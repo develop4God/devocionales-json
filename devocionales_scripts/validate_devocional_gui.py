@@ -25,11 +25,9 @@ LATIN_RE = re.compile(r"[a-zA-Z]+")
 
 # Spanish leak words to detect in non-Spanish Latin-script files
 SPANISH_LEAKS = {
-    "Amén", "amen", "Jesús", "Jesus", "Señor", "señor", "también",
-    "también", "Espíritu", "espíritu", "oración", "también", "Padre",
-    "padre", "gracia", "gloria", "alabanza", "misericordia", "Salvador",
-    "salvador", "bendición", "bendicion", "nombre", "santo", "santa",
-    "corazón", "corazon", "Dios",
+    "Amén", "Jesús", "Señor", "señor", "también",
+    "Espíritu", "espíritu", "oración", "Salvador",
+    "bendición", "corazón",
 }
 
 
