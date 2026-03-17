@@ -23,11 +23,11 @@ ALWAYS_ALLOWED  = {"HIOV", "OV", "HERV", "ERV", "KJV", "NIV", "NVI",
                    "RVR1960", "ARC", "TOB", "LSG1910"}
 LATIN_RE = re.compile(r"[a-zA-Z]+")
 
-# Spanish leak words to detect in non-Spanish Latin-script files
-SPANISH_LEAKS = {
-    "Amén", "Jesús", "Señor", "señor", "también",
-    "Espíritu", "espíritu", "oración", "Salvador",
-    "bendición", "corazón",
+# Spanish leak: per-language accent patterns (excludes accents native to each language)
+SPANISH_ACCENT_BY_LANG = {
+    "fr": re.compile(r"[áíóúÁÍÓÚñÑ]"),   # French has é,è,à — only flag non-French accents
+    "en": re.compile(r"[áéíóúÁÉÍÓÚñÑ]"),  # English: all Spanish accents
+    "pt": re.compile(r"[íñÑ]"),            # Portuguese has ã,ê,â,ó,á — only flag í and ñ
 }
 
 
@@ -43,9 +43,10 @@ def check_latin(text: str, extra: set) -> tuple[list, dict]:
     return bad, labels
 
 
-def check_spanish_leak(text: str) -> list:
-    words = set(re.findall(r"[A-Za-zÁáÉéÍíÓóÚúÑñÜü]+", text))
-    return [w for w in SPANISH_LEAKS if w in words]
+def check_spanish_leak(text: str, lang: str) -> list:
+    pattern = SPANISH_ACCENT_BY_LANG.get(lang, SPANISH_ACCENT_BY_LANG["en"])
+    words = re.findall(r"[A-Za-zÁáÉéÍíÓóÚúÑñÀàÈèÊêÂâÃãÔô]+", text)
+    return [w for w in words if pattern.search(w)]
 
 
 def validate(filepath, lang_override, version_override):
@@ -152,7 +153,7 @@ def validate(filepath, lang_override, version_override):
         # Spanish leak check
         if latin_script:
             for field in ["reflexion", "oracion"]:
-                leaks = check_spanish_leak(entry.get(field, ""))
+                leaks = check_spanish_leak(entry.get(field, ""), expected_lang)
                 for word in leaks: spanish_issues.append(f"{date_key} [{field}]: \"{word}\"")
 
     # Summaries
