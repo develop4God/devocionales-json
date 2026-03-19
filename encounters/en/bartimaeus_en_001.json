@@ -1,0 +1,191 @@
+{
+    "id": "bartimaeus_001",
+    "type": "encounter",
+    "schema_version": "encounters_v1",
+    "language": "en",
+    "bible_version": "KJV",
+    "version": "1.0",
+    "estimated_reading_minutes": 7,
+    "meta": {
+        "character": "Bartimaeus",
+        "testament": "new",
+        "scripture_reference": "Mark 10:46-52",
+        "mood_primary": "darkness",
+        "accent_color": "#2a1500",
+        "emoji": "👁️",
+        "tags": [
+            "blindness",
+            "faith",
+            "persistence",
+            "mercy",
+            "healing",
+            "bartimaeus",
+            "jesus",
+            "sight"
+        ]
+    },
+    "key_verse": {
+        "reference": "Mark 10:52",
+        "text": "And Jesus said unto him, Go thy way; thy faith hath made thee whole. And immediately he received his sight, and followed Jesus in the way.",
+        "bible_version": "KJV"
+    },
+    "cards": [
+        {
+            "order": 1,
+            "type": "cinematic_scene",
+            "mood": "darkness",
+            "image_url": "bartimaeus_roadside_dust.png",
+            "title": "The Side of the Road.",
+            "narrative": "Jericho: dust, the noise of crowds. And on the side of the road, a man who had lost everything — including the light.\n\nBartimaeus, son of Timaeus. He was blind and a beggar. Invisible to all who passed by.",
+            "ambient_sound": "crowd_distant",
+            "haptic": null,
+            "revelation_key": "God sees those whom the world has stopped seeing."
+        },
+        {
+            "order": 2,
+            "type": "scripture_moment",
+            "mood": "tense",
+            "image_url": "bartimaeus_crowd_passing.png",
+            "verse_reference": "Mark 10:46-47",
+            "verse_text": "And they came to Jericho: and as he went out of Jericho with his disciples and a great number of people, blind Bartimaeus, the son of Timaeus, sat by the highway side begging. And when he heard that it was Jesus of Nazareth, he began to cry out, and say, Jesus, thou son of David, have mercy on me.",
+            "reflection": "Notice the details Mark includes.\n\nNot 'a blind man.' It's Bartimaeus, son of Timaeus. Mark gives him a name. Mark gives him a father. Mark sees him.\n\nAnd notice what Bartimaeus does the instant he hears the name of Jesus. He doesn't wait. He doesn't send a messenger. He doesn't pray in silence.\n\nHe shouts.",
+            "revelation_key": "Bartimaeus could not see Jesus. But he recognized Him before many who could."
+        },
+        {
+            "order": 3,
+            "type": "character_moment",
+            "mood": "intense",
+            "image_url": "bartimaeus_crying_out.png",
+            "title": "Be Quiet",
+            "subtitle": "The command Bartimaeus ignored",
+            "content": "The crowd rebuked him. 'Be quiet.'\n\nThink about that moment. Surrounded by people. All of them telling him his voice was not welcome. That his need was an inconvenience. That Jesus had more important things to do.\n\nBartimaeus's response:\n\n'But he cried the more a great deal: Thou Son of David, have mercy on me!'\n\n🔑 HE CRIED THE MORE.\n\nHe didn't apologize. He didn't lower his voice. He didn't wait for a better moment.\n\nOpposition did not extinguish his faith — it ignited it.\n\nThere is something profound here: Bartimaeus had never seen Jesus. He couldn't. But he had heard. And what he heard was enough that no human voice could silence him.\n\nBartimaeus's faith did not depend on what his eyes could see.",
+            "revelation_key": "When the world says 'be quiet,' faith says 'much more.'"
+        },
+        {
+            "order": 4,
+            "type": "cinematic_scene",
+            "mood": "turning_point",
+            "image_url": "bartimaeus_jesus_stops.png",
+            "title": "Jesus Stopped",
+            "narrative": "The entire crowd. All the movement. All the urgency of the road to Jerusalem.\n\nAnd Jesus stopped.",
+            "ambient_sound": "crowd_quieting",
+            "haptic": "gentle_pulse",
+            "verse_overlay": {
+                "reference": "Mark 10:49",
+                "text": "And Jesus stood still, and commanded him to be called. And they call the blind man, saying unto him, Be of good comfort, rise; he calleth thee."
+            },
+            "revelation_key": "The cry of a blind beggar stopped the Son of God in His path. That is how honest prayer works."
+        },
+        {
+            "order": 5,
+            "type": "theological_depth",
+            "image_url": "bartimaeus_throws_cloak.png",
+            "title": "The Cloak He Threw",
+            "subtitle": "The smallest detail that says everything",
+            "content": "Mark includes a detail that Matthew and Luke omit:\n\n'And he, casting away his garment, rose, and came to Jesus.'\n\nThat cloak was no ordinary clothing.\n\nFor a blind beggar in the first century, the cloak was the instrument of work — spread on the ground to collect coins. It was his only possession. His security. His identity as a beggar.\n\nAnd he threw it.\n\n⚠️ THINK ABOUT WHAT THAT MEANT:\n\nBlind, throwing your cloak in the middle of a crowd probably meant losing it forever. If Jesus did not heal him — if Bartimaeus went back to look for his cloak among the feet of hundreds of people — he probably would not find it.\n\nThrowing the cloak was an act of total faith before receiving anything.\n\nHe did not wait to see in order to believe. He acted as if he had already been answered.\n\n🔑 IN GREEK: The verb 'casting away' (apobalón) implies throwing with force — not setting down carefully. He did not deposit the cloak. He threw it.",
+            "revelation_key": "Bartimaeus threw his security before receiving his miracle. Faith acts before seeing.",
+            "scripture_connections": [
+                {
+                    "reference": "Hebrews 11:1",
+                    "text": "Now faith is the substance of things hoped for, the evidence of things not seen."
+                },
+                {
+                    "reference": "2 Corinthians 5:7",
+                    "text": "For we walk by faith, not by sight."
+                }
+            ]
+        },
+        {
+            "order": 6,
+            "type": "scripture_moment",
+            "mood": "intimate",
+            "image_url": "bartimaeus_desperate_plea.png",
+            "verse_reference": "Mark 10:51",
+            "verse_text": "And Jesus answered and said unto him, What wilt thou that I should do unto thee? The blind man said unto him, Lord, that I might receive my sight.",
+            "reflection": "This is the same question Jesus had just asked James and John in Mark 10:36.\n\nThey asked for power. Position. To sit at his right and left hand.\n\nBartimaeus asked to see.\n\nJesus asks everyone the same question. The difference is in what each heart answers.\n\nAnd notice what he calls Jesus: Rabboni — My Master. Not just Master. Mine. Personal. Intimate. The blind man who had never seen Him called Him his before he could look Him in the eyes.",
+            "revelation_key": "What we ask Jesus reveals how well we know Him."
+        },
+        {
+            "order": 7,
+            "type": "cinematic_scene",
+            "mood": "grace",
+            "image_url": "bartimaeus_sight_restored.png",
+            "title": "The Light Came In",
+            "narrative": "No mud. No ceremony. No condition.\n\nJust: 'Go thy way; thy faith hath made thee whole.'\n\nAnd immediately — the colors of the world. The dust of the road. The faces of the crowd. And the face of Jesus, for the first time.",
+            "ambient_sound": "silence_breaking",
+            "haptic": "light_pulse",
+            "verse_overlay": {
+                "reference": "Mark 10:52",
+                "text": "And immediately he received his sight, and followed Jesus in the way."
+            },
+            "revelation_key": "The first thing his eyes saw was Jesus. And he chose to follow Him."
+        },
+        {
+            "order": 8,
+            "type": "character_moment",
+            "mood": "peace",
+            "image_url": "bartimaeus_face_restored.png",
+            "title": "He Followed Jesus on the Road",
+            "subtitle": "The five most important words in the text",
+            "content": "Mark ends the story with a line that can be read too quickly:\n\n'And followed Jesus in the way.'\n\nThis is not just the end of Bartimaeus's story.\n\nThis is his beginning.\n\n🔑 THE ROAD:\n\nThe road Jesus was heading toward at that moment was Jerusalem. To the cross. To betrayal. To death.\n\nBartimaeus received his sight and chose the hardest road.\n\nHe did not go home to show off his miracle. He did not stay where he was, now that he could see and could work. He followed a man toward Jerusalem — toward everything the crowd had not yet understood.\n\n🚶 WHAT THIS SAYS ABOUT GENUINE FAITH:\n\nBartimaeus's faith did not end when he received what he asked for. That is where it began.\n\nThe miracle was not the destination. It was the door.",
+            "revelation_key": "The miracle was not Bartimaeus's destination. It was the door to Jesus."
+        },
+        {
+            "order": 9,
+            "type": "theological_depth",
+            "image_url": "bartimaeus_desperate_plea.png",
+            "title": "The Irony Mark Cannot Avoid",
+            "subtitle": "Those who could see did not see. The one who could not see, saw.",
+            "content": "Mark 10 is full of people who do not understand who Jesus is.\n\nThe disciples argue over who is the greatest. James and John ask for power. The crowd rebukes Bartimaeus for shouting.\n\nAnd the blind man — the man without eyes — is the only one who names Him correctly:\n\n'Thou Son of David!'\n\nThis is a messianic title. Bartimaeus did not just recognize that Jesus was a rabbi. He recognized who He was in God's plan.\n\n⚠️ THE SPIRITUAL IRONY:\n\nThroughout the Gospel of Mark, Jesus heals the physically blind at moments when the disciples display spiritual blindness. It is not accidental.\n\nMark wants the reader to ask: Who can really see?\n\nBartimaeus received physical sight at the moment when those who had eyes could not see who was walking among them.\n\nGod frequently reveals more to those whom the world considers least.",
+            "revelation_key": "Spiritual blindness is more dangerous than physical blindness. Bartimaeus saw before he could see.",
+            "scripture_connections": [
+                {
+                    "reference": "John 9:39",
+                    "text": "And Jesus said, For judgment I am come into this world, that they which see not might see; and that they which see might be made blind."
+                },
+                {
+                    "reference": "1 Corinthians 1:27",
+                    "text": "But God hath chosen the foolish things of the world to confound the wise; and God hath chosen the weak things of the world to confound the things which are mighty."
+                }
+            ]
+        },
+        {
+            "order": 10,
+            "type": "discovery_activation",
+            "image_url": "bartimaeus_jesus_way.png",
+            "icon": "🙏",
+            "title": "Your Encounter",
+            "subtitle": "Bartimaeus did not wait for the perfect moment. He cried out from where he was.",
+            "discovery_questions": [
+                {
+                    "category": "Honesty",
+                    "question": "In what area of your life are you sitting by the side of the road, waiting for Jesus to pass by — rather than crying out to Him? What has silenced you?"
+                },
+                {
+                    "category": "Faith",
+                    "question": "Bartimaeus threw his cloak before receiving his miracle. Is there something you need to 'throw' — a security, a plan, an identity — to follow Jesus completely?"
+                },
+                {
+                    "category": "Purpose",
+                    "question": "When Bartimaeus received what he asked for, he chose to follow Jesus rather than go away. What does it mean for you to follow Jesus after He answers a prayer?"
+                }
+            ],
+            "prayer": {
+                "title": "Prayer of the One Who Cries from the Roadside",
+                "content": "Lord Jesus, Son of David, have mercy on me.\n\nLike Bartimaeus — I am aware of what I cannot see. The areas of my life where I walk in darkness. The truths I do not understand. The blindnesses I do not recognize in myself.\n\nI will not be quiet.\n\nI cry out from where I am — without the perfect moment, without the perfect words, without the perfect faith.\n\nOnly with the same honesty of a man on the side of a dusty road: I want to see.\n\nAnd when you give me sight — let the first thing my eyes find be You. And let me follow You.\n\nIn Jesus' name, Amen."
+            }
+        },
+        {
+            "order": 11,
+            "type": "completion",
+            "image_url": "bartimaeus_face_restored.png",
+            "completion_verse": {
+                "reference": "Mark 10:52",
+                "text": "And Jesus said unto him, Go thy way; thy faith hath made thee whole. And immediately he received his sight, and followed Jesus in the way.",
+                "bible_version": "KJV"
+            },
+            "reflection_prompt": "What cloak do you need to throw today? What do you need to see?",
+            "celebration_type": "gentle_light"
+        }
+    ]
+}
