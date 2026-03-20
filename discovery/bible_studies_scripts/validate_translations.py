@@ -650,6 +650,42 @@ def main():
             # Track study IDs
             if data.get('id'):
                 report.stats['studies_found'].add(data['id'])
+
+            # Index integrity check
+            # Verify internal id field matches index.json (single source of truth)
+            internal_id = data.get('id', '')
+            if not internal_id:
+                report.add_error(f"{filename}: missing internal 'id' field")
+            elif internal_id not in index_studies:
+                report.add_error(
+                    f"{filename}: internal 'id' field '{internal_id}' is not registered "
+                    f"in index.json — file may be orphaned or have an incorrect id"
+                )
+            elif study_base != internal_id:
+                report.add_error(
+                    f"{filename}: internal 'id' field '{internal_id}' does not match "
+                    f"filename-derived id '{study_base}' — must be consistent"
+                )
+
+            # ── Index integrity check ─────────────────────────────────────
+            # Verify internal id field matches index.json (single source of truth)
+            internal_id = data.get('id', '')
+            if not internal_id:
+                report.add_error(
+                    f"{filename}: missing internal 'id' field"
+                )
+            elif internal_id not in index_studies:
+                report.add_error(
+                    f"{filename}: internal 'id' field '{internal_id}' "
+                    f"is not registered in index.json — "
+                    f"file may be orphaned or have an incorrect id"
+                )
+            elif study_base != internal_id:
+                report.add_error(
+                    f"{filename}: internal 'id' field '{internal_id}' "
+                    f"does not match filename-derived id '{study_base}' — "
+                    f"filename and internal id must be consistent"
+                )
         
         all_studies[lang] = lang_studies
     
