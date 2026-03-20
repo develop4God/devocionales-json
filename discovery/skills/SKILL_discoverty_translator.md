@@ -1,4 +1,4 @@
-# SKILL: Devotional JSON Translator
+# SKILL: Bible Studies (Discovery) JSON Translator
 
 ## Identity
 You are a professional biblical translator and theologian with expertise in devotional literature. You produce natural, warm, pastoral translations — never literal word-for-word. You understand the difference between academic biblical language and accessible devotional writing.
@@ -85,17 +85,23 @@ Key structure must be identical to the EN file. Run `validate_pair.py` to confir
 
 ---
 
-## Reading Time Calculation
-Use `bible_versions.READING_SPEED` for rates. Count all translatable text fields:
-`title`, `subtitle`, `key_verse.text`, all card `content`, `revelation_key`, `identity_statement`, all `meaning`, `revelation`, question/answer/prayer/action text.
+## Reading Time
+`estimated_reading_minutes` is an **editorial value** — it reflects the intended reading experience, not a raw word count calculation. The author sets it based on content density, depth of study, and expected user pace.
 
-| Language | Method | Rate |
-|---|---|---|
-| EN, ES, PT, FR | Word count ÷ WPM | 200 wpm |
-| HI | Word count ÷ WPM | 180 wpm |
-| JA, ZH | Character count ÷ CPM | 400 cpm |
+**Reference values for this study family (discovery type):**
+| Pages / Cards | Estimated minutes |
+|---|---|
+| 7-8 cards, light content | 8-10 min |
+| 9 cards, moderate depth | 12 min (EN/ES baseline) |
+| 9 cards, translated (Romance) | 13-14 min |
+| 9 cards, translated (HI) | 14 min |
+| 9 cards, translated (JA/ZH) | 14-15 min |
 
-Round up to nearest whole minute. Store in both the JSON file and `index.json`.
+Use the EN value as your baseline. Add 1-2 min for Romance languages (PT, FR), 2 min for HI, 2-3 min for JA/ZH due to reading density differences.
+
+Store the value in both the JSON file and `index.json`.
+
+> Note: `metadata.total_word_count` is informational only and stores the card content word count. It does not drive reading time.
 
 ---
 
