@@ -8,25 +8,37 @@
         "en": "mammon_anxiety_freedom_en_001.json",
         "es": "mammon_anxiety_freedom_es_001.json",
         "pt": "mammon_anxiety_freedom_pt_001.json",
-        "hi": "mammon_anxiety_freedom_hi_001.json"
+        "fr": "mammon_anxiety_freedom_fr_001.json",
+        "zh": "mammon_anxiety_freedom_zh_001.json",
+        "hi": "mammon_anxiety_freedom_hi_001.json",
+        "ja": "mammon_anxiety_freedom_ja_001.json"
       },
       "titles": {
-        "en": "Unbound from Riches: The Path from Anxiety to Peace",
-        "es": "Desatado de las Riquezas: El Camino de la Ansiedad a la Paz",
-        "pt": "Délié des Richesses: O Caminho da Ansiedade para a Paz",
-        "hi": "धन की बेड़ियों से मुक्त: चिंता से शांति का मार्ग"
+        "en": "Unbound from Riches",
+        "es": "Desatado de las Riquezas",
+        "pt": "Desacorrentado das Riquezas",
+        "fr": "Délié des Richesses",
+        "zh": "挣脱财富的枷锁",
+        "hi": "धन-दौलत की जंजीरों से आज़ाद",
+        "ja": "富から解き放たれて"
       },
       "subtitles": {
         "en": "What Jesus said 2,000 years ago is exactly what you need to hear today",
         "es": "Lo que Jesús dijo hace 2000 años es exactamente lo que necesitas escuchar hoy",
         "pt": "O que Jesus disse há 2.000 anos é exatamente o que você precisa ouvir hoje",
-        "hi": "जो यीशु ने 2,000 वर्ष पहले कहा था, वही आज आपको सुनने की आवश्यकता है"
+        "fr": "Ce que Jésus a dit il y a 2 000 ans est exactement ce que vous devez entendre aujourd'hui",
+        "zh": "2000年前耶稣说过的话正是你今天需要听到的",
+        "hi": "जो यीशु ने 2,000 वर्ष पहले कहा था, वही आज आपको सुनने की आवश्यकता है",
+        "ja": "2000年前にイエスが言われたことは、あなたが今日聞く必要があることです"
       },
       "estimated_reading_minutes": {
         "en": 12,
         "es": 12,
         "pt": 13,
-        "hi": 14
+        "fr": 12,
+        "zh": 12,
+        "hi": 14,
+        "ja": 12
       }
     },
     {
