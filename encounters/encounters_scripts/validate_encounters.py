@@ -18,7 +18,7 @@ from typing import Dict, List, Optional
 # ── Config ────────────────────────────────────────────────────────────────────
 
 SCRIPTS_DIR = Path(__file__).parent
-ENCOUNTERS_DIR = SCRIPTS_DIR.parent / 'encounters'
+ENCOUNTERS_DIR = SCRIPTS_DIR.parent
 INDEX_PATH = ENCOUNTERS_DIR / 'index.json'
 
 SCHEMA_VERSION = 'encounters_v1'
