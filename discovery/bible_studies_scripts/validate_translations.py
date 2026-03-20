@@ -655,7 +655,7 @@ def main():
     
     # Cross-validate translations against English using index.json as source
     if 'en' in all_studies:
-        for lang in ['es', 'pt', 'fr', 'ja', 'zh']:
+        for lang in ['es', 'pt', 'fr', 'ja', 'zh', 'hi']:
             if lang not in all_studies:
                 continue
             
