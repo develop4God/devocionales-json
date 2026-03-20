@@ -21,16 +21,18 @@ from pathlib import Path
 from typing import Dict, List, Tuple, Set, Optional
 from collections import Counter
 
-# Expected languages and their Bible versions
-# Note: Some studies may use different Bible versions
+# Load Bible versions from JSON (single source of truth)
+# To add a language or version: edit bible_versions.json only
+def _load_bible_versions() -> dict:
+    path = Path(__file__).parent / 'bible_versions.json'
+    return json.loads(path.read_text(encoding='utf-8'))['languages']
+
+_BIBLE_VERSIONS = _load_bible_versions()
+
+# Build EXPECTED_LANGUAGES directly from JSON
 EXPECTED_LANGUAGES = {
-    'en': ['KJV', 'NIV'],  # Allow both KJV(PRIMARY) and NIV (SECONDARY) for English
-    'es': ['RVR1960', 'NVI'],  # Allow both RVR1960(PRIMARY) and NVI (SECONDARY) for Spanish
-    'pt': ['ARC', 'NVI'],  # Allow both ARC(PRIMARY) and NVI (SECONDARY) for Portuguese
-    'fr': ['LSG1910', 'TOB'],  # Allow both LSG1910(PRIMARY) and TOB (SECONDARY)for French
-    'ja': ['新改訳2003', 'リビングバイブル'],  # Allow both versions for Japanese 新改訳2003 (PRIMARY) and リビングバイブル 
-    'zh': ['和合本1919', '新译本'],  # Allow both versions for Chinese 和合本1919 (PRIMARY) and 新译本 (SECONDARY)
-    'hi': ['पवित्र बाइबिल (ओ.वी.)', 'पवित्र बाइबिल']  # Allow both versions for Hindi पवित्र बाइबिल (ओ.वी.) (PRIMARY) and पवित्र बाइबिल (SECONDARY)
+    lang: cfg['allowed_versions']
+    for lang, cfg in _BIBLE_VERSIONS.items()
 }
 
 # Language character patterns for detection
@@ -258,7 +260,7 @@ def validate_verse_references(data: Dict, lang: str, filename: str,
     
     # Pattern to detect English Bible book names that SHOULD be translated
     # Exclude books that are commonly the same across languages
-    if lang in ['es', 'pt', 'fr']:
+    if _BIBLE_VERSIONS.get(lang, {}).get('script') == 'latin' and lang != 'en':
         # For Romance languages, be less strict about common names
         english_bible_pattern = re.compile(
             r'\b(Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|'
@@ -270,7 +272,7 @@ def validate_verse_references(data: Dict, lang: str, filename: str,
             r'Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|'
             r'Revelation)\s+\d', re.IGNORECASE)
     else:
-        # For Asian languages, all English names should be translated
+        # For non-Latin languages (CJK, Devanagari), all English names should be translated
         english_bible_pattern = re.compile(
             r'\b(Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|'
             r'Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalm|Psalms|'
@@ -324,7 +326,7 @@ def validate_discovery_question_categories(data: Dict, lang: str, filename: str,
         return  # English is the base language
     
     # For Asian languages (ja, zh), categories should contain Asian characters
-    if lang in ['ja', 'zh']:
+    if _BIBLE_VERSIONS.get(lang, {}).get('script') == 'cjk':
         # Pattern to detect English category names (capitalized English words)
         english_category_pattern = re.compile(r'^[A-Z][a-z]+(\s+[a-z]+)*$')
         
@@ -338,7 +340,7 @@ def validate_discovery_question_categories(data: Dict, lang: str, filename: str,
     # For Romance languages (es, pt, fr), we can't use simple pattern matching
     # because their category names look similar to English (capitalized words)
     # Instead, we check for exact matches of known English categories
-    elif lang in ['es', 'pt', 'fr']:
+    elif _BIBLE_VERSIONS.get(lang, {}).get('script') == 'latin' and lang != 'en':
         # EXACT English categories that should never appear in translations
         # Note: Excludes cognates that are spelled the same in French/Spanish/Portuguese
         # (e.g., "Transformation", "Gratitude", "Mission" are valid in French)
@@ -369,7 +371,7 @@ def validate_no_english_in_translation(data: Dict, lang: str, filename: str,
     
     # For JA and ZH, tags should be translated (not in English)
     # Detect English tags by checking for vowels (a,e,i,o,u)
-    if lang in ['ja', 'zh']:
+    if _BIBLE_VERSIONS.get(lang, {}).get('script') == 'cjk':
         tags = data.get('tags', [])
         english_tags = []
         for tag in tags:
@@ -387,7 +389,7 @@ def validate_no_english_in_translation(data: Dict, lang: str, filename: str,
     
     # Check themes for English
     themes = data.get('metadata', {}).get('themes', [])
-    if lang in ['ja', 'zh']:
+    if _BIBLE_VERSIONS.get(lang, {}).get('script') == 'cjk':
         for theme in themes:
             if not LANGUAGE_PATTERNS[lang].search(str(theme)):
                 # Check if it looks like English
@@ -650,12 +652,48 @@ def main():
             # Track study IDs
             if data.get('id'):
                 report.stats['studies_found'].add(data['id'])
+
+            # Index integrity check
+            # Verify internal id field matches index.json (single source of truth)
+            internal_id = data.get('id', '')
+            if not internal_id:
+                report.add_error(f"{filename}: missing internal 'id' field")
+            elif internal_id not in index_studies:
+                report.add_error(
+                    f"{filename}: internal 'id' field '{internal_id}' is not registered "
+                    f"in index.json — file may be orphaned or have an incorrect id"
+                )
+            elif study_base != internal_id:
+                report.add_error(
+                    f"{filename}: internal 'id' field '{internal_id}' does not match "
+                    f"filename-derived id '{study_base}' — must be consistent"
+                )
+
+            # ── Index integrity check ─────────────────────────────────────
+            # Verify internal id field matches index.json (single source of truth)
+            internal_id = data.get('id', '')
+            if not internal_id:
+                report.add_error(
+                    f"{filename}: missing internal 'id' field"
+                )
+            elif internal_id not in index_studies:
+                report.add_error(
+                    f"{filename}: internal 'id' field '{internal_id}' "
+                    f"is not registered in index.json — "
+                    f"file may be orphaned or have an incorrect id"
+                )
+            elif study_base != internal_id:
+                report.add_error(
+                    f"{filename}: internal 'id' field '{internal_id}' "
+                    f"does not match filename-derived id '{study_base}' — "
+                    f"filename and internal id must be consistent"
+                )
         
         all_studies[lang] = lang_studies
     
     # Cross-validate translations against English using index.json as source
     if 'en' in all_studies:
-        for lang in ['es', 'pt', 'fr', 'ja', 'zh']:
+        for lang in ['es', 'pt', 'fr', 'ja', 'zh', 'hi']:
             if lang not in all_studies:
                 continue
             

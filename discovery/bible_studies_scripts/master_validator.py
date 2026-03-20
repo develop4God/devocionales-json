@@ -1,46 +1,48 @@
 #!/usr/bin/env python3
 """
-Master validator: simply calls both macro validators for the entire database.
-1. Runs validate_translations.py (global translation/JSON/structure validation)
-2. Runs validate_structure_bulk.py for each English base file (study-level structure validation)
-No additional logic or per-file handling.
-"""
+Master validator: orchestrates all validation for the entire database.
+1. validate_translations.py  — global translation/JSON/structure/index validation
+2. validate_structure_bulk.py — schema drift check per study (EN as base)
 
+Exit codes: 0 = all passed, 1 = errors found (stops at first failure)
+"""
 
 import subprocess
 import sys
-import os
-import glob
+from pathlib import Path
 
-print("==============================")
+SCRIPTS_DIR = Path(__file__).parent
+EN_DIR = SCRIPTS_DIR.parent / 'en'
+
+
+def run(script, args=None, label=''):
+    """Run a validator script. Exit with its code if it fails."""
+    cmd = [sys.executable, str(SCRIPTS_DIR / script)] + (args or [])
+    result = subprocess.run(cmd, text=True)
+    if result.returncode != 0:
+        lbl = label or script
+        print(f"\n❌ {lbl} failed.")
+        sys.exit(result.returncode)
+
+
+# ── Phase 1: Global translation / JSON / index validation ────────────────────
+print("=" * 30)
 print("GLOBAL TRANSLATION/JSON VALIDATION")
-print("==============================")
+print("=" * 30)
+run("validate_translations.py", label="Translation/JSON validation")
 
-# Run the global translation/JSON validator
-result = subprocess.run([
-    sys.executable, "validate_translations.py"
-], cwd="./discovery/bible_studies_scripts", capture_output=True, text=True)
-print(result.stdout)
-if result.returncode != 0:
-    print("\n❌ Errors found in translation/JSON validation.")
-    sys.exit(result.returncode)
-
-print("==============================")
+# ── Phase 2: Schema drift check per study ────────────────────────────────────
+print("=" * 30)
 print("BULK STRUCTURE VALIDATION FOR ALL STUDIES")
-print("==============================")
+print("=" * 30)
 
-# Find all English base files for studies
-en_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../en'))
-base_files = glob.glob(os.path.join(en_dir, '*_en_*.json'))
+base_files = sorted(EN_DIR.glob("*_en_*.json"))
+if not base_files:
+    print(f"❌ No English base files found in {EN_DIR}")
+    sys.exit(1)
 
 for base_file in base_files:
-    print(f"\n--- Structure validation for study: {os.path.basename(base_file)} ---")
-    result2 = subprocess.run([
-        sys.executable, "validate_structure_bulk.py", base_file
-    ], cwd="./discovery/bible_studies_scripts", capture_output=True, text=True)
-    print(result2.stdout)
-    if result2.returncode != 0:
-        print(f"\n❌ Structure errors found for {os.path.basename(base_file)}.")
-        sys.exit(result2.returncode)
+    print(f"\n--- {base_file.name} ---")
+    run("validate_structure_bulk.py", [str(base_file)], label=base_file.name)
 
 print("\n✅ All studies passed bulk structure validation.\n")
