@@ -3,7 +3,7 @@
     "type": "encounter",
     "schema_version": "encounters_v1",
     "language": "hi",
-    "bible_version": "HIOV",
+    "bible_version": "पवित्र बाइबिल (ओ.वी.)",
     "version": "1.0",
     "estimated_reading_minutes": 7,
     "meta": {
@@ -27,7 +27,7 @@
     "key_verse": {
         "reference": "मरकुस 10:52",
         "text": "यीशु ने उससे कहा, 'जा, तेरे विश्वास ने तुझे चंगा कर दिया है।' और तुरन्त उसे दृष्टि मिल गई, और वह मार्ग में यीशु के पीछे हो लिया।",
-        "bible_version": "HIOV"
+        "bible_version": "पवित्र बाइबिल (ओ.वी.)"
     },
     "cards": [
         {
