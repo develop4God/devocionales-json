@@ -11,33 +11,49 @@
     "reference": "Mateo 6:33-34",
     "text": "33 Mas buscad primeramente el reino de Dios y su justicia, y todas estas cosas os serán añadidas. 34 Así que, no os afanéis por el día de mañana, porque el día de mañana traerá su afán. Basta a cada día su propio mal."
   },
-
   "introduction": "Quizás llevas tiempo escuchando 'no te preocupes' y sabes perfectamente que no funciona así. La ansiedad no se va porque alguien te lo diga. Jesús lo sabía también. Por eso no dijo simplemente 'no te angusties' y ya. Explicó por qué aparece la ansiedad, de dónde viene su raíz, y cuál es la única salida real.\n\nLo que vas a leer no es una lista de consejos. Es un solo argumento, construido paso a paso, que termina en un lugar concreto. Al final de este estudio hay una oración. Si la haces con fe, puede ser un antes y un después en tu corazón y en tu vida.",
-
-  "phases": [
-    {
-      "phase": 1,
-      "title": "¿Por qué no puedo parar de angustiarme?",
-      "description": "El problema real, no el síntoma",
-      "card_orders": [1, 2, 3]
-    },
-    {
-      "phase": 2,
-      "title": "¿Qué tiene que ver el dinero con mi ansiedad?",
-      "description": "La raíz que nadie te explicó",
-      "card_orders": [4, 5]
-    },
-    {
-      "phase": 3,
-      "title": "¿Entonces qué hago?",
-      "description": "La salida que Jesús mismo señaló",
-      "card_orders": [6, 7]
-    }
-  ],
-
   "cards": [
     {
       "order": 1,
+      "phase": 0,
+      "type": "phases_overview",
+      "icon": "🗺️",
+      "title": "Desatado de las Riquezas",
+      "subtitle": "El camino que vamos a recorrer",
+      "phases": [
+        {
+          "phase": 1,
+          "title": "¿Por qué no puedo parar de angustiarme?",
+          "description": "El problema real, no el síntoma",
+          "card_orders": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "phase": 2,
+          "title": "¿Qué tiene que ver el dinero con mi ansiedad?",
+          "description": "La raíz que nadie te explicó",
+          "card_orders": [
+            5,
+            6
+          ]
+        },
+        {
+          "phase": 3,
+          "title": "¿Entonces qué hago?",
+          "description": "La salida que Jesús mismo señaló",
+          "card_orders": [
+            7,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "order": 2,
       "phase": 1,
       "type": "historical_context",
       "icon": "🌾",
@@ -46,9 +62,8 @@
       "content": "Estas palabras no fueron pronunciadas en una conferencia de teología. Fueron dichas en una colina, al aire libre, frente a personas que conocían la ansiedad en carne propia. Los oyentes de Jesús eran campesinos, pescadores y artesanos bajo una presión económica brutal. Pagaban tributo al Imperio Romano, vivían con cosechas que podían perderse por sequía, y muchos trabajaban todo el día sin saber si comerían mañana. No era filosofía. Era supervivencia.\n\n📖 MATEO 6:25:\n'25 Por tanto os digo: No os afanéis por vuestra vida, qué habéis de comer o qué habéis de beber; ni por vuestro cuerpo, qué habéis de vestir. ¿No es la vida más que el alimento, y el cuerpo más que el vestido?'\n\nAsí que cuando Jesús dijo 'no os afanéis', no lo dijo desde la comodidad. Lo dijo mirando a gente con razones reales para estar ansiosa, y por eso lo que dijo no fue un regaño sino una liberación. Los nombres cambian hoy: facturas, deudas, desempleo, incertidumbre. Pero la presión en el pecho cuando no sabes cómo vas a llegar a fin de mes es exactamente lo mismo que sentían ellos. Y el Jesús que les habló a ellos te habla a ti hoy.",
       "revelation_key": "Jesús no diseñó este mensaje para personas con vida perfecta. Lo diseñó para personas como tú, que tienen razones reales para estar angustiadas y que necesitan una salida real."
     },
-
     {
-      "order": 2,
+      "order": 3,
       "phase": 1,
       "type": "greek_exegesis",
       "icon": "🧠",
@@ -65,9 +80,8 @@
       ],
       "revelation_key": "La ansiedad no es tu enemiga. Es la señal de que tu mente está dividida. Jesús no te pide que ignores tu situación. Te pide que cambies a quién consultas primero cuando la situación llega."
     },
-
     {
-      "order": 3,
+      "order": 4,
       "phase": 1,
       "type": "greek_exegesis",
       "icon": "⛓️",
@@ -84,9 +98,8 @@
       ],
       "revelation_key": "Tu ansiedad no es tu enemiga. Es la señal honesta de que tu corazón está dividido entre dos señores. Esa señal es misericordiosa: te está diciendo exactamente dónde está el problema y cuál es la solución."
     },
-
     {
-      "order": 4,
+      "order": 5,
       "phase": 2,
       "type": "terminology_clarification",
       "icon": "💰",
@@ -95,9 +108,8 @@
       "content": "Ya sabes que tienes dos amos. Ahora necesitas saber cómo se llama el segundo. Jesús usó una palabra aramea que la mayoría de las Biblias decidieron no traducir porque ninguna traducción la captura completamente.\n\n📖 MATEO 6:24:\n'24 Nadie puede servir a dos señores; porque o aborrecerá al uno y amará al otro, o estimará al uno y menospreciará al otro. No podéis servir a Dios y a las Riquezas.'\n\nEsa palabra es Māmônā (מָמוֹנָא), y su raíz aramea es la misma de la que viene la palabra 'Amén'. Amén significa: es firme, es digno de confianza, en eso me apoyo. Entonces Māmônā significa aquello en lo que uno confía para sentirse seguro. Por eso las Riquezas no son solo billetes, son cualquier cosa a la que le dices 'Amén' cuando el miedo llega: el dinero, un trabajo estable, el control sobre tu propia vida, el estatus, una cuenta de ahorros que te haga sentir protegido. Jesús hace algo revolucionario al poner a Māmônā al mismo nivel que Dios. No dice 'no uses el dinero', dice 'no puedes tener dos señores', porque cuando algo material se convierte en tu fuente de seguridad, deja de ser una herramienta y se convierte en un amo.\n\nEntonces la pregunta que lo revela todo es esta: ¿a qué le dices Amén cuando tienes miedo? ¿Qué necesitarías tener o lograr para sentirte finalmente seguro? Lo que respondiste en tu interior, eso son tus Riquezas.",
       "revelation_key": "Las Riquezas no son lo que tienes en el banco. Son lo que tu corazón consulta cuando el miedo llega. Identificar qué ocupa ese lugar es el primer paso hacia la libertad."
     },
-
     {
-      "order": 5,
+      "order": 6,
       "phase": 2,
       "type": "greek_exegesis",
       "icon": "🕊️",
@@ -120,9 +132,8 @@
       ],
       "revelation_key": "El mismo Jesús que extendió la mano a Pedro hundiéndose en el mar, hoy extiende Su Espíritu a tu mente. No espera que tengas fe perfecta para ayudarte. Actúa exactamente donde tu fe termina."
     },
-
     {
-      "order": 6,
+      "order": 7,
       "phase": 3,
       "type": "kingdom_principle",
       "icon": "🌱",
@@ -141,9 +152,8 @@
       ],
       "revelation_key": "El mayor acto de fe contra la ansiedad no es orar más por ti mismo. Es soltar tu necesidad el tiempo suficiente para ver la del otro. En ese acto, Dios demuestra que Él es real."
     },
-
     {
-      "order": 7,
+      "order": 8,
       "phase": 3,
       "type": "discovery_activation",
       "icon": "🙏",
@@ -189,7 +199,6 @@
       "identity_statement": "No eres un esclavo de la ansiedad. No eres un prisionero de tus circunstancias. Eres un hijo del Padre que viste los lirios y las aves y dijo: 'Tú vales mucho más.' Esta mente que no puede descansar no tiene la última palabra sobre tu vida. Él sí."
     }
   ],
-
   "tags": [
     "ansiedad",
     "riquezas",
@@ -204,15 +213,14 @@
     "generosidad",
     "liberacion"
   ],
-
   "metadata": {
-    "version": "004",
+    "version": "005",
     "total_word_count": 3600,
     "greek_words_count": 3,
     "scripture_references_count": 18,
     "difficulty_level": "accessible",
     "phases_count": 3,
-    "cards_count": 7,
+    "cards_count": 8,
     "themes": [
       "Libertad de la ansiedad",
       "Las Riquezas (Māmônā) como señor rival",
