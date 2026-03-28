@@ -388,7 +388,8 @@
         "fr": "temple_cleansing_fr_001.json",
         "ja": "temple_cleansing_ja_001.json",
         "zh": "temple_cleansing_zh_001.json",
-        "hi": "temple_cleansing_hi_001.json"
+        "hi": "temple_cleansing_hi_001.json",
+        "de": "temple_cleansing_de_001.json"
       },
       "titles": {
         "es": "La Purificación del Templo",
@@ -397,7 +398,8 @@
         "fr": "La Purification du Temple",
         "ja": "神殿の清め",
         "zh": "洁净圣殿",
-        "hi": "मंदिर की शुद्धि"
+        "hi": "मंदिर की शुद्धि",
+        "de": "Die Reinigung des Tempels"
       },
       "subtitles": {
         "es": "Cuando Jesús declara que Él es el Templo verdadero",
@@ -406,7 +408,8 @@
         "fr": "Quand Jésus déclare qu'Il est le véritable Temple",
         "ja": "イエスが御霊自身が真の神殿であると宣言するとき",
         "zh": "耶稣宣告自己是真正的圣殿",
-        "hi": "जब यीशु घोषणा करता है कि वह ही सच्चा मंदिर है"
+        "hi": "जब यीशु घोषणा करता है कि वह ही सच्चा मंदिर है",
+        "de": "Als Jesus erklärt, dass er der wahre Tempel ist"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -415,7 +418,8 @@
         "fr": 6,
         "ja": 6,
         "zh": 6,
-        "hi": 6
+        "hi": 6,
+        "de": 7
       }
     },
     {
@@ -429,7 +433,8 @@
         "pt": "woman_at_well_pt_001.json",
         "ja": "woman_at_well_ja_001.json",
         "zh": "woman_at_well_zh_001.json",
-        "hi": "woman_at_well_hi_001.json"
+        "hi": "woman_at_well_hi_001.json",
+        "de": "woman_at_well_de_001.json"
       },
       "titles": {
         "es": "La Mujer del Pozo",
@@ -438,7 +443,8 @@
         "pt": "A Mulher no Poço",
         "ja": "井戸の女",
         "zh": "井边的妇人",
-        "hi": "कुएँ पर की स्त्री"
+        "hi": "कुएँ पर की स्त्री",
+        "de": "Die Frau am Brunnen"
       },
       "subtitles": {
         "es": "Cuando Jesús rompe todas las barreras por una conversación que cambiará una ciudad",
@@ -447,7 +453,8 @@
         "pt": "Quando Jesus quebra todas as barreiras por uma conversa que mudará uma cidade",
         "ja": "イエスがすべての壁を打ち破り、町を変える会話をする時",
         "zh": "当耶稣打破一切隔阂，带来改变城市的对话",
-        "hi": "जब यीशु एक ऐसी बातचीत के लिए हर बाधा तोड़ता है जो एक पूरे नगर को बदल देगी"
+        "hi": "जब यीशु एक ऐसी बातचीत के लिए हर बाधा तोड़ता है जो एक पूरे नगर को बदल देगी",
+        "de": "Als Jesus jede Schranke durchbricht für ein Gespräch, das eine ganze Stadt verwandeln wird"
       },
       "estimated_reading_minutes": {
         "es": 5,
@@ -456,7 +463,8 @@
         "pt": 5,
         "ja": 5,
         "zh": 5,
-        "hi": 5
+        "hi": 5,
+        "de": 6
       }
     },
     {
@@ -638,7 +646,8 @@
         "fr": "transfiguration_fr_001.json",
         "ja": "transfiguration_ja_001.json",
         "zh": "transfiguration_zh_001.json",
-        "hi": "transfiguration_hi_001.json"
+        "hi": "transfiguration_hi_001.json",
+        "de": "transfiguration_de_001.json"
       },
       "titles": {
         "es": "La Transfiguración",
@@ -647,7 +656,8 @@
         "fr": "La Transfiguration",
         "ja": "変貌",
         "zh": "登山变像",
-        "hi": "रूपान्तरण"
+        "hi": "रूपान्तरण",
+        "de": "Die Verklärung"
       },
       "subtitles": {
         "es": "Cuando el velo de la carne se abre y la gloria irrumpe",
@@ -656,7 +666,8 @@
         "fr": "Quand le voile de la chair s'ouvre et la gloire éclate",
         "ja": "肉の覆いが開かれ、栄光が輝き出るとき",
         "zh": "当肉身的幔子揭开，荣耀突破而出",
-        "hi": "जब देह का परदा खुलता है और महिमा प्रकट होती है"
+        "hi": "जब देह का परदा खुलता है और महिमा प्रकट होती है",
+        "de": "Als der Schleier des Fleisches sich öffnet und die Herrlichkeit durchbricht"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -665,7 +676,8 @@
         "fr": 7,
         "ja": 7,
         "zh": 7,
-        "hi": 7
+        "hi": 7,
+        "de": 8
       }
     },
     {
@@ -1171,7 +1183,8 @@
         "fr": "pentecost_power_fr_001.json",
         "ja": "pentecost_power_ja_001.json",
         "zh": "pentecost_power_zh_001.json",
-        "hi": "pentecost_power_hi_001.json"
+        "hi": "pentecost_power_hi_001.json",
+        "de": "pentecost_power_de_001.json"
       },
       "titles": {
         "es": "El Poder de Pentecostés",
@@ -1180,7 +1193,8 @@
         "fr": "La puissance de la Pentecôte",
         "ja": "ペンテコステの力",
         "zh": "五旬节的能力",
-        "hi": "पिन्तेकुस्त की सामर्थ"
+        "hi": "पिन्तेकुस्त की सामर्थ",
+        "de": "Die Kraft von Pfingsten"
       },
       "subtitles": {
         "es": "Cuando el Espíritu Santo transforma cobardes en valientes",
@@ -1189,7 +1203,8 @@
         "fr": "Quand le Saint-Esprit transforme les lâches en courageux",
         "ja": "聖霊が臆病者を勇敢な者へと変える時",
         "zh": "当圣灵将懦夫转变为勇士",
-        "hi": "जब पवित्र आत्मा कायरों को साहसी में बदल देता है"
+        "hi": "जब पवित्र आत्मा कायरों को साहसी में बदल देता है",
+        "de": "Als der Heilige Geist Feiglinge in Mutigen verwandelt"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1198,7 +1213,8 @@
         "fr": 7,
         "ja": 7,
         "zh": 7,
-        "hi": 7
+        "hi": 7,
+        "de": 8
       }
     },
     {
