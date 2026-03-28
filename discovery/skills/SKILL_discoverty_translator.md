@@ -33,6 +33,7 @@ Import from `bible_versions.py` — never hardcode versions. Primary version per
 | Spanish | `es` | RVR1960 |
 | Portuguese | `pt` | ARC |
 | French | `fr` | LSG1910 |
+| German | `de` | LU17 |
 | Japanese | `ja` | 新改訳2003 |
 | Chinese | `zh` | 和合本1919 |
 | Hindi | `hi` | पवित्र बाइबिल (ओ.वी.) |

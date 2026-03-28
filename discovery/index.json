@@ -175,7 +175,8 @@
         "fr": "logos_creation_fr_001.json",
         "ja": "logos_creation_ja_001.json",
         "zh": "logos_creation_zh_001.json",
-        "hi": "logos_creation_hi_001.json"
+        "hi": "logos_creation_hi_001.json",
+        "de": "logos_creation_de_001.json"
       },
       "titles": {
         "es": "En el Principio era el Verbo",
@@ -184,7 +185,8 @@
         "fr": "Au commencement était la Parole",
         "ja": "初めに、ことばがあった",
         "zh": "太初有道",
-        "hi": "आदि में वचन था"
+        "hi": "आदि में वचन था",
+        "de": "Im Anfang war das Wort"
       },
       "subtitles": {
         "es": "Cuando Juan declara que Jesús es el Logos eterno que creó todas las cosas",
@@ -193,7 +195,8 @@
         "fr": "Lorsque Jean déclare que Jésus est le Logos éternel qui a créé toutes choses",
         "ja": "ヨハネがイエスはすべてのものを創造した永遠のロゴスであると宣言するとき",
         "zh": "当约翰宣告耶稣是创造万有的永恒之道",
-        "hi": "जब यूहन्ना घोषणा करता है कि यीशु शाश्वत लोगॉस है जिसने सब कुछ सृजा"
+        "hi": "जब यूहन्ना घोषणा करता है कि यीशु शाश्वत लोगॉस है जिसने सब कुछ सृजा",
+        "de": "Als Johannes erklärt, dass Jesus der ewige Logos ist, der alles erschaffen hat"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -202,7 +205,8 @@
         "fr": 5,
         "ja": 5,
         "zh": 5,
-        "hi": 5
+        "hi": 5,
+        "de": 6
       }
     },
     {
@@ -339,7 +343,8 @@
         "fr": "born_again_fr_001.json",
         "ja": "born_again_ja_001.json",
         "zh": "born_again_zh_001.json",
-        "hi": "born_again_hi_001.json"
+        "hi": "born_again_hi_001.json",
+        "de": "born_again_de_001.json"
       },
       "titles": {
         "es": "Es Necesario Nacer de Nuevo",
@@ -348,7 +353,8 @@
         "fr": "Il faut que vous naissiez de nouveau",
         "ja": "新しく生まれなければならない",
         "zh": "你必须重生",
-        "hi": "तुम्हें फिर से जन्म लेना होगा"
+        "hi": "तुम्हें फिर से जन्म लेना होगा",
+        "de": "Du musst von Neuem geboren werden"
       },
       "subtitles": {
         "es": "El misterio del nuevo nacimiento espiritual revelado",
@@ -357,7 +363,8 @@
         "fr": "Quand le maître d'Israël découvre que sa religion ne suffit pas",
         "ja": "イスラエルの教師が、自分の宗教では不十分であることを発見したとき",
         "zh": "当以色列的教师发现他的宗教并不足够",
-        "hi": "जब इस्राएल का गुरु यह जान लेता है कि उसका धर्म पर्याप्त नहीं है"
+        "hi": "जब इस्राएल का गुरु यह जान लेता है कि उसका धर्म पर्याप्त नहीं है",
+        "de": "Als der Meister Israels erkennt, dass seine Religion nicht genug ist"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -366,7 +373,8 @@
         "fr": 5,
         "ja": 5,
         "zh": 5,
-        "hi": 5
+        "hi": 5,
+        "de": 6
       }
     },
     {
@@ -503,7 +511,8 @@
         "fr": "good_shepherd_fr_001.json",
         "ja": "good_shepherd_ja_001.json",
         "zh": "good_shepherd_zh_001.json",
-        "hi": "good_shepherd_hi_001.json"
+        "hi": "good_shepherd_hi_001.json",
+        "de": "good_shepherd_de_001.json"
       },
       "titles": {
         "es": "El Buen Pastor",
@@ -512,7 +521,8 @@
         "fr": "Le Bon Berger",
         "ja": "良い羊飼い",
         "zh": "好牧人",
-        "hi": "अच्छा चरवाहा"
+        "hi": "अच्छा चरवाहा",
+        "de": "Der gute Hirte"
       },
       "subtitles": {
         "es": "Cuando Jesús declara que conoce a sus ovejas por nombre",
@@ -521,7 +531,8 @@
         "fr": "Quand Jésus déclare qu'Il connaît Ses brebis par leur nom",
         "ja": "イエスが羊を名前で知っていると宣言するとき",
         "zh": "当耶稣宣告祂按名认识祂的羊",
-        "hi": "जब यीशु घोषणा करता है कि वह अपनी भेड़ों को नाम से जानता है"
+        "hi": "जब यीशु घोषणा करता है कि वह अपनी भेड़ों को नाम से जानता है",
+        "de": "Als Jesus erklärt, dass er seine Schafe beim Namen kennt"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -530,7 +541,8 @@
         "fr": 6,
         "ja": 6,
         "zh": 6,
-        "hi": 6
+        "hi": 6,
+        "de": 7
       }
     },
     {
