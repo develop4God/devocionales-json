@@ -52,7 +52,8 @@
         "fr": "morning_star_fr_001.json",
         "ja": "morning_star_ja_001.json",
         "zh": "morning_star_zh_001.json",
-        "hi": "morning_star_hi_001.json"
+        "hi": "morning_star_hi_001.json",
+        "de": "morning_star_de_001.json"
       },
       "titles": {
         "es": "Estrella de la Mañana",
@@ -61,7 +62,8 @@
         "fr": "Le Héraut de la Lumière",
         "ja": "光の使者",
         "zh": "晨星",
-        "hi": "प्रकाश का संदेशवाहक"
+        "hi": "प्रकाश का संदेशवाहक",
+        "de": "Der Herold des Lichts"
       },
       "subtitles": {
         "es": "El testimonio más poderoso sobre la identidad de Jesús",
@@ -70,7 +72,8 @@
         "fr": "Le lien éternel entre la création, la prophétie et votre cœur",
         "ja": "創造、預言、そしてあなたの心の間の永遠のつながり",
         "zh": "创造、预言与你心灵的永恒连结",
-        "hi": "सृष्टि, भविष्यवाणी और आपके हृदय के बीच का शाश्वत संबंध"
+        "hi": "सृष्टि, भविष्यवाणी और आपके हृदय के बीच का शाश्वत संबंध",
+        "de": "Die ewige Verbindung zwischen Schöpfung, Prophezeiung und deinem Herzen"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -79,7 +82,8 @@
         "fr": 6,
         "ja": 6,
         "zh": 6,
-        "hi": 6
+        "hi": 6,
+        "de": 7
       }
     },
     {
@@ -93,7 +97,8 @@
         "pt": "hammer_of_god_pt_001.json",
         "ja": "hammer_of_god_ja_001.json",
         "zh": "hammer_of_god_zh_001.json",
-        "hi": "hammer_of_god_hi_001.json"
+        "hi": "hammer_of_god_hi_001.json",
+        "de": "hammer_of_god_de_001.json"
       },
       "titles": {
         "es": "El Martillo de Dios",
@@ -102,7 +107,8 @@
         "pt": "O Martelo de Deus",
         "ja": "神のハンマー",
         "zh": "神的锤子",
-        "hi": "परमेश्वर का हथौड़ा"
+        "hi": "परमेश्वर का हथौड़ा",
+        "de": "Der Hammer Gottes"
       },
       "subtitles": {
         "es": "De ejecutores del juicio a adoradores del Mesías: La historia redentora de los Medos",
@@ -111,7 +117,8 @@
         "pt": "De executores do juízo a adoradores do Messias: A história redentora dos Medos",
         "ja": "裁きの執行者から救い主の礼拝者へ：メディア人の贖いの物語",
         "zh": "从审判的执行者到弥赛亚的敬拜者：玛代人的救赎故事",
-        "hi": "न्याय के निष्पादकों से मसीहा के उपासकों तक: मादियों की छुटकारे की कहानी"
+        "hi": "न्याय के निष्पादकों से मसीहा के उपासकों तक: मादियों की छुटकारे की कहानी",
+        "de": "Von Vollstreckern des Gerichts zu Anbetern des Messias: Die Erlösungsgeschichte der Meder"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -120,7 +127,8 @@
         "pt": 8,
         "ja": 8,
         "zh": 8,
-        "hi": 8
+        "hi": 8,
+        "de": 9
       }
     },
     {
@@ -134,7 +142,8 @@
         "pt": "balaam_humble_vision_pt_001.json",
         "ja": "balaam_humble_vision_ja_001.json",
         "zh": "balaam_humble_vision_zh_001.json",
-        "hi": "balaam_humble_vision_hi_001.json"
+        "hi": "balaam_humble_vision_hi_001.json",
+        "de": "balaam_humble_vision_de_001.json"
       },
       "titles": {
         "es": "Cuando la Burra Vio al Ángel y el Profeta Estaba Ciego",
@@ -143,7 +152,8 @@
         "pt": "Quando a Jumenta Viu o Anjo e o Profeta Estava Cego",
         "ja": "ろばが天使を見て預言者が盲目だったとき",
         "zh": "当驴看见天使而先知却瞎眼时",
-        "hi": "जब गधी ने स्वर्गदूत को देखा और भविष्यवक्ता अंधा था"
+        "hi": "जब गधी ने स्वर्गदूत को देखा और भविष्यवक्ता अंधा था",
+        "de": "Als die Eselin den Engel sah und der Prophet blind war"
       },
       "subtitles": {
         "es": "La advertencia más solemne sobre revelación sin transformación",
@@ -152,7 +162,8 @@
         "pt": "A advertência mais solene sobre revelação sem transformação",
         "ja": "変革のない啓示についての最も厳粛な警告",
         "zh": "关于没有改变的启示最严肃的警告",
-        "hi": "प्रकाशन के बिना परिवर्तन के बारे में सबसे गंभीर चेतावनी"
+        "hi": "प्रकाशन के बिना परिवर्तन के बारे में सबसे गंभीर चेतावनी",
+        "de": "Die eindringlichste Warnung über Offenbarung ohne Verwandlung"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -161,7 +172,8 @@
         "pt": 8,
         "ja": 8,
         "zh": 8,
-        "hi": 8
+        "hi": 8,
+        "de": 9
       }
     },
     {
@@ -715,7 +727,8 @@
         "fr": "buried_talent_fr_001.json",
         "ja": "buried_talent_ja_001.json",
         "zh": "buried_talent_zh_001.json",
-        "hi": "buried_talent_hi_001.json"
+        "hi": "buried_talent_hi_001.json",
+        "de": "buried_talent_de_001.json"
       },
       "titles": {
         "es": "El Talento Enterrado",
@@ -724,7 +737,8 @@
         "fr": "Le Talent Enfoui",
         "ja": "埋められたタラント",
         "zh": "被埋葬的他连得",
-        "hi": "दफनाई गई प्रतिभा"
+        "hi": "दफनाई गई प्रतिभा",
+        "de": "Das vergrabene Talent"
       },
       "subtitles": {
         "es": "Cuando el miedo paraliza y las manos quedan vacías",
@@ -733,7 +747,8 @@
         "fr": "Quand la peur paralyse et que les mains restent vides",
         "ja": "恐れが麻痺させ、手が空になるとき",
         "zh": "当恐惧使人瘫痪,双手空空如也",
-        "hi": "जब डर लकवा मारता है और हाथ खाली रह जाते हैं"
+        "hi": "जब डर लकवा मारता है और हाथ खाली रह जाते हैं",
+        "de": "Wenn Angst lähmt und Hände leer bleiben"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -742,7 +757,8 @@
         "fr": 8,
         "ja": 8,
         "zh": 8,
-        "hi": 8
+        "hi": 8,
+        "de": 9
       }
     },
     {
@@ -891,7 +907,8 @@
         "fr": "cup_of_wrath_fr_001.json",
         "ja": "cup_of_wrath_ja_001.json",
         "zh": "cup_of_wrath_zh_001.json",
-        "hi": "cup_of_wrath_hi_001.json"
+        "hi": "cup_of_wrath_hi_001.json",
+        "de": "cup_of_wrath_de_001.json"
       },
       "titles": {
         "es": "La Copa de la Ira",
@@ -900,7 +917,8 @@
         "fr": "La Coupe de la Colère",
         "ja": "怒りの杯",
         "zh": "忿怒的杯",
-        "hi": "क्रोध का कटोरा"
+        "hi": "क्रोध का कटोरा",
+        "de": "Der Kelch des Zorns"
       },
       "subtitles": {
         "es": "Cuando el Inocente bebe el juicio que nos correspondía",
@@ -909,7 +927,8 @@
         "fr": "Quand l'Innocent boit le jugement qui nous appartenait",
         "ja": "無実の方が私たちに属していた裁きを飲むとき",
         "zh": "当无辜者喝下属于我们的审判时",
-        "hi": "जब निर्दोष वह दंड पीता है जो हमारा था"
+        "hi": "जब निर्दोष वह दंड पीता है जो हमारा था",
+        "de": "Als der Unschuldige das Gericht trinkt, das uns bestimmt war"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -918,7 +937,8 @@
         "fr": 8,
         "ja": 8,
         "zh": 8,
-        "hi": 8
+        "hi": 8,
+        "de": 9
       }
     },
     {
@@ -932,7 +952,8 @@
         "fr": "veil_torn_fr_001.json",
         "ja": "veil_torn_ja_001.json",
         "zh": "veil_torn_zh_001.json",
-        "hi": "veil_torn_hi_001.json"
+        "hi": "veil_torn_hi_001.json",
+        "de": "veil_torn_de_001.json"
       },
       "titles": {
         "es": "El Velo Rasgado",
@@ -941,7 +962,8 @@
         "fr": "Le Voile Déchiré",
         "ja": "裂け分かれた幕",
         "zh": "裂开的幔子",
-        "hi": "फटा हुआ पर्दा"
+        "hi": "फटा हुआ पर्दा",
+        "de": "Der zerrissene Vorhang"
       },
       "subtitles": {
         "es": "Cuando Dios abre el camino al Lugar Santísimo",
@@ -950,7 +972,8 @@
         "fr": "Quand Dieu ouvre le chemin vers le Saint des Saints",
         "ja": "神が至聖所への道を開くとき",
         "zh": "当神开辟通往至圣所的道路时",
-        "hi": "जब परमेश्वर परम पवित्र स्थान का मार्ग खोलता है"
+        "hi": "जब परमेश्वर परम पवित्र स्थान का मार्ग खोलता है",
+        "de": "Als Gott den Weg zum Allerheiligsten öffnet"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -959,7 +982,8 @@
         "fr": 7,
         "ja": 7,
         "zh": 7,
-        "hi": 7
+        "hi": 7,
+        "de": 8
       }
     },
     {
