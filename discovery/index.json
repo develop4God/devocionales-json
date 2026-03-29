@@ -997,7 +997,8 @@
         "fr": "saints_resurrected_fr_001.json",
         "ja": "saints_resurrected_ja_001.json",
         "zh": "saints_resurrected_zh_001.json",
-        "hi": "saints_resurrected_hi_001.json"
+        "hi": "saints_resurrected_hi_001.json",
+        "de": "saints_resurrected_de_001.json"
       },
       "titles": {
         "es": "Los Santos Resucitados",
@@ -1006,7 +1007,8 @@
         "fr": "Les Saints Ressuscités",
         "ja": "よみがえった聖人たち",
         "zh": "复活的圣徒",
-        "hi": "पुनरुत्थित संत"
+        "hi": "पुनरुत्थित संत",
+        "de": "Die auferstandenen Heiligen"
       },
       "subtitles": {
         "es": "Cuando la muerte de Cristo liberó a los cautivos del Hades",
@@ -1015,7 +1017,8 @@
         "fr": "Quand la mort du Christ a libéré les captifs de l'Hadès",
         "ja": "キリストの死がハデスの捕虜を解放したとき",
         "zh": "当基督的死释放了阴间的囚徒时",
-        "hi": "जब मसीह की मृत्यु ने अधोलोक के बंदियों को मुक्त किया"
+        "hi": "जब मसीह की मृत्यु ने अधोलोक के बंदियों को मुक्त किया",
+        "de": "Als der Tod Christi die Gefangenen aus dem Hades befreite"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -1024,7 +1027,8 @@
         "fr": 8,
         "ja": 8,
         "zh": 8,
-        "hi": 8
+        "hi": 8,
+        "de": 9
       }
     },
     {
@@ -1038,7 +1042,8 @@
         "fr": "breath_new_adam_fr_001.json",
         "ja": "breath_new_adam_ja_001.json",
         "zh": "breath_new_adam_zh_001.json",
-        "hi": "breath_new_adam_hi_001.json"
+        "hi": "breath_new_adam_hi_001.json",
+        "de": "breath_new_adam_de_001.json"
       },
       "titles": {
         "es": "El Soplo del Nuevo Adán",
@@ -1047,7 +1052,8 @@
         "fr": "Le Souffle du Nouvel Adam",
         "ja": "新しいアダムの息",
         "zh": "新亚当的气息",
-        "hi": "नए आदम की श्वास"
+        "hi": "नए आदम की श्वास",
+        "de": "Der Hauch des neuen Adam"
       },
       "subtitles": {
         "es": "Cuando Jesús reconecta al hombre con Dios",
@@ -1056,7 +1062,8 @@
         "fr": "Quand Jésus reconnecte l'homme avec Dieu",
         "ja": "イエスが人を神と再びつなぐとき",
         "zh": "当耶稣将人与神重新连接",
-        "hi": "जब यीशु ने मनुष्य को परमेश्वर से पुनः जोड़ा"
+        "hi": "जब यीशु ने मनुष्य को परमेश्वर से पुनः जोड़ा",
+        "de": "Als Jesus den Menschen mit Gott wiederverbindet"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1065,7 +1072,8 @@
         "fr": 7,
         "ja": 7,
         "zh": 7,
-        "hi": 7
+        "hi": 7,
+        "de": 8
       }
     },
     {
@@ -1124,7 +1132,8 @@
         "fr": "restoration_by_fire_fr_001.json",
         "ja": "restoration_by_fire_ja_001.json",
         "zh": "restoration_by_fire_zh_001.json",
-        "hi": "restoration_by_fire_hi_001.json"
+        "hi": "restoration_by_fire_hi_001.json",
+        "de": "restoration_by_fire_de_001.json"
       },
       "titles": {
         "es": "Las Brasas de la Restauración",
@@ -1133,7 +1142,8 @@
         "fr": "Les Braises de la Restauration",
         "ja": "回復の炭火",
         "zh": "恢复的炭火",
-        "hi": "पुनर्स्थापना की अंगीठी"
+        "hi": "पुनर्स्थापना की अंगीठी",
+        "de": "Das Kohlenfeuer der Wiederherstellung"
       },
       "subtitles": {
         "es": "Cuando el olor del fracaso se convierte en el aroma del perdón",
@@ -1142,7 +1152,8 @@
         "fr": "Quand l'odeur de l'échec devient l'arôme du pardon",
         "ja": "失敗の匂いが赦しの香りになるとき",
         "zh": "当失败的气味变成宽恕的芬芳",
-        "hi": "जब असफलता की गंध क्षमा की सुगंध बन जाती है"
+        "hi": "जब असफलता की गंध क्षमा की सुगंध बन जाती है",
+        "de": "Als der Geruch des Scheiterns zum Duft der Vergebung wird"
       },
       "estimated_reading_minutes": {
         "es": 9,
@@ -1151,7 +1162,8 @@
         "fr": 9,
         "ja": 9,
         "zh": 9,
-        "hi": 9
+        "hi": 9,
+        "de": 10
       }
     },
     {
@@ -1210,7 +1222,8 @@
         "fr": "ascension_victory_fr_001.json",
         "ja": "ascension_victory_ja_001.json",
         "zh": "ascension_victory_zh_001.json",
-        "hi": "ascension_victory_hi_001.json"
+        "hi": "ascension_victory_hi_001.json",
+        "de": "ascension_victory_de_001.json"
       },
       "titles": {
         "es": "La Ascensión Victoriosa",
@@ -1219,7 +1232,8 @@
         "fr": "L'Ascension victorieuse",
         "ja": "勝利の昇天",
         "zh": "得胜的升天",
-        "hi": "विजयी स्वर्गारोहण"
+        "hi": "विजयी स्वर्गारोहण",
+        "de": "Die siegreiche Himmelfahrt"
       },
       "subtitles": {
         "es": "Cuando el Rey conquista el trono y envía el Espíritu",
@@ -1228,7 +1242,8 @@
         "fr": "Quand le Roi conquiert le trône et envoie l'Esprit",
         "ja": "王が御座を征服し、御霊を送られるとき",
         "zh": "当君王得胜宝座并差遣圣灵",
-        "hi": "जब राजा सिंहासन पर विजय पाता है और आत्मा को भेजता है"
+        "hi": "जब राजा सिंहासन पर विजय पाता है और आत्मा को भेजता है",
+        "de": "Als der König den Thron erobert und den Geist sendet"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1237,7 +1252,8 @@
         "fr": 7,
         "ja": 7,
         "zh": 7,
-        "hi": 7
+        "hi": 7,
+        "de": 8
       }
     },
     {
@@ -1296,7 +1312,8 @@
         "fr": "damascus_road_fr_001.json",
         "ja": "damascus_road_ja_001.json",
         "zh": "damascus_road_zh_001.json",
-        "hi": "damascus_road_hi_001.json"
+        "hi": "damascus_road_hi_001.json",
+        "de": "damascus_road_de_001.json"
       },
       "titles": {
         "es": "El Camino a Damasco",
@@ -1305,7 +1322,8 @@
         "fr": "Le chemin de Damas",
         "ja": "ダマスコへの道",
         "zh": "大马士革的路上",
-        "hi": "दमिश्क का मार्ग"
+        "hi": "दमिश्क का मार्ग",
+        "de": "Der Weg nach Damaskus"
       },
       "subtitles": {
         "es": "Cuando la luz de Cristo derriba al perseguidor más feroz",
@@ -1314,7 +1332,8 @@
         "fr": "Quand la lumière de Christ terrasse le plus féroce des persécuteurs",
         "ja": "キリストの光が最も激しい迫害者を打ち倒す時",
         "zh": "当基督的光击倒最凶猛的逼迫者",
-        "hi": "जब मसीह का प्रकाश सबसे उग्र सताने वाले को गिरा देता है"
+        "hi": "जब मसीह का प्रकाश सबसे उग्र सताने वाले को गिरा देता है",
+        "de": "Als das Licht Christi den grausamsten Verfolger niederwirft"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1323,7 +1342,8 @@
         "fr": 7,
         "ja": 7,
         "zh": 7,
-        "hi": 7
+        "hi": 7,
+        "de": 8
       }
     },
     {
