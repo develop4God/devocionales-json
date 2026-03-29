@@ -220,7 +220,8 @@
         "fr": "lamb_of_god_fr_001.json",
         "ja": "lamb_of_god_ja_001.json",
         "zh": "lamb_of_god_zh_001.json",
-        "hi": "lamb_of_god_hi_001.json"
+        "hi": "lamb_of_god_hi_001.json",
+        "de": "lamb_of_god_de_001.json"
       },
       "titles": {
         "es": "El Cordero de Dios",
@@ -229,7 +230,8 @@
         "fr": "L'Agneau de Dieu",
         "ja": "神の小羊",
         "zh": "神的羔羊",
-        "hi": "परमेश्वर का मेम्ना"
+        "hi": "परमेश्वर का मेम्ना",
+        "de": "Das Lamm Gottes"
       },
       "subtitles": {
         "es": "La culminación de 1,500 años de sistema sacrificial en una sola declaración",
@@ -238,7 +240,8 @@
         "fr": "L'aboutissement de 1 500 ans de système sacrificiel en une seule déclaration",
         "ja": "1,500年の犠牲システムが一つの宣言で頂点に達する",
         "zh": "1500年献祭制度在一句宣告中的顶点",
-        "hi": "एक एकमात्र घोषणा में 1,500 वर्षों की बलिदान प्रणाली की परिणति"
+        "hi": "एक एकमात्र घोषणा में 1,500 वर्षों की बलिदान प्रणाली की परिणति",
+        "de": "Der Höhepunkt von 1.500 Jahren Opfersystem in einer einzigen Erklärung"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -247,7 +250,8 @@
         "fr": 5,
         "ja": 5,
         "zh": 5,
-        "hi": 5
+        "hi": 5,
+        "de": 6
       }
     },
     {
@@ -605,7 +609,8 @@
         "fr": "passed_from_death_fr_001.json",
         "ja": "passed_from_death_ja_001.json",
         "zh": "passed_from_death_zh_001.json",
-        "hi": "passed_from_death_hi_001.json"
+        "hi": "passed_from_death_hi_001.json",
+        "de": "passed_from_death_de_001.json"
       },
       "titles": {
         "es": "Pasados de Muerte a Vida",
@@ -614,7 +619,8 @@
         "fr": "Passé de la Mort à la Vie",
         "ja": "死からいのちへ渡された",
         "zh": "从死到生",
-        "hi": "मृत्यु से जीवन में पार"
+        "hi": "मृत्यु से जीवन में पार",
+        "de": "Vom Tod ins Leben hindurchgedrungen"
       },
       "subtitles": {
         "es": "La revelación final: ya no puedes 'des-nacer'",
@@ -623,7 +629,8 @@
         "fr": "La révélation finale : vous ne pouvez pas 'dé-naître'",
         "ja": "最終的な啓示：あなたは自分を「生まれなかったこと」にできない",
         "zh": "最终的启示：你不能'不出生'",
-        "hi": "अंतिम प्रकाशन: आप अब 'अजन्मे' नहीं हो सकते"
+        "hi": "अंतिम प्रकाशन: आप अब 'अजन्मे' नहीं हो सकते",
+        "de": "Die endgültige Offenbarung: Du kannst nicht mehr 'ungeboren' werden"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -632,7 +639,8 @@
         "fr": 8,
         "ja": 8,
         "zh": 8,
-        "hi": 8
+        "hi": 8,
+        "de": 9
       }
     },
     {
@@ -732,7 +740,8 @@
         "pt": "triumphal_entry_pt_001.json",
         "ja": "triumphal_entry_ja_001.json",
         "zh": "triumphal_entry_zh_001.json",
-        "hi": "triumphal_entry_hi_001.json"
+        "hi": "triumphal_entry_hi_001.json",
+        "de": "triumphal_entry_de_001.json"
       },
       "titles": {
         "es": "La Entrada Triunfal",
@@ -741,7 +750,8 @@
         "pt": "A Entrada Triunfal",
         "ja": "勝利の入城",
         "zh": "荣入圣城",
-        "hi": "विजयी प्रवेश"
+        "hi": "विजयी प्रवेश",
+        "de": "Der Einzug des Königs"
       },
       "subtitles": {
         "es": "Cuando el Rey rechazado entra a Jerusalén montado en un pollino, no en un caballo de guerra",
@@ -750,7 +760,8 @@
         "pt": "Quando o Rei rejeitado entra em Jerusalém montado em um jumentinho, não em um cavalo de guerra",
         "ja": "拒絶された王が、軍馬ではなくろばに乗ってエルサレムに入られる時",
         "zh": "当被拒绝的王骑着驴驹而非战马进入耶路撒冷",
-        "hi": "जब तिरस्कृत राजा यरूशलेम में गधे पर सवार होकर प्रवेश करता है, न कि युद्ध के घोड़े पर"
+        "hi": "जब तिरस्कृत राजा यरूशलेम में गधे पर सवार होकर प्रवेश करता है, न कि युद्ध के घोड़े पर",
+        "de": "Als der verworfene König auf einem Esel in Jerusalem einzieht – nicht auf einem Streitross"
       },
       "estimated_reading_minutes": {
         "es": 5,
@@ -759,7 +770,8 @@
         "pt": 5,
         "ja": 5,
         "zh": 5,
-        "hi": 5
+        "hi": 5,
+        "de": 6
       }
     },
     {
@@ -773,7 +785,8 @@
         "fr": "gethsemane_agony_fr_001.json",
         "ja": "gethsemane_agony_ja_001.json",
         "zh": "gethsemane_agony_zh_001.json",
-        "hi": "gethsemane_agony_hi_001.json"
+        "hi": "gethsemane_agony_hi_001.json",
+        "de": "gethsemane_agony_de_001.json"
       },
       "titles": {
         "es": "La Agonía del Testador",
@@ -782,7 +795,8 @@
         "fr": "L'Agonie du Testateur",
         "ja": "遺言者の苦悶",
         "zh": "立约者的痛苦",
-        "hi": "वसीयतकर्ता की व्यथा"
+        "hi": "वसीयतकर्ता की व्यथा",
+        "de": "Die Qual des Erblassers"
       },
       "subtitles": {
         "es": "Cuando el Hijo de Dios suda sangre en la prensa de aceite",
@@ -791,7 +805,8 @@
         "fr": "Quand le Fils de Dieu sue du sang dans le pressoir à olives",
         "ja": "神の御子がオリーブの圧搾器で血の汗を流すとき",
         "zh": "当神的儿子在橄榄压榨机中流出血汗时",
-        "hi": "जब परमेश्वर का पुत्र जैतून की कोल्हू में लहू जैसा पसीना बहाता है"
+        "hi": "जब परमेश्वर का पुत्र जैतून की कोल्हू में लहू जैसा पसीना बहाता है",
+        "de": "Als der Sohn Gottes im Ölbaumgarten Blut schwitzt"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -800,7 +815,8 @@
         "fr": 7,
         "ja": 7,
         "zh": 7,
-        "hi": 7
+        "hi": 7,
+        "de": 8
       }
     },
     {
@@ -1019,7 +1035,8 @@
         "fr": "road_to_emmaus_fr_001.json",
         "ja": "road_to_emmaus_ja_001.json",
         "zh": "road_to_emmaus_zh_001.json",
-        "hi": "road_to_emmaus_hi_001.json"
+        "hi": "road_to_emmaus_hi_001.json",
+        "de": "road_to_emmaus_de_001.json"
       },
       "titles": {
         "es": "El Camino a Emaús",
@@ -1028,7 +1045,8 @@
         "fr": "Le Chemin d'Emmaüs",
         "ja": "エマオへの道",
         "zh": "去以马忤斯的路上",
-        "hi": "एम्माऊस का मार्ग"
+        "hi": "एम्माऊस का मार्ग",
+        "de": "Der Weg nach Emmaus"
       },
       "subtitles": {
         "es": "Cuando el Cristo resucitado camina contigo sin que lo reconozcas, hasta que parte el pan",
@@ -1037,7 +1055,8 @@
         "fr": "Quand le Christ ressuscité marche avec vous sans être reconnu, jusqu'à la fraction du pain",
         "ja": "復活したキリストがあなたと共に歩んでいるのに、パンを裂くまで気づかない時",
         "zh": "当复活的基督与你同行却未被认出，直到祂擘饼",
-        "hi": "जब पुनरुत्थित मसीह आपके साथ अपरिचित चलता है, जब तक वह रोटी नहीं तोड़ता"
+        "hi": "जब पुनरुत्थित मसीह आपके साथ अपरिचित चलता है, जब तक वह रोटी नहीं तोड़ता",
+        "de": "Als der auferstandene Christus unerkannt mit dir geht – bis er das Brot bricht"
       },
       "estimated_reading_minutes": {
         "es": 10,
@@ -1046,7 +1065,8 @@
         "fr": 10,
         "ja": 10,
         "zh": 10,
-        "hi": 10
+        "hi": 10,
+        "de": 12
       }
     },
     {
@@ -1101,7 +1121,8 @@
         "fr": "great_commission_fr_001.json",
         "ja": "great_commission_ja_001.json",
         "zh": "great_commission_zh_001.json",
-        "hi": "great_commission_hi_001.json"
+        "hi": "great_commission_hi_001.json",
+        "de": "great_commission_de_001.json"
       },
       "titles": {
         "es": "La Gran Comisión",
@@ -1110,7 +1131,8 @@
         "fr": "La Grande Commission",
         "ja": "大宣教命令",
         "zh": "大使命",
-        "hi": "महान आदेश"
+        "hi": "महान आदेश",
+        "de": "Der Missionsbefehl"
       },
       "subtitles": {
         "es": "Cuando Jesús transforma a seguidores en enviados",
@@ -1119,7 +1141,8 @@
         "fr": "Quand Jésus transforme les disciples en envoyés",
         "ja": "イエスが従う者を遣わされる者へと変える時",
         "zh": "当耶稣将跟随者转变为奉差者",
-        "hi": "जब यीशु अनुयायियों को भेजे हुओं में बदल देता है"
+        "hi": "जब यीशु अनुयायियों को भेजे हुओं में बदल देता है",
+        "de": "Als Jesus Nachfolger zu Gesandten macht"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -1128,7 +1151,8 @@
         "fr": 6,
         "ja": 6,
         "zh": 6,
-        "hi": 6
+        "hi": 6,
+        "de": 7
       }
     },
     {
