@@ -11,7 +11,8 @@
         "fr": "mammon_anxiety_freedom_fr_001.json",
         "ja": "mammon_anxiety_freedom_ja_001.json",
         "zh": "mammon_anxiety_freedom_zh_001.json",
-        "hi": "mammon_anxiety_freedom_hi_001.json"
+        "hi": "mammon_anxiety_freedom_hi_001.json",
+        "de": "mammon_anxiety_freedom_de_001.json"
       },
       "titles": {
         "es": "Desatado de las Riquezas: El Camino de la Ansiedad a la Paz",
@@ -20,7 +21,8 @@
         "fr": "Délié des Richesses : Le Chemin de l'Anxiété vers la Paix",
         "ja": "富から解き放たれて：不安から平和への道",
         "zh": "挣脱财富的枷锁：从焦虑到平静的道路",
-        "hi": "धन-दौलत की जंजीरों से आज़ाद: चिंता से शांति का मार्ग"
+        "hi": "धन-दौलत की जंजीरों से आज़ाद: चिंता से शांति का मार्ग",
+        "de": "Befreit vom Mammon: Der Weg von der Angst zum Frieden"
       },
       "subtitles": {
         "es": "Lo que Jesús dijo hace 2000 años es exactamente lo que necesitas escuchar hoy",
@@ -29,7 +31,8 @@
         "fr": "Ce que Jésus a dit il y a 2 000 ans est exactement ce que vous avez besoin d'entendre aujourd'hui",
         "ja": "イエスが2000年前に語られた言葉は、あなたが今日聞く必要があるものです",
         "zh": "耶稣两千年前所说的话，正是你今天需要听到的",
-        "hi": "जो यीशु ने 2,000 वर्ष पहले कहा था, वही आज आपको सुनने की आवश्यकता है"
+        "hi": "जो यीशु ने 2,000 वर्ष पहले कहा था, वही आज आपको सुनने की आवश्यकता है",
+        "de": "Was Jesus vor 2.000 Jahren gesagt hat, ist genau das, was du heute hören musst"
       },
       "estimated_reading_minutes": {
         "es": 12,
@@ -38,7 +41,8 @@
         "fr": 13,
         "ja": 15,
         "zh": 15,
-        "hi": 14
+        "hi": 14,
+        "de": 11
       }
     },
     {
@@ -1357,7 +1361,8 @@
         "fr": "gold_silver_ashes_fr_001.json",
         "ja": "gold_silver_ashes_ja_001.json",
         "zh": "gold_silver_ashes_zh_001.json",
-        "hi": "gold_silver_ashes_hi_001.json"
+        "hi": "gold_silver_ashes_hi_001.json",
+        "de": "gold_silver_ashes_de_001.json"
       },
       "titles": {
         "es": "Oro, Plata o Cenizas",
@@ -1366,7 +1371,8 @@
         "fr": "Or, Argent ou Cendres",
         "ja": "金、銀、それとも灰",
         "zh": "金银还是灰烬",
-        "hi": "सोना, चाँदी या राख"
+        "hi": "सोना, चाँदी या राख",
+        "de": "Gold, Silber oder Asche"
       },
       "subtitles": {
         "es": "Cuando el fuego prueba la calidad de tu obra",
@@ -1375,7 +1381,8 @@
         "fr": "Quand le feu éprouve la qualité de ton œuvre",
         "ja": "火があなたの働きの質を試すとき",
         "zh": "当火试验你工作的质量",
-        "hi": "जब आग आपके काम की गुणवत्ता को परखती है"
+        "hi": "जब आग आपके काम की गुणवत्ता को परखती है",
+        "de": "Wenn das Feuer die Güte deines Werkes prüft"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1384,7 +1391,8 @@
         "fr": 7,
         "ja": 7,
         "zh": 7,
-        "hi": 7
+        "hi": 7,
+        "de": 8
       }
     },
     {
@@ -1398,7 +1406,8 @@
         "pt": "zechariah_14_return_pt_001.json",
         "ja": "zechariah_14_return_ja_001.json",
         "zh": "zechariah_14_return_zh_001.json",
-        "hi": "zechariah_14_return_hi_001.json"
+        "hi": "zechariah_14_return_hi_001.json",
+        "de": "zechariah_14_return_de_001.json"
       },
       "titles": {
         "es": "Zacarías 14: Cuando Sus Pies Toquen el Monte de los Olivos",
@@ -1407,7 +1416,8 @@
         "pt": "Zacarias 14: Quando Seus Pés Tocarem o Monte das Oliveiras",
         "ja": "ゼカリヤ書14章:御足がオリーブ山に触れる時",
         "zh": "撒迦利亚书14章：当祂的脚踏在橄榄山上",
-        "hi": "जकर्याह 14: जब उसके पाँव जैतून पर्वत पर पड़ेंगे"
+        "hi": "जकर्याह 14: जब उसके पाँव जैतून पर्वत पर पड़ेंगे",
+        "de": "Sacharja 14: Wenn Seine Füße den Ölberg Berühren"
       },
       "subtitles": {
         "es": "El día en que el cielo desciende y la tierra es transformada",
@@ -1416,7 +1426,8 @@
         "pt": "O dia em que o céu desce e a terra é transformada",
         "ja": "天が降り、地が変えられる日",
         "zh": "天降大地、地球转化的那一天",
-        "hi": "वह दिन जब स्वर्ग उतरेगा और पृथ्वी बदल जाएगी"
+        "hi": "वह दिन जब स्वर्ग उतरेगा और पृथ्वी बदल जाएगी",
+        "de": "Der Tag, an dem der Himmel herabkommt und die Erde verwandelt wird"
       },
       "estimated_reading_minutes": {
         "es": 9,
@@ -1425,7 +1436,8 @@
         "pt": 9,
         "ja": 9,
         "zh": 9,
-        "hi": 9
+        "hi": 9,
+        "de": 10
       }
     },
     {
@@ -1439,7 +1451,8 @@
         "fr": "full_hands_king_fr_001.json",
         "ja": "full_hands_king_ja_001.json",
         "zh": "full_hands_king_zh_001.json",
-        "hi": "full_hands_king_hi_001.json"
+        "hi": "full_hands_king_hi_001.json",
+        "de": "full_hands_king_de_001.json"
       },
       "titles": {
         "es": "Manos Llenas para el Rey",
@@ -1448,7 +1461,8 @@
         "fr": "Mains Pleines pour le Roi",
         "ja": "王のための満たされた手",
         "zh": "为王预备满手",
-        "hi": "राजा के लिए भरे हाथ"
+        "hi": "राजा के लिए भरे हाथ",
+        "de": "Volle Hände für den König"
       },
       "subtitles": {
         "es": "Cuando el Alfa y la Omega trae su recompensa",
@@ -1457,7 +1471,8 @@
         "fr": "Quand l'Alpha et l'Oméga apporte sa récompense",
         "ja": "アルファとオメガが報いをもって来られるとき",
         "zh": "当阿拉法和俄梅戛带着祂的赏赐而来",
-        "hi": "जब आल्फा और ओमेगा अपना इनाम लेकर आता है"
+        "hi": "जब आल्फा और ओमेगा अपना इनाम लेकर आता है",
+        "de": "Wenn der Alfa und das Omega seinen Lohn bringt"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1466,7 +1481,8 @@
         "fr": 7,
         "ja": 7,
         "zh": 7,
-        "hi": 7
+        "hi": 7,
+        "de": 8
       }
     }
   ]
