@@ -23,29 +23,42 @@ def validate_all_files():
     
     # All files to check
     all_files = [
+        # Base Spanish/RVR1960 (previously missing — caused 66 duplicates to go undetected)
+        "Devocional_year_2025.json",
+        "Devocional_year_2026.json",
+        # German (previously missing)
+        "Devocional_year_2025_de_LU17.json",
+        "Devocional_year_2025_de_SCH2000.json",
+        "Devocional_year_2026_de_LU17.json",
+        "Devocional_year_2026_de_SCH2000.json",
         # English
         "Devocional_year_2025_en_KJV.json",
         "Devocional_year_2025_en_NIV.json",
         "Devocional_year_2026_en_KJV.json",
         "Devocional_year_2026_en_NIV.json",
-        # Spanish
+        # Spanish NVI
         "Devocional_year_2025_es_NVI.json",
         "Devocional_year_2026_es_NVI.json",
-        # Portuguese
-        "Devocional_year_2025_pt_ARC.json",
-        "Devocional_year_2025_pt_NVI.json",
-        "Devocional_year_2026_pt_ARC.json",
-        "Devocional_year_2026_pt_NVI.json",
         # French
         "Devocional_year_2025_fr_LSG1910.json",
         "Devocional_year_2025_fr_TOB.json",
         "Devocional_year_2026_fr_LSG1910.json",
         "Devocional_year_2026_fr_TOB.json",
+        # Hindi (previously missing)
+        "Devocional_year_2025_hi_HERV.json",
+        "Devocional_year_2025_hi_HIOV.json",
+        "Devocional_year_2026_hi_HERV.json",
+        "Devocional_year_2026_hi_HIOV.json",
         # Japanese
         "Devocional_year_2025_ja_リビングバイブル.json",
         "Devocional_year_2025_ja_新改訳2003.json",
         "Devocional_year_2026_ja_リビングバイブル.json",
         "Devocional_year_2026_ja_新改訳2003.json",
+        # Portuguese
+        "Devocional_year_2025_pt_ARC.json",
+        "Devocional_year_2025_pt_NVI.json",
+        "Devocional_year_2026_pt_ARC.json",
+        "Devocional_year_2026_pt_NVI.json",
         # Chinese
         "Devocional_year_2025_zh_和合本1919.json",
         "Devocional_year_2025_zh_新译本.json",
