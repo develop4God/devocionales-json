@@ -49,7 +49,7 @@ ORACION_MIN_CHARS    = 150
 REFLEXION_MIN_CHARS_CJK = 200
 ORACION_MIN_CHARS_CJK   = 60
 CJK_LANGS = {"zh", "ja", "hi"}
-SENTENCE_ENDINGS     = ('.', '!', '?', '»', '"', '\u201c', '\u201d', '।', '。', '！', '？')
+SENTENCE_ENDINGS     = ('.', '!', '?', '»', '"', '“', '”', '’', "'", '।', '。', '！', '？')
 LITURGICAL_WHITELIST = frozenset({
     # Amen variants
     'heilig', 'holy', 'kadosh', 'halleluja', 'hosanna', 'amen', 'amén', 'āmen',
@@ -57,11 +57,18 @@ LITURGICAL_WHITELIST = frozenset({
     'santo', 'saulo', 'saul', 'jerusalem', 'jérusalem',
     # French/Portuguese reflexive & function words that legitimately repeat
     'nous', 'vous', 'mais', 'para', 'tout', 'bien',
+    # English: "God's will will remain forever" (1 Jn 2:17) — noun + modal
+    'will',
+    # Hindi Bible quotations where word repetition is a translation convention:
+    # Heb 4:12: "गांठ गांठ और गूदे गूदे" (joints and marrow)
+    # 2 Cor 9:7: "कुढ़ कुढ़ के" (grudgingly)
+    # Acts 2:4: "अन्य अन्य भाषाओं में" (various languages)
+    'गांठ', 'गूदे', 'कुढ़', 'अन्य',
 })
 AMEN_VARIANTS = frozenset({
     'amen', 'amén', 'āmen',
     'amém',           # Portuguese
-    '阿们', '阿門',    # Chinese (Simplified / Traditional)
+    '阿们', '阿们', '阿门', '阿門', '阿們',    # Chinese (门/们/門 variants, Simplified & Traditional)
     'アーメン',        # Japanese
     'आमीन', 'आमेन',   # Hindi
 })
@@ -75,7 +82,8 @@ def _find_consecutive_dup(text: str):
         w1 = words[i].strip('.,;:!?»"\u201c\u201d').lower()
         w2 = words[i + 1].strip('.,;:!?»"\u201c\u201d').lower()
         # skip sentence boundaries: previous token ends with terminal punctuation
-        if words[i] and words[i][-1] in '.!?:»"\u201d':
+        # also skip comma-separated repeats (biblical anaphora, rhetorical apposition)
+        if words[i] and words[i][-1] in '.!?:,;»"\u201d':
             continue
         if w1 == w2 and len(w1) > 3 and w1 not in LITURGICAL_WHITELIST:
             return f'"{words[i]} {words[i+1]}"'
@@ -83,21 +91,20 @@ def _find_consecutive_dup(text: str):
 
 
 def _check_prayer_ending(oracion: str) -> bool:
-    import unicodedata
-    stripped = oracion.strip().rstrip('.!,;।。！？')
-    # For Latin-script (space-separated): use last space-delimited token
-    tokens = stripped.split()
-    raw_last = tokens[-1].rstrip('.!,;।。！？') if tokens else ''
-    # check raw form first (handles CJK/Indic Amen variants like 阿们, आमीन)
-    if raw_last.lower() in AMEN_VARIANTS:
-        return True
-    # also check the last few characters of the full stripped text for CJK
+    import unicodedata, re
+    tail = oracion.strip()[-60:].lower()  # lowercase for case-insensitive match
+    # check raw form for CJK/Indic Amen variants
     for variant in AMEN_VARIANTS:
-        if stripped.endswith(variant):
+        if variant in tail:
             return True
-    # normalise accents for Latin-script variants (amén → amen, etc.)
-    normalised = unicodedata.normalize('NFD', raw_last).encode('ascii', 'ignore').decode().lower()
-    return normalised in AMEN_VARIANTS
+    # check last space-delimited token (Latin scripts)
+    tokens = oracion.strip().rstrip('.!,;।。！？').split()
+    if tokens:
+        raw_last = tokens[-1].rstrip('.!,;।。！？')
+        normalised = unicodedata.normalize('NFD', raw_last).encode('ascii', 'ignore').decode().lower()
+        if normalised in AMEN_VARIANTS:
+            return True
+    return False
 
 
 def check_content_quality(entry: dict, lang: str = "") -> list:
