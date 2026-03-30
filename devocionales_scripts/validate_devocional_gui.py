@@ -134,6 +134,7 @@ def check_content_quality(entry: dict, lang: str = "") -> list:
     if dup: issues.append(f'dup_words_reflexion: {dup}')
     dup = _find_consecutive_dup(o)
     if dup: issues.append(f'dup_words_oracion: {dup}')
+    issues.extend(check_seasonal_content(r, o))
 
     return issues
 
@@ -153,6 +154,70 @@ def check_latin(text: str, extra: set) -> tuple[list, dict]:
 def check_spanish_leak(text: str) -> list:
     words = set(re.findall(r"[A-Za-zÁáÉéÍíÓóÚúÑñÜü]+", text))
     return [w for w in SPANISH_LEAKS if w in words]
+
+
+# ── Seasonal content detection ────────────────────────────────────────────────
+# Calendar-holiday framing injected by AI generators.  Devotionals should be
+# verse-focused year-round; seasonal openers like "On this Christmas morning…"
+# are a content error regardless of the date of the entry.
+SEASONAL_RE = re.compile(
+    r'(?:'
+    # Spanish
+    r'\b[Nn]avidad\b'
+    r'|[Nn]ochebuena'
+    r'|[Nn]ochevieja'
+    r'|[Aa]ño [Nn]uevo'
+    r'|primer[o]? del año'
+    r'|[Ee]ste día celebramos el nacimiento'
+    r'|[Ee]n este día.{0,20}celebr'
+    # Portuguese
+    r'|[Nn]atal\b'
+    r'|[Aa]no [Nn]ovo'
+    r'|espírito natalino'
+    r'|véspera de [Nn]atal'
+    r'|[Nn]este [Nn]atal\b'
+    r'|natalino'
+    # French
+    r'|\b[Nn]oël\b'
+    r'|[Jj]our de l.An\b'
+    r'|premier jour de l.ann[eé]e'
+    r'|[Ee]n ce jour de ce '
+    r'|alors que nous célébrons la (?:venue|promesse)'
+    r'|alors que nos c[oœ]urs se remplissent de joie et de célébration'
+    # German
+    r'|[Ww]eihnacht(?:en|s)?'
+    r'|[Ss]ilvester\b'
+    r'|[Nn]eujahr\b'
+    # English
+    r'|\b[Cc]hristmas\b'
+    r'|[Nn]ew [Yy]ear.s'
+    r'|[Hh]oliday season'
+    # Japanese
+    r'|クリスマス'
+    r'|降誕祭'
+    r'|お正月'
+    # Chinese (Simplified + Traditional)
+    r'|[圣聖][诞誕][节節]'
+    r'|元[旦旦]'
+    # Hindi
+    r'|क्रिसमस'
+    r'|नया साल'
+    r'|नव वर्ष'
+    r')',
+    re.UNICODE,
+)
+
+
+def check_seasonal_content(reflexion: str, oracion: str) -> list:
+    """Returns list of 'seasonal_content' issues if holiday framing detected."""
+    issues = []
+    m = SEASONAL_RE.search(reflexion)
+    if m:
+        issues.append(f'seasonal_content reflexion: "{m.group(0)}" at pos {m.start()}')
+    m = SEASONAL_RE.search(oracion)
+    if m:
+        issues.append(f'seasonal_content oracion: "{m.group(0)}" at pos {m.start()}')
+    return issues
 
 
 def validate(filepath, lang_override, version_override):
