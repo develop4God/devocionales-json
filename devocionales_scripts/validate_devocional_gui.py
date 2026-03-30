@@ -242,6 +242,17 @@ def validate(filepath, lang_override, version_override):
     expected_year    = int(match.group("year"))    if match else None
     expected_lang    = lang_override.strip()    or (match.group("lang")    if match else None)
     expected_version = version_override.strip() or (match.group("version") if match else None)
+
+    # For base files without lang/version in filename, auto-detect from data
+    if expected_lang is None and not lang_override.strip():
+        try:
+            _probe = json.load(open(path, encoding="utf-8"))
+            _keys = list(_probe.get("data", {}).keys())
+            if len(_keys) == 1:
+                expected_lang = _keys[0]
+        except Exception:
+            pass
+
     ok(f"Lang: {expected_lang} | Version: {expected_version} | Year: {expected_year}")
 
     non_latin = expected_lang in NON_LATIN_LANGS
