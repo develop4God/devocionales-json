@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-validate_devocional_gui.py — v4
+validate_devocional_gui.py — v5
 - Non-Latin langs (hi, ja, zh): flag Latin chars, group allowed labels
 - Latin langs (en, pt, fr): detect Spanish leaks
 - Content quality checks (Phase 1): truncation, min length, prayer ending,
@@ -29,45 +29,78 @@ ALWAYS_ALLOWED  = {"HIOV", "OV", "HERV", "ERV", "KJV", "NIV", "NVI",
                    "RVR1960", "ARC", "TOB", "LSG1910"}
 LATIN_RE = re.compile(r"[a-zA-Z]+")
 
-# Spanish leak words to detect in non-Spanish Latin-script files
+# Spanish-ONLY leak words — terms unambiguously Spanish that would NOT appear
+# legitimately in French or Portuguese devotional content.
+# Removed cross-language Christian terms (Jesus/Amen/Padre/gloria/gracia)
+# that are shared vocabulary in all Romance-language devotionals.
 SPANISH_LEAKS = {
-    "Amén", "amen", "Jesús", "Jesus", "Señor", "señor", "también",
-    "también", "Espíritu", "espíritu", "oración", "también", "Padre",
-    "padre", "gracia", "gloria", "alabanza", "misericordia", "Salvador",
-    "salvador", "bendición", "bendicion", "nombre", "santo", "santa",
-    "corazón", "corazon", "Dios",
+    "también", "así", "nosotros", "nuestro", "nuestros", "nuestra", "nuestras",
+    "también", "arrepentimiento", "salvación", "hermanos",
+    "En el nombre de Jesús", "en el nombre de Jesús",
+    "nombre de Jesús",
 }
 
 
 # ── Content quality constants (Phase 1) ──────────────────────────────────────
+# Latin-script minimum lengths
 REFLEXION_MIN_CHARS  = 800
 ORACION_MIN_CHARS    = 150
+# CJK/Indic scripts pack ~3-5x meaning per character — use lower thresholds
+REFLEXION_MIN_CHARS_CJK = 200
+ORACION_MIN_CHARS_CJK   = 60
+CJK_LANGS = {"zh", "ja", "hi"}
 SENTENCE_ENDINGS     = ('.', '!', '?', '»', '"', '\u201c', '\u201d', '।', '。', '！', '？')
 LITURGICAL_WHITELIST = frozenset({
-    'heilig', 'holy', 'kadosh', 'halleluja', 'hosanna', 'amen', 'amén', 'āmen'
+    # Amen variants
+    'heilig', 'holy', 'kadosh', 'halleluja', 'hosanna', 'amen', 'amén', 'āmen',
+    # Trisagion / biblical call repetitions (Isa 6:3, Acts 9:4, Mt 23:37 etc.)
+    'santo', 'saulo', 'saul', 'jerusalem', 'jérusalem',
+    # French/Portuguese reflexive & function words that legitimately repeat
+    'nous', 'vous', 'mais', 'para', 'tout', 'bien',
 })
-AMEN_VARIANTS = frozenset({'amen', 'amén', 'āmen'})
+AMEN_VARIANTS = frozenset({
+    'amen', 'amén', 'āmen',
+    'amém',           # Portuguese
+    '阿们', '阿門',    # Chinese (Simplified / Traditional)
+    'アーメン',        # Japanese
+    'आमीन', 'आमेन',   # Hindi
+})
 
 
 def _find_consecutive_dup(text: str):
-    """Returns first consecutive duplicate word (len > 3, not liturgical), or None."""
+    """Returns first consecutive duplicate word (len > 3, not liturgical,
+    not a sentence boundary), or None."""
     words = text.split()
     for i in range(len(words) - 1):
-        w1 = words[i].strip('.,;:!?').lower()
-        w2 = words[i + 1].strip('.,;:!?').lower()
+        w1 = words[i].strip('.,;:!?»"\u201c\u201d').lower()
+        w2 = words[i + 1].strip('.,;:!?»"\u201c\u201d').lower()
+        # skip sentence boundaries: previous token ends with terminal punctuation
+        if words[i] and words[i][-1] in '.!?:»"\u201d':
+            continue
         if w1 == w2 and len(w1) > 3 and w1 not in LITURGICAL_WHITELIST:
             return f'"{words[i]} {words[i+1]}"'
     return None
 
 
 def _check_prayer_ending(oracion: str) -> bool:
-    last = oracion.strip().rstrip('.!,;।').split()[-1].lower()
     import unicodedata
-    last = unicodedata.normalize('NFD', last).encode('ascii', 'ignore').decode()
-    return last in AMEN_VARIANTS
+    stripped = oracion.strip().rstrip('.!,;।。！？')
+    # For Latin-script (space-separated): use last space-delimited token
+    tokens = stripped.split()
+    raw_last = tokens[-1].rstrip('.!,;।。！？') if tokens else ''
+    # check raw form first (handles CJK/Indic Amen variants like 阿们, आमीन)
+    if raw_last.lower() in AMEN_VARIANTS:
+        return True
+    # also check the last few characters of the full stripped text for CJK
+    for variant in AMEN_VARIANTS:
+        if stripped.endswith(variant):
+            return True
+    # normalise accents for Latin-script variants (amén → amen, etc.)
+    normalised = unicodedata.normalize('NFD', raw_last).encode('ascii', 'ignore').decode().lower()
+    return normalised in AMEN_VARIANTS
 
 
-def check_content_quality(entry: dict) -> list:
+def check_content_quality(entry: dict, lang: str = "") -> list:
     """
     Phase 1 content checks — returns list of issue strings.
     Checks: min length, truncation, prayer ending, double Amen, dup words.
@@ -76,10 +109,14 @@ def check_content_quality(entry: dict) -> list:
     r = entry.get('reflexion', '').strip()
     o = entry.get('oracion',   '').strip()
 
-    if len(r) < REFLEXION_MIN_CHARS:
-        issues.append(f'reflexion too short: {len(r)} chars (min {REFLEXION_MIN_CHARS})')
-    if len(o) < ORACION_MIN_CHARS:
-        issues.append(f'oracion too short: {len(o)} chars (min {ORACION_MIN_CHARS})')
+    cjk = lang in CJK_LANGS
+    r_min = REFLEXION_MIN_CHARS_CJK if cjk else REFLEXION_MIN_CHARS
+    o_min = ORACION_MIN_CHARS_CJK   if cjk else ORACION_MIN_CHARS
+
+    if len(r) < r_min:
+        issues.append(f'reflexion too short: {len(r)} chars (min {r_min})')
+    if len(o) < o_min:
+        issues.append(f'oracion too short: {len(o)} chars (min {o_min})')
     if r and not r.endswith(SENTENCE_ENDINGS):
         issues.append(f'reflexion truncated — ends: ...{r.rstrip()[-40:]}')
     if len(re.findall(r'\bAm[eé]n\b', o[-120:], re.IGNORECASE)) >= 2:
@@ -212,14 +249,14 @@ def validate(filepath, lang_override, version_override):
                 for word in bad: latin_issues.append(f"{date_key} [{field}]: \"{word}\"")
                 for lbl, cnt in labels.items(): label_totals[lbl] = label_totals.get(lbl, 0) + cnt
 
-        # Spanish leak check
-        if latin_script:
-            for field in ["reflexion", "oracion"]:
-                leaks = check_spanish_leak(entry.get(field, ""))
-                for word in leaks: spanish_issues.append(f"{date_key} [{field}]: \"{word}\"")
+        # Spanish leak check (only for non-Spanish Latin-script files)
+        if latin_script and expected_lang != "es":
+            text_combined = entry.get("reflexion", "") + " " + entry.get("oracion", "")
+            leaks = check_spanish_leak(text_combined)
+            for word in leaks: spanish_issues.append(f"{date_key}: \"{word}\"")
 
         # Content quality check (Phase 1)
-        for issue in check_content_quality(entry):
+        for issue in check_content_quality(entry, expected_lang or ""):
             content_issues.append(f"{date_key}: {issue}")
 
     # Summaries
