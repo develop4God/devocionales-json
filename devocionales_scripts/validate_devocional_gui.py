@@ -323,6 +323,7 @@ def validate(filepath, lang_override, version_override):
                 for j, ref in enumerate(pm):
                     for pf in PARA_MEDITAR_FIELDS:
                         if pf not in ref: e(f"[{eid}] para_meditar[{j}] missing '{pf}'")
+                        elif not (ref[pf] or "").strip(): e(f"[{eid}] para_meditar[{j}] empty '{pf}'")
         if "tags" in entry and not isinstance(entry["tags"], list): e(f"[{eid}] tags not a list")
 
         # Non-Latin script check
