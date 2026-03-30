@@ -24,8 +24,25 @@ For each language listed under `files` in `index.json` for this study (excluding
 
 ---
 
-## Bible Versions
+
+## Bible Versions & Verse Resolver
 Import from `bible_versions.py` — never hardcode versions. Primary version per language:
+
+**Verse Resolver Requirement:**
+All verse lookups, citation translation, and verse text extraction must use the shared resolver in `devocionales_scripts/verse_resolver.py`. Do not manually map, hardcode, or copy-paste verse text or references. The resolver ensures consistent, accurate, and language-appropriate results for all supported Bibles.
+
+**How to use:**
+Import and use as follows:
+
+```python
+from verse_resolver import VerseResolver
+
+with VerseResolver(sqlite_path, book_map_path, target_lang) as resolver:
+	citation, text, error = resolver.resolve("John 3:16")
+```
+
+See the script for full usage details. All translation and validation scripts must use this resolver for any Bible verse content.
+
 
 | Language | Code | Primary Version |
 |---|---|---|
