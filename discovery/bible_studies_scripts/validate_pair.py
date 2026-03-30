@@ -62,6 +62,23 @@ def W(msg):
     warn(msg)
 
 
+# ── Shared-word allow-list ────────────────────────────────────────────────────
+# Short category labels that are identical in German and English (international
+# loan-words).  These must_differ checks would otherwise produce false positives.
+_DE_SHARED_CATEGORY_WORDS = {
+    "Motivation",
+    "Situation",
+    "Kontext",
+    "Meditation",
+    "Vision",
+    "Mission",
+    "Transformation",
+    "Identität",
+    "Analyse",
+    "Reflexion",
+    "Resonanz",
+}
+
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 def load(path: Path):
@@ -103,7 +120,9 @@ def check_field(src, tgt, key, ctx, *, must_differ=False, required=True):
 
     if must_differ and isinstance(src_val, str) and isinstance(tgt_val, str):
         if src_val.strip() == tgt_val.strip():
-            W(f"{ctx}: field '{key}' appears untranslated (identical to source)")
+            # Skip false positives for international words identical in DE and EN
+            if tgt_val.strip() not in _DE_SHARED_CATEGORY_WORDS:
+                W(f"{ctx}: field '{key}' appears untranslated (identical to source)")
 
 
 def keys_parity(src: dict, tgt: dict, ctx: str):

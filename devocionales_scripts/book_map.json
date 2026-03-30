@@ -1,5 +1,5 @@
 {
-  "_comment": "Agnostic book map. book_number matches the numbering used in all Bible SQLite DBs (multiples of 10). Add a <lang>_name key per language as needed.",
+  "_comment": "book_map.json — Single source of truth for Bible book name mappings across languages. Used by verse_resolver.py. EN keys must match English reference format (e.g. '1 Corinthians', 'Psalms'). Add '<lang>_name' keys to support more languages.",
   "OT": {
     "Genesis": { "book_number": 10, "de_name": "1. Mose" },
     "Exodus": { "book_number": 20, "de_name": "2. Mose" },
@@ -19,12 +19,11 @@
     "Nehemiah": { "book_number": 160, "de_name": "Nehemia" },
     "Esther": { "book_number": 190, "de_name": "Ester" },
     "Job": { "book_number": 220, "de_name": "Hiob" },
-    "Psalm": { "book_number": 230, "de_name": "Psalm" },
     "Psalms": { "book_number": 230, "de_name": "Psalm" },
+    "Psalm": { "book_number": 230, "de_name": "Psalm" },
     "Proverbs": { "book_number": 240, "de_name": "Sprüche" },
     "Ecclesiastes": { "book_number": 250, "de_name": "Prediger" },
-    "Song of Solomon": { "book_number": 260, "de_name": "Hohelied" },
-    "Song of Songs": { "book_number": 260, "de_name": "Hohelied" },
+    "Song of Solomon": { "book_number": 260, "de_name": "Hoheslied" },
     "Isaiah": { "book_number": 290, "de_name": "Jesaja" },
     "Jeremiah": { "book_number": 300, "de_name": "Jeremia" },
     "Lamentations": { "book_number": 310, "de_name": "Klagelieder" },
@@ -38,7 +37,7 @@
     "Micah": { "book_number": 400, "de_name": "Micha" },
     "Nahum": { "book_number": 410, "de_name": "Nahum" },
     "Habakkuk": { "book_number": 420, "de_name": "Habakuk" },
-    "Zephaniah": { "book_number": 430, "de_name": "Zephanja" },
+    "Zephaniah": { "book_number": 430, "de_name": "Zefanja" },
     "Haggai": { "book_number": 440, "de_name": "Haggai" },
     "Zechariah": { "book_number": 450, "de_name": "Sacharja" },
     "Malachi": { "book_number": 460, "de_name": "Maleachi" }
