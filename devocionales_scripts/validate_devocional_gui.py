@@ -295,7 +295,9 @@ def validate(filepath, lang_override, version_override):
         return False, "\n".join(lines), summary
 
     seen_dates = {}
+    seen_ids   = {}   # per-file duplicate ID tracking
     version_mismatches, lang_mismatches, latin_issues, spanish_issues, content_issues = [], [], [], [], []
+    dup_id_issues = []
     label_totals = {}
     extra_allowed = {expected_version} if expected_version else set()
 
@@ -303,8 +305,27 @@ def validate(filepath, lang_override, version_override):
         eid = entry.get("id", f"UNKNOWN@{date_key}")
 
         for field in REQUIRED_FIELDS:
-            if field not in entry: e(f"[{eid}] Missing: '{field}'")
-            elif isinstance(entry[field], str) and not entry[field].strip(): e(f"[{eid}] Empty: '{field}'")
+            if field not in entry:
+                e(f"[{eid}] Missing: '{field}'")
+            elif isinstance(entry[field], str) and not entry[field].strip():
+                e(f"[{eid}] Empty string: '{field}'")
+            elif isinstance(entry[field], list) and len(entry[field]) == 0:
+                e(f"[{eid}] Empty list: '{field}'")
+
+        # Per-file duplicate ID check
+        raw_id = entry.get("id", "")
+        if raw_id:
+            if raw_id in seen_ids:
+                dup_id_issues.append(f"[{raw_id}] duplicate — also at date {seen_ids[raw_id]}")
+                e(f"[{raw_id}] DUPLICATE ID within file (also at {seen_ids[raw_id]})")
+            else:
+                seen_ids[raw_id] = date_key
+
+        # Empty-string items inside tags list
+        if isinstance(entry.get("tags"), list):
+            for i, tag in enumerate(entry["tags"]):
+                if not (tag or "").strip():
+                    e(f"[{eid}] tags[{i}] is empty")
 
         if expected_version and entry.get("version") != expected_version:
             version_mismatches.append(f"[{eid}] version='{entry.get('version')}' expected='{expected_version}'")
@@ -313,12 +334,15 @@ def validate(filepath, lang_override, version_override):
 
         entry_date = entry.get("date", "")
         if entry_date != date_key: e(f"[{eid}] date '{entry_date}' ≠ key '{date_key}'")
-        if entry_date in seen_dates: e(f"Duplicate: {entry_date}")
+        if entry_date in seen_dates: e(f"Duplicate date: {entry_date}")
         else: seen_dates[entry_date] = eid
 
         pm = entry.get("para_meditar")
         if pm is not None:
-            if not isinstance(pm, list): e(f"[{eid}] para_meditar not a list")
+            if not isinstance(pm, list):
+                e(f"[{eid}] para_meditar not a list")
+            elif len(pm) == 0:
+                e(f"[{eid}] para_meditar is empty list")
             else:
                 for j, ref in enumerate(pm):
                     for pf in PARA_MEDITAR_FIELDS:
@@ -366,6 +390,12 @@ def validate(filepath, lang_override, version_override):
         for si in deduped[:15]: lines.append(f"    {si}")
         if len(deduped) > 15: lines.append(f"    ... and {len(deduped)-15} more")
 
+    if dup_id_issues:
+        for di in dup_id_issues[:10]: lines.append(f"    {di}")
+        if len(dup_id_issues) > 10: lines.append(f"    ... and {len(dup_id_issues)-10} more")
+    else:
+        ok("No duplicate IDs within file")
+
     if content_issues:
         e(f"CONTENT ISSUES — {len(content_issues)} entries")
         for ci in content_issues[:20]: lines.append(f"    {ci}")
@@ -397,6 +427,7 @@ def validate(filepath, lang_override, version_override):
         "version_err": len(version_mismatches), "lang_err": len(lang_mismatches),
         "date_gaps": gap_count, "latin_err": len(latin_issues) + len(spanish_issues),
         "content_err": len(content_issues),
+        "dup_id_err": len(dup_id_issues),
         "other_err": 0, "status": "✅ PASSED" if passed else "❌ FAILED",
     })
     return passed, "\n".join(lines), summary
@@ -507,6 +538,7 @@ if __name__ == "__main__":
         print(f"  Entries   : {summary['entries']}")
         print(f"  Version ❌ : {summary['version_err'] or '✅'}")
         print(f"  Lang ❌    : {summary['lang_err'] or '✅'}")
+        print(f"  Dup IDs ❌ : {summary.get('dup_id_err', 0) or '✅'}")
         print(f"  Gaps ⚠️   : {summary['date_gaps'] or '✅'}")
         print(f"  Char Issues: {summary['latin_err'] or '✅'}")
         print(f"  Content ❌ : {summary['content_err'] or '✅'}")
