@@ -1,102 +1,168 @@
-# Devotional Scripts
+# devocionales_scripts
 
-This folder contains scripts for managing and validating devotional JSON files.
+Validation and maintenance tools for the `devocionales-json` repository.
 
-## Overview
+**Last full validation run:** 2026-03-30 · 32 files · 11 680 entries · all checks passed.
 
-This collection of scripts was created to fix a critical bug where devotional IDs were not properly formatted, leading to duplicate IDs and data integrity issues. **Total fixes: 4,205 entries across 22 files in 6 languages.**
+---
 
 ## Scripts
 
-### fix_devotional_ids.py
+### `validate_devocional_gui.py` — primary validator (v5)
 
-**Purpose**: Fixes incorrect ID format in Japanese and Chinese devotional files.
+Validates a single devotional JSON file.  Run in **GUI mode** (no args) or **CLI mode** (`--file`).
 
-**Problem Solved**: Japanese and Chinese devotional files had incorrect ID formats that only included version and date, missing the critical chapter and verse information needed for unique identification.
-
-**What it does**:
-1. Parses scripture references to extract book, chapter, and verse
-2. Fixes ID format in Japanese and Chinese files (2025 and 2026)
-3. Converts IDs from format: `"リビングバイブル-20250801"` to `"galatians2v20LB20250801"`
-4. Validates all language files for duplicate IDs
-5. Generates a comprehensive report
-
-**Usage**:
 ```bash
-python3 scripts/fix_devotional_ids.py
+# CLI
+python3 validate_devocional_gui.py --file ../Devocional_year_2026_de_LU17.json
+
+# GUI
+python3 validate_devocional_gui.py
 ```
 
-**Files Fixed**: 8 files (JA and ZH for 2025 and 2026)
-**Entries Fixed**: 2,565 entries
+**All checks performed:**
 
----
+| Category | Detail |
+|---|---|
+| Required fields present | All 9 fields must exist and be non-empty |
+| Empty string | `versiculo`, `reflexion`, `oracion`, `language`, `version`, `date`, `id` must not be `""` |
+| Empty list | `tags` and `para_meditar` must not be `[]` |
+| Empty list items | Every `tags[n]` must be non-empty; every `para_meditar[n].cita` and `.texto` must be non-empty |
+| Metadata match | `language` and `version` fields must match what is encoded in the filename |
+| Date key match | Entry `date` value must match its parent date key |
+| Per-file duplicate dates | Same date cannot appear twice within one file |
+| **Per-file duplicate IDs** | Same `id` cannot appear twice within one file |
+| Date continuity | No missing days between first and last entry |
+| Entry count | Warns if < 365 entries |
+| Reflexion min length | ≥ 800 chars (Latin scripts); ≥ 200 chars (CJK/Indic — `zh`, `ja`, `hi`) |
+| Oracion min length | ≥ 150 chars (Latin); ≥ 60 chars (CJK/Indic) |
+| Reflexion truncation | Must end with `.`, `!`, `?`, `»`, `"`, `'`, `।`, `。`, `！`, or `？` |
+| Prayer Amen ending | `oracion` must end with a recognised Amen variant |
+| Double Amen | Flags duplicate Amen in closing 120 chars |
+| Consecutive duplicate words | Flags AI-generated word repetition (liturgical anaphora whitelisted) |
+| Seasonal content | Flags holiday framing injected by AI (Christmas, New Year, etc.) in 8 languages |
+| Non-Latin charset | `hi`, `ja`, `zh`: unexpected Latin words are flagged |
+| Spanish vocabulary leak | `fr`, `pt`, `en`: Spanish-only words are flagged |
 
-### fix_remaining_ids.py
-
-**Purpose**: Fixes ID format in English, Spanish, Portuguese, and French devotional files.
-
-**Problem Solved**: After fixing JA and ZH files, validation revealed that other language files also had inconsistent ID formats where many IDs were missing the date component, causing duplicate IDs across different years.
-
-**What it does**:
-1. Checks all EN, ES, PT, and FR files
-2. Ensures all IDs include the date component for uniqueness
-3. Appends date to IDs that are missing it
-
-**Usage**:
-```bash
-python3 scripts/fix_remaining_ids.py
+**CLI output example:**
+```
+  Entries   : 365
+  Version ❌ : ✅
+  Lang ❌    : ✅
+  Dup IDs ❌ : ✅
+  Gaps ⚠️   : ✅
+  Char Issues: ✅
+  Content ❌ : ✅
+  Status     : ✅ PASSED
 ```
 
-**Files Fixed**: 14 files (EN, ES, PT, FR for 2025 and 2026)
-**Entries Fixed**: 1,640 entries
-
 ---
 
-### validate_duplicates.py
+### `validate_duplicates.py` — cross-file duplicate ID checker
 
-**Purpose**: Final validation script to check for duplicate IDs across ALL devotional files.
+Checks that every `id` is globally unique across **all 32 production files** (11 680 entries).
 
-**What it does**:
-1. Scans all 22 devotional files
-2. Checks for duplicate IDs across the entire dataset
-3. Reports any duplicates with file locations
-
-**Usage**:
 ```bash
-python3 scripts/validate_duplicates.py
+python3 validate_duplicates.py
+# Run from the repo root:
+python3 devocionales_scripts/validate_duplicates.py
 ```
 
-**Result**: ✅ 0 duplicate IDs found (after fixes)
+Scans all files listed inside the script. Reports duplicate IDs with their file and date location.
+
+**Expected result after any valid release:**
+```
+✅ NO DUPLICATE IDs FOUND!
+All devotional files have unique IDs. ✨
+```
 
 ---
 
-## ID Format
+### `verse_resolver.py` — verse lookup utility
 
-**Correct format**: `{book}{chapter}v{verse}{version}{date}`
+Resolves an English Bible reference to target-language citation and verse text, using the gzip-compressed SQLite3 databases in `../bible_database/`.
 
-**Examples**:
-- English: `"john15v5KJV20250801"`
-- Japanese: `"galatians2v20LB20250801"`
-- Chinese: `"james2v17CUV191920250801"`
-- French: `"heb13v5LSG191020251015"`
+```python
+from verse_resolver import VerseResolver
 
-**Components**:
-- **Book**: English abbreviation (e.g., galatians, john, james)
-- **Chapter**: Chapter number (e.g., 2, 15)
-- **v**: Separator
-- **Verse**: Verse number or range (e.g., 20, 1516 for 15-16)
-- **Version**: Bible version abbreviation (e.g., KJV, LB, CUV1919)
-- **Date**: YYYYMMDD format (e.g., 20250801)
+with VerseResolver("../bible_database/LU17_de.SQLite3.gz", "book_map.json", "de") as r:
+    cita, texto, error = r.resolve("Luke 19:10")
+    # ("Lukas 19:10", "Denn der Menschensohn ist gekommen...", None)
+```
+
+**Used by:** maintenance scripts that need to fill missing `para_meditar.texto` fields when a verse is absent or empty in the target Bible database.
+
+**Note on absent verses:** Some translations omit textually disputed verses (e.g., Matthew 18:11 in LU17; Ephesians 1:4–5 in HERV). When `texto` returns `""`, use a canonical equivalent from the same translation (e.g., Luke 19:10 for LU17; Galatians 4:5 for HERV).
 
 ---
 
-## Reports
+### `fix_devotional_ids.py` — one-time ID repair utility
 
-### id_fix_report.txt
-Initial report from fixing JA and ZH files only (2,565 entries).
+**Status:** completed historical fix — do not re-run on production files.
 
-### FINAL_REPORT.txt
-Comprehensive report covering all fixes across all languages (4,205 entries total).
+Fixed 4 205 entries across 22 files where IDs were missing the book/chapter/verse component or the date component, causing cross-year duplicates.
+
+| Phase | Files | Entries fixed |
+|---|---|---|
+| JA + ZH (missing book/ch/vs) | 8 files | 2 565 |
+| EN + ES + PT + FR (missing date) | 14 files | 1 640 |
+
+---
+
+### `extract_unique_tags.py`
+
+Scans all production files and prints a sorted, deduplicated list of all tag values used across every entry.  Useful for auditing tag vocabulary consistency.
+
+```bash
+python3 extract_unique_tags.py
+```
+
+---
+
+### `book_map.json`
+
+Maps English canonical book names to their counterparts in each supported language.  Used by `verse_resolver.py` and `fix_devotional_ids.py`.
+
+Structure:
+```json
+{
+  "OT": { "Genesis": { "book_number": 1, "de_name": "1. Mose", "hi_name": "उत्पत्ति", ... } },
+  "NT": { "Matthew": { "book_number": 40, "de_name": "Matthäus", ... } }
+}
+```
+
+---
+
+## Running all 32 files in one pass
+
+```bash
+cd /path/to/devocionales-json
+
+for f in Devocional_year_2025.json Devocional_year_2026.json \
+  Devocional_year_{2025,2026}_{de_LU17,de_SCH2000,en_KJV,en_NIV,es_NVI,\
+fr_LSG1910,fr_TOB,hi_HERV,hi_HIOV,pt_ARC,pt_NVI}.json \
+  "Devocional_year_2025_ja_リビングバイブル.json" "Devocional_year_2025_ja_新改訳2003.json" \
+  "Devocional_year_2026_ja_リビングバイブル.json" "Devocional_year_2026_ja_新改訳2003.json" \
+  "Devocional_year_2025_zh_和合本1919.json" "Devocional_year_2025_zh_新译本.json" \
+  "Devocional_year_2026_zh_和合本1919.json" "Devocional_year_2026_zh_新译本.json"; do
+    result=$(python3 devocionales_scripts/validate_devocional_gui.py --file "$f" 2>&1)
+    status=$(echo "$result" | grep "Status" | tail -1)
+    echo "$f | $status"
+done
+
+python3 devocionales_scripts/validate_duplicates.py
+```
+
+---
+
+## Known translation quirks
+
+| Version | Quirk | Handling |
+|---|---|---|
+| HIOV (Hindi OV) | Labels itself `(ओ.वी.)` in `versiculo`, not `HIOV` | Expected — validator accepts this alias |
+| LU17 (Luther 2017) | Matthew 18:11 is absent (disputed verse omitted) | Use Luke 19:10 as canonical equivalent |
+| HERV (Hindi ERV) | Ephesians 1:4–5 empty in DB (restructured into vv.3 and 6) | Use Galatians 4:5 as canonical equivalent |
+| LU17 / HERV | Some book numbers differ from standard (Matthew=470, not 40) | `verse_resolver.py` handles this via `book_map.json` |
 
 **Summary**:
 - **Total files fixed**: 22 files (6 languages × ~4 files each)
