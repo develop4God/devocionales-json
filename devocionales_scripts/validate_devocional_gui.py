@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
 """
-validate_devocional_gui.py — v3
+validate_devocional_gui.py — v5
 - Non-Latin langs (hi, ja, zh): flag Latin chars, group allowed labels
 - Latin langs (en, pt, fr): detect Spanish leaks
+- Content quality checks (Phase 1): truncation, min length, prayer ending,
+  double Amen, consecutive duplicate words (len > 3)
+
+Usage:
+  GUI mode  : python validate_devocional_gui.py
+  CLI mode  : python validate_devocional_gui.py --file path.json --lang de --version LU17
 """
 
-import json, re, tkinter as tk
+import json, re, sys, argparse, tkinter as tk
 from tkinter import filedialog, ttk, scrolledtext
 from pathlib import Path
 from datetime import date, timedelta
@@ -23,12 +29,114 @@ ALWAYS_ALLOWED  = {"HIOV", "OV", "HERV", "ERV", "KJV", "NIV", "NVI",
                    "RVR1960", "ARC", "TOB", "LSG1910"}
 LATIN_RE = re.compile(r"[a-zA-Z]+")
 
-# Spanish leak: per-language accent patterns (excludes accents native to each language)
-SPANISH_ACCENT_BY_LANG = {
-    "fr": re.compile(r"[áíóúÁÍÓÚñÑ]"),   # French has é,è,à — only flag non-French accents
-    "en": re.compile(r"[áéíóúÁÉÍÓÚñÑ]"),  # English: all Spanish accents
-    "pt": re.compile(r"[íñÑ]"),            # Portuguese has ã,ê,â,ó,á — only flag í and ñ
+# Spanish-ONLY leak words — terms unambiguously Spanish that would NOT appear
+# legitimately in French or Portuguese devotional content.
+# Removed cross-language Christian terms (Jesus/Amen/Padre/gloria/gracia)
+# that are shared vocabulary in all Romance-language devotionals.
+SPANISH_LEAKS = {
+    "también", "así", "nosotros", "nuestro", "nuestros", "nuestra", "nuestras",
+    "también", "arrepentimiento", "salvación", "hermanos",
+    "En el nombre de Jesús", "en el nombre de Jesús",
+    "nombre de Jesús",
 }
+
+
+# ── Content quality constants (Phase 1) ──────────────────────────────────────
+# Latin-script minimum lengths
+REFLEXION_MIN_CHARS  = 800
+ORACION_MIN_CHARS    = 150
+# CJK/Indic scripts pack ~3-5x meaning per character — use lower thresholds
+REFLEXION_MIN_CHARS_CJK = 200
+ORACION_MIN_CHARS_CJK   = 60
+CJK_LANGS = {"zh", "ja", "hi"}
+SENTENCE_ENDINGS     = ('.', '!', '?', '»', '"', '“', '”', '’', "'", '।', '。', '！', '？')
+LITURGICAL_WHITELIST = frozenset({
+    # Amen variants
+    'heilig', 'holy', 'kadosh', 'halleluja', 'hosanna', 'amen', 'amén', 'āmen',
+    # Trisagion / biblical call repetitions (Isa 6:3, Acts 9:4, Mt 23:37 etc.)
+    'santo', 'saulo', 'saul', 'jerusalem', 'jérusalem',
+    # French/Portuguese reflexive & function words that legitimately repeat
+    'nous', 'vous', 'mais', 'para', 'tout', 'bien',
+    # English: "God's will will remain forever" (1 Jn 2:17) — noun + modal
+    'will',
+    # Hindi Bible quotations where word repetition is a translation convention:
+    # Heb 4:12: "गांठ गांठ और गूदे गूदे" (joints and marrow)
+    # 2 Cor 9:7: "कुढ़ कुढ़ के" (grudgingly)
+    # Acts 2:4: "अन्य अन्य भाषाओं में" (various languages)
+    'गांठ', 'गूदे', 'कुढ़', 'अन्य',
+})
+AMEN_VARIANTS = frozenset({
+    'amen', 'amén', 'āmen',
+    'amém',           # Portuguese
+    '阿们', '阿们', '阿门', '阿門', '阿們',    # Chinese (门/们/門 variants, Simplified & Traditional)
+    'アーメン',        # Japanese
+    'आमीन', 'आमेन',   # Hindi
+})
+
+
+def _find_consecutive_dup(text: str):
+    """Returns first consecutive duplicate word (len > 3, not liturgical,
+    not a sentence boundary), or None."""
+    words = text.split()
+    for i in range(len(words) - 1):
+        w1 = words[i].strip('.,;:!?»"\u201c\u201d').lower()
+        w2 = words[i + 1].strip('.,;:!?»"\u201c\u201d').lower()
+        # skip sentence boundaries: previous token ends with terminal punctuation
+        # also skip comma-separated repeats (biblical anaphora, rhetorical apposition)
+        if words[i] and words[i][-1] in '.!?:,;»"\u201d':
+            continue
+        if w1 == w2 and len(w1) > 3 and w1 not in LITURGICAL_WHITELIST:
+            return f'"{words[i]} {words[i+1]}"'
+    return None
+
+
+def _check_prayer_ending(oracion: str) -> bool:
+    import unicodedata, re
+    tail = oracion.strip()[-60:].lower()  # lowercase for case-insensitive match
+    # check raw form for CJK/Indic Amen variants
+    for variant in AMEN_VARIANTS:
+        if variant in tail:
+            return True
+    # check last space-delimited token (Latin scripts)
+    tokens = oracion.strip().rstrip('.!,;।。！？').split()
+    if tokens:
+        raw_last = tokens[-1].rstrip('.!,;।。！？')
+        normalised = unicodedata.normalize('NFD', raw_last).encode('ascii', 'ignore').decode().lower()
+        if normalised in AMEN_VARIANTS:
+            return True
+    return False
+
+
+def check_content_quality(entry: dict, lang: str = "") -> list:
+    """
+    Phase 1 content checks — returns list of issue strings.
+    Checks: min length, truncation, prayer ending, double Amen, dup words.
+    """
+    issues = []
+    r = entry.get('reflexion', '').strip()
+    o = entry.get('oracion',   '').strip()
+
+    cjk = lang in CJK_LANGS
+    r_min = REFLEXION_MIN_CHARS_CJK if cjk else REFLEXION_MIN_CHARS
+    o_min = ORACION_MIN_CHARS_CJK   if cjk else ORACION_MIN_CHARS
+
+    if len(r) < r_min:
+        issues.append(f'reflexion too short: {len(r)} chars (min {r_min})')
+    if len(o) < o_min:
+        issues.append(f'oracion too short: {len(o)} chars (min {o_min})')
+    if r and not r.endswith(SENTENCE_ENDINGS):
+        issues.append(f'reflexion truncated — ends: ...{r.rstrip()[-40:]}')
+    if len(re.findall(r'\bAm[eé]n\b', o[-120:], re.IGNORECASE)) >= 2:
+        issues.append('double_amen: duplicate Amen in closing')
+    if o and not _check_prayer_ending(o):
+        issues.append(f'prayer_ending: oracion does not end with Amen variant')
+    dup = _find_consecutive_dup(r)
+    if dup: issues.append(f'dup_words_reflexion: {dup}')
+    dup = _find_consecutive_dup(o)
+    if dup: issues.append(f'dup_words_oracion: {dup}')
+    issues.extend(check_seasonal_content(r, o))
+
+    return issues
 
 
 def check_latin(text: str, extra: set) -> tuple[list, dict]:
@@ -43,16 +151,79 @@ def check_latin(text: str, extra: set) -> tuple[list, dict]:
     return bad, labels
 
 
-def check_spanish_leak(text: str, lang: str) -> list:
-    pattern = SPANISH_ACCENT_BY_LANG.get(lang, SPANISH_ACCENT_BY_LANG["en"])
-    words = re.findall(r"[A-Za-zÁáÉéÍíÓóÚúÑñÀàÈèÊêÂâÃãÔô]+", text)
-    return [w for w in words if pattern.search(w)]
+def check_spanish_leak(text: str) -> list:
+    words = set(re.findall(r"[A-Za-zÁáÉéÍíÓóÚúÑñÜü]+", text))
+    return [w for w in SPANISH_LEAKS if w in words]
+
+
+# ── Seasonal content detection ────────────────────────────────────────────────
+# Calendar-holiday framing injected by AI generators.  Devotionals should be
+# verse-focused year-round; seasonal openers like "On this Christmas morning…"
+# are a content error regardless of the date of the entry.
+SEASONAL_RE = re.compile(
+    r'(?:'
+    # Spanish
+    r'\b[Nn]avidad\b'
+    r'|[Nn]ochebuena'
+    r'|[Nn]ochevieja'
+    r'|[Aa]ño [Nn]uevo'
+    r'|primer[o]? del año'
+    r'|[Ee]ste día celebramos el nacimiento'
+    r'|[Ee]n este día.{0,20}celebr'
+    # Portuguese
+    r'|[Nn]atal\b'
+    r'|[Aa]no [Nn]ovo'
+    r'|espírito natalino'
+    r'|véspera de [Nn]atal'
+    r'|[Nn]este [Nn]atal\b'
+    r'|natalino'
+    # French
+    r'|\b[Nn]oël\b'
+    r'|[Jj]our de l.An\b'
+    r'|premier jour de l.ann[eé]e'
+    r'|[Ee]n ce jour de ce '
+    r'|alors que nous célébrons la (?:venue|promesse)'
+    r'|alors que nos c[oœ]urs se remplissent de joie et de célébration'
+    # German
+    r'|[Ww]eihnacht(?:en|s)?'
+    r'|[Ss]ilvester\b'
+    r'|[Nn]eujahr\b'
+    # English
+    r'|\b[Cc]hristmas\b'
+    r'|[Nn]ew [Yy]ear.s'
+    r'|[Hh]oliday season'
+    # Japanese
+    r'|クリスマス'
+    r'|降誕祭'
+    r'|お正月'
+    # Chinese (Simplified + Traditional)
+    r'|[圣聖][诞誕][节節]'
+    r'|元[旦旦]'
+    # Hindi
+    r'|क्रिसमस'
+    r'|नया साल'
+    r'|नव वर्ष'
+    r')',
+    re.UNICODE,
+)
+
+
+def check_seasonal_content(reflexion: str, oracion: str) -> list:
+    """Returns list of 'seasonal_content' issues if holiday framing detected."""
+    issues = []
+    m = SEASONAL_RE.search(reflexion)
+    if m:
+        issues.append(f'seasonal_content reflexion: "{m.group(0)}" at pos {m.start()}')
+    m = SEASONAL_RE.search(oracion)
+    if m:
+        issues.append(f'seasonal_content oracion: "{m.group(0)}" at pos {m.start()}')
+    return issues
 
 
 def validate(filepath, lang_override, version_override):
     lines, errors = [], []
     summary = {"file": "", "entries": 0, "version_err": 0, "lang_err": 0,
-               "date_gaps": 0, "latin_err": 0, "other_err": 0, "status": "—"}
+               "date_gaps": 0, "latin_err": 0, "content_err": 0, "other_err": 0, "status": "—"}
 
     def e(msg): errors.append(msg); lines.append(f"  ❌ {msg}")
     def w(msg): lines.append(f"  ⚠️  {msg}")
@@ -71,6 +242,17 @@ def validate(filepath, lang_override, version_override):
     expected_year    = int(match.group("year"))    if match else None
     expected_lang    = lang_override.strip()    or (match.group("lang")    if match else None)
     expected_version = version_override.strip() or (match.group("version") if match else None)
+
+    # For base files without lang/version in filename, auto-detect from data
+    if expected_lang is None and not lang_override.strip():
+        try:
+            _probe = json.load(open(path, encoding="utf-8"))
+            _keys = list(_probe.get("data", {}).keys())
+            if len(_keys) == 1:
+                expected_lang = _keys[0]
+        except Exception:
+            pass
+
     ok(f"Lang: {expected_lang} | Version: {expected_version} | Year: {expected_year}")
 
     non_latin = expected_lang in NON_LATIN_LANGS
@@ -113,7 +295,9 @@ def validate(filepath, lang_override, version_override):
         return False, "\n".join(lines), summary
 
     seen_dates = {}
-    version_mismatches, lang_mismatches, latin_issues, spanish_issues = [], [], [], []
+    seen_ids   = {}   # per-file duplicate ID tracking
+    version_mismatches, lang_mismatches, latin_issues, spanish_issues, content_issues = [], [], [], [], []
+    dup_id_issues = []
     label_totals = {}
     extra_allowed = {expected_version} if expected_version else set()
 
@@ -121,8 +305,27 @@ def validate(filepath, lang_override, version_override):
         eid = entry.get("id", f"UNKNOWN@{date_key}")
 
         for field in REQUIRED_FIELDS:
-            if field not in entry: e(f"[{eid}] Missing: '{field}'")
-            elif isinstance(entry[field], str) and not entry[field].strip(): e(f"[{eid}] Empty: '{field}'")
+            if field not in entry:
+                e(f"[{eid}] Missing: '{field}'")
+            elif isinstance(entry[field], str) and not entry[field].strip():
+                e(f"[{eid}] Empty string: '{field}'")
+            elif isinstance(entry[field], list) and len(entry[field]) == 0:
+                e(f"[{eid}] Empty list: '{field}'")
+
+        # Per-file duplicate ID check
+        raw_id = entry.get("id", "")
+        if raw_id:
+            if raw_id in seen_ids:
+                dup_id_issues.append(f"[{raw_id}] duplicate — also at date {seen_ids[raw_id]}")
+                e(f"[{raw_id}] DUPLICATE ID within file (also at {seen_ids[raw_id]})")
+            else:
+                seen_ids[raw_id] = date_key
+
+        # Empty-string items inside tags list
+        if isinstance(entry.get("tags"), list):
+            for i, tag in enumerate(entry["tags"]):
+                if not (tag or "").strip():
+                    e(f"[{eid}] tags[{i}] is empty")
 
         if expected_version and entry.get("version") != expected_version:
             version_mismatches.append(f"[{eid}] version='{entry.get('version')}' expected='{expected_version}'")
@@ -131,16 +334,20 @@ def validate(filepath, lang_override, version_override):
 
         entry_date = entry.get("date", "")
         if entry_date != date_key: e(f"[{eid}] date '{entry_date}' ≠ key '{date_key}'")
-        if entry_date in seen_dates: e(f"Duplicate: {entry_date}")
+        if entry_date in seen_dates: e(f"Duplicate date: {entry_date}")
         else: seen_dates[entry_date] = eid
 
         pm = entry.get("para_meditar")
         if pm is not None:
-            if not isinstance(pm, list): e(f"[{eid}] para_meditar not a list")
+            if not isinstance(pm, list):
+                e(f"[{eid}] para_meditar not a list")
+            elif len(pm) == 0:
+                e(f"[{eid}] para_meditar is empty list")
             else:
                 for j, ref in enumerate(pm):
                     for pf in PARA_MEDITAR_FIELDS:
                         if pf not in ref: e(f"[{eid}] para_meditar[{j}] missing '{pf}'")
+                        elif not (ref[pf] or "").strip(): e(f"[{eid}] para_meditar[{j}] empty '{pf}'")
         if "tags" in entry and not isinstance(entry["tags"], list): e(f"[{eid}] tags not a list")
 
         # Non-Latin script check
@@ -150,11 +357,15 @@ def validate(filepath, lang_override, version_override):
                 for word in bad: latin_issues.append(f"{date_key} [{field}]: \"{word}\"")
                 for lbl, cnt in labels.items(): label_totals[lbl] = label_totals.get(lbl, 0) + cnt
 
-        # Spanish leak check
-        if latin_script:
-            for field in ["reflexion", "oracion"]:
-                leaks = check_spanish_leak(entry.get(field, ""), expected_lang)
-                for word in leaks: spanish_issues.append(f"{date_key} [{field}]: \"{word}\"")
+        # Spanish leak check (only for non-Spanish Latin-script files)
+        if latin_script and expected_lang != "es":
+            text_combined = entry.get("reflexion", "") + " " + entry.get("oracion", "")
+            leaks = check_spanish_leak(text_combined)
+            for word in leaks: spanish_issues.append(f"{date_key}: \"{word}\"")
+
+        # Content quality check (Phase 1)
+        for issue in check_content_quality(entry, expected_lang or ""):
+            content_issues.append(f"{date_key}: {issue}")
 
     # Summaries
     if version_mismatches:
@@ -179,6 +390,19 @@ def validate(filepath, lang_override, version_override):
         for si in deduped[:15]: lines.append(f"    {si}")
         if len(deduped) > 15: lines.append(f"    ... and {len(deduped)-15} more")
 
+    if dup_id_issues:
+        for di in dup_id_issues[:10]: lines.append(f"    {di}")
+        if len(dup_id_issues) > 10: lines.append(f"    ... and {len(dup_id_issues)-10} more")
+    else:
+        ok("No duplicate IDs within file")
+
+    if content_issues:
+        e(f"CONTENT ISSUES — {len(content_issues)} entries")
+        for ci in content_issues[:20]: lines.append(f"    {ci}")
+        if len(content_issues) > 20: lines.append(f"    ... and {len(content_issues)-20} more")
+    else:
+        ok("Content quality: all entries pass Phase 1")
+
     # Date gaps
     gap_count = 0
     if seen_dates:
@@ -202,6 +426,8 @@ def validate(filepath, lang_override, version_override):
     summary.update({
         "version_err": len(version_mismatches), "lang_err": len(lang_mismatches),
         "date_gaps": gap_count, "latin_err": len(latin_issues) + len(spanish_issues),
+        "content_err": len(content_issues),
+        "dup_id_err": len(dup_id_issues),
         "other_err": 0, "status": "✅ PASSED" if passed else "❌ FAILED",
     })
     return passed, "\n".join(lines), summary
@@ -240,8 +466,8 @@ class App(tk.Tk):
 
         tf = ttk.LabelFrame(self, text="Validation Summary Table", padding=8)
         tf.pack(fill="x", **pad)
-        cols = ("File", "Entries", "Version ❌", "Lang ❌", "Gaps ⚠️", "Char Issues ❌", "Status")
-        widths = [240, 60, 90, 70, 70, 100, 90]
+        cols = ("File", "Entries", "Version ❌", "Lang ❌", "Gaps ⚠️", "Char Issues ❌", "Content ❌", "Status")
+        widths = [200, 60, 90, 70, 70, 100, 90, 90]
         self.tree = ttk.Treeview(tf, columns=cols, show="headings", height=5)
         for col, w in zip(cols, widths):
             self.tree.heading(col, text=col)
@@ -280,6 +506,7 @@ class App(tk.Tk):
             summary["file"], summary["entries"],
             summary["version_err"] or "✅", summary["lang_err"] or "✅",
             summary["date_gaps"]   or "✅", summary["latin_err"] or "✅",
+            summary["content_err"] or "✅",
             summary["status"],
         ))
         self.status_var.set("✅ Passed" if passed else "❌ Failed — see results above")
@@ -288,4 +515,36 @@ class App(tk.Tk):
         for row in self.tree.get_children(): self.tree.delete(row)
 
 if __name__ == "__main__":
-    App().mainloop()
+    # ── CLI mode: at least --file provided ────────────────────────────────────
+    if len(sys.argv) > 1:
+        parser = argparse.ArgumentParser(
+            description="Devocional JSON Validator v4",
+            epilog=(
+                "Examples:\n"
+                "  python validate_devocional_gui.py --file path.json --lang de --version LU17\n"
+                "  python validate_devocional_gui.py --file path.json --lang hi --version HIOV\n"
+                "  python validate_devocional_gui.py   (no args → GUI mode)"
+            ),
+            formatter_class=argparse.RawDescriptionHelpFormatter,
+        )
+        parser.add_argument("--file",    required=True, help="Path to devotional JSON file")
+        parser.add_argument("--lang",    default="",    help="Language code (e.g. de, hi, es, en)")
+        parser.add_argument("--version", default="",    help="Bible version code (e.g. LU17, HIOV, RVR1960)")
+        args = parser.parse_args()
+
+        passed, result, summary = validate(args.file, args.lang, args.version)
+        print(result)
+        print()
+        print(f"  Entries   : {summary['entries']}")
+        print(f"  Version ❌ : {summary['version_err'] or '✅'}")
+        print(f"  Lang ❌    : {summary['lang_err'] or '✅'}")
+        print(f"  Dup IDs ❌ : {summary.get('dup_id_err', 0) or '✅'}")
+        print(f"  Gaps ⚠️   : {summary['date_gaps'] or '✅'}")
+        print(f"  Char Issues: {summary['latin_err'] or '✅'}")
+        print(f"  Content ❌ : {summary['content_err'] or '✅'}")
+        print(f"  Status     : {summary['status']}")
+        sys.exit(0 if passed else 1)
+
+    # ── GUI mode: no args ─────────────────────────────────────────────────────
+    else:
+        App().mainloop()
