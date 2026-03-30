@@ -37,6 +37,14 @@
       "allowed_versions": ["LSG1910", "TOB"],
       "reading_speed": { "unit": "wpm", "rate": 200 }
     },
+    "de": {
+      "name": "Deutsch",
+      "script": "latin",
+      "primary_version": "LU17",
+      "fallback_version": "SCH2000",
+      "allowed_versions": ["LU17", "SCH2000"],
+      "reading_speed": { "unit": "wpm", "rate": 200 }
+    },
     "ja": {
       "name": "日本語",
       "script": "cjk",
@@ -60,6 +68,14 @@
       "fallback_version": "पवित्र बाइबिल",
       "allowed_versions": ["पवित्र बाइबिल (ओ.वी.)", "पवित्र बाइबिल"],
       "reading_speed": { "unit": "wpm", "rate": 180 }
+    },
+    "de": {
+      "name": "Deutsch",
+      "script": "latin",
+      "primary_version": "LU17",
+      "fallback_version": "SCH2000",
+      "allowed_versions": ["LU17", "SCH2000"],
+      "reading_speed": { "unit": "wpm", "rate": 200 }
     }
   }
 }

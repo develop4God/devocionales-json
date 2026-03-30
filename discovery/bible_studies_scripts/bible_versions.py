@@ -16,9 +16,11 @@ PRIMARY_VERSION = {
     'es': 'RVR1960',
     'pt': 'ARC',
     'fr': 'LSG1910',
+    'de': 'LU17',
     'ja': '新改訳2003',
     'zh': '和合本1919',
     'hi': 'पवित्र बाइबिल (ओ.वी.)',
+    'de': 'LU17',
 }
 
 # ── Allowed versions per language ────────────────────────────────────────────
@@ -30,9 +32,11 @@ ALLOWED_VERSIONS = {
     'es': ['RVR1960', 'NVI'],
     'pt': ['ARC', 'NVI'],
     'fr': ['LSG1910', 'TOB'],
+    'de': ['LU17', 'SCH2000'],
     'ja': ['新改訳2003', 'リビングバイブル'],
     'zh': ['和合本1919', '新译本'],
     'hi': ['पवित्र बाइबिल (ओ.वी.)', 'पवित्र बाइबिल'],
+    'de': ['LU17', 'SCH2000'],
 }
 
 # ── Supported language codes ──────────────────────────────────────────────────
@@ -47,9 +51,11 @@ READING_SPEED = {
     'es': {'unit': 'wpm', 'rate': 200},
     'pt': {'unit': 'wpm', 'rate': 200},
     'fr': {'unit': 'wpm', 'rate': 200},
+    'de': {'unit': 'wpm', 'rate': 200},
     'ja': {'unit': 'cpm', 'rate': 400},
     'zh': {'unit': 'cpm', 'rate': 400},
     'hi': {'unit': 'wpm', 'rate': 180},
+    'de': {'unit': 'wpm', 'rate': 200},
 }
 
 

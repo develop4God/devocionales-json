@@ -48,6 +48,7 @@ See the script for full usage details. All translation and validation scripts mu
 | Spanish | `es` | RVR1960 | NVI |
 | Portuguese | `pt` | ARC | NVI |
 | French | `fr` | LSG1910 | TOB |
+| German | `de` | LU17 | SCH2000 |
 | Japanese | `ja` | 新改訳2003 | リビングバイブル |
 | Chinese | `zh` | 和合本1919 | 新译本 |
 | Hindi | `hi` | पवित्र बाइबिल (ओ.वी.) | पवित्र बाइबिल |
@@ -120,6 +121,7 @@ Structure must be identical to the EN file.
 | Language | Adjustment from EN |
 |---|---|
 | ES, PT, FR | +1-2 min |
+| DE | +1 min |
 | HI | +2 min |
 | JA, ZH | +2-3 min |
 
@@ -162,6 +164,7 @@ Warnings about cognates (FR/PT/ES) and reading time differences from EN are expe
 | ES | +1 | — |
 | PT | +1 | — |
 | FR | +1 | — |
+| DE | +1 | — |
 | HI | +2 | — |
 | JA | +3 | — |
 | ZH | +3 | — |

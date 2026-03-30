@@ -55,6 +55,23 @@ EN_BIBLE_BOOK_PATTERN = re.compile(
     r'Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|'
     r'Revelation)\s+\d', re.IGNORECASE)
 
+# Book names that are identical (or near-identical) in German and English —
+# the EN pattern would falsely flag these as untranslated in DE files.
+_DE_SHARED_BOOK_NAMES = {
+    'psalm', 'psalms', 'daniel', 'hosea', 'joel', 'amos', 'nahum', 'ezra',
+    'job', 'ruth',
+}
+
+
+def _has_english_book_name(reference: str, lang: str) -> bool:
+    """Return True if reference contains an English-only book name for lang."""
+    m = EN_BIBLE_BOOK_PATTERN.search(reference)
+    if not m:
+        return False
+    if lang == 'de' and m.group(1).lower() in _DE_SHARED_BOOK_NAMES:
+        return False
+    return True
+
 
 # ── Report ────────────────────────────────────────────────────────────────────
 
@@ -253,7 +270,7 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
             report.E(f"{filename}: key_verse.bible_version '{kv.get('bible_version')}' not valid for '{lang}'")
         # Non-EN: reference should not use English book names
         if lang != 'en' and kv.get('reference'):
-            if EN_BIBLE_BOOK_PATTERN.search(kv['reference']):
+            if _has_english_book_name(kv['reference'], lang):
                 report.E(f"{filename}: key_verse.reference has English book name: {kv['reference']}")
 
     # cards
@@ -319,7 +336,7 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
                 if not card.get(field, '').strip():
                     report.E(f"{ctx}: '{field}' is empty")
             if lang != 'en' and card.get('verse_reference'):
-                if EN_BIBLE_BOOK_PATTERN.search(card['verse_reference']):
+                if _has_english_book_name(card['verse_reference'], lang):
                     report.E(f"{ctx}: verse_reference has English book name: {card['verse_reference']}")
 
         # scripture_connections check
@@ -328,7 +345,7 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
                 if not sc.get(field, '').strip():
                     report.E(f"{ctx} scripture_connections[{j+1}]: '{field}' is empty")
             if lang != 'en' and sc.get('reference'):
-                if EN_BIBLE_BOOK_PATTERN.search(sc['reference']):
+                if _has_english_book_name(sc['reference'], lang):
                     report.E(f"{ctx} scripture_connections[{j+1}]: reference has English book name")
 
 

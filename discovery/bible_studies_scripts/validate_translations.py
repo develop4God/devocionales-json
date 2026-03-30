@@ -257,11 +257,27 @@ def validate_verse_references(data: Dict, lang: str, filename: str,
     # Books that are the same or very similar across Romance languages
     # (Spanish, Portuguese, French) - these should not trigger errors
     common_books_romance = ['Job', 'Joel', 'Amos', 'Daniel', 'Ruth', 'Rut', 'Rute']
-    
+
+    # Books that are identical in German and English — must not be flagged as untranslated
+    # (Psalm, Daniel, Hosea, Joel, Amos, Nahum, Ezra, Job, Ruth are the same in LU17/German)
+    _DE_SHARED_BOOK_NAMES = {'Psalm', 'Psalms', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Nahum',
+                              'Ezra', 'Job', 'Ruth'}
+
+    def _has_english_book_name(ref: str, pattern, lang: str) -> bool:
+        """Return True only if ref contains an English book name that should be translated."""
+        if not pattern.search(ref):
+            return False
+        if lang == 'de':
+            # Psalm etc. are identical in German — not a false positive
+            for shared in _DE_SHARED_BOOK_NAMES:
+                if re.match(rf'\b{re.escape(shared)}\b', ref, re.IGNORECASE):
+                    return False
+        return True
+
     # Pattern to detect English Bible book names that SHOULD be translated
     # Exclude books that are commonly the same across languages
     if _BIBLE_VERSIONS.get(lang, {}).get('script') == 'latin' and lang != 'en':
-        # For Romance languages, be less strict about common names
+        # For Romance/German languages, be less strict about common names
         english_bible_pattern = re.compile(
             r'\b(Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|'
             r'Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Psalm|Psalms|'
@@ -286,7 +302,7 @@ def validate_verse_references(data: Dict, lang: str, filename: str,
     # Check key_verse reference
     if 'key_verse' in data and 'reference' in data['key_verse']:
         ref = data['key_verse']['reference']
-        if english_bible_pattern.search(ref):
+        if _has_english_book_name(ref, english_bible_pattern, lang):
             report.add_error(f"{filename}: key_verse reference has English book name: {ref}")
     
     # Check all card references
@@ -295,27 +311,27 @@ def validate_verse_references(data: Dict, lang: str, filename: str,
         for gw_idx, gw in enumerate(card.get('greek_words', [])):
             if 'reference' in gw:
                 ref = gw['reference']
-                if english_bible_pattern.search(ref):
+                if _has_english_book_name(ref, english_bible_pattern, lang):
                     report.add_error(f"{filename}: card {card_idx+1} greek_word {gw_idx+1} reference has English: {ref}")
         
         # Check timeline event references
         for event_idx, event in enumerate(card.get('timeline', [])):
             if 'event' in event:
                 ref = event['event']
-                if english_bible_pattern.search(ref):
+                if _has_english_book_name(ref, english_bible_pattern, lang):
                     report.add_error(f"{filename}: card {card_idx+1} timeline {event_idx+1} has English reference: {ref}")
         
         # Check scripture_connections
         for sc_idx, sc in enumerate(card.get('scripture_connections', [])):
             if 'reference' in sc:
                 ref = sc['reference']
-                if english_bible_pattern.search(ref):
+                if _has_english_book_name(ref, english_bible_pattern, lang):
                     report.add_error(f"{filename}: card {card_idx+1} scripture_connection {sc_idx+1} has English: {ref}")
         
         # Check scripture_anchor
         if 'scripture_anchor' in card and 'reference' in card['scripture_anchor']:
             ref = card['scripture_anchor']['reference']
-            if english_bible_pattern.search(ref):
+            if _has_english_book_name(ref, english_bible_pattern, lang):
                 report.add_error(f"{filename}: card {card_idx+1} scripture_anchor has English: {ref}")
 
 
