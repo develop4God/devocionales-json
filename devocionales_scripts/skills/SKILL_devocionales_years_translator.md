@@ -30,16 +30,18 @@ https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/ind
 **Never hardcode versions, file names, reading speeds, or verse text.** All lookup must resolve from this index.
 
 ### Quick Reference (derived from index)
-| Language | Code | Primary | Fallback | Speed |
-|---|---|---|---|---|
-| English | `en` | `KJV` | `NIV` | 200 wpm |
-| Spanish | `es` | `RVR1960` | `NVI` | 200 wpm |
-| Portuguese | `pt` | `ARC` | `NVI` | 200 wpm |
-| French | `fr` | `LSG1910` | `BDS` | 200 wpm |
-| German | `de` | `LU17` | `SCH2000` | 200 wpm |
-| Japanese | `ja` | `SK2003` | `JCB` | 400 cpm |
-| Chinese | `zh` | `CUV1919` | `CNVS` | 400 cpm |
-| Hindi | `hi` | `HIOV` | `HERV` | 180 wpm |
+| Language | Code | Primary | Fallback |
+|---|---|---|---|
+| English | `en` | `KJV` | `NIV` |
+| Spanish | `es` | `RVR1960` | `NVI` |
+| Portuguese | `pt` | `ARC` | `NVI` |
+| French | `fr` | `LSG1910` | `BDS` |
+| German | `de` | `LU17` | `SCH2000` |
+| Japanese | `ja` | `SK2003` | `JCB` |
+| Chinese | `zh` | `CUV1919` | `CNVS` |
+| Hindi | `hi` | `HIOV` | `HERV` |
+
+Reading speeds (`reading_speed.rate` and `reading_speed.unit`) are available per language in the remote index — read them from there, do not hardcode.
 
 For the `version` field in JSON output, use the display `name` from the index — not the code:
 `SK2003` → `"新改訳2003"`, `CUV1919` → `"和合本1919"`, `HIOV` → `"पवित्र बाइबिल (ओ.वी.)"`, `HERV` → `"पवित्र बाइबिल"`, `JCB` → `"リビングバイブル"`, `CNVS` → `"新译本"`.
