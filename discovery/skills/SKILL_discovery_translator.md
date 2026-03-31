@@ -8,7 +8,7 @@ You are a professional biblical translator and theologian with expertise in devo
 ## What You Receive
 - `{study_id}_en_001.json` — English master file (translation base)
 - `index.json` — source of truth for which languages this study needs
-- `bible_versions.py` — single source of truth for Bible versions and reading speeds
+- Remote index — source of truth for versions, codes, and download URLs: `https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json`
 - `validate_pair.py` — pair validator (run after each language)
 - `validate_structure_bulk.py` — bulk structure validator (run at end)
 - `validate_translations.py` — full suite validator (run at end)
@@ -26,36 +26,82 @@ For each language listed under `files` in `index.json` for this study (excluding
 
 
 ## Bible Versions & Verse Resolver
-Import from `bible_versions.py` — never hardcode versions. Primary version per language:
 
-**Verse Resolver Requirement:**
-All verse lookups, citation translation, and verse text extraction must use the shared resolver in `devocionales_scripts/verse_resolver.py`. Do not manually map, hardcode, or copy-paste verse text or references. The resolver ensures consistent, accurate, and language-appropriate results for all supported Bibles.
+### Source of Truth — Remote Index
+```
+https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json
+```
+**Never hardcode versions, file names, or reading speeds.** Always resolve from this index.
 
-**How to use:**
-Import and use as follows:
+### Quick Reference (derived from index)
+| Language | Code | Primary | Fallback |
+|---|---|---|---|
+| English | `en` | `KJV` | `NIV` |
+| Spanish | `es` | `RVR1960` | `NVI` |
+| Portuguese | `pt` | `ARC` | `NVI` |
+| French | `fr` | `LSG1910` | `BDS` |
+| German | `de` | `LU17` | `SCH2000` |
+| Japanese | `ja` | `SK2003` | `JCB` |
+| Chinese | `zh` | `CUV1919` | `CNVS` |
+| Hindi | `hi` | `HIOV` | `HERV` |
 
+Reading speeds (`reading_speed.rate` and `reading_speed.unit`) are available per language in the remote index — read them from there, do not hardcode.
+
+For the `version` field in JSON output, use the display `name` from the index — not the code:
+`SK2003` → `"新改訳2003"`, `CUV1919` → `"和合本1919"`, `HIOV` → `"पवित्र बाइबिल (ओ.वी.)"`, etc.
+
+> If a version used by this project is **not** listed in the remote index, that SQLite file must already be present locally in `bible_database/`.
+
+### Pre-Translation: Lookup & Download
+Before translating each language, ensure the required SQLite is available locally:
+
+**Step 1 — Fetch the remote index:**
+```python
+import urllib.request, json, gzip, shutil, os
+
+INDEX_URL = "https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json"
+with urllib.request.urlopen(INDEX_URL) as resp:
+    index = json.loads(resp.read())
+```
+
+**Step 2 — Resolve version for target language:**
+```python
+lang_entry    = index["languages"][lang_code]        # e.g. lang_code = "es"
+primary_code  = lang_entry["primary_version"]        # e.g. "RVR1960"
+fallback_code = lang_entry["fallback_version"]       # e.g. "NVI"
+version_entry = lang_entry["versions"][primary_code]
+remote_file   = version_entry["file"]                # e.g. "RVR1960_es.SQLite3.gz"
+download_url  = version_entry["url"]
+```
+
+**Step 3 — Download & decompress to `bible_database/` if not present:**
+```python
+DB_DIR   = "bible_database"
+local_gz = os.path.join(DB_DIR, remote_file)
+local_db = local_gz.replace(".gz", "")              # e.g. "bible_database/RVR1960_es.SQLite3"
+
+if not os.path.exists(local_db):
+    if not os.path.exists(local_gz):
+        print(f"Downloading {remote_file}...")
+        urllib.request.urlretrieve(download_url, local_gz)
+    with gzip.open(local_gz, "rb") as gz_in, open(local_db, "wb") as db_out:
+        shutil.copyfileobj(gz_in, db_out)
+```
+
+**Step 4 — Pass the decompressed path to VerseResolver:**
 ```python
 from verse_resolver import VerseResolver
 
-with VerseResolver(sqlite_path, book_map_path, target_lang) as resolver:
-	citation, text, error = resolver.resolve("John 3:16")
+with VerseResolver(local_db, "devocionales_scripts/book_map.json", lang_code) as resolver:
+    citation, text, error = resolver.resolve("John 3:16")
 ```
 
-See the script for full usage details. All translation and validation scripts must use this resolver for any Bible verse content.
+If a verse fails in the primary version, repeat Steps 2–4 for `fallback_code` and flag it in the delivery note.
 
+### Verse Resolver Requirement
+All verse lookups, citation translation, and verse text extraction must use `devocionales_scripts/verse_resolver.py`. Do not manually map, hardcode, or copy-paste verse text or references.
 
-| Language | Code | Primary Version |
-|---|---|---|
-| English | `en` | KJV |
-| Spanish | `es` | RVR1960 |
-| Portuguese | `pt` | ARC |
-| French | `fr` | LSG1910 |
-| German | `de` | LU17 |
-| Japanese | `ja` | 新改訳2003 |
-| Chinese | `zh` | 和合本1919 |
-| Hindi | `hi` | पवित्र बाइबिल (ओ.वी.) |
-
-Use the **primary version only** for all verse text in translations. If a verse cannot be found in the primary version, use the secondary version (see `bible_versions.ALLOWED_VERSIONS`) and flag it in the delivery note.
+Use the **primary version only** for all verse text in translations.
 
 ---
 
@@ -153,14 +199,14 @@ After all languages are validated, update the study entry in `index.json`:
 1. All translated JSON files
 2. Updated `index.json`
 3. Validation log (✅ PERFECT for each pair)
-4. Reading time table:
+4. Reading time table — use the format below; retrieve each language's rate and unit from `reading_speed` in the remote index:
 
-| Language | Words/Chars | Rate | Minutes |
+| Language | Words/Chars | Rate (from index) | Minutes |
 |---|---|---|---|
-| PT | — | 200 wpm | — |
-| FR | — | 200 wpm | — |
-| HI | — | 180 wpm | — |
-| JA | — | 400 cpm | — |
-| ZH | — | 400 cpm | — |
+| PT | — | — | — |
+| FR | — | — | — |
+| HI | — | — | — |
+| JA | — | — | — |
+| ZH | — | — | — |
 
 5. Flag any verse not found in primary version with the fallback version used
