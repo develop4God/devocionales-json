@@ -4,25 +4,24 @@ verse_resolver.py
 Agnostic verse resolver. Resolves English Bible references to
 target-language citations and verse text from a SQLite Bible DB.
 
+Book lookup uses the bible_books.json SOT (github.com/develop4God/bible_versions)
+to confirm the EN book name and get its book_number. The native book name is
+then read directly from the DB's own `books` table — no manual per-language
+mapping file is required.
+
 Reusable by any pipeline script — no content-type assumptions.
 
 Usage:
     from verse_resolver import VerseResolver
 
-    resolver = VerseResolver(
-        sqlite_path="path/to/bible.db",
-        book_map_path="path/to/book_map.json",
-        target_lang="de",
-    )
-
-    cita, texto, error = resolver.resolve("1 Corinthians 13:4-7")
+    # SQLite path is the only required argument
+    with VerseResolver("path/to/bible.db") as r:
+        cita, texto, error = r.resolve("1 Corinthians 13:4-7")
     # On success : ("1 Korinther 13:4-7", "Die Liebe ist...", None)
     # On failure : (None, None, "reason string")
 
-    resolver.close()
-
-    # Or use as a context manager:
-    with VerseResolver(sqlite_path, book_map_path, "hi") as r:
+    # Optional: supply a local bible_books.json to avoid a network fetch
+    with VerseResolver("path/to/bible.db", books_sot_path="devocionales_scripts/bible_books.json") as r:
         cita, texto, error = r.resolve("John 3:16")
 """
 
@@ -30,36 +29,54 @@ import json
 import os
 import re
 import sqlite3
+import urllib.request
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CONSTANTS
 # ─────────────────────────────────────────────────────────────────────────────
 
+BOOKS_SOT_URL = (
+    "https://raw.githubusercontent.com/develop4god/bible_versions"
+    "/refs/heads/main/bible_books.json"
+)
+
 # Devanagari digit → ASCII digit (for Hindi references)
 _DEVA = str.maketrans("०१२३४५६७८९", "0123456789")
+
+# Module-level cache — fetched once per Python process
+_books_sot_cache: dict | None = None
 
 
 # ─────────────────────────────────────────────────────────────────────────────
 # LOW-LEVEL HELPERS  (module-level, usable without instantiation)
 # ─────────────────────────────────────────────────────────────────────────────
 
-def load_book_map(book_map_path: str) -> dict:
+def load_books_sot(local_path: str | None = None) -> dict:
     """
-    Load book_map.json.
-    Returns flat dict: EN book name → {book_number, <lang>_name, ...}
+    Load the bible_books.json SOT.
+    Returns flat dict: EN book name → book_number (int)
+
+    Priority:
+      1. Module-level cache (subsequent calls are instant)
+      2. local_path if provided and the file exists
+      3. Remote fetch from BOOKS_SOT_URL
     """
-    if not os.path.exists(book_map_path):
-        raise FileNotFoundError(
-            f"book_map.json not found at: {book_map_path}\n"
-            f"Place book_map.json next to the calling script."
-        )
-    with open(book_map_path, encoding="utf-8") as f:
-        raw = json.load(f)
-    flat = {}
-    for testament in ("OT", "NT"):
-        for en_name, entry in raw.get(testament, {}).items():
-            flat[en_name] = entry
-    return flat
+    global _books_sot_cache
+    if _books_sot_cache is not None:
+        return _books_sot_cache
+
+    if local_path and os.path.exists(local_path):
+        with open(local_path, encoding="utf-8") as f:
+            data = json.load(f)
+    else:
+        with urllib.request.urlopen(BOOKS_SOT_URL) as resp:
+            data = json.loads(resp.read())
+
+    _books_sot_cache = {
+        name: entry["book_number"]
+        for name, entry in data["books"].items()
+    }
+    return _books_sot_cache
 
 
 def parse_en_ref(cita: str) -> tuple[str, int, int, int] | None:
@@ -129,33 +146,36 @@ def fetch_text(
 
 class VerseResolver:
     """
-    Stateful verse resolver. Holds an open SQLite connection and book_map
-    so callers do not manage them directly.
+    Stateful verse resolver. Holds an open SQLite connection and the
+    bible_books.json SOT so callers do not manage them directly.
+
+    Book numbers come from the bible_books.json SOT (EN name → book_number).
+    Native book names are read directly from the DB's `books` table, so no
+    per-language mapping file is needed.
 
     Parameters
     ----------
-    sqlite_path   : path to SQLite Bible database
-    book_map_path : path to book_map.json
-    target_lang   : language code (e.g. "hi", "de", "ko")
-                    Must match the <lang>_name keys in book_map.json
+    sqlite_path    : path to SQLite Bible database
+    books_sot_path : optional path to a local bible_books.json for offline use;
+                     if absent, the SOT is fetched from BOOKS_SOT_URL once and
+                     cached for the lifetime of the process.
 
     Example
     -------
-    resolver = VerseResolver("bible.db", "book_map.json", "de")
-    cita, texto, error = resolver.resolve("1 Corinthians 13:4-7")
-    resolver.close()
+    with VerseResolver("bible.db") as r:
+        cita, texto, error = r.resolve("1 Corinthians 13:4-7")
+        # cita  → native-language citation, e.g. "1. Korinther 13:4-7"
+        # texto → verse text from the DB
     """
 
     def __init__(
         self,
         sqlite_path: str,
-        book_map_path: str,
-        target_lang: str,
+        books_sot_path: str | None = None,
     ) -> None:
-        self.target_lang = target_lang
-        self.book_map    = load_book_map(book_map_path)
-        self.conn        = sqlite3.connect(sqlite_path)
-        self.cursor      = self.conn.cursor()
+        self.books_sot = load_books_sot(books_sot_path)
+        self.conn      = sqlite3.connect(sqlite_path)
+        self.cursor    = self.conn.cursor()
 
     # ── context manager support ───────────────────────────────────────────────
 
@@ -172,6 +192,26 @@ class VerseResolver:
             self.conn   = None
             self.cursor = None
 
+    # ── internal helpers ──────────────────────────────────────────────────────
+
+    def _native_book_name(self, book_number: int, fallback: str) -> str:
+        """
+        Query the DB's `books` table for the long_name of this book_number.
+        Returns fallback (the EN book name) if the table is absent or the
+        row is missing — ensuring citation building never fails silently.
+        """
+        try:
+            self.cursor.execute(
+                "SELECT long_name FROM books WHERE book_number = ?",
+                (book_number,),
+            )
+            row = self.cursor.fetchone()
+            if row and row[0]:
+                return row[0]
+        except sqlite3.OperationalError:
+            pass  # `books` table absent in some minimal DB builds
+        return fallback
+
     # ── public API ────────────────────────────────────────────────────────────
 
     def resolve(
@@ -179,7 +219,7 @@ class VerseResolver:
         cita_en: str,
     ) -> tuple[str | None, str | None, str | None]:
         """
-        Resolve an English Bible reference to target-language citation + text.
+        Resolve an English Bible reference to native-language citation + text.
 
         Parameters
         ----------
@@ -192,8 +232,7 @@ class VerseResolver:
 
         Failure reasons:
           - "could not parse reference: '...'"
-          - "unknown book: '...'"
-          - "no '<lang>_name' in book_map for book '...' — add it before running"
+          - "unknown book: '...' — not in bible_books.json SOT"
           - "verse not found: '...' (chapter has N verses)"
         """
         parsed = parse_en_ref(cita_en)
@@ -202,20 +241,13 @@ class VerseResolver:
 
         book_en, chapter, v_start, v_end = parsed
 
-        entry = self.book_map.get(book_en)
-        if not entry:
-            return None, None, f"unknown book: '{book_en}'"
+        # Confirm EN book name against SOT and get book_number
+        book_number = self.books_sot.get(book_en)
+        if book_number is None:
+            return None, None, f"unknown book: '{book_en}' — not in bible_books.json SOT"
 
-        book_number = entry["book_number"]
-        name_key    = f"{self.target_lang}_name"
-
-        if name_key not in entry:
-            return None, None, (
-                f"no '{name_key}' in book_map for book '{book_en}' — "
-                f"add it before running lang='{self.target_lang}'"
-            )
-
-        local_name = entry[name_key]
+        # Get native book name directly from the DB (no manual mapping needed)
+        local_name = self._native_book_name(book_number, fallback=book_en)
 
         texto = fetch_text(self.cursor, book_number, chapter, v_start, v_end)
         if texto is None:

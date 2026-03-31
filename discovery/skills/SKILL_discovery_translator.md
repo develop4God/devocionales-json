@@ -33,6 +33,12 @@ https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/ind
 ```
 **Never hardcode versions, file names, or reading speeds.** Always resolve from this index.
 
+### Bible Books SOT
+```
+https://raw.githubusercontent.com/develop4god/bible_versions/refs/heads/main/bible_books.json
+```
+Single source of truth for EN book name → `book_number` mapping (MySword/TheWord standard, identical across all language DBs). `VerseResolver` fetches this automatically on first use; native book names are then read from the DB's own `books` table — no manual language mapping file is needed.
+
 ### Quick Reference (derived from index)
 | Language | Code | Primary | Fallback |
 |---|---|---|---|
@@ -92,7 +98,8 @@ if not os.path.exists(local_db):
 ```python
 from verse_resolver import VerseResolver
 
-with VerseResolver(local_db, "devocionales_scripts/book_map.json", lang_code) as resolver:
+# No book_map.json needed — native book names come from the DB's books table
+with VerseResolver(local_db) as resolver:
     citation, text, error = resolver.resolve("John 3:16")
 ```
 

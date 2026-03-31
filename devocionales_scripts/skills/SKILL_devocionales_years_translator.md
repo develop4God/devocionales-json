@@ -8,8 +8,8 @@ You are a professional biblical translator and theologian with expertise in brie
 - `Devocional_year_{year}.json` — master source file (all dates, base language)
 - `index.json` — tracks active languages, versions per year, and last-updated dates
 - Remote index — source of truth for supported languages, version codes, and download URLs: `https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json`
-- `devocionales_scripts/verse_resolver.py` — shared verse resolver
-- `devocionales_scripts/book_map.json` — book name map for the resolver
+- Bible books SOT — source of truth for EN book name → `book_number` mapping: `https://raw.githubusercontent.com/develop4god/bible_versions/refs/heads/main/bible_books.json`
+- `devocionales_scripts/verse_resolver.py` — shared verse resolver (fetches bible_books.json SOT automatically; native book names come from the DB's `books` table)
 
 ---
 
@@ -28,6 +28,12 @@ For each language and **each version** listed in the remote index for that langu
 https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json
 ```
 **Never hardcode versions, file names, reading speeds, or verse text.** All lookup must resolve from this index.
+
+### Bible Books SOT
+```
+https://raw.githubusercontent.com/develop4god/bible_versions/refs/heads/main/bible_books.json
+```
+Single source of truth for EN book name → `book_number` mapping (MySword/TheWord standard, identical across all language DBs). `VerseResolver` fetches this automatically on first use; native book names are then read from the DB's own `books` table — `book_map.json` is no longer needed.
 
 ### Quick Reference (derived from index)
 | Language | Code | Primary | Fallback |
@@ -92,7 +98,8 @@ from verse_resolver import VerseResolver
 
 for version_code, local_db in db_paths.items():
     display_name = versions_dict[version_code]["name"]  # e.g. "Luther 2017"
-    with VerseResolver(local_db, "devocionales_scripts/book_map.json", lang_code) as resolver:
+    # No book_map.json needed — native book names come from the DB's books table
+    with VerseResolver(local_db) as resolver:
         citation, text, error = resolver.resolve("Romans 12:10")
         # citation → translated reference, e.g. "Römer 12:10"
         # text     → verse text in target version
