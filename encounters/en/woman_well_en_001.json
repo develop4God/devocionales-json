@@ -1,0 +1,282 @@
+{
+  "id": "woman_well_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "en",
+  "bible_version": "King James Version",
+  "version": "6.0",
+  "estimated_reading_minutes": 9,
+  "meta": {
+    "character": "The Samaritan Woman",
+    "testament": "new",
+    "scripture_reference": "John 4:1-42",
+    "mood_primary": "midday",
+    "accent_color": "#3d1a00",
+    "emoji": "⛲",
+    "tags": [
+      "thirst",
+      "shame",
+      "living_water",
+      "identity",
+      "evangelism",
+      "grace",
+      "samaritan",
+      "jesus",
+      "encounter",
+      "restoration"
+    ]
+  },
+  "key_verse": {
+    "reference": "John 4:14",
+    "text": "But whosoever drinks of the water that I shall give him shall never thirst; but the water that I shall give him shall be in him a well of water springing up into everlasting life.",
+    "bible_version": "King James Version"
+  },
+  "cards": [
+
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "heat",
+      "image_url": "well_midday_sun.avif",
+      "title": "It was necessary.",
+      "narrative": "Jews went around Samaria. Centuries of contempt between two peoples who had once been one. Days of detour rather than set foot on that land.\n\nJesus did not go around.\n\nThere was a woman at a well who did not yet know she was being sought.",
+      "ambient_sound": "desert_wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 4:4",
+        "text": "And he must needs go through Samaria."
+      },
+      "revelation_key": "Jesus rerouted His journey around a woman the world had stopped searching for."
+    },
+
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "heat",
+      "image_url": "well_jesus_waiting.avif",
+      "title": "Jacob's well. The sixth hour.",
+      "narrative": "Tired from the road. Alone at the well.\n\nThe sixth hour — the midday sun.\n\nThe same hour she would come.",
+      "ambient_sound": "desert_wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 4:5-6",
+        "text": "Then came he to a city of Samaria, which is called Sychar, near to the parcel of ground that Jacob gave to his son Joseph. Now Jacob's well was there. Jesus therefore, being wearied with his journey, sat thus on the well: and it was about the sixth hour."
+      },
+      "revelation_key": "The place was not coincidence. The hour was not coincidence. He was never there by accident."
+    },
+
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "woman_jar_approaching.avif",
+      "verse_reference": "John 4:7-9",
+      "verse_text": "There came a woman of Samaria to draw water: Jesus said unto her, Give me to drink. (For his disciples were gone away unto the city to buy food.) Then said the woman of Samaria unto him, How is it that you, being a Jew, ask drink of me, who am a woman of Samaria? for the Jews have no dealings with the Samaritans.",
+      "reflection": "Women went to the well in the morning. Together. She came at noon. Alone.\n\nThat is not a minor detail. It is her entire story in a single decision.\n\nAnd the first to speak to her did not judge her. Did not ignore her. He asked her for something.\n\nThe Son of God made Himself vulnerable before her before she knew His name.\n\nThat is how grace enters. Not with power. With humility.",
+      "revelation_key": "Jesus spoke first. To her. In the place where she had learned to be invisible."
+    },
+
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "mood": "shifting",
+      "image_url": "water_ripple.avif",
+      "title": "Two Kinds of Thirst",
+      "subtitle": "She was talking about water. He was talking about something more.",
+      "content": "Jesus offered living water. She heard it practically: spring water, flowing water, water you don't have to come and fetch at midday under the sun.\n\nBut He was pointing at the well. At the rope. At everything she had carried there every day.\n\n📖 John 4:13-14 (KJV)\n«Jesus answered and said unto her, Whosoever drinks of this water shall thirst again: But whosoever drinks of the water that I shall give him shall never thirst; but the water that I shall give him shall be in him a well of water springing up into everlasting life.»\n\nNever. Not for a long time. Never.\n\n💧 Jacob's well was real. It was history. It was a heritage of centuries. Jesus does not ignore it. But what He offers does not come from outside. It comes from within. It is not a spring you must return to. It is a fountain that rises up inside the one who receives it.\n\nShe recognized it herself, even without fully understanding:\n\n📖 John 4:15 (KJV)\n«The woman said unto him, Sir, give me this water, that I thirst not, neither come here to draw.»\n\nShe was still thinking about a well.\n\nBut she was leaning toward Him. And that was enough.",
+      "revelation_key": "Sometimes our thirst points us to Jesus before our understanding does.",
+      "scripture_connections": [
+        {
+          "reference": "Isaiah 55:1",
+          "text": "Ho, everyone that thirsts, come you to the waters, and he that has no money; come you, buy, and eat; yea, come, buy wine and milk without money and without price."
+        },
+        {
+          "reference": "John 7:37",
+          "text": "In the last day, that great day of the feast, Jesus stood and cried, saying, If any man thirst, let him come unto me, and drink."
+        }
+      ]
+    },
+
+    {
+      "order": 5,
+      "type": "cinematic_scene",
+      "mood": "exposed",
+      "image_url": "woman_still_moment.avif",
+      "title": "Jesus said unto her, Go, call your husband, and come here.",
+      "narrative": "She answered with the most honest thing she had ever said at that well.",
+      "ambient_sound": "silence_heavy",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 4:16-18",
+        "text": "Jesus said unto her, Go, call your husband, and come here. The woman answered and said, I have no husband. Jesus said unto her, You have well said, I have no husband: For you have had five husbands; and he whom you now have is not your husband: that said you truly."
+      },
+      "revelation_key": "He knew her completely. And He said: you have spoken truly."
+    },
+
+    {
+      "order": 6,
+      "type": "character_moment",
+      "mood": "exposed",
+      "image_url": "woman_face_grace.avif",
+      "title": "You have well said.",
+      "subtitle": "What Jesus did not say",
+      "content": "He did not say: you are broken.\nHe did not say: you should be ashamed.\nHe did not say: fix yourself before we speak.\n\nHe said: you have well said.\n\nHe praised her honesty in the very moment He revealed what she was carrying.\n\nFive husbands. Five wells. Five attempts to quench a thirst none of them could touch.\n\nHe did not mention her past to shame her. He mentioned it to show her He knew her — and stayed.\n\nThat is the difference between the world and Jesus. The world exposes to shame. Jesus reveals to set free.\n\nShe came to hide. He came to find her.",
+      "revelation_key": "Jesus knew every well she had been to. And He did not move."
+    },
+
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "awakening",
+      "image_url": "woman_eyes_wide.avif",
+      "title": "Sir, I perceive that you are a prophet.",
+      "narrative": "Something inside her was moving.\n\nNot evasion. Recognition. Her spirit was sensing that she was not speaking with an ordinary person.\n\nThe fear, the curiosity, something awakening within her, led her to ask the oldest question between her people and the Jews. Not to escape. To understand.",
+      "ambient_sound": "wind_shifting",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 4:19-20",
+        "text": "The woman said unto him, Sir, I perceive that you are a prophet. Our fathers worshiped in this mountain; and you say, that in Jerusalem is the place where men ought to worship."
+      },
+      "revelation_key": "Before she knew who He was, her spirit was already recognizing Him."
+    },
+
+    {
+      "order": 8,
+      "type": "theological_depth",
+      "mood": "shifting",
+      "image_url": "well_light_breaking.avif",
+      "title": "In spirit and in truth.",
+      "subtitle": "An answer larger than the question.",
+      "content": "Jesus did not dodge her question. He answered it completely.\n\nBut He took her further than she expected.\n\n📖 John 4:21-24 (KJV)\n«Jesus said unto her, Woman, believe me, the hour comes, when you shall neither in this mountain, nor yet at Jerusalem, worship the Father. You worship you know not what: we know what we worship: for salvation is of the Jews. But the hour comes, and now is, when the true worshipers shall worship the Father in spirit and in truth: for the Father seeks such to worship him. God is a Spirit: and they that worship him must worship him in spirit and in truth.»\n\nNot a mountain. Not a temple. Not a correct location.\n\nA relationship. Interior. True.\n\nShe had come with a question about places. He was speaking to her about the heart.",
+      "revelation_key": "She asked where to worship. He showed her how.",
+      "scripture_connections": [
+        {
+          "reference": "John 4:23",
+          "text": "But the hour comes, and now is, when the true worshipers shall worship the Father in spirit and in truth: for the Father seeks such to worship him."
+        }
+      ]
+    },
+
+    {
+      "order": 9,
+      "type": "scripture_moment",
+      "mood": "revelation",
+      "image_url": "jesus_i_am_declaration.avif",
+      "verse_reference": "John 4:25-26",
+      "verse_text": "The woman said unto him, I know that Messiah comes, who is called Christ: when he comes, he will tell us all things. Jesus said unto her, I that speak unto you am he.",
+      "reflection": "Throughout the Gospel of John, Jesus does not directly announce who He is. He speaks in signs, in images, in declarations that require discernment.\n\nHere, beside a well in Samaria, at noon, He says it plainly.\n\nAnd He says it to her.\n\nNot to a Levite priest, nor a Pharisee, nor a disciple.\n\nBut to the woman who came alone — ashamed, humbled.\n\nShe went from asking whether Jesus was greater than Jacob, a patriarch of the past, to receiving the declaration of the Messiah, the living hope. In a single conversation beside that well.",
+      "revelation_key": "The first person to receive this powerful declaration was the last person the world would have expected. That is how God works."
+    },
+
+    {
+      "order": 10,
+      "type": "cinematic_scene",
+      "mood": "turning_point",
+      "image_url": "jar_left_at_well.avif",
+      "title": "The woman then left her waterpot.",
+      "narrative": "The disciples arrived. They marveled that He was talking with a woman. None of them asked anything.\n\nAnd she made a decision.",
+      "ambient_sound": "footsteps_running",
+      "haptic": "light_pulse",
+      "verse_overlay": {
+        "reference": "John 4:27-29",
+        "text": "And upon this came his disciples, and marveled that he talked with the woman: yet no man said, What seek you? or, Why talk you with her? The woman then left her water pot, and went her way into the city, and said to the men, Come, see a man, who told me all things that ever I did: is not this the Christ?"
+      },
+      "revelation_key": "She did not forget the waterpot. She was transformed. The water she had come for was no longer enough."
+    },
+
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "wonder",
+      "image_url": "empty_jar_well.avif",
+      "title": "The waterpot she left behind.",
+      "subtitle": "What an abandoned waterpot means.",
+      "content": "In the previous encounter we saw Bartimaeus throw down his cloak before receiving his healing — faith that lets go before having anything to hold onto.\n\nShe left her waterpot after the encounter. What Jesus placed inside her had already made small what she carried in her hands.\n\nTwo people. Two abandoned objects. The same Jesus.\n\nBut there is something more in what she did.\n\n🪣 In the Greek, the question she brought to the city is framed with a word that anticipates uncertainty: Is not this the Christ?\n\nShe did not arrive proclaiming. She arrived inviting. She knew that a woman with her history would not be believed if she made a declaration. So she wrapped the revelation in a question that compelled each person to go and see for themselves.\n\nThat was not naivety. That was wisdom.\n\nAnd it worked.\n\n📖 John 4:30 (KJV)\n«Then they went out of the city, and came unto him.»",
+      "revelation_key": "She brought her wound as her testimony. And an entire city came out to see.",
+      "scripture_connections": [
+        {
+          "reference": "2 Corinthians 12:9",
+          "text": "And he said unto me, My grace is sufficient for you: for my strength is made perfect in weakness. Most gladly therefore will I rather boast in my weaknesses, that the power of Christ may rest upon me."
+        },
+        {
+          "reference": "Romans 8:28",
+          "text": "And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
+        }
+      ]
+    },
+
+    {
+      "order": 12,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "city_samaritans_coming.avif",
+      "title": "And many believed.",
+      "subtitle": "Because of the word of the woman.",
+      "content": "We must understand what this means.\n\nIn the first century, a woman had no public voice. A Samaritan woman with her history had even less. The men of that city had no cultural or social reason to listen to her.\n\nAnd they went out.\n\nThat is not normal. That is supernatural.\n\n📖 John 4:39 (KJV)\n«And many of the Samaritans of that city believed on him for the saying of the woman, who testified, He told me all that ever I did.»\n\nJohn — a first-century Jewish writer formed in that culture — recorded that it was this woman who brought an entire city to the Messiah. That cannot be explained apart from the Holy Spirit.\n\n📖 John 4:41-42 (KJV)\n«And many more believed because of his own word; And said unto the woman, Now we believe, not because of your saying: for we have heard him ourselves, and know that this is indeed the Christ, the Savior of the world.»\n\nShe arrived alone. She left as a movement.\nShe arrived carrying shame. She left with a testimony.\nShe arrived to hide. She left to find others.\n\nThat is what Jesus does. In our imperfection He loves us, transforms us, and uses us.",
+      "revelation_key": "God took the person the world disqualified and made her the first evangelist of Samaria."
+    },
+
+    {
+      "order": 13,
+      "type": "cinematic_scene",
+      "mood": "peace",
+      "image_url": "well_at_dusk.avif",
+      "title": "The well at dusk.",
+      "narrative": "The same well. The same place.\n\nBut the waterpot is gone. Only the rope curled over the edge.\n\nSomething happened here.",
+      "ambient_sound": "evening_wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 4:42",
+        "text": "And said unto the woman, Now we believe, not because of your saying: for we have heard him ourselves, and know that this is indeed the Christ, the Savior of the world."
+      },
+      "revelation_key": "An encounter with Jesus always leaves something different in the place where it occurred."
+    },
+
+    {
+      "order": 14,
+      "type": "discovery_activation",
+      "icon": "🪣",
+      "mood": "intimate",
+      "image_url": "woman_running_city.avif",
+      "title": "Your encounter",
+      "subtitle": "What well do you keep coming back to?",
+      "discovery_questions": [
+        {
+          "category": "Your thirst",
+          "question": "She returned to the same well every day. What have you kept returning to, hoping this time it would be different? What are you really looking for in that place?"
+        },
+        {
+          "category": "Being known",
+          "question": "Jesus knew everything about her and stayed. Is there something in your story you believe would push Jesus away if He knew it? What would it mean to know He already knows — and is still here?"
+        },
+        {
+          "category": "Your waterpot",
+          "question": "She left the waterpot because something inside her changed. What are you carrying that Jesus is inviting you to leave at the well?"
+        },
+        {
+          "category": "Your testimony",
+          "question": "She did not wait until everything was settled. She went with what she had: her story and a question. Who needs to hear what Jesus has done in your life — just as you are, today?"
+        }
+      ],
+      "prayer": {
+        "title": "Prayer of the one who came alone at noon",
+        "content": "Lord Jesus, I come to this well.\n\nNot because I have it figured out. Not because my story is clean. I come because I am thirsty and I have tried other places.\n\nYou know everything about me. Every well I have returned to. Every time I looked in the wrong place for what only You can give.\n\nAnd You are still here. Not to expose me. To find me.\n\nLike her, I want the encounter that changes what I carry. That what came in as thirst, goes out as testimony.\n\nTransform me. Use me. In my imperfection, in my story, in what I am.\n\nGive me the water that never runs dry. And give me the courage to leave my waterpot.\n\nIn Jesus' name, amen."
+      }
+    },
+
+    {
+      "order": 15,
+      "type": "completion",
+      "mood": "open",
+      "image_url": "woman_running_city.avif",
+      "completion_verse": {
+        "reference": "John 4:28-29",
+        "text": "The woman then left her water pot, and went her way into the city, and said to the men, Come, see a man, who told me all things that ever I did: is not this the Christ?",
+        "bible_version": "King James Version"
+      },
+      "reflection_prompt": "What is the waterpot you need to leave behind today? And who needs to hear your 'come and see'?",
+      "celebration_type": "gentle_light"
+    }
+
+  ]
+}
