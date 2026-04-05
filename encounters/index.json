@@ -125,7 +125,7 @@
             }
         },
         {
-            "id": "woman_well_encounter_001",
+            "id": "woman_well_001",
             "version": "1.0",
             "emoji": "⛲",
             "status": "published",
@@ -136,14 +136,14 @@
             "testament": "new",
             "character": "Woman at the Well",
             "files": {
-                "en": "woman_well_encounter_en_001.json",
-                "es": "woman_well_encounter_es_001.json",
-                "pt": "woman_well_encounter_pt_001.json",
-                "fr": "woman_well_encounter_fr_001.json",
-                "de": "woman_well_encounter_de_001.json",
-                "ja": "woman_well_encounter_ja_001.json",
-                "zh": "woman_well_encounter_zh_001.json",
-                "hi": "woman_well_encounter_hi_001.json"
+                "en": "woman_well_en_001.json",
+                "es": "woman_well_es_001.json",
+                "pt": "woman_well_pt_001.json",
+                "fr": "woman_well_fr_001.json",
+                "de": "woman_well_de_001.json",
+                "ja": "woman_well_ja_001.json",
+                "zh": "woman_well_zh_001.json",
+                "hi": "woman_well_hi_001.json"
             },
             "titles": {
                 "en": "The Woman Who Came Alone",
