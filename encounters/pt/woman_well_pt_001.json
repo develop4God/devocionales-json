@@ -12,7 +12,7 @@
     "scripture_reference": "João 4:1-42",
     "mood_primary": "midday",
     "accent_color": "#3d1a00",
-    "emoji": "🪣",
+    "emoji": "⛲",
     "tags": [
       "sede",
       "vergonha",
@@ -235,7 +235,7 @@
     {
       "order": 14,
       "type": "discovery_activation",
-      "icon": "🪣",
+      "icon": "⛲",
       "mood": "intimate",
       "image_url": "woman_running_city.avif",
       "title": "O seu encontro",
