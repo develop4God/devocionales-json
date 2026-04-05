@@ -1,0 +1,282 @@
+{
+  "id": "woman_well_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "de",
+  "bible_version": "LU17",
+  "version": "6.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "Die Samaritanerin",
+    "testament": "new",
+    "scripture_reference": "Johannes 4:1-42",
+    "mood_primary": "midday",
+    "accent_color": "#3d1a00",
+    "emoji": "⛲",
+    "tags": [
+      "durst",
+      "scham",
+      "lebendiges_wasser",
+      "identität",
+      "evangelisation",
+      "gnade",
+      "samaritanerin",
+      "jesus",
+      "begegnung",
+      "wiederherstellung"
+    ]
+  },
+  "key_verse": {
+    "reference": "Johannes 4:14",
+    "text": "wer aber von dem Wasser trinkt, das ich ihm gebe, den wird in Ewigkeit nicht dürsten, sondern das Wasser, das ich ihm geben werde, das wird in ihm eine Quelle des Wassers werden, das in das ewige Leben quillt.",
+    "bible_version": "LU17"
+  },
+  "cards": [
+
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "heat",
+      "image_url": "well_midday_sun.avif",
+      "title": "Es war notwendig.",
+      "narrative": "Die Juden umgingen Samarien. Jahrhunderte der Verachtung zwischen zwei Völkern, die einst eines gewesen waren. Tage des Umwegs, statt den Fuß auf dieses Land zu setzen.\n\nJesus machte keinen Umweg.\n\nDa war eine Frau an einem Brunnen, die noch nicht wusste, dass sie gesucht wurde.",
+      "ambient_sound": "desert_wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 4:4",
+        "text": "Er musste aber durch Samarien reisen."
+      },
+      "revelation_key": "Jesus veränderte seinen Weg um eine Frau willen, nach der die Welt aufgehört hatte zu suchen."
+    },
+
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "heat",
+      "image_url": "well_jesus_waiting.avif",
+      "title": "Jakobs Brunnen. Die sechste Stunde.",
+      "narrative": "Müde vom Weg. Allein am Brunnen.\n\nDie sechste Stunde — die Mittagssonne.\n\nGenau die Stunde, in der sie kommen würde.",
+      "ambient_sound": "desert_wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 4:5-6",
+        "text": "Da kam er in eine Stadt Samariens, die heißt Sychar, nahe bei dem Feld, das Jakob seinem Sohn Josef gegeben hatte. Es war aber dort Jakobs Brunnen. Weil nun Jesus müde war von der Reise, setzte er sich an den Brunnen; es war um die sechste Stunde."
+      },
+      "revelation_key": "Der Ort war kein Zufall. Die Stunde war kein Zufall. Er war niemals aus Versehen dort."
+    },
+
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "woman_jar_approaching.avif",
+      "verse_reference": "Johannes 4:7-9",
+      "verse_text": "Da kommt eine Frau aus Samarien, um Wasser zu schöpfen. Jesus spricht zu ihr: Gib mir zu trinken! Denn seine Jünger waren in die Stadt gegangen, um Speise zu kaufen. Da spricht die samaritische Frau zu ihm: Wie, du, ein Jude, erbittest etwas zu trinken von mir, einer samaritischen Frau? Denn die Juden haben keine Gemeinschaft mit den Samaritern. —",
+      "reflection": "Die Frauen gingen morgens zum Brunnen. Zusammen. Sie kam mittags. Allein.\n\nDas ist kein kleines Detail. Es ist ihre ganze Geschichte in einer einzigen Entscheidung.\n\nUnd der Erste, der mit ihr sprach, verurteilte sie nicht. Ignorierte sie nicht. Er bat sie um etwas.\n\nDer Sohn Gottes machte sich ihr gegenüber verwundbar, bevor sie seinen Namen kannte.\n\nSo kommt die Gnade. Nicht mit Macht. Mit Demut.",
+      "revelation_key": "Jesus sprach zuerst. Mit ihr. An dem Ort, wo sie gelernt hatte, unsichtbar zu sein."
+    },
+
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "mood": "shifting",
+      "image_url": "water_ripple.avif",
+      "title": "Zwei Arten des Durstes",
+      "subtitle": "Sie sprach von Wasser. Er sprach von etwas mehr.",
+      "content": "Jesus bot lebendiges Wasser an. Sie verstand es praktisch: Quellwasser, fließendes Wasser, Wasser, das man nicht mittags unter der Sonne holen muss.\n\nAber er zeigte auf den Brunnen. Auf das Seil. Auf alles, was sie jeden Tag dorthin getragen hatte.\n\n📖 Johannes 4:13-14 (LU17)\n«Jesus antwortete und sprach zu ihr: Wer von diesem Wasser trinkt, den wird wieder dürsten; wer aber von dem Wasser trinkt, das ich ihm gebe, den wird in Ewigkeit nicht dürsten, sondern das Wasser, das ich ihm geben werde, das wird in ihm eine Quelle des Wassers werden, das in das ewige Leben quillt.»\n\nIn Ewigkeit. Nicht für lange Zeit. In Ewigkeit.\n\n💧 Jakobs Brunnen war real. Er war Geschichte. Er war das Erbe von Jahrhunderten. Jesus ignoriert ihn nicht. Aber was er anbietet, kommt nicht von außen. Es kommt von innen. Es ist keine Quelle, zu der man zurückkehren muss. Es ist ein Brunnen, der in dem aufsprudelt, der ihn empfängt.\n\nSie selbst erkannte es, auch wenn sie es noch nicht vollständig verstand:\n\n📖 Johannes 4:15 (LU17)\n«Spricht die Frau zu ihm: Herr, gib mir dieses Wasser, damit mich nicht dürstet und ich nicht herkommen muss, um zu schöpfen!»\n\nSie dachte noch an einen Brunnen.\n\nAber sie neigte sich ihm zu. Und das war genug.",
+      "revelation_key": "Manchmal weist unser Durst uns auf Jesus hin, bevor es unser Verstand tut.",
+      "scripture_connections": [
+        {
+          "reference": "Jesaja 55:1",
+          "text": "Wohlan, alle, die ihr durstig seid, kommt her zum Wasser! Und die ihr kein Geld habt, kommt her, kauft und esst! Kommt her und kauft ohne Geld und umsonst Wein und Milch!"
+        },
+        {
+          "reference": "Johannes 7:37",
+          "text": "Aber am letzten, dem höchsten Tag des Festes trat Jesus auf und rief: Wen da dürstet, der komme zu mir und trinke!"
+        }
+      ]
+    },
+
+    {
+      "order": 5,
+      "type": "cinematic_scene",
+      "mood": "exposed",
+      "image_url": "woman_still_moment.avif",
+      "title": "Spricht er zu ihr: Geh hin, ruf deinen Mann und komm wieder her!",
+      "narrative": "Sie antwortete mit dem Ehrlichsten, was sie je an diesem Brunnen gesagt hatte.",
+      "ambient_sound": "silence_heavy",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 4:16-18",
+        "text": "Spricht er zu ihr: Geh hin, ruf deinen Mann und komm wieder her! Die Frau antwortete und sprach zu ihm: Ich habe keinen Mann. Jesus spricht zu ihr: Du hast richtig gesagt: »Ich habe keinen Mann.« Denn fünf Männer hast du gehabt, und der, den du jetzt hast, ist nicht dein Mann; das hast du recht gesagt."
+      },
+      "revelation_key": "Er kannte sie vollständig. Und er sagte: das hast du recht gesagt."
+    },
+
+    {
+      "order": 6,
+      "type": "character_moment",
+      "mood": "exposed",
+      "image_url": "woman_face_grace.avif",
+      "title": "Das hast du recht gesagt.",
+      "subtitle": "Was Jesus nicht sagte",
+      "content": "Er sagte nicht: du bist kaputt.\nEr sagte nicht: du solltest dich schämen.\nEr sagte nicht: mach dich in Ordnung, bevor wir reden.\n\nEr sagte: das hast du recht gesagt.\n\nEr lobte ihre Ehrlichkeit in dem Augenblick, in dem er offenbarte, was sie trug.\n\nFünf Männer. Fünf Brunnen. Fünf Versuche, einen Durst zu stillen, den keiner von ihnen berühren konnte.\n\nEr nannte ihr Vergangenes nicht, um sie zu beschämen. Er nannte es, um ihr zu zeigen, dass er sie kannte — und blieb.\n\nDas ist der Unterschied zwischen der Welt und Jesus. Die Welt enthüllt, um zu beschämen. Jesus offenbart, um zu befreien.\n\nSie kam, um sich zu verstecken. Er kam, um sie zu finden.",
+      "revelation_key": "Jesus kannte jeden Brunnen, an dem sie gewesen war. Und er bewegte sich nicht."
+    },
+
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "awakening",
+      "image_url": "woman_eyes_wide.avif",
+      "title": "Herr, ich sehe, dass du ein Prophet bist.",
+      "narrative": "Etwas in ihr bewegte sich.\n\nKeine Ausweichung. Erkennung. Ihr Geist spürte, dass sie nicht mit einem gewöhnlichen Menschen sprach.\n\nDie Furcht, die Neugier, etwas in ihr Erwachendes, führte sie dazu, die älteste Frage zwischen ihrem Volk und den Juden zu stellen. Nicht um zu entkommen. Um zu verstehen.",
+      "ambient_sound": "wind_shifting",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 4:19-20",
+        "text": "Die Frau spricht zu ihm: Herr, ich sehe, dass du ein Prophet bist. Unsere Väter haben auf diesem Berge angebetet, und ihr sagt, in Jerusalem sei die Stätte, wo man anbeten soll."
+      },
+      "revelation_key": "Bevor sie wusste, wer er war, erkannte ihr Geist ihn bereits."
+    },
+
+    {
+      "order": 8,
+      "type": "theological_depth",
+      "mood": "shifting",
+      "image_url": "well_light_breaking.avif",
+      "title": "Im Geist und in der Wahrheit.",
+      "subtitle": "Eine Antwort, die größer war als die Frage.",
+      "content": "Jesus wich ihrer Frage nicht aus. Er antwortete vollständig.\n\nAber er führte sie weiter, als sie erwartet hatte.\n\n📖 Johannes 4:21-24 (LU17)\n«Jesus spricht zu ihr: Glaube mir, Frau, es kommt die Zeit, dass ihr weder auf diesem Berge noch in Jerusalem den Vater anbeten werdet. Ihr wisst nicht, was ihr anbetet; wir aber wissen, was wir anbeten; denn das Heil kommt von den Juden. Aber es kommt die Stunde und ist schon jetzt, dass die wahren Anbeter den Vater anbeten werden im Geist und in der Wahrheit; denn auch der Vater will solche Anbeter haben. Gott ist Geist, und die ihn anbeten, die müssen ihn im Geist und in der Wahrheit anbeten.»\n\nKein Berg. Kein Tempel. Kein richtiger Ort.\n\nEine Beziehung. Innerlich. Wahr.\n\nSie war mit einer Frage über Orte gekommen. Er sprach mit ihr über das Herz.",
+      "revelation_key": "Sie fragte, wo sie anbeten sollte. Er zeigte ihr, wie.",
+      "scripture_connections": [
+        {
+          "reference": "Johannes 4:23",
+          "text": "Aber es kommt die Stunde und ist schon jetzt, dass die wahren Anbeter den Vater anbeten werden im Geist und in der Wahrheit; denn auch der Vater will solche Anbeter haben."
+        }
+      ]
+    },
+
+    {
+      "order": 9,
+      "type": "scripture_moment",
+      "mood": "revelation",
+      "image_url": "jesus_i_am_declaration.avif",
+      "verse_reference": "Johannes 4:25-26",
+      "verse_text": "Spricht die Frau zu ihm: Ich weiß, dass der Messias kommt, der da Christus heißt. Wenn dieser kommt, wird er uns alles verkündigen. Jesus spricht zu ihr: Ich bin's, der mit dir redet.",
+      "reflection": "Im gesamten Johannesevangelium kündigt Jesus nicht direkt an, wer er ist. Er spricht in Zeichen, in Bildern, in Aussagen, die Unterscheidungsvermögen erfordern.\n\nHier, neben einem Brunnen in Samarien, am Mittag, sagt er es klar und deutlich.\n\nUnd er sagt es ihr.\n\nNicht einem levitischen Priester, nicht einem Pharisäer, nicht einem Jünger.\n\nSondern der Frau, die allein gekommen war — beschämt, demütig.\n\nSie war von der Frage, ob Jesus größer als Jakob sei — ein Patriarch der Vergangenheit — zur Empfängerin der Erklärung des Messias übergegangen, der lebendigen Hoffnung. In einem einzigen Gespräch neben diesem Brunnen.",
+      "revelation_key": "Die erste Person, die diese mächtige Erklärung empfing, war die, die die Welt am wenigsten erwartet hätte. So handelt Gott."
+    },
+
+    {
+      "order": 10,
+      "type": "cinematic_scene",
+      "mood": "turning_point",
+      "image_url": "jar_left_at_well.avif",
+      "title": "Da ließ die Frau ihren Krug stehen.",
+      "narrative": "Die Jünger kamen. Sie wunderten sich, dass er mit einer Frau redete. Niemand fragte irgendetwas.\n\nUnd sie traf eine Entscheidung.",
+      "ambient_sound": "footsteps_running",
+      "haptic": "light_pulse",
+      "verse_overlay": {
+        "reference": "Johannes 4:27-29",
+        "text": "Unterdessen kamen seine Jünger, und sie wunderten sich, dass er mit einer Frau redete; doch sagte niemand: Was willst du?, oder: Was redest du mit ihr? Da ließ die Frau ihren Krug stehen und ging hin in die Stadt und spricht zu den Leuten: Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe, ob er nicht der Christus sei!"
+      },
+      "revelation_key": "Sie vergaß den Krug nicht. Sie war verwandelt. Das Wasser, das sie geholt hatte, war nicht mehr genug."
+    },
+
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "wonder",
+      "image_url": "empty_jar_well.avif",
+      "title": "Der Krug, den sie zurückließ.",
+      "subtitle": "Was ein zurückgelassener Krug bedeutet.",
+      "content": "In der vorherigen Begegnung sahen wir Bartimäus seinen Mantel wegwerfen, bevor er seine Heilung empfing — Glaube, der loslässt, bevor er etwas hat, woran er sich festhalten kann.\n\nSie ließ den Krug nach der Begegnung zurück. Was Jesus in ihr Inneres gelegt hatte, hatte bereits klein gemacht, was sie in ihren Händen trug.\n\nZwei Menschen. Zwei zurückgelassene Gegenstände. Derselbe Jesus.\n\nAber es gibt noch etwas mehr in dem, was sie tat.\n\n🪣 Im Griechischen ist die Frage, die sie in die Stadt trug, mit einem Wort formuliert, das Ungewissheit antizipiert: ob er nicht der Christus sei?\n\nSie kam nicht verkündigend an. Sie kam einladend. Sie wusste, dass einer Frau mit ihrer Geschichte nicht geglaubt werden würde, wenn sie eine Erklärung abgäbe. Deshalb hüllte sie die Offenbarung in eine Frage, die jeden zwang, selbst zu urteilen.\n\nDas war keine Naivität. Das war Weisheit.\n\nUnd es wirkte.\n\n📖 Johannes 4:30 (LU17)\n«Da gingen sie aus der Stadt heraus und kamen zu ihm.»",
+      "revelation_key": "Sie trug ihre Wunde als Zeugnis. Und eine ganze Stadt kam heraus, um zu sehen.",
+      "scripture_connections": [
+        {
+          "reference": "2. Korinther 12:9",
+          "text": "Und er hat zu mir gesagt: Lass dir an meiner Gnade genügen; denn meine Kraft vollendet sich in der Schwachheit. Darum will ich mich am allerliebsten rühmen meiner Schwachheit, auf dass die Kraft Christi bei mir wohne."
+        },
+        {
+          "reference": "Römer 8:28",
+          "text": "Wir wissen aber, dass denen, die Gott lieben, alle Dinge zum Besten dienen, denen, die nach seinem Ratschluss berufen sind."
+        }
+      ]
+    },
+
+    {
+      "order": 12,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "city_samaritans_coming.avif",
+      "title": "Und viele glaubten.",
+      "subtitle": "Durch das Wort der Frau.",
+      "content": "Man muss verstehen, was das bedeutet.\n\nIm ersten Jahrhundert hatte eine Frau keine öffentliche Stimme. Eine samaritische Frau mit ihrer Geschichte hatte noch weniger. Die Männer dieser Stadt hatten keinen kulturellen oder sozialen Grund, ihr zuzuhören.\n\nUnd sie gingen hinaus.\n\nDas ist nicht normal. Das ist übernatürlich.\n\n📖 Johannes 4:39 (LU17)\n«Es glaubten aber an ihn viele der Samariter aus dieser Stadt um des Wortes der Frau willen, die bezeugte: Er hat mir alles gesagt, was ich getan habe.»\n\nJohannes — ein jüdischer Schriftsteller des ersten Jahrhunderts, der in jener Kultur geformt wurde — hielt fest, dass es diese Frau war, die eine ganze Stadt zum Messias brachte. Das lässt sich ohne den Heiligen Geist nicht erklären.\n\n📖 Johannes 4:41-42 (LU17)\n«Und noch viel mehr glaubten um seines Wortes willen. Und sie sprachen zu der Frau: Nun glauben wir nicht mehr um deiner Rede willen; denn wir haben selber gehört und erkannt: Dieser ist wahrlich der Welt Heiland.»\n\nSie kam allein an. Sie ging als Bewegung.\nSie kam voll Scham an. Sie ging mit einem Zeugnis.\nSie kam, um sich zu verstecken. Sie ging, um andere zu suchen.\n\nDas ist es, was Jesus tut. In unserer Unvollkommenheit liebt er uns, verwandelt uns und gebraucht uns.",
+      "revelation_key": "Gott nahm die Person, die die Welt disqualifiziert hatte, und machte sie zur ersten Evangelistin Samariens."
+    },
+
+    {
+      "order": 13,
+      "type": "cinematic_scene",
+      "mood": "peace",
+      "image_url": "well_at_dusk.avif",
+      "title": "Der Brunnen in der Abenddämmerung.",
+      "narrative": "Derselbe Brunnen. Derselbe Ort.\n\nAber der Krug ist weg. Nur das Seil, das über den Rand gerollt liegt.\n\nHier ist etwas geschehen.",
+      "ambient_sound": "evening_wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 4:42",
+        "text": "Und sie sprachen zu der Frau: Nun glauben wir nicht mehr um deiner Rede willen; denn wir haben selber gehört und erkannt: Dieser ist wahrlich der Welt Heiland."
+      },
+      "revelation_key": "Eine Begegnung mit Jesus hinterlässt immer etwas Verändertes an dem Ort, wo sie geschah."
+    },
+
+    {
+      "order": 14,
+      "type": "discovery_activation",
+      "icon": "⛲",
+      "mood": "intimate",
+      "image_url": "woman_running_city.avif",
+      "title": "Deine Begegnung",
+      "subtitle": "Zu welchem Brunnen kehrst du immer wieder zurück?",
+      "discovery_questions": [
+        {
+          "category": "Dein Durst",
+          "question": "Sie kehrte jeden Tag zum selben Brunnen zurück. Wohin bist du immer wieder gegangen, in der Hoffnung, dass es diesmal anders sein würde? Was suchst du wirklich an diesem Ort?"
+        },
+        {
+          "category": "Erkannt werden",
+          "question": "Jesus wusste alles über sie und blieb. Gibt es etwas in deiner Geschichte, von dem du glaubst, dass es Jesus wegschicken würde, wenn er es wüsste? Was würde es für dich bedeuten, zu wissen, dass er es bereits weiß — und noch hier ist?"
+        },
+        {
+          "category": "Dein Krug",
+          "question": "Sie ließ den Krug zurück, weil sich etwas in ihr verändert hatte. Was trägst du, wozu Jesus dich einlädt, es am Brunnen zurückzulassen?"
+        },
+        {
+          "category": "Dein Zeugnis",
+          "question": "Sie wartete nicht, bis alles geklärt war. Sie ging mit dem, was sie hatte: ihrer Geschichte und einer Frage. Mit wem musst du teilen, was Jesus in deinem Leben getan hat — so wie du bist, heute?"
+        }
+      ],
+      "prayer": {
+        "title": "Gebet desjenigen, der allein um die Mittagsstunde kam",
+        "content": "Herr Jesus, ich komme zu diesem Brunnen.\n\nNicht weil ich alles geklärt habe. Nicht weil meine Geschichte rein ist. Ich komme, weil ich Durst habe und es anderswo versucht habe.\n\nDu weißt alles über mich. Jeden Brunnen, zu dem ich zurückgekehrt bin. Jedes Mal, wenn ich am falschen Ort gesucht habe, was nur Du geben kannst.\n\nUnd Du bist noch hier. Nicht, um mich bloßzustellen. Um mich zu finden.\n\nWie sie möchte ich die Begegnung, die verändert, was man trägt. Dass das, was als Durst kam, als Zeugnis geht.\n\nVerwandle mich. Gebrauche mich. In meiner Unvollkommenheit, in meiner Geschichte, in dem, was ich bin.\n\nGib mir das Wasser, das nie versieht. Und gib mir den Mut, meinen Krug zurückzulassen.\n\nIn Jesu Namen, Amen."
+      }
+    },
+
+    {
+      "order": 15,
+      "type": "completion",
+      "mood": "open",
+      "image_url": "woman_running_city.avif",
+      "completion_verse": {
+        "reference": "Johannes 4:28-29",
+        "text": "Da ließ die Frau ihren Krug stehen und ging hin in die Stadt und spricht zu den Leuten: Kommt, seht einen Menschen, der mir alles gesagt hat, was ich getan habe, ob er nicht der Christus sei!",
+        "bible_version": "LU17"
+      },
+      "reflection_prompt": "Welchen Krug musst du heute zurücklassen? Und wer muss dein »Kommt und seht« hören?",
+      "celebration_type": "gentle_light"
+    }
+
+  ]
+}
