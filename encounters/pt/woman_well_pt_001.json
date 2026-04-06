@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "pt",
-  "bible_version": "Almeida Revista e Corrigida",
+  "bible_version": "ARC",
   "version": "6.0",
   "estimated_reading_minutes": 10,
   "meta": {
@@ -29,7 +29,7 @@
   "key_verse": {
     "reference": "S. João 4:14",
     "text": "mas aquele que beber da água que eu lhe der nunca terá sede, porque a água que eu lhe der se fará nele uma fonte de água a jorrar para a vida eterna.",
-    "bible_version": "Almeida Revista e Corrigida"
+    "bible_version": "ARC"
   },
   "cards": [
 

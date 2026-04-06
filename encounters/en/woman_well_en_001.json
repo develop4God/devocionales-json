@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "en",
-  "bible_version": "King James Version",
+  "bible_version": "KJV",
   "version": "6.0",
   "estimated_reading_minutes": 9,
   "meta": {
@@ -29,7 +29,7 @@
   "key_verse": {
     "reference": "John 4:14",
     "text": "But whosoever drinks of the water that I shall give him shall never thirst; but the water that I shall give him shall be in him a well of water springing up into everlasting life.",
-    "bible_version": "King James Version"
+    "bible_version": "KJV"
   },
   "cards": [
 
