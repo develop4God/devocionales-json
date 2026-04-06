@@ -1,197 +1,191 @@
 {
-    "id": "bartimaeus_001",
-    "type": "encounter",
-    "schema_version": "encounters_v1",
-    "language": "es",
-    "bible_version": "RVR1960",
-    "version": "1.0",
-    "estimated_reading_minutes": 9,
-
-    "meta": {
-        "character": "Bartimeo",
-        "testament": "new",
-        "scripture_reference": "Marcos 10:46-52",
-        "mood_primary": "darkness",
-        "accent_color": "#2a1500",
-        "emoji": "👁️",
-        "tags": ["ceguera", "fe", "persistencia", "misericordia", "sanidad", "bartimeo", "jesus", "ver"]
+  "id": "bartimaeus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "es",
+  "bible_version": "RVR1960",
+  "version": "1.0",
+  "estimated_reading_minutes": 9,
+  "meta": {
+    "character": "Bartimeo",
+    "testament": "new",
+    "scripture_reference": "Marcos 10:46-52",
+    "mood_primary": "darkness",
+    "accent_color": "#2a1500",
+    "emoji": "👁️",
+    "tags": [
+      "ceguera",
+      "fe",
+      "persistencia",
+      "misericordia",
+      "sanidad",
+      "bartimeo",
+      "jesus",
+      "ver"
+    ]
+  },
+  "key_verse": {
+    "reference": "Marcos 10:52",
+    "text": "Y Jesús le dijo: Vete, tu fe te ha salvado. Y en seguida recobró la vista, y seguía a Jesús en el camino.",
+    "bible_version": "RVR1960"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "darkness",
+      "image_url": "bartimaeus_roadside_dust",
+      "title": "La Orilla del Camino.",
+      "narrative": "Jericó: polvo, ruido de multitudes. Y en la orilla del camino, un hombre que lo había perdido todo; incluyendo la luz.\n\nBartimeo, hijo de Timeo. Era ciego y mendigo. Invisible para todos los que pasaban.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "revelation_key": "Dios ve a los que el mundo ha dejado de ver."
     },
-
-    "key_verse": {
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "bartimaeus_crowd_passing",
+      "verse_reference": "Marcos 10:46-47",
+      "verse_text": "Entonces vinieron a Jericó; y al salir de Jericó él y sus discípulos y una gran multitud, Bartimeo el ciego, hijo de Timeo, estaba sentado junto al camino mendigando. Y oyendo que era Jesús nazareno, comenzó a dar voces y a decir: ¡Jesús, Hijo de David, ten misericordia de mí!",
+      "reflection": "Observa los detalles que Marcos incluye.\n\nNo es 'un ciego'. Es Bartimeo, hijo de Timeo. Marcos le da nombre. Marcos le da padre. Marcos lo ve.\n\nY nota lo que Bartimeo hace en el instante en que escucha el nombre de Jesús. No espera. No envía un mensajero. No reza en silencio.\n\nGrita.",
+      "revelation_key": "Bartimeo no podía ver a Jesús. Pero lo reconoció antes que muchos que sí podían."
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "bartimaeus_crying_out",
+      "title": "Cállate",
+      "subtitle": "La orden que Bartimeo ignoró",
+      "content": "La multitud lo reprendió. 'Cállate.'\n\nPiensa en ese momento. Rodeado de gente. Todos diciéndole que su voz no era bienvenida. Que su necesidad era una molestia. Que Jesús tenía cosas más importantes que hacer.\n\nLa respuesta de Bartimeo:\n\n'Pero él clamaba mucho más: ¡Hijo de David, ten misericordia de mí!'\n\n🔑 CLAMABA MUCHO MÁS.\n\nNo se disculpó. No bajó la voz. No esperó un mejor momento.\n\nLa oposición no apagó su fe — la encendió.\n\nHay algo profundo aquí: Bartimeo nunca había visto a Jesús. No podía. Pero había escuchado. Y lo que escuchó fue suficiente para que ninguna voz humana lo silenciara.\n\nLa fe de Bartimeo no dependía de lo que sus ojos podían ver.",
+      "revelation_key": "Cuando el mundo dice 'cállate', la fe dice 'mucho más'."
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "turning_point",
+      "image_url": "bartimaeus_jesus_stops",
+      "title": "Jesús se detuvo",
+      "narrative": "Toda la multitud. Todo el movimiento. Toda la urgencia del camino a Jerusalén.\n\nY Jesús se detuvo.",
+      "ambient_sound": "crowd_quieting",
+      "haptic": "gentle_pulse",
+      "verse_overlay": {
+        "reference": "Marcos 10:49",
+        "text": "Entonces Jesús, deteniéndose, mandó llamarle; y llamaron al ciego, diciéndole: Ten confianza; levántate, te llama."
+      },
+      "revelation_key": "El grito de un mendigo ciego detuvo al Hijo de Dios en su camino. Así funciona la oración honesta."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "image_url": "bartimaeus_throws_cloak",
+      "title": "El Manto que Tiró",
+      "subtitle": "El detalle más pequeño que lo dice todo",
+      "content": "Marcos incluye un detalle que Mateo y Lucas omiten:\n\n'Él entonces, arrojando su capa, se levantó y vino a Jesús.'\n\nEsa capa no era ropa ordinaria.\n\nPara un mendigo ciego en el siglo primero, la capa era el instrumento de trabajo — extendida en el suelo para recoger monedas. Era su único bien. Su seguridad. Su identidad como mendigo.\n\nY la tiró.\n\n⚠️ PIENSA EN LO QUE SIGNIFICÓ ESO:\n\nSin vista, tirar tu capa en medio de una multitud probablemente significaba perderla para siempre. Si Jesús no lo sanaba — si Bartimeo volvía a buscar su capa entre los pies de cientos de personas — probablemente no la encontraría.\n\nTirar la capa fue un acto de fe total antes de recibir nada.\n\nNo esperó ver para creer. Actuó como si ya hubiera sido respondido.\n\n🔑 EN GRIEGO: El verbo 'arrojando' (apobalón) implica lanzar con fuerza — no soltar con cuidado. No depositó la capa. La lanzó.",
+      "revelation_key": "Bartimeo tiró su seguridad antes de recibir su milagro. La fe actúa antes de ver.",
+      "scripture_connections": [
+        {
+          "reference": "Hebreos 11:1",
+          "text": "Es, pues, la fe la certeza de lo que se espera, la convicción de lo que no se ve."
+        },
+        {
+          "reference": "2 Corintios 5:7",
+          "text": "porque por fe andamos, no por vista."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "scripture_moment",
+      "mood": "intimate",
+      "image_url": "bartimaeus_desperate_plea",
+      "verse_reference": "Marcos 10:51",
+      "verse_text": "Respondiendo Jesús, le dijo: ¿Qué quieres que te haga? Y el ciego le dijo: Maestro, que recobre la vista.",
+      "reflection": "Esta es la misma pregunta que Jesús acaba de hacerle a Jacobo y Juan en Marcos 10:36.\n\nEllos pidieron poder. Posición. Sentarse a la derecha y a la izquierda.\n\nBartimeo pidió ver.\n\nJesús hace la misma pregunta a todos. La diferencia está en lo que cada corazón responde.\n\nY nota lo que llama a Jesús: Rabboni — Maestro mío. No solo Maestro. Mío. Personal. Íntimo. El ciego que nunca lo había visto lo llamó suyo antes de poder mirarlo a los ojos.",
+      "revelation_key": "Lo que le pedimos a Jesús revela qué tan bien lo conocemos."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "bartimaeus_sight_restored",
+      "title": "La luz entró",
+      "narrative": "Sin barro. Sin ceremonia. Sin condición.\n\nSolo: 'Tu fe te ha salvado.'\n\nY en seguida — los colores del mundo. El polvo del camino. Las caras de la multitud. Y el rostro de Jesús, por primera vez.",
+      "ambient_sound": "silence_breaking",
+      "haptic": "light_pulse",
+      "verse_overlay": {
+        "reference": "Marcos 10:52",
+        "text": "Y en seguida recobró la vista, y seguía a Jesús en el camino."
+      },
+      "revelation_key": "Lo primero que vieron sus ojos fue a Jesús. Y eligió seguirlo."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "peace",
+      "image_url": "bartimaeus_face_restored",
+      "title": "Siguió a Jesús en el Camino",
+      "subtitle": "Las cinco palabras más importantes del texto",
+      "content": "Marcos termina la historia con una línea que se puede leer demasiado rápido:\n\n'Y seguía a Jesús en el camino.'\n\nEste no es solo el final de la historia de Bartimeo.\n\nEste es su comienzo.\n\n🔑 EL CAMINO:\n\nEl camino hacia donde se dirigía Jesús en ese momento era Jerusalén. A la cruz. A la traición. A la muerte.\n\nBartimeo recibió su vista y eligió el camino más difícil.\n\nNo volvió a casa a mostrar su milagro. No se quedó donde estaba, ahora que podía ver y podía trabajar. Siguió a un hombre hacia Jerusalén — hacia todo lo que la multitud no comprendía aún.\n\n🚶 LO QUE ESTO DICE SOBRE LA FE GENUINA:\n\nLa fe de Bartimeo no terminó cuando recibió lo que pedía. Ahí comenzó.\n\nEl milagro no fue el destino. Fue la puerta.",
+      "revelation_key": "El milagro no fue el destino de Bartimeo. Fue la puerta hacia Jesús."
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "image_url": "bartimaeus_desperate_plea",
+      "title": "La Ironía que Marcos No Puede Evitar",
+      "subtitle": "Los que veían no vieron. El que no podía ver, vio.",
+      "content": "Marcos 10 está lleno de personas que no entienden quién es Jesús.\n\nLos discípulos discuten quién es el más grande. Jacobo y Juan piden poder. La multitud reprende a Bartimeo por gritar.\n\nY el ciego — el hombre sin ojos — es el único que lo llama correctamente:\n\n'¡Hijo de David!'\n\nEste es un título mesiánico. Bartimeo no solo reconoció que Jesús era un rabino. Reconoció quién era en el plan de Dios.\n\n⚠️ LA IRONÍA ESPIRITUAL:\n\nA lo largo del Evangelio de Marcos, Jesús sana ciegos físicos en momentos donde los discípulos muestran ceguera espiritual. No es accidental.\n\nMarcos quiere que el lector se pregunte: ¿Quién realmente puede ver?\n\nBartimeo recibió vista física en el momento en que los que tenían ojos no podían ver quién estaba caminando entre ellos.\n\nDios frecuentemente revela más a los que el mundo considera menos.",
+      "revelation_key": "La ceguera espiritual es más peligrosa que la física. Bartimeo veía antes de poder ver.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 9:39",
+          "text": "Jesús entonces dijo: Para juicio he venido yo a este mundo; para que los que no ven, vean, y los que ven, sean cegados."
+        },
+        {
+          "reference": "1 Corintios 1:27",
+          "text": "sino que lo necio del mundo escogió Dios, para avergonzar a los sabios; y lo débil del mundo escogió Dios, para avergonzar a lo fuerte."
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "type": "discovery_activation",
+      "image_url": "bartimaeus_jesus_way",
+      "icon": "🙏",
+      "title": "Tu Encuentro",
+      "subtitle": "Bartimeo no esperó el momento perfecto. Gritó desde donde estaba.",
+      "discovery_questions": [
+        {
+          "category": "Honestidad",
+          "question": "¿En qué área de tu vida estás sentado al borde del camino, esperando que Jesús pase — en lugar de clamar a Él? ¿Qué te ha silenciado?"
+        },
+        {
+          "category": "Fe",
+          "question": "Bartimeo tiró su capa antes de recibir su milagro. ¿Hay algo que necesitas 'tirar' — una seguridad, un plan, una identidad — para seguir a Jesús completamente?"
+        },
+        {
+          "category": "Propósito",
+          "question": "Cuando Bartimeo recibió lo que pedía, eligió seguir a Jesús en lugar de irse. ¿Qué significa para ti seguir a Jesús después de que Él responde una oración?"
+        }
+      ],
+      "prayer": {
+        "title": "Oración del que Clama desde la Orilla",
+        "content": "Señor Jesús, Hijo de David, ten misericordia de mí.\n\nComo Bartimeo — soy consciente de lo que no puedo ver. Las áreas de mi vida donde camino a oscuras. Las verdades que no entiendo. Las cegueras que no reconozco en mí mismo.\n\nNo me voy a callar.\n\nClamo desde donde estoy — sin el momento perfecto, sin las palabras perfectas, sin la fe perfecta.\n\nSolo con la misma honestidad de un hombre en la orilla de un camino polvoriento: quiero ver.\n\nY cuando me des vista — que lo primero que mis ojos encuentren seas Tú. Y que te siga.\n\nEn el nombre de Jesús, Amén."
+      }
+    },
+    {
+      "order": 11,
+      "type": "completion",
+      "image_url": "bartimaeus_face_restored",
+      "completion_verse": {
         "reference": "Marcos 10:52",
         "text": "Y Jesús le dijo: Vete, tu fe te ha salvado. Y en seguida recobró la vista, y seguía a Jesús en el camino.",
         "bible_version": "RVR1960"
-    },
-
-    "cards": [
-
-        {
-            "order": 1,
-            "type": "cinematic_scene",
-            "mood": "darkness",
-            "image_url": "bartimaeus_roadside_dust.png",
-            "title": "La Orilla del Camino.",
-            "narrative": "Jericó: polvo, ruido de multitudes. Y en la orilla del camino, un hombre que lo había perdido todo; incluyendo la luz.\n\nBartimeo, hijo de Timeo. Era ciego y mendigo. Invisible para todos los que pasaban.",
-            "ambient_sound": "crowd_distant",
-            "haptic": null,
-            "revelation_key": "Dios ve a los que el mundo ha dejado de ver."
-        },
-
-        {
-            "order": 2,
-            "type": "scripture_moment",
-            "mood": "tense",
-            "image_url": "bartimaeus_crowd_passing.png",
-            "verse_reference": "Marcos 10:46-47",
-            "verse_text": "Entonces vinieron a Jericó; y al salir de Jericó él y sus discípulos y una gran multitud, Bartimeo el ciego, hijo de Timeo, estaba sentado junto al camino mendigando. Y oyendo que era Jesús nazareno, comenzó a dar voces y a decir: ¡Jesús, Hijo de David, ten misericordia de mí!",
-            "reflection": "Observa los detalles que Marcos incluye.\n\nNo es 'un ciego'. Es Bartimeo, hijo de Timeo. Marcos le da nombre. Marcos le da padre. Marcos lo ve.\n\nY nota lo que Bartimeo hace en el instante en que escucha el nombre de Jesús. No espera. No envía un mensajero. No reza en silencio.\n\nGrita.",
-            "revelation_key": "Bartimeo no podía ver a Jesús. Pero lo reconoció antes que muchos que sí podían."
-        },
-
-        {
-            "order": 3,
-            "type": "character_moment",
-            "mood": "intense",
-            "image_url": "bartimaeus_crying_out.png",
-            "title": "Cállate",
-            "subtitle": "La orden que Bartimeo ignoró",
-            "content": "La multitud lo reprendió. 'Cállate.'\n\nPiensa en ese momento. Rodeado de gente. Todos diciéndole que su voz no era bienvenida. Que su necesidad era una molestia. Que Jesús tenía cosas más importantes que hacer.\n\nLa respuesta de Bartimeo:\n\n'Pero él clamaba mucho más: ¡Hijo de David, ten misericordia de mí!'\n\n🔑 CLAMABA MUCHO MÁS.\n\nNo se disculpó. No bajó la voz. No esperó un mejor momento.\n\nLa oposición no apagó su fe — la encendió.\n\nHay algo profundo aquí: Bartimeo nunca había visto a Jesús. No podía. Pero había escuchado. Y lo que escuchó fue suficiente para que ninguna voz humana lo silenciara.\n\nLa fe de Bartimeo no dependía de lo que sus ojos podían ver.",
-            "revelation_key": "Cuando el mundo dice 'cállate', la fe dice 'mucho más'."
-        },
-
-        {
-            "order": 4,
-            "type": "cinematic_scene",
-            "mood": "turning_point",
-            "image_url": "bartimaeus_jesus_stops.png",
-            "title": "Jesús se detuvo",
-            "narrative": "Toda la multitud. Todo el movimiento. Toda la urgencia del camino a Jerusalén.\n\nY Jesús se detuvo.",
-            "ambient_sound": "crowd_quieting",
-            "haptic": "gentle_pulse",
-            "verse_overlay": {
-                "reference": "Marcos 10:49",
-                "text": "Entonces Jesús, deteniéndose, mandó llamarle; y llamaron al ciego, diciéndole: Ten confianza; levántate, te llama."
-            },
-            "revelation_key": "El grito de un mendigo ciego detuvo al Hijo de Dios en su camino. Así funciona la oración honesta."
-        },
-
-        {
-            "order": 5,
-            "type": "theological_depth",
-            "image_url": "bartimaeus_throws_cloak.png",
-            "title": "El Manto que Tiró",
-            "subtitle": "El detalle más pequeño que lo dice todo",
-            "content": "Marcos incluye un detalle que Mateo y Lucas omiten:\n\n'Él entonces, arrojando su capa, se levantó y vino a Jesús.'\n\nEsa capa no era ropa ordinaria.\n\nPara un mendigo ciego en el siglo primero, la capa era el instrumento de trabajo — extendida en el suelo para recoger monedas. Era su único bien. Su seguridad. Su identidad como mendigo.\n\nY la tiró.\n\n⚠️ PIENSA EN LO QUE SIGNIFICÓ ESO:\n\nSin vista, tirar tu capa en medio de una multitud probablemente significaba perderla para siempre. Si Jesús no lo sanaba — si Bartimeo volvía a buscar su capa entre los pies de cientos de personas — probablemente no la encontraría.\n\nTirar la capa fue un acto de fe total antes de recibir nada.\n\nNo esperó ver para creer. Actuó como si ya hubiera sido respondido.\n\n🔑 EN GRIEGO: El verbo 'arrojando' (apobalón) implica lanzar con fuerza — no soltar con cuidado. No depositó la capa. La lanzó.",
-            "revelation_key": "Bartimeo tiró su seguridad antes de recibir su milagro. La fe actúa antes de ver.",
-            "scripture_connections": [
-                {
-                    "reference": "Hebreos 11:1",
-                    "text": "Es, pues, la fe la certeza de lo que se espera, la convicción de lo que no se ve."
-                },
-                {
-                    "reference": "2 Corintios 5:7",
-                    "text": "porque por fe andamos, no por vista."
-                }
-            ]
-        },
-
-        {
-            "order": 6,
-            "type": "scripture_moment",
-            "mood": "intimate",
-            "image_url": "bartimaeus_desperate_plea.png",
-            "verse_reference": "Marcos 10:51",
-            "verse_text": "Respondiendo Jesús, le dijo: ¿Qué quieres que te haga? Y el ciego le dijo: Maestro, que recobre la vista.",
-            "reflection": "Esta es la misma pregunta que Jesús acaba de hacerle a Jacobo y Juan en Marcos 10:36.\n\nEllos pidieron poder. Posición. Sentarse a la derecha y a la izquierda.\n\nBartimeo pidió ver.\n\nJesús hace la misma pregunta a todos. La diferencia está en lo que cada corazón responde.\n\nY nota lo que llama a Jesús: Rabboni — Maestro mío. No solo Maestro. Mío. Personal. Íntimo. El ciego que nunca lo había visto lo llamó suyo antes de poder mirarlo a los ojos.",
-            "revelation_key": "Lo que le pedimos a Jesús revela qué tan bien lo conocemos."
-        },
-
-        {
-            "order": 7,
-            "type": "cinematic_scene",
-            "mood": "grace",
-            "image_url": "bartimaeus_sight_restored.png",
-            "title": "La luz entró",
-            "narrative": "Sin barro. Sin ceremonia. Sin condición.\n\nSolo: 'Tu fe te ha salvado.'\n\nY en seguida — los colores del mundo. El polvo del camino. Las caras de la multitud. Y el rostro de Jesús, por primera vez.",
-            "ambient_sound": "silence_breaking",
-            "haptic": "light_pulse",
-            "verse_overlay": {
-                "reference": "Marcos 10:52",
-                "text": "Y en seguida recobró la vista, y seguía a Jesús en el camino."
-            },
-            "revelation_key": "Lo primero que vieron sus ojos fue a Jesús. Y eligió seguirlo."
-        },
-
-        {
-            "order": 8,
-            "type": "character_moment",
-            "mood": "peace",
-            "image_url": "bartimaeus_face_restored.png",
-            "title": "Siguió a Jesús en el Camino",
-            "subtitle": "Las cinco palabras más importantes del texto",
-            "content": "Marcos termina la historia con una línea que se puede leer demasiado rápido:\n\n'Y seguía a Jesús en el camino.'\n\nEste no es solo el final de la historia de Bartimeo.\n\nEste es su comienzo.\n\n🔑 EL CAMINO:\n\nEl camino hacia donde se dirigía Jesús en ese momento era Jerusalén. A la cruz. A la traición. A la muerte.\n\nBartimeo recibió su vista y eligió el camino más difícil.\n\nNo volvió a casa a mostrar su milagro. No se quedó donde estaba, ahora que podía ver y podía trabajar. Siguió a un hombre hacia Jerusalén — hacia todo lo que la multitud no comprendía aún.\n\n🚶 LO QUE ESTO DICE SOBRE LA FE GENUINA:\n\nLa fe de Bartimeo no terminó cuando recibió lo que pedía. Ahí comenzó.\n\nEl milagro no fue el destino. Fue la puerta.",
-            "revelation_key": "El milagro no fue el destino de Bartimeo. Fue la puerta hacia Jesús."
-        },
-
-        {
-            "order": 9,
-            "type": "theological_depth",
-            "image_url": "bartimaeus_desperate_plea.png",
-            "title": "La Ironía que Marcos No Puede Evitar",
-            "subtitle": "Los que veían no vieron. El que no podía ver, vio.",
-            "content": "Marcos 10 está lleno de personas que no entienden quién es Jesús.\n\nLos discípulos discuten quién es el más grande. Jacobo y Juan piden poder. La multitud reprende a Bartimeo por gritar.\n\nY el ciego — el hombre sin ojos — es el único que lo llama correctamente:\n\n'¡Hijo de David!'\n\nEste es un título mesiánico. Bartimeo no solo reconoció que Jesús era un rabino. Reconoció quién era en el plan de Dios.\n\n⚠️ LA IRONÍA ESPIRITUAL:\n\nA lo largo del Evangelio de Marcos, Jesús sana ciegos físicos en momentos donde los discípulos muestran ceguera espiritual. No es accidental.\n\nMarcos quiere que el lector se pregunte: ¿Quién realmente puede ver?\n\nBartimeo recibió vista física en el momento en que los que tenían ojos no podían ver quién estaba caminando entre ellos.\n\nDios frecuentemente revela más a los que el mundo considera menos.",
-            "revelation_key": "La ceguera espiritual es más peligrosa que la física. Bartimeo veía antes de poder ver.",
-            "scripture_connections": [
-                {
-                    "reference": "Juan 9:39",
-                    "text": "Jesús entonces dijo: Para juicio he venido yo a este mundo; para que los que no ven, vean, y los que ven, sean cegados."
-                },
-                {
-                    "reference": "1 Corintios 1:27",
-                    "text": "sino que lo necio del mundo escogió Dios, para avergonzar a los sabios; y lo débil del mundo escogió Dios, para avergonzar a lo fuerte."
-                }
-            ]
-        },
-
-        {
-            "order": 10,
-            "type": "discovery_activation",
-            "image_url": "bartimaeus_jesus_way.png",
-            "icon": "🙏",
-            "title": "Tu Encuentro",
-            "subtitle": "Bartimeo no esperó el momento perfecto. Gritó desde donde estaba.",
-            "discovery_questions": [
-                {
-                    "category": "Honestidad",
-                    "question": "¿En qué área de tu vida estás sentado al borde del camino, esperando que Jesús pase — en lugar de clamar a Él? ¿Qué te ha silenciado?"
-                },
-                {
-                    "category": "Fe",
-                    "question": "Bartimeo tiró su capa antes de recibir su milagro. ¿Hay algo que necesitas 'tirar' — una seguridad, un plan, una identidad — para seguir a Jesús completamente?"
-                },
-                {
-                    "category": "Propósito",
-                    "question": "Cuando Bartimeo recibió lo que pedía, eligió seguir a Jesús en lugar de irse. ¿Qué significa para ti seguir a Jesús después de que Él responde una oración?"
-                }
-            ],
-            "prayer": {
-                "title": "Oración del que Clama desde la Orilla",
-                "content": "Señor Jesús, Hijo de David, ten misericordia de mí.\n\nComo Bartimeo — soy consciente de lo que no puedo ver. Las áreas de mi vida donde camino a oscuras. Las verdades que no entiendo. Las cegueras que no reconozco en mí mismo.\n\nNo me voy a callar.\n\nClamo desde donde estoy — sin el momento perfecto, sin las palabras perfectas, sin la fe perfecta.\n\nSolo con la misma honestidad de un hombre en la orilla de un camino polvoriento: quiero ver.\n\nY cuando me des vista — que lo primero que mis ojos encuentren seas Tú. Y que te siga.\n\nEn el nombre de Jesús, Amén."
-            }
-        },
-
-        {
-            "order": 11,
-            "type": "completion",
-            "image_url": "bartimaeus_face_restored.png",
-            "completion_verse": {
-                "reference": "Marcos 10:52",
-                "text": "Y Jesús le dijo: Vete, tu fe te ha salvado. Y en seguida recobró la vista, y seguía a Jesús en el camino.",
-                "bible_version": "RVR1960"
-            },
-            "reflection_prompt": "¿Qué capa necesitas tirar hoy? ¿Qué necesitas ver?",
-            "celebration_type": "gentle_light"
-        }
-
-    ]
+      },
+      "reflection_prompt": "¿Qué capa necesitas tirar hoy? ¿Qué necesitas ver?",
+      "celebration_type": "gentle_light"
+    }
+  ]
 }
