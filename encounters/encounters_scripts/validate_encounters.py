@@ -157,7 +157,7 @@ def validate_index(report: Report) -> Optional[dict]:
         seen_ids.add(enc_id)
 
         # Required index fields
-        required = ['id', 'version', 'emoji', 'status', 'files',
+        required = ['id', 'version', 'image_version', 'emoji', 'status', 'files',
                     'titles', 'subtitles', 'scripture_reference',
                     'estimated_reading_minutes', 'has_interactive',
                     'testament', 'character']
@@ -174,6 +174,16 @@ def validate_index(report: Report) -> Optional[dict]:
         testament = enc.get('testament', '')
         if testament not in VALID_TESTAMENT:
             report.E(f"Encounter {enc_id}: invalid testament '{testament}', must be 'old' or 'new'")
+
+        # Version format validation
+        version = enc.get('version', '')
+        if not re.match(r'^\d+\.\d+(\.\d+)?$', version):
+            report.W(f"Encounter {enc_id}: version '{version}' should follow semantic versioning (e.g., '1.0' or '1.0.0')")
+
+        # Image version format validation
+        image_version = enc.get('image_version', '')
+        if not re.match(r'^\d+\.\d+(\.\d+)?$', image_version):
+            report.W(f"Encounter {enc_id}: image_version '{image_version}' should follow semantic versioning (e.g., '1.0' or '1.0.0')")
 
         # Language coverage for all language objects
         lang_objects = ['files', 'titles', 'subtitles', 'scripture_reference', 'estimated_reading_minutes']

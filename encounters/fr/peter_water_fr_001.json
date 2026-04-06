@@ -33,7 +33,7 @@
       "order": 1,
       "type": "cinematic_scene",
       "mood": "storm",
-      "image_url": "peter_intro.jpg",
+      "image_url": "peter_intro.png",
       "title": "3h du matin. Tempête. Sans Jésus.",
       "narrative": "Les disciples ramaient depuis des heures contre un vent violent. Jésus les avait envoyés en avant — seuls. La mer était déchaînée. Et ils perdaient la bataille.",
       "ambient_sound": "storm_waves",
@@ -157,7 +157,7 @@
           "question": "Quelle tempête dans ta vie fixes-tu en ce moment au lieu de regarder Jésus ? Quelles sont tes vagues ?"
         },
         {
-          "category": "Courage",
+          "category": "Audace",
           "question": "Y a-t-il une barque dont tu dois sortir ? Quelque chose vers lequel Dieu t'appelle qui semble impossible — et que tu n'as pas encore demandé ?"
         },
         {
@@ -174,7 +174,7 @@
       "order": 11,
       "type": "completion",
       "mood": "awe",
-      "image_url": "peter_walking_water.png",
+      "image_url": "peter_thumb.png",
       "completion_verse": {
         "reference": "Matthieu 14:33",
         "text": "Ceux qui étaient dans la barque vinrent se prosterner devant lui, et dirent : Tu es vraiment le Fils de Dieu.",

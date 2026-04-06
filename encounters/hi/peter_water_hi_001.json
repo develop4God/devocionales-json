@@ -33,7 +33,7 @@
       "order": 1,
       "type": "cinematic_scene",
       "mood": "storm",
-      "image_url": "peter_intro.jpg",
+      "image_url": "peter_intro.png",
       "title": "रात के 3 बजे। तूफान। यीशु नहीं।",
       "narrative": "चेले घंटों से तेज़ हवा के विरुद्ध नाव खे रहे थे। यीशु ने उन्हें आगे भेज दिया था — अकेले। समुद्र प्रचंड क्रोध से उफन रहा था। और वे हार रहे थे।",
       "ambient_sound": "storm_waves",
@@ -174,7 +174,7 @@
       "order": 11,
       "type": "completion",
       "mood": "awe",
-      "image_url": "peter_walking_water.png",
+      "image_url": "peter_thumb.png",
       "completion_verse": {
         "reference": "मत्ती 14:33",
         "text": "तब जो नाव पर थे उन्होंने उसे दण्डवत् की और कहा, सच में तू परमेश्वर का पुत्र है।",
