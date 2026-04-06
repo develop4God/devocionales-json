@@ -218,7 +218,8 @@
         "ja": "2週間後",
         "zh": "2周后",
         "hi": "2 सप्ताह में",
-        "de": "In 2 Wochen"
+        "de": "In 2 Wochen",
+        "ar": "خلال أسبوعين"
       },
       "mood_primary": "crowd",
       "accent_color": "#1a2e00",
@@ -233,7 +234,8 @@
         "ja": "zacchaeus_ja_001.json",
         "zh": "zacchaeus_zh_001.json",
         "hi": "zacchaeus_hi_001.json",
-        "de": "zacchaeus_de_001.json"
+        "de": "zacchaeus_de_001.json",
+        "ar": "zacchaeus_ar_001.json"
       },
       "titles": {
         "en": "The Man in the Tree",
@@ -243,7 +245,8 @@
         "ja": "木の上の男",
         "zh": "树上的那个人",
         "hi": "पेड़ पर चढ़ा आदमी",
-        "de": "Der Mann im Baum"
+        "de": "Der Mann im Baum",
+        "ar": "الرجل في الشجرة"
       },
       "subtitles": {
         "en": "The most hated man in Jericho — and Jesus chose his house",
@@ -253,7 +256,8 @@
         "ja": "エリコで最も嫌われた男 — そしてイエスは彼の家を選ばれた",
         "zh": "耶利哥最被憎恶的人——耶稣却选了他的家",
         "hi": "यरीहो का सबसे घृणित आदमी — और यीशु ने उसके घर को चुना",
-        "de": "Der meistgehasste Mann in Jericho — und Jesus wählte sein Haus"
+        "de": "Der meistgehasste Mann in Jericho — und Jesus wählte sein Haus",
+        "ar": "أكثر الناس كرهاً في أريحا — ويسوع اختار بيته"
       },
       "scripture_reference": {
         "en": "Luke 19:1-10",
@@ -263,7 +267,8 @@
         "ja": "ルカ19:1-10",
         "zh": "路加福音19:1-10",
         "hi": "लूका 19:1-10",
-        "de": "Lukas 19:1-10"
+        "de": "Lukas 19:1-10",
+        "ar": "لوقا 19:1-10"
       },
       "estimated_reading_minutes": {
         "en": 7,
@@ -273,7 +278,8 @@
         "ja": 7,
         "zh": 7,
         "hi": 7,
-        "de": 8
+        "de": 8,
+        "ar": 9
       }
     },
     {
@@ -290,7 +296,8 @@
         "ja": "聖週間",
         "zh": "圣周",
         "hi": "पवित्र सप्ताह",
-        "de": "Karwoche"
+        "de": "Karwoche",
+        "ar": "أسبوع الآلام"
       },
       "mood_primary": "grief",
       "accent_color": "#1a0a2e",
@@ -305,7 +312,8 @@
         "ja": "mary_garden_ja_001.json",
         "zh": "mary_garden_zh_001.json",
         "hi": "mary_garden_hi_001.json",
-        "de": "mary_garden_de_001.json"
+        "de": "mary_garden_de_001.json",
+        "ar": "mary_garden_ar_001.json"
       },
       "titles": {
         "en": "She Heard Her Name",
@@ -315,7 +323,8 @@
         "ja": "彼女は自分の名前を聞いた",
         "zh": "她听见了自己的名字",
         "hi": "उसने अपना नाम सुना",
-        "de": "Sie hörte ihren Namen"
+        "de": "Sie hörte ihren Namen",
+        "ar": "سمعت اسمها"
       },
       "subtitles": {
         "en": "Mary at the empty tomb — grief, darkness, and one word that changed everything",
@@ -325,7 +334,8 @@
         "ja": "空の墓のマリア — 悲しみ、暗闇、そしてすべてを変えた一言",
         "zh": "马利亚在空坟墓前——悲痛、黑暗，以及改变一切的一个字",
         "hi": "खाली कब्र के सामने मरियम — दुःख, अंधेरा, और एक शब्द जिसने सब कुछ बदल दिया",
-        "de": "Maria am leeren Grab — Trauer, Dunkelheit und ein Wort, das alles veränderte"
+        "de": "Maria am leeren Grab — Trauer, Dunkelheit und ein Wort, das alles veränderte",
+        "ar": "مريم عند القبر الفارغ — حزن وظلام وكلمة واحدة غيّرت كل شيء"
       },
       "scripture_reference": {
         "en": "John 20:1-18",
@@ -335,7 +345,8 @@
         "ja": "ヨハネ20:1-18",
         "zh": "约翰福音20:1-18",
         "hi": "यूहन्ना 20:1-18",
-        "de": "Johannes 20:1-18"
+        "de": "Johannes 20:1-18",
+        "ar": "يوحنا 20:1-18"
       },
       "estimated_reading_minutes": {
         "en": 8,
@@ -345,7 +356,8 @@
         "ja": 8,
         "zh": 8,
         "hi": 8,
-        "de": 9
+        "de": 9,
+        "ar": 11
       }
     }
   ]
