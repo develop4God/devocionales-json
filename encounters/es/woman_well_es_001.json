@@ -1,0 +1,266 @@
+{
+  "id": "woman_well_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "es",
+  "bible_version": "RVR1960",
+  "version": "6.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "La Mujer Samaritana",
+    "testament": "new",
+    "scripture_reference": "Juan 4:1-42",
+    "mood_primary": "midday",
+    "accent_color": "#3d1a00",
+    "emoji": "⛲",
+    "tags": [
+      "sed",
+      "vergüenza",
+      "agua_viva",
+      "identidad",
+      "evangelismo",
+      "gracia",
+      "samaritana",
+      "jesús",
+      "encuentro",
+      "restauración"
+    ]
+  },
+  "key_verse": {
+    "reference": "Juan 4:14",
+    "text": "mas el que bebiere del agua que yo le daré, no tendrá sed jamás; sino que el agua que yo le daré será en él una fuente de agua que salte para vida eterna.",
+    "bible_version": "RVR1960"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "heat",
+      "image_url": "well_midday_sun.png",
+      "title": "Era necesario.",
+      "narrative": "Los judíos rodeaban Samaria. Siglos de desprecio entre dos pueblos que alguna vez habían sido uno. Días de desvío antes que pisar esa tierra.\n\nJesús no rodeó.\n\nHabía una mujer en un pozo que todavía no sabía que estaba siendo buscada.",
+      "ambient_sound": "desert_wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 4:4",
+        "text": "Y le era necesario pasar por Samaria."
+      },
+      "revelation_key": "Jesús reorganizó su camino alrededor de una mujer que el mundo había dejado de buscar."
+    },
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "heat",
+      "image_url": "well_jesus_waiting.png",
+      "title": "El pozo de Jacob. La hora sexta.",
+      "narrative": "Cansado del camino. Solo junto al pozo.\n\nLa hora sexta, el sol de mediodía.\n\nLa misma hora en que ella vendría.",
+      "ambient_sound": "desert_wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 4:5-6",
+        "text": "Vino, pues, a una ciudad de Samaria llamada Sicar, junto a la heredad que Jacob dio a su hijo José. Y estaba allí el pozo de Jacob. Entonces Jesús, cansado del camino, se sentó así junto al pozo. Era como la hora sexta."
+      },
+      "revelation_key": "No fue casualidad el lugar. No fue casualidad la hora. Él nunca estuvo allí por accidente."
+    },
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "woman_jar_approaching.png",
+      "verse_reference": "Juan 4:7-9",
+      "verse_text": "Una mujer de Samaria vino a sacar agua; y Jesús le dijo: Dame de beber. Pues sus discípulos habían ido a la ciudad a comprar de comer. La mujer samaritana le dijo: ¿Cómo tú, siendo judío, me pides a mí de beber, que soy mujer samaritana?",
+      "reflection": "Las mujeres iban al pozo por la mañana. Juntas. Ella vino al mediodía. Sola.\n\nEso no es un detalle menor. Es toda su historia en una sola decisión.\n\nY el primero en hablarle no la juzgó. No la ignoró. Le pidió algo.\n\nEl Hijo de Dios se hizo vulnerable ante ella antes de que ella supiera su nombre.\n\nAsí entra la gracia. No con poder. Con humildad.",
+      "revelation_key": "Jesús habló primero. A ella. En el lugar donde había aprendido a ser invisible."
+    },
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "mood": "shifting",
+      "image_url": "water_ripple.png",
+      "title": "Dos clases de sed",
+      "subtitle": "Ella hablaba de agua. Él hablaba de algo más.",
+      "content": "Jesús le ofrece agua viva. Ella lo escucha de manera práctica: agua de manantial, agua que fluye, agua que no hay que venir a buscar al mediodía bajo el sol.\n\nPero Él apunta al pozo. A la cuerda. A todo lo que ella ha cargado cada día.\n\n📖 Juan 4:13-14 (RVR1960)\n«Respondió Jesús y le dijo: Cualquiera que bebiere de esta agua, volverá a tener sed; mas el que bebiere del agua que yo le daré, no tendrá sed jamás; sino que el agua que yo le daré será en él una fuente de agua que salte para vida eterna.»\n\nJamás. No por mucho tiempo. Jamás.\n\n💧 El pozo de Jacob era real. Era historia. Era herencia de siglos. Jesús no lo ignora. Pero lo que Él ofrece no viene de afuera. Viene de adentro. No es un manantial al que hay que regresar. Es una fuente que nace en el interior de quien lo recibe.\n\nElla misma lo reconoció sin entenderlo del todo:\n\n📖 Juan 4:15 (RVR1960)\n«La mujer le dijo: Señor, dame esa agua, para que no tenga yo sed, ni venga aquí a sacarla.»\n\nTodavía pensaba que hablaba de un pozo.\n\nPero se estaba inclinando hacia Él. Y eso era suficiente.",
+      "revelation_key": "A veces nuestra sed nos señala a Jesús antes que nuestro entendimiento.",
+      "scripture_connections": [
+        {
+          "reference": "Isaías 55:1",
+          "text": "A todos los sedientos: Venid a las aguas; y los que no tienen dinero, venid, comprad y comed. Venid, comprad sin dinero y sin precio, vino y leche."
+        },
+        {
+          "reference": "Juan 7:37",
+          "text": "En el último y gran día de la fiesta, Jesús se puso en pie y alzó la voz, diciendo: Si alguno tiene sed, venga a mí y beba."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "cinematic_scene",
+      "mood": "exposed",
+      "image_url": "woman_still_moment.png",
+      "title": "Jesús le dijo: Ve, llama a tu marido, y ven acá.",
+      "narrative": "Ella respondió con lo más honesto que jamás había dicho en ese pozo.",
+      "ambient_sound": "silence_heavy",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 4:16-18",
+        "text": "Jesús le dijo: Ve, llama a tu marido, y ven acá. Respondió la mujer y dijo: No tengo marido. Jesús le dijo: Bien has dicho: No tengo marido; porque cinco maridos has tenido, y el que ahora tienes no es tu marido; esto has dicho con verdad."
+      },
+      "revelation_key": "La conocía por completo. Y le dijo: bien has dicho."
+    },
+    {
+      "order": 6,
+      "type": "character_moment",
+      "mood": "exposed",
+      "image_url": "woman_face_grace.png",
+      "title": "Bien has dicho.",
+      "subtitle": "Lo que Jesús no dijo",
+      "content": "No dijo: estás rota.\nNo dijo: deberías avergonzarte.\nNo dijo: arréglate antes de que hablemos.\n\nDijo: bien has dicho.\n\nElogió su honestidad en el mismo momento en que reveló lo que ella cargaba.\n\nCinco maridos. Cinco pozos. Cinco intentos de saciar una sed que ninguno pudo tocar.\n\nNo mencionó su pasado para avergonzarla. Lo mencionó para mostrarle que la conocía, y se quedó.\n\nEsa es la diferencia entre el mundo y Jesús. El mundo expone para avergonzar. Jesús revela para liberar.\n\nElla vino a esconderse. Él vino a encontrarla.",
+      "revelation_key": "Jesús conocía cada pozo en el que ella había estado. Y no se movió."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "awakening",
+      "image_url": "woman_eyes_wide.png",
+      "title": "Señor, me parece que tú eres profeta.",
+      "narrative": "Algo en su interior se estaba moviendo.\n\nNo era evasión. Era reconocimiento. Su espíritu estaba percibiendo que no estaba hablando con cualquier persona.\n\nEl temor, la curiosidad, algo despertando dentro de ella, la llevó a hacer la pregunta más antigua entre su pueblo y los judíos. No para escapar. Para entender.",
+      "ambient_sound": "wind_shifting",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 4:19-20",
+        "text": "Le dijo la mujer: Señor, me parece que tú eres profeta. Nuestros padres adoraron en este monte, y vosotros decís que en Jerusalén es el lugar donde se debe adorar."
+      },
+      "revelation_key": "Antes de saber quién era Él, su espíritu ya lo estaba reconociendo."
+    },
+    {
+      "order": 8,
+      "type": "theological_depth",
+      "mood": "shifting",
+      "image_url": "well_light_breaking.png",
+      "title": "En espíritu y en verdad.",
+      "subtitle": "Una respuesta más grande que la pregunta.",
+      "content": "Jesús no esquivó su pregunta. La respondió completamente.\n\nPero la llevó más lejos de donde ella esperaba.\n\n📖 Juan 4:21-24 (RVR1960)\n«Jesús le dijo: Mujer, créeme, que la hora viene cuando ni en este monte ni en Jerusalén adoraréis al Padre. Vosotros adoráis lo que no sabéis; nosotros adoramos lo que sabemos; porque la salvación viene de los judíos. Mas la hora viene, y ahora es, cuando los verdaderos adoradores adorarán al Padre en espíritu y en verdad; porque también el Padre tales adoradores busca que le adoren. Dios es Espíritu; y los que le adoran, en espíritu y en verdad es necesario que adoren.»\n\nNo una montaña. No un templo. No un lugar correcto.\n\nUna relación. Interior. Verdadera.\n\nElla había venido con una pregunta sobre lugares. Él le estaba hablando del corazón.",
+      "revelation_key": "Ella preguntó dónde adorar. Él le mostró cómo.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 4:23",
+          "text": "Mas la hora viene, y ahora es, cuando los verdaderos adoradores adorarán al Padre en espíritu y en verdad; porque también el Padre tales adoradores busca que le adoren."
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "type": "scripture_moment",
+      "mood": "revelation",
+      "image_url": "jesus_i_am_declaration.png",
+      "verse_reference": "Juan 4:25-26",
+      "verse_text": "Le dijo la mujer: Sé que ha de venir el Mesías, llamado el Cristo; cuando él venga nos declarará todas las cosas. Jesús le dijo: Yo soy, el que habla contigo.",
+      "reflection": "En todo el Evangelio de Juan, Jesús no anuncia directamente quién es. Habla en señales, en imágenes, en declaraciones que requieren discernimiento.\n\nAquí, junto a un pozo en Samaria, al mediodía, lo dice con toda claridad.\n\nY lo dice a ella.\n\nNo lo dijo a un sacerdote Levita, tampoco un fariseo ni a un discípulo.\n\nSino, a la mujer que vino sola, avergonzada, humilde.\n\nElla pasó de preguntar si Jesús era mayor que Jacob, un patriarca del pasado, a recibir la declaración del Mesías, la esperanza viva. En una sola conversación junto a ese pozo.",
+      "revelation_key": "La primera persona en recibir esta declaración tan poderosa fue la que en esa época menos se hubiera esperado. Así actúa Dios."
+    },
+    {
+      "order": 10,
+      "type": "cinematic_scene",
+      "mood": "turning_point",
+      "image_url": "jar_left_at_well.png",
+      "title": "Entonces la mujer dejó su cántaro.",
+      "narrative": "Los discípulos llegaron. Se maravillaron de que hablaba con una mujer. Ninguno preguntó nada.\n\nY ella tomó una decisión.",
+      "ambient_sound": "footsteps_running",
+      "haptic": "light_pulse",
+      "verse_overlay": {
+        "reference": "Juan 4:27-29",
+        "text": "En esto vinieron sus discípulos, y se maravillaron de que hablaba con una mujer; sin embargo, ninguno dijo: ¿Qué preguntas? o, ¿Qué hablas con ella? Entonces la mujer dejó su cántaro, y fue a la ciudad, y dijo a los hombres: Venid, ved a un hombre que me ha dicho todo cuanto he hecho. ¿No será éste el Cristo?"
+      },
+      "revelation_key": "No olvidó el cántaro. Fue transformada. Ya no era suficiente el agua que había venido a buscar."
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "wonder",
+      "image_url": "empty_jar_well.png",
+      "title": "El cántaro que dejó.",
+      "subtitle": "Lo que significa un cántaro abandonado.",
+      "content": "En el encuentro anterior vimos a Bartimeo tirar su manto antes de recibir su sanidad, fe que suelta antes de tener algo a qué aferrarse.\n\nElla dejó su cántaro después del encuentro. Lo que Jesús puso en su interior ya había hecho pequeño lo que traía en sus manos.\n\nDos personas. Dos objetos abandonados. El mismo Jesús.\n\nPero hay algo más en lo que ella hizo.\n\n🪣 En el griego, la pregunta que ella llevó a la ciudad está formulada con una palabra que espera incertidumbre: ¿No será éste el Cristo?\n\nNo llegó proclamando. Llegó invitando. Sabía que una mujer con su historia no sería creída si hacía una declaración. Así que envolvió la revelación en una pregunta que obligaba a cada persona a ir a ver por sí misma.\n\nNo fue ingenuidad. Fue sabiduría.\n\nY funcionó.\n\n📖 Juan 4:30 (RVR1960)\n«Entonces salieron de la ciudad, y vinieron a él.»",
+      "revelation_key": "Llevó su herida como testimonio. Y una ciudad entera salió a ver.",
+      "scripture_connections": [
+        {
+          "reference": "2 Corintios 12:9",
+          "text": "Y me ha dicho: Bástate mi gracia; porque mi poder se perfecciona en la debilidad."
+        },
+        {
+          "reference": "Romanos 8:28",
+          "text": "Y sabemos que a los que aman a Dios, todas las cosas les ayudan a bien, esto es, a los que conforme a su propósito son llamados."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "city_samaritans_coming.png",
+      "title": "Y muchos creyeron.",
+      "subtitle": "Por la palabra de la mujer.",
+      "content": "Hay que entender lo que esto significa.\n\nEn el primer siglo, una mujer no tenía voz pública. Una mujer samaritana con su historia tenía menos aún. Los hombres de esa ciudad no tenían ninguna razón cultural ni social para escucharla.\n\nY salieron.\n\nEso no es normal. Eso es sobrenatural.\n\n📖 Juan 4:39 (RVR1960)\n«Y muchos de los samaritanos de aquella ciudad creyeron en él por la palabra de la mujer, que daba testimonio diciendo: Me dijo todo lo que he hecho.»\n\nJuan, un escritor judío del primer siglo formado en esa cultura, registró que fue esta mujer la que trajo a toda una ciudad al Mesías. Eso solo no se explica sin el Espíritu Santo.\n\n📖 Juan 4:41-42 (RVR1960)\n«Y creyeron muchos más por la palabra de él, y decían a la mujer: Ya no creemos solamente por tu dicho, porque nosotros mismos hemos oído, y sabemos que verdaderamente éste es el Salvador del mundo, el Cristo.»\n\nElla llegó sola. Se fue siendo un movimiento.\nLlegó cargando vergüenza. Se fue con un testimonio.\nLlegó a esconderse. Se fue a buscar a otros.\n\nEso es lo que Jesús hace. En la imperfección nos ama, nos transforma y nos utiliza.",
+      "revelation_key": "Dios tomó a la persona que el mundo descalificó y la convirtió en la primera evangelista de Samaria."
+    },
+    {
+      "order": 13,
+      "type": "cinematic_scene",
+      "mood": "peace",
+      "image_url": "well_at_dusk.png",
+      "title": "El pozo al atardecer.",
+      "narrative": "El mismo pozo. El mismo lugar.\n\nPero el cántaro ya no está. Solo la cuerda enrollada en el borde.\n\nAlgo sucedió aquí.",
+      "ambient_sound": "evening_wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 4:42",
+        "text": "verdaderamente éste es el Salvador del mundo, el Cristo."
+      },
+      "revelation_key": "Un encuentro con Jesús siempre deja algo distinto en el lugar donde ocurrió."
+    },
+    {
+      "order": 14,
+      "type": "discovery_activation",
+      "icon": "⛲",
+      "mood": "intimate",
+      "image_url": "woman_running_city.png",
+      "title": "Tu encuentro",
+      "subtitle": "¿A qué pozo sigues volviendo?",
+      "discovery_questions": [
+        {
+          "category": "Tu sed",
+          "question": "Ella volvía cada día al mismo pozo. ¿A qué has seguido volviendo tú, esperando que esta vez sea diferente? ¿Qué es lo que en realidad estás buscando en ese lugar?"
+        },
+        {
+          "category": "Ser conocido",
+          "question": "Jesús sabía todo sobre ella y se quedó. ¿Hay algo de tu historia que crees que alejaría a Jesús si lo supiera? ¿Qué significaría para ti saber que ya lo sabe, y sigue aquí?"
+        },
+        {
+          "category": "Tu cántaro",
+          "question": "Ella dejó el cántaro porque algo en ella cambió. ¿Qué estás cargando que Jesús te está invitando a dejar en el pozo?"
+        },
+        {
+          "category": "Tu testimonio",
+          "question": "Ella no esperó tener todo resuelto. Fue con lo que tenía: su historia y una pregunta. ¿Con quién necesitas compartir lo que Jesús ha hecho en tu vida, tal como eres, hoy?"
+        }
+      ],
+      "prayer": {
+        "title": "Oración del que vino solo al mediodía",
+        "content": "Señor Jesús, vengo a este pozo.\n\nNo porque lo tenga resuelto. No porque mi historia sea limpia. Vengo porque tengo sed y lo he intentado en otros lugares.\n\nTú sabes todo sobre mí. Cada pozo al que he vuelto. Cada vez que busqué en el lugar equivocado lo que solo Tú puedes dar.\n\nY sigues aquí. No para exponerme. Para encontrarme.\n\nComo ella, quiero ese encuentro que cambia lo que uno carga. Que lo que vino siendo sed, salga siendo testimonio.\n\nTransfórmame. Úsame. En mi imperfección, en mi historia, en lo que soy.\n\nDame el agua que no se acaba. Y dame el valor de dejar mi cántaro.\n\nEn el nombre de Jesús, amén."
+      }
+    },
+    {
+      "order": 15,
+      "type": "completion",
+      "mood": "open",
+      "image_url": "woman_well_joy.png",
+      "completion_verse": {
+        "reference": "Juan 4:28-29",
+        "text": "Entonces la mujer dejó su cántaro, y fue a la ciudad, y dijo a los hombres: Venid, ved a un hombre que me ha dicho todo cuanto he hecho. ¿No será éste el Cristo?",
+        "bible_version": "RVR1960"
+      },
+      "reflection_prompt": "¿Cuál es el cántaro que necesitas dejar hoy? ¿Y quién necesita escuchar tu venid y ved?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

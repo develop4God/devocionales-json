@@ -33,7 +33,7 @@
       "order": 1,
       "type": "cinematic_scene",
       "mood": "storm",
-      "image_url": "peter_intro.jpg",
+      "image_url": "peter_intro.png",
       "title": "3am. Storm. No Jesus.",
       "narrative": "The disciples had been rowing for hours against a violent wind. Jesus had sent them ahead — alone. The sea was alive with fury. And they were losing.",
       "ambient_sound": "storm_waves",
@@ -174,7 +174,7 @@
       "order": 11,
       "type": "completion",
       "mood": "awe",
-      "image_url": "peter_walking_water.png",
+      "image_url": "peter_thumb.png",
       "completion_verse": {
         "reference": "Matthew 14:33",
         "text": "Then they that were in the ship came and worshipped him, saying, Of a truth thou art the Son of God.",

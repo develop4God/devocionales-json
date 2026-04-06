@@ -33,7 +33,7 @@
       "order": 1,
       "type": "cinematic_scene",
       "mood": "storm",
-      "image_url": "peter_intro.jpg",
+      "image_url": "peter_intro.png",
       "title": "3:00 am. Tormenta. Sin Jesús.",
       "narrative": "Los discípulos llevaban horas remando contra un viento violento. Jesús los había enviado adelante — solos. El mar estaba vivo de furia. Y estaban perdiendo.",
       "ambient_sound": "storm_waves",
@@ -174,7 +174,7 @@
       "order": 11,
       "type": "completion",
       "mood": "awe",
-      "image_url": "peter_walking_water.png",
+      "image_url": "peter_thumb.png",
       "completion_verse": {
         "reference": "Mateo 14:33",
         "text": "Entonces los que estaban en la barca vinieron y le adoraron, diciendo: Verdaderamente eres Hijo de Dios.",

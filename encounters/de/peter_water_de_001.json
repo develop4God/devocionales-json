@@ -33,7 +33,7 @@
             "order": 1,
             "type": "cinematic_scene",
             "mood": "storm",
-            "image_url": "peter_intro.jpg",
+            "image_url": "peter_intro.png",
             "title": "3 Uhr nachts. Sturm. Kein Jesus.",
             "narrative": "Die Jünger ruderten seit Stunden gegen den reißenden Wind an. Jesus hatte sie allein vorausgeschickt. Das Meer tobte vor Wut. Und sie verloren den Kampf.",
             "ambient_sound": "storm_waves",
@@ -174,7 +174,7 @@
             "order": 11,
             "type": "completion",
             "mood": "awe",
-            "image_url": "peter_walking_water.png",
+            "image_url": "peter_thumb.png",
             "completion_verse": {
                 "reference": "Matthäus 14:33",
                 "text": "Die aber im Boot waren, fielen vor ihm nieder und sprachen: Du bist wahrhaftig Gottes Sohn!",

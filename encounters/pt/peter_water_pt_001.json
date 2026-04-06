@@ -33,7 +33,7 @@
       "order": 1,
       "type": "cinematic_scene",
       "mood": "storm",
-      "image_url": "peter_intro.jpg",
+      "image_url": "peter_intro.png",
       "title": "3da manhã. Tempestade. Sem Jesus.",
       "narrative": "Os discípulos remavam há horas contra um vento violento. Jesus os havia enviado à frente — sozinhos. O mar estava vivo de fúria. E eles estavam perdendo.",
       "ambient_sound": "storm_waves",
@@ -174,7 +174,7 @@
       "order": 11,
       "type": "completion",
       "mood": "awe",
-      "image_url": "peter_walking_water.png",
+      "image_url": "peter_thumb.png",
       "completion_verse": {
         "reference": "Mateus 14:33",
         "text": "E os que estavam no barco vieram e adoraram-no, dizendo: Verdadeiramente és o Filho de Deus.",

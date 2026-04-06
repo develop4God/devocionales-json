@@ -33,7 +33,7 @@
       "order": 1,
       "type": "cinematic_scene",
       "mood": "storm",
-      "image_url": "peter_intro.jpg",
+      "image_url": "peter_intro.png",
       "title": "凌晨三点。风暴。没有耶稣。",
       "narrative": "门徒们已经在狂风中划行了数小时。耶稣打发他们先走——独自一人。海浪汹涌，怒不可遏。他们正节节败退。",
       "ambient_sound": "storm_waves",
@@ -174,7 +174,7 @@
       "order": 11,
       "type": "completion",
       "mood": "awe",
-      "image_url": "peter_walking_water.png",
+      "image_url": "peter_thumb.png",
       "completion_verse": {
         "reference": "马太福音 14:33",
         "text": "在船上的人都拜他，说：你真是神的儿子了。",

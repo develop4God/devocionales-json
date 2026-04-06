@@ -33,7 +33,7 @@
       "order": 1,
       "type": "cinematic_scene",
       "mood": "storm",
-      "image_url": "peter_intro.jpg",
+      "image_url": "peter_intro.png",
       "title": "午前3時。嵐。イエスはいない。",
       "narrative": "弟子たちは激しい風の中、何時間も漕ぎ続けていた。イエスは彼らを先に行かせた——一人で。海は怒り狂い、荒れ狂っていた。そして彼らは負けつつあった。",
       "ambient_sound": "storm_waves",
@@ -174,7 +174,7 @@
       "order": 11,
       "type": "completion",
       "mood": "awe",
-      "image_url": "peter_walking_water.png",
+      "image_url": "peter_thumb.png",
       "completion_verse": {
         "reference": "マタイ 14:33",
         "text": "舟の中にいた人たちは、「本当に、あなたは神の子です」と言って、イエスを拝んだ。",
