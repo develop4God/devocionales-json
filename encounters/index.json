@@ -160,15 +160,15 @@
         "ar": "woman_well_ar_001.json"
       },
       "titles": {
-        "en": "The Woman Who Came Alone",
+        "en": "The Woman Who Left Her Pitcher",
         "es": "La Mujer que Dejó el Cántaro",
-        "pt": "A Mulher que Veio Sozinha",
-        "fr": "La Femme qui Vint Seule",
-        "de": "Die Frau, die allein kam",
-        "ja": "一人でやって来た女",
-        "zh": "独自前来的女人",
-        "hi": "वह स्त्री जो अकेली आई",
-        "ar": "المرأة التي جاءت وحدها"
+        "pt": "A Mulher que Deixou o Cântaro",
+        "fr": "La Femme qui Abandonna sa Cruche",
+        "de": "Die Frau, die ihren Krug zurückließ",
+        "ja": "自分の水がめを置き去りにした女",
+        "zh": "舍弃水罐的女人",
+        "hi": "जिस स्त्री ने अपना घड़ा छोड़ दिया",
+        "ar": "المرأة التي تركت جرتها"
       },
       "subtitles": {
         "en": "She came with thirst for water. Jesus gave her a source that never runs dry.",
