@@ -33,7 +33,7 @@
       "order": 1,
       "type": "cinematic_scene",
       "mood": "storm",
-      "image_url": "peter_intro.jpg",
+      "image_url": "peter_intro",
       "title": "الساعة الثالثة. عاصفة. بلا يسوع.",
       "narrative": "كان التلاميذ يجدّفون لساعات في مواجهة ريح عاتية. كان يسوع قد أرسلهم وحدهم إلى الأمام. البحيرة تتلاطم في غضب. وكانوا يخسرون.",
       "ambient_sound": "storm_waves",
