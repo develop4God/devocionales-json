@@ -142,7 +142,7 @@
       "image_version": "1.0",
       "emoji": "⛲",
       "status": "coming_soon",
-      "intro_image": "woman_well_intro",
+      "intro_image": "woman_well_intro.png",
       "mood_primary": "midday",
       "accent_color": "#3d1a00",
       "has_interactive": false,
