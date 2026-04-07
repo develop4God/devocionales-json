@@ -6,7 +6,7 @@
   "subtitle": "حين يدّعي يسوع الأزلية والجمهور يلتقط الحجارة",
   "language": "ar",
   "version": "NAV",
-  "estimated_reading_minutes": 8,
+  "estimated_reading_minutes": 6,
   "key_verse": {
     "reference": "يوحنا 8:58",
     "text": "أَجَابَهُمْ: الْحَقَّ الْحَقَّ أَقُولُ لَكُمْ: «إِنَّنِي كَائِنٌ مِنْ قَبْلِ أَنْ يَكُونَ إِبْرَاهِيمُ»."
@@ -115,7 +115,7 @@
     "السيادة"
   ],
   "metadata": {
-    "total_word_count": 1281,
+    "total_word_count": 1001,
     "greek_words_count": 3,
     "scripture_references_count": 10,
     "difficulty_level": "intermediate",

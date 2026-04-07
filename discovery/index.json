@@ -57,7 +57,8 @@
         "ja": "morning_star_ja_001.json",
         "zh": "morning_star_zh_001.json",
         "hi": "morning_star_hi_001.json",
-        "de": "morning_star_de_001.json"
+        "de": "morning_star_de_001.json",
+        "ar": "morning_star_ar_001.json"
       },
       "titles": {
         "es": "Estrella de la Mañana",
@@ -67,7 +68,8 @@
         "ja": "光の使者",
         "zh": "晨星",
         "hi": "प्रकाश का संदेशवाहक",
-        "de": "Der Herold des Lichts"
+        "de": "Der Herold des Lichts",
+        "ar": "بشير النور"
       },
       "subtitles": {
         "es": "El testimonio más poderoso sobre la identidad de Jesús",
@@ -102,7 +104,8 @@
         "ja": "hammer_of_god_ja_001.json",
         "zh": "hammer_of_god_zh_001.json",
         "hi": "hammer_of_god_hi_001.json",
-        "de": "hammer_of_god_de_001.json"
+        "de": "hammer_of_god_de_001.json",
+        "ar": "hammer_of_god_ar_001.json"
       },
       "titles": {
         "es": "El Martillo de Dios",
@@ -112,7 +115,8 @@
         "ja": "神のハンマー",
         "zh": "神的锤子",
         "hi": "परमेश्वर का हथौड़ा",
-        "de": "Der Hammer Gottes"
+        "de": "Der Hammer Gottes",
+        "ar": "مطرقة الله"
       },
       "subtitles": {
         "es": "De ejecutores del juicio a adoradores del Mesías: La historia redentora de los Medos",
@@ -147,7 +151,8 @@
         "ja": "balaam_humble_vision_ja_001.json",
         "zh": "balaam_humble_vision_zh_001.json",
         "hi": "balaam_humble_vision_hi_001.json",
-        "de": "balaam_humble_vision_de_001.json"
+        "de": "balaam_humble_vision_de_001.json",
+        "ar": "balaam_humble_vision_ar_001.json"
       },
       "titles": {
         "es": "Cuando la Burra Vio al Ángel y el Profeta Estaba Ciego",
@@ -157,7 +162,8 @@
         "ja": "ろばが天使を見て預言者が盲目だったとき",
         "zh": "当驴看见天使而先知却瞎眼时",
         "hi": "जब गधी ने स्वर्गदूत को देखा और भविष्यवक्ता अंधा था",
-        "de": "Als die Eselin den Engel sah und der Prophet blind war"
+        "de": "Als die Eselin den Engel sah und der Prophet blind war",
+        "ar": "حين رأت الأتان الملاك وكان النبي أعمى"
       },
       "subtitles": {
         "es": "La advertencia más solemne sobre revelación sin transformación",
@@ -780,7 +786,8 @@
         "ja": "buried_talent_ja_001.json",
         "zh": "buried_talent_zh_001.json",
         "hi": "buried_talent_hi_001.json",
-        "de": "buried_talent_de_001.json"
+        "de": "buried_talent_de_001.json",
+        "ar": "buried_talent_ar_001.json"
       },
       "titles": {
         "es": "El Talento Enterrado",
@@ -790,7 +797,8 @@
         "ja": "埋められたタラント",
         "zh": "被埋葬的他连得",
         "hi": "दफनाई गई प्रतिभा",
-        "de": "Das vergrabene Talent"
+        "de": "Das vergrabene Talent",
+        "ar": "الوزنة المدفونة"
       },
       "subtitles": {
         "es": "Cuando el miedo paraliza y las manos quedan vacías",
@@ -972,7 +980,8 @@
         "ja": "cup_of_wrath_ja_001.json",
         "zh": "cup_of_wrath_zh_001.json",
         "hi": "cup_of_wrath_hi_001.json",
-        "de": "cup_of_wrath_de_001.json"
+        "de": "cup_of_wrath_de_001.json",
+        "ar": "cup_of_wrath_ar_001.json"
       },
       "titles": {
         "es": "La Copa de la Ira",
@@ -982,7 +991,8 @@
         "ja": "怒りの杯",
         "zh": "忿怒的杯",
         "hi": "क्रोध का कटोरा",
-        "de": "Der Kelch des Zorns"
+        "de": "Der Kelch des Zorns",
+        "ar": "كأس الغضب"
       },
       "subtitles": {
         "es": "Cuando el Inocente bebe el juicio que nos correspondía",
@@ -1017,7 +1027,8 @@
         "ja": "veil_torn_ja_001.json",
         "zh": "veil_torn_zh_001.json",
         "hi": "veil_torn_hi_001.json",
-        "de": "veil_torn_de_001.json"
+        "de": "veil_torn_de_001.json",
+        "ar": "veil_torn_ar_001.json"
       },
       "titles": {
         "es": "El Velo Rasgado",
@@ -1027,7 +1038,8 @@
         "ja": "裂け分かれた幕",
         "zh": "裂开的幔子",
         "hi": "फटा हुआ पर्दा",
-        "de": "Der zerrissene Vorhang"
+        "de": "Der zerrissene Vorhang",
+        "ar": "الحجاب الممزّق"
       },
       "subtitles": {
         "es": "Cuando Dios abre el camino al Lugar Santísimo",

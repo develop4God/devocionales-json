@@ -6,7 +6,7 @@
   "subtitle": "عندما يُعلن يوحنا أن يسوع هو اللوغوس الأزلي الذي خلق كل شيء",
   "language": "ar",
   "version": "NAV",
-  "estimated_reading_minutes": 8,
+  "estimated_reading_minutes": 5,
   "key_verse": {
     "reference": "يوحنا 1:1",
     "text": "فِي الْبَدْءِ كَانَ الْكَلِمَةُ، وَالْكَلِمَةُ كَانَ عِنْدَ اللهِ. وَكَانَ الْكَلِمَةُ اللهُ."
@@ -101,7 +101,7 @@
     "سفر_التكوين"
   ],
   "metadata": {
-    "total_word_count": 1286,
+    "total_word_count": 910,
     "greek_words_count": 1,
     "scripture_references_count": 9,
     "difficulty_level": "intermediate-advanced",

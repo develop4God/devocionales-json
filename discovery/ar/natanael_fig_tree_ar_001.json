@@ -6,7 +6,7 @@
   "subtitle": "اللقاء الذي يكشف فيه يسوع أنه يعرف أسرارك العميقة",
   "language": "ar",
   "version": "NAV",
-  "estimated_reading_minutes": 8,
+  "estimated_reading_minutes": 6,
   "key_verse": {
     "reference": "يوحنا 1:48",
     "text": "فَسَأَلَهُ نَثَنَائِيلُ: «وَمِنْ أَيْنَ تَعْرِفُنِي؟» فَأَجَابَهُ يَسُوعُ: «رَأَيْتُكَ تَحْتَ التِّينَةِ قَبْلَ أَنْ يَدْعُوَكَ فِيلِبُّسُ»."
@@ -127,7 +127,7 @@
     "نثنائيل"
   ],
   "metadata": {
-    "total_word_count": 1341,
+    "total_word_count": 978,
     "greek_words_count": 3,
     "scripture_references_count": 7,
     "difficulty_level": "intermediate",

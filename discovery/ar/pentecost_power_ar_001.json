@@ -6,7 +6,7 @@
   "subtitle": "عندما يحوّل الروح القدس الجبناء إلى شجعان",
   "language": "ar",
   "version": "NAV",
-  "estimated_reading_minutes": 9,
+  "estimated_reading_minutes": 6,
   "key_verse": {
     "reference": "أعمال 2:4",
     "text": "فَامْتَلأُوا جَمِيعاً مِنَ الرُّوحِ الْقُدُسِ، وَأَخَذُوا يَتَكَلَّمُونَ بِلُغَاتٍ أُخْرَى، مِثْلَمَا مَنَحَهُمُ الرُّوحُ أَنْ يَنْطِقُوا."
@@ -107,7 +107,7 @@
     "الجرأة"
   ],
   "metadata": {
-    "total_word_count": 1434,
+    "total_word_count": 1011,
     "greek_words_count": 2,
     "scripture_references_count": 10,
     "difficulty_level": "intermediate",

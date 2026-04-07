@@ -6,7 +6,7 @@
   "subtitle": "حين اختار يسوع أن يدخل ألمنا",
   "language": "ar",
   "version": "NAV",
-  "estimated_reading_minutes": 11,
+  "estimated_reading_minutes": 7,
   "key_verse": {
     "reference": "يوحنا 11:33",
     "text": "فَلَمَّا رَآهَا يَسُوعُ تَبْكِي وَيَبْكِي مَعَهَا الْيَهُودُ الَّذِينَ رَافَقُوهَا، فَاضَ قَلْبُهُ بِالأَسَى الشَّدِيدِ."
@@ -143,7 +143,7 @@
     "الألم_والرجاء"
   ],
   "metadata": {
-    "total_word_count": 1713,
+    "total_word_count": 1239,
     "greek_words_count": 2,
     "scripture_references_count": 8,
     "difficulty_level": "beginner_to_intermediate",

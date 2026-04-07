@@ -6,7 +6,7 @@
   "subtitle": "حين يمشي المسيح القائم معك دون أن تتعرف عليه، حتى يكسر الخبز",
   "language": "ar",
   "version": "NAV",
-  "estimated_reading_minutes": 12,
+  "estimated_reading_minutes": 7,
   "key_verse": {
     "reference": "لوقا 24:30-31",
     "text": "وَلَمَّا اتَّكَأَ مَعَهُمَا، أَخَذَ الْخُبْزَ، وَبَارَكَ، وَكَسَّرَ، وَأَعْطَاهُمَا. فَانْفَتَحَتْ أَعْيُنُهُمَا وَعَرَفَاهُ. ثُمَّ اخْتَفَى عَنْهُمَا."
@@ -241,7 +241,7 @@
     "الحضور_المحجوب"
   ],
   "metadata": {
-    "total_word_count": 1972,
+    "total_word_count": 1242,
     "greek_words_count": 6,
     "scripture_references_count": 10,
     "difficulty_level": "intermediate",

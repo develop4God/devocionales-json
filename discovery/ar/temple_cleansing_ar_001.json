@@ -6,7 +6,7 @@
   "subtitle": "حين يُعلن يسوع أنه الهيكل الحقيقي",
   "language": "ar",
   "version": "NAV",
-  "estimated_reading_minutes": 10,
+  "estimated_reading_minutes": 6,
   "key_verse": {
     "reference": "يوحنا 2:19",
     "text": "أَجَابَهُمْ يَسُوعُ: «اهْدِمُوا هَذَا الْهَيْكَلَ، وَفِي ثَلاَثَةِ أَيَّامٍ أُقِيمُهُ»."
@@ -93,7 +93,7 @@
     "النبوة"
   ],
   "metadata": {
-    "total_word_count": 1537,
+    "total_word_count": 981,
     "greek_words_count": 1,
     "scripture_references_count": 10,
     "difficulty_level": "intermediate-advanced",

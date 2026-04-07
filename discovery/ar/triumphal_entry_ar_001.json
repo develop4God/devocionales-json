@@ -6,7 +6,7 @@
   "subtitle": "حين يدخل الملك المرفوض أورشليم راكباً على حمار لا على حصان حرب",
   "language": "ar",
   "version": "NAV",
-  "estimated_reading_minutes": 10,
+  "estimated_reading_minutes": 6,
   "key_verse": {
     "reference": "متى 21:9",
     "text": "وَكَانَتِ الْجُمُوعُ الَّتِي تَقَدَّمَتْ يَسُوعَ وَالَّتِي مَشَتْ خَلْفَهُ تَهْتِفُ قَائِلَةً: «أُوصَنَّا لابْنِ دَاوُدَ! مُبَارَكٌ الآتِي بِاسْمِ الرَّبِّ! أُوصَنَّا فِي الأَعَالِي!»"
@@ -105,7 +105,7 @@
     "المسيح"
   ],
   "metadata": {
-    "total_word_count": 1577,
+    "total_word_count": 966,
     "greek_words_count": 1,
     "scripture_references_count": 12,
     "difficulty_level": "intermediate",

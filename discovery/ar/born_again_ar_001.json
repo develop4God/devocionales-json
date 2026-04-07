@@ -6,7 +6,7 @@
   "subtitle": "عندما يكتشف معلّم إسرائيل أن دينه لا يكفي",
   "language": "ar",
   "version": "NAV",
-  "estimated_reading_minutes": 9,
+  "estimated_reading_minutes": 6,
   "key_verse": {
     "reference": "يوحنا 3:3",
     "text": "فَأَجَابَهُ يَسُوعُ: «الْحَقَّ الْحَقَّ أَقُولُ لَكَ: لاَ أَحَدَ يُمْكِنُهُ أَنْ يَرَى مَلَكُوتَ اللهِ إِلاَّ إِذَا وُلِدَ مِنْ جَدِيدٍ»."
@@ -107,7 +107,7 @@
     "الدين_مقابل_العلاقة"
   ],
   "metadata": {
-    "total_word_count": 1381,
+    "total_word_count": 1003,
     "greek_words_count": 2,
     "scripture_references_count": 8,
     "difficulty_level": "intermediate",
