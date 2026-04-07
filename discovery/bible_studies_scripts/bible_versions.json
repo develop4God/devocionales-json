@@ -68,6 +68,14 @@
       "fallback_version": "पवित्र बाइबिल",
       "allowed_versions": ["पवित्र बाइबिल (ओ.वी.)", "पवित्र बाइबिल"],
       "reading_speed": { "unit": "wpm", "rate": 180 }
+    },
+    "ar": {
+      "name": "العربية",
+      "script": "arabic",
+      "primary_version": "NAV",
+      "fallback_version": "SVDA",
+      "allowed_versions": ["NAV", "SVDA"],
+      "reading_speed": { "unit": "wpm", "rate": 170 }
     }
   }
 }
