@@ -43,7 +43,8 @@ LANGUAGE_PATTERNS = {
     'fr': re.compile(r'[a-zA-Z]{3,}'),  # French words (similar to English)
     'ja': re.compile(r'[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+'),  # Japanese
     'zh': re.compile(r'[\u4E00-\u9FFF]+'),  # Chinese
-    'hi': re.compile(r'[\u0900-\u097F]+')  # Hindi (Devanagari script)
+    'hi': re.compile(r'[\u0900-\u097F]+'),  # Hindi (Devanagari script)
+    'ar': re.compile(r'[\u0600-\u06FF]+')   # Arabic
 }
 
 
@@ -144,7 +145,14 @@ def detect_language_mix(text: str, expected_lang: str, report: ValidationReport,
         if not pattern.search(text):
             report.add_warning(f"{context}: Expected {expected_lang} characters but found none in: {text[:50]}...")
             return False
-    
+
+    # For Arabic, check that Arabic characters are present
+    elif expected_lang == 'ar':
+        pattern = LANGUAGE_PATTERNS['ar']
+        if not pattern.search(text):
+            report.add_warning(f"{context}: Expected Arabic characters but found none in: {text[:50]}...")
+            return False
+
     # For Latin-based languages, check for unexpected characters
     elif expected_lang in ['en', 'es', 'pt', 'fr']:
         # Check if Asian characters are present (shouldn't be)
