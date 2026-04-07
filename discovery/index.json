@@ -226,7 +226,7 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 6
+        "ar": 8
       }
     },
     {
@@ -275,7 +275,7 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 6
+        "ar": 5
       }
     },
     {
@@ -290,7 +290,8 @@
         "ja": "natanael_fig_tree_ja_001.json",
         "zh": "natanael_fig_tree_zh_001.json",
         "hi": "natanael_fig_tree_hi_001.json",
-        "de": "natanael_fig_tree_de_001.json"
+        "de": "natanael_fig_tree_de_001.json",
+        "ar": "natanael_fig_tree_ar_001.json"
       },
       "titles": {
         "es": "Debajo de la Higuera",
@@ -300,7 +301,8 @@
         "ja": "いちじくの木の下で",
         "zh": "在无花果树下",
         "hi": "अंजीर के पेड़ के नीचे",
-        "de": "Unter dem Feigenbaum"
+        "de": "Unter dem Feigenbaum",
+        "ar": "تحت شجرة التين"
       },
       "subtitles": {
         "es": "El encuentro donde Jesús revela que conoce tus secretos más profundos",
@@ -310,7 +312,8 @@
         "ja": "イエスがあなたの最も深い秘密を知っていることを明かす出会い",
         "zh": "耶稣显明他知道你内心深处秘密的相遇",
         "hi": "वह मुलाकात जहां यीशु प्रकट करता है कि वह आपके गहरे रहस्यों को जानता है",
-        "de": "Die Begegnung, in der Jesus offenbart, dass er deine tiefsten Geheimnisse kennt"
+        "de": "Die Begegnung, in der Jesus offenbart, dass er deine tiefsten Geheimnisse kennt",
+        "ar": "اللقاء الذي يكشف فيه يسوع أنه يعرف أسرارك العميقة"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -320,7 +323,8 @@
         "ja": 5,
         "zh": 5,
         "hi": 5,
-        "de": 6
+        "de": 6,
+        "ar": 8
       }
     },
     {
@@ -335,7 +339,8 @@
         "hi": "cana_wedding_hi_001.json",
         "ja": "cana_wedding_ja_001.json",
         "zh": "cana_wedding_zh_001.json",
-        "de": "cana_wedding_de_001.json"
+        "de": "cana_wedding_de_001.json",
+        "ar": "cana_wedding_ar_001.json"
       },
       "titles": {
         "es": "Las Bodas de Caná",
@@ -345,7 +350,8 @@
         "hi": "काना का विवाह",
         "ja": "カナの婚礼",
         "zh": "迦拿的婚筵",
-        "de": "Die Hochzeit zu Kana"
+        "de": "Die Hochzeit zu Kana",
+        "ar": "عرس قانا"
       },
       "subtitles": {
         "es": "Cuando Jesús convierte lo ordinario en extraordinario",
@@ -355,7 +361,8 @@
         "hi": "जब यीशु सामान्य को असाधारण में बदल देता है",
         "ja": "イエスが普通のものを特別なものに変えるとき",
         "zh": "当耶稣将平凡变为非凡",
-        "de": "Wenn Jesus das Gewöhnliche in Außergewöhnliches verwandelt"
+        "de": "Wenn Jesus das Gewöhnliche in Außergewöhnliches verwandelt",
+        "ar": "حين يحوّل يسوع العادي إلى استثنائي"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -365,7 +372,8 @@
         "hi": 5,
         "ja": 5,
         "zh": 5,
-        "de": 6
+        "de": 6,
+        "ar": 7
       }
     },
     {
@@ -414,7 +422,7 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 6
+        "ar": 9
       }
     },
     {
@@ -463,7 +471,7 @@
         "zh": 6,
         "hi": 6,
         "de": 7,
-        "ar": 7
+        "ar": 10
       }
     },
     {
@@ -512,7 +520,7 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 6
+        "ar": 10
       }
     },
     {
@@ -527,7 +535,8 @@
         "ja": "i_am_before_abraham_ja_001.json",
         "zh": "i_am_before_abraham_zh_001.json",
         "hi": "i_am_before_abraham_hi_001.json",
-        "de": "i_am_before_abraham_de_001.json"
+        "de": "i_am_before_abraham_de_001.json",
+        "ar": "i_am_before_abraham_ar_001.json"
       },
       "titles": {
         "es": "YO SOY: Antes que Abraham Fuese",
@@ -537,7 +546,8 @@
         "ja": "わたしはある：アブラハムが生まれる前から",
         "zh": "我是：在亚伯拉罕出生以前",
         "hi": "मैं हूं: इब्राहीम से पहले",
-        "de": "ICH BIN: Bevor Abraham war"
+        "de": "ICH BIN: Bevor Abraham war",
+        "ar": "أنا هو: قبل أن يكون إبراهيم"
       },
       "subtitles": {
         "es": "Cuando Jesús reclama eternidad y la multitud toma piedras",
@@ -547,7 +557,8 @@
         "ja": "イエスが永遠性を主張し、群衆が石を取り上げたとき",
         "zh": "当耶稣宣称永恒，而众人拿起石头",
         "hi": "जब यीशु अनन्तता का दावा करता है और भीड़ पत्थर उठाती है",
-        "de": "Als Jesus Ewigkeit beansprucht und der Mob nach Steinen greift"
+        "de": "Als Jesus Ewigkeit beansprucht und der Mob nach Steinen greift",
+        "ar": "حين يدّعي يسوع الأزلية والجمهور يلتقط الحجارة"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -557,7 +568,8 @@
         "ja": 6,
         "zh": 6,
         "hi": 6,
-        "de": 7
+        "de": 7,
+        "ar": 8
       }
     },
     {
@@ -606,7 +618,7 @@
         "zh": 6,
         "hi": 6,
         "de": 7,
-        "ar": 7
+        "ar": 8
       }
     },
     {
@@ -621,7 +633,8 @@
         "ja": "jesus_troubled_himself_ja_001.json",
         "zh": "jesus_troubled_himself_zh_001.json",
         "hi": "jesus_troubled_himself_hi_001.json",
-        "de": "jesus_troubled_himself_de_001.json"
+        "de": "jesus_troubled_himself_de_001.json",
+        "ar": "jesus_troubled_himself_ar_001.json"
       },
       "titles": {
         "es": "Se Turbó a Sí Mismo",
@@ -631,7 +644,8 @@
         "ja": "御霊自身を悩まされた",
         "zh": "他使自己心里悲叹",
         "hi": "उसने स्वयं को व्याकुल किया",
-        "de": "Er erschütterte sich selbst"
+        "de": "Er erschütterte sich selbst",
+        "ar": "اضطرب في نفسه"
       },
       "subtitles": {
         "es": "Cuando Jesús eligió entrar en nuestro dolor",
@@ -641,7 +655,8 @@
         "ja": "イエスが私たちの痛みに入ることを選ばれたとき",
         "zh": "当耶稣选择进入我们的痛苦",
         "hi": "जब यीशु ने हमारे दर्द में प्रवेश करना चुना",
-        "de": "Als Jesus sich entschied, in unseren Schmerz einzutauchen"
+        "de": "Als Jesus sich entschied, in unseren Schmerz einzutauchen",
+        "ar": "حين اختار يسوع أن يدخل ألمنا"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -651,7 +666,8 @@
         "ja": 7,
         "zh": 7,
         "hi": 7,
-        "de": 8
+        "de": 8,
+        "ar": 11
       }
     },
     {
@@ -666,7 +682,8 @@
         "ja": "passed_from_death_ja_001.json",
         "zh": "passed_from_death_zh_001.json",
         "hi": "passed_from_death_hi_001.json",
-        "de": "passed_from_death_de_001.json"
+        "de": "passed_from_death_de_001.json",
+        "ar": "passed_from_death_ar_001.json"
       },
       "titles": {
         "es": "Pasados de Muerte a Vida",
@@ -676,7 +693,8 @@
         "ja": "死からいのちへ渡された",
         "zh": "从死到生",
         "hi": "मृत्यु से जीवन में पार",
-        "de": "Vom Tod ins Leben hindurchgedrungen"
+        "de": "Vom Tod ins Leben hindurchgedrungen",
+        "ar": "عبرتَ من الموت إلى الحياة"
       },
       "subtitles": {
         "es": "La revelación final: ya no puedes 'des-nacer'",
@@ -686,7 +704,8 @@
         "ja": "最終的な啓示：あなたは自分を「生まれなかったこと」にできない",
         "zh": "最终的启示：你不能'不出生'",
         "hi": "अंतिम प्रकाशन: आप अब 'अजन्मे' नहीं हो सकते",
-        "de": "Die endgültige Offenbarung: Du kannst nicht mehr 'ungeboren' werden"
+        "de": "Die endgültige Offenbarung: Du kannst nicht mehr 'ungeboren' werden",
+        "ar": "الحقيقة الختامية: لا يمكن أن تعود غير مولود"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -696,7 +715,8 @@
         "ja": 8,
         "zh": 8,
         "hi": 8,
-        "de": 9
+        "de": 9,
+        "ar": 11
       }
     },
     {
@@ -745,7 +765,7 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 8
+        "ar": 10
       }
     },
     {
@@ -839,7 +859,7 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 6
+        "ar": 10
       }
     },
     {
@@ -888,7 +908,7 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 8
+        "ar": 9
       }
     },
     {
@@ -903,7 +923,8 @@
         "ja": "new_covenant_cup_ja_001.json",
         "zh": "new_covenant_cup_zh_001.json",
         "hi": "new_covenant_cup_hi_001.json",
-        "de": "new_covenant_cup_de_001.json"
+        "de": "new_covenant_cup_de_001.json",
+        "ar": "new_covenant_cup_ar_001.json"
       },
       "titles": {
         "es": "La Copa del Nuevo Pacto",
@@ -913,7 +934,8 @@
         "ja": "新しい契約の杯",
         "zh": "新约的杯",
         "hi": "नई वाचा का कटोरा",
-        "de": "Der Kelch des Neuen Bundes"
+        "de": "Der Kelch des Neuen Bundes",
+        "ar": "كأس العهد الجديد"
       },
       "subtitles": {
         "es": "Cuando el Testador firma con su sangre el testamento de nuestra libertad",
@@ -923,7 +945,8 @@
         "ja": "遺言者が私たちの自由の遺言を血で署名するとき",
         "zh": "当立约者用他的血签署我们自由的遗嘱时",
         "hi": "जब वसीयतकर्ता अपने लहू से हमारी स्वतंत्रता की वसीयत पर हस्ताक्षर करता है",
-        "de": "Als der Erblasser das Testament unserer Freiheit mit seinem Blut unterzeichnet"
+        "de": "Als der Erblasser das Testament unserer Freiheit mit seinem Blut unterzeichnet",
+        "ar": "حين يوقّع المُوصي بدمه وصيّة حريتنا"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -933,7 +956,8 @@
         "ja": 7,
         "zh": 7,
         "hi": 7,
-        "de": 8
+        "de": 8,
+        "ar": 9
       }
     },
     {
@@ -1128,7 +1152,8 @@
         "ja": "road_to_emmaus_ja_001.json",
         "zh": "road_to_emmaus_zh_001.json",
         "hi": "road_to_emmaus_hi_001.json",
-        "de": "road_to_emmaus_de_001.json"
+        "de": "road_to_emmaus_de_001.json",
+        "ar": "road_to_emmaus_ar_001.json"
       },
       "titles": {
         "es": "El Camino a Emaús",
@@ -1138,7 +1163,8 @@
         "ja": "エマオへの道",
         "zh": "去以马忤斯的路上",
         "hi": "एम्माऊस का मार्ग",
-        "de": "Der Weg nach Emmaus"
+        "de": "Der Weg nach Emmaus",
+        "ar": "طريق عمواس"
       },
       "subtitles": {
         "es": "Cuando el Cristo resucitado camina contigo sin que lo reconozcas, hasta que parte el pan",
@@ -1148,7 +1174,8 @@
         "ja": "復活したキリストがあなたと共に歩んでいるのに、パンを裂くまで気づかない時",
         "zh": "当复活的基督与你同行却未被认出，直到祂擘饼",
         "hi": "जब पुनरुत्थित मसीह आपके साथ अपरिचित चलता है, जब तक वह रोटी नहीं तोड़ता",
-        "de": "Als der auferstandene Christus unerkannt mit dir geht – bis er das Brot bricht"
+        "de": "Als der auferstandene Christus unerkannt mit dir geht – bis er das Brot bricht",
+        "ar": "حين يمشي المسيح القائم معك دون أن تتعرف عليه حتى يكسر الخبز"
       },
       "estimated_reading_minutes": {
         "es": 10,
@@ -1158,7 +1185,8 @@
         "ja": 10,
         "zh": 10,
         "hi": 10,
-        "de": 12
+        "de": 12,
+        "ar": 12
       }
     },
     {
@@ -1252,7 +1280,7 @@
         "zh": 6,
         "hi": 6,
         "de": 7,
-        "ar": 7
+        "ar": 10
       }
     },
     {
@@ -1346,7 +1374,7 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 8
+        "ar": 9
       }
     },
     {
