@@ -5,13 +5,12 @@
   "title": "Noong Pasimula ay ang Salita",
   "subtitle": "Nang ipahayag ni Juan na si Jesus ay ang walang hanggang Logos na lumikha ng lahat ng mga bagay",
   "language": "tl",
-  "version": "Ang Dating Biblia",
+  "version": "ADB",
   "estimated_reading_minutes": 5,
   "key_verse": {
     "reference": "Juan 1:1",
     "text": "Nang pasimula ay ang Verbo, at ang Verbo ay sumasa Dios, at ang Verbo ay Dios."
   },
-
   "cards": [
     {
       "order": 1,
@@ -30,7 +29,6 @@
       ],
       "revelation_key": "Ang Logos ay hindi pilosopiya. Ito ay isang Persona. Hindi konsepto na pinag-aaralan mo; ito ay Isang kilala mo."
     },
-
     {
       "order": 2,
       "type": "structural_analysis",
@@ -40,7 +38,6 @@
       "content": "Ang Juan 1:1 ay naglalaman ng TATLONG pahayag na sama-sama ay bumubuo ng kumpletong depensa ng pagka-Diyos ni Cristo:\n\n1️⃣ 'NOONG PASIMULA AY ANG SALITA' (Ēn archē ēn ho Logos)\n\n• Ang 'ay' (ēn) = imperfect tense sa Griego = patuloy na pag-iral na walang simula\n• HINDI nagsasabi ng 'dumating' o 'nilikha'\n• Sinasampal ang kaherehiya: 'Si Cristo ay ang unang nilalang'\n• KATOTOHANAN: Umiiral si Cristo BAGO ang pasimula. Siya ay walang hanggan.\n\n2️⃣ 'AT ANG SALITA AY SUMASA DIOS' (kai ho Logos ēn pros ton Theon)\n\n• Ang 'pros' = harapan sa harapan, sa patuloy na matalik na relasyon\n• Hindi lamang 'katabi' - ito ay aktibong pakikipag-ugnayan\n• Sinasampal ang kaherehiya: 'Si Jesus ay isa lamang ibang pangalan para sa Diyos Ama (modalismo)'\n• KATOTOHANAN: Ang Logos ay NATATANGING Persona sa relasyon sa Ama.\n\n3️⃣ 'AT ANG SALITA AY DIOS' (kai Theos ēn ho Logos)\n\n• HINDI nagsasabi ng 'isang dios' (Arianong kaherehiya)\n• Ang Theos na walang artikulo ay binibigyang-diin ang banal na KALIKASAN\n• Sinasampal ang kaherehiya: 'Si Jesus ay propeta o anghel lamang'\n• KATOTOHANAN: Ang Logos ay may PAREHONG banal na kalikasan gaya ng Ama.\n\n✨ BUOD:\nSi Jesus ay walang hanggang Diyos (talata 1a), natatangi bilang persona mula sa Ama (talata 1b), ngunit magkapareho sa banal na kalikasan (talata 1c).",
       "revelation_key": "Hindi nagsusulat ng tula si Juan. Siya ay bumubuo ng teolohikong kuta na tumagal sa 2,000 taon ng mga pag-atake."
     },
-
     {
       "order": 3,
       "type": "creation_connection",
@@ -60,7 +57,6 @@
       ],
       "revelation_key": "Ang karpintero mula sa Nazaret na lumalakad sa madungis na Galilea ay siya ring nag-ibitin ng mga galaksiya sa kalawakan. Nilikha ka Niya, at tanging Siya lamang ang makakapaglikha muli sa iyo."
     },
-
     {
       "order": 4,
       "type": "light_darkness",
@@ -71,7 +67,6 @@
       "identity_statement": "Ikaw ay tagadala ng Liwanag na hindi maunawaan o malupigan ng kadiliman. Sa iyong pinakamadilim na mga sandali, ang Liwanag sa iyo ay mas malakas kaysa kadiliman sa paligid mo.",
       "revelation_key": "Ang kadiliman ay hindi kapantay na kabaligtaran ng liwanag. Ito ay simpleng KAKULANGAN ng liwanag. Kapag pumasok si Cristo, kusang tumakas ang kadiliman."
     },
-
     {
       "order": 5,
       "type": "discovery_activation",
@@ -97,7 +92,6 @@
       }
     }
   ],
-
   "tags": [
     "logos",
     "paglikha",
@@ -106,7 +100,6 @@
     "pagka_diyos_ni_cristo",
     "genesis"
   ],
-
   "metadata": {
     "total_word_count": 1050,
     "greek_words_count": 1,

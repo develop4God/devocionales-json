@@ -307,7 +307,8 @@
         "zh": "natanael_fig_tree_zh_001.json",
         "hi": "natanael_fig_tree_hi_001.json",
         "de": "natanael_fig_tree_de_001.json",
-        "ar": "natanael_fig_tree_ar_001.json"
+        "ar": "natanael_fig_tree_ar_001.json",
+        "tl": "natanael_fig_tree_tl_001.json"
       },
       "titles": {
         "es": "Debajo de la Higuera",
@@ -318,7 +319,8 @@
         "zh": "在无花果树下",
         "hi": "अंजीर के पेड़ के नीचे",
         "de": "Unter dem Feigenbaum",
-        "ar": "تحت شجرة التين"
+        "ar": "تحت شجرة التين",
+        "tl": "Sa Ilalim ng Puno ng Higos"
       },
       "subtitles": {
         "es": "El encuentro donde Jesús revela que conoce tus secretos más profundos",
@@ -329,7 +331,8 @@
         "zh": "耶稣显明他知道你内心深处秘密的相遇",
         "hi": "वह मुलाकात जहां यीशु प्रकट करता है कि वह आपके गहरे रहस्यों को जानता है",
         "de": "Die Begegnung, in der Jesus offenbart, dass er deine tiefsten Geheimnisse kennt",
-        "ar": "اللقاء الذي يكشف فيه يسوع أنه يعرف أسرارك العميقة"
+        "ar": "اللقاء الذي يكشف فيه يسوع أنه يعرف أسرارك العميقة",
+        "tl": "Ang pagkikita kung saan inihayag ni Jesus na alam Niya ang iyong pinakamalalim na lihim"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -340,7 +343,8 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 6
+        "ar": 6,
+        "tl": 6
       }
     },
     {
@@ -356,7 +360,8 @@
         "ja": "cana_wedding_ja_001.json",
         "zh": "cana_wedding_zh_001.json",
         "de": "cana_wedding_de_001.json",
-        "ar": "cana_wedding_ar_001.json"
+        "ar": "cana_wedding_ar_001.json",
+        "tl": "cana_wedding_tl_001.json"
       },
       "titles": {
         "es": "Las Bodas de Caná",
@@ -367,7 +372,8 @@
         "ja": "カナの婚礼",
         "zh": "迦拿的婚筵",
         "de": "Die Hochzeit zu Kana",
-        "ar": "عرس قانا"
+        "ar": "عرس قانا",
+        "tl": "Ang Kasalan sa Cana"
       },
       "subtitles": {
         "es": "Cuando Jesús convierte lo ordinario en extraordinario",
@@ -378,7 +384,8 @@
         "ja": "イエスが普通のものを特別なものに変えるとき",
         "zh": "当耶稣将平凡变为非凡",
         "de": "Wenn Jesus das Gewöhnliche in Außergewöhnliches verwandelt",
-        "ar": "حين يحوّل يسوع العادي إلى استثنائي"
+        "ar": "حين يحوّل يسوع العادي إلى استثنائي",
+        "tl": "Nang gawing pambihira ni Jesus ang karaniwan"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -389,7 +396,8 @@
         "ja": 5,
         "zh": 5,
         "de": 6,
-        "ar": 5
+        "ar": 5,
+        "tl": 5
       }
     },
     {
@@ -454,7 +462,8 @@
         "zh": "temple_cleansing_zh_001.json",
         "hi": "temple_cleansing_hi_001.json",
         "de": "temple_cleansing_de_001.json",
-        "ar": "temple_cleansing_ar_001.json"
+        "ar": "temple_cleansing_ar_001.json",
+        "tl": "temple_cleansing_tl_001.json"
       },
       "titles": {
         "es": "La Purificación del Templo",
@@ -465,7 +474,8 @@
         "zh": "洁净圣殿",
         "hi": "मंदिर की शुद्धि",
         "de": "Die Reinigung des Tempels",
-        "ar": "تطهير الهيكل"
+        "ar": "تطهير الهيكل",
+        "tl": "Ang Paglilinis ng Templo"
       },
       "subtitles": {
         "es": "Cuando Jesús declara que Él es el Templo verdadero",
@@ -476,7 +486,8 @@
         "zh": "耶稣宣告自己是真正的圣殿",
         "hi": "जब यीशु घोषणा करता है कि वह ही सच्चा मंदिर है",
         "de": "Als Jesus erklärt, dass er der wahre Tempel ist",
-        "ar": "حين يُعلن يسوع أنه الهيكل الحقيقي"
+        "ar": "حين يُعلن يسوع أنه الهيكل الحقيقي",
+        "tl": "Nang ipahayag ni Jesus na Siya ang tunay na Templo"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -487,7 +498,8 @@
         "zh": 6,
         "hi": 6,
         "de": 7,
-        "ar": 6
+        "ar": 6,
+        "tl": 7
       }
     },
     {
@@ -503,7 +515,8 @@
         "zh": "woman_at_well_zh_001.json",
         "hi": "woman_at_well_hi_001.json",
         "de": "woman_at_well_de_001.json",
-        "ar": "woman_at_well_ar_001.json"
+        "ar": "woman_at_well_ar_001.json",
+        "tl": "woman_at_well_tl_001.json"
       },
       "titles": {
         "es": "La Mujer del Pozo",
@@ -514,7 +527,8 @@
         "zh": "井边的妇人",
         "hi": "कुएँ पर की स्त्री",
         "de": "Die Frau am Brunnen",
-        "ar": "المرأة عند البئر"
+        "ar": "المرأة عند البئر",
+        "tl": "Ang Babae sa Balon"
       },
       "subtitles": {
         "es": "Cuando Jesús rompe todas las barreras por una conversación que cambiará una ciudad",
@@ -525,7 +539,8 @@
         "zh": "当耶稣打破一切隔阂，带来改变城市的对话",
         "hi": "जब यीशु एक ऐसी बातचीत के लिए हर बाधा तोड़ता है जो एक पूरे नगर को बदल देगी",
         "de": "Als Jesus jede Schranke durchbricht für ein Gespräch, das eine ganze Stadt verwandeln wird",
-        "ar": "عندما يكسر يسوع كل الحواجز لمحادثة ستحوّل مدينة بأكملها"
+        "ar": "عندما يكسر يسوع كل الحواجز لمحادثة ستحوّل مدينة بأكملها",
+        "tl": "Nang wasakin ni Jesus ang lahat ng hadlang para sa isang pag-uusap na magbabago sa isang lungsod"
       },
       "estimated_reading_minutes": {
         "es": 5,
@@ -536,7 +551,8 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 6
+        "ar": 6,
+        "tl": 6
       }
     },
     {
@@ -552,7 +568,8 @@
         "zh": "i_am_before_abraham_zh_001.json",
         "hi": "i_am_before_abraham_hi_001.json",
         "de": "i_am_before_abraham_de_001.json",
-        "ar": "i_am_before_abraham_ar_001.json"
+        "ar": "i_am_before_abraham_ar_001.json",
+        "tl": "i_am_before_abraham_tl_001.json"
       },
       "titles": {
         "es": "YO SOY: Antes que Abraham Fuese",
@@ -563,7 +580,8 @@
         "zh": "我是：在亚伯拉罕出生以前",
         "hi": "मैं हूं: इब्राहीम से पहले",
         "de": "ICH BIN: Bevor Abraham war",
-        "ar": "أنا هو: قبل أن يكون إبراهيم"
+        "ar": "أنا هو: قبل أن يكون إبراهيم",
+        "tl": "AKO AY: Bago si Abraham"
       },
       "subtitles": {
         "es": "Cuando Jesús reclama eternidad y la multitud toma piedras",
@@ -574,7 +592,8 @@
         "zh": "当耶稣宣称永恒，而众人拿起石头",
         "hi": "जब यीशु अनन्तता का दावा करता है और भीड़ पत्थर उठाती है",
         "de": "Als Jesus Ewigkeit beansprucht und der Mob nach Steinen greift",
-        "ar": "حين يدّعي يسوع الأزلية والجمهور يلتقط الحجارة"
+        "ar": "حين يدّعي يسوع الأزلية والجمهور يلتقط الحجارة",
+        "tl": "Nang iangkin ni Jesus ang walang-hanggan at kinuha ng mga tao ang mga bato"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -585,7 +604,8 @@
         "zh": 6,
         "hi": 6,
         "de": 7,
-        "ar": 6
+        "ar": 6,
+        "tl": 7
       }
     },
     {
@@ -601,7 +621,8 @@
         "zh": "good_shepherd_zh_001.json",
         "hi": "good_shepherd_hi_001.json",
         "de": "good_shepherd_de_001.json",
-        "ar": "good_shepherd_ar_001.json"
+        "ar": "good_shepherd_ar_001.json",
+        "tl": "good_shepherd_tl_001.json"
       },
       "titles": {
         "es": "El Buen Pastor",
@@ -612,7 +633,8 @@
         "zh": "好牧人",
         "hi": "अच्छा चरवाहा",
         "de": "Der gute Hirte",
-        "ar": "الراعي الصالح"
+        "ar": "الراعي الصالح",
+        "tl": "Ang Mabuting Pastol"
       },
       "subtitles": {
         "es": "Cuando Jesús declara que conoce a sus ovejas por nombre",
@@ -623,7 +645,8 @@
         "zh": "当耶稣宣告祂按名认识祂的羊",
         "hi": "जब यीशु घोषणा करता है कि वह अपनी भेड़ों को नाम से जानता है",
         "de": "Als Jesus erklärt, dass er seine Schafe beim Namen kennt",
-        "ar": "عندما يعلن يسوع أنه يعرف خرافه بالاسم"
+        "ar": "عندما يعلن يسوع أنه يعرف خرافه بالاسم",
+        "tl": "Nang ipahayag ni Jesus na kilala Niya ang bawat tupa sa pamamagitan ng pangalan"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -634,7 +657,8 @@
         "zh": 6,
         "hi": 6,
         "de": 7,
-        "ar": 5
+        "ar": 5,
+        "tl": 7
       }
     },
     {
