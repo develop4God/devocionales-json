@@ -1,0 +1,129 @@
+{
+  "id": "i_am_before_abraham_001",
+  "type": "discovery",
+  "date": "2026-01-23",
+  "title": "AKO AY: Bago si Abraham",
+  "subtitle": "Nang iangkin ni Jesus ang walang-hanggan at kinuha ng mga tao ang mga bato",
+  "language": "tl",
+  "version": "Ang Dating Biblia",
+  "estimated_reading_minutes": 7,
+  "key_verse": {
+    "reference": "Juan 8:58",
+    "text": "Sinabi sa kanila ni Jesus, Katotohanan, katotohanang sinasabi ko sa inyo, Bago ipinanganak si Abraham, ay ako nga."
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "character_context",
+      "icon": "🕎",
+      "title": "Ang Pista ng mga Tabernakulo: Ang Pagtatakda ng Entablado",
+      "subtitle": "Bakit nangyayari ang pag-uusap na ito kung saan at kailan ito nangyayari",
+      "content": "Ang paghaharap na ito ay nangyayari sa panahon ng Pista ng mga Tabernakulo (Sukkot), isa sa tatlong mandatoryong pista ng mga peregrinasyon ng Israel. Napakahalaga ng pag-unawa sa konteksto:\n\n🏛️ ANG LOKASYON:\n• Si Jesus ay nasa ingatan ng Templo (Juan 8:20)\n• Dito nakatayo ang apat na higanteng candelabra\n• Sa panahon ng Sukkot, ang mga menorah na ito ay sinindihan upang gunitain ang haligi ng apoy sa ilang\n• Ang liwanag ay napakalakas na nag-iilaw sa buong Jerusalem\n\n🔥 ANG SIMBOLISMO:\n• Ang haligi ng apoy ay kumakatawan sa presensya ng Diyos na gumagabay sa Israel\n• Ito ay isang patuloy na paalala na ang YHWH ay naninirahan kasama nila\n• Ang naiilaw na Templo ay nagpapahayag: 'Nandito ang Diyos'\n\n💡 ANG PAGHAHABOL NI JESUS (8:12):\nSa kontekstong ITO, ipinahahayag ni Jesus: 'Ako ang ilaw ng sanglibutan.'\n\nHindi lamang Siya gumagamit ng isang magandang metapora. Inaangkin Niya na maging ang realidad na ang mga candelabra ay sumasagisag lamang. Siya ang tunay na haligi ng apoy. Siya ang hayag na presensya ng YHWH.\n\n⚔️ ANG TUMATAAS NA TENSYON:\nSa Juan 8:58, ang debate na ito ay tumataas na sa loob ng ilang oras. Si Jesus ay:\n• Tinawag sila na mga anak ng diyablo (8:44)\n• Inaangkin na kilala Niya nang personal si Abraham (8:56)\n• Sinabi na si Abraham ay 'nagalak na makita ang aking araw'\n\nNgayon ang rurok.",
+      "revelation_key": "Hindi pumili si Jesus ng mga random na sandali upang gumawa ng radikal na mga angkin. Bawat pahayag na 'AKO AY' ay inilagay sa isang konteksto na idinisenyo upang gawing hindi mapagkakamalang Kanyang pagkakakilanlan."
+    },
+    {
+      "order": 2,
+      "type": "greek_exegesis",
+      "icon": "📖",
+      "title": "Genesthai laban sa Egō Eimi: Ang Gramatika ng Walang-hanggan",
+      "subtitle": "Dalawang pandiwa na naghahayag ng dalawang kalikasan",
+      "content": "Ang Juan 8:58 ay naglalaman ng isa sa pinakateolohikong nakakargadong mga pangungusap sa Kasulatan:\n\n'Ἀμὴν ἀμὴν λέγω ὑμῖν, πρὶν Ἀβραὰμ γενέσθαι ἐγὼ εἰμί.'\n'Amēn amēn legō hymin, prin Abraam genesthai egō eimi.'\n\n🔍 PANDIWA NI ABRAHAM: GENESTHAI (γενέσθαι)\n\n• Strong's G1096: γίνομαι (ginomai)\n• Anyo: Aorist infinitive\n• Kahulugan: 'Dumating sa pag-iral,' 'ipinanganak,' 'maging'\n• Implikasyon: Si Abraham ay may simula sa panahon\n• Timeline: Mga 2000 BC\n\n📊 ANG GRAMATIKA:\nAng aorist tense ay nagtatatak ng isang tiyak na historikal na kaganapan. Si Abraham ay hindi laging umiiral - DUMATING SIYA SA PAG-IRAL sa isang partikular na sandali nang tawagin siya ng Diyos.\n\n⚡ PANDIWA NI JESUS: EGŌ EIMI (ἐγὼ εἰμί)\n\n• Strong's G1510 (εἰμί) + G1473 (ἐγώ)\n• Anyo: Present indicative, emphatic\n• Kahulugan: 'AKO AY' (patuloy, walang-hanggang kasalukuyan)\n• Implikasyon: Walang simula, walang katapusan - walang-hanggang pag-iral\n\n🔥 ANG GULAT:\nHindi nagsasabi si Jesus ng:\n• 'AKO AY NOON bago si Abraham' (nakaraang panahon)\n• 'Umiiral ako bago si Abraham' (binibigyang-diin ang pagkakasunud-sunod)\n\nSinasabi Niya: 'AKO AY' - gamit ang walang-hanggang kasalukuyang panahon na lumalampas sa panahon mismo.\n\n🌟 ANG KONEKSYON SA EXODO 3:14:\nNang tanungin ni Moises ang pangalan ng Diyos sa umuusok na palumpong, sinabi ng Diyos:\n• Hebreo: אֶהְיֶה אֲשֶׁר אֶהְיֶה (Ehyeh Asher Ehyeh)\n• Griegong LXX: Ἐγώ εἰμι ὁ ὤν (Egō eimi ho ōn)\n• Salin: 'AKO AY AKO AY'\n\nInaangkin ni Jesus ang banal na Pangalan.",
+      "greek_words": [
+        {
+          "word": "Genesthai",
+          "transliteration": "γενέσθαι",
+          "meaning": "Dumating sa pag-iral, ipinanganak",
+          "revelation": "Ang pandiwang ito ay nagtatatak ng mga nilikha. Lahat ng 'dumating sa pag-iral' ay may Lumikha - kasama si Abraham."
+        },
+        {
+          "word": "Egō Eimi",
+          "transliteration": "ἐγὼ εἰμί",
+          "meaning": "AKO AY (walang-hanggang kasalukuyan)",
+          "revelation": "Ito ang pangalan ng Diyos. Hindi 'ako ay noon' o 'ako ay magiging' - kundi ang walang-hanggan, sariling umiiral na ISA na AY lamang."
+        }
+      ],
+      "revelation_key": "Ang gramatika mismo ay isang teolohikong pahayag. Si Abraham ay 'naging.' Si Jesus ay 'AY.' Ang isa ay may simula. Ang Isa ay ang Simula."
+    },
+    {
+      "order": 3,
+      "type": "theological_depth",
+      "icon": "⚖️",
+      "title": "Ang mga Bato: Bakit Naintindihan Nila nang Perpekto",
+      "subtitle": "Juan 8:59 - Patunay na nakuha nila ang mensahe",
+      "content": "Agad pagkatapos sabihin ni Jesus na 'AKO AY,' inirekord ng teksto:\n\n'Nang magkagayo'y nangagdampot sila ng mga bato upang ib uhin siya...' (Juan 8:59a)\n\n🪨 BAKIT MGA BATO?\n\nHindi ito isang spontaneous na kagulo ng karamihan. Ito ay isang kinalkula na legal na pagtatangkang pagpatay batay sa Batas ni Moises:\n\n📜 LEVITICO 24:16:\n'At ang lumapastangan sa pangalan ng Panginoon, ay walang pagsalang papatayin, at lahat ng kapisanan ay walang pagsalang babatuhin siya: maging taga ibang lupa, o maging ipinanganak sa lupain, ay papatayin niya, pagka kaniyang nilalait ang pangalan ng Panginoon.'\n\n⚡ ANG SAKDAL: PAMUMUSONG\n\nSa ilalim ng batas ng mga Hudyo, ang pamumusong ay hindi lamang 'pagsasabi ng masasamang bagay tungkol sa Diyos.' Mayroon itong napaka-tiyak na kahulugan:\n• Pagbigkas ng sagradong Pangalan (YHWH) upang iangkin ang pagka-diyos sa sarili\n• Kinukuha ang eksklusibong pagkakakilanlan ng Diyos at inaangkin ito bilang sarili mo\n\nIto EKSAKTO ang ginawa ni Jesus. Sa pamamagitan ng pagsasabi ng 'Egō Eimi' sa kontekstong ito, inaangkin Niya ang:\n1️⃣ Pag-iral bago lahat ng nilikha\n2️⃣ Ang banal na Pangalan na inihayag sa umuusok na palumpong\n3️⃣ Pagkakapantay sa Ama\n\n❌ KUNG SI JESUS AY GURO LAMANG:\n\nItatapon lamang sana Siya ng mga Hudyo bilang:\n• Isang baliw (delusyonal)\n• Isang erehe (nalito sa teolohiya)\n• Isang taong inaalihan ng demonyo (8:48 - iminungkahi na nila ito)\n\nNgunit hindi nila Siya itinakwil. Sinubukan nilang PATAYIN Siya.\n\n✅ BAKIT? DAHIL NAINTINDIHAN NILA:\n\nWalang Hudyong ika-1 siglo ang hindi makakaintindi ng 'Egō Eimi' sa kontekstong ito. Alam nila:\n• Ang Shema: 'Pakinggan mo, Israel: Ang Panginoon nating Dios ay isang Panginoon' (Deut 6:4)\n• Ang sagradong Pangalan mula sa Exodo 3:14\n• Ang parusa para sa pamumusong\n\nAng kanilang karahasan ay ang kanilang eksamen sa teolohiya. Nakakuha sila ng A+ sa pag-unawa - at F sa pananampalataya.",
+      "scripture_connections": [
+        {
+          "reference": "Exodo 3:14",
+          "text": "At sinabi ng Dios kay Moises, AKO YAONG AKO NGA; at kaniyang sinabi, Ganito ang sasabihin mo sa mga anak ni Israel, Sinugo ako sa inyo ni AKO NGA."
+        },
+        {
+          "reference": "Levitico 24:16",
+          "text": "At ang lumapastangan sa pangalan ng Panginoon ay papataying walang pagsala; walang pagsalang pagbabatuhanan siya ng buong kapisanan: maging taga ibang lupa o maging tubo sa lupain, ay papatayin pagka lumapastangan sa Pangalan ng Panginoon."
+        }
+      ],
+      "revelation_key": "Ang mga bato ay nagpapatunay ng angkin. Kung sinabi lamang ni Jesus na Siya ay umiiral bago si Abraham, maaaring makipagtalo sila sa teolohiya. Ngunit ang pag-angkin ng 'AKO AY' ay nangangahulugang pag-angkin na maging Diyos - at iyon ay nangangailangan ng pagsamba o pagbitay."
+    },
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "icon": "✨",
+      "title": "Ang Supernatural na Paglabas: Ekrybē",
+      "subtitle": "Nang nagtago ang Liwanag mula sa mga pumili ng kadiliman",
+      "content": "Pagkatapos nilang kunin ang mga bato, may kahanga-hangang bagay na nangyayari:\n\n'...datapuwa't si Jesus ay nagkubli (ἐκρύβη), at lumabas sa templo, na nagdaan sa gitna nila, at gayon ay nagdaan.' (Juan 8:59b)\n\n🔍 ANG SALITA: EKRYBĒ (ἐκρύβη)\n\n• Strong's G2928: κρύπτω (kryptō)\n• Anyo: Aorist passive indicative\n• Ugat na kahulugan: 'Magtago, ikubli, mag-encrypt'\n• Inggles na mga derivatives: 'Crypt,' 'cryptic,' 'encryption'\n\n⚡ BAKIT MAHALAGA ANG 'PASSIVE':\n\nAng passive voice (ekrybē) ay nangangahulugang 'Siya ay ITINAGO' - hindi 'Nagtago Siya ng Kanyang Sarili.'\n\nIminumungkahi nito ang banal na interbensyon:\n• Itinago Siya ng Diyos Ama\n• Isang supernatural na tabing ay bumagsak sa kanilang mga mata\n• Ang Liwanag ay ginawa ang Kanyang Sariling hindi nakikita sa mga tumangging sa Kanya\n\n🚶 'NAGDAAN SA GITNA NILA':\n\nNapakahalaga ng pariralang ito. Si Jesus ay HINDI:\n• Sumilip sa isang side door\n• Tumakas sa takot\n• Nagtago sa likod ng haligi\n\nSiya ay lumakad SA GITNA ng isang armadong karamihan na handang ipatupad Siya.\n\n💭 ANG TEOLOHIKONG IRONYA:\n\n1️⃣ Inaangkin lang ni Jesus na Siya ang 'ilaw ng sanglibutan' (8:12)\n2️⃣ Tinanggihan nila ang Liwanag\n3️⃣ Ngayon ang Liwanag ay 'nagtago' mula sa kanila - isang anyo ng paghatol\n\n🔦 IBANG MGA GAMIT NG KRYPTŌ (G2928):\n\n• Mateo 11:25 - Ang Diyos ay 'nagtago' ng katotohanan mula sa mga marunong at matalino\n• Lucas 19:42 - Ang kapayapaan ay 'nakatago' mula sa mga mata ng Jerusalem bilang paghatol\n• Mga Taga-Colosas 3:3 - Ang ating buhay ay 'nakatago' kay Cristo sa Diyos (proteksyon)\n\n🎯 ANG PATTERN:\n\nHindi ito ang unang pagkakataon na ginagawa ito ni Jesus:\n• Lucas 4:30 - Sa Nazaret, sinubukan nilang itapon Siya sa bangin, ngunit 'na pagdaan niya sa gitna nila ay yumaon ng kaniyang lakad'\n\nSa parehong pagkakataon, ipinakita ni Jesus na:\n• Walang sinoman ang makakakuha ng Kanyang buhay - kusang ibinibigay Niya ito (Juan 10:18)\n• Ang Kanyang 'oras' ay hindi pa dumarating (Juan 7:30)\n• Siya ay soberano kahit sa tinangkang pagpatay",
+      "greek_words": [
+        {
+          "word": "Ekrybē",
+          "transliteration": "ἐκρύβη",
+          "meaning": "Itinago, ikinubli (passive voice)",
+          "revelation": "Ang passive voice ay tumutukoy sa banal na passive - itinago Siya ng Diyos. Ang Liwanag ay umurong mula sa mga pumili ng kadiliman."
+        }
+      ],
+      "revelation_key": "Hindi tumakas si Jesus tulad ng isang fugitive. Umalis Siya tulad ng isang Hari na nagpasya, 'Hindi ito ang aking panahon.' Ang Kanyang paglabas ay kasing-supernatural ng Kanyang angkin - parehong nagpapatunay ng Kanyang pagka-diyos."
+    },
+    {
+      "order": 5,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Pansariling Pagtuklas",
+      "discovery_questions": [
+        {
+          "category": "Pagkakakilanlan",
+          "question": "Ginamit ni Jesus ang gramatika mismo upang patunayan ang Kanyang walang-hanggan. Ano ang mga implikasyon para sa iyong buhay kung ang karpintero mula sa Nazaret ay talagang ang walang-hanggang 'AKO AY' na umiiral bago ang paglikha?"
+        },
+        {
+          "category": "Tugon",
+          "question": "Perpekto ang pag-unawa ng mga lider ng mga Hudyo sa angkin ni Jesus - at pumili ng mga bato sa halip na pagsuko. Nang harapin ang pagka-diyos ni Cristo ngayon, anong 'mga bato' ang kinukuha ng mga tao sa halip na sumamba (intelektwalismo, pag-uyam, pag-iwas)?"
+        },
+        {
+          "category": "Soberanya",
+          "question": "Si Jesus ay kumalma na lumakad sa isang mamamatay-taong karamihan dahil 'ang Kanyang oras ay hindi pa dumarating.' Paano binabago ang ganap na soberanya ni Cristo sa Kanyang sariling kamatayan ang paraan ng iyong pagtingin sa Kanyang soberanya sa iyong buhay?"
+        }
+      ],
+      "prayer": {
+        "title": "Panalangin ng Pagsamba sa Walang-hanggang AKO AY",
+        "content": "Panginoong Jesus, Ikaw ang AKO AY - ang Isa na umiiral sa labas ng panahon, bago si Abraham, bago ang paglikha, bago may anumang dumating sa pag-iral. Hindi Ka isang nilikha. Ikaw ang Lumikha. Hindi Ka limitado ng panahon. Ikaw ang Matanda ng mga Araw at ang walang-hanggang Kasalukuyan. Ipinapahayag ko na Ikaw lamang ang Diyos. Tulad ng mga nasa Templo, mayroon akong pagpili: kumuha ng mga bato ng pagtanggi o lumuhod sa pagsamba. Ngayong araw ay pumipili ako ng pagsamba. Kinikilala ko na Ikaw ay PANGINOON - ang parehong Pangalan na inihayag kay Moises sa umuusok na palumpong. Ikaw ang Ilaw ng Sanglibutan, at hinihiling ko na huwag Kang magtago mula sa akin tulad ng ginawa Mo sa mga tumangging sa Iyo. Buksan ang aking mga mata upang makita ang Iyong kaluwalhatian. Bigyan mo ako ng pananampalataya upang maniwala sa nakaintindi kahit ng Iyong mga kaaway: na Ikaw ay Diyos sa katawang-tao. Sa Iyong walang-hanggang Pangalan, ang Pangalan sa itaas ng lahat ng mga pangalan, Amen."
+      }
+    }
+  ],
+  "tags": [
+    "pagka_diyos_ni_cristo",
+    "mga_pahayag_na_ako_ay",
+    "juan_8",
+    "walang_hanggan",
+    "pagsusuri_ng_griego",
+    "pamumusong",
+    "soberanya"
+  ],
+  "metadata": {
+    "total_word_count": 1450,
+    "greek_words_count": 3,
+    "scripture_references_count": 10,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "Walang-hanggang pag-iral ni Cristo",
+      "Ang banal na Pangalan",
+      "Pag-unawa ng mga Hudyo sa pamumusong",
+      "Supernatural na soberanya"
+    ]
+  }
+}
