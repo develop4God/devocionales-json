@@ -674,7 +674,8 @@
         "zh": "jesus_troubled_himself_zh_001.json",
         "hi": "jesus_troubled_himself_hi_001.json",
         "de": "jesus_troubled_himself_de_001.json",
-        "ar": "jesus_troubled_himself_ar_001.json"
+        "ar": "jesus_troubled_himself_ar_001.json",
+        "tl": "jesus_troubled_himself_tl_001.json"
       },
       "titles": {
         "es": "Se Turbó a Sí Mismo",
@@ -685,7 +686,8 @@
         "zh": "他使自己心里悲叹",
         "hi": "उसने स्वयं को व्याकुल किया",
         "de": "Er erschütterte sich selbst",
-        "ar": "اضطرب في نفسه"
+        "ar": "اضطرب في نفسه",
+        "tl": "Kinabag Niya ang Kanyang Sarili"
       },
       "subtitles": {
         "es": "Cuando Jesús eligió entrar en nuestro dolor",
@@ -696,7 +698,8 @@
         "zh": "当耶稣选择进入我们的痛苦",
         "hi": "जब यीशु ने हमारे दर्द में प्रवेश करना चुना",
         "de": "Als Jesus sich entschied, in unseren Schmerz einzutauchen",
-        "ar": "حين اختار يسوع أن يدخل ألمنا"
+        "ar": "حين اختار يسوع أن يدخل ألمنا",
+        "tl": "Nang piliin ni Jesus na pumasok sa ating sakit"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -707,7 +710,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 7
+        "ar": 7,
+        "tl": 8
       }
     },
     {
@@ -723,7 +727,8 @@
         "zh": "passed_from_death_zh_001.json",
         "hi": "passed_from_death_hi_001.json",
         "de": "passed_from_death_de_001.json",
-        "ar": "passed_from_death_ar_001.json"
+        "ar": "passed_from_death_ar_001.json",
+        "tl": "passed_from_death_tl_001.json"
       },
       "titles": {
         "es": "Pasados de Muerte a Vida",
@@ -734,7 +739,8 @@
         "zh": "从死到生",
         "hi": "मृत्यु से जीवन में पार",
         "de": "Vom Tod ins Leben hindurchgedrungen",
-        "ar": "عبرتَ من الموت إلى الحياة"
+        "ar": "عبرتَ من الموت إلى الحياة",
+        "tl": "Lumipat Mula sa Kamatayan Tungo sa Buhay"
       },
       "subtitles": {
         "es": "La revelación final: ya no puedes 'des-nacer'",
@@ -745,7 +751,8 @@
         "zh": "最终的启示：你不能'不出生'",
         "hi": "अंतिम प्रकाशन: आप अब 'अजन्मे' नहीं हो सकते",
         "de": "Die endgültige Offenbarung: Du kannst nicht mehr 'ungeboren' werden",
-        "ar": "الحقيقة الختامية: لا يمكن أن تعود غير مولود"
+        "ar": "الحقيقة الختامية: لا يمكن أن تعود غير مولود",
+        "tl": "Ang huling pahayag: hindi ka na maaaring 'hindi ipinanganak'"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -756,7 +763,8 @@
         "zh": 8,
         "hi": 8,
         "de": 9,
-        "ar": 7
+        "ar": 7,
+        "tl": 10
       }
     },
     {
@@ -772,7 +780,8 @@
         "zh": "transfiguration_zh_001.json",
         "hi": "transfiguration_hi_001.json",
         "de": "transfiguration_de_001.json",
-        "ar": "transfiguration_ar_001.json"
+        "ar": "transfiguration_ar_001.json",
+        "tl": "transfiguration_tl_001.json"
       },
       "titles": {
         "es": "La Transfiguración",
@@ -783,7 +792,8 @@
         "zh": "登山变像",
         "hi": "रूपान्तरण",
         "de": "Die Verklärung",
-        "ar": "التجلّي"
+        "ar": "التجلّي",
+        "tl": "Ang Pagbabagong-Anyo"
       },
       "subtitles": {
         "es": "Cuando el velo de la carne se abre y la gloria irrumpe",
@@ -794,7 +804,8 @@
         "zh": "当肉身的幔子揭开，荣耀突破而出",
         "hi": "जब देह का परदा खुलता है और महिमा प्रकट होती है",
         "de": "Als der Schleier des Fleisches sich öffnet und die Herrlichkeit durchbricht",
-        "ar": "عندما ينفتح ستار الجسد ويشقّ المجد طريقه"
+        "ar": "عندما ينفتح ستار الجسد ويشقّ المجد طريقه",
+        "tl": "Nang magbukas ang tabing ng laman at sumilay ang kaluwalhatian"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -805,7 +816,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 6
+        "ar": 6,
+        "tl": 9
       }
     },
     {
@@ -821,7 +833,8 @@
         "zh": "buried_talent_zh_001.json",
         "hi": "buried_talent_hi_001.json",
         "de": "buried_talent_de_001.json",
-        "ar": "buried_talent_ar_001.json"
+        "ar": "buried_talent_ar_001.json",
+        "tl": "buried_talent_tl_001.json"
       },
       "titles": {
         "es": "El Talento Enterrado",
@@ -832,7 +845,8 @@
         "zh": "被埋葬的他连得",
         "hi": "दफनाई गई प्रतिभा",
         "de": "Das vergrabene Talent",
-        "ar": "الوزنة المدفونة"
+        "ar": "الوزنة المدفونة",
+        "tl": "Ang Inilibing na Talento"
       },
       "subtitles": {
         "es": "Cuando el miedo paraliza y las manos quedan vacías",
@@ -843,7 +857,8 @@
         "zh": "当恐惧使人瘫痪,双手空空如也",
         "hi": "जब डर लकवा मारता है और हाथ खाली रह जाते हैं",
         "de": "Wenn Angst lähmt und Hände leer bleiben",
-        "ar": "حين يشلّ الخوف الإنسان وتبقى يداه فارغتين"
+        "ar": "حين يشلّ الخوف الإنسان وتبقى يداه فارغتين",
+        "tl": "Nang ang takot ay nagpapara at ang mga kamay ay nananatiling walang laman"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -854,7 +869,8 @@
         "zh": 8,
         "hi": 8,
         "de": 9,
-        "ar": 10
+        "ar": 10,
+        "tl": 10
       }
     },
     {
@@ -870,7 +886,8 @@
         "zh": "triumphal_entry_zh_001.json",
         "hi": "triumphal_entry_hi_001.json",
         "de": "triumphal_entry_de_001.json",
-        "ar": "triumphal_entry_ar_001.json"
+        "ar": "triumphal_entry_ar_001.json",
+        "tl": "triumphal_entry_tl_001.json"
       },
       "titles": {
         "es": "La Entrada Triunfal",
@@ -881,7 +898,8 @@
         "zh": "荣入圣城",
         "hi": "विजयी प्रवेश",
         "de": "Der Einzug des Königs",
-        "ar": "الدخول المنتصر"
+        "ar": "الدخول المنتصر",
+        "tl": "Ang Matagumpay na Pagpasok"
       },
       "subtitles": {
         "es": "Cuando el Rey rechazado entra a Jerusalén montado en un pollino, no en un caballo de guerra",
@@ -892,7 +910,8 @@
         "zh": "当被拒绝的王骑着驴驹而非战马进入耶路撒冷",
         "hi": "जब तिरस्कृत राजा यरूशलेम में गधे पर सवार होकर प्रवेश करता है, न कि युद्ध के घोड़े पर",
         "de": "Als der verworfene König auf einem Esel in Jerusalem einzieht – nicht auf einem Streitross",
-        "ar": "حين يدخل الملك المرفوض أورشليم راكباً على حمار لا على حصان حرب"
+        "ar": "حين يدخل الملك المرفوض أورشليم راكباً على حمار لا على حصان حرب",
+        "tl": "Nang ang tinanggihang Hari ay pumasok sa Jerusalem na nakasaskay sa isang asno, hindi sa kabalyong pandigma"
       },
       "estimated_reading_minutes": {
         "es": 5,
@@ -903,7 +922,8 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 6
+        "ar": 6,
+        "tl": 7
       }
     },
     {
@@ -919,7 +939,8 @@
         "zh": "gethsemane_agony_zh_001.json",
         "hi": "gethsemane_agony_hi_001.json",
         "de": "gethsemane_agony_de_001.json",
-        "ar": "gethsemane_agony_ar_001.json"
+        "ar": "gethsemane_agony_ar_001.json",
+        "tl": "gethsemane_agony_tl_001.json"
       },
       "titles": {
         "es": "La Agonía del Testador",
@@ -930,7 +951,8 @@
         "zh": "立约者的痛苦",
         "hi": "वसीयतकर्ता की व्यथा",
         "de": "Die Qual des Erblassers",
-        "ar": "آلام الوصيّة"
+        "ar": "آلام الوصيّة",
+        "tl": "Ang Paghihirap ng Tagapagmana"
       },
       "subtitles": {
         "es": "Cuando el Hijo de Dios suda sangre en la prensa de aceite",
@@ -941,7 +963,8 @@
         "zh": "当神的儿子在橄榄压榨机中流出血汗时",
         "hi": "जब परमेश्वर का पुत्र जैतून की कोल्हू में लहू जैसा पसीना बहाता है",
         "de": "Als der Sohn Gottes im Ölbaumgarten Blut schwitzt",
-        "ar": "عندما يعرق ابن الله دماً في معصرة الزيتون"
+        "ar": "عندما يعرق ابن الله دماً في معصرة الزيتون",
+        "tl": "Nang ang Anak ng Diyos ay nagpawis ng dugo sa pigaan ng olibo"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -952,7 +975,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 6
+        "ar": 6,
+        "tl": 9
       }
     },
     {
