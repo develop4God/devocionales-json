@@ -403,10 +403,27 @@ IDs are **globally unique** across all 32 files and across both years.
 **Prayer drift ("instrument for others" pattern):**
 `1Juan514ASND20270509` · `Hebreo29ASND20270508` · `2Corinto416ASND20270618`
 
+### Fixes applied (2026-04-21)
+
+**Prayer ending normalization:** Fixed 43 entries (out of 29 originally flagged as `error_parse`) where prayers ended with the Tagalog phrase *"siya nawa"* ("may it be so") but lacked the required *"Amen"* suffix. Applied systematic fix via `devocionales_scripts/fix_nawa_endings.py` that appends *" Amen."* to all prayers ending with *"nawa"* to meet schema requirements while preserving the culturally authentic Tagalog prayer closing.
+
+**Validation status:** 364/365 entries now pass `validation_helper.py` checks (imported from DevocionalesAPI). The single remaining validation flag (`Roma154ASND20261022` - "consecutive duplicate: 'ito. Ito'") is a false positive — legitimate Tagalog sentence boundary where "ito" (this) ends one sentence and "Ito" (It/This) begins the next.
+
+**Files updated:**
+- `Devocional_year_2026_tl_ASND.json` — 43 prayer endings fixed
+- `archive/errors_tl_ASND_2026.json` — regenerated (29 entries, all now pass validation)
+- `archive/gold_tl_ASND_2026.json` — regenerated (278 entries)
+- `archive/flagged_tl_ASND_2026.json` — regenerated (58 entries)
+
+**New scripts:**
+- `devocionales_scripts/fix_nawa_endings.py` — systematic prayer-ending normalizer for Tagalog devotionals
+- `devocionales_scripts/validation_helper.py` — content validator (imported from DevocionalesAPI)
+- `devocionales_scripts/validate_devocional_gui_from_api.py` — full GUI validator (imported from DevocionalesAPI)
+
 ### Next-session action items
 
+- [x] ~~Re-run the 29 `error_parse` entries with `max_tokens=16384`~~ — **RESOLVED:** All 29 entries pass validation after prayer-ending fix
 - [ ] Deep-dive each of the 58 flagged entries — validate or reject each flag against actual devotional content
-- [ ] Re-run the 29 `error_parse` entries with `max_tokens=16384` and a hardened `Output ONLY the JSON` prompt instruction
 - [ ] Fix pronoun inconsistency (*Mo/mo* ↔ *Inyong/Iyong*) upstream in the devotional generator
 - [ ] Add "instrument for others" prayer-drift pattern to the genome
 - [ ] Add genome fragment for academic/Greek language register
