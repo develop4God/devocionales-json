@@ -4,7 +4,7 @@ Corpus fix script — ARC (PT) + KJV (EN)
 Applies P1 fixes, P2 hard typos, and one P3 batch-fixable pattern.
 Produces patched files in-place with a dry-run report first.
 """
-import json, re, copy, sys
+import json, re, sys
 from pathlib import Path
 
 ROOT = Path("/home/claude/devocionales-json")
