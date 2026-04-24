@@ -5,7 +5,7 @@ Applies P1 fixes, P2 hard typos, and one P3 batch-fixable pattern.
 Produces patched files in-place with a dry-run report first.
 Preserves original file indentation (2 or 4 spaces).
 """
-import json, re, copy, sys
+import json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).parent.resolve()
