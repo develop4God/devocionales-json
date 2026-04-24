@@ -23,7 +23,7 @@ def detect_indent(fname):
 def load(fname, lang):
     path = ROOT / fname
     indent = detect_indent(path)
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         data = json.load(f)
     return data, data["data"][lang], indent
 
