@@ -1,23 +1,35 @@
 #!/usr/bin/env python3
 """
-Corpus fix script — ARC (PT) + KJV (EN)
+Corpus fix script — ARC (PT) + KJV (EN) + NVI (PT) + NIV (EN)
 Applies P1 fixes, P2 hard typos, and one P3 batch-fixable pattern.
 Produces patched files in-place with a dry-run report first.
+Preserves original file indentation (2 or 4 spaces).
 """
 import json, re, copy, sys
 from pathlib import Path
 
-ROOT = Path("/home/claude/devocionales-json")
+ROOT = Path(__file__).parent.resolve()
 FIELDS = ["reflexion", "para_meditar", "oracion"]
 
-def load(fname, lang):
-    with open(ROOT / fname) as f:
-        data = json.load(f)
-    return data, data["data"][lang]
+def detect_indent(fname):
+    """Return the indent integer used in the file (2 or 4)."""
+    for line in Path(fname).read_text(encoding="utf-8").splitlines():
+        if line.startswith("  "):
+            stripped = line.lstrip(" ")
+            spaces = len(line) - len(stripped)
+            return spaces if spaces in (2, 4) else 2
+    return 2
 
-def save(fname, data):
+def load(fname, lang):
+    path = ROOT / fname
+    indent = detect_indent(path)
+    with open(path) as f:
+        data = json.load(f)
+    return data, data["data"][lang], indent
+
+def save(fname, data, indent):
     with open(ROOT / fname, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+        json.dump(data, f, ensure_ascii=False, indent=indent)
 
 def all_entries(lang_data):
     for date, arr in lang_data.items():
@@ -80,7 +92,7 @@ def fix_kjv_closing(text):
 def process_arc(dry_run=False):
     total_changes = {"em_o_nome": 0, "dele": 0, "reverential": 0, "p2": 0}
     for fname, lang in ARC_FILES:
-        data, lang_data = load(fname, lang)
+        data, lang_data, indent = load(fname, lang)
         year = "2025" if "2025" in fname else "2026"
         changed_entries = 0
         for e in all_entries(lang_data):
@@ -139,7 +151,7 @@ def process_arc(dry_run=False):
                 changed_entries += 1
 
         if not dry_run:
-            save(fname, data)
+            save(fname, data, indent)
             print(f"  ✅ Saved {fname} ({changed_entries} entries modified)")
 
     print(f"\nARC totals: {total_changes}")
@@ -147,7 +159,7 @@ def process_arc(dry_run=False):
 def process_kjv(dry_run=False):
     total_changes = {"kjv_closing": 0}
     for fname, lang in KJV_FILES:
-        data, lang_data = load(fname, lang)
+        data, lang_data, indent = load(fname, lang)
         changed_entries = 0
         for e in all_entries(lang_data):
             eid = e.get("id", "?")
@@ -163,10 +175,139 @@ def process_kjv(dry_run=False):
                     print(f"  [kjv_closing] {eid}")
 
         if not dry_run:
-            save(fname, data)
+            save(fname, data, indent)
             print(f"  ✅ Saved {fname} ({changed_entries} entries modified)")
 
     print(f"\nKJV totals: {total_changes}")
+
+# ─── NVI FIXES (PT) ────────────────────────────────────────────────────────
+
+NVI_FILES = [
+    ("Devocional_year_2025_pt_NVI.json", "pt"),
+    ("Devocional_year_2026_pt_NVI.json", "pt"),
+]
+
+# P2: Hard typos for NVI — to be added in a future phase
+P2_FIXES_NVI = {}
+
+def process_nvi(dry_run=False):
+    total_changes = {"em_o_nome": 0, "dele": 0, "reverential": 0, "p2": 0}
+    for fname, lang in NVI_FILES:
+        data, lang_data, indent = load(fname, lang)
+        changed_entries = 0
+        for e in all_entries(lang_data):
+            entry_changed = False
+            eid = e.get("id", "?")
+
+            # P1-A: em o nome (oracion only)
+            orig = e.get("oracion", "")
+            fixed = fix_em_o_nome(orig)
+            if fixed != orig:
+                total_changes["em_o_nome"] += 1
+                if not dry_run:
+                    e["oracion"] = fixed
+                else:
+                    print(f"  [em_o_nome] {eid}")
+                entry_changed = True
+
+            # P1-B: dEle / dAquele (all fields)
+            for field in FIELDS + ["versiculo"]:
+                orig = e.get(field, "")
+                if not isinstance(orig, str): continue
+                fixed = fix_dele(orig)
+                if fixed != orig:
+                    total_changes["dele"] += 1
+                    if not dry_run:
+                        e[field] = fixed
+                    else:
+                        print(f"  [dEle] {eid} [{field}]")
+                    entry_changed = True
+
+            # P1-C: reverential pronouns (oracion only)
+            orig = e.get("oracion", "")
+            fixed = fix_reverential(orig)
+            if fixed != orig:
+                total_changes["reverential"] += 1
+                if not dry_run:
+                    e["oracion"] = fixed
+                else:
+                    print(f"  [reverential] {eid}")
+                entry_changed = True
+
+            # P2: hard typos
+            if eid in P2_FIXES_NVI:
+                for field, old, new in P2_FIXES_NVI[eid]:
+                    orig = e.get(field, "")
+                    if not isinstance(orig, str): continue
+                    if old in orig:
+                        total_changes["p2"] += 1
+                        if not dry_run:
+                            e[field] = orig.replace(old, new)
+                        else:
+                            print(f"  [P2] {eid} [{field}] '{old}' → '{new}'")
+                        entry_changed = True
+
+            if entry_changed:
+                changed_entries += 1
+
+        if not dry_run:
+            save(fname, data, indent)
+            print(f"  ✅ Saved {fname} ({changed_entries} entries modified)")
+
+    print(f"\nNVI totals: {total_changes}")
+
+# ─── NIV FIXES (EN) ────────────────────────────────────────────────────────
+
+NIV_FILES = [
+    ("Devocional_year_2025_en_NIV.json", "en"),
+    ("Devocional_year_2026_en_NIV.json", "en"),
+]
+
+# P2: Hard typos for NIV — to be added in a future phase
+P2_FIXES_NIV = {}
+
+def process_niv(dry_run=False):
+    total_changes = {"kjv_closing": 0, "p2": 0}
+    for fname, lang in NIV_FILES:
+        data, lang_data, indent = load(fname, lang)
+        changed_entries = 0
+        for e in all_entries(lang_data):
+            entry_changed = False
+            eid = e.get("id", "?")
+
+            orig = e.get("oracion", "")
+            if not isinstance(orig, str): continue
+
+            fixed = fix_kjv_closing(orig)
+            if fixed != orig:
+                total_changes["kjv_closing"] += 1
+                if not dry_run:
+                    e["oracion"] = fixed
+                else:
+                    print(f"  [kjv_closing] {eid}")
+                entry_changed = True
+
+            # P2: hard typos
+            if eid in P2_FIXES_NIV:
+                for field, old, new in P2_FIXES_NIV[eid]:
+                    orig = e.get(field, "")
+                    if not isinstance(orig, str): continue
+                    if old in orig:
+                        total_changes["p2"] += 1
+                        if not dry_run:
+                            e[field] = orig.replace(old, new)
+                        else:
+                            print(f"  [P2] {eid} [{field}] '{old}' → '{new}'")
+                        entry_changed = True
+
+            if entry_changed:
+                changed_entries += 1
+
+        if not dry_run:
+            save(fname, data, indent)
+            print(f"  ✅ Saved {fname} ({changed_entries} entries modified)")
+
+    print(f"\nNIV totals: {total_changes}")
 
 if __name__ == "__main__":
     dry = "--apply" not in sys.argv
@@ -178,5 +319,9 @@ if __name__ == "__main__":
     process_arc(dry_run=dry)
     print("\n── KJV ──")
     process_kjv(dry_run=dry)
+    print("\n── NVI ──")
+    process_nvi(dry_run=dry)
+    print("\n── NIV ──")
+    process_niv(dry_run=dry)
     if dry:
         print("\nRe-run with --apply to commit all changes.")
