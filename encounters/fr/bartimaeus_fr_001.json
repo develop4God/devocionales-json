@@ -1,191 +1,191 @@
 {
-    "id": "bartimaeus_001",
-    "type": "encounter",
-    "schema_version": "encounters_v1",
-    "language": "fr",
-    "bible_version": "LSG1910",
-    "version": "1.0",
-    "estimated_reading_minutes": 7,
-    "meta": {
-        "character": "Bartimée",
-        "testament": "new",
-        "scripture_reference": "Marc 10:46-52",
-        "mood_primary": "darkness",
-        "accent_color": "#2a1500",
-        "emoji": "👁️",
-        "tags": [
-            "cécité",
-            "foi",
-            "persévérance",
-            "miséricorde",
-            "guérison",
-            "bartimée",
-            "jésus",
-            "voir"
-        ]
+  "id": "bartimaeus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fr",
+  "bible_version": "LSG1910",
+  "version": "1.0",
+  "estimated_reading_minutes": 7,
+  "meta": {
+    "character": "Bartimée",
+    "testament": "new",
+    "scripture_reference": "Marc 10:46-52",
+    "mood_primary": "darkness",
+    "accent_color": "#2a1500",
+    "emoji": "👁️",
+    "tags": [
+      "cécité",
+      "foi",
+      "persévérance",
+      "miséricorde",
+      "guérison",
+      "bartimée",
+      "jésus",
+      "voir"
+    ]
+  },
+  "key_verse": {
+    "reference": "Marc 10:52",
+    "text": "Jésus lui dit: Va, ta foi t'a sauvé. Aussitôt il recouvra la vue, et suivit Jésus dans le chemin.",
+    "bible_version": "LSG1910"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "darkness",
+      "image_url": "bartimaeus_roadside_dust.png",
+      "title": "Au Bord du Chemin.",
+      "narrative": "Jéricho : poussière, bruit des foules. Et au bord du chemin, un homme qui avait tout perdu — y compris la lumière.\n\nBartimée, fils de Timée. Il était aveugle et mendiant. Invisible pour tous ceux qui passaient.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "revelation_key": "Dieu voit ceux que le monde a cessé de voir."
     },
-    "key_verse": {
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "bartimaeus_crowd_passing.png",
+      "verse_reference": "Marc 10:46-47",
+      "verse_text": "Ils arrivèrent à Jéricho. Comme Jésus sortait de Jéricho avec ses disciples et une grande foule, le fils de Timée, Bartimée, un aveugle qui mendiait, était assis au bord du chemin. Quand il apprit que c'était Jésus de Nazareth, il se mit à crier: Jésus, Fils de David, aie pitié de moi!",
+      "reflection": "Remarquez les détails que Marc inclut.\n\nCe n'est pas 'un aveugle'. C'est Bartimée, fils de Timée. Marc lui donne un nom. Marc lui donne un père. Marc le voit.\n\nEt remarquez ce que Bartimée fait à l'instant où il entend le nom de Jésus. Il n'attend pas. Il n'envoie pas de messager. Il ne prie pas en silence.\n\nIl crie.",
+      "revelation_key": "Bartimée ne pouvait pas voir Jésus. Mais il l'a reconnu avant beaucoup de ceux qui le pouvaient."
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "bartimaeus_crying_out.png",
+      "title": "Tais-toi",
+      "subtitle": "L'ordre que Bartimée ignora",
+      "content": "La foule le reprit. 'Tais-toi.'\n\nPensez à ce moment. Entouré de gens. Tous lui disant que sa voix n'était pas la bienvenue. Que son besoin était une gêne. Que Jésus avait des choses plus importantes à faire.\n\nLa réponse de Bartimée :\n\n'Mais il criait beaucoup plus fort : Fils de David, aie pitié de moi !'\n\n🔑 IL CRIAIT BEAUCOUP PLUS FORT.\n\nIl ne s'excusa pas. Il ne baissa pas la voix. Il n'attendit pas un meilleur moment.\n\nL'opposition n'éteignit pas sa foi — elle l'enflamma.\n\nIl y a quelque chose de profond ici : Bartimée n'avait jamais vu Jésus. Il ne le pouvait pas. Mais il avait entendu. Et ce qu'il avait entendu était suffisant pour qu'aucune voix humaine ne le réduise au silence.\n\nLa foi de Bartimée ne dépendait pas de ce que ses yeux pouvaient voir.",
+      "revelation_key": "Quand le monde dit 'tais-toi', la foi dit 'beaucoup plus fort'."
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "turning_point",
+      "image_url": "bartimaeus_jesus_stops.png",
+      "title": "Jésus s'arrêta",
+      "narrative": "Toute la foule. Tout le mouvement. Toute l'urgence du chemin vers Jérusalem.\n\nEt Jésus s'arrêta.",
+      "ambient_sound": "crowd_quieting",
+      "haptic": "gentle_pulse",
+      "verse_overlay": {
+        "reference": "Marc 10:49",
+        "text": "Jésus s'arrêta, et dit: Appelez-le. Ils appelèrent l'aveugle, et lui dirent: Aie confiance, lève-toi, il t'appelle."
+      },
+      "revelation_key": "Le cri d'un mendiant aveugle arrêta le Fils de Dieu sur son chemin. C'est ainsi que fonctionne la prière honnête."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "image_url": "bartimaeus_throws_cloak.png",
+      "title": "Le Manteau qu'il Jeta",
+      "subtitle": "Le plus petit détail qui dit tout",
+      "content": "Marc inclut un détail que Matthieu et Luc omettent :\n\n'Alors il jeta son vêtement, se leva, et vint à Jésus.'\n\nCe manteau n'était pas un vêtement ordinaire.\n\nPour un mendiant aveugle au premier siècle, le manteau était l'instrument de travail — étalé par terre pour recueillir les pièces. C'était son unique bien. Sa sécurité. Son identité de mendiant.\n\nEt il le jeta.\n\n⚠️ PENSEZ À CE QUE CELA SIGNIFIAIT :\n\nAveugle, jeter son manteau au milieu d'une foule signifiait probablement le perdre pour toujours. Si Jésus ne le guérissait pas — si Bartimée revenait chercher son manteau parmi les pieds de centaines de personnes — il ne le retrouverait probablement pas.\n\nJeter le manteau fut un acte de foi totale avant de rien recevoir.\n\nIl n'attendit pas de voir pour croire. Il agit comme s'il avait déjà été exaucé.\n\n🔑 EN GREC : Le verbe 'jeter' (apobalón) implique lancer avec force — pas déposer soigneusement. Il n'a pas posé le manteau. Il l'a lancé.",
+      "revelation_key": "Bartimée jeta sa sécurité avant de recevoir son miracle. La foi agit avant de voir.",
+      "scripture_connections": [
+        {
+          "reference": "Hébreux 11:1",
+          "text": "Or, la foi est une ferme assurance des choses qu'on espère, une démonstration de celles qu'on ne voit pas."
+        },
+        {
+          "reference": "2 Corinthiens 5:7",
+          "text": "Car nous marchons par la foi et non par la vue."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "scripture_moment",
+      "mood": "intimate",
+      "image_url": "bartimaeus_desperate_plea.png",
+      "verse_reference": "Marc 10:51",
+      "verse_text": "Jésus lui dit: Que veux-tu que je te fasse? L'aveugle lui répondit: Rabboni, que je recouvre la vue.",
+      "reflection": "C'est la même question que Jésus venait de poser à Jacques et Jean en Marc 10:36.\n\nIls demandèrent du pouvoir. Une position. S'asseoir à sa droite et à sa gauche.\n\nBartimée demanda à voir.\n\nJésus pose la même question à tous. La différence réside dans ce que chaque cœur répond.\n\nEt remarquez comment il appelle Jésus : Rabboni — Mon Maître. Pas seulement Maître. Mon. Personnel. Intime. L'aveugle qui ne l'avait jamais vu l'appela sien avant de pouvoir le regarder dans les yeux.",
+      "revelation_key": "Ce que nous demandons à Jésus révèle à quel point nous le connaissons."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "bartimaeus_sight_restored.png",
+      "title": "La Lumière Entra",
+      "narrative": "Pas de boue. Pas de cérémonie. Pas de condition.\n\nSeulement : 'Va, ta foi t'a sauvé.'\n\nEt aussitôt — les couleurs du monde. La poussière du chemin. Les visages de la foule. Et le visage de Jésus, pour la première fois.",
+      "ambient_sound": "silence_breaking",
+      "haptic": "light_pulse",
+      "verse_overlay": {
+        "reference": "Marc 10:52",
+        "text": "Aussitôt il recouvra la vue, et suivit Jésus dans le chemin."
+      },
+      "revelation_key": "La première chose que ses yeux virent, ce fut Jésus. Et il choisit de le suivre."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "peace",
+      "image_url": "bartimaeus_face_restored.png",
+      "title": "Il Suivit Jésus dans le Chemin",
+      "subtitle": "Les cinq mots les plus importants du texte",
+      "content": "Marc termine l'histoire avec une ligne qu'on peut lire trop vite :\n\n'Et il suivit Jésus dans le chemin.'\n\nCe n'est pas seulement la fin de l'histoire de Bartimée.\n\nC'est son commencement.\n\n🔑 LE CHEMIN :\n\nLe chemin où Jésus se dirigeait en ce moment était Jérusalem. Vers la croix. Vers la trahison. Vers la mort.\n\nBartimée recouvra la vue et choisit le chemin le plus difficile.\n\nIl ne rentra pas chez lui pour montrer son miracle. Il ne resta pas là où il était, maintenant qu'il pouvait voir et travailler. Il suivit un homme vers Jérusalem — vers tout ce que la foule ne comprenait pas encore.\n\n🚶 CE QUE CELA DIT SUR LA FOI VÉRITABLE :\n\nLa foi de Bartimée ne prit pas fin quand il reçut ce qu'il avait demandé. C'est là qu'elle commença.\n\nLe miracle n'était pas le but. C'était la porte.",
+      "revelation_key": "Le miracle n'était pas le but de Bartimée. C'était la porte vers Jésus."
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "image_url": "bartimaeus_desperate_plea.png",
+      "title": "L'Ironie que Marc Ne Peut Éviter",
+      "subtitle": "Ceux qui voyaient ne virent pas. Celui qui ne pouvait pas voir, vit.",
+      "content": "Marc 10 est rempli de personnes qui ne comprennent pas qui est Jésus.\n\nLes disciples débattent de qui est le plus grand. Jacques et Jean demandent du pouvoir. La foule reprend Bartimée pour ses cris.\n\nEt l'aveugle — l'homme sans yeux — est le seul qui le nomme correctement :\n\n'Fils de David !'\n\nC'est un titre messianique. Bartimée ne reconnut pas seulement que Jésus était un rabbin. Il reconnut qui il était dans le plan de Dieu.\n\n⚠️ L'IRONIE SPIRITUELLE :\n\nTout au long de l'Évangile de Marc, Jésus guérit des aveugles physiques à des moments où les disciples montrent une cécité spirituelle. Ce n'est pas accidentel.\n\nMarc veut que le lecteur se demande : Qui peut vraiment voir ?\n\nBartimée reçut la vue physique au moment où ceux qui avaient des yeux ne pouvaient pas voir qui marchait parmi eux.\n\nDieu révèle souvent davantage à ceux que le monde considère comme moins.",
+      "revelation_key": "La cécité spirituelle est plus dangereuse que la cécité physique. Bartimée voyait avant de pouvoir voir.",
+      "scripture_connections": [
+        {
+          "reference": "Jean 9:39",
+          "text": "Jésus dit: Je suis venu dans ce monde pour opérer un jugement, afin que ceux qui ne voient point voient, et que ceux qui voient deviennent aveugles."
+        },
+        {
+          "reference": "1 Corinthiens 1:27",
+          "text": "mais Dieu a choisi les choses folles du monde pour confondre les sages; Dieu a choisi les choses faibles du monde pour confondre les fortes."
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "type": "discovery_activation",
+      "image_url": "bartimaeus_jesus_way.png",
+      "icon": "🙏",
+      "title": "Votre Rencontre",
+      "subtitle": "Bartimée n'attendit pas le moment parfait. Il cria depuis là où il était.",
+      "discovery_questions": [
+        {
+          "category": "Honnêteté",
+          "question": "Dans quel domaine de votre vie êtes-vous assis au bord du chemin, attendant que Jésus passe — plutôt que de crier vers lui ? Qu'est-ce qui vous a réduit au silence ?"
+        },
+        {
+          "category": "Foi",
+          "question": "Bartimée jeta son manteau avant de recevoir son miracle. Y a-t-il quelque chose que vous devez 'jeter' — une sécurité, un plan, une identité — pour suivre Jésus pleinement ?"
+        },
+        {
+          "category": "Vocation",
+          "question": "Quand Bartimée reçut ce qu'il demandait, il choisit de suivre Jésus plutôt que de partir. Que signifie pour vous suivre Jésus après qu'il a répondu à une prière ?"
+        }
+      ],
+      "prayer": {
+        "title": "Prière de Celui qui Crie du Bord du Chemin",
+        "content": "Seigneur Jésus, Fils de David, aie pitié de moi.\n\nComme Bartimée — je suis conscient de ce que je ne peux pas voir. Les domaines de ma vie où je marche dans les ténèbres. Les vérités que je ne comprends pas. Les cécités que je ne reconnais pas en moi-même.\n\nJe ne me tairai pas.\n\nJe crie depuis là où je suis — sans le moment parfait, sans les mots parfaits, sans la foi parfaite.\n\nSeulement avec la même honnêteté d'un homme au bord d'un chemin poussiéreux : je veux voir.\n\nEt quand tu me donneras la vue — que la première chose que mes yeux trouvent, ce soit toi. Et que je te suive.\n\nAu nom de Jésus, Amen."
+      }
+    },
+    {
+      "order": 11,
+      "type": "completion",
+      "image_url": "bartimaeus_face_restored.png",
+      "completion_verse": {
         "reference": "Marc 10:52",
         "text": "Jésus lui dit: Va, ta foi t'a sauvé. Aussitôt il recouvra la vue, et suivit Jésus dans le chemin.",
         "bible_version": "LSG1910"
-    },
-    "cards": [
-        {
-            "order": 1,
-            "type": "cinematic_scene",
-            "mood": "darkness",
-            "image_url": "bartimaeus_roadside_dust.png",
-            "title": "Au Bord du Chemin.",
-            "narrative": "Jéricho : poussière, bruit des foules. Et au bord du chemin, un homme qui avait tout perdu — y compris la lumière.\n\nBartimée, fils de Timée. Il était aveugle et mendiant. Invisible pour tous ceux qui passaient.",
-            "ambient_sound": "crowd_distant",
-            "haptic": null,
-            "revelation_key": "Dieu voit ceux que le monde a cessé de voir."
-        },
-        {
-            "order": 2,
-            "type": "scripture_moment",
-            "mood": "tense",
-            "image_url": "bartimaeus_crowd_passing.png",
-            "verse_reference": "Marc 10:46-47",
-            "verse_text": "Ils arrivèrent à Jéricho. Comme Jésus sortait de Jéricho avec ses disciples et une grande foule, le fils de Timée, Bartimée, un aveugle qui mendiait, était assis au bord du chemin. Quand il apprit que c'était Jésus de Nazareth, il se mit à crier: Jésus, Fils de David, aie pitié de moi!",
-            "reflection": "Remarquez les détails que Marc inclut.\n\nCe n'est pas 'un aveugle'. C'est Bartimée, fils de Timée. Marc lui donne un nom. Marc lui donne un père. Marc le voit.\n\nEt remarquez ce que Bartimée fait à l'instant où il entend le nom de Jésus. Il n'attend pas. Il n'envoie pas de messager. Il ne prie pas en silence.\n\nIl crie.",
-            "revelation_key": "Bartimée ne pouvait pas voir Jésus. Mais il l'a reconnu avant beaucoup de ceux qui le pouvaient."
-        },
-        {
-            "order": 3,
-            "type": "character_moment",
-            "mood": "intense",
-            "image_url": "bartimaeus_crying_out.png",
-            "title": "Tais-toi",
-            "subtitle": "L'ordre que Bartimée ignora",
-            "content": "La foule le reprit. 'Tais-toi.'\n\nPensez à ce moment. Entouré de gens. Tous lui disant que sa voix n'était pas la bienvenue. Que son besoin était une gêne. Que Jésus avait des choses plus importantes à faire.\n\nLa réponse de Bartimée :\n\n'Mais il criait beaucoup plus fort : Fils de David, aie pitié de moi !'\n\n🔑 IL CRIAIT BEAUCOUP PLUS FORT.\n\nIl ne s'excusa pas. Il ne baissa pas la voix. Il n'attendit pas un meilleur moment.\n\nL'opposition n'éteignit pas sa foi — elle l'enflamma.\n\nIl y a quelque chose de profond ici : Bartimée n'avait jamais vu Jésus. Il ne le pouvait pas. Mais il avait entendu. Et ce qu'il avait entendu était suffisant pour qu'aucune voix humaine ne le réduise au silence.\n\nLa foi de Bartimée ne dépendait pas de ce que ses yeux pouvaient voir.",
-            "revelation_key": "Quand le monde dit 'tais-toi', la foi dit 'beaucoup plus fort'."
-        },
-        {
-            "order": 4,
-            "type": "cinematic_scene",
-            "mood": "turning_point",
-            "image_url": "bartimaeus_jesus_stops.png",
-            "title": "Jésus s'arrêta",
-            "narrative": "Toute la foule. Tout le mouvement. Toute l'urgence du chemin vers Jérusalem.\n\nEt Jésus s'arrêta.",
-            "ambient_sound": "crowd_quieting",
-            "haptic": "gentle_pulse",
-            "verse_overlay": {
-                "reference": "Marc 10:49",
-                "text": "Jésus s'arrêta, et dit: Appelez-le. Ils appelèrent l'aveugle, et lui dirent: Aie confiance, lève-toi, il t'appelle."
-            },
-            "revelation_key": "Le cri d'un mendiant aveugle arrêta le Fils de Dieu sur son chemin. C'est ainsi que fonctionne la prière honnête."
-        },
-        {
-            "order": 5,
-            "type": "theological_depth",
-            "image_url": "bartimaeus_throws_cloak.png",
-            "title": "Le Manteau qu'il Jeta",
-            "subtitle": "Le plus petit détail qui dit tout",
-            "content": "Marc inclut un détail que Matthieu et Luc omettent :\n\n'Alors il jeta son vêtement, se leva, et vint à Jésus.'\n\nCe manteau n'était pas un vêtement ordinaire.\n\nPour un mendiant aveugle au premier siècle, le manteau était l'instrument de travail — étalé par terre pour recueillir les pièces. C'était son unique bien. Sa sécurité. Son identité de mendiant.\n\nEt il le jeta.\n\n⚠️ PENSEZ À CE QUE CELA SIGNIFIAIT :\n\nAveugle, jeter son manteau au milieu d'une foule signifiait probablement le perdre pour toujours. Si Jésus ne le guérissait pas — si Bartimée revenait chercher son manteau parmi les pieds de centaines de personnes — il ne le retrouverait probablement pas.\n\nJeter le manteau fut un acte de foi totale avant de rien recevoir.\n\nIl n'attendit pas de voir pour croire. Il agit comme s'il avait déjà été exaucé.\n\n🔑 EN GREC : Le verbe 'jeter' (apobalón) implique lancer avec force — pas déposer soigneusement. Il n'a pas posé le manteau. Il l'a lancé.",
-            "revelation_key": "Bartimée jeta sa sécurité avant de recevoir son miracle. La foi agit avant de voir.",
-            "scripture_connections": [
-                {
-                    "reference": "Hébreux 11:1",
-                    "text": "Or, la foi est une ferme assurance des choses qu'on espère, une démonstration de celles qu'on ne voit pas."
-                },
-                {
-                    "reference": "2 Corinthiens 5:7",
-                    "text": "Car nous marchons par la foi et non par la vue."
-                }
-            ]
-        },
-        {
-            "order": 6,
-            "type": "scripture_moment",
-            "mood": "intimate",
-            "image_url": "bartimaeus_desperate_plea.png",
-            "verse_reference": "Marc 10:51",
-            "verse_text": "Jésus lui dit: Que veux-tu que je te fasse? L'aveugle lui répondit: Rabboni, que je recouvre la vue.",
-            "reflection": "C'est la même question que Jésus venait de poser à Jacques et Jean en Marc 10:36.\n\nIls demandèrent du pouvoir. Une position. S'asseoir à sa droite et à sa gauche.\n\nBartimée demanda à voir.\n\nJésus pose la même question à tous. La différence réside dans ce que chaque cœur répond.\n\nEt remarquez comment il appelle Jésus : Rabboni — Mon Maître. Pas seulement Maître. Mon. Personnel. Intime. L'aveugle qui ne l'avait jamais vu l'appela sien avant de pouvoir le regarder dans les yeux.",
-            "revelation_key": "Ce que nous demandons à Jésus révèle à quel point nous le connaissons."
-        },
-        {
-            "order": 7,
-            "type": "cinematic_scene",
-            "mood": "grace",
-            "image_url": "bartimaeus_sight_restored.png",
-            "title": "La Lumière Entra",
-            "narrative": "Pas de boue. Pas de cérémonie. Pas de condition.\n\nSeulement : 'Va, ta foi t'a sauvé.'\n\nEt aussitôt — les couleurs du monde. La poussière du chemin. Les visages de la foule. Et le visage de Jésus, pour la première fois.",
-            "ambient_sound": "silence_breaking",
-            "haptic": "light_pulse",
-            "verse_overlay": {
-                "reference": "Marc 10:52",
-                "text": "Aussitôt il recouvra la vue, et suivit Jésus dans le chemin."
-            },
-            "revelation_key": "La première chose que ses yeux virent, ce fut Jésus. Et il choisit de le suivre."
-        },
-        {
-            "order": 8,
-            "type": "character_moment",
-            "mood": "peace",
-            "image_url": "bartimaeus_face_restored.png",
-            "title": "Il Suivit Jésus dans le Chemin",
-            "subtitle": "Les cinq mots les plus importants du texte",
-            "content": "Marc termine l'histoire avec une ligne qu'on peut lire trop vite :\n\n'Et il suivit Jésus dans le chemin.'\n\nCe n'est pas seulement la fin de l'histoire de Bartimée.\n\nC'est son commencement.\n\n🔑 LE CHEMIN :\n\nLe chemin où Jésus se dirigeait en ce moment était Jérusalem. Vers la croix. Vers la trahison. Vers la mort.\n\nBartimée recouvra la vue et choisit le chemin le plus difficile.\n\nIl ne rentra pas chez lui pour montrer son miracle. Il ne resta pas là où il était, maintenant qu'il pouvait voir et travailler. Il suivit un homme vers Jérusalem — vers tout ce que la foule ne comprenait pas encore.\n\n🚶 CE QUE CELA DIT SUR LA FOI VÉRITABLE :\n\nLa foi de Bartimée ne prit pas fin quand il reçut ce qu'il avait demandé. C'est là qu'elle commença.\n\nLe miracle n'était pas le but. C'était la porte.",
-            "revelation_key": "Le miracle n'était pas le but de Bartimée. C'était la porte vers Jésus."
-        },
-        {
-            "order": 9,
-            "type": "theological_depth",
-            "image_url": "bartimaeus_desperate_plea.png",
-            "title": "L'Ironie que Marc Ne Peut Éviter",
-            "subtitle": "Ceux qui voyaient ne virent pas. Celui qui ne pouvait pas voir, vit.",
-            "content": "Marc 10 est rempli de personnes qui ne comprennent pas qui est Jésus.\n\nLes disciples débattent de qui est le plus grand. Jacques et Jean demandent du pouvoir. La foule reprend Bartimée pour ses cris.\n\nEt l'aveugle — l'homme sans yeux — est le seul qui le nomme correctement :\n\n'Fils de David !'\n\nC'est un titre messianique. Bartimée ne reconnut pas seulement que Jésus était un rabbin. Il reconnut qui il était dans le plan de Dieu.\n\n⚠️ L'IRONIE SPIRITUELLE :\n\nTout au long de l'Évangile de Marc, Jésus guérit des aveugles physiques à des moments où les disciples montrent une cécité spirituelle. Ce n'est pas accidentel.\n\nMarc veut que le lecteur se demande : Qui peut vraiment voir ?\n\nBartimée reçut la vue physique au moment où ceux qui avaient des yeux ne pouvaient pas voir qui marchait parmi eux.\n\nDieu révèle souvent davantage à ceux que le monde considère comme moins.",
-            "revelation_key": "La cécité spirituelle est plus dangereuse que la cécité physique. Bartimée voyait avant de pouvoir voir.",
-            "scripture_connections": [
-                {
-                    "reference": "Jean 9:39",
-                    "text": "Jésus dit: Je suis venu dans ce monde pour opérer un jugement, afin que ceux qui ne voient point voient, et que ceux qui voient deviennent aveugles."
-                },
-                {
-                    "reference": "1 Corinthiens 1:27",
-                    "text": "mais Dieu a choisi les choses folles du monde pour confondre les sages; Dieu a choisi les choses faibles du monde pour confondre les fortes."
-                }
-            ]
-        },
-        {
-            "order": 10,
-            "type": "discovery_activation",
-            "image_url": "bartimaeus_jesus_way.png",
-            "icon": "🙏",
-            "title": "Votre Rencontre",
-            "subtitle": "Bartimée n'attendit pas le moment parfait. Il cria depuis là où il était.",
-            "discovery_questions": [
-                {
-                    "category": "Honnêteté",
-                    "question": "Dans quel domaine de votre vie êtes-vous assis au bord du chemin, attendant que Jésus passe — plutôt que de crier vers lui ? Qu'est-ce qui vous a réduit au silence ?"
-                },
-                {
-                    "category": "Foi",
-                    "question": "Bartimée jeta son manteau avant de recevoir son miracle. Y a-t-il quelque chose que vous devez 'jeter' — une sécurité, un plan, une identité — pour suivre Jésus pleinement ?"
-                },
-                {
-                    "category": "Vocation",
-                    "question": "Quand Bartimée reçut ce qu'il demandait, il choisit de suivre Jésus plutôt que de partir. Que signifie pour vous suivre Jésus après qu'il a répondu à une prière ?"
-                }
-            ],
-            "prayer": {
-                "title": "Prière de Celui qui Crie du Bord du Chemin",
-                "content": "Seigneur Jésus, Fils de David, aie pitié de moi.\n\nComme Bartimée — je suis conscient de ce que je ne peux pas voir. Les domaines de ma vie où je marche dans les ténèbres. Les vérités que je ne comprends pas. Les cécités que je ne reconnais pas en moi-même.\n\nJe ne me tairai pas.\n\nJe crie depuis là où je suis — sans le moment parfait, sans les mots parfaits, sans la foi parfaite.\n\nSeulement avec la même honnêteté d'un homme au bord d'un chemin poussiéreux : je veux voir.\n\nEt quand tu me donneras la vue — que la première chose que mes yeux trouvent, ce soit toi. Et que je te suive.\n\nAu nom de Jésus, Amen."
-            }
-        },
-        {
-            "order": 11,
-            "type": "completion",
-            "image_url": "bartimaeus_face_restored.png",
-            "completion_verse": {
-                "reference": "Marc 10:52",
-                "text": "Jésus lui dit: Va, ta foi t'a sauvé. Aussitôt il recouvra la vue, et suivit Jésus dans le chemin.",
-                "bible_version": "LSG1910"
-            },
-            "reflection_prompt": "Quel manteau devez-vous jeter aujourd'hui ? Qu'avez-vous besoin de voir ?",
-            "celebration_type": "gentle_light"
-        }
-    ]
+      },
+      "reflection_prompt": "Quel manteau devez-vous jeter aujourd'hui ? Qu'avez-vous besoin de voir ?",
+      "celebration_type": "gentle_light"
+    }
+  ]
 }

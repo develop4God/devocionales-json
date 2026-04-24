@@ -1,191 +1,191 @@
 {
-    "id": "bartimaeus_001",
-    "type": "encounter",
-    "schema_version": "encounters_v1",
-    "language": "pt",
-    "bible_version": "ARC",
-    "version": "1.0",
-    "estimated_reading_minutes": 7,
-    "meta": {
-        "character": "Bartimeu",
-        "testament": "new",
-        "scripture_reference": "Marcos 10:46-52",
-        "mood_primary": "darkness",
-        "accent_color": "#2a1500",
-        "emoji": "👁️",
-        "tags": [
-            "cegueira",
-            "fé",
-            "persistência",
-            "misericórdia",
-            "cura",
-            "bartimeu",
-            "jesus",
-            "ver"
-        ]
+  "id": "bartimaeus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "pt",
+  "bible_version": "ARC",
+  "version": "1.0",
+  "estimated_reading_minutes": 7,
+  "meta": {
+    "character": "Bartimeu",
+    "testament": "new",
+    "scripture_reference": "Marcos 10:46-52",
+    "mood_primary": "darkness",
+    "accent_color": "#2a1500",
+    "emoji": "👁️",
+    "tags": [
+      "cegueira",
+      "fé",
+      "persistência",
+      "misericórdia",
+      "cura",
+      "bartimeu",
+      "jesus",
+      "ver"
+    ]
+  },
+  "key_verse": {
+    "reference": "Marcos 10:52",
+    "text": "E Jesus lhe disse: Vai, a tua fé te salvou. E imediatamente recobrou a vista, e seguia Jesus no caminho.",
+    "bible_version": "ARC"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "darkness",
+      "image_url": "bartimaeus_roadside_dust.png",
+      "title": "À Beira do Caminho.",
+      "narrative": "Jericó: poeira, o barulho das multidões. E à beira do caminho, um homem que havia perdido tudo — inclusive a luz.\n\nBartimeu, filho de Timeu. Era cego e mendigo. Invisível para todos os que passavam.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "revelation_key": "Deus vê aqueles que o mundo parou de ver."
     },
-    "key_verse": {
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "bartimaeus_crowd_passing.png",
+      "verse_reference": "Marcos 10:46-47",
+      "verse_text": "Depois foram a Jericó; e saindo ele de Jericó com os seus discípulos e uma grande multidão, Bartimeu, o cego, filho de Timeu, estava assentado junto ao caminho mendigando. E ouvindo que era Jesus Nazareno, começou a clamar, e a dizer: Jesus, filho de Davi, tem misericórdia de mim.",
+      "reflection": "Observe os detalhes que Marcos inclui.\n\nNão é 'um cego'. É Bartimeu, filho de Timeu. Marcos lhe dá um nome. Marcos lhe dá um pai. Marcos o vê.\n\nE note o que Bartimeu faz no instante em que ouve o nome de Jesus. Ele não espera. Não manda um mensageiro. Não reza em silêncio.\n\nGrita.",
+      "revelation_key": "Bartimeu não podia ver Jesus. Mas o reconheceu antes de muitos que podiam."
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "bartimaeus_crying_out.png",
+      "title": "Cala-te",
+      "subtitle": "O comando que Bartimeu ignorou",
+      "content": "A multidão o repreendeu. 'Cala-te.'\n\nPense nesse momento. Rodeado de gente. Todos dizendo que sua voz não era bem-vinda. Que sua necessidade era um incômodo. Que Jesus tinha coisas mais importantes a fazer.\n\nA resposta de Bartimeu:\n\n'Mas ele clamava muito mais: Filho de Davi, tem misericórdia de mim!'\n\n🔑 CLAMAVA MUITO MAIS.\n\nNão se desculpou. Não baixou a voz. Não esperou um momento melhor.\n\nA oposição não apagou a sua fé — a acendeu.\n\nHá algo profundo aqui: Bartimeu nunca havia visto Jesus. Não podia. Mas havia ouvido. E o que ouviu foi suficiente para que nenhuma voz humana o silenciasse.\n\nA fé de Bartimeu não dependia do que seus olhos podiam ver.",
+      "revelation_key": "Quando o mundo diz 'cala-te', a fé diz 'muito mais'."
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "turning_point",
+      "image_url": "bartimaeus_jesus_stops.png",
+      "title": "Jesus se Deteve",
+      "narrative": "Toda a multidão. Todo o movimento. Toda a urgência do caminho para Jerusalém.\n\nE Jesus se deteve.",
+      "ambient_sound": "crowd_quieting",
+      "haptic": "gentle_pulse",
+      "verse_overlay": {
+        "reference": "Marcos 10:49",
+        "text": "E Jesus, parando, mandou chamá-lo. E chamaram o cego, dizendo-lhe: Tem bom ânimo; levanta-te, que ele te chama."
+      },
+      "revelation_key": "O grito de um mendigo cego deteve o Filho de Deus em seu caminho. Assim funciona a oração honesta."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "image_url": "bartimaeus_throws_cloak.png",
+      "title": "O Manto que Jogou",
+      "subtitle": "O menor detalhe que diz tudo",
+      "content": "Marcos inclui um detalhe que Mateus e Lucas omitem:\n\n'E ele, lançando fora a sua capa, levantou-se e foi ter com Jesus.'\n\nEssa capa não era roupa comum.\n\nPara um mendigo cego no primeiro século, a capa era o instrumento de trabalho — estendida no chão para recolher moedas. Era o seu único bem. A sua segurança. A sua identidade como mendigo.\n\nE a jogou fora.\n\n⚠️ PENSE NO QUE ISSO SIGNIFICOU:\n\nSem vista, jogar a sua capa no meio de uma multidão provavelmente significava perdê-la para sempre. Se Jesus não o curasse — se Bartimeu fosse procurar a sua capa entre os pés de centenas de pessoas — provavelmente não a encontraria.\n\nJogar a capa foi um ato de fé total antes de receber qualquer coisa.\n\nEle não esperou ver para crer. Agiu como se já tivesse sido respondido.\n\n🔑 EM GREGO: O verbo 'lançando fora' (apobalón) implica jogar com força — não largar com cuidado. Ele não depositou a capa. A lançou.",
+      "revelation_key": "Bartimeu jogou a sua segurança antes de receber o seu milagre. A fé age antes de ver.",
+      "scripture_connections": [
+        {
+          "reference": "Hebreus 11:1",
+          "text": "Ora, a fé é o firme fundamento das coisas que se esperam, e a prova das coisas que se não vêem."
+        },
+        {
+          "reference": "2 Coríntios 5:7",
+          "text": "Porque andamos por fé, e não por vista."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "scripture_moment",
+      "mood": "intimate",
+      "image_url": "bartimaeus_desperate_plea.png",
+      "verse_reference": "Marcos 10:51",
+      "verse_text": "E Jesus, respondendo, disse-lhe: Que queres que te faça? E o cego disse-lhe: Mestre, que eu receba a vista.",
+      "reflection": "Esta é a mesma pergunta que Jesus acabou de fazer a Tiago e João em Marcos 10:36.\n\nEles pediram poder. Posição. Sentar à direita e à esquerda.\n\nBartimeu pediu para ver.\n\nJesus faz a mesma pergunta a todos. A diferença está no que cada coração responde.\n\nE note como ele chama Jesus: Rabboni — Meu Mestre. Não apenas Mestre. Meu. Pessoal. Íntimo. O cego que nunca o havia visto o chamou de seu antes de poder olhá-lo nos olhos.",
+      "revelation_key": "O que pedimos a Jesus revela o quanto O conhecemos."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "bartimaeus_sight_restored.png",
+      "title": "A Luz Entrou",
+      "narrative": "Sem lama. Sem cerimônia. Sem condição.\n\nApenas: 'Vai, a tua fé te salvou.'\n\nE imediatamente — as cores do mundo. A poeira do caminho. Os rostos da multidão. E o rosto de Jesus, pela primeira vez.",
+      "ambient_sound": "silence_breaking",
+      "haptic": "light_pulse",
+      "verse_overlay": {
+        "reference": "Marcos 10:52",
+        "text": "E imediatamente recobrou a vista, e seguia Jesus no caminho."
+      },
+      "revelation_key": "A primeira coisa que os seus olhos viram foi Jesus. E ele escolheu segui-Lo."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "peace",
+      "image_url": "bartimaeus_face_restored.png",
+      "title": "Seguiu a Jesus no Caminho",
+      "subtitle": "As cinco palavras mais importantes do texto",
+      "content": "Marcos termina a história com uma linha que pode ser lida rápido demais:\n\n'E seguia Jesus no caminho.'\n\nEste não é apenas o fim da história de Bartimeu.\n\nEste é o seu começo.\n\n🔑 O CAMINHO:\n\nO caminho para onde Jesus se dirigia naquele momento era Jerusalém. Para a cruz. Para a traição. Para a morte.\n\nBartimeu recebeu a sua vista e escolheu o caminho mais difícil.\n\nNão voltou para casa mostrar o seu milagre. Não ficou onde estava, agora que podia ver e podia trabalhar. Seguiu um homem em direção a Jerusalém — em direção a tudo que a multidão ainda não compreendia.\n\n🚶 O QUE ISSO DIZ SOBRE A FÉ GENUÍNA:\n\nA fé de Bartimeu não terminou quando recebeu o que pediu. Foi aí que começou.\n\nO milagre não foi o destino. Foi a porta.",
+      "revelation_key": "O milagre não foi o destino de Bartimeu. Foi a porta para Jesus."
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "image_url": "bartimaeus_desperate_plea.png",
+      "title": "A Ironia que Marcos Não Pode Evitar",
+      "subtitle": "Os que viam não viram. O que não podia ver, viu.",
+      "content": "Marcos 10 está cheio de pessoas que não entendem quem é Jesus.\n\nOs discípulos discutem sobre quem é o maior. Tiago e João pedem poder. A multidão repreende Bartimeu por gritar.\n\nE o cego — o homem sem olhos — é o único que O chama corretamente:\n\n'Filho de Davi!'\n\nEste é um título messiânico. Bartimeu não reconheceu apenas que Jesus era um rabino. Reconheceu quem Ele era no plano de Deus.\n\n⚠️ A IRONIA ESPIRITUAL:\n\nAo longo do Evangelho de Marcos, Jesus cura cegos físicos em momentos em que os discípulos mostram cegueira espiritual. Não é acidental.\n\nMarcos quer que o leitor se pergunte: Quem realmente pode ver?\n\nBartimeu recebeu a visão física no momento em que aqueles que tinham olhos não podiam ver quem caminhava entre eles.\n\nDeus frequentemente revela mais àqueles que o mundo considera menos.",
+      "revelation_key": "A cegueira espiritual é mais perigosa que a física. Bartimeu via antes de poder ver.",
+      "scripture_connections": [
+        {
+          "reference": "João 9:39",
+          "text": "E Jesus disse: Para julgamento vim eu a este mundo; para que os que não vêem vejam, e os que vêem sejam cegados."
+        },
+        {
+          "reference": "1 Coríntios 1:27",
+          "text": "Mas Deus escolheu as coisas loucas do mundo para confundir as sábias; e Deus escolheu as coisas fracas do mundo para confundir as fortes."
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "type": "discovery_activation",
+      "image_url": "bartimaeus_jesus_way.png",
+      "icon": "🙏",
+      "title": "Seu Encontro",
+      "subtitle": "Bartimeu não esperou o momento perfeito. Gritou de onde estava.",
+      "discovery_questions": [
+        {
+          "category": "Honestidade",
+          "question": "Em que área da sua vida você está sentado à beira do caminho, esperando Jesus passar — em vez de clamar a Ele? O que te silenciou?"
+        },
+        {
+          "category": "Fé",
+          "question": "Bartimeu jogou a sua capa antes de receber o seu milagre. Há algo que você precisa 'jogar fora' — uma segurança, um plano, uma identidade — para seguir Jesus completamente?"
+        },
+        {
+          "category": "Propósito",
+          "question": "Quando Bartimeu recebeu o que pediu, escolheu seguir a Jesus em vez de ir embora. O que significa para você seguir a Jesus depois que Ele responde a uma oração?"
+        }
+      ],
+      "prayer": {
+        "title": "Oração de Quem Clama à Beira do Caminho",
+        "content": "Senhor Jesus, Filho de Davi, tem misericórdia de mim.\n\nComo Bartimeu — tenho consciência do que não posso ver. As áreas da minha vida onde caminho nas trevas. As verdades que não entendo. As cegueiras que não reconheço em mim mesmo.\n\nNão vou me calar.\n\nClamo de onde estou — sem o momento perfeito, sem as palavras perfeitas, sem a fé perfeita.\n\nApenas com a mesma honestidade de um homem à beira de um caminho empoeirado: quero ver.\n\nE quando me deres a visão — que a primeira coisa que meus olhos encontrem sejas Tu. E que eu Te siga.\n\nEm nome de Jesus, Amém."
+      }
+    },
+    {
+      "order": 11,
+      "type": "completion",
+      "image_url": "bartimaeus_face_restored.png",
+      "completion_verse": {
         "reference": "Marcos 10:52",
         "text": "E Jesus lhe disse: Vai, a tua fé te salvou. E imediatamente recobrou a vista, e seguia Jesus no caminho.",
         "bible_version": "ARC"
-    },
-    "cards": [
-        {
-            "order": 1,
-            "type": "cinematic_scene",
-            "mood": "darkness",
-            "image_url": "bartimaeus_roadside_dust.png",
-            "title": "À Beira do Caminho.",
-            "narrative": "Jericó: poeira, o barulho das multidões. E à beira do caminho, um homem que havia perdido tudo — inclusive a luz.\n\nBartimeu, filho de Timeu. Era cego e mendigo. Invisível para todos os que passavam.",
-            "ambient_sound": "crowd_distant",
-            "haptic": null,
-            "revelation_key": "Deus vê aqueles que o mundo parou de ver."
-        },
-        {
-            "order": 2,
-            "type": "scripture_moment",
-            "mood": "tense",
-            "image_url": "bartimaeus_crowd_passing.png",
-            "verse_reference": "Marcos 10:46-47",
-            "verse_text": "Depois foram a Jericó; e saindo ele de Jericó com os seus discípulos e uma grande multidão, Bartimeu, o cego, filho de Timeu, estava assentado junto ao caminho mendigando. E ouvindo que era Jesus Nazareno, começou a clamar, e a dizer: Jesus, filho de Davi, tem misericórdia de mim.",
-            "reflection": "Observe os detalhes que Marcos inclui.\n\nNão é 'um cego'. É Bartimeu, filho de Timeu. Marcos lhe dá um nome. Marcos lhe dá um pai. Marcos o vê.\n\nE note o que Bartimeu faz no instante em que ouve o nome de Jesus. Ele não espera. Não manda um mensageiro. Não reza em silêncio.\n\nGrita.",
-            "revelation_key": "Bartimeu não podia ver Jesus. Mas o reconheceu antes de muitos que podiam."
-        },
-        {
-            "order": 3,
-            "type": "character_moment",
-            "mood": "intense",
-            "image_url": "bartimaeus_crying_out.png",
-            "title": "Cala-te",
-            "subtitle": "O comando que Bartimeu ignorou",
-            "content": "A multidão o repreendeu. 'Cala-te.'\n\nPense nesse momento. Rodeado de gente. Todos dizendo que sua voz não era bem-vinda. Que sua necessidade era um incômodo. Que Jesus tinha coisas mais importantes a fazer.\n\nA resposta de Bartimeu:\n\n'Mas ele clamava muito mais: Filho de Davi, tem misericórdia de mim!'\n\n🔑 CLAMAVA MUITO MAIS.\n\nNão se desculpou. Não baixou a voz. Não esperou um momento melhor.\n\nA oposição não apagou a sua fé — a acendeu.\n\nHá algo profundo aqui: Bartimeu nunca havia visto Jesus. Não podia. Mas havia ouvido. E o que ouviu foi suficiente para que nenhuma voz humana o silenciasse.\n\nA fé de Bartimeu não dependia do que seus olhos podiam ver.",
-            "revelation_key": "Quando o mundo diz 'cala-te', a fé diz 'muito mais'."
-        },
-        {
-            "order": 4,
-            "type": "cinematic_scene",
-            "mood": "turning_point",
-            "image_url": "bartimaeus_jesus_stops.png",
-            "title": "Jesus se Deteve",
-            "narrative": "Toda a multidão. Todo o movimento. Toda a urgência do caminho para Jerusalém.\n\nE Jesus se deteve.",
-            "ambient_sound": "crowd_quieting",
-            "haptic": "gentle_pulse",
-            "verse_overlay": {
-                "reference": "Marcos 10:49",
-                "text": "E Jesus, parando, mandou chamá-lo. E chamaram o cego, dizendo-lhe: Tem bom ânimo; levanta-te, que ele te chama."
-            },
-            "revelation_key": "O grito de um mendigo cego deteve o Filho de Deus em seu caminho. Assim funciona a oração honesta."
-        },
-        {
-            "order": 5,
-            "type": "theological_depth",
-            "image_url": "bartimaeus_throws_cloak.png",
-            "title": "O Manto que Jogou",
-            "subtitle": "O menor detalhe que diz tudo",
-            "content": "Marcos inclui um detalhe que Mateus e Lucas omitem:\n\n'E ele, lançando fora a sua capa, levantou-se e foi ter com Jesus.'\n\nEssa capa não era roupa comum.\n\nPara um mendigo cego no primeiro século, a capa era o instrumento de trabalho — estendida no chão para recolher moedas. Era o seu único bem. A sua segurança. A sua identidade como mendigo.\n\nE a jogou fora.\n\n⚠️ PENSE NO QUE ISSO SIGNIFICOU:\n\nSem vista, jogar a sua capa no meio de uma multidão provavelmente significava perdê-la para sempre. Se Jesus não o curasse — se Bartimeu fosse procurar a sua capa entre os pés de centenas de pessoas — provavelmente não a encontraria.\n\nJogar a capa foi um ato de fé total antes de receber qualquer coisa.\n\nEle não esperou ver para crer. Agiu como se já tivesse sido respondido.\n\n🔑 EM GREGO: O verbo 'lançando fora' (apobalón) implica jogar com força — não largar com cuidado. Ele não depositou a capa. A lançou.",
-            "revelation_key": "Bartimeu jogou a sua segurança antes de receber o seu milagre. A fé age antes de ver.",
-            "scripture_connections": [
-                {
-                    "reference": "Hebreus 11:1",
-                    "text": "Ora, a fé é o firme fundamento das coisas que se esperam, e a prova das coisas que se não vêem."
-                },
-                {
-                    "reference": "2 Coríntios 5:7",
-                    "text": "Porque andamos por fé, e não por vista."
-                }
-            ]
-        },
-        {
-            "order": 6,
-            "type": "scripture_moment",
-            "mood": "intimate",
-            "image_url": "bartimaeus_desperate_plea.png",
-            "verse_reference": "Marcos 10:51",
-            "verse_text": "E Jesus, respondendo, disse-lhe: Que queres que te faça? E o cego disse-lhe: Mestre, que eu receba a vista.",
-            "reflection": "Esta é a mesma pergunta que Jesus acabou de fazer a Tiago e João em Marcos 10:36.\n\nEles pediram poder. Posição. Sentar à direita e à esquerda.\n\nBartimeu pediu para ver.\n\nJesus faz a mesma pergunta a todos. A diferença está no que cada coração responde.\n\nE note como ele chama Jesus: Rabboni — Meu Mestre. Não apenas Mestre. Meu. Pessoal. Íntimo. O cego que nunca o havia visto o chamou de seu antes de poder olhá-lo nos olhos.",
-            "revelation_key": "O que pedimos a Jesus revela o quanto O conhecemos."
-        },
-        {
-            "order": 7,
-            "type": "cinematic_scene",
-            "mood": "grace",
-            "image_url": "bartimaeus_sight_restored.png",
-            "title": "A Luz Entrou",
-            "narrative": "Sem lama. Sem cerimônia. Sem condição.\n\nApenas: 'Vai, a tua fé te salvou.'\n\nE imediatamente — as cores do mundo. A poeira do caminho. Os rostos da multidão. E o rosto de Jesus, pela primeira vez.",
-            "ambient_sound": "silence_breaking",
-            "haptic": "light_pulse",
-            "verse_overlay": {
-                "reference": "Marcos 10:52",
-                "text": "E imediatamente recobrou a vista, e seguia Jesus no caminho."
-            },
-            "revelation_key": "A primeira coisa que os seus olhos viram foi Jesus. E ele escolheu segui-Lo."
-        },
-        {
-            "order": 8,
-            "type": "character_moment",
-            "mood": "peace",
-            "image_url": "bartimaeus_face_restored.png",
-            "title": "Seguiu a Jesus no Caminho",
-            "subtitle": "As cinco palavras mais importantes do texto",
-            "content": "Marcos termina a história com uma linha que pode ser lida rápido demais:\n\n'E seguia Jesus no caminho.'\n\nEste não é apenas o fim da história de Bartimeu.\n\nEste é o seu começo.\n\n🔑 O CAMINHO:\n\nO caminho para onde Jesus se dirigia naquele momento era Jerusalém. Para a cruz. Para a traição. Para a morte.\n\nBartimeu recebeu a sua vista e escolheu o caminho mais difícil.\n\nNão voltou para casa mostrar o seu milagre. Não ficou onde estava, agora que podia ver e podia trabalhar. Seguiu um homem em direção a Jerusalém — em direção a tudo que a multidão ainda não compreendia.\n\n🚶 O QUE ISSO DIZ SOBRE A FÉ GENUÍNA:\n\nA fé de Bartimeu não terminou quando recebeu o que pediu. Foi aí que começou.\n\nO milagre não foi o destino. Foi a porta.",
-            "revelation_key": "O milagre não foi o destino de Bartimeu. Foi a porta para Jesus."
-        },
-        {
-            "order": 9,
-            "type": "theological_depth",
-            "image_url": "bartimaeus_desperate_plea.png",
-            "title": "A Ironia que Marcos Não Pode Evitar",
-            "subtitle": "Os que viam não viram. O que não podia ver, viu.",
-            "content": "Marcos 10 está cheio de pessoas que não entendem quem é Jesus.\n\nOs discípulos discutem sobre quem é o maior. Tiago e João pedem poder. A multidão repreende Bartimeu por gritar.\n\nE o cego — o homem sem olhos — é o único que O chama corretamente:\n\n'Filho de Davi!'\n\nEste é um título messiânico. Bartimeu não reconheceu apenas que Jesus era um rabino. Reconheceu quem Ele era no plano de Deus.\n\n⚠️ A IRONIA ESPIRITUAL:\n\nAo longo do Evangelho de Marcos, Jesus cura cegos físicos em momentos em que os discípulos mostram cegueira espiritual. Não é acidental.\n\nMarcos quer que o leitor se pergunte: Quem realmente pode ver?\n\nBartimeu recebeu a visão física no momento em que aqueles que tinham olhos não podiam ver quem caminhava entre eles.\n\nDeus frequentemente revela mais àqueles que o mundo considera menos.",
-            "revelation_key": "A cegueira espiritual é mais perigosa que a física. Bartimeu via antes de poder ver.",
-            "scripture_connections": [
-                {
-                    "reference": "João 9:39",
-                    "text": "E Jesus disse: Para julgamento vim eu a este mundo; para que os que não vêem vejam, e os que vêem sejam cegados."
-                },
-                {
-                    "reference": "1 Coríntios 1:27",
-                    "text": "Mas Deus escolheu as coisas loucas do mundo para confundir as sábias; e Deus escolheu as coisas fracas do mundo para confundir as fortes."
-                }
-            ]
-        },
-        {
-            "order": 10,
-            "type": "discovery_activation",
-            "image_url": "bartimaeus_jesus_way.png",
-            "icon": "🙏",
-            "title": "Seu Encontro",
-            "subtitle": "Bartimeu não esperou o momento perfeito. Gritou de onde estava.",
-            "discovery_questions": [
-                {
-                    "category": "Honestidade",
-                    "question": "Em que área da sua vida você está sentado à beira do caminho, esperando Jesus passar — em vez de clamar a Ele? O que te silenciou?"
-                },
-                {
-                    "category": "Fé",
-                    "question": "Bartimeu jogou a sua capa antes de receber o seu milagre. Há algo que você precisa 'jogar fora' — uma segurança, um plano, uma identidade — para seguir Jesus completamente?"
-                },
-                {
-                    "category": "Propósito",
-                    "question": "Quando Bartimeu recebeu o que pediu, escolheu seguir a Jesus em vez de ir embora. O que significa para você seguir a Jesus depois que Ele responde a uma oração?"
-                }
-            ],
-            "prayer": {
-                "title": "Oração de Quem Clama à Beira do Caminho",
-                "content": "Senhor Jesus, Filho de Davi, tem misericórdia de mim.\n\nComo Bartimeu — tenho consciência do que não posso ver. As áreas da minha vida onde caminho nas trevas. As verdades que não entendo. As cegueiras que não reconheço em mim mesmo.\n\nNão vou me calar.\n\nClamo de onde estou — sem o momento perfeito, sem as palavras perfeitas, sem a fé perfeita.\n\nApenas com a mesma honestidade de um homem à beira de um caminho empoeirado: quero ver.\n\nE quando me deres a visão — que a primeira coisa que meus olhos encontrem sejas Tu. E que eu Te siga.\n\nEm nome de Jesus, Amém."
-            }
-        },
-        {
-            "order": 11,
-            "type": "completion",
-            "image_url": "bartimaeus_face_restored.png",
-            "completion_verse": {
-                "reference": "Marcos 10:52",
-                "text": "E Jesus lhe disse: Vai, a tua fé te salvou. E imediatamente recobrou a vista, e seguia Jesus no caminho.",
-                "bible_version": "ARC"
-            },
-            "reflection_prompt": "Que capa você precisa jogar fora hoje? O que você precisa ver?",
-            "celebration_type": "gentle_light"
-        }
-    ]
+      },
+      "reflection_prompt": "Que capa você precisa jogar fora hoje? O que você precisa ver?",
+      "celebration_type": "gentle_light"
+    }
+  ]
 }
