@@ -5,7 +5,7 @@ Applies P1 fixes, P2 hard typos, and one P3 batch-fixable pattern.
 Produces patched files in-place with a dry-run report first.
 Preserves original file indentation (2 or 4 spaces).
 """
-import json, re, sys
+import argparse, json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).parent.resolve()
@@ -23,7 +23,7 @@ def detect_indent(fname):
 def load(fname, lang):
     path = ROOT / fname
     indent = detect_indent(path)
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         data = json.load(f)
     return data, data["data"][lang], indent
 
@@ -310,11 +310,24 @@ def process_niv(dry_run=False):
     print(f"\nNIV totals: {total_changes}")
 
 if __name__ == "__main__":
-    dry = "--apply" not in sys.argv
+    parser = argparse.ArgumentParser(description="Fix corpus JSON files (dry-run by default).")
+    parser.add_argument("--root", help="Path to repository root to use instead of the script location")
+    parser.add_argument("--file", help="Path to a file inside the repo; sets root to its parent directory")
+    parser.add_argument("--apply", action="store_true", help="Write changes instead of dry-run")
+    args = parser.parse_args()
+
+    # Allow overriding ROOT for CI or alternative layouts
+    if args.root:
+        ROOT = Path(args.root).resolve()
+    elif args.file:
+        ROOT = Path(args.file).resolve().parent
+
+    dry = not args.apply
     if dry:
         print("=" * 60)
         print("DRY RUN — pass --apply to write changes")
         print("=" * 60)
+
     print("\n── ARC ──")
     process_arc(dry_run=dry)
     print("\n── KJV ──")
