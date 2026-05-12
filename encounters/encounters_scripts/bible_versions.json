@@ -77,12 +77,12 @@
       "allowed_versions": ["الترجمة العربية الجديدة", "ترجمة سميث وفاندايك"],
       "reading_speed": { "unit": "wpm", "rate": 150 }
     },
-    "de": {
-      "name": "Deutsch",
+    "fil": {
+      "name": "Filipino",
       "script": "latin",
-      "primary_version": "LU17",
-      "fallback_version": "SCH2000",
-      "allowed_versions": ["LU17", "SCH2000"],
+      "primary_version": "Magandang Balita Biblia",
+      "fallback_version": "Ang Salita ng Dios",
+      "allowed_versions": ["Magandang Balita Biblia", "Ang Salita ng Dios"],
       "reading_speed": { "unit": "wpm", "rate": 200 }
     }
   }
