@@ -111,7 +111,8 @@
         "zh": "hammer_of_god_zh_001.json",
         "hi": "hammer_of_god_hi_001.json",
         "de": "hammer_of_god_de_001.json",
-        "ar": "hammer_of_god_ar_001.json"
+        "ar": "hammer_of_god_ar_001.json",
+        "fil": "hammer_of_god_fil_001.json"
       },
       "titles": {
         "es": "El Martillo de Dios",
@@ -122,7 +123,8 @@
         "zh": "神的锤子",
         "hi": "परमेश्वर का हथौड़ा",
         "de": "Der Hammer Gottes",
-        "ar": "مطرقة الله"
+        "ar": "مطرقة الله",
+        "fil": "Ang Martilyo ng Diyos"
       },
       "subtitles": {
         "es": "De ejecutores del juicio a adoradores del Mesías: La historia redentora de los Medos",
@@ -133,7 +135,8 @@
         "zh": "从审判的执行者到弥赛亚的敬拜者：玛代人的救赎故事",
         "hi": "न्याय के निष्पादकों से मसीहा के उपासकों तक: मादियों की छुटकारे की कहानी",
         "de": "Von Vollstreckern des Gerichts zu Anbetern des Messias: Die Erlösungsgeschichte der Meder",
-        "ar": "من مُنفِّذي الدينونة إلى ساجدي المسيّا: قصة الماديين الفدائية"
+        "ar": "من مُنفِّذي الدينونة إلى ساجدي المسيّا: قصة الماديين الفدائية",
+        "fil": "Mula sa mga Tagapagsagawa ng Paghatol hanggang sa mga Sumasamba sa Mesiyas: Ang Mapagligtás na Kuwento ng mga Medo"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -144,7 +147,8 @@
         "zh": 8,
         "hi": 8,
         "de": 9,
-        "ar": 8
+        "ar": 8,
+        "fil": 10
       }
     },
     {

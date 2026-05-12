@@ -1,0 +1,138 @@
+{
+  "id": "morning_star_001",
+  "type": "discovery",
+  "date": "2026-01-15",
+  "title": "Ang Tagapagbalita ng Liwanag",
+  "subtitle": "Ang walang hanggang koneksyon sa pagitan ng paglikha, propesiya, at ang iyong puso",
+  "language": "fil",
+  "version": "Magandang Balita Biblia",
+  "estimated_reading_minutes": 7,
+  "key_verse": {
+    "reference": "2 Pedro 1:19",
+    "text": "Kaya naman lalong tumibay ang aming paniniwala sa ipinahayag ng mga propeta. Makakabuting ito'y pag-ukulan ninyo ng pansin, sapagkat tulad ito sa isang ilaw sa kadiliman na tumatanglaw sa inyo hanggang sa sumikat ang araw ng Panginoon at magliwanag sa inyong mga puso ang bituin sa umaga."
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "natural_revelation",
+      "icon": "🔭",
+      "title": "Ang Patotoo ng Paglikha: Venus",
+      "subtitle": "Isinulat ng Diyos ang Kanyang plano sa kalangitan bago pa Niya ito isulat sa papel",
+      "content": "Sa astronomiya, kilala ang Venus bilang 'Morning Star' o Tala sa Umaga. Hindi tulad ng mga malayong bituin, ang Venus ay malapit at ang liwanag nito ay sobrang kintab na siya ang huling bagay na mawawala kapag sumikat na ang araw.\n\nNakakamit ng Venus ang kanyang pinakamataas na ningning sa ika-apat na bantayan (sa pagitan ng 3:00 ng umaga at 6:00 ng umaga), ang sandaling pinakamalamig ang kapaligiran at tila pinakamakapal ang kadiliman.\n\nHindi araw ang Venus, ngunit siya ang tagapagbalita nito (Eskēnōsen - pisikal na ebidensya). Ang kanyang pagpapakita sa abot-tanaw ay patunay na tinalo ng pag-ikot ng mundo ang gabi. Kapag nakita mo ang Venus, ang pagsikat ng araw ay matematikong sigurado.",
+      "revelation_key": "Gaya ng Venus na sumasalamin sa kaluwalhatian ng Araw na hindi pa natin nakikita, sinasalamin natin ang kaluwalhatian ni Cristo sa gitna ng kadiliman ng mundo."
+    },
+    {
+      "order": 2,
+      "type": "historical_thread",
+      "icon": "🏛️",
+      "title": "Ang Hilo ng Propesiya: Mula kay Balaam Hanggang sa mga Mago",
+      "subtitle": "Isang patotoo na umaabot ng 1,400 taon",
+      "content": "Ang propesiya ni Balaam sa Mga Bilang 24:17 ay nagsasabi: 'Mula kay Jacob ay lilitaw ang isang bituin, at mula sa Israel ay maghahari ang isang hari.' Ang propesiyang ito ay naitala sa mga aklatan ng Mesopotamia.\n\nPagkaraan ng maraming siglo, si Daniel ay hinirang na 'Pinuno ng mga Astrologo' sa Babilonya (Daniel 2:48). Iniugnay niya ang 'Bituin' ni Balaam sa 'Panahon' ng pitumpung linggo mula sa kanyang sariling propesiya.\n\nNang makita ng mga Mago mula sa Silangan ang bituin sa ibabaw ng Bethlehem, hindi lamang ordinaryong planeta ang kanilang sinusundan. Sinusundan nila ang isang liwanag na gumalaw mula hilaga tungo sa timog at tumigil sa isang bahay: ang Shekinah (Kaluwalhatian ng Diyos) na gumagabay sa mga Hentil patungo sa Bagong Shekinah na naging tao.",
+      "scripture_connections": [
+        {
+          "reference": "Mga Bilang 24:17",
+          "text": "Mayroon akong nakikita ngunit hindi pa ngayon magaganap, nakikita ko ngayon ang mangyayari sa hinaharap. Mula sa lahi ni Jacob ay lilitaw ang isang bituin, sa lahi ni Israel ay may maghahari rin. Mga pinuno ni Moab ay kanyang lilipulin, lahat ng mga anak ni Set ay kanyang pababagsakin."
+        },
+        {
+          "reference": "Mateo 2:2",
+          "text": "Nagtanung-tanong sila, “Nasaan ang ipinanganak na hari ng mga Judio? Nakita namin sa silangan ang kanyang bituin, kaya't naparito kami upang siya'y sambahin.”"
+        }
+      ],
+      "revelation_key": "Hindi nawala ang propesiya. Iningatan ng Diyos ang Kanyang patotoo sa gitna ng mga bansa upang nang ipanganak si Cristo, kahit ang mga Hentil ay malalaman na dapat Siyang hanapin."
+    },
+    {
+      "order": 3,
+      "type": "greek_exegesis",
+      "icon": "📖",
+      "title": "Ang Tatlong Titulo ng Tagumpay",
+      "subtitle": "Pagsusuri ng orihinal na teksto",
+      "greek_words": [
+        {
+          "word": "Logos",
+          "transliteration": "Λόγος",
+          "reference": "Juan 1:1",
+          "meaning": "Ang Disenyo / Ang Salita / Ang Pagpapahayag ng kaisipan ng Diyos",
+          "revelation": "Siya ang pagpapahayag ng kaisipan ng Diyos. Bago pa umiiral ang iyong problema, nariyan na ang Logos. Siya ang Arkitekto na kayang muling itayo ang anumang bahagi ng iyong buhay.",
+          "application": "Kapag ang iyong buhay ay tila gulo, tandaan: ang parehong Logos na nagsabi ng 'Magkaroon ng liwanag' sa Genesis ay maaaring magsalita ng kaayusan sa iyong sitwasyon."
+        },
+        {
+          "word": "Eskēnōsen",
+          "transliteration": "ἐσκήνωσεν",
+          "reference": "Juan 1:14",
+          "meaning": "Nagtayo ng Kanyang tolda / Nanirahan / Namuhay",
+          "revelation": "Ang salitang ito ay mula sa 'Skēnē' (tolda). Ayaw ng Diyos na maging nasa templong bato lamang; pumasok Siya sa 'toldang laman' (sarx) upang maintindihan ang iyong sakit, uhaw, at pagkapagod mula sa loob.",
+          "application": "Hindi malayong Diyos si Jesus. Namuhay Siya sa parehong 'mahihinang tolda' na iyong tinutuluyan. Alam Niya ang iyong limitasyon dahil naranasan Niya ito."
+        },
+        {
+          "word": "Amnos",
+          "transliteration": "ἀμνός",
+          "reference": "Juan 1:29",
+          "meaning": "Ang Kordero",
+          "related_verb": "Airōn (αἴρων) - na buhatin, dalhin, at alisin",
+          "revelation": "Sinabi ni Juan: 'Narito ang Kordero ng Diyos na Airōn ang kasalanan ng sanlibutan.' Hindi lang Niya ito tinatakpan ng dugo—binubuhat Niya ito mula sa iyong mga balikat, dinadala, at inilalayo nang malayo upang makalalakad kang malaya!",
+          "application": "Ang bigat ng iyong nakaraan, kahihiyan, at pagkakasala—hindi lamang pinatawad ni Cristo, lubusang inalis Niya ito. Wala na ito sa iyo."
+        }
+      ],
+      "revelation_key": "Si Cristo ay sabay na walang hanggang Disenyo (Logos), malapit na presensya (Eskēnōsen), at ganap na tagapaglaya (Amnos). Walang kulang sa Kanya."
+    },
+    {
+      "order": 4,
+      "type": "prophetic_promise",
+      "icon": "⭐",
+      "title": "Ang Pangako para sa Mananagumpay",
+      "subtitle": "Pahayag 2:28 - Ang iyong pamana",
+      "content": "Sa Pahayag 2:26-28, nangako si Jesus: 'At ang mananagumpay, at ang tumutupad ng aking mga gawa hanggang sa wakas... ay bibigyan ko ng tala sa umaga.'\n\nAno ang ibig sabihin ng pangakong ito?\n\nHindi Siya nagbibigay sa iyo ng astronomikong bagay. Binibigay Niya ang Kanyang sarili. Sa Pahayag 22:16, ipinahayag ni Jesus: 'Ako si Jesus... Ako ang maningning na tala sa umaga.'\n\nAng parehong liwanag na gumabay sa mga Mago, ang parehong bituin na ipinropesiya ni Balaam, ang parehong kaluwalhatian na nagdulot ng kaayusan sa kaguluhan ng Genesis—ngayon ay pag-aari mo na. Hindi ito isang bagay na tinitingnan mo sa malayo; ito ay Isang naninirahan sa loob mo.\n\nKapag lumitaw ang Venus, alam ng mandaragat na siguradong sisikat ang araw. Kapag si Cristo ay namumuhay sa iyo, ang iyong tagumpay ay sigurado. Hindi ito posibilidad, ito ay matematikong at espiritwal na garantiya.",
+      "scripture_anchor": {
+        "reference": "Pahayag 22:16",
+        "text": "“Akong si Jesus ang nagsugo sa aking anghel upang ang mga bagay na ito'y ipahayag sa inyo na nasa mga iglesya. Ako'y mula sa angkan ni David; ako ang maningning na bituin sa umaga.”"
+      },
+      "identity_statement": "Hindi ka isang taong naghihintay ng liwanag. Ikaw ay tagadala ng Bituin mismo. Nasaan ka man, bumubukadkad ang umaga ng Diyos.",
+      "revelation_key": "Ang tagumpay ay hindi isang bagay na pinagsisikapan mong makamit. Ito ay Isang mayroon ka na."
+    },
+    {
+      "order": 5,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Pansariling Pagtuklas",
+      "discovery_questions": [
+        {
+          "category": "Sitwasyon",
+          "question": "Sa aling bahagi ng iyong buhay mo nararamdaman na nasa 'ika-apat na bantayan' ka—ang pinakamadilim at pinakamalamig na sandali bago sumikat ang araw?"
+        },
+        {
+          "category": "Direksyon",
+          "question": "Ang mga sinaunang mandaragat ay nawawasak kapag nawala nila ang Tala sa Umaga. Ano ang nangyayari sa iyong buhay kapag tumigil kang tumingin sa 'mas tiyak na salita ng propesiya'?"
+        },
+        {
+          "category": "Pagkakakilanlan",
+          "question": "Inilalarawan ni Balaam ang Israel bilang 'mga tolda' kung saan nananahan ang Kaluwalhatian. Paano nagbago ang iyong pananaw sa pagkakaalam na ikaw ay isang 'tolda' kung saan nananahan ang parehong Kaluwalhatiang gumabay sa mga Mago?"
+        }
+      ],
+      "prayer": {
+        "title": "Panalanging Pangtatatak",
+        "content": "Panginoong Jesus, aking Logos at aking Tala sa Umaga. Salamat sa Iyo dahil ngayon ay nauunawaan ko na ang aking tagumpay ay hindi posibilidad, kundi matematikong at espiritwal na garantiya. Salamat sa Iyo sa pagbuhat (airōn) ng aking pasan ngayong araw. Itinutuon ko ang aking mga mata sa Iyong liwanag at pumipili akong lumakad bilang tolda ng Iyong kaluwalhatian sa gitna ng mundong ito. Nawa'y ang Iyong liwanag sa akin ay maging tagapagbalita ng bagong araw para sa mga nasa paligid ko. Gaya ng Venus na nagbabalita ng araw, nawa'y ang aking buhay ay magbalita ng Iyong kaharian. Sa pangalan ni Jesus, Amen."
+      }
+    }
+  ],
+  "tags": [
+    "liwanag",
+    "pag-asa",
+    "kristo",
+    "pangako",
+    "tagumpay",
+    "pagkakakilanlan",
+    "propesiya"
+  ],
+  "metadata": {
+    "total_word_count": 850,
+    "greek_words_count": 3,
+    "scripture_references_count": 6,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "Paglikha at propesiya",
+      "Pagkakakilanlan kay Cristo",
+      "Propesiyang Mesianiko",
+      "Griyegong exegesis"
+    ]
+  }
+}
