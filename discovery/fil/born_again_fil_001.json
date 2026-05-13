@@ -1,0 +1,121 @@
+{
+  "id": "born_again_001",
+  "type": "discovery",
+  "date": "2026-01-20",
+  "title": "Dapat Kang Ipanganak na Muli",
+  "subtitle": "Nang matuklasan ng guro ng Israel na hindi sapat ang kanyang relihiyon",
+  "language": "fil",
+  "version": "Magandang Balita Biblia",
+  "estimated_reading_minutes": 6,
+  "key_verse": {
+    "reference": "Juan 3:3",
+    "text": "Sumagot si Jesus, “Pakatandaan mo: malibang ipanganak na muli [7] ang isang tao, hindi niya makikita ang paghahari ng Diyos.”"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "character_context",
+      "icon": "🧔",
+      "title": "Nicodemo: Ang Taong May Lahat ng Bagay",
+      "subtitle": "Bakit mahalaga ang kanyang pagbisita sa gabi",
+      "content": "Binigyan tayo ni Juan ng tatlong mahalagang katotohanan tungkol kay Nicodemo sa isang talatang lamang (Juan 3:1):\n\n1️⃣ 'ISANG TAO SA MGA FARISEO':\n• Ang mga Fariseo ay ang mga ehitong pangrelihiyon - 6,000 lamang sa buong Israel\n• Kanilang kinabisado ang buong Torah\n• Nag-aayuno sila nang dalawang beses bawat linggo\n• Nag-iiwan sila ng ikapu kahit sa mga pampalasa mula sa kanilang hardin\n• Sila ang pinaka-iginagalang ng mga tao\n\n2️⃣ 'NA NAGNGANGALANG NICODEMO':\n• Ang kanyang pangalan ay nangangahulugang 'Tagapagtagumpay sa mga tao'\n• Ito ay isang prestihiyosong pangalan, mula sa aristokratikong pamilya\n\n3️⃣ 'ISANG PINUNO NG MGA JUDIO':\n• Miyembro ng Sanedrin - ang pinakamataas na konseho ng 70 anciano\n• Tanging ang pinaka-bihasang mga tao lamang ang nakakaabot sa Sanedrin\n• Tinawag siya ni Jesus bilang 'ANG guro ng Israel' (Juan 3:10)\n\n🌙 BAKIT SIYA PUMUNTA SA GABI:\n\nHindi lamang ito upang iwasan ang kritisismo. Ito ay may simbolismo:\n• Si Nicodemo ay nasa 'espiritwal na kadiliman' sa kabila ng kanyang kaalaman\n• Siya ay natatakot na mawala ang kanyang posisyon\n• Ang gabi ay sumasalamin sa kalagayan ng espirituwal na kaluluwa na walang si Kristo\n\n💔 ANG IRONIYA:\n\nAng taong may pinakamataas na pangrelihiyong kaalaman sa Israel ay pumunta upang magtanong sa karpintero mula sa Nazaret. Ang kanyang perpektong relihiyon ay nag-iwan sa kanya ng kawalan.",
+      "revelation_key": "Maaari kang maging perpekto sa relihiyon at patay sa espirituwal. Ang teolohikal na edukasyon ay hindi pumapalit sa bagong kapanganakan."
+    },
+    {
+      "order": 2,
+      "type": "greek_exegesis",
+      "icon": "📖",
+      "title": "Anōthen: Ang Salitang May Dalawang Kahulugan",
+      "subtitle": "Kung bakit nalito si Nicodemo",
+      "content": "Sinabi sa kanya ni Jesus: 'Dapat kang ipanganak ANŌTHEN.'\n\nAng salitang Griego na ito ay may DALAWANG sabay na kahulugan:\n\n1️⃣ 'MULI' (isang beses pa, ikalawang pagkakataon)\n2️⃣ 'MULA SA ITAAS' (mula sa langit, mula sa Diyos)\n\n🤔 ANG KALITUHAN NI NICODEMO:\n\nNaintindihan lamang ni Nicodemo ang unang kahulugan: 'Paano maipapanganak ang isang tao na matanda na? Makapupasok ba siya sa pangalawang pagkakataon sa bahay-bata ng kanyang ina, at ipanganak?'\n\nIniisip niya ang paulit-ulit na PISIKAL na kapanganakan.\n\n✨ ANG TUNAY NA IBIG SABIHIN NI JESUS:\n\nSinasadya ni Jesus na gamitin ang dalawang kahulugan:\n• Kailangan mong ipanganak MULI (hindi mo mapapabuti ang unang kapanganakan mo)\n• Kailangan mong ipanganak MULA SA ITAAS (tanging Diyos lamang ang makakagawa nito, hindi ikaw)\n\n📊 ANG TUGON NI JESUS (v.5-6):\n\n'Malibang ang tao ay ipanganak ng TUBIG at ng ESPIRITU, hindi siya makapapasok sa kaharian ng Diyos.'\n\n• Tubig = malamang na sanggunian sa Ezekiel 36:25-27 (espiritwal na paglilinis)\n• Espiritu = ang Banal na Espiritu na gumagawa ng bagong kapanganakan\n\n'Ang ipinanganak ng laman ay LAMAN; at ang ipinanganak ng Espiritu ay espiritu.'\n\nAng laman ay naglalabas lamang ng laman. Gaano man itong turuan, disiplinahin o pag-andahin - nananatiling laman ito. Tanging ang Espiritu lamang ang makakabuo ng espiritwal na buhay.",
+      "greek_words": [
+        {
+          "word": "Anōthen",
+          "transliteration": "ἄνωθεν",
+          "meaning": "Muli / Mula sa itaas",
+          "revelation": "Ang dalawang kahulugan ay kailangan: ito ay isang kapanganakan na nangyayari MULI (hindi ka pinabuti, ikaw ay PINALITAN), at nagmumula MULA SA ITAAS (hindi ito sariling-binuo, ito ay kaloob ng Diyos)."
+        },
+        {
+          "word": "Gennēthē",
+          "transliteration": "γεννηθῇ",
+          "meaning": "Maipanganak, mabuo",
+          "revelation": "Ito ay passive voice sa Griego - 'maipanganak', hindi 'ipanganak ang sarili mo'. Ang bagong kapanganakan ay isang bagay na TINATANGGAP mo, hindi isang bagay na GINAGAWA mo."
+        }
+      ],
+      "revelation_key": "Hindi mo maipapanganak muli ang iyong sarili, tulad ng hindi mo naipanganak ang iyong sarili noong unang pagkakataon. Ang dalawang kapanganakan ay tinatanggap, hindi nakakamtan."
+    },
+    {
+      "order": 3,
+      "type": "theological_depth",
+      "icon": "🍃",
+      "title": "Ang Hangin ay Humihihip Kung Saan Nais Nito",
+      "subtitle": "Juan 3:8 - Ang misteryo ng Espiritu",
+      "content": "Gumamit si Jesus ng perpektong paglalarawan upang ipaliwanag ang bagong kapanganakan:\n\n'Ang hangin ay humihihip kung saan nais nito, at naririnig mo ang tunog nito, ngunit hindi mo masasabi kung saan ito nanggaling, at kung saan ito pupunta: gayon ang bawat isa na ipinanganak ng Espiritu.'\n\n🌬️ ANG PAGLALARO SA SALITA:\n\nSa Griego (at Hebreo), ang parehong salita ay nangangahulugang HANGIN at ESPIRITU:\n• Griego: Pneuma (πνεῦμα)\n• Hebreo: Ruach (רוּחַ)\n\nGumawa si Jesus ng triple parallel:\n\n1️⃣ ANG HANGIN AY DI-NAKIKITA:\n• Hindi mo NAKIKITA ang hangin\n• Nakikita mo lamang ang mga EPEKTO nito (mga dahon na gumagalaw, mga puno na yumuyuko)\n• Gayon din ang Espiritu - hindi mo siya nakikita, ngunit nakikita mo ang kanyang gawa sa mga binagong buhay\n\n2️⃣ ANG HANGIN AY HINDI MAKOKONTROL:\n• Ang hangin ay 'humihihip kung saan nais nito' - hindi mo ito dinidirekta\n• Ang Espiritu ay soberano - siya ang pumipili kung kailan at saan gumagalaw\n• Hindi mo maaaring gawing bangkaan ang isang revival; maaari ka lamang maghanda para sa pagdating ng Hangin\n\n3️⃣ ANG HANGIN AY HINDI MAIPIPILIT NA TANGIHAN:\n• 'Naririnig mo ang tunog nito' - bagaman hindi mo ito nakikita, ALAM mo na nandyan ito\n• Ang taong ipinanganak ng Espiritu ay gumagawa ng EBIDENSYA - bunga, pagbabago, pagbabagong-anyo\n\n⚠️ ANG BABALA KAY NICODEMO:\n\nSi Nicodemo ay gustong MAINTINDIHAN bago maniwala. Sinabi sa kanya ni Jesus: 'Hindi mo lubusang maintindihan ang bagong kapanganakan, tulad ng hindi mo lubusang maintindihan ang hangin. Ngunit maaari mo itong MARANASAN'.",
+      "scripture_connections": [
+        {
+          "reference": "Ezekiel 37:9",
+          "text": "Sinabi sa akin ni Yahweh, “Ezekiel, anak ng tao, tawagan mo ang hangin sa lahat ng dako. Sabihin mong ipinapasabi ko: Hangin, hingahan mo ang mga patay na ito upang sila'y mabuhay.”"
+        },
+        {
+          "reference": "Mga Gawa 2:2",
+          "text": "Walang anu-ano'y may ingay na nagmula sa langit, na tulad ng ugong ng malakas na hangin, at napuno nito ang bahay na kinaroroonan nila."
+        }
+      ],
+      "revelation_key": "Ang gawa ng Espiritu ay misteryoso ngunit totoo, di-nakikita ngunit hindi maipipilit na tangihan, soberano ngunit madarama."
+    },
+    {
+      "order": 4,
+      "type": "necessity_emphasis",
+      "icon": "⚠️",
+      "title": "Huwag Mamangha: ITO AY KAILANGAN",
+      "subtitle": "Bakit ang bagong kapanganakan ay hindi opsyonal",
+      "content": "Sinabi ni Jesus sa Juan 3:7: 'Huwag kang mamangha na sinabi ko sa iyo, Kayo ay DAPAT na ipanganak na muli.'\n\nAng salitang 'dapat' (dei sa Griego) ay nagpapahiwatig ng:\n• Ganap na obligasyon\n• Banal na pangangailangan\n• Hindi mapag-negosyong pangangailangan\n\n❌ BAKIT HINDI SAPAT ANG RELIHIYON:\n\nSi Nicodemo ay may:\n✓ Kaalaman sa Bibliya (guro ng Israel)\n✓ Posisyon sa relihiyon (Fariseo)\n✓ Awtoridad (miyembro ng Sanedrin)\n✓ Walang-kapintasang moralidad (sumunod sa 613 utos)\n✓ Paggalang mula sa mga tao\n\nNgunit sinabi sa kanya ni Jesus: 'LAHAT ng iyan ay hindi sapat. Kailangan mong IPANGANAK NA MULI.'\n\n🔑 ANG PUNDAMENTAL NA DAHILAN:\n\n'Ang ipinanganak ng laman ay LAMAN' (v.6)\n\nAng problema ay hindi dahil MASAMA ang laman. Ang problema ay dahil LIMITADO ang laman:\n• Hindi nito mabubuo ang espiritwal na buhay\n• Hindi nito makikita ang kaharian ng Diyos (v.3)\n• Hindi ito makapapasok sa kaharian ng Diyos (v.5)\n\nGaano man itong turuan, pag-andahin o disiplinahin ang laman - nananatiling laman ito. Ito ay tulad ng pagsubok na patawirin ang isang isda sa pamamagitan ng mas mahigpit na pagsasanay. Ang isda ay nangangailangan ng BAGONG KALIKASAN.\n\n✨ ANG EBANGHELYO:\n\nHindi dumating ang Diyos upang pagbutihin ang iyong lumang sarili. Dumating siya upang PATAYIN ito at bigyan ka ng bagong sarili. Hindi ito reno­basyon; ito ay MULING PAGKABUHAY.",
+      "identity_statement": "Kung ikaw ay ipinanganak na muli, hindi ka pinabuting bersyon ng iyong lumang sarili. Ikaw ay isang BAGONG NILALANG. Ang lumang ikaw ay namatay kasama ni Kristo; ang bagong ikaw ay bumangon kasama niya.",
+      "revelation_key": "Ang Kristiyanismo ay hindi espiritwal na pagpapabuti ng sarili. Ito ay kamatayan at muling pagkabuhay. Hindi 'maging mas mabuti'; ito ay 'mamatay at tumanggap ng bagong buhay'."
+    },
+    {
+      "order": 5,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Pansariling Pagtuklas",
+      "discovery_questions": [
+        {
+          "category": "Pagtatasa ng Sarili",
+          "question": "Si Nicodemo ay nagtiwala sa kanyang relihiyon. Mayroon bang anumang bagay sa iyong buhay (moralidad, mabubuting gawa, kaalaman sa Bibliya) na pinagkakatiwalaan mo ng HIGIT PA kaysa sa bagong kapanganakan?"
+        },
+        {
+          "category": "Ebidensya",
+          "question": "Sinabi ni Jesus na ang taong ipinanganak ng Espiritu ay tulad ng hangin - di-nakikita ngunit hindi maipipilit na tangihan. Mayroon bang nakikitang ebidensya sa iyong buhay na binago ka ng Espiritu?"
+        },
+        {
+          "category": "Pagsuko",
+          "question": "Ang bagong kapanganakan ay PASSIVE voice - isang bagay na tinatanggap mo, hindi nakakamtan. Sinusubukan mo bang 'ipanganak muli' sa pamamagitan ng iyong pagsisikap, o sumusuko ka ba upang hayaang gawin ito ng Diyos sa iyo?"
+        }
+      ],
+      "prayer": {
+        "title": "Panalangin ng Bagong Kapanganakan",
+        "content": "Amang nasa Langit, kinikilala ko na ang aking relihiyon, moralidad at pagsisikap ay hindi sapat. Tulad ni Nicodemo, dumarating ako sa Iyo sa aking espiritwal na kadiliman. Naniniwala ako na si Jesus ay namatay sa aking lugar at muling nabuhay. Ngayong araw ay tinatanggihan ko ang pagtitiwala sa aking laman - sa aking mga tagumpay, sa aking kabutihan, sa aking kaalaman. Banal na Espiritu, gawin sa akin ang hindi ko magagawa para sa aking sarili: IPANGANAK MO AKO NG BAGO. Lumikha sa akin ng malinis na puso. Gawin mo akong bagong nilalang. Nawa ang aking buhay ay maging hindi maipipilit na tangihang ebidensya na humihip ang Hangin ng Diyos sa aking patay na kaluluwa at nagbigay sa akin ng walang-hanggang buhay. Sa pangalan ni Jesus, Amen."
+      }
+    }
+  ],
+  "tags": [
+    "kaligtasan",
+    "bagong_kapanganakan",
+    "banal_na_espiritu",
+    "regenerasyon",
+    "nicodemo",
+    "relihiyon_vs_relasyon"
+  ],
+  "metadata": {
+    "total_word_count": 1150,
+    "greek_words_count": 2,
+    "scripture_references_count": 8,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "Kakulangan ng relihiyon",
+      "Bagong kapanganakan",
+      "Soberanong gawa ng Espiritu",
+      "Kamatayan at muling pagkabuhay"
+    ]
+  }
+}

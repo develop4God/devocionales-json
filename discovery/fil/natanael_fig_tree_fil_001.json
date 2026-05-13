@@ -1,0 +1,141 @@
+{
+  "id": "natanael_fig_tree_001",
+  "type": "discovery",
+  "date": "2026-01-17",
+  "title": "Sa Ilalim ng Puno ng Igos",
+  "subtitle": "Ang pakikipagtagpo kung saan inihahayag ni Jesus na alam Niya ang iyong pinakamalalim na mga lihim",
+  "language": "fil",
+  "version": "Magandang Balita Biblia",
+  "estimated_reading_minutes": 6,
+  "key_verse": {
+    "reference": "Juan 1:48",
+    "text": "Tinanong siya ni Nathanael, “Paano ninyo ako nakilala?” Sumagot si Jesus, “Bago ka pa tawagin ni Felipe, nakita na kita nang ikaw ay nasa ilalim ng puno ng igos.”"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cultural_context",
+      "icon": "🌳",
+      "title": "Ang Kodigo ng Puno ng Igos",
+      "subtitle": "Ang nauunawaan ng bawat Judio kapag nakakarinig ng \"sa ilalim ng puno ng igos\"",
+      "content": "Noong unang siglo, ang pariralang \"nakaupo sa ilalim ng sariling puno ng igos\" ay hindi literal. Ito ay isang malalim na nakaugat na kultura idiom na nangangahulugang:\n\n• Pag-atras sa isang pribadong lugar upang pag-aralan nang malalim ang Torah\n• Pagmumuni-muni sa mga propesiya tungkol sa Mesias\n• Panalangin na may ganap na bukas na puso sa harap ng Diyos\n• Paghahanap ng banal na mga sagot na malayo sa pang-araw-araw na ingay\n\nAng mga bahay ay maliit at maingay, kaya ang mga iskolar ay lumabas sa bakuran. Ang puno ng igos ay nagbigay ng lilim at privacy. Ito ang \"lihim na lugar ng Kataas-taasan\" mula sa Awit 91.\n\nKapag sinabi ni Jesus na \"nakita kita sa ilalim ng puno ng igos,\" HINDI Niya sinasabing \"nakita ko ang iyong pisikal na lokasyon.\" Sinasabi Niya ang isang bagay na mas intimate: \"Narinig ko ang iyong lihim na mga panalangin. Nakita ko ang iyong gutom para sa Mesias. Alam ko ang mga lihim ng iyong puso na walang ibang nakakaalam.\" Kaya agad tumugon si Natanael: \"Rabi, ikaw ang Anak ng Diyos!\"",
+      "scripture_anchor": {
+        "reference": "Mikas 4:4",
+        "text": "Sa halip, bawat tao'y mamumuhay nang payapa sa kanyang ubasan at mga puno ng igos. Wala nang babagabag sa kanila, sapagkat ito ang pangako ni Yahweh na Makapangyarihan sa lahat."
+      },
+      "revelation_key": "Ang iyong \"sa ilalim ng puno ng igos\" ay ang mga pribadong sandali kung saan nakikipag-usap ka sa Diyos nang walang filter. Nandoon si Jesus. Narinig Niya ang bawat salita."
+    },
+    {
+      "order": 2,
+      "type": "character_study",
+      "icon": "👤",
+      "title": "Ang Pagkiling ni Natanael",
+      "subtitle": "Kapag ang iyong tamang teolohiya ay naging isang kahon",
+      "content": "Sinabi sa kanya ni Felipe: \"Natagpuan namin ang Mesias... si Jesus ng Nazaret.\"\n\nTumugon si Natanael: \"May mabubuting bagay ba na maaaring manggaling sa Nazaret?\"\n\n🔍 BAKIT ITO AY ISANG LEHITIMONG PAGKILING:\n\n• Ang Nazaret ay HINDI kailanman lumilitaw sa Lumang Tipan\n• HINDI nabanggit sa Talmud o sa mga sulat ni Josephus\n• Ito ay isang guwardiya militar ng mga Romano - isang hinamak na lugar\n• Ang mga propesiya ay nagsabi na ang Mesias ay manggagaling sa BETLEHEM (Mika 5:2)\n• Ang Jerusalem ay ang relihiyosong sentro - ang Nazaret ay nasa gilid\n\nSi Natanael ay isang seryosong estudyante ng Kasulatan. Ang kanyang tanong ay hindi palalo; ito ay teolohikal na may kaalaman. Ang problema: Hindi palaging tinutupad ng Diyos ang Kanyang mga pangako sa paraang inaasahan natin.\n\nANG IRONY: Si Jesus ay IPINANGANAK sa Betlehem (natutupad si Mika 5:2), ngunit lumaki sa Nazaret. Tinupad ng Diyos ang propesiya AT sinira ang mga relihiyosong inaasahan sa parehong oras.",
+      "scripture_connections": [
+        {
+          "reference": "Mikas 5:2",
+          "text": "Sinabi ni Yahweh, “Ngunit ikaw, Bethlehem Efrata, bagama't pinakamaliit ka sa mga angkan ng Juda ay magmumula sa iyong angkan ang isang mamumuno sa Israel. Ang kanyang pinagmulan ay buhat pa noong una, noong unang panahon pa.”"
+        },
+        {
+          "reference": "Isaias 53:2",
+          "text": "Kalooban ni Yahweh na matulad sa isang halaman ang kanyang lingkod, parang ugat na natanim sa tuyong lupa. Walang katangian o kagandahang makatawag-pansin, walang taglay na pang-akit para siya ay lapitan."
+        }
+      ],
+      "revelation_key": "Minsan ang iyong kaalaman sa Bibliya ay maaaring maging isang kahon na naglilimita kung paano mo inaasahan na gumagalaw ang Diyos. Si Jesus ay nanggagaling sa mga lugar na hindi mo kailanman inaasahan."
+    },
+    {
+      "order": 3,
+      "type": "greek_exegesis",
+      "icon": "📖",
+      "title": "Ang Tatlong Salitang Naghahayag ng Lahat",
+      "subtitle": "Pagsusuri ng orihinal na tekstong Griego",
+      "greek_words": [
+        {
+          "word": "Dolos",
+          "transliteration": "δόλος",
+          "reference": "John 1:47",
+          "meaning": "Panlilinlang, pain, patibong, nakatagong layunin",
+          "revelation": "Sinabi ni Jesus: \"Narito ang isang tunay na Israelita, na walang DAYA (dolos).\" Ang salitang ito ay literal na nangangahulugang \"pain sa pangingisda.\"\n\nIpinapahayag ni Jesus: \"Si Natanael ay walang nakatagong layunin. Hindi siya naghahanap ng Mesias para sa pampulitika o personal na pakinabang. Siya ay isang PURONG naghahanap.\"\n\nAng koneksyon kay Jacob: Ang pangalang \"Israel\" ay nagmula kay Jacob, na MAY dolos (dinaya niya ang kanyang ama at kapatid). Sinabi ni Jesus kay Natanael: \"Ikaw ay kung ano dapat si Jacob mula pa sa simula: isang tunay na Israelita na walang daya.\"",
+          "application": "Hindi humahanap ang Diyos ng perpektong mga tao. Humahanap Siya ng mga taong tapat. Ang iyong tunay na gutom ay mas mahalaga kaysa sa iyong perpektong teolohiya."
+        },
+        {
+          "word": "Eidon",
+          "transliteration": "εἶδον",
+          "reference": "John 1:48",
+          "meaning": "Makita na may espirituwal na pang-unawa, makilala nang malalim",
+          "revelation": "Kapag sinabi ni Jesus na \"nakita kita,\" ginamit Niya ang EIDON. Hindi ito simpleng optical vision (blepō). Ito ay malalim na pang-unawa, malalim na kaalaman.\n\nIto ang parehong salitang ginamit ni Juan nang sabihin niya: \"At tiningnan namin ang kanyang kaluwalhatian\" (Juan 1:14). Hindi ito pagkakita gamit ang pisikal na mga mata; ito ay pagkakita gamit ang puso.\n\nSinasabi ni Jesus: \"Hindi ko lang nakita ang iyong katawan sa ilalim ng puno. Nakita ko ang iyong kaluluwa, ang iyong mga pakikibaka, ang iyong mga tanong, ang iyong gutom para sa katotohanan.\"",
+          "application": "Hindi ka kilala ni Jesus sa mababaw. Kilala ka Niya sa pinakamalalim na mga layer na hindi mo pa nauunawaan ang iyong sarili."
+        },
+        {
+          "word": "Ho Huios Tou Anthrōpou",
+          "transliteration": "ὁ υἱὸς τοῦ ἀνθρώπου",
+          "reference": "John 1:51",
+          "meaning": "Ang Anak ng Tao - titulo tungkol sa Mesias mula sa Daniel 7",
+          "revelation": "Ito ang PABORITONG titulo ni Jesus para sa Kanyang Sarili (lumilitaw ng 81 beses sa mga ebanghelyo).\n\nIto ay direktang konektado sa Daniel 7:13-14: \"Nakita ko sa mga pangitain sa gabi, at narito, ang gaya ng Anak ng tao ay dumarating na may mga ulap ng langit... at binigyan siya ng paghahari, at kaluwalhatian.\"\n\nKinikilala ni Jesus ang Kanyang Sarili bilang Walang Hanggang Hari mula sa Daniel, ngunit ginagamit ang \"Anak ng Tao\" upang bigyang-diin na Siya ay naging ganap na tao upang maging tulay sa pagitan ng langit at lupa.",
+          "application": "Si Jesus ay sabay na 100% Diyos (makikita ang iyong mga lihim) at 100% tao (nauunawaan ang iyong sakit). Kaya Siya ay maaaring maging perpektong tulay."
+        }
+      ],
+      "revelation_key": "Kilala ka ni Jesus nang malalim (eidon), tinatanggap ka nang buo (walang daya), at konektado ka magpakailanman (Anak ng Tao)."
+    },
+    {
+      "order": 4,
+      "type": "typology_connection",
+      "icon": "🪜",
+      "title": "Ang Hagdan ni Jacob: Si Jesus ang Tulay",
+      "subtitle": "Juan 1:51 - Ang natupad na propesiya na nagsasara ng kabanata",
+      "content": "Nagtatapos si Jesus ng isang explosive na pahayag:\n\n\"Katotohanan, katotohanan, sinasabi ko sa inyo, mula ngayon makikita ninyo ang langit na bukas, at ang mga anghel ng Diyos na umaakyat at bumababa sa Anak ng tao.\"\n\n🔗 ANG KONEKSYON SA GENESIS 28:\n\nSi Jacob (hinaharap na Israel) ay tumakas mula sa kanyang kapatid at natulog sa disyerto na may bato bilang unan. Nananaginip siya ng isang hagdan na nag-uugnay sa langit at lupa, na may mga anghel na umaakyat at bumababa. Nang magising siya ay sinabi: \"Ito ang bahay ng Diyos! Ito ang pintuan ng langit!\" Tinawag niya ang lugar na BETHEL (Bahay ng Diyos).\n\n✨ ANG IPINAPAHAYAG NI JESUS:\n\n\"Natanael, tandaan mo ang hagdan na nakita ng iyong ninuno na si Jacob? Ang hagdang iyon ay hindi isang bagay sa hinaharap. ANG HAGDANG IYON AY AKO. Ako ang Bethel. Ako ang Bahay ng Diyos. Ako ang Pintuan ng Langit.\"\n\nHindi ka na nangangailangan ng isang banal na lugar (templo) o mystical na hagdan. Ang punto ng kontakt sa pagitan ng langit at lupa ay isang TAO: si Jesu-Kristo.\n\nAng mga anghel ay hindi na umaakyat at bumababa sa isang hagdang bato. Umaakyat at bumababa sila sa Anak ng Tao, dahil SIYA ang unibersal na tulay.",
+      "scripture_anchor": {
+        "reference": "Genesis 28:12",
+        "text": "Nang gabing iyon, siya'y nanaginip. May nakita siyang hagdan na abot sa langit at nagmamanhik-manaog doon ang mga anghel ng Diyos."
+      },
+      "identity_statement": "Hindi ka na hiwalay sa langit. Si Kristo ay iyong personal na hagdan, iyong portable na Bethel, iyong permanenteng tulay sa Ama.",
+      "revelation_key": "Hindi ka binibigyan ni Jesus ng access sa Diyos. Siya AY ang iyong access sa Diyos. Walang tagapamagitan, walang waiting list. Ang langit ay bukas sa iyo dahil si Kristo ay nasa iyo."
+    },
+    {
+      "order": 5,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Personal na Pagtuklas",
+      "discovery_questions": [
+        {
+          "category": "Intimidad",
+          "question": "Ano ang iyong \"sa ilalim ng puno ng igos\"? Ang lugar o sandali kung saan nakikipag-usap ka sa Diyos nang walang filter? Paano binabago ng pagkakaalam na si Jesus ay nandoon at nakikinig sa bawat salita ang iyong panalangin?"
+        },
+        {
+          "category": "Pagkiling",
+          "question": "Tinanggihan ni Natanael si Jesus dahil nanggaling sa Nazaret. May \"Nazaret\" ba sa iyong buhay - isang sitwasyon, tao, o lugar na sa palagay mo ay \"walang mabuting maaaring manggaling doon\"? Paano kung ang Diyos ay eksakto doon?"
+        },
+        {
+          "category": "Pag-access",
+          "question": "Kailangan ni Jacob ng isang panaginip upang makita ang hagdan. Mayroon kang hagdan na nabubuhay sa iyo (si Kristo). Nabubuhay ka ba bilang isang tao na may agarang access sa langit, o sinusubukan mo pa rin bang bumuo ng sarili mong hagdan?"
+        }
+      ],
+      "prayer": {
+        "title": "Panalangin ng Tugon",
+        "content": "Jesus, aking buhay na Bethel. Ngayong araw ay sumusuko ako sa katotohanang kilala Mo ako nang mas malalim kaysa sa pagkakakilala ko sa aking sarili. Nakita Mo ang aking mga sandali \"sa ilalim ng puno ng igos\" - ang aking lihim na mga panalangin, ang aking tapat na mga pagdududa, ang aking gutom para sa katotohanan. Salamat sa iyo dahil hindi mo ako tinanggihan dahil sa aking mga pagkiling o hindi perpektong teolohiya. Salamat dahil Ikaw ang Hagdan na nag-uugnay sa aking realidad sa langit ng Ama. Ngayong araw ay pumipili akong mabuhay na may langit na bukas sa akin, hindi dahil sa ginagawa ko, kundi dahil sa kung sino Ka sa akin. Sa pangalan ni Jesus, Amen."
+      }
+    }
+  ],
+  "tags": [
+    "intimidad",
+    "pagkakakilanlan",
+    "kaalam-alaman",
+    "access",
+    "tulay",
+    "hagdan_ni_jacob",
+    "natanael"
+  ],
+  "metadata": {
+    "total_word_count": 545,
+    "greek_words_count": 3,
+    "scripture_references_count": 7,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "Kilala ka ng Diyos nang malalim",
+      "Si Kristo bilang tulay sa Ama",
+      "Tipologiya ng Lumang Tipan",
+      "Pagwasak ng relihiyosong pagkiling"
+    ]
+  }
+}
