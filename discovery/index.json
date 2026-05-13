@@ -278,7 +278,8 @@
         "zh": "lamb_of_god_zh_001.json",
         "hi": "lamb_of_god_hi_001.json",
         "de": "lamb_of_god_de_001.json",
-        "ar": "lamb_of_god_ar_001.json"
+        "ar": "lamb_of_god_ar_001.json",
+        "fil": "lamb_of_god_fil_001.json"
       },
       "titles": {
         "es": "El Cordero de Dios",
@@ -289,7 +290,8 @@
         "zh": "神的羔羊",
         "hi": "परमेश्वर का मेम्ना",
         "de": "Das Lamm Gottes",
-        "ar": "حمل الله"
+        "ar": "حمل الله",
+        "fil": "Ang Kordero ng Diyos"
       },
       "subtitles": {
         "es": "La culminación de 1,500 años de sistema sacrificial en una sola declaración",
@@ -300,7 +302,8 @@
         "zh": "1500年献祭制度在一句宣告中的顶点",
         "hi": "एक एकमात्र घोषणा में 1,500 वर्षों की बलिदान प्रणाली की परिणति",
         "de": "Der Höhepunkt von 1.500 Jahren Opfersystem in einer einzigen Erklärung",
-        "ar": "اكتمال ألف وخمس مئة عام من نظام الذبائح في إعلان واحد"
+        "ar": "اكتمال ألف وخمس مئة عام من نظام الذبائح في إعلان واحد",
+        "fil": "Ang katuparan ng 1,500 taon ng sistemang handog sa isang deklarasyon"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -311,7 +314,8 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 4
+        "ar": 4,
+        "fil": 6
       }
     },
     {
@@ -327,7 +331,8 @@
         "zh": "natanael_fig_tree_zh_001.json",
         "hi": "natanael_fig_tree_hi_001.json",
         "de": "natanael_fig_tree_de_001.json",
-        "ar": "natanael_fig_tree_ar_001.json"
+        "ar": "natanael_fig_tree_ar_001.json",
+        "fil": "natanael_fig_tree_fil_001.json"
       },
       "titles": {
         "es": "Debajo de la Higuera",
@@ -338,7 +343,8 @@
         "zh": "在无花果树下",
         "hi": "अंजीर के पेड़ के नीचे",
         "de": "Unter dem Feigenbaum",
-        "ar": "تحت شجرة التين"
+        "ar": "تحت شجرة التين",
+        "fil": "Sa Ilalim ng Puno ng Igos"
       },
       "subtitles": {
         "es": "El encuentro donde Jesús revela que conoce tus secretos más profundos",
@@ -349,7 +355,8 @@
         "zh": "耶稣显明他知道你内心深处秘密的相遇",
         "hi": "वह मुलाकात जहां यीशु प्रकट करता है कि वह आपके गहरे रहस्यों को जानता है",
         "de": "Die Begegnung, in der Jesus offenbart, dass er deine tiefsten Geheimnisse kennt",
-        "ar": "اللقاء الذي يكشف فيه يسوع أنه يعرف أسرارك العميقة"
+        "ar": "اللقاء الذي يكشف فيه يسوع أنه يعرف أسرارك العميقة",
+        "fil": "Ang pakikipagtagpo kung saan inihahayag ni Jesus na alam Niya ang iyong pinakamalalim na mga lihim"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -360,7 +367,8 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 6
+        "ar": 6,
+        "fil": 6
       }
     },
     {
@@ -376,7 +384,8 @@
         "ja": "cana_wedding_ja_001.json",
         "zh": "cana_wedding_zh_001.json",
         "de": "cana_wedding_de_001.json",
-        "ar": "cana_wedding_ar_001.json"
+        "ar": "cana_wedding_ar_001.json",
+        "fil": "cana_wedding_fil_001.json"
       },
       "titles": {
         "es": "Las Bodas de Caná",
@@ -387,7 +396,8 @@
         "ja": "カナの婚礼",
         "zh": "迦拿的婚筵",
         "de": "Die Hochzeit zu Kana",
-        "ar": "عرس قانا"
+        "ar": "عرس قانا",
+        "fil": "Ang Kasalan sa Cana"
       },
       "subtitles": {
         "es": "Cuando Jesús convierte lo ordinario en extraordinario",
@@ -398,7 +408,8 @@
         "ja": "イエスが普通のものを特別なものに変えるとき",
         "zh": "当耶稣将平凡变为非凡",
         "de": "Wenn Jesus das Gewöhnliche in Außergewöhnliches verwandelt",
-        "ar": "حين يحوّل يسوع العادي إلى استثنائي"
+        "ar": "حين يحوّل يسوع العادي إلى استثنائي",
+        "fil": "Nang ginawa ni Hesus ang ordinaryo na pambihira"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -409,7 +420,8 @@
         "ja": 5,
         "zh": 5,
         "de": 6,
-        "ar": 5
+        "ar": 5,
+        "fil": 6
       }
     },
     {
@@ -425,7 +437,8 @@
         "zh": "born_again_zh_001.json",
         "hi": "born_again_hi_001.json",
         "de": "born_again_de_001.json",
-        "ar": "born_again_ar_001.json"
+        "ar": "born_again_ar_001.json",
+        "fil": "born_again_fil_001.json"
       },
       "titles": {
         "es": "Es Necesario Nacer de Nuevo",
@@ -436,7 +449,8 @@
         "zh": "你必须重生",
         "hi": "तुम्हें फिर से जन्म लेना होगा",
         "de": "Du musst von Neuem geboren werden",
-        "ar": "يجب أن تُولَد من جديد"
+        "ar": "يجب أن تُولَد من جديد",
+        "fil": "Dapat Kang Ipanganak na Muli"
       },
       "subtitles": {
         "es": "El misterio del nuevo nacimiento espiritual revelado",
@@ -447,7 +461,8 @@
         "zh": "当以色列的教师发现他的宗教并不足够",
         "hi": "जब इस्राएल का गुरु यह जान लेता है कि उसका धर्म पर्याप्त नहीं है",
         "de": "Als der Meister Israels erkennt, dass seine Religion nicht genug ist",
-        "ar": "عندما يكتشف معلّم إسرائيل أن دينه لا يكفي"
+        "ar": "عندما يكتشف معلّم إسرائيل أن دينه لا يكفي",
+        "fil": "Nang matuklasan ng guro ng Israel na hindi sapat ang kanyang relihiyon"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -458,7 +473,8 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 6
+        "ar": 6,
+        "fil": 6
       }
     },
     {
@@ -474,7 +490,8 @@
         "zh": "temple_cleansing_zh_001.json",
         "hi": "temple_cleansing_hi_001.json",
         "de": "temple_cleansing_de_001.json",
-        "ar": "temple_cleansing_ar_001.json"
+        "ar": "temple_cleansing_ar_001.json",
+        "fil": "temple_cleansing_fil_001.json"
       },
       "titles": {
         "es": "La Purificación del Templo",
@@ -485,7 +502,8 @@
         "zh": "洁净圣殿",
         "hi": "मंदिर की शुद्धि",
         "de": "Die Reinigung des Tempels",
-        "ar": "تطهير الهيكل"
+        "ar": "تطهير الهيكل",
+        "fil": "Ang Paglilinis ng Templo"
       },
       "subtitles": {
         "es": "Cuando Jesús declara que Él es el Templo verdadero",
@@ -496,7 +514,8 @@
         "zh": "耶稣宣告自己是真正的圣殿",
         "hi": "जब यीशु घोषणा करता है कि वह ही सच्चा मंदिर है",
         "de": "Als Jesus erklärt, dass er der wahre Tempel ist",
-        "ar": "حين يُعلن يسوع أنه الهيكل الحقيقي"
+        "ar": "حين يُعلن يسوع أنه الهيكل الحقيقي",
+        "fil": "Nang ipahayag ni Jesus na Siya ang tunay na Templo"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -507,7 +526,8 @@
         "zh": 6,
         "hi": 6,
         "de": 7,
-        "ar": 6
+        "ar": 6,
+        "fil": 7
       }
     },
     {
