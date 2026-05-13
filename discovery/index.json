@@ -543,7 +543,8 @@
         "zh": "woman_at_well_zh_001.json",
         "hi": "woman_at_well_hi_001.json",
         "de": "woman_at_well_de_001.json",
-        "ar": "woman_at_well_ar_001.json"
+        "ar": "woman_at_well_ar_001.json",
+        "fil": "woman_at_well_fil_001.json"
       },
       "titles": {
         "es": "La Mujer del Pozo",
@@ -554,7 +555,8 @@
         "zh": "井边的妇人",
         "hi": "कुएँ पर की स्त्री",
         "de": "Die Frau am Brunnen",
-        "ar": "المرأة عند البئر"
+        "ar": "المرأة عند البئر",
+        "fil": "Ang Babae sa Balon"
       },
       "subtitles": {
         "es": "Cuando Jesús rompe todas las barreras por una conversación que cambiará una ciudad",
@@ -565,7 +567,8 @@
         "zh": "当耶稣打破一切隔阂，带来改变城市的对话",
         "hi": "जब यीशु एक ऐसी बातचीत के लिए हर बाधा तोड़ता है जो एक पूरे नगर को बदल देगी",
         "de": "Als Jesus jede Schranke durchbricht für ein Gespräch, das eine ganze Stadt verwandeln wird",
-        "ar": "عندما يكسر يسوع كل الحواجز لمحادثة ستحوّل مدينة بأكملها"
+        "ar": "عندما يكسر يسوع كل الحواجز لمحادثة ستحوّل مدينة بأكملها",
+        "fil": "Nang sirain ni Jesus ang lahat ng hadlang para sa isang pag-uusap na magbabago sa isang lunsod"
       },
       "estimated_reading_minutes": {
         "es": 5,
@@ -576,7 +579,8 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 6
+        "ar": 6,
+        "fil": 6
       }
     },
     {
@@ -592,7 +596,8 @@
         "zh": "i_am_before_abraham_zh_001.json",
         "hi": "i_am_before_abraham_hi_001.json",
         "de": "i_am_before_abraham_de_001.json",
-        "ar": "i_am_before_abraham_ar_001.json"
+        "ar": "i_am_before_abraham_ar_001.json",
+        "fil": "i_am_before_abraham_fil_001.json"
       },
       "titles": {
         "es": "YO SOY: Antes que Abraham Fuese",
@@ -603,7 +608,8 @@
         "zh": "我是：在亚伯拉罕出生以前",
         "hi": "मैं हूं: इब्राहीम से पहले",
         "de": "ICH BIN: Bevor Abraham war",
-        "ar": "أنا هو: قبل أن يكون إبراهيم"
+        "ar": "أنا هو: قبل أن يكون إبراهيم",
+        "fil": "AKO AY: Bago si Abraham"
       },
       "subtitles": {
         "es": "Cuando Jesús reclama eternidad y la multitud toma piedras",
@@ -614,7 +620,8 @@
         "zh": "当耶稣宣称永恒，而众人拿起石头",
         "hi": "जब यीशु अनन्तता का दावा करता है और भीड़ पत्थर उठाती है",
         "de": "Als Jesus Ewigkeit beansprucht und der Mob nach Steinen greift",
-        "ar": "حين يدّعي يسوع الأزلية والجمهور يلتقط الحجارة"
+        "ar": "حين يدّعي يسوع الأزلية والجمهور يلتقط الحجارة",
+        "fil": "Nang iangkin ni Jesus ang walang-hanggan at kumuha ng mga bato ang karamihan"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -625,7 +632,8 @@
         "zh": 6,
         "hi": 6,
         "de": 7,
-        "ar": 6
+        "ar": 6,
+        "fil": 7
       }
     },
     {
@@ -641,7 +649,8 @@
         "zh": "good_shepherd_zh_001.json",
         "hi": "good_shepherd_hi_001.json",
         "de": "good_shepherd_de_001.json",
-        "ar": "good_shepherd_ar_001.json"
+        "ar": "good_shepherd_ar_001.json",
+        "fil": "good_shepherd_fil_001.json"
       },
       "titles": {
         "es": "El Buen Pastor",
@@ -652,7 +661,8 @@
         "zh": "好牧人",
         "hi": "अच्छा चरवाहा",
         "de": "Der gute Hirte",
-        "ar": "الراعي الصالح"
+        "ar": "الراعي الصالح",
+        "fil": "Ang Mabuting Pastol"
       },
       "subtitles": {
         "es": "Cuando Jesús declara que conoce a sus ovejas por nombre",
@@ -663,7 +673,8 @@
         "zh": "当耶稣宣告祂按名认识祂的羊",
         "hi": "जब यीशु घोषणा करता है कि वह अपनी भेड़ों को नाम से जानता है",
         "de": "Als Jesus erklärt, dass er seine Schafe beim Namen kennt",
-        "ar": "عندما يعلن يسوع أنه يعرف خرافه بالاسم"
+        "ar": "عندما يعلن يسوع أنه يعرف خرافه بالاسم",
+        "fil": "Nang ipahayag ni Jesus na kilala Niya ang bawat tupa sa kanilang pangalan"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -674,7 +685,8 @@
         "zh": 6,
         "hi": 6,
         "de": 7,
-        "ar": 5
+        "ar": 5,
+        "fil": 7
       }
     },
     {
@@ -690,7 +702,8 @@
         "zh": "jesus_troubled_himself_zh_001.json",
         "hi": "jesus_troubled_himself_hi_001.json",
         "de": "jesus_troubled_himself_de_001.json",
-        "ar": "jesus_troubled_himself_ar_001.json"
+        "ar": "jesus_troubled_himself_ar_001.json",
+        "fil": "jesus_troubled_himself_fil_001.json"
       },
       "titles": {
         "es": "Se Turbó a Sí Mismo",
@@ -701,7 +714,8 @@
         "zh": "他使自己心里悲叹",
         "hi": "उसने स्वयं को व्याकुल किया",
         "de": "Er erschütterte sich selbst",
-        "ar": "اضطرب في نفسه"
+        "ar": "اضطرب في نفسه",
+        "fil": "Pinili Niyang Magulumihanan ang Sarili"
       },
       "subtitles": {
         "es": "Cuando Jesús eligió entrar en nuestro dolor",
@@ -712,7 +726,8 @@
         "zh": "当耶稣选择进入我们的痛苦",
         "hi": "जब यीशु ने हमारे दर्द में प्रवेश करना चुना",
         "de": "Als Jesus sich entschied, in unseren Schmerz einzutauchen",
-        "ar": "حين اختار يسوع أن يدخل ألمنا"
+        "ar": "حين اختار يسوع أن يدخل ألمنا",
+        "fil": "Nang piliin ni Jesus na pumasok sa ating sakit"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -723,7 +738,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 7
+        "ar": 7,
+        "fil": 8
       }
     },
     {
@@ -739,7 +755,8 @@
         "zh": "passed_from_death_zh_001.json",
         "hi": "passed_from_death_hi_001.json",
         "de": "passed_from_death_de_001.json",
-        "ar": "passed_from_death_ar_001.json"
+        "ar": "passed_from_death_ar_001.json",
+        "fil": "passed_from_death_fil_001.json"
       },
       "titles": {
         "es": "Pasados de Muerte a Vida",
@@ -750,7 +767,8 @@
         "zh": "从死到生",
         "hi": "मृत्यु से जीवन में पार",
         "de": "Vom Tod ins Leben hindurchgedrungen",
-        "ar": "عبرتَ من الموت إلى الحياة"
+        "ar": "عبرتَ من الموت إلى الحياة",
+        "fil": "Lumipat mula sa Kamatayan patungo sa Buhay"
       },
       "subtitles": {
         "es": "La revelación final: ya no puedes 'des-nacer'",
@@ -761,7 +779,8 @@
         "zh": "最终的启示：你不能'不出生'",
         "hi": "अंतिम प्रकाशन: आप अब 'अजन्मे' नहीं हो सकते",
         "de": "Die endgültige Offenbarung: Du kannst nicht mehr 'ungeboren' werden",
-        "ar": "الحقيقة الختامية: لا يمكن أن تعود غير مولود"
+        "ar": "الحقيقة الختامية: لا يمكن أن تعود غير مولود",
+        "fil": "Ang huling paghahayag: hindi ka na maaaring maging \"hindi ipinanganak\""
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -772,7 +791,8 @@
         "zh": 8,
         "hi": 8,
         "de": 9,
-        "ar": 7
+        "ar": 7,
+        "fil": 9
       }
     },
     {
