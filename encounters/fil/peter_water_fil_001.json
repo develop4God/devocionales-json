@@ -35,7 +35,7 @@
             "mood": "storm",
             "image_url": "peter_intro.png",
             "title": "Alas tres ng umaga. Bagyo. Walang Jesus.",
-            "narrative": "Ilang oras na silang naggaod laban sa malakas na hangin. Pinauna sila ni Jesus — nang mag-isa. Buhay ang dagat sa galit. At natalo sila.",
+            "narrative": "Ilang oras na silang nagsasagwan laban sa malakas na hangin. Pinauna sila ni Jesus — nang mag-isa. Buhay ang dagat sa galit. At natalo sila.",
             "ambient_sound": "storm_waves",
             "haptic": "storm_rumble",
             "revelation_key": "Sa ating buhay, hinahayaan ng Diyos ang mga bagyo na may layunin."
@@ -66,7 +66,7 @@
             "mood": "mysterious",
             "image_url": "jesus_light_water.png",
             "title": "May isang bagay na lumalakad patungo sa kanila",
-            "narrative": "Nakita nila ito. Isang anino. Gumagalaw sa gitna ng bagyo na parang wala ito. Lumalakad sa ibabaw ng tubig. Papalapit sa kanila.\n\nNatakot sila. Akala nila ay multo ito.",
+            "narrative": "Nakita nila ito. Isang anino. Gumagalaw sa gitna ng bagyo na tila hindi ito alintana. Lumalakad sa ibabaw ng tubig. Papalapit sa kanila.\n\nNatakot sila. Akala nila ay multo ito.",
             "ambient_sound": "storm_fading",
             "verse_overlay": {
                 "reference": "Mateo 14:27",
@@ -96,8 +96,8 @@
             "image_url": "waves_night.png",
             "title": "Ang Sandaling Nagbago ang Lahat",
             "subtitle": "Tatlong salitang nagpapaliwanag sa bawat kabiguan ng pananampalataya",
-            "content": "Ibinibigay sa atin ni Mateo ang eksaktong pagkakasunod:\n\n1️⃣ 'Nakita niya ang hangin' — lumipat ang kanyang atensyon\n2️⃣ 'Natakot siya' — sumunod ang takot sa kanyang tingin\n3️⃣ 'Nagsimula siyang lumubog' — sumunod ang katawan sa kanyang puso\n\n🔑 ANG SUSING SALITA: 'Nagsimula'\n\nHindi siya lumubog agad. May sandali sa pagitan ng pag-aalinlangan at pag-lubog. Isang bukas. Isang sigaw.\n\n'Panginoon, ILIGTAS MO AKO.'\n\nTatlong salita. Ang pinakamaikling panalangin sa kasulatan. At ang pinaka-tapat.\n\nWalang teolohiya. Walang paliwanag. Walang pakikipagtawaran. Ang lantarang katotohanan lamang ng isang taong nasubukan, nabigo, at alam kung sino ang tatawagan.\n\n⚠️ ANG HINDI SINABI NI JESUS:\n\nHindi niya sinabi: 'Mas mabuti pang nanatili ka sa bangka.'\nHindi niya sinabi: 'Sinabi ko na sa iyo.'\nHindi niya hayaan siyang malunod upang turuan ng leksyon.\n\nAng salitang Griyego na eutheos — agad — lumitaw sa sandaling sumigaw si Pedro. Agad. Walang pagkaantala. Ito ang bilis ng biyaya.\n\nAgad. Inabot siya.",
-            "revelation_key": "Ang pinakamaikling panalangin ay minsang pinaka-makapangyarihan. 'Panginoon, iligtas mo ako' ay sapat na.",
+            "content": "Ibinibigay sa atin ni Mateo ang eksaktong pagkakasunod:\n\n1️⃣ 'Nakita niya ang hangin' — lumipat ang kanyang atensyon\n2️⃣ 'Natakot siya' — sumunod ang takot sa kanyang tingin\n3️⃣ 'Nagsimula siyang lumubog' — sumunod ang katawan sa kanyang puso\n\n🔑 ANG SUSING SALITA: 'Nagsimula'\n\nHindi siya lumubog agad. May sandali sa pagitan ng pag-aalinlangan at pag-lubog. Isang pagkakataon. Isang sigaw.\n\n'Panginoon, ILIGTAS MO AKO.'\n\nTatlong salita. Ang pinakamaikling panalangin sa kasulatan. At ang pinaka-tapat.\n\nWalang teolohiya. Walang paliwanag. Walang pakikipagtawaran. Ang lantarang katotohanan lamang ng isang taong nasubukan, nabigo, at alam kung sino ang tatawagan.\n\n⚠️ ANG HINDI SINABI NI JESUS:\n\nHindi niya sinabi: 'Mas mabuti pang nanatili ka sa bangka.'\nHindi niya sinabi: 'Sinabi ko na sa iyo.'\nHindi niya hinayaan siyang malunod upang turuan ng leksyon.\n\nAng salitang Griyego na eutheos — agad — lumitaw sa sandaling sumigaw si Pedro. Agad. Walang pagkaantala. Ito ang bilis ng biyaya.\n\nAgad. Inabot siya.",
+            "revelation_key": "Ang pinakamaikling panalangin ay minsan ang pinaka-makapangyarihan. 'Panginoon, iligtas mo ako' ay sapat na.",
             "scripture_connections": [
                 {
                     "reference": "Isaias 41:13",
@@ -150,7 +150,7 @@
             "mood": "grace",
             "image_url": "jesus_light_water.png",
             "title": "Ang Iyong Pagtatagpo",
-            "subtitle": "Ang kwento ni Pedro ay hindi lamang kasaysayan. Ito ay isang salamin.",
+            "subtitle": "Ang kuwento ni Pedro ay hindi lamang kasaysayan. Ito ay isang salamin.",
             "discovery_questions": [
                 {
                     "category": "Katapatan",
@@ -158,16 +158,16 @@
                 },
                 {
                     "category": "Tapang",
-                    "question": "May bangkang kailangan mong labasan? May isang bagay bang tinatawag sa iyo ng Diyos na tila imposible — at hindi ka pa humiling?"
+                    "question": "May bangka ka bang kailangang iwan? May isang bagay bang tinatawag sa iyo ng Diyos na tila imposible — at hindi ka pa humiling?"
                 },
                 {
                     "category": "Biyaya",
-                    "question": "Nagsigaw ka na ba ng 'Panginoon, iligtas mo ako' at naramdaman mong inaabot ka? Ano ang nangyari? Kung hindi pa — ano ang pumipigil sa iyo mula sa pagsigaw ngayon?"
+                    "question": "Sumigaw ka na ba ng 'Panginoon, iligtas mo ako' at naramdaman mong inaabot ka? Ano ang nangyari? Kung hindi pa — ano ang pumipigil sa iyo mula sa pagsigaw ngayon?"
                 }
             ],
             "prayer": {
                 "title": "Panalangin ng Isang Lumalubog",
-                "content": "Panginoon, inaamin ko na tinitingnan ko ang mga alon.\n\nTotoo ang bagyo. Salungat ang hangin. At takot ako.\n\nTulad ni Pedro ay sumisigaw ako — Panginoon, iligtas mo ako.\n\nHindi dahil sapat ang aking pananampalataya. Hindi dahil karapat-dapat akong iligtas. Kundi dahil Ikaw ang uri ng Diyos na agad na umaabot.\n\nHulihin mo ako. Aabot ako sa Iyo.\n\nAt kapag ginawa Mo — panatilihin ang aking mga mata sa Iyo at hindi sa tubig sa ilalim ng aking mga paa.\n\nSa pangalan ni Jesus, Amen."
+                "content": "Panginoon, inaamin ko na tinitingnan ko ang mga alon.\n\nTotoo ang bagyo. Salungat ang hangin. At takot ako.\n\nTulad ni Pedro ay sumisigaw ako — Panginoon, iligtas mo ako.\n\nHindi dahil sapat ang aking pananampalataya. Hindi dahil karapat-dapat akong iligtas. Kundi dahil Ikaw ang uri ng Diyos na agad na umaabot.\n\nHulihin mo ako. Lalapit ako sa Iyo.\n\nAt kapag ginawa Mo — panatilihin ang aking mga mata sa Iyo at hindi sa tubig sa ilalim ng aking mga paa.\n\nSa pangalan ni Jesus, Amen."
             }
         },
         {
