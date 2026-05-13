@@ -13,7 +13,8 @@
         "zh": "mammon_anxiety_freedom_zh_001.json",
         "hi": "mammon_anxiety_freedom_hi_001.json",
         "de": "mammon_anxiety_freedom_de_001.json",
-        "ar": "mammon_anxiety_freedom_ar_001.json"
+        "ar": "mammon_anxiety_freedom_ar_001.json",
+        "fil": "mammon_anxiety_freedom_fil_001.json"
       },
       "titles": {
         "es": "Desatado de las Riquezas: El Camino de la Ansiedad a la Paz",
@@ -24,7 +25,8 @@
         "zh": "挣脱财富的枷锁：从焦虑到平静的道路",
         "hi": "धन-दौलत की जंजीरों से आज़ाद: चिंता से शांति का मार्ग",
         "de": "Befreit vom Mammon: Der Weg von der Angst zum Frieden",
-        "ar": "التحرر من المامون: الطريق من القلق إلى السلام"
+        "ar": "التحرر من المامون: الطريق من القلق إلى السلام",
+        "fil": "Kalayaan Mula sa Mammon: Ang Daan Mula sa Pagkabalisa Tungo sa Kapayapaan"
       },
       "subtitles": {
         "es": "Lo que Jesús dijo hace 2000 años es exactamente lo que necesitas escuchar hoy",
@@ -35,7 +37,8 @@
         "zh": "耶稣两千年前所说的话，正是你今天需要听到的",
         "hi": "जो यीशु ने 2,000 वर्ष पहले कहा था, वही आज आपको सुनने की आवश्यकता है",
         "de": "Was Jesus vor 2.000 Jahren gesagt hat, ist genau das, was du heute hören musst",
-        "ar": "ما قاله يسوع منذ ألفَي عام هو بالضبط ما تحتاج سماعه اليوم"
+        "ar": "ما قاله يسوع منذ ألفَي عام هو بالضبط ما تحتاج سماعه اليوم",
+        "fil": "Ang sinabi ni Hesus 2,000 taon na ang nakakaraan ay eksakto ang kailangan mong marinig ngayon"
       },
       "estimated_reading_minutes": {
         "es": 12,
@@ -46,7 +49,8 @@
         "zh": 15,
         "hi": 14,
         "de": 11,
-        "ar": 8
+        "ar": 8,
+        "fil": 12
       }
     },
     {
@@ -62,7 +66,8 @@
         "zh": "morning_star_zh_001.json",
         "hi": "morning_star_hi_001.json",
         "de": "morning_star_de_001.json",
-        "ar": "morning_star_ar_001.json"
+        "ar": "morning_star_ar_001.json",
+        "fil": "morning_star_fil_001.json"
       },
       "titles": {
         "es": "Estrella de la Mañana",
@@ -73,7 +78,8 @@
         "zh": "晨星",
         "hi": "प्रकाश का संदेशवाहक",
         "de": "Der Herold des Lichts",
-        "ar": "بشير النور"
+        "ar": "بشير النور",
+        "fil": "Ang Tagapagbalita ng Liwanag"
       },
       "subtitles": {
         "es": "El testimonio más poderoso sobre la identidad de Jesús",
@@ -84,7 +90,8 @@
         "zh": "创造、预言与你心灵的永恒连结",
         "hi": "सृष्टि, भविष्यवाणी और आपके हृदय के बीच का शाश्वत संबंध",
         "de": "Die ewige Verbindung zwischen Schöpfung, Prophezeiung und deinem Herzen",
-        "ar": "الرابط الأبدي بين الخليقة والنبوّة وقلبك"
+        "ar": "الرابط الأبدي بين الخليقة والنبوّة وقلبك",
+        "fil": "Ang walang hanggang koneksyon sa pagitan ng paglikha, propesiya, at ang iyong puso"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -95,7 +102,8 @@
         "zh": 6,
         "hi": 6,
         "de": 7,
-        "ar": 5
+        "ar": 5,
+        "fil": 7
       }
     },
     {
@@ -164,7 +172,8 @@
         "zh": "balaam_humble_vision_zh_001.json",
         "hi": "balaam_humble_vision_hi_001.json",
         "de": "balaam_humble_vision_de_001.json",
-        "ar": "balaam_humble_vision_ar_001.json"
+        "ar": "balaam_humble_vision_ar_001.json",
+        "fil": "balaam_humble_vision_fil_001.json"
       },
       "titles": {
         "es": "Cuando la Burra Vio al Ángel y el Profeta Estaba Ciego",
@@ -175,7 +184,8 @@
         "zh": "当驴看见天使而先知却瞎眼时",
         "hi": "जब गधी ने स्वर्गदूत को देखा और भविष्यवक्ता अंधा था",
         "de": "Als die Eselin den Engel sah und der Prophet blind war",
-        "ar": "حين رأت الأتان الملاك وكان النبي أعمى"
+        "ar": "حين رأت الأتان الملاك وكان النبي أعمى",
+        "fil": "Nang Nakita ng Asno ang Anghel at Ang Propeta ay Bulag"
       },
       "subtitles": {
         "es": "La advertencia más solemne sobre revelación sin transformación",
@@ -186,7 +196,8 @@
         "zh": "关于没有改变的启示最严肃的警告",
         "hi": "प्रकाशन के बिना परिवर्तन के बारे में सबसे गंभीर चेतावनी",
         "de": "Die eindringlichste Warnung über Offenbarung ohne Verwandlung",
-        "ar": "أخطر تحذير عن الإعلان بلا تحوّل"
+        "ar": "أخطر تحذير عن الإعلان بلا تحوّل",
+        "fil": "Ang pinaka-solemneng babala tungkol sa pahayag na walang pagbabago"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -197,7 +208,8 @@
         "zh": 8,
         "hi": 8,
         "de": 9,
-        "ar": 9
+        "ar": 9,
+        "fil": 9
       }
     },
     {
@@ -213,7 +225,8 @@
         "zh": "logos_creation_zh_001.json",
         "hi": "logos_creation_hi_001.json",
         "de": "logos_creation_de_001.json",
-        "ar": "logos_creation_ar_001.json"
+        "ar": "logos_creation_ar_001.json",
+        "fil": "logos_creation_fil_001.json"
       },
       "titles": {
         "es": "En el Principio era el Verbo",
@@ -224,7 +237,8 @@
         "zh": "太初有道",
         "hi": "आदि में वचन था",
         "de": "Im Anfang war das Wort",
-        "ar": "فِي الْبَدْءِ كَانَ الْكَلِمَةُ"
+        "ar": "فِي الْبَدْءِ كَانَ الْكَلِمَةُ",
+        "fil": "Sa Simula ay ang Verbo"
       },
       "subtitles": {
         "es": "Cuando Juan declara que Jesús es el Logos eterno que creó todas las cosas",
@@ -235,7 +249,8 @@
         "zh": "当约翰宣告耶稣是创造万有的永恒之道",
         "hi": "जब यूहन्ना घोषणा करता है कि यीशु शाश्वत लोगॉस है जिसने सब कुछ सृजा",
         "de": "Als Johannes erklärt, dass Jesus der ewige Logos ist, der alles erschaffen hat",
-        "ar": "عندما يُعلن يوحنا أن يسوع هو اللوغوس الأزلي الذي خلق كل شيء"
+        "ar": "عندما يُعلن يوحنا أن يسوع هو اللوغوس الأزلي الذي خلق كل شيء",
+        "fil": "Nang ipahayag ni Juan na si Jesus ay ang walang hanggang Logos na lumikha ng lahat ng bagay"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -246,7 +261,8 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 5
+        "ar": 5,
+        "fil": 6
       }
     },
     {
