@@ -1073,7 +1073,8 @@
         "zh": "cup_of_wrath_zh_001.json",
         "hi": "cup_of_wrath_hi_001.json",
         "de": "cup_of_wrath_de_001.json",
-        "ar": "cup_of_wrath_ar_001.json"
+        "ar": "cup_of_wrath_ar_001.json",
+        "fil": "cup_of_wrath_fil_001.json"
       },
       "titles": {
         "es": "La Copa de la Ira",
@@ -1084,7 +1085,8 @@
         "zh": "忿怒的杯",
         "hi": "क्रोध का कटोरा",
         "de": "Der Kelch des Zorns",
-        "ar": "كأس الغضب"
+        "ar": "كأس الغضب",
+        "fil": "Ang Kopa ng Poot"
       },
       "subtitles": {
         "es": "Cuando el Inocente bebe el juicio que nos correspondía",
@@ -1095,7 +1097,8 @@
         "zh": "当无辜者喝下属于我们的审判时",
         "hi": "जब निर्दोष वह दंड पीता है जो हमारा था",
         "de": "Als der Unschuldige das Gericht trinkt, das uns bestimmt war",
-        "ar": "حين يشرب البريء الدينونة التي كانت لنا"
+        "ar": "حين يشرب البريء الدينونة التي كانت لنا",
+        "fil": "Nang ang Walang Sala ay uminom ng hatol na para sa atin"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -1106,7 +1109,8 @@
         "zh": 8,
         "hi": 8,
         "de": 9,
-        "ar": 6
+        "ar": 6,
+        "fil": 9
       }
     },
     {
@@ -1122,7 +1126,8 @@
         "zh": "veil_torn_zh_001.json",
         "hi": "veil_torn_hi_001.json",
         "de": "veil_torn_de_001.json",
-        "ar": "veil_torn_ar_001.json"
+        "ar": "veil_torn_ar_001.json",
+        "fil": "veil_torn_fil_001.json"
       },
       "titles": {
         "es": "El Velo Rasgado",
@@ -1133,7 +1138,8 @@
         "zh": "裂开的幔子",
         "hi": "फटा हुआ पर्दा",
         "de": "Der zerrissene Vorhang",
-        "ar": "الحجاب الممزّق"
+        "ar": "الحجاب الممزّق",
+        "fil": "Ang Napunit na Tabing"
       },
       "subtitles": {
         "es": "Cuando Dios abre el camino al Lugar Santísimo",
@@ -1144,7 +1150,8 @@
         "zh": "当神开辟通往至圣所的道路时",
         "hi": "जब परमेश्वर परम पवित्र स्थान का मार्ग खोलता है",
         "de": "Als Gott den Weg zum Allerheiligsten öffnet",
-        "ar": "حين يفتح الله الطريق إلى قدس الأقداس"
+        "ar": "حين يفتح الله الطريق إلى قدس الأقداس",
+        "fil": "Nang buksan ng Diyos ang daan sa Kabanal-banalang Dako"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1155,7 +1162,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 6
+        "ar": 6,
+        "fil": 8
       }
     },
     {
@@ -1171,7 +1179,8 @@
         "zh": "saints_resurrected_zh_001.json",
         "hi": "saints_resurrected_hi_001.json",
         "de": "saints_resurrected_de_001.json",
-        "ar": "saints_resurrected_ar_001.json"
+        "ar": "saints_resurrected_ar_001.json",
+        "fil": "saints_resurrected_fil_001.json"
       },
       "titles": {
         "es": "Los Santos Resucitados",
@@ -1182,7 +1191,8 @@
         "zh": "复活的圣徒",
         "hi": "पुनरुत्थित संत",
         "de": "Die auferstandenen Heiligen",
-        "ar": "القدّيسون الذين قاموا"
+        "ar": "القدّيسون الذين قاموا",
+        "fil": "Ang Muling Nabuhay na mga Banal"
       },
       "subtitles": {
         "es": "Cuando la muerte de Cristo liberó a los cautivos del Hades",
@@ -1193,7 +1203,8 @@
         "zh": "当基督的死释放了阴间的囚徒时",
         "hi": "जब मसीह की मृत्यु ने अधोलोक के बंदियों को मुक्त किया",
         "de": "Als der Tod Christi die Gefangenen aus dem Hades befreite",
-        "ar": "حين حرّر موت المسيح الأسرى من الهاوية"
+        "ar": "حين حرّر موت المسيح الأسرى من الهاوية",
+        "fil": "Nang ang kamatayan ni Cristo ay nagpalaya sa mga bihag mula sa Hades"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -1204,7 +1215,8 @@
         "zh": 8,
         "hi": 8,
         "de": 9,
-        "ar": 7
+        "ar": 7,
+        "fil": 9
       }
     },
     {
@@ -1220,7 +1232,8 @@
         "zh": "breath_new_adam_zh_001.json",
         "hi": "breath_new_adam_hi_001.json",
         "de": "breath_new_adam_de_001.json",
-        "ar": "breath_new_adam_ar_001.json"
+        "ar": "breath_new_adam_ar_001.json",
+        "fil": "breath_new_adam_fil_001.json"
       },
       "titles": {
         "es": "El Soplo del Nuevo Adán",
@@ -1231,7 +1244,8 @@
         "zh": "新亚当的气息",
         "hi": "नए आदम की श्वास",
         "de": "Der Hauch des neuen Adam",
-        "ar": "نَفَسُ آدم الأخير"
+        "ar": "نَفَسُ آدم الأخير",
+        "fil": "Ang Hininga ng Bagong Adan"
       },
       "subtitles": {
         "es": "Cuando Jesús reconecta al hombre con Dios",
@@ -1242,7 +1256,8 @@
         "zh": "当耶稣将人与神重新连接",
         "hi": "जब यीशु ने मनुष्य को परमेश्वर से पुनः जोड़ा",
         "de": "Als Jesus den Menschen mit Gott wiederverbindet",
-        "ar": "حين يعيد يسوع وصل الإنسان بالله"
+        "ar": "حين يعيد يسوع وصل الإنسان بالله",
+        "fil": "Nang muling ikonekta ni Jesus ang tao sa Diyos"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1253,7 +1268,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 8
+        "ar": 8,
+        "fil": 8
       }
     },
     {
@@ -1269,7 +1285,8 @@
         "zh": "road_to_emmaus_zh_001.json",
         "hi": "road_to_emmaus_hi_001.json",
         "de": "road_to_emmaus_de_001.json",
-        "ar": "road_to_emmaus_ar_001.json"
+        "ar": "road_to_emmaus_ar_001.json",
+        "fil": "road_to_emmaus_fil_001.json"
       },
       "titles": {
         "es": "El Camino a Emaús",
@@ -1280,7 +1297,8 @@
         "zh": "去以马忤斯的路上",
         "hi": "एम्माऊस का मार्ग",
         "de": "Der Weg nach Emmaus",
-        "ar": "طريق عمواس"
+        "ar": "طريق عمواس",
+        "fil": "Ang Daan Patungo sa Emaus"
       },
       "subtitles": {
         "es": "Cuando el Cristo resucitado camina contigo sin que lo reconozcas, hasta que parte el pan",
@@ -1291,7 +1309,8 @@
         "zh": "当复活的基督与你同行却未被认出，直到祂擘饼",
         "hi": "जब पुनरुत्थित मसीह आपके साथ अपरिचित चलता है, जब तक वह रोटी नहीं तोड़ता",
         "de": "Als der auferstandene Christus unerkannt mit dir geht – bis er das Brot bricht",
-        "ar": "حين يمشي المسيح القائم معك دون أن تتعرف عليه حتى يكسر الخبز"
+        "ar": "حين يمشي المسيح القائم معك دون أن تتعرف عليه حتى يكسر الخبز",
+        "fil": "Nang ang muling nabuhay na Cristo ay lumakad kasama mo nang hindi nakikilala, hanggang sa pagpilas Niya ng tinapay"
       },
       "estimated_reading_minutes": {
         "es": 10,
@@ -1302,7 +1321,8 @@
         "zh": 10,
         "hi": 10,
         "de": 12,
-        "ar": 7
+        "ar": 7,
+        "fil": 11
       }
     },
     {
