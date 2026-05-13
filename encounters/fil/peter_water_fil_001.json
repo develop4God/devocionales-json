@@ -1,187 +1,187 @@
 {
-  "id": "peter_water_001",
-  "type": "encounter",
-  "schema_version": "encounters_v1",
-  "language": "fil",
-  "bible_version": "Magandang Balita Biblia",
-  "version": "1.0",
-  "estimated_reading_minutes": 9,
-  "meta": {
-    "character": "Pedro",
-    "testament": "new",
-    "scripture_reference": "Mateo 14:22-33",
-    "mood_primary": "storm",
-    "accent_color": "#1e3a5f",
-    "emoji": "🌊",
-    "tags": [
-      "pananampalataya",
-      "takot",
-      "kababalaghan",
-      "bagyo",
-      "biyaya",
-      "pedro",
-      "jesus"
-    ]
-  },
-  "key_verse": {
-    "reference": "Mateo 14:31",
-    "text": "Agad siyang inabot ni Jesus. \"Bakit ka nag-alinlangan? Napakaliit ng iyong pananampalataya!\" sabi niya kay Pedro.",
-    "bible_version": "Magandang Balita Biblia"
-  },
-  "cards": [
-    {
-      "order": 1,
-      "type": "cinematic_scene",
-      "mood": "storm",
-      "image_url": "peter_intro.png",
-      "title": "Alas tres ng umaga. Bagyo. Walang Jesus.",
-      "narrative": "Ilang oras na silang naggaod laban sa malakas na hangin. Pinaaalis sila ni Jesus nang mag-isa. Buhay ang dagat sa galit. At natalo sila.",
-      "ambient_sound": "storm_waves",
-      "haptic": "storm_rumble",
-      "revelation_key": "Sa ating buhay, hinahayaan ng Diyos ang mga bagyo na may layunin."
+    "id": "peter_water_001",
+    "type": "encounter",
+    "schema_version": "encounters_v1",
+    "language": "fil",
+    "bible_version": "Magandang Balita Biblia",
+    "version": "1.0",
+    "estimated_reading_minutes": 9,
+    "meta": {
+        "character": "Pedro",
+        "testament": "new",
+        "scripture_reference": "Mateo 14:22-33",
+        "mood_primary": "storm",
+        "accent_color": "#1e3a5f",
+        "emoji": "🌊",
+        "tags": [
+            "pananampalataya",
+            "takot",
+            "kababalaghan",
+            "bagyo",
+            "biyaya",
+            "pedro",
+            "jesus"
+        ]
     },
-    {
-      "order": 2,
-      "type": "scripture_moment",
-      "mood": "tense",
-      "image_url": "waves_night.png",
-      "verse_reference": "Mateo 14:24",
-      "verse_text": "Samantala, ang bangka ay nasa laot na ngunit sinasalpok ito ng mga alon dahil pasalungat ito sa hangin.",
-      "reflection": "Pansinin ang hindi sinasabi ng talatang ito.\n\nHindi sinabi na inabandona sila ng Diyos. Hindi sinabi na pinarurusahan sila. Sinabi nito na pasalungat ang hangin.\n\nAng ilang bagyo ay hindi parusa. Ang ilang bagyo ay hindi pagkakamali. Ang ilang bagyo ay ang landas na pinili ng Diyos para sa iyo — dahil sa kung ano ang naghihintay sa kabilang dako.",
-      "revelation_key": "Ang salungat na hangin ay hindi nangangahulugang maling direksyon."
-    },
-    {
-      "order": 3,
-      "type": "character_moment",
-      "mood": "intense",
-      "image_url": "peter_storm_boat.png",
-      "title": "Ang Pinaka-Mapanganib na Panalangin sa Biblia",
-      "subtitle": "Mateo 14:28",
-      "content": "Kahanga-hanga ang tugon ni Pedro. Hindi 'Panginoon iligtas mo kaming lahat' — ang buong bangka na nagdarasal nang sabay.\n\nSi Pedro lamang. Isang tao. Isang mailap na kahilingan:\n\n'Panginoon, kung kayo nga ito — utusan ninyo akong PUMUNTA sa inyo sa ibabaw ng tubig.'\n\nIsip-isipin kung ano talaga ang hinihingi niya. Hindi na iligtas. Hindi para huminto ang bagyo. Lumabas ng bangka at lumakad patungo sa bagyo.\n\n⚡ ANG LABING-ISANG IBANG ALAGAD:\n\nWala ni isa sa kanila ang gumawa ng ganitong kahilingan. Nanatili sila sa bangka. Ligtas. Tuyo. Makatuwiran.\n\nHindi rin sila nakalakad sa tubig.\n\nAng pananampalataya ni Pedro ay mapanganib. Pabigla-bigla. Marahil nakahiya sa iba.\n\nAt iyon ang nag-iisang pananampalatayang naglabas sa kanya sa imposible.",
-      "revelation_key": "Hindi hiniling ni Pedro na pumunta si Jesus sa kanya. Humingi siya ng pahintulot na pumunta kay Jesus. Nagbabago iyon ng lahat."
-    },
-    {
-      "order": 4,
-      "type": "cinematic_scene",
-      "mood": "mysterious",
-      "image_url": "jesus_light_water.png",
-      "title": "May isang bagay na lumalakad patungo sa kanila",
-      "narrative": "Nakita nila ito. Isang anino. Gumagalaw sa gitna ng bagyo na parang wala ito. Lumalakad sa ibabaw ng tubig. Papalapit sa kanila.\n\nNatakot sila. Akala nila ay multo ito.",
-      "ambient_sound": "storm_fading",
-      "verse_overlay": {
-        "reference": "Mateo 14:27",
-        "text": "Ngunit nagsalita agad si Jesus at sinabi sa kanila, \"Huwag kayong matakot, ako ito!\""
-      },
-      "revelation_key": "Pinupuntahan tayo ni Jesus sa gitna ng ating pinakamasamang bagyo. Hindi pagkatapos."
-    },
-    {
-      "order": 5,
-      "type": "cinematic_scene",
-      "mood": "awe",
-      "image_url": "peter_walking_water.png",
-      "title": "At siya ay lumakad sa ibabaw ng tubig",
-      "narrative": "Isang salita mula kay Jesus. 'Halika.'\n\nAt lumabas si Pedro sa bangka. Sa gitna ng bagyo. Sa ibabaw ng tubig.\n\nSa isang imposible, maningning, nakakatakot na sandali — siya ay lumakad.",
-      "ambient_sound": "wind_gentle",
-      "haptic": "gentle_pulse",
-      "verse_overlay": {
-        "reference": "Mateo 14:29",
-        "text": "Sumagot siya, \"Halika.\" Mula sa bangka ay lumakad si Pedro sa ibabaw ng tubig papunta kay Jesus."
-      },
-      "revelation_key": "Si Pedro ang nag-iisang tao sa kasaysayan maliban kay Jesus na nakalakad sa tubig. Dahil siya lamang ang humiling."
-    },
-    {
-      "order": 6,
-      "type": "theological_depth",
-      "mood": "storm",
-      "image_url": "waves_night.png",
-      "title": "Ang Sandaling Nagbago ang Lahat",
-      "subtitle": "Tatlong salitang nagpapaliwanag sa bawat kabiguan ng pananampalataya",
-      "content": "Ibinibigay sa atin ni Mateo ang eksaktong pagkakasunod:\n\n1️⃣ 'Nakita niya ang hangin' — lumipat ang kanyang atensyon\n2️⃣ 'Natakot siya' — sumunod ang takot sa kanyang tingin\n3️⃣ 'Nagsimula siyang lumubog' — sumunod ang katawan sa kanyang puso\n\n🔑 ANG SUSING SALITA: 'Nagsimula'\n\nHindi siya lumubog agad. May sandali sa pagitan ng pag-aalinlangan at pag-lubog. Isang bukas. Isang sigaw.\n\n'Panginoon, ILIGTAS MO AKO.'\n\nTatlong salita. Ang pinaikling panalangin sa kasulatan. At ang pinaka-tapat.\n\nWalang teolohiya. Walang paliwanag. Walang pag-aayos. Ang lantarang katotohanan lamang ng isang taong nasubukan, nabigo, at alam kung sino ang tatawagan.\n\n⚠️ ANG HINDI SINABI NI JESUS:\n\nHindi niya sinabi: 'Mas mabuti pang nanatili ka sa bangka.'\nHindi niya sinabi: 'Sinabi ko na sa iyo.'\nHindi niya hayaan siyang malunod upang turuan ng leksyon.\n\nAng salitang Griyego na eutheos — agad — lumitaw sa sandaling sumigaw si Pedro. Agad. Walang pagkaantala. Ito ang bilis ng biyaya.\n\nAgad. Inabot siya.",
-      "revelation_key": "Ang pinaikling panalangin ay minsang pinaka-makapangyarihan. 'Panginoon, iligtas mo ako' ay sapat na.",
-      "scripture_connections": [
-        {
-          "reference": "Isaias 41:13",
-          "text": "Ako si Yahweh na inyong Diyos, ang magpapalakas sa inyo. Ako ang nagsasabi, 'Huwag kayong matakot at tutulungan ko kayo.'"
-        },
-        {
-          "reference": "Mga Awit 18:16",
-          "text": "Mula sa kalangitan, itong Panginoon, sa malalim na tubig, ako'y iniahon."
-        }
-      ]
-    },
-    {
-      "order": 7,
-      "type": "cinematic_scene",
-      "mood": "grace",
-      "image_url": "peter_hand_saved.png",
-      "title": "Agad",
-      "narrative": "Ang salitang iyon — agad — ay lahat.\n\nWalang pagkaantala. Walang sermon muna. Walang 'pag-iisipan ko kung karapat-dapat ka ba.'\n\nAgad iniabot ni Jesus ang kanyang kamay at hinawakan siya.\n\nAng biyaya ay mas mabilis pa sa kabiguan.",
-      "ambient_sound": "storm_stopping",
-      "haptic": "rescue_pulse",
-      "verse_overlay": {
+    "key_verse": {
         "reference": "Mateo 14:31",
-        "text": "Agad siyang inabot ni Jesus. \"Bakit ka nag-alinlangan? Napakaliit ng iyong pananampalataya!\" sabi niya kay Pedro."
-      },
-      "revelation_key": "Inaabot tayo ni Jesus bago niya tayo itama. Biyaya bago pagsaway. Palagi."
-    },
-    {
-      "order": 8,
-      "type": "character_moment",
-      "mood": "peace",
-      "image_url": "waves_night.png",
-      "title": "O Ikaw na Maliit ang Pananampalataya",
-      "subtitle": "Ang pagsaway na hindi talaga pagsaway",
-      "content": "Isang tanong ang itinanong ni Jesus kay Pedro:\n\n'Bakit ka nag-alinlangan? Napakaliit ng iyong pananampalataya!'\n\nBasahin ito nang mabuti. Tinutukoy ito ni Jesus bilang MALIIT na pananampalataya — hindi WALA.\n\nMas malaki ang pananampalataya ni Pedro kaysa sa labing-isang nanatili sa bangka. Lumabas siya. Lumakad siya. Sumigaw siya sa tamang tao nang siya ay lumubog.\n\nIyon ay hindi kawalan ng pananampalataya. Iyon ay pananampalataya na nasa proseso.\n\n🚣 ANG TUGON NG BANGKA:\n\nNang pumasok muli sina Jesus at Pedro sa bangka, nangyari ang isang bagay na hindi pa nangyayari dati:\n\n'Ang mga nasa bangka ay sumamba sa kanya na sinasabi: Tunay na Ikaw ang Anak ng Diyos.'\n\nAng labing-isa na nanatiling ligtas — na hindi nag-alinlangan dahil hindi man lamang nagtangka — ay nakakita ng isang bagay sa pamamagitan ng kabiguan at pagliligtas kay Pedro na nagdala sa kanila sa pagsamba.\n\nGinamit ng Diyos ang paglubog ni Pedro upang maipakilala si Jesus sa lahat ng nasa bangka.",
-      "revelation_key": "Minsan hinahayaan tayong lumubog ng Diyos upang makita ng iba kung paano niya tayo binubunot."
-    },
-    {
-      "order": 9,
-      "type": "interactive_moment",
-      "icon": "🌊",
-      "image_url": "waves_night.png",
-      "title": "Pangalanan Ang Iyong Alon",
-      "subtitle": "Ano ang bagyo na nagpapalayo ng iyong mga mata mula kay Jesus?",
-      "reflection_prompt": "Maglaan ng sandali upang pangalanan ang hangin at alon sa iyong buhay ngayon. Ano ang magiging hitsura ng paglabas mo sa bangka patungo kay Jesus sa sitwasyong iyon?"
-    },
-    {
-      "order": 10,
-      "type": "discovery_activation",
-      "icon": "🙏",
-      "mood": "grace",
-      "image_url": "jesus_light_water.png",
-      "title": "Ang Iyong Pagtatagpo",
-      "subtitle": "Ang kwento ni Pedro ay hindi lamang kasaysayan. Ito ay isang salamin.",
-      "discovery_questions": [
-        {
-          "category": "Katapatan",
-          "question": "Anong bagyo sa iyong buhay ngayon ang tinitingnan mo sa halip na si Jesus? Ano ang iyong mga alon?"
-        },
-        {
-          "category": "Tapang",
-          "question": "May bangkang kailangan mong labasan? May isang bagay bang tinatawag sa iyo ng Diyos na tila imposible — at hindi ka pa humiling?"
-        },
-        {
-          "category": "Biyaya",
-          "question": "Nagsigaw ka na ba ng 'Panginoon, iligtas mo ako' at naramdaman mong inaabot ka? Ano ang nangyari? Kung hindi pa — ano ang pumipigil sa iyo mula sa pagsigaw ngayon?"
-        }
-      ],
-      "prayer": {
-        "title": "Panalangin ng Isang Lumalubok",
-        "content": "Panginoon, inaamin ko na tinitingnan ko ang mga alon.\n\nTotoo ang bagyo. Salungat ang hangin. At takot ako.\n\nTulad ni Pedro ay sumisigaw ako — Panginoon, iligtas mo ako.\n\nHindi dahil sapat ang aking pananampalataya. Hindi dahil karapat-dapat akong iligtas. Kundi dahil Ikaw ang uri ng Diyos na agad na umaabot.\n\nHulihin mo ako. Aabot ako sa Iyo.\n\nAt kapag ginawa Mo — panatilihin ang aking mga mata sa Iyo at hindi sa tubig sa ilalim ng aking mga paa.\n\nSa pangalan ni Jesus, Amen."
-      }
-    },
-    {
-      "order": 11,
-      "type": "completion",
-      "mood": "awe",
-      "image_url": "peter_thumb.png",
-      "completion_verse": {
-        "reference": "Mateo 14:33",
-        "text": "at sinamba siya ng mga nasa bangka. \"Tunay nga pong kayo ang Anak ng Diyos!\" sabi nila.",
+        "text": "Agad siyang inabot ni Jesus. \"Bakit ka nag-alinlangan? Napakaliit ng iyong pananampalataya!\" sabi niya kay Pedro.",
         "bible_version": "Magandang Balita Biblia"
-      },
-      "reflection_prompt": "Anong katotohanang mula sa pagtatagpo ni Pedro ang nais mong dalhin sa iyo ngayon?",
-      "celebration_type": "gentle_light"
-    }
-  ]
+    },
+    "cards": [
+        {
+            "order": 1,
+            "type": "cinematic_scene",
+            "mood": "storm",
+            "image_url": "peter_intro.png",
+            "title": "Alas tres ng umaga. Bagyo. Walang Jesus.",
+            "narrative": "Ilang oras na silang naggaod laban sa malakas na hangin. Pinauna sila ni Jesus — nang mag-isa. Buhay ang dagat sa galit. At natalo sila.",
+            "ambient_sound": "storm_waves",
+            "haptic": "storm_rumble",
+            "revelation_key": "Sa ating buhay, hinahayaan ng Diyos ang mga bagyo na may layunin."
+        },
+        {
+            "order": 2,
+            "type": "scripture_moment",
+            "mood": "tense",
+            "image_url": "waves_night.png",
+            "verse_reference": "Mateo 14:24",
+            "verse_text": "Samantala, ang bangka ay nasa laot na ngunit sinasalpok ito ng mga alon dahil pasalungat ito sa hangin.",
+            "reflection": "Pansinin ang hindi sinasabi ng talatang ito.\n\nHindi sinabi na inabandona sila ng Diyos. Hindi sinabi na pinarurusahan sila. Sinabi nito na pasalungat ang hangin.\n\nAng ilang bagyo ay hindi parusa. Ang ilang bagyo ay hindi pagkakamali. Ang ilang bagyo ay ang landas na pinili ng Diyos para sa iyo — dahil sa kung ano ang naghihintay sa kabilang dako.",
+            "revelation_key": "Ang salungat na hangin ay hindi nangangahulugang maling direksyon."
+        },
+        {
+            "order": 3,
+            "type": "character_moment",
+            "mood": "intense",
+            "image_url": "peter_storm_boat.png",
+            "title": "Ang Pinaka-Mapanganib na Panalangin sa Biblia",
+            "subtitle": "Mateo 14:28",
+            "content": "Kahanga-hanga ang tugon ni Pedro. Hindi 'Panginoon iligtas mo kaming lahat' — ang buong bangka na nagdarasal nang sabay.\n\nSi Pedro lamang. Isang tao. Isang mapangahas na kahilingan:\n\n'Panginoon, kung kayo nga ito — utusan ninyo akong PUMUNTA sa inyo sa ibabaw ng tubig.'\n\nIsip-isipin kung ano talaga ang hinihingi niya. Hindi na iligtas. Hindi para huminto ang bagyo. Lumabas sa bangka at lumakad patungo sa bagyo.\n\n⚡ ANG LABING-ISANG IBANG ALAGAD:\n\nWala ni isa sa kanila ang gumawa ng ganitong kahilingan. Nanatili sila sa bangka. Ligtas. Tuyo. Makatuwiran.\n\nHindi rin sila nakalakad sa tubig.\n\nAng pananampalataya ni Pedro ay mapanganib. Pabigla-bigla. Marahil nakahiya sa iba.\n\nAt iyon ang nag-iisang pananampalatayang naglabas sa kanya sa imposible.",
+            "revelation_key": "Hindi hiniling ni Pedro na pumunta si Jesus sa kanya. Humingi siya ng pahintulot na pumunta kay Jesus. Nagbabago iyon ng lahat."
+        },
+        {
+            "order": 4,
+            "type": "cinematic_scene",
+            "mood": "mysterious",
+            "image_url": "jesus_light_water.png",
+            "title": "May isang bagay na lumalakad patungo sa kanila",
+            "narrative": "Nakita nila ito. Isang anino. Gumagalaw sa gitna ng bagyo na parang wala ito. Lumalakad sa ibabaw ng tubig. Papalapit sa kanila.\n\nNatakot sila. Akala nila ay multo ito.",
+            "ambient_sound": "storm_fading",
+            "verse_overlay": {
+                "reference": "Mateo 14:27",
+                "text": "Ngunit nagsalita agad si Jesus at sinabi sa kanila, \"Huwag kayong matakot, ako ito!\""
+            },
+            "revelation_key": "Pinupuntahan tayo ni Jesus sa gitna ng ating pinakamasamang bagyo. Hindi pagkatapos."
+        },
+        {
+            "order": 5,
+            "type": "cinematic_scene",
+            "mood": "awe",
+            "image_url": "peter_walking_water.png",
+            "title": "At siya ay lumakad sa ibabaw ng tubig",
+            "narrative": "Isang salita mula kay Jesus. 'Halika.'\n\nAt lumabas si Pedro sa bangka. Sa gitna ng bagyo. Sa ibabaw ng tubig.\n\nSa isang imposible, maningning, nakakatakot na sandali — siya ay lumakad.",
+            "ambient_sound": "wind_gentle",
+            "haptic": "gentle_pulse",
+            "verse_overlay": {
+                "reference": "Mateo 14:29",
+                "text": "Sumagot siya, \"Halika.\" Mula sa bangka ay lumakad si Pedro sa ibabaw ng tubig papunta kay Jesus."
+            },
+            "revelation_key": "Si Pedro ang nag-iisang tao sa kasaysayan maliban kay Jesus na nakalakad sa tubig. Dahil siya lamang ang humiling."
+        },
+        {
+            "order": 6,
+            "type": "theological_depth",
+            "mood": "storm",
+            "image_url": "waves_night.png",
+            "title": "Ang Sandaling Nagbago ang Lahat",
+            "subtitle": "Tatlong salitang nagpapaliwanag sa bawat kabiguan ng pananampalataya",
+            "content": "Ibinibigay sa atin ni Mateo ang eksaktong pagkakasunod:\n\n1️⃣ 'Nakita niya ang hangin' — lumipat ang kanyang atensyon\n2️⃣ 'Natakot siya' — sumunod ang takot sa kanyang tingin\n3️⃣ 'Nagsimula siyang lumubog' — sumunod ang katawan sa kanyang puso\n\n🔑 ANG SUSING SALITA: 'Nagsimula'\n\nHindi siya lumubog agad. May sandali sa pagitan ng pag-aalinlangan at pag-lubog. Isang bukas. Isang sigaw.\n\n'Panginoon, ILIGTAS MO AKO.'\n\nTatlong salita. Ang pinakamaikling panalangin sa kasulatan. At ang pinaka-tapat.\n\nWalang teolohiya. Walang paliwanag. Walang pakikipagtawaran. Ang lantarang katotohanan lamang ng isang taong nasubukan, nabigo, at alam kung sino ang tatawagan.\n\n⚠️ ANG HINDI SINABI NI JESUS:\n\nHindi niya sinabi: 'Mas mabuti pang nanatili ka sa bangka.'\nHindi niya sinabi: 'Sinabi ko na sa iyo.'\nHindi niya hayaan siyang malunod upang turuan ng leksyon.\n\nAng salitang Griyego na eutheos — agad — lumitaw sa sandaling sumigaw si Pedro. Agad. Walang pagkaantala. Ito ang bilis ng biyaya.\n\nAgad. Inabot siya.",
+            "revelation_key": "Ang pinakamaikling panalangin ay minsang pinaka-makapangyarihan. 'Panginoon, iligtas mo ako' ay sapat na.",
+            "scripture_connections": [
+                {
+                    "reference": "Isaias 41:13",
+                    "text": "Ako si Yahweh na inyong Diyos, ang magpapalakas sa inyo. Ako ang nagsasabi, 'Huwag kayong matakot at tutulungan ko kayo.'"
+                },
+                {
+                    "reference": "Mga Awit 18:16",
+                    "text": "Mula sa kalangitan, ang Panginoon, sa malalim na tubig, ako'y iniahon."
+                }
+            ]
+        },
+        {
+            "order": 7,
+            "type": "cinematic_scene",
+            "mood": "grace",
+            "image_url": "peter_hand_saved.png",
+            "title": "Agad",
+            "narrative": "Ang salitang iyon — agad — ay lahat.\n\nWalang pagkaantala. Walang sermon muna. Walang 'pag-iisipan ko kung karapat-dapat ka ba.'\n\nAgad iniabot ni Jesus ang kanyang kamay at hinawakan siya.\n\nAng biyaya ay mas mabilis pa sa kabiguan.",
+            "ambient_sound": "storm_stopping",
+            "haptic": "rescue_pulse",
+            "verse_overlay": {
+                "reference": "Mateo 14:31",
+                "text": "Agad siyang inabot ni Jesus. \"Bakit ka nag-alinlangan? Napakaliit ng iyong pananampalataya!\" sabi niya kay Pedro."
+            },
+            "revelation_key": "Inaabot tayo ni Jesus bago niya tayo itama. Biyaya bago pagsaway. Palagi."
+        },
+        {
+            "order": 8,
+            "type": "character_moment",
+            "mood": "peace",
+            "image_url": "waves_night.png",
+            "title": "O Ikaw na Maliit ang Pananampalataya",
+            "subtitle": "Ang pagsaway na hindi talaga pagsaway",
+            "content": "Isang tanong ang itinanong ni Jesus kay Pedro:\n\n'Bakit ka nag-alinlangan? Napakaliit ng iyong pananampalataya!'\n\nBasahin ito nang mabuti. Tinutukoy ito ni Jesus bilang MALIIT na pananampalataya — hindi WALA.\n\nMas malaki ang pananampalataya ni Pedro kaysa sa labing-isang nanatili sa bangka. Lumabas siya. Lumakad siya. Sumigaw siya sa tamang tao nang siya ay lumubog.\n\nIyon ay hindi kawalan ng pananampalataya. Iyon ay pananampalataya na nasa proseso.\n\n🚣 ANG TUGON NG BANGKA:\n\nNang pumasok muli sina Jesus at Pedro sa bangka, nangyari ang isang bagay na hindi pa nangyayari dati:\n\n'Ang mga nasa bangka ay sumamba sa kanya na sinasabi: Tunay na Ikaw ang Anak ng Diyos.'\n\nAng labing-isa na nanatiling ligtas — na hindi nag-alinlangan dahil hindi man lamang nagtangka — ay nakakita ng isang bagay sa pamamagitan ng kabiguan at pagliligtas kay Pedro na nagdala sa kanila sa pagsamba.\n\nGinamit ng Diyos ang paglubog ni Pedro upang maipakilala si Jesus sa lahat ng nasa bangka.",
+            "revelation_key": "Minsan hinahayaan tayong lumubog ng Diyos upang makita ng iba kung paano niya tayo binubunot."
+        },
+        {
+            "order": 9,
+            "type": "interactive_moment",
+            "icon": "🌊",
+            "image_url": "waves_night.png",
+            "title": "Pangalanan Ang Iyong Alon",
+            "subtitle": "Ano ang bagyo na nagpapalayo ng iyong mga mata mula kay Jesus?",
+            "reflection_prompt": "Maglaan ng sandali upang pangalanan ang hangin at alon sa iyong buhay ngayon. Ano ang magiging hitsura ng paglabas mo sa bangka patungo kay Jesus sa sitwasyong iyon?"
+        },
+        {
+            "order": 10,
+            "type": "discovery_activation",
+            "icon": "🙏",
+            "mood": "grace",
+            "image_url": "jesus_light_water.png",
+            "title": "Ang Iyong Pagtatagpo",
+            "subtitle": "Ang kwento ni Pedro ay hindi lamang kasaysayan. Ito ay isang salamin.",
+            "discovery_questions": [
+                {
+                    "category": "Katapatan",
+                    "question": "Anong bagyo sa iyong buhay ngayon ang tinitingnan mo sa halip na si Jesus? Ano ang iyong mga alon?"
+                },
+                {
+                    "category": "Tapang",
+                    "question": "May bangkang kailangan mong labasan? May isang bagay bang tinatawag sa iyo ng Diyos na tila imposible — at hindi ka pa humiling?"
+                },
+                {
+                    "category": "Biyaya",
+                    "question": "Nagsigaw ka na ba ng 'Panginoon, iligtas mo ako' at naramdaman mong inaabot ka? Ano ang nangyari? Kung hindi pa — ano ang pumipigil sa iyo mula sa pagsigaw ngayon?"
+                }
+            ],
+            "prayer": {
+                "title": "Panalangin ng Isang Lumalubog",
+                "content": "Panginoon, inaamin ko na tinitingnan ko ang mga alon.\n\nTotoo ang bagyo. Salungat ang hangin. At takot ako.\n\nTulad ni Pedro ay sumisigaw ako — Panginoon, iligtas mo ako.\n\nHindi dahil sapat ang aking pananampalataya. Hindi dahil karapat-dapat akong iligtas. Kundi dahil Ikaw ang uri ng Diyos na agad na umaabot.\n\nHulihin mo ako. Aabot ako sa Iyo.\n\nAt kapag ginawa Mo — panatilihin ang aking mga mata sa Iyo at hindi sa tubig sa ilalim ng aking mga paa.\n\nSa pangalan ni Jesus, Amen."
+            }
+        },
+        {
+            "order": 11,
+            "type": "completion",
+            "mood": "awe",
+            "image_url": "peter_thumb.png",
+            "completion_verse": {
+                "reference": "Mateo 14:33",
+                "text": "At sinamba siya ng mga nasa bangka. \"Tunay nga pong kayo ang Anak ng Diyos!\" sabi nila.",
+                "bible_version": "Magandang Balita Biblia"
+            },
+            "reflection_prompt": "Anong katotohanang mula sa pagtatagpo ni Pedro ang nais mong dalhin sa iyo ngayon?",
+            "celebration_type": "gentle_light"
+        }
+    ]
 }
