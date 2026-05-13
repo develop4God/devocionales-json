@@ -808,7 +808,8 @@
         "zh": "transfiguration_zh_001.json",
         "hi": "transfiguration_hi_001.json",
         "de": "transfiguration_de_001.json",
-        "ar": "transfiguration_ar_001.json"
+        "ar": "transfiguration_ar_001.json",
+        "fil": "transfiguration_fil_001.json"
       },
       "titles": {
         "es": "La Transfiguración",
@@ -819,7 +820,8 @@
         "zh": "登山变像",
         "hi": "रूपान्तरण",
         "de": "Die Verklärung",
-        "ar": "التجلّي"
+        "ar": "التجلّي",
+        "fil": "Ang Pagbabagong-Anyo"
       },
       "subtitles": {
         "es": "Cuando el velo de la carne se abre y la gloria irrumpe",
@@ -830,7 +832,8 @@
         "zh": "当肉身的幔子揭开，荣耀突破而出",
         "hi": "जब देह का परदा खुलता है और महिमा प्रकट होती है",
         "de": "Als der Schleier des Fleisches sich öffnet und die Herrlichkeit durchbricht",
-        "ar": "عندما ينفتح ستار الجسد ويشقّ المجد طريقه"
+        "ar": "عندما ينفتح ستار الجسد ويشقّ المجد طريقه",
+        "fil": "Nang bumukas ang tabing ng laman at sumilay ang kaluwalhatian"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -841,7 +844,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 6
+        "ar": 6,
+        "fil": 8
       }
     },
     {
@@ -857,7 +861,8 @@
         "zh": "buried_talent_zh_001.json",
         "hi": "buried_talent_hi_001.json",
         "de": "buried_talent_de_001.json",
-        "ar": "buried_talent_ar_001.json"
+        "ar": "buried_talent_ar_001.json",
+        "fil": "buried_talent_fil_001.json"
       },
       "titles": {
         "es": "El Talento Enterrado",
@@ -868,7 +873,8 @@
         "zh": "被埋葬的他连得",
         "hi": "दफनाई गई प्रतिभा",
         "de": "Das vergrabene Talent",
-        "ar": "الوزنة المدفونة"
+        "ar": "الوزنة المدفونة",
+        "fil": "Ang Binalinang Talento"
       },
       "subtitles": {
         "es": "Cuando el miedo paraliza y las manos quedan vacías",
@@ -879,7 +885,8 @@
         "zh": "当恐惧使人瘫痪,双手空空如也",
         "hi": "जब डर लकवा मारता है और हाथ खाली रह जाते हैं",
         "de": "Wenn Angst lähmt und Hände leer bleiben",
-        "ar": "حين يشلّ الخوف الإنسان وتبقى يداه فارغتين"
+        "ar": "حين يشلّ الخوف الإنسان وتبقى يداه فارغتين",
+        "fil": "Kapag ang takot ay pumipigil at ang mga kamay ay nananatiling walang laman"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -890,7 +897,8 @@
         "zh": 8,
         "hi": 8,
         "de": 9,
-        "ar": 10
+        "ar": 10,
+        "fil": 9
       }
     },
     {
@@ -906,7 +914,8 @@
         "zh": "triumphal_entry_zh_001.json",
         "hi": "triumphal_entry_hi_001.json",
         "de": "triumphal_entry_de_001.json",
-        "ar": "triumphal_entry_ar_001.json"
+        "ar": "triumphal_entry_ar_001.json",
+        "fil": "triumphal_entry_fil_001.json"
       },
       "titles": {
         "es": "La Entrada Triunfal",
@@ -917,7 +926,8 @@
         "zh": "荣入圣城",
         "hi": "विजयी प्रवेश",
         "de": "Der Einzug des Königs",
-        "ar": "الدخول المنتصر"
+        "ar": "الدخول المنتصر",
+        "fil": "Ang Tagumpay na Pagpasok"
       },
       "subtitles": {
         "es": "Cuando el Rey rechazado entra a Jerusalén montado en un pollino, no en un caballo de guerra",
@@ -928,7 +938,8 @@
         "zh": "当被拒绝的王骑着驴驹而非战马进入耶路撒冷",
         "hi": "जब तिरस्कृत राजा यरूशलेम में गधे पर सवार होकर प्रवेश करता है, न कि युद्ध के घोड़े पर",
         "de": "Als der verworfene König auf einem Esel in Jerusalem einzieht – nicht auf einem Streitross",
-        "ar": "حين يدخل الملك المرفوض أورشليم راكباً على حمار لا على حصان حرب"
+        "ar": "حين يدخل الملك المرفوض أورشليم راكباً على حمار لا على حصان حرب",
+        "fil": "Nang pumasok ang tinanggihang Hari sa Jerusalem na nakasakay sa asno, hindi sa kabayong pandigma"
       },
       "estimated_reading_minutes": {
         "es": 5,
@@ -939,7 +950,8 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 6
+        "ar": 6,
+        "fil": 6
       }
     },
     {
@@ -955,7 +967,8 @@
         "zh": "gethsemane_agony_zh_001.json",
         "hi": "gethsemane_agony_hi_001.json",
         "de": "gethsemane_agony_de_001.json",
-        "ar": "gethsemane_agony_ar_001.json"
+        "ar": "gethsemane_agony_ar_001.json",
+        "fil": "gethsemane_agony_fil_001.json"
       },
       "titles": {
         "es": "La Agonía del Testador",
@@ -966,7 +979,8 @@
         "zh": "立约者的痛苦",
         "hi": "वसीयतकर्ता की व्यथा",
         "de": "Die Qual des Erblassers",
-        "ar": "آلام الوصيّة"
+        "ar": "آلام الوصيّة",
+        "fil": "Ang Paghihirap ng Tagapagmana"
       },
       "subtitles": {
         "es": "Cuando el Hijo de Dios suda sangre en la prensa de aceite",
@@ -977,7 +991,8 @@
         "zh": "当神的儿子在橄榄压榨机中流出血汗时",
         "hi": "जब परमेश्वर का पुत्र जैतून की कोल्हू में लहू जैसा पसीना बहाता है",
         "de": "Als der Sohn Gottes im Ölbaumgarten Blut schwitzt",
-        "ar": "عندما يعرق ابن الله دماً في معصرة الزيتون"
+        "ar": "عندما يعرق ابن الله دماً في معصرة الزيتون",
+        "fil": "Nang magpawis ng dugo ang Anak ng Diyos sa pigaan ng olibo"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -988,7 +1003,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 6
+        "ar": 6,
+        "fil": 8
       }
     },
     {
@@ -1004,7 +1020,8 @@
         "zh": "new_covenant_cup_zh_001.json",
         "hi": "new_covenant_cup_hi_001.json",
         "de": "new_covenant_cup_de_001.json",
-        "ar": "new_covenant_cup_ar_001.json"
+        "ar": "new_covenant_cup_ar_001.json",
+        "fil": "new_covenant_cup_fil_001.json"
       },
       "titles": {
         "es": "La Copa del Nuevo Pacto",
@@ -1015,7 +1032,8 @@
         "zh": "新约的杯",
         "hi": "नई वाचा का कटोरा",
         "de": "Der Kelch des Neuen Bundes",
-        "ar": "كأس العهد الجديد"
+        "ar": "كأس العهد الجديد",
+        "fil": "Ang Tasa ng Bagong Tipan"
       },
       "subtitles": {
         "es": "Cuando el Testador firma con su sangre el testamento de nuestra libertad",
@@ -1026,7 +1044,8 @@
         "zh": "当立约者用他的血签署我们自由的遗嘱时",
         "hi": "जब वसीयतकर्ता अपने लहू से हमारी स्वतंत्रता की वसीयत पर हस्ताक्षर करता है",
         "de": "Als der Erblasser das Testament unserer Freiheit mit seinem Blut unterzeichnet",
-        "ar": "حين يوقّع المُوصي بدمه وصيّة حريتنا"
+        "ar": "حين يوقّع المُوصي بدمه وصيّة حريتنا",
+        "fil": "Nang lagdaan ng Testador gamit ang Kanyang dugo ang testamento ng ating kalayaan"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1037,7 +1056,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 6
+        "ar": 6,
+        "fil": 8
       }
     },
     {

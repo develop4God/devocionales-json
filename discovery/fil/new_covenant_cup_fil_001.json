@@ -1,0 +1,142 @@
+{
+  "id": "new_covenant_cup_001",
+  "type": "discovery",
+  "date": "2026-01-21",
+  "title": "Ang Tasa ng Bagong Tipan",
+  "subtitle": "Nang lagdaan ng Testador gamit ang Kanyang dugo ang testamento ng ating kalayaan",
+  "language": "fil",
+  "version": "Magandang Balita Biblia",
+  "estimated_reading_minutes": 8,
+  "key_verse": {
+    "reference": "Marcos 14:24",
+    "text": "Sinabi niya, \"Ito ang aking dugo; pinapagtibay nito ang tipan ng Diyos. Ang aking dugo ay mabubuhos para sa marami."
+  },
+
+  "cards": [
+    {
+      "order": 1,
+      "type": "character_context",
+      "icon": "🍷",
+      "title": "Ang Huling Hapunan: Isang Legal na Testamento",
+      "subtitle": "Ano ang talagang nangyayari sa silid sa itaas",
+      "content": "Inirerehistro ng Marcos 14:22-25 ang isa sa pinaka-banal na sandali sa kasaysayan ng sangkatauhan. Ngunit hindi ito simpleng 'paalam na hapunan.'\n\n⚖️ ITO AY ISANG COSMIC NA LEGAL NA GAWA:\n\nSi Jesus ay:\n1. Kinikilala ang mga tagapagmana (Ang Kanyang mga alagad)\n2. Ipinapresenta ang testamento (Ang tinapay at ang tasa)\n3. Inihahayag ang Kanyang kamatayan (Kinakailangan upang paganahin ang testamento)\n\n📜 ANG WIKA NG MGA HEBREO 9:15-17:\n\n'Si Cristo ang tagapamagitan ng BAGONG TIPAN... Kapag may testamento, kailangang mapatunayang patay na ang gumawa niyon, sapagkat ang testamento ay walang bisa habang buháy pa ang gumawa; magkakabisa lamang iyon kapag siya'y namatay na.'\n\n🔑 ANG PANGUNAHING SALITA: DIATHĒKĒ (Strong G1242)\n\nSa Griego, ang diathēkē ay nangangahulugan ng DALAWANG bagay:\n• TIPAN - Isang solemneng kasunduan\n• TESTAMENTO/HULING BILIN - Ang huling bilin ng isang tao\n\nGinagamit ni Jesus ang dalawang kahulugan nang sabay.\n\n💰 PAANO GUMAGANA ANG TESTAMENTO:\n\n• Ang tagapagmana (gumagawa ng testamento) ay nag-aayos ng kanilang ari-arian\n• Ang mga tagapagmana (mga benepisyaryo) ay tinutukoy\n• Ang testamento ay WALANG bisa habang buhay ang tagapagmana\n• Ang KAMATAYAN lang ng tagapagmana ang nag-aaktibo ng mana\n\n✨ SA HAPUNAN:\n\nSi Jesus ay ang TAGAPAGMANA na:\n• Nag-aayos ng Kanyang buhay, Kanyang kapatawaran, Kanyang Espiritu\n• Nagtutukoy ng mga tagapagmana (lahat ng naniniwala)\n• Inihahayag na kailangan Niyang mamatay para makamtan nila ang mana\n• Lumalagda gamit ang Kanyang dugo",
+      "revelation_key": "Ang komunyon ay hindi simpleng simbolo. Ito ay legal na pagpapresenta ng pinakamahalagang testamentong naisulat, nilagdaan gamit ang dugo ng Anak ng Diyos."
+    },
+
+    {
+      "order": 2,
+      "type": "greek_exegesis",
+      "icon": "🍞",
+      "title": "Touto Estin: Ito AY Aking Katawan",
+      "subtitle": "Ang 2000 taong debate sa isang salita",
+      "content": "Marcos 14:22 - Kinuha ni Jesus ang tinapay at sinabi: 'TOUTO ESTIN TO SŌMA MOU' (Ito AY aking katawan).\n\n🔍 ANG KONTRUBERSYA NG 'AY':\n\nLiteral ba o simboliko? Ang debate ay nakasentro sa ESTIN (Strong G1510).\n\n📖 MGA INTERPRETASYON:\n\n1️⃣ LITERAL NA POSISYON:\n• Kung ang ibig sabihin ni Jesus ay 'kumakatawan,' may ibang salita\n• Ang Griego na estin ay tumutukoy sa tunay na pagkakakilanlan\n• Ang salita ni Cristo ay 'gumagawa' ng sinasabi nito\n\n2️⃣ SIMBOLIKONG POSISYON:\n• Ang Griego (gaya ng Aramaic) ay gumagamit ng 'ay' nang metapora\n• Gaya ng 'Ako ay ang pintuan' o 'Ako ay ang ubas'\n• Ito ay memorial (anamnesis)\n\n🔑 ANO ANG INIHAHAYAG NG GRIEGO:\n\nAapat na pandiwa sa pagkakasunod-sunod (v. 22):\n\n1. LAMBANŌ (G2983) - KINUHA: Tanggapin na may soberanong intensyon\n2. EULOGEŌ (G2127) - BINASBASAN: 'Magsalita ng mabuting salita,' punan ng banal na layunin\n3. KLAŌ (G2806) - BINALI: Balihin upang ipamahagi (ginagamit lang para sa tinapay sa NT)\n4. DIDŌMI (G1325) - IBINIGAY: Ilahad bilang kaloob\n\n🍞 ANG SALITANG 'KATAWAN': SŌMA (G4983)\n\nHINDI ginamit ni Jesus ang SARX (pisikal na laman, kalamnan).\nGinamit Niya ang SŌMA (ang buong tao, ang integral na pagkatao).\n\nHindi Niya sinabi: 'Ito ang aking patay na laman.'\nSinabi Niya: 'Ito ang aking SŌMA,' ang aking kabuuang presensya, ang aking kumpletong sarili.\n\n🔄 ANG RITMO NG BUHAY KRISTIYANO:\n\n• Tayo ay KINUHA ng Diyos (hindi tayo pumipili sa sarili natin)\n• BINASBASAN ng Kanyang biyaya (ipinahahayag na mabuti)\n• BINALI sa ating kapalaluan (upang ipamahagi)\n• IBINIGAY sa mundo para sa paglilingkod (hindi upang mag-ipon)",
+      "greek_words": [
+        {
+          "word": "Sōma",
+          "transliteration": "σῶμα",
+          "meaning": "Katawan bilang buong tao, integral na pagkatao",
+          "revelation": "Sa paggamit ng sōma sa halip na sarx, hindi lang ibinibigay ni Jesus ang Kanyang biology, kundi ang Kanyang kumpletong personal na presensya. Ibinibigay Niya ang LAHAT."
+        },
+        {
+          "word": "Klaō",
+          "transliteration": "κλάω",
+          "meaning": "Balihin, baliin (partikular na tinapay)",
+          "revelation": "Ang tinapay ay kailangang balihin upang ipamahagi. Ang katawan ni Cristo ay kailangang sugatan upang ibahagi sa atin."
+        },
+        {
+          "word": "Eulogeō",
+          "transliteration": "εὐλογέω",
+          "meaning": "Pagpalain, magsalita ng mabuting salita",
+          "revelation": "Hindi lang 'nagpapasalamat' si Jesus. Pinupuno Niya ng banal na layunin ang materyal na elemento, gaya ng pagpapala ng Diyos sa paglikha sa Genesis 1."
+        }
+      ],
+      "revelation_key": "Ang teolohikal na debate ay intelektwal, ngunit ang espirituwal na katotohanan ay malinaw: Inanyayahan ni Jesus ang mataimtim na pakikilahok (koinonia) sa Kanyang paparating na kamatayan."
+    },
+
+    {
+      "order": 3,
+      "type": "theological_depth",
+      "icon": "📜",
+      "title": "Diathēkē Kainē: Ang Bagong Tipan",
+      "subtitle": "Pag-uugnay ng Marcos 14 sa Jeremias 31 at Mga Hebreo 9",
+      "content": "Marcos 14:24 - 'Ito ang aking dugo ng BAGONG TIPAN (diathēkē kainē), na ibubuhos para sa marami.'\n\n🔗 ANG PROPESIYA NG JEREMIAS 31:31:\n\n'Darating ang panahon... na gagawa ako ng BAGONG TIPAN... Ito'y hindi tulad ng kasunduang ginawa ko sa kanilang mga ninuno... Itatanim ko sa kanilang kalooban ang aking kautusan; isusulat ko ito sa kanilang mga puso.'\n\n🆕 ANG SALITANG 'BAGO': KAINOS (G2537)\n\nMay DALAWANG salita para sa 'bago' sa Griego:\n• NEOS = Bago sa oras (isang bagay na bata, kamakailang)\n• KAINOS = Bago sa kalidad (isang bagay na walang kapantay)\n\nGinamit ni Jesus ang KAINOS. Hindi ito simpleng 'mas bago' na tipan. Ito ay tipan ng ganap na IBANG kalikasan.\n\n📊 PAGHAHAMBING NG TIPAN:\n\nLUMANG TIPAN (Moises):\n✓ Nakasulat sa bato (panlabas)\n✓ 'Kung susundin mo, mabubuhay ka' (may kondisyon)\n✓ Dugo ng mga hayop (pansamantala)\n✓ Tinakpan ang kasalanan (kippur)\n✓ Kailangang ulitin\n\nBAGONG TIPAN (Jesus):\n✓ Nakasulat sa puso (panloob)\n✓ 'Tapos na' (walang kondisyon)\n✓ Dugo ni Cristo (walang hanggan)\n✓ Tinatanggal ang kasalanan (apolytrōsis)\n✓ Minsan lang para sa lahat\n\n🩸 'IBUBUHOS': EKCHYNNŌ (G1632)\n\nHindi ito patak. Ito ay ganap na PAGBUBUWIS.\n\nGinagamit para sa:\n• Pagbuhos ng mga mangkok ng galit (Pahayag)\n• Pagbuhos ng Espiritu Santo (Mga Gawa 2)\n\nIto ay pandiwa ng matinding kasaganaan. 'Inubos' (kenōsis) ni Jesus ang Kanyang sarili nang lubusan.\n\n⚖️ ANG LEGAL NA MEKANISMO (Mga Hebreo 9:15):\n\n'Si Cristo ang tagapamagitan... Sa pamamagitan ng kanyang kamatayan, ipinatawad ang paglabag ng mga tao noong sila'y nasa ilalim pa ng NAUNANG KASUNDUAN.'\n\n• APOLYTRŌSIS (G629) = Pagtubos, bayad para sa kalayaan ng alipin\n• Inilantad ng Kautusan ang kasalanan ngunit hindi makabali ng tanikala\n• Ang kamatayan ni Cristo ay gumagana bilang huling bayad na 'bumibili' ng ating kalayaan",
+      "scripture_connections": [
+        {
+          "reference": "Jeremias 31:31-33",
+          "text": "Darating ang panahon... na gagawa ako ng bagong tipan... Itatanim ko sa kanilang kalooban ang aking kautusan; isusulat ko ito sa kanilang mga puso"
+        },
+        {
+          "reference": "Mga Hebreo 9:15",
+          "text": "Kaya nga, si Cristo ang tagapamagitan ng bagong kasunduan. Sa pamamagitan ng kanyang kamatayan, ipinatawad ang paglabag ng mga tao noong sila'y nasa ilalim pa ng naunang kasunduan. Dahil dito, makakamtan ng mga tinawag ng Diyos ang walang hanggang pagpapala na kanyang ipinangako."
+        },
+        {
+          "reference": "Mga Hebreo 9:16-17",
+          "text": "Kapag may testamento, kailangang mapatunayang patay na ang gumawa niyon, sapagkat ang testamento ay walang bisa habang buháy pa ang gumawa; magkakabisa lamang iyon kapag siya'y namatay na."
+        }
+      ],
+      "revelation_key": "Ang kapatawaran ay hindi kapabayaan ng Diyos, kundi perpektong legal at mapagmahal na proseso. Hindi lang namatay si Jesus bilang martir; namatay Siya bilang Testador upang paganahin ang iyong mana."
+    },
+
+    {
+      "order": 4,
+      "type": "necessity_emphasis",
+      "icon": "⚖️",
+      "title": "Walang Kapatawaran Nang Walang Pagbuhos ng Dugo",
+      "subtitle": "Bakit ganap na kinakailangan ang dugo",
+      "content": "Mga Hebreo 9:22 - 'Walang kapatawaran (aphesis) na hindi dumaraan sa pagbuhos ng dugo.'\n\n🩸 BAKIT DUGO?\n\nSa biblikal na pag-iisip, ang dugo ay simbolo ng BUHAY (Levitico 17:11).\n\n'Ang buhay ng nilalang ay nasa dugo... ito ay ang dugo na gumagawa ng pagtubos para sa buhay ng isa.'\n\n⚖️ ANG LEGAL NA PRINSIPYO:\n\nUpang 'lagdaan' ang tipan ng buhay at kamatayan:\n• Kailangan may mamatay (ang kabayaran ng kasalanan ay kamatayan)\n• Ang dugo ay kumakatawan sa buhay na ibinigay\n• Walang kamatayan = walang bayad = walang kapatawaran\n\n🐑 LUMANG TIPAN:\n\n• Ang hayop ay namatay PARA SA tao\n• Ito ay PANSAMANTALANG kapalit\n• Kailangang ulitin taon-taon\n• Ang dugo ay 'tumatakip' (kippur) ngunit hindi 'nag-aalis' ng kasalanan\n\n✝️ BAGONG TIPAN:\n\n• Ang Testador mismo ay namatay PARA SA mga tagapagmana\n• Ito ay WALANG-HANGGANG kapalit\n• Minsan lang para sa lahat (ephapax)\n• Ang dugo ay 'nag-aalis' (airō) ng kasalanan nang lubusan\n\n🔑 ANG PANGUNAHING PAGKAKAIBA:\n\nMga Hebreo 10:4 - 'IMPOSIBLE para sa dugo ng mga toro at kambing na makapag-alis ng mga kasalanan.'\n\nBakit? Dahil:\n• Ang hayop ay walang katumbas na halaga sa tao\n• Ang makasalanan ay hindi maaaring mamatay para sa ibang makasalanan\n• Ang perpekto at kusang Kapalit lang ang makakapagbayad\n\n✨ SI JESUS LANG ANG KWALIPIKADO:\n\n• Walang kasalanan (2 Corinto 5:21)\n• Diyos at tao (walang hanggang halaga)\n• Kusang-loob (Juan 10:18 - 'Walang tumatanggal nito sa akin')\n\n🎁 ANG RESULTA NGAYON:\n\nKapag tiningnan ka ng Diyos, hindi Niya nakikita ang iyong mga kabiguan. Nakikita Niya ang dugo ni Cristo na sumasaklaw sa iyo. Ang bayad ay nabayaran na. Ang testamento ay pinagtibay na. Ang mana ay sa iyo na.",
+      "identity_statement": "Hindi ka makasalanang sumusubok na tanggapin. Ikaw ay tagapagmana na ang mana ay nabili na gamit ang pinakamahalagang dugo sa sansinukob.",
+      "revelation_key": "Ang dugo ni Jesus ay hindi lang simbolo. Ito ay legal na bayad na natugunan ang hustisya ng Diyos at binigyan ka ng walang-hanggang access sa Ama."
+    },
+
+    {
+      "order": 5,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Pansariling Pagtuklas",
+      "discovery_questions": [
+        {
+          "category": "Pag-unawa sa tipan",
+          "question": "Nauunawaan mo ba na ang iyong kaligtasan ay hindi 'kontrata' kung saan nagbibigay ka ng iyong bahagi, kundi 'testamento' kung saan si Cristo ay nagbigay ng LAHAT? Paano nito binabago ang iyong seguridad?"
+        },
+        {
+          "category": "Halaga ng dugo",
+          "question": "Kapag nagkakasala ka, binabawasan mo ba ang halaga ng dugo ni Cristo na iniisip 'maliit lang na kasalanan,' o kinikilala mo na bawat kasalanan ay nangailangan ng Kanyang kamatayan?"
+        },
+        {
+          "category": "Mana laban sa merito",
+          "question": "Namumuhay ka ba bilang TAGAPAGMANA na nag-aangkin ng ibinigay sa iyo, o bilang EMPLEYADO na sumusubok na kitain ang pabor ng Diyos?"
+        },
+        {
+          "category": "Komunyon",
+          "question": "Kapag nakikilahok ka sa Hapunan ng Panginoon, ritwal lang ba ito, o sandaling alalahanin ang legal na testamento na ginawa kang co-heir kay Cristo?"
+        }
+      ],
+      "prayer": {
+        "title": "Panalangin ng Tagapagmana",
+        "content": "Makalangit na Ama, ngayon ay nauunawaan ko na hindi ako empleyado sa probation. Ako ay TAGAPAGMANA. Si Jesus, ang Testador, ay namatay upang paganahin ang aking mana. Ang Kanyang dugo ay hindi ibuhos nang kalahati; ito ay INUBOS nang lubusan. Patawarin ang aking kawalan ng paniniwala kapag namumuhay ako na para bang kailangan kong 'kitain' ang Inyong pag-ibig. Nagbayad na Kayo ng buong presyo. Ang testamento ay nilagdaan. Ang tabing ay napunit. Ngayon ay inaangkin ko ang aking mana: walang-hanggang kapatawaran, access sa Ama, at ang Espiritu Santo na nabubuhay sa akin. Salamat po na ang tipang ito ay KAINOS - ganap na bago sa kalidad, hindi lang kinumpuni. Sa pangalan ni Jesus, Amen."
+      }
+    }
+  ],
+
+  "tags": [
+    "bagong_tipan",
+    "komunyon",
+    "dugo_ni_kristo",
+    "testamento",
+    "mana",
+    "tipan_laban_sa_kautusan"
+  ],
+
+  "metadata": {
+    "total_word_count": 1300,
+    "greek_words_count": 6,
+    "scripture_references_count": 12,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "Legal na kalikasan ng Bagong Tipan",
+      "Dugo bilang bayad sa pagtubos",
+      "Testamento laban sa kontrata",
+      "Mana sa pamamagitan ng biyaya"
+    ]
+  }
+}
