@@ -1338,7 +1338,8 @@
         "zh": "restoration_by_fire_zh_001.json",
         "hi": "restoration_by_fire_hi_001.json",
         "de": "restoration_by_fire_de_001.json",
-        "ar": "restoration_by_fire_ar_001.json"
+        "ar": "restoration_by_fire_ar_001.json",
+        "fil": "restoration_by_fire_fil_001.json"
       },
       "titles": {
         "es": "Las Brasas de la Restauración",
@@ -1349,7 +1350,8 @@
         "zh": "恢复的炭火",
         "hi": "पुनर्स्थापना की अंगीठी",
         "de": "Das Kohlenfeuer der Wiederherstellung",
-        "ar": "جمرات الاسترداد"
+        "ar": "جمرات الاسترداد",
+        "fil": "Ang Mga Baga ng Pagpapanumbalik"
       },
       "subtitles": {
         "es": "Cuando el olor del fracaso se convierte en el aroma del perdón",
@@ -1360,7 +1362,8 @@
         "zh": "当失败的气味变成宽恕的芬芳",
         "hi": "जब असफलता की गंध क्षमा की सुगंध बन जाती है",
         "de": "Als der Geruch des Scheiterns zum Duft der Vergebung wird",
-        "ar": "حين تصبح رائحة الفشل عطر المغفرة"
+        "ar": "حين تصبح رائحة الفشل عطر المغفرة",
+        "fil": "Kapag ang amoy ng kabiguan ay naging halimuyak ng kapatawaran"
       },
       "estimated_reading_minutes": {
         "es": 9,
@@ -1371,7 +1374,8 @@
         "zh": 9,
         "hi": 9,
         "de": 10,
-        "ar": 10
+        "ar": 10,
+        "fil": 10
       }
     },
     {
@@ -1387,7 +1391,8 @@
         "zh": "great_commission_zh_001.json",
         "hi": "great_commission_hi_001.json",
         "de": "great_commission_de_001.json",
-        "ar": "great_commission_ar_001.json"
+        "ar": "great_commission_ar_001.json",
+        "fil": "great_commission_fil_001.json"
       },
       "titles": {
         "es": "La Gran Comisión",
@@ -1398,7 +1403,8 @@
         "zh": "大使命",
         "hi": "महान आदेश",
         "de": "Der Missionsbefehl",
-        "ar": "الوصية الكبرى"
+        "ar": "الوصية الكبرى",
+        "fil": "Ang Dakilang Komisyon"
       },
       "subtitles": {
         "es": "Cuando Jesús transforma a seguidores en enviados",
@@ -1409,7 +1415,8 @@
         "zh": "当耶稣将跟随者转变为奉差者",
         "hi": "जब यीशु अनुयायियों को भेजे हुओं में बदल देता है",
         "de": "Als Jesus Nachfolger zu Gesandten macht",
-        "ar": "عندما يحوّل يسوع أتباعه إلى مُرسَلين"
+        "ar": "عندما يحوّل يسوع أتباعه إلى مُرسَلين",
+        "fil": "Kapag ginawa ni Jesus ang mga tagasunod na mga sinugo"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -1420,7 +1427,8 @@
         "zh": 6,
         "hi": 6,
         "de": 7,
-        "ar": 6
+        "ar": 6,
+        "fil": 7
       }
     },
     {
@@ -1436,7 +1444,8 @@
         "zh": "ascension_victory_zh_001.json",
         "hi": "ascension_victory_hi_001.json",
         "de": "ascension_victory_de_001.json",
-        "ar": "ascension_victory_ar_001.json"
+        "ar": "ascension_victory_ar_001.json",
+        "fil": "ascension_victory_fil_001.json"
       },
       "titles": {
         "es": "La Ascensión Victoriosa",
@@ -1447,7 +1456,8 @@
         "zh": "得胜的升天",
         "hi": "विजयी स्वर्गारोहण",
         "de": "Die siegreiche Himmelfahrt",
-        "ar": "الصعود المُظفَّر"
+        "ar": "الصعود المُظفَّر",
+        "fil": "Ang Matagumpay na Pag-akyat"
       },
       "subtitles": {
         "es": "Cuando el Rey conquista el trono y envía el Espíritu",
@@ -1458,7 +1468,8 @@
         "zh": "当君王得胜宝座并差遣圣灵",
         "hi": "जब राजा सिंहासन पर विजय पाता है और आत्मा को भेजता है",
         "de": "Als der König den Thron erobert und den Geist sendet",
-        "ar": "حين يحتلّ الملك العرش ويُرسل الروح"
+        "ar": "حين يحتلّ الملك العرش ويُرسل الروح",
+        "fil": "Kapag sinakop ng Hari ang trono at isinugo ang Espiritu"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1469,7 +1480,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 6
+        "ar": 6,
+        "fil": 8
       }
     },
     {
@@ -1485,7 +1497,8 @@
         "zh": "pentecost_power_zh_001.json",
         "hi": "pentecost_power_hi_001.json",
         "de": "pentecost_power_de_001.json",
-        "ar": "pentecost_power_ar_001.json"
+        "ar": "pentecost_power_ar_001.json",
+        "fil": "pentecost_power_fil_001.json"
       },
       "titles": {
         "es": "El Poder de Pentecostés",
@@ -1496,7 +1509,8 @@
         "zh": "五旬节的能力",
         "hi": "पिन्तेकुस्त की सामर्थ",
         "de": "Die Kraft von Pfingsten",
-        "ar": "قوة العنصرة"
+        "ar": "قوة العنصرة",
+        "fil": "Ang Kapangyarihan ng Pentecostes"
       },
       "subtitles": {
         "es": "Cuando el Espíritu Santo transforma cobardes en valientes",
@@ -1507,7 +1521,8 @@
         "zh": "当圣灵将懦夫转变为勇士",
         "hi": "जब पवित्र आत्मा कायरों को साहसी में बदल देता है",
         "de": "Als der Heilige Geist Feiglinge in Mutigen verwandelt",
-        "ar": "عندما يحوّل الروح القدس الجبناء إلى شجعان"
+        "ar": "عندما يحوّل الروح القدس الجبناء إلى شجعان",
+        "fil": "Kapag ginawa ng Banal na Espiritu ang mga duwag na matapang"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1518,7 +1533,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 6
+        "ar": 6,
+        "fil": 8
       }
     },
     {
@@ -1534,7 +1550,8 @@
         "zh": "damascus_road_zh_001.json",
         "hi": "damascus_road_hi_001.json",
         "de": "damascus_road_de_001.json",
-        "ar": "damascus_road_ar_001.json"
+        "ar": "damascus_road_ar_001.json",
+        "fil": "damascus_road_fil_001.json"
       },
       "titles": {
         "es": "El Camino a Damasco",
@@ -1545,7 +1562,8 @@
         "zh": "大马士革的路上",
         "hi": "दमिश्क का मार्ग",
         "de": "Der Weg nach Damaskus",
-        "ar": "طريق دمشق"
+        "ar": "طريق دمشق",
+        "fil": "Ang Daan Patungo sa Damasco"
       },
       "subtitles": {
         "es": "Cuando la luz de Cristo derriba al perseguidor más feroz",
@@ -1556,7 +1574,8 @@
         "zh": "当基督的光击倒最凶猛的逼迫者",
         "hi": "जब मसीह का प्रकाश सबसे उग्र सताने वाले को गिरा देता है",
         "de": "Als das Licht Christi den grausamsten Verfolger niederwirft",
-        "ar": "حين يصرع نور المسيح أشرس مضطهديه"
+        "ar": "حين يصرع نور المسيح أشرس مضطهديه",
+        "fil": "Kapag itinumba ng liwanag ni Kristo ang pinakamabagsik na mang-uusig"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1567,7 +1586,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 6
+        "ar": 6,
+        "fil": 8
       }
     },
     {
