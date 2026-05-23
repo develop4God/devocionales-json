@@ -1616,6 +1616,31 @@
         "de": 8,
         "ar": 8
       }
+    },
+    {
+      "id": "jordan_convergence_001",
+      "version": "1.0",
+      "emoji": "🌊",
+      "files": {
+        "en": "jordan_convergence_001_en.json",
+        "pt": "jordan_convergence_001_pt.json",
+        "fr": "jordan_convergence_001_fr.json"
+      },
+      "titles": {
+        "en": "The river he already crossed before",
+        "pt": "O rio que ele já havia atravessado antes",
+        "fr": "Le fleuve qu'il avait déjà traversé avant"
+      },
+      "subtitles": {
+        "en": "The crossing point where Israel's story began is the same place where Jesus walked into the water",
+        "pt": "O ponto de travessia onde a história de Israel começou é o mesmo lugar onde Jesus entrou na água",
+        "fr": "Le point de passage où l'histoire d'Israël a commencé est le même endroit où Jésus est entré dans l'eau"
+      },
+      "estimated_reading_minutes": {
+        "en": 10,
+        "pt": 11,
+        "fr": 11
+      }
     }
   ]
 }
