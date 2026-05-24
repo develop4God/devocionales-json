@@ -13,7 +13,8 @@
         "zh": "mammon_anxiety_freedom_zh_001.json",
         "hi": "mammon_anxiety_freedom_hi_001.json",
         "de": "mammon_anxiety_freedom_de_001.json",
-        "ar": "mammon_anxiety_freedom_ar_001.json"
+        "ar": "mammon_anxiety_freedom_ar_001.json",
+        "fil": "mammon_anxiety_freedom_fil_001.json"
       },
       "titles": {
         "es": "Desatado de las Riquezas: El Camino de la Ansiedad a la Paz",
@@ -24,7 +25,8 @@
         "zh": "挣脱财富的枷锁：从焦虑到平静的道路",
         "hi": "धन-दौलत की जंजीरों से आज़ाद: चिंता से शांति का मार्ग",
         "de": "Befreit vom Mammon: Der Weg von der Angst zum Frieden",
-        "ar": "التحرر من المامون: الطريق من القلق إلى السلام"
+        "ar": "التحرر من المامون: الطريق من القلق إلى السلام",
+        "fil": "Kalayaan Mula sa Mammon: Ang Daan Mula sa Pagkabalisa Tungo sa Kapayapaan"
       },
       "subtitles": {
         "es": "Lo que Jesús dijo hace 2000 años es exactamente lo que necesitas escuchar hoy",
@@ -35,7 +37,8 @@
         "zh": "耶稣两千年前所说的话，正是你今天需要听到的",
         "hi": "जो यीशु ने 2,000 वर्ष पहले कहा था, वही आज आपको सुनने की आवश्यकता है",
         "de": "Was Jesus vor 2.000 Jahren gesagt hat, ist genau das, was du heute hören musst",
-        "ar": "ما قاله يسوع منذ ألفَي عام هو بالضبط ما تحتاج سماعه اليوم"
+        "ar": "ما قاله يسوع منذ ألفَي عام هو بالضبط ما تحتاج سماعه اليوم",
+        "fil": "Ang sinabi ni Hesus 2,000 taon na ang nakakaraan ay eksakto ang kailangan mong marinig ngayon"
       },
       "estimated_reading_minutes": {
         "es": 12,
@@ -46,7 +49,8 @@
         "zh": 15,
         "hi": 14,
         "de": 11,
-        "ar": 8
+        "ar": 8,
+        "fil": 12
       }
     },
     {
@@ -62,7 +66,8 @@
         "zh": "morning_star_zh_001.json",
         "hi": "morning_star_hi_001.json",
         "de": "morning_star_de_001.json",
-        "ar": "morning_star_ar_001.json"
+        "ar": "morning_star_ar_001.json",
+        "fil": "morning_star_fil_001.json"
       },
       "titles": {
         "es": "Estrella de la Mañana",
@@ -73,7 +78,8 @@
         "zh": "晨星",
         "hi": "प्रकाश का संदेशवाहक",
         "de": "Der Herold des Lichts",
-        "ar": "بشير النور"
+        "ar": "بشير النور",
+        "fil": "Ang Tagapagbalita ng Liwanag"
       },
       "subtitles": {
         "es": "El testimonio más poderoso sobre la identidad de Jesús",
@@ -84,7 +90,8 @@
         "zh": "创造、预言与你心灵的永恒连结",
         "hi": "सृष्टि, भविष्यवाणी और आपके हृदय के बीच का शाश्वत संबंध",
         "de": "Die ewige Verbindung zwischen Schöpfung, Prophezeiung und deinem Herzen",
-        "ar": "الرابط الأبدي بين الخليقة والنبوّة وقلبك"
+        "ar": "الرابط الأبدي بين الخليقة والنبوّة وقلبك",
+        "fil": "Ang walang hanggang koneksyon sa pagitan ng paglikha, propesiya, at ang iyong puso"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -95,7 +102,8 @@
         "zh": 6,
         "hi": 6,
         "de": 7,
-        "ar": 5
+        "ar": 5,
+        "fil": 7
       }
     },
     {
@@ -111,7 +119,8 @@
         "zh": "hammer_of_god_zh_001.json",
         "hi": "hammer_of_god_hi_001.json",
         "de": "hammer_of_god_de_001.json",
-        "ar": "hammer_of_god_ar_001.json"
+        "ar": "hammer_of_god_ar_001.json",
+        "fil": "hammer_of_god_fil_001.json"
       },
       "titles": {
         "es": "El Martillo de Dios",
@@ -122,7 +131,8 @@
         "zh": "神的锤子",
         "hi": "परमेश्वर का हथौड़ा",
         "de": "Der Hammer Gottes",
-        "ar": "مطرقة الله"
+        "ar": "مطرقة الله",
+        "fil": "Ang Martilyo ng Diyos"
       },
       "subtitles": {
         "es": "De ejecutores del juicio a adoradores del Mesías: La historia redentora de los Medos",
@@ -133,7 +143,8 @@
         "zh": "从审判的执行者到弥赛亚的敬拜者：玛代人的救赎故事",
         "hi": "न्याय के निष्पादकों से मसीहा के उपासकों तक: मादियों की छुटकारे की कहानी",
         "de": "Von Vollstreckern des Gerichts zu Anbetern des Messias: Die Erlösungsgeschichte der Meder",
-        "ar": "من مُنفِّذي الدينونة إلى ساجدي المسيّا: قصة الماديين الفدائية"
+        "ar": "من مُنفِّذي الدينونة إلى ساجدي المسيّا: قصة الماديين الفدائية",
+        "fil": "Mula sa mga Tagapagsagawa ng Paghatol hanggang sa mga Sumasamba sa Mesiyas: Ang Mapagligtás na Kuwento ng mga Medo"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -144,7 +155,8 @@
         "zh": 8,
         "hi": 8,
         "de": 9,
-        "ar": 8
+        "ar": 8,
+        "fil": 10
       }
     },
     {
@@ -160,7 +172,8 @@
         "zh": "balaam_humble_vision_zh_001.json",
         "hi": "balaam_humble_vision_hi_001.json",
         "de": "balaam_humble_vision_de_001.json",
-        "ar": "balaam_humble_vision_ar_001.json"
+        "ar": "balaam_humble_vision_ar_001.json",
+        "fil": "balaam_humble_vision_fil_001.json"
       },
       "titles": {
         "es": "Cuando la Burra Vio al Ángel y el Profeta Estaba Ciego",
@@ -171,7 +184,8 @@
         "zh": "当驴看见天使而先知却瞎眼时",
         "hi": "जब गधी ने स्वर्गदूत को देखा और भविष्यवक्ता अंधा था",
         "de": "Als die Eselin den Engel sah und der Prophet blind war",
-        "ar": "حين رأت الأتان الملاك وكان النبي أعمى"
+        "ar": "حين رأت الأتان الملاك وكان النبي أعمى",
+        "fil": "Nang Nakita ng Asno ang Anghel at Ang Propeta ay Bulag"
       },
       "subtitles": {
         "es": "La advertencia más solemne sobre revelación sin transformación",
@@ -182,7 +196,8 @@
         "zh": "关于没有改变的启示最严肃的警告",
         "hi": "प्रकाशन के बिना परिवर्तन के बारे में सबसे गंभीर चेतावनी",
         "de": "Die eindringlichste Warnung über Offenbarung ohne Verwandlung",
-        "ar": "أخطر تحذير عن الإعلان بلا تحوّل"
+        "ar": "أخطر تحذير عن الإعلان بلا تحوّل",
+        "fil": "Ang pinaka-solemneng babala tungkol sa pahayag na walang pagbabago"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -193,7 +208,8 @@
         "zh": 8,
         "hi": 8,
         "de": 9,
-        "ar": 9
+        "ar": 9,
+        "fil": 9
       }
     },
     {
@@ -209,7 +225,8 @@
         "zh": "logos_creation_zh_001.json",
         "hi": "logos_creation_hi_001.json",
         "de": "logos_creation_de_001.json",
-        "ar": "logos_creation_ar_001.json"
+        "ar": "logos_creation_ar_001.json",
+        "fil": "logos_creation_fil_001.json"
       },
       "titles": {
         "es": "En el Principio era el Verbo",
@@ -220,7 +237,8 @@
         "zh": "太初有道",
         "hi": "आदि में वचन था",
         "de": "Im Anfang war das Wort",
-        "ar": "فِي الْبَدْءِ كَانَ الْكَلِمَةُ"
+        "ar": "فِي الْبَدْءِ كَانَ الْكَلِمَةُ",
+        "fil": "Sa Simula ay ang Verbo"
       },
       "subtitles": {
         "es": "Cuando Juan declara que Jesús es el Logos eterno que creó todas las cosas",
@@ -231,7 +249,8 @@
         "zh": "当约翰宣告耶稣是创造万有的永恒之道",
         "hi": "जब यूहन्ना घोषणा करता है कि यीशु शाश्वत लोगॉस है जिसने सब कुछ सृजा",
         "de": "Als Johannes erklärt, dass Jesus der ewige Logos ist, der alles erschaffen hat",
-        "ar": "عندما يُعلن يوحنا أن يسوع هو اللوغوس الأزلي الذي خلق كل شيء"
+        "ar": "عندما يُعلن يوحنا أن يسوع هو اللوغوس الأزلي الذي خلق كل شيء",
+        "fil": "Nang ipahayag ni Juan na si Jesus ay ang walang hanggang Logos na lumikha ng lahat ng bagay"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -242,7 +261,8 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 5
+        "ar": 5,
+        "fil": 6
       }
     },
     {
@@ -258,7 +278,8 @@
         "zh": "lamb_of_god_zh_001.json",
         "hi": "lamb_of_god_hi_001.json",
         "de": "lamb_of_god_de_001.json",
-        "ar": "lamb_of_god_ar_001.json"
+        "ar": "lamb_of_god_ar_001.json",
+        "fil": "lamb_of_god_fil_001.json"
       },
       "titles": {
         "es": "El Cordero de Dios",
@@ -269,7 +290,8 @@
         "zh": "神的羔羊",
         "hi": "परमेश्वर का मेम्ना",
         "de": "Das Lamm Gottes",
-        "ar": "حمل الله"
+        "ar": "حمل الله",
+        "fil": "Ang Kordero ng Diyos"
       },
       "subtitles": {
         "es": "La culminación de 1,500 años de sistema sacrificial en una sola declaración",
@@ -280,7 +302,8 @@
         "zh": "1500年献祭制度在一句宣告中的顶点",
         "hi": "एक एकमात्र घोषणा में 1,500 वर्षों की बलिदान प्रणाली की परिणति",
         "de": "Der Höhepunkt von 1.500 Jahren Opfersystem in einer einzigen Erklärung",
-        "ar": "اكتمال ألف وخمس مئة عام من نظام الذبائح في إعلان واحد"
+        "ar": "اكتمال ألف وخمس مئة عام من نظام الذبائح في إعلان واحد",
+        "fil": "Ang katuparan ng 1,500 taon ng sistemang handog sa isang deklarasyon"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -291,7 +314,8 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 4
+        "ar": 4,
+        "fil": 6
       }
     },
     {
@@ -307,7 +331,8 @@
         "zh": "natanael_fig_tree_zh_001.json",
         "hi": "natanael_fig_tree_hi_001.json",
         "de": "natanael_fig_tree_de_001.json",
-        "ar": "natanael_fig_tree_ar_001.json"
+        "ar": "natanael_fig_tree_ar_001.json",
+        "fil": "natanael_fig_tree_fil_001.json"
       },
       "titles": {
         "es": "Debajo de la Higuera",
@@ -318,7 +343,8 @@
         "zh": "在无花果树下",
         "hi": "अंजीर के पेड़ के नीचे",
         "de": "Unter dem Feigenbaum",
-        "ar": "تحت شجرة التين"
+        "ar": "تحت شجرة التين",
+        "fil": "Sa Ilalim ng Puno ng Igos"
       },
       "subtitles": {
         "es": "El encuentro donde Jesús revela que conoce tus secretos más profundos",
@@ -329,7 +355,8 @@
         "zh": "耶稣显明他知道你内心深处秘密的相遇",
         "hi": "वह मुलाकात जहां यीशु प्रकट करता है कि वह आपके गहरे रहस्यों को जानता है",
         "de": "Die Begegnung, in der Jesus offenbart, dass er deine tiefsten Geheimnisse kennt",
-        "ar": "اللقاء الذي يكشف فيه يسوع أنه يعرف أسرارك العميقة"
+        "ar": "اللقاء الذي يكشف فيه يسوع أنه يعرف أسرارك العميقة",
+        "fil": "Ang pakikipagtagpo kung saan inihahayag ni Jesus na alam Niya ang iyong pinakamalalim na mga lihim"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -340,7 +367,8 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 6
+        "ar": 6,
+        "fil": 6
       }
     },
     {
@@ -356,7 +384,8 @@
         "ja": "cana_wedding_ja_001.json",
         "zh": "cana_wedding_zh_001.json",
         "de": "cana_wedding_de_001.json",
-        "ar": "cana_wedding_ar_001.json"
+        "ar": "cana_wedding_ar_001.json",
+        "fil": "cana_wedding_fil_001.json"
       },
       "titles": {
         "es": "Las Bodas de Caná",
@@ -367,7 +396,8 @@
         "ja": "カナの婚礼",
         "zh": "迦拿的婚筵",
         "de": "Die Hochzeit zu Kana",
-        "ar": "عرس قانا"
+        "ar": "عرس قانا",
+        "fil": "Ang Kasalan sa Cana"
       },
       "subtitles": {
         "es": "Cuando Jesús convierte lo ordinario en extraordinario",
@@ -378,7 +408,8 @@
         "ja": "イエスが普通のものを特別なものに変えるとき",
         "zh": "当耶稣将平凡变为非凡",
         "de": "Wenn Jesus das Gewöhnliche in Außergewöhnliches verwandelt",
-        "ar": "حين يحوّل يسوع العادي إلى استثنائي"
+        "ar": "حين يحوّل يسوع العادي إلى استثنائي",
+        "fil": "Nang ginawa ni Hesus ang ordinaryo na pambihira"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -389,7 +420,8 @@
         "ja": 5,
         "zh": 5,
         "de": 6,
-        "ar": 5
+        "ar": 5,
+        "fil": 6
       }
     },
     {
@@ -405,7 +437,8 @@
         "zh": "born_again_zh_001.json",
         "hi": "born_again_hi_001.json",
         "de": "born_again_de_001.json",
-        "ar": "born_again_ar_001.json"
+        "ar": "born_again_ar_001.json",
+        "fil": "born_again_fil_001.json"
       },
       "titles": {
         "es": "Es Necesario Nacer de Nuevo",
@@ -416,7 +449,8 @@
         "zh": "你必须重生",
         "hi": "तुम्हें फिर से जन्म लेना होगा",
         "de": "Du musst von Neuem geboren werden",
-        "ar": "يجب أن تُولَد من جديد"
+        "ar": "يجب أن تُولَد من جديد",
+        "fil": "Dapat Kang Ipanganak na Muli"
       },
       "subtitles": {
         "es": "El misterio del nuevo nacimiento espiritual revelado",
@@ -427,7 +461,8 @@
         "zh": "当以色列的教师发现他的宗教并不足够",
         "hi": "जब इस्राएल का गुरु यह जान लेता है कि उसका धर्म पर्याप्त नहीं है",
         "de": "Als der Meister Israels erkennt, dass seine Religion nicht genug ist",
-        "ar": "عندما يكتشف معلّم إسرائيل أن دينه لا يكفي"
+        "ar": "عندما يكتشف معلّم إسرائيل أن دينه لا يكفي",
+        "fil": "Nang matuklasan ng guro ng Israel na hindi sapat ang kanyang relihiyon"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -438,7 +473,8 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 6
+        "ar": 6,
+        "fil": 6
       }
     },
     {
@@ -454,7 +490,8 @@
         "zh": "temple_cleansing_zh_001.json",
         "hi": "temple_cleansing_hi_001.json",
         "de": "temple_cleansing_de_001.json",
-        "ar": "temple_cleansing_ar_001.json"
+        "ar": "temple_cleansing_ar_001.json",
+        "fil": "temple_cleansing_fil_001.json"
       },
       "titles": {
         "es": "La Purificación del Templo",
@@ -465,7 +502,8 @@
         "zh": "洁净圣殿",
         "hi": "मंदिर की शुद्धि",
         "de": "Die Reinigung des Tempels",
-        "ar": "تطهير الهيكل"
+        "ar": "تطهير الهيكل",
+        "fil": "Ang Paglilinis ng Templo"
       },
       "subtitles": {
         "es": "Cuando Jesús declara que Él es el Templo verdadero",
@@ -476,7 +514,8 @@
         "zh": "耶稣宣告自己是真正的圣殿",
         "hi": "जब यीशु घोषणा करता है कि वह ही सच्चा मंदिर है",
         "de": "Als Jesus erklärt, dass er der wahre Tempel ist",
-        "ar": "حين يُعلن يسوع أنه الهيكل الحقيقي"
+        "ar": "حين يُعلن يسوع أنه الهيكل الحقيقي",
+        "fil": "Nang ipahayag ni Jesus na Siya ang tunay na Templo"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -487,7 +526,8 @@
         "zh": 6,
         "hi": 6,
         "de": 7,
-        "ar": 6
+        "ar": 6,
+        "fil": 7
       }
     },
     {
@@ -503,7 +543,8 @@
         "zh": "woman_at_well_zh_001.json",
         "hi": "woman_at_well_hi_001.json",
         "de": "woman_at_well_de_001.json",
-        "ar": "woman_at_well_ar_001.json"
+        "ar": "woman_at_well_ar_001.json",
+        "fil": "woman_at_well_fil_001.json"
       },
       "titles": {
         "es": "La Mujer del Pozo",
@@ -514,7 +555,8 @@
         "zh": "井边的妇人",
         "hi": "कुएँ पर की स्त्री",
         "de": "Die Frau am Brunnen",
-        "ar": "المرأة عند البئر"
+        "ar": "المرأة عند البئر",
+        "fil": "Ang Babae sa Balon"
       },
       "subtitles": {
         "es": "Cuando Jesús rompe todas las barreras por una conversación que cambiará una ciudad",
@@ -525,7 +567,8 @@
         "zh": "当耶稣打破一切隔阂，带来改变城市的对话",
         "hi": "जब यीशु एक ऐसी बातचीत के लिए हर बाधा तोड़ता है जो एक पूरे नगर को बदल देगी",
         "de": "Als Jesus jede Schranke durchbricht für ein Gespräch, das eine ganze Stadt verwandeln wird",
-        "ar": "عندما يكسر يسوع كل الحواجز لمحادثة ستحوّل مدينة بأكملها"
+        "ar": "عندما يكسر يسوع كل الحواجز لمحادثة ستحوّل مدينة بأكملها",
+        "fil": "Nang sirain ni Jesus ang lahat ng hadlang para sa isang pag-uusap na magbabago sa isang lunsod"
       },
       "estimated_reading_minutes": {
         "es": 5,
@@ -536,7 +579,8 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 6
+        "ar": 6,
+        "fil": 6
       }
     },
     {
@@ -552,7 +596,8 @@
         "zh": "i_am_before_abraham_zh_001.json",
         "hi": "i_am_before_abraham_hi_001.json",
         "de": "i_am_before_abraham_de_001.json",
-        "ar": "i_am_before_abraham_ar_001.json"
+        "ar": "i_am_before_abraham_ar_001.json",
+        "fil": "i_am_before_abraham_fil_001.json"
       },
       "titles": {
         "es": "YO SOY: Antes que Abraham Fuese",
@@ -563,7 +608,8 @@
         "zh": "我是：在亚伯拉罕出生以前",
         "hi": "मैं हूं: इब्राहीम से पहले",
         "de": "ICH BIN: Bevor Abraham war",
-        "ar": "أنا هو: قبل أن يكون إبراهيم"
+        "ar": "أنا هو: قبل أن يكون إبراهيم",
+        "fil": "AKO AY: Bago si Abraham"
       },
       "subtitles": {
         "es": "Cuando Jesús reclama eternidad y la multitud toma piedras",
@@ -574,7 +620,8 @@
         "zh": "当耶稣宣称永恒，而众人拿起石头",
         "hi": "जब यीशु अनन्तता का दावा करता है और भीड़ पत्थर उठाती है",
         "de": "Als Jesus Ewigkeit beansprucht und der Mob nach Steinen greift",
-        "ar": "حين يدّعي يسوع الأزلية والجمهور يلتقط الحجارة"
+        "ar": "حين يدّعي يسوع الأزلية والجمهور يلتقط الحجارة",
+        "fil": "Nang iangkin ni Jesus ang walang-hanggan at kumuha ng mga bato ang karamihan"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -585,7 +632,8 @@
         "zh": 6,
         "hi": 6,
         "de": 7,
-        "ar": 6
+        "ar": 6,
+        "fil": 7
       }
     },
     {
@@ -601,7 +649,8 @@
         "zh": "good_shepherd_zh_001.json",
         "hi": "good_shepherd_hi_001.json",
         "de": "good_shepherd_de_001.json",
-        "ar": "good_shepherd_ar_001.json"
+        "ar": "good_shepherd_ar_001.json",
+        "fil": "good_shepherd_fil_001.json"
       },
       "titles": {
         "es": "El Buen Pastor",
@@ -612,7 +661,8 @@
         "zh": "好牧人",
         "hi": "अच्छा चरवाहा",
         "de": "Der gute Hirte",
-        "ar": "الراعي الصالح"
+        "ar": "الراعي الصالح",
+        "fil": "Ang Mabuting Pastol"
       },
       "subtitles": {
         "es": "Cuando Jesús declara que conoce a sus ovejas por nombre",
@@ -623,7 +673,8 @@
         "zh": "当耶稣宣告祂按名认识祂的羊",
         "hi": "जब यीशु घोषणा करता है कि वह अपनी भेड़ों को नाम से जानता है",
         "de": "Als Jesus erklärt, dass er seine Schafe beim Namen kennt",
-        "ar": "عندما يعلن يسوع أنه يعرف خرافه بالاسم"
+        "ar": "عندما يعلن يسوع أنه يعرف خرافه بالاسم",
+        "fil": "Nang ipahayag ni Jesus na kilala Niya ang bawat tupa sa kanilang pangalan"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -634,7 +685,8 @@
         "zh": 6,
         "hi": 6,
         "de": 7,
-        "ar": 5
+        "ar": 5,
+        "fil": 7
       }
     },
     {
@@ -650,7 +702,8 @@
         "zh": "jesus_troubled_himself_zh_001.json",
         "hi": "jesus_troubled_himself_hi_001.json",
         "de": "jesus_troubled_himself_de_001.json",
-        "ar": "jesus_troubled_himself_ar_001.json"
+        "ar": "jesus_troubled_himself_ar_001.json",
+        "fil": "jesus_troubled_himself_fil_001.json"
       },
       "titles": {
         "es": "Se Turbó a Sí Mismo",
@@ -661,7 +714,8 @@
         "zh": "他使自己心里悲叹",
         "hi": "उसने स्वयं को व्याकुल किया",
         "de": "Er erschütterte sich selbst",
-        "ar": "اضطرب في نفسه"
+        "ar": "اضطرب في نفسه",
+        "fil": "Pinili Niyang Magulumihanan ang Sarili"
       },
       "subtitles": {
         "es": "Cuando Jesús eligió entrar en nuestro dolor",
@@ -672,7 +726,8 @@
         "zh": "当耶稣选择进入我们的痛苦",
         "hi": "जब यीशु ने हमारे दर्द में प्रवेश करना चुना",
         "de": "Als Jesus sich entschied, in unseren Schmerz einzutauchen",
-        "ar": "حين اختار يسوع أن يدخل ألمنا"
+        "ar": "حين اختار يسوع أن يدخل ألمنا",
+        "fil": "Nang piliin ni Jesus na pumasok sa ating sakit"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -683,7 +738,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 7
+        "ar": 7,
+        "fil": 8
       }
     },
     {
@@ -699,7 +755,8 @@
         "zh": "passed_from_death_zh_001.json",
         "hi": "passed_from_death_hi_001.json",
         "de": "passed_from_death_de_001.json",
-        "ar": "passed_from_death_ar_001.json"
+        "ar": "passed_from_death_ar_001.json",
+        "fil": "passed_from_death_fil_001.json"
       },
       "titles": {
         "es": "Pasados de Muerte a Vida",
@@ -710,7 +767,8 @@
         "zh": "从死到生",
         "hi": "मृत्यु से जीवन में पार",
         "de": "Vom Tod ins Leben hindurchgedrungen",
-        "ar": "عبرتَ من الموت إلى الحياة"
+        "ar": "عبرتَ من الموت إلى الحياة",
+        "fil": "Lumipat mula sa Kamatayan patungo sa Buhay"
       },
       "subtitles": {
         "es": "La revelación final: ya no puedes 'des-nacer'",
@@ -721,7 +779,8 @@
         "zh": "最终的启示：你不能'不出生'",
         "hi": "अंतिम प्रकाशन: आप अब 'अजन्मे' नहीं हो सकते",
         "de": "Die endgültige Offenbarung: Du kannst nicht mehr 'ungeboren' werden",
-        "ar": "الحقيقة الختامية: لا يمكن أن تعود غير مولود"
+        "ar": "الحقيقة الختامية: لا يمكن أن تعود غير مولود",
+        "fil": "Ang huling paghahayag: hindi ka na maaaring maging \"hindi ipinanganak\""
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -732,7 +791,8 @@
         "zh": 8,
         "hi": 8,
         "de": 9,
-        "ar": 7
+        "ar": 7,
+        "fil": 9
       }
     },
     {
@@ -748,7 +808,8 @@
         "zh": "transfiguration_zh_001.json",
         "hi": "transfiguration_hi_001.json",
         "de": "transfiguration_de_001.json",
-        "ar": "transfiguration_ar_001.json"
+        "ar": "transfiguration_ar_001.json",
+        "fil": "transfiguration_fil_001.json"
       },
       "titles": {
         "es": "La Transfiguración",
@@ -759,7 +820,8 @@
         "zh": "登山变像",
         "hi": "रूपान्तरण",
         "de": "Die Verklärung",
-        "ar": "التجلّي"
+        "ar": "التجلّي",
+        "fil": "Ang Pagbabagong-Anyo"
       },
       "subtitles": {
         "es": "Cuando el velo de la carne se abre y la gloria irrumpe",
@@ -770,7 +832,8 @@
         "zh": "当肉身的幔子揭开，荣耀突破而出",
         "hi": "जब देह का परदा खुलता है और महिमा प्रकट होती है",
         "de": "Als der Schleier des Fleisches sich öffnet und die Herrlichkeit durchbricht",
-        "ar": "عندما ينفتح ستار الجسد ويشقّ المجد طريقه"
+        "ar": "عندما ينفتح ستار الجسد ويشقّ المجد طريقه",
+        "fil": "Nang bumukas ang tabing ng laman at sumilay ang kaluwalhatian"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -781,7 +844,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 6
+        "ar": 6,
+        "fil": 8
       }
     },
     {
@@ -797,7 +861,8 @@
         "zh": "buried_talent_zh_001.json",
         "hi": "buried_talent_hi_001.json",
         "de": "buried_talent_de_001.json",
-        "ar": "buried_talent_ar_001.json"
+        "ar": "buried_talent_ar_001.json",
+        "fil": "buried_talent_fil_001.json"
       },
       "titles": {
         "es": "El Talento Enterrado",
@@ -808,7 +873,8 @@
         "zh": "被埋葬的他连得",
         "hi": "दफनाई गई प्रतिभा",
         "de": "Das vergrabene Talent",
-        "ar": "الوزنة المدفونة"
+        "ar": "الوزنة المدفونة",
+        "fil": "Ang Binalinang Talento"
       },
       "subtitles": {
         "es": "Cuando el miedo paraliza y las manos quedan vacías",
@@ -819,7 +885,8 @@
         "zh": "当恐惧使人瘫痪,双手空空如也",
         "hi": "जब डर लकवा मारता है और हाथ खाली रह जाते हैं",
         "de": "Wenn Angst lähmt und Hände leer bleiben",
-        "ar": "حين يشلّ الخوف الإنسان وتبقى يداه فارغتين"
+        "ar": "حين يشلّ الخوف الإنسان وتبقى يداه فارغتين",
+        "fil": "Kapag ang takot ay pumipigil at ang mga kamay ay nananatiling walang laman"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -830,7 +897,8 @@
         "zh": 8,
         "hi": 8,
         "de": 9,
-        "ar": 10
+        "ar": 10,
+        "fil": 9
       }
     },
     {
@@ -846,7 +914,8 @@
         "zh": "triumphal_entry_zh_001.json",
         "hi": "triumphal_entry_hi_001.json",
         "de": "triumphal_entry_de_001.json",
-        "ar": "triumphal_entry_ar_001.json"
+        "ar": "triumphal_entry_ar_001.json",
+        "fil": "triumphal_entry_fil_001.json"
       },
       "titles": {
         "es": "La Entrada Triunfal",
@@ -857,7 +926,8 @@
         "zh": "荣入圣城",
         "hi": "विजयी प्रवेश",
         "de": "Der Einzug des Königs",
-        "ar": "الدخول المنتصر"
+        "ar": "الدخول المنتصر",
+        "fil": "Ang Tagumpay na Pagpasok"
       },
       "subtitles": {
         "es": "Cuando el Rey rechazado entra a Jerusalén montado en un pollino, no en un caballo de guerra",
@@ -868,7 +938,8 @@
         "zh": "当被拒绝的王骑着驴驹而非战马进入耶路撒冷",
         "hi": "जब तिरस्कृत राजा यरूशलेम में गधे पर सवार होकर प्रवेश करता है, न कि युद्ध के घोड़े पर",
         "de": "Als der verworfene König auf einem Esel in Jerusalem einzieht – nicht auf einem Streitross",
-        "ar": "حين يدخل الملك المرفوض أورشليم راكباً على حمار لا على حصان حرب"
+        "ar": "حين يدخل الملك المرفوض أورشليم راكباً على حمار لا على حصان حرب",
+        "fil": "Nang pumasok ang tinanggihang Hari sa Jerusalem na nakasakay sa asno, hindi sa kabayong pandigma"
       },
       "estimated_reading_minutes": {
         "es": 5,
@@ -879,7 +950,8 @@
         "zh": 5,
         "hi": 5,
         "de": 6,
-        "ar": 6
+        "ar": 6,
+        "fil": 6
       }
     },
     {
@@ -895,7 +967,8 @@
         "zh": "gethsemane_agony_zh_001.json",
         "hi": "gethsemane_agony_hi_001.json",
         "de": "gethsemane_agony_de_001.json",
-        "ar": "gethsemane_agony_ar_001.json"
+        "ar": "gethsemane_agony_ar_001.json",
+        "fil": "gethsemane_agony_fil_001.json"
       },
       "titles": {
         "es": "La Agonía del Testador",
@@ -906,7 +979,8 @@
         "zh": "立约者的痛苦",
         "hi": "वसीयतकर्ता की व्यथा",
         "de": "Die Qual des Erblassers",
-        "ar": "آلام الوصيّة"
+        "ar": "آلام الوصيّة",
+        "fil": "Ang Paghihirap ng Tagapagmana"
       },
       "subtitles": {
         "es": "Cuando el Hijo de Dios suda sangre en la prensa de aceite",
@@ -917,7 +991,8 @@
         "zh": "当神的儿子在橄榄压榨机中流出血汗时",
         "hi": "जब परमेश्वर का पुत्र जैतून की कोल्हू में लहू जैसा पसीना बहाता है",
         "de": "Als der Sohn Gottes im Ölbaumgarten Blut schwitzt",
-        "ar": "عندما يعرق ابن الله دماً في معصرة الزيتون"
+        "ar": "عندما يعرق ابن الله دماً في معصرة الزيتون",
+        "fil": "Nang magpawis ng dugo ang Anak ng Diyos sa pigaan ng olibo"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -928,7 +1003,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 6
+        "ar": 6,
+        "fil": 8
       }
     },
     {
@@ -944,7 +1020,8 @@
         "zh": "new_covenant_cup_zh_001.json",
         "hi": "new_covenant_cup_hi_001.json",
         "de": "new_covenant_cup_de_001.json",
-        "ar": "new_covenant_cup_ar_001.json"
+        "ar": "new_covenant_cup_ar_001.json",
+        "fil": "new_covenant_cup_fil_001.json"
       },
       "titles": {
         "es": "La Copa del Nuevo Pacto",
@@ -955,7 +1032,8 @@
         "zh": "新约的杯",
         "hi": "नई वाचा का कटोरा",
         "de": "Der Kelch des Neuen Bundes",
-        "ar": "كأس العهد الجديد"
+        "ar": "كأس العهد الجديد",
+        "fil": "Ang Tasa ng Bagong Tipan"
       },
       "subtitles": {
         "es": "Cuando el Testador firma con su sangre el testamento de nuestra libertad",
@@ -966,7 +1044,8 @@
         "zh": "当立约者用他的血签署我们自由的遗嘱时",
         "hi": "जब वसीयतकर्ता अपने लहू से हमारी स्वतंत्रता की वसीयत पर हस्ताक्षर करता है",
         "de": "Als der Erblasser das Testament unserer Freiheit mit seinem Blut unterzeichnet",
-        "ar": "حين يوقّع المُوصي بدمه وصيّة حريتنا"
+        "ar": "حين يوقّع المُوصي بدمه وصيّة حريتنا",
+        "fil": "Nang lagdaan ng Testador gamit ang Kanyang dugo ang testamento ng ating kalayaan"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -977,7 +1056,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 6
+        "ar": 6,
+        "fil": 8
       }
     },
     {
@@ -993,7 +1073,8 @@
         "zh": "cup_of_wrath_zh_001.json",
         "hi": "cup_of_wrath_hi_001.json",
         "de": "cup_of_wrath_de_001.json",
-        "ar": "cup_of_wrath_ar_001.json"
+        "ar": "cup_of_wrath_ar_001.json",
+        "fil": "cup_of_wrath_fil_001.json"
       },
       "titles": {
         "es": "La Copa de la Ira",
@@ -1004,7 +1085,8 @@
         "zh": "忿怒的杯",
         "hi": "क्रोध का कटोरा",
         "de": "Der Kelch des Zorns",
-        "ar": "كأس الغضب"
+        "ar": "كأس الغضب",
+        "fil": "Ang Kopa ng Poot"
       },
       "subtitles": {
         "es": "Cuando el Inocente bebe el juicio que nos correspondía",
@@ -1015,7 +1097,8 @@
         "zh": "当无辜者喝下属于我们的审判时",
         "hi": "जब निर्दोष वह दंड पीता है जो हमारा था",
         "de": "Als der Unschuldige das Gericht trinkt, das uns bestimmt war",
-        "ar": "حين يشرب البريء الدينونة التي كانت لنا"
+        "ar": "حين يشرب البريء الدينونة التي كانت لنا",
+        "fil": "Nang ang Walang Sala ay uminom ng hatol na para sa atin"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -1026,7 +1109,8 @@
         "zh": 8,
         "hi": 8,
         "de": 9,
-        "ar": 6
+        "ar": 6,
+        "fil": 9
       }
     },
     {
@@ -1042,7 +1126,8 @@
         "zh": "veil_torn_zh_001.json",
         "hi": "veil_torn_hi_001.json",
         "de": "veil_torn_de_001.json",
-        "ar": "veil_torn_ar_001.json"
+        "ar": "veil_torn_ar_001.json",
+        "fil": "veil_torn_fil_001.json"
       },
       "titles": {
         "es": "El Velo Rasgado",
@@ -1053,7 +1138,8 @@
         "zh": "裂开的幔子",
         "hi": "फटा हुआ पर्दा",
         "de": "Der zerrissene Vorhang",
-        "ar": "الحجاب الممزّق"
+        "ar": "الحجاب الممزّق",
+        "fil": "Ang Napunit na Tabing"
       },
       "subtitles": {
         "es": "Cuando Dios abre el camino al Lugar Santísimo",
@@ -1064,7 +1150,8 @@
         "zh": "当神开辟通往至圣所的道路时",
         "hi": "जब परमेश्वर परम पवित्र स्थान का मार्ग खोलता है",
         "de": "Als Gott den Weg zum Allerheiligsten öffnet",
-        "ar": "حين يفتح الله الطريق إلى قدس الأقداس"
+        "ar": "حين يفتح الله الطريق إلى قدس الأقداس",
+        "fil": "Nang buksan ng Diyos ang daan sa Kabanal-banalang Dako"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1075,7 +1162,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 6
+        "ar": 6,
+        "fil": 8
       }
     },
     {
@@ -1091,7 +1179,8 @@
         "zh": "saints_resurrected_zh_001.json",
         "hi": "saints_resurrected_hi_001.json",
         "de": "saints_resurrected_de_001.json",
-        "ar": "saints_resurrected_ar_001.json"
+        "ar": "saints_resurrected_ar_001.json",
+        "fil": "saints_resurrected_fil_001.json"
       },
       "titles": {
         "es": "Los Santos Resucitados",
@@ -1102,7 +1191,8 @@
         "zh": "复活的圣徒",
         "hi": "पुनरुत्थित संत",
         "de": "Die auferstandenen Heiligen",
-        "ar": "القدّيسون الذين قاموا"
+        "ar": "القدّيسون الذين قاموا",
+        "fil": "Ang Muling Nabuhay na mga Banal"
       },
       "subtitles": {
         "es": "Cuando la muerte de Cristo liberó a los cautivos del Hades",
@@ -1113,7 +1203,8 @@
         "zh": "当基督的死释放了阴间的囚徒时",
         "hi": "जब मसीह की मृत्यु ने अधोलोक के बंदियों को मुक्त किया",
         "de": "Als der Tod Christi die Gefangenen aus dem Hades befreite",
-        "ar": "حين حرّر موت المسيح الأسرى من الهاوية"
+        "ar": "حين حرّر موت المسيح الأسرى من الهاوية",
+        "fil": "Nang ang kamatayan ni Cristo ay nagpalaya sa mga bihag mula sa Hades"
       },
       "estimated_reading_minutes": {
         "es": 8,
@@ -1124,7 +1215,8 @@
         "zh": 8,
         "hi": 8,
         "de": 9,
-        "ar": 7
+        "ar": 7,
+        "fil": 9
       }
     },
     {
@@ -1140,7 +1232,8 @@
         "zh": "breath_new_adam_zh_001.json",
         "hi": "breath_new_adam_hi_001.json",
         "de": "breath_new_adam_de_001.json",
-        "ar": "breath_new_adam_ar_001.json"
+        "ar": "breath_new_adam_ar_001.json",
+        "fil": "breath_new_adam_fil_001.json"
       },
       "titles": {
         "es": "El Soplo del Nuevo Adán",
@@ -1151,7 +1244,8 @@
         "zh": "新亚当的气息",
         "hi": "नए आदम की श्वास",
         "de": "Der Hauch des neuen Adam",
-        "ar": "نَفَسُ آدم الأخير"
+        "ar": "نَفَسُ آدم الأخير",
+        "fil": "Ang Hininga ng Bagong Adan"
       },
       "subtitles": {
         "es": "Cuando Jesús reconecta al hombre con Dios",
@@ -1162,7 +1256,8 @@
         "zh": "当耶稣将人与神重新连接",
         "hi": "जब यीशु ने मनुष्य को परमेश्वर से पुनः जोड़ा",
         "de": "Als Jesus den Menschen mit Gott wiederverbindet",
-        "ar": "حين يعيد يسوع وصل الإنسان بالله"
+        "ar": "حين يعيد يسوع وصل الإنسان بالله",
+        "fil": "Nang muling ikonekta ni Jesus ang tao sa Diyos"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1173,7 +1268,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 8
+        "ar": 8,
+        "fil": 8
       }
     },
     {
@@ -1189,7 +1285,8 @@
         "zh": "road_to_emmaus_zh_001.json",
         "hi": "road_to_emmaus_hi_001.json",
         "de": "road_to_emmaus_de_001.json",
-        "ar": "road_to_emmaus_ar_001.json"
+        "ar": "road_to_emmaus_ar_001.json",
+        "fil": "road_to_emmaus_fil_001.json"
       },
       "titles": {
         "es": "El Camino a Emaús",
@@ -1200,7 +1297,8 @@
         "zh": "去以马忤斯的路上",
         "hi": "एम्माऊस का मार्ग",
         "de": "Der Weg nach Emmaus",
-        "ar": "طريق عمواس"
+        "ar": "طريق عمواس",
+        "fil": "Ang Daan Patungo sa Emaus"
       },
       "subtitles": {
         "es": "Cuando el Cristo resucitado camina contigo sin que lo reconozcas, hasta que parte el pan",
@@ -1211,7 +1309,8 @@
         "zh": "当复活的基督与你同行却未被认出，直到祂擘饼",
         "hi": "जब पुनरुत्थित मसीह आपके साथ अपरिचित चलता है, जब तक वह रोटी नहीं तोड़ता",
         "de": "Als der auferstandene Christus unerkannt mit dir geht – bis er das Brot bricht",
-        "ar": "حين يمشي المسيح القائم معك دون أن تتعرف عليه حتى يكسر الخبز"
+        "ar": "حين يمشي المسيح القائم معك دون أن تتعرف عليه حتى يكسر الخبز",
+        "fil": "Nang ang muling nabuhay na Cristo ay lumakad kasama mo nang hindi nakikilala, hanggang sa pagpilas Niya ng tinapay"
       },
       "estimated_reading_minutes": {
         "es": 10,
@@ -1222,7 +1321,8 @@
         "zh": 10,
         "hi": 10,
         "de": 12,
-        "ar": 7
+        "ar": 7,
+        "fil": 11
       }
     },
     {
@@ -1238,7 +1338,8 @@
         "zh": "restoration_by_fire_zh_001.json",
         "hi": "restoration_by_fire_hi_001.json",
         "de": "restoration_by_fire_de_001.json",
-        "ar": "restoration_by_fire_ar_001.json"
+        "ar": "restoration_by_fire_ar_001.json",
+        "fil": "restoration_by_fire_fil_001.json"
       },
       "titles": {
         "es": "Las Brasas de la Restauración",
@@ -1249,7 +1350,8 @@
         "zh": "恢复的炭火",
         "hi": "पुनर्स्थापना की अंगीठी",
         "de": "Das Kohlenfeuer der Wiederherstellung",
-        "ar": "جمرات الاسترداد"
+        "ar": "جمرات الاسترداد",
+        "fil": "Ang Mga Baga ng Pagpapanumbalik"
       },
       "subtitles": {
         "es": "Cuando el olor del fracaso se convierte en el aroma del perdón",
@@ -1260,7 +1362,8 @@
         "zh": "当失败的气味变成宽恕的芬芳",
         "hi": "जब असफलता की गंध क्षमा की सुगंध बन जाती है",
         "de": "Als der Geruch des Scheiterns zum Duft der Vergebung wird",
-        "ar": "حين تصبح رائحة الفشل عطر المغفرة"
+        "ar": "حين تصبح رائحة الفشل عطر المغفرة",
+        "fil": "Kapag ang amoy ng kabiguan ay naging halimuyak ng kapatawaran"
       },
       "estimated_reading_minutes": {
         "es": 9,
@@ -1271,7 +1374,8 @@
         "zh": 9,
         "hi": 9,
         "de": 10,
-        "ar": 10
+        "ar": 10,
+        "fil": 10
       }
     },
     {
@@ -1287,7 +1391,8 @@
         "zh": "great_commission_zh_001.json",
         "hi": "great_commission_hi_001.json",
         "de": "great_commission_de_001.json",
-        "ar": "great_commission_ar_001.json"
+        "ar": "great_commission_ar_001.json",
+        "fil": "great_commission_fil_001.json"
       },
       "titles": {
         "es": "La Gran Comisión",
@@ -1298,7 +1403,8 @@
         "zh": "大使命",
         "hi": "महान आदेश",
         "de": "Der Missionsbefehl",
-        "ar": "الوصية الكبرى"
+        "ar": "الوصية الكبرى",
+        "fil": "Ang Dakilang Komisyon"
       },
       "subtitles": {
         "es": "Cuando Jesús transforma a seguidores en enviados",
@@ -1309,7 +1415,8 @@
         "zh": "当耶稣将跟随者转变为奉差者",
         "hi": "जब यीशु अनुयायियों को भेजे हुओं में बदल देता है",
         "de": "Als Jesus Nachfolger zu Gesandten macht",
-        "ar": "عندما يحوّل يسوع أتباعه إلى مُرسَلين"
+        "ar": "عندما يحوّل يسوع أتباعه إلى مُرسَلين",
+        "fil": "Kapag ginawa ni Jesus ang mga tagasunod na mga sinugo"
       },
       "estimated_reading_minutes": {
         "es": 6,
@@ -1320,7 +1427,8 @@
         "zh": 6,
         "hi": 6,
         "de": 7,
-        "ar": 6
+        "ar": 6,
+        "fil": 7
       }
     },
     {
@@ -1336,7 +1444,8 @@
         "zh": "ascension_victory_zh_001.json",
         "hi": "ascension_victory_hi_001.json",
         "de": "ascension_victory_de_001.json",
-        "ar": "ascension_victory_ar_001.json"
+        "ar": "ascension_victory_ar_001.json",
+        "fil": "ascension_victory_fil_001.json"
       },
       "titles": {
         "es": "La Ascensión Victoriosa",
@@ -1347,7 +1456,8 @@
         "zh": "得胜的升天",
         "hi": "विजयी स्वर्गारोहण",
         "de": "Die siegreiche Himmelfahrt",
-        "ar": "الصعود المُظفَّر"
+        "ar": "الصعود المُظفَّر",
+        "fil": "Ang Matagumpay na Pag-akyat"
       },
       "subtitles": {
         "es": "Cuando el Rey conquista el trono y envía el Espíritu",
@@ -1358,7 +1468,8 @@
         "zh": "当君王得胜宝座并差遣圣灵",
         "hi": "जब राजा सिंहासन पर विजय पाता है और आत्मा को भेजता है",
         "de": "Als der König den Thron erobert und den Geist sendet",
-        "ar": "حين يحتلّ الملك العرش ويُرسل الروح"
+        "ar": "حين يحتلّ الملك العرش ويُرسل الروح",
+        "fil": "Kapag sinakop ng Hari ang trono at isinugo ang Espiritu"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1369,7 +1480,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 6
+        "ar": 6,
+        "fil": 8
       }
     },
     {
@@ -1385,7 +1497,8 @@
         "zh": "pentecost_power_zh_001.json",
         "hi": "pentecost_power_hi_001.json",
         "de": "pentecost_power_de_001.json",
-        "ar": "pentecost_power_ar_001.json"
+        "ar": "pentecost_power_ar_001.json",
+        "fil": "pentecost_power_fil_001.json"
       },
       "titles": {
         "es": "El Poder de Pentecostés",
@@ -1396,7 +1509,8 @@
         "zh": "五旬节的能力",
         "hi": "पिन्तेकुस्त की सामर्थ",
         "de": "Die Kraft von Pfingsten",
-        "ar": "قوة العنصرة"
+        "ar": "قوة العنصرة",
+        "fil": "Ang Kapangyarihan ng Pentecostes"
       },
       "subtitles": {
         "es": "Cuando el Espíritu Santo transforma cobardes en valientes",
@@ -1407,7 +1521,8 @@
         "zh": "当圣灵将懦夫转变为勇士",
         "hi": "जब पवित्र आत्मा कायरों को साहसी में बदल देता है",
         "de": "Als der Heilige Geist Feiglinge in Mutigen verwandelt",
-        "ar": "عندما يحوّل الروح القدس الجبناء إلى شجعان"
+        "ar": "عندما يحوّل الروح القدس الجبناء إلى شجعان",
+        "fil": "Kapag ginawa ng Banal na Espiritu ang mga duwag na matapang"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1418,7 +1533,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 6
+        "ar": 6,
+        "fil": 8
       }
     },
     {
@@ -1434,7 +1550,8 @@
         "zh": "damascus_road_zh_001.json",
         "hi": "damascus_road_hi_001.json",
         "de": "damascus_road_de_001.json",
-        "ar": "damascus_road_ar_001.json"
+        "ar": "damascus_road_ar_001.json",
+        "fil": "damascus_road_fil_001.json"
       },
       "titles": {
         "es": "El Camino a Damasco",
@@ -1445,7 +1562,8 @@
         "zh": "大马士革的路上",
         "hi": "दमिश्क का मार्ग",
         "de": "Der Weg nach Damaskus",
-        "ar": "طريق دمشق"
+        "ar": "طريق دمشق",
+        "fil": "Ang Daan Patungo sa Damasco"
       },
       "subtitles": {
         "es": "Cuando la luz de Cristo derriba al perseguidor más feroz",
@@ -1456,7 +1574,8 @@
         "zh": "当基督的光击倒最凶猛的逼迫者",
         "hi": "जब मसीह का प्रकाश सबसे उग्र सताने वाले को गिरा देता है",
         "de": "Als das Licht Christi den grausamsten Verfolger niederwirft",
-        "ar": "حين يصرع نور المسيح أشرس مضطهديه"
+        "ar": "حين يصرع نور المسيح أشرس مضطهديه",
+        "fil": "Kapag itinumba ng liwanag ni Kristo ang pinakamabagsik na mang-uusig"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1467,7 +1586,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 6
+        "ar": 6,
+        "fil": 8
       }
     },
     {
@@ -1483,7 +1603,8 @@
         "zh": "gold_silver_ashes_zh_001.json",
         "hi": "gold_silver_ashes_hi_001.json",
         "de": "gold_silver_ashes_de_001.json",
-        "ar": "gold_silver_ashes_ar_001.json"
+        "ar": "gold_silver_ashes_ar_001.json",
+        "fil": "gold_silver_ashes_fil_001.json"
       },
       "titles": {
         "es": "Oro, Plata o Cenizas",
@@ -1494,7 +1615,8 @@
         "zh": "金银还是灰烬",
         "hi": "सोना, चाँदी या राख",
         "de": "Gold, Silber oder Asche",
-        "ar": "ذهب أم فضة أم رماد"
+        "ar": "ذهب أم فضة أم رماد",
+        "fil": "Ginto, Pilak o Abo"
       },
       "subtitles": {
         "es": "Cuando el fuego prueba la calidad de tu obra",
@@ -1505,7 +1627,8 @@
         "zh": "当火试验你工作的质量",
         "hi": "जब आग आपके काम की गुणवत्ता को परखती है",
         "de": "Wenn das Feuer die Güte deines Werkes prüft",
-        "ar": "حين تمتحن النار جودة أعمالك"
+        "ar": "حين تمتحن النار جودة أعمالك",
+        "fil": "Kapag sinusubok ng apoy ang kalidad ng iyong gawa"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1516,7 +1639,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 9
+        "ar": 9,
+        "fil": 8
       }
     },
     {
@@ -1532,7 +1656,8 @@
         "zh": "zechariah_14_return_zh_001.json",
         "hi": "zechariah_14_return_hi_001.json",
         "de": "zechariah_14_return_de_001.json",
-        "ar": "zechariah_14_return_ar_001.json"
+        "ar": "zechariah_14_return_ar_001.json",
+        "fil": "zechariah_14_return_fil_001.json"
       },
       "titles": {
         "es": "Zacarías 14: Cuando Sus Pies Toquen el Monte de los Olivos",
@@ -1543,7 +1668,8 @@
         "zh": "撒迦利亚书14章：当祂的脚踏在橄榄山上",
         "hi": "जकर्याह 14: जब उसके पाँव जैतून पर्वत पर पड़ेंगे",
         "de": "Sacharja 14: Wenn Seine Füße den Ölberg Berühren",
-        "ar": "زكريا 14: حين تطأ قدماه جبل الزيتون"
+        "ar": "زكريا 14: حين تطأ قدماه جبل الزيتون",
+        "fil": "Zacarias 14: Kapag Tumapat ang Kanyang mga Paa sa Bundok ng mga Olibo"
       },
       "subtitles": {
         "es": "El día en que el cielo desciende y la tierra es transformada",
@@ -1554,7 +1680,8 @@
         "zh": "天降大地、地球转化的那一天",
         "hi": "वह दिन जब स्वर्ग उतरेगा और पृथ्वी बदल जाएगी",
         "de": "Der Tag, an dem der Himmel herabkommt und die Erde verwandelt wird",
-        "ar": "اليوم الذي تنزل فيه السماء وتتحوّل الأرض"
+        "ar": "اليوم الذي تنزل فيه السماء وتتحوّل الأرض",
+        "fil": "Ang araw na bababa ang langit at mababago ang lupa"
       },
       "estimated_reading_minutes": {
         "es": 9,
@@ -1565,7 +1692,8 @@
         "zh": 9,
         "hi": 9,
         "de": 10,
-        "ar": 10
+        "ar": 10,
+        "fil": 10
       }
     },
     {
@@ -1581,7 +1709,8 @@
         "zh": "full_hands_king_zh_001.json",
         "hi": "full_hands_king_hi_001.json",
         "de": "full_hands_king_de_001.json",
-        "ar": "full_hands_king_ar_001.json"
+        "ar": "full_hands_king_ar_001.json",
+        "fil": "full_hands_king_fil_001.json"
       },
       "titles": {
         "es": "Manos Llenas para el Rey",
@@ -1592,7 +1721,8 @@
         "zh": "为王预备满手",
         "hi": "राजा के लिए भरे हाथ",
         "de": "Volle Hände für den König",
-        "ar": "يدان ممتلئتان للملك"
+        "ar": "يدان ممتلئتان للملك",
+        "fil": "Punong-puno ang mga Kamay para sa Hari"
       },
       "subtitles": {
         "es": "Cuando el Alfa y la Omega trae su recompensa",
@@ -1603,7 +1733,8 @@
         "zh": "当阿拉法和俄梅戛带着祂的赏赐而来",
         "hi": "जब आल्फा और ओमेगा अपना इनाम लेकर आता है",
         "de": "Wenn der Alfa und das Omega seinen Lohn bringt",
-        "ar": "حين يأتي الألف والياء بمكافأته"
+        "ar": "حين يأتي الألف والياء بمكافأته",
+        "fil": "Kapag dinala ng Alpha at Omega ang Kanyang gantimpala"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1614,7 +1745,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 8
+        "ar": 8,
+        "fil": 8
       }
     },
     {
