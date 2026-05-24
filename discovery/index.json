@@ -1603,7 +1603,8 @@
         "zh": "gold_silver_ashes_zh_001.json",
         "hi": "gold_silver_ashes_hi_001.json",
         "de": "gold_silver_ashes_de_001.json",
-        "ar": "gold_silver_ashes_ar_001.json"
+        "ar": "gold_silver_ashes_ar_001.json",
+        "fil": "gold_silver_ashes_fil_001.json"
       },
       "titles": {
         "es": "Oro, Plata o Cenizas",
@@ -1614,7 +1615,8 @@
         "zh": "金银还是灰烬",
         "hi": "सोना, चाँदी या राख",
         "de": "Gold, Silber oder Asche",
-        "ar": "ذهب أم فضة أم رماد"
+        "ar": "ذهب أم فضة أم رماد",
+        "fil": "Ginto, Pilak o Abo"
       },
       "subtitles": {
         "es": "Cuando el fuego prueba la calidad de tu obra",
@@ -1625,7 +1627,8 @@
         "zh": "当火试验你工作的质量",
         "hi": "जब आग आपके काम की गुणवत्ता को परखती है",
         "de": "Wenn das Feuer die Güte deines Werkes prüft",
-        "ar": "حين تمتحن النار جودة أعمالك"
+        "ar": "حين تمتحن النار جودة أعمالك",
+        "fil": "Kapag sinusubok ng apoy ang kalidad ng iyong gawa"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1636,7 +1639,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 9
+        "ar": 9,
+        "fil": 8
       }
     },
     {
@@ -1652,7 +1656,8 @@
         "zh": "zechariah_14_return_zh_001.json",
         "hi": "zechariah_14_return_hi_001.json",
         "de": "zechariah_14_return_de_001.json",
-        "ar": "zechariah_14_return_ar_001.json"
+        "ar": "zechariah_14_return_ar_001.json",
+        "fil": "zechariah_14_return_fil_001.json"
       },
       "titles": {
         "es": "Zacarías 14: Cuando Sus Pies Toquen el Monte de los Olivos",
@@ -1663,7 +1668,8 @@
         "zh": "撒迦利亚书14章：当祂的脚踏在橄榄山上",
         "hi": "जकर्याह 14: जब उसके पाँव जैतून पर्वत पर पड़ेंगे",
         "de": "Sacharja 14: Wenn Seine Füße den Ölberg Berühren",
-        "ar": "زكريا 14: حين تطأ قدماه جبل الزيتون"
+        "ar": "زكريا 14: حين تطأ قدماه جبل الزيتون",
+        "fil": "Zacarias 14: Kapag Tumapat ang Kanyang mga Paa sa Bundok ng mga Olibo"
       },
       "subtitles": {
         "es": "El día en que el cielo desciende y la tierra es transformada",
@@ -1674,7 +1680,8 @@
         "zh": "天降大地、地球转化的那一天",
         "hi": "वह दिन जब स्वर्ग उतरेगा और पृथ्वी बदल जाएगी",
         "de": "Der Tag, an dem der Himmel herabkommt und die Erde verwandelt wird",
-        "ar": "اليوم الذي تنزل فيه السماء وتتحوّل الأرض"
+        "ar": "اليوم الذي تنزل فيه السماء وتتحوّل الأرض",
+        "fil": "Ang araw na bababa ang langit at mababago ang lupa"
       },
       "estimated_reading_minutes": {
         "es": 9,
@@ -1685,7 +1692,8 @@
         "zh": 9,
         "hi": 9,
         "de": 10,
-        "ar": 10
+        "ar": 10,
+        "fil": 10
       }
     },
     {
@@ -1701,7 +1709,8 @@
         "zh": "full_hands_king_zh_001.json",
         "hi": "full_hands_king_hi_001.json",
         "de": "full_hands_king_de_001.json",
-        "ar": "full_hands_king_ar_001.json"
+        "ar": "full_hands_king_ar_001.json",
+        "fil": "full_hands_king_fil_001.json"
       },
       "titles": {
         "es": "Manos Llenas para el Rey",
@@ -1712,7 +1721,8 @@
         "zh": "为王预备满手",
         "hi": "राजा के लिए भरे हाथ",
         "de": "Volle Hände für den König",
-        "ar": "يدان ممتلئتان للملك"
+        "ar": "يدان ممتلئتان للملك",
+        "fil": "Punong-puno ang mga Kamay para sa Hari"
       },
       "subtitles": {
         "es": "Cuando el Alfa y la Omega trae su recompensa",
@@ -1723,7 +1733,8 @@
         "zh": "当阿拉法和俄梅戛带着祂的赏赐而来",
         "hi": "जब आल्फा और ओमेगा अपना इनाम लेकर आता है",
         "de": "Wenn der Alfa und das Omega seinen Lohn bringt",
-        "ar": "حين يأتي الألف والياء بمكافأته"
+        "ar": "حين يأتي الألف والياء بمكافأته",
+        "fil": "Kapag dinala ng Alpha at Omega ang Kanyang gantimpala"
       },
       "estimated_reading_minutes": {
         "es": 7,
@@ -1734,7 +1745,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 8
+        "ar": 8,
+        "fil": 8
       }
     }
   ]
