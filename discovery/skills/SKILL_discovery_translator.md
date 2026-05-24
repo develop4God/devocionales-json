@@ -237,9 +237,9 @@ Overall assessment
 
 ### Coordinator review
 After all critic reports return:
-1. Apply all CRITICAL fixes immediately
-2. Review MODERATE findings — apply if agreed
-3. Review MINOR suggestions — apply if agreed
+1. CRITICAL findings are a checklist. The coordinator must iterate through every item marked CRITICAL, apply each fix one by one, and confirm each one before closing the review. Do not mark a file as reviewed until every CRITICAL item has a fix applied and confirmed.
+2. Review MODERATE findings — review one by one, dismiss or apply the fix, document each one. 
+3. Review MINOR suggestions — review one by one, dismiss or apply the fix, document each one.
 4. Re-run `validate_pair.py` on any file that was modified
 5. Proceed to final validation
 ---
