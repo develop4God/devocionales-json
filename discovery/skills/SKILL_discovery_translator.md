@@ -190,6 +190,58 @@ python3 validate_translations.py
 
 **Zero errors required.** Warnings about `estimated_reading_minutes` differing from EN are expected and acceptable. All other warnings must be investigated and resolved.
 
+markdown---
+
+## Quality Gate — Native Critic Review
+
+After all translations in the batch are complete, spawn one critic subagent per translated file **in parallel** before running final validation.
+
+### When to spawn
+After the last translation file in the batch is written and `validate_pair.py` passes for each file.
+
+### Delegation prompt template
+You are a native [LANGUAGE] Christian speaker. Review the following [LANGUAGE] Bible study translation for errors (DOES NOT APPLY to the verses only in the translated content):
+File: [FILE_PATH]
+For EACH file, carefully check for:
+CRITICAL ERRORS (must be fixed):
+
+Typos and spacing errors
+Wrong word meanings that change theological meaning
+Untranslated English words or phrases
+Incorrect characters or diacritics
+Wrong verb conjugations or tenses
+Expressions that sound unnatural for a native speaker
+Theological terminology errors for this language and culture
+
+MODERATE ISSUES (should be improved):
+
+Word choices with wrong connotations
+Unnatural phrasing that doesn't sound native
+Inconsistent terminology across sections
+Better synonym choices for clarity
+
+MINOR SUGGESTIONS:
+
+Style improvements
+More natural idioms
+Better flow
+
+Provide:
+
+File name
+List of ALL findings (with text context)
+Severity: CRITICAL / MODERATE / MINOR
+Suggested correction
+Overall assessment
+
+
+### Coordinator review
+After all critic reports return:
+1. Apply all CRITICAL fixes immediately
+2. Review MODERATE findings — apply if agreed
+3. Log MINOR suggestions for future reference
+4. Re-run `validate_pair.py` on any file that was modified
+5. Proceed to final validation
 ---
 
 ## index.json Update
