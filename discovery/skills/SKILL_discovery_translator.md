@@ -176,7 +176,7 @@ Store the value in both the JSON file and `index.json`.
 
 ---
 
-## Validation Steps
+## Validation Steps for each translation
 Run in this order. Fix all errors before proceeding to the next language.
 
 ```bash
@@ -192,7 +192,7 @@ python3 validate_translations.py
 
 markdown---
 
-## Quality Gate — Native Critic Review
+## Quality Gate — Native Critic Review  MUST RUN BEFORE MARKING THE TRANSLATION as DONE
 
 After all translations in the batch are complete, spawn one critic subagent per translated file **in parallel** before running final validation.
 
@@ -239,7 +239,7 @@ Overall assessment
 After all critic reports return:
 1. Apply all CRITICAL fixes immediately
 2. Review MODERATE findings — apply if agreed
-3. Log MINOR suggestions for future reference
+3. Review MINOR suggestions — apply if agreed
 4. Re-run `validate_pair.py` on any file that was modified
 5. Proceed to final validation
 ---
