@@ -1,0 +1,191 @@
+{
+    "id": "bartimaeus_001",
+    "type": "encounter",
+    "schema_version": "encounters_v1",
+    "language": "fil",
+    "bible_version": "Magandang Balita Biblia",
+    "version": "1.0",
+    "estimated_reading_minutes": 8,
+    "meta": {
+        "character": "Bartimeo",
+        "testament": "new",
+        "scripture_reference": "Marcos 10:46-52",
+        "mood_primary": "darkness",
+        "accent_color": "#2a1500",
+        "emoji": "👁️",
+        "tags": [
+            "pagkabulag",
+            "pananampalataya",
+            "pagtitiyaga",
+            "awa",
+            "pagpapagaling",
+            "bartimeo",
+            "jesus",
+            "paningin"
+        ]
+    },
+    "key_verse": {
+        "reference": "Marcos 10:52",
+        "text": "Sinabi ni Jesus, \"Kung gayon, magaling ka na dahil sa iyong pananampalataya.\" Noon di'y nakakita siyang muli, at sumunod kay Jesus.",
+        "bible_version": "Magandang Balita Biblia"
+    },
+    "cards": [
+        {
+            "order": 1,
+            "type": "cinematic_scene",
+            "mood": "darkness",
+            "image_url": "bartimaeus_roadside_dust.png",
+            "title": "Sa Gilid ng Daan",
+            "narrative": "Jerico: alikabok, ingay ng karamihan. At sa gilid ng daan, isang lalaki na nawalan ng lahat — pati na rin ang liwanag.\n\nSi Bartimeo, anak ni Timeo. Siya ay bulag at pulubi. Hindi na napapansin ng mga nagdaraan.",
+            "ambient_sound": "crowd_distant",
+            "haptic": null,
+            "revelation_key": "Nakikita ng Diyos ang mga hindi na nakikita ng mundo."
+        },
+        {
+            "order": 2,
+            "type": "scripture_moment",
+            "mood": "tense",
+            "image_url": "bartimaeus_crowd_passing.png",
+            "verse_reference": "Marcos 10:46-47",
+            "verse_text": "Dumating sina Jesus sa Jerico. Nang papaalis na siya sa Jerico kasama ang kanyang mga alagad at marami pang iba, may nadaanan silang isang bulag na nakaupo sa tabi ng daan at namamalimos. Siya'y si Bartimeo na anak ni Timeo. Nang marinig ng bulag na ang nagdaraan ay si Jesus na taga-Nazaret, sumigaw siya nang sumigaw, \"Jesus, Anak ni David, mahabag po kayo sa akin!\"",
+            "reflection": "Pansinin ang mga detalyeng isinasama ni Marcos.\n\nHindi 'isang bulag na lalaki.' Si Bartimeo, anak ni Timeo. Binigyan siya ni Marcos ng pangalan. Binigyan siya ni Marcos ng ama. Nakikita siya ni Marcos.\n\nAt pansinin kung ano ang ginagawa ni Bartimeo sa sandaling marinig niya ang pangalan ni Jesus. Hindi siya naghintay. Hindi siya nagpadala ng mensahero. Hindi siya nanalangin nang tahimik.\n\nSumigaw siya.",
+            "revelation_key": "Hindi nakita ni Bartimeo si Jesus. Ngunit nakilala niya siya bago pa man nakilala siya ng marami sa mga nakakakita."
+        },
+        {
+            "order": 3,
+            "type": "character_moment",
+            "mood": "intense",
+            "image_url": "bartimaeus_crying_out.png",
+            "title": "Tumahimik Ka",
+            "subtitle": "Ang utos na hindi sinunod ni Bartimeo",
+            "content": "Sinaway siya ng karamihan. 'Tumahimik ka.'\n\nIsipin natin ang sandaling iyon. Napalibutan siya ng mga tao. Lahat ay nagsasabi sa kanya na hindi tinatanggap ang kanyang tinig. Na nakakaabala lamang ang kanyang pangangailangan. Na may mas mahahalagang gawain si Jesus.\n\nAng tugon ni Bartimeo:\n\n'Lalo pa siyang sumigaw nang malakas: Anak ni David, mahabag po kayo sa akin!'\n\n🔑 LALO PA SIYANG SUMIGAW.\n\nHindi siya humingi ng tawad. Hindi niya ibinaba ang kanyang tinig. Hindi siya naghintay ng mas magandang sandali.\n\nAng pagtutol ay hindi nagpatahimik sa kanyang pananampalataya — lalo pa nitong pinaalab ang kanyang pananampalataya.\n\nMay malalim na katotohanan dito: Hindi kailanman nakita ni Bartimeo si Jesus. Hindi niya kaya. Ngunit narinig niya. At ang narinig niya ay sapat upang walang boses ng tao ang makapapatahimik sa kanya.\n\nAng pananampalataya ni Bartimeo ay hindi nakasalalay sa nakikita ng kanyang mga mata.",
+            "revelation_key": "Kapag sinabi ng mundo na 'tumahimik ka,' sinasabi ng pananampalataya na 'lalo pang malakas.'"
+        },
+        {
+            "order": 4,
+            "type": "cinematic_scene",
+            "mood": "turning_point",
+            "image_url": "bartimaeus_jesus_stops.png",
+            "title": "Tumigil si Jesus",
+            "narrative": "Ang buong karamihan. Ang lahat ng kilusan. Ang lahat ng pagmamadali ng daan papuntang Jerusalem.\n\nAt tumigil si Jesus.",
+            "ambient_sound": "crowd_quieting",
+            "haptic": "gentle_pulse",
+            "verse_overlay": {
+                "reference": "Marcos 10:49",
+                "text": "Tumigil si Jesus at kanyang sinabi, \"Dalhin ninyo siya rito.\" At tinawag nga nila ang bulag. \"Lakasan mo ang iyong loob. Tumayo ka. Ipinapatawag ka ni Jesus,\" sabi nila."
+            },
+            "revelation_key": "Ang sigaw ng isang bulag na pulubi ay nagpatigil sa Anak ng Diyos sa kanyang landas. Iyan ang nagagawa ng tapat na panalangin."
+        },
+        {
+            "order": 5,
+            "type": "theological_depth",
+            "image_url": "bartimaeus_throws_cloak.png",
+            "title": "Ang Balabal na Itinapon Niya",
+            "subtitle": "Ang pinakamaliit na detalye na nagsasabi ng lahat",
+            "content": "Isinasama ni Marcos ang isang detalye na hindi isinama nina Mateo at Lucas:\n\n'At siya, nang itapon ang kanyang balabal, ay tumindig at pumunta kay Jesus.'\n\nAng balabal na iyon ay hindi karaniwang damit.\n\nPara sa isang bulag na pulubi sa unang siglo, ang balabal ay ang kagamitan sa trabaho — inilatag sa lupa upang mangolekta ng mga barya. Ito ang tangi niyang ari-arian. Ang kanyang seguridad. Ang kanyang pagkakakilanlan bilang isang pulubi.\n\nAt inihagis niya ito.\n\n⚠️ ISIPIN ANG IBIG SABIHIN NOON:\n\nBilang isang bulag, kung ihahagis mo ang iyong balabal sa gitna ng karamihan, posibleng mawala ito magpakailanman. Kung hindi siya pinagaling ni Jesus — kung si Bartimeo ay babalik upang hanapin ang kanyang balabal sa pagitan ng daan-daang paa — malamang ay hindi niya ito mahahanap.\n\nAng paghahagis ng balabal ay isang gawa ng ganap na pananampalataya bago pa man makatanggap ng kahit ano.\n\nHindi siya naghintay na makita upang maniwala. Kumilos siya na parang nasagot na siya.\n\n🔑 SA GRIYEGO: Ang pandiwang 'paghahagis' (apobalón) ay nagpapahiwatig ng pagtatapon nang may lakas — hindi maingat na paglalagay. Hindi niya inilapag ang balabal. Inihagis niya ito.",
+            "revelation_key": "Inihagis ni Bartimeo ang kanyang seguridad bago pa man natanggap ang kanyang himala. Ang pananampalataya ay kumikilos bago pa makita.",
+            "scripture_connections": [
+                {
+                    "reference": "Mga Hebreo 11:1",
+                    "text": "Ang pananampalataya ay pagtitiwala na mangyayari ang ating mga inaasahan, at katiyakan tungkol sa mga bagay na hindi nakikita."
+                },
+                {
+                    "reference": "2 Mga Taga-Corinto 5:7",
+                    "text": "Sapagkat namumuhay tayo batay sa pananampalataya sa Panginoon at hindi sa mga bagay na nakikita."
+                }
+            ]
+        },
+        {
+            "order": 6,
+            "type": "scripture_moment",
+            "mood": "intimate",
+            "image_url": "bartimaeus_desperate_plea.png",
+            "verse_reference": "Marcos 10:51",
+            "verse_text": "\"Ano ang gusto mong gawin ko para sa iyo?\" tanong sa kanya ni Jesus. Sumagot ang bulag, \"Guro, gusto ko pong makakitang muli.\"",
+            "reflection": "Ito ang parehong tanong na itinanong ni Jesus kina Santiago at Juan sa Marcos 10:36.\n\nNaghiling sila ng kapangyarihan. Posisyon. Na maupo sa kanyang kanan at kaliwa.\n\nNaghiling si Bartimeo na makakita.\n\nIsang tanong ang itinatanong ni Jesus sa lahat. Ang pagkakaiba ay nasa sagot ng bawat puso.\n\nAt pansinin kung paano niya tinatawag si Jesus: Rabboni — Aking Guro. Hindi lamang Guro. Akin. Personal. Malapit. Ang bulag na lalaki na hindi pa nakakita sa kanya ay tinawag siyang 'akin' bago pa man siya makatingin sa kanyang mga mata.",
+            "revelation_key": "Ang ating mga hinihiling kay Jesus ay nagpapakita kung gaano natin siya kilala."
+        },
+        {
+            "order": 7,
+            "type": "cinematic_scene",
+            "mood": "grace",
+            "image_url": "bartimaeus_sight_restored.png",
+            "title": "Pumasok ang Liwanag",
+            "narrative": "Walang putik. Walang seremonya. Walang kondisyon.\n\nIsang salita lamang: 'Magaling ka na dahil sa iyong pananampalataya.'\n\nAt agad — ang mga kulay ng mundo. Ang alikabok ng daan. Ang mga mukha ng karamihan. At ang mukha ni Jesus, sa unang pagkakataon.",
+            "ambient_sound": "silence_breaking",
+            "haptic": "light_pulse",
+            "verse_overlay": {
+                "reference": "Marcos 10:52",
+                "text": "Sinabi ni Jesus, \"Kung gayon, magaling ka na dahil sa iyong pananampalataya.\" Noon di'y nakakita siyang muli, at sumunod kay Jesus."
+            },
+            "revelation_key": "Ang unang nakita ng kanyang mga mata ay si Jesus. At pinili niyang sumunod sa kanya."
+        },
+        {
+            "order": 8,
+            "type": "character_moment",
+            "mood": "peace",
+            "image_url": "bartimaeus_face_restored.png",
+            "title": "Sumunod Siya kay Jesus sa Daan",
+            "subtitle": "Ang apat na pinakamahalagang salita sa teksto",
+            "content": "Tinapos ni Marcos ang kuwento sa isang linyang maaaring mapalampas sa mabilis na pagbabasa:\n\n'At sumunod kay Jesus.'\n\nIto ay hindi lamang katapusan ng kuwento ni Bartimeo.\n\nIto ang simula niya.\n\n🔑 ANG DAAN:\n\nAng daan na patutunguhan ni Jesus sa sandaling iyon ay Jerusalem. Sa krus. Sa pagtataksil. Sa kamatayan.\n\nNatanggap ni Bartimeo ang kanyang paningin at pinili ang pinakamahirap na daan.\n\nHindi siya umuwi upang ipakita ang kanyang himala. Hindi siya nanatili kung nasaan siya, ngayon na makakita at makakapagtrabaho na. Sumunod siya sa isang lalaki patungo sa Jerusalem — patungo sa lahat ng hindi pa naiintindihan ng karamihan.\n\n🚶 ANG SINASABI NITO TUNGKOL SA TUNAY NA PANANAMPALATAYA:\n\nAng pananampalataya ni Bartimeo ay hindi natatapos nang matanggap niya ang kanyang hiniling. Doon ito nagsimula.\n\nAng himala ay hindi ang destinasyon. Ito ang pintuan.",
+            "revelation_key": "Ang himala ay hindi ang destinasyon ni Bartimeo. Ito ang pintuan patungo kay Jesus."
+        },
+        {
+            "order": 9,
+            "type": "theological_depth",
+            "image_url": "bartimaeus_desperate_plea.png",
+            "title": "Ang Ironiyang Hindi Maiiwasan ni Marcos",
+            "subtitle": "Ang mga nakakakita ay naging bulag, habang ang bulag ang siyang nakakita.",
+            "content": "Ang Marcos 10 ay puno ng mga taong hindi naiintindihan kung sino si Jesus.\n\nAng mga alagad ay nag-aaway kung sino ang pinakamahalaga. Sina Santiago at Juan ay naghiling ng kapangyarihan. Sinaway ng karamihan si Bartimeo sa pagsisigaw.\n\nAt ang bulag na lalaki — ang lalaki na walang mga mata — ang tanging nakakilala nang wasto sa kanya:\n\n'Anak ni David!'\n\nIto ay isang mesyanikong pamagat. Hindi lamang nakilala ni Bartimeo na rabbi si Jesus. Nakilala niya kung sino siya sa plano ng Diyos.\n\n⚠️ ANG ESPIRITUWAL NA IRONIYA:\n\nSa buong Ebanghelyo ni Marcos, pinagaling ni Jesus ang mga pisikal na bulag sa mga sandaling nagpapakita ng espirituwal na pagkabulag ng mga alagad. Hindi ito basta nagkataon.\n\nTinatanong tayo ni Marcos: Sino ba talaga ang nakakakita?\n\nNatanggap ni Bartimeo ang pisikal na paningin sa sandaling ang mga taong may mata ay hindi nakilala kung sino ang lumalakad sa kanila.\n\nMadalas pinipili ng Diyos ang mga itinuturing ng mundo na pinakamababa upang ipahayag ang Kanyang kapangyarihan.",
+            "revelation_key": "Ang espirituwal na pagkabulag ay mas mapanganib kaysa pisikal na pagkabulag. Nakita ni Bartimeo bago pa man niya makita.",
+            "scripture_connections": [
+                {
+                    "reference": "Juan 9:39",
+                    "text": "Sinabi pa ni Jesus, \"Naparito ako sa mundong ito upang humatol, at nang sa gayo'y makakita ang mga bulag at mabulag naman ang mga nakakakita.\""
+                },
+                {
+                    "reference": "1 Mga Taga-Corinto 1:27",
+                    "text": "Subalit pinili ng Diyos ang mga naturingang hangal sa sanlibutan upang hiyain ang marurunong, at pinili niya ang mga naturingang mahihina upang hiyain ang malalakas."
+                }
+            ]
+        },
+        {
+            "order": 10,
+            "type": "discovery_activation",
+            "image_url": "bartimaeus_jesus_way.png",
+            "icon": "🙏",
+            "title": "Ang Iyong Pagtatagpo",
+            "subtitle": "Hindi naghintay si Bartimeo ng perpektong sandali. Sumigaw siya mula sa kinatatayuan niya.",
+            "discovery_questions": [
+                {
+                    "category": "Katapatan",
+                    "question": "Sa anong bahagi ng iyong buhay ka nakaupo sa gilid ng daan, naghihintay na dumaan si Jesus — sa halip na sumigaw sa kanya? Ano ang pumipigil sa iyong tinig?"
+                },
+                {
+                    "category": "Pananampalataya",
+                    "question": "Inihagis ni Bartimeo ang kanyang balabal bago pa man natanggap ang kanyang himala. May isang bagay ba na kailangan mong 'ihagis' — isang seguridad, isang plano, isang pagkakakilanlan — upang ganap na sumunod kay Jesus?"
+                },
+                {
+                    "category": "Layunin",
+                    "question": "Nang matanggap ni Bartimeo ang kanyang hiniling, pinili niyang sumunod kay Jesus sa halip na umalis. Ano ang ibig sabihin para sa iyo na sumunod kay Jesus pagkatapos dinggin ang iyong panalangin?"
+                }
+            ],
+            "prayer": {
+                "title": "Panalangin ng Isang Sumisinigaw mula sa Gilid ng Daan",
+                "content": "Panginoong Jesus, Anak ni David, mahabag po kayo sa akin.\n\nTulad ni Bartimeo — alam ko ang hindi ko nakikita. Ang mga bahagi ng aking buhay na lumalakad sa kadiliman. Ang mga katotohanang hindi ko maintindihan. Ang mga pagkabulag na hindi ko nakikilala sa aking sarili.\n\nHindi ako titigil.\n\nSumisigaw ako mula sa kinatatayuan ko — walang perpektong sandali, walang perpektong salita, walang perpektong pananampalataya.\n\nTanging ang ganitong katapatan ng isang lalaki sa gilid ng maalikabok na daan: Nais ko pong makakita.\n\nAt kapag binigyan Mo ako ng paningin — hayaan Mong ang unang makita ng aking mga mata ay Ikaw. At hayaan Mo akong sumunod sa Iyo.\n\nSa pangalan ni Jesus, Amen."
+            }
+        },
+        {
+            "order": 11,
+            "type": "completion",
+            "image_url": "bartimaeus_face_restored.png",
+            "completion_verse": {
+                "reference": "Marcos 10:52",
+                "text": "Sinabi ni Jesus, \"Kung gayon, magaling ka na dahil sa iyong pananampalataya.\" Noon di'y nakakita siyang muli, at sumunod kay Jesus.",
+                "bible_version": "Magandang Balita Biblia"
+            },
+            "reflection_prompt": "Anong balabal ang kailangan mong ihagis ngayon? Ano ang kailangan mong makita?",
+            "celebration_type": "gentle_light"
+        }
+    ]
+}
