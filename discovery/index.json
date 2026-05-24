@@ -1629,7 +1629,8 @@
         "hi": "jordan_convergence_hi_001.json",
         "zh": "jordan_convergence_zh_001.json",
         "ja": "jordan_convergence_ja_001.json",
-        "ar": "jordan_convergence_ar_001.json"
+        "ar": "jordan_convergence_ar_001.json",
+        "fil": "jordan_convergence_fil_001.json"
       },
       "titles": {
         "en": "The river he had already crossed before",
@@ -1639,7 +1640,8 @@
         "hi": "वह नदी जिसे वह पहले ही पार कर चुके थे",
         "zh": "他曾经跨越的那条河",
         "ja": "すでに渡ったことのある川",
-        "ar": "النهر الذي كان قد عبره من قبل"
+        "ar": "النهر الذي كان قد عبره من قبل",
+        "fil": "Ang ilog na kanyang tinawid na noon pa"
       },
       "subtitles": {
         "en": "The crossing point where Israel's story began is the same place where Jesus walked into the water",
@@ -1649,7 +1651,8 @@
         "hi": "वह पार करने का स्थान जहाँ इस्राएल की कहानी आरम्भ हुई, वही स्थान है जहाँ यीशु जल में उतरे",
         "zh": "以色列故事开始的渡口，正是耶稣走入水中的同一个地方",
         "ja": "イスラエルの物語が始まった渡河地点は、イエスが水に入られた場所と同じです",
-        "ar": "نقطة العبور حيث بدأت قصة إسرائيل هي نفس المكان الذي دخل فيه يسوع إلى الماء"
+        "ar": "نقطة العبور حيث بدأت قصة إسرائيل هي نفس المكان الذي دخل فيه يسوع إلى الماء",
+        "fil": "Ang tawiran kung saan nagsimula ang kuwento ng Israel ay ang mismong lugar kung saan pumasok si Hesus sa tubig"
       },
       "estimated_reading_minutes": {
         "en": 10,
@@ -1659,7 +1662,8 @@
         "hi": 12,
         "zh": 13,
         "ja": 13,
-        "ar": 12
+        "ar": 12,
+        "fil": 11
       }
     }
   ]
