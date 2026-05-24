@@ -176,7 +176,7 @@ Store the value in both the JSON file and `index.json`.
 
 ---
 
-## Validation Steps
+## Validation Steps for each translation
 Run in this order. Fix all errors before proceeding to the next language.
 
 ```bash
@@ -190,6 +190,58 @@ python3 validate_translations.py
 
 **Zero errors required.** Warnings about `estimated_reading_minutes` differing from EN are expected and acceptable. All other warnings must be investigated and resolved.
 
+markdown---
+
+## Quality Gate — Native Critic Review  MUST RUN BEFORE MARKING THE TRANSLATION as DONE
+
+After all translations in the batch are complete, spawn one critic subagent per translated file **in parallel** before running final validation.
+
+### When to spawn
+After the last translation file in the batch is written and `validate_pair.py` passes for each file.
+
+### Delegation prompt template
+You are a native [LANGUAGE] Christian speaker. Review the following [LANGUAGE] Bible study translation for errors (DOES NOT APPLY to the verses only in the translated content):
+File: [FILE_PATH]
+For EACH file, carefully check for:
+CRITICAL ERRORS (must be fixed):
+
+Typos and spacing errors
+Wrong word meanings that change theological meaning
+Untranslated English words or phrases
+Incorrect characters or diacritics
+Wrong verb conjugations or tenses
+Expressions that sound unnatural for a native speaker
+Theological terminology errors for this language and culture
+
+MODERATE ISSUES (should be improved):
+
+Word choices with wrong connotations
+Unnatural phrasing that doesn't sound native
+Inconsistent terminology across sections
+Better synonym choices for clarity
+
+MINOR SUGGESTIONS:
+
+Style improvements
+More natural idioms
+Better flow
+
+Provide:
+
+File name
+List of ALL findings (with text context)
+Severity: CRITICAL / MODERATE / MINOR
+Suggested correction: elaborate diff for all the purpose changes
+
+
+
+### Coordinator review
+After all critic reports return:
+1. CRITICAL findings are a checklist. The coordinator must iterate through every item marked CRITICAL, apply each fix one by one, and confirm each one before closing the review. Do not mark a file as reviewed until every CRITICAL item has a fix applied and confirmed.
+2. Review MODERATE findings — review one by one, dismiss or apply the fix, document each one. 
+3. Review MINOR suggestions — review one by one, dismiss or apply the fix, document each one.
+4. Re-run `validate_pair.py` on any file that was modified
+5. Proceed to final validation
 ---
 
 ## index.json Update

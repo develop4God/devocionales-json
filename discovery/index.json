@@ -1616,6 +1616,55 @@
         "de": 8,
         "ar": 8
       }
+    },
+    {
+      "id": "jordan_convergence_001",
+      "version": "1.0",
+      "emoji": "🌊",
+      "files": {
+        "en": "jordan_convergence_en_001.json",
+        "pt": "jordan_convergence_pt_001.json",
+        "fr": "jordan_convergence_fr_001.json",
+        "de": "jordan_convergence_de_001.json",
+        "hi": "jordan_convergence_hi_001.json",
+        "zh": "jordan_convergence_zh_001.json",
+        "ja": "jordan_convergence_ja_001.json",
+        "ar": "jordan_convergence_ar_001.json",
+        "fil": "jordan_convergence_fil_001.json"
+      },
+      "titles": {
+        "en": "The river he had already crossed before",
+        "pt": "O rio que ele já havia atravessado antes",
+        "fr": "Le fleuve qu'il avait déjà traversé avant",
+        "de": "Der Fluss, den er schon einmal überquert hatte",
+        "hi": "वह नदी जिसे वह पहले ही पार कर चुके थे",
+        "zh": "他曾经跨越的那条河",
+        "ja": "すでに渡ったことのある川",
+        "ar": "النهر الذي كان قد عبره من قبل",
+        "fil": "Ang ilog na kanyang tinawid na noon pa"
+      },
+      "subtitles": {
+        "en": "The crossing point where Israel's story began is the same place where Jesus walked into the water",
+        "pt": "O ponto de travessia onde a história de Israel começou é o mesmo lugar onde Jesus entrou na água",
+        "fr": "Le point de passage où l'histoire d'Israël a commencé est le même endroit où Jésus est entré dans l'eau",
+        "de": "Die Durchquerungsstelle, wo Israels Geschichte begann, ist derselbe Ort, wo Jesus ins Wasser stieg",
+        "hi": "वह पार करने का स्थान जहाँ इस्राएल की कहानी आरम्भ हुई, वही स्थान है जहाँ यीशु जल में उतरे",
+        "zh": "以色列故事开始的渡口，正是耶稣走入水中的同一个地方",
+        "ja": "イスラエルの物語が始まった渡河地点は、イエスが水に入られた場所と同じです",
+        "ar": "نقطة العبور حيث بدأت قصة إسرائيل هي نفس المكان الذي دخل فيه يسوع إلى الماء",
+        "fil": "Ang tawiran kung saan nagsimula ang kuwento ng Israel ay ang mismong lugar kung saan pumasok si Hesus sa tubig"
+      },
+      "estimated_reading_minutes": {
+        "en": 10,
+        "pt": 11,
+        "fr": 11,
+        "de": 12,
+        "hi": 12,
+        "zh": 13,
+        "ja": 13,
+        "ar": 12,
+        "fil": 11
+      }
     }
   ]
 }
