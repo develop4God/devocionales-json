@@ -231,8 +231,8 @@ Provide:
 File name
 List of ALL findings (with text context)
 Severity: CRITICAL / MODERATE / MINOR
-Suggested correction
-Overall assessment
+Suggested correction: elaborate diff for all the purpose changes
+
 
 
 ### Coordinator review
