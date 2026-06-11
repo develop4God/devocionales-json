@@ -21,7 +21,8 @@
         "ja": "peter_water_ja_001.json",
         "zh": "peter_water_zh_001.json",
         "hi": "peter_water_hi_001.json",
-        "ar": "peter_water_ar_001.json"
+        "ar": "peter_water_ar_001.json",
+        "fil": "peter_water_fil_001.json"
       },
       "titles": {
         "en": "The Night Peter Walked on Water",
@@ -32,7 +33,8 @@
         "ja": "ペテロが水の上を歩いた夜",
         "zh": "彼得踏水而行的那夜",
         "hi": "वह रात जब पतरस पानी पर चला",
-        "ar": "الليلة التي مشى فيها بطرس على الماء"
+        "ar": "الليلة التي مشى فيها بطرس على الماء",
+        "fil": "Ang Gabing Lumakad si Pedro sa Tubig"
       },
       "subtitles": {
         "en": "When faith and fear collide at 3:00 am on the Sea of Galilee",
@@ -43,7 +45,8 @@
         "ja": "ガリラヤ湖の午前3時、信仰と恐れが衝突するとき",
         "zh": "当信心与恐惧在加利利海凌晨三点碰撞",
         "hi": "जब विश्वास और भय गलील की झील पर रात के 3 बजे टकराते हैं",
-        "ar": "حين يصطدم الإيمان والخوف في الساعة الثالثة فجراً على بحيرة الجليل"
+        "ar": "حين يصطدم الإيمان والخوف في الساعة الثالثة فجراً على بحيرة الجليل",
+        "fil": "Nang ang pananampalataya at takot ay nagbanggaan sa Dagat ng Galilea alas tres ng umaga"
       },
       "scripture_reference": {
         "en": "Matthew 14:22-33",
@@ -54,7 +57,8 @@
         "ja": "マタイ14:22-33",
         "zh": "马太福音14:22-33",
         "hi": "मत्ती 14:22-33",
-        "ar": "متى 14:22-33"
+        "ar": "متى 14:22-33",
+        "fil": "Mateo 14:22-33"
       },
       "estimated_reading_minutes": {
         "en": 12,
@@ -65,7 +69,8 @@
         "ja": 14,
         "zh": 14,
         "hi": 13,
-        "ar": 11
+        "ar": 11,
+        "fil": 9
       }
     },
     {
@@ -89,7 +94,8 @@
         "ja": "bartimaeus_ja_001.json",
         "zh": "bartimaeus_zh_001.json",
         "hi": "bartimaeus_hi_001.json",
-        "ar": "bartimaeus_ar_001.json"
+        "ar": "bartimaeus_ar_001.json",
+        "fil": "bartimaeus_fil_001.json"
       },
       "titles": {
         "en": "Bartimaeus Receives Sight",
@@ -100,7 +106,8 @@
         "ja": "バルティマイが視力を受ける",
         "zh": "巴底买得见光明",
         "hi": "बरतिमाई को दृष्टि मिलती है",
-        "ar": "بَارْتِيمَاوُسُ يَسْتَرِدُّ بَصَرَهُ"
+        "ar": "بَارْتِيمَاوُسُ يَسْتَرِدُّ بَصَرَهُ",
+        "fil": "Si Bartimeo ay Binigyan ng Paningin"
       },
       "subtitles": {
         "en": "The blind man who refused to be silenced — and was seen by Jesus",
@@ -111,7 +118,8 @@
         "ja": "沈黙を拒んだ盲人 — そしてイエスに見られた",
         "zh": "拒绝沉默的盲人——被耶稿看见",
         "hi": "वह अंधा जिसने चुप रहने से इनकार किया — और यीशु ने उसे देखा",
-        "ar": "الأعمى الذي رفض الصمت — فنظر إليه يسوع"
+        "ar": "الأعمى الذي رفض الصمت — فنظر إليه يسوع",
+        "fil": "Ang bulag na lalaki na tumanggi na tumahimik — at nakita ni Jesus"
       },
       "scripture_reference": {
         "en": "Mark 10:46-52",
@@ -122,7 +130,8 @@
         "ja": "マルコ10:46-52",
         "zh": "马可福音10:46-52",
         "hi": "मरकुस 10:46-52",
-        "ar": "مرقس 10:46-52"
+        "ar": "مرقس 10:46-52",
+        "fil": "Marcos 10:46-52"
       },
       "estimated_reading_minutes": {
         "en": 7,
@@ -133,7 +142,8 @@
         "ja": 7,
         "zh": 7,
         "hi": 7,
-        "ar": 9
+        "ar": 9,
+        "fil": 8
       }
     },
     {
@@ -157,7 +167,8 @@
         "ja": "woman_well_ja_001.json",
         "zh": "woman_well_zh_001.json",
         "hi": "woman_well_hi_001.json",
-        "ar": "woman_well_ar_001.json"
+        "ar": "woman_well_ar_001.json",
+        "fil": "woman_well_fil_001.json"
       },
       "titles": {
         "en": "The Woman Who Left Her Pitcher",
@@ -168,7 +179,8 @@
         "ja": "自分の水がめを置き去りにした女",
         "zh": "舍弃水罐的女人",
         "hi": "जिस स्त्री ने अपना घड़ा छोड़ दिया",
-        "ar": "المرأة التي تركت جرتها"
+        "ar": "المرأة التي تركت جرتها",
+        "fil": "Ang Babaeng Nag-iwan ng Kanyang Banga"
       },
       "subtitles": {
         "en": "She came with thirst for water. Jesus gave her a source that never runs dry.",
@@ -179,7 +191,8 @@
         "ja": "彼女は水への渇きを携えてやって来た。イエスは彼女に決して絶えることのない泉を与えた。",
         "zh": "她带着对水的渴望来了。耶稣给了她一个永不枯竭的泉源。",
         "hi": "वह पानी की प्यास लेकर आई। यीशु ने उसे एक ऐसा स्रोत दिया जो कभी सूखता नहीं है।",
-        "ar": "جاءت بعطش الماء. أعطاها يسوع ينبوعاً لا ينضب أبداً."
+        "ar": "جاءت بعطش الماء. أعطاها يسوع ينبوعاً لا ينضب أبداً.",
+        "fil": "Dumating siya na nauuhaw sa tubig. Binigyan siya ni Jesus ng bukal na hindi kailanman nasisaid."
       },
       "scripture_reference": {
         "en": "John 4:1-42",
@@ -190,7 +203,8 @@
         "ja": "ヨハネ4:1-42",
         "zh": "约翰福音4:1-42",
         "hi": "यूहन्ना 4:1-42",
-        "ar": "يوحنا 4:1-42"
+        "ar": "يوحنا 4:1-42",
+        "fil": "Juan 4:1-42"
       },
       "estimated_reading_minutes": {
         "en": 9,
@@ -201,7 +215,8 @@
         "ja": 9,
         "zh": 9,
         "hi": 11,
-        "ar": 12
+        "ar": 12,
+        "fil": 10
       }
     },
     {
@@ -209,7 +224,8 @@
       "version": "1.0",
       "image_version": "1.0",
       "emoji": "🌳",
-      "status": "coming_soon",
+      "status": "published",
+      "intro_image": "zacchaeus_in_tree.png",
       "mood_primary": "crowd",
       "accent_color": "#1a2e00",
       "has_interactive": false,
@@ -224,7 +240,8 @@
         "zh": "zacchaeus_zh_001.json",
         "hi": "zacchaeus_hi_001.json",
         "de": "zacchaeus_de_001.json",
-        "ar": "zacchaeus_ar_001.json"
+        "ar": "zacchaeus_ar_001.json",
+        "fil": "zacchaeus_fil_001.json"
       },
       "titles": {
         "en": "The Man in the Tree",
@@ -235,7 +252,8 @@
         "zh": "树上的那个人",
         "hi": "पेड़ पर चढ़ा आदमी",
         "de": "Der Mann im Baum",
-        "ar": "الرجل في الشجرة"
+        "ar": "الرجل في الشجرة",
+        "fil": "Ang Lalaki sa Puno"
       },
       "subtitles": {
         "en": "The most hated man in Jericho — and Jesus chose his house",
@@ -246,7 +264,8 @@
         "zh": "耶利哥最被憎恶的人——耶稣却选了他的家",
         "hi": "यरीहो का सबसे घृणित आदमी — और यीशु ने उसके घर को चुना",
         "de": "Der meistgehasste Mann in Jericho — und Jesus wählte sein Haus",
-        "ar": "أكثر الناس كرهاً في أريحا — ويسوع اختار بيته"
+        "ar": "أكثر الناس كرهاً في أريحا — ويسوع اختار بيته",
+        "fil": "Ang pinaka-kinapopootan na tao sa Jericho — at pinili ni Jesus ang kanyang tahanan"
       },
       "scripture_reference": {
         "en": "Luke 19:1-10",
@@ -257,7 +276,8 @@
         "zh": "路加福音19:1-10",
         "hi": "लूका 19:1-10",
         "de": "Lukas 19:1-10",
-        "ar": "لوقا 19:1-10"
+        "ar": "لوقا 19:1-10",
+        "fil": "Lucas 19:1-10"
       },
       "estimated_reading_minutes": {
         "en": 7,
@@ -268,7 +288,8 @@
         "zh": 7,
         "hi": 7,
         "de": 8,
-        "ar": 9
+        "ar": 9,
+        "fil": 8
       }
     },
     {
@@ -291,7 +312,8 @@
         "zh": "mary_garden_zh_001.json",
         "hi": "mary_garden_hi_001.json",
         "de": "mary_garden_de_001.json",
-        "ar": "mary_garden_ar_001.json"
+        "ar": "mary_garden_ar_001.json",
+        "fil": "mary_garden_fil_001.json"
       },
       "titles": {
         "en": "She Heard Her Name",
@@ -302,7 +324,8 @@
         "zh": "她听见了自己的名字",
         "hi": "उसने अपना नाम सुना",
         "de": "Sie hörte ihren Namen",
-        "ar": "سمعت اسمها"
+        "ar": "سمعت اسمها",
+        "fil": "Narinig Niya ang Kanyang Pangalan"
       },
       "subtitles": {
         "en": "Mary at the empty tomb — grief, darkness, and one word that changed everything",
@@ -313,7 +336,8 @@
         "zh": "马利亚在空坟墓前——悲痛、黑暗，以及改变一切的一个字",
         "hi": "खाली कब्र के सामने मरियम — दुःख, अंधेरा, और एक शब्द जिसने सब कुछ बदल दिया",
         "de": "Maria am leeren Grab — Trauer, Dunkelheit und ein Wort, das alles veränderte",
-        "ar": "مريم عند القبر الفارغ — حزن وظلام وكلمة واحدة غيّرت كل شيء"
+        "ar": "مريم عند القبر الفارغ — حزن وظلام وكلمة واحدة غيّرت كل شيء",
+        "fil": "Si Maria sa tabi ng walang lamang libingan — kalungkutan, kadiliman, at isang salitang nagbago ng lahat"
       },
       "scripture_reference": {
         "en": "John 20:1-18",
@@ -324,7 +348,8 @@
         "zh": "约翰福音20:1-18",
         "hi": "यूहन्ना 20:1-18",
         "de": "Johannes 20:1-18",
-        "ar": "يوحنا 20:1-18"
+        "ar": "يوحنا 20:1-18",
+        "fil": "Juan 20:1-18"
       },
       "estimated_reading_minutes": {
         "en": 8,
@@ -335,7 +360,8 @@
         "zh": 8,
         "hi": 8,
         "de": 9,
-        "ar": 11
+        "ar": 11,
+        "fil": 9
       }
     }
   ]

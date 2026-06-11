@@ -76,6 +76,14 @@
       "fallback_version": "SVDA",
       "allowed_versions": ["NAV", "SVDA"],
       "reading_speed": { "unit": "wpm", "rate": 170 }
+    },
+    "fil": {
+      "name": "Filipino",
+      "script": "latin",
+      "primary_version": "MBB05",
+      "fallback_version": "ASND",
+      "allowed_versions": ["MBB05", "ASND", "Magandang Balita Biblia", "Ang Bibliya (MBB)"],
+      "reading_speed": { "unit": "wpm", "rate": 200 }
     }
   }
 }
