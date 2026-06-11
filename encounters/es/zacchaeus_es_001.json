@@ -207,7 +207,7 @@
       "order": 13,
       "type": "completion",
       "mood": "open",
-      "image_url": "zacchaeus_door_light.png",
+      "image_url": "zacchaeus_door_light_front.png",
       "completion_verse": {
         "reference": "Lucas 19:10",
         "text": "Porque el Hijo del Hombre vino a buscar y a salvar lo que se había perdido.",
