@@ -240,7 +240,6 @@
         "zh": "zacchaeus_zh_001.json",
         "hi": "zacchaeus_hi_001.json",
         "de": "zacchaeus_de_001.json",
-        "ar": "zacchaeus_ar_001.json",
         "fil": "zacchaeus_fil_001.json"
       },
       "titles": {
@@ -252,7 +251,6 @@
         "zh": "树上的那个人",
         "hi": "पेड़ पर चढ़ा आदमी",
         "de": "Der Mann im Baum",
-        "ar": "الرجل في الشجرة",
         "fil": "Ang Lalaki sa Puno"
       },
       "subtitles": {
@@ -264,7 +262,6 @@
         "zh": "耶利哥最被憎恶的人——耶稣却选了他的家",
         "hi": "यरीहो का सबसे घृणित आदमी — और यीशु ने उसके घर को चुना",
         "de": "Der meistgehasste Mann in Jericho — und Jesus wählte sein Haus",
-        "ar": "أكثر الناس كرهاً في أريحا — ويسوع اختار بيته",
         "fil": "Ang pinaka-kinapopootan na tao sa Jericho — at pinili ni Jesus ang kanyang tahanan"
       },
       "scripture_reference": {
@@ -276,7 +273,6 @@
         "zh": "路加福音19:1-10",
         "hi": "लूका रचित सुसमाचार 19:1-10",
         "de": "Lukas 19:1-10",
-        "ar": "لوقا 19:1-10",
         "fil": "Lucas 19:1-10"
       },
       "estimated_reading_minutes": {
@@ -284,11 +280,10 @@
         "es": 11,
         "pt": 11,
         "fr": 7,
-        "ja": 7,
-        "zh": 7,
+        "ja": 13,
+        "zh": 13,
         "hi": 9,
         "de": 8,
-        "ar": 9,
         "fil": 8
       }
     },
