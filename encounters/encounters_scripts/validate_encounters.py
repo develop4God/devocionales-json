@@ -62,6 +62,13 @@ _DE_SHARED_BOOK_NAMES = {
     'job', 'ruth',
 }
 
+# Book names used in the Magandang Balita Biblia (MBB05) Filipino Bible that
+# retain the English/transliterated form — same-name false positives for FIL.
+_FIL_SHARED_BOOK_NAMES = {
+    'genesis', 'ruth', 'samuel', 'ezra', 'job', 'ezekiel', 'daniel',
+    'hosea', 'joel', 'amos', 'nahum',
+}
+
 
 def _has_english_book_name(reference: str, lang: str) -> bool:
     """Return True if reference contains an English-only book name for lang."""
@@ -70,7 +77,50 @@ def _has_english_book_name(reference: str, lang: str) -> bool:
         return False
     if lang == 'de' and m.group(1).lower() in _DE_SHARED_BOOK_NAMES:
         return False
+    if lang == 'fil' and m.group(1).lower() in _FIL_SHARED_BOOK_NAMES:
+        return False
     return True
+
+
+# Quote-like characters whose accidental back-to-back doubling indicates a
+# stray-punctuation typo (e.g. »» , "" , '')
+_DOUBLE_CHECK_CHARS = {'"', "'", '«', '»', '“', '”', '‘', '’'}
+
+# Paired quote characters that should appear in balanced counts within a field.
+# Note: curly double quotes (“ ” „) are intentionally NOT balance-checked here —
+# this corpus mixes „...“ and „...” conventions across different German
+# encounters, so a fixed pair produces false positives. Guillemets « » are
+# checked for all languages (used in AR/FR/etc.) since their usage is consistent.
+
+
+def _iter_strings(obj, path: str = ""):
+    """Recursively yield (path, value) for every string leaf in obj."""
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            yield from _iter_strings(v, f"{path}.{k}" if path else k)
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            yield from _iter_strings(v, f"{path}[{i}]")
+    elif isinstance(obj, str):
+        yield path, obj
+
+
+def _check_quote_anomalies(text: str, ctx: str, lang: str, report: 'Report'):
+    """Flag stray/duplicated/unbalanced quote-like punctuation in a text field."""
+    # Doubled identical quote-like characters back-to-back (e.g. »», "", '')
+    for i in range(len(text) - 1):
+        c = text[i]
+        if c in _DOUBLE_CHECK_CHARS and text[i + 1] == c:
+            report.E(f"{ctx}: contains doubled '{c}{c}' — likely stray punctuation")
+
+    # Balanced guillemets (used in AR/FR/etc.)
+    oc, cc = text.count('«'), text.count('»')
+    if oc != cc:
+        report.W(f"{ctx}: unbalanced '«'/'»' — {oc} open vs {cc} close")
+
+    # Straight double quotes should appear in pairs
+    if text.count('"') % 2 != 0:
+        report.W(f"{ctx}: odd number of straight double quotes (\") — possible stray quote")
 
 
 # ── Report ────────────────────────────────────────────────────────────────────
@@ -220,6 +270,10 @@ def validate_index(report: Report) -> Optional[dict]:
 def validate_encounter_file(data: dict, lang: str, filename: str,
                              enc_id: str, report: Report):
     """Validate a single encounter file."""
+
+    # Quote / stray-punctuation anomaly scan across all text fields
+    for path, text in _iter_strings(data):
+        _check_quote_anomalies(text, f"{filename}:{path}", lang, report)
 
     # Required top-level fields
     required = ['id', 'type', 'schema_version', 'language', 'bible_version',
@@ -382,6 +436,11 @@ def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
         for key in ec:
             if key not in tc:
                 report.E(f"{ctx}: key '{key}' present in EN but missing in {lang.upper()}")
+
+        # Reverse key parity — no extra/stray key in translation absent from EN
+        for key in tc:
+            if key not in ec:
+                report.W(f"{ctx}: key '{key}' present in {lang.upper()} but missing in EN (possible extra/stray field)")
 
         # Text fields must be translated (non-empty, differ from EN)
         for field in ('title', 'subtitle', 'narrative', 'content', 'reflection',
