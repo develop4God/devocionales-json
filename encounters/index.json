@@ -221,7 +221,7 @@
     },
     {
       "id": "zacchaeus_001",
-      "version": "1.0",
+      "version": "1.1",
       "image_version": "1.0",
       "emoji": "🌳",
       "status": "published",
@@ -281,7 +281,7 @@
       },
       "estimated_reading_minutes": {
         "en": 7,
-        "es": 9,
+        "es": 10,
         "pt": 7,
         "fr": 7,
         "ja": 7,
