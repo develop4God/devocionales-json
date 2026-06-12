@@ -28,7 +28,7 @@
   },
   "key_verse": {
     "reference": "Lucas 19:10",
-    "text": "Ang Anak ng Tao ay naparito upang hanapin at iligtas ang naligaw.\"",
+    "text": "Ang Anak ng Tao ay naparito upang hanapin at iligtas ang naligaw.",
     "bible_version": "Magandang Balita Biblia"
   },
   "cards": [
@@ -209,7 +209,7 @@
       "image_url": "zacchaeus_door_light_front.png",
       "completion_verse": {
         "reference": "Lucas 19:10",
-        "text": "Ang Anak ng Tao ay naparito upang hanapin at iligtas ang naligaw.\"",
+        "text": "Ang Anak ng Tao ay naparito upang hanapin at iligtas ang naligaw.",
         "bible_version": "Magandang Balita Biblia"
       },
       "reflection_prompt": "Anong puno ang kailangan mong akyatin ngayon? At ano ang kailangan mong bitawan kapag tinawag Niya ang pangalan mo?",
