@@ -1,0 +1,219 @@
+{
+  "id": "zacchaeus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fr",
+  "bible_version": "LSG1910",
+  "version": "1.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "Zachée",
+    "testament": "new",
+    "scripture_reference": "Luc 19:1-10",
+    "mood_primary": "crowd",
+    "accent_color": "#3b1f00",
+    "emoji": "🌳",
+    "tags": [
+      "exclusion",
+      "dignité",
+      "restitution",
+      "salut",
+      "richesse",
+      "zachée",
+      "jésus",
+      "transformation",
+      "rencontre",
+      "être_vu"
+    ]
+  },
+  "key_verse": {
+    "reference": "Luc 19:10",
+    "text": "Car le Fils de l'homme est venu chercher et sauver ce qui était perdu.",
+    "bible_version": "LSG1910"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "crowd",
+      "image_url": "zacchaeus_jericho_crowd.png",
+      "title": "Jéricho était pleine de monde.",
+      "narrative": "Il y avait une foule, et une rumeur courait d'une rue à l'autre à travers toute la ville: Jésus de Nazareth passait par là.\n\nDans cette foule se trouvait un homme que personne ne voulait à ses côtés. Un homme qui avait choisi l'argent au détriment de son peuple, et qui portait maintenant le poids de ce choix.\n\nZachée était chef des publicains. Il était riche. Et il était de petite taille.\n\nPetit non seulement de corps. Mais aussi dans la seule chose qui comptait à cet instant: la hauteur pour voir par-dessus la foule.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "Celui qui avait le plus besoin de voir Jésus était celui qui pouvait le moins l'atteindre."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "zacchaeus_crowd_wall.png",
+      "verse_reference": "Luc 19:1-4",
+      "verse_text": "Jésus étant entré dans Jéricho, traversait la ville. Et voici, un homme, nommé Zachée, qui était chef des publicains et qui était riche, cherchait à voir Jésus, pour connaître qui il était; mais il ne le pouvait pas à cause de la foule, parce qu'il était de petite taille. Il courut en avant, et monta sur un sycomore pour voir Jésus qui devait passer par là.",
+      "reflection": "Luc le présente avec précision: chef des publicains, riche.\n\nCes deux détails suffisaient à le condamner aux yeux de tout Jéricho. Les publicains collectaient les impôts pour Rome — et pas seulement cela. Ils prélevaient davantage que ce qui était dû, gardaient l'excédent pour eux, et bâtissaient leur fortune sur la misère de leur propre peuple. C'était une trahison légalisée.\n\nEt pourtant.\n\nCet homme qui avait acheté tout ce que l'argent peut acheter courait. Il courait pour apercevoir un rabbin qui allait de village en village, sans maison ni richesse.\n\nQuelque chose en Zachée savait déjà qu'il avait besoin de ce que l'argent ne peut pas acheter.",
+      "revelation_key": "L'homme le plus riche de Jéricho courait pour voir quelqu'un sans richesses de ce monde — mais maître des richesses éternelles. Cela ne s'explique que par la soif spirituelle."
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "solitude",
+      "image_url": "zacchaeus_in_tree.png",
+      "title": "Il monta sur l'arbre.",
+      "narrative": "Imagine la scène.\n\nUn homme adulte, chef d'un bureau de perception, riche, avec une réputation — même mauvaise — grimpa sur un arbre au milieu de la rue principale de Jéricho, devant toute la ville qui le méprisait.\n\nIl y a dans ce geste quelque chose qui dit plus que n'importe quelle prière.\n\nIl ne s'est pas soucié du ridicule. Il n'a pas calculé les conséquences. Il n'a pas pensé à ce que diraient ses collègues.\n\nIl voulait seulement voir.\n\nEt c'est souvent ainsi que la foi se manifeste dans les Écritures: un homme qui abandonne sa dignité pour s'approcher de Jésus.",
+      "ambient_sound": "crowd_passing_below",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "Zachée laissa de côté sa dignité, sans savoir que Jésus venait lui-même le chercher."
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "turning_point",
+      "image_url": "zacchaeus_jesus_looks_up.png",
+      "verse_reference": "Luc 19:5-6",
+      "verse_text": "Lorsque Jésus fut arrivé à cet endroit, il leva les yeux et lui dit: Zachée, hâte-toi de descendre, car il faut que je loge aujourd'hui chez toi. Zachée se hâta de descendre, et le reçut avec joie.",
+      "reflection": "Arrête-toi un instant.\n\nJésus s'arrêta, leva les yeux et prononça son nom.\n\nIl ne dit pas: hé, toi, là-haut dans l'arbre. Il ne désigna pas le publicain du doigt. Il ne fit pas de lui un exemple.\n\nIl dit son nom.\n\nZachée était monté pour voir Jésus de loin. Ce qu'il ne pouvait pas imaginer, c'est que Jésus l'avait déjà vu.\n\nEt il y a un mot dans ce verset qu'on ne peut pas laisser passer: il faut. Il faut que je loge aujourd'hui chez toi.\n\nC'est le même mot utilisé dans le passage de la Samaritaine en Jean 4:4 — il fallait qu'il passât par la Samarie. Ce n'était pas un hasard. Jésus n'a pas découvert Zachée dans cet arbre: il était arrivé à Jéricho en le cherchant.\n\nEt lorsqu'il dit 'que je loge chez toi', ce n'était pas une invitation à dîner. Dans cette culture, séjourner chez quelqu'un, c'était déclarer publiquement que cette personne était digne de ta présence. C'était le geste d'accueil le plus fort qui soit.",
+      "revelation_key": "Zachée monta pour le voir. Jésus arriva à Jéricho pour le trouver. C'est là la marque de la grâce donnée par Jésus-Christ."
+    },
+    {
+      "order": 5,
+      "type": "character_moment",
+      "mood": "exposed",
+      "image_url": "zacchaeus_descent.png",
+      "title": "Il descendit en hâte.",
+      "subtitle": "L'homme que personne ne voulait chez soi",
+      "content": "Observe le contraste.\n\nLorsque Jésus dit 'il faut que je loge aujourd'hui chez toi', la foule réagit immédiatement.\n\n📖 Luc 19:7 (LSG1910): 'Tous murmuraient, disant qu'il était allé loger chez un homme pécheur.'\n\nTous murmuraient — pas quelques-uns, pas les pharisiens, tous.\n\nZachée était l'homme que tout le monde désignait comme pécheur. Le rejeter faisait se sentir les autres meilleurs que lui. Et Jésus, sachant tout cela, choisit de s'installer chez lui — non pas seulement pour manger ou dormir, mais pour déclarer devant tous que cet homme était digne de sa présence.\n\n💭 Arrête-toi pour y penser:\n\nDepuis combien d'années personne ne voulait entrer chez Zachée? Depuis combien de temps personne ne le regardait comme une personne et non comme un titre? Depuis combien de temps personne ne prononçait son nom sans mépris?\n\nEt voilà que le Fils de Dieu leva les yeux vers lui, l'appela par son prénom avec familiarité, et demanda à loger chez lui. Zachée était monté dans l'arbre pour voir Jésus de loin, sans imaginer que celui qu'il voulait voir l'avait déjà accueilli et le tenait pour digne de sa présence.\n\nZachée descendit en hâte.\n\nNon pas parce que Jésus avait exigé qu'il change d'abord. Mais parce que quelqu'un l'avait vu.",
+      "revelation_key": "Jésus n'a pas attendu que Zachée soit meilleur. Il l'a appelé depuis là-haut, tel qu'il était, par la grâce et la miséricorde."
+    },
+    {
+      "order": 6,
+      "type": "theological_depth",
+      "mood": "depth",
+      "image_url": "zacchaeus_coins_table.png",
+      "title": "Chef des publicains",
+      "subtitle": "Ce que ce titre coûtait vraiment",
+      "content": "Pour comprendre la transformation de Zachée, il faut comprendre ce qu'il était.\n\n🏛️ LE SYSTÈME:\n\nRome sous-traitait la collecte des impôts à des habitants locaux. Le publicain versait une somme fixe à Rome, puis prélevait ce qu'il pouvait sur le peuple — la différence constituait son gain. C'était un système conçu pour l'abus, et Zachée n'y participait pas seulement: il en était le chef.\n\nCela voulait dire que d'autres publicains travaillaient sous ses ordres. Il était responsable de tout le système d'extorsion fiscale à Jéricho. Chaque denier — la monnaie romaine de l'époque — de sa fortune venait de la poche de familles juives.\n\n⚠️ LE COÛT SOCIAL:\n\nLes publicains étaient considérés comme rituellement impurs. Ils ne pouvaient pas témoigner dans un tribunal juif. Ils ne pouvaient pas participer normalement à la vie de la synagogue. Ils étaient exclus du seul système d'appartenance qui existait dans cette culture.\n\nZachée n'était pas seulement riche. C'était un homme entièrement exclu — sans communauté, sans accès à la synagogue, sans lieu où appartenir.\n\n🔑 EN HÉBREU: Le nom Zachée vient de l'hébreu Zakkay — qui signifie pur, innocent. Il portait un nom qui décrivait ce qu'il avait cessé d'être.\n\nEt c'est cet homme que Jésus appela par son nom depuis le pied de l'arbre.",
+      "revelation_key": "Zachée portait le nom de ce qu'il avait perdu. Jésus l'appela par ce nom pour lui rendre ce qu'il signifiait.",
+      "scripture_connections": [
+        {
+          "reference": "Luc 5:30-32",
+          "text": "Les pharisiens et leurs scribes murmuraient, et disaient à ses disciples: Pourquoi mangez-vous et buvez-vous avec les publicains et les pécheurs? Jésus prit la parole, et leur dit: Ce ne sont pas ceux qui se portent bien qui ont besoin de médecin, mais les malades. Je suis venu appeler non des justes, mais des pécheurs, à la repentance."
+        },
+        {
+          "reference": "Ézéchiel 34:16",
+          "text": "Je chercherai celle qui était perdue, je ramènerai celle qui était égarée, je panserai celle qui est blessée, et je fortifierai celle qui est malade; mais je détruirai la grasse et la forte: je les paîtrai avec justice."
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "intimacy",
+      "image_url": "zacchaeus_table_jesus.png",
+      "title": "Ce qui se passa à l'intérieur.",
+      "narrative": "Nous ne connaissons pas chaque parole échangée dans cette maison. Mais nous savons ce qui en est sorti. Quelque chose se passa à cette table que l'argent, les contrats et les années de pouvoir n'avaient jamais réussi à accomplir en Zachée. Jésus resta avec lui, et cela suffit à le transformer.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luc 19:9",
+        "text": "Le salut est entré aujourd'hui dans cette maison."
+      },
+      "revelation_key": "La présence de Jésus accomplit ce que des années de richesse et de pouvoir n'avaient pu faire: toucher le coeur de Zachée."
+    },
+    {
+      "order": 8,
+      "type": "scripture_moment",
+      "mood": "breakthrough",
+      "image_url": "zacchaeus_stands_declaration.png",
+      "verse_reference": "Luc 19:8",
+      "verse_text": "Zachée, se tenant debout, dit au Seigneur: Voici, Seigneur, je donne la moitié de mes biens aux pauvres; et si j'ai fait tort à quelqu'un, je lui rends le quadruple.",
+      "reflection": "Les spécialistes du grec débattent si Zachée agissait déjà ainsi avant la rencontre, ou s'il en fut transformé. Le texte original peut se lire dans les deux sens.\n\nMais voici ce que nous savons: debout devant Jésus, Zachée offrit la moitié de tout ce qu'il possédait. Là où le jeune homme riche (Luc 18:18-23) n'avait pu rien lâcher lorsque Jésus l'y invita, Zachée lâcha la moitié sans qu'on le lui demande. Et il ne s'arrêta pas au minimum que la loi exigeait — il alla quatre fois plus loin (Lévitique 5:16).\n\nCela ne s'explique que par un coeur qui avait déjà trouvé quelque chose de plus précieux que ses richesses. Peu importe si ce fut avant ou pendant la rencontre — face à Jésus, Zachée choisit autrement. Et Jésus répondit par la déclaration de salut la plus complète de tout l'Évangile de Luc.\n\nC'est là la miséricorde de Dieu: elle n'attend pas que tu la mérites, mais que tu y répondes.",
+      "revelation_key": "La générosité de Zachée ne fut pas la cause de son salut. Elle en fut le signe que le salut avait déjà eu lieu."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "transformation",
+      "image_url": "zacchaeus_open_hands.png",
+      "title": "L'homme qui lâcha prise",
+      "subtitle": "Ce que la richesse ne lui avait jamais donné, et ce que Jésus lui rendit",
+      "content": "Zachée avait construit sa vie sur l'accumulation.\n\nEt en un après-midi face à Jésus, il lâcha la moitié de tout ce qu'il possédait.\n\n💰 Ce que cela signifie:\n\nIl ne vendit pas ses biens progressivement. Il ne dit pas qu'il y réfléchirait. Il ne négocia pas avec Jésus un pourcentage plus raisonnable. Il se leva, en public, et déclara ce qu'il allait faire.\n\nCelui qui avait bâti son identité sur ce qu'il possédait choisit désormais de se définir par ce qu'il pouvait donner.\n\nVoici le parallèle avec la femme samaritaine rencontrée dans l'étude précédente:\n\nElle laissa sa cruche au bord du puits après avoir rencontré Jésus. Ce qu'il avait déposé en elle avait rendu dérisoire ce qu'elle portait dans les mains.\n\nZachée lâcha la moitié de sa fortune après avoir reçu Jésus chez lui.\n\nDeux histoires. Un seul principe: la rencontre avec Jésus te fait lâcher ce que tu croyais être.\n\nEt tous deux trouvèrent la même chose, face au Fils de Dieu.",
+      "revelation_key": "Jésus ne demanda pas à Zachée de lâcher ses richesses. Zachée les lâcha parce que quelque chose de plus précieux était entré dans la pièce, et sa vie ne serait plus jamais la même."
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "depth",
+      "image_url": "zacchaeus_salvation_word.png",
+      "title": "Le salut est entré aujourd'hui dans cette maison.",
+      "subtitle": "La parole qui transforme",
+      "content": "La réponse de Jésus porte un poids immense.\n\n📖 Luc 19:9-10 (LSG1910):\n'Jésus lui dit: Le salut est entré aujourd'hui dans cette maison, parce que celui-ci est aussi un fils d'Abraham. Car le Fils de l'homme est venu chercher et sauver ce qui était perdu.'\n\n✨ TROIS DONS EN UNE SEULE PAROLE:\n\n1. 'Le salut est entré aujourd'hui': pas demain quand tu seras meilleur. Pas quand tu auras fini de restituer. Aujourd'hui. Ce jour même. Le salut n'arriva pas quand Zachée fit sa déclaration. Il arriva quand Jésus entra dans sa maison.\n\n2. 'Celui-ci est aussi un fils d'Abraham': la communauté qui l'avait exclu le regardait comme un traître à Israël. Jésus le réintègre dans la lignée dont il n'aurait jamais dû sortir. Non comme une concession. Comme une déclaration d'identité.\n\n📜 EN GREC: Le mot utilisé pour 'salut' ici est soteria — qui comprend délivrance, préservation, guérison totale. Ce n'est pas seulement le pardon des péchés. C'est la restauration complète de l'être.\n\n3. 'Est venu chercher et sauver ce qui était perdu': Jésus n'arriva pas à Jéricho en passant. Il y arriva pour Zachée. Ce verset révèle qu'il était venu chercher précisément cet homme.",
+      "revelation_key": "Jésus ne pardonna pas seulement Zachée. Il lui rendit son nom, sa lignée et sa place dans le peuple de Dieu.",
+      "scripture_connections": [
+        {
+          "reference": "Luc 15:4-6",
+          "text": "Quel homme d'entre vous, s'il a cent brebis et qu'il en perde une, ne laisse pas les quatre-vingt-dix-neuf autres dans le désert pour aller après celle qui est perdue, jusqu'à ce qu'il la trouve? Lorsqu'il l'a trouvée, il la met avec joie sur ses épaules; et, de retour à la maison, il appelle ses amis et ses voisins, et leur dit: Réjouissez-vous avec moi, car j'ai trouvé ma brebis qui était perdue."
+        },
+        {
+          "reference": "Romains 4:16",
+          "text": "C'est pourquoi la foi est le principe de l'héritage, afin qu'il soit par grâce, et que la promesse soit assurée à toute la postérité d'Abraham, non seulement à celle qui est sous la loi, mais encore à celle qui partage la foi d'Abraham, lequel est le père de nous tous."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "cinematic_scene",
+      "mood": "peace",
+      "image_url": "zacchaeus_door_light.png",
+      "title": "La même ville. Un homme différent.",
+      "narrative": "La foule qui murmurait était toujours dehors.\n\nJéricho n'avait pas changé. Les mêmes visages qui l'avaient exclu se trouvaient dans les mêmes rues.\n\nMais Zachée n'avait plus besoin que la ville l'accepte pour savoir qui il était.\n\nLe Fils de Dieu l'avait appelé par son nom depuis le pied d'un arbre. Le Fils de Dieu avait demandé à loger chez lui. Le Fils de Dieu l'avait appelé fils d'Abraham.\n\nEt cela suffisait pour se tenir sur le seuil de sa propre maison comme s'il voyait la rue pour la première fois.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luc 19:9",
+        "text": "Le salut est entré aujourd'hui dans cette maison."
+      },
+      "revelation_key": "L'approbation de Jésus est la seule qui puisse faire que le rejet du monde cesse de te définir."
+    },
+    {
+      "order": 12,
+      "type": "discovery_activation",
+      "image_url": "zacchaeus_open_road.png",
+      "icon": "🌳",
+      "title": "Ta Rencontre",
+      "subtitle": "Zachée n'attendit pas d'être parfait. Il chercha Jésus tel qu'il était.",
+      "discovery_questions": [
+        {
+          "category": "Être vu",
+          "question": "Zachée monta sur un arbre devant tout le monde, sans se soucier du regard des autres, simplement pour voir Jésus. Quelles sont les choses que tu ne fais plus par peur du jugement? Sur quel arbre as-tu besoin de monter aujourd'hui?"
+        },
+        {
+          "category": "Ce que tu accumules",
+          "question": "Zachée avait bâti sa vie en accumulant ce qui ne pouvait pas combler son vide intérieur. Qu'y a-t-il dans ta vie — argent, position, réussite, approbation — que tu tiens comme si c'était ton identité? Que ressentirais-tu si tu lâchais ce poids?"
+        },
+        {
+          "category": "Réparer les relations",
+          "question": "Zachée ne reçut pas seulement le pardon de Jésus — il sortit pour réparer ce qu'il avait brisé. Y a-t-il quelqu'un dans ta vie avec qui tu dois encore faire ce pas? Une excuse, une conversation, un geste concret. Le même Jésus qui transforma Zachée t'accompagne aujourd'hui pour franchir cette étape."
+        }
+      ],
+      "prayer": {
+        "title": "Prière depuis l'arbre",
+        "content": "Seigneur Jésus, me voici.\n\nNon pas dans la situation idéale. Non pas avec le parcours parfait. Je suis monté comme j'ai pu pour essayer de t'apercevoir de loin — sans imaginer que c'est toi qui me cherchais.\n\nComme Zachée, je porte des choses que j'ai cru pouvoir me protéger ou me définir. Des richesses, des réussites, l'approbation des autres, ou simplement le poids de vouloir contrôler ce que je suis aux yeux du monde. Aujourd'hui, je reconnais que tout cela est trop lourd, et qu'aucune de ces choses ne peut me donner ce que toi seul peux donner.\n\nJe ne te demande pas de me changer d'abord pour t'approcher ensuite. Je te demande d'entrer dans ma vie aujourd'hui, telle qu'elle est, et d'y demeurer.\n\nCe qui en moi a besoin d'être lâché — donne-moi le courage de le lâcher. Ce qui a besoin d'être réparé avec quelqu'un que j'ai blessé — donne-moi la force de faire ce pas. Toi qui as accompagné Zachée, accompagne-moi.\n\nToi qui es venu chercher ce qui était perdu — me voici. Trouve-moi.\n\nAu nom de Jésus, Amen."
+      }
+    },
+    {
+      "order": 13,
+      "type": "completion",
+      "mood": "open",
+      "image_url": "zacchaeus_door_light_front.png",
+      "completion_verse": {
+        "reference": "Luc 19:10",
+        "text": "Car le Fils de l'homme est venu chercher et sauver ce qui était perdu.",
+        "bible_version": "LSG1910"
+      },
+      "reflection_prompt": "Sur quel arbre as-tu besoin de monter aujourd'hui? Et qu'as-tu besoin de lâcher lorsqu'il t'appellera par ton nom?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
