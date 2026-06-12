@@ -1,0 +1,219 @@
+{
+  "id": "zacchaeus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "de",
+  "bible_version": "LU17",
+  "version": "1.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "Zachäus",
+    "testament": "new",
+    "scripture_reference": "Lukas 19:1-10",
+    "mood_primary": "crowd",
+    "accent_color": "#3b1f00",
+    "emoji": "🌳",
+    "tags": [
+      "ausgrenzung",
+      "würde",
+      "wiedergutmachung",
+      "heil",
+      "reichtum",
+      "zachäus",
+      "jesus",
+      "verwandlung",
+      "begegnung",
+      "gesehen_werden"
+    ]
+  },
+  "key_verse": {
+    "reference": "Lukas 19:10",
+    "text": "Denn der Menschensohn ist gekommen, zu suchen und selig zu machen, was verloren ist.",
+    "bible_version": "LU17"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "crowd",
+      "image_url": "zacchaeus_jericho_crowd.png",
+      "title": "Jericho war voller Menschen.",
+      "narrative": "Eine Menschenmenge, und ein Gerücht, das durch die ganze Stadt lief: Jesus von Nazareth zog hindurch.\n\nIn dieser Menge stand ein Mann, den niemand in seiner Nähe haben wollte. Ein Mann, der das Geld über sein eigenes Volk gestellt hatte — und der nun überall die Last dieser Entscheidung mit sich trug.\n\nZachäus war ein Oberer der Zöllner und war reich.\n\nKlein von Gestalt. Und in diesem Moment fehlte ihm das Einzige, worauf es wirklich ankam: groß genug zu sein, um über die Menge hinwegzusehen.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "Derjenige, der Jesus am meisten sehen musste, war derjenige, der am wenigsten an ihn heranreichen konnte."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "zacchaeus_crowd_wall.png",
+      "verse_reference": "Lukas 19:1-4",
+      "verse_text": "Und er ging nach Jericho hinein und zog hindurch. Und siehe, da war ein Mann mit Namen Zachäus, der war ein Oberer der Zöllner und war reich. Und er begehrte, Jesus zu sehen, wer er wäre, und konnte es nicht wegen der Menge; denn er war klein von Gestalt. Und er lief voraus und stieg auf einen Maulbeerfeigenbaum, um ihn zu sehen; denn dort sollte er durchkommen.",
+      "reflection": "Lukas stellt ihn mit Präzision vor: Oberer der Zöllner. Reich.\n\nDiese zwei Merkmale reichten aus, um ihn in den Augen aller in Jericho zu verurteilen. Zöllner arbeiteten für Rom — und das nicht nur als Angestellte. Sie zahlten Rom einen festen Betrag im Voraus und trieben dann ein, was sie konnten — vom eigenen Volk. Die Differenz war ihr Gewinn. Es war legalisierte Erpressung, und Zachäus war nicht nur Teil des Systems. Er leitete es.\n\nUnd dennoch.\n\nDieser Mann, der alles gekauft hatte, was Geld kaufen konnte, rannte. Er rannte, um einen Rabbi zu erblicken, der von Ort zu Ort zog — ohne Haus, ohne Reichtum, ohne irgendetwas Irdisches.\n\nEtwas in Zachäus wusste bereits, dass er brauchte, was Geld nicht kaufen konnte.",
+      "revelation_key": "Der reichste Mann in Jericho rannte hinter jemandem her, der nichts besaß — was nur Sinn ergibt, wenn das, wonach er sich sehnte, nicht käuflich war."
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "solitude",
+      "image_url": "zacchaeus_in_tree.png",
+      "title": "Er stieg auf den Baum.",
+      "narrative": "Stell dir die Szene vor.\n\nEin erwachsener Mann — ein Oberzöllner, ein Mann von Ansehen, wie verrufen es auch war — kletterte mitten auf Jerichos Hauptstraße auf einen Baum, vor den Augen der ganzen Stadt, die auf ihn herabsah.\n\nIn dieser Geste steckt etwas, das lauter spricht als jedes Gebet.\n\nEr berechnete nicht den sozialen Preis. Er wog nicht ab, was seine Kollegen denken würden. Er schützte nicht seine Würde.\n\nEr wollte einfach sehen.\n\nUnd so sieht Glaube in der Heiligen Schrift oft aus: ein Mensch, der beiseitelegt, was er zu verlieren fürchtet, um Jesus näherzukommen.",
+      "ambient_sound": "crowd_passing_below",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "Zachäus ließ seine Würde los — ohne zu wissen, dass Jesus bereits auf der Suche nach ihm war."
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "turning_point",
+      "image_url": "zacchaeus_jesus_looks_up.png",
+      "verse_reference": "Lukas 19:5-6",
+      "verse_text": "Und als Jesus an die Stelle kam, sah er auf und sprach zu ihm: Zachäus, steig eilend herunter; denn ich muss heute in deinem Haus einkehren. Und er stieg eilend herunter und nahm ihn auf mit Freuden.",
+      "reflection": "Halte hier einen Moment inne.\n\nJesus blieb stehen. Er sah auf. Und er sagte seinen Namen.\n\nNicht: Hey, du da oben im Baum. Nicht: der Zöllner dort. Nicht: Schaut mal her.\n\nEr sagte seinen Namen.\n\nZachäus war hinaufgestiegen, um Jesus aus der Ferne zu sehen. Was er nicht ahnen konnte: Jesus hatte ihn bereits gesehen.\n\nUnd es gibt ein Wort in diesem Vers, das deine volle Aufmerksamkeit verdient: muss. Ich muss heute in deinem Haus einkehren.\n\nEs ist dasselbe griechische Wort wie in Johannes 4:4 — es musste sein, dass er durch Samaria zog. Auch das war kein Zufall. Jesus entdeckte Zachäus nicht auf jenem Baum. Er kam nach Jericho, um ihn zu suchen.\n\nUnd als er sagte 'in deinem Haus einkehren', war das keine Einladung zum Abendessen. In jener Kultur war es eine öffentliche Erklärung, dass der Gastgeber der Gegenwart des Gastes würdig war. Es war die höchste mögliche Geste der Annahme.",
+      "revelation_key": "Zachäus stieg hinauf, um Jesus zu finden. Jesus kam nach Jericho, um ihn zu finden. Das ist das Zeichen der Gnade."
+    },
+    {
+      "order": 5,
+      "type": "character_moment",
+      "mood": "exposed",
+      "image_url": "zacchaeus_descent.png",
+      "title": "Er stieg eilend herunter.",
+      "subtitle": "Der Mann, den niemand in seinem Haus haben wollte",
+      "content": "Beachte den Kontrast.\n\nAls Jesus sagte 'ich muss heute in deinem Haus einkehren', hatte die Menge eine sofortige Reaktion.\n\n📖 Lukas 19:7 (LU17): 'Da sie das sahen, murrten sie alle und sprachen: Bei einem Sünder ist er eingekehrt.'\n\nSie alle murrten. Nicht einige. Nicht nur die Pharisäer. Alle.\n\nZachäus war der Mann, auf den alle mit dem Finger zeigten. Ihn abzulehnen ließ die anderen besser aussehen. Und Jesus, der das alles wusste, entschied sich, in seinem Haus zu bleiben — nicht nur um zu essen oder zu schlafen, sondern um vor der ganzen Stadt zu erklären, dass dieser Mann seiner Gegenwart würdig war.\n\n💭 Halte dabei inne:\n\nWie viele Jahre war Zachäus ohne jemanden, der in seinem Haus sein wollte? Ohne jemanden, der ihn als Person sah und nicht als Amt? Ohne jemanden, der seinen Namen mit etwas anderem aussprach als mit Verachtung?\n\nUnd dann sah der Sohn Gottes auf, rief ihn beim Namen — vertraut, nicht anklagend — und bat, in seinem Haus zu bleiben. Zachäus war hinaufgestiegen, um Jesus nur von weitem zu sehen, ohne sich vorstellen zu können, dass der, den er sehen wollte, ihn bereits angenommen hatte.\n\nEr stieg eilend herunter.\n\nNicht weil Jesus verlangte, dass er sich zuerst änderte. Sondern weil jemand ihn gesehen hatte.",
+      "revelation_key": "Jesus wartete nicht darauf, dass Zachäus ein besserer Mensch wurde. Er rief ihn dort herunter, wo er war — allein durch Gnade und Barmherzigkeit."
+    },
+    {
+      "order": 6,
+      "type": "theological_depth",
+      "mood": "depth",
+      "image_url": "zacchaeus_coins_table.png",
+      "title": "Oberer der Zöllner",
+      "subtitle": "Was dieser Titel ihn wirklich kostete",
+      "content": "Um die Verwandlung des Zachäus zu verstehen, muss man verstehen, was er war.\n\n🏛️ DAS SYSTEM:\n\nRom verpachtete die Steuereintreibung an Einheimische. Ein Zöllner zahlte Rom eine feste Summe im Voraus und trieb dann ein, was er konnte — die Differenz war sein Gewinn. Es war ein System, das auf Missbrauch ausgelegt war, und Zachäus war nicht nur darin: er leitete es.\n\nDas bedeutete, dass andere Zöllner ihm unterstanden. Er war verantwortlich für das gesamte System der Erpressung in Jericho. Jeder Denar seines Reichtums stammte aus den Taschen jüdischer Familien in seiner eigenen Stadt.\n\n⚠️ DER SOZIALE PREIS:\n\nZöllner galten als zeremoniell unrein. Sie durften nicht als Zeugen vor einem jüdischen Gericht auftreten. Sie waren vom normalen Synagogenleben ausgeschlossen. Sie waren vom einzigen Zugehörigkeitssystem abgeschnitten, das es in jener Kultur gab.\n\nZachäus war nicht nur reich. Er war vollständig ausgegrenzt — keine Gemeinschaft, kein Zugang zur Anbetung, keinen Ort, zu dem er gehörte.\n\n🔑 DER NAME: Der Name Zachäus kommt vom Hebräischen Zakkay — was rein, unschuldig bedeutet. Er trug einen Namen, der das beschrieb, was er aufgehört hatte zu sein.\n\nUnd das war der Mann, den Jesus von unten am Baum beim Namen rief.",
+      "revelation_key": "Zachäus trug den Namen dessen, was er verloren hatte. Jesus rief ihn bei diesem Namen, um ihm seine Bedeutung zurückzugeben.",
+      "scripture_connections": [
+        {
+          "reference": "Lukas 5:30-32",
+          "text": "Und die Pharisäer und ihre Schriftgelehrten murrten und sprachen zu seinen Jüngern: Warum esst und trinkt ihr mit den Zöllnern und Sündern? Und Jesus antwortete und sprach zu ihnen: Die Gesunden bedürfen des Arztes nicht, sondern die Kranken. Ich bin nicht gekommen, Gerechte zu rufen, sondern Sünder zur Buße."
+        },
+        {
+          "reference": "Hesekiel 34:16",
+          "text": "Ich will das Verlorene wieder suchen und das Verirrte zurückbringen und das Verwundete verbinden und das Schwache stärken und, was fett und stark ist, behüten; ich will sie weiden, wie es recht ist."
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "intimacy",
+      "image_url": "zacchaeus_table_jesus.png",
+      "title": "Was drinnen geschah.",
+      "narrative": "Wir kennen nicht jedes Wort, das in jenem Haus gesprochen wurde. Aber wir wissen, was daraus hervorging. Etwas geschah an jenem Tisch, was jahrelanger Reichtum, Verträge und Macht bei Zachäus nie vermocht hatten. Jesus blieb bei ihm — und das genügte, um alles zu verändern.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lukas 19:9",
+        "text": "Heute ist diesem Hause Heil widerfahren."
+      },
+      "revelation_key": "Die Gegenwart Jesu bewirkte, was Jahre des Reichtums und der Macht nicht konnten: sie bewegte das Herz des Zachäus."
+    },
+    {
+      "order": 8,
+      "type": "scripture_moment",
+      "mood": "breakthrough",
+      "image_url": "zacchaeus_stands_declaration.png",
+      "verse_reference": "Lukas 19:8",
+      "verse_text": "Zachäus aber trat herzu und sprach zu dem Herrn: Siehe, Herr, die Hälfte von meinem Besitz gebe ich den Armen, und wenn ich jemanden betrogen habe, so gebe ich es vierfach zurück.",
+      "reflection": "Bibelgelehrte streiten darüber, ob Zachäus bereits vor der Begegnung so handelte oder ob erst die Begegnung ihn verwandelte. Der Urtext lässt ehrlich gesagt beide Lesarten zu.\n\nAber was wir wissen, ist dies: Vor Jesus stehend bot Zachäus die Hälfte von allem an, was er besaß. Während der reiche Jüngling (Lukas 18:18–23) nichts loslassen konnte, als Jesus ihn einlud, ließ Zachäus die Hälfte los — ohne dass Jesus ihn darum bat. Und er blieb nicht beim gesetzlichen Minimum — er ging viermal weiter als gefordert (3. Mose 5:16).\n\nDiese Art von Reaktion kommt nur von einem Herzen, das etwas Wertvolleres gefunden hat als das, woran es festgehalten hatte. Egal wann die Verwandlung stattfand — vor Jesus stehend entschied Zachäus anders. Und Jesus antwortete mit der vollständigsten Heilsaussage im gesamten Lukasevangelium.\n\nDas ist die Barmherzigkeit Gottes: Er wartet nicht darauf, dass du sie verdienst. Er wartet darauf, dass du antwortest.",
+      "revelation_key": "Die Großzügigkeit des Zachäus war nicht die Ursache seiner Errettung. Sie war der Beweis, dass sie bereits geschehen war."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "transformation",
+      "image_url": "zacchaeus_open_hands.png",
+      "title": "Der Mann, der losließ",
+      "subtitle": "Was der Reichtum ihm nie geben konnte — und was Jesus ihm zurückgab",
+      "content": "Zachäus hatte sein ganzes Leben um das Anhäufen herum aufgebaut.\n\nUnd an einem einzigen Nachmittag in der Gegenwart Jesu ließ er die Hälfte von allem los, was er besaß.\n\n💰 Was das bedeutet:\n\nEr verkaufte nicht allmählich seinen Besitz. Er sagte nicht, er würde darüber nachdenken. Er verhandelte keine bequemere Prozentzahl mit Jesus. Er stand auf, öffentlich, und erklärte, was er tun würde.\n\nDerselbe Mann, der seine gesamte Identität darauf aufgebaut hatte, wie viel er besaß, wählte nun, sich durch das zu definieren, was er geben konnte.\n\nHier liegt die Parallele zur Frau am Brunnen aus der vorherigen Begegnung:\n\nSie ließ ihren Wasserkrug am Brunnen zurück, nachdem sie Jesus begegnet war. Was Er in ihr Inneres gelegt hatte, ließ das, was sie in den Händen trug, klein erscheinen.\n\nZachäus ließ die Hälfte seines Reichtums los, nachdem er Jesus in sein Haus aufgenommen hatte.\n\nZwei Menschen. Dasselbe Prinzip: Eine Begegnung mit Jesus lässt dich das loslassen, woran du deine Identität festgemacht hast.\n\nUnd beide fanden dasselbe — von Angesicht zu Angesicht mit dem Sohn Gottes.",
+      "revelation_key": "Jesus bat Zachäus nie, seinen Reichtum aufzugeben. Zachäus ließ ihn los, weil etwas Wertvolleres durch die Tür getreten war — und sein Leben würde nie mehr dasselbe sein."
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "depth",
+      "image_url": "zacchaeus_salvation_word.png",
+      "title": "Heute ist diesem Hause Heil widerfahren.",
+      "subtitle": "Das Wort, das alles verändert",
+      "content": "Das Gewicht der Antwort Jesu ist außerordentlich.\n\n📖 Lukas 19:9-10 (LU17):\n'Jesus aber sprach zu ihm: Heute ist diesem Hause Heil widerfahren, denn auch er ist ein Sohn Abrahams. Denn der Menschensohn ist gekommen, zu suchen und selig zu machen, was verloren ist.'\n\n✨ DREI GESCHENKE IN EINEM EINZIGEN SATZ:\n\n1. 'Heute ist Heil widerfahren': Nicht morgen, wenn du dich gebessert hast. Nicht wenn du mit der Wiedergutmachung fertig bist. Heute. Noch am selben Tag. Das Heil kam nicht an, als Zachäus seine Erklärung abgab. Es kam an, als Jesus seine Tür durchschritt.\n\n2. 'Denn auch er ist ein Sohn Abrahams': Die Gemeinschaft, die ihn ausgeschlossen hatte, sah in ihm einen Verräter an Israel. Jesus gibt ihm die Zugehörigkeit zurück, die er in Wahrheit nie verlassen hatte — nicht als Zugeständnis, sondern als Identitätserklärung.\n\n📜 IM GRIECHISCHEN: Das hier verwendete Wort für 'Heil' ist soteria — es umfasst Rettung, Bewahrung, vollständige Wiederherstellung. Es ist nicht nur Vergebung der Sünden. Es ist die vollständige Erneuerung der Person.\n\n3. 'Der Menschensohn ist gekommen, zu suchen und selig zu machen, was verloren ist': Jesus war nicht bloß auf der Durchreise in Jericho. Er kam für Zachäus. Dieser Vers macht deutlich, dass er in jene Stadt kam, um genau diesen Mann zu suchen.",
+      "revelation_key": "Jesus vergab Zachäus nicht nur. Er gab ihm seinen Namen zurück, seine Abstammung und seinen Platz im Volk Gottes.",
+      "scripture_connections": [
+        {
+          "reference": "Lukas 15:4-6",
+          "text": "Welcher Mensch ist unter euch, der hundert Schafe hat und, wenn er eines von ihnen verliert, nicht die neunundneunzig in der Wüste lässt und geht dem verlorenen nach, bis er's findet? Und wenn er's gefunden hat, so legt er sich's auf die Schultern voller Freude. Und wenn er heimkommt, ruft er seine Freunde und Nachbarn und spricht zu ihnen: Freut euch mit mir; denn ich habe mein Schaf gefunden, das verloren war."
+        },
+        {
+          "reference": "Römer 4:16",
+          "text": "Deshalb muss die Gerechtigkeit durch den Glauben kommen, damit sie aus Gnaden sei und die Verheißung festbleibe für alle Nachkommen, nicht allein für die, die aus dem Gesetz leben, sondern auch für die, die aus Abrahams Glauben leben. Der ist unser aller Vater –"
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "cinematic_scene",
+      "mood": "peace",
+      "image_url": "zacchaeus_door_light.png",
+      "title": "Dieselbe Stadt. Ein anderer Mensch.",
+      "narrative": "Die Menge, die gemurrt hatte, stand noch draußen.\n\nJericho hatte sich nicht verändert. Dieselben Gesichter, die ihn ausgeschlossen hatten, säumten dieselben Straßen.\n\nAber Zachäus brauchte die Anerkennung der Stadt nicht mehr, um zu wissen, wer er war.\n\nDer Sohn Gottes hatte ihn vom Baum aus beim Namen gerufen. Der Sohn Gottes hatte gebeten, in seinem Haus zu bleiben. Der Sohn Gottes hatte ihn einen Sohn Abrahams genannt.\n\nUnd das genügte, um auf der Schwelle seiner eigenen Haustür zu stehen, als würde er die Straße zum allerersten Mal sehen.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lukas 19:9",
+        "text": "Jesus aber sprach zu ihm: Heute ist diesem Hause Heil widerfahren."
+      },
+      "revelation_key": "Die Zustimmung Jesu ist die einzige Zustimmung, die dafür sorgen kann, dass die Ablehnung der Welt aufhört, dich zu definieren."
+    },
+    {
+      "order": 12,
+      "type": "discovery_activation",
+      "image_url": "zacchaeus_open_road.png",
+      "icon": "🌳",
+      "title": "Deine Begegnung",
+      "subtitle": "Zachäus wartete nicht, bis er bereit war. Er kam zu Jesus genau so, wie er war.",
+      "discovery_questions": [
+        {
+          "category": "Gesehen werden",
+          "question": "Was hältst du zurück, weil du Angst hast, was andere sagen könnten? Welchen Baum musst du heute besteigen?"
+        },
+        {
+          "category": "Was du festhältst",
+          "question": "Zachäus baute sein Leben darauf auf, Dinge anzuhäufen, die die innere Leere nicht füllen konnten. Was in deinem Leben — Geld, Ansehen, Leistung, Anerkennung — hältst du fest, als wäre es deine Identität? Wie würde es sich anfühlen, das loszulassen?"
+        },
+        {
+          "category": "Heilung des Zerbrochenen",
+          "question": "Zachäus empfing nicht nur Jesu Vergebung — er ging hinaus und machte es mit denen wieder gut, denen er Unrecht getan hatte. Gibt es jemanden in deinem Leben, dem du das noch schuldest? Ein echtes Gespräch, eine aufrichtige Entschuldigung, einen konkreten Schritt. Derselbe Jesus, der Zachäus verwandelte, geht heute mit dir diesen Weg."
+        }
+      ],
+      "prayer": {
+        "title": "Ein Gebet vom Baum",
+        "content": "Herr Jesus, hier bin ich.\n\nNicht an einem vollkommenen Ort. Nicht mit einer vollkommenen Geschichte. Ich kletterte, so gut ich konnte, nur um dich aus der Ferne zu sehen — ohne zu wissen, dass du bereits nach mir Ausschau hieltest.\n\nWie Zachäus trage ich Dinge mit mir, von denen ich dachte, sie würden mich schützen oder definieren. Reichtum, Leistung, Anerkennung — oder schlicht das Gewicht, kontrollieren zu wollen, wie andere mich sehen. Heute erkenne ich, dass all das zu schwer ist und dass keines davon mir geben kann, was nur du geben kannst.\n\nIch bitte dich nicht, zu warten, bis ich besser bin, bevor du nahkommst. Ich bitte dich, noch heute in mein Leben einzutreten, so wie es ist, und zu bleiben.\n\nUnd was in mir losgelassen werden muss — gib mir den Mut, es loszulassen. Was mit jemandem wiederhergestellt werden muss, dem ich Unrecht getan habe — gib mir die Kraft, diesen Schritt zu tun. Derselbe, der Zachäus begleitete, begleite mich.\n\nDu bist gekommen, zu suchen, was verloren ist — hier bin ich. Komm und finde mich.\n\nIn Jesu Namen, Amen."
+      }
+    },
+    {
+      "order": 13,
+      "type": "completion",
+      "mood": "open",
+      "image_url": "zacchaeus_door_light_front.png",
+      "completion_verse": {
+        "reference": "Lukas 19:10",
+        "text": "Denn der Menschensohn ist gekommen, zu suchen und selig zu machen, was verloren ist.",
+        "bible_version": "LU17"
+      },
+      "reflection_prompt": "Welchen Baum musst du heute besteigen? Und was musst du loslassen, wenn er dich beim Namen ruft?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
