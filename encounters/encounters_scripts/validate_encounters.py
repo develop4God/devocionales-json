@@ -62,6 +62,13 @@ _DE_SHARED_BOOK_NAMES = {
     'job', 'ruth',
 }
 
+# Book names used in the Magandang Balita Biblia (MBB05) Filipino Bible that
+# retain the English/transliterated form — same-name false positives for FIL.
+_FIL_SHARED_BOOK_NAMES = {
+    'genesis', 'ruth', 'samuel', 'ezra', 'job', 'ezekiel', 'daniel',
+    'hosea', 'joel', 'amos', 'nahum',
+}
+
 
 def _has_english_book_name(reference: str, lang: str) -> bool:
     """Return True if reference contains an English-only book name for lang."""
@@ -69,6 +76,8 @@ def _has_english_book_name(reference: str, lang: str) -> bool:
     if not m:
         return False
     if lang == 'de' and m.group(1).lower() in _DE_SHARED_BOOK_NAMES:
+        return False
+    if lang == 'fil' and m.group(1).lower() in _FIL_SHARED_BOOK_NAMES:
         return False
     return True
 

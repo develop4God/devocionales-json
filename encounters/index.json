@@ -240,8 +240,8 @@
         "zh": "zacchaeus_zh_001.json",
         "hi": "zacchaeus_hi_001.json",
         "de": "zacchaeus_de_001.json",
-        "ar": "zacchaeus_ar_001.json",
-        "fil": "zacchaeus_fil_001.json"
+        "fil": "zacchaeus_fil_001.json",
+        "ar": "zacchaeus_ar_001.json"
       },
       "titles": {
         "en": "The Man in the Tree",
@@ -252,8 +252,8 @@
         "zh": "树上的那个人",
         "hi": "पेड़ पर चढ़ा आदमी",
         "de": "Der Mann im Baum",
-        "ar": "الرجل في الشجرة",
-        "fil": "Ang Lalaki sa Puno"
+        "fil": "Ang Lalaki sa Puno",
+        "ar": "الرجل على الشجرة"
       },
       "subtitles": {
         "en": "The most hated man in Jericho — and Jesus chose his house",
@@ -264,8 +264,8 @@
         "zh": "耶利哥最被憎恶的人——耶稣却选了他的家",
         "hi": "यरीहो का सबसे घृणित आदमी — और यीशु ने उसके घर को चुना",
         "de": "Der meistgehasste Mann in Jericho — und Jesus wählte sein Haus",
-        "ar": "أكثر الناس كرهاً في أريحا — ويسوع اختار بيته",
-        "fil": "Ang pinaka-kinapopootan na tao sa Jericho — at pinili ni Jesus ang kanyang tahanan"
+        "fil": "Ang pinaka-kinapopootan na tao sa Jericho — at pinili ni Jesus ang kanyang tahanan",
+        "ar": "أكثر رجل مكروه في أريحا — ويسوع اختار بيته"
       },
       "scripture_reference": {
         "en": "Luke 19:1-10",
@@ -274,22 +274,22 @@
         "fr": "Luc 19:1-10",
         "ja": "ルカ19:1-10",
         "zh": "路加福音19:1-10",
-        "hi": "लूका 19:1-10",
+        "hi": "लूका रचित सुसमाचार 19:1-10",
         "de": "Lukas 19:1-10",
-        "ar": "لوقا 19:1-10",
-        "fil": "Lucas 19:1-10"
+        "fil": "Lucas 19:1-10",
+        "ar": "لوقا 19:1-10"
       },
       "estimated_reading_minutes": {
         "en": 7,
-        "es": 7,
-        "pt": 7,
+        "es": 11,
+        "pt": 11,
         "fr": 7,
-        "ja": 7,
-        "zh": 7,
-        "hi": 7,
+        "ja": 13,
+        "zh": 13,
+        "hi": 9,
         "de": 8,
-        "ar": 9,
-        "fil": 8
+        "fil": 8,
+        "ar": 13
       }
     },
     {
