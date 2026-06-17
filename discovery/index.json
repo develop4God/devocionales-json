@@ -1801,6 +1801,59 @@
         "ar": 12,
         "fil": 11
       }
+    },
+    {
+      "id": "union_with_christ_001",
+      "version": "1.0",
+      "emoji": "🏠",
+      "files": {
+        "es": "union_with_christ_es_001.json",
+        "en": "union_with_christ_en_001.json",
+        "pt": "union_with_christ_pt_001.json",
+        "fr": "union_with_christ_fr_001.json",
+        "ja": "union_with_christ_ja_001.json",
+        "zh": "union_with_christ_zh_001.json",
+        "hi": "union_with_christ_hi_001.json",
+        "de": "union_with_christ_de_001.json",
+        "ar": "union_with_christ_ar_001.json",
+        "fil": "union_with_christ_fil_001.json"
+      },
+      "titles": {
+        "es": "En Cristo",
+        "en": "In Christ",
+        "pt": "Em Cristo",
+        "fr": "En Christ",
+        "ja": "PENDING_TRANSLATION",
+        "zh": "PENDING_TRANSLATION",
+        "hi": "मसीह में",
+        "de": "In Christus",
+        "ar": "PENDING_TRANSLATION",
+        "fil": "PENDING_TRANSLATION"
+      },
+      "subtitles": {
+        "es": "Lo que la Biblia dice sobre el lugar donde ahora vives",
+        "en": "What the Bible says about the place where you now live",
+        "pt": "O que a Bíblia diz sobre o lugar onde você agora vive",
+        "fr": "Ce que la Bible dit sur le lieu où tu vis maintenant",
+        "ja": "PENDING_TRANSLATION",
+        "zh": "PENDING_TRANSLATION",
+        "hi": "बाइबल उस स्थान के बारे में क्या कहती है जहाँ अब तुम रहते हो",
+        "de": "Was die Bibel über den Ort sagt, an dem du jetzt lebst",
+        "ar": "PENDING_TRANSLATION",
+        "fil": "PENDING_TRANSLATION"
+      },
+      "estimated_reading_minutes": {
+        "es": 10,
+        "en": 10,
+        "pt": 10,
+        "fr": 10,
+        "ja": 10,
+        "zh": 10,
+        "hi": 10,
+        "de": 10,
+        "ar": 10,
+        "fil": 10
+      }
     }
   ]
 }
