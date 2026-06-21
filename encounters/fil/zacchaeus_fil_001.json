@@ -1,0 +1,219 @@
+{
+  "id": "zacchaeus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fil",
+  "bible_version": "Magandang Balita Biblia",
+  "version": "1.0",
+  "estimated_reading_minutes": 8,
+  "meta": {
+    "character": "Zaqueo",
+    "testament": "new",
+    "scripture_reference": "Lucas 19:1-10",
+    "mood_primary": "crowd",
+    "accent_color": "#3b1f00",
+    "emoji": "🌳",
+    "tags": [
+      "pagbubukod",
+      "dignidad",
+      "kabayaran",
+      "kaligtasan",
+      "kayamanan",
+      "zaqueo",
+      "jesus",
+      "pagbabago",
+      "pagtatagpo",
+      "pagtanaw"
+    ]
+  },
+  "key_verse": {
+    "reference": "Lucas 19:10",
+    "text": "Ang Anak ng Tao ay naparito upang hanapin at iligtas ang naligaw.",
+    "bible_version": "Magandang Balita Biblia"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "crowd",
+      "image_url": "zacchaeus_jericho_crowd.png",
+      "title": "Siksikan sa Jerico.",
+      "narrative": "May pulutong, at may bulung-bulungang kumakalat sa buong lungsod: dumaraan si Jesus na taga-Nazaret.\n\nSa gitna ng karamihang iyon ay nakatayo ang isang lalaking ayaw ng kahit sino na mapalapit sa kanila. Isang lalaking pinili ang pera kaysa sa sarili niyang bayan—at ngayon, dala-dala niya saanman siya magpunta ang bigat ng pasyang iyon.\n\nSi Zaqueo ang pinuno ng mga maniningil ng buwis, at siya'y mayaman.\n\nPandak. At sa sandaling iyon, kulang sa kanya ang tanging bagay na talagang mahalaga: ang tangkad para makakita sa ibabaw ng mga tao.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "Ang higit na nangangailangang makita si Jesus ang siya ring may pinakamaliit na kakayahang makalapit sa Kanya."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "zacchaeus_crowd_wall.png",
+      "verse_reference": "Lucas 19:1-4",
+      "verse_text": "Pumasok si Jesus sa Jerico at naglakad sa kabayanan. May isang tao roong ang pangalan ay Zaqueo, isang pinuno ng mga maniningil ng buwis at napakayaman. Sinisikap niyang makita si Jesus upang makilala kung sino ito, ngunit sa dami ng tao, hindi niya ito makita dahil sa siya'y pandak. Kaya't patakbo siyang nauna sa dadaanan ni Jesus at umakyat sa isang puno ng sikamoro.",
+      "reflection": "Ipinakikilala siya ni Lucas nang malinaw: pinuno ng mga maniningil ng buwis. Mayaman.\n\nSapat na ang dalawang detalyeng iyon para hatulan siya sa paningin ng lahat sa Jerico. Nagtatrabaho ang mga maniningil ng buwis para sa Roma—at hindi lang bilang mga empleyado. Nagbabayad sila nang pauna ng nakatakdang halaga sa Roma, saka sila naniningil ng kaya nilang makuha mula sa sarili nilang kababayan. Ang diperensya ang kanilang tubo. Isa itong legalisadong pangingikil, at si Zaqueo ay hindi lang bahagi ng sistemang iyon. Siya ang namamahala rito.\n\nAt gayon pa man.\n\nAng taong nabili na ang lahat ng kayang bilhin ng pera ay tumatakbo. Tumatakbo para lamang makasilip sa isang rabing palipat-lipat ng bayan na walang bahay, walang yaman, walang anumang maipagmamalaki sa mundo.\n\nMay kung anong alam na si Zaqueo sa kaibuturan niya: kailangan niya ang hindi kayang bilhin ng pera.",
+      "revelation_key": "Ang pinakamayamang lalaki sa Jerico ay tumatakbo kasunod ng isang taong waring walang pag-aari—na may saysay lamang kung ang hinahabol niya ay isang bagay na hindi mo kailanman maaangkin."
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "solitude",
+      "image_url": "zacchaeus_in_tree.png",
+      "title": "Umakyat siya sa puno.",
+      "narrative": "Isipin mo.\n\nIsang matandang lalaki—isang pinuno ng mga maniningil ng buwis, isang taong may kaya, isang taong may reputasyon kahit kinasusuklaman—ang umakyat sa isang puno sa gitna ng pangunahing daan ng Jerico, lantad sa paningin ng lungsod na matagal nang minamaliit siya.\n\nMay isang bagay sa kilos na iyon na mas malakas magsalita kaysa maraming panalangin.\n\nHindi na siya tumigil para kwentahin ang kapalit sa lipunan. Hindi na niya inisip kung ano ang sasabihin ng mga kasamahan niya. Hindi na niya ipinagtanggol ang kanyang dignidad.\n\nGusto lang niyang makakita.\n\nAt madalas, ganiyan ang hitsura ng pananampalataya sa Kasulatan: isang taong handang isantabi ang bagay na kinatatakutan niyang mawala para makalapit kay Jesus.",
+      "ambient_sound": "crowd_passing_below",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "Binitiwan ni Zaqueo ang kanyang dignidad—hindi niya alam na si Jesus ay dati nang paparating upang hanapin siya."
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "turning_point",
+      "image_url": "zacchaeus_jesus_looks_up.png",
+      "verse_reference": "Lucas 19:5-6",
+      "verse_text": "Pagtapat ni Jesus sa lugar na iyon, tumingala siya kay Zaqueo at sinabi, \"Zaqueo, bumabâ ka agad sapagkat kailangan kong tumuloy ngayon sa iyong bahay.\" Nagmamadaling bumabâ si Zaqueo, at tuwang-tuwang tinanggap si Jesus sa kanyang bahay.",
+      "reflection": "Huminto muna tayo rito.\n\nTumigil si Jesus. Tumingala Siya. At tinawag Niya ang pangalan niya.\n\nHindi: \"Hoy, ikaw sa puno.\" Hindi: \"Iyong maniningil ng buwis diyan.\" Hindi: \"Tingnan ninyo ang taong ito.\"\n\nTinawag Niya ang pangalan niya.\n\nUmakyat si Zaqueo para makita si Jesus mula sa malayo. Ang hindi niya alam, matagal na pala siyang nakita ni Jesus.\n\nAt may isang salita sa talatang ito na dapat mong pagtuunan nang buo: kailangan. Kailangan kong tumuloy ngayon sa iyong bahay.\n\nIyon din ang salitang Griyego na ginamit sa Juan 4:4—kinailangan Niyang dumaan sa Samaria. Hindi rin aksidente iyon. Hindi nadiskubre ni Jesus si Zaqueo sa punong iyon. Dumating Siya sa Jerico para hanapin siya.\n\nAt nang sabihin Niyang \"tumuloy sa iyong bahay,\" hindi lang iyon paanyaya sa hapunan. Sa kulturang iyon, ang pananatili sa tahanan ng isang tao ay hayagang pahayag na ang may-ari ng bahay ay karapat-dapat sa presensya ng panauhin. Iyon ang isa sa pinakamataas na anyo ng pagtanggap.",
+      "revelation_key": "Umakyat si Zaqueo para hanapin si Jesus. Dumating si Jesus sa Jerico para hanapin siya. Iyan ang tatak ng biyaya."
+    },
+    {
+      "order": 5,
+      "type": "character_moment",
+      "mood": "exposed",
+      "image_url": "zacchaeus_descent.png",
+      "title": "Mabilis siyang bumabâ.",
+      "subtitle": "Ang lalaking ayaw ng kahit sino sa kanilang tahanan",
+      "content": "Pansinin ang pagkakaiba.\n\nNang sabihin ni Jesus na \"kailangan kong tumuloy ngayon sa iyong bahay,\" agad na nagkaroon ng reaksiyon ang mga tao.\n\n📖 Lucas 19:7 (Magandang Balita Biblia):\nLahat ng nakakita nito ay nagbulung-bulungan. \"Nakikituloy siya sa isang makasalanan,\" sabi nila.\n\nLahat sila ay nagbulung-bulungan. Hindi lang ilan. Hindi lang ang mga Pariseo. Lahat sila.\n\nSi Zaqueo ang taong itinuturo ng lahat bilang makasalanan sa silid. Ang pagtanggi sa kanya ay nagpapagaan ng pakiramdam ng iba tungkol sa sarili nila. At si Jesus, alam ang lahat ng iyon, pinili pa ring tumuloy sa kanyang bahay—hindi lang para kumain o magpahinga, kundi para ideklara sa harap ng buong lungsod na ang taong ito ay karapat-dapat sa Kanyang presensya.\n\n💭 Pag-isipan mo ito sandali:\n\nIlang taon kayang lumipas na walang sinumang gustong tumuloy sa bahay ni Zaqueo? Na walang tumitingin sa kanya bilang tao at hindi lang bilang posisyon? Na walang bumibigkas ng pangalan niya nang walang halong paghamak?\n\nAt pagkatapos, tumingala ang Anak ng Diyos, tinawag siya sa pangalan—na may pagkilala, hindi paratang—at hiniling na tumuloy sa kanyang bahay. Umakyat si Zaqueo para makita lamang Siya mula sa malayo, hindi niya iniisip na ang gusto niyang makita ay tinanggap na pala siya.\n\nMabilis siyang bumabâ.\n\nHindi dahil pinagbago muna siya ni Jesus. Kundi dahil may nakakita sa kanya.",
+      "revelation_key": "Hindi hinintay ni Jesus na maging mas mabuting tao muna si Zaqueo. Tinawag Niya siyang bumabâ habang naroon pa siya—sa biyaya at habag lamang."
+    },
+    {
+      "order": 6,
+      "type": "theological_depth",
+      "mood": "depth",
+      "image_url": "zacchaeus_coins_table.png",
+      "title": "Pinuno ng mga maniningil ng buwis",
+      "subtitle": "Ano talaga ang naging kapalit ng titulong iyon",
+      "content": "Para maunawaan ang pagbabago kay Zaqueo, kailangan mong maunawaan kung ano siya noon.\n\n🏛️ ANG SISTEMA:\n\nIpinapasa ng Roma sa mga lokal ang pangongolekta ng buwis. Nagbabayad nang pauna ang isang maniningil ng buwis sa Roma, saka kinokolekta ang kaya niyang makuha mula sa mga tao—ang diperensya ang kanyang tubo. Sistemang ginawa ito para sa pang-aabuso, at si Zaqueo ay hindi lang nakapaloob dito: siya ang namamahala rito.\n\nIbig sabihin, may iba pang mga maniningil ng buwis na nasa ilalim niya. Siya ang may pananagutan sa buong sistema ng pagsipsip ng yaman sa Jerico. Bawat baryang bumuo sa kanyang kayamanan ay galing sa mga pamilyang Judio sa sarili niyang lungsod.\n\n⚠️ ANG HALAGANG PANLIPUNAN:\n\nItinuturing na marumi ayon sa seremonya ang mga maniningil ng buwis. Hindi sila maaaring tumestigo sa hukuman ng mga Judio. Hindi sila kabilang sa normal na buhay sa sinagoga. Napuputol sila sa tanging sistemang nagbibigay ng pakikipagkapwa at pag-aari sa kulturang iyon.\n\nHindi lang mayaman si Zaqueo. Ganap siyang naibukod—walang komunidad, walang malayang paglapit sa pagsamba, walang lugar na matawag na kanya.\n\n🔑 ANG PANGALAN: Ang pangalang Zaqueo ay mula sa Hebreong Zakkay—na ang ibig sabihin ay dalisay, walang sala. Dala niya ang pangalang naglalarawan sa bagay na matagal na niyang nawala.\n\nAt iyon ang lalaking tinawag ni Jesus sa pangalan mula sa ilalim ng puno.",
+      "revelation_key": "Dala ni Zaqueo ang pangalan ng bagay na nawala sa kanya. Tinawag siya ni Jesus sa pangalang iyon upang isauli ang kahulugan nito.",
+      "scripture_connections": [
+        {
+          "reference": "Lucas 5:30-32",
+          "text": "Kaya't nagbulung-bulungan ang mga Pariseo at ang mga kasamahan nilang tagapagturo ng Kautusan. Sinabi nila sa mga alagad ni Jesus, \"Bakit kayo kumakain at umiinom na kasalo ng mga maniningil ng buwis at ng mga makasalanan?\" Sinagot sila ni Jesus, \"Hindi nangangailangan ng manggagamot ang walang sakit kundi ang maysakit. Hindi ako naparito upang tawagin ang mga matuwid, kundi ang mga makasalanan upang sila'y magsisi.\""
+        },
+        {
+          "reference": "Ezekiel 34:16",
+          "text": "Hahanapin ko ang nawawala, ibabalik ang nalalayo, hihilutin ang napilay, palalakasin ang mahihina, ngunit pupuksain [9] ko ang mga malulusog at malalakas. Ibibigay ko sa kanila ang katarungan."
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "intimacy",
+      "image_url": "zacchaeus_table_jesus.png",
+      "title": "Ano ang nangyari sa loob.",
+      "narrative": "Hindi natin alam ang bawat salitang sinabi sa bahay na iyon. Pero alam natin kung ano ang lumabas mula roon. May nangyari sa hapag na iyon na hindi kailanman nagawa ng mga taon ng pera, mga kasunduan, at kapangyarihan sa buhay ni Zaqueo. Tumigil si Jesus sa piling niya—at sapat na iyon para baguhin ang lahat.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 19:9",
+        "text": "Ang kaligtasan ay dumating ngayon sa sambahayang ito."
+      },
+      "revelation_key": "Ginawa ng presensya ni Jesus ang hindi kailanman nagawa ng mga taon ng yaman at kapangyarihan: ginalaw nito ang puso ni Zaqueo."
+    },
+    {
+      "order": 8,
+      "type": "scripture_moment",
+      "mood": "breakthrough",
+      "image_url": "zacchaeus_stands_declaration.png",
+      "verse_reference": "Lucas 19:8",
+      "verse_text": "Tumayo si Zaqueo at sinabi niya kay Jesus, \"Panginoon, ipamimigay ko po sa mga mahihirap ang kalahati ng aking mga kayamanan. At kung ako'y may nadayang sinuman, isasauli ko ito sa kanya ng maka-apat na beses.\"",
+      "reflection": "Pinagtatalunan ng mga iskolar ng Griyego kung ganito na ba si Zaqueo bago pa ang pagtatagpo, o kung ang mismong pagtatagpong iyon ang nagbago sa kanya. Matapat na maaaring basahin ang orihinal na teksto sa alinman sa dalawang paraan.\n\nPero ito ang malinaw nating alam: sa harap ni Jesus, inalok ni Zaqueo ang kalahati ng lahat ng mayroon siya. Samantalang ang mayamang binata (Lucas 18:18–23) ay hindi makabitaw ng anuman nang anyayahan siya ni Jesus, si Zaqueo ay kusang bumitaw sa kalahati nang hindi man lamang hinihingi. At hindi siya tumigil sa hinihingi ng kautusan—nag-alok siya ng maka-apat na beses na pagsasauli, higit pa sa itinatakda ng kautusan (Levitico 5:16).\n\nAng ganitong tugon ay nagmumula lamang sa pusong nakatagpo ng isang bagay na mas mahalaga kaysa sa matagal nitong hinahawakan. Kailan man eksaktong nangyari ang pagbabagong iyon, isang bagay ang malinaw: sa harap ni Jesus, ibang pagpili ang ginawa ni Zaqueo. At tumugon si Jesus ng isa sa pinakabuo at pinakmatinding pahayag ng kaligtasan sa buong Ebanghelyo ni Lucas.\n\nIto ang awa ng Diyos: hindi Niya hinihintay na maging karapat-dapat ka. Hinihintay Niya ang tugon mo.",
+      "revelation_key": "Ang pagiging mapagbigay ni Zaqueo ay hindi dahilan ng kanyang kaligtasan. Ito ang patunay na nangyari na iyon."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "transformation",
+      "image_url": "zacchaeus_open_hands.png",
+      "title": "Ang lalaking bumitaw",
+      "subtitle": "Ang hindi naibigay ng kayamanan—at ang isinauli ni Jesus",
+      "content": "Buong buhay ni Zaqueo ay itinayo sa pag-iipon.\n\nAt sa isang hapon sa presensya ni Jesus, binitiwan niya ang kalahati ng lahat ng pag-aari niya.\n\n💰 Ang ibig sabihin nito:\n\nHindi siya dahan-dahang nagbenta ng mga bagay. Hindi niya sinabing pag-iisipan pa niya. Hindi siya tumawad kay Jesus para sa mas komportableng porsiyento. Tumayo siya, sa harap ng mga tao, at inihayag ang gagawin niya.\n\nAng mismong lalaking itinayo ang buong pagkakakilanlan niya sa dami ng kanyang pag-aari ay pinili ngayong tukuyin ang sarili sa dami ng kaya niyang ibigay.\n\nNarito ang pagkakatulad nito sa babae sa balon mula sa naunang pagtatagpo:\n\nIniwan niya ang kanyang banga ng tubig sa tabi ng balon matapos makatagpo si Jesus. Ang inilagay Niya sa loob niya ay nagmukhang napakaliit ng dati niyang tangan.\n\nBinitiwan ni Zaqueo ang kalahati ng kanyang kayamanan matapos tanggapin si Jesus sa kanyang bahay.\n\nDalawang tao. Iisang prinsipyong gumagalaw: kapag nakatagpo mo si Jesus, pinakakawalan mo ang akala mong ikaw.\n\nAt pareho nilang natagpuan ang iisang bagay, harap-harapan sa Anak ng Diyos.",
+      "revelation_key": "Hindi kailanman inutusan ni Jesus si Zaqueo na isuko ang kanyang yaman. Binitiwan iyon ni Zaqueo dahil may mas mahalagang pumasok sa kanyang pintuan—at hindi na muling naging pareho ang buhay niya."
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "depth",
+      "image_url": "zacchaeus_salvation_word.png",
+      "title": "Ang kaligtasan ay dumating ngayon sa sambahayang ito.",
+      "subtitle": "Ang salitang nagpapabago sa lahat",
+      "content": "Napakabigat ng tugon ni Jesus dito.\n\n📖 Lucas 19:9-10 (Magandang Balita Biblia):\n\"At sinabi sa kanya ni Jesus, \"Ang kaligtasan ay dumating ngayon sa sambahayang ito sapagkat anak din ni Abraham ang taong ito. Ang Anak ng Tao ay naparito upang hanapin at iligtas ang naligaw.\"\n\n✨ TATLONG KALOOB SA IISANG PANGUNGUSAP:\n\n1. \"Ang kaligtasan ay dumating ngayon\": Hindi bukas kapag maayos ka na. Hindi kapag natapos mo nang ituwid ang lahat. Ngayon. Sa araw ding iyon. Hindi dumating ang kaligtasan nang magsalita si Zaqueo. Dumating ito nang pumasok si Jesus sa kanyang tahanan.\n\n2. \"Sapagkat anak din ni Abraham ang taong ito\": Ang komunidad na nagbukod sa kanya ay tumingin sa kanya bilang taksil sa Israel. Ibinabalik siya ni Jesus sa lahing hindi naman niya kailanman tunay na nawala—hindi bilang pabor, kundi bilang pahayag ng pagkakakilanlan.\n\n📜 SA GRIYEGO: Ang salitang ginamit para sa \"kaligtasan\" dito ay soteria—na may dalang kahulugan ng pagsagip, pag-iingat, at ganap na kabuuan. Hindi lamang ito kapatawaran ng kasalanan. Ito ay ganap na pagpapanumbalik ng buong tao.\n\n3. \"Ang Anak ng Tao ay naparito upang hanapin at iligtas ang naligaw\": Hindi lang dumaan si Jesus sa Jerico habang papunta sa ibang lugar. Naparito Siya para kay Zaqueo. Nililinaw ng talatang ito na dumating Siya sa lungsod na iyon upang hanapin ang mismong lalaking ito.",
+      "revelation_key": "Hindi lang pinatawad ni Jesus si Zaqueo. Isinauli Niya ang kanyang pangalan, ang kanyang lahi, at ang kanyang lugar sa bayan ng Diyos.",
+      "scripture_connections": [
+        {
+          "reference": "Lucas 15:4-6",
+          "text": "\"Kung ang sinuman sa inyo ay may isandaang tupa at mawalan ng isa, ano ang gagawin niya? Hindi ba't iiwan niya ang siyamnapu't siyam sa pastulan at hahanapin ang nawawala hanggang sa ito'y matagpuan? Kapag nakita na niya ang tupa ay masaya niya itong papasanin. Pagdating sa bahay, aanyayahan niya ang kanyang mga kaibigan at mga kapitbahay at sasabihin sa kanila, 'Makipagsaya kayo sa akin dahil nakita ko na ang tupa kong nawawala!'\""
+        },
+        {
+          "reference": "Mga Taga-Roma 4:16",
+          "text": "Kaya nga't sa pananampalataya nababatay ang pangako, upang ito'y maibigay bilang walang bayad na kaloob para sa lahat ng anak ni Abraham; hindi lamang sa mga saklaw ng Kautusan, kundi sa lahat ng sumasampalataya rin tulad ni Abraham. Sapagkat siya ang ama nating lahat,"
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "cinematic_scene",
+      "mood": "peace",
+      "image_url": "zacchaeus_door_light.png",
+      "title": "Parehong lungsod. Ibang tao.",
+      "narrative": "Nasa labas pa rin ang pulutong na nagbulung-bulungan.\n\nHindi nagbago ang Jerico. Ang parehong mga mukhang nagbukod sa kanya ay nasa parehong mga lansangan pa rin.\n\nPero hindi na kailangan ni Zaqueo ang pagtanggap ng lungsod para malaman kung sino siya.\n\nTinawag siya ng Anak ng Diyos sa pangalan mula sa ilalim ng isang puno. Hiningi ng Anak ng Diyos na tumuloy sa kanyang bahay. Tinawag siya ng Anak ng Diyos na anak ni Abraham.\n\nAt sapat na iyon para makatayo siya sa sariling pintuan na para bang ngayon lang niya nakikita ang kalsada sa unang pagkakataon.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 19:9",
+        "text": "At sinabi sa kanya ni Jesus, \"Ang kaligtasan ay dumating ngayon sa sambahayang ito.\""
+      },
+      "revelation_key": "Ang pagsang-ayon ni Jesus ang tanging pagsang-ayon na kayang magpatigil sa pagtanggi ng mundo sa paghubog ng pagkatao mo."
+    },
+    {
+      "order": 12,
+      "type": "discovery_activation",
+      "image_url": "zacchaeus_open_road.png",
+      "icon": "🌳",
+      "title": "Ang Iyong Pagtatagpo",
+      "subtitle": "Hindi naghintay si Zaqueo hanggang maging handa siya. Lumapit siya kay Jesus nang eksakto kung ano siya noon.",
+      "discovery_questions": [
+        {
+          "category": "Pagkakita sa iyo",
+          "question": "Ano ang iniiwasan mo dahil takot ka sa sasabihin ng mga tao? Anong puno ang kailangan mong akyatin ngayon?"
+        },
+        {
+          "category": "Ang hawak mo",
+          "question": "Itinayo ni Zaqueo ang buhay niya sa pag-iipon ng mga bagay na hindi makakapuno sa kawalan sa loob. Ano sa buhay mo—pera, katayuan, tagumpay, pagtanggap—ang hinahawakan mo na para bang iyon ang pagkatao mo? Ano ang mararamdaman mong pakawalan iyon?"
+        },
+        {
+          "category": "Pagpapagaling sa nasira",
+          "question": "Hindi lang tinanggap ni Zaqueo ang kapatawaran ni Jesus—lumabas siya at itinuwid ang mali niya sa mga taong nasaktan niya. May tao ba sa buhay mo na may utang ka pang ganoon? Isang totoong pag-uusap, isang taos-pusong paghingi ng tawad, isang kongkretong hakbang. Ang mismong Jesus na nagbago kay Zaqueo ang kasama mo ngayon upang tulungan kang gawin iyon."
+        }
+      ],
+      "prayer": {
+        "title": "Panalangin Mula sa Puno",
+        "content": "Panginoong Jesus, heto ako.\n\nHindi sa perpektong kalagayan. Hindi may perpektong kuwento. Umakyat lang ako sa abot ng kaya ko para kahit mula sa malayo ay masilayan Ka—hindi ko alam na Ikaw pala ang unang naghahanap sa akin.\n\nGaya ni Zaqueo, may mga dala akong mga bagay na akala ko ay poprotekta sa akin o magbibigay sa akin ng pagkakakilanlan. Kayamanan, tagumpay, pagtanggap—o simpleng bigat ng pagsisikap na kontrolin kung paano ako nakikita ng iba. Ngayon inaamin kong mabigat ang lahat ng iyon, at wala ni isa man sa mga iyon ang makapagbibigay sa akin ng tanging Ikaw lang ang makapagbibigay.\n\nHindi ko hinihiling na hintayin Mo munang maging maayos ako bago Ka lumapit. Hinihiling ko na pumasok Ka sa buhay ko ngayon, gaya ng kalagayan nito, at manatili.\n\nAt kung ano man ang kailangang bitiwan sa loob ko—bigyan Mo ako ng lakas ng loob para pakawalan iyon. Kung ano man ang kailangang itama sa taong nasaktan ko—bigyan Mo ako ng lakas para gawin ang hakbang na iyon. Ang Siya ring lumakad kasama ni Zaqueo, lumakad Ka rin kasama ko.\n\nNaparito Ka upang hanapin ang naligaw—heto ako. Hanapin Mo ako.\n\nSa pangalan ni Jesus, Amen."
+      }
+    },
+    {
+      "order": 13,
+      "type": "completion",
+      "mood": "open",
+      "image_url": "zacchaeus_door_light_front.png",
+      "completion_verse": {
+        "reference": "Lucas 19:10",
+        "text": "Ang Anak ng Tao ay naparito upang hanapin at iligtas ang naligaw.",
+        "bible_version": "Magandang Balita Biblia"
+      },
+      "reflection_prompt": "Anong puno ang kailangan mong akyatin ngayon? At ano ang kailangan mong bitawan kapag tinawag Niya ang pangalan mo?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

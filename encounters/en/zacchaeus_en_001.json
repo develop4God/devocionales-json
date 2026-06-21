@@ -1,0 +1,219 @@
+{
+  "id": "zacchaeus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "en",
+  "bible_version": "KJV",
+  "version": "1.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "Zacchaeus",
+    "testament": "new",
+    "scripture_reference": "Luke 19:1-10",
+    "mood_primary": "crowd",
+    "accent_color": "#3b1f00",
+    "emoji": "🌳",
+    "tags": [
+      "exclusion",
+      "dignity",
+      "restitution",
+      "salvation",
+      "wealth",
+      "zacchaeus",
+      "jesus",
+      "transformation",
+      "encounter",
+      "being_seen"
+    ]
+  },
+  "key_verse": {
+    "reference": "Luke 19:10",
+    "text": "For the Son of man is come to seek and to save that which was lost.",
+    "bible_version": "KJV"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "crowd",
+      "image_url": "zacchaeus_jericho_crowd.png",
+      "title": "Jericho was packed.",
+      "narrative": "There was a crowd, and a rumor moving through the whole city: Jesus of Nazareth was passing through.\n\nIn that crowd stood a man nobody wanted anywhere near them. A man who had chosen money over his own people — and who now carried the weight of that choice everywhere he went.\n\nZacchaeus was the chief among the publicans, and he was rich.\n\nSmall in stature. And at that moment, he lacked the only thing that actually mattered: being tall enough to see over the crowd.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "The one who needed to see Jesus most was the one who was least able to reach Him."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "zacchaeus_crowd_wall.png",
+      "verse_reference": "Luke 19:1-4",
+      "verse_text": "And Jesus entered and passed through Jericho. And, behold, there was a man named Zacchaeus, which was the chief among the publicans, and he was rich. And he sought to see Jesus who he was; and could not for the press, because he was little of stature. And he ran before, and climbed up into a sycomore tree to see him: for he was to pass that way.",
+      "reflection": "Luke introduces him with precision: chief of the publicans. Rich.\n\nThose two details were enough to condemn him in the eyes of everyone in Jericho. Tax collectors worked for Rome — and not just as employees. They paid Rome a fixed sum upfront, then collected whatever they could from their own people. The difference was their profit. It was legalized extortion, and Zacchaeus wasn't just part of the system. He ran it.\n\nAnd yet.\n\nThis man who had bought everything money could buy was running. Running to catch a glimpse of a rabbi who traveled from town to town with no house, no wealth, nothing to his name.\n\nSomething in Zacchaeus already knew he needed what money couldn't buy.",
+      "revelation_key": "The richest man in Jericho was running after someone with nothing to his name — which only makes sense if what he was chasing wasn't something you could own."
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "solitude",
+      "image_url": "zacchaeus_in_tree.png",
+      "title": "He climbed the tree.",
+      "narrative": "Picture it.\n\nA grown man — a chief tax collector, a man of means, a man with a reputation, however despised — climbed a tree in the middle of Jericho's main road, in full view of the city that looked down on him.\n\nThere's something in that act that speaks louder than any prayer.\n\nHe didn't stop to calculate the social cost. He didn't weigh what his colleagues would think. He didn't protect his dignity.\n\nHe just wanted to see.\n\nAnd that's often what faith looks like in Scripture: a person who sets aside what they're afraid to lose in order to get closer to Jesus.",
+      "ambient_sound": "crowd_passing_below",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "Zacchaeus let go of his dignity — not knowing Jesus had already come looking for him."
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "turning_point",
+      "image_url": "zacchaeus_jesus_looks_up.png",
+      "verse_reference": "Luke 19:5-6",
+      "verse_text": "And when Jesus came to the place, he looked up, and saw him, and said unto him, Zacchaeus, make haste, and come down; for to day I must abide at thy house. And he made haste, and came down, and received him joyfully.",
+      "reflection": "Stop here for a moment.\n\nJesus stopped. He looked up. And He said his name.\n\nNot: 'Hey, you in the tree.' Not: 'The tax collector up there.' Not: 'Look at this man.'\n\nHe said his name.\n\nZacchaeus had climbed up to see Jesus from a distance. What he couldn't have known was that Jesus had already seen him.\n\nAnd there's a word in this verse that deserves your full attention: must. Today I must abide at thy house.\n\nIt's the same Greek word used in John 4:4 — it was necessary to pass through Samaria. That wasn't an accident either. Jesus didn't discover Zacchaeus in that tree. He arrived in Jericho looking for him.\n\nAnd when He said 'abide at thy house,' it wasn't an invitation to dinner. In that culture, staying in someone's home was a public declaration that the host was worthy of the guest's presence. It was the highest gesture of acceptance possible.",
+      "revelation_key": "Zacchaeus climbed up to find Jesus. Jesus came to Jericho to find him. That is the mark of grace."
+    },
+    {
+      "order": 5,
+      "type": "character_moment",
+      "mood": "exposed",
+      "image_url": "zacchaeus_descent.png",
+      "title": "He came down quickly.",
+      "subtitle": "The man no one wanted in their home",
+      "content": "Notice the contrast.\n\nWhen Jesus said 'today I must abide at thy house,' the crowd had an immediate reaction.\n\n📖 Luke 19:7 (KJV): 'And when they saw it, they all murmured, saying, That he was gone to be guest with a man that is a sinner.'\n\nAll of them murmured. Not just some. Not just the Pharisees. All of them.\n\nZacchaeus was the man everyone pointed to as the sinner in the room. Rejecting him made everyone else feel better by comparison. And Jesus, knowing all of that, chose to stay in his house — not just to eat or sleep, but to declare before the whole city that this man was worthy of His presence.\n\n💭 Sit with this for a moment:\n\nHow many years had Zacchaeus gone without anyone wanting to be in his home? Without anyone looking at him as a person rather than a position? Without anyone saying his name with anything but contempt?\n\nAnd then the Son of God looked up, called him by name — with familiarity, not accusation — and asked to stay at his house. Zacchaeus had climbed up just to see Him from a distance, not imagining that the one he wanted to see had already accepted him.\n\nHe came down quickly.\n\nNot because Jesus demanded he change first. But because someone had seen him.",
+      "revelation_key": "Jesus didn't wait for Zacchaeus to become a better person. He called him down right where he was — by grace and by mercy alone."
+    },
+    {
+      "order": 6,
+      "type": "theological_depth",
+      "mood": "depth",
+      "image_url": "zacchaeus_coins_table.png",
+      "title": "Chief of the publicans",
+      "subtitle": "What that title actually cost him",
+      "content": "To understand Zacchaeus's transformation, you have to understand what he was.\n\n🏛️ THE SYSTEM:\n\nRome subcontracted tax collection to locals. A publican paid Rome a fixed sum upfront and then collected whatever he could from the people — the difference was his profit. It was a system built for abuse, and Zacchaeus wasn't just in it: he ran it.\n\nThat meant other tax collectors answered to him. He was responsible for the entire system of extraction in Jericho. Every coin of his wealth came from Jewish families in his own city.\n\n⚠️ THE SOCIAL COST:\n\nPublicans were considered ceremonially unclean. They couldn't serve as witnesses in a Jewish court. They were excluded from normal synagogue life. They were cut off from the only system of belonging that existed in that culture.\n\nZacchaeus wasn't just wealthy. He was completely excluded — no community, no access to worship, no place to belong.\n\n🔑 THE NAME: The name Zacchaeus comes from the Hebrew Zakkay — meaning pure, innocent. He carried a name that described what he had stopped being.\n\nAnd that is the man Jesus called by name from beneath the tree.",
+      "revelation_key": "Zacchaeus carried the name of what he had lost. Jesus called him by that name to give back what it meant.",
+      "scripture_connections": [
+        {
+          "reference": "Luke 5:30-32",
+          "text": "But their scribes and Pharisees murmured against his disciples, saying, Why do ye eat and drink with publicans and sinners? And Jesus answering said unto them, They that are whole need not a physician; but they that are sick. I came not to call the righteous, but sinners to repentance."
+        },
+        {
+          "reference": "Ezekiel 34:16",
+          "text": "I will seek that which was lost, and bring again that which was driven away, and will bind up that which was broken, and will strengthen that which was sick: but I will destroy the fat and the strong; I will feed them with judgment."
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "intimacy",
+      "image_url": "zacchaeus_table_jesus.png",
+      "title": "What happened inside.",
+      "narrative": "We don't know every word spoken in that house. But we know what came out of it. Something happened at that table that years of money, contracts, and power had never been able to accomplish in Zacchaeus. Jesus stayed with him — and that was enough to change everything.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luke 19:9",
+        "text": "This day is salvation come to this house."
+      },
+      "revelation_key": "The presence of Jesus did what years of wealth and power never could: it moved Zacchaeus's heart."
+    },
+    {
+      "order": 8,
+      "type": "scripture_moment",
+      "mood": "breakthrough",
+      "image_url": "zacchaeus_stands_declaration.png",
+      "verse_reference": "Luke 19:8",
+      "verse_text": "And Zacchaeus stood, and said unto the Lord; Behold, Lord, the half of my goods I give to the poor; and if I have taken any thing from any man by false accusation, I restore him fourfold.",
+      "reflection": "Greek scholars debate whether Zacchaeus was already living this way before the encounter, or whether the encounter itself was what transformed him. The original text can honestly be read either way.\n\nBut here's what we do know: standing before Jesus, Zacchaeus offered half of everything he had. While the rich young ruler (Luke 18:18–23) couldn't release anything when Jesus invited him, Zacchaeus released half without being asked. And he didn't stop at what the law required — he offered a fourfold restitution—far exceeding what the law required (Leviticus 5:16).\n\nThat kind of response only comes from a heart that has found something more valuable than what it was holding. Regardless of when the transformation happened, standing in front of Jesus, Zacchaeus chose differently. And Jesus responded with the most complete declaration of salvation in the entire Gospel of Luke.\n\nThis is the mercy of God: He doesn't wait for you to deserve it. He waits for you to respond.",
+      "revelation_key": "Zacchaeus's generosity wasn't the cause of his salvation. It was the evidence that it had already happened."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "transformation",
+      "image_url": "zacchaeus_open_hands.png",
+      "title": "The man who let go",
+      "subtitle": "What wealth never gave him — and what Jesus gave back",
+      "content": "Zacchaeus had built his whole life around accumulating.\n\nAnd in one afternoon in the presence of Jesus, he let go of half of everything he owned.\n\n💰 What that means:\n\nHe didn't slowly sell things off. He didn't say he'd think about it. He didn't negotiate a more comfortable percentage with Jesus. He stood up, in public, and declared what he was going to do.\n\nThe same man who had built his entire identity around how much he possessed now chose to define himself by how much he could give.\n\nHere's the parallel with the woman at the well from the previous encounter:\n\nShe left her water jar by the well after meeting Jesus. What He placed inside her had already made what she was carrying in her hands seem small by comparison.\n\nZacchaeus let go of half his wealth after receiving Jesus into his home.\n\nTwo people. The same principle: an encounter with Jesus makes you release what you thought you were.\n\nAnd both of them found the same thing, face to face with the Son of God.",
+      "revelation_key": "Jesus never asked Zacchaeus to give up his wealth. Zacchaeus let it go because something more valuable had walked through the door — and his life would never be the same."
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "depth",
+      "image_url": "zacchaeus_salvation_word.png",
+      "title": "This day is salvation come to this house.",
+      "subtitle": "The word that changes everything",
+      "content": "The weight of Jesus's response here is extraordinary.\n\n📖 Luke 19:9-10 (KJV):\n'And Jesus said unto him, This day is salvation come to this house, forsomuch as he also is a son of Abraham. For the Son of man is come to seek and to save that which was lost.'\n\n✨ THREE GIFTS IN A SINGLE SENTENCE:\n\n1. 'This day is salvation come': Not tomorrow when you've improved. Not when you've finished making restitution. Today. The same day. Salvation didn't arrive when Zacchaeus made his declaration. It arrived when Jesus stepped through his door.\n\n2. 'Forsomuch as he also is a son of Abraham': The community that had excluded him saw him as a traitor to Israel. Jesus restores him to the lineage he had never truly left — not as a concession, but as a declaration of identity.\n\n📜 IN THE GREEK: The word used for 'salvation' here is soteria — which carries the meaning of rescue, preservation, complete wholeness. It isn't only forgiveness of sins. It is full restoration of the person.\n\n3. 'The Son of man is come to seek and to save that which was lost': Jesus didn't pass through Jericho on His way somewhere else. He came for Zacchaeus. This verse makes it clear that He arrived in that city searching for exactly this man.",
+      "revelation_key": "Jesus didn't just forgive Zacchaeus. He gave him back his name, his lineage, and his place among the people of God.",
+      "scripture_connections": [
+        {
+          "reference": "Luke 15:4-6",
+          "text": "What man of you, having an hundred sheep, if he lose one of them, doth not leave the ninety and nine in the wilderness, and go after that which is lost, until he find it? And when he hath found it, he layeth it on his shoulders, rejoicing. And when he cometh home, he calleth together his friends and neighbours, saying unto them, Rejoice with me; for I have found my sheep which was lost."
+        },
+        {
+          "reference": "Romans 4:16",
+          "text": "Therefore it is of faith, that it might be by grace; to the end the promise might be sure to all the seed; not to that only which is of the law, but to that also which is of the faith of Abraham; who is the father of us all."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "cinematic_scene",
+      "mood": "peace",
+      "image_url": "zacchaeus_door_light.png",
+      "title": "Same city. Different man.",
+      "narrative": "The crowd that had murmured was still outside.\n\nJericho hadn't changed. The same faces that had excluded him lined the same streets.\n\nBut Zacchaeus no longer needed the city's acceptance to know who he was.\n\nThe Son of God had called him by name from beneath a tree. The Son of God had asked to stay in his home. The Son of God had called him a son of Abraham.\n\nAnd that was enough for him to stand in his own doorway as if he were seeing the street for the very first time.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luke 19:9",
+        "text": "And Jesus said unto him, This day is salvation come to this house."
+      },
+      "revelation_key": "The approval of Jesus is the only approval that can make the rejection of the world stop defining you."
+    },
+    {
+      "order": 12,
+      "type": "discovery_activation",
+      "image_url": "zacchaeus_open_road.png",
+      "icon": "🌳",
+      "title": "Your Encounter",
+      "subtitle": "Zacchaeus didn't wait until he was ready. He came to Jesus exactly as he was.",
+      "discovery_questions": [
+        {
+          "category": "Being seen",
+          "question": "What are you holding back from because you're afraid of what people will say? What tree do you need to climb today?"
+        },
+        {
+          "category": "What you're holding",
+          "question": "Zacchaeus built his life accumulating things that couldn't fill the emptiness. What in your life — money, status, achievement, approval — are you gripping like it's your identity? What would it feel like to let that go?"
+        },
+        {
+          "category": "Healing what's broken",
+          "question": "Zacchaeus didn't just receive Jesus's forgiveness — he walked out and made things right with the people he had wronged. Is there someone in your life you still owe that to? A real conversation, a genuine apology, a concrete step. The same Jesus who transformed Zacchaeus walks with you today to help you take it."
+        }
+      ],
+      "prayer": {
+        "title": "A Prayer from the Tree",
+        "content": "Lord Jesus, here I am.\n\nNot in a perfect place. Not with a perfect story. I climbed as best I could just to try to see You from a distance — not knowing You were already looking for me.\n\nLike Zacchaeus, I carry things I thought would protect me or define me. Wealth, achievement, approval — or simply the weight of trying to control how others see me. Today I admit that all of it is too heavy, and none of it can give me what only You can give.\n\nI'm not asking You to wait until I'm better to come close. I'm asking You to walk into my life today, just as it is, and stay.\n\nAnd what needs to be released in me — give me the courage to let it go. What needs to be made right with someone I've hurt — give me the strength to take that step. The same One who walked with Zacchaeus, walk with me.\n\nYou came to seek what was lost — here I am. Come find me.\n\nIn Jesus's name, Amen."
+      }
+    },
+    {
+      "order": 13,
+      "type": "completion",
+      "mood": "open",
+      "image_url": "zacchaeus_door_light_front.png",
+      "completion_verse": {
+        "reference": "Luke 19:10",
+        "text": "For the Son of man is come to seek and to save that which was lost.",
+        "bible_version": "KJV"
+      },
+      "reflection_prompt": "What tree do you need to climb today? And what do you need to let go of when He calls your name?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": "triumphal_entry_001",
+  "type": "discovery",
+  "date": "2026-02-09",
+  "title": "Ang Tagumpay na Pagpasok",
+  "subtitle": "Nang pumasok ang tinanggihang Hari sa Jerusalem na nakasakay sa asno, hindi sa kabayong pandigma",
+  "language": "fil",
+  "version": "Magandang Balita Biblia",
+  "estimated_reading_minutes": 6,
+  "key_verse": {
+    "reference": "Mateo 21:9",
+    "text": "Nagsisigawan ang mga taong nauuna at sumusunod sa kanya. Sigaw nila, \"Purihin ang anak ni David! Pinagpala ang dumarating sa pangalan ng Panginoon! Purihin ang Diyos!\""
+  },
+
+  "cards": [
+    {
+      "order": 1,
+      "type": "greek_exegesis",
+      "icon": "🌴",
+      "title": "Hosanna: Sigaw ng Pagsamo na Naging Papuri",
+      "subtitle": "Ang kahulugan sa likod ng mga sigawan",
+      "content": "Linggo ng Palaspas, AD 30. Pumasok si Jesus sa Jerusalem limang araw bago Siya ipako sa krus. Sumisigaw ang mga tao ng 'Hosanna!' - ngunit ano ba talaga ang ibig sabihin nito?\n\n📢 ANG SIGAW NG 'HOSANNA':\n\nAng salita ay nanggaling sa Hebrew na 'Hoshana' (הוֹשִׁיעָ נָּא):\n• 'Hosha' = iligtas\n• 'Na' = pakiusap, kami'y dumalangin\n• Literal na kahulugan: 'Iligtas kami ngayon!' o 'Kami'y dumalangin, iligtas!'\n\nIto ay sigaw mula sa Awit 118:25 na inaawit sa panahon ng Pista ng mga Tolda:\n'Iligtas mo kami ngayon, O Panginoon; O Panginoon, ipanalangin namin, magpadala ka ngayon ng kasaganaan.'\n\n👑 ANO ANG INAASAHAN NG MGA TAO:\n\n• Isang PULITIKONG Mesiyas upang palayain sila mula sa Roma\n• Isang MILITARYONG hari upang itatag ang kaharian ni David\n• Isang lider upang ibalik ang kaluwalhatian ng Israel\n\nSumigaw sila ng 'Hosanna sa anak ni David!' inaasahan na si Jesus ay:\n• Maglalakad sa palasyo ni Pilato\n• Palalayasin ang mga Romano\n• Mauupo sa trono ni David\n\n💔 ANG NAKAPANLULUMO NA IRONYA:\n\nLimang araw pagkatapos, ang PAREHONG mga tao ay sisigaw: 'Ipako sa krus!'\n\nBakit? Dahil hindi natugunan ni Jesus ang kanilang pampulitikang inaasahan. Naparito Siya upang magligtas, ngunit hindi sa paraang gusto nila.\n\nAng Kanyang kaharian ay HINDI sa sanlibutan na ito (Juan 18:36).",
+      "greek_words": [
+        {
+          "word": "Hōsanna",
+          "transliteration": "Ὡσαννά",
+          "meaning": "Iligtas kami ngayon, kami'y dumalangin na iligtas",
+          "revelation": "Ang mga tao ay sumisigaw para sa kaligtasan, ngunit hindi nila nauunawaan ANONG URI ng kaligtasan ang dinala ni Jesus. Hindi Siya naparito upang iligtas sila mula sa Roma, kundi mula sa kasalanan. Hindi Siya naparito upang magtatag ng lupaing trono, kundi ng walang-hanggang trono."
+        }
+      ],
+      "revelation_key": "Madalas tayong sumisigaw ng 'Hosanna' inaasahan na sosolusyunan ni Jesus ang ating mga lupaing problema, ngunit naparito Siya upang solusyunan ang ating walang-hanggang problema: ang paghihiwalay sa Diyos."
+    },
+
+    {
+      "order": 2,
+      "type": "structural_analysis",
+      "icon": "🔍",
+      "title": "Ang Batang Asno: Sinasadyang Propetikong Katuparan",
+      "subtitle": "Bakit pumili si Jesus ng asno at hindi kabayo",
+      "content": "Isinugo ni Jesus ang dalawang alagad na may tiyak na tagubilin: 'Pumasok kayo sa nayon... makikita ninyo ang isang asno at ang kanyang anak. Kalasin ninyo sila at dalhin sa akin' (Mateo 21:2).\n\n🐴 ASNO LABAN SA KABAYO:\n\nSa sinaunang mundo, ang hayop ay may kahulugan:\n\n• KABAYO = simbolo ng DIGMA (ang mga nanlulupig na hari ay nakasakay sa kabayo)\n• ASNO/BATANG ASNO = simbolo ng KAPAYAPAAN (ang mga hari ay pumapasok sa kapayapaan na nakasakay sa asno)\n\n📜 PROPETIKONG KATUPARAN:\n\nDiretso'ng kinuha ng Mateo 21:4-5 mula sa Zacarias 9:9:\n\n'Sabihin ninyo sa anak na babae ng Zion, Narito, dumarating sa iyo ang iyong Hari, maamo, at nakasakay sa asno, sa batang anak ng asno.'\n\nMga detalye ng katuparan:\n1. 'Dumarating ang iyong HARI' → Si Jesus ay Hari\n2. 'Maamo' (Greek: praus) → Mapagpakumbaba, hindi mayabang\n3. 'Sa asno... batang asno' → Eksaktong gaya ng hinulaan ni Zacarias\n\n🎯 ANG SINASADYANG KAIBAHAN:\n\nSinasadyang tinupad ni Jesus ang propesiya EKSAKTONG:\n• HINDI sa maharlikang karwahe\n• HINDI sa kabayong pandigma\n• HINDI na may hukbo sa likod Niya\n• OO sa hiniraming batang asno, simbolo ng kapayapaan at pagpapakumbaba\n\n💡 ANG MENSAHE:\n\nIpinahahayag ni Jesus:\n'Ako ang Hari na hinulaan ni Zacarias, ngunit ang Aking kaharian ay hindi itinatayo sa pamamagitan ng espada. Dumarating Ako sa kapayapaan, upang lupigin ang mga puso, hindi ang mga lupain.'",
+      "revelation_key": "Ang Hari ng sansinukob ay pumapasok na nakasakay sa hiniraming asno. Ang kadakilaan ng Diyos ay nahayag sa pagpapakumbaba, hindi sa karangyaan."
+    },
+
+    {
+      "order": 3,
+      "type": "creation_connection",
+      "icon": "🌿",
+      "title": "Mga Palaspas: Ang Simbolo ng Tagumpay at Kaharian",
+      "subtitle": "Juan 12:13 - Ang ipinahahayag ng mga tao nang hindi nila nalalaman",
+      "content": "Nagdagdag ang Juan 12:13 ng detalye na hindi binanggit ni Mateo: 'Kumuha ng mga sanga ng palaspas, at lumabas upang salubungin siya.'\n\n🌴 MGA PALASPAS SA KASAYSAYAN NG JUDIO:\n\nAng mga sanga ng palaspas ay may malalim na makasaysayang kahalagahan:\n\n1️⃣ PISTA NG MGA TOLDA:\n\nInuutos ng Levitico 23:40 na kumuha ng mga sanga ng palaspas sa pistang ito upang ipagdiwang ang pagbibigay ng Diyos sa ilang.\n\n2️⃣ SIMBOLO NG TAGUMPAY:\n\nNang palayain ng mga Macabeo ang Jerusalem mula sa imperyo ng mga Seleucid (164 BC), ipinagdiwang ito ng mga tao gamit ang mga palaspas (1 Macabeo 13:51).\n\n3️⃣ SIMBOLO NG KAHARIAN:\n\nSa sinaunang mundo, ang mga palaspas ay kumakatawan sa:\n• Militaryong tagumpay\n• Tagumpay na kahariang\n• Pagdiriwang ng paglulunsad\n\n🔗 ANG APOKALIPTIKONG KONEKSYON:\n\nInilalarawan ng Pahayag 7:9 ang tanawin sa langit:\n'Napakaraming tao... nakatayo sa harap ng trono, at sa harap ng Kordero, nakadamit ng puti at may hawak na mga palaspas.'\n\nAng PAREHONG mga palaspas na winagayway nila sa Jerusalem ay lumitaw sa langit sa harap ng trono ng Kordero!\n\n⚔️ ANG DOBLENG IRONYA:\n\n• Winawagayway nila ang mga palaspas inaasahan ang PULITIKONG tagumpay → Dinala ni Jesus ang ESPIRITUWAL na tagumpay\n• Inaasahan nila na tatalunin Niya ang Roma → Tinalo ni Jesus ang kamatayan mismo\n• Gusto nila ng LUPAING kaharian → Itinatag ni Jesus ang WALANG-HANGGANG kaharian",
+      "scripture_connections": [
+        {
+          "reference": "Zacarias 9:9",
+          "text": "O Zion, magdiwang ka sa kagalakan! O Jerusalem, ilakas mo ang awitan! Pagkat dumarating na ang iyong hari na mapagtagumpay at mapagwagi. Dumarating siyang may kapakumbabaan, batang asno ang kanyang sinasakyan."
+        },
+        {
+          "reference": "Mga Awit 118:26",
+          "text": "Pinagpala ang dumarating sa pangalan ni Yahweh; magmula sa templo, mga pagpapala'y kanyang tatanggapin!"
+        },
+        {
+          "reference": "Pahayag 7:9-10",
+          "text": "Nakatayo sila sa harap ng trono at ng Kordero, nakadamit ng puti at may hawak na mga palaspas... Sinasabi nila nang malakas, \"Ang kaligtasan ay nagmumula sa Kordero, at sa ating Diyos na nakaluklok sa trono!\""
+        }
+      ],
+      "revelation_key": "Ang mga tao ay nanghula ng higit pa sa kanilang nauunawaan. Ang mga palaspas na winagayway nila noong araw na iyon ay tumuturo sa walang-hanggang tagumpay na mananalo ni Cristo sa krus."
+    },
+
+    {
+      "order": 4,
+      "type": "light_darkness",
+      "icon": "😢",
+      "title": "Umiyak si Jesus para sa Jerusalem",
+      "subtitle": "Lucas 19:41-44 - Ang tinanggihang Hari ay nagluluksa para sa Kanyang lungsod",
+      "content": "Sa gitna ng kasiyahan, inirerehistro ni Lucas ang nakakawasak na sandaling hindi binanggit ng ibang mga ebanghelio:\n\n'At nang malapit na siya sa lungsod, tiningnan niya ito at umiyak' (Lucas 19:41).\n\n😭 ANG MGA LUHA NG HARI:\n\nHabang sumisigaw ang mga tao ng 'Hosanna!', UMIYAK si Jesus.\n\nBakit?\n\nDahil nakikita Niya ang hindi nila nakikita:\n• Sa loob ng 40 taon (AD 70), sisirain ng Roma ang Jerusalem\n• Ang templo ay gigibain (Mateo 24:2)\n• Libu-libo ang mamamatay dahil tinanggihan nila ang kanilang Mesiyas\n\n💔 ANG MGA SALITA NG PANANGIS:\n\n'Kung alam mo lamang ngayong araw, ang mga bagay na nauukol sa iyong kapayapaan! Ngunit ngayo'y nakatago sa iyong mga mata' (Lucas 19:42).\n\nSinabi ni Jesus: 'NGAYONG ARAW MO' - ang araw ng pagdalaw, ang araw ng pagkakataon.\n\nNgunit hindi nila ito nakilala. Talatang 44: 'Dahil hindi mo nakilala ang panahon ng iyong pagdalaw.'\n\n⏰ ANG PANAHON NG PAGDALAW:\n\nHinulaan ng Daniel 9:25 ng EKSAKTONG kailan darating ang Mesiyas:\n• Mula sa utos na muling itayo ang Jerusalem (445 BC)\n• Hanggang sa Mesiyas na Prinsipe\n• 69 linggo ng mga taon = 483 taon\n\nAng EKSAKTONG sandali ay Linggo ng Palaspas!\n\nNgunit hindi nila ito nakilala.\n\n🌆 ANG TRAHEDYA:\n\n• Nag-aalok si Jesus ng kapayapaan → Pumili sila ng paghihimagsik\n• Nag-aalok si Jesus ng kaligtasan → Pumili sila ng kapahamakan\n• Nag-aalok si Jesus ng buhay → Pumili sila ng kamatayan\n\nAt si Jesus, na nakakaalam ng lahat ng ito, UMIYAK.",
+      "identity_statement": "Umiiyak si Jesus para sa mga tumatangging tanggapin ang Kanyang kaligtasan. Ang Kanyang puso ay nadudurog hindi lang para sa kasalanan, kundi para sa mga kahihinatnan na dadalhin ng kasalanan.",
+      "revelation_key": "Dumarating ang araw ng pagdalaw, ngunit hindi ito tumatagal magpakailanman. May panahon upang kilalanin ang Hari, at ang pagtanggi sa Kanya ay may walang-hanggang kahihinatnan."
+    },
+
+    {
+      "order": 5,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Pansariling Pagtuklas",
+      "discovery_questions": [
+        {
+          "category": "Mga Inaasahan",
+          "question": "Gusto ng mga tao na maging pulitikong hari si Jesus. Sa aling mga bahagi ng iyong buhay sinubukan mong iangkop si Jesus sa IYONG mga inaasahan sa halip na sumuko sa Kanyang plano?"
+        },
+        {
+          "category": "Pagsamba",
+          "question": "Sumigaw ang mga tao ng 'Hosanna!' noong Linggo at 'Ipako sa krus!' noong Biyernes. Ano ang inihahayag nito tungkol sa pagsambang nakabatay sa emosyon laban sa pagsambang nakabatay sa tunay na pagtatalaga?"
+        },
+        {
+          "category": "Panahon ng Pagdalaw",
+          "question": "Umiyak si Jesus dahil hindi nakilala ng Jerusalem 'ang panahon ng iyong pagdalaw.' May mga bahagi ba ng iyong buhay kung saan dinadalaw ka ng Diyos at hindi mo ito nakilala?"
+        }
+      ],
+      "prayer": {
+        "title": "Panalangin sa Mapagpakumbabang Hari",
+        "content": "Jesus, Hari ng mga hari na pumapasok na nakasakay sa asno. Patawarin Mo ako sa mga pagkakataong sumigaw ako ng 'Hosanna' inaasahan na tutuparin Mo ang AKING mga plano, sa halip na sumuko sa Iyo. Salamat po na hindi Kayo naparito bilang lupaing manlulupig na hari, kundi bilang Hari na lumulunsad sa mga puso. Tulungan Mo akong kilalanin ang panahon ng Inyong pagdalaw sa aking buhay. Nawa'y hindi umasa ang aking pagsamba sa pagtupad Ninyo sa aking mga inaasahan, kundi sa kung sino Kayo. Ngayon ay tinatanggap ko Kayo bilang aking Hari, hindi ang hari na gusto ko, kundi ang Hari na Kayo. Sa pangalan ni Jesus, Amen."
+      }
+    }
+  ],
+
+  "tags": [
+    "tagumpay_na_pagpasok",
+    "linggo_ng_palaspas",
+    "hosanna",
+    "propesiya",
+    "mapagpakumbabang_hari",
+    "mesiyas"
+  ],
+
+  "metadata": {
+    "total_word_count": 1150,
+    "greek_words_count": 1,
+    "scripture_references_count": 15,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "Hinulaang Mesiyas",
+      "Pagpapakumbaba ng Hari",
+      "Mga inaasahan laban sa realidad",
+      "Pagtanggi sa Mesiyas"
+    ]
+  }
+}

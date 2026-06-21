@@ -1,0 +1,219 @@
+{
+  "id": "zacchaeus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "es",
+  "bible_version": "RVR1960",
+  "version": "1.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "Zaqueo",
+    "testament": "new",
+    "scripture_reference": "Lucas 19:1-10",
+    "mood_primary": "crowd",
+    "accent_color": "#3b1f00",
+    "emoji": "🌳",
+    "tags": [
+      "exclusion",
+      "dignidad",
+      "restitución",
+      "salvación",
+      "riqueza",
+      "zaqueo",
+      "jesús",
+      "transformación",
+      "encuentro",
+      "ser_visto"
+    ]
+  },
+  "key_verse": {
+    "reference": "Lucas 19:10",
+    "text": "Porque el Hijo del Hombre vino a buscar y a salvar lo que se había perdido.",
+    "bible_version": "RVR1960"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "crowd",
+      "image_url": "zacchaeus_jericho_crowd.png",
+      "title": "Jericó estaba llena de gente.",
+      "narrative": "Había una multitud, y un rumor recorría la ciudad completa: Jesús de Nazaret pasaba por ahí.\n\nEntre esa multitud había un hombre que nadie quería a su lado. Un hombre que había elegido el dinero sobre su pueblo, y que ahora cargaba con el precio de esa elección.\n\nZaqueo era el jefe de publicanos, era rico y tenía baja estatura.\n\nPequeño no solo de cuerpo. También en lo único que en ese momento importaba: la altura para ver por encima de la multitud.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "El que más necesitaba ver a Jesús era el que menos podía alcanzarlo."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "zacchaeus_crowd_wall.png",
+      "verse_reference": "Lucas 19:1-4",
+      "verse_text": "Habiendo entrado Jesús en Jericó, iba pasando por la ciudad. Y sucedió que un varón llamado Zaqueo, que era jefe de los publicanos, y rico, procuraba ver quién era Jesús; pero no podía a causa de la multitud, pues era pequeño de estatura. Y corriendo delante, subió a un árbol sicómoro para verle; porque había de pasar por allí.",
+      "reflection": "Lucas lo presenta con precisión: jefe de publicanos, rico.\n\nEsos dos detalles lo condenaban a los ojos de todos en Jericó. Los publicanos recaudaban impuestos para Roma. Y no solo eso —cobraban de más, se quedaban con el excedente, y construían su riqueza sobre la pobreza de su propio pueblo. Era traición legalizada.\n\nY sin embargo.\n\nEste hombre que había comprado todo lo que el dinero podía comprar, corría. Corría para ver a un rabino que iba de pueblo en pueblo, sin casa ni riquezas.\n\nAlgo dentro de Zaqueo ya sabía que necesitaba lo que el dinero no podía comprar.",
+      "revelation_key": "El hombre más rico de Jericó corría para ver a alguien sin riquezas de este mundo, pero dueño de las riquezas eternas. Eso solo explica la sed espiritual."
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "solitude",
+      "image_url": "zacchaeus_in_tree.png",
+      "title": "Subió al árbol.",
+      "narrative": "Imagina la escena.\n\nUn hombre adulto, jefe de una oficina de recaudación, rico, con reputación —aunque fuera mala— se subió a un árbol en medio de la calle principal de Jericó, delante de toda la ciudad que lo despreciaba.\n\nHay algo en ese gesto que dice más que cualquier oración.\n\nNo le importó el ridículo. No calculó las consecuencias sociales. No consideró lo que dirían sus colegas.\n\nSolo quería ver.\n\nY muchas veces así se ve la fe en las Escrituras: un hombre que suelta su dignidad para acercarse a Jesús.",
+      "ambient_sound": "crowd_passing_below",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "Zaqueo dejó de lado su dignidad, sin saber que Jesús lo iba a buscar a él."
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "turning_point",
+      "image_url": "zacchaeus_jesus_looks_up.png",
+      "verse_reference": "Lucas 19:5-6",
+      "verse_text": "Cuando Jesús llegó a aquel lugar, mirando hacia arriba, le vio, y le dijo: Zaqueo, date prisa, desciende, porque hoy es necesario que pose yo en tu casa. Entonces él descendió aprisa, y le recibió gozoso.",
+      "reflection": "Detente un momento.\n\nJesús se detuvo, levantó la vista y dijo su nombre.\n\nNo dijo: oye, el del árbol. No señaló al publicano. No hizo un ejemplo de él.\n\nDijo su nombre.\n\nZaqueo había subido para ver a Jesús desde lejos. Lo que no podía imaginar es que Jesús ya lo había visto a él.\n\nY hay una palabra en el versículo que no se debe omitir: necesario. Hoy es necesario que pose en tu casa.\n\nLa misma palabra utilizada en el pasaje de la Mujer Samaritana en Juan 4:4 —era necesario pasar por Samaria. No fue accidente. Jesús no descubrió a Zaqueo en ese árbol, llegó a Jericó buscándolo.\n\nY cuando dijo 'pose en tu casa', no era una invitación a cenar. En esa cultura, quedarse en la casa de alguien era declarar públicamente que esa persona era digna de tu presencia. Era el gesto de aceptación más alto posible.",
+      "revelation_key": "Zaqueo subió para verlo. Jesús llegó a Jericó para encontrarlo. Esa es la marca de la gracia dada por Jesucristo."
+    },
+    {
+      "order": 5,
+      "type": "character_moment",
+      "mood": "exposed",
+      "image_url": "zacchaeus_descent.png",
+      "title": "Descendió aprisa.",
+      "subtitle": "El hombre que nadie quería en su casa",
+      "content": "Observa el contraste.\n\nCuando Jesús dijo 'hoy es necesario que pose en tu casa', la multitud tuvo una respuesta inmediata.\n\n📖 Lucas 19:7 (RVR1960): 'Al ver esto, todos murmuraban, diciendo que había entrado a posar con un hombre pecador.'\n\nTodos murmuraban, no algunos, no los fariseos, todos.\n\nZaqueo era el hombre que todos señalaban como pecador. Rechazarlo hacía sentir a los demás mejores que él. Y Jesús, sabiendo todo eso, eligió quedarse en su casa — no solo a comer o dormir, sino a declarar ante todos que ese hombre era digno de su presencia.\n\n💭 Detente a pensar:\n\n¿Cuántos años llevaba Zaqueo sin que nadie quisiera estar en su casa? ¿Sin que nadie lo mirara como persona y no como cargo? ¿Sin que nadie pronunciara su nombre sin desprecio?\n\nY entonces el Hijo de Dios levantó la mirada, lo llamó por su nombre con familiaridad, y pidió posar en su casa. Zaqueo subió al árbol para verle desde lejos, sin imaginar que quien él quería ver ya lo había aceptado y lo consideraba digno de su presencia.\n\nZaqueo descendió aprisa.\n\nNo porque Jesús le exigiera cambiar primero. Sino porque alguien lo vio.",
+      "revelation_key": "Jesús no esperó a que Zaqueo fuera mejor persona. Lo llamó desde ahí arriba, tal como estaba, por medio de la gracia y la misericordia."
+    },
+    {
+      "order": 6,
+      "type": "theological_depth",
+      "mood": "depth",
+      "image_url": "zacchaeus_coins_table.png",
+      "title": "Jefe de publicanos",
+      "subtitle": "Lo que ese título costó en realidad",
+      "content": "Para entender la transformación de Zaqueo hay que entender lo que era.\n\n🏛️ EL SISTEMA:\n\nRoma subcontrataba la recaudación de impuestos a locales. El publicano pagaba una suma fija a Roma y luego recaudaba lo que pudiera del pueblo —la diferencia era su ganancia. Era un sistema diseñado para el abuso, y Zaqueo no solo participaba en él: era el jefe.\n\nEso significaba que otros publicanos trabajaban bajo sus órdenes. Era el responsable de todo el sistema de cobro abusivo en Jericó. Cada denario —la moneda romana de la época— de su riqueza venía del bolsillo de familias judías en Jericó.\n\n⚠️ EL COSTO SOCIAL:\n\nLos publicanos eran considerados ceremonialmente impuros. No podían ser testigos en un tribunal judío. No podían participar en la vida sinagogal normal. Estaban excluidos del único sistema de pertenencia que existía en esa cultura.\n\nZaqueo no era solo rico. Era un hombre completamente excluido — sin comunidad, sin acceso a la sinagoga, sin un lugar al que pertenecer.\n\n🔑 El nombre: El nombre Zaqueo viene del hebreo Zakkay —que significa puro, inocente. Cargaba un nombre que describía lo que había dejado de ser.\n\nY ese fue el hombre al que Jesús llamó por nombre desde abajo del árbol.",
+      "revelation_key": "Zaqueo cargaba el nombre de lo que había perdido. Jesús lo llamó por ese nombre para devolverle lo que significaba.",
+      "scripture_connections": [
+        {
+          "reference": "Lucas 5:30-32",
+          "text": "Y los escribas y los fariseos murmuraban contra los discípulos, diciendo: ¿Por qué coméis y bebéis con publicanos y pecadores? Respondiendo Jesús, les dijo: Los que están sanos no tienen necesidad de médico, sino los enfermos. No he venido a llamar a justos, sino a pecadores al arrepentimiento."
+        },
+        {
+          "reference": "Ezequiel 34:16",
+          "text": "Yo buscaré la perdida, y haré volver al redil la descarriada; vendaré la perniquebrada, y fortaleceré la debilitada; mas a la engordada y a la fuerte destruiré; las apacentaré con justicia."
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "intimacy",
+      "image_url": "zacchaeus_table_jesus.png",
+      "title": "Lo que pasó adentro.",
+      "narrative": "No sabemos cada palabra que se dijo en esa casa. Pero sí sabemos lo que salió de ella. Algo pasó en esa mesa que el dinero, los contratos y los años de poder nunca habían logrado en Zaqueo. Jesús se quedó con él, y eso fue suficiente para transformarlo.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 19:9",
+        "text": "Hoy ha venido la salvación a esta casa."
+      },
+      "revelation_key": "La presencia de Jesús hizo lo que años de riqueza y poder no pudieron: mover el corazón de Zaqueo."
+    },
+    {
+      "order": 8,
+      "type": "scripture_moment",
+      "mood": "breakthrough",
+      "image_url": "zacchaeus_stands_declaration.png",
+      "verse_reference": "Lucas 19:8",
+      "verse_text": "Entonces Zaqueo, puesto en pie, dijo al Señor: He aquí, Señor, la mitad de mis bienes doy a los pobres; y si en algo he defraudado a alguno, se lo devuelvo cuadruplicado.",
+      "reflection": "Los estudiosos del griego debaten si Zaqueo ya obraba de esta manera antes del encuentro, o si fue transformado por él. El texto original pude entenderse de ambas maneras.\n\nPero lo que sí sabemos es esto: parado frente a Jesús, Zaqueo ofreció la mitad de todo lo que tenía. Donde el joven rico (Lucas 18:18-23) no pudo soltar nada cuando Jesús lo invitó, Zaqueo soltó la mitad sin que Jesús se lo pidiera. Y no se quedó en lo mínimo que exigía la ley — fue cuatro veces más allá de lo requerido (Levítico 5:16).\n\nEso solo lo explica un corazón que ya había encontrado algo más valioso que su riqueza. No importa si fue antes o durante el encuentro — frente a Jesús, Zaqueo eligió diferente. Y Jesús respondió con la declaración más completa de salvación en todo el Evangelio de Lucas.\n\nEsa es la misericordia de Dios: no espera que lo merezcas, sino que respondas.",
+      "revelation_key": "La generosidad de Zaqueo no fue la causa de su salvación. Fue la evidencia de que ya había ocurrido."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "transformation",
+      "image_url": "zacchaeus_open_hands.png",
+      "title": "El hombre que soltó",
+      "subtitle": "Lo que la riqueza nunca le dio y lo que Jesús le devolvió",
+      "content": "Zaqueo había construido su vida alrededor de acumular.\n\nY en una tarde frente a Jesús, soltó la mitad de toda su bienes.\n\n💰 Lo que significa:\n\nNo vendió sus posesiones gradualmente. No dijo que lo pensaría. No negoció con Jesús un porcentaje más cómodo. Se puso de pie, en público, y declaró lo que haría.\n\nEl mismo hombre que construyó su identidad sobre cuánto tenía, eligió definirse ahora por lo que podía dar.\n\nAquí está el paralelo con la mujer samaritana del estudio anterior:\n\nElla dejó su cántaro junto al pozo después de encontrar a Jesús. Lo que Él puso en su interior ya había hecho pequeño lo que traía en sus manos.\n\nZaqueo soltó la mitad de su riqueza después de recibir a Jesús en su casa.\n\nDos tiempos. El mismo principio: el encuentro con Jesús hace que sueltes lo que creías que eras.\n\nY ambos encontraron lo mismo, frente al Hijo de Dios.",
+      "revelation_key": "Jesús no le pidió a Zaqueo que soltara su riqueza. Zaqueo la soltó porque algo más valioso había entrado en la habitación y su vida nunca sería la misma."
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "depth",
+      "image_url": "zacchaeus_salvation_word.png",
+      "title": "Hoy ha venido la salvación a esta casa.",
+      "subtitle": "La palabra transformadora",
+      "content": "La respuesta de Jesús tiene un peso enorme.\n\n📖 Lucas 19:9-10 (RVR1960):\n'Jesús le dijo: Hoy ha venido la salvación a esta casa; por cuanto él también es hijo de Abraham. Porque el Hijo del Hombre vino a buscar y a salvar lo que se había perdido.'\n\n✨ TRES REGALOS EN UNA SOLA FRASE:\n\n1. 'Hoy ha venido la salvación': No mañana cuando mejore. No cuando termine de restituir. Hoy. El mismo día. La salvación no llegó cuando Zaqueo hizo su declaración. Llegó cuando Jesús entró en su casa.\n\n2. 'Por cuanto él también es hijo de Abraham': La comunidad que lo había excluido lo veía como traidor a Israel. Jesús lo devuelve al linaje del que nunca debió salir. No como concesión. Como declaración de identidad.\n\n📜 EN EL GRIEGO: La palabra usada para 'salvación' aquí es soteria —que incluye rescate, preservación, sanidad total. No es solo perdón de pecados. Es restauración completa del ser.\n\n3. 'Vino a buscar y a salvar lo que se había perdido': Jesús no llegó a Jericó de paso. Llegó por Zaqueo. Jesús no pasó por Jericó por casualidad. Este versículo muestra que había venido buscando exactamente a este hombre.",
+      "revelation_key": "Jesús no solo perdonó a Zaqueo. Le devolvió su nombre, su linaje, y su lugar en el pueblo de Dios.",
+      "scripture_connections": [
+        {
+          "reference": "Lucas 15:4-6",
+          "text": "¿Qué hombre de vosotros, teniendo cien ovejas, si pierde una de ellas, no deja las noventa y nueve en el desierto, y va tras la que se perdió, hasta encontrarla? Y cuando la encuentra, la pone sobre sus hombros gozoso; y al llegar a casa, reúne a sus amigos y vecinos, diciéndoles: Gozaos conmigo, porque he encontrado mi oveja que se había perdido."
+        },
+        {
+          "reference": "Romanos 4:16",
+          "text": "Por tanto, es por fe, para que sea por gracia, a fin de que la promesa sea firme para toda su descendencia; no solamente para la que es de la ley, sino también para la que es de la fe de Abraham, el cual es padre de todos nosotros."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "cinematic_scene",
+      "mood": "peace",
+      "image_url": "zacchaeus_door_light.png",
+      "title": "La misma ciudad. Un hombre distinto.",
+      "narrative": "La multitud que murmuraba seguía afuera.\n\nJericó no había cambiado. Los mismos rostros que lo habían excluido estaban en las mismas calles.\n\nPero Zaqueo ya no necesitaba que la ciudad lo aceptara para saber quién era.\n\nEl Hijo de Dios lo había llamado por nombre desde abajo de un árbol. El Hijo de Dios había pedido quedarse en su casa. El Hijo de Dios lo había llamado hijo de Abraham.\n\nY eso era suficiente para pararse en su propia puerta como si fuera la primera vez que veía la calle.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 19:9",
+        "text": "Jesús le dijo: Hoy ha venido la salvación a esta casa."
+      },
+      "revelation_key": "La aprobación de Jesús es la única que puede hacer que el rechazo del mundo deje de definirte."
+    },
+    {
+      "order": 12,
+      "type": "discovery_activation",
+      "image_url": "zacchaeus_open_road.png",
+      "icon": "🌳",
+      "title": "Tu Encuentro",
+      "subtitle": "Zaqueo no esperó a ser perfecto. Buscó a Jesús tal como estaba.",
+      "discovery_questions": [
+        {
+          "category": "Ser visto",
+          "question": "Zaqueo se subió a un árbol delante de todos, sin importar el qué dirán, solo para ver a Jesús. ¿Qué cosas dejas de hacer por miedo a las críticas? ¿Qué árbol necesitas subir hoy?"
+        },
+        {
+          "category": "Lo que acumulas",
+          "question": "Zaqueo construyó su vida acumulando lo que no podía llenar el vacío. ¿Qué hay en tu vida —dinero, posición, logros, aprobación— que estás sosteniendo como si fuera tu identidad? ¿Cómo se sentiría soltar esa carga?"
+        },
+        {
+          "category": "Sanar relaciones",
+          "question": "Zaqueo no solo recibió el perdón de Jesús — salió a ponerse a cuentas con quienes había lastimado. ¿Hay alguien en tu vida con quien todavía necesites hacerlo? Una disculpa, una conversación, un gesto concreto. El mismo Jesús que transformó a Zaqueo te acompaña hoy a dar ese paso."
+        }
+      ],
+      "prayer": {
+        "title": "Oración desde el árbol",
+        "content": "Señor Jesús, aquí estoy.\n\nNo en el lugar perfecto. No con la historia perfecta. Subí como pude para tratar de verte desde lejos — sin imaginar que Tú ya me estabas buscando a mí.\n\nComo Zaqueo, cargo cosas que creí que me protegerían o me definirían. Riquezas, logros, aprobación, o simplemente el peso de querer controlar lo que soy ante los demás. Hoy reconozco que todo eso pesa demasiado y que ninguna de esas cosas puede darme lo que solo Tú puedes dar.\n\nNo te pido que me cambies primero para luego acercarte. Te pido que entres a mi vida hoy mismo, tal como está, y que te quedes conmigo.\n\nY lo que en mí necesita ser soltado, dame la valentía de soltarlo. Lo que necesita ser reparado con alguien a quien lastimé, dame el valor de dar ese paso. El mismo que acompañaste a Zaqueo, acompáñame a mí.\n\nTú que viniste a buscar lo perdido — aquí estoy. Encuéntrame.\n\nEn el nombre de Jesús, Amén."
+      }
+    },
+    {
+      "order": 13,
+      "type": "completion",
+      "mood": "open",
+      "image_url": "zacchaeus_door_light_front.png",
+      "completion_verse": {
+        "reference": "Lucas 19:10",
+        "text": "Porque el Hijo del Hombre vino a buscar y a salvar lo que se había perdido.",
+        "bible_version": "RVR1960"
+      },
+      "reflection_prompt": "¿Qué árbol necesitas subir hoy? ¿Y qué necesitas soltar cuando Él te llame por nombre?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
