@@ -81,11 +81,19 @@
       "type": "theological_depth",
       "mood": "shifting",
       "image_url": "water_ripple.png",
+      "verse_overlay": {
+        "reference": "John 4:13-14",
+        "text": "Jesus answered and said unto her, Whosoever drinks of this water shall thirst again: But whosoever drinks of the water that I shall give him shall never thirst; but the water that I shall give him shall be in him a well of water springing up into everlasting life."
+      },
       "title": "Two Kinds of Thirst",
       "subtitle": "She was talking about water. He was talking about something more.",
-      "content": "Jesus offered living water. She heard it practically: spring water, flowing water, water you don't have to come and fetch at midday under the sun.\n\nBut He was pointing at the well. At the rope. At everything she had carried there every day.\n\n📖 John 4:13-14 (KJV)\n«Jesus answered and said unto her, Whosoever drinks of this water shall thirst again: But whosoever drinks of the water that I shall give him shall never thirst; but the water that I shall give him shall be in him a well of water springing up into everlasting life.»\n\nNever. Not for a long time. Never.\n\n💧 Jacob's well was real. It was history. It was a heritage of centuries. Jesus does not ignore it. But what He offers does not come from outside. It comes from within. It is not a spring you must return to. It is a fountain that rises up inside the one who receives it.\n\nShe recognized it herself, even without fully understanding:\n\n📖 John 4:15 (KJV)\n«The woman said unto him, Sir, give me this water, that I thirst not, neither come here to draw.»\n\nShe was still thinking about a well.\n\nBut she was leaning toward Him. And that was enough.",
+      "content": "Jesus offered living water. She heard it practically: spring water, flowing water, water you don't have to come and fetch at midday under the sun.\n\nBut He was pointing at the well. At the rope. At everything she had carried there every day.\n\nNever. Not for a long time. Never — that's what Jesus promised her.\n\n💧 Jacob's well was real. It was history. It was a heritage of centuries. Jesus does not ignore it. But what He offers does not come from outside. It comes from within. It is not a spring you must return to. It is a fountain that rises up inside the one who receives it.\n\nShe recognized it herself, even without fully understanding — and asked for exactly that water.\n\nShe was still thinking about a well.\n\nBut she was leaning toward Him. And that was enough.",
       "revelation_key": "Sometimes our thirst points us to Jesus before our understanding does.",
       "scripture_connections": [
+        {
+          "reference": "John 4:15",
+          "text": "The woman said unto him, Sir, give me this water, that I thirst not, neither come here to draw."
+        },
         {
           "reference": "Isaiah 55:1",
           "text": "Ho, everyone that thirsts, come you to the waters, and he that has no money; come you, buy, and eat; yea, come, buy wine and milk without money and without price."
@@ -145,9 +153,13 @@
       "type": "theological_depth",
       "mood": "shifting",
       "image_url": "well_light_breaking.png",
+      "verse_overlay": {
+        "reference": "John 4:21-24",
+        "text": "Jesus said unto her, Woman, believe me, the hour comes, when you shall neither in this mountain, nor yet at Jerusalem, worship the Father. You worship you know not what: we know what we worship: for salvation is of the Jews. But the hour comes, and now is, when the true worshipers shall worship the Father in spirit and in truth: for the Father seeks such to worship him. God is a Spirit: and they that worship him must worship him in spirit and in truth."
+      },
       "title": "In spirit and in truth.",
       "subtitle": "An answer larger than the question.",
-      "content": "Jesus did not dodge her question. He answered it completely.\n\nBut He took her further than she expected.\n\n📖 John 4:21-24 (KJV)\n«Jesus said unto her, Woman, believe me, the hour comes, when you shall neither in this mountain, nor yet at Jerusalem, worship the Father. You worship you know not what: we know what we worship: for salvation is of the Jews. But the hour comes, and now is, when the true worshipers shall worship the Father in spirit and in truth: for the Father seeks such to worship him. God is a Spirit: and they that worship him must worship him in spirit and in truth.»\n\nNot a mountain. Not a temple. Not a correct location.\n\nA relationship. Interior. True.\n\nShe had come with a question about places. He was speaking to her about the heart.",
+      "content": "Jesus did not dodge her question. He answered it completely.\n\nBut He took her further than she expected — explaining that true worship was never about geography to begin with.\n\nNot a mountain. Not a temple. Not a correct location.\n\nA relationship. Interior. True.\n\nShe had come with a question about places. He was speaking to her about the heart.",
       "revelation_key": "She asked where to worship. He showed her how.",
       "scripture_connections": [
         {
@@ -189,9 +201,13 @@
       "type": "theological_depth",
       "mood": "wonder",
       "image_url": "empty_jar_well.png",
+      "verse_overlay": {
+        "reference": "John 4:30",
+        "text": "Then they went out of the city, and came unto him."
+      },
       "title": "The waterpot she left behind.",
       "subtitle": "What an abandoned waterpot means.",
-      "content": "In the previous encounter we saw Bartimaeus throw down his cloak before receiving his healing — faith that lets go before having anything to hold onto.\n\nShe left her waterpot after the encounter. What Jesus placed inside her had already made small what she carried in her hands.\n\nTwo people. Two abandoned objects. The same Jesus.\n\nBut there is something more in what she did.\n\n🪣 In the Greek, the question she brought to the city is framed with a word that anticipates uncertainty: Is not this the Christ?\n\nShe did not arrive proclaiming. She arrived inviting. She knew that a woman with her history would not be believed if she made a declaration. So she wrapped the revelation in a question that compelled each person to go and see for themselves.\n\nThat was not naivety. That was wisdom.\n\nAnd it worked.\n\n📖 John 4:30 (KJV)\n«Then they went out of the city, and came unto him.»",
+      "content": "In the previous encounter we saw Bartimaeus throw down his cloak before receiving his healing — faith that lets go before having anything to hold onto.\n\nShe left her waterpot after the encounter. What Jesus placed inside her had already made small what she carried in her hands.\n\nTwo people. Two abandoned objects. The same Jesus.\n\nBut there is something more in what she did.\n\n🪣 In the Greek, the question she brought to the city is framed with a word that anticipates uncertainty: Is not this the Christ?\n\nShe did not arrive proclaiming. She arrived inviting. She knew that a woman with her history would not be believed if she made a declaration. So she wrapped the revelation in a question that compelled each person to go and see for themselves.\n\nThat was not naivety. That was wisdom.\n\nAnd it worked.",
       "revelation_key": "She brought her wound as her testimony. And an entire city came out to see.",
       "scripture_connections": [
         {
@@ -210,10 +226,20 @@
       "type": "character_moment",
       "mood": "awe",
       "image_url": "city_samaritans_coming.png",
+      "verse_overlay": {
+        "reference": "John 4:39",
+        "text": "And many of the Samaritans of that city believed on him for the saying of the woman, who testified, He told me all that ever I did."
+      },
       "title": "And many believed.",
       "subtitle": "Because of the word of the woman.",
-      "content": "We must understand what this means.\n\nIn the first century, a woman had no public voice. A Samaritan woman with her history had even less. The men of that city had no cultural or social reason to listen to her.\n\nAnd they went out.\n\nThat is not normal. That is supernatural.\n\n📖 John 4:39 (KJV)\n«And many of the Samaritans of that city believed on him for the saying of the woman, who testified, He told me all that ever I did.»\n\nJohn — a first-century Jewish writer formed in that culture — recorded that it was this woman who brought an entire city to the Messiah. That cannot be explained apart from the Holy Spirit.\n\n📖 John 4:41-42 (KJV)\n«And many more believed because of his own word; And said unto the woman, Now we believe, not because of your saying: for we have heard him ourselves, and know that this is indeed the Christ, the Savior of the world.»\n\nShe arrived alone. She left as a movement.\nShe arrived carrying shame. She left with a testimony.\nShe arrived to hide. She left to find others.\n\nThat is what Jesus does. In our imperfection He loves us, transforms us, and uses us.",
-      "revelation_key": "God took the person the world disqualified and made her the first evangelist of Samaria."
+      "content": "We must understand what this means.\n\nIn the first century, a woman had no public voice. A Samaritan woman with her history had even less. The men of that city had no cultural or social reason to listen to her.\n\nAnd they went out.\n\nThat is not normal. That is supernatural — many believed because of her testimony.\n\nJohn — a first-century Jewish writer formed in that culture — recorded that it was this woman who brought an entire city to the Messiah. That cannot be explained apart from the Holy Spirit.\n\nEven more believed once they heard Jesus themselves.\n\nShe arrived alone. She left as a movement.\nShe arrived carrying shame. She left with a testimony.\nShe arrived to hide. She left to find others.\n\nThat is what Jesus does. In our imperfection He loves us, transforms us, and uses us.",
+      "revelation_key": "God took the person the world disqualified and made her the first evangelist of Samaria.",
+      "scripture_connections": [
+        {
+          "reference": "John 4:41-42",
+          "text": "And many more believed because of his own word; And said unto the woman, Now we believe, not because of your saying: for we have heard him ourselves, and know that this is indeed the Christ, the Savior of the world."
+        }
+      ]
     },
 
     {

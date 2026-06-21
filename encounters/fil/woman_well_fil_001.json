@@ -1,266 +1,292 @@
 {
-    "id": "woman_well_001",
-    "type": "encounter",
-    "schema_version": "encounters_v1",
-    "language": "fil",
-    "bible_version": "Magandang Balita Biblia",
-    "version": "1.0",
-    "estimated_reading_minutes": 10,
-    "meta": {
-        "character": "Ang Babaeng Samaritana",
-        "testament": "new",
-        "scripture_reference": "Juan 4:1-42",
-        "mood_primary": "midday",
-        "accent_color": "#3d1a00",
-        "emoji": "⛲",
-        "tags": [
-            "pagkauhaw",
-            "kahihiyan",
-            "tubig-buhay",
-            "pagkakakilanlan",
-            "ebanghelismo",
-            "biyaya",
-            "samaritana",
-            "jesus",
-            "pagtatagpo",
-            "pagpapanumbalik"
-        ]
-    },
-    "key_verse": {
-        "reference": "Juan 4:14",
-        "text": "Ngunit ang sinumang uminom ng tubig na ibibigay ko sa kanya ay hindi na muling mauuhaw kailanman. Ang tubig na ibibigay ko ay magiging batis sa loob niya, at patuloy na bubukal at magbibigay sa kanya ng buhay na walang hanggan.\"",
-        "bible_version": "Magandang Balita Biblia"
-    },
-    "cards": [
-        {
-            "order": 1,
-            "type": "cinematic_scene",
-            "mood": "heat",
-            "image_url": "well_midday_sun.png",
-            "title": "Kinakailangan niya",
-            "narrative": "Umiilag ang mga Judio sa Samaria. Daan-taon ng paghamak sa pagitan ng dalawang bayang dating iisa. Mga araw ng pag-iikot kaysa sa pagtapak sa lupaing iyon.\n\nHindi umikot si Jesus.\n\nMay isang babae sa balon na hindi pa nalalaman na hinahanap siya.",
-            "ambient_sound": "desert_wind",
-            "haptic": null,
-            "verse_overlay": {
-                "reference": "Juan 4:4",
-                "text": "ngunit kailangang sa Samaria siya dumaan."
-            },
-            "revelation_key": "Binago ni Jesus ang kanyang ruta para sa isang babaeng sinukuan na ng mundo sa paghahanap."
-        },
-        {
-            "order": 2,
-            "type": "cinematic_scene",
-            "mood": "heat",
-            "image_url": "well_jesus_waiting.png",
-            "title": "Balon ni Jacob. Alas dose.",
-            "narrative": "Pagod sa paglalakbay. Mag-isa sa balon.\n\nAng ika-anim na oras — ang sikat ng tanghaling tapat.\n\nAng parehong oras na darating siya.",
-            "ambient_sound": "desert_wind",
-            "haptic": null,
-            "verse_overlay": {
-                "reference": "Juan 4:5-6",
-                "text": "Dumating siya sa isang bayan na tinatawag na Sicar. Malapit ito sa bukid na ibinigay ni Jacob sa kanyang anak na si Jose. Dito matatagpuan ang balon ni Jacob. Dahil siya'y napagod sa paglalakbay, umupo si Jesus sa tabi ng balon. Halos katanghalian na noon."
-            },
-            "revelation_key": "Hindi nagkataon ang lugar. Hindi nagkataon ang oras. Hindi siya naroon nang walang dahilan."
-        },
-        {
-            "order": 3,
-            "type": "scripture_moment",
-            "mood": "tense",
-            "image_url": "woman_jar_approaching.png",
-            "verse_reference": "Juan 4:7-9",
-            "verse_text": "May isang Samaritanang dumating upang umigib, at sinabi ni Jesus sa kanya, \"Maaari mo ba akong bigyan ng maiinom?\" Wala noon ang kanyang mga alagad dahil sila'y bumibili ng pagkain sa bayan. Sinabi sa kanya ng babae, \"Ikaw ay Judio at Samaritana naman ako! Bakit ka humihingi sa akin ng inumin?\" Sinabi niya iyon sapagkat hindi nakikihalubilo ang mga Judio sa mga Samaritano.",
-            "reflection": "Pumupunta ang mga babae sa balon sa umaga. Magkasama. Pumunta siya nang tanghali. Mag-isa.\n\nIyon ay hindi maliit na detalye. Sa isang desisyong iyon, makikita mo na ang buong kuwento ng buhay niya.\n\nAt ang unang nagsalita sa kanya ay hindi siya humusga. Hindi siya binalewala. Humingi siya sa kanya ng isang bagay.\n\nGinawang mahina ng Anak ng Diyos ang kanyang sarili sa harap niya bago pa man niya malaman ang kanyang pangalan.\n\nGanyan pumapasok ang biyaya. Hindi sa kapangyarihan. Sa kababaang-loob.",
-            "revelation_key": "Si Jesus ang nagsalita muna. Sa kanya. Sa lugar kung saan natuto siyang maging hindi nakikita."
-        },
-        {
-            "order": 4,
-            "type": "theological_depth",
-            "mood": "shifting",
-            "image_url": "water_ripple.png",
-            "title": "Dalawang Uri ng Pagkauhaw",
-            "subtitle": "Nagsasalita siya tungkol sa tubig. Nagsasalita siya tungkol sa higit pa.",
-            "content": "Nag-alok si Jesus ng tubig na buhay. Naunawaan niya ito nang literal: tubig na bumabukal, tubig na hindi mo na kailangang dumating at kumuha sa tanghaling tapat sa ilalim ng araw.\n\nNgunit nasa isip pa rin niya ang balon. Ang lubid. Ang lahat ng dinala niya doon araw-araw.\n\n📖 Juan 4:13-14 (MBB)\n«Sumagot si Jesus, \"Ang bawat uminom ng tubig na ito'y muling mauuhaw, ngunit ang sinumang uminom ng tubig na ibibigay ko sa kanya ay hindi na muling mauuhaw kailanman. Ang tubig na ibibigay ko ay magiging batis sa loob niya, at patuloy na bubukal at magbibigay sa kanya ng buhay na walang hanggan.»\n\nKailanman. Hindi nang matagal. Kailanman.\n\n💧 Totoo ang balon ni Jacob. Ito ay kasaysayan. Isang pamana ng daan-taon. Hindi ito binalewala ni Jesus. Ngunit ang inaalok niya ay hindi nanggagaling sa labas. Nanggagaling ito sa loob. Hindi ito isang bukal na dapat kang bumalik. Ito ay isang batis na umaangat sa loob ng tatanggap nito.\n\nNakilala niya ito mismo, kahit hindi pa lubos na naiintindihan:\n\n📖 Juan 4:15 (MBB)\n«Sinabi ng babae, \"Ginoo, bigyan po ninyo ako ng tubig na ito upang hindi na ako mauhaw, ni pumarito pa upang sumalok muli.»\n\nNag-iisip pa rin siya tungkol sa balon.\n\nNgunit lumalapit na siya sa kanya. At iyon ay sapat na.",
-            "revelation_key": "Minsan ang ating pagkauhaw ay nagdadala sa atin kay Jesus bago pa man ang ating pag-unawa.",
-            "scripture_connections": [
-                {
-                    "reference": "Isaias 55:1",
-                    "text": "Sinabi ni Yahweh, \"Narito ang tubig, kayong mga nauuhaw. Ang mga walang salapi ay lumapit din dito, bumili kayo ng pagkain at ito'y kainin ninyo! Bumili kayo ng alak at gatas kahit walang salaping pambayad."
-                },
-                {
-                    "reference": "Juan 7:37",
-                    "text": "Nang dumating ang huli at pinakamahalagang araw ng pista, tumayo si Jesus at sinabi nang malakas, \"Ang sinumang nauuhaw ay lumapit sa akin at uminom.\""
-                }
-            ]
-        },
-        {
-            "order": 5,
-            "type": "cinematic_scene",
-            "mood": "exposed",
-            "image_url": "woman_still_moment.png",
-            "title": "Sinabi ni Jesus sa kanya, 'Umuwi ka at isama mo rito ang iyong asawa.'",
-            "narrative": "Sumagot siya ng pinakatapat na bagay na nasabi niya sa balong iyon.",
-            "ambient_sound": "silence_heavy",
-            "haptic": null,
-            "verse_overlay": {
-                "reference": "Juan 4:16-18",
-                "text": "\"Umuwi ka at isama mo rito ang iyong asawa,\" wika ni Jesus. \"Wala akong asawa,\" sagot ng babae. Sinabi ni Jesus, \"Tama ang sinabi mong wala kang asawa sapagkat lima na ang iyong naging asawa, at ang kinakasama mo ngayon ay hindi mo asawa. Totoo nga ang sinabi mo.\""
-            },
-            "revelation_key": "Lubos na kilala niya siya. At sinabi niya: tama ang iyong sinabi."
-        },
-        {
-            "order": 6,
-            "type": "character_moment",
-            "mood": "exposed",
-            "image_url": "woman_face_grace.png",
-            "title": "Tama ang iyong sinabi",
-            "subtitle": "Ang hindi sinabi ni Jesus",
-            "content": "Hindi niya sinabi: ikaw ay sira.\nHindi niya sinabi: dapat kang mahiya.\nHindi niya sinabi: ayusin mo ang iyong sarili bago tayo mag-usap.\n\nSinabi niya: tama ang iyong sinabi.\n\nPinuri niya ang kanyang katapatan sa eksaktong sandaling inihayag niya ang kanyang dalahin.\n\nLimang asawa. Limang balon. Limang pagtatangkang papawiin ang pagkauhaw na hindi nila maabot.\n\nHindi niya binanggit ang kanyang nakaraan upang hiyain siya. Binanggit niya ito upang ipakita sa kanya na kilala niya siya — at nanatili pa rin.\n\nIyan ang kaibahan ng mundo kay Jesus. Inilalantad tayo ng mundo para mapahiya. Inilalantad ni Jesus upang palayain.\n\nPumunta siya upang magtago. Dumating si Jesus upang hanapin siya.",
-            "revelation_key": "Alam ni Jesus ang bawat balon na pinuntahan niya. At hindi siya umalis."
-        },
-        {
-            "order": 7,
-            "type": "cinematic_scene",
-            "mood": "awakening",
-            "image_url": "woman_eyes_wide.png",
-            "title": "Ginoo, nakikita ko pong kayo ay isang propeta",
-            "narrative": "May kumikilos sa loob niya.\n\nHindi pagtakas. Pagkilala. Nararamdaman ng kanyang espiritu na hindi siya nakikipag-usap sa isang ordinaryong tao.\n\nAng takot, ang pag-usisa, ang isang bagay na nagigising sa loob niya, ay nagdala sa kanya na itanong ang pinakamatandang tanong sa pagitan ng kanyang bayan at ng mga Judio. Hindi upang makaiwas. Upang maunawaan.",
-            "ambient_sound": "wind_shifting",
-            "haptic": null,
-            "verse_overlay": {
-                "reference": "Juan 4:19-20",
-                "text": "Sinabi ng babae, \"Ginoo, isa kang propeta, hindi nga ba? Dito sa bundok na ito sumamba sa Diyos ang aming mga ninuno, ngunit sinasabi ninyong mga Judio na sa Jerusalem lamang dapat sambahin ang Diyos.\""
-            },
-            "revelation_key": "Bago pa man niya malaman kung sino siya, kinikilala na ng kanyang espiritu ang kanyang presensya."
-        },
-        {
-            "order": 8,
-            "type": "theological_depth",
-            "mood": "shifting",
-            "image_url": "well_light_breaking.png",
-            "title": "Sa espiritu at sa katotohanan",
-            "subtitle": "Isang sagot na higit pa sa tanong.",
-            "content": "Hindi umiwas si Jesus sa kanyang tanong. Sinagot niya ito nang buo.\n\nNgunit dinala niya siya nang higit pa sa inaasahan niya.\n\n📖 Juan 4:21-24 (MBB)\n«Sinabi naman ni Jesus, \"Maniwala ka sa akin, darating na ang panahon na sasambahin ninyo ang Ama hindi na sa bundok na ito o sa Jerusalem. Hindi ninyo kilala ang inyong sinasamba, ngunit kilala namin ang aming sinasamba, sapagkat ang kaligtasan ay nagmumula sa mga Judio. Subalit dumarating na ang panahon at ngayon na nga, na ang mga tunay na sumasamba sa Ama ay sasamba sa kanya sa espiritu at sa katotohanan. Sapagkat ganyan ang uri ng pagsambang kinalulugdan ng Ama. Ang Diyos ay Espiritu kaya dapat siyang sambahin sa espiritu at sa katotohanan.»\n\nHindi bundok. Hindi templo. Hindi tamang lokasyon.\n\nIsang relasyon. Panloob. Totoo.\n\nDumating siya na may tanong tungkol sa mga lugar. Nagsasalita siya sa kanya tungkol sa puso.",
-            "revelation_key": "Tinanong niya kung saan sasamba. Ipinakita niya sa kanya kung paano.",
-            "scripture_connections": [
-                {
-                    "reference": "Juan 4:23",
-                    "text": "Subalit dumarating na ang panahon at ngayon na nga, na ang mga tunay na sumasamba sa Ama ay sasamba sa kanya sa espiritu at sa katotohanan. Sapagkat ganyan ang uri ng pagsambang kinalulugdan ng Ama."
-                }
-            ]
-        },
-        {
-            "order": 9,
-            "type": "scripture_moment",
-            "mood": "revelation",
-            "image_url": "jesus_i_am_declaration.png",
-            "verse_reference": "Juan 4:25-26",
-            "verse_text": "Sinabi ng babae, \"Nalalaman ko pong darating ang Mesiyas, ang tinatawag na Cristo. Pagdating niya, siya ang magpapahayag sa amin ng lahat ng bagay.\" \"Ako na kausap mo ngayon ang iyong tinutukoy,\" sabi ni Jesus.",
-            "reflection": "Sa buong Ebanghelyo ni Juan, hindi direktang inihahayag ni Jesus kung sino siya. Nagsasalita siya sa mga tanda, sa mga larawan, sa mga pahayag na nangangailangan ng pagkilatis.\n\nDito, sa tabi ng isang balon sa Samaria, sa katanghalian, sinabi niya ito nang malinaw.\n\nAt sinabi niya ito sa kanya.\n\nHindi sa isang Levitang pari, ni isang Pariseo, ni isang alagad.\n\nKundi sa babae na pumuntang mag-isa — nahihiya, nakayuko.\n\nMula sa pagtatanong kung si Jesus ay higit pa ba sa patriyarko na si Jacob, nakatanggap siya ng pahayag ng Mesiyas. Sa iisang pag-uusap sa tabi ng balong iyon.",
-            "revelation_key": "Ang unang taong nakatanggap ng makapangyarihang pahayag na ito ay ang huli na inaasahan ng mundo. Ganyan gumagawa ang Diyos."
-        },
-        {
-            "order": 10,
-            "type": "cinematic_scene",
-            "mood": "turning_point",
-            "image_url": "jar_left_at_well.png",
-            "title": "Iniwanan ng babae ang kanyang banga",
-            "narrative": "Dumating ang kanyang mga alagad. Namangha sila na nakikipag-usap si Jesus sa isang babae. Wala ni isa sa kanila ang nagtanong ng kahit ano.\n\nAt gumawa siya ng isang desisyon.",
-            "ambient_sound": "footsteps_running",
-            "haptic": "light_pulse",
-            "verse_overlay": {
-                "reference": "Juan 4:27-29",
-                "text": "Dumating ang kanyang mga alagad nang sandaling iyon, at nabigla sila nang makita nilang nakikipag-usap si Jesus sa isang Samaritana. Ngunit isa man sa kanila'y walang nagtanong sa babae, \"Ano ang kailangan ninyo?\" Wala ring nagtanong kay Jesus, \"Bakit ninyo siya kinakausap?\" Iniwanan ng babae ang kanyang banga, bumalik sa bayan at sinabi sa mga tagaroon, \"Halikayo! Tingnan ninyo ang taong nagsabi sa akin ng lahat ng ginawa ko. Siya na kaya ang Cristo?\""
-            },
-            "revelation_key": "Hindi aksidente ang pag-iwan ng banga. Nabago siya. Ang tubig na pinuntahan niya ay hindi na sapat."
-        },
-        {
-            "order": 11,
-            "type": "theological_depth",
-            "mood": "wonder",
-            "image_url": "empty_jar_well.png",
-            "title": "Ang banggang iniwan niya",
-            "subtitle": "Ano ang kahulugan ng isang iniwanang banga.",
-            "content": "Sa nakaraang pagtatagpo nakita natin si Bartimeo na naghagis ng kanyang balabal bago pa man matanggap ang kanyang pagpapagaling — pananampalataya na bumitaw bago pa man may mahawakan.\n\nIniwanan niya ang kanyang banga pagkatapos ng pagtatagpo. Ang inilagay ni Jesus sa loob niya ay nagpawala ng kanyang dalahin.\n\nDalawang tao. Dalawang iniwanang bagay. Ang parehong Jesus.\n\nNgunit may higit pa sa kanyang ginawa.\n\n🪣 Sa Griyego, ang tanong na dinala niya sa bayan ay may himig ng kawalan ng katiyakan: Siya na kaya ang Cristo?\n\nHindi siya dumating na nagpapahayag. Dumating siya na nag-aanyaya. Alam niya na ang isang babae na may kanyang kasaysayan ay hindi paniniwalaan kung gumawa siya ng pahayag. Kaya binalot niya ang pahayag sa isang tanong na nagpilit sa bawat isa na pumunta at tingnan ang kanilang sarili.\n\nHindi ito dahil sa kawalang-muwang; iyon ay bunga ng karunungan.\n\nAt gumana ito.\n\n📖 Juan 4:30 (MBB)\n«Kaya't lumabas ng bayan ang mga tao at nagpunta kay Jesus.»",
-            "revelation_key": "Dinala niya ang kanyang sugat bilang kanyang patotoo. At isang buong bayan ang lumabas upang makita.",
-            "scripture_connections": [
-                {
-                    "reference": "2 Mga Taga-Corinto 12:9",
-                    "text": "ganito ang kanyang sagot, \"Ang pagpapala ko ay sapat sa lahat ng pangangailangan mo; lalong nahahayag ang aking kapangyarihan kung ikaw ay mahina.\" Kaya't buong galak kong ipagmamalaki ang aking mga kahinaan upang lalo kong madama ang kapangyarihan ni Cristo."
-                },
-                {
-                    "reference": "Mga Taga-Roma 8:28",
-                    "text": "Alam nating sa lahat ng bagay ay gumagawa ang Diyos para sa ikabubuti ng mga nagmamahal sa kanya, silang mga tinawag ayon sa kanyang layunin."
-                }
-            ]
-        },
-        {
-            "order": 12,
-            "type": "character_moment",
-            "mood": "awe",
-            "image_url": "city_samaritans_coming.png",
-            "title": "At marami ang naniwala",
-            "subtitle": "Dahil sa salita ng babae.",
-            "content": "Kailangan nating maunawaan ang ibig sabihin nito.\n\nSa unang siglo, walang pampublikong tinig ang isang babae. Ang isang Samaritanang babae na may kanyang kasaysayan ay mas wala pa. Walang kultural o panlipunang dahilan ang mga lalaki sa bayang iyon upang makinig sa kanya.\n\nAt lumabas sila.\n\nIyon ay hindi normal. Iyon ay supernatural.\n\n📖 Juan 4:39 (MBB)\n«Maraming Samaritano sa bayang iyon ang nanalig kay Jesus dahil sa patotoo ng babae, \"Sinabi niya sa akin ang lahat ng aking ginawa.»\n\nSi Juan — isang unang-siglong Judiong manunulat na nabuo sa kulturang iyon — ay itinala na ang babaeng ito ang nagdala ng isang buong bayan sa Mesiyas. Hindi ito maipaliwanag maliban sa gawa ng Banal na Espiritu.\n\n📖 Juan 4:41-42 (MBB)\n«At marami pang sumampalataya nang mapakinggan siya. Pagkatapos, sinabi nila sa babae, \"Naniniwala kami ngayon, hindi na dahil sa sinabi mo kundi dahil sa narinig namin siya. Alam na naming siya nga ang Tagapagligtas ng sangkatauhan.»\n\nDumating siya nang mag-isa. Umalis siyang isang kilusan.\nDumating siyang may dalahing kahihiyan. Umalis siyang may patotoo.\nDumating siyang magtatago. Umalis siyang maghahanap ng iba.\n\nIyon ang ginagawa ni Jesus. Sa ating kawalang-sakdal iniiibig niya tayo, binabago, at ginagamit tayo.",
-            "revelation_key": "Kinuha ng Diyos ang taong itinakwil ng mundo at ginawa siyang unang ebanghelistang Samaritana."
-        },
-        {
-            "order": 13,
-            "type": "cinematic_scene",
-            "mood": "peace",
-            "image_url": "well_at_dusk.png",
-            "title": "Ang balon sa paglubog ng araw",
-            "narrative": "Ang parehong balon. Ang parehong lugar.\n\nNgunit wala na ang banga. Ang lubid lamang na nakasabit sa gilid.\n\nMay nangyari dito.",
-            "ambient_sound": "evening_wind",
-            "haptic": null,
-            "verse_overlay": {
-                "reference": "Juan 4:42",
-                "text": "Pagkatapos, sinabi nila sa babae, \"Naniniwala kami ngayon, hindi na dahil sa sinabi mo kundi dahil sa narinig namin siya. Alam na naming siya nga ang Tagapagligtas ng sangkatauhan.\""
-            },
-            "revelation_key": "Ang isang pagtatagpo kay Jesus ay palaging nag-iiwan ng isang bagay na naiiba sa lugar kung saan ito nangyari."
-        },
-        {
-            "order": 14,
-            "type": "discovery_activation",
-            "icon": "🪣",
-            "mood": "intimate",
-            "image_url": "woman_running_city.png",
-            "title": "Ang iyong pagtatagpo",
-            "subtitle": "Anong balon ang patuloy mong pinupuntahan?",
-            "discovery_questions": [
-                {
-                    "category": "Ang iyong pagkauhaw",
-                    "question": "Bumabalik siya sa parehong balon araw-araw. Ano ang patuloy mong pinupuntahan, umaasang sa pagkakataong ito ay magiiba na? Ano talaga ang hinahanap mo roon?"
-                },
-                {
-                    "category": "Ang pagkakilala sa iyo",
-                    "question": "Alam ni Jesus ang lahat tungkol sa kanya at nanatili pa rin. May isang bagay ba sa iyong kuwento na naniniwala kang magtataboy kay Jesus kapag nalaman niya ito? Ano ang ibig sabihin kung malalaman mong alam na niya — at nandito pa rin siya?"
-                },
-                {
-                    "category": "Ang iyong banga",
-                    "question": "Iniwanan niya ang banga dahil nagbago ang isang bagay sa loob niya. Ano ang dala mo na inaanyayahan ka ni Jesus na iwan sa balon?"
-                },
-                {
-                    "category": "Ang iyong patotoo",
-                    "question": "Hindi naghintay na maging perpekto ang lahat bago siya pumunta. Pumunta siya kasama ang mayroon siya: ang kanyang kuwento at isang tanong. Sino ang kailangang marinig ang ginawa ni Jesus sa iyong buhay — ganoon ka na, ngayon?"
-                }
-            ],
-            "prayer": {
-                "title": "Panalangin ng isang pumunta nang mag-isa sa katanghalian",
-                "content": "Panginoong Jesus, pumupunta ako sa balong ito.\n\nHindi dahil malinaw ang lahat para sa akin. Hindi dahil malinis ang aking kuwento. Pumupunta ako dahil nauuhaw ako at nasubukan ko na ang ibang mga lugar.\n\nAlam Mo ang lahat tungkol sa akin. Bawat balon na pinuntahan ko. Bawat pagkakataon na naghanap ako sa maling lugar para sa bagay na tanging Ikaw lamang ang makapagbibigay.\n\nAt nandito Ka pa rin. Hindi upang ilantad ako. Upang hanapin ako.\n\nTulad niya, nais ko ang pagtatagpong nagbabago ng aking dalahin. Na ang nagsimula bilang pagkauhaw, ay lalabas bilang patotoo.\n\nBaguhin Mo ako. Gamitin Mo ako. Sa aking kawalang-sakdal, sa aking kuwento, sa kung ano ako.\n\nBigyan Mo ako ng tubig na hindi kailanman nasisaid. At bigyan Mo ako ng tapang na iwan ang aking banga.\n\nSa pangalan ni Jesus, amen."
-            }
-        },
-        {
-            "order": 15,
-            "type": "completion",
-            "mood": "open",
-            "image_url": "woman_well_joy.png",
-            "completion_verse": {
-                "reference": "Juan 4:28-29",
-                "text": "Iniwanan ng babae ang kanyang banga, bumalik sa bayan at sinabi sa mga tagaroon, \"Halikayo! Tingnan ninyo ang taong nagsabi sa akin ng lahat ng ginawa ko. Siya na kaya ang Cristo?\"",
-                "bible_version": "Magandang Balita Biblia"
-            },
-            "reflection_prompt": "Anong banga ang kailangan mong iwan ngayon? At sino ang kailangang marinig ang iyong 'halika at tingnan'?",
-            "celebration_type": "gentle_light"
-        }
+  "id": "woman_well_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fil",
+  "bible_version": "Magandang Balita Biblia",
+  "version": "1.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "Ang Babaeng Samaritana",
+    "testament": "new",
+    "scripture_reference": "Juan 4:1-42",
+    "mood_primary": "midday",
+    "accent_color": "#3d1a00",
+    "emoji": "⛲",
+    "tags": [
+      "pagkauhaw",
+      "kahihiyan",
+      "tubig-buhay",
+      "pagkakakilanlan",
+      "ebanghelismo",
+      "biyaya",
+      "samaritana",
+      "jesus",
+      "pagtatagpo",
+      "pagpapanumbalik"
     ]
+  },
+  "key_verse": {
+    "reference": "Juan 4:14",
+    "text": "Ngunit ang sinumang uminom ng tubig na ibibigay ko sa kanya ay hindi na muling mauuhaw kailanman. Ang tubig na ibibigay ko ay magiging batis sa loob niya, at patuloy na bubukal at magbibigay sa kanya ng buhay na walang hanggan.\"",
+    "bible_version": "Magandang Balita Biblia"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "heat",
+      "image_url": "well_midday_sun.png",
+      "title": "Kinakailangan niya",
+      "narrative": "Umiilag ang mga Judio sa Samaria. Daan-taon ng paghamak sa pagitan ng dalawang bayang dating iisa. Mga araw ng pag-iikot kaysa sa pagtapak sa lupaing iyon.\n\nHindi umikot si Jesus.\n\nMay isang babae sa balon na hindi pa nalalaman na hinahanap siya.",
+      "ambient_sound": "desert_wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 4:4",
+        "text": "ngunit kailangang sa Samaria siya dumaan."
+      },
+      "revelation_key": "Binago ni Jesus ang kanyang ruta para sa isang babaeng sinukuan na ng mundo sa paghahanap."
+    },
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "heat",
+      "image_url": "well_jesus_waiting.png",
+      "title": "Balon ni Jacob. Alas dose.",
+      "narrative": "Pagod sa paglalakbay. Mag-isa sa balon.\n\nAng ika-anim na oras — ang sikat ng tanghaling tapat.\n\nAng parehong oras na darating siya.",
+      "ambient_sound": "desert_wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 4:5-6",
+        "text": "Dumating siya sa isang bayan na tinatawag na Sicar. Malapit ito sa bukid na ibinigay ni Jacob sa kanyang anak na si Jose. Dito matatagpuan ang balon ni Jacob. Dahil siya'y napagod sa paglalakbay, umupo si Jesus sa tabi ng balon. Halos katanghalian na noon."
+      },
+      "revelation_key": "Hindi nagkataon ang lugar. Hindi nagkataon ang oras. Hindi siya naroon nang walang dahilan."
+    },
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "woman_jar_approaching.png",
+      "verse_reference": "Juan 4:7-9",
+      "verse_text": "May isang Samaritanang dumating upang umigib, at sinabi ni Jesus sa kanya, \"Maaari mo ba akong bigyan ng maiinom?\" Wala noon ang kanyang mga alagad dahil sila'y bumibili ng pagkain sa bayan. Sinabi sa kanya ng babae, \"Ikaw ay Judio at Samaritana naman ako! Bakit ka humihingi sa akin ng inumin?\" Sinabi niya iyon sapagkat hindi nakikihalubilo ang mga Judio sa mga Samaritano.",
+      "reflection": "Pumupunta ang mga babae sa balon sa umaga. Magkasama. Pumunta siya nang tanghali. Mag-isa.\n\nIyon ay hindi maliit na detalye. Sa isang desisyong iyon, makikita mo na ang buong kuwento ng buhay niya.\n\nAt ang unang nagsalita sa kanya ay hindi siya humusga. Hindi siya binalewala. Humingi siya sa kanya ng isang bagay.\n\nGinawang mahina ng Anak ng Diyos ang kanyang sarili sa harap niya bago pa man niya malaman ang kanyang pangalan.\n\nGanyan pumapasok ang biyaya. Hindi sa kapangyarihan. Sa kababaang-loob.",
+      "revelation_key": "Si Jesus ang nagsalita muna. Sa kanya. Sa lugar kung saan natuto siyang maging hindi nakikita."
+    },
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "mood": "shifting",
+      "image_url": "water_ripple.png",
+      "title": "Dalawang Uri ng Pagkauhaw",
+      "subtitle": "Nagsasalita siya tungkol sa tubig. Nagsasalita siya tungkol sa higit pa.",
+      "content": "Nag-alok si Jesus ng tubig na buhay. Naunawaan niya ito nang literal: tubig na bumabukal, tubig na hindi mo na kailangang dumating at kumuha sa tanghaling tapat sa ilalim ng araw.\n\nNgunit nasa isip pa rin niya ang balon. Ang lubid. Ang lahat ng dinala niya doon araw-araw.\n\nKailanman. Hindi nang matagal. Kailanman.\n\n💧 Totoo ang balon ni Jacob. Ito ay kasaysayan. Isang pamana ng daan-taon. Hindi ito binalewala ni Jesus. Ngunit ang inaalok niya ay hindi nanggagaling sa labas. Nanggagaling ito sa loob. Hindi ito isang bukal na dapat kang bumalik. Ito ay isang batis na umaangat sa loob ng tatanggap nito.\n\nNakilala niya ito mismo, kahit hindi pa lubos na naiintindihan:\n\nNag-iisip pa rin siya tungkol sa balon.\n\nNgunit lumalapit na siya sa kanya. At iyon ay sapat na.",
+      "revelation_key": "Minsan ang ating pagkauhaw ay nagdadala sa atin kay Jesus bago pa man ang ating pag-unawa.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 4:15",
+          "text": "Sinabi ng babae, \"Ginoo, bigyan po ninyo ako ng tubig na ito upang hindi na ako mauhaw, ni pumarito pa upang sumalok muli."
+        },
+        {
+          "reference": "Isaias 55:1",
+          "text": "Sinabi ni Yahweh, \"Narito ang tubig, kayong mga nauuhaw. Ang mga walang salapi ay lumapit din dito, bumili kayo ng pagkain at ito'y kainin ninyo! Bumili kayo ng alak at gatas kahit walang salaping pambayad."
+        },
+        {
+          "reference": "Juan 7:37",
+          "text": "Nang dumating ang huli at pinakamahalagang araw ng pista, tumayo si Jesus at sinabi nang malakas, \"Ang sinumang nauuhaw ay lumapit sa akin at uminom.\""
+        }
+      ],
+      "verse_overlay": {
+        "reference": "Juan 4:13-14",
+        "text": "Sumagot si Jesus, \"Ang bawat uminom ng tubig na ito'y muling mauuhaw, ngunit ang sinumang uminom ng tubig na ibibigay ko sa kanya ay hindi na muling mauuhaw kailanman. Ang tubig na ibibigay ko ay magiging batis sa loob niya, at patuloy na bubukal at magbibigay sa kanya ng buhay na walang hanggan."
+      }
+    },
+    {
+      "order": 5,
+      "type": "cinematic_scene",
+      "mood": "exposed",
+      "image_url": "woman_still_moment.png",
+      "title": "Sinabi ni Jesus sa kanya, 'Umuwi ka at isama mo rito ang iyong asawa.'",
+      "narrative": "Sumagot siya ng pinakatapat na bagay na nasabi niya sa balong iyon.",
+      "ambient_sound": "silence_heavy",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 4:16-18",
+        "text": "\"Umuwi ka at isama mo rito ang iyong asawa,\" wika ni Jesus. \"Wala akong asawa,\" sagot ng babae. Sinabi ni Jesus, \"Tama ang sinabi mong wala kang asawa sapagkat lima na ang iyong naging asawa, at ang kinakasama mo ngayon ay hindi mo asawa. Totoo nga ang sinabi mo.\""
+      },
+      "revelation_key": "Lubos na kilala niya siya. At sinabi niya: tama ang iyong sinabi."
+    },
+    {
+      "order": 6,
+      "type": "character_moment",
+      "mood": "exposed",
+      "image_url": "woman_face_grace.png",
+      "title": "Tama ang iyong sinabi",
+      "subtitle": "Ang hindi sinabi ni Jesus",
+      "content": "Hindi niya sinabi: ikaw ay sira.\nHindi niya sinabi: dapat kang mahiya.\nHindi niya sinabi: ayusin mo ang iyong sarili bago tayo mag-usap.\n\nSinabi niya: tama ang iyong sinabi.\n\nPinuri niya ang kanyang katapatan sa eksaktong sandaling inihayag niya ang kanyang dalahin.\n\nLimang asawa. Limang balon. Limang pagtatangkang papawiin ang pagkauhaw na hindi nila maabot.\n\nHindi niya binanggit ang kanyang nakaraan upang hiyain siya. Binanggit niya ito upang ipakita sa kanya na kilala niya siya — at nanatili pa rin.\n\nIyan ang kaibahan ng mundo kay Jesus. Inilalantad tayo ng mundo para mapahiya. Inilalantad ni Jesus upang palayain.\n\nPumunta siya upang magtago. Dumating si Jesus upang hanapin siya.",
+      "revelation_key": "Alam ni Jesus ang bawat balon na pinuntahan niya. At hindi siya umalis."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "awakening",
+      "image_url": "woman_eyes_wide.png",
+      "title": "Ginoo, nakikita ko pong kayo ay isang propeta",
+      "narrative": "May kumikilos sa loob niya.\n\nHindi pagtakas. Pagkilala. Nararamdaman ng kanyang espiritu na hindi siya nakikipag-usap sa isang ordinaryong tao.\n\nAng takot, ang pag-usisa, ang isang bagay na nagigising sa loob niya, ay nagdala sa kanya na itanong ang pinakamatandang tanong sa pagitan ng kanyang bayan at ng mga Judio. Hindi upang makaiwas. Upang maunawaan.",
+      "ambient_sound": "wind_shifting",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 4:19-20",
+        "text": "Sinabi ng babae, \"Ginoo, isa kang propeta, hindi nga ba? Dito sa bundok na ito sumamba sa Diyos ang aming mga ninuno, ngunit sinasabi ninyong mga Judio na sa Jerusalem lamang dapat sambahin ang Diyos.\""
+      },
+      "revelation_key": "Bago pa man niya malaman kung sino siya, kinikilala na ng kanyang espiritu ang kanyang presensya."
+    },
+    {
+      "order": 8,
+      "type": "theological_depth",
+      "mood": "shifting",
+      "image_url": "well_light_breaking.png",
+      "title": "Sa espiritu at sa katotohanan",
+      "subtitle": "Isang sagot na higit pa sa tanong.",
+      "content": "Hindi umiwas si Jesus sa kanyang tanong. Sinagot niya ito nang buo.\n\nNgunit dinala niya siya nang higit pa sa inaasahan niya.\n\nHindi bundok. Hindi templo. Hindi tamang lokasyon.\n\nIsang relasyon. Panloob. Totoo.\n\nDumating siya na may tanong tungkol sa mga lugar. Nagsasalita siya sa kanya tungkol sa puso.",
+      "revelation_key": "Tinanong niya kung saan sasamba. Ipinakita niya sa kanya kung paano.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 4:23",
+          "text": "Subalit dumarating na ang panahon at ngayon na nga, na ang mga tunay na sumasamba sa Ama ay sasamba sa kanya sa espiritu at sa katotohanan. Sapagkat ganyan ang uri ng pagsambang kinalulugdan ng Ama."
+        }
+      ],
+      "verse_overlay": {
+        "reference": "Juan 4:21-24",
+        "text": "Sinabi naman ni Jesus, \"Maniwala ka sa akin, darating na ang panahon na sasambahin ninyo ang Ama hindi na sa bundok na ito o sa Jerusalem. Hindi ninyo kilala ang inyong sinasamba, ngunit kilala namin ang aming sinasamba, sapagkat ang kaligtasan ay nagmumula sa mga Judio. Subalit dumarating na ang panahon at ngayon na nga, na ang mga tunay na sumasamba sa Ama ay sasamba sa kanya sa espiritu at sa katotohanan. Sapagkat ganyan ang uri ng pagsambang kinalulugdan ng Ama. Ang Diyos ay Espiritu kaya dapat siyang sambahin sa espiritu at sa katotohanan."
+      }
+    },
+    {
+      "order": 9,
+      "type": "scripture_moment",
+      "mood": "revelation",
+      "image_url": "jesus_i_am_declaration.png",
+      "verse_reference": "Juan 4:25-26",
+      "verse_text": "Sinabi ng babae, \"Nalalaman ko pong darating ang Mesiyas, ang tinatawag na Cristo. Pagdating niya, siya ang magpapahayag sa amin ng lahat ng bagay.\" \"Ako na kausap mo ngayon ang iyong tinutukoy,\" sabi ni Jesus.",
+      "reflection": "Sa buong Ebanghelyo ni Juan, hindi direktang inihahayag ni Jesus kung sino siya. Nagsasalita siya sa mga tanda, sa mga larawan, sa mga pahayag na nangangailangan ng pagkilatis.\n\nDito, sa tabi ng isang balon sa Samaria, sa katanghalian, sinabi niya ito nang malinaw.\n\nAt sinabi niya ito sa kanya.\n\nHindi sa isang Levitang pari, ni isang Pariseo, ni isang alagad.\n\nKundi sa babae na pumuntang mag-isa — nahihiya, nakayuko.\n\nMula sa pagtatanong kung si Jesus ay higit pa ba sa patriyarko na si Jacob, nakatanggap siya ng pahayag ng Mesiyas. Sa iisang pag-uusap sa tabi ng balong iyon.",
+      "revelation_key": "Ang unang taong nakatanggap ng makapangyarihang pahayag na ito ay ang huli na inaasahan ng mundo. Ganyan gumagawa ang Diyos."
+    },
+    {
+      "order": 10,
+      "type": "cinematic_scene",
+      "mood": "turning_point",
+      "image_url": "jar_left_at_well.png",
+      "title": "Iniwanan ng babae ang kanyang banga",
+      "narrative": "Dumating ang kanyang mga alagad. Namangha sila na nakikipag-usap si Jesus sa isang babae. Wala ni isa sa kanila ang nagtanong ng kahit ano.\n\nAt gumawa siya ng isang desisyon.",
+      "ambient_sound": "footsteps_running",
+      "haptic": "light_pulse",
+      "verse_overlay": {
+        "reference": "Juan 4:27-29",
+        "text": "Dumating ang kanyang mga alagad nang sandaling iyon, at nabigla sila nang makita nilang nakikipag-usap si Jesus sa isang Samaritana. Ngunit isa man sa kanila'y walang nagtanong sa babae, \"Ano ang kailangan ninyo?\" Wala ring nagtanong kay Jesus, \"Bakit ninyo siya kinakausap?\" Iniwanan ng babae ang kanyang banga, bumalik sa bayan at sinabi sa mga tagaroon, \"Halikayo! Tingnan ninyo ang taong nagsabi sa akin ng lahat ng ginawa ko. Siya na kaya ang Cristo?\""
+      },
+      "revelation_key": "Hindi aksidente ang pag-iwan ng banga. Nabago siya. Ang tubig na pinuntahan niya ay hindi na sapat."
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "wonder",
+      "image_url": "empty_jar_well.png",
+      "title": "Ang banggang iniwan niya",
+      "subtitle": "Ano ang kahulugan ng isang iniwanang banga.",
+      "content": "Sa nakaraang pagtatagpo nakita natin si Bartimeo na naghagis ng kanyang balabal bago pa man matanggap ang kanyang pagpapagaling — pananampalataya na bumitaw bago pa man may mahawakan.\n\nIniwanan niya ang kanyang banga pagkatapos ng pagtatagpo. Ang inilagay ni Jesus sa loob niya ay nagpawala ng kanyang dalahin.\n\nDalawang tao. Dalawang iniwanang bagay. Ang parehong Jesus.\n\nNgunit may higit pa sa kanyang ginawa.\n\n🪣 Sa Griyego, ang tanong na dinala niya sa bayan ay may himig ng kawalan ng katiyakan: Siya na kaya ang Cristo?\n\nHindi siya dumating na nagpapahayag. Dumating siya na nag-aanyaya. Alam niya na ang isang babae na may kanyang kasaysayan ay hindi paniniwalaan kung gumawa siya ng pahayag. Kaya binalot niya ang pahayag sa isang tanong na nagpilit sa bawat isa na pumunta at tingnan ang kanilang sarili.\n\nHindi ito dahil sa kawalang-muwang; iyon ay bunga ng karunungan.\n\nAt gumana ito.",
+      "revelation_key": "Dinala niya ang kanyang sugat bilang kanyang patotoo. At isang buong bayan ang lumabas upang makita.",
+      "scripture_connections": [
+        {
+          "reference": "2 Mga Taga-Corinto 12:9",
+          "text": "ganito ang kanyang sagot, \"Ang pagpapala ko ay sapat sa lahat ng pangangailangan mo; lalong nahahayag ang aking kapangyarihan kung ikaw ay mahina.\" Kaya't buong galak kong ipagmamalaki ang aking mga kahinaan upang lalo kong madama ang kapangyarihan ni Cristo."
+        },
+        {
+          "reference": "Mga Taga-Roma 8:28",
+          "text": "Alam nating sa lahat ng bagay ay gumagawa ang Diyos para sa ikabubuti ng mga nagmamahal sa kanya, silang mga tinawag ayon sa kanyang layunin."
+        }
+      ],
+      "verse_overlay": {
+        "reference": "Juan 4:30",
+        "text": "Kaya't lumabas ng bayan ang mga tao at nagpunta kay Jesus."
+      }
+    },
+    {
+      "order": 12,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "city_samaritans_coming.png",
+      "title": "At marami ang naniwala",
+      "subtitle": "Dahil sa salita ng babae.",
+      "content": "Kailangan nating maunawaan ang ibig sabihin nito.\n\nSa unang siglo, walang pampublikong tinig ang isang babae. Ang isang Samaritanang babae na may kanyang kasaysayan ay mas wala pa. Walang kultural o panlipunang dahilan ang mga lalaki sa bayang iyon upang makinig sa kanya.\n\nAt lumabas sila.\n\nIyon ay hindi normal. Iyon ay supernatural.\n\nSi Juan — isang unang-siglong Judiong manunulat na nabuo sa kulturang iyon — ay itinala na ang babaeng ito ang nagdala ng isang buong bayan sa Mesiyas. Hindi ito maipaliwanag maliban sa gawa ng Banal na Espiritu.\n\nDumating siya nang mag-isa. Umalis siyang isang kilusan.\nDumating siyang may dalahing kahihiyan. Umalis siyang may patotoo.\nDumating siyang magtatago. Umalis siyang maghahanap ng iba.\n\nIyon ang ginagawa ni Jesus. Sa ating kawalang-sakdal iniiibig niya tayo, binabago, at ginagamit tayo.",
+      "revelation_key": "Kinuha ng Diyos ang taong itinakwil ng mundo at ginawa siyang unang ebanghelistang Samaritana.",
+      "verse_overlay": {
+        "reference": "Juan 4:39",
+        "text": "Maraming Samaritano sa bayang iyon ang nanalig kay Jesus dahil sa patotoo ng babae, \"Sinabi niya sa akin ang lahat ng aking ginawa."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Juan 4:41-42",
+          "text": "At marami pang sumampalataya nang mapakinggan siya. Pagkatapos, sinabi nila sa babae, \"Naniniwala kami ngayon, hindi na dahil sa sinabi mo kundi dahil sa narinig namin siya. Alam na naming siya nga ang Tagapagligtas ng sangkatauhan."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "cinematic_scene",
+      "mood": "peace",
+      "image_url": "well_at_dusk.png",
+      "title": "Ang balon sa paglubog ng araw",
+      "narrative": "Ang parehong balon. Ang parehong lugar.\n\nNgunit wala na ang banga. Ang lubid lamang na nakasabit sa gilid.\n\nMay nangyari dito.",
+      "ambient_sound": "evening_wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 4:42",
+        "text": "Pagkatapos, sinabi nila sa babae, \"Naniniwala kami ngayon, hindi na dahil sa sinabi mo kundi dahil sa narinig namin siya. Alam na naming siya nga ang Tagapagligtas ng sangkatauhan.\""
+      },
+      "revelation_key": "Ang isang pagtatagpo kay Jesus ay palaging nag-iiwan ng isang bagay na naiiba sa lugar kung saan ito nangyari."
+    },
+    {
+      "order": 14,
+      "type": "discovery_activation",
+      "icon": "🪣",
+      "mood": "intimate",
+      "image_url": "woman_running_city.png",
+      "title": "Ang iyong pagtatagpo",
+      "subtitle": "Anong balon ang patuloy mong pinupuntahan?",
+      "discovery_questions": [
+        {
+          "category": "Ang iyong pagkauhaw",
+          "question": "Bumabalik siya sa parehong balon araw-araw. Ano ang patuloy mong pinupuntahan, umaasang sa pagkakataong ito ay magiiba na? Ano talaga ang hinahanap mo roon?"
+        },
+        {
+          "category": "Ang pagkakilala sa iyo",
+          "question": "Alam ni Jesus ang lahat tungkol sa kanya at nanatili pa rin. May isang bagay ba sa iyong kuwento na naniniwala kang magtataboy kay Jesus kapag nalaman niya ito? Ano ang ibig sabihin kung malalaman mong alam na niya — at nandito pa rin siya?"
+        },
+        {
+          "category": "Ang iyong banga",
+          "question": "Iniwanan niya ang banga dahil nagbago ang isang bagay sa loob niya. Ano ang dala mo na inaanyayahan ka ni Jesus na iwan sa balon?"
+        },
+        {
+          "category": "Ang iyong patotoo",
+          "question": "Hindi naghintay na maging perpekto ang lahat bago siya pumunta. Pumunta siya kasama ang mayroon siya: ang kanyang kuwento at isang tanong. Sino ang kailangang marinig ang ginawa ni Jesus sa iyong buhay — ganoon ka na, ngayon?"
+        }
+      ],
+      "prayer": {
+        "title": "Panalangin ng isang pumunta nang mag-isa sa katanghalian",
+        "content": "Panginoong Jesus, pumupunta ako sa balong ito.\n\nHindi dahil malinaw ang lahat para sa akin. Hindi dahil malinis ang aking kuwento. Pumupunta ako dahil nauuhaw ako at nasubukan ko na ang ibang mga lugar.\n\nAlam Mo ang lahat tungkol sa akin. Bawat balon na pinuntahan ko. Bawat pagkakataon na naghanap ako sa maling lugar para sa bagay na tanging Ikaw lamang ang makapagbibigay.\n\nAt nandito Ka pa rin. Hindi upang ilantad ako. Upang hanapin ako.\n\nTulad niya, nais ko ang pagtatagpong nagbabago ng aking dalahin. Na ang nagsimula bilang pagkauhaw, ay lalabas bilang patotoo.\n\nBaguhin Mo ako. Gamitin Mo ako. Sa aking kawalang-sakdal, sa aking kuwento, sa kung ano ako.\n\nBigyan Mo ako ng tubig na hindi kailanman nasisaid. At bigyan Mo ako ng tapang na iwan ang aking banga.\n\nSa pangalan ni Jesus, amen."
+      }
+    },
+    {
+      "order": 15,
+      "type": "completion",
+      "mood": "open",
+      "image_url": "woman_well_joy.png",
+      "completion_verse": {
+        "reference": "Juan 4:28-29",
+        "text": "Iniwanan ng babae ang kanyang banga, bumalik sa bayan at sinabi sa mga tagaroon, \"Halikayo! Tingnan ninyo ang taong nagsabi sa akin ng lahat ng ginawa ko. Siya na kaya ang Cristo?\"",
+        "bible_version": "Magandang Balita Biblia"
+      },
+      "reflection_prompt": "Anong banga ang kailangan mong iwan ngayon? At sino ang kailangang marinig ang iyong 'halika at tingnan'?",
+      "celebration_type": "gentle_light"
+    }
+  ]
 }
