@@ -135,7 +135,17 @@
       "verse_reference": "Luc 19:8",
       "verse_text": "Zachée, se tenant debout, dit au Seigneur: Voici, Seigneur, je donne la moitié de mes biens aux pauvres; et si j'ai fait tort à quelqu'un, je lui rends le quadruple.",
       "reflection": "Les spécialistes du grec débattent pour savoir si Zachée agissait déjà ainsi avant la rencontre, ou s'il en fut transformé. Le texte original peut se lire dans les deux sens.\n\nMais voici ce que nous savons : debout devant Jésus, Zachée offrit la moitié de tout ce qu'il possédait. Là où le jeune homme riche (Luc 18:18-23) n'avait rien pu lâcher lorsque Jésus l'y invita, Zachée lâcha la moitié sans qu'on le lui ait demandé. Et il ne s'arrêta pas au minimum que la loi exigeait — il alla quatre fois plus loin (Lévitique 5:16).\n\nCela ne s'explique que par un cœur qui avait déjà trouvé quelque chose de plus précieux que ses richesses. Peu importe si ce fut avant ou pendant la rencontre — face à Jésus, Zachée choisit autrement. Et Jésus répondit par la déclaration de salut la plus complète de tout l'Évangile de Luc.\n\nC'est là la miséricorde de Dieu : elle n'attend pas que tu la mérites, mais que tu y répondes.",
-      "revelation_key": "La générosité de Zachée ne fut pas la cause de son salut. Elle fut le signe que le salut avait déjà eu lieu."
+      "revelation_key": "La générosité de Zachée ne fut pas la cause de son salut. Elle fut le signe que le salut avait déjà eu lieu.",
+      "scripture_connections": [
+        {
+          "reference": "Luc 18:18-23",
+          "text": "Un chef interrogea Jésus, et dit: Bon maître, que dois-je faire pour hériter la vie éternelle? Jésus lui répondit: Pourquoi m'appelles-tu bon? Il n'y a de bon que Dieu seul. Tu connais les commandements: Tu ne commettras point d'adultère; tu ne tueras point; tu ne déroberas point; tu ne diras point de faux témoignage; honore ton père et ta mère. Il dit: J'ai observé toutes ces choses dès ma jeunesse. Lorsque Jésus entendit cela, il lui dit: Il te manque encore une chose; vends tout ce que tu as, distribue-le aux pauvres, et tu auras un trésor dans les cieux. Puis, viens, et suis-moi. Lorsqu'il entendit ces paroles, il devint tout triste; car il était très riche."
+        },
+        {
+          "reference": "Lévitique 5:16",
+          "text": "Il restituera ce dont il se sera rendu coupable envers les choses saintes, en y ajoutant le cinquième, et le remettra au sacrificateur. Le sacrificateur fera pour lui l'expiation avec le bélier de la culpabilité, et il lui sera pardonné."
+        }
+      ]
     },
     {
       "order": 9,

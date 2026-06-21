@@ -135,7 +135,17 @@
       "verse_reference": "Lucas 19:8",
       "verse_text": "E, levantando-se Zaqueu, disse ao Senhor: Senhor, eis aqui dou aos pobres a metade dos meus bens; e, se em alguma coisa tenho defraudado alguém, lho restituo quadruplicado.",
       "reflection": "Os estudiosos do grego debatem se Zaqueu já agia assim antes do encontro, ou se foi transformado por ele. O texto original pode ser entendido das duas formas.\n\nMas o que sabemos é isto: de pé diante de Jesus, Zaqueu ofereceu a metade de tudo o que tinha. Onde o jovem rico (Lucas 18:18-23) não conseguiu soltar nada quando Jesus o convidou, Zaqueu soltou a metade sem que Jesus pedisse. E não ficou no mínimo exigido pela lei — foi quatro vezes além do que era requerido (Levítico 5:16).\n\nIsso só se explica por um coração que já havia encontrado algo mais valioso que sua riqueza. Não importa se foi antes ou durante o encontro — diante de Jesus, Zaqueu escolheu diferente. E Jesus respondeu com a declaração de salvação mais completa de todo o Evangelho de Lucas.\n\nEssa é a misericórdia de Deus: ele não espera que você a mereça, espera que você responda.",
-      "revelation_key": "A generosidade de Zaqueu não foi a causa da sua salvação. Foi a evidência de que ela já havia acontecido."
+      "revelation_key": "A generosidade de Zaqueu não foi a causa da sua salvação. Foi a evidência de que ela já havia acontecido.",
+      "scripture_connections": [
+        {
+          "reference": "Lucas 18:18-23",
+          "text": "E um certo príncipe lhe perguntou, dizendo: Bom Mestre, que farei para herdar a vida eterna? E Jesus lhe disse: Por que me chamas bom? Nenhum há bom, senão só Deus. Sabes os mandamentos: Não adulterarás; não matarás; não furtarás; não dirás falso testemunho; honra teu pai e tua mãe. E ele disse: Tudo isso guardei desde a minha mocidade. Jesus, ouvindo isso, disse-lhe: Ainda te falta uma coisa: vende tudo o que tens, e dá-o aos pobres, e terás um tesouro nos céus; e vem e segue-me. Mas ele, ouvindo estas coisas, entristeceu-se muito, porque era muito rico."
+        },
+        {
+          "reference": "Levítico 5:16",
+          "text": "Assim, restituirá o que ele tirou das coisas sagradas, e ainda de mais acrescentará o seu quinto, e o dará ao sacerdote; assim, o sacerdote, com o carneiro da expiação, fará expiação por ela, e ser-lhe-á perdoado o pecado."
+        }
+      ]
     },
     {
       "order": 9,
