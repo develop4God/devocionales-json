@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "es",
   "bible_version": "RVR1960",
-  "version": "2.0",
+  "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 13,
   "meta": {
@@ -31,6 +31,7 @@
       "type": "cinematic_scene",
       "mood": "witness",
       "image_url": "saulo_stephen_stoning_mantles.png",
+      "image_prompt": "A young man in his late twenties — dark olive skin, strong jaw, short dark curly hair, wearing a fine dark woolen tunic of a scholar — sits on a large stone at the edge of a crowd, calmly folding a pile of outer cloaks across his lap. His expression is composed, deliberate, not disturbed. In the blurred background, a mob of figures raise their arms in anger toward a kneeling man whose face is upturned with light on it. The young man in the foreground does not look away — he watches with approval. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, dust in the air, cinematic afternoon light, no text.",
       "title": "Guardó los mantos.",
       "narrative": "No fue un espectador casual.\n\nEra un hombre joven que había subido desde Tarso hasta Jerusalén para estudiar con los mejores. Conocía la ley. Conocía las Escrituras. Y cuando la multitud decidió que Esteban merecía morir, los que arrojaban las piedras necesitaban manos libres para hacerlo mejor. Pusieron sus mantos a los pies de un joven llamado Saulo.\n\nY él los guardó.\n\nNo con indiferencia. El texto dice que consentía en la muerte de Esteban. Era una postura activa, informada, convencida. Mientras las piedras caían sobre el primer mártir de la iglesia, Saulo de Tarso estuvo presente, aprobó, y luego salió de allí con más determinación que antes.\n\nEsa es la persona que va a encontrar a Jesús.",
       "ambient_sound": "crowd_distant",
@@ -46,6 +47,7 @@
       "type": "character_moment",
       "mood": "certainty",
       "image_url": "saulo_pharisee_study_torchlight.png",
+      "image_prompt": "A young man in his late twenties — dark olive skin, short dark curly hair, fine dark woolen tunic — sits at a low wooden table covered in open scrolls, a clay oil lamp casting warm gold light across his face. His posture is upright, focused, eyes scanning a scroll. He holds a quill but is not writing — he is reading with total intensity, lips slightly moving. The room is a scholar's cell: plain stone walls, more scrolls on a shelf. His expression shows not pride but absolute certainty. Painterly warm 2D illustration, Mediterranean palette, warm amber light against deep shadows, cinematic close-up, no text.",
       "title": "El hombre más convencido de Israel.",
       "subtitle": "Lo que construyó antes del camino",
       "content": "Saulo no llegó a sus conclusiones por accidente.\n\nHabía nacido en Tarso, una ciudad universitaria del mundo greco-romano, lo que le daba dominio natural de la cultura y el idioma que luego necesitaría para llevar el evangelio a los gentiles. Pero su corazón era completamente hebreo. Su familia lo envió a Jerusalén para estudiar a los pies de Gamaliel, el rabino más respetado de su generación. Y Saulo no solo aprendió. Aventajó a muchos de sus contemporáneos en el judaísmo, ardiendo en celo por las tradiciones de sus padres.\n\nEra fariseo, hijo de fariseos. La secta más estricta, la más comprometida con la pureza de la fe.\n\n⚠️ Lo que esto significa:\n\nSaulo no perseguía a los seguidores de Jesús por maldad. Lo hacía por amor. Amor a Dios, amor a la ley, amor a Israel. En su mente, el movimiento que seguía a un carpintero crucificado era una herejía peligrosa que podía corromper al pueblo de Dios. Extirparlo era un acto de devoción.\n\n🔑 Esa es la trampa más difícil de todas: cuando el error más grande de tu vida lo estás cometiendo convencido de que sirves a Dios.",
@@ -56,6 +58,7 @@
       "type": "cinematic_scene",
       "mood": "urgency",
       "image_url": "saulo_road_damascus_dust.png",
+      "image_prompt": "A man in his late twenties — dark olive skin, short dark curly hair, fine dark woolen scholar's tunic now dusty from travel — walks with deliberate, rapid strides down a wide desert road. He is slightly ahead of several companions visible behind him. In his left hand he holds a rolled document secured with a seal. His jaw is set, his eyes fixed forward. The road extends toward a distant walled city on the horizon. Late afternoon sun casts long shadows. Dust rises from the road. Painterly warm 2D illustration, Mediterranean palette, ochre and burnt sienna tones, wide establishing shot, cinematic harsh afternoon light, no text.",
       "title": "Iba camino a Damasco.",
       "narrative": "No iba de viaje. Iba en misión.\n\nLlevaba cartas del sumo sacerdote: autorización formal para entrar a las sinagogas de Damasco, identificar a los que pertenecían al Camino, atarlos, y traerlos a Jerusalén para ser juzgados. Hombres y mujeres. El texto no hace distinción.\n\nSaulo sabía exactamente lo que iba a hacer. Sabía los nombres que buscaba, los barrios donde se reunían, las señales por las que se reconocían. Ya lo había hecho en Jerusalén, casa por casa. Damasco era la siguiente ciudad.\n\nNo tenía dudas. Ese estado, esa certeza absoluta, lo hacía más peligroso que cualquier soldado.",
       "ambient_sound": "wind",
@@ -71,6 +74,7 @@
       "type": "scripture_moment",
       "mood": "confrontation",
       "image_url": "saulo_fallen_light.png",
+      "image_prompt": "A man — dark olive skin, short dark curly hair, fine dark woolen tunic now covered in road dust — lies face-down on the ground of a wide desert road, arms stretched forward, one hand still gripping a rolled document. Around him, several companions stumble and fall back in shock. From above, an overwhelming white-gold light pours down in a column onto the fallen man, not gentle — intense, inescapable, like midday sun but from directly above. The man's face is turned sideways against the earth, eyes shut. Painterly warm 2D illustration, Mediterranean palette, extreme contrast between the blinding light and the dry ochre earth, cinematic, dramatic, no text.",
       "verse_reference": "Hechos 9:3-6",
       "verse_text": "Mas yendo por el camino, aconteció que al llegar cerca de Damasco, repentinamente le rodeó un resplandor de luz del cielo; y cayendo en tierra, oyó una voz que le decía: Saulo, Saulo, ¿por qué me persigues? Y él dijo: ¿Quién eres, Señor? Y le dijo: Yo soy Jesús, a quien tú persigues; dura cosa te es dar coces contra el aguijón. Él, temblando y temeroso, dijo: Señor, ¿qué quieres que yo haga? Y el Señor le dijo: Levántate y entra en la ciudad, y se te dirá lo que debes hacer.",
       "reflection": "Nota lo que no dice el texto.\n\nNo dice que Saulo llegó a Damasco y tuvo una crisis de fe. No dice que leyó algo que lo hizo dudar. Dice que yendo por el camino, repentinamente, una luz del cielo lo rodeó y cayó en tierra.\n\nJesús no esperó que Saulo llegara a sus conclusiones. Lo interrumpió en el trayecto.\n\nY la primera palabra no fue una acusación. Fue su nombre, dos veces. Saulo, Saulo. En la Escritura, cuando Dios llama a alguien por nombre dos veces, el peso de la llamada es personal, urgente, íntimo. Así llamó a Abraham antes de detener el sacrificio de Isaac. Así llamó a Moisés desde la zarza.\n\nLuego vino la pregunta: ¿por qué me persigues?\n\nNo: ¿por qué persigues a mi iglesia? No: ¿por qué persigues a los míos? Sino: ¿por qué me persigues a mí?\n\nJesús había identificado el sufrimiento de cada creyente arrestado, de cada familia destruida, de cada hombre y mujer arrastrado a prisión, como sufrimiento propio. Lo que le hacías a los míos, me lo hacías a mí.\n\nSaulo preguntó desde el polvo: ¿Quién eres, Señor? Era la pregunta más importante de su vida. Y la había hecho sin levantarse del suelo.",
@@ -81,6 +85,7 @@
       "type": "theological_depth",
       "mood": "depth",
       "image_url": "saulo_thorn_ox_metaphor.png",
+      "image_prompt": "Extreme close-up of a large wooden ox yoke resting on the ground, ancient and worn smooth by years of use. Behind it, barely visible in soft focus, a simple iron goad or prod leans against a stone wall. The light is warm afternoon gold coming from one side, casting long shadows from the yoke's curve. The objects fill the frame. No people. The mood is quiet, weighty, ancient. Painterly warm 2D illustration, Mediterranean palette, deep amber and dark wood tones, object shot, no text.",
       "title": "Dura cosa te es dar coces contra el aguijón",
       "subtitle": "Lo que Jesús sabía que Saulo todavía no",
       "content": "La imagen del aguijón no era nueva para Saulo.\n\n📜 En el mundo agrícola del primer siglo, el aguijón era la vara larga con una punta de hierro que el labrador usaba para guiar al buey. Cuando el animal daba coces contra el aguijón, se lastimaba a sí mismo. La resistencia solo aumentaba el dolor. El labrador no cambiaba de dirección. El buey sí, o sufría.\n\nJesús usó esa imagen con precisión.\n\n🔑 Implicación que sacude: si Saulo estaba dando coces contra el aguijón, significa que el aguijón ya llevaba tiempo ahí. Jesús no dijo que Saulo empezara a resistir ese día. Dijo que había estado resistiendo. El proceso que terminó en el camino a Damasco llevaba tiempo ocurriendo desde adentro.\n\n¿Había visto Saulo morir a Esteban con una paz que no podía explicarse? ¿Había escuchado testimonios de los creyentes que arrestaba y algo en él no podía silenciarlos? El texto no lo dice. Pero Jesús lo sabía.\n\n⚠️ La frase completa en griego usa el presente continuo: no «te ha sido dura», sino «te es dura». Era una lucha activa, en curso. Y Saulo la estaba perdiendo sin saberlo.",
@@ -97,8 +102,9 @@
       "type": "cinematic_scene",
       "mood": "blindness",
       "image_url": "saulo_led_hand_damascus.png",
+      "image_prompt": "A man in his late twenties — dark olive skin, short dark curly hair, fine dark woolen tunic now heavily dusty and creased — is being led by the hand through a narrow stone-paved street in an ancient city. His eyes are open but vacant, unfocused, seeing nothing. The man leading him is a companion, visible only from the side, gripping his arm gently. The street is quiet, the walls tall and close. Late afternoon light filters between the buildings but doesn't reach the walking man. His free hand hangs open at his side, the rolled document gone. Painterly warm 2D illustration, Mediterranean palette, muted ochre and stone tones, long shadows, medium two-figure shot, cinematic, no text.",
       "title": "Tres días sin ver.",
-      "narrative": "Cuando Saulo se levantó del suelo, abrió los ojos.\n\nNo vio nada.\n\nSus companions lo tomaron de la mano y lo llevaron hasta Damasco. El hombre que había salido de Jerusalén con cartas de arresto, con autoridad delegada por el sumo sacerdote, con un plan y una misión, entró a la ciudad siendo conducido por otro.\n\nY allí estuvo tres días. Sin ver. Sin comer. Sin beber.\n\nEl texto no dice que oraba en voz alta. No dice que lloraba. No dice qué pensaba. Solo dice que estaba ahí, en una casa en la calle que se llamaba Derecha, en silencio y oscuridad.\n\nDios no le dio instrucciones inmediatas. Le dio tres días para estar con lo que acababa de ocurrir.",
+      "narrative": "Cuando Saulo se levantó del suelo, abrió los ojos.\n\nNo vio nada.\n\nSus compañeros lo tomaron de la mano y lo llevaron hasta Damasco. El hombre que había salido de Jerusalén con cartas de arresto, con autoridad delegada por el sumo sacerdote, con un plan y una misión, entró a la ciudad siendo conducido por otro.\n\nY allí estuvo tres días. Sin ver. Sin comer. Sin beber.\n\nEl texto no dice que oraba en voz alta. No dice que lloraba. No dice qué pensaba. Solo dice que estaba ahí, en una casa en la calle que se llamaba Derecha, en silencio y oscuridad.\n\nDios no le dio instrucciones inmediatas. Le dio tres días para estar con lo que acababa de ocurrir.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
@@ -112,6 +118,7 @@
       "type": "theological_depth",
       "mood": "depth",
       "image_url": "saulo_dark_room_light_crack.png",
+      "image_prompt": "Interior of a small ancient stone room, almost completely dark. A single narrow crack between the wall and the wooden door frame lets in a thin vertical line of bright daylight. The crack of light falls across the rough stone floor, dividing the frame into darkness and a sharp sliver of gold. No people visible. The mood is still, waiting, interior. Painterly warm 2D illustration, Mediterranean palette, near-total darkness with one precise beam of warm amber light, object and environment shot, cinematic, no text.",
       "title": "Tres días",
       "subtitle": "El patrón que Dios repite",
       "content": "En la tradición bíblica, el número tres no es accidental.\n\n📜 Jonás estuvo tres días en el vientre del pez antes de ser enviado a su misión. Jesús estuvo tres días en el sepulcro antes de la resurrección. Saulo estuvo tres días en ceguera y ayuno antes de ser enviado a las naciones.\n\nEl tres en la Escritura hebrea y griega no es un número de castigo. Es un número de gestación. Algo termina. Algo nuevo está por nacer.\n\n🔑 En el griego, la palabra para ver en Hechos 9:8 es blepō: la función física del ojo. Pero cuando Ananías le impone las manos en el versículo 17, se usa anablepō: recuperar la vista, ver de nuevo, ver de una manera que antes no era posible. No fue una sanidad. Fue una apertura nueva.\n\nSaulo no simplemente recuperó la función de sus ojos. Recibió otra manera de ver el mundo.\n\n⚠️ El ayuno de tres días en el clima de Siria no fue un acto de disciplina espiritual planificado. Fue la respuesta natural de un hombre cuya realidad completa había sido reordenada. No había nada del mundo exterior que pudiera entrar todavía. Dios no comparte ese espacio.",
@@ -132,6 +139,7 @@
       "type": "scripture_moment",
       "mood": "fear_and_obedience",
       "image_url": "saulo_ananias_vision_split.png",
+      "image_prompt": "Split composition, two small rooms shown side by side separated by a dark stone wall. On the left, a plain man in his forties — olive skin, simple beige linen tunic, short graying hair — kneels in prayer in a sparse room, his eyes open and startled, clearly receiving something from above. On the right, a man in his late twenties — dark olive skin, short dark curly hair, fine woolen tunic — sits on a low bench in a darker room, hands open on his knees, face lifted, clearly in prayer. Both rooms lit by small oil lamps. Painterly warm 2D illustration, Mediterranean palette, warm amber light, two-scene composition showing two people being spoken to simultaneously, cinematic, no text.",
       "verse_reference": "Hechos 9:10-14",
       "verse_text": "Había entonces en Damasco un discípulo llamado Ananías, a quien el Señor dijo en visión: Ananías. Y él respondió: Heme aquí, Señor. Y el Señor le dijo: Levántate, y ve a la calle que se llama Derecha, y busca en casa de Judas a uno llamado Saulo, de Tarso; porque he aquí, él ora, y ha visto en visión a un varón llamado Ananías, que entra y le pone las manos encima para que recobre la vista. Entonces Ananías respondió: Señor, he oído de muchos acerca de este hombre, cuántos males ha hecho a tus santos en Jerusalén; y aun aquí tiene autoridad de los principales sacerdotes para prender a todos los que invocan tu nombre.",
       "reflection": "Ananías no era un nombre conocido en la iglesia primitiva. No era un apóstol, no era un líder reconocido. Era un discípulo en Damasco. Un creyente ordinario dentro de la misma comunidad que Saulo había venido a destruir.\n\nY cuando el Señor le dijo que fuera a buscar a Saulo, Ananías respondió con honestidad: Señor, he oído de muchos acerca de este hombre.\n\nNo pretendió no tener miedo. No respondió con fe perfecta. Le dijo al Señor exactamente lo que sabía y lo que sentía. Y Dios no lo corrigió por ello. Le dio más información y repitió la instrucción.\n\nPero hay algo más en este texto que no podemos pasar rápido: mientras Ananías recibía instrucciones en un cuarto, Saulo en otro cuarto también estaba orando, y en esa oración había recibido ya la imagen de un hombre llamado Ananías que vendría a él.\n\nDios estaba preparando a los dos al mismo tiempo. En cuartos separados, en la misma ciudad, en el mismo momento.",
@@ -142,6 +150,7 @@
       "type": "cinematic_scene",
       "mood": "threshold",
       "image_url": "saulo_ananias_doorway.png",
+      "image_prompt": "A plain man in his forties — olive skin, simple beige linen tunic, short graying hair — stands in the open doorway of a small stone room. He is mid-step, having just entered. His posture shows resolve mixed with visible effort — this is not easy for him. Inside the room, barely visible in the dimness, a younger man sits on a low bench, face turned toward the sound at the door. Light from the street falls across the threshold, illuminating the older man but leaving the room interior in shadow. Painterly warm 2D illustration, Mediterranean palette, threshold light, doorway framing the moment of courage, medium two-figure shot, cinematic, no text.",
       "title": "Ananías entró.",
       "narrative": "Sabía exactamente quién era el hombre al otro lado de esa puerta.\n\nConocía los nombres de familias que ese hombre había destruido. Había escuchado de las casas allanadas en Jerusalén, de los creyentes arrastrados, de los que habían muerto. Y sin embargo caminó por esa calle, llegó a esa puerta, y entró.\n\nNo porque no tuviera miedo. Porque el Señor le había dicho que fuera.\n\nY lo primero que hizo cuando entró no fue exigir explicaciones. No fue poner condiciones. No fue verificar si Saulo merecía lo que venía a traerle.\n\nLo llamó hermano.",
       "ambient_sound": "silence",
@@ -157,6 +166,7 @@
       "type": "scripture_moment",
       "mood": "restoration",
       "image_url": "saulo_ananias_hands_eyes.png",
+      "image_prompt": "Extreme close-up of two pairs of hands: an older man's hands — weathered, olive skin, simple linen sleeve — gently resting on the sides of a younger man's face. The younger man's eyes are closed, his face tilted slightly upward in reception. The older hands are placed with care, not force. In the instant captured, something small and translucent — like a thin membrane — appears to be falling from the corner of the younger man's eye. Warm golden lamp light illuminates the scene from one side. Painterly warm 2D illustration, Mediterranean palette, intimate close-up, gentle ochre and gold tones, cinematic, no text.",
       "verse_reference": "Hechos 9:17-18",
       "verse_text": "Fue entonces Ananías y entró en la casa, y poniendo sobre él las manos, dijo: Hermano Saulo, el Señor Jesús, que se te apareció en el camino por donde venías, me ha enviado para que recibas la vista y seas lleno del Espíritu Santo. Y al momento le cayeron de los ojos como escamas, y recibió al instante la vista; y levantándose, fue bautizado.",
       "reflection": "Hermano Saulo.\n\nDos palabras que no podemos leer de prisa.\n\nEste hombre había entrado a casas en Jerusalén y arrastrado a personas exactamente como Ananías. Y Ananías entró a esa habitación y lo llamó hermano, antes de que Saulo dijera una sola palabra, antes de que prometiera nada, antes de cualquier declaración pública de cambio.\n\nLa comunidad que Saulo había perseguido fue el instrumento a través del cual Jesús lo restauró. Esa precisión no es accidental. Es el estilo de la gracia.\n\nY al momento le cayeron de los ojos como escamas.\n\nLa imagen es exacta: no fue una curación gradual. Cayó algo que estaba encima de sus ojos. Lo que había cubierto su visión se desprendió. Y Saulo vio.\n\nLuego se levantó y fue bautizado. Tres días de oscuridad y ayuno terminaron en agua, en comunidad, en un nuevo comienzo que él mismo todavía no medía en su totalidad.",
@@ -173,6 +183,7 @@
       "type": "theological_depth",
       "mood": "depth",
       "image_url": "saulo_pharisee_scrolls_water.png",
+      "image_prompt": "A man in his late twenties — dark olive skin, short dark curly hair, fine dark woolen tunic slightly rumpled — stands at the edge of a simple stone cistern or basin in an open courtyard. He is looking down at the water surface, which reflects his face back at him. In his right hand he holds a folded document — official, sealed — but his grip is loose, almost as if he might release it. Morning light fills the courtyard. His expression shows someone looking at a reflection they are seeing differently than before. Painterly warm 2D illustration, Mediterranean palette, warm morning gold, reflective water surface, medium shot, cinematic, no text.",
       "title": "El hombre más preparado sin saberlo",
       "subtitle": "Por qué Dios permitió que Saulo construyera todo lo que construyó",
       "content": "Años después, ya como Pablo, él mismo describió su historia desde adentro.\n\n📜 Sus propias palabras: Circuncidado al octavo día, del linaje de Israel, de la tribu de Benjamín, hebreo de hebreos; en cuanto a la ley, fariseo; en cuanto a celo, perseguidor de la iglesia; en cuanto a la justicia que es en la ley, irreprensible.\n\nNo era vergüenza lo que había en esa lista. Era el currículum que Dios había permitido que construyera, porque lo necesitaba para la misión que venía.\n\nSaulo conocía el judaísmo desde adentro porque tendría que explicar a Jesús dentro del judaísmo ante audiencias que lo conocían. Sabía el griego y la cultura romana porque llevaría el evangelio al mundo griego y romano. Conocía las objeciones porque las había tenido.\n\n🔑 En cuanto al nombre: Saulo (Sha'ul en hebreo) era el nombre del primer rey de Israel, también de la tribu de Benjamín. Pablo (Paulos) era su nombre romano de nacimiento, que comenzó a usar en su ministerio a los gentiles. Dios no le dio un nombre nuevo en Damasco. Reorientó al hombre que ya tenía ambos nombres.\n\n⚠️ La paradoja central de su historia: el perseguidor más formidable de la iglesia se convirtió en su plantador más extenso. Dios no desperdició nada de lo que Saulo había sido. Lo reorientó.",
@@ -189,6 +200,7 @@
       "type": "cinematic_scene",
       "mood": "commissioned",
       "image_url": "saulo_damascus_morning_new.png",
+      "image_prompt": "A man in his late twenties — dark olive skin, short dark curly hair, fine dark woolen tunic clean again — walks with purposeful strides through a narrow sunlit street in an ancient city. He is alone, moving toward a large arched doorway ahead that opens into a brighter space — a synagogue interior visible beyond. His posture is upright but different from card 3: the rigidity of certainty has been replaced by the directness of purpose. He carries nothing in his hands. Morning light fills the street from above. Painterly warm 2D illustration, Mediterranean palette, warm morning gold and deep stone shadows, medium action shot, cinematic, no text.",
       "title": "La misma ciudad. Una misión distinta.",
       "narrative": "Salió a predicar en las sinagogas de Damasco que Jesús era el Hijo de Dios.\n\nLos mismos lugares a los que había llegado con cartas de arresto. Las mismas calles donde había planeado hacer redadas. Las mismas sinagogas donde habría identificado a los creyentes para arrestarlos.\n\nPero el hombre que caminaba por ellas ya no era el mismo. No porque hubiera dejado de ser quien era. Sino porque ahora sabía para qué había sido todo lo que era.\n\nY todos los que le oían estaban atónitos. Conocían su reputación. Sabían con qué propósito había venido a Damasco. Y ahora este mismo hombre predicaba en el nombre del que antes perseguía.\n\nEl camino a Damasco no fue el final de Saulo. Fue el primer día de Pablo.",
       "ambient_sound": "wind",
@@ -204,6 +216,7 @@
       "type": "character_moment",
       "mood": "humility",
       "image_url": "saulo_paul_aged_lamp_writing.png",
+      "image_prompt": "An older man in his fifties — olive skin weathered and lined, short graying dark hair, a small beard, wearing a plain coarse tunic — sits at a low wooden table in a bare stone room that looks like a cell. A single clay oil lamp burns beside him. He is writing on a scroll, but in the moment captured his hand has stopped and he is looking up slightly, not at anything in the room — looking inward. His expression is completely unguarded: no pride, no performance, only a settled and quiet awareness. Faint marks on his wrists, barely visible. Painterly warm 2D illustration, Mediterranean palette, deep warm amber lamp light against dark stone walls, intimate close-up, cinematic, no text.",
       "title": "El primer de los pecadores.",
       "subtitle": "Lo que dijo el hombre que lo había logrado todo",
       "content": "Desde una celda en Roma, el hombre que había plantado iglesias desde Antioquía hasta Corinto, desde Éfeso hasta el borde de España, escribió estas palabras:\n\n\"Cristo Jesús vino al mundo para salvar a los pecadores, de los cuales yo soy el primero.\"\n\nNo dijo: yo fui el primero. Dijo: yo soy el primero. Presente. Permanente.\n\nEste era el mismo hombre que había escrito el himno del amor en 1 Corintios 13. El que había plantado la iglesia en Filipos después de ser azotado y encarcelado. El que naufragó tres veces. El que fue apedreado y lo dieron por muerto. El que escribió sobre el gozo desde la prisión.\n\n🔑 Lo que hace esta declaración singular:\n\nNo era falsa modestia. Era la perspectiva de alguien que había visto a Jesús cara a cara y entendido desde entonces cuán grande era la distancia entre lo que Dios es y lo que él era sin esa gracia. Cuanto más conocía a Cristo, más claramente veía su propia necesidad.\n\nEsa es la marca del encuentro genuino con Jesús: no te infla. Te ancla. La grandeza que Pablo construyó en su ministerio no lo hizo sentirse más grande. Lo hizo sentirse más consciente de la gracia que lo sostenía.\n\n⚠️ El denuedo y la humildad no son opuestos. En Pablo vivían juntos. Podía pararse frente al César y también llamarse el primero de los pecadores. Podía reprender a Pedro en público y también decir que era menos que el menor de todos los santos.\n\nEse es el hombre que Jesús hizo del que guardaba los mantos en la lapidación de Esteban.",
@@ -213,9 +226,42 @@
       "order": 14,
       "type": "discovery_activation",
       "image_url": "saulo_open_road_dust_light.png",
+      "image_prompt": "Wide landscape shot of a long desert road stretching toward the horizon at dawn. The road is empty. On either side, dry ochre terrain extends to low hills. The sky is transitioning from deep indigo to warm gold at the horizon. A faint path of footprints is visible in the dust at the center of the road, leading away into the distance. No people visible. The mood is open, expectant, the beginning of something. Painterly warm 2D illustration, Mediterranean palette, dawn light, ochre and deep indigo to gold gradient sky, wide establishing shot, cinematic, no text.",
       "icon": "⚡",
       "title": "Tu Encuentro",
-      "subtitle": "Saulo no buscaba a Jesús. Jesús lo detuvo en el camino. Y lo que hizo con ese hombre, puede hacerlo contigo."
+      "subtitle": "Saulo no buscaba a Jesús. Jesús lo detuvo en el camino. Y lo que hizo con ese hombre, puede hacerlo contigo.",
+      "discovery_questions": [
+        {
+          "category": "Tu certeza",
+          "question": "Saulo estaba absolutamente convencido de que hacía lo correcto, y esa convicción lo hacía más peligroso. ¿Hay alguna área de tu vida donde tu certeza podría estar cerrándote a algo que Dios quiere mostrarte? ¿Cómo distinguirías entre convicción santa y resistencia a Dios disfrazada de devoción?"
+        },
+        {
+          "category": "Tu silencio",
+          "question": "Saulo tuvo tres días de oscuridad y silencio antes de recibir dirección. ¿Has tenido períodos de tu vida que viviste como fracaso o paralización que ahora puedes reconocer como un tiempo de gestación? ¿Qué le das a Dios en el silencio que no puede recibir de ti en el ruido?"
+        },
+        {
+          "category": "Tu Ananías",
+          "question": "La restauración de Saulo llegó a través de un hombre con miedo que obedeció de todas formas y lo llamó hermano. ¿Hay alguien en tu vida que necesita que te acerques con esa misma valentía, aunque tengas razones legítimas para no hacerlo? ¿Qué te detiene?"
+        }
+      ],
+      "prayer": {
+        "title": "Oración desde el camino",
+        "content": "Señor Jesús,\n\nComo Saulo, he caminado con certezas que construí yo mismo. He tenido mis razones, mis convicciones, mis sistemas de lo que está bien y lo que está mal. Y en medio de todo eso, no siempre te he preguntado a Ti.\n\nHoy te pido que me interrumpas donde sea necesario. Que salgas a mi encuentro en el camino, no solo cuando esté buscándote, sino cuando más falta me haga que alguien me detenga.\n\nSi hay períodos de silencio en mi historia que no entiendo, ayúdame a confiar en que Tú también estás ahí. Que el tiempo que siento perdido puede ser el tiempo donde Tú más estás trabajando.\n\nY si hay alguien que necesita que yo sea su Ananías, dame el valor de entrar a esa puerta. De decir hermano, de decir hermana, aunque tenga miedo, aunque la historia entre nosotros sea complicada.\n\nHazme como Pablo: con denuedo para predicarte y con claridad para saber que sin Tu gracia no soy nada.\n\nEn el nombre de Jesús, Amén."
+      }
+    },
+    {
+      "order": 15,
+      "type": "completion",
+      "mood": "open",
+      "image_url": "saulo_road_light_horizon.png",
+      "image_prompt": "Wide shot of a desert road at the moment just after sunrise. The road stretches toward the horizon where the sun has just risen, flooding the entire frame with warm gold light. The road is empty but not desolate — the light makes everything feel alive and open. Long shadows from small roadside stones point back toward the viewer. The sky is clear, deep gold fading to pale blue above. Painterly warm 2D illustration, Mediterranean palette, full golden hour light, warm ochre earth, expansive wide shot, cinematic, hopeful, no text.",
+      "completion_verse": {
+        "reference": "1 Timoteo 1:15-16",
+        "text": "Palabra fiel y digna de ser recibida por todos: que Cristo Jesús vino al mundo para salvar a los pecadores, de los cuales yo soy el primero. Pero por esto fui recibido a misericordia, para que Jesucristo mostrase en mí el primero toda su clemencia, para ejemplo de los que habrían de creer en él para vida eterna.",
+        "bible_version": "RVR1960"
+      },
+      "reflection_prompt": "Pablo llegó a ser el ejemplo de la clemencia de Jesús para todos los que vendrían después. ¿Qué parte de tu historia, la que más te cuesta contar, podría ser exactamente esa misma clase de ejemplo para alguien que todavía no conoces?",
+      "celebration_type": "burst"
     }
   ]
 }
