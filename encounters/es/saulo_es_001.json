@@ -15,9 +15,19 @@
     "accent_color": "#1a0a00",
     "emoji": "⚡",
     "tags": [
-      "conversión", "persecución", "encuentro", "identidad",
-      "silencio", "ceguera", "restauración", "misión", "pablo",
-      "damasco", "valentía", "humildad", "legado"
+      "conversión",
+      "persecución",
+      "encuentro",
+      "identidad",
+      "silencio",
+      "ceguera",
+      "restauración",
+      "misión",
+      "pablo",
+      "damasco",
+      "valentía",
+      "humildad",
+      "legado"
     ]
   },
   "key_verse": {
@@ -170,6 +180,16 @@
     },
     {
       "order": 11,
+      "type": "scripture_moment",
+      "mood": "miracle",
+      "image_url": "saulo_scales_falling_eyes.png",
+      "verse_reference": "Hechos 9:18",
+      "verse_text": "Y al momento le cayeron de los ojos como escamas, y recibió al instante la vista; y levantándose, fue bautizado.",
+      "reflection": "No hubo proceso. No hubo mejora gradual.\n\nEl texto usa una expresión precisa: al momento. No dice que la vista de Saulo fue regresando poco a poco, como cuando los ojos se acostumbran a la luz después de la oscuridad. Dice que algo cayó, y en el instante en que cayó, vio.\n\nLas escamas no eran una metáfora vacía. La palabra que Lucas usa describe literalmente algo córneo, como una costra o membrana que se desprende. Tres días de oscuridad habían cubierto sus ojos con algo físico, tangible, que tenía que desprenderse para que la luz volviera a entrar.\n\nY el cuerpo de Saulo respondió antes que sus palabras. Recibió la vista, y levantándose, fue bautizado. No hubo pausa para procesar, para dar un discurso, para explicar lo que acababa de vivir. La respuesta inmediata a la vista recobrada fue el agua.\n\nElla misma es la confesión más honesta: cuando Dios te devuelve la vista, lo primero que tu cuerpo sabe hacer es moverse hacia Él.",
+      "revelation_key": "El milagro de Saulo no fue gradual. Cuando Dios actúa para restaurar, a veces no hay proceso que negociar. Solo hay un antes ciego y un después que ve."
+    },
+    {
+      "order": 12,
       "type": "theological_depth",
       "mood": "depth",
       "image_url": "saulo_pharisee_scrolls_water.png",
@@ -185,7 +205,7 @@
       ]
     },
     {
-      "order": 12,
+      "order": 13,
       "type": "cinematic_scene",
       "mood": "commissioned",
       "image_url": "saulo_damascus_morning_new.png",
@@ -200,7 +220,7 @@
       "revelation_key": "El encuentro con Jesús no borra lo que eres. Revela para qué eras."
     },
     {
-      "order": 13,
+      "order": 14,
       "type": "character_moment",
       "mood": "humility",
       "image_url": "saulo_paul_aged_lamp_writing.png",
@@ -210,7 +230,7 @@
       "revelation_key": "La humildad de Pablo no era debilidad. Era la consecuencia directa de haber visto a Jesús. Cuanto más lo conocía, más claro veía cuánto necesitaba Su gracia."
     },
     {
-      "order": 14,
+      "order": 15,
       "type": "discovery_activation",
       "image_url": "saulo_open_road_dust_light.png",
       "icon": "⚡",
@@ -236,7 +256,7 @@
       }
     },
     {
-      "order": 15,
+      "order": 16,
       "type": "completion",
       "mood": "open",
       "image_url": "saulo_road_light_horizon.png",
