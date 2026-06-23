@@ -88,17 +88,17 @@
     },
     {
       "order": 5,
-      "type": "theological_depth",
+      "type": "scripture_moment",
       "mood": "depth",
       "image_url": "saulo_thorn_ox_metaphor.png",
-      "title": "Dura cosa te es dar coces contra el aguijón",
-      "subtitle": "Lo que Jesús sabía que Saulo todavía no",
-      "content": "La imagen del aguijón no era nueva para Saulo.\n\n📜 En el mundo agrícola del primer siglo, el aguijón era la vara larga con una punta de hierro que el labrador usaba para guiar al buey. Cuando el animal daba coces contra el aguijón, se lastimaba a sí mismo. La resistencia solo aumentaba el dolor. El labrador no cambiaba de dirección. El buey sí, o sufría.\n\nJesús usó esa imagen con precisión.\n\n🔑 Implicación que sacude: si Saulo estaba dando coces contra el aguijón, significa que el aguijón ya llevaba tiempo ahí. Jesús no dijo que Saulo empezara a resistir ese día. Dijo que había estado resistiendo. El proceso que terminó en el camino a Damasco llevaba tiempo ocurriendo desde adentro.\n\n¿Había visto Saulo morir a Esteban con una paz que no podía explicarse? ¿Había escuchado testimonios de los creyentes que arrestaba y algo en él no podía silenciarlos? El texto no lo dice. Pero Jesús lo sabía.\n\n⚠️ La frase completa en griego usa el presente continuo: no «te ha sido dura», sino «te es dura». Era una lucha activa, en curso. Y Saulo la estaba perdiendo sin saberlo.",
-      "revelation_key": "Dios muchas veces trabaja en nosotros mucho antes de que lo reconozcamos. La resistencia que sientes puede ser el aguijón que ya lleva tiempo guiándote.",
+      "verse_reference": "Hechos 9:5-6",
+      "verse_text": "Y él dijo: ¿Quién eres, Señor? Y le dijo: Yo soy Jesús, a quien tú persigues; dura cosa te es dar coces contra el aguijón. Él, temblando y temeroso, dijo: Señor, ¿qué quieres que yo haga? Y el Señor le dijo: Levántate y entra en la ciudad, y se te dirá lo que debes hacer.",
+      "reflection": "Imagina un buey jalando un arado. El campesino lleva una vara con una punta filosa, y la usa para guiar al animal: un toque ligero le dice 'para acá', 'más despacio', 'sigue'.\n\nPero si el buey se enoja y patea la vara con coraje, ¿qué pasa? Se hiere a sí mismo. Cada patada contra esa punta filosa le duele más a él que al campesino. Y el campesino no cambia de plan: el buey es el que termina lastimado si sigue resistiendo.\n\nEso es lo que Jesús le dijo a Saulo.\n\nSi Saulo 'estaba dando coces contra el aguijón', quiere decir que Dios ya llevaba tiempo hablándole por dentro, antes de ese día en el camino a Damasco. Saulo perseguía a los cristianos, los mandaba a la cárcel, aprobaba que los mataran — y mientras hacía todo eso, algo dentro de él no estaba en paz. Esa es la lucha: la convicción de que lo que hacía estaba mal, peleando contra su propia decisión de seguir haciéndolo.\n\nJesús no le dijo 'hoy empezaste a resistirte'. Le dijo 'llevas tiempo resistiéndote'.\n\n¿Había visto Saulo la muerte de Esteban con una paz que no podía explicarse? ¿Había oído a los creyentes que él mismo arrestaba hablar de Jesús sin miedo, incluso camino a la cárcel? El relato de Hechos no entra en esos detalles. Pero Jesús, que estaba ahí ese día con Esteban y con cada uno de ellos, sí lo sabía.",
+      "revelation_key": "Dios trabaja en nosotros mucho antes de que lo reconozcamos. La incomodidad que sientes puede ser su voz ya presente.",
       "scripture_connections": [
-        {
-          "reference": "Hechos 7:60",
-          "text": "Y puesto de rodillas, clamó a gran voz: Señor, no les tomes en cuenta este pecado. Y habiendo dicho esto, durmió."
+    {
+      "reference": "Hechos 7:55-60",
+      "text": "Pero Esteban, lleno del Espíritu Santo, puestos los ojos en el cielo, vio la gloria de Dios, y a Jesús que estaba a la diestra de Dios, y dijo: He aquí, veo los cielos abiertos, y al Hijo del Hombre que está a la diestra de Dios. Entonces ellos dieron grandes voces, y se taparon los oídos, y arremetieron unánimemente contra él. Y sacándole fuera de la ciudad, le apedreaban; y los testigos pusieron sus ropas a los pies de un joven llamado Saulo. Y apedreaban a Esteban, mientras él invocaba y decía: Señor Jesús, recibe mi espíritu. Y puesto de rodillas, clamó a gran voz: Señor, no les tomes en cuenta este pecado. Y habiendo dicho esto, durmió."
         }
       ]
     },
