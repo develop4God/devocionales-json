@@ -1,0 +1,272 @@
+{
+  "id": "saulo_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "es",
+  "bible_version": "RVR1960",
+  "version": "2.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 13,
+  "meta": {
+    "character": "Saulo de Tarso",
+    "testament": "new",
+    "scripture_reference": "Hechos 9:1-22",
+    "mood_primary": "confrontation",
+    "accent_color": "#1a0a00",
+    "emoji": "⚡",
+    "tags": [
+      "conversión",
+      "persecución",
+      "encuentro",
+      "identidad",
+      "silencio",
+      "ceguera",
+      "restauración",
+      "misión",
+      "pablo",
+      "damasco",
+      "valentía",
+      "humildad",
+      "legado"
+    ]
+  },
+  "key_verse": {
+    "reference": "Hechos 9:5-6",
+    "text": "Y él dijo: ¿Quién eres, Señor? Y le dijo: Yo soy Jesús, a quien tú persigues; dura cosa te es dar coces contra el aguijón. Él, temblando y temeroso, dijo: Señor, ¿qué quieres que yo haga? Y el Señor le dijo: Levántate y entra en la ciudad, y se te dirá lo que debes hacer.",
+    "bible_version": "RVR1960"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "witness",
+      "image_url": "saulo_stephen_stoning_mantles.png",
+      "title": "Guardó los mantos.",
+      "narrative": "No fue un espectador casual.\n\nEra un hombre joven que había subido desde Tarso hasta Jerusalén para estudiar con los mejores. Conocía la ley. Conocía las Escrituras. Y cuando la multitud decidió que Esteban merecía morir, los que arrojaban las piedras necesitaban manos libres para hacerlo mejor. Pusieron sus mantos a los pies de un joven llamado Saulo.\n\nY él los guardó.\n\nNo con indiferencia. El texto dice que consentía en la muerte de Esteban. Era una postura activa, informada, convencida. Mientras las piedras caían sobre el primer mártir de la iglesia, Saulo de Tarso estuvo presente, aprobó, y luego salió de allí con más determinación que antes.\n\nEsa es la persona que va a encontrar a Jesús.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Hechos 7:58",
+        "text": "Y echándole fuera de la ciudad, le apedrearon; y los testigos pusieron sus ropas a los pies de un joven que se llamaba Saulo."
+      },
+      "revelation_key": "La historia de Saulo no comienza en el camino a Damasco. Comienza a los pies de Esteban, cargando los mantos de quienes mataban."
+    },
+    {
+      "order": 2,
+      "type": "character_moment",
+      "mood": "certainty",
+      "image_url": "saulo_pharisee_study_torchlight.png",
+      "title": "El hombre más convencido de Israel.",
+      "subtitle": "Lo que construyó antes del camino",
+      "content": "Saulo no llegó a sus conclusiones por accidente.\n\nHabía nacido en Tarso, una ciudad universitaria del mundo greco-romano, lo que le daba dominio natural de la cultura y el idioma que luego necesitaría para llevar el evangelio a los gentiles. Pero su corazón era completamente hebreo. Su familia lo envió a Jerusalén para estudiar a los pies de Gamaliel, el rabino más respetado de su generación. Y Saulo no solo aprendió. Aventajó a muchos de sus contemporáneos en el judaísmo, ardiendo en celo por las tradiciones de sus padres.\n\nEra fariseo, hijo de fariseos. La secta más estricta, la más comprometida con la pureza de la fe.\n\n⚠️ Lo que esto significa:\n\nSaulo no perseguía a los seguidores de Jesús por maldad. Lo hacía por amor. Amor a Dios, amor a la ley, amor a Israel. En su mente, el movimiento que seguía a un carpintero crucificado era una herejía peligrosa que podía corromper al pueblo de Dios. Extirparlo era un acto de devoción.\n\n🔑 Esa es la trampa más difícil de todas: cuando el error más grande de tu vida lo estás cometiendo convencido de que sirves a Dios.",
+      "revelation_key": "La certeza sin encuentro personal con Jesús puede convertir la devoción en arma."
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "urgency",
+      "image_url": "saulo_road_damascus_dust.png",
+      "title": "Iba camino a Damasco.",
+      "narrative": "No iba de viaje. Iba en misión.\n\nLlevaba cartas del sumo sacerdote: autorización formal para entrar a las sinagogas de Damasco, identificar a los que pertenecían al Camino, atarlos, y traerlos a Jerusalén para ser juzgados. Hombres y mujeres. El texto no hace distinción.\n\nSaulo sabía exactamente lo que iba a hacer. Sabía los nombres que buscaba, los barrios donde se reunían, las señales por las que se reconocían. Ya lo había hecho en Jerusalén, casa por casa. Damasco era la siguiente ciudad.\n\nNo tenía dudas. Ese estado, esa certeza absoluta, lo hacía más peligroso que cualquier soldado.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Hechos 9:1-2",
+        "text": "Saulo, respirando aún amenazas y muerte contra los discípulos del Señor, vino al sumo sacerdote, y le pidió cartas para las sinagogas de Damasco, a fin de que si hallase algunos hombres o mujeres de este Camino, los trajese presos a Jerusalén."
+      },
+      "revelation_key": "El hombre más seguro de estar haciendo la voluntad de Dios era el que más la estaba resistiendo."
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "confrontation",
+      "image_url": "saulo_fallen_light.png",
+      "verse_reference": "Hechos 9:3-6",
+      "verse_text": "Mas yendo por el camino, aconteció que al llegar cerca de Damasco, repentinamente le rodeó un resplandor de luz del cielo; y cayendo en tierra, oyó una voz que le decía: Saulo, Saulo, ¿por qué me persigues? Y él dijo: ¿Quién eres, Señor? Y le dijo: Yo soy Jesús, a quien tú persigues; dura cosa te es dar coces contra el aguijón. Él, temblando y temeroso, dijo: Señor, ¿qué quieres que yo haga? Y el Señor le dijo: Levántate y entra en la ciudad, y se te dirá lo que debes hacer.",
+      "reflection": "Nota lo que no dice el texto.\n\nNo dice que Saulo llegó a Damasco y tuvo una crisis de fe. No dice que leyó algo que lo hizo dudar. Dice que yendo por el camino, repentinamente, una luz del cielo lo rodeó y cayó en tierra.\n\nJesús no esperó que Saulo llegara a sus conclusiones. Lo interrumpió en el trayecto.\n\nY la primera palabra no fue una acusación. Fue su nombre, dos veces. Saulo, Saulo. En la Escritura, cuando Dios llama a alguien por nombre dos veces, el peso de la llamada es personal, urgente, íntimo. Así llamó a Abraham antes de detener el sacrificio de Isaac. Así llamó a Moisés desde la zarza.\n\nLuego vino la pregunta: ¿por qué me persigues?\n\nNo: ¿por qué persigues a mi iglesia? No: ¿por qué persigues a los míos? Sino: ¿por qué me persigues a mí?\n\nJesús había identificado el sufrimiento de cada creyente arrestado, de cada familia destruida, de cada hombre y mujer arrastrado a prisión, como sufrimiento propio. Lo que le hacías a los míos, me lo hacías a mí.\n\nSaulo preguntó desde el polvo: ¿Quién eres, Señor? Era la pregunta más importante de su vida. Y la había hecho sin levantarse del suelo.",
+      "revelation_key": "Jesús no interrumpió a Saulo con castigo. Lo interrumpió con una pregunta. La gracia tiene esa forma: no destruye, interroga."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "depth",
+      "image_url": "saulo_thorn_ox_metaphor.png",
+      "title": "Dura cosa te es dar coces contra el aguijón",
+      "subtitle": "Lo que Jesús sabía que Saulo todavía no",
+      "content": "La imagen del aguijón no era nueva para Saulo.\n\n📜 En el mundo agrícola del primer siglo, el aguijón era la vara larga con una punta de hierro que el labrador usaba para guiar al buey. Cuando el animal daba coces contra el aguijón, se lastimaba a sí mismo. La resistencia solo aumentaba el dolor. El labrador no cambiaba de dirección. El buey sí, o sufría.\n\nJesús usó esa imagen con precisión.\n\n🔑 Implicación que sacude: si Saulo estaba dando coces contra el aguijón, significa que el aguijón ya llevaba tiempo ahí. Jesús no dijo que Saulo empezara a resistir ese día. Dijo que había estado resistiendo. El proceso que terminó en el camino a Damasco llevaba tiempo ocurriendo desde adentro.\n\n¿Había visto Saulo morir a Esteban con una paz que no podía explicarse? ¿Había escuchado testimonios de los creyentes que arrestaba y algo en él no podía silenciarlos? El texto no lo dice. Pero Jesús lo sabía.\n\n⚠️ La frase completa en griego usa el presente continuo: no «te ha sido dura», sino «te es dura». Era una lucha activa, en curso. Y Saulo la estaba perdiendo sin saberlo.",
+      "revelation_key": "Dios muchas veces trabaja en nosotros mucho antes de que lo reconozcamos. La resistencia que sientes puede ser el aguijón que ya lleva tiempo guiándote.",
+      "scripture_connections": [
+        {
+          "reference": "Hechos 7:60",
+          "text": "Y puesto de rodillas, clamó a gran voz: Señor, no les tomes en cuenta este pecado. Y habiendo dicho esto, durmió."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "blindness",
+      "image_url": "saulo_led_hand_damascus.png",
+      "title": "Tres días sin ver.",
+      "narrative": "Cuando Saulo se levantó del suelo, abrió los ojos.\n\nNo vio nada.\n\nSus compañeros lo tomaron de la mano y lo llevaron hasta Damasco. El hombre que había salido de Jerusalén con cartas de arresto, con autoridad delegada por el sumo sacerdote, con un plan y una misión, entró a la ciudad siendo conducido por otro.\n\nY allí estuvo tres días. Sin ver. Sin comer. Sin beber.\n\nEl texto no dice que oraba en voz alta. No dice que lloraba. No dice qué pensaba. Solo dice que estaba ahí, en una casa en la calle que se llamaba Derecha, en silencio y oscuridad.\n\nDios no le dio instrucciones inmediatas. Le dio tres días para estar con lo que acababa de ocurrir.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Hechos 9:9",
+        "text": "Y estuvo tres días sin ver, y no comió ni bebió."
+      },
+      "revelation_key": "El silencio después del encuentro también es parte del encuentro. La obra más profunda ocurre donde no hay nada que ver ni hacer."
+    },
+    {
+      "order": 7,
+      "type": "theological_depth",
+      "mood": "depth",
+      "image_url": "saulo_dark_room_light_crack.png",
+      "title": "Tres días",
+      "subtitle": "El patrón que Dios repite",
+      "content": "En la tradición bíblica, el número tres no es accidental.\n\n📜 Jonás estuvo tres días en el vientre del pez antes de ser enviado a su misión. Jesús estuvo tres días en el sepulcro antes de la resurrección. Saulo estuvo tres días en ceguera y ayuno antes de ser enviado a las naciones.\n\nEl tres en la Escritura hebrea y griega no es un número de castigo. Es un número de gestación. Algo termina. Algo nuevo está por nacer.\n\n🔑 En el griego, la palabra para ver en Hechos 9:8 es blepō: la función física del ojo. Pero cuando Ananías le impone las manos en el versículo 17, se usa anablepō: recuperar la vista, ver de nuevo, ver de una manera que antes no era posible. No fue una sanidad. Fue una apertura nueva.\n\nSaulo no simplemente recuperó la función de sus ojos. Recibió otra manera de ver el mundo.\n\n⚠️ El ayuno de tres días en el clima de Siria no fue un acto de disciplina espiritual planificado. Fue la respuesta natural de un hombre cuya realidad completa había sido reordenada. No había nada del mundo exterior que pudiera entrar todavía. Dios no comparte ese espacio.",
+      "revelation_key": "Dios usa el silencio para hacer lo que las palabras no pueden: reordenar desde adentro lo que la mente no puede procesar desde afuera.",
+      "scripture_connections": [
+        {
+          "reference": "Jonás 1:17",
+          "text": "Pero Jehová tenía preparado un gran pez que tragase a Jonás; y estuvo Jonás en el vientre del pez tres días y tres noches."
+        },
+        {
+          "reference": "Mateo 12:40",
+          "text": "Porque como estuvo Jonás en el vientre del gran pez tres días y tres noches, así estará el Hijo del Hombre en el corazón de la tierra tres días y tres noches."
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "scripture_moment",
+      "mood": "fear_and_obedience",
+      "image_url": "saulo_ananias_vision_split.png",
+      "verse_reference": "Hechos 9:10-14",
+      "verse_text": "Había entonces en Damasco un discípulo llamado Ananías, a quien el Señor dijo en visión: Ananías. Y él respondió: Heme aquí, Señor. Y el Señor le dijo: Levántate, y ve a la calle que se llama Derecha, y busca en casa de Judas a uno llamado Saulo, de Tarso; porque he aquí, él ora, y ha visto en visión a un varón llamado Ananías, que entra y le pone las manos encima para que recobre la vista. Entonces Ananías respondió: Señor, he oído de muchos acerca de este hombre, cuántos males ha hecho a tus santos en Jerusalén; y aun aquí tiene autoridad de los principales sacerdotes para prender a todos los que invocan tu nombre.",
+      "reflection": "Ananías no era un nombre conocido en la iglesia primitiva. No era un apóstol, no era un líder reconocido. Era un discípulo en Damasco. Un creyente ordinario dentro de la misma comunidad que Saulo había venido a destruir.\n\nY cuando el Señor le dijo que fuera a buscar a Saulo, Ananías respondió con honestidad: Señor, he oído de muchos acerca de este hombre.\n\nNo pretendió no tener miedo. No respondió con fe perfecta. Le dijo al Señor exactamente lo que sabía y lo que sentía. Y Dios no lo corrigió por ello. Le dio más información y repitió la instrucción.\n\nPero hay algo más en este texto que no podemos pasar rápido: mientras Ananías recibía instrucciones en un cuarto, Saulo en otro cuarto también estaba orando, y en esa oración había recibido ya la imagen de un hombre llamado Ananías que vendría a él.\n\nDios estaba preparando a los dos al mismo tiempo. En cuartos separados, en la misma ciudad, en el mismo momento.",
+      "revelation_key": "Dios no le pidió a Ananías que dejara de tener miedo. Le pidió que obedeciera aunque lo tuviera. Esa distinción lo cambia todo."
+    },
+    {
+      "order": 9,
+      "type": "cinematic_scene",
+      "mood": "threshold",
+      "image_url": "saulo_ananias_doorway.png",
+      "title": "Ananías entró.",
+      "narrative": "Sabía exactamente quién era el hombre al otro lado de esa puerta.\n\nConocía los nombres de familias que ese hombre había destruido. Había escuchado de las casas allanadas en Jerusalén, de los creyentes arrastrados, de los que habían muerto. Y sin embargo caminó por esa calle, llegó a esa puerta, y entró.\n\nNo porque no tuviera miedo. Porque el Señor le había dicho que fuera.\n\nY lo primero que hizo cuando entró no fue exigir explicaciones. No fue poner condiciones. No fue verificar si Saulo merecía lo que venía a traerle.\n\nLo llamó hermano.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Hechos 9:17",
+        "text": "Hermano Saulo, el Señor Jesús, que se te apareció en el camino por donde venías, me ha enviado para que recibas la vista y seas lleno del Espíritu Santo."
+      },
+      "revelation_key": "La restauración de Saulo no llegó directamente del cielo. Llegó a través de un hombre con miedo que obedeció y dijo hermano."
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "restoration",
+      "image_url": "saulo_ananias_hands_eyes.png",
+      "verse_reference": "Hechos 9:17-18",
+      "verse_text": "Fue entonces Ananías y entró en la casa, y poniendo sobre él las manos, dijo: Hermano Saulo, el Señor Jesús, que se te apareció en el camino por donde venías, me ha enviado para que recibas la vista y seas lleno del Espíritu Santo. Y al momento le cayeron de los ojos como escamas, y recibió al instante la vista; y levantándose, fue bautizado.",
+      "reflection": "Hermano Saulo.\n\nDos palabras que no podemos leer de prisa.\n\nEste hombre había entrado a casas en Jerusalén y arrastrado a personas exactamente como Ananías. Y Ananías entró a esa habitación y lo llamó hermano, antes de que Saulo dijera una sola palabra, antes de que prometiera nada, antes de cualquier declaración pública de cambio.\n\nLa comunidad que Saulo había perseguido fue el instrumento a través del cual Jesús lo restauró. Esa precisión no es accidental. Es el estilo de la gracia.\n\nY al momento le cayeron de los ojos como escamas.\n\nLa imagen es exacta: no fue una curación gradual. Cayó algo que estaba encima de sus ojos. Lo que había cubierto su visión se desprendió. Y Saulo vio.\n\nLuego se levantó y fue bautizado. Tres días de oscuridad y ayuno terminaron en agua, en comunidad, en un nuevo comienzo que él mismo todavía no medía en su totalidad.",
+      "revelation_key": "Jesús restauró a Saulo a través de la misma comunidad que Saulo había perseguido. La gracia tiene ese nivel de precisión.",
+      "scripture_connections": [
+        {
+          "reference": "Hechos 8:3",
+          "text": "Y Saulo asolaba la iglesia, y entrando casa por casa, arrastraba a hombres y a mujeres, y los entregaba en la cárcel."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "scripture_moment",
+      "mood": "miracle",
+      "image_url": "saulo_scales_falling_eyes.png",
+      "verse_reference": "Hechos 9:18",
+      "verse_text": "Y al momento le cayeron de los ojos como escamas, y recibió al instante la vista; y levantándose, fue bautizado.",
+      "reflection": "No hubo proceso. No hubo mejora gradual.\n\nEl texto usa una expresión precisa: al momento. No dice que la vista de Saulo fue regresando poco a poco, como cuando los ojos se acostumbran a la luz después de la oscuridad. Dice que algo cayó, y en el instante en que cayó, vio.\n\nLas escamas no eran una metáfora vacía. La palabra que Lucas usa describe literalmente algo córneo, como una costra o membrana que se desprende. Tres días de oscuridad habían cubierto sus ojos con algo físico, tangible, que tenía que desprenderse para que la luz volviera a entrar.\n\nY el cuerpo de Saulo respondió antes que sus palabras. Recibió la vista, y levantándose, fue bautizado. No hubo pausa para procesar, para dar un discurso, para explicar lo que acababa de vivir. La respuesta inmediata a la vista recobrada fue el agua.\n\nElla misma es la confesión más honesta: cuando Dios te devuelve la vista, lo primero que tu cuerpo sabe hacer es moverse hacia Él.",
+      "revelation_key": "El milagro de Saulo no fue gradual. Cuando Dios actúa para restaurar, a veces no hay proceso que negociar. Solo hay un antes ciego y un después que ve."
+    },
+    {
+      "order": 12,
+      "type": "theological_depth",
+      "mood": "depth",
+      "image_url": "saulo_pharisee_scrolls_water.png",
+      "title": "El hombre más preparado sin saberlo",
+      "subtitle": "Por qué Dios permitió que Saulo construyera todo lo que construyó",
+      "content": "Años después, ya como Pablo, él mismo describió su historia desde adentro.\n\n📜 Sus propias palabras: Circuncidado al octavo día, del linaje de Israel, de la tribu de Benjamín, hebreo de hebreos; en cuanto a la ley, fariseo; en cuanto a celo, perseguidor de la iglesia; en cuanto a la justicia que es en la ley, irreprensible.\n\nNo era vergüenza lo que había en esa lista. Era el currículum que Dios había permitido que construyera, porque lo necesitaba para la misión que venía.\n\nSaulo conocía el judaísmo desde adentro porque tendría que explicar a Jesús dentro del judaísmo ante audiencias que lo conocían. Sabía el griego y la cultura romana porque llevaría el evangelio al mundo griego y romano. Conocía las objeciones porque las había tenido.\n\n🔑 En cuanto al nombre: Saulo (Sha'ul en hebreo) era el nombre del primer rey de Israel, también de la tribu de Benjamín. Pablo (Paulos) era su nombre romano de nacimiento, que comenzó a usar en su ministerio a los gentiles. Dios no le dio un nombre nuevo en Damasco. Reorientó al hombre que ya tenía ambos nombres.\n\n⚠️ La paradoja central de su historia: el perseguidor más formidable de la iglesia se convirtió en su plantador más extenso. Dios no desperdició nada de lo que Saulo había sido. Lo reorientó.",
+      "revelation_key": "Dios no destruyó la formación de Saulo. La reorientó. Lo que viviste antes de encontrar a Jesús no se pierde. Se pone al servicio de algo más grande.",
+      "scripture_connections": [
+        {
+          "reference": "Filipenses 3:5-7",
+          "text": "Circuncidado al octavo día, del linaje de Israel, de la tribu de Benjamín, hebreo de hebreos; en cuanto a la ley, fariseo; en cuanto a celo, perseguidor de la iglesia; en cuanto a la justicia que es en la ley, irreprensible. Pero cuantas cosas eran para mí ganancia, las he estimado como pérdida por amor de Cristo."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "cinematic_scene",
+      "mood": "commissioned",
+      "image_url": "saulo_damascus_morning_new.png",
+      "title": "La misma ciudad. Una misión distinta.",
+      "narrative": "Salió a predicar en las sinagogas de Damasco que Jesús era el Hijo de Dios.\n\nLos mismos lugares a los que había llegado con cartas de arresto. Las mismas calles donde había planeado hacer redadas. Las mismas sinagogas donde habría identificado a los creyentes para arrestarlos.\n\nPero el hombre que caminaba por ellas ya no era el mismo. No porque hubiera dejado de ser quien era. Sino porque ahora sabía para qué había sido todo lo que era.\n\nY todos los que le oían estaban atónitos. Conocían su reputación. Sabían con qué propósito había venido a Damasco. Y ahora este mismo hombre predicaba en el nombre del que antes perseguía.\n\nEl camino a Damasco no fue el final de Saulo. Fue el primer día de Pablo.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Hechos 9:20-21",
+        "text": "En seguida predicaba a Cristo en las sinagogas, diciendo que éste era el Hijo de Dios. Y todos los que le oían estaban atónitos, y decían: ¿No es éste el que asolaba en Jerusalén a los que invocaban este nombre?"
+      },
+      "revelation_key": "El encuentro con Jesús no borra lo que eres. Revela para qué eras."
+    },
+    {
+      "order": 14,
+      "type": "character_moment",
+      "mood": "humility",
+      "image_url": "saulo_paul_aged_lamp_writing.png",
+      "title": "El primer de los pecadores.",
+      "subtitle": "Lo que dijo el hombre que lo había logrado todo",
+      "content": "Desde una celda en Roma, el hombre que había plantado iglesias desde Antioquía hasta Corinto, desde Éfeso hasta el borde de España, escribió estas palabras:\n\n\"Cristo Jesús vino al mundo para salvar a los pecadores, de los cuales yo soy el primero.\"\n\nNo dijo: yo fui el primero. Dijo: yo soy el primero. Presente. Permanente.\n\nEste era el mismo hombre que había escrito el himno del amor en 1 Corintios 13. El que había plantado la iglesia en Filipos después de ser azotado y encarcelado. El que naufragó tres veces. El que fue apedreado y lo dieron por muerto. El que escribió sobre el gozo desde la prisión.\n\n🔑 Lo que hace esta declaración singular:\n\nNo era falsa modestia. Era la perspectiva de alguien que había visto a Jesús cara a cara y entendido desde entonces cuán grande era la distancia entre lo que Dios es y lo que él era sin esa gracia. Cuanto más conocía a Cristo, más claramente veía su propia necesidad.\n\nEsa es la marca del encuentro genuino con Jesús: no te infla. Te ancla. La grandeza que Pablo construyó en su ministerio no lo hizo sentirse más grande. Lo hizo sentirse más consciente de la gracia que lo sostenía.\n\n⚠️ El denuedo y la humildad no son opuestos. En Pablo vivían juntos. Podía pararse frente al César y también llamarse el primero de los pecadores. Podía reprender a Pedro en público y también decir que era menos que el menor de todos los santos.\n\nEse es el hombre que Jesús hizo del que guardaba los mantos en la lapidación de Esteban.",
+      "revelation_key": "La humildad de Pablo no era debilidad. Era la consecuencia directa de haber visto a Jesús. Cuanto más lo conocía, más claro veía cuánto necesitaba Su gracia."
+    },
+    {
+      "order": 15,
+      "type": "discovery_activation",
+      "image_url": "saulo_open_road_dust_light.png",
+      "icon": "⚡",
+      "title": "Tu Encuentro",
+      "subtitle": "Saulo no buscaba a Jesús. Jesús lo detuvo en el camino. Y lo que hizo con ese hombre, puede hacerlo contigo.",
+      "discovery_questions": [
+        {
+          "category": "Tu certeza",
+          "question": "Saulo estaba absolutamente convencido de que hacía lo correcto, y esa convicción lo hacía más peligroso. ¿Hay alguna área de tu vida donde tu certeza podría estar cerrándote a algo que Dios quiere mostrarte? ¿Cómo distinguirías entre convicción santa y resistencia a Dios disfrazada de devoción?"
+        },
+        {
+          "category": "Tu silencio",
+          "question": "Saulo tuvo tres días de oscuridad y silencio antes de recibir dirección. ¿Has tenido períodos de tu vida que viviste como fracaso o paralización que ahora puedes reconocer como un tiempo de gestación? ¿Qué le das a Dios en el silencio que no puede recibir de ti en el ruido?"
+        },
+        {
+          "category": "Tu Ananías",
+          "question": "La restauración de Saulo llegó a través de un hombre con miedo que obedeció de todas formas y lo llamó hermano. ¿Hay alguien en tu vida que necesita que te acerques con esa misma valentía, aunque tengas razones legítimas para no hacerlo? ¿Qué te detiene?"
+        }
+      ],
+      "prayer": {
+        "title": "Oración desde el camino",
+        "content": "Señor Jesús,\n\nComo Saulo, he caminado con certezas que construí yo mismo. He tenido mis razones, mis convicciones, mis sistemas de lo que está bien y lo que está mal. Y en medio de todo eso, no siempre te he preguntado a Ti.\n\nHoy te pido que me interrumpas donde sea necesario. Que salgas a mi encuentro en el camino, no solo cuando esté buscándote, sino cuando más falta me haga que alguien me detenga.\n\nSi hay períodos de silencio en mi historia que no entiendo, ayúdame a confiar en que Tú también estás ahí. Que el tiempo que siento perdido puede ser el tiempo donde Tú más estás trabajando.\n\nY si hay alguien que necesita que yo sea su Ananías, dame el valor de entrar a esa puerta. De decir hermano, de decir hermana, aunque tenga miedo, aunque la historia entre nosotros sea complicada.\n\nHazme como Pablo: con denuedo para predicarte y con claridad para saber que sin Tu gracia no soy nada.\n\nEn el nombre de Jesús, Amén."
+      }
+    },
+    {
+      "order": 16,
+      "type": "completion",
+      "mood": "open",
+      "image_url": "saulo_road_light_horizon.png",
+      "completion_verse": {
+        "reference": "1 Timoteo 1:15-16",
+        "text": "Palabra fiel y digna de ser recibida por todos: que Cristo Jesús vino al mundo para salvar a los pecadores, de los cuales yo soy el primero. Pero por esto fui recibido a misericordia, para que Jesucristo mostrase en mí el primero toda su clemencia, para ejemplo de los que habrían de creer en él para vida eterna.",
+        "bible_version": "RVR1960"
+      },
+      "reflection_prompt": "Pablo llegó a ser el ejemplo de la clemencia de Jesús para todos los que vendrían después. ¿Qué parte de tu historia, la que más te cuesta contar, podría ser exactamente esa misma clase de ejemplo para alguien que todavía no conoces?",
+      "celebration_type": "burst"
+    }
+  ]
+}
