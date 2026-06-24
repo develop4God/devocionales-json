@@ -145,8 +145,9 @@ All cards share these base fields:
 - `type` (string, see types below)
 - `mood` (string, optional on some types)
 - `image_url` (string — filename, see Image Prompt section)
-- `image_prompt` (string — AI generation prompt, see Image Prompt section)
 - `revelation_key` (string — the one-sentence theological insight, optional on some types)
+
+> **Note:** `image_prompt` is NOT stored in the card JSON. Image prompts are managed separately (see Image Prompts section).
 
 ---
 
@@ -158,15 +159,19 @@ Opens or transitions a narrative beat. Immersive, present-tense prose.
   "type": "cinematic_scene",
   "mood": "string",
   "image_url": "filename.png",
-  "image_prompt": "...",
   "title": "Short evocative title.",
   "narrative": "Prose paragraph(s). No em dashes. Pastoral tone.",
   "ambient_sound": "crowd_distant | wind | water | silence | fire | etc.",
   "haptic": null,
-  "verse_overlay": "Optional short verse quote (if the scene has a verse anchor)",
+  "verse_overlay": {
+    "reference": "Book ch:v",
+    "text": "Full verse text in same Bible version and language"
+  },
   "revelation_key": "One sentence."
 }
 ```
+> **`verse_overlay`** is optional but common — use it when the scene has a verse anchor.
+> **`haptic`** is optional — omit or set to `null`.
 
 #### `scripture_moment`
 Presents a passage + reflection. Verse must be complete — no truncation.
@@ -183,7 +188,6 @@ contrasts another passage — the dart code will resolve these for display autom
   "type": "scripture_moment",
   "mood": "string",
   "image_url": "filename.png",
-  "image_prompt": "...",
   "verse_reference": "Book chapter:verses",
   "verse_text": "Full verse(s) from RVR1960 — exact text, correct capitalization",
   "reflection": "Paragraph(s) unpacking the verse. No jargon. Pastoral.",
@@ -207,13 +211,20 @@ Psychological/emotional deep-dive into the biblical character.
   "type": "character_moment",
   "mood": "string",
   "image_url": "filename.png",
-  "image_prompt": "...",
   "title": "string",
   "subtitle": "string",
   "content": "Prose. May include emphasis markers like 🔑 or ⚠️ for key phrases.",
-  "revelation_key": "One sentence."
+  "revelation_key": "One sentence.",
+  "verse_overlay": {
+    "reference": "Book ch:v",
+    "text": "Full verse text"
+  },
+  "scripture_connections": [
+    { "reference": "Book ch:v", "text": "Full verse text" }
+  ]
 }
 ```
+> **`verse_overlay`** and **`scripture_connections`** are optional on this card type.
 
 #### `theological_depth`
 Exegetical insight — Greek/Hebrew word studies, cultural context, cross-references.
@@ -223,16 +234,20 @@ Exegetical insight — Greek/Hebrew word studies, cultural context, cross-refere
   "type": "theological_depth",
   "mood": "string",
   "image_url": "filename.png",
-  "image_prompt": "...",
   "title": "string",
   "subtitle": "string",
   "content": "Prose with emoji markers for key insights. Greek/Hebrew in transliteration.",
   "revelation_key": "One sentence.",
+  "verse_overlay": {
+    "reference": "Book ch:v",
+    "text": "Full verse text"
+  },
   "scripture_connections": [
     { "reference": "Book ch:v", "text": "Full verse text" }
   ]
 }
 ```
+> **`verse_overlay`** is optional on this card type.
 
 #### `discovery_activation`
 Application card — 3 reflection questions + closing prayer. Always near the end.
@@ -241,8 +256,6 @@ Application card — 3 reflection questions + closing prayer. Always near the en
   "order": 14,
   "type": "discovery_activation",
   "image_url": "filename.png",
-  "image_prompt": "...",
-  "icon": "🙏",
   "title": "Tu Encuentro",
   "subtitle": "One-line bridge from the story to the reader's life.",
   "discovery_questions": [
@@ -263,7 +276,6 @@ Final card. Repeats the key verse + one reflection prompt.
   "type": "completion",
   "mood": "string",
   "image_url": "filename.png",
-  "image_prompt": "...",
   "completion_verse": {
     "reference": "Book ch:v",
     "text": "Full verse",
@@ -282,7 +294,6 @@ Pause for personal naming/reflection. Used sparingly.
   "type": "interactive_moment",
   "icon": "emoji",
   "image_url": "filename.png",
-  "image_prompt": "...",
   "title": "string",
   "subtitle": "string",
   "reflection_prompt": "string"
