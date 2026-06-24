@@ -2,7 +2,7 @@
   "encounters": [
     {
       "id": "peter_water_001",
-      "version": "1.2",
+      "version": "1.3",
       "image_version": "1.0",
       "emoji": "🌊",
       "status": "published",
@@ -61,21 +61,21 @@
         "fil": "Mateo 14:22-33"
       },
       "estimated_reading_minutes": {
-        "en": 12,
-        "es": 12,
-        "pt": 12,
-        "fr": 12,
-        "de": 9,
-        "ja": 14,
-        "zh": 14,
-        "hi": 13,
-        "ar": 11,
-        "fil": 9
+        "en": 5,
+        "es": 5,
+        "fr": 6,
+        "pt": 5,
+        "de": 5,
+        "fil": 6,
+        "hi": 6,
+        "ar": 5,
+        "ja": 6,
+        "zh": 4
       }
     },
     {
       "id": "bartimaeus_001",
-      "version": "1.0",
+      "version": "1.1",
       "image_version": "1.0",
       "emoji": "👁️",
       "status": "published",
@@ -135,20 +135,20 @@
       },
       "estimated_reading_minutes": {
         "en": 7,
-        "es": 9,
-        "pt": 7,
+        "es": 7,
         "fr": 7,
-        "de": 8,
-        "ja": 7,
-        "zh": 7,
-        "hi": 7,
-        "ar": 9,
-        "fil": 8
+        "pt": 7,
+        "de": 6,
+        "fil": 9,
+        "hi": 9,
+        "ar": 6,
+        "ja": 8,
+        "zh": 5
       }
     },
     {
       "id": "woman_well_001",
-      "version": "1.1",
+      "version": "1.2",
       "image_version": "1.0",
       "emoji": "⛲",
       "status": "published",
@@ -207,21 +207,21 @@
         "fil": "Juan 4:1-42"
       },
       "estimated_reading_minutes": {
-        "en": 9,
+        "en": 10,
         "es": 10,
+        "fr": 11,
         "pt": 10,
-        "fr": 10,
-        "de": 10,
-        "ja": 9,
-        "zh": 9,
-        "hi": 11,
-        "ar": 12,
-        "fil": 10
+        "de": 9,
+        "fil": 12,
+        "hi": 13,
+        "ar": 9,
+        "ja": 13,
+        "zh": 8
       }
     },
     {
       "id": "zacchaeus_001",
-      "version": "1.4",
+      "version": "1.5",
       "image_version": "1.0",
       "emoji": "🌳",
       "status": "published",
@@ -280,16 +280,16 @@
         "ar": "لوقا 19:1-10"
       },
       "estimated_reading_minutes": {
-        "en": 7,
-        "es": 11,
-        "pt": 11,
-        "fr": 7,
-        "ja": 13,
-        "zh": 13,
-        "hi": 9,
-        "de": 8,
-        "fil": 8,
-        "ar": 13
+        "en": 12,
+        "es": 12,
+        "fr": 14,
+        "pt": 12,
+        "de": 11,
+        "fil": 15,
+        "hi": 17,
+        "ar": 12,
+        "ja": 15,
+        "zh": 10
       }
     },
     {
@@ -297,7 +297,9 @@
       "version": "1.0",
       "image_version": "1.0",
       "emoji": "🌸",
-      "status": "coming_soon",
+      "status": "published",
+      "intro_image": "mary_garden_portrait.png",
+      "intro_image_prompt": "Wide atmospheric shot of an ancient garden at the edge of dawn. A rock-cut tomb with a large round stone rolled aside sits in the middle ground, dark opening visible. Olive trees and low shrubs surround it. The sky is deep indigo fading to the faintest amber on the horizon. A lone small figure in a dark violet headscarf walks toward the tomb from the far left, barely visible against the landscape. No text. Painterly warm 2D illustration, Mediterranean palette, deep indigo and muted violet tones, cinematic lighting.",
       "mood_primary": "grief",
       "accent_color": "#1a0a2e",
       "has_interactive": false,
@@ -316,28 +318,28 @@
         "fil": "mary_garden_fil_001.json"
       },
       "titles": {
-        "en": "She Heard Her Name",
-        "es": "Ella Escuchó Su Nombre",
-        "pt": "Ela Ouviu Seu Nome",
-        "fr": "Elle Entendit Son Nom",
-        "ja": "彼女は自分の名前を聞いた",
-        "zh": "她听见了自己的名字",
-        "hi": "उसने अपना नाम सुना",
-        "de": "Sie hörte ihren Namen",
-        "ar": "سمعت اسمها",
-        "fil": "Narinig Niya ang Kanyang Pangalan"
+        "en": "The Spoken Name",
+        "es": "El nombre pronunciado",
+        "pt": "O nome pronunciado",
+        "fr": "Le nom prononcé",
+        "ja": "呼ばれた名",
+        "zh": "被呼唤的名字",
+        "hi": "पुकारा गया नाम",
+        "de": "Der ausgesprochene Name",
+        "ar": "الاسم المنادى",
+        "fil": "Ang Pangalang Tinawag"
       },
       "subtitles": {
-        "en": "Mary at the empty tomb — grief, darkness, and one word that changed everything",
-        "es": "María ante el sepulcro vacío — dolor, oscuridad, y una palabra que lo cambió todo",
-        "pt": "Maria diante do túmulo vazio — dor, escuridão e uma palavra que mudou tudo",
-        "fr": "Marie devant le tombeau vide — douleur, obscurité, et un mot qui changea tout",
-        "ja": "空の墓のマリア — 悲しみ、暗闇、そしてすべてを変えた一言",
-        "zh": "马利亚在空坟墓前——悲痛、黑暗，以及改变一切的一个字",
-        "hi": "खाली कब्र के सामने मरियम — दुःख, अंधेरा, और एक शब्द जिसने सब कुछ बदल दिया",
-        "de": "Maria am leeren Grab — Trauer, Dunkelheit und ein Wort, das alles veränderte",
-        "ar": "مريم عند القبر الفارغ — حزن وظلام وكلمة واحدة غيّرت كل شيء",
-        "fil": "Si Maria sa tabi ng walang lamang libingan — kalungkutan, kadiliman, at isang salitang nagbago ng lahat"
+        "en": "Mary in the garden: from the grief of the tomb to the voice that called her.",
+        "es": "María en el jardín: del duelo del sepulcro a la voz que la llamó.",
+        "pt": "Maria no jardim: do luto do sepulcro à voz que a chamou.",
+        "fr": "Marie au jardin : du deuil du tombeau à la voix qui l’a appelée.",
+        "ja": "庭に立つマリア：空の墓の嘆きから、彼女を呼ぶ声へ。",
+        "zh": "园中的马利亚：从坟墓的哀恸，到呼唤她的声音。",
+        "hi": "बगीचे में मरियम: कब्र के दुःख से उस आवाज़ तक, जिसने उसे पुकारा।",
+        "de": "Maria im Garten: von der Trauer am Grab hin zu der Stimme, die sie rief.",
+        "ar": "مريم في البستان: من حزن القبر إلى الصوت الذي ناداها.",
+        "fil": "Si Maria sa halamanan: mula sa dalamhati sa libingan patungo sa tinig na tumawag sa kanya."
       },
       "scripture_reference": {
         "en": "John 20:1-18",
@@ -352,16 +354,89 @@
         "fil": "Juan 20:1-18"
       },
       "estimated_reading_minutes": {
-        "en": 8,
-        "es": 8,
-        "pt": 8,
-        "fr": 8,
-        "ja": 8,
-        "zh": 8,
-        "hi": 8,
+        "en": 9,
+        "es": 10,
+        "fr": 11,
+        "pt": 10,
         "de": 9,
-        "ar": 11,
-        "fil": 9
+        "fil": 12,
+        "hi": 13,
+        "ar": 9,
+        "ja": 13,
+        "zh": 8
+      }
+    },
+    {
+      "id": "saulo_001",
+      "version": "0.1",
+      "image_version": "1.0",
+      "emoji": "⚡",
+      "status": "coming_soon",
+      "intro_image": "saulo_stephen_stoning_mantles.png",
+      "mood_primary": "transformation",
+      "accent_color": "#1a0a00",
+      "has_interactive": false,
+      "testament": "new",
+      "character": "Saulo de Tarso",
+      "files": {
+        "en": "saulo_en_001.json",
+        "es": "saulo_es_001.json",
+        "pt": "saulo_pt_001.json",
+        "fr": "saulo_fr_001.json",
+        "de": "saulo_de_001.json",
+        "ja": "saulo_ja_001.json",
+        "zh": "saulo_zh_001.json",
+        "hi": "saulo_hi_001.json",
+        "ar": "saulo_ar_001.json",
+        "fil": "saulo_fil_001.json"
+      },
+      "titles": {
+        "en": "The Road to Damascus",
+        "es": "El Camino a Damasco",
+        "pt": "O Caminho para Damasco",
+        "fr": "Le Chemin de Damas",
+        "de": "Der Weg nach Damaskus",
+        "ja": "ダマスカスへの道",
+        "zh": "大马士革之路",
+        "hi": "दमिश्क की राह",
+        "ar": "الطريق إلى دمشق",
+        "fil": "Ang Daan Patungong Damasco"
+      },
+      "subtitles": {
+        "en": "The most feared persecutor of the church, transformed into the apostle to the Gentiles",
+        "es": "El perseguidor más temido de la iglesia, transformado en el apóstol de los gentiles",
+        "pt": "O perseguidor mais temido da igreja, transformado no apóstolo dos gentios",
+        "fr": "Le persécuteur le plus redouté de l'Église, transformé en apôtre des nations",
+        "de": "Der gefürchtetste Verfolger der Kirche, verwandelt in den Apostel der Heiden",
+        "ja": "教会の最も恐れられた迫害者が、異邦人への使徒に変えられた",
+        "zh": "教会最令人恐惧的迫害者，转变为外邦人的使徒",
+        "hi": "कलीसिया का सबसे भयभीत करने वाला सताने वाला, अन्यजातियों का प्रेरित बन गया",
+        "ar": "أشد مضطهدي الكنيسة رعباً، تحوّل إلى رسول الأمم",
+        "fil": "Ang pinakakatatakot na taga-usig ng simbahan, naging apostol sa mga Hentil"
+      },
+      "scripture_reference": {
+        "en": "Acts 9:1-22",
+        "es": "Hechos 9:1-22",
+        "pt": "Atos 9:1-22",
+        "fr": "Actes 9:1-22",
+        "de": "Apostelgeschichte 9:1-22",
+        "ja": "使徒行伝9:1-22",
+        "zh": "使徒行传9:1-22",
+        "hi": "प्रेरितों के काम 9:1-22",
+        "ar": "أعمال الرسل 9:1-22",
+        "fil": "Mga Gawa 9:1-22"
+      },
+      "estimated_reading_minutes": {
+        "en": 10,
+        "es": 10,
+        "pt": 10,
+        "fr": 10,
+        "de": 10,
+        "ja": 10,
+        "zh": 10,
+        "hi": 10,
+        "ar": 10,
+        "fil": 10
       }
     }
   ]

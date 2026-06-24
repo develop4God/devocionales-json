@@ -1,0 +1,263 @@
+{
+  "id": "mary_garden_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fil",
+  "bible_version": "Magandang Balita Biblia",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 12,
+  "meta": {
+    "character": "Maria Magdalena",
+    "testament": "new",
+    "scripture_reference": "Juan 20:1-18",
+    "mood_primary": "grief",
+    "accent_color": "#1a0a2e",
+    "emoji": "🌸",
+    "tags": [
+      "kalungkutan",
+      "pagkabuhay-na-muli",
+      "pangalan",
+      "pagkakakilanlan",
+      "katapatan",
+      "pag-ibig",
+      "magdalena",
+      "jesus",
+      "pakikipagtagpo",
+      "pagpapanumbalik"
+    ]
+  },
+  "key_verse": {
+    "reference": "Juan 20:16",
+    "text": "“Maria!” sabi ni Jesus. Humarap siya at kanyang sinabi sa wikang Hebreo, “Raboni!” na ang ibig sabihi'y “Guro.”",
+    "bible_version": "Magandang Balita Biblia"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "darkness",
+      "image_url": "mary_garden_dawn_tomb.png",
+      "title": "Habang madilim pa.",
+      "narrative": "Hindi siya naghintay ng liwanag.\n\nNatutulog ang iba. Nagkulong ang mga alagad. Tapos na ang Araw ng Pamamahinga, pero parang nakatigil pa rin ang mundo.\n\nHindi siya. Pumunta siya sa libingan habang madilim pa ang lahat.\n\nWala siyang plano. Iisa lang ang dala niya, ang bagay na walang makakaagaw sa kanya: ang kanyang presensya.",
+      "ambient_sound": "wind_predawn",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 20:1",
+        "text": "Madilim-dilim pa nang unang araw ng sanlinggo, pumunta si Maria Magdalena sa libingan. Naratnan niyang naalis na ang batong nakatakip sa pinto ng libingan."
+      },
+      "revelation_key": "Nang magtago ang lahat, naglakad siya patungo sa libingan. Hindi naghihintay ng perpektong sandali ang pag-ibig."
+    },
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "panic",
+      "image_url": "mary_garden_empty_tomb.png",
+      "title": "Naigulong na ang bato.",
+      "narrative": "Ang unang nakita niya, naalis na ang bato.\n\nHindi pagkabuhay-na-muli ang naisip niya. Pagnanakaw ang naisip niya. Akala niya, kinuha nila ang huling natira sa kanya mula sa Kanya.\n\nTumakbo siya.",
+      "ambient_sound": "footsteps_running",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 20:2",
+        "text": "Dahil dito, patakbo siyang pumunta kay Simon Pedro at sa alagad na mahal ni Jesus, at sinabi sa kanila, “May kumuha sa Panginoon mula sa libingan, at hindi namin alam kung saan siya dinala!”"
+      },
+      "revelation_key": "Ang unang naramdaman niya sa walang lamang libingan ay hindi pananampalataya. Sakit. At hindi naman siya nadiskwalipika dahil doon."
+    },
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "grief",
+      "image_url": "mary_garden_weeping.png",
+      "verse_reference": "Juan 20:11-13",
+      "verse_text": "Si Maria ay nakatayong umiiyak sa labas ng libingan. Nang yumuko siya at sumilip sa loob, may nakita siyang dalawang anghel na nakadamit ng puti at nakaupo sa pinaglagyan ng bangkay ni Jesus, ang isa'y sa gawing ulunan at ang isa nama'y sa paanan. Tinanong nila si Maria, “Babae, bakit ka umiiyak?” Sumagot siya, “May kumuha po sa aking Panginoon at hindi ko alam kung saan siya dinala.”",
+      "reflection": "Dumating sina Pedro at Juan, nakita ang mga telang lino, naniwala, at umuwi.\n\nNanatili siya.\n\nHindi dahil mas malakas ang pananampalataya niya. Hindi dahil mas nauunawaan niya. Nanatili siya dahil hindi niya kayang umalis. Dahil ang nag-uugnay sa kanya kay Jesus ay hindi pag-unawa. Pag-ibig iyon.\n\nDalawang anghel ang nagtanong ng tanong na itatanong din ni Jesus: Bakit ka umiiyak?\n\nHindi nila siya itinama. Hindi nila sinabing hindi siya dapat umiyak. Pinayagan nila ang kanyang kalungkutan.\n\nMinsan, hindi lakas ang anyo ng katapatan. Ito ay isang taong nanatili kahit walang dahilang manatili.",
+      "revelation_key": "Umuwi ang mga alagad. Nanatili siya. Hindi laging nakakaunawa ang katapatan; pero hindi ito umaalis."
+    },
+    {
+      "order": 4,
+      "type": "character_moment",
+      "mood": "grief",
+      "image_url": "mary_garden_portrait.png",
+      "title": "Sino si Maria Magdalena?",
+      "subtitle": "Ang sinasabi ng Bibliya",
+      "content": "Pinalayas ni Jesus ang pitong demonyo mula sa kanya. Pito. Ang bilang ng kaganapan. Anuman ang nagpahirap sa kanya, lubusan siyang nilamon nito.\n\nMatapos siyang mapalaya, sumunod siya sa Kanya. Inilagay siya ng Lucas 8:2-3 kasama ng mga babaing tumustos sa ministeryo ni Jesus mula sa sarili nilang yaman. Hindi siya nasa gilid. Naroon siya.\n\nNanatili siya sa paanan ng krus nang tumakas ang mga alagad. At siya ang unang pumunta sa libingan.\n\nHindi siya perpekto. Tapat siya, may pusong sumuko, at iyon ang nakikita at hinahanap ni Jesus sa kanyang iglesya.",
+      "revelation_key": "Hindi natin alam ang lahat tungkol sa kanyang nakaraan. Pero alam nating naroon siya kung saan wala ang iba.",
+      "scripture_connections": [
+        {
+          "reference": "Lucas 8:2-3",
+          "text": "at ilang babaing pinagaling niya sa masasamang espiritu at sa kanilang mga karamdaman: si Maria na tinatawag na Magdalena na may pitong demonyong pinalayas ni Jesus mula sa babaing ito, si Juana na asawa ni Cusa na katiwala ni Herodes, si Susana, at marami pang iba. Sarili nilang salapi ang kanilang ginastos para sa pangangailangan ni Jesus at ng kanyang mga alagad."
+        },
+        {
+          "reference": "Marcos 15:40",
+          "text": "Naroon din ang ilang babaing nakatanaw mula sa malayo. Kabilang sa kanila si Maria Magdalena, si Salome, at si Maria na ina ng nakababatang si Santiago at ni Jose."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "tension",
+      "image_url": "mary_garden_linen_cloths.png",
+      "title": "Ang naiwan sa libingan",
+      "subtitle": "Ang mga telang lino, ang panyo, at ang kahulugan nila.",
+      "content": "May detalyeng itinala si Juan na walang ibang ebanghelista ang nagbanggit nang ganoon kalinaw: nakalagay doon ang mga telang lino, at ang panyong nakatiklop nang hiwalay sa isang tabi.\n\nHindi ito maliit na bagay. Kung may nagnakaw ng bangkay, hindi nila aalisin ang balot nito. Naroon ang mga damit-pambaon, pero wala ang katawan.\n\n📜 May bigat na pangkultura ang panyong nakatiklop nang hiwalay. May mga iskolar na nagmungkahi na sa kaugaliang Judio, kapag natapos kumain ang isang panginoon, at iniwan niyang nakatiklop ang panyo, ito ay nangangahulugang babalik siya. Mapatunayan man o hindi ang tradisyong iyon, ang nakita ni Juan ay kaayusan, hindi kaguluhan. Walang pagnanakaw na nangyari. Pagkabuhay-na-muli ang nangyari.\n\nNakita ito ni Juan at naniwala. Pero hindi pa rin nauunawaan ni Maria. At hindi siya itinakwil ni Jesus dahil doon.\n\nHindi laging sabay dumarating ang pananampalataya para sa lahat. At hindi nagmamadali ang Diyos.",
+      "revelation_key": "Nakita ni Juan at naniwala. Nakita ni Maria at umiyak. Ipinahayag ni Jesus ang Kanyang sarili sa kanilang dalawa.",
+      "verse_overlay": {
+        "reference": "Juan 20:6-7",
+        "text": "Nang dumating si Simon Pedro, tuluy-tuloy itong pumasok sa libingan at nakita nito ang mga telang lino, at ang panyong ibinalot sa ulo ni Jesus. Ang panyo ay hindi kasama ng mga mamahaling tela, kundi hiwalay na nakatiklop sa isang tabi."
+      }
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "liminal",
+      "image_url": "mary_garden_turned_back.png",
+      "title": "Lumingon siya.",
+      "narrative": "Sumagot siya sa mga anghel. Lumingon siya.\n\nAt naroon Siya. Nakatayo. Buhay.\n\nPero hindi niya Siya nakilala.\n\nAng kanyang mga matang puno ng luha ay naghahanap ng patay na katawan. Hindi handa ang mga ito na makita ang Buhay.",
+      "ambient_sound": "garden_morning",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 20:14",
+        "text": "Pagkasabi nito'y napalingon siya at nakita niya si Jesus na nakatayo roon, ngunit hindi niya nakilalang si Jesus iyon."
+      },
+      "revelation_key": "Minsan nasa likuran lang natin si Jesus pero hindi natin Siya nakikilala dahil mali ang ating pagtingin."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "ache",
+      "image_url": "mary_garden_mistaken_gardener.png",
+      "verse_reference": "Juan 20:15",
+      "verse_text": "Tinanong siya ni Jesus, “Babae, bakit ka umiiyak? Sino ang hinahanap mo?” Akala ni Maria, ang kausap niya'y ang hardinero kaya't sinabi niya, “Ginoo, kung kayo po ang kumuha sa kanya, pakituro nga po ninyo sa akin kung saan ninyo siya dinala at kukunin ko.”",
+      "reflection": "Ang parehong tanong ng mga anghel, ngayon ay sa tinig ni Jesus: Bakit ka umiiyak?\n\nAt may pangalawa: Sino ang hinahanap mo?\n\nHindi Niya tinanong kung ano ang hinahanap mo. Tinanong Niya kung sino.\n\nNapagkamalan niyang hardinero Siya, at sa kanyang pagkalito ay may sinabi siyang naghahayag ng lahat tungkol sa kanyang puso: Kukunin ko Siya.\n\nIsang babaing nag-iisa, walang katayuan sa lipunan, walang lakas magbuhat ng katawan, ay nag-aalok na siya na ang magbuhat nito. Hindi ito lohika. Pag-ibig ito.\n\nAt nakita ito ng lahat ni Jesus.",
+      "revelation_key": "Wala siyang lakas para sa inialok niya. Pero ang pagkukusa ng kanyang puso ang hinahanap ni Jesus."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "revelation",
+      "image_url": "mary_garden_name_called.png",
+      "title": "Maria!",
+      "narrative": "Isang salita.\n\nAng kanyang pangalan.\n\nHindi teolohikong paliwanag. Hindi pagtatama. Hindi pagsaway sa hindi pagkakakilala sa Kanya.\n\nAng kanyang pangalan lamang, binigkas sa paraang Siya lang ang makakapagsabi.\n\nAt nalaman niya.",
+      "ambient_sound": "silence_sacred",
+      "haptic": "light_pulse",
+      "verse_overlay": {
+        "reference": "Juan 20:16",
+        "text": "“Maria!” sabi ni Jesus. Humarap siya at kanyang sinabi sa wikang Hebreo, “Raboni!” na ang ibig sabihi'y “Guro.”"
+      },
+      "revelation_key": "Hindi Niya siya kinumbinsi sa pamamagitan ng pangangatwiran. Tinawag Niya siya sa pangalan. Ganoon hinahanap ng Pastol ang Kanyang tupa."
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "wonder",
+      "image_url": "mary_garden_light_breaking.png",
+      "title": "Raboni!",
+      "subtitle": "Ang bigat ng isang salita.",
+      "content": "Hindi pareho ang Raboni at Rabbi. Ito ay isang mas malalim, mas personal na anyo. Sa Aramaic noong unang siglo, ang Raboni ay halos nakalaan lamang sa pakikipag-usap sa Diyos sa panalangin. Ito ang anyong ginagamit ng mga pinakamalapit.\n\nHindi niya sinabing Guro bilang pormal na titulo. Sinabi niyang Raboni bilang isang kumikilala sa taong nagbago ng kanyang buhay.\n\n🔑 Tinawag siya ni Jesus sa pangalan. Tumugon siya sa pamamagitan ng pangalang ginagamit lamang ng mga malapit sa Kanya.\n\nDalawang pangalan. Isang sabay na pagkikilala.\n\nSa Juan 10:3, sinabi ni Jesus na tinatawag ng mabuting pastol ang kanyang mga tupa sa pangalan. Dito, sa isang hardin, sa madaling-araw, literal Niyang ginawa iyon.\n\nHindi ito doktrina. Pakikipagtagpo ito.",
+      "revelation_key": "Tinawag Niya siya sa pangalan. Tumugon siya sa pangalang ginagamit lamang ng mga pinakamalapit. Ganoon gumagana ang pagiging malapit sa Diyos.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 10:3",
+          "text": "Pinapapasok siya ng gwardiya, at pinapakinggan ng mga tupa ang kanyang tinig. Tinatawag niya ang kanyang mga tupa sa kani-kanilang pangalan, at inilalabas sa kulungan."
+        },
+        {
+          "reference": "Isaias 43:1",
+          "text": "Israel, ito ang sinasabi ni Yahweh na lumikha sa iyo, “Huwag kang matatakot sapagkat ililigtas kita. Tinawag kita sa iyong pangalan, ikaw ay akin."
+        }
+      ],
+      "verse_overlay": {
+        "reference": "Juan 10:14",
+        "text": "Ako nga ang mabuting pastol. Kung paanong kilala ako ng Ama at siya'y kilala ko, gayundin naman, kilala ko ang aking mga tupa at ako nama'y kilala nila. At iniaalay ko ang aking buhay para sa aking mga tupa."
+      }
+    },
+    {
+      "order": 10,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "mary_garden_reaching.png",
+      "title": "Huwag mo akong hawakan.",
+      "subtitle": "Ang hiniling ni Jesus sa kanya at kung bakit.",
+      "content": "Ang likas na reaksyon ni Maria ay hawakan Siya nang mahigpit. Matapos ang tatlong araw ng kadiliman, ng paniniwalang nawala na Siya magpakailanman, gusto niyang panatilihin Siya.\n\nSinabi sa kanya ni Jesus: Huwag mo akong hawakan, sapagkat hindi pa ako nakakapunta sa aking Ama.\n\nHindi ito pagtanggi. Pagpapanibago ito ng direksyon.\n\nSinasabi Niya sa kanya: hindi mo na ako maaaring hawakan tulad ng dati. Hindi nagtatapos dito ang relasyon, pero nagbabago ito. Hindi na ito pisikal na presensya. Ito ay espiritwal na presensya, permanente, walang hangganan ng panahon o lugar.\n\nAt pagkatapos ay binigyan Niya siya ng misyon: pumunta ka sa aking mga kapatid.\n\nAng babaing dumating na naghahanap ng patay na katawan ay umalis ng hardin dala ang buhay na mensahe. Hindi siya sinugo upang maghanap. Sinugo siya upang ipahayag.",
+      "revelation_key": "Hindi siya itinakwil ni Jesus. Ipinakita Niya na ang Kanyang presensya ay hindi na malilimitahan sa kung ano lang ang maaabot ng kanyang mga kamay.",
+      "verse_overlay": {
+        "reference": "Juan 20:17",
+        "text": "Sabi ni Jesus, “Huwag mo akong hawakan sapagkat hindi pa ako nakakapunta sa Ama. Sa halip, pumunta ka sa aking mga kapatid at sabihin mo sa kanila na aakyat ako sa aking Ama at inyong Ama, sa aking Diyos at inyong Diyos.”"
+      }
+    },
+    {
+      "order": 11,
+      "type": "cinematic_scene",
+      "mood": "sending",
+      "image_url": "mary_garden_running_dawn.png",
+      "title": "Pumunta si Maria Magdalena at sinabi sa mga alagad.",
+      "narrative": "Ang parehong babaing tumakbo patungo sa libingan sa kadiliman ay tumakbo na ngayon pabalik sa lungsod, ang liwanag ng madaling-araw ay nasa kanyang likod.\n\nPero sa pagkakataong ito hindi siya tumatakbo mula sa sakit. Tumatakbo siya dala ang mensahe.\n\nNakita ko ang Panginoon.\n\nApat na salita. Ang unang pagpapahayag ng pagkabuhay-na-muli sa kasaysayan.",
+      "ambient_sound": "dawn_birds",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 20:18",
+        "text": "Kaya't si Maria Magdalena ay pumunta sa mga alagad at sinabi sa kanila, “Nakita ko ang Panginoon!” At sinabi rin niya sa kanila ang bilin ni Jesus."
+      },
+      "revelation_key": "Ang unang nagpahayag ng pagkabuhay-na-muli ay isang babaing hindi pagkakatiwalaan ng mundo. Ganoon pumili ang Diyos ng Kanyang mga mensahero."
+    },
+    {
+      "order": 12,
+      "type": "theological_depth",
+      "mood": "wonder",
+      "image_url": "mary_garden_sunrise.png",
+      "title": "Ang apostol ng mga apostol",
+      "subtitle": "Kung bakit siya ang nauna.",
+      "content": "Sa Israel noong unang siglo, walang legal na bisa ang patotoo ng isang babae. Kung imbento lang ang mga Ebanghelyo, hindi nila gagawing unang saksi ng pagkabuhay-na-muli ang isang babae. Walang gagawa ng kuwento ang pipili ng pinakahindi mapagkakatiwalaang saksi sa kanilang kultura.\n\nPero ginawa ito ng Diyos.\n\nTinawag siya ng sinaunang tradisyong Kristiyano na apostola apostolorum: ang apostol ng mga apostol. Sinugo siya sa mga sinugo.\n\n✝️ May isang padron sa buong Kasulatan: pinipili ng Diyos ang itinatakwil ng mundo. Ang mahina. Ang maliit. Ang walang tinig.\n\nHindi aksidente si Maria Magdalena. Sadyang pinili siya. Maaaring nagpakita muna si Jesus kay Pedro, kay Juan, sa Sanedrin. Nagpakita Siya sa nanatiling umiiyak sa tabi ng walang lamang libingan.\n\nDahil ang katapatan, hindi ang katungkulan, ang pinararangalan ng Diyos.",
+      "revelation_key": "Hindi pinili ng Diyos ang pinakamapagkakatiwalaang saksi. Pinili Niya ang pinakatapat.",
+      "scripture_connections": [
+        {
+          "reference": "1 Mga Taga-Corinto 1:27",
+          "text": "Subalit pinili ng Diyos ang mga naturingang hangal sa sanlibutan upang hiyain ang marurunong, at pinili niya ang mga naturingang mahihina upang hiyain ang malalakas."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "mood": "intimate",
+      "image_url": "mary_garden_prayer.png",
+      "title": "Ang iyong pakikipagtagpo",
+      "subtitle": "Anong pangalan ang kailangan mong marinig ngayon?",
+      "discovery_questions": [
+        {
+          "category": "Ang iyong kadiliman",
+          "question": "Pumunta si Maria sa libingan habang madilim pa. May hinahanap ka ba sa iyong buhay kahit sa dilim, nang hindi naghihintay ng liwanag? Ano ang nagtutulak sa iyong magpatuloy kahit hindi mo nauunawaan?"
+        },
+        {
+          "category": "Ang iyong paghahanap",
+          "question": "Naghahanap siya ng patay na katawan ngunit natagpuan niya ang buhay na Kristo. May hinahanap ka ba sa maling paraan? Ano kaya kung ang nakalaan ng Diyos para sa iyo ay iba sa iyong inaasahan?"
+        },
+        {
+          "category": "Ang iyong pangalan",
+          "question": "Tinawag siya ni Jesus sa pangalan at tumugon siya nang may ganoong pagiging malapit. Kailan ka huling nakaramdam na tinatawag ka ng Diyos nang personal? Mayroon ka bang ganoong lapit at intimidad upang lumapit sa Diyos? Kung wala, ano ang humahadlang sa iyong lumapit sa Kanya?"
+        },
+        {
+          "category": "Ang iyong mensahe",
+          "question": "Mula sa paghahanap ay sinugo si Maria. Ano ang ginawa ni Jesus sa iyong buhay na kailangan mong itigil sa pag-iingat sa sarili mo lang? Sino ang kailangan mong sabihan: Nakita ko ang Panginoon, at gusto kong mabuhay ka sa parehong pag-asang ito?"
+        }
+      ],
+      "prayer": {
+        "title": "Panalangin ng naghahanap sa kadiliman",
+        "content": "Panginoong Jesus, lumalapit ako sa hardin na ito.\n\nLumalapit ako tulad ni Maria: nasa dilim, hindi lubos na nauunawaan ang lahat, pero hindi tumatalikod sa Iyo.\n\nMinsan hinahanap kita sa maling paraan. Minsan hindi kita nakikilala kahit nasa harap kita. Minsan ang aking mga luha ang humahadlang sa akin na makita ang nangyayari na pala.\n\nPero kilala mo ako. Alam mo ang aking pangalan. Alam mo ang bawat bahagi ng aking kuwento. At hindi ka umalis.\n\nTawagin mo ako sa aking pangalan ngayon. Hayaan mong makilala ko ang Iyong tinig sa gitna ng lahat ng ibang tinig. At hayaan mong baguhin ako ng naririnig ko mula sa Iyo upang maging isang hindi makapananatiling tahimik.\n\nTulad ni Maria, gusto kong mula sa paghahanap ay maging pagpapahayag. Mula sa pag-iyak ay maging pagtakbo dala ang Iyong mensahe, dala ang iba sa pag-asang dinala mo sa aking buhay.\n\nSa pangalan ni Jesus, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "dawn",
+      "image_url": "mary_garden_completion.png",
+      "completion_verse": {
+        "reference": "Juan 20:16",
+        "text": "“Maria!” sabi ni Jesus. Humarap siya at kanyang sinabi sa wikang Hebreo, “Raboni!” na ang ibig sabihi'y “Guro.”",
+        "bible_version": "Magandang Balita Biblia"
+      },
+      "reflection_prompt": "Anong pangalan ang kailangan mong marinig ngayon mula kay Jesus? At sino ang kailangan mong sabihan: Nakita ko ang Panginoon?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

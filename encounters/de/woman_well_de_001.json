@@ -5,7 +5,7 @@
   "language": "de",
   "bible_version": "LU17",
   "version": "6.0",
-  "estimated_reading_minutes": 10,
+  "estimated_reading_minutes": 9,
   "meta": {
     "character": "Die Samaritanerin",
     "testament": "new",
@@ -192,7 +192,7 @@
       "image_url": "empty_jar_well.png",
       "title": "Der Krug, den sie zurückließ.",
       "subtitle": "Was ein zurückgelassener Krug bedeutet.",
-      "content": "In der vorherigen Begegnung sahen wir Bartimäus seinen Mantel wegwerfen, bevor er seine Heilung empfing — Glaube, der loslässt, bevor er etwas hat, woran er sich festhalten kann.\n\nSie ließ den Krug nach der Begegnung zurück. Was Jesus in ihr Inneres gelegt hatte, hatte bereits klein gemacht, was sie in ihren Händen trug.\n\nZwei Menschen. Zwei zurückgelassene Gegenstände. Derselbe Jesus.\n\nAber es gibt noch etwas mehr in dem, was sie tat.\n\n🪣 Im Griechischen ist die Frage, die sie in die Stadt trug, mit einem Wort formuliert, das Ungewissheit antizipiert: ob er nicht der Christus sei?\n\nSie kam nicht verkündigend an. Sie kam einladend. Sie wusste, dass einer Frau mit ihrer Geschichte nicht geglaubt werden würde, wenn sie eine Erklärung abgäbe. Deshalb hüllte sie die Offenbarung in eine Frage, die jeden zwang, selbst zu urteilen.\n\nDas war keine Naivität. Das war Weisheit.\n\nUnd es wirkte.",
+      "content": "In der vorherigen Begegnung sahen wir Bartimäus seinen Mantel wegwerfen, bevor er seine Heilung empfing — Glaube, der loslässt, bevor er etwas hat, woran er sich festhalten kann.\n\nSie ließ den Krug nach der Begegnung zurück. Was Jesus in ihr Inneres gelegt hatte, hatte bereits klein gemacht, was sie in ihren Händen trug.\n\nZwei Menschen. Zwei zurückgelassene Gegenstände. Derselbe Jesus.\n\nAber es gibt noch etwas mehr in dem, was sie tat.\n\n🏺 Im Griechischen ist die Frage, die sie in die Stadt trug, mit einem Wort formuliert, das Ungewissheit antizipiert: ob er nicht der Christus sei?\n\nSie kam nicht verkündigend an. Sie kam einladend. Sie wusste, dass einer Frau mit ihrer Geschichte nicht geglaubt werden würde, wenn sie eine Erklärung abgäbe. Deshalb hüllte sie die Offenbarung in eine Frage, die jeden zwang, selbst zu urteilen.\n\nDas war keine Naivität. Das war Weisheit.\n\nUnd es wirkte.",
       "revelation_key": "Sie trug ihre Wunde als Zeugnis. Und eine ganze Stadt kam heraus, um zu sehen.",
       "scripture_connections": [
         {
@@ -247,7 +247,6 @@
     {
       "order": 14,
       "type": "discovery_activation",
-      "icon": "⛲",
       "mood": "intimate",
       "image_url": "woman_running_city.png",
       "title": "Deine Begegnung",

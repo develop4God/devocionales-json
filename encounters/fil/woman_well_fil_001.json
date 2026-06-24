@@ -5,7 +5,7 @@
   "language": "fil",
   "bible_version": "Magandang Balita Biblia",
   "version": "1.0",
-  "estimated_reading_minutes": 10,
+  "estimated_reading_minutes": 12,
   "meta": {
     "character": "Ang Babaeng Samaritana",
     "testament": "new",
@@ -28,7 +28,7 @@
   },
   "key_verse": {
     "reference": "Juan 4:14",
-    "text": "Ngunit ang sinumang uminom ng tubig na ibibigay ko sa kanya ay hindi na muling mauuhaw kailanman. Ang tubig na ibibigay ko ay magiging batis sa loob niya, at patuloy na bubukal at magbibigay sa kanya ng buhay na walang hanggan.\"",
+    "text": "Ngunit ang sinumang uminom ng tubig na ibibigay ko sa kanya ay hindi na muling mauuhaw kailanman. Ang tubig na ibibigay ko ay magiging batis sa loob niya, at patuloy na bubukal at magbibigay sa kanya ng buhay na walang hanggan.",
     "bible_version": "Magandang Balita Biblia"
   },
   "cards": [
@@ -79,16 +79,16 @@
       "image_url": "water_ripple.png",
       "title": "Dalawang Uri ng Pagkauhaw",
       "subtitle": "Nagsasalita siya tungkol sa tubig. Nagsasalita siya tungkol sa higit pa.",
-      "content": "Nag-alok si Jesus ng tubig na buhay. Naunawaan niya ito nang literal: tubig na bumabukal, tubig na hindi mo na kailangang dumating at kumuha sa tanghaling tapat sa ilalim ng araw.\n\nNgunit nasa isip pa rin niya ang balon. Ang lubid. Ang lahat ng dinala niya doon araw-araw.\n\nKailanman. Hindi nang matagal. Kailanman.\n\n💧 Totoo ang balon ni Jacob. Ito ay kasaysayan. Isang pamana ng daan-taon. Hindi ito binalewala ni Jesus. Ngunit ang inaalok niya ay hindi nanggagaling sa labas. Nanggagaling ito sa loob. Hindi ito isang bukal na dapat kang bumalik. Ito ay isang batis na umaangat sa loob ng tatanggap nito.\n\nNakilala niya ito mismo, kahit hindi pa lubos na naiintindihan:\n\nNag-iisip pa rin siya tungkol sa balon.\n\nNgunit lumalapit na siya sa kanya. At iyon ay sapat na.",
+      "content": "Nag-alok si Jesus ng tubig na buhay. Naunawaan niya ito nang literal: tubig na bumabukal, tubig na hindi mo na kailangang dumating at kumuha sa tanghaling tapat sa ilalim ng araw.\n\nNgunit nasa isip pa rin niya ang balon. Ang lubid. Ang lahat ng dinala niya doon araw-araw.\n\nKailanman. Hindi nang matagal. Kailanman.\n\n💧 Totoo ang balon ni Jacob. Ito ay kasaysayan. Isang pamana ng daan-taon. Hindi ito binalewala ni Jesus. Ngunit ang inaalok niya ay hindi nanggagaling sa labas. Nanggagaling ito sa loob. Hindi ito isang bukal na dapat mong balikan. Ito ay isang batis na umaangat sa loob ng tatanggap nito.\n\nNakilala niya ito mismo, kahit hindi pa lubos na naiintindihan:\n\nNag-iisip pa rin siya tungkol sa balon.\n\nNgunit lumalapit na siya sa kanya. At iyon ay sapat na.",
       "revelation_key": "Minsan ang ating pagkauhaw ay nagdadala sa atin kay Jesus bago pa man ang ating pag-unawa.",
       "scripture_connections": [
         {
           "reference": "Juan 4:15",
-          "text": "Sinabi ng babae, \"Ginoo, bigyan po ninyo ako ng tubig na ito upang hindi na ako mauhaw, ni pumarito pa upang sumalok muli."
+          "text": "Sinabi ng babae, \"Ginoo, bigyan po ninyo ako ng tubig na ito upang hindi na ako mauhaw, ni pumarito pa upang sumalok muli.\""
         },
         {
           "reference": "Isaias 55:1",
-          "text": "Sinabi ni Yahweh, \"Narito ang tubig, kayong mga nauuhaw. Ang mga walang salapi ay lumapit din dito, bumili kayo ng pagkain at ito'y kainin ninyo! Bumili kayo ng alak at gatas kahit walang salaping pambayad."
+          "text": "Sinabi ni Yahweh, \"Narito ang tubig, kayong mga nauuhaw. Ang mga walang salapi ay lumapit din dito, bumili kayo ng pagkain at ito'y kainin ninyo! Bumili kayo ng alak at gatas kahit walang salaping pambayad.\""
         },
         {
           "reference": "Juan 7:37",
@@ -97,7 +97,7 @@
       ],
       "verse_overlay": {
         "reference": "Juan 4:13-14",
-        "text": "Sumagot si Jesus, \"Ang bawat uminom ng tubig na ito'y muling mauuhaw, ngunit ang sinumang uminom ng tubig na ibibigay ko sa kanya ay hindi na muling mauuhaw kailanman. Ang tubig na ibibigay ko ay magiging batis sa loob niya, at patuloy na bubukal at magbibigay sa kanya ng buhay na walang hanggan."
+        "text": "Sumagot si Jesus, \"Ang bawat uminom ng tubig na ito'y muling mauuhaw, ngunit ang sinumang uminom ng tubig na ibibigay ko sa kanya ay hindi na muling mauuhaw kailanman. Ang tubig na ibibigay ko ay magiging batis sa loob niya, at patuloy na bubukal at magbibigay sa kanya ng buhay na walang hanggan.\""
       }
     },
     {
@@ -157,7 +157,7 @@
       ],
       "verse_overlay": {
         "reference": "Juan 4:21-24",
-        "text": "Sinabi naman ni Jesus, \"Maniwala ka sa akin, darating na ang panahon na sasambahin ninyo ang Ama hindi na sa bundok na ito o sa Jerusalem. Hindi ninyo kilala ang inyong sinasamba, ngunit kilala namin ang aming sinasamba, sapagkat ang kaligtasan ay nagmumula sa mga Judio. Subalit dumarating na ang panahon at ngayon na nga, na ang mga tunay na sumasamba sa Ama ay sasamba sa kanya sa espiritu at sa katotohanan. Sapagkat ganyan ang uri ng pagsambang kinalulugdan ng Ama. Ang Diyos ay Espiritu kaya dapat siyang sambahin sa espiritu at sa katotohanan."
+        "text": "Sinabi naman ni Jesus, \"Maniwala ka sa akin, darating na ang panahon na sasambahin ninyo ang Ama hindi na sa bundok na ito o sa Jerusalem. Hindi ninyo kilala ang inyong sinasamba, ngunit kilala namin ang aming sinasamba, sapagkat ang kaligtasan ay nagmumula sa mga Judio. Subalit dumarating na ang panahon at ngayon na nga, na ang mga tunay na sumasamba sa Ama ay sasamba sa kanya sa espiritu at sa katotohanan. Sapagkat ganyan ang uri ng pagsambang kinalulugdan ng Ama. Ang Diyos ay Espiritu kaya dapat siyang sambahin sa espiritu at sa katotohanan.\""
       }
     },
     {
@@ -192,7 +192,7 @@
       "image_url": "empty_jar_well.png",
       "title": "Ang banggang iniwan niya",
       "subtitle": "Ano ang kahulugan ng isang iniwanang banga.",
-      "content": "Sa nakaraang pagtatagpo nakita natin si Bartimeo na naghagis ng kanyang balabal bago pa man matanggap ang kanyang pagpapagaling — pananampalataya na bumitaw bago pa man may mahawakan.\n\nIniwanan niya ang kanyang banga pagkatapos ng pagtatagpo. Ang inilagay ni Jesus sa loob niya ay nagpawala ng kanyang dalahin.\n\nDalawang tao. Dalawang iniwanang bagay. Ang parehong Jesus.\n\nNgunit may higit pa sa kanyang ginawa.\n\n🪣 Sa Griyego, ang tanong na dinala niya sa bayan ay may himig ng kawalan ng katiyakan: Siya na kaya ang Cristo?\n\nHindi siya dumating na nagpapahayag. Dumating siya na nag-aanyaya. Alam niya na ang isang babae na may kanyang kasaysayan ay hindi paniniwalaan kung gumawa siya ng pahayag. Kaya binalot niya ang pahayag sa isang tanong na nagpilit sa bawat isa na pumunta at tingnan ang kanilang sarili.\n\nHindi ito dahil sa kawalang-muwang; iyon ay bunga ng karunungan.\n\nAt gumana ito.",
+      "content": "Sa nakaraang pagtatagpo nakita natin si Bartimeo na naghagis ng kanyang balabal bago pa man matanggap ang kanyang pagpapagaling — pananampalataya na bumitaw bago pa man may mahawakan.\n\nIniwanan niya ang kanyang banga pagkatapos ng pagtatagpo. Ang inilagay ni Jesus sa loob niya ay nagpawala ng kanyang dalahin.\n\nDalawang tao. Dalawang iniwanang bagay. Iisang Jesus.\n\nNgunit may higit pa sa kanyang ginawa.\n\n🏺 Sa Griyego, ang tanong na dinala niya sa bayan ay may himig ng kawalan ng katiyakan: Siya na kaya ang Cristo?\n\nHindi siya dumating na nagpapahayag. Dumating siya na nag-aanyaya. Alam niya na ang isang babae na may kanyang kasaysayan ay hindi paniniwalaan kung gumawa siya ng pahayag. Kaya binalot niya ang pahayag sa isang tanong na nagpilit sa bawat isa na pumunta at tingnan ang kanilang sarili.\n\nHindi ito dahil sa kawalang-muwang; iyon ay bunga ng karunungan.\n\nAt gumana ito.",
       "revelation_key": "Dinala niya ang kanyang sugat bilang kanyang patotoo. At isang buong bayan ang lumabas upang makita.",
       "scripture_connections": [
         {
@@ -220,12 +220,12 @@
       "revelation_key": "Kinuha ng Diyos ang taong itinakwil ng mundo at ginawa siyang unang ebanghelistang Samaritana.",
       "verse_overlay": {
         "reference": "Juan 4:39",
-        "text": "Maraming Samaritano sa bayang iyon ang nanalig kay Jesus dahil sa patotoo ng babae, \"Sinabi niya sa akin ang lahat ng aking ginawa."
+        "text": "Maraming Samaritano sa bayang iyon ang nanalig kay Jesus dahil sa patotoo ng babae, \"Sinabi niya sa akin ang lahat ng aking ginawa.\""
       },
       "scripture_connections": [
         {
           "reference": "Juan 4:41-42",
-          "text": "At marami pang sumampalataya nang mapakinggan siya. Pagkatapos, sinabi nila sa babae, \"Naniniwala kami ngayon, hindi na dahil sa sinabi mo kundi dahil sa narinig namin siya. Alam na naming siya nga ang Tagapagligtas ng sangkatauhan."
+          "text": "At marami pang sumampalataya nang mapakinggan siya. Pagkatapos, sinabi nila sa babae, \"Naniniwala kami ngayon, hindi na dahil sa sinabi mo kundi dahil sa narinig namin siya. Alam na naming siya nga ang Tagapagligtas ng sangkatauhan.\""
         }
       ]
     },
@@ -247,7 +247,6 @@
     {
       "order": 14,
       "type": "discovery_activation",
-      "icon": "🪣",
       "mood": "intimate",
       "image_url": "woman_running_city.png",
       "title": "Ang iyong pagtatagpo",

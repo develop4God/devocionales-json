@@ -5,7 +5,7 @@
   "language": "es",
   "bible_version": "RVR1960",
   "version": "1.0",
-  "estimated_reading_minutes": 9,
+  "estimated_reading_minutes": 7,
   "meta": {
     "character": "Bartimeo",
     "testament": "new",
@@ -153,7 +153,6 @@
       "order": 10,
       "type": "discovery_activation",
       "image_url": "bartimaeus_jesus_way.png",
-      "icon": "🙏",
       "title": "Tu Encuentro",
       "subtitle": "Bartimeo no esperó el momento perfecto. Gritó desde donde estaba.",
       "discovery_questions": [

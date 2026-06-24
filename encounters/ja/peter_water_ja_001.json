@@ -5,7 +5,7 @@
   "language": "ja",
   "bible_version": "新改訳2003",
   "version": "1.0",
-  "estimated_reading_minutes": 8,
+  "estimated_reading_minutes": 6,
   "meta": {
     "character": "ペテロ",
     "testament": "new",
@@ -146,7 +146,6 @@
     {
       "order": 10,
       "type": "discovery_activation",
-      "icon": "🙏",
       "mood": "grace",
       "image_url": "jesus_light_water.png",
       "title": "あなたとの出会い",

@@ -5,7 +5,7 @@
   "language": "en",
   "bible_version": "KJV",
   "version": "1.0",
-  "estimated_reading_minutes": 10,
+  "estimated_reading_minutes": 12,
   "meta": {
     "character": "Zacchaeus",
     "testament": "new",
@@ -200,7 +200,6 @@
       "order": 12,
       "type": "discovery_activation",
       "image_url": "zacchaeus_open_road.png",
-      "icon": "🌳",
       "title": "Your Encounter",
       "subtitle": "Zacchaeus didn't wait until he was ready. He came to Jesus exactly as he was.",
       "discovery_questions": [

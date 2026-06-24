@@ -5,7 +5,7 @@
   "language": "de",
   "bible_version": "LU17",
   "version": "1.0",
-  "estimated_reading_minutes": 9,
+  "estimated_reading_minutes": 5,
   "meta": {
     "character": "Petrus",
     "testament": "new",
@@ -146,7 +146,6 @@
     {
       "order": 10,
       "type": "discovery_activation",
-      "icon": "🙏",
       "mood": "grace",
       "image_url": "jesus_light_water.png",
       "title": "Deine Begegnung",

@@ -5,7 +5,7 @@
   "language": "fil",
   "bible_version": "Magandang Balita Biblia",
   "version": "1.0",
-  "estimated_reading_minutes": 8,
+  "estimated_reading_minutes": 15,
   "meta": {
     "character": "Zaqueo",
     "testament": "new",
@@ -178,7 +178,7 @@
       ],
       "verse_overlay": {
         "reference": "Lucas 19:9-10",
-        "text": "At sinabi sa kanya ni Jesus, \"Ang kaligtasan ay dumating ngayon sa sambahayang ito sapagkat anak din ni Abraham ang taong ito. Ang Anak ng Tao ay naparito upang hanapin at iligtas ang naligaw."
+        "text": "At sinabi sa kanya ni Jesus, \"Ang kaligtasan ay dumating ngayon sa sambahayang ito sapagkat anak din ni Abraham ang taong ito. Ang Anak ng Tao ay naparito upang hanapin at iligtas ang naligaw.\""
       }
     },
     {
@@ -200,7 +200,6 @@
       "order": 12,
       "type": "discovery_activation",
       "image_url": "zacchaeus_open_road.png",
-      "icon": "🌳",
       "title": "Ang Iyong Pagtatagpo",
       "subtitle": "Hindi naghintay si Zaqueo hanggang maging handa siya. Lumapit siya kay Jesus nang eksakto kung ano siya noon.",
       "discovery_questions": [

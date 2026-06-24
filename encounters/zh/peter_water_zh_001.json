@@ -5,7 +5,7 @@
   "language": "zh",
   "bible_version": "和合本1919",
   "version": "1.0",
-  "estimated_reading_minutes": 8,
+  "estimated_reading_minutes": 4,
   "meta": {
     "character": "彼得",
     "testament": "new",
@@ -146,7 +146,6 @@
     {
       "order": 10,
       "type": "discovery_activation",
-      "icon": "🙏",
       "mood": "grace",
       "image_url": "jesus_light_water.png",
       "title": "你的相遇",

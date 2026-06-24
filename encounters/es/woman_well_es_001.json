@@ -192,7 +192,7 @@
       "image_url": "empty_jar_well.png",
       "title": "El cántaro que dejó.",
       "subtitle": "Lo que significa un cántaro abandonado.",
-      "content": "En el encuentro anterior vimos a Bartimeo tirar su manto antes de recibir su sanidad, fe que suelta antes de tener algo a qué aferrarse.\n\nElla dejó su cántaro después del encuentro. Lo que Jesús puso en su interior ya había hecho pequeño lo que traía en sus manos.\n\nDos personas. Dos objetos abandonados. El mismo Jesús.\n\nPero hay algo más en lo que ella hizo.\n\n🪣 En el griego, la pregunta que ella llevó a la ciudad está formulada con una palabra que espera incertidumbre: ¿No será éste el Cristo?\n\nNo llegó proclamando. Llegó invitando. Sabía que una mujer con su historia no sería creída si hacía una declaración. Así que envolvió la revelación en una pregunta que obligaba a cada persona a ir a ver por sí misma.\n\nNo fue ingenuidad. Fue sabiduría.\n\nY funcionó.",
+      "content": "En el encuentro anterior vimos a Bartimeo tirar su manto antes de recibir su sanidad, fe que suelta antes de tener algo a qué aferrarse.\n\nElla dejó su cántaro después del encuentro. Lo que Jesús puso en su interior ya había hecho pequeño lo que traía en sus manos.\n\nDos personas. Dos objetos abandonados. El mismo Jesús.\n\nPero hay algo más en lo que ella hizo.\n\n🏺 En el griego, la pregunta que ella llevó a la ciudad está formulada con una palabra que espera incertidumbre: ¿No será éste el Cristo?\n\nNo llegó proclamando. Llegó invitando. Sabía que una mujer con su historia no sería creída si hacía una declaración. Así que envolvió la revelación en una pregunta que obligaba a cada persona a ir a ver por sí misma.\n\nNo fue ingenuidad. Fue sabiduría.\n\nY funcionó.",
       "revelation_key": "Llevó su herida como testimonio. Y una ciudad entera salió a ver.",
       "scripture_connections": [
         {
@@ -247,7 +247,6 @@
     {
       "order": 14,
       "type": "discovery_activation",
-      "icon": "⛲",
       "mood": "intimate",
       "image_url": "woman_running_city.png",
       "title": "Tu encuentro",
