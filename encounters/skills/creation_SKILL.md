@@ -53,10 +53,23 @@ Make all edits to the in-chat JSON until the user approves. Only then proceed to
 
 ---
 
-### 4. Save the approved JSON file
+### 4. Save the approved JSON files
 
-Once the user says it's approved, save to `/mnt/user-data/outputs/<id>.json`
-and use `present_files` to deliver it.
+Once the user says it's approved, save **two files** to the encounter's language directory
+(e.g. `encounters/es/`):
+
+1. **Encounter file**: `<id>.json` — the full encounter JSON with cards.
+2. **Image prompts file**: `<id_without_lang>_image_prompts.json` — a separate JSON containing:
+   - `encounter_id` — matches the encounter's `id`
+   - `character` — English character name
+   - `master_character_prompt` — the character visual identity lock (English)
+   - `intro_image` — `{ "filename": "...", "prompt": "..." }` for the index cover image
+   - `card_prompts` — array of `{ "order", "image_url", "mood", "shot_type", "prompt" }` for each card
+
+Image prompts are always in English regardless of encounter language. Each card prompt must be
+self-contained (include character description inline, never reference "see master prompt").
+
+Also update `index.json` with `intro_image` and `intro_image_prompt` fields for the encounter.
 
 ---
 
@@ -304,45 +317,85 @@ Pause for personal naming/reflection. Used sparingly.
 
 ## Image Prompts
 
-Every card requires both:
-- `image_url` — filename: `<character_slug>_<scene_slug>.png` (always in English)
-- `image_prompt` — AI generation prompt (always in English)
+Image prompts are delivered as a **separate JSON file** alongside the encounter file:
+`<character_slug>_image_prompts.json` (e.g. `mary_garden_image_prompts.json`).
 
-Plus, every new encounter requires two additional image assets:
+Every card that shows the character requires:
+- `image_url` — filename: `<character_slug>_<scene_slug>.png` (always in English)
+- `prompt` — AI generation prompt (always in English), **character-first** (see below)
+
+### Image Prompts JSON structure
+
+```json
+{
+  "encounter_id": "<id>",
+  "character": "English character name",
+  "master_character_prompt": "Full character description (see below)",
+  "intro_image": {
+    "filename": "<character>_intro.png",
+    "prompt": "Character description first, then scene..."
+  },
+  "card_prompts": [
+    {
+      "order": 1,
+      "image_url": "filename.png",
+      "mood": "matches card mood",
+      "shot_type": "wide establishing | medium two-figure | close-up portrait | object/still life | action/movement | wide departure",
+      "prompt": "Character description first, then scene..."
+    }
+  ]
+}
+```
 
 ### Master Character Prompt
-Write this once per encounter before writing any card prompts.
+
+Write this **once** per encounter before writing any card prompts.
 It locks the character's visual identity across all cards.
-Include: age range, skin tone, hair, clothing, style anchor.
-Store it as a comment block at the top of the image prompts document.
+Include: age range, build, skin tone, hair, clothing (fabric, color, condition), style anchor.
 
 ```
-// MASTER CHARACTER PROMPT — <Character Name>
-// Use this first to lock the character before generating any card image.
-A [character description: age, build, skin tone, hair, expression baseline],
+A [age, build, skin tone, hair, expression baseline],
 [clothing: fabric, color, condition, details].
 Painterly warm 2D illustration style, Mediterranean palette,
 ochre and sandstone tones, cinematic lighting.
 Character reference sheet, full body and face close-up.
 ```
 
+Store this as the `master_character_prompt` field in the image prompts JSON.
+
+### Using the master character in every prompt (non-negotiable)
+
+**Every card prompt where the character appears MUST open with the master character description
+as its first paragraph.** Then follow with the scene-specific content. This ensures visual
+consistency across all AI-generated images — the character looks like the SAME person in every card.
+
+For object/still-life shots (no people), skip the character paragraph.
+For shots where the character is distant/tiny, use a shortened version but keep the key visual
+anchors (skin tone, hair, clothing color).
+
+**Pattern:**
+```
+"prompt": "<master character description, adapted to the shot>. <Scene description: shot type,
+setting, time of day, emotion, composition>. <Style anchor>."
+```
+
 ### Intro Image Prompt
 One cover image per encounter for the index (`intro_image` field).
 Wide or atmospheric — establishes the world before the story begins.
-Character may appear small or from behind. No text.
+Character may appear small or from behind. Still opens with character description. No text.
 
 ### Card Image Prompts
 
-**Style anchor (use in every prompt):**
+**Style anchor (end every prompt with this):**
 > Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text.
 
 **Rules:**
+- **Character-first**: open with the master character description (adapted to the shot), then describe the scene
 - Describe scene, time of day, setting, emotion, what's physically visible
-- Include character description inline in every card prompt — do not rely on "see character prompt." Each prompt must be self-contained for generation
+- Never say "see character prompt" or "same character as above" — each prompt must be fully self-contained
 - Vary shot distance: wide establishing shots, medium interaction shots, intimate close-ups, pure metaphor/object shots (no people)
 - Jesus appears in soft focus, partial silhouette, or from behind. Never the visual center
 - No halos. No supernatural glow. No photorealism
-- The character must feel like the SAME person across all cards — repeat key visual anchors (skin tone, hair, clothing color) in every prompt where they appear
 - Mood in the prompt must match the card's `mood` field
 - Length: 3-5 sentences per prompt
 
@@ -356,10 +409,12 @@ Character may appear small or from behind. No text.
 | Action/movement | Transformation, decision moment |
 | Wide departure | After the encounter — changed |
 
-**When Jesus appears:**
-- Soft focus or partial silhouette
+**When Jesus appears (Ben-Hur style — non-negotiable):**
+- **His face is NEVER visible.** Always from behind, partial silhouette, over-the-shoulder, or obscured
+- A **subtle warm glow of glory** emanates from his form — this is the only supernatural element allowed
 - Never the visual center — the story belongs to the biblical character
-- Describe him as "a man in a simple first-century tunic" — no supernatural markers
+- Describe him as "a man in a simple first-century tunic, seen from behind, face never visible, a subtle warm glow of glory around his form"
+- No halos. No full-body supernatural glow. No face. No eyes. No frontal view. Ever.
 
 **Example (from Woman at the Well, card 2):**
 ```
