@@ -294,7 +294,7 @@
     },
     {
       "id": "mary_garden_001",
-      "version": "0.4",
+      "version": "1.0",
       "image_version": "1.0",
       "emoji": "🌸",
       "status": "published",
@@ -371,7 +371,7 @@
       "version": "0.1",
       "image_version": "1.0",
       "emoji": "⚡",
-      "status": "published",
+      "status": "coming_soon",
       "intro_image": "saulo_stephen_stoning_mantles.png",
       "mood_primary": "transformation",
       "accent_color": "#1a0a00",
