@@ -2,7 +2,8 @@
 """
 validate_encounters.py — Validator for the encounters content type.
 
-Two-phase validation:
+Three-phase validation:
+  PHASE 1: Lint — verify all JSON files use indent=2 formatting
   PHASE A: Validate encounters/index.json
   PHASE B: Validate encounter files (published only) using EN as base
 
@@ -166,6 +167,43 @@ def load_json(path: Path, report: Report) -> Optional[dict]:
     except Exception as e:
         report.E(f"Cannot read {path.name}: {e}")
         return None
+
+
+# ── Phase 1: Lint ────────────────────────────────────────────────────────────
+
+def validate_lint(report: Report) -> bool:
+    """Check that all JSON files use indent=2 formatting and end with newline."""
+    report.I("=" * 60)
+    report.I("PHASE 1: Lint — checking JSON formatting (indent=2)")
+    report.I("=" * 60)
+
+    json_files = sorted(ENCOUNTERS_DIR.rglob('*.json'))
+    json_files = [f for f in json_files if f.is_file()
+                  and 'encounters_scripts' not in f.parts]
+    checked = 0
+    for fpath in json_files:
+        raw = fpath.read_text(encoding='utf-8')
+        try:
+            json.loads(raw)
+        except json.JSONDecodeError:
+            report.E(f"{fpath.name}: invalid JSON")
+            continue
+        rel = fpath.relative_to(ENCOUNTERS_DIR)
+        for line_no, line in enumerate(raw.splitlines(), 1):
+            stripped = line.lstrip(' ')
+            indent = len(line) - len(stripped)
+            if indent > 0 and indent % 2 != 0:
+                report.E(f"{rel}:{line_no}: odd indentation ({indent} spaces), expected multiples of 2")
+                break
+            if '\t' in line:
+                report.E(f"{rel}:{line_no}: contains tab character, use 2-space indent")
+                break
+        if not raw.endswith('\n'):
+            report.W(f"{rel}: missing trailing newline")
+        checked += 1
+
+    report.I(f"✓ Checked {checked} JSON files")
+    return True
 
 
 # ── Phase A: Index validation ─────────────────────────────────────────────────
@@ -478,6 +516,15 @@ def main():
     print("🔍 Starting Encounters Validation...")
     print(f"📁 Encounters directory: {ENCOUNTERS_DIR}")
     print()
+
+    # ── PHASE 1: Lint ──
+    report_lint = Report("PHASE 1: LINT")
+    validate_lint(report_lint)
+    passed_lint = report_lint.print(final=False)
+
+    if not passed_lint:
+        print("\n❌ PHASE 1 FAILED - Fix formatting before proceeding")
+        sys.exit(1)
 
     # ── PHASE A ──
     report_a = Report("PHASE A: INDEX")
