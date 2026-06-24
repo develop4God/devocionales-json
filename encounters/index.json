@@ -61,16 +61,16 @@
         "fil": "Mateo 14:22-33"
       },
       "estimated_reading_minutes": {
-        "en": 12,
-        "es": 12,
-        "pt": 12,
-        "fr": 12,
-        "de": 9,
-        "ja": 14,
-        "zh": 14,
-        "hi": 13,
-        "ar": 11,
-        "fil": 9
+        "en": 5,
+        "es": 5,
+        "fr": 6,
+        "pt": 5,
+        "de": 5,
+        "fil": 6,
+        "hi": 6,
+        "ar": 5,
+        "ja": 6,
+        "zh": 4
       }
     },
     {
@@ -135,15 +135,15 @@
       },
       "estimated_reading_minutes": {
         "en": 7,
-        "es": 9,
-        "pt": 7,
+        "es": 7,
         "fr": 7,
-        "de": 8,
-        "ja": 7,
-        "zh": 7,
-        "hi": 7,
-        "ar": 9,
-        "fil": 8
+        "pt": 7,
+        "de": 6,
+        "fil": 9,
+        "hi": 9,
+        "ar": 6,
+        "ja": 8,
+        "zh": 5
       }
     },
     {
@@ -207,16 +207,16 @@
         "fil": "Juan 4:1-42"
       },
       "estimated_reading_minutes": {
-        "en": 9,
+        "en": 10,
         "es": 10,
+        "fr": 11,
         "pt": 10,
-        "fr": 10,
-        "de": 10,
-        "ja": 9,
-        "zh": 9,
-        "hi": 11,
-        "ar": 12,
-        "fil": 10
+        "de": 9,
+        "fil": 12,
+        "hi": 13,
+        "ar": 9,
+        "ja": 13,
+        "zh": 8
       }
     },
     {
@@ -280,16 +280,16 @@
         "ar": "لوقا 19:1-10"
       },
       "estimated_reading_minutes": {
-        "en": 7,
-        "es": 11,
-        "pt": 11,
-        "fr": 7,
-        "ja": 13,
-        "zh": 13,
-        "hi": 9,
-        "de": 8,
-        "fil": 8,
-        "ar": 13
+        "en": 12,
+        "es": 12,
+        "fr": 14,
+        "pt": 12,
+        "de": 11,
+        "fil": 15,
+        "hi": 17,
+        "ar": 12,
+        "ja": 15,
+        "zh": 10
       }
     },
     {
@@ -354,16 +354,16 @@
         "fil": "Juan 20:1-18"
       },
       "estimated_reading_minutes": {
-        "en": 8,
+        "en": 9,
         "es": 10,
-        "pt": 11,
         "fr": 11,
-        "ja": 11,
-        "zh": 11,
-        "hi": 8,
+        "pt": 10,
         "de": 9,
-        "ar": 11,
-        "fil": 9
+        "fil": 12,
+        "hi": 13,
+        "ar": 9,
+        "ja": 13,
+        "zh": 8
       }
     },
     {
@@ -391,7 +391,7 @@
         "es": "Hechos 9:1-22"
       },
       "estimated_reading_minutes": {
-        "es": 13
+        "es": 18
       }
     }
   ]
