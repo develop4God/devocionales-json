@@ -346,28 +346,28 @@
         "fil": "mary_garden_fil_001.json"
       },
       "titles": {
-        "en": "She Heard Her Name",
-        "es": "Ella Escuchó Su Nombre",
-        "pt": "Ela Ouviu Seu Nome",
-        "fr": "Elle Entendit Son Nom",
-        "ja": "彼女は自分の名前を聞いた",
-        "zh": "她听见了自己的名字",
-        "hi": "उसने अपना नाम सुना",
-        "de": "Sie hörte ihren Namen",
-        "ar": "سمعت اسمها",
-        "fil": "Narinig Niya ang Kanyang Pangalan"
+        "en": "The Spoken Name",
+        "es": "El nombre pronunciado",
+        "pt": "O nome pronunciado",
+        "fr": "Le nom prononcé",
+        "ja": "呼ばれた名",
+        "zh": "被呼唤的名字",
+        "hi": "पुकारा गया नाम",
+        "de": "Der ausgesprochene Name",
+        "ar": "الاسم المنادى",
+        "fil": "Ang Pangalang Tinawag"
       },
       "subtitles": {
-        "en": "Mary at the empty tomb — grief, darkness, and one word that changed everything",
-        "es": "María ante el sepulcro vacío — dolor, oscuridad, y una palabra que lo cambió todo",
-        "pt": "Maria diante do túmulo vazio — dor, escuridão e uma palavra que mudou tudo",
-        "fr": "Marie devant le tombeau vide — douleur, obscurité, et un mot qui changea tout",
-        "ja": "空の墓のマリア — 悲しみ、暗闇、そしてすべてを変えた一言",
-        "zh": "马利亚在空坟墓前——悲痛、黑暗，以及改变一切的一个字",
-        "hi": "खाली कब्र के सामने मरियम — दुःख, अंधेरा, और एक शब्द जिसने सब कुछ बदल दिया",
-        "de": "Maria am leeren Grab — Trauer, Dunkelheit und ein Wort, das alles veränderte",
-        "ar": "مريم عند القبر الفارغ — حزن وظلام وكلمة واحدة غيّرت كل شيء",
-        "fil": "Si Maria sa tabi ng walang lamang libingan — kalungkutan, kadiliman, at isang salitang nagbago ng lahat"
+        "en": "Mary in the garden: from the grief of the tomb to the voice that called her.",
+        "es": "María en el jardín: del duelo del sepulcro a la voz que la llamó.",
+        "pt": "Maria no jardim: do luto do sepulcro à voz que a chamou.",
+        "fr": "Marie au jardin : du deuil du tombeau à la voix qui l’a appelée.",
+        "ja": "庭に立つマリア：空の墓の嘆きから、彼女を呼ぶ声へ。",
+        "zh": "园中的马利亚：从坟墓的哀恸，到呼唤她的声音。",
+        "hi": "बगीचे में मरियम: कब्र के दुःख से उस आवाज़ तक, जिसने उसे पुकारा।",
+        "de": "Maria im Garten: von der Trauer am Grab hin zu der Stimme, die sie rief.",
+        "ar": "مريم في البستان: من حزن القبر إلى الصوت الذي ناداها.",
+        "fil": "Si Maria sa halamanan: mula sa dalamhati sa libingan patungo sa tinig na tumawag sa kanya."
       },
       "scripture_reference": {
         "en": "John 20:1-18",
