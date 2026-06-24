@@ -1,0 +1,263 @@
+{
+  "id": "mary_garden_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "en",
+  "bible_version": "King James Version",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 8,
+  "meta": {
+    "character": "Mary Magdalene",
+    "testament": "new",
+    "scripture_reference": "John 20:1-18",
+    "mood_primary": "grief",
+    "accent_color": "#1a0a2e",
+    "emoji": "🌸",
+    "tags": [
+      "grief",
+      "resurrection",
+      "name",
+      "identity",
+      "faithfulness",
+      "love",
+      "magdalene",
+      "jesus",
+      "encounter",
+      "restoration"
+    ]
+  },
+  "key_verse": {
+    "reference": "John 20:16",
+    "text": "Jesus said unto her, Mary. She turned, and said unto him, Rabboni; which is to say, Teacher.",
+    "bible_version": "King James Version"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "darkness",
+      "image_url": "mary_garden_dawn_tomb.png",
+      "title": "While it was still dark.",
+      "narrative": "She didn't wait for the light.\n\nThe others were asleep. The disciples had locked themselves in. The Sabbath was over, but the world was still standing still.\n\nNot her. She went to the tomb while everything was still dark.\n\nShe had no plan. She only carried the one thing no one could take from her: her presence.",
+      "ambient_sound": "wind_predawn",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 20:1",
+        "text": "The first day of the week came Mary Magdalene early, when it was yet dark, unto the sepulcher, and saw the stone taken away from the sepulcher."
+      },
+      "revelation_key": "When everyone else hid, she walked toward the tomb. Love doesn't wait for perfect conditions."
+    },
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "panic",
+      "image_url": "mary_garden_empty_tomb.png",
+      "title": "The stone rolled away.",
+      "narrative": "The first thing she saw was the stone moved.\n\nShe didn't think of resurrection. She thought of theft. She thought they had taken the last thing she had left of Him.\n\nShe ran.",
+      "ambient_sound": "footsteps_running",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 20:2",
+        "text": "Then she ran, and came to Simon Peter, and to the other disciple, whom Jesus loved, and said unto them, They have taken away the Lord out of the sepulcher, and we know not where they have laid him."
+      },
+      "revelation_key": "Her first instinct at the empty tomb wasn't faith. It was pain. And that didn't disqualify her."
+    },
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "grief",
+      "image_url": "mary_garden_weeping.png",
+      "verse_reference": "John 20:11-13",
+      "verse_text": "But Mary stood outside at the sepulcher weeping: and as she wept, she stooped down, and looked into the sepulcher, And saw two angels in white sitting, the one at the head, and the other at the feet, where the body of Jesus had lain. And they said unto her, Woman, why weep you? She said unto them, Because they have taken away my Lord, and I know not where they have laid him.",
+      "reflection": "Peter and John came, saw the linen cloths, believed, and went home.\n\nShe stayed.\n\nNot because she had more faith. Not because she understood more. She stayed because she couldn't leave. Because what bound her to Jesus wasn't understanding. It was love.\n\nTwo angels asked her the same question Jesus would soon ask: Why are you weeping?\n\nThey didn't correct her. They didn't tell her she shouldn't cry. They allowed her grief.\n\nSometimes faithfulness doesn't look like strength. It looks like someone who stays when there's no reason to stay.",
+      "revelation_key": "The disciples went home. She stayed. Faithfulness doesn't always understand; but it doesn't leave."
+    },
+    {
+      "order": 4,
+      "type": "character_moment",
+      "mood": "grief",
+      "image_url": "mary_garden_portrait.png",
+      "title": "Who was Mary Magdalene?",
+      "subtitle": "What the Bible says",
+      "content": "Jesus cast seven demons out of her. Seven. The number of completeness. Whatever tormented her, it consumed her entirely.\n\nAfter her deliverance, she followed Him. Luke 8:2-3 places her among the women who supported Jesus' ministry with their resources. She wasn't on the margins. She was present.\n\nShe stood at the foot of the cross when the disciples fled. And she was the first to go to the tomb.\n\nShe wasn't perfect. She was faithful, with a surrendered heart — and that is what Jesus sees and seeks in His church.",
+      "revelation_key": "We don't know everything about her past. But we know she was where others weren't.",
+      "scripture_connections": [
+        {
+          "reference": "Luke 8:2-3",
+          "text": "And certain women, who had been healed of evil spirits and infirmities, Mary called Magdalene, out of whom went seven demons"
+        },
+        {
+          "reference": "Mark 15:40",
+          "text": "There were also women looking on from afar: among whom was Mary Magdalene, and Mary the mother of James the less and of Joses, and Salome;"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "tension",
+      "image_url": "mary_garden_linen_cloths.png",
+      "title": "What remained in the tomb",
+      "subtitle": "The linen cloths, the napkin, and what they mean.",
+      "content": "John records a detail no other evangelist mentions with such precision: the linen cloths lying there, and the napkin wrapped together in a place by itself.\n\nThis is no minor detail. If someone had stolen the body, they wouldn't have unwrapped the corpse. The burial clothes were in place, but the body was not.\n\n📜 The napkin wrapped in a place by itself carries cultural weight. Some scholars have suggested that in Jewish custom, when a master finished eating, if he left the napkin folded it meant he would return. Whether or not that tradition is verifiable, what John saw was order, not chaos. There was no robbery. There was resurrection.\n\nJohn saw this and believed. But Mary still didn't understand. And Jesus didn't discard her for it.\n\nFaith doesn't always arrive at the same time for everyone. And God is in no hurry.",
+      "revelation_key": "John saw and believed. Mary saw and wept. Jesus revealed Himself to both.",
+      "verse_overlay": {
+        "reference": "John 20:6-7",
+        "text": "Then came Simon Peter following him, and went into the sepulcher, and saw the linen cloths lying, And the cloth, that was about his head, not lying with the linen clothes, but wrapped together in a place by itself."
+      }
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "liminal",
+      "image_url": "mary_garden_turned_back.png",
+      "title": "She turned around.",
+      "narrative": "She answered the angels. She turned around.\n\nAnd there He was. Standing. Alive.\n\nBut she didn't recognize Him.\n\nHer eyes, filled with tears, were searching for a dead body. They weren't prepared to see the One who was alive.",
+      "ambient_sound": "garden_morning",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 20:14",
+        "text": "And when she had thus spoke, she turned back, and saw Jesus standing, and knew not that it was Jesus."
+      },
+      "revelation_key": "Sometimes Jesus is right behind us and we don't recognize Him because we're looking in the wrong way."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "ache",
+      "image_url": "mary_garden_mistaken_gardener.png",
+      "verse_reference": "John 20:15",
+      "verse_text": "Jesus said unto her, Woman, why do you weep? whom do you seek? She, supposing him to be the gardener, said unto him, Sir, if you have borne him away, tell me where you have laid him, and I will take him away.",
+      "reflection": "The same question the angels asked, now in Jesus' voice: Why are you weeping?\n\nAnd then a second one: Whom do you seek?\n\nHe didn't ask what you seek. He asked whom.\n\nShe mistook Him for the gardener, and in her confusion said something that reveals everything about her heart: I will take Him away.\n\nA woman alone, with no social standing, without the strength to carry a body, offers to carry it herself. It isn't logic. It's love.\n\nAnd Jesus saw it all.",
+      "revelation_key": "She didn't have the strength for what she offered. But the willingness of her heart was what Jesus was looking for."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "revelation",
+      "image_url": "mary_garden_name_called.png",
+      "title": "Mary!",
+      "narrative": "One word.\n\nHer name.\n\nNot a theological explanation. Not a correction. Not a rebuke for failing to recognize Him.\n\nJust her name, spoken the way only He could say it.\n\nAnd she knew.",
+      "ambient_sound": "silence_sacred",
+      "haptic": "light_pulse",
+      "verse_overlay": {
+        "reference": "John 20:16",
+        "text": "Jesus said unto her, Mary. She turned, and said unto him, Rabboni; which is to say, Teacher."
+      },
+      "revelation_key": "He didn't convince her with arguments. He called her by name. That's how the Shepherd finds His sheep."
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "wonder",
+      "image_url": "mary_garden_light_breaking.png",
+      "title": "Rabboni!",
+      "subtitle": "The weight of a single word.",
+      "content": "Rabboni is not the same as Rabbi. It's a more intimate, more personal form. In first-century Aramaic, Rabboni was reserved almost exclusively for addressing God in prayer. It was the form used by those closest.\n\nShe didn't say Teacher as a formal title. She said Rabboni as one who recognizes the person who changed her life.\n\n🔑 Jesus called her by name. She responded with the name only those who knew Him closely used.\n\nTwo names. A mutual recognition.\n\nIn John 10:3, Jesus had said that the good shepherd calls his sheep by name. Here, in a garden, at dawn, He did it literally.\n\nIt wasn't doctrine. It was encounter.",
+      "revelation_key": "He called her by name. She responded with the name only the closest ones used. That's how intimacy with God works.",
+      "scripture_connections": [
+        {
+          "reference": "John 10:3",
+          "text": "To him the gatekeeper opens; and the sheep hear his voice: and he calls his own sheep by name, and leads them out."
+        },
+        {
+          "reference": "Isaiah 43:1",
+          "text": "But now thus says the LORD that created you, O Jacob, and he that formed you, O Israel, Fear not: for I have redeemed you, I have called you by your name; you are mine."
+        }
+      ],
+      "verse_overlay": {
+        "reference": "John 10:14",
+        "text": "I am the good shepherd, and know my sheep, and am known of mine."
+      }
+    },
+    {
+      "order": 10,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "mary_garden_reaching.png",
+      "title": "Touch me not.",
+      "subtitle": "What Jesus asked of her and why.",
+      "content": "Mary's natural reaction was to hold on to Him. After three days of darkness, of believing she had lost Him forever, she wanted to keep Him.\n\nJesus told her: Touch me not, for I am not yet ascended to my Father.\n\nIt wasn't rejection. It was redirection.\n\nHe was telling her: you cannot hold on to me as before. The relationship doesn't end here, but it changes. It will no longer be physical presence. It will be spiritual presence — permanent, without limits of time or place.\n\nAnd then He gave her a mission: go to my brethren.\n\nThe woman who came looking for a dead body left the garden with a living message. She wasn't sent to seek. She was sent to proclaim.",
+      "revelation_key": "Jesus didn't reject her. He showed her that His presence would no longer be limited to what her hands could touch.",
+      "verse_overlay": {
+        "reference": "John 20:17",
+        "text": "Jesus said unto her, Touch me not; for I am not yet ascended to my Father: but go to my brethren, and say unto them, I ascend unto my Father, and your Father; and to my God, and your God."
+      }
+    },
+    {
+      "order": 11,
+      "type": "cinematic_scene",
+      "mood": "sending",
+      "image_url": "mary_garden_running_dawn.png",
+      "title": "Mary Magdalene came and told the disciples.",
+      "narrative": "The same woman who ran to the tomb in the darkness now ran back to the city with the light of dawn at her back.\n\nBut this time she wasn't running from pain. She was running with a message.\n\nI have seen the Lord.\n\nFour words. The first proclamation of the resurrection in history.",
+      "ambient_sound": "dawn_birds",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 20:18",
+        "text": "Mary Magdalene came and told the disciples that she had seen the Lord, and that he had spoken these things unto her."
+      },
+      "revelation_key": "The first person to announce the resurrection was a woman the world would not have given credibility to. That's how God chooses His messengers."
+    },
+    {
+      "order": 12,
+      "type": "theological_depth",
+      "mood": "wonder",
+      "image_url": "mary_garden_sunrise.png",
+      "title": "The apostle to the apostles",
+      "subtitle": "Why she was first.",
+      "content": "In first-century Israel, a woman's testimony had no legal validity. If the Gospels were an invention, they would never have placed a woman as the first witness of the resurrection. No one fabricating a story would choose the least credible witness in their culture.\n\nBut God did.\n\nThe early Christian tradition called her apostola apostolorum: the apostle to the apostles. She was sent to the sent ones.\n\n✝️ There is a pattern throughout all of Scripture: God chooses what the world discards. The weak. The small. The voiceless.\n\nMary Magdalene was not an accident. She was a deliberate choice. Jesus could have appeared first to Peter, to John, to the Sanhedrin. He appeared to the one who stayed weeping beside an empty tomb.\n\nBecause faithfulness, not position, is what God honors.",
+      "revelation_key": "God didn't choose the most credible witness. He chose the most faithful.",
+      "scripture_connections": [
+        {
+          "reference": "1 Corinthians 1:27",
+          "text": "But God has chosen the foolish things of the world to confound the wise; and God has chosen the weak things of the world to confound the things which are mighty;"
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "mood": "intimate",
+      "image_url": "mary_garden_prayer.png",
+      "title": "Your encounter",
+      "subtitle": "What name do you need to hear today?",
+      "discovery_questions": [
+        {
+          "category": "Your darkness",
+          "question": "Mary went to the tomb while it was still dark. Is there something in your life you seek even in the dark, without waiting for light? What drives you to keep going even when you don't understand?"
+        },
+        {
+          "category": "Your search",
+          "question": "She was looking for a dead body and found the living Christ. Is there something you're searching for in the wrong way? What would happen if what God has for you is different from what you expect?"
+        },
+        {
+          "category": "Your name",
+          "question": "Jesus called her by name and she responded with that same intimacy. When was the last time you felt God calling you personally? Do you have that closeness and intimacy to draw near to God? If not, what keeps you from drawing near to Him?"
+        },
+        {
+          "category": "Your message",
+          "question": "Mary went from seeking to being sent. What has Jesus done in your life that you need to stop keeping to yourself? Who do you need to tell: I have seen the Lord, and I want you to live with this same hope?"
+        }
+      ],
+      "prayer": {
+        "title": "Prayer of the one who seeks in the darkness",
+        "content": "Lord Jesus, I come to this garden.\n\nI come like Mary: in the darkness, not understanding everything, but not turning away from You.\n\nSometimes I seek You in the wrong ways. Sometimes I don't recognize You even when You're right in front of me. Sometimes my tears keep me from seeing what is already happening.\n\nBut You know me. You know my name. You know every part of my story. And You haven't left.\n\nCall me by my name today. Let me recognize Your voice among all the other voices. And let what I hear from You transform me into someone who cannot stay silent.\n\nLike Mary, I want to go from seeking to proclaiming. From weeping to running with Your message, bringing others to the hope You have brought to my life.\n\nIn the name of Jesus, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "dawn",
+      "image_url": "mary_garden_completion.png",
+      "completion_verse": {
+        "reference": "John 20:16",
+        "text": "Jesus said unto her, Mary. She turned, and said unto him, Rabboni; which is to say, Teacher.",
+        "bible_version": "King James Version"
+      },
+      "reflection_prompt": "What name do you need to hear today from Jesus? And who do you need to tell: I have seen the Lord?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
