@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "en",
-  "bible_version": "King James Version",
+  "bible_version": "KJV",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 8,
@@ -30,7 +30,7 @@
   "key_verse": {
     "reference": "John 20:16",
     "text": "Jesus said unto her, Mary. She turned, and said unto him, Rabboni; which is to say, Teacher.",
-    "bible_version": "King James Version"
+    "bible_version": "KJV"
   },
   "cards": [
     {
@@ -254,7 +254,7 @@
       "completion_verse": {
         "reference": "John 20:16",
         "text": "Jesus said unto her, Mary. She turned, and said unto him, Rabboni; which is to say, Teacher.",
-        "bible_version": "King James Version"
+        "bible_version": "KJV"
       },
       "reflection_prompt": "What name do you need to hear today from Jesus? And who do you need to tell: I have seen the Lord?",
       "celebration_type": "gentle_light"

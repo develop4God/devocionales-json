@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "de",
-  "bible_version": "Luther 2017",
+  "bible_version": "LU17",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 9,
@@ -30,7 +30,7 @@
   "key_verse": {
     "reference": "Johannes 20:16",
     "text": "Spricht Jesus zu ihr: Maria! Da wandte sie sich um und spricht zu ihm auf Hebräisch: Rabbuni!, das heißt: Meister!",
-    "bible_version": "Luther 2017"
+    "bible_version": "LU17"
   },
   "cards": [
     {
@@ -254,7 +254,7 @@
       "completion_verse": {
         "reference": "Johannes 20:16",
         "text": "Spricht Jesus zu ihr: Maria! Da wandte sie sich um und spricht zu ihm auf Hebräisch: Rabbuni!, das heißt: Meister!",
-        "bible_version": "Luther 2017"
+        "bible_version": "LU17"
       },
       "reflection_prompt": "Welchen Namen musst du heute von Jesus hören? Und wem musst du sagen: Ich habe den Herrn gesehen?",
       "celebration_type": "gentle_light"
