@@ -93,12 +93,12 @@
       "image_url": "saulo_thorn_ox_metaphor.png",
       "verse_reference": "Hechos 26:14",
       "verse_text": "Y habiendo caído todos nosotros en tierra, oí una voz que me hablaba, y decía en lengua hebrea: Saulo, Saulo, ¿por qué me persigues? Dura cosa te es dar coces contra el aguijón.",
-      "reflection": "Imagina un buey jalando un arado. El campesino lleva una vara con una punta filosa, y la usa para guiar al animal: un toque ligero le dice 'para acá', 'más despacio', 'sigue'.\n\nPero si el buey se enoja y patea la vara con coraje, ¿qué pasa? Se hiere a sí mismo. Cada patada contra esa punta filosa le duele más a él que al campesino. Y el campesino no cambia de plan: el buey es el que termina lastimado si sigue resistiendo.\n\nEso es lo que Jesús le dijo a Saulo.\n\nSi Saulo 'estaba dando coces contra el aguijón', quiere decir que Dios ya llevaba tiempo hablándole por dentro, antes de ese día en el camino a Damasco. Saulo perseguía a los cristianos, los mandaba a la cárcel, aprobaba que los mataran — y mientras hacía todo eso, algo dentro de él no estaba en paz. Esa es la lucha: la convicción de que lo que hacía estaba mal, peleando contra su propia decisión de seguir haciéndolo.\n\nJesús no le dijo 'hoy empezaste a resistirte'. Le dijo 'llevas tiempo resistiéndote'.\n\n¿Había visto Saulo la muerte de Esteban con una paz que no podía explicarse? ¿Había oído a los creyentes que él mismo arrestaba hablar de Jesús sin miedo, incluso camino a la cárcel? El relato de Hechos no entra en esos detalles. Pero Jesús, que estaba ahí ese día con Esteban y con cada uno de ellos, sí lo sabía.",
+      "reflection": "En el griego original, Jesús usó la imagen de un animal que patea la punta con la que el campesino lo dirige — y se lastima a sí mismo. Resistir no detiene al que guía. Solo destruye al que resiste.\n\nEl animal que patea la punta no lo hace sin sentirlo. Se lastima, y sigue pateando. No porque no duela — sino porque detenerse sería admitir que iba en la dirección equivocada.\n\nSaulo sufría. Jesús lo sabía. Y le estaba diciendo: llevas tiempo lastimándote, y los dos lo sabemos.",
       "revelation_key": "Dios trabaja en nosotros mucho antes de que lo reconozcamos. La incomodidad que sientes puede ser su voz ya presente.",
       "scripture_connections": [
-    {
-      "reference": "Hechos 7:55-60",
-      "text": "Pero Esteban, lleno del Espíritu Santo, puestos los ojos en el cielo, vio la gloria de Dios, y a Jesús que estaba a la diestra de Dios, y dijo: He aquí, veo los cielos abiertos, y al Hijo del Hombre que está a la diestra de Dios. Entonces ellos dieron grandes voces, y se taparon los oídos, y arremetieron unánimemente contra él. Y sacándole fuera de la ciudad, le apedreaban; y los testigos pusieron sus ropas a los pies de un joven llamado Saulo. Y apedreaban a Esteban, mientras él invocaba y decía: Señor Jesús, recibe mi espíritu. Y puesto de rodillas, clamó a gran voz: Señor, no les tomes en cuenta este pecado. Y habiendo dicho esto, durmió."
+        {
+          "reference": "Hechos 7:55-60",
+          "text": "Pero Esteban, lleno del Espíritu Santo, puestos los ojos en el cielo, vio la gloria de Dios, y a Jesús que estaba a la diestra de Dios, y dijo: He aquí, veo los cielos abiertos, y al Hijo del Hombre que está a la diestra de Dios. Entonces ellos dieron grandes voces, y se taparon los oídos, y arremetieron unánimemente contra él. Y sacándole fuera de la ciudad, le apedreaban; y los testigos pusieron sus ropas a los pies de un joven llamado Saulo. Y apedreaban a Esteban, mientras él invocaba y decía: Señor Jesús, recibe mi espíritu. Y puesto de rodillas, clamó a gran voz: Señor, no les tomes en cuenta este pecado. Y habiendo dicho esto, durmió."
         }
       ]
     },
@@ -232,6 +232,7 @@
     {
       "order": 15,
       "type": "discovery_activation",
+      "mood": "surrender",
       "image_url": "saulo_open_road_dust_light.png",
       "title": "Tu Encuentro",
       "subtitle": "Saulo no buscaba a Jesús. Jesús lo detuvo en el camino. Y lo que hizo con ese hombre, puede hacerlo contigo.",
