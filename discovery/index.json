@@ -1828,19 +1828,19 @@
         "hi": "मसीह में",
         "de": "In Christus",
         "ar": "في المسيح",
-        "fil": "Kay Cristo"
+        "fil": "Pakikipag-isa kay Cristo"
       },
       "subtitles": {
         "es": "Lo que la Biblia dice sobre el lugar donde ahora vives",
         "en": "What the Bible says about the place where you now live",
         "pt": "O que a Bíblia diz sobre o lugar onde você agora vive",
         "fr": "Ce que la Bible dit sur le lieu où tu vis maintenant",
-        "ja": "まもなく公開 🚧",
-        "zh": "即将推出 🚧",
+        "ja": "あなたが今住んでいる場所について聖書が語ること",
+        "zh": "圣经怎样描述你现在所居住的地方",
         "hi": "बाइबल उस स्थान के बारे में क्या कहती है जहाँ अब तुम रहते हो",
         "de": "Was die Bibel über den Ort sagt, an dem du jetzt lebst",
-        "ar": "قريباً 🚧",
-        "fil": "Malapit na 🚧"
+        "ar": "ما يقوله الكتاب المقدس عن المكان الذي تعيش فيه الآن",
+        "fil": "Ang sinasabi ng Biblia tungkol sa lugar kung saan ka na ngayon nakatira"
       },
       "estimated_reading_minutes": {
         "es": 10,
@@ -1851,7 +1851,7 @@
         "zh": 10,
         "hi": 10,
         "de": 10,
-        "ar": 10,
+        "ar": 12,
         "fil": 10
       }
     }
