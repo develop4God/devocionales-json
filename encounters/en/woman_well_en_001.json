@@ -32,7 +32,6 @@
     "bible_version": "KJV"
   },
   "cards": [
-
     {
       "order": 1,
       "type": "cinematic_scene",
@@ -48,7 +47,6 @@
       },
       "revelation_key": "Jesus rerouted His journey around a woman the world had stopped searching for."
     },
-
     {
       "order": 2,
       "type": "cinematic_scene",
@@ -64,7 +62,6 @@
       },
       "revelation_key": "The place was not coincidence. The hour was not coincidence. He was never there by accident."
     },
-
     {
       "order": 3,
       "type": "scripture_moment",
@@ -75,7 +72,6 @@
       "reflection": "Women went to the well in the morning. Together. She came at noon. Alone.\n\nThat is not a minor detail. It is her entire story in a single decision.\n\nAnd the first to speak to her did not judge her. Did not ignore her. He asked her for something.\n\nThe Son of God made Himself vulnerable before her before she knew His name.\n\nThat is how grace enters. Not with power. With humility.",
       "revelation_key": "Jesus spoke first. To her. In the place where she had learned to be invisible."
     },
-
     {
       "order": 4,
       "type": "theological_depth",
@@ -104,7 +100,6 @@
         }
       ]
     },
-
     {
       "order": 5,
       "type": "cinematic_scene",
@@ -120,7 +115,6 @@
       },
       "revelation_key": "He knew her completely. And He said: you have spoken truly."
     },
-
     {
       "order": 6,
       "type": "character_moment",
@@ -131,7 +125,6 @@
       "content": "He did not say: you are broken.\nHe did not say: you should be ashamed.\nHe did not say: fix yourself before we speak.\n\nHe said: you have well said.\n\nHe praised her honesty in the very moment He revealed what she was carrying.\n\nFive husbands. Five wells. Five attempts to quench a thirst none of them could touch.\n\nHe did not mention her past to shame her. He mentioned it to show her He knew her — and stayed.\n\nThat is the difference between the world and Jesus. The world exposes to shame. Jesus reveals to set free.\n\nShe came to hide. He came to find her.",
       "revelation_key": "Jesus knew every well she had been to. And He did not move."
     },
-
     {
       "order": 7,
       "type": "cinematic_scene",
@@ -147,7 +140,6 @@
       },
       "revelation_key": "Before she knew who He was, her spirit was already recognizing Him."
     },
-
     {
       "order": 8,
       "type": "theological_depth",
@@ -168,7 +160,6 @@
         }
       ]
     },
-
     {
       "order": 9,
       "type": "scripture_moment",
@@ -179,7 +170,6 @@
       "reflection": "Throughout the Gospel of John, Jesus does not directly announce who He is. He speaks in signs, in images, in declarations that require discernment.\n\nHere, beside a well in Samaria, at noon, He says it plainly.\n\nAnd He says it to her.\n\nNot to a Levite priest, nor a Pharisee, nor a disciple.\n\nBut to the woman who came alone — ashamed, humbled.\n\nShe went from asking whether Jesus was greater than Jacob, a patriarch of the past, to receiving the declaration of the Messiah, the living hope. In a single conversation beside that well.",
       "revelation_key": "The first person to receive this powerful declaration was the last person the world would have expected. That is how God works."
     },
-
     {
       "order": 10,
       "type": "cinematic_scene",
@@ -195,7 +185,6 @@
       },
       "revelation_key": "She did not forget the waterpot. She was transformed. The water she had come for was no longer enough."
     },
-
     {
       "order": 11,
       "type": "theological_depth",
@@ -220,7 +209,6 @@
         }
       ]
     },
-
     {
       "order": 12,
       "type": "character_moment",
@@ -241,7 +229,6 @@
         }
       ]
     },
-
     {
       "order": 13,
       "type": "cinematic_scene",
@@ -257,7 +244,6 @@
       },
       "revelation_key": "An encounter with Jesus always leaves something different in the place where it occurred."
     },
-
     {
       "order": 14,
       "type": "discovery_activation",
@@ -288,7 +274,6 @@
         "content": "Lord Jesus, I come to this well.\n\nNot because I have it figured out. Not because my story is clean. I come because I am thirsty and I have tried other places.\n\nYou know everything about me. Every well I have returned to. Every time I looked in the wrong place for what only You can give.\n\nAnd You are still here. Not to expose me. To find me.\n\nLike her, I want the encounter that changes what I carry. That what came in as thirst, goes out as testimony.\n\nTransform me. Use me. In my imperfection, in my story, in what I am.\n\nGive me the water that never runs dry. And give me the courage to leave my waterpot.\n\nIn Jesus' name, amen."
       }
     },
-
     {
       "order": 15,
       "type": "completion",
@@ -297,11 +282,10 @@
       "completion_verse": {
         "reference": "John 4:28-29",
         "text": "The woman then left her water pot, and went her way into the city, and said to the men, Come, see a man, who told me all things that ever I did: is not this the Christ?",
-        "bible_version": "King James Version"
+        "bible_version": "KJV"
       },
       "reflection_prompt": "What is the waterpot you need to leave behind today? And who needs to hear your 'come and see'?",
       "celebration_type": "gentle_light"
     }
-
   ]
 }

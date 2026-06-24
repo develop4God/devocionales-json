@@ -14,7 +14,7 @@ import json
 import re
 import sys
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import List, Optional
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
@@ -171,12 +171,16 @@ def load_json(path: Path, report: Report) -> Optional[dict]:
 
 # ── Phase 1: Lint ────────────────────────────────────────────────────────────
 
-def validate_lint(report: Report) -> bool:
-    """Check that all JSON files use indent=2 formatting and end with newline."""
+def validate_lint(report: Report) -> dict:
+    """Check that all JSON files use indent=2 formatting and end with newline.
+
+    Returns a cache mapping absolute Path -> parsed dict for valid files.
+    """
     report.I("=" * 60)
     report.I("PHASE 1: Lint — checking JSON formatting (indent=2)")
     report.I("=" * 60)
 
+    cache: dict = {}
     json_files = sorted(ENCOUNTERS_DIR.rglob('*.json'))
     json_files = [f for f in json_files if f.is_file()
                   and 'encounters_scripts' not in f.parts]
@@ -184,7 +188,7 @@ def validate_lint(report: Report) -> bool:
     for fpath in json_files:
         raw = fpath.read_text(encoding='utf-8')
         try:
-            json.loads(raw)
+            data = json.loads(raw)
         except json.JSONDecodeError:
             report.E(f"{fpath.name}: invalid JSON")
             continue
@@ -200,10 +204,11 @@ def validate_lint(report: Report) -> bool:
                 break
         if not raw.endswith('\n'):
             report.W(f"{rel}: missing trailing newline")
+        cache[fpath] = data
         checked += 1
 
     report.I(f"✓ Checked {checked} JSON files")
-    return True
+    return cache
 
 
 # ── Phase A: Index validation ─────────────────────────────────────────────────
@@ -306,7 +311,8 @@ def validate_index(report: Report) -> Optional[dict]:
 # ── Phase B: File validation ──────────────────────────────────────────────────
 
 def validate_encounter_file(data: dict, lang: str, filename: str,
-                             enc_id: str, report: Report):
+                             enc_id: str, report: Report,
+                             index_entry: Optional[dict] = None):
     """Validate a single encounter file."""
 
     # Quote / stray-punctuation anomaly scan across all text fields
@@ -358,6 +364,12 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
         if 'accent_color' in meta:
             if not re.match(r'^#[0-9a-fA-F]{6}$', meta.get('accent_color', '')):
                 report.W(f"{filename}: meta.accent_color '{meta['accent_color']}' is not a valid hex color")
+        if index_entry:
+            for meta_key, index_key in [('emoji', 'emoji'), ('testament', 'testament')]:
+                meta_val = meta.get(meta_key, '')
+                index_val = index_entry.get(index_key, '')
+                if meta_val and index_val and meta_val != index_val:
+                    report.E(f"{filename}: meta.{meta_key} '{meta_val}' does not match index '{index_val}'")
 
     # key_verse
     kv = data.get('key_verse', {})
@@ -401,6 +413,10 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
         cidx = card.get('order', '?')
         ctx = f"{filename} card[{cidx}]({ctype})"
 
+        # Unknown card type
+        if ctype not in CARD_REQUIRED_KEYS:
+            report.W(f"{ctx}: unknown card type '{ctype}'")
+
         # Required keys per card type
         required_keys = CARD_REQUIRED_KEYS.get(ctype, ['order', 'type', 'image_url'])
         for key in required_keys:
@@ -425,12 +441,27 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
             if not prayer.get('content', '').strip():
                 report.E(f"{ctx}: prayer.content is empty")
 
+        # verse_overlay validation
+        vo = card.get('verse_overlay')
+        if vo is not None:
+            if not isinstance(vo, dict):
+                report.E(f"{ctx}: verse_overlay must be an object")
+            else:
+                for field in ['reference', 'text']:
+                    if not vo.get(field, '').strip():
+                        report.E(f"{ctx}: verse_overlay.{field} is empty")
+                if lang != 'en' and vo.get('reference'):
+                    if _has_english_book_name(vo['reference'], lang):
+                        report.E(f"{ctx}: verse_overlay.reference has English book name: {vo['reference']}")
+
         # completion specific
         if ctype == 'completion':
             cv = card.get('completion_verse', {})
             for field in ['reference', 'text', 'bible_version']:
                 if not cv.get(field, '').strip():
                     report.E(f"{ctx}: completion_verse.{field} is empty")
+            if cv.get('bible_version') not in allowed:
+                report.E(f"{ctx}: completion_verse.bible_version '{cv.get('bible_version')}' not valid for '{lang}'")
 
         # scripture_moment specific
         if ctype == 'scripture_moment':
@@ -519,7 +550,7 @@ def main():
 
     # ── PHASE 1: Lint ──
     report_lint = Report("PHASE 1: LINT")
-    validate_lint(report_lint)
+    lint_cache = validate_lint(report_lint)
     passed_lint = report_lint.print(final=False)
 
     if not passed_lint:
@@ -558,12 +589,12 @@ def main():
             if not fpath.exists():
                 continue  # already caught in Phase A
 
-            data = load_json(fpath, report_b)
+            data = lint_cache.get(fpath) or load_json(fpath, report_b)
             if data is None:
                 continue
 
             # Individual file validation
-            validate_encounter_file(data, lang, fname, enc_id, report_b)
+            validate_encounter_file(data, lang, fname, enc_id, report_b, index_entry=enc)
 
             # has_interactive cross-check
             has_interactive_in_file = any(
