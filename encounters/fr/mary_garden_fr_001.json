@@ -1,0 +1,263 @@
+{
+  "id": "mary_garden_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fr",
+  "bible_version": "Louis Segond 1910",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 11,
+  "meta": {
+    "character": "Marie de Magdala",
+    "testament": "new",
+    "scripture_reference": "Jean 20:1-18",
+    "mood_primary": "grief",
+    "accent_color": "#1a0a2e",
+    "emoji": "🌸",
+    "tags": [
+      "deuil",
+      "résurrection",
+      "nom",
+      "identité",
+      "fidélité",
+      "amour",
+      "magdalena",
+      "jésus",
+      "rencontre",
+      "restauration"
+    ]
+  },
+  "key_verse": {
+    "reference": "Jean 20:16",
+    "text": "Jésus lui dit: Marie! Elle se retourna, et lui dit en hébreu: Rabbouni! C'est-à-dire, Maître!",
+    "bible_version": "Louis Segond 1910"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "darkness",
+      "image_url": "mary_garden_dawn_tomb.png",
+      "title": "Comme il faisait encore obscur.",
+      "narrative": "Elle n'a pas attendu la lumière.\n\nLes autres dormaient. Les disciples s'étaient enfermés. Le sabbat était terminé, mais le monde restait figé.\n\nElle non. Elle se rendit au sépulcre alors que tout était encore obscur.\n\nElle n'avait pas de plan. Elle portait seulement la seule chose qu'on n'avait pu lui enlever : sa présence.",
+      "ambient_sound": "wind_predawn",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 20:1",
+        "text": "Le premier jour de la semaine, Marie de Magdala se rendit au sépulcre dès le matin, comme il faisait encore obscur; et elle vit que la pierre était ôtée du sépulcre."
+      },
+      "revelation_key": "Quand tous se cachaient, elle a marché vers le tombeau. L'amour n'attend pas les conditions parfaites."
+    },
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "panic",
+      "image_url": "mary_garden_empty_tomb.png",
+      "title": "La pierre ôtée.",
+      "narrative": "La première chose qu'elle vit fut la pierre déplacée.\n\nElle ne pensa pas à la résurrection. Elle pensa à un vol. Elle pensa qu'on lui avait enlevé la dernière chose qui lui restait de Lui.\n\nElle courut.",
+      "ambient_sound": "footsteps_running",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 20:2",
+        "text": "Elle courut vers Simon Pierre et vers l'autre disciple que Jésus aimait, et leur dit: Ils ont enlevé du sépulcre le Seigneur, et nous ne savons où ils l'ont mis."
+      },
+      "revelation_key": "Son premier instinct devant le tombeau vide ne fut pas la foi. Ce fut la douleur. Et cela ne l'a pas disqualifiée."
+    },
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "grief",
+      "image_url": "mary_garden_weeping.png",
+      "verse_reference": "Jean 20:11-13",
+      "verse_text": "Cependant Marie se tenait dehors près du sépulcre, et pleurait. Comme elle pleurait, elle se baissa pour regarder dans le sépulcre; et elle vit deux anges vêtus de blanc, assis à la place où avait été couché le corps de Jésus, l'un à la tête, l'autre aux pieds. Ils lui dirent: Femme, pourquoi pleures-tu? Elle leur répondit: Parce qu'ils ont enlevé mon Seigneur, et je ne sais où ils l'ont mis.",
+      "reflection": "Pierre et Jean vinrent, virent les bandes, crurent et rentrèrent chez eux.\n\nElle resta.\n\nNon parce qu'elle avait plus de foi. Non parce qu'elle comprenait mieux. Elle resta parce qu'elle ne pouvait pas partir. Parce que ce qui la liait à Jésus n'était pas la compréhension. C'était l'amour.\n\nDeux anges lui posèrent la même question que Jésus allait bientôt poser : Pourquoi pleures-tu ?\n\nIls ne la corrigèrent pas. Ils ne lui dirent pas qu'elle ne devait pas pleurer. Ils permirent sa douleur.\n\nParfois la fidélité ne ressemble pas à la force. Elle ressemble à quelqu'un qui reste quand il n'y a aucune raison de rester.",
+      "revelation_key": "Les disciples rentrèrent chez eux. Elle resta. La fidélité ne comprend pas toujours ; mais elle ne part pas."
+    },
+    {
+      "order": 4,
+      "type": "character_moment",
+      "mood": "grief",
+      "image_url": "mary_garden_portrait.png",
+      "title": "Qui était Marie de Magdala ?",
+      "subtitle": "Ce que dit la Bible",
+      "content": "Jésus chassa d'elle sept démons. Sept. Le nombre de la totalité. Quoi que ce fût qui la tourmentait, cela l'occupait entièrement.\n\nAprès sa libération, elle le suivit. Luc 8:2-3 la place parmi les femmes qui soutenaient le ministère de Jésus de leurs biens. Elle n'était pas en marge. Elle était présente.\n\nElle fut au pied de la croix quand les disciples s'enfuirent. Et elle fut la première à se rendre au sépulcre.\n\nElle n'était pas parfaite. Elle était fidèle, avec un cœur donné, et c'est ce que Jésus voit et cherche dans son Église.",
+      "revelation_key": "Nous ne savons pas tout de son passé. Mais nous savons qu'elle était là où les autres n'étaient pas.",
+      "scripture_connections": [
+        {
+          "reference": "Luc 8:2-3",
+          "text": "Les douze étaient avec lui et quelques femmes qui avaient été guéries d'esprits malins et de maladies: Marie, dite de Magdala, de laquelle étaient sortis sept démons, Jeanne, femme de Chuza, intendant d'Hérode, Susanne, et plusieurs autres, qui l'assistaient de leurs biens."
+        },
+        {
+          "reference": "Marc 15:40",
+          "text": "Il y avait aussi des femmes qui regardaient de loin. Parmi elles étaient Marie de Magdala, Marie, mère de Jacques le mineur et de Joses, et Salomé,"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "tension",
+      "image_url": "mary_garden_linen_cloths.png",
+      "title": "Ce qui resta dans le tombeau",
+      "subtitle": "Les bandes, le linge, et ce qu'ils signifient.",
+      "content": "Jean enregistre un détail qu'aucun autre évangéliste ne mentionne avec autant de précision : les bandes posées là, et le linge plié dans un lieu à part.\n\nCe n'est pas un détail mineur. Si quelqu'un avait volé le corps, il n'aurait pas débandé le cadavre. Le linge mortuaire était à sa place, mais le corps n'y était plus.\n\n📜 Le linge plié dans un lieu à part porte un poids culturel. Certains spécialistes ont suggéré que dans la coutume juive, quand un maître finissait de manger, s'il laissait la serviette pliée, cela signifiait qu'il reviendrait. Que cette tradition soit vérifiable ou non, ce que Jean vit fut de l'ordre, non du chaos. Il n'y eut pas de vol. Il y eut résurrection.\n\nJean vit cela et crut. Mais Marie ne comprenait pas encore. Et Jésus ne la rejeta pas pour autant.\n\nLa foi n'arrive pas toujours au même moment pour tous. Et Dieu n'est pas pressé.",
+      "revelation_key": "Jean vit et crut. Marie vit et pleura. Jésus se révéla aux deux.",
+      "verse_overlay": {
+        "reference": "Jean 20:6-7",
+        "text": "Simon Pierre, qui le suivait, arriva et entra dans le sépulcre; il vit les bandes qui étaient à terre, et le linge qu'on avait mis sur la tête de Jésus, non pas avec les bandes, mais plié dans un lieu à part."
+      }
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "liminal",
+      "image_url": "mary_garden_turned_back.png",
+      "title": "Elle se retourna.",
+      "narrative": "Elle répondit aux anges. Elle se retourna.\n\nEt Il était là. Debout. Vivant.\n\nMais elle ne le reconnut pas.\n\nSes yeux, pleins de larmes, cherchaient un corps mort. Ils n'étaient pas prêts à voir celui qui était vivant.",
+      "ambient_sound": "garden_morning",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 20:14",
+        "text": "En disant cela, elle se retourna, et elle vit Jésus debout; mais elle ne savait pas que c'était Jésus."
+      },
+      "revelation_key": "Parfois Jésus est juste derrière nous et nous ne le reconnaissons pas parce que nous cherchons de la mauvaise manière."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "ache",
+      "image_url": "mary_garden_mistaken_gardener.png",
+      "verse_reference": "Jean 20:15",
+      "verse_text": "Jésus lui dit: Femme, pourquoi pleures-tu? Qui cherches-tu? Elle, pensant que c'était le jardinier, lui dit: Seigneur, si c'est toi qui l'as emporté, dis-moi où tu l'as mis, et je le prendrai.",
+      "reflection": "La même question que posèrent les anges, maintenant dans la voix de Jésus : Pourquoi pleures-tu ?\n\nPuis une seconde : Qui cherches-tu ?\n\nIl n'a pas demandé que cherches-tu. Il a demandé qui.\n\nElle le confondit avec le jardinier et dans sa confusion dit quelque chose qui révèle tout de son cœur : je le prendrai.\n\nUne femme seule, sans position sociale, sans la force de porter un corps, offre de le porter elle-même. Ce n'est pas de la logique. C'est de l'amour.\n\nEt Jésus vit tout cela.",
+      "revelation_key": "Elle n'avait pas la force pour ce qu'elle offrait. Mais la disposition de son cœur était ce que Jésus cherchait."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "revelation",
+      "image_url": "mary_garden_name_called.png",
+      "title": "Marie !",
+      "narrative": "Un mot.\n\nSon nom.\n\nPas une explication théologique. Pas une correction. Pas un reproche pour ne pas l'avoir reconnu.\n\nSeulement son nom, prononcé comme Lui seul le disait.\n\nEt elle sut.",
+      "ambient_sound": "silence_sacred",
+      "haptic": "light_pulse",
+      "verse_overlay": {
+        "reference": "Jean 20:16",
+        "text": "Jésus lui dit: Marie! Elle se retourna, et lui dit en hébreu: Rabbouni! C'est-à-dire, Maître!"
+      },
+      "revelation_key": "Il ne la convainquit pas par des arguments. Il l'appela par son nom. C'est ainsi que le Berger trouve ses brebis."
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "wonder",
+      "image_url": "mary_garden_light_breaking.png",
+      "title": "Rabbouni !",
+      "subtitle": "Le poids d'un seul mot.",
+      "content": "Rabbouni n'est pas la même chose que Rabbi. C'est une forme plus intime, plus personnelle. Dans l'araméen du premier siècle, Rabbouni était réservé presque exclusivement pour s'adresser à Dieu dans la prière. C'était la forme qu'utilisaient les plus proches.\n\nElle n'a pas dit Maître comme un titre formel. Elle a dit Rabbouni comme quelqu'un qui reconnaît la personne qui a changé sa vie.\n\n🔑 Jésus l'a appelée par son nom. Elle a répondu avec le nom que seuls ceux qui le connaissaient de près utilisaient.\n\nDeux noms. Une reconnaissance mutuelle.\n\nDans Jean 10:3, Jésus avait dit que le bon berger appelle ses brebis par leur nom. Ici, dans un jardin, à l'aube, il le fit littéralement.\n\nCe ne fut pas de la doctrine. Ce fut une rencontre.",
+      "revelation_key": "Il l'appela par son nom. Elle répondit avec le nom que seuls les proches utilisaient. C'est ainsi que fonctionne la relation d'intimité avec Dieu.",
+      "scripture_connections": [
+        {
+          "reference": "Jean 10:3",
+          "text": "Le portier lui ouvre, et les brebis entendent sa voix; il appelle par leur nom les brebis qui lui appartiennent, et il les conduit dehors."
+        },
+        {
+          "reference": "Ésaïe 43:1",
+          "text": "Ainsi parle maintenant l'Éternel, qui t'a créé, ô Jacob! Celui qui t'a formé, ô Israël! Ne crains rien, car je te rachète, Je t'appelle par ton nom: tu es à moi!"
+        }
+      ],
+      "verse_overlay": {
+        "reference": "Jean 10:14",
+        "text": "Je connais mes brebis, et elles me connaissent,"
+      }
+    },
+    {
+      "order": 10,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "mary_garden_reaching.png",
+      "title": "Ne me touche pas.",
+      "subtitle": "Ce que Jésus lui demanda et pourquoi.",
+      "content": "La réaction naturelle de Marie fut de s'accrocher à Lui. Après trois jours d'obscurité, de croire qu'elle l'avait perdu pour toujours, elle voulait le retenir.\n\nJésus lui dit : Ne me touche pas, car je ne suis pas encore monté vers mon Père.\n\nCe ne fut pas un rejet. Ce fut une redirection.\n\nIl lui disait : tu ne peux pas me retenir comme avant. La relation ne s'arrête pas ici, mais elle change. Ce ne sera plus une présence physique. Ce sera une présence spirituelle, permanente, sans limite de temps ni de lieu.\n\nPuis il lui donna une mission : va trouver mes frères.\n\nLa femme qui était venue chercher un corps mort sortit du jardin avec un message vivant. Elle ne fut pas envoyée pour chercher. Elle fut envoyée pour annoncer.",
+      "revelation_key": "Jésus ne la rejeta pas. Il lui montra que sa présence ne serait plus limitée à ce que ses mains pouvaient toucher.",
+      "verse_overlay": {
+        "reference": "Jean 20:17",
+        "text": "Jésus lui dit: Ne me touche pas; car je ne suis pas encore monté vers mon Père. Mais va trouver mes frères, et dis-leur que je monte vers mon Père et votre Père, vers mon Dieu et votre Dieu."
+      }
+    },
+    {
+      "order": 11,
+      "type": "cinematic_scene",
+      "mood": "sending",
+      "image_url": "mary_garden_running_dawn.png",
+      "title": "Marie de Magdala alla annoncer aux disciples.",
+      "narrative": "La même femme qui avait couru au sépulcre dans l'obscurité courait maintenant vers la ville avec la lumière de l'aube dans son dos.\n\nMais cette fois, elle ne courait pas de douleur. Elle courait avec un message.\n\nJ'ai vu le Seigneur.\n\nQuatre mots. La première proclamation de la résurrection dans l'histoire.",
+      "ambient_sound": "dawn_birds",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 20:18",
+        "text": "Marie de Magdala alla annoncer aux disciples qu'elle avait vu le Seigneur, et qu'il lui avait dit ces choses."
+      },
+      "revelation_key": "La première personne à annoncer la résurrection fut une femme à qui le monde n'aurait pas accordé de crédibilité. C'est ainsi que Dieu choisit ses messagers."
+    },
+    {
+      "order": 12,
+      "type": "theological_depth",
+      "mood": "wonder",
+      "image_url": "mary_garden_sunrise.png",
+      "title": "L'apôtre des apôtres",
+      "subtitle": "Pourquoi elle fut la première.",
+      "content": "Dans l'Israël du premier siècle, le témoignage d'une femme n'avait pas de validité juridique. Si les Évangiles étaient une invention, jamais on n'aurait placé une femme comme premier témoin de la résurrection. Personne fabriquant une histoire ne choisirait le témoin le moins crédible de sa culture.\n\nMais Dieu, si.\n\nLa tradition chrétienne ancienne l'appela apostola apostolorum : l'apôtre des apôtres. Elle fut envoyée aux envoyés.\n\n✝️ Il y a un schéma dans toute l'Écriture : Dieu choisit ce que le monde rejette. Le faible. Le petit. Ce qui n'a pas de voix.\n\nMarie de Magdala ne fut pas un accident. Ce fut un choix délibéré. Jésus aurait pu apparaître d'abord à Pierre, à Jean, au Sanhédrin. Il apparut à celle qui était restée en pleurs devant un tombeau vide.\n\nParce que la fidélité, et non la position, est ce que Dieu honore.",
+      "revelation_key": "Dieu n'a pas choisi le témoin le plus crédible. Il a choisi le plus fidèle.",
+      "scripture_connections": [
+        {
+          "reference": "1 Corinthiens 1:27",
+          "text": "Mais Dieu a choisi les choses folles du monde pour confondre les sages; Dieu a choisi les choses faibles du monde pour confondre les fortes;"
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "mood": "intimate",
+      "image_url": "mary_garden_prayer.png",
+      "title": "Ta rencontre",
+      "subtitle": "Quel nom as-tu besoin d'entendre aujourd'hui ?",
+      "discovery_questions": [
+        {
+          "category": "Ton obscurité",
+          "question": "Marie se rendit au sépulcre comme il faisait encore obscur. Y a-t-il quelque chose dans ta vie que tu cherches encore dans l'obscurité, sans attendre la lumière ? Qu'est-ce qui te pousse à continuer d'y aller même sans comprendre ?"
+        },
+        {
+          "category": "Ta recherche",
+          "question": "Elle cherchait un corps mort et trouva Jésus-Christ vivant. Y a-t-il quelque chose que tu cherches de la mauvaise manière ? Que se passerait-il si ce que Dieu a pour toi était différent de ce que tu attends ?"
+        },
+        {
+          "category": "Ton nom",
+          "question": "Jésus l'appela par son nom et elle répondit avec cette même intimité. Quand as-tu senti pour la dernière fois que Dieu t'appelait personnellement ? As-tu cette proximité et cette intimité pour t'approcher de Dieu ? Si ce n'est pas le cas, qu'est-ce qui t'empêche de t'approcher de Lui ?"
+        },
+        {
+          "category": "Ton message",
+          "question": "Marie passa de chercher à être envoyée. Qu'est-ce que Jésus a fait dans ta vie que tu dois cesser de garder pour toi ? À qui as-tu besoin de dire : j'ai vu le Seigneur et je veux que tu vives avec cette même espérance ?"
+        }
+      ],
+      "prayer": {
+        "title": "Prière de celui qui cherche dans l'obscurité",
+        "content": "Seigneur Jésus, je viens dans ce jardin.\n\nJe viens comme Marie : dans l'obscurité, sans tout comprendre, mais sans m'éloigner de Toi.\n\nParfois je Te cherche de la mauvaise manière. Parfois je ne Te reconnais pas alors que Tu es juste devant moi. Parfois mes larmes m'empêchent de voir ce qui est déjà en train de se produire.\n\nMais Tu me connais. Tu connais mon nom. Tu connais chaque partie de mon histoire. Et Tu n'es pas parti.\n\nAppelle-moi par mon nom aujourd'hui. Que je puisse reconnaître Ta voix parmi toutes les autres voix. Et que ce que j'entends de Toi me transforme en quelqu'un qui ne peut pas rester silencieux.\n\nComme Marie, je veux passer de chercher à annoncer. De pleurer à courir avec Ton message et conduire d'autres vers l'espérance que Tu as apportée dans ma vie.\n\nAu nom de Jésus, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "dawn",
+      "image_url": "mary_garden_completion.png",
+      "completion_verse": {
+        "reference": "Jean 20:16",
+        "text": "Jésus lui dit: Marie! Elle se retourna, et lui dit en hébreu: Rabbouni! C'est-à-dire, Maître!",
+        "bible_version": "Louis Segond 1910"
+      },
+      "reflection_prompt": "Quel nom as-tu besoin d'entendre aujourd'hui de la part de Jésus ? Et à qui as-tu besoin de dire : j'ai vu le Seigneur ?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
