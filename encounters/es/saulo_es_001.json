@@ -54,7 +54,7 @@
     {
       "order": 2,
       "type": "character_moment",
-      "mood": "solitude",
+      "mood": "tense",
       "image_url": "saulo_pharisee_study_torchlight.png",
       "title": "El hombre más convencido de Israel.",
       "subtitle": "Lo que construyó antes del camino",
@@ -99,7 +99,7 @@
     {
       "order": 5,
       "type": "scripture_moment",
-      "mood": "depth",
+      "mood": "mysterious",
       "image_url": "saulo_thorn_ox_metaphor.png",
       "verse_reference": "Hechos 26:14",
       "verse_text": "Y habiendo caído todos nosotros en tierra, oí una voz que me hablaba, y decía en lengua hebrea: Saulo, Saulo, ¿por qué me persigues? Dura cosa te es dar coces contra el aguijón.",
@@ -130,7 +130,7 @@
     {
       "order": 7,
       "type": "theological_depth",
-      "mood": "liminal",
+      "mood": "mysterious",
       "image_url": "saulo_dark_room_light_crack.png",
       "title": "Tres días",
       "subtitle": "El patrón que Dios repite",
@@ -150,7 +150,7 @@
     {
       "order": 8,
       "type": "scripture_moment",
-      "mood": "shifting",
+      "mood": "tense",
       "image_url": "saulo_ananias_vision_split.png",
       "verse_reference": "Hechos 9:10-14",
       "verse_text": "Había entonces en Damasco un discípulo llamado Ananías, a quien el Señor dijo en visión: Ananías. Y él respondió: Heme aquí, Señor. Y el Señor le dijo: Levántate, y ve a la calle que se llama Derecha, y busca en casa de Judas a uno llamado Saulo, de Tarso; porque he aquí, él ora, y ha visto en visión a un varón llamado Ananías, que entra y le pone las manos encima para que recobre la vista. Entonces Ananías respondió: Señor, he oído de muchos acerca de este hombre, cuántos males ha hecho a tus santos en Jerusalén; y aun aquí tiene autoridad de los principales sacerdotes para prender a todos los que invocan tu nombre.",
@@ -191,7 +191,7 @@
     {
       "order": 11,
       "type": "scripture_moment",
-      "mood": "awakening",
+      "mood": "peace",
       "image_url": "saulo_scales_falling_eyes.png",
       "verse_reference": "Hechos 9:18",
       "verse_text": "Y al momento le cayeron de los ojos como escamas, y recibió al instante la vista; y levantándose, fue bautizado.",
@@ -201,7 +201,7 @@
     {
       "order": 12,
       "type": "theological_depth",
-      "mood": "revelation",
+      "mood": "grace",
       "image_url": "saulo_pharisee_scrolls_water.png",
       "title": "El hombre más preparado sin saberlo",
       "subtitle": "Por qué Dios permitió que Saulo construyera todo lo que construyó",
@@ -217,7 +217,7 @@
     {
       "order": 13,
       "type": "cinematic_scene",
-      "mood": "sending",
+      "mood": "awe",
       "image_url": "saulo_damascus_morning_new.png",
       "title": "La misma ciudad. Una misión distinta.",
       "narrative": "Salió a predicar en las sinagogas de Damasco que Jesús era el Hijo de Dios.\n\nLos mismos lugares a los que había llegado con cartas de arresto. Las mismas calles donde había planeado hacer redadas. Las mismas sinagogas donde habría identificado a los creyentes para arrestarlos.\n\nPero el hombre que caminaba por ellas ya no era el mismo. No porque hubiera dejado de ser quien era. Sino porque ahora sabía para qué había sido todo lo que era.\n\nY todos los que le oían estaban atónitos. Conocían su reputación. Sabían con qué propósito había venido a Damasco. Y ahora este mismo hombre predicaba en el nombre del que antes perseguía.\n\nEl camino a Damasco no fue el final de Saulo. Fue el primer día de Pablo.",
@@ -232,7 +232,7 @@
     {
       "order": 14,
       "type": "character_moment",
-      "mood": "intimate",
+      "mood": "grace",
       "image_url": "saulo_paul_aged_lamp_writing.png",
       "title": "El primer de los pecadores.",
       "subtitle": "Lo que dijo el hombre que lo había logrado todo",
@@ -256,7 +256,7 @@
     {
       "order": 15,
       "type": "discovery_activation",
-      "mood": "open",
+      "mood": "peace",
       "image_url": "saulo_open_road_dust_light.png",
       "title": "Tu Encuentro",
       "subtitle": "Saulo no buscaba a Jesús. Jesús lo detuvo en el camino. Y lo que hizo con ese hombre, puede hacerlo contigo.",
@@ -282,7 +282,7 @@
     {
       "order": 16,
       "type": "completion",
-      "mood": "dawn",
+      "mood": "peace",
       "image_url": "saulo_road_light_horizon.png",
       "completion_verse": {
         "reference": "1 Timoteo 1:15-16",
