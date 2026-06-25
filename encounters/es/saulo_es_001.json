@@ -31,8 +31,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Hechos 9:5-6",
-    "text": "Y él dijo: ¿Quién eres, Señor? Y le dijo: Yo soy Jesús, a quien tú persigues; dura cosa te es dar coces contra el aguijón. Él, temblando y temeroso, dijo: Señor, ¿qué quieres que yo haga? Y el Señor le dijo: Levántate y entra en la ciudad, y se te dirá lo que debes hacer.",
+    "reference": "1 Timoteo 1:15-16",
+    "text": "Palabra fiel y digna de ser recibida por todos: que Cristo Jesús vino al mundo para salvar a los pecadores, de los cuales yo soy el primero. Pero por esto fui recibido a misericordia, para que Jesucristo mostrase en mí el primero toda su clemencia, para ejemplo de los que habrían de creer en él para vida eterna.",
     "bible_version": "RVR1960"
   },
   "cards": [
@@ -84,7 +84,17 @@
       "verse_reference": "Hechos 9:3-6",
       "verse_text": "Mas yendo por el camino, aconteció que al llegar cerca de Damasco, repentinamente le rodeó un resplandor de luz del cielo; y cayendo en tierra, oyó una voz que le decía: Saulo, Saulo, ¿por qué me persigues? Y él dijo: ¿Quién eres, Señor? Y le dijo: Yo soy Jesús, a quien tú persigues; dura cosa te es dar coces contra el aguijón. Él, temblando y temeroso, dijo: Señor, ¿qué quieres que yo haga? Y el Señor le dijo: Levántate y entra en la ciudad, y se te dirá lo que debes hacer.",
       "reflection": "Nota lo que no dice el texto.\n\nNo dice que Saulo llegó a Damasco y tuvo una crisis de fe. No dice que leyó algo que lo hizo dudar. Dice que yendo por el camino, repentinamente, una luz del cielo lo rodeó y cayó en tierra.\n\nJesús no esperó que Saulo llegara a sus conclusiones. Lo interrumpió en el trayecto.\n\nY la primera palabra no fue una acusación. Fue su nombre, dos veces. Saulo, Saulo. En la Escritura, cuando Dios llama a alguien por nombre dos veces, el peso de la llamada es personal, urgente, íntimo. Así llamó a Abraham antes de detener el sacrificio de Isaac. Así llamó a Moisés desde la zarza.\n\nLuego vino la pregunta: ¿por qué me persigues?\n\nNo: ¿por qué persigues a mi iglesia? No: ¿por qué persigues a los míos? Sino: ¿por qué me persigues a mí?\n\nJesús había identificado el sufrimiento de cada creyente arrestado, de cada familia destruida, de cada hombre y mujer arrastrado a prisión, como sufrimiento propio. Lo que le hacías a los míos, me lo hacías a mí.\n\nSaulo preguntó desde el polvo: ¿Quién eres, Señor? Era la pregunta más importante de su vida. Y la había hecho sin levantarse del suelo.",
-      "revelation_key": "Jesús no interrumpió a Saulo con castigo. Lo interrumpió con una pregunta. La gracia tiene esa forma: no destruye, interroga."
+      "revelation_key": "Jesús no interrumpió a Saulo con castigo. Lo interrumpió con una pregunta. La gracia tiene esa forma: no destruye, interroga.",
+      "scripture_connections": [
+        {
+          "reference": "Génesis 22:11",
+          "text": "Entonces el ángel de Jehová le dio voces desde el cielo, y dijo: Abraham, Abraham. Y él respondió: Heme aquí."
+        },
+        {
+          "reference": "Éxodo 3:4",
+          "text": "Viendo Jehová que él iba a ver, lo llamó Dios de en medio de la zarza, y dijo: ¡Moisés, Moisés! Y él respondió: Heme aquí."
+        }
+      ]
     },
     {
       "order": 5,
@@ -227,7 +237,21 @@
       "title": "El primer de los pecadores.",
       "subtitle": "Lo que dijo el hombre que lo había logrado todo",
       "content": "Desde una celda en Roma, el hombre que había plantado iglesias desde Antioquía hasta Corinto, desde Éfeso hasta el borde de España, escribió estas palabras:\n\n\"Cristo Jesús vino al mundo para salvar a los pecadores, de los cuales yo soy el primero.\"\n\nNo dijo: yo fui el primero. Dijo: yo soy el primero. Presente. Permanente.\n\nEste era el mismo hombre que había escrito el himno del amor en 1 Corintios 13. El que había plantado la iglesia en Filipos después de ser azotado y encarcelado. El que naufragó tres veces. El que fue apedreado y lo dieron por muerto. El que escribió sobre el gozo desde la prisión.\n\n🔑 Lo que hace esta declaración singular:\n\nNo era falsa modestia. Era la perspectiva de alguien que había visto a Jesús cara a cara y entendido desde entonces cuán grande era la distancia entre lo que Dios es y lo que él era sin esa gracia. Cuanto más conocía a Cristo, más claramente veía su propia necesidad.\n\nEsa es la marca del encuentro genuino con Jesús: no te infla. Te ancla. La grandeza que Pablo construyó en su ministerio no lo hizo sentirse más grande. Lo hizo sentirse más consciente de la gracia que lo sostenía.\n\n⚠️ El denuedo y la humildad no son opuestos. En Pablo vivían juntos. Podía pararse frente al César y también llamarse el primero de los pecadores. Podía reprender a Pedro en público y también decir que era menos que el menor de todos los santos.\n\nEse es el hombre que Jesús hizo del que guardaba los mantos en la lapidación de Esteban.",
-      "revelation_key": "La humildad de Pablo no era debilidad. Era la consecuencia directa de haber visto a Jesús. Cuanto más lo conocía, más claro veía cuánto necesitaba Su gracia."
+      "revelation_key": "La humildad de Pablo no era debilidad. Era la consecuencia directa de haber visto a Jesús. Cuanto más lo conocía, más claro veía cuánto necesitaba Su gracia.",
+      "scripture_connections": [
+        {
+          "reference": "1 Corintios 13:4",
+          "text": "El amor es sufrido, es benigno; el amor no tiene envidia, el amor no es jactancioso, no se envanece."
+        },
+        {
+          "reference": "Efesios 3:8",
+          "text": "A mí, que soy menos que el más pequeño de todos los santos, me fue dada esta gracia de anunciar entre los gentiles el evangelio de las inescrutables riquezas de Cristo."
+        },
+        {
+          "reference": "1 Timoteo 1:15",
+          "text": "Palabra fiel y digna de ser recibida por todos: que Cristo Jesús vino al mundo para salvar a los pecadores, de los cuales yo soy el primero."
+        }
+      ]
     },
     {
       "order": 15,
