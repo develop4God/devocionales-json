@@ -177,18 +177,14 @@
       "type": "scripture_moment",
       "mood": "grace",
       "image_url": "saulo_ananias_hands_eyes.png",
-      "verse_reference": "Hechos 9:17-18",
-      "verse_text": "Fue entonces Ananías y entró en la casa, y poniendo sobre él las manos, dijo: Hermano Saulo, el Señor Jesús, que se te apareció en el camino por donde venías, me ha enviado para que recibas la vista y seas lleno del Espíritu Santo. Y al momento le cayeron de los ojos como escamas, y recibió al instante la vista; y levantándose, fue bautizado.",
-      "reflection": "Y al momento le cayeron de los ojos como escamas.\n\nEn el card 7 mencionamos la palabra griega blepō — la función física del ojo, la que Saulo había perdido. La palabra que usa el texto aquí es diferente: ἀνέβλεψεν (anablepsen) — recobrar la vista, ver de nuevo. No era simplemente recuperar lo que tenía. Era una visión restaurada, abierta de una manera nueva.\n\nPero el texto no habla solo de los ojos del cuerpo. Ananías le había dicho dos cosas juntas: recibirás la vista y serás lleno del Espíritu Santo. Las dos en el mismo momento. Las escamas cayeron de los dos lugares — de los ojos del cuerpo y de los ojos del corazón. El fariseo que había conocido las Escrituras de memoria sin poder ver al Mesías que estaba delante de él, ahora veía con los dos.\n\nY luego se levantó y fue bautizado.\n\nJesús le había dicho a Nicodemo: el que no naciere de agua y del Espíritu no puede entrar en el reino de Dios. En ese cuarto en Damasco, en ese momento, Saulo nació del agua y del Espíritu. No como dos eventos separados — como uno solo. El nuevo nacimiento completo, exactamente como Jesús lo había descrito.\n\nY la comunidad que Saulo había perseguido fue el instrumento a través del cual Jesús lo restauró. Entró como enemigo. Salió como hijo.",
-      "revelation_key": "Las escamas cayeron de los dos lugares. Saulo recibió la vista — y nació de nuevo.",
+      "verse_reference": "Hechos 9:18",
+      "verse_text": "Y al momento le cayeron de los ojos como escamas, y recibió al instante la vista.",
+      "reflection": "Y al momento le cayeron de los ojos como escamas.\n\nEn el card 7 mencionamos la palabra griega blepō — la función física del ojo, la que Saulo había perdido. La palabra que usa el texto aquí es diferente: ἀνέβλεψεν (anablepsen) — recobrar la vista, ver de nuevo. No era simplemente recuperar lo que tenía. Era una visión restaurada, abierta de una manera nueva.\n\nAnanías le había dicho dos cosas juntas: recibirás la vista y serás lleno del Espíritu Santo. Las dos en el mismo momento. Las escamas cayeron de los dos lugares — de los ojos del cuerpo y de los ojos del corazón. El fariseo que había conocido las Escrituras de memoria sin poder ver al Mesías que estaba delante de él, ahora veía con los dos.",
+      "revelation_key": "Las escamas cayeron de los dos lugares — de los ojos del cuerpo y de los ojos del corazón.",
       "scripture_connections": [
         {
-          "reference": "Hechos 8:3",
-          "text": "Y Saulo asolaba la iglesia, y entrando casa por casa, arrastraba a hombres y a mujeres, y los entregaba en la cárcel."
-        },
-        {
-          "reference": "Juan 3:5",
-          "text": "Respondió Jesús: De cierto, de cierto te digo, que el que no naciere de agua y del Espíritu, no puede entrar en el reino de Dios."
+          "reference": "Hechos 9:8",
+          "text": "Entonces Saulo se levantó de tierra, y abriendo los ojos, no veía a nadie; así que, llevándole de la mano, le metieron en Damasco."
         }
       ]
     },
@@ -197,10 +193,20 @@
       "type": "scripture_moment",
       "mood": "peace",
       "image_url": "saulo_scales_falling_eyes.png",
-      "verse_reference": "Hechos 9:18",
-      "verse_text": "Y al momento le cayeron de los ojos como escamas, y recibió al instante la vista; y levantándose, fue bautizado.",
-      "reflection": "No hubo proceso. No hubo mejora gradual.\n\nEl texto usa una expresión precisa: al momento. No dice que la vista de Saulo fue regresando poco a poco, como cuando los ojos se acostumbran a la luz después de la oscuridad. Dice que algo cayó, y en el instante en que cayó, vio.\n\nLas escamas no eran una metáfora vacía. La palabra que Lucas usa describe literalmente algo córneo, como una costra o membrana que se desprende. Tres días de oscuridad habían cubierto sus ojos con algo físico, tangible, que tenía que desprenderse para que la luz volviera a entrar.\n\nY el cuerpo de Saulo respondió antes que sus palabras. Recibió la vista, y levantándose, fue bautizado. No hubo pausa para procesar, para dar un discurso, para explicar lo que acababa de vivir. La respuesta inmediata a la vista recobrada fue el agua.\n\nElla misma es la confesión más honesta: cuando Dios te devuelve la vista, lo primero que tu cuerpo sabe hacer es moverse hacia Él.",
-      "revelation_key": "El milagro de Saulo no fue gradual. Cuando Dios actúa para restaurar, a veces no hay proceso que negociar. Solo hay un antes ciego y un después que ve."
+      "verse_reference": "Hechos 9:17-18",
+      "verse_text": "Me ha enviado para que recibas la vista y seas lleno del Espíritu Santo. Y al momento le cayeron de los ojos como escamas, y recibió al instante la vista; y levantándose, fue bautizado.",
+      "reflection": "Y luego se levantó y fue bautizado.\n\nJesús le había dicho a Nicodemo: el que no naciere de agua y del Espíritu no puede entrar en el reino de Dios. En ese cuarto en Damasco, en ese momento, Saulo nació del agua y del Espíritu — juntos, en uno solo. El nuevo nacimiento completo, exactamente como Jesús lo había descrito.\n\nY la comunidad que Saulo había perseguido fue el instrumento a través del cual Jesús lo restauró. Entró como enemigo. Salió como hijo.",
+      "revelation_key": "En ese cuarto en Damasco se cumplió Juan 3:5. Saulo nació del agua y del Espíritu — exactamente como Jesús lo había descrito.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 3:5",
+          "text": "Respondió Jesús: De cierto, de cierto te digo, que el que no naciere de agua y del Espíritu, no puede entrar en el reino de Dios."
+        },
+        {
+          "reference": "Hechos 8:3",
+          "text": "Y Saulo asolaba la iglesia, y entrando casa por casa, arrastraba a hombres y a mujeres, y los entregaba en la cárcel."
+        }
+      ]
     },
     {
       "order": 12,
