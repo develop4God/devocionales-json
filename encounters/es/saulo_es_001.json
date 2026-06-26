@@ -255,11 +255,11 @@
       "mood": "peace",
       "image_url": "saulo_road_light_horizon.png",
       "completion_verse": {
-        "reference": "1 Timoteo 1:15-16",
-        "text": "Palabra fiel y digna de ser recibida por todos: que Cristo Jesús vino al mundo para salvar a los pecadores, de los cuales yo soy el primero. Pero por esto fui recibido a misericordia, para que Jesucristo mostrase en mí el primero toda su clemencia, para ejemplo de los que habrían de creer en él para vida eterna.",
+        "reference": "Hechos 9:15",
+        "text": "Ve, porque instrumento escogido me es éste, para llevar mi nombre en presencia de los gentiles, y de reyes, y de los hijos de Israel.",
         "bible_version": "RVR1960"
       },
-      "reflection_prompt": "Pablo llegó a ser el ejemplo de la clemencia de Jesús para todos los que vendrían después. ¿Qué parte de tu historia, la que más te cuesta contar, podría ser exactamente esa misma clase de ejemplo para alguien que todavía no conoces?",
+      "reflection_prompt": "Dios tomó al mayor perseguidor de la iglesia y lo convirtió en ejemplo de su clemencia para todos los que vendrían después. Nada de lo que eres o has sido está fuera de su alcance. ¿Estás dispuesto a que Dios haga lo mismo contigo; que tome todo lo que eres y lo use para su propósito?",
       "celebration_type": "burst"
     }
   ]
