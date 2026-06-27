@@ -6,7 +6,7 @@
   "bible_version": "LSG1910",
   "version": "2.0",
   "image_version": "1.0",
-  "estimated_reading_minutes": 19,
+  "estimated_reading_minutes": 16,
   "meta": {
     "character": "Saul de Tarse",
     "testament": "new",
@@ -177,14 +177,14 @@
       "type": "scripture_moment",
       "mood": "grace",
       "image_url": "saulo_ananias_hands_eyes.png",
-      "verse_reference": "Actes 9:18",
-      "verse_text": "Au même instant, il tomba de ses yeux comme des écailles, et il recouvra la vue. Il se leva, et fut baptisé;",
+      "verse_reference": "Actes 9:17",
+      "verse_text": "Ananias sortit; et, lorsqu'il fut arrivé dans la maison, il imposa les mains à Saul, en disant: Saul, mon frère, le Seigneur Jésus, qui t'est apparu sur le chemin par lequel tu venais, m'a envoyé pour que tu recouvres la vue et que tu sois rempli du Saint-Esprit.",
       "reflection": "Au même instant, il tomba de ses yeux comme des écailles.\n\nDans le card 7, nous avons mentionné le mot grec βλέπω (blepō) — la fonction physique de l'œil, celle que Saul avait perdue. Le mot utilisé ici par le texte est différent : ἀνέβλεψεν (anablepsen) — recouvrer la vue, voir de nouveau. Ce n'était pas simplement retrouver ce qu'il avait. C'était une vision restaurée, ouverte d'une manière nouvelle.\n\nAnanias lui avait dit deux choses en même temps : tu recouvreras la vue et tu seras rempli du Saint-Esprit. Les deux au même instant. Les écailles tombèrent des deux endroits — des yeux du corps et des yeux du cœur. Le pharisien qui avait connu les Écritures par cœur sans pouvoir voir le Messie qui se tenait devant lui, voyait désormais avec les deux.",
       "revelation_key": "Les écailles tombèrent des deux endroits — des yeux du corps et des yeux du cœur.",
       "scripture_connections": [
         {
-          "reference": "Actes 9:8",
-          "text": "Saul se releva de terre, et, quoique ses yeux fussent ouverts, il ne voyait rien; on le prit par la main, et on le conduisit à Damas."
+          "reference": "Jean 3:5",
+          "text": "Jésus répondit: En vérité, en vérité, je te le dis, si un homme ne naît d'eau et d'Esprit, il ne peut entrer dans le royaume de Dieu."
         }
       ]
     },
@@ -193,8 +193,8 @@
       "type": "scripture_moment",
       "mood": "peace",
       "image_url": "saulo_scales_falling_eyes.png",
-      "verse_reference": "Actes 9:17-18",
-      "verse_text": "Ananias sortit; et, lorsqu'il fut arrivé dans la maison, il imposa les mains à Saul, en disant: Saul, mon frère, le Seigneur Jésus, qui t'est apparu sur le chemin par lequel tu venais, m'a envoyé pour que tu recouvres la vue et que tu sois rempli du Saint-Esprit. Au même instant, il tomba de ses yeux comme des écailles, et il recouvra la vue. Il se leva, et fut baptisé;",
+      "verse_reference": "Actes 9:18",
+      "verse_text": "Au même instant, il tomba de ses yeux comme des écailles, et il recouvra la vue. Il se leva, et fut baptisé;",
       "reflection": "Et puis il se leva et fut baptisé.\n\nJésus avait dit à Nicodème : si un homme ne naît d'eau et d'Esprit, il ne peut entrer dans le royaume de Dieu. Dans cette pièce à Damas, en cet instant, Saul naquit de l'eau et de l'Esprit — ensemble, en un seul moment. La nouvelle naissance complète, exactement comme Jésus l'avait décrite.\n\nEt la communauté que Saul avait persécutée fut l'instrument par lequel Jésus le restaura. Il entra comme ennemi. Il en sortit comme fils.",
       "revelation_key": "Dans cette pièce à Damas s'accomplit Jean 3:5. Saul naquit de l'eau et de l'Esprit — exactement comme Jésus l'avait décrit.",
       "scripture_connections": [

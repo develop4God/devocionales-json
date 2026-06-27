@@ -6,7 +6,7 @@
   "bible_version": "RVR1960",
   "version": "2.0",
   "image_version": "1.0",
-  "estimated_reading_minutes": 18,
+  "estimated_reading_minutes": 16,
   "meta": {
     "character": "Saulo de Tarso",
     "testament": "new",
@@ -177,14 +177,14 @@
       "type": "scripture_moment",
       "mood": "grace",
       "image_url": "saulo_ananias_hands_eyes.png",
-      "verse_reference": "Hechos 9:18",
-      "verse_text": "Y al momento le cayeron de los ojos como escamas, y recibió al instante la vista.",
+      "verse_reference": "Hechos 9:17",
+      "verse_text": "Hermano Saulo, el Señor Jesús, que se te apareció en el camino por donde venías, me ha enviado para que recibas la vista y seas lleno del Espíritu Santo.",
       "reflection": "Y al momento le cayeron de los ojos como escamas.\n\nEn el card 7 mencionamos la palabra griega βλέπω (blepō) — la función física del ojo, la que Saulo había perdido. La palabra que usa el texto aquí es diferente: ἀνέβλεψεν (anablepsen) — recobrar la vista, ver de nuevo. No era simplemente recuperar lo que tenía. Era una visión restaurada, abierta de una manera nueva.\n\nAnanías le había dicho dos cosas juntas: recibirás la vista y serás lleno del Espíritu Santo. Las dos en el mismo momento. Las escamas cayeron de los dos lugares — de los ojos del cuerpo y de los ojos del corazón. El fariseo que había conocido las Escrituras de memoria sin poder ver al Mesías que estaba delante de él, ahora veía con los dos.",
       "revelation_key": "Las escamas cayeron de los dos lugares — de los ojos del cuerpo y de los ojos del corazón.",
       "scripture_connections": [
         {
-          "reference": "Hechos 9:8",
-          "text": "Entonces Saulo se levantó de tierra, y abriendo los ojos, no veía a nadie; así que, llevándole de la mano, le metieron en Damasco."
+          "reference": "Juan 3:5",
+          "text": "Respondió Jesús: De cierto, de cierto te digo, que el que no naciere de agua y del Espíritu, no puede entrar en el reino de Dios."
         }
       ]
     },
@@ -193,8 +193,8 @@
       "type": "scripture_moment",
       "mood": "peace",
       "image_url": "saulo_scales_falling_eyes.png",
-      "verse_reference": "Hechos 9:17-18",
-      "verse_text": "Me ha enviado para que recibas la vista y seas lleno del Espíritu Santo. Y al momento le cayeron de los ojos como escamas, y recibió al instante la vista; y levantándose, fue bautizado.",
+      "verse_reference": "Hechos 9:18",
+      "verse_text": "Y al momento le cayeron de los ojos como escamas, y recibió al instante la vista.",
       "reflection": "Y luego se levantó y fue bautizado.\n\nJesús le había dicho a Nicodemo: el que no naciere de agua y del Espíritu no puede entrar en el reino de Dios. En ese cuarto en Damasco, en ese momento, Saulo nació del agua y del Espíritu — juntos, en uno solo. El nuevo nacimiento completo, exactamente como Jesús lo había descrito.\n\nY la comunidad que Saulo había perseguido fue el instrumento a través del cual Jesús lo restauró. Entró como enemigo. Salió como hijo.",
       "revelation_key": "En ese cuarto en Damasco se cumplió Juan 3:5. Saulo nació del agua y del Espíritu — exactamente como Jesús lo había descrito.",
       "scripture_connections": [

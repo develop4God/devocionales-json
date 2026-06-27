@@ -6,7 +6,7 @@
   "bible_version": "ARC",
   "version": "2.0",
   "image_version": "1.0",
-  "estimated_reading_minutes": 19,
+  "estimated_reading_minutes": 16,
   "meta": {
     "character": "Saulo de Tarso",
     "testament": "new",
@@ -177,14 +177,14 @@
       "type": "scripture_moment",
       "mood": "grace",
       "image_url": "saulo_ananias_hands_eyes.png",
-      "verse_reference": "Atos dos Apóstolos 9:18",
-      "verse_text": "E logo lhe caíram dos olhos como que umas escamas, e recuperou a vista; e, levantando-se, foi batizado.",
+      "verse_reference": "Atos dos Apóstolos 9:17",
+      "verse_text": "E Ananias foi, e entrou na casa, e, impondo-lhe as mãos, disse: Irmão Saulo, o Senhor Jesus, que te apareceu no caminho por onde vinhas, me enviou, para que tornes a ver e sejas cheio do Espírito Santo.",
       "reflection": "E logo lhe caíram dos olhos como que umas escamas.\n\nNo card 7 mencionamos a palavra grega βλέπω (blepō) — a função física do olho, a que Saulo havia perdido. A palavra que o texto usa aqui é diferente: ἀνέβλεψεν (anablepsen) — recobrar a vista, ver de novo. Não era simplesmente recuperar o que tinha. Era uma visão restaurada, aberta de uma forma nova.\n\nAnanias lhe havia dito duas coisas juntas: receberás a vista e serás cheio do Espírito Santo. As duas no mesmo momento. As escamas caíram dos dois lugares — dos olhos do corpo e dos olhos do coração. O fariseu que havia conhecido as Escrituras de memória sem poder ver o Messias que estava diante dele, agora via com os dois.",
       "revelation_key": "As escamas caíram dos dois lugares — dos olhos do corpo e dos olhos do coração.",
       "scripture_connections": [
         {
-          "reference": "Atos dos Apóstolos 9:8",
-          "text": "E Saulo levantou-se da terra e, abrindo os olhos, não via a ninguém. E, guiando-o pela mão, o conduziram a Damasco."
+          "reference": "S. João 3:5",
+          "text": "Jesus respondeu: Na verdade, na verdade te digo que aquele que não nascer da água e do Espírito não pode entrar no Reino de Deus."
         }
       ]
     },
@@ -193,8 +193,8 @@
       "type": "scripture_moment",
       "mood": "peace",
       "image_url": "saulo_scales_falling_eyes.png",
-      "verse_reference": "Atos dos Apóstolos 9:17-18",
-      "verse_text": "E Ananias foi, e entrou na casa, e, impondo-lhe as mãos, disse: Irmão Saulo, o Senhor Jesus, que te apareceu no caminho por onde vinhas, me enviou, para que tornes a ver e sejas cheio do Espírito Santo. E logo lhe caíram dos olhos como que umas escamas, e recuperou a vista; e, levantando-se, foi batizado.",
+      "verse_reference": "Atos dos Apóstolos 9:18",
+      "verse_text": "E logo lhe caíram dos olhos como que umas escamas, e recuperou a vista; e, levantando-se, foi batizado.",
       "reflection": "E depois se levantou e foi batizado.\n\nJesus havia dito a Nicodemos: aquele que não nascer da água e do Espírito não pode entrar no Reino de Deus. Naquele quarto em Damasco, naquele momento, Saulo nasceu da água e do Espírito — juntos, num só. O novo nascimento completo, exatamente como Jesus o havia descrito.\n\nE a comunidade que Saulo havia perseguido foi o instrumento através do qual Jesus o restaurou. Entrou como inimigo. Saiu como filho.",
       "revelation_key": "Naquele quarto em Damasco cumpriu-se João 3:5. Saulo nasceu da água e do Espírito — exatamente como Jesus o havia descrito.",
       "scripture_connections": [
