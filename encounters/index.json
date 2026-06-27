@@ -382,31 +382,51 @@
         "en": "saulo_en_001.json",
         "es": "saulo_es_001.json",
         "pt": "saulo_pt_001.json",
-        "fr": "saulo_fr_001.json"
+        "fr": "saulo_fr_001.json",
+        "de": "saulo_de_001.json",
+        "hi": "saulo_hi_001.json",
+        "fil": "saulo_fil_001.json",
+        "ar": "saulo_ar_001.json"
       },
       "titles": {
         "en": "The Road to Damascus",
         "es": "El Camino a Damasco",
         "pt": "O Caminho para Damasco",
-        "fr": "Le Chemin de Damas"
+        "fr": "Le Chemin de Damas",
+        "de": "Der Weg nach Damaskus",
+        "hi": "दमिश्क का मार्ग",
+        "fil": "Ang Daan Patungong Damasco",
+        "ar": "الطريق إلى دمشق"
       },
       "subtitles": {
         "en": "The most feared persecutor of the church, transformed into the apostle to the Gentiles",
         "es": "El perseguidor más temido de la iglesia, transformado en el apóstol de los gentiles",
         "pt": "O perseguidor mais temido da igreja, transformado no apóstolo dos gentios",
-        "fr": "Le persécuteur le plus redouté de l'Église, transformé en apôtre des nations"
+        "fr": "Le persécuteur le plus redouté de l'Église, transformé en apôtre des nations",
+        "de": "Der gefürchtetste Verfolger der Gemeinde, verwandelt in den Apostel der Heiden",
+        "hi": "कलीसिया का सबसे भयंकर उत्पीड़क, अन्यजातियों का प्रेरित बन गया",
+        "fil": "Ang pinakakatatakutang mang-uusig ng iglesya, ginawang apostol sa mga Hentil",
+        "ar": "أشدّ مضطهدي الكنيسة رعبًا، تحوّل إلى رسول الأمم"
       },
       "scripture_reference": {
         "en": "Acts 9:1-22",
         "es": "Hechos 9:1-22",
         "pt": "Atos 9:1-22",
-        "fr": "Actes 9:1-22"
+        "fr": "Actes 9:1-22",
+        "de": "Apostelgeschichte 9:1-22",
+        "hi": "प्रेरितों के काम 9:1-22",
+        "fil": "Mga Gawa 9:1-22",
+        "ar": "أعمال الرسل 9:1-22"
       },
       "estimated_reading_minutes": {
         "en": 18,
         "es": 18,
         "pt": 19,
-        "fr": 19
+        "fr": 19,
+        "de": 19,
+        "hi": 20,
+        "fil": 20,
+        "ar": 19
       }
     }
   ]
