@@ -1,0 +1,268 @@
+{
+  "id": "thomas_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "es",
+  "bible_version": "RVR1960",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 12,
+  "meta": {
+    "character": "Tomás",
+    "testament": "new",
+    "scripture_reference": "Juan 20:24-29",
+    "mood_primary": "doubt",
+    "accent_color": "#1a1a2e",
+    "emoji": "🤚",
+    "tags": [
+      "duda",
+      "fe",
+      "resurrección",
+      "confesión",
+      "honestidad",
+      "valentía",
+      "ausencia",
+      "presencia",
+      "heridas",
+      "encuentro",
+      "tomás",
+      "creer"
+    ]
+  },
+  "key_verse": {
+    "reference": "Juan 20:28",
+    "text": "Entonces Tomás respondió y le dijo: ¡Señor mío, y Dios mío!",
+    "bible_version": "RVR1960"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "thomas_empty_room_evening.png",
+      "title": "No estaba con ellos.",
+      "narrative": "Era el primer día de la semana. El día en que todo cambió.\n\nLos discípulos estaban reunidos a puerta cerrada. El miedo los mantenía juntos. Habían oído los rumores: la tumba estaba vacía, las mujeres decían haber visto ángeles, María Magdalena afirmaba que había hablado con Jesús.\n\nPero uno de los doce no estaba allí.\n\nTomás, llamado Dídimo, no estaba con ellos cuando Jesús vino. El texto no dice por qué. No dice dónde estaba. Solo dice que no estaba.\n\nY esa ausencia lo cambió todo.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 20:24",
+        "text": "Pero Tomás, uno de los doce, llamado Dídimo, no estaba con ellos cuando Jesús vino."
+      },
+      "revelation_key": "A veces, lo que define un encuentro con Jesús no es lo que hiciste, sino el momento en que no estabas presente."
+    },
+    {
+      "order": 2,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "thomas_disciple_portrait.png",
+      "title": "El discípulo que nadie recuerda bien.",
+      "subtitle": "Quién era Tomás antes de la duda",
+      "content": "La historia le ha dado un apodo que no merece: el incrédulo. Pero antes de ese domingo por la noche, Tomás ya había demostrado quién era.\n\nSu nombre hebreo, תְּאוֹם (Te'om), y su sobrenombre griego, Δίδυμος (Dídymos), significan lo mismo: gemelo. Alguien con una identidad doble, un hombre que cargaba en su propio nombre la tensión entre dos realidades.\n\nPero lo que el evangelio de Juan revela sobre él no es debilidad. Es algo mucho más difícil de encontrar entre los doce: honestidad.\n\n🔑 Tomás no era el discípulo que dudaba de todo. Era el que se atrevía a decir lo que los demás callaban.\n\n⚠️ En una cultura donde seguir al maestro sin preguntar era señal de respeto, Tomás hacía preguntas. Y sus preguntas no eran de rebeldía. Eran de un hombre que necesitaba entender para poder entregarse.",
+      "revelation_key": "La honestidad ante Dios no es falta de fe. Es el terreno donde la fe verdadera puede nacer."
+    },
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "storm",
+      "image_url": "thomas_road_bethany.png",
+      "verse_reference": "Juan 11:16",
+      "verse_text": "Dijo entonces Tomás, llamado Dídimo, a sus condiscípulos: Vamos también nosotros, para que muramos con él.",
+      "reflection": "Lázaro había muerto. Jesús decidió regresar a Judea, donde los líderes religiosos habían intentado apedrearlo. Los discípulos le advirtieron: Rabí, hace poco los judíos procuraban apedrearte, ¿y otra vez vas allá?\n\nJesús fue de todos modos.\n\nY fue Tomás, no Pedro, no Juan, el que habló. No dijo: confiemos en Dios. No dijo: todo saldrá bien. Dijo: Vamos también nosotros, para que muramos con él.\n\nEsa no es la frase de un cobarde. Es la frase de un hombre que midió el costo y eligió pagar. No tenía garantía de que Jesús los protegería. No tenía una promesa de seguridad. Solo tenía una decisión: si Jesús va a morir, yo voy con él.\n\n🔑 El mismo hombre que la historia recuerda como el incrédulo fue el primero en ofrecer su vida.",
+      "revelation_key": "Antes de dudar de la resurrección, Tomás estuvo dispuesto a morir junto a Jesús. Su duda no venía de la cobardía, sino de la misma intensidad con la que amaba.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 11:8",
+          "text": "Le dijeron los discípulos: Rabí, ahora procuraban los judíos apedrearte, ¿y otra vez vas allá?"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "thomas_last_supper_question.png",
+      "verse_reference": "Juan 14:5-6",
+      "verse_text": "Le dijo Tomás: Señor, no sabemos a dónde vas; ¿cómo, pues, podemos saber el camino? Jesús le dijo: Yo soy el camino, y la verdad, y la vida; nadie viene al Padre, sino por mí.",
+      "reflection": "La última cena. Jesús les había dicho que se iba. Que iba a prepararles un lugar. Que conocían el camino.\n\nLos demás asintieron. Quizás no entendían. Quizás tenían miedo de preguntar. Pero Tomás no.\n\nSeñor, no sabemos a dónde vas. ¿Cómo podemos saber el camino?\n\nNo era una objeción. Era la pregunta más honesta que alguien podía hacer en ese momento. Y esa honestidad provocó una de las declaraciones más importantes de toda la Escritura: Yo soy el camino, y la verdad, y la vida.\n\nSin la pregunta de Tomás, esas palabras no habrían sido pronunciadas en ese contexto. La sinceridad de un hombre abrió la puerta a una revelación que ha sostenido a millones durante dos mil años.",
+      "revelation_key": "Las preguntas honestas no ofenden a Dios. Las usa. La pregunta de Tomás provocó una de las revelaciones más grandes de Jesús.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 14:1-3",
+          "text": "No se turbe vuestro corazón; creéis en Dios, creed también en mí. En la casa de mi Padre muchas moradas hay; si así no fuera, yo os lo hubiera dicho; voy, pues, a preparar lugar para vosotros. Y si me fuere y os preparare lugar, vendré otra vez, y os tomaré a mí mismo, para que donde yo estoy, vosotros también estéis."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "thomas_upper_room_jesus_appears.png",
+      "title": "Paz a vosotros.",
+      "narrative": "El domingo de la resurrección, al caer la noche, los discípulos estaban encerrados. Las puertas cerradas. El miedo los paralizaba.\n\nY Jesús se puso en medio de ellos.\n\nNo tocó la puerta. No pidió permiso. Entró en el espacio donde el miedo los tenía cautivos y lo primero que dijo fue: Paz a vosotros.\n\nLes mostró las manos y el costado. Las heridas seguían allí. La resurrección no las borró. Las transformó. Ya no eran marcas de muerte. Eran prueba de identidad.\n\nY los discípulos se regocijaron viendo al Señor.\n\nPero uno de ellos no vio nada de esto. Tomás no estaba.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 20:19-20",
+        "text": "Cuando llegó la noche de aquel mismo día, el primero de la semana, estando las puertas cerradas en el lugar donde los discípulos estaban reunidos por miedo de los judíos, vino Jesús, y puesto en medio, les dijo: Paz a vosotros. Y cuando les hubo dicho esto, les mostró las manos y el costado. Y los discípulos se regocijaron viendo al Señor."
+      },
+      "revelation_key": "Las heridas de Jesús no desaparecieron con la resurrección. Las conservó. Son su carta de identidad para siempre."
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "thomas_disciples_tell_him.png",
+      "title": "Al Señor hemos visto.",
+      "narrative": "Cuando Tomás regresó, lo encontró todo diferente.\n\nLos rostros de los otros habían cambiado. Había algo en sus ojos que no estaba antes. Una certeza, una alegría, algo que él no podía compartir porque no lo había vivido.\n\nLe dijeron: Al Señor hemos visto.\n\nTres años caminando juntos. Tres años viendo los mismos milagros, escuchando las mismas enseñanzas, compartiendo el mismo pan. Pero ahora ellos habían visto algo que él no vio. Y le pedían que creyera basándose en su testimonio.\n\nTomás los miró. A estos mismos hombres que se habían escondido cuando arrestaron a Jesús. Que huyeron del huerto. Que cerraron la puerta por miedo.\n\nY ahora le decían que lo habían visto vivo.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 20:25",
+        "text": "Le dijeron, pues, los otros discípulos: Al Señor hemos visto."
+      },
+      "revelation_key": "Tomás no rechazó a Jesús. Rechazó un testimonio de segunda mano. Quería lo mismo que los demás ya habían recibido: un encuentro propio."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "thomas_alone_night.png",
+      "verse_reference": "Juan 20:25",
+      "verse_text": "Él les dijo: Si no viere en sus manos la señal de los clavos, y metiere mi dedo en el lugar de los clavos, y metiere mi mano en su costado, no creeré.",
+      "reflection": "Lee sus palabras otra vez. No dijo: no quiero creer. No dijo: es imposible. Dijo: si no viere.\n\nTomás puso una condición. Pero no era una condición de arrogancia. Era la condición de un hombre que había dado todo por Jesús, que estuvo dispuesto a morir con él en Judea, y que ahora no podía permitirse otra desilusión.\n\nLa señal de los clavos. El lugar de los clavos. El costado. Tomás no pedía un milagro genérico. Pedía las heridas. Quería tocar exactamente el lugar donde el sufrimiento había sido más real.\n\n🔑 Hay algo profundo en esto: Tomás no quería ver a un Jesús glorioso e irreconocible. Quería ver al mismo Jesús que había sido crucificado. Las heridas eran la prueba de que era él, y no otro.\n\nLa palabra griega que usa es τύπον (typon): la marca, la huella, la impresión que queda cuando algo ha atravesado. El mismo término del que viene nuestra palabra tipo, modelo, patrón. Tomás quería ver el patrón que los clavos dejaron en las manos de Jesús.",
+      "revelation_key": "Tomás no pidió ver poder. Pidió ver heridas. Porque las heridas son la prueba de que el amor fue real.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 10:17-18",
+          "text": "Por eso me ama el Padre, porque yo pongo mi vida, para volverla a tomar. Nadie me la quita, sino que yo de mí mismo la pongo. Tengo poder para ponerla, y tengo poder para volverla a tomar. Este mandamiento recibí de mi Padre."
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "thomas_dark_room_candle.png",
+      "title": "Ocho días",
+      "subtitle": "Lo que vivió Tomás en una semana de silencio",
+      "content": "Ocho días.\n\nEl texto de Juan dice que Jesús volvió a aparecer ocho días después. Eso significa que Tomás pasó una semana entera viviendo con su duda. Siete días conviviendo con hombres que habían visto lo que él no vio.\n\nImagina lo que fue esa semana. Cada conversación giraba alrededor de algo que él no había experimentado. Los demás tenían una paz que él no entendía. Una certeza que él no compartía. Y cada noche, en la oscuridad, la misma pregunta: ¿y si es verdad? ¿Y si yo me lo perdí?\n\n📜 En la tradición judía, el número ocho representa un nuevo comienzo. La circuncisión se hacía al octavo día. Las fiestas de consagración duraban siete días y el octavo marcaba el inicio de algo nuevo. El octavo día es el día que está más allá del ciclo completo: el día donde Dios comienza de nuevo.\n\n🔑 Jesús no volvió al día siguiente. No envió un mensaje. No mandó a otro discípulo a convencerlo. Esperó ocho días completos.\n\nDios no tiene prisa con tu proceso. Pero tampoco te abandona en él.",
+      "revelation_key": "Jesús no castigó la duda de Tomás con ausencia. La honró con presencia. Pero a su tiempo, no al de Tomás.",
+      "scripture_connections": [
+        {
+          "reference": "Génesis 17:12",
+          "text": "Y de edad de ocho días será circuncidado todo varón entre vosotros por vuestras generaciones."
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "thomas_jesus_appears_doors.png",
+      "title": "Estando las puertas cerradas.",
+      "narrative": "Ocho días después. Mismo lugar. Mismas puertas cerradas. Pero esta vez, Tomás estaba dentro.\n\nY Jesús vino.\n\nNo entró por la puerta. Se puso en medio de ellos, como la primera vez. Y lo primero que dijo fue lo mismo: Paz a vosotros.\n\nPero inmediatamente después, sin que nadie se lo pidiera, sin que Tomás dijera una palabra, Jesús se dirigió a él.\n\nSabía exactamente lo que Tomás había pedido. Conocía cada palabra de su condición. Había escuchado lo que Tomás dijo cuando él no estaba presente en la habitación.\n\nY no vino a reprenderlo. Vino a responderle.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 20:26",
+        "text": "Ocho días después, estaban otra vez sus discípulos dentro, y con ellos Tomás. Llegó Jesús, estando las puertas cerradas, y se puso en medio y les dijo: Paz a vosotros."
+      },
+      "revelation_key": "Jesús no esperó a que Tomás lo buscara. Vino a él. Entró donde estaba su duda y se puso en medio de ella."
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "grace",
+      "image_url": "thomas_jesus_hands_wounds.png",
+      "verse_reference": "Juan 20:27-28",
+      "verse_text": "Luego dijo a Tomás: Pon aquí tu dedo, y mira mis manos; y acerca tu mano, y métela en mi costado; y no seas incrédulo, sino creyente. Entonces Tomás respondió y le dijo: ¡Señor mío, y Dios mío!",
+      "reflection": "Jesús repitió palabra por palabra la condición que Tomás había puesto. Pon tu dedo. Mira mis manos. Acerca tu mano. Métela en mi costado.\n\nNo fue una reprimenda. Fue una invitación.\n\nJesús tomó cada exigencia de Tomás y la convirtió en una oferta. Tú pediste esto. Aquí estoy. Hazlo.\n\nPero el texto no dice que Tomás lo hiciera. No dice que tocara las heridas. Lo que dice es que respondió. Y lo que salió de su boca no fue un análisis, ni una disculpa, ni una explicación.\n\nFue la confesión más alta de todo el evangelio de Juan: ¡Señor mío, y Dios mío!\n\nΚύριός μου καὶ ὁ Θεός μου. Kyrios mou kai ho Theos mou.\n\nEn todo el evangelio, nadie había dicho esto. Ni Pedro. Ni Juan. Ni María. Fue Tomás, el que dudó, el que se ausentó, el que puso condiciones, el primero en declarar con sus propias palabras lo que la iglesia entera confesaría después: que Jesús no es solo Señor. Es Dios.\n\n🔑 La duda más profunda produjo la confesión más alta.",
+      "revelation_key": "Del fondo de la duda más honesta surgió la declaración más alta sobre quién es Jesús: Señor mío y Dios mío.",
+      "scripture_connections": [
+        {
+          "reference": "Filipenses 2:10-11",
+          "text": "para que en el nombre de Jesús se doble toda rodilla de los que están en los cielos, y en la tierra, y debajo de la tierra; y toda lengua confiese que Jesucristo es el Señor, para gloria de Dios Padre."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "thomas_nail_marks_closeup.png",
+      "title": "Las heridas que no desaparecieron",
+      "subtitle": "Por qué Jesús conservó las marcas",
+      "content": "Jesús resucitó con un cuerpo glorificado. Podía atravesar puertas cerradas. Podía aparecer y desaparecer. Pero las heridas seguían allí.\n\n📜 En toda la narrativa bíblica de la resurrección, ningún otro detalle se repite con tanta insistencia como este: les mostró las manos y el costado. Las heridas no eran un defecto de la resurrección. Eran parte de ella.\n\n🔑 En el griego del Nuevo Testamento, la palabra para herida en Apocalipsis 5:6 es ἐσφαγμένον (esphagmenon): que ha sido inmolado. El Cordero de Dios aparece en el cielo con las marcas de su sacrificio visibles para siempre. No como cicatrices que recuerdan un dolor pasado, sino como señales permanentes de un amor que no se retira.\n\nJesús no borró sus heridas porque sus heridas son su mensaje. Son la prueba de que el amor llegó hasta el final. Y cuando Tomás las vio, no necesitó tocarlas. Fue suficiente con verlas.\n\nLas heridas de Cristo no son debilidad. Son la firma de Dios.",
+      "revelation_key": "Las heridas de Jesús no desaparecieron porque no son marcas de derrota. Son la firma eterna de su amor.",
+      "scripture_connections": [
+        {
+          "reference": "Apocalipsis 5:6",
+          "text": "Y miré, y vi que en medio del trono y de los cuatro seres vivientes, y en medio de los ancianos, estaba en pie un Cordero como inmolado, que tenía siete cuernos, y siete ojos, los cuales son los siete espíritus de Dios enviados por toda la tierra."
+        },
+        {
+          "reference": "Isaías 53:5",
+          "text": "Mas él herido fue por nuestras rebeliones, molido por nuestros pecados; el castigo de nuestra paz fue sobre él, y por su llaga fuimos nosotros curados."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "thomas_blessed_who_believe.png",
+      "verse_reference": "Juan 20:29",
+      "verse_text": "Jesús le dijo: Porque me has visto, Tomás, creíste; bienaventurados los que no vieron, y creyeron.",
+      "reflection": "Con esta frase, Jesús atravesó dos mil años de historia y te habló a ti.\n\nBienaventurados los que no vieron, y creyeron.\n\nTomás vio y creyó. Los discípulos vieron y creyeron. María vio y creyó. Pero Jesús sabía que vendrían millones después que no verían sus manos, que no escucharían su voz audible, que no lo encontrarían en un aposento alto con las puertas cerradas.\n\nY los llamó bienaventurados.\n\nNo dijo: pobres los que no vieron. No dijo: difícil será para los que no me toquen. Dijo: bienaventurados. Dichosos. Felices. Los que creen sin haber visto no tienen menos fe que Tomás. Tienen la fe que Jesús llama bendita.\n\n🔑 La palabra griega μακάριοι (makarioi) es la misma que Jesús usó en el Sermón del Monte: bienaventurados los pobres en espíritu, bienaventurados los que lloran. Es una declaración de estado: ustedes están en el lugar donde la bendición de Dios descansa.",
+      "revelation_key": "Jesús no dijo que creer sin ver es más difícil. Dijo que es bienaventurado. Tú estás incluido en esa promesa.",
+      "scripture_connections": [
+        {
+          "reference": "1 Pedro 1:8",
+          "text": "a quien amáis sin haberle visto, en quien creyendo, aunque ahora no lo veáis, os alegráis con gozo inefable y glorioso;"
+        },
+        {
+          "reference": "Hebreos 11:1",
+          "text": "Es, pues, la fe la certeza de lo que se espera, la convicción de lo que no se ve."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "mood": "peace",
+      "image_url": "thomas_open_hands_light.png",
+      "title": "Tu encuentro",
+      "subtitle": "Tomás no fue rechazado por dudar. Fue encontrado por Jesús en medio de su duda. Y lo mismo puede sucederte a ti.",
+      "discovery_questions": [
+        {
+          "category": "Tu honestidad",
+          "question": "¿Hay algo que no te atreves a decirle a Dios porque crees que Él lo tomaría como falta de fe? Tomás dijo exactamente lo que sentía, y Jesús no lo rechazó. ¿Qué pasaría si tú hicieras lo mismo?"
+        },
+        {
+          "category": "Tu ausencia",
+          "question": "¿Te has sentido fuera del lugar donde Dios se mueve? ¿Como si los demás hubieran vivido algo con Dios que tú te perdiste? Tomás también se sintió así. Pero Jesús volvió, específicamente por él. No te ha olvidado."
+        },
+        {
+          "category": "Tu decisión",
+          "question": "Tomás pasó de la duda más profunda a la confesión más alta: Señor mío y Dios mío. No necesitó entenderlo todo. Solo necesitó estar presente cuando Jesús vino. ¿Estás dispuesto a estar presente, aunque no tengas todas las respuestas?"
+        }
+      ],
+      "prayer": {
+        "title": "Una oración desde la duda",
+        "content": "Señor Jesús,\n\nComo Tomás, hay cosas que no entiendo. Hay preguntas que no me atrevo a hacer en voz alta. Hay días en que los demás parecen tener una fe que yo no tengo, una certeza que a mí me falta.\n\nPero Tú no rechazaste a Tomás por ser honesto. Lo buscaste. Viniste a él. Le mostraste exactamente lo que necesitaba ver.\n\nHoy quiero hacer lo que él hizo: estar presente. No tengo todas las respuestas. No entiendo todo lo que has hecho en mi vida. Pero estoy aquí.\n\nY si Tú viniste por Tomás cuando las puertas estaban cerradas, sé que puedes venir por mí también.\n\nSeñor mío y Dios mío.\n\nAmén."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "thomas_dawn_horizon.png",
+      "completion_verse": {
+        "reference": "Juan 20:29",
+        "text": "Jesús le dijo: Porque me has visto, Tomás, creíste; bienaventurados los que no vieron, y creyeron.",
+        "bible_version": "RVR1960"
+      },
+      "reflection_prompt": "Tomás no necesitó entenderlo todo para rendirse ante Jesús. Solo necesitó estar presente cuando Él vino. Hoy Jesús te dice lo mismo: no necesitas tener todas las respuestas. Solo necesitas estar dispuesto a recibirlo. ¿Lo estás?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

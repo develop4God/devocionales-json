@@ -438,6 +438,35 @@
         "ja": 21,
         "zh": 21
       }
+    },
+    {
+      "id": "thomas_001",
+      "version": "0.1",
+      "image_version": "1.0",
+      "emoji": "🤚",
+      "status": "published",
+      "intro_image": "thomas_disciple_portrait.png",
+      "intro_image_prompt": "A man in his late twenties, lean build, olive-brown skin, short dark curly hair, short dark beard, wearing a simple earth-toned linen tunic in warm brown with a darker mantle. He stands alone in the far right of the frame, seen from behind, looking toward a closed wooden door set in a stone wall. Wide atmospheric shot of a narrow Jerusalem street at dusk. Deep blue twilight fills the sky, warm amber lamplight glows faintly through a small window above the door. No text. Painterly warm 2D illustration, Mediterranean palette, deep indigo and warm amber tones, cinematic lighting.",
+      "mood_primary": "doubt",
+      "accent_color": "#1a1a2e",
+      "has_interactive": false,
+      "testament": "new",
+      "character": "Thomas",
+      "files": {
+        "es": "thomas_es_001.json"
+      },
+      "titles": {
+        "es": "Señor Mío y Dios Mío"
+      },
+      "subtitles": {
+        "es": "Del fondo de la duda más honesta surgió la confesión más alta: la historia de Tomás y su encuentro con Jesús resucitado"
+      },
+      "scripture_reference": {
+        "es": "Juan 20:24-29"
+      },
+      "estimated_reading_minutes": {
+        "es": 12
+      }
     }
   ]
 }
