@@ -441,10 +441,10 @@
     },
     {
       "id": "thomas_001",
-      "version": "1.0",
+      "version": "0.1",
       "image_version": "1.0",
       "emoji": "🤚",
-      "status": "coming_soon",
+      "status": "published",
       "intro_image": "thomas_intro.png",
       "intro_image_prompt": "A man in his late twenties, lean build, olive-brown skin, short dark curly hair, short dark beard, wearing a simple earth-toned linen tunic in warm brown with a darker mantle. He stands alone in the far right of the frame, seen from behind, looking toward a closed wooden door set in a stone wall. Wide atmospheric shot of a narrow Jerusalem street at dusk. Deep blue twilight fills the sky, warm amber lamplight glows faintly through a small window above the door. No text. Painterly warm 2D illustration, Mediterranean palette, deep indigo and warm amber tones, cinematic lighting.",
       "mood_primary": "doubt",
