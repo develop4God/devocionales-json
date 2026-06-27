@@ -1,0 +1,266 @@
+{
+  "id": "saulo_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fil",
+  "bible_version": "Magandang Balita Biblia",
+  "version": "2.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 17,
+  "meta": {
+    "character": "Si Saulo ng Tarso",
+    "testament": "new",
+    "scripture_reference": "Mga Gawa 9:1-22",
+    "mood_primary": "confrontation",
+    "accent_color": "#1a0a00",
+    "emoji": "⚡",
+    "tags": [
+      "pagbabago",
+      "pag-uusig",
+      "pagtatagpo",
+      "pagkakakilanlan",
+      "katahimikan",
+      "pagkabulag",
+      "pagpapanumbalik",
+      "misyon",
+      "pablo",
+      "damasco",
+      "katapangan",
+      "kababaang-loob",
+      "pamana"
+    ]
+  },
+  "key_verse": {
+    "reference": "Mga Gawa 9:5-6",
+    "text": "\"Sino kayo, Panginoon?\" tanong niya. \"Ako'y si Jesus, ang iyong inuusig,\" tugon ng tinig sa kanya. \"Tumayo ka't pumasok sa lunsod, at doo'y sasabihin sa iyo kung ano ang dapat mong gawin.\"",
+    "bible_version": "Magandang Balita Biblia"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "saulo_stephen_stoning_mantles.png",
+      "title": "Tinago niya ang mga damit.",
+      "narrative": "Hindi siya isang karaniwang nanonood lamang.\n\nSiya ay isang binatang naglakbay mula sa Tarso patungong Jerusalem upang mag-aral sa ilalim ng pinakamahusay. Alam niya ang kautusan. Alam niya ang mga Kasulatan. At nang magpasya ang mga tao na nararapat mamatay si Esteban, kailangan ng mga bumabato na malaya ang kanilang mga kamay. Inilagay nila ang kanilang mga balabal sa paanan ng isang binatang nagngangalang Saulo.\n\nAt tinago niya ang mga iyon.\n\nHindi nang walang pakialam. Sinasabi ng teksto na siya ay sang-ayon sa pagkamatay ni Esteban. Ito ay isang aktibo, mulat, at matatag na paninindigan. Habang bumabagsak ang mga bato sa unang martir ng iglesya, si Saulo ng Tarso ay nakatayo roon — sumasang-ayon — at pagkatapos ay umalis nang may mas matibay na determinasyon kaysa dati.\n\nIyan ang lalaking malapit nang makatagpo si Hesus.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Mga Gawa 7:58",
+        "text": "at kinaladkad palabas ng lunsod upang batuhin. Inilagay ng mga saksi ang kanilang mga balabal sa paanan ng isang binatang nagngangalang Saulo."
+      },
+      "revelation_key": "Ang kwento ni Saulo ay hindi nagsimula sa daan patungong Damasco. Nagsimula ito sa paanan ni Esteban, habang hawak niya ang mga damit ng mga pumapatay sa kanya."
+    },
+    {
+      "order": 2,
+      "type": "character_moment",
+      "mood": "tense",
+      "image_url": "saulo_pharisee_study_torchlight.png",
+      "title": "Ang pinakamatibay na lalaki sa Israel.",
+      "subtitle": "Ang kanyang binuo bago ang daan",
+      "content": "Hindi basta-basta dumating si Saulo sa kanyang mga konklusyon.\n\nIpinanganak siya sa Tarso, isang unibersidad na lunsod ng mundo ng Griyego at Romano, na nagbigay sa kanya ng natural na kaalaman sa kultura at wikang kakailanganin niya kalaunan upang dalhin ang ebanghelyo sa mga Hentil. Ngunit ang kanyang puso ay ganap na Hebreo. Ipinadala siya ng kanyang pamilya sa Jerusalem upang mag-aral sa paanan ni Gamaliel, ang pinakarespetadong rabbi ng kanyang henerasyon. At hindi lamang nag-aral si Saulo. Nanguna siya sa marami niyang mga kapanahon sa Judaismo, nag-aalab sa sigasig para sa mga tradisyon ng kanyang mga ninuno.\n\nSiya ay isang Pariseo, anak ng mga Pariseo. Ang pinakamahigpit na sekta, ang pinakamatibay sa kadalisayan ng pananampalataya.\n\n⚠️ Ano ang ibig sabihin nito:\n\nHindi inusig ni Saulo ang mga tagasunod ni Hesus dahil sa masamang hangarin. Ginawa niya ito dahil sa pag-ibig. Pag-ibig sa Diyos, pag-ibig sa kautusan, pag-ibig sa Israel. Sa kanyang isip, ang kilusang sumusunod sa isang ipinako na karpintero ay isang mapanganib na erehiya na maaaring makapagpahamak sa bayan ng Diyos. Ang pagbubuklod laban dito ay isang gawang debosyon.\n\n🔑 Iyan ang pinakamahirap na bitag sa lahat: kapag ang pinakamalaking pagkakamali ng iyong buhay ay ginagawa mo habang naniniwala kang naglilingkod ka sa Diyos.",
+      "revelation_key": "Ang katiyakan nang walang personal na pagtatagpo kay Hesus ay maaaring gawing sandata ang debosyon."
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "storm",
+      "image_url": "saulo_road_damascus_dust.png",
+      "title": "Patungo siyang Damasco.",
+      "narrative": "Hindi siya naglalakbay. Siya ay may misyon.\n\nMay dala siyang mga sulat mula sa Pinakapunong Pari: pormal na awtorisasyon upang pumasok sa mga sinagoga ng Damasco, kilalanin ang mga kaanib sa Daan, gapusin sila, at dalhin sa Jerusalem para sa paglilitis. Mga lalaki at babae. Walang pagtatangi ang teksto.\n\nTiyak na tiyak si Saulo sa kanyang gagawin. Alam niya ang mga pangalang hinahanap niya, ang mga kapitbahayan kung saan sila nagtitipon, ang mga palatandaan kung saan nagkakakilanlan sila. Nagawa na niya ito sa Jerusalem, bahay-bahay. Ang Damasco ang susunod na lunsod.\n\nWalang duda sa kanyang isip. Ang katayuang iyon, ang ganap na katiyakan, ang gumawa sa kanya na mas mapanganib kaysa alinmang sundalo.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Mga Gawa 9:1-2",
+        "text": "Samantala, patuloy ang pagsisikap ni Saulo na maipapatay ang mga alagad ng Panginoon. Kaya't lumapit siya sa Pinakapunong Pari ng mga Judio at humingi ng mga sulat para sa mga sinagoga sa Damasco upang madakip niya at madala sa Jerusalem ang sinumang lalaki o babae na matagpuan niya roong kaanib sa Daan ng Panginoon."
+      },
+      "revelation_key": "Ang taong pinakamatibay na naniniwala na ginagawa niya ang kalooban ng Diyos ang siyang pinakamatindi ang paglaban dito."
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "grace",
+      "image_url": "saulo_fallen_light.png",
+      "verse_reference": "Mga Gawa 9:3-6",
+      "verse_text": "Naglakbay si Saulo papuntang Damasco, at nang siya'y malapit na sa lunsod, biglang kumislap sa paligid niya ang isang nakakasilaw na liwanag mula sa langit. Natumba siya sa lupa at narinig niya ang isang tinig na nagsasabi, \"Saulo, Saulo! Bakit mo ako inuusig?\" \"Sino kayo, Panginoon?\" tanong niya. \"Ako'y si Jesus, ang iyong inuusig,\" tugon ng tinig sa kanya. \"Tumayo ka't pumasok sa lunsod, at doo'y sasabihin sa iyo kung ano ang dapat mong gawin.\"",
+      "reflection": "Natumba si Saulo sa lupa. At mula sa sahig, bago pa niya nalamang sino ang nagsasalita sa kanya, sinabi niya: Panginoon.\n\nHindi pa niya Siya kilala. Ngunit may isang bagay sa tinig na iyon, sa liwanag na iyon, sa sandaling iyon, na nagpakilala sa kanya na nasa harapan siya ng isang higit na dakila kaysa sa kanya. Sumunod siya bago pa man niya naunawaan.\n\nHindi hinintay ni Hesus na si Saulo mismo ang dumating sa kanyang sariling konklusyon. Hinarang Niya siya sa gitna ng kanyang paglalakbay.\n\nAt ang unang salita ay hindi isang akusasyon. Ito ay ang kanyang pangalan, dalawang beses. Saulo, Saulo. Sa Kasulatan, kapag tinawag ng Diyos ang isang tao sa pangalan nang dalawang beses, ang bigat ng pagtawag ay personal, mapilit, at matalik. Ganito Niya tinawag si Abraham bago pinahinto ang paghahandog kay Isaac. Ganito Niya tinawag si Moises mula sa nagliliyab na punongkahoy.\n\nAt pagkatapos ay dumating ang tanong: bakit mo ako inuusig?\n\nHindi: bakit mo inuusig ang aking iglesya? Hindi: bakit mo inuusig ang aking bayan? Kundi: bakit mo ako inuusig?\n\nKinikilala ni Hesus ang pagdurusa ng bawat mananampalatayang inaresto, bawat pamilyang winasak, bawat lalaki at babaeng kinakaladkad sa bilangguan, bilang Kanyang sariling pagdurusa. Ang ginawa mo sa mga akin, ginawa mo sa akin.\n\nNagtanong si Saulo mula sa alikabok: Sino kayo, Panginoon? Ito ang pinakamahalagang tanong ng kanyang buhay. At tinanong niya ito nang hindi man lang tumayo mula sa lupa.",
+      "revelation_key": "Hindi hinarang ni Hesus si Saulo nang may parusa. Hinarang Niya siya nang may tanong. Ganyan ang anyo ng biyaya: hindi ito sumisira, ito ay nagtatanong.",
+      "scripture_connections": [
+        {
+          "reference": "Genesis 22:11",
+          "text": "tinawag siya ng anghel ni Yahweh at mula sa langit ay sinabi, \"Abraham, Abraham!\" \"Narito po ako,\" sagot ni Abraham."
+        },
+        {
+          "reference": "Exodo 3:4",
+          "text": "Nang lalapit na si Moises, tinawag siya ni Yahweh buhat sa nagliliyab na punongkahoy, \"Moises, Moises.\" \"Ano po iyon?\" sagot niya."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "saulo_thorn_ox_metaphor.png",
+      "verse_reference": "Mga Gawa 26:14",
+      "verse_text": "Kaming lahat ay natumba sa lupa, at narinig ko ang isang tinig na nagsabi sa akin sa wikang Hebreo, 'Saulo, Saulo, bakit mo ako pinag-uusig? Ikaw na rin ang masasaktan sa ginagawa mong iyan. Para kang sumisipa sa talim.'",
+      "reflection": "May mga taong gumagawa ng masama habang naniniwala silang gumagawa ng mabuti. Si Saulo ay isa sa kanila. Hindi niya inusig ang mga tagasunod ni Hesus dahil sa masamang hangarin — ginawa niya ito dahil sa paniniwala. Naniniwala siyang ipinagtatanggol niya ang Diyos.\n\nNgunit ibinunyag sa kanya ni Hesus nang umagang iyon: matagal na siyang lumalaban sa isang panloob na tinig na hindi niya mapatahimik.\n\nMarahil nagsimula ito nang araw na pinanood niyang mamatay si Esteban. Naroon si Saulo. Nakita niya ang isang taong binabato hanggang mamatay, na namatay habang pinapatawad ang mga pumatay sa kanya, may kapayapaan sa kanyang mukha at langit sa kanyang mga mata. Hindi iyan ang ginagawa ng isang taong namamatay para sa isang kasinungalingan. Paano mo malilimutan ang ganoon?\n\nPinangalanan ito ni Hesus: matagal ka nang lumalaban sa isang bagay na alam mo na. At ang paglaban dito ay hindi pumipigil sa ginagawa ng Diyos — ikaw lang ang nasasaktan nito.",
+      "revelation_key": "Gumagawa ang Diyos sa atin nang matagal bago pa natin ito makilala. Ang pagkabalisa na nararamdaman mo ay maaaring Kanyang tinig na naroon na.",
+      "scripture_connections": [
+        {
+          "reference": "Mga Gawa 7:55-60",
+          "text": "Ngunit si Esteban, na puspos ng Espiritu Santo, ay tumingala sa langit, at nakita niya ang kaluwalhatian ng Diyos at si Jesus na nakatayo sa kanan ng Diyos. Kaya't sinabi niya, \"Nakikita kong bukás ang kalangitan, at ang Anak ng Tao na nakatayo sa kanan ng Diyos.\" Tinakpan nila ang kanilang tainga at nagsigawan; pagkatapos, sabay-sabay nilang sinugod si Esteban at kinaladkad palabas ng lunsod upang batuhin. Inilagay ng mga saksi ang kanilang mga balabal sa paanan ng isang binatang nagngangalang Saulo. At pinagbabato nila si Esteban, na nananalangin naman ng ganito: \"Panginoong Jesus, tanggapin mo po ang aking espiritu.\" Lumuhod si Esteban at sumigaw nang malakas, \"Panginoon, huwag mo po silang pananagutin sa kasalanang ito!\" At pagkasabi nito, siya'y namatay."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "saulo_led_hand_damascus.png",
+      "title": "Tatlong araw na walang paningin.",
+      "narrative": "Nang tumayo si Saulo mula sa lupa, dumilat siya.\n\nBulag siya.\n\nInakay siya ng kanyang mga kasama patungong Damasco. Ang lalaking umalis sa Jerusalem na may mga mandamyento ng pagdakip, may awtoridad mula sa Pinakapunong Pari, may plano at misyon, ay pumasok sa lunsod na inaakay ng iba.\n\nAt doon siya nanatili sa loob ng tatlong araw. Walang paningin. Walang pagkain. Walang inumin.\n\nPitumpu't dalawang oras sa kadiliman. Naisip mo ba kung ano ang dinanas ng taong iyon sa loob ng 72 oras na iyon? Ano kaya ang pumasok sa kanyang isipan? Makakakita pa ba siyang muli? Para sa isang taong bihasa sa kautusan, ang biglaang pagkabulag ay hindi lamang isang pisikal na limitasyon — ito ay isang tanda ng hatol ng Diyos. Sinusumpa ba siya dahil sa kanyang mga nagawa? Ano ang mangyayari sa kanyang buhay? Paano siya babalik sa Jerusalem?\n\nHindi agad nagbigay ng mga sagot ang Diyos. Binigyan Niya siya ng tatlong araw na mapag-isa kasama ang pinakamahalagang tanong na naitanong sa kanya: Bakit mo ako inuusig?",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Mga Gawa 9:9",
+        "text": "Hindi siya nakakita sa loob ng tatlong araw, hindi rin siya kumain ni uminom."
+      },
+      "revelation_key": "Hindi palaging ipinaliliwanag ng Diyos ang katatapos lang Niyang gawin. Kung minsan ay iniiwan ka Niyang mag-isa upang magnilay at upang matupad ang Kanyang layunin."
+    },
+    {
+      "order": 7,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "saulo_dark_room_light_crack.png",
+      "title": "Tatlong araw",
+      "subtitle": "Ang pattern na inuulit ng Diyos",
+      "content": "Sa tradisyong biblikal, ang bilang na tatlo ay hindi aksidente.\n\n📜 Tatlong araw si Jonas sa tiyan ng isda bago isinugo sa kanyang misyon.\nTatlong araw si Hesus sa libingan bago ang muling pagkabuhay.\nTatlong araw si Saulo sa pagkabulag at pag-aayuno.\n\nAng tatlo sa Kasulatan ay hindi bilang ng parusa. Ito ang panahong ginagamit ng Diyos upang magbago. May kailangang matapos upang may bago na magsimula.\n\n🔑 Sa Griyego, ang salitang ginamit para sa pagtingin sa Mga Gawa 9:8 ay βλέπω (blepō): ang pisikal na paggana ng mata. Tandaan mo muna ito — sa kalaunan ay mauunawaan natin kung bakit ito mahalaga.\n\n⚠️ Ang tatlong araw na pag-aayuno sa klima ng Sirya ay hindi isang planado na espirituwal na disiplina. Ito ang natural na tugon ng isang taong niyuyanig ang buong katotohanan. Wala pang maaaring pumasok mula sa labas — nasa proseso siya at espasyo na tanging ang Diyos ang pumupuno.",
+      "revelation_key": "Ginagamit ng Diyos ang katahimikan upang gawin ang hindi kayang gawin ng mga salita: ayusin mula sa loob ang hindi kayang iproseso ng isipan mula sa labas.",
+      "scripture_connections": [
+        {
+          "reference": "Jonas 1:17",
+          "text": "Sa utos ni Yahweh, nilamon si Jonas ng isang dambuhalang isda at siya'y nanatili ng tatlong araw at tatlong gabi sa tiyan nito."
+        },
+        {
+          "reference": "Mateo 12:40",
+          "text": "Kung paanong si Jonas ay tatlong araw at tatlong gabing nasa tiyan ng dambuhalang isda, ang Anak ng Tao ay tatlong araw at tatlong gabi ring nasa libingan."
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "saulo_ananias_vision_split.png",
+      "verse_reference": "Mga Gawa 9:10-14",
+      "verse_text": "Sa Damasco naman ay may isang alagad na ang pangala'y Ananias. Tinawag siya ng Panginoon sa pamamagitan ng isang pangitain, \"Ananias!\" \"Ano po iyon, Panginoon,\" tugon niya. Inutusan siya ng Panginoon, \"Pumunta ka sa kalyeng tinatawag na Tuwid, sa bahay ni Judas, at ipagtanong mo ang isang lalaking taga-Tarso na ang pangala'y Saulo. Siya'y nananalangin ngayon. Sa isang pangitain, nakita ka niyang pumasok sa kinaroroonan niya at pinatungan mo siya ng kamay upang siya'y makakitang muli.\" Sumagot si Ananias, \"Panginoon, marami na po ang nagbalita sa akin tungkol sa taong ito at tungkol sa mga kasamaang ginawa niya sa inyong mga hinirang sa Jerusalem. At naparito siya sa Damasco, taglay ang kapangyarihang galing sa mga punong pari ng mga Judio, upang dakpin ang lahat ng tumatawag sa iyong pangalan.\"",
+      "reflection": "Si Ananias ay isang alagad sa Damasco. Isang karaniwang mananampalataya sa loob ng pamayanan na pinaplanong wasakin ni Saulo.\n\nTinawag siya ng Panginoon sa pamamagitan ng isang pangitain. Ang Panginoong iyon ay si Hesukristo na muling nabuhay — ang parehong pangalang binibigkas ni Ananias araw-araw, ang parehong pangalang inusig ni Saulo sa Jerusalem.\n\nTuwirang utos ang ibinigay: pumunta sa kalyeng tinatawag na Tuwid, hanapin si Saulo ng Tarso. At ang dahilang ibinigay ng Panginoon: siya ay nananalangin. Kasalukuyang panahon. Ngayon mismo. Tatlong araw ng kadiliman ang nagbunga ng isang taong nananalangin, at ang mga panalanging iyon ay nadinig.\n\nAt sa parehong panalangin, ipinakita ng Diyos kay Saulo ang isang bagay: ang imahe ng isang lalaking nagngangalang Ananias na papasok at ipapatong ang kamay sa kanya. Tatlong araw siyang walang nakikita. Ngunit ipinakita sa kanya ng Diyos — sa pamamagitan ng tinatawag sa Griyego na ὅραμα (horama), isang pangitain na inilalagay ng Diyos nang tuwiran sa isip, na hindi nangangailangan ng mga mata ng katawan.\n\nAt ang ipinakita sa kanya ay hindi lamang kaaliwan.\n\nSa buong Kasulatan, ang pagpapagaling ng pagkabulag ay isang himalang sa Mesiyas lamang nabibilang. Kapag dumating si Ananias, hindi lamang matatanggap ni Saulo ang kanyang paningin. Matatanggap niya ang isang bagay na walang argumento ang makakapagbigay sa kanya: ang parehong tatak — ang pinag-aralan niya sa buong buhay niya. Ang parehong Hesus na kanyang inusig ang gumagawa, sa pamamagitan ng isang karaniwang alagad, ng tanging sa Diyos lamang magagawa.\n\nSumagot si Ananias nang may katapatan. Alam niya ang reputasyon ng taong iyon, ang pinsalang ginawa niya sa mga mananampalataya sa Jerusalem. At alam niyang naparito siya sa Damasco upang dakpin ang lahat ng tumatawag sa pangalan ng Panginoong Hesus.\n\nInihahanda sila ng Diyos na pareho sa parehong panahon. Sa dalawang magkaibang silid, sa iisang lunsod. Ang isa ay tumatanggap ng mga tagubilin. Ang isa ay nananalangin sa kadiliman — at sa kadilimang iyon, ipinakikita na ng Diyos sa kanya ang darating.",
+      "revelation_key": "Tatlong araw nang walang nakikita si Saulo. At sa kadilimang iyon, ipinakita sa kanya ng Diyos ang isang bagay. Tanging ang Mesiyas ang makagagawa ng darating — at mapapatunayan na ito ni Saulo."
+    },
+    {
+      "order": 9,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "saulo_ananias_doorway.png",
+      "title": "Pumasok si Ananias.",
+      "narrative": "Bago tumawid sa pintuan, alam ni Ananias kung sino ang taong iyon.\n\nNarinig niya ang mga ulat mula sa Jerusalem — ang mga bahay na sinamsaman, ang mga mananampalatayang kinakaladkad, ang mga namatay. Alam niyang ang parehong taong ito ay dumating sa Damasco na may awtoridad na gawin din doon ang pareho. Siya ang idineklara niyang kaaway.\n\nIbinunyag ng Panginoon sa kanya ang isang bagay: ang taong iyon ay nananalangin. Tatlong araw na siya sa kadiliman, sa pag-aayuno, sa panalangin. At sa panalanging iyon, nagsalita na ang Diyos sa kanya. Ipinakita na Niya sa kanya ang darating.\n\nPumasok si Ananias. Mula sa kanyang mga labi ay lumabas ang dalawang salita: Σαούλ (Shaul) — ang pangalan ni Saulo sa Arameo, hindi sa Griyego gaya ng karaniwan. Ang parehong pangalang ginamit ni Hesus nang kausapin siya sa daan. Isang paraan ng pagpapakilala: ang parehong Panginoon na pumigil sa kanya ang ngayon ay nagsasalita sa pamamagitan ni Ananias. At pagkatapos ἀδελφέ (adelphos) — kapatid, na sa Griyego ay nangangahulugang mula sa iisang sinapupunan, mula sa iisang magulang.\n\nNagawa na ng Panginoon ang Kanyang gawain. Ang tatlong araw ay isang ganap na pagbabago. Ang taong naghihintay sa silid na iyon ay ipinanganak nang muli, isa nang mananampalataya kay Hesukristo. Pumasok si Ananias upang tanggapin ang isang kapatid.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Mga Gawa 9:17",
+        "text": "Pumunta nga si Ananias sa naturang bahay at ipinatong ang kanyang kamay kay Saulo. Sabi niya, \"Kapatid na Saulo, pinapunta ako rito ng Panginoong Jesus na nagpakita sa iyo sa daan nang ikaw ay papunta rito. Isinugo niya ako upang muli kang makakita at upang mapuspos ka ng Espiritu Santo.\""
+      },
+      "revelation_key": "Ang parehong Panginoon na pumigil kay Saulo sa daan ang pumasok sa pintuan na iyon — sa pamamagitan ng tinig at mga kamay ng isang karaniwang taong sumunod."
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "grace",
+      "image_url": "saulo_ananias_hands_eyes.png",
+      "verse_reference": "Mga Gawa 9:17",
+      "verse_text": "Pumunta nga si Ananias sa naturang bahay at ipinatong ang kanyang kamay kay Saulo. Sabi niya, \"Kapatid na Saulo, pinapunta ako rito ng Panginoong Jesus na nagpakita sa iyo sa daan nang ikaw ay papunta rito. Isinugo niya ako upang muli kang makakita at upang mapuspos ka ng Espiritu Santo.\"",
+      "reflection": "At biglang may nalaglag na tila mga kaliskis mula sa kanyang mga mata.\n\nSa card 7 binanggit natin ang salitang Griyego na βλέπω (blepō) — ang pisikal na paggana ng mata, ang nawala kay Saulo. Ang salitang ginamit dito ng teksto ay iba: ἀνέβλεψεν (anablepsen) — muling makakita, makita muli. Hindi ito basta pagbabalik ng dati niyang paningin. Ito ay isang naibalik na paningin, nabuksan sa bagong paraan.\n\nDalawang bagay ang sinabi ni Ananias sa kanya nang sabay: muli kang makakakita at mapupuspos ka ng Espiritu Santo. Pareho sa iisang sandali. Nalaglag ang mga kaliskis sa dalawang lugar — sa mga mata ng katawan at sa mga mata ng puso. Ang Pariseo na nakaalam ng Kasulatan mula sa ulo ngunit hindi nakita ang Mesiyas na nakatayo sa harapan niya, ngayon ay nakakita na sa dalawa.",
+      "revelation_key": "Nalaglag ang mga kaliskis sa dalawang lugar — sa mga mata ng katawan at sa mga mata ng puso.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 3:5",
+          "text": "Sagot naman ni Jesus, \"Pakatandaan mo: malibang ang isang tao ay ipanganak sa pamamagitan ng tubig at ng Espiritu, hindi ito makakapasok sa kaharian ng Diyos.\""
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "saulo_scales_falling_eyes.png",
+      "verse_reference": "Mga Gawa 9:18",
+      "verse_text": "Noon di'y may nalaglag na tila mga kaliskis mula sa mga mata ni Saulo at nakakita na siyang muli. Tumayo siya at nagpabautismo.",
+      "reflection": "At pagkatapos ay tumayo siya at nagpabautismo.\n\nSinabi ni Hesus kay Nicodemo: malibang ang isang tao ay ipanganak sa pamamagitan ng tubig at ng Espiritu, hindi ito makakapasok sa kaharian ng Diyos. Sa silid na iyon sa Damasco, sa sandaling iyon, si Saulo ay ipinanganak sa tubig at sa Espiritu — magkasama, bilang isa. Ang ganap na bagong kapanganakan, eksakto sa inilarawan ni Hesus.\n\nAt ang pamayanang inusig ni Saulo ang naging instrumento kung saan siya pinanumbalik ni Hesus. Pumasok siyang kaaway. Lumabas siyang anak.",
+      "revelation_key": "Sa silid na iyon sa Damasco, natupad ang Juan 3:5. Si Saulo ay ipinanganak sa tubig at sa Espiritu — eksakto sa inilarawan ni Hesus.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 3:5",
+          "text": "Sagot naman ni Jesus, \"Pakatandaan mo: malibang ang isang tao ay ipanganak sa pamamagitan ng tubig at ng Espiritu, hindi ito makakapasok sa kaharian ng Diyos.\""
+        },
+        {
+          "reference": "Mga Gawa 8:3",
+          "text": "Samantala, sinikap ni Saulo na wasakin ang iglesya; pinapasok niya ang mga bahay-bahay at ang mga mananampalataya ay kanyang kinakaladkad at ibinibilanggo, maging lalaki man o babae."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "saulo_damascus_morning_new.png",
+      "title": "Ang parehong lunsod. Ibang misyon.",
+      "narrative": "Lumabas siya upang mangaral sa mga sinagoga ng Damasco na si Hesus ang Anak ng Diyos.\n\nAng parehong mga lugar na planado niyang puntahan bilang taga-usig. Ang parehong mga sinagoga kung saan balak niyang habulin ang mga mananampalataya at dakpin sila. Ngunit pinigil siya ni Hesus bago pa niya naisakatuparan ang planong iyon. Iniwan Niya siyang bulag sa daan. Nang sa wakas ay pumasok siya sa mga sinagoga, pumasok siya bilang isang taong kailangang akayin ng kamay, hindi bilang mangangaso na dating misyon niya.\n\nAt lahat ng nakarinig sa kanya ay namangha. Alam nila ang kanyang reputasyon. Alam nila ang layuning dala niya mula sa Jerusalem. At ngayon ang parehong taong ito ay nangangaral kay Kristo, ang mismong pangalang dating inuusig niya.\n\nSa natural, hindi ito maipaliwanag. Isang taong umusig sa mga unang Kristiyano ang ngayo'y nangangaral sa pangalan ni Hesukristo na Mesiyas. Ginawa iyon ng Diyos.\n\nGinagamit ng Griyegong teksto ang pandiwa na συνέχυνεν (synéchynen) upang ilarawan ang ginawa ni Saulo sa mga sinagoga — lituhin, guluhin, ganap na guluhin. Ang parehong sinanay na isipan na dating ginamit upang usigin ang iglesya, ngayon ay ginamit ng Diyos upang wasakin ang mga argumento ng mga sumalungat sa kanya, pinatutunayan mula sa Kasulatan na si Hesus ang Kristo.\n\nNgunit lalong lumalakas si Saulo sa bawat araw na lumilipas, at ang mga dating natatakot sa kanya ay hindi na makasagot sa kanya. Nagpasya silang patayin siya. Binantayan nila ang mga pintuan ng lunsod araw at gabi, naghihintay ng pagkakataon.\n\nIbinaba siya ng mga alagad sa ibabaw ng pader nang gabing iyon, sa loob ng isang malaking basket.\n\nAng taong nag-ingat ng mga damit sa pagkamatay ni Esteban ay ngayon ay inilalagay ang sariling buhay sa panganib alang-alang sa pangalan ni Hesus.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Mga Gawa 9:20-25",
+        "text": "Pumasok siya sa mga sinagoga at nangaral na si Jesus ang Anak ng Diyos. Nagtaka ang lahat ng nakarinig sa kanya. \"Hindi ba siya ang dating umuusig sa mga sumasamba kay Jesus sa Jerusalem?\" tanong nila. \"Hindi ba't naparito siya upang sila'y dakpin at dalhing nakagapos sa mga punong pari?\" Ngunit lalong naging mahusay si Saulo sa kanyang pangangaral at nalito ang mga Judiong naninirahan sa Damasco dahil sa kanyang matibay na pagpapatunay na si Jesus ang siyang Cristo. Pagkaraan ng maraming araw, nagkaisa ang mga Judio na patayin si Saulo. Araw at gabi ay inaabangan nila si Saulo sa mga pintuang-bayan para patayin, ngunit nalaman niya ito. Kaya't isang gabi, inilagay siya ng kanyang mga alagad sa isang malaking basket at ibinabâ sa kabila ng pader."
+      },
+      "revelation_key": "Binago ng Diyos ang hindi kayang baguhin ni Saulo sa kanyang sarili. Ngunit pagkatapos niyon, pinili ni Saulo na sumunod, kahit na ang kapalit ay lahat. Ang parehong pagsuko ang hinihingi ng Diyos sa iyo ngayon: ang hakbang ng pagsuko ng iyong kalooban sa Diyos ay maaaring hindi madali o komportable, ngunit pupunuin ka nito na wala sa mundong ito ang kayang ibigay."
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "mood": "peace",
+      "image_url": "saulo_open_road_dust_light.png",
+      "title": "Ang iyong pagtatagpo",
+      "subtitle": "Hindi hinahanap ni Saulo si Hesus. Si Hesus ang pumigil sa kanya sa daan. At ang ginawa Niya sa taong iyon, magagawa rin Niya sa iyo.",
+      "discovery_questions": [
+        {
+          "category": "Ang iyong katiyakan",
+          "question": "Mayroon bang isang bagay na hiniling ng Diyos na baguhin mo, at hindi mo binago dahil masyadong malaki ang kapalit — ang iyong reputasyon, ang iyong mga relasyon, o ang posisyon mong hawak?"
+        },
+        {
+          "category": "Ang iyong katahimikan",
+          "question": "Nararamdaman mo bang sumisigaw ka sa Diyos at katahimikan lang ang tugon? Naranasan din iyan ni Saulo — tatlong araw na walang paningin, walang pagkain, nagmumuni-muni. Ngunit gumagawa na ang Diyos. Ang katahimikan ay hindi kawalan ng presensya, ito ay paghahanda. Ang nararamdaman mong paghihintay, ginagamit ng Diyos para sa pagbabago. Naririnig ka Niya, hindi Siya malayo sa dinaranas mo."
+        },
+        {
+          "category": "Ang iyong desisyon",
+          "question": "Si Saulo ang pinakakinatatakutang taga-usig — may posisyon siya, awtoridad, at malinaw na layunin. Iniwan niya ang lahat nang matagpuan niya si Hesus at ganap na sumuko sa plano ng Diyos para sa kanya. Handa ka bang gawin ang pareho — isuko ang iyong kalooban sa Diyos nang buong puso?"
+        }
+      ],
+      "prayer": {
+        "title": "Isang panalangin mula sa daan",
+        "content": "Panginoong Hesus,\n\nTulad ni Saulo, naglakad ako na may mga katiyakang ako mismo ang bumuo. Nagkaroon ako ng aking mga dahilan, aking mga paniniwala, aking mga sistema ng tama at mali. At sa gitna ng lahat ng iyon, hindi ko palaging sinunod ang Iyong gabay at ang Iyong tinig.\n\nKung ngayon ay may katahimikan sa aking buhay, tulungan Mo akong magtiwala na nariyan Ka sa gitna nito. Na ang nararamdaman kong paghihintay ay ginagamit Mo, at ang Iyong katahimikan ay hindi kawalan.\n\nNgayon ay nais kong gawin ang ginawa ni Saulo: sumuko sa Iyo nang buong puso. Hindi kalahati lamang. Tulungan Mo ako upang ang Iyong mga plano ang maging aking landas at gabay. Huwag Mo akong hayaang mahulog sa sarili kong pag-iisip kundi akayin ng Iyong Banal na Espiritu.\n\nGawin Mo akong handang tulad ni Saulo. Nawa ang parehong pagsukong nagbago sa kanya ay baguhin din ako, at nawa ang lahat ng ako ay mapahinga sa Iyong mga kamay.\n\nSa pangalan ni Hesus, Amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "saulo_road_light_horizon.png",
+      "completion_verse": {
+        "reference": "Mga Gawa 9:15",
+        "text": "Ngunit sinabi sa kanya ng Panginoon, \"Pumunta ka roon, sapagkat pinili ko siya upang ipangaral ang aking pangalan sa mga Hentil, sa mga hari, at sa mga anak ng Israel.\"",
+        "bible_version": "Magandang Balita Biblia"
+      },
+      "reflection_prompt": "Kinuha ng Diyos ang pinakamatinding taga-usig ng iglesya at ginawa siyang halimbawa ng Kanyang awa para sa lahat ng darating pagkatapos. Walang anumang ikaw o naging ikaw ang lampas sa Kanyang maabot. Handa ka bang hayaan ang Diyos na gawin ang pareho sa iyo — kunin ang lahat ng ikaw at gamitin ito para sa Kanyang layunin?",
+      "celebration_type": "burst"
+    }
+  ]
+}

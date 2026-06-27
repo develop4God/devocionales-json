@@ -368,27 +368,27 @@
     },
     {
       "id": "saulo_001",
-      "version": "0.1",
+      "version": "1.0",
       "image_version": "1.0",
       "emoji": "⚡",
-      "status": "coming_soon",
+      "status": "published",
       "intro_image": "saulo_stephen_stoning_mantles.png",
-      "mood_primary": "transformation",
+      "mood_primary": "confrontation",
       "accent_color": "#1a0a00",
       "has_interactive": false,
       "testament": "new",
-      "character": "Saulo de Tarso",
+      "character": "Saul of Tarsus",
       "files": {
         "en": "saulo_en_001.json",
         "es": "saulo_es_001.json",
         "pt": "saulo_pt_001.json",
         "fr": "saulo_fr_001.json",
         "de": "saulo_de_001.json",
-        "ja": "saulo_ja_001.json",
-        "zh": "saulo_zh_001.json",
         "hi": "saulo_hi_001.json",
+        "fil": "saulo_fil_001.json",
         "ar": "saulo_ar_001.json",
-        "fil": "saulo_fil_001.json"
+        "ja": "saulo_ja_001.json",
+        "zh": "saulo_zh_001.json"
       },
       "titles": {
         "en": "The Road to Damascus",
@@ -396,47 +396,47 @@
         "pt": "O Caminho para Damasco",
         "fr": "Le Chemin de Damas",
         "de": "Der Weg nach Damaskus",
-        "ja": "ダマスカスへの道",
-        "zh": "大马士革之路",
-        "hi": "दमिश्क की राह",
+        "hi": "दमिश्क का मार्ग",
+        "fil": "Ang Daan Patungong Damasco",
         "ar": "الطريق إلى دمشق",
-        "fil": "Ang Daan Patungong Damasco"
+        "ja": "ダマスコへの道",
+        "zh": "大马色之路"
       },
       "subtitles": {
         "en": "The most feared persecutor of the church, transformed into the apostle to the Gentiles",
         "es": "El perseguidor más temido de la iglesia, transformado en el apóstol de los gentiles",
         "pt": "O perseguidor mais temido da igreja, transformado no apóstolo dos gentios",
         "fr": "Le persécuteur le plus redouté de l'Église, transformé en apôtre des nations",
-        "de": "Der gefürchtetste Verfolger der Kirche, verwandelt in den Apostel der Heiden",
+        "de": "Der gefürchtetste Verfolger der Gemeinde, verwandelt in den Apostel der Heiden",
+        "hi": "कलीसिया का सबसे भयंकर उत्पीड़क, अन्यजातियों का प्रेरित बन गया",
+        "fil": "Ang pinakakatatakutang mang-uusig ng iglesya, ginawang apostol sa mga Hentil",
+        "ar": "أشدّ مضطهدي الكنيسة رعبًا، تحوّل إلى رسول الأمم",
         "ja": "教会の最も恐れられた迫害者が、異邦人への使徒に変えられた",
-        "zh": "教会最令人恐惧的迫害者，转变为外邦人的使徒",
-        "hi": "कलीसिया का सबसे भयभीत करने वाला सताने वाला, अन्यजातियों का प्रेरित बन गया",
-        "ar": "أشد مضطهدي الكنيسة رعباً، تحوّل إلى رسول الأمم",
-        "fil": "Ang pinakakatatakot na taga-usig ng simbahan, naging apostol sa mga Hentil"
+        "zh": "教会最令人惧怕的逼迫者，被转变为外邦人的使徒"
       },
       "scripture_reference": {
         "en": "Acts 9:1-22",
         "es": "Hechos 9:1-22",
-        "pt": "Atos 9:1-22",
+        "pt": "Atos dos Apóstolos 9:1-22",
         "fr": "Actes 9:1-22",
         "de": "Apostelgeschichte 9:1-22",
-        "ja": "使徒行伝9:1-22",
-        "zh": "使徒行传9:1-22",
         "hi": "प्रेरितों के काम 9:1-22",
+        "fil": "Mga Gawa 9:1-22",
         "ar": "أعمال الرسل 9:1-22",
-        "fil": "Mga Gawa 9:1-22"
+        "ja": "使徒の働き 9:1-22",
+        "zh": "使徒行传 9:1-22"
       },
       "estimated_reading_minutes": {
-        "en": 10,
-        "es": 10,
-        "pt": 10,
-        "fr": 10,
-        "de": 10,
-        "ja": 10,
-        "zh": 10,
-        "hi": 10,
-        "ar": 10,
-        "fil": 10
+        "en": 18,
+        "es": 19,
+        "pt": 19,
+        "fr": 19,
+        "de": 19,
+        "hi": 20,
+        "fil": 20,
+        "ar": 19,
+        "ja": 21,
+        "zh": 21
       }
     }
   ]
