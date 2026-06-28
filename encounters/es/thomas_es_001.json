@@ -41,7 +41,7 @@
       "mood": "tense",
       "image_url": "thomas_empty_room_evening.png",
       "title": "No estaba con ellos.",
-      "narrative": "Era el primer día de la semana. El día en que todo cambió.\n\nLos discípulos estaban reunidos a puerta cerrada. El miedo los mantenía juntos. Habían oído los rumores: la tumba estaba vacía, las mujeres decían haber visto ángeles, María Magdalena afirmaba que había hablado con Jesús.\n\nPero uno de los doce estaba ausente.\n\nTomás, llamado Dídimo, no estaba con ellos cuando Jesús vino. El texto solo registra un hecho: su ausencia.\n\nY esa ausencia lo cambió todo.",
+      "narrative": "Era el primer día de la semana.\n\nTres días antes, habían crucificado a Jesús. Los mismos líderes religiosos que lo entregaron sabían quiénes eran sus discípulos, dónde se reunían, quiénes lo habían seguido. Por eso estaban encerrados. Las puertas cerradas no eran un detalle — eran una medida de supervivencia.\n\nMaría Magdalena les había dicho que había visto al Señor. Pero el miedo seguía siendo más grande que la noticia.\n\nPero uno de los doce estaba ausente.\n\nTomás, llamado Dídimo, no estaba con ellos cuando Jesús vino.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
@@ -57,7 +57,7 @@
       "image_url": "thomas_disciple_portrait.png",
       "title": "El discípulo que nadie recuerda bien.",
       "subtitle": "Quién era Tomás antes de la duda",
-      "content": "La historia le ha dado un apodo que no merece: el incrédulo. Pero antes de ese domingo por la noche, Tomás ya había demostrado quién era.\n\nSu nombre hebreo, תְּאוֹם (Te'om), y su sobrenombre griego, Δίδυμος (Dídymos), significan lo mismo: gemelo. Alguien con una identidad doble, un hombre que cargaba en su propio nombre la tensión entre dos realidades.\n\nLo que el evangelio de Juan revela sobre él es algo difícil de encontrar entre los doce: honestidad.\n\n🔑 Tomás era el discípulo que se atrevía a decir lo que los demás callaban.\n\n⚠️ En una cultura donde seguir al maestro sin preguntar era señal de respeto, Tomás hacía preguntas. Sus preguntas nacían de un hombre que necesitaba entender para poder entregarse.",
+      "content": "Dos mil años de historia le dejaron un solo apodo: el incrédulo. Es el discípulo que dudó, el que no creyó, el que puso condiciones.\n\nPero Juan lo presenta de otra manera.\n\nAntes de ese domingo por la noche, antes de la duda, Juan ya nos había mostrado quién era Tomás. Y lo que revela es algo difícil de encontrar entre los doce: honestidad.\n\nSu nombre arameo, תְּאוֹם (Te'om), y su equivalente griego, Δίδυμος (Dídymos), significan lo mismo: gemelo. El evangelio no nos dice quién era su gemelo. Solo nos dice quién era él.\n\nTomás era el discípulo que se atrevía a decir lo que los demás callaban. En una cultura donde seguir al maestro sin preguntar era señal de respeto, Tomás hacía preguntas. No por rebeldía — sino porque necesitaba entender antes de actuar.\n\nY cuando entendió, actuó.",
       "revelation_key": "La honestidad ante Dios es el terreno donde la fe verdadera puede nacer."
     },
     {
@@ -67,8 +67,8 @@
       "image_url": "thomas_road_bethany.png",
       "verse_reference": "Juan 11:16",
       "verse_text": "Dijo entonces Tomás, llamado Dídimo, a sus condiscípulos: Vamos también nosotros, para que muramos con él.",
-      "reflection": "Lázaro había muerto. Jesús decidió regresar a Judea, donde los líderes religiosos habían intentado apedrearlo. Los discípulos le advirtieron: Rabí, hace poco los judíos procuraban apedrearte, ¿y otra vez vas allá?\n\nJesús fue de todos modos.\n\nY fue Tomás el que habló. Una sola frase: Vamos también nosotros, para que muramos con él.\n\nEs la frase de un hombre que midió el costo y eligió pagar. Tenía una sola cosa: una decisión. Si Jesús va a morir, yo voy con él.\n\n🔑 El mismo hombre que la historia recuerda como el incrédulo fue el primero en ofrecer su vida.",
-      "revelation_key": "Antes de dudar de la resurrección, Tomás estuvo dispuesto a morir junto a Jesús. Su duda venía de la misma intensidad con la que amaba.",
+      "reflection": "Juan nos dejó tres momentos para ver a Tomás en acción antes de la duda. El primero revela de qué estaba hecho.\n\nJesús les dijo primero que Lázaro dormía. Los discípulos pensaron que hablaba del sueño. Entonces Jesús les dijo claramente: Lázaro ha muerto; mas vamos a él. Los discípulos ya habían intentado disuadirlo — Rabí, hace poco los judíos procuraban apedrearte, ¿y otra vez vas allá?\n\nEntonces Tomás dijo: Vamos también nosotros, para que muramos con él.\n\nTomás hablaba desde la certeza de que probablemente iban a morir. Los líderes religiosos ya habían intentado apedrear a Jesús. Regresar a Judea era caminar hacia el peligro con los ojos abiertos. Y aun así, su respuesta fue: vamos.\n\nEl mismo hombre que la historia llama el incrédulo fue el primero en decir que moriría con Jesús.",
+      "revelation_key": "El hombre que la historia llama el incrédulo fue el primero en estar dispuesto a morir con Jesús — con los ojos abiertos al peligro.",
       "scripture_connections": [
         {
           "reference": "Juan 11:8",
@@ -83,12 +83,16 @@
       "image_url": "thomas_last_supper_question.png",
       "verse_reference": "Juan 14:5-6",
       "verse_text": "Le dijo Tomás: Señor, no sabemos a dónde vas; ¿cómo, pues, podemos saber el camino? Jesús le dijo: Yo soy el camino, y la verdad, y la vida; nadie viene al Padre, sino por mí.",
-      "reflection": "La última cena. Jesús les había dicho que se iba. Que iba a prepararles un lugar. Que conocían el camino.\n\nLos demás asintieron. Quizás entendían. Quizás callaban. Pero Tomás habló.\n\nSeñor, no sabemos a dónde vas. ¿Cómo podemos saber el camino?\n\nEra la pregunta más honesta que alguien podía hacer en ese momento. Y esa honestidad provocó una de las declaraciones más importantes de toda la Escritura: Yo soy el camino, y la verdad, y la vida.\n\nLa sinceridad de un hombre abrió la puerta a una revelación que ha sostenido a millones durante dos mil años.",
-      "revelation_key": "Las preguntas honestas no ofenden a Dios. Las usa. La pregunta de Tomás provocó una de las revelaciones más grandes de Jesús.",
+      "reflection": "Era el segundo momento en que Tomás habló cuando los demás callaron.\n\nLa última cena. Jesús les acababa de decir que se iba a preparar un lugar para ellos, y añadió: Y sabéis a dónde voy, y sabéis el camino.\n\nTomás fue el único que respondió: Señor, no sabemos a dónde vas; ¿cómo, pues, podemos saber el camino?\n\nDijo en voz alta lo que ninguno se atrevió a admitir. Y esa pregunta recibió una de las declaraciones más directas de todo el evangelio: Yo soy el camino, y la verdad, y la vida; nadie viene al Padre, sino por mí.\n\nLa base del evangelio, el corazón del mensaje cristiano — la pregunta honesta de Tomás abrió la puerta a la declaración que define el plan de salvación y vida eterna para la humanidad.",
+      "revelation_key": "Las preguntas honestas no ofenden a Dios. Las usa. La pregunta de Tomás provocó la declaración que es la base de todo el evangelio.",
       "scripture_connections": [
         {
           "reference": "Juan 14:1-3",
           "text": "No se turbe vuestro corazón; creéis en Dios, creed también en mí. En la casa de mi Padre muchas moradas hay; si así no fuera, yo os lo hubiera dicho; voy, pues, a preparar lugar para vosotros. Y si me fuere y os preparare lugar, vendré otra vez, y os tomaré a mí mismo, para que donde yo estoy, vosotros también estéis."
+        },
+        {
+          "reference": "Juan 14:4",
+          "text": "Y sabéis a dónde voy, y sabéis el camino."
         }
       ]
     },
@@ -98,7 +102,7 @@
       "mood": "awe",
       "image_url": "thomas_upper_room_jesus_appears.png",
       "title": "Paz a vosotros.",
-      "narrative": "El domingo de la resurrección, al caer la noche, los discípulos estaban encerrados. Las puertas cerradas. El miedo los paralizaba.\n\nY Jesús se puso en medio de ellos.\n\nEntró en el espacio donde el miedo los tenía cautivos y lo primero que dijo fue: Paz a vosotros.\n\nLes mostró las manos y el costado. Las heridas seguían allí. La resurrección las había transformado. Ya eran prueba de identidad.\n\nY los discípulos se regocijaron viendo al Señor.\n\nPero Tomás estaba ausente.",
+      "narrative": "Era el mismo día. Al caer la noche, los discípulos seguían reunidos a puerta cerrada. Afuera estaban los mismos líderes religiosos que habían crucificado a Jesús.\n\nPedro y Juan habían visto la tumba vacía esa mañana. María Magdalena les había dicho que había visto al Señor resucitado. Y aun así, estaban encerrados con miedo.\n\nTodos excepto uno. Tomás estaba afuera.\n\nY fue en ese momento — con Tomás ausente — que el Señor resucitado eligió aparecer.\n\nApareció en medio de ellos con las puertas aún cerradas. Y su primera palabra no fue pregunta, ni reproche, ni explicación. Fue: Paz a vosotros.\n\nEn hebreo, shalom — שָׁלוֹם. Plenitud, restauración, bienestar completo. Pronunciado sobre hombres que todavía no habían creído, antes de que alguno abriera la boca, sin condiciones.\n\nLes mostró las manos y el costado. Y los discípulos se regocijaron viendo al Señor.\n\nPero Tomás no estaba.\n\nEl que todo lo sabe, el que ya no estaba limitado por el tiempo ni el espacio, eligió ese momento. Sabía que Tomás no estaba. Y tenía un propósito para esa ausencia.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
