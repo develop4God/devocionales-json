@@ -1,7 +1,7 @@
 {
   "encounter_id": "bleeding_woman_001",
   "character": "The Bleeding Woman",
-  "master_character_prompt": "A woman in her late thirties, thin and frail from years of illness, olive-tan skin, dark hair pulled back and partly covered by a faded gray-brown headscarf, wearing a simple worn linen tunic in muted rust and clay tones, patched at the hem. Her expression carries quiet exhaustion and determination. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting. Character reference sheet, full body and face close-up.",
+  "master_character_prompt": "A woman in her late thirties, thin and frail from years of illness, bonny face, olive-tan skin, dark hair pulled back and partly covered by a faded gray-brown headscarf, wearing a simple worn linen tunic in muted rust and clay tones, patched at the hem. Her expression carries quiet exhaustion and determination. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting. Character reference sheet, full body and face close-up.",
   "intro_image": {
     "filename": "bleeding_woman_intro.png",
     "prompt": "Wide atmospheric shot of a dusty Galilean street packed with a pressing crowd under harsh midday sun. In the distance, barely visible among the bodies, a thin woman in a faded gray-brown headscarf and worn rust-toned tunic reaches one hand forward, fingers just grazing the fringed hem of a man's simple tunic ahead of her, seen only from behind, a subtle warm glow of glory around his form. Dust hangs in the sunlight. No text. Painterly warm 2D illustration, Mediterranean palette, ochre and warm dust tones, cinematic lighting."
@@ -12,7 +12,7 @@
       "image_url": "bleeding_woman_crowd_pressing.png",
       "mood": "storm",
       "shot_type": "wide establishing",
-      "prompt": "A woman in her late thirties, thin and frail, olive-tan skin, dark hair under a faded gray-brown headscarf, worn rust-toned linen tunic patched at the hem — pressed among a dense crowd of people on a dusty street under a harsh midday sun, her face taut with quiet determination as she pushes forward. Bodies crowd close on every side, dust rising in shafts of sunlight. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+      "prompt": "A woman in her late thirties, thin and frail, bonny face, olive-tan skin, dark hair under a faded gray-brown headscarf, worn rust-toned linen tunic patched at the hem — pressed among a dense crowd of people on a dusty street under a harsh midday sun, her face taut with quiet determination as she pushes forward. Bodies crowd close on every side, dust rising in shafts of sunlight. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
     },
     {
       "order": 2,
@@ -26,7 +26,7 @@
       "image_url": "bleeding_woman_portrait_determined.png",
       "mood": "intense",
       "shot_type": "close-up portrait",
-      "prompt": "A woman in her late thirties, thin and frail from years of illness, olive-tan skin, dark hair partly covered by a faded gray-brown headscarf, worn rust-toned linen tunic — close-up portrait, her eyes fixed forward with quiet, weary resolve, faint shadows under her eyes from years of suffering, jaw set with determination. Soft directional light from one side. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+      "prompt": "A woman in her late thirties, thin and frail from years of illness, bonny face, olive-tan skin, dark hair partly covered by a faded gray-brown headscarf, worn rust-toned linen tunic — close-up portrait, her eyes fixed forward with quiet, weary resolve, faint shadows under her eyes from years of suffering, jaw set with determination. Soft directional light from one side. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
     },
     {
       "order": 4,
@@ -54,14 +54,14 @@
       "image_url": "bleeding_woman_falls_trembling.png",
       "mood": "falling",
       "shot_type": "close-up portrait",
-      "prompt": "A woman in her late thirties, thin and frail, olive-tan skin, dark hair under a faded gray-brown headscarf, worn rust-toned tunic — kneeling on packed dirt ground, head bowed, shoulders trembling, hands pressed together at her chest, visibly afraid yet resolved to speak. Blurred legs of onlookers surround her at the edges of frame. Painterly warm 2D illustration, muted dust tones, Mediterranean palette, cinematic lighting, no text."
+      "prompt": "A woman in her late thirties, thin and frail, bonny face, olive-tan skin, dark hair under a faded gray-brown headscarf, worn rust-toned tunic — kneeling on packed dirt ground, head bowed, shoulders trembling, hands pressed together at her chest, visibly afraid yet resolved to speak. Blurred legs of onlookers surround her at the edges of frame. Painterly warm 2D illustration, muted dust tones, Mediterranean palette, cinematic lighting, no text."
     },
     {
       "order": 8,
       "image_url": "bleeding_woman_jesus_calls_daughter.png",
       "mood": "grace",
       "shot_type": "medium two-figure",
-      "prompt": "A woman in her late thirties, thin and frail, olive-tan skin, dark hair under a faded gray-brown headscarf, worn rust-toned tunic — kneeling on the ground, face lifted, an expression of astonished relief breaking through. Before her stands a man in a simple first-century tunic, seen from behind and slightly to the side, one hand extended toward her in a gesture of blessing, face never visible, a subtle warm glow of glory around his form. Soft warm afternoon light. Painterly warm 2D illustration, Mediterranean palette, ochre and amber tones, cinematic lighting, no text."
+      "prompt": "A woman in her late thirties, thin and frail, bonny face, olive-tan skin, dark hair under a faded gray-brown headscarf, worn rust-toned tunic — kneeling on the ground, face lifted, an expression of astonished relief breaking through. Before her stands a man in a simple first-century tunic, seen from behind and slightly to the side, one hand extended toward her in a gesture of blessing, face never visible, a subtle warm glow of glory around his form. Soft warm afternoon light. Painterly warm 2D illustration, Mediterranean palette, ochre and amber tones, cinematic lighting, no text."
     },
     {
       "order": 9,
