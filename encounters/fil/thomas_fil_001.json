@@ -1,0 +1,283 @@
+{
+  "id": "thomas_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fil",
+  "bible_version": "Magandang Balita Biblia",
+  "version": "1.0",
+  "estimated_reading_minutes": 14,
+  "meta": {
+    "character": "Thomas",
+    "testament": "new",
+    "scripture_reference": "Juan 20:24-29",
+    "mood_primary": "doubt",
+    "accent_color": "#1a1a2e",
+    "emoji": "🤚",
+    "tags": [
+      "pagdududa",
+      "pananampalataya",
+      "muling-pagkabuhay",
+      "pagpapahayag",
+      "katapatan",
+      "tapang",
+      "kawalan",
+      "presensya",
+      "sugat",
+      "pagtatagpo",
+      "tomas",
+      "paniniwala"
+    ]
+  },
+  "key_verse": {
+    "reference": "Juan 20:28",
+    "text": "Sumagot si Tomas, “Panginoon ko at Diyos ko!”",
+    "bible_version": "Magandang Balita Biblia"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "thomas_empty_room_evening.png",
+      "title": "Wala siya sa kanila.",
+      "narrative": "Unang araw ng sanlinggo.\n\nTatlong araw na ang nakalipas nang ipako sa krus si Jesus. Alam ng mga pinunong relihiyoso na siya ring nagbigay sa kanya, kung sino ang mga alagad niya, kung saan sila nagtitipon, kung sino ang sumunod sa kanya. Kaya't nakasara sila sa loob. Ang nakasarang pinto ay hindi lamang detalye — usaping buhay at kamatayan iyon.\n\nSinabi na sa kanila ni Maria Magdalena na nakita niya ang Panginoon. Ngunit mas malaki pa rin ang takot kaysa sa balita.\n\nNgunit isa sa Labindalawa ang wala roon.\n\nSi Tomas, na tinatawag na Kambal, ay wala sa kanila nang dumating si Jesus.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 20:24",
+        "text": "Ngunit si Tomas, na tinatawag na Kambal at kabilang sa Labindalawa, ay wala roon nang dumating si Jesus."
+      },
+      "revelation_key": "Minsan ang pagtatagpo kay Jesus ay nagsisimula sa isang kawalan na siya mismo ang pupuno."
+    },
+    {
+      "order": 2,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "thomas_disciple_portrait.png",
+      "title": "Ang alagad na kilala ang pagdududa.",
+      "subtitle": "Sino si Tomas bago ang pagdududa",
+      "content": "Marami ang naaalala sa kanya bilang ang hindi mananampalataya. Siya ang alagad na nagduda, na hindi naniwala, na naglagay ng kondisyon.\n\nNgunit ipinakita siya nang iba ni Juan.\n\nBago pa man dumating ang gabing iyon ng Linggo, bago pa ang pagdududa, ipinakita na ni Juan sa atin kung sino talaga si Tomas. At ang inihayag niya ay isang bagay na mahirap makita: katapatan.\n\nAng kanyang pangalang Aramaiko, תְּאוֹם (Te'om), at ang katumbas nitong Griyego, Δίδυμος (Didymos), ay parehong nangangahulugang: kambal. Hindi sinabi sa atin ng ebanghelyo kung sino ang kanyang kambal. Ipinakita lamang nito kung sino siya.\n\nSi Tomas ang alagad na lumakas ang loob magsabi ng hindi nasasabi ng iba. Sa isang kultura kung saan ang pagsunod sa guro nang walang tanong ay tanda ng paggalang, si Tomas ay nagtatanong. Hindi dahil sa paghihimagsik — kundi dahil kailangan niyang maunawaan bago kumilos.\n\nAt nang maintindihan niya, kumilos siya.",
+      "revelation_key": "Ang katapatan sa harap ng Diyos ang sariwang lupa kung saan nasisilang ang tunay na pananampalataya."
+    },
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "storm",
+      "image_url": "thomas_road_bethany.png",
+      "verse_reference": "Juan 11:16",
+      "verse_text": "Niyaya ni Tomas, na tinatawag na Kambal, ang kanyang mga kasama, “Sumama tayo sa Guro, mamamatay tayong kasama niya.”",
+      "reflection": "Nag-iwan si Juan ng tatlong sandali upang makita natin si Tomas bago pa ang pagdududa. Ang una'y nagpapakita kung ano ang ginawa sa kanya.\n\nSinabi muna ni Jesus na natutulog si Lazaro. Akala ng mga alagad ay ang ibig niyang sabihin ay pahinga. Kaya't tuwiran nang sinabi ni Jesus: patay na si Lazaro; ngunit pumunta tayo sa kanya. Sinubukan na ng mga alagad na pigilan siya — Guro, kamakailan lamang ay pinagtangkaan kayong batuhin ng mga pinuno ng mga Judio, bakit babalik pa kayo roon?\n\nNoon sinabi ni Tomas: sumama tayo sa Guro, mamamatay tayong kasama niya.\n\nNagsalita si Tomas mula sa katiyakan na malamang mamamatay sila. Sinubukan na ng mga pinunong relihiyoso na batuhin si Jesus. Ang pagbalik sa Judea ay paglalakad patungo sa panganib nang bukas ang mga mata. At sa kabila nito, ang sagot niya'y: pumunta na tayo.\n\nAng lalaking tinatawag ng kasaysayan na hindi mananampalataya ang unang nagsabing mamamatay siyang kasama ni Jesus.",
+      "revelation_key": "Ang lalaking tinatawag ng kasaysayan na hindi mananampalataya ang unang handang mamatay kasama ni Jesus — nang bukas ang mga mata sa panganib.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 11:8",
+          "text": "Sumagot ang mga alagad, “Guro, hindi po ba't kamakailan lamang ay pinagtangkaan kayong batuhin ng mga pinuno ng mga Judio? Bakit pupunta na naman kayo doon?”"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "thomas_last_supper_question.png",
+      "verse_reference": "Juan 14:5-6",
+      "verse_text": "Sinabi sa kanya ni Tomas, “Panginoon, hindi po namin alam kung saan kayo pupunta, paano naming malalaman ang daan?” Sumagot si Jesus, “Ako ang daan, ang katotohanan, at ang buhay. Walang makakapunta sa Ama kundi sa pamamagitan ko.”",
+      "reflection": "Ikalawang beses na nagsalita si Tomas nang nanatiling tahimik ang iba.\n\nAng Huling Hapunan. Kararaan lamang sabihin ni Jesus na pupunta siya upang ipaghanda sila ng matitirhan, at idinagdag: at alam na ninyo ang daan papunta sa pupuntahan ko.\n\nSi Tomas lamang ang sumagot: Panginoon, hindi po namin alam kung saan kayo pupunta, paano naming malalaman ang daan?\n\nSinabi niya nang malakas ang hindi kinilalang tanong ng iba. At ang tanong na iyon ang nagbunga ng isa sa pinakatuwirang pahayag sa buong ebanghelyo: Ako ang daan, ang katotohanan, at ang buhay; walang makakapunta sa Ama kundi sa pamamagitan ko.\n\nAng saligan ng ebanghelyo, ang puso ng mensaheng Kristiyano — ang tapat na tanong ni Tomas ang nagbukas ng pinto sa pahayag na naglalarawan sa plano ng kaligtasan at buhay na walang hanggan para sa sangkatauhan.",
+      "revelation_key": "Ang mga tapat na tanong ay hindi nakakasakit sa Diyos. Ginagamit niya ang mga ito. Ang tanong ni Tomas ang nagbunsod ng pahayag na siyang saligan ng buong ebanghelyo.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 14:1-3",
+          "text": "“Huwag na kayong mabalisa; sumampalataya kayo sa Diyos, sumampalataya din kayo sa akin. Sa bahay ng aking Ama ay maraming silid. Kung hindi ito totoo, sasabihin ko ba sa inyong pupunta ako roon upang ipaghanda ko kayo ng inyong matitirhan? At kapag naipaghanda ko na kayo ng matitirhan, ako'y babalik at isasama ko kayo upang kayo'y makapiling ko kung saan ako naroroon.”"
+        },
+        {
+          "reference": "Juan 14:4",
+          "text": "At alam na ninyo ang daan papunta sa pupuntahan ko.”"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "thomas_upper_room_jesus_appears.png",
+      "title": "Sumainyo ang kapayapaan.",
+      "narrative": "Araw pa rin iyon. Nang dumilim, nagkakatipon pa rin ang mga alagad sa likod ng nakasarang pinto. Nasa labas pa rin sa isang lugar ang mga pinunong relihiyoso na siya ring nagpapako kay Jesus — at ang takot na iyon ang dahilan kung bakit nakasara ang mga pinto.\n\nNakita na nina Pedro at Juan ang walang laman na libingan kaninang umaga. Sinabi na sa kanila ni Maria Magdalena na nakita niya ang muling nabuhay na Panginoon. At sa kabila nito, nakasara pa rin sila dahil sa takot.\n\nLahat maliban sa isa. Nasa labas si Tomas.\n\nAt sa sandaling iyon — nang wala si Tomas — pinili ng muling nabuhay na Panginoon na magpakita.\n\nLumitaw siya sa gitna nila kahit nakasara pa rin ang mga pinto. At ang unang sinabi niya ay hindi tanong, hindi paninisi, hindi paliwanag. Ito'y: Sumainyo ang kapayapaan.\n\nSa Hebreo, shalom — שָׁלוֹם. Kaganapan, pagsasauli, ganap na kapakanan. Sinabi sa mga taong hindi pa naniniwala, bago pa man may nagsalita sa kanila, walang kondisyon.\n\nIpinakita niya sa kanila ang kanyang mga kamay at ang kanyang tagiliran. At tuwang-tuwa ang mga alagad nang makita nila ang Panginoon.\n\nNgunit wala roon si Tomas.\n\nSiya na nakakaalam ng lahat, hindi na hinahangganan ng panahon o espasyo, ang pumili sa sandaling iyon. Alam niyang wala si Tomas. At may layunin siya para sa kawalang iyon.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 20:19-20",
+        "text": "Kinagabihan ng araw ng Linggo, ang mga alagad ay nagkakatipon. Nakasara ang mga pinto ng bahay na kanilang pinagtitipunan dahil sa takot nila sa mga Judio. Dumating si Jesus at tumayo sa kalagitnaan nila. “Sumainyo ang kapayapaan!” sabi niya. Pagkasabi nito, ipinakita niya ang kanyang mga kamay at ang kanyang tagiliran. Nang makita nila ang Panginoon, tuwang-tuwa ang mga alagad."
+      },
+      "revelation_key": "Ang mga sugat ni Jesus ay hindi naglaho kasabay ng muling pagkabuhay. Iningatan niya ang mga ito. Sila ang kanyang pagkakakilanlan, magpakailanman."
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "thomas_disciples_tell_him.png",
+      "title": "Nakita namin ang Panginoon.",
+      "narrative": "Nang bumalik si Tomas, iba na ang lahat ng nakita niya.\n\nNagbago ang mga mukha ng iba. May bago sa kanilang mga mata. Isang katiyakan, isang kagalakan, isang bagay na inaasam pa niyang danasin mismo.\n\nSinabi nila sa kanya: Nakita namin ang Panginoon.\n\nTatlong taon silang magkasamang naglakbay. Tatlong taon na pinapanood ang parehong mga himala, pinakikinggan ang parehong mga aral, pinaghahatian ang parehong tinapay. At ngayon nakita nila ang isang bagay na kailangan niyang danasin ng sariling mga mata.\n\nTiningnan sila ni Tomas. Ang mga lalaking iyon din ang nagtago nang dakpin si Jesus. Na nagsara ng pinto dahil sa takot.\n\nAt ngayon sinasabi nila sa kanyang nakita nila siyang buhay.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 20:25",
+        "text": "Kaya't sinabi sa kanya ng ibang mga alagad, “Nakita namin ang Panginoon!”"
+      },
+      "revelation_key": "Hindi tinanggihan ni Tomas si Jesus. Tinanggihan niya ang patalastas ng iba. Nais niya ang natanggap na ng iba: isang sariling pagtatagpo."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "thomas_alone_night.png",
+      "verse_reference": "Juan 20:25",
+      "verse_text": "Kaya't sinabi sa kanya ng ibang mga alagad, “Nakita namin ang Panginoon!” Sumagot si Tomas, “Hindi ako maniniwala hangga't hindi ko nakikita at nahahawakan ang butas ng mga pako sa kanyang mga kamay, at hangga't hindi ko naisusuot ang aking daliri sa mga sugat na iyon at sa kanyang tagiliran.”",
+      "reflection": "Basahin muli ang kanyang mga salita: hangga't hindi ko nakikita ang butas ng mga pako sa kanyang mga kamay.\n\nKakasabi lamang ng ibang alagad sa kanya: Nakita namin ang Panginoon. Sumagot si Tomas gamit ang parehong pandiwa nila. Nakita nila. Nais niyang makita. Hindi siya kumatha ng ibang kondisyon — hinihiling niya ang parehong bagay na natanggap na nila, gamit ang parehong mga salitang ginamit nila.\n\nNgunit lumagpas pa siya. Hindi lang siya humihiling na makita. Hinihiling niyang maisuot ang kanyang daliri sa butas ng mga pako. Hinihiling niyang maisuot ang kanyang kamay sa kanyang tagiliran.\n\nAng butas ng mga pako. Ang lugar ng mga pako. Ang tagiliran. Ang tagilirang iyon ay hindi ordinaryong sugat. Dugo at tubig ang lumabas doon nang patay na si Jesus — ang tanda na ganap nang naganap ang sakripisyo (Juan 19:34). Hinihiling ni Tomas na ilagay ang kanyang kamay sa mismong lugar kung saan naibayad na ang halaga.\n\nAng salitang Griyego na ginamit niya ay τύπον (typon): ang tanda, ang bakas, ang marka na naiiwan kapag may tumusok. Sa salitang iyon nagmula ang ating salitang uri, huwaran, pattern. Nais makita ni Tomas ang huwarang iniwan ng mga pako sa mga kamay ni Jesus.",
+      "revelation_key": "Hiniling ni Tomas na makita ang mga sugat. Dahil ang mga sugat ang katunayan na tunay ang pag-ibig.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 10:17-18",
+          "text": "“Kaya't iniibig ako ng Ama sapagkat ibinibigay ko ang aking buhay upang makuha kong muli. Walang nakakakuha nito sa akin, kusa ko itong ibinibigay. May kapangyarihan akong ibigay ito, at may kapangyarihan din akong kunin itong muli. Ito ang ipinag-utos sa akin ng aking Ama.”"
+        },
+        {
+          "reference": "Juan 19:34",
+          "text": "ngunit sinaksak ng isang kawal ang kanyang tagiliran, at pagdaka'y lumabas ang dugo't tubig."
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "thomas_dark_room_candle.png",
+      "title": "Walong araw",
+      "subtitle": "Ang dinanas ni Tomas sa isang linggo ng katahimikan",
+      "content": "Walong araw.\n\nSinabi sa teksto ni Juan na muling nagpakita si Jesus makalipas ang walong araw. Sa bilang na Judio, na isinasama ang una at huling araw, ang walong araw ay katumbas ng isang buong linggo. Buong linggong iyon dinanas ni Tomas ang kanyang pagdududa, kasama ang mga lalaking nakita na ang inaasam pa niyang makita.\n\nAt bawat gabi, sa kadiliman, ang parehong tanong: paano kung totoo?\n\n📜 Sa tradisyong Judio, ang bilang na walo ay kumakatawan sa isang bagong simula. Ang pagtutuli ay ginagawa sa ikawalong araw — ang selyo ng tipan sa laman (Genesis 17:12).\n\nMuling nabuhay si Jesus sa isang araw ng Linggo. Ngayon, eksaktong isang linggo pagkatapos, sa parehong araw ng sanlinggo, muli siyang nagpakita — sa pagkakataong ito ay naroon si Tomas. Ibinigay niya kay Tomas ang sarili niyang selyo: ang pisikal na katunayan ng isang tipan na nasealuhan na ng kanyang sariling dugo.",
+      "revelation_key": "Iginalang ni Jesus ang pagdududa ni Tomas sa pamamagitan ng presensya, sa parehong araw ng sanlinggo na siya'y muling nabuhay.",
+      "scripture_connections": [
+        {
+          "reference": "Genesis 17:12",
+          "text": "Lahat ng lalaki na isisilang sa inyong lahi ay tutuliin pagsapit ng ikawalong araw, kasama rito ang mga aliping isinilang sa inyong sambahayan, gayundin ang mga aliping binili sa dayuhan."
+        },
+        {
+          "reference": "Juan 20:1",
+          "text": "Madilim-dilim pa nang unang araw ng sanlinggo, pumunta si Maria Magdalena sa libingan. Naratnan niyang naalis na ang batong nakatakip sa pinto ng libingan."
+        },
+        {
+          "reference": "Juan 20:19",
+          "text": "Kinagabihan ng araw ng Linggo, ang mga alagad ay nagkakatipon. Nakasara ang mga pinto ng bahay na kanilang pinagtitipunan dahil sa takot nila sa mga Judio. Dumating si Jesus at tumayo sa kalagitnaan nila. “Sumainyo ang kapayapaan!” sabi niya."
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "thomas_jesus_appears_doors.png",
+      "title": "Nakasara ang mga pinto.",
+      "narrative": "Makalipas ang walong araw. Parehong lugar. Parehong nakasarang pinto. Ngunit sa pagkakataong ito, nasa loob si Tomas.\n\nAt dumating si Jesus.\n\nTumayo siya sa kalagitnaan nila, tulad ng una. At ang una niyang sinabi'y pareho: Sumainyo ang kapayapaan.\n\nAgad pagkatapos, tuwiran hinarap ni Jesus si Tomas.\n\nAlam niyang eksakto ang hiniling ni Tomas, bawat salita ng kanyang kondisyon, lahat ng sinabi niya sa silid na iyon.\n\nDumating siya upang sagutin siya.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 20:26",
+        "text": "Makalipas ang isang linggo, muling nagkatipon sa loob ng bahay ang mga alagad at kasama nila si Tomas. Nakasara ang mga pinto, ngunit nakapasok si Jesus at tumayo sa kalagitnaan nila. Sinabi niya, “Sumainyo ang kapayapaan!”"
+      },
+      "revelation_key": "Pumunta si Jesus kay Tomas. Pumasok siya kung saan nasa kalagitnaan ang kanyang pagdududa at tumayo sa gitna nito."
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "grace",
+      "image_url": "thomas_jesus_hands_wounds.png",
+      "verse_reference": "Juan 20:27-28",
+      "verse_text": "At sinabi niya kay Tomas, “Tingnan mo ang aking mga kamay. Ilagay mo ang iyong kamay sa aking tagiliran at huwag ka nang mag-alinlangan pa, sa halip ay maniwala ka.” Sumagot si Tomas, “Panginoon ko at Diyos ko!”",
+      "reflection": "Inulit ni Jesus salita sa salita ang kondisyon na itinakda ni Tomas. Tingnan mo ang aking mga kamay. Ilagay mo ang iyong kamay sa aking tagiliran.\n\nIsang paanyaya iyon.\n\nKinuha ni Jesus ang kahilingan ni Tomas at ginawa itong alok. Tinupad ni Jesus ang kanyang kahilingan.\n\nPumili si Jesus ng tumpak na salita: γίνου (ginou), “maging”. Ito'y kilos patungo sa hinaharap, hindi paglalarawan ng kasalukuyan. Sa ganitong paraan, ipinapahiwatig ni Jesus na hindi pa mananampalataya si Tomas sa sandaling iyon.\n\nSinabi sa kanya ni Jesus ang resulta na maaaring markahan ng sandaling iyon: ang paglipat mula sa hindi mananampalataya patungong mananampalataya, alinsunod sa kung ano ang ipapasya ni Tomas.\n\nSinasabi ng teksto na sumagot si Tomas. At ang lumabas sa kanyang bibig ay isang makapangyarihang pahayag: Panginoon ko at Diyos ko!\n\nΚύριός μου καὶ ὁ Θεός μου. Kyrios mou kai ho Theos mou.\n\nSi Tomas — ang nagduda, ang wala roon, ang naglagay ng kondisyon — ang nagpahayag nang walang alinlangan, sa sarili niyang mga salita, ng ipapahayag pa lamang ng buong iglesya: na si Jesus ay Panginoon at Diyos.\n\nAng pinakamalalim na pagdududa ang nagbunga ng pinakamataas na pahayag.",
+      "revelation_key": "Mula sa kailaliman ng pinakatapat na pagdududa, bumangon ang pinakamataas na pahayag kung sino si Jesus: Panginoon ko at Diyos ko.",
+      "scripture_connections": [
+        {
+          "reference": "Mga Taga-Filipos 2:10-11",
+          "text": "Sa gayon, sa pangalan ni Jesus ay luluhod at magpupuri ang lahat ng nasa langit, nasa lupa, at nasa ilalim ng lupa. At para sa ikaluluwalhati ng Diyos Ama, ang lahat ay magpapahayag na si Jesu-Cristo ang Panginoon."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "thomas_nail_marks_closeup.png",
+      "title": "Ang mga sugat na hindi naglaho",
+      "subtitle": "Ang walang hanggang layunin ng mga sugat ni Jesus",
+      "content": "Muling nabuhay si Jesus na may niluwalhating katawan. Kaya niyang lumagpas sa nakasarang pinto. Kaya niyang magpakita at maglaho. At naroon pa rin ang mga sugat.\n\n📜 Sa buong salaysay ng bibliya tungkol sa muling pagkabuhay, isang detalye ang paulit-ulit: ipinakita niya sa kanila ang kanyang mga kamay at ang kanyang tagiliran. Bahagi ng muling pagkabuhay ang mga sugat.\n\nSa Griyegong Bagong Tipan, ang salita para sa sugat sa Pahayag 5:6 ay ἐσφαγμένον (esphagmenon): ang pinatay na. Lumitaw ang Kordero ng Diyos sa langit na kitang-kita ang mga bakas ng kanyang sakripisyo, magpakailanman. Permanenteng tanda ng pag-ibig na mananatili nang walang hanggan.\n\nAng mga sugat ang kanyang mensahe. Sila ang katunayan na umabot sa dulo ang pag-ibig, na ganap na naganap ang kanyang sakripisyo.",
+      "revelation_key": "Nananatili ang mga sugat ni Jesus, at sila ang walang hanggang katunayan ng kanyang pag-ibig at sakripisyo para sa sangkatauhan.",
+      "scripture_connections": [
+        {
+          "reference": "Pahayag 5:6",
+          "text": "Pagkatapos, nakita ko sa pagitan ng mga pinuno at ng tronong napapaligiran ng apat na buháy na nilalang ang isang Korderong nakatayo na parang pinatay na. Ito'y may pitong sungay at pitong mata na siyang pitong espiritu ng Diyos na ipinadala sa buong sanlibutan."
+        },
+        {
+          "reference": "Isaias 53:5",
+          "text": "Ngunit dahil sa ating mga kasalanan kaya siya nasugatan; siya ay binugbog dahil sa ating kasamaan. Tayo ay gumaling dahil sa pahirap na dinanas niya at sa mga hampas na kanyang tinanggap."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "thomas_blessed_who_believe.png",
+      "verse_reference": "Juan 20:29",
+      "verse_text": "Sinabi sa kanya ni Jesus, “Naniniwala ka na ba dahil nakita mo ako? Mapalad ang mga naniniwala kahit hindi nila ako nakita.”",
+      "reflection": "Sa pangungusap na ito, tinawid ni Jesus ang dalawang libong taon ng kasaysayan at nakipag-usap sa iyo.\n\nMapalad ang mga naniniwala kahit hindi nila ako nakita.\n\nNakita ni Tomas at naniwala. Nakita ng mga alagad at naniwala. Nakita ni Maria at naniwala. Alam ni Jesus na darating ang milyon-milyon pa, at tinawag niya silang mapalad.\n\nMapalad: masaya, mapalad, ganap; ang mga naniniwala kahit hindi nakakita ay taglay ang pananampalatayang tinatawag ni Jesus na mapalad.\n\n🔑 Ang salitang Griyego na μακάριοι (makarioi) ay ang parehong salitang ginamit ni Jesus sa Sermon sa Bundok: mapalad ang mga mapagpakumbabang-loob, mapalad ang mga nagdadalamhati. Isa itong pahayag ng kalagayan: ikaw ay nasa lugar kung saan namamalagi ang pagpapala ng Diyos.",
+      "revelation_key": "Sinabi ni Jesus na mapalad ang naniniwala nang hindi nakakita. Kasali ka sa pangakong iyon.",
+      "scripture_connections": [
+        {
+          "reference": "1 Pedro 1:8",
+          "text": "Hindi ninyo siya nakita kailanman ngunit siya'y inibig na ninyo. Hindi pa rin ninyo siya nakikita hanggang ngayon, ngunit sumasampalataya na kayo sa kanya. Dahil dito'y nag-uumapaw na sa inyong puso ang kagalakang di kayang ilarawan sa salita,"
+        },
+        {
+          "reference": "Mga Hebreo 11:1",
+          "text": "Ang pananampalataya ay pagtitiwala na mangyayari ang ating mga inaasahan, at katiyakan tungkol sa mga bagay na hindi nakikita."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "mood": "peace",
+      "image_url": "thomas_open_hands_light.png",
+      "title": "Ang iyong pagtatagpo",
+      "subtitle": "Hindi tinanggihan si Tomas dahil sa pagdududa. Natagpuan siya ni Jesus sa kalagitnaan ng kanyang pagdududa. At maaari rin itong mangyari sa iyo.",
+      "discovery_questions": [
+        {
+          "category": "Ang iyong katapatan",
+          "question": "May bagay ka bang hindi mo maipahayag sa Diyos dahil sa akala mong ituturing niya itong kakulangan ng pananampalataya? Sinabi ni Tomas nang eksakto kung ano ang nadarama niya, at hindi siya tinanggihan ni Jesus. Ano kaya ang mangyayari kung gawin mo rin ito?"
+        },
+        {
+          "category": "Ang iyong kawalan",
+          "question": "Naramdaman mo na bang wala sa lugar kung saan gumagalaw ang Diyos? Na parang may dinanas ang iba kasama ang Diyos na nakaligtaan mo? Naramdaman din iyon ni Tomas. Ngunit bumalik si Jesus, para sa kanya mismo. Ganap ang kanyang mga layunin."
+        },
+        {
+          "category": "Ang iyong desisyon",
+          "question": "Nagmula si Tomas sa pinakamalalim na pagdududa patungo sa pinakamataas na pahayag: Panginoon ko at Diyos ko. Hindi niya kinailangang maunawaan ang lahat. Kailangan lamang niyang naroon nang dumating si Jesus. Handa ka bang naroon, kahit walang lahat ng sagot?"
+        }
+      ],
+      "prayer": {
+        "title": "Isang panalangin mula sa pagdududa",
+        "content": "Panginoong Jesus,\n\nTulad ni Tomas, may mga bagay akong hindi maunawaan. May mga tanong akong hindi maipahayag nang malakas. May mga araw na para bang ang iba ay may pananampalatayang wala ako, isang katiyakang kulang sa akin.\n\nNgunit hindi mo tinanggihan si Tomas dahil sa katapatan niya. Hinanap mo siya, ginabayan mo siya, naglakad ka kasama niya, inalis mo ang pagdududa; pumunta ka sa kanya. Ipinakita mo sa kanya nang eksakto ang kailangan niyang makita.\n\nNgayon, nais kong gawin ang ginawa niya: maging naroon. Wala akong lahat ng sagot, hindi ko lubos na maunawaan ang lahat ng ginawa mo sa buhay ko. Ngunit narito ako: gabayan mo ako sa alam mong kailangan ko upang palakasin ang aking pananampalataya, punuin mo ako ng iyong pag-ibig, at hayaan mo akong maging liwanag para sa iba.\n\nAt kung paanong pumasok ka kung saan nakasara ang pinto, turuan mo akong isara ang pinto kapag nananalangin, at dalawin mo ako upang makipagtagpo sa iyo nang lihim. Tulungan mo ako sa pamamagitan ng iyong Banal na Espiritu na huwag magduda, kundi manatiling matatag sa iyong salita.\n\nPanginoon ko at Diyos ko.\n\nSa pangalan ni Jesus, Amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "thomas_dawn_horizon.png",
+      "completion_verse": {
+        "reference": "Juan 20:29",
+        "text": "Sinabi sa kanya ni Jesus, “Naniniwala ka na ba dahil nakita mo ako? Mapalad ang mga naniniwala kahit hindi nila ako nakita.”",
+        "bible_version": "Magandang Balita Biblia"
+      },
+      "reflection_prompt": "Hindi kinailangan ni Tomas na maunawaan ang lahat upang isuko ang sarili kay Jesus. Kailangan lamang niyang naroon nang dumating siya. Ngayon sinasabi sa iyo ni Jesus ang parehong bagay: hindi mo kailangan ang lahat ng sagot. Kailangan mo lamang na maging handa na tanggapin siya. Ikaw ba?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
