@@ -1,0 +1,284 @@
+{
+  "id": "thomas_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "pt",
+  "bible_version": "ARC",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 13,
+  "meta": {
+    "character": "Tomé",
+    "testament": "new",
+    "scripture_reference": "João 20:24-29",
+    "mood_primary": "doubt",
+    "accent_color": "#1a1a2e",
+    "emoji": "🤚",
+    "tags": [
+      "dúvida",
+      "fé",
+      "ressurreição",
+      "confissão",
+      "honestidade",
+      "coragem",
+      "ausência",
+      "presença",
+      "feridas",
+      "encontro",
+      "tomé",
+      "crer"
+    ]
+  },
+  "key_verse": {
+    "reference": "João 20:28",
+    "text": "Tomé respondeu e disse-lhe: Senhor meu, e Deus meu!",
+    "bible_version": "ARC"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "thomas_empty_room_evening.png",
+      "title": "Não estava com eles.",
+      "narrative": "Era o primeiro dia da semana.\n\nTrês dias antes, haviam crucificado Jesus. Os mesmos líderes religiosos que o entregaram sabiam quem eram seus discípulos, onde se reuniam, quem o havia seguido. Por isso estavam trancados. As portas fechadas não eram um detalhe — eram uma medida de sobrevivência.\n\nMaria Madalena lhes havia dito que tinha visto o Senhor. Mas o medo continuava sendo maior que a notícia.\n\nNo entanto, um dos doze estava ausente.\n\nTomé, chamado Dídimo, não estava com eles quando Jesus veio.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "João 20:24",
+        "text": "Ora, Tomé, um dos doze, chamado Dídimo, não estava com eles quando veio Jesus."
+      },
+      "revelation_key": "Às vezes, um encontro com Jesus começa com uma ausência que Ele mesmo vem preencher."
+    },
+    {
+      "order": 2,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "thomas_disciple_portrait.png",
+      "title": "O discípulo que se relaciona com a dúvida.",
+      "subtitle": "Quem era Tomé antes da dúvida",
+      "content": "Muitas pessoas o recordam como o incrédulo. É o discípulo que duvidou, o que não creu, o que impôs condições.\n\nMas João o apresenta de outra maneira.\n\nAntes daquele domingo à noite, antes da dúvida, João já havia nos mostrado quem era Tomé. E o que ele revela é algo difícil de encontrar: honestidade.\n\nSeu nome aramaico, תְּאוֹם (Te'om), e seu equivalente grego, Δίδυμος (Dídymos), significam a mesma coisa: gêmeo. O evangelho não nos diz quem era seu gêmeo. Só nos diz quem ele era.\n\nTomé era o discípulo que ousava dizer o que os outros calavam. Numa cultura em que seguir o mestre sem questionar era sinal de respeito, Tomé fazia perguntas. Não por rebeldia — mas porque precisava entender antes de agir.\n\nE quando entendeu, agiu.",
+      "revelation_key": "A honestidade diante de Deus é o terreno onde a fé verdadeira pode nascer."
+    },
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "storm",
+      "image_url": "thomas_road_bethany.png",
+      "verse_reference": "João 11:16",
+      "verse_text": "Disse, pois, Tomé, chamado Dídimo, aos condiscípulos: Vamos nós também, para morrermos com ele.",
+      "reflection": "João nos deixou três momentos para ver Tomé em ação antes da dúvida. O primeiro revela do que ele era feito.\n\nJesus lhes disse primeiro que Lázaro dormia. Os discípulos pensaram que falava do sono. Então Jesus lhes disse claramente: Lázaro está morto; mas vamos a ele. Os discípulos já haviam tentado dissuadi-lo — Rabi, ainda agora os judeus procuravam apedrejar-te, e tornas para lá?\n\nEntão Tomé disse: Vamos nós também, para morrermos com ele.\n\nTomé falava a partir da certeza de que provavelmente morreriam. Os líderes religiosos já haviam tentado apedrejar Jesus. Voltar à Judeia era caminhar rumo ao perigo de olhos abertos. E ainda assim, sua resposta foi: vamos.\n\nO mesmo homem que a história chama de incrédulo foi o primeiro a dizer que morreria com Jesus.",
+      "revelation_key": "O homem que a história chama de incrédulo foi o primeiro a se dispor a morrer com Jesus — de olhos abertos para o perigo.",
+      "scripture_connections": [
+        {
+          "reference": "João 11:8",
+          "text": "Disseram-lhe os discípulos: Rabi, ainda agora os judeus procuravam apedrejar-te, e tornas para lá?"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "thomas_last_supper_question.png",
+      "verse_reference": "João 14:5-6",
+      "verse_text": "Disse-lhe Tomé: Senhor, nós não sabemos para onde vais e como podemos saber o caminho? Disse-lhe Jesus: Eu sou o caminho, e a verdade, e a vida. Ninguém vem ao Pai senão por mim.",
+      "reflection": "Foi o segundo momento em que Tomé falou quando os outros se calaram.\n\nA última ceia. Jesus acabara de lhes dizer que ia preparar um lugar para eles, e acrescentou: Mesmo vós sabeis para onde vou e conheceis o caminho.\n\nTomé foi o único que respondeu: Senhor, nós não sabemos para onde vais e como podemos saber o caminho?\n\nDisse em voz alta o que nenhum deles se atrevia a admitir. E essa pergunta recebeu uma das declarações mais diretas de todo o evangelho: Eu sou o caminho, e a verdade, e a vida; ninguém vem ao Pai senão por mim.\n\nO fundamento do evangelho, o coração da mensagem cristã — a pergunta honesta de Tomé abriu a porta para a declaração que define o plano de salvação e vida eterna para a humanidade.",
+      "revelation_key": "Perguntas honestas não ofendem a Deus. Ele as usa. A pergunta de Tomé provocou a declaração que é o fundamento de todo o evangelho.",
+      "scripture_connections": [
+        {
+          "reference": "João 14:1-3",
+          "text": "Não se turbe o vosso coração; credes em Deus, crede também em mim. Na casa de meu Pai há muitas moradas; se não fosse assim, eu vo-lo teria dito, pois vou preparar-vos lugar. E, se eu for e vos preparar lugar, virei outra vez e vos levarei para mim mesmo, para que, onde eu estiver, estejais vós também."
+        },
+        {
+          "reference": "João 14:4",
+          "text": "Mesmo vós sabeis para onde vou e conheceis o caminho."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "thomas_upper_room_jesus_appears.png",
+      "title": "Paz seja convosco.",
+      "narrative": "Era o mesmo dia. Ao cair da noite, os discípulos continuavam reunidos com as portas trancadas. Os mesmos líderes religiosos que haviam crucificado Jesus ainda podiam estar à espreita em algum lugar — e era esse medo que mantinha as portas fechadas.\n\nPedro e João haviam visto o túmulo vazio naquela manhã. Maria Madalena lhes dissera que tinha visto o Senhor ressuscitado. E ainda assim, estavam trancados com medo.\n\nTodos, menos um. Tomé estava fora.\n\nE foi nesse momento — com Tomé ausente — que o Senhor ressuscitado escolheu aparecer.\n\nApareceu no meio deles com as portas ainda fechadas. E sua primeira palavra não foi pergunta, nem repreensão, nem explicação. Foi: Paz seja convosco.\n\nEm hebraico, shalom — שָׁלוֹם. Plenitude, restauração, bem-estar completo. Pronunciado sobre homens que ainda não haviam crido, antes que algum deles abrisse a boca, sem condições.\n\nMostrou-lhes as mãos e o lado. E os discípulos se alegraram, vendo o Senhor.\n\nMas Tomé não estava lá.\n\nAquele que tudo sabe, que já não estava limitado pelo tempo nem pelo espaço, escolheu esse momento. Sabia que Tomé estava ausente. E tinha um propósito para essa ausência.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "João 20:19-20",
+        "text": "Chegada, pois, a tarde daquele dia, o primeiro da semana, e cerradas as portas onde os discípulos, com medo dos judeus, se tinham ajuntado, chegou Jesus, e pôs-se no meio, e disse-lhes: Paz seja convosco! E, dizendo isso, mostrou-lhes as mãos e o lado. De sorte que os discípulos se alegraram, vendo o Senhor."
+      },
+      "revelation_key": "As feridas de Jesus não desapareceram com a ressurreição. Ele as conservou. São sua carta de identidade para sempre."
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "thomas_disciples_tell_him.png",
+      "title": "Vimos o Senhor.",
+      "narrative": "Quando Tomé voltou, encontrou tudo diferente.\n\nOs rostos dos outros haviam mudado. Havia algo novo em seus olhos. Uma certeza, uma alegria, algo que ele ainda esperava viver por si mesmo.\n\nDisseram-lhe: Vimos o Senhor.\n\nTrês anos caminhando juntos. Três anos vendo os mesmos milagres, ouvindo os mesmos ensinamentos, partilhando o mesmo pão. E agora eles tinham visto algo que ele precisava experimentar com seus próprios olhos.\n\nTomé os olhou. Esses mesmos homens que se haviam escondido quando prenderam Jesus. Que trancaram a porta por medo.\n\nE agora lhe diziam que o haviam visto vivo.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "João 20:25",
+        "text": "Disseram-lhe, pois, os outros discípulos: Vimos o Senhor."
+      },
+      "revelation_key": "Tomé não rejeitou Jesus. Rejeitou um testemunho de segunda mão. Queria o mesmo que os outros já haviam recebido: um encontro próprio."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "thomas_alone_night.png",
+      "verse_reference": "João 20:25",
+      "verse_text": "Disseram-lhe, pois, os outros discípulos: Vimos o Senhor. Mas ele disse-lhes: Se eu não vir o sinal dos cravos em suas mãos, e não puser o dedo no lugar dos cravos, e não puser a minha mão no seu lado, de maneira nenhuma o crerei.",
+      "reflection": "Leia suas palavras novamente: se eu não vir o sinal dos cravos em suas mãos.\n\nOs outros discípulos acabavam de lhe dizer: Vimos o Senhor. Tomé responde com o mesmo verbo que eles usaram. Eles viram. Ele pede ver. Não inventa uma condição diferente — exige o mesmo que eles já receberam, com as mesmas palavras que eles usaram para contar.\n\nMas depois vai mais longe. Não pede apenas ver. Pede pôr o dedo no lugar dos cravos. Pede pôr a mão em seu lado.\n\nO sinal dos cravos. O lugar dos cravos. O lado. Aquele lado não era uma ferida qualquer. Dali havia saído sangue e água quando Jesus já estava morto — o sinal de que o sacrifício havia sido plenamente consumado (João 19:34). Tomé pedia para colocar sua mão no lugar exato onde o preço já havia sido pago.\n\nA palavra grega que usa é τύπον (typon): a marca, a impressão, o sinal que fica quando algo atravessou. O mesmo termo de que vem nossa palavra tipo, modelo, padrão. Tomé queria ver o padrão que os cravos deixaram nas mãos de Jesus.",
+      "revelation_key": "Tomé pediu para ver as feridas. Porque as feridas são a prova de que o amor foi real.",
+      "scripture_connections": [
+        {
+          "reference": "João 10:17-18",
+          "text": "Por isso o Pai me ama, porque dou a minha vida para tornar a tomá-la. Ninguém a tira de mim, mas eu de mim mesmo a dou; tenho poder para a dar e poder para tornar a tomá-la. Este mandamento recebi de meu Pai."
+        },
+        {
+          "reference": "João 19:34",
+          "text": "Contudo um dos soldados lhe furou o lado com uma lança, e logo saiu sangue e água."
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "thomas_dark_room_candle.png",
+      "title": "Oito dias",
+      "subtitle": "O que Tomé viveu numa semana de silêncio",
+      "content": "Oito dias.\n\nO texto de João diz que Jesus voltou a aparecer oito dias depois. Na contagem judaica, que inclui tanto o primeiro quanto o último dia, oito dias equivalem a uma semana completa. Tomé viveu essa semana inteira com sua dúvida, cercado de homens que já haviam visto o que ele ainda esperava ver.\n\nE a cada noite, na escuridão, a mesma pergunta: e se for verdade?\n\n📜 Na tradição judaica, o número oito representa um novo começo. A circuncisão era feita ao oitavo dia — o selo do pacto na carne (Gênesis 17:12).\n\nJesus ressuscitou num domingo. Agora, exatamente uma semana depois, no mesmo dia da semana, volta a aparecer — desta vez com Tomé presente. Deu a Tomé seu próprio selo: a evidência física de um pacto já selado com seu próprio sangue.",
+      "revelation_key": "Jesus honrou a dúvida de Tomé com presença, no mesmo dia da semana em que havia ressuscitado.",
+      "scripture_connections": [
+        {
+          "reference": "Gênesis 17:12",
+          "text": "O filho de oito dias, pois, será circuncidado; todo macho nas vossas gerações, o nascido na casa e o comprado por dinheiro a qualquer estrangeiro, que não for da tua semente."
+        },
+        {
+          "reference": "João 20:1",
+          "text": "E, no primeiro dia da semana, Maria Madalena foi ao sepulcro de madrugada, sendo ainda escuro, e viu a pedra tirada do sepulcro."
+        },
+        {
+          "reference": "João 20:19",
+          "text": "Chegada, pois, a tarde daquele dia, o primeiro da semana, e cerradas as portas onde os discípulos, com medo dos judeus, se tinham ajuntado, chegou Jesus, e pôs-se no meio, e disse-lhes: Paz seja convosco!"
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "thomas_jesus_appears_doors.png",
+      "title": "Estando as portas fechadas.",
+      "narrative": "Oito dias depois. Mesmo lugar. Mesmas portas fechadas. Mas desta vez, Tomé estava dentro.\n\nE Jesus veio.\n\nApresentou-se no meio deles, como da primeira vez. E a primeira coisa que disse foi a mesma: Paz seja convosco.\n\nLogo em seguida, Jesus se dirigiu diretamente a Tomé.\n\nSabia exatamente o que Tomé havia pedido, cada palavra de sua condição, tudo o que havia dito naquele quarto.\n\nVeio para lhe responder.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "João 20:26",
+        "text": "E, oito dias depois, estavam outra vez os seus discípulos dentro, e, com eles, Tomé. Chegou Jesus, estando as portas fechadas, e apresentou-se no meio, e disse: Paz seja convosco!"
+      },
+      "revelation_key": "Jesus veio até Tomé. Entrou onde estava sua dúvida e se colocou no meio dela."
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "grace",
+      "image_url": "thomas_jesus_hands_wounds.png",
+      "verse_reference": "João 20:27-28",
+      "verse_text": "Depois, disse a Tomé: Põe aqui o teu dedo e vê as minhas mãos; chega a tua mão e põe-na no meu lado; não sejas incrédulo, mas crente. Tomé respondeu e disse-lhe: Senhor meu, e Deus meu!",
+      "reflection": "Jesus repetiu palavra por palavra a condição que Tomé havia posto. Põe o teu dedo. Vê as minhas mãos. Chega a tua mão. Põe-na no meu lado.\n\nFoi um convite.\n\nJesus tomou o pedido de Tomé e o transformou em uma oferta. Jesus cumpriu seu pedido.\n\nJesus escolheu uma palavra precisa: γίνου (gínou), \"tornar-se\". É uma ação voltada para o futuro, não uma descrição do presente. Com isso, Jesus indica que Tomé não era, naquele momento, um incrédulo.\n\nJesus lhe falou do resultado que aquele momento poderia marcar: a transição de incrédulo para crente, segundo o que Tomé decidisse.\n\nO texto diz que Tomé respondeu. E o que saiu de sua boca foi uma confissão poderosa: Senhor meu, e Deus meu!\n\nΚύριός μου καὶ ὁ Θεός μου. Kyrios mou kai ho Theos mou.\n\nFoi Tomé, o que duvidou, o que estava ausente, o que impôs condições, quem declarou sem hesitar, com suas próprias palavras, o que toda a igreja depois confessaria: que Jesus é Senhor e é Deus.\n\nA dúvida mais profunda produziu a confissão mais alta.",
+      "revelation_key": "Do fundo da dúvida mais honesta surgiu a mais alta declaração sobre quem é Jesus: Senhor meu e Deus meu.",
+      "scripture_connections": [
+        {
+          "reference": "Filipenses 2:10-11",
+          "text": "para que ao nome de Jesus se dobre todo joelho dos que estão nos céus, e na terra, e debaixo da terra, e toda língua confesse que Jesus Cristo é o Senhor, para glória de Deus Pai."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "thomas_nail_marks_closeup.png",
+      "title": "As feridas que não desapareceram",
+      "subtitle": "Propósito eterno das feridas de Jesus",
+      "content": "Jesus ressuscitou com um corpo glorificado. Podia atravessar portas trancadas. Podia aparecer e desaparecer. E as feridas continuavam ali.\n\n📜 Em toda a narrativa bíblica da ressurreição, um detalhe se repete com insistência: mostrou-lhes as mãos e o lado. As feridas eram parte da ressurreição.\n\nNo grego do Novo Testamento, a palavra para ferida em Apocalipse 5:6 é ἐσφαγμένον (esphagmenon): que foi imolado. O Cordeiro de Deus aparece no céu com as marcas de seu sacrifício visíveis para sempre. Sinais permanentes de um amor que permanece eternamente.\n\nAs feridas são sua mensagem. São a prova de que o amor chegou até o fim, que seu sacrifício foi plenamente consumado.",
+      "revelation_key": "As feridas de Jesus permanecem e são a prova eterna de seu amor e sacrifício pela humanidade.",
+      "scripture_connections": [
+        {
+          "reference": "Apocalipse 5:6",
+          "text": "E olhei, e eis que estava no meio do trono e dos quatro animais viventes e entre os anciãos um Cordeiro, como havendo sido morto, e tinha sete pontas e sete olhos, que são os sete Espíritos de Deus enviados a toda a terra."
+        },
+        {
+          "reference": "Isaías 53:5",
+          "text": "Mas ele foi ferido pelas nossas transgressões e moído pelas nossas iniquidades; o castigo que nos traz a paz estava sobre ele, e, pelas suas pisaduras, fomos sarados."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "thomas_blessed_who_believe.png",
+      "verse_reference": "João 20:29",
+      "verse_text": "Disse-lhe Jesus: Porque me viste, Tomé, creste; bem-aventurados os que não viram e creram!",
+      "reflection": "Com essa frase, Jesus atravessou dois mil anos de história e falou com você.\n\nBem-aventurados os que não viram e creram.\n\nTomé viu e creu. Os discípulos viram e creram. Maria viu e creu. Jesus sabia que viriam milhões depois, e os chamou de bem-aventurados.\n\nBem-aventurados: felizes, plenos; os que creem sem ter visto têm a fé que Jesus chama de abençoada.\n\n🔑 A palavra grega μακάριοι (makarioi) é a mesma que Jesus usou no Sermão do Monte: bem-aventurados os pobres em espírito, bem-aventurados os que choram. É uma declaração de estado: vocês estão no lugar onde a bênção de Deus repousa.",
+      "revelation_key": "Jesus disse que crer sem ver é bem-aventurança. Você está incluído nessa promessa.",
+      "scripture_connections": [
+        {
+          "reference": "1 Pedro 1:8",
+          "text": "ao qual, não o havendo visto, amais; no qual, não o vendo agora, mas crendo, vos alegrais com gozo inefável e glorioso,"
+        },
+        {
+          "reference": "Hebreus 11:1",
+          "text": "Ora, a fé é o firme fundamento das coisas que se esperam e a prova das coisas que se não veem."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "mood": "peace",
+      "image_url": "thomas_open_hands_light.png",
+      "title": "Seu encontro",
+      "subtitle": "Tomé não foi rejeitado por duvidar. Foi encontrado por Jesus no meio de sua dúvida. E o mesmo pode acontecer com você.",
+      "discovery_questions": [
+        {
+          "category": "Sua honestidade",
+          "question": "Há algo que você não se atreve a dizer a Deus porque acha que Ele veria como falta de fé? Tomé disse exatamente o que sentia, e Jesus não o rejeitou. O que aconteceria se você fizesse o mesmo?"
+        },
+        {
+          "category": "Sua ausência",
+          "question": "Você já se sentiu fora do lugar onde Deus se move? Como se os outros tivessem vivido algo com Deus que você perdeu? Tomé também se sentiu assim. Mas Jesus voltou, especificamente por causa dele. Seus propósitos são perfeitos."
+        },
+        {
+          "category": "Sua decisão",
+          "question": "Tomé passou da dúvida mais profunda para a confissão mais alta: Senhor meu e Deus meu. Não precisou entender tudo. Só precisou estar presente quando Jesus veio. Você está disposto a estar presente, mesmo sem todas as respostas?"
+        }
+      ],
+      "prayer": {
+        "title": "Uma oração em meio à dúvida",
+        "content": "Senhor Jesus,\n\nComo Tomé, há coisas que não entendo. Há perguntas que não me atrevo a fazer em voz alta. Há dias em que os outros parecem ter uma fé que eu não tenho, uma certeza que me falta.\n\nMas Você não rejeitou Tomé por ser honesto. Foi buscá-lo, o guiou e o acompanhou, removendo a dúvida; foi até ele. Mostrou-lhe exatamente o que ele precisava ver.\n\nHoje quero fazer o que ele fez: estar presente. Não tenho todas as respostas, não entendo tudo o que fez em minha vida. Mas estou aqui: guie-me com o que sabe que preciso para fortalecer minha fé, encha-me do seu amor e permita que eu seja luz para outros.\n\nE assim como entrou onde a porta estava fechada, ensine-me a fechar a porta quando oro e visite-me para me encontrar com Você em segredo. Ajude-me com Seu Espírito Santo a não duvidar, mas a ser firme na Sua palavra.\n\nSenhor meu e Deus meu.\n\nEm nome de Jesus, Amém."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "thomas_dawn_horizon.png",
+      "completion_verse": {
+        "reference": "João 20:29",
+        "text": "Disse-lhe Jesus: Porque me viste, Tomé, creste; bem-aventurados os que não viram e creram!",
+        "bible_version": "ARC"
+      },
+      "reflection_prompt": "Tomé não precisou entender tudo para se render a Jesus. Só precisou estar presente quando Ele veio. Hoje Jesus lhe diz o mesmo: você não precisa ter todas as respostas. Só precisa estar disposto a recebê-lo. Você está?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

@@ -438,6 +438,80 @@
         "ja": 21,
         "zh": 21
       }
+    },
+    {
+      "id": "thomas_001",
+      "version": "0.1",
+      "image_version": "1.0",
+      "emoji": "🤚",
+      "status": "published",
+      "intro_image": "thomas_disciple_portrait.png",
+      "intro_image_prompt": "A man in his late twenties, lean build, olive-brown skin, short dark curly hair, short dark beard, wearing a simple earth-toned linen tunic in warm brown with a darker mantle. He stands alone in the far right of the frame, seen from behind, looking toward a closed wooden door set in a stone wall. Wide atmospheric shot of a narrow Jerusalem street at dusk. Deep blue twilight fills the sky, warm amber lamplight glows faintly through a small window above the door. No text. Painterly warm 2D illustration, Mediterranean palette, deep indigo and warm amber tones, cinematic lighting.",
+      "mood_primary": "doubt",
+      "accent_color": "#1a1a2e",
+      "has_interactive": false,
+      "testament": "new",
+      "character": "Thomas",
+      "files": {
+        "es": "thomas_es_001.json",
+        "en": "thomas_en_001.json",
+        "pt": "thomas_pt_001.json",
+        "fr": "thomas_fr_001.json",
+        "de": "thomas_de_001.json",
+        "hi": "thomas_hi_001.json",
+        "fil": "thomas_fil_001.json",
+        "ja": "thomas_ja_001.json",
+        "zh": "thomas_zh_001.json",
+        "ar": "thomas_ar_001.json"
+      },
+      "titles": {
+        "es": "Señor Mío y Dios Mío",
+        "en": "My Lord and My God",
+        "pt": "Senhor Meu e Deus Meu",
+        "fr": "Mon Seigneur et Mon Dieu",
+        "de": "Mein Herr und mein Gott",
+        "hi": "हे मेरे प्रभु, हे मेरे परमेश्‍वर",
+        "fil": "Panginoon Ko at Diyos Ko",
+        "ja": "私の主。私の神。",
+        "zh": "我的主，我的神",
+        "ar": "رَبِّي وَإِلَهِي"
+      },
+      "subtitles": {
+        "es": "De la duda a la fe: el encuentro de Tomás.",
+        "en": "From doubt to faith: Thomas's encounter.",
+        "pt": "Da dúvida à fé: o encontro de Tomé.",
+        "fr": "Du doute à la foi : la rencontre de Thomas.",
+        "de": "Vom Zweifel zum Glauben: die Begegnung des Thomas.",
+        "hi": "संदेह से विश्‍वास तक: थोमा की मुलाकात।",
+        "fil": "Mula sa pagdududa tungo sa pananampalataya: ang pagtatagpo ni Tomas.",
+        "ja": "疑いから信仰へ：トマスとの出会い。",
+        "zh": "从怀疑到信心：多马的相遇。",
+        "ar": "من الشك إلى الإيمان: لقاء توما."
+      },
+      "scripture_reference": {
+        "es": "Juan 20:24-29",
+        "en": "John 20:24-29",
+        "pt": "João 20:24-29",
+        "fr": "Jean 20:24-29",
+        "de": "Johannes 20:24-29",
+        "hi": "यूहन्ना 20:24-29",
+        "fil": "Juan 20:24-29",
+        "ja": "ヨハネの福音書 20:24-29",
+        "zh": "约翰福音 20:24-29",
+        "ar": "إِنْجِيلُ يُوحَنَّا 20:24-29"
+      },
+      "estimated_reading_minutes": {
+        "es": 12,
+        "en": 12,
+        "pt": 13,
+        "fr": 13,
+        "de": 13,
+        "hi": 14,
+        "fil": 14,
+        "ja": 15,
+        "zh": 15,
+        "ar": 13
+      }
     }
   ]
 }
