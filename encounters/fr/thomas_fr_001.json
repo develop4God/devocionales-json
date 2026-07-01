@@ -1,0 +1,284 @@
+{
+  "id": "thomas_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fr",
+  "bible_version": "LSG1910",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 13,
+  "meta": {
+    "character": "Thomas",
+    "testament": "new",
+    "scripture_reference": "Jean 20:24-29",
+    "mood_primary": "doubt",
+    "accent_color": "#1a1a2e",
+    "emoji": "🤚",
+    "tags": [
+      "doute",
+      "foi",
+      "résurrection",
+      "confession",
+      "honnêteté",
+      "courage",
+      "absence",
+      "présence",
+      "blessures",
+      "rencontre",
+      "thomas",
+      "croire"
+    ]
+  },
+  "key_verse": {
+    "reference": "Jean 20:28",
+    "text": "Thomas lui répondit: Mon Seigneur et mon Dieu!",
+    "bible_version": "LSG1910"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "thomas_empty_room_evening.png",
+      "title": "Il n'était pas avec eux.",
+      "narrative": "C'était le premier jour de la semaine.\n\nTrois jours plus tôt, ils avaient crucifié Jésus. Les mêmes chefs religieux qui l'avaient livré savaient qui étaient ses disciples, où ils se réunissaient, qui l'avait suivi. C'est pourquoi ils étaient enfermés. Les portes closes n'étaient pas un détail — c'était une mesure de survie.\n\nMarie de Magdala leur avait dit qu'elle avait vu le Seigneur. Mais la peur restait plus grande que la nouvelle.\n\nMais l'un des douze était absent.\n\nThomas, appelé Didyme, n'était pas avec eux lorsque Jésus vint.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 20:24",
+        "text": "Thomas, appelé Didyme, l'un des douze, n'était pas avec eux lorsque Jésus vint."
+      },
+      "revelation_key": "Parfois, une rencontre avec Jésus commence par une absence que Lui-même vient combler."
+    },
+    {
+      "order": 2,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "thomas_disciple_portrait.png",
+      "title": "Le disciple qui se relie au doute.",
+      "subtitle": "Qui était Thomas avant le doute",
+      "content": "Beaucoup se souviennent de lui comme de l'incrédule. C'est le disciple qui a douté, celui qui n'a pas cru, celui qui a posé des conditions.\n\nMais Jean le présente autrement.\n\nAvant ce dimanche soir, avant le doute, Jean nous avait déjà montré qui était Thomas. Et ce qu'il révèle est quelque chose de rare : l'honnêteté.\n\nSon nom araméen, תְּאוֹם (Te'om), et son équivalent grec, Δίδυμος (Didymos), signifient la même chose : jumeau. L'évangile ne nous dit pas qui était son jumeau. Il nous dit seulement qui il était, lui.\n\nThomas était le disciple qui osait dire ce que les autres taisaient. Dans une culture où suivre le maître sans questionner était signe de respect, Thomas posait des questions. Non par rébellion — mais parce qu'il avait besoin de comprendre avant d'agir.\n\nEt quand il comprenait, il agissait.",
+      "revelation_key": "L'honnêteté devant Dieu est le terrain où la vraie foi peut naître."
+    },
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "storm",
+      "image_url": "thomas_road_bethany.png",
+      "verse_reference": "Jean 11:16",
+      "verse_text": "Sur quoi Thomas, appelé Didyme, dit aux autres disciples: Allons aussi, afin de mourir avec lui.",
+      "reflection": "Jean nous a laissé trois moments pour voir Thomas en action avant le doute. Le premier révèle de quoi il était fait.\n\nJésus leur avait d'abord dit que Lazare dormait. Les disciples pensaient qu'il parlait du sommeil. Alors Jésus leur dit clairement : Lazare est mort ; et je me réjouis, à cause de vous, de ce que je n'étais pas là, afin que vous croyiez. Mais allons vers lui. Les disciples avaient déjà tenté de l'en dissuader — Rabbi, les Juifs tout récemment cherchaient à te lapider, et tu retournes en Judée !\n\nAlors Thomas dit : Allons aussi, afin de mourir avec lui.\n\nThomas parlait avec la certitude qu'ils allaient probablement mourir. Les chefs religieux avaient déjà tenté de lapider Jésus. Retourner en Judée, c'était marcher vers le danger les yeux grands ouverts. Et pourtant, sa réponse fut : allons-y.\n\nLe même homme que l'histoire appelle l'incrédule fut le premier à dire qu'il mourrait avec Jésus.",
+      "revelation_key": "L'homme que l'histoire appelle l'incrédule fut le premier prêt à mourir avec Jésus — les yeux ouverts sur le danger.",
+      "scripture_connections": [
+        {
+          "reference": "Jean 11:8",
+          "text": "Les disciples lui dirent: Rabbi, les Juifs tout récemment cherchaient à te lapider, et tu retournes en Judée!"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "thomas_last_supper_question.png",
+      "verse_reference": "Jean 14:5-6",
+      "verse_text": "Thomas lui dit: Seigneur, nous ne savons où tu vas; comment pouvons-nous en savoir le chemin? Jésus lui dit: Je suis le chemin, la vérité, et la vie. Nul ne vient au Père que par moi.",
+      "reflection": "C'était la deuxième fois que Thomas parlait quand les autres se taisaient.\n\nLa dernière cène. Jésus venait de leur dire qu'il allait leur préparer une place, et il ajouta : Vous savez où je vais, et vous en savez le chemin.\n\nThomas fut le seul à répondre : Seigneur, nous ne savons où tu vas ; comment pouvons-nous en savoir le chemin ?\n\nIl dit tout haut ce qu'aucun d'eux n'osait avouer. Et cette question reçut l'une des déclarations les plus directes de tout l'évangile : Je suis le chemin, la vérité, et la vie ; nul ne vient au Père que par moi.\n\nLe fondement de l'évangile, le cœur du message chrétien — la question honnête de Thomas a ouvert la porte à la déclaration qui définit le plan du salut et de la vie éternelle pour l'humanité.",
+      "revelation_key": "Les questions honnêtes n'offensent pas Dieu. Il les utilise. La question de Thomas a provoqué la déclaration qui est le fondement de tout l'évangile.",
+      "scripture_connections": [
+        {
+          "reference": "Jean 14:1-3",
+          "text": "Que votre cœur ne se trouble point. Croyez en Dieu, et croyez en moi. Il y a plusieurs demeures dans la maison de mon Père. Si cela n'était pas, je vous l'aurais dit. Je vais vous préparer une place. Et, lorsque je m'en serai allé, et que je vous aurai préparé une place, je reviendrai, et je vous prendrai avec moi, afin que là où je suis vous y soyez aussi."
+        },
+        {
+          "reference": "Jean 14:4",
+          "text": "Vous savez où je vais, et vous en savez le chemin."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "thomas_upper_room_jesus_appears.png",
+      "title": "La paix soit avec vous.",
+      "narrative": "C'était le même jour. Au tomber de la nuit, les disciples étaient encore réunis, portes closes. Dehors se trouvaient les mêmes chefs religieux qui avaient crucifié Jésus.\n\nPierre et Jean avaient vu le tombeau vide ce matin-là. Marie de Magdala leur avait dit qu'elle avait vu le Seigneur ressuscité. Et pourtant, ils restaient enfermés par peur.\n\nTous, sauf un. Thomas était dehors.\n\nEt c'est à ce moment précis — Thomas absent — que le Seigneur ressuscité choisit d'apparaître.\n\nIl apparut au milieu d'eux, portes closes. Et sa première parole ne fut ni question, ni reproche, ni explication. Ce fut : La paix soit avec vous.\n\nEn hébreu, shalom — שָׁלוֹם. Plénitude, restauration, bien-être complet. Prononcé sur des hommes qui n'avaient pas encore cru, avant même qu'aucun d'eux n'ouvre la bouche, sans condition.\n\nIl leur montra ses mains et son côté. Et les disciples furent dans la joie en voyant le Seigneur.\n\nMais Thomas n'était pas là.\n\nCelui qui sait tout, qui n'était plus limité par le temps ni l'espace, choisit ce moment précis. Il savait que Thomas était absent. Et il avait un dessein pour cette absence.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 20:19-20",
+        "text": "Le soir de ce jour, qui était le premier de la semaine, les portes du lieu où se trouvaient les disciples étant fermées, à cause de la crainte qu'ils avaient des Juifs, Jésus vint, se présenta au milieu d'eux, et leur dit: La paix soit avec vous! Et quand il eut dit cela, il leur montra ses mains et son côté. Les disciples furent dans la joie en voyant le Seigneur."
+      },
+      "revelation_key": "Les blessures de Jésus n'ont pas disparu avec la résurrection. Il les a gardées. Elles sont sa carte d'identité pour toujours."
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "thomas_disciples_tell_him.png",
+      "title": "Nous avons vu le Seigneur.",
+      "narrative": "Quand Thomas revint, il trouva tout différent.\n\nLe visage des autres avait changé. Il y avait quelque chose de neuf dans leurs yeux. Une certitude, une joie, quelque chose qu'il espérait encore vivre par lui-même.\n\nIls lui dirent : Nous avons vu le Seigneur.\n\nTrois ans à marcher ensemble. Trois ans à voir les mêmes miracles, à entendre les mêmes enseignements, à partager le même pain. Et maintenant, ils avaient vu quelque chose qu'il avait besoin d'expérimenter de ses propres yeux.\n\nThomas les regarda. Ces mêmes hommes qui s'étaient cachés lorsqu'on avait arrêté Jésus. Qui avaient fermé la porte par peur.\n\nEt maintenant ils lui disaient l'avoir vu vivant.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 20:25",
+        "text": "Les autres disciples lui dirent donc: Nous avons vu le Seigneur."
+      },
+      "revelation_key": "Thomas n'a pas rejeté Jésus. Il a rejeté un témoignage de seconde main. Il voulait ce que les autres avaient déjà reçu : une rencontre bien à lui."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "thomas_alone_night.png",
+      "verse_reference": "Jean 20:25",
+      "verse_text": "Les autres disciples lui dirent donc: Nous avons vu le Seigneur. Mais il leur dit: Si je ne vois dans ses mains la marque des clous, et si je ne mets mon doigt dans la marque des clous, et si je ne mets ma main dans son côté, je ne croirai point.",
+      "reflection": "Relis ses paroles : si je ne vois dans ses mains la marque des clous.\n\nLes autres disciples venaient de lui dire : Nous avons vu le Seigneur. Thomas répond avec le même verbe qu'eux. Ils ont vu. Il demande à voir. Il n'invente pas une condition différente — il exige la même chose qu'ils ont déjà reçue, avec les mêmes mots qu'ils ont employés pour la raconter.\n\nMais ensuite il va plus loin. Il ne demande pas seulement à voir. Il demande à mettre son doigt dans la marque des clous. Il demande à mettre sa main dans son côté.\n\nLa marque des clous. L'endroit des clous. Le côté. Ce côté n'était pas une blessure ordinaire. C'est de là qu'étaient sortis le sang et l'eau lorsque Jésus était déjà mort — le signe que le sacrifice avait été pleinement accompli (Jean 19:34). Thomas demandait à placer sa main exactement là où le prix avait déjà été payé.\n\nLe mot grec qu'il emploie est τύπον (typon) : la marque, l'empreinte, l'impression laissée quand quelque chose a transpercé. C'est de ce mot que vient notre mot type, modèle, empreinte. Thomas voulait voir l'empreinte que les clous avaient laissée dans les mains de Jésus.",
+      "revelation_key": "Thomas a demandé à voir les blessures. Parce que les blessures sont la preuve que l'amour était réel.",
+      "scripture_connections": [
+        {
+          "reference": "Jean 10:17-18",
+          "text": "Le Père m'aime, parce que je donne ma vie, afin de la reprendre. Personne ne me l'ôte, mais je la donne de moi-même; j'ai le pouvoir de la donner, et j'ai le pouvoir de la reprendre: tel est l'ordre que j'ai reçu de mon Père."
+        },
+        {
+          "reference": "Jean 19:34",
+          "text": "mais un des soldats lui perça le côté avec une lance, et aussitôt il sortit du sang et de l'eau."
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "thomas_dark_room_candle.png",
+      "title": "Huit jours",
+      "subtitle": "Ce que Thomas a vécu pendant une semaine de silence",
+      "content": "Huit jours.\n\nLe texte de Jean dit que Jésus réapparut huit jours plus tard. Dans le comptage juif, qui inclut le premier et le dernier jour, huit jours équivalent à une semaine complète. Thomas a vécu cette semaine entière avec son doute, entouré d'hommes qui avaient déjà vu ce qu'il espérait encore voir.\n\nEt chaque nuit, dans l'obscurité, la même question : et si c'était vrai ?\n\n📜 Dans la tradition juive, le nombre huit représente un nouveau commencement. La circoncision se pratiquait le huitième jour — le sceau de l'alliance dans la chair (Genèse 17:12).\n\nJésus est ressuscité un dimanche. Maintenant, exactement une semaine plus tard, le même jour de la semaine, il réapparaît — cette fois avec Thomas présent. Il donna à Thomas son propre sceau : la preuve physique d'une alliance déjà scellée par son propre sang.",
+      "revelation_key": "Jésus a honoré le doute de Thomas par sa présence, le même jour de la semaine où il était ressuscité.",
+      "scripture_connections": [
+        {
+          "reference": "Genèse 17:12",
+          "text": "A l'âge de huit jours, tout mâle parmi vous sera circoncis, selon vos générations, qu'il soit né dans la maison, ou qu'il soit acquis à prix d'argent de tout fils d'étranger, sans appartenir à ta race."
+        },
+        {
+          "reference": "Jean 20:1",
+          "text": "Le premier jour de la semaine, Marie de Magdala se rendit au sépulcre dès le matin, comme il faisait encore obscur; et elle vit que la pierre était ôtée du sépulcre."
+        },
+        {
+          "reference": "Jean 20:19",
+          "text": "Le soir de ce jour, qui était le premier de la semaine, les portes du lieu où se trouvaient les disciples étant fermées, à cause de la crainte qu'ils avaient des Juifs, Jésus vint, se présenta au milieu d'eux, et leur dit: La paix soit avec vous!"
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "thomas_jesus_appears_doors.png",
+      "title": "Les portes étant fermées.",
+      "narrative": "Huit jours plus tard. Même lieu. Mêmes portes fermées. Mais cette fois, Thomas était à l'intérieur.\n\nEt Jésus vint.\n\nIl se présenta au milieu d'eux, comme la première fois. Et la première chose qu'il dit fut la même : La paix soit avec vous.\n\nImmédiatement après, Jésus s'adressa directement à Thomas.\n\nIl savait exactement ce que Thomas avait demandé, chaque mot de sa condition, tout ce qu'il avait dit dans cette pièce.\n\nIl venait lui répondre.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 20:26",
+        "text": "Huit jours après, les disciples de Jésus étaient de nouveau dans la maison, et Thomas se trouvait avec eux. Jésus vint, les portes étant fermées, se présenta au milieu d'eux, et dit: La paix soit avec vous!"
+      },
+      "revelation_key": "Jésus est venu vers Thomas. Il est entré là où était son doute et s'est tenu au milieu."
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "grace",
+      "image_url": "thomas_jesus_hands_wounds.png",
+      "verse_reference": "Jean 20:27-28",
+      "verse_text": "Puis il dit à Thomas: Avance ici ton doigt, et regarde mes mains; avance aussi ta main, et mets-la dans mon côté; et ne sois pas incrédule, mais crois. Thomas lui répondit: Mon Seigneur et mon Dieu!",
+      "reflection": "Jésus répéta mot pour mot la condition que Thomas avait posée. Avance ton doigt. Regarde mes mains. Avance ta main. Mets-la dans mon côté.\n\nC'était une invitation.\n\nJésus a pris la demande de Thomas et l'a transformée en offre. Jésus a répondu à sa demande.\n\nJésus a choisi un mot précis : γίνου (ginou), « devenir ». C'est une action tournée vers l'avenir, non une description du présent. Par là, Jésus indique que Thomas n'était pas, à cet instant, un incrédule.\n\nJésus lui a parlé du résultat que ce moment pouvait marquer : le passage d'incrédule à croyant, selon ce que Thomas déciderait.\n\nLe texte dit que Thomas répondit. Et ce qui sortit de sa bouche fut une confession puissante : Mon Seigneur et mon Dieu !\n\nΚύριός μου καὶ ὁ Θεός μου. Kyrios mou kai ho Theos mou.\n\nCe fut Thomas — celui qui a douté, qui était absent, qui a posé des conditions — qui déclara sans hésiter, de ses propres mots, ce que toute l'Église confesserait ensuite : que Jésus est Seigneur et qu'il est Dieu.\n\nLe doute le plus profond a produit la confession la plus élevée.",
+      "revelation_key": "Du fond du doute le plus honnête a jailli la plus haute déclaration sur qui est Jésus : mon Seigneur et mon Dieu.",
+      "scripture_connections": [
+        {
+          "reference": "Philippiens 2:10-11",
+          "text": "afin qu'au nom de Jésus tout genou fléchisse dans les cieux, sur la terre et sous la terre, et que toute langue confesse que Jésus-Christ est Seigneur, à la gloire de Dieu le Père."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "thomas_nail_marks_closeup.png",
+      "title": "Les blessures qui n'ont pas disparu",
+      "subtitle": "Le dessein éternel des blessures de Jésus",
+      "content": "Jésus est ressuscité avec un corps glorifié. Il pouvait traverser des portes fermées à clé. Il pouvait apparaître et disparaître. Et les blessures étaient toujours là.\n\n📜 Dans tout le récit biblique de la résurrection, un détail revient avec insistance : il leur montra ses mains et son côté. Les blessures faisaient partie de la résurrection.\n\nDans le grec du Nouveau Testament, le mot pour blessure en Apocalypse 5:6 est ἐσφαγμένον (esphagmenon) : qui a été immolé. L'Agneau de Dieu apparaît au ciel avec les marques de son sacrifice visibles pour toujours. Signes permanents d'un amour qui demeure éternellement.\n\nLes blessures sont son message. Elles sont la preuve que l'amour est allé jusqu'au bout, que son sacrifice a été pleinement accompli.",
+      "revelation_key": "Les blessures de Jésus demeurent et sont la preuve éternelle de son amour et de son sacrifice pour l'humanité.",
+      "scripture_connections": [
+        {
+          "reference": "Apocalypse 5:6",
+          "text": "Et je vis, au milieu du trône et des quatre êtres vivants et au milieu des vieillards, un agneau qui était là comme immolé. Il avait sept cornes et sept yeux, qui sont les sept esprits de Dieu envoyés par toute la terre."
+        },
+        {
+          "reference": "Ésaïe 53:5",
+          "text": "Mais il était blessé pour nos péchés, Brisé pour nos iniquités; Le châtiment qui nous donne la paix est tombé sur lui, Et c'est par ses meurtrissures que nous sommes guéris."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "thomas_blessed_who_believe.png",
+      "verse_reference": "Jean 20:29",
+      "verse_text": "Parce que tu m'as vu, tu as cru. Heureux ceux qui n'ont pas vu, et qui ont cru!",
+      "reflection": "Par cette phrase, Jésus a traversé deux mille ans d'histoire pour te parler.\n\nHeureux ceux qui n'ont pas vu, et qui ont cru.\n\nThomas a vu et cru. Les disciples ont vu et cru. Marie a vu et cru. Jésus savait que des millions viendraient après, et il les a appelés heureux.\n\nHeureux : bienheureux, comblés, pleinement ; ceux qui croient sans avoir vu ont la foi que Jésus appelle bienheureuse.\n\n🔑 Le mot grec μακάριοι (makarioi) est le même que Jésus a utilisé dans le Sermon sur la montagne : heureux les pauvres en esprit, heureux ceux qui pleurent. C'est une déclaration d'état : vous êtes à l'endroit où repose la bénédiction de Dieu.",
+      "revelation_key": "Jésus a dit que croire sans voir est un bonheur. Tu es inclus dans cette promesse.",
+      "scripture_connections": [
+        {
+          "reference": "1 Pierre 1:8",
+          "text": "lui que vous aimez sans l'avoir vu, en qui vous croyez sans le voir encore, vous réjouissant d'une joie ineffable et glorieuse,"
+        },
+        {
+          "reference": "Hébreux 11:1",
+          "text": "Or la foi est une ferme assurance des choses qu'on espère, une démonstration de celles qu'on ne voit pas."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "mood": "peace",
+      "image_url": "thomas_open_hands_light.png",
+      "title": "Ta rencontre",
+      "subtitle": "Thomas n'a pas été rejeté pour avoir douté. Il a été trouvé par Jésus au cœur de son doute. Et la même chose peut t'arriver.",
+      "discovery_questions": [
+        {
+          "category": "Ton honnêteté",
+          "question": "Y a-t-il quelque chose que tu n'oses pas dire à Dieu parce que tu penses qu'il le prendrait pour un manque de foi ? Thomas a dit exactement ce qu'il ressentait, et Jésus ne l'a pas rejeté. Que se passerait-il si tu faisais de même ?"
+        },
+        {
+          "category": "Ton absence",
+          "question": "T'es-tu déjà senti à l'écart, là où Dieu agit ? Comme si les autres avaient vécu quelque chose avec Dieu que tu avais manqué ? Thomas a ressenti la même chose. Mais Jésus est revenu, spécifiquement pour lui. Ses desseins sont parfaits."
+        },
+        {
+          "category": "Ta décision",
+          "question": "Thomas est passé du doute le plus profond à la confession la plus élevée : Mon Seigneur et mon Dieu. Il n'a pas eu besoin de tout comprendre. Il lui a juste fallu être présent quand Jésus est venu. Es-tu prêt à être présent, même sans avoir toutes les réponses ?"
+        }
+      ],
+      "prayer": {
+        "title": "Une prière depuis le doute",
+        "content": "Seigneur Jésus,\n\nComme Thomas, il y a des choses que je ne comprends pas. Il y a des questions que je n'ose pas poser à voix haute. Il y a des jours où les autres semblent avoir une foi que je n'ai pas, une certitude qui me manque.\n\nMais tu n'as pas rejeté Thomas pour avoir été honnête. Tu es allé le chercher, tu l'as guidé et accompagné, dissipant le doute ; tu es venu à lui. Tu lui as montré exactement ce qu'il avait besoin de voir.\n\nAujourd'hui, je veux faire ce qu'il a fait : être présent. Je n'ai pas toutes les réponses, je ne comprends pas tout ce que tu as fait dans ma vie. Mais je suis ici : guide-moi avec ce que tu sais que j'ai besoin pour fortifier ma foi, remplis-moi de ton amour et permets-moi d'être une lumière pour les autres.\n\nEt tout comme tu es entré là où la porte était fermée, apprends-moi à fermer la porte quand je prie, et viens me rencontrer dans le secret. Aide-moi par ton Saint-Esprit à ne pas douter, mais à demeurer ferme dans ta parole.\n\nMon Seigneur et mon Dieu.\n\nAu nom de Jésus, Amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "thomas_dawn_horizon.png",
+      "completion_verse": {
+        "reference": "Jean 20:29",
+        "text": "Parce que tu m'as vu, tu as cru. Heureux ceux qui n'ont pas vu, et qui ont cru!",
+        "bible_version": "LSG1910"
+      },
+      "reflection_prompt": "Thomas n'a pas eu besoin de tout comprendre pour se rendre à Jésus. Il lui a juste fallu être présent quand il est venu. Aujourd'hui, Jésus te dit la même chose : tu n'as pas besoin de toutes les réponses. Tu as juste besoin d'être disposé à le recevoir. L'es-tu ?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

@@ -453,19 +453,34 @@
       "testament": "new",
       "character": "Thomas",
       "files": {
-        "es": "thomas_es_001.json"
+        "es": "thomas_es_001.json",
+        "en": "thomas_en_001.json",
+        "pt": "thomas_pt_001.json",
+        "fr": "thomas_fr_001.json"
       },
       "titles": {
-        "es": "Señor Mío y Dios Mío"
+        "es": "Señor Mío y Dios Mío",
+        "en": "My Lord and My God",
+        "pt": "Senhor Meu e Deus Meu",
+        "fr": "Mon Seigneur et Mon Dieu"
       },
       "subtitles": {
-        "es": "De la duda a la fe: el encuentro de Tomás."
+        "es": "De la duda a la fe: el encuentro de Tomás.",
+        "en": "From doubt to faith: Thomas's encounter.",
+        "pt": "Da dúvida à fé: o encontro de Tomé.",
+        "fr": "Du doute à la foi : la rencontre de Thomas."
       },
       "scripture_reference": {
-        "es": "Juan 20:24-29"
+        "es": "Juan 20:24-29",
+        "en": "John 20:24-29",
+        "pt": "João 20:24-29",
+        "fr": "Jean 20:24-29"
       },
       "estimated_reading_minutes": {
-        "es": 12
+        "es": 12,
+        "en": 12,
+        "pt": 13,
+        "fr": 13
       }
     }
   ]
