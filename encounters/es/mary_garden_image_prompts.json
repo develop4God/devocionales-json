@@ -1,0 +1,109 @@
+{
+  "encounter_id": "mary_garden_001",
+  "character": "Mary Magdalene",
+  "master_character_prompt": "A woman in her early thirties, olive-brown skin, long dark wavy hair partly covered by a deep indigo-violet headscarf, dark tired eyes reddened from weeping, wearing a simple linen tunic in muted dusty violet over an undyed shift, bare feet, slender build. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting. Character reference sheet, full body and face close-up.",
+  "intro_image": {
+    "filename": "mary_garden_intro.png",
+    "prompt": "A woman in her early thirties, olive-brown skin, long dark wavy hair partly covered by a deep indigo-violet headscarf, wearing a simple linen tunic in muted dusty violet, bare feet. She is a lone small figure walking from the far left toward a rock-cut tomb with a large round stone rolled aside, barely visible against the landscape. Wide atmospheric shot of an ancient garden at the edge of dawn. Olive trees and low shrubs surround the tomb. The sky is deep indigo fading to the faintest amber on the horizon. No text. Painterly warm 2D illustration, Mediterranean palette, deep indigo and muted violet tones, cinematic lighting."
+  },
+  "card_prompts": [
+    {
+      "order": 1,
+      "image_url": "mary_garden_dawn_tomb.png",
+      "mood": "darkness",
+      "shot_type": "wide establishing",
+      "prompt": "A woman in her early thirties, olive-brown skin, long dark wavy hair partly covered by a deep indigo-violet headscarf, wearing a simple linen tunic in muted dusty violet, bare feet. She walks alone toward a tomb carved into a hillside, seen from behind, small against the landscape. Wide establishing shot of a rocky garden path, pre-dawn. The sky is nearly black with the faintest pale line at the horizon. Cold blue-grey tones dominate. Painterly warm 2D illustration, Mediterranean palette, deep shadow, cinematic predawn lighting, no text."
+    },
+    {
+      "order": 2,
+      "image_url": "mary_garden_empty_tomb.png",
+      "mood": "panic",
+      "shot_type": "medium action",
+      "prompt": "A woman in her early thirties, olive-brown skin, long dark wavy hair escaping from a deep indigo-violet headscarf, wearing a simple linen tunic in muted dusty violet, bare feet. She stands frozen in the tomb opening, one hand on the stone edge, eyes wide, mouth slightly open in shock. Medium shot from inside the tomb looking outward. The large round stone has been rolled to the side, revealing the pale predawn sky beyond. The tomb interior is dark, empty stone slab visible in the foreground. Painterly warm 2D illustration, Mediterranean palette, high contrast between dark tomb interior and pale opening, cinematic lighting, no text."
+    },
+    {
+      "order": 3,
+      "image_url": "mary_garden_weeping.png",
+      "mood": "grief",
+      "shot_type": "close-up portrait",
+      "prompt": "A woman in her early thirties, olive-brown skin, long dark wavy hair falling loose from a deep indigo-violet headscarf, wearing a simple linen tunic in muted dusty violet. Intimate close-up, eyes closed, tears on her cheeks, hands clasped together near her chin. The rough-hewn stone of the tomb entrance fills the background, slightly out of focus. Early dawn light catches the tears. Her expression is not dramatic but quietly devastated. Painterly warm 2D illustration, Mediterranean palette, muted violet and warm ochre tones, soft cinematic lighting, no text."
+    },
+    {
+      "order": 4,
+      "image_url": "mary_garden_portrait.png",
+      "mood": "grief",
+      "shot_type": "medium portrait",
+      "prompt": "A woman in her early thirties, olive-brown skin, long dark wavy hair partly covered by a deep indigo-violet headscarf, wearing a simple linen tunic in muted dusty violet, bare feet. Medium portrait, standing in a garden at dawn, looking directly at the viewer with quiet intensity. Behind her, out of focus, olive trees and the faint outline of a hillside path. Her expression holds both grief and a fierce, stubborn loyalty. Warm amber light begins to touch the top of the frame. Painterly warm 2D illustration, Mediterranean palette, ochre and deep violet tones, cinematic lighting, no text."
+    },
+    {
+      "order": 5,
+      "image_url": "mary_garden_linen_cloths.png",
+      "mood": "tension",
+      "shot_type": "object/still life",
+      "prompt": "Close-up still life inside a dark rock-cut tomb. A flat stone slab in the center. On it, neatly folded white linen burial cloths, and separately, a small folded face cloth placed apart on the far end. No body. No people. The only light enters from the tomb opening behind the viewer, casting a soft warm beam across the stone and the linens. Dust motes float in the light. Pure metaphor. Painterly warm 2D illustration, Mediterranean palette, warm sandstone and white linen against dark cave walls, cinematic lighting, no text."
+    },
+    {
+      "order": 6,
+      "image_url": "mary_garden_turned_back.png",
+      "mood": "liminal",
+      "shot_type": "medium two-figure",
+      "prompt": "A woman in her early thirties, olive-brown skin, long dark wavy hair partly covered by a deep indigo-violet headscarf, wearing a simple linen tunic in muted dusty violet, bare feet. She has just turned around from the tomb entrance, face showing confusion through tears, not yet recognizing the figure behind her. In the soft background, slightly out of focus, a man in a simple first-century tunic stands among the garden plants, seen from behind, face never visible, a faint warm glow of glory surrounding his silhouette. The space between them holds all the tension. Painterly warm 2D illustration, Mediterranean palette, liminal blue-amber light, cinematic, no text."
+    },
+    {
+      "order": 7,
+      "image_url": "mary_garden_mistaken_gardener.png",
+      "mood": "ache",
+      "shot_type": "medium two-figure",
+      "prompt": "A woman in her early thirties, olive-brown skin, long dark wavy hair loose from a deep indigo-violet headscarf, wearing a simple linen tunic in muted dusty violet, tear-streaked face, bare feet. She looks up pleadingly, hands extended slightly, palms up, offering. Before her, a man in a simple undyed first-century tunic stands near garden plants, seen from behind, face never visible, a subtle warm glow of glory emanating from his form, partially silhouetted. Morning mist clings low to the ground between them. Painterly warm 2D illustration, Mediterranean palette, cool dawn tones warming at the edges, cinematic lighting, no text."
+    },
+    {
+      "order": 8,
+      "image_url": "mary_garden_name_called.png",
+      "mood": "revelation",
+      "shot_type": "close-up portrait",
+      "prompt": "A woman in her early thirties, olive-brown skin, long dark wavy hair, deep indigo-violet headscarf falling back from her head. Extreme close-up of her face at the exact moment of recognition. Her eyes have just widened, tears still wet on her cheeks but her expression shifting from grief to stunned joy. Warm golden light breaks across her face from the left side, as if dawn has arrived in a single instant. The background is a soft blur of garden greens and amber. Painterly warm 2D illustration, Mediterranean palette, warm gold and deep violet, cinematic lighting, no text."
+    },
+    {
+      "order": 9,
+      "image_url": "mary_garden_light_breaking.png",
+      "mood": "wonder",
+      "shot_type": "wide atmospheric",
+      "prompt": "A woman in her early thirties, olive-brown skin, long dark wavy hair partly covered by a deep indigo-violet headscarf, wearing a simple linen tunic in muted dusty violet. Wide atmospheric shot of the garden at the moment of full dawn. In the middle distance, she faces a man in a simple first-century tunic seen from behind or in partial silhouette, face never visible, a gentle glow of glory around him. Golden light pours through the olive trees, casting long warm shadows across the ground. The tomb in the background is open and empty, no longer threatening. The entire garden glows. Painterly warm 2D illustration, Mediterranean palette, rich gold and green and ochre, warm cinematic lighting, no text."
+    },
+    {
+      "order": 10,
+      "image_url": "mary_garden_reaching.png",
+      "mood": "awe",
+      "shot_type": "medium action",
+      "prompt": "A woman in her early thirties, olive-brown skin, long dark wavy hair, deep indigo-violet headscarf, wearing a simple linen tunic in muted dusty violet. Medium shot, she reaches forward with both hands, fingers extended. Her expression is a mixture of joy, relief, and desperate wanting. Before her, seen from behind and slightly above, a man in a simple first-century tunic raises one hand gently, face never visible, a warm glow of glory radiating from his form. Warm golden dawn light fills the scene from behind him. Painterly warm 2D illustration, Mediterranean palette, warm gold tones, cinematic lighting, no text."
+    },
+    {
+      "order": 11,
+      "image_url": "mary_garden_running_dawn.png",
+      "mood": "sending",
+      "shot_type": "action/movement",
+      "prompt": "A woman in her early thirties, olive-brown skin, long dark wavy hair streaming behind her, deep indigo-violet headscarf flying loose, wearing a simple linen tunic in muted dusty violet in motion, bare feet. Dynamic medium-wide shot, she runs along a dusty path away from a garden, toward a walled city visible in the distance. Full dawn light behind her, casting her long shadow forward on the path. Her posture is urgent and joyful, not fleeing. The garden and open tomb are small behind her. The city ahead catches the first warm light. Painterly warm 2D illustration, Mediterranean palette, warm amber and ochre, cinematic lighting, no text."
+    },
+    {
+      "order": 12,
+      "image_url": "mary_garden_sunrise.png",
+      "mood": "wonder",
+      "shot_type": "wide departure",
+      "prompt": "Wide panoramic shot of the garden at full sunrise. No people in the frame. The empty tomb is visible at the left, stone rolled aside, small and quiet now. The garden is bathed in warm golden light. In the far distance, the rooftops of Jerusalem catch the sun. A single path leads from the tomb through the garden toward the city. The scene is peaceful, complete, transformed. Painterly warm 2D illustration, Mediterranean palette, rich warm golds and soft greens, cinematic sunrise lighting, no text."
+    },
+    {
+      "order": 13,
+      "image_url": "mary_garden_prayer.png",
+      "mood": "intimate",
+      "shot_type": "close-up portrait",
+      "prompt": "A woman in her early thirties, olive-brown skin, slender fingers interlaced, knuckles slightly white from gripping. Intimate close-up of clasped hands in prayer. A fold of dusty violet linen tunic is visible at the wrist. Soft warm light falls on the hands from above. Background is a warm blur of amber and dark indigo. No face visible. Pure devotion. Painterly warm 2D illustration, Mediterranean palette, warm ochre and deep violet, soft cinematic lighting, no text."
+    },
+    {
+      "order": 14,
+      "image_url": "mary_garden_completion.png",
+      "mood": "dawn",
+      "shot_type": "wide atmospheric",
+      "prompt": "Wide atmospheric shot from inside the empty tomb looking outward through the round opening. No people. Beyond the opening, the garden is flooded with warm golden sunrise light. Olive trees frame the view. The stone slab inside is bare, the linen cloths gone. The dark tomb interior creates a natural frame for the brilliant, alive world outside. The transition from darkness to light is the entire composition. Painterly warm 2D illustration, Mediterranean palette, stark contrast between dark tomb and golden dawn, cinematic lighting, no text."
+    }
+  ]
+}

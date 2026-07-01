@@ -5,7 +5,7 @@
   "language": "en",
   "bible_version": "KJV",
   "version": "6.0",
-  "estimated_reading_minutes": 9,
+  "estimated_reading_minutes": 10,
   "meta": {
     "character": "The Samaritan Woman",
     "testament": "new",
@@ -32,7 +32,6 @@
     "bible_version": "KJV"
   },
   "cards": [
-
     {
       "order": 1,
       "type": "cinematic_scene",
@@ -48,7 +47,6 @@
       },
       "revelation_key": "Jesus rerouted His journey around a woman the world had stopped searching for."
     },
-
     {
       "order": 2,
       "type": "cinematic_scene",
@@ -64,7 +62,6 @@
       },
       "revelation_key": "The place was not coincidence. The hour was not coincidence. He was never there by accident."
     },
-
     {
       "order": 3,
       "type": "scripture_moment",
@@ -75,17 +72,24 @@
       "reflection": "Women went to the well in the morning. Together. She came at noon. Alone.\n\nThat is not a minor detail. It is her entire story in a single decision.\n\nAnd the first to speak to her did not judge her. Did not ignore her. He asked her for something.\n\nThe Son of God made Himself vulnerable before her before she knew His name.\n\nThat is how grace enters. Not with power. With humility.",
       "revelation_key": "Jesus spoke first. To her. In the place where she had learned to be invisible."
     },
-
     {
       "order": 4,
       "type": "theological_depth",
       "mood": "shifting",
       "image_url": "water_ripple.png",
+      "verse_overlay": {
+        "reference": "John 4:13-14",
+        "text": "Jesus answered and said unto her, Whosoever drinks of this water shall thirst again: But whosoever drinks of the water that I shall give him shall never thirst; but the water that I shall give him shall be in him a well of water springing up into everlasting life."
+      },
       "title": "Two Kinds of Thirst",
       "subtitle": "She was talking about water. He was talking about something more.",
-      "content": "Jesus offered living water. She heard it practically: spring water, flowing water, water you don't have to come and fetch at midday under the sun.\n\nBut He was pointing at the well. At the rope. At everything she had carried there every day.\n\n📖 John 4:13-14 (KJV)\n«Jesus answered and said unto her, Whosoever drinks of this water shall thirst again: But whosoever drinks of the water that I shall give him shall never thirst; but the water that I shall give him shall be in him a well of water springing up into everlasting life.»\n\nNever. Not for a long time. Never.\n\n💧 Jacob's well was real. It was history. It was a heritage of centuries. Jesus does not ignore it. But what He offers does not come from outside. It comes from within. It is not a spring you must return to. It is a fountain that rises up inside the one who receives it.\n\nShe recognized it herself, even without fully understanding:\n\n📖 John 4:15 (KJV)\n«The woman said unto him, Sir, give me this water, that I thirst not, neither come here to draw.»\n\nShe was still thinking about a well.\n\nBut she was leaning toward Him. And that was enough.",
+      "content": "Jesus offered living water. She heard it practically: spring water, flowing water, water you don't have to come and fetch at midday under the sun.\n\nBut He was pointing at the well. At the rope. At everything she had carried there every day.\n\nNever. Not for a long time. Never — that's what Jesus promised her.\n\n💧 Jacob's well was real. It was history. It was a heritage of centuries. Jesus does not ignore it. But what He offers does not come from outside. It comes from within. It is not a spring you must return to. It is a fountain that rises up inside the one who receives it.\n\nShe recognized it herself, even without fully understanding — and asked for exactly that water.\n\nShe was still thinking about a well.\n\nBut she was leaning toward Him. And that was enough.",
       "revelation_key": "Sometimes our thirst points us to Jesus before our understanding does.",
       "scripture_connections": [
+        {
+          "reference": "John 4:15",
+          "text": "The woman said unto him, Sir, give me this water, that I thirst not, neither come here to draw."
+        },
         {
           "reference": "Isaiah 55:1",
           "text": "Ho, everyone that thirsts, come you to the waters, and he that has no money; come you, buy, and eat; yea, come, buy wine and milk without money and without price."
@@ -96,7 +100,6 @@
         }
       ]
     },
-
     {
       "order": 5,
       "type": "cinematic_scene",
@@ -112,7 +115,6 @@
       },
       "revelation_key": "He knew her completely. And He said: you have spoken truly."
     },
-
     {
       "order": 6,
       "type": "character_moment",
@@ -123,7 +125,6 @@
       "content": "He did not say: you are broken.\nHe did not say: you should be ashamed.\nHe did not say: fix yourself before we speak.\n\nHe said: you have well said.\n\nHe praised her honesty in the very moment He revealed what she was carrying.\n\nFive husbands. Five wells. Five attempts to quench a thirst none of them could touch.\n\nHe did not mention her past to shame her. He mentioned it to show her He knew her — and stayed.\n\nThat is the difference between the world and Jesus. The world exposes to shame. Jesus reveals to set free.\n\nShe came to hide. He came to find her.",
       "revelation_key": "Jesus knew every well she had been to. And He did not move."
     },
-
     {
       "order": 7,
       "type": "cinematic_scene",
@@ -139,15 +140,18 @@
       },
       "revelation_key": "Before she knew who He was, her spirit was already recognizing Him."
     },
-
     {
       "order": 8,
       "type": "theological_depth",
       "mood": "shifting",
       "image_url": "well_light_breaking.png",
+      "verse_overlay": {
+        "reference": "John 4:21-24",
+        "text": "Jesus said unto her, Woman, believe me, the hour comes, when you shall neither in this mountain, nor yet at Jerusalem, worship the Father. You worship you know not what: we know what we worship: for salvation is of the Jews. But the hour comes, and now is, when the true worshipers shall worship the Father in spirit and in truth: for the Father seeks such to worship him. God is a Spirit: and they that worship him must worship him in spirit and in truth."
+      },
       "title": "In spirit and in truth.",
       "subtitle": "An answer larger than the question.",
-      "content": "Jesus did not dodge her question. He answered it completely.\n\nBut He took her further than she expected.\n\n📖 John 4:21-24 (KJV)\n«Jesus said unto her, Woman, believe me, the hour comes, when you shall neither in this mountain, nor yet at Jerusalem, worship the Father. You worship you know not what: we know what we worship: for salvation is of the Jews. But the hour comes, and now is, when the true worshipers shall worship the Father in spirit and in truth: for the Father seeks such to worship him. God is a Spirit: and they that worship him must worship him in spirit and in truth.»\n\nNot a mountain. Not a temple. Not a correct location.\n\nA relationship. Interior. True.\n\nShe had come with a question about places. He was speaking to her about the heart.",
+      "content": "Jesus did not dodge her question. He answered it completely.\n\nBut He took her further than she expected — explaining that true worship was never about geography to begin with.\n\nNot a mountain. Not a temple. Not a correct location.\n\nA relationship. Interior. True.\n\nShe had come with a question about places. He was speaking to her about the heart.",
       "revelation_key": "She asked where to worship. He showed her how.",
       "scripture_connections": [
         {
@@ -156,7 +160,6 @@
         }
       ]
     },
-
     {
       "order": 9,
       "type": "scripture_moment",
@@ -167,7 +170,6 @@
       "reflection": "Throughout the Gospel of John, Jesus does not directly announce who He is. He speaks in signs, in images, in declarations that require discernment.\n\nHere, beside a well in Samaria, at noon, He says it plainly.\n\nAnd He says it to her.\n\nNot to a Levite priest, nor a Pharisee, nor a disciple.\n\nBut to the woman who came alone — ashamed, humbled.\n\nShe went from asking whether Jesus was greater than Jacob, a patriarch of the past, to receiving the declaration of the Messiah, the living hope. In a single conversation beside that well.",
       "revelation_key": "The first person to receive this powerful declaration was the last person the world would have expected. That is how God works."
     },
-
     {
       "order": 10,
       "type": "cinematic_scene",
@@ -183,15 +185,18 @@
       },
       "revelation_key": "She did not forget the waterpot. She was transformed. The water she had come for was no longer enough."
     },
-
     {
       "order": 11,
       "type": "theological_depth",
       "mood": "wonder",
       "image_url": "empty_jar_well.png",
+      "verse_overlay": {
+        "reference": "John 4:30",
+        "text": "Then they went out of the city, and came unto him."
+      },
       "title": "The waterpot she left behind.",
       "subtitle": "What an abandoned waterpot means.",
-      "content": "In the previous encounter we saw Bartimaeus throw down his cloak before receiving his healing — faith that lets go before having anything to hold onto.\n\nShe left her waterpot after the encounter. What Jesus placed inside her had already made small what she carried in her hands.\n\nTwo people. Two abandoned objects. The same Jesus.\n\nBut there is something more in what she did.\n\n🪣 In the Greek, the question she brought to the city is framed with a word that anticipates uncertainty: Is not this the Christ?\n\nShe did not arrive proclaiming. She arrived inviting. She knew that a woman with her history would not be believed if she made a declaration. So she wrapped the revelation in a question that compelled each person to go and see for themselves.\n\nThat was not naivety. That was wisdom.\n\nAnd it worked.\n\n📖 John 4:30 (KJV)\n«Then they went out of the city, and came unto him.»",
+      "content": "In the previous encounter we saw Bartimaeus throw down his cloak before receiving his healing — faith that lets go before having anything to hold onto.\n\nShe left her waterpot after the encounter. What Jesus placed inside her had already made small what she carried in her hands.\n\nTwo people. Two abandoned objects. The same Jesus.\n\nBut there is something more in what she did.\n\n🏺 In the Greek, the question she brought to the city is framed with a word that anticipates uncertainty: Is not this the Christ?\n\nShe did not arrive proclaiming. She arrived inviting. She knew that a woman with her history would not be believed if she made a declaration. So she wrapped the revelation in a question that compelled each person to go and see for themselves.\n\nThat was not naivety. That was wisdom.\n\nAnd it worked.",
       "revelation_key": "She brought her wound as her testimony. And an entire city came out to see.",
       "scripture_connections": [
         {
@@ -204,18 +209,26 @@
         }
       ]
     },
-
     {
       "order": 12,
       "type": "character_moment",
       "mood": "awe",
       "image_url": "city_samaritans_coming.png",
+      "verse_overlay": {
+        "reference": "John 4:39",
+        "text": "And many of the Samaritans of that city believed on him for the saying of the woman, who testified, He told me all that ever I did."
+      },
       "title": "And many believed.",
       "subtitle": "Because of the word of the woman.",
-      "content": "We must understand what this means.\n\nIn the first century, a woman had no public voice. A Samaritan woman with her history had even less. The men of that city had no cultural or social reason to listen to her.\n\nAnd they went out.\n\nThat is not normal. That is supernatural.\n\n📖 John 4:39 (KJV)\n«And many of the Samaritans of that city believed on him for the saying of the woman, who testified, He told me all that ever I did.»\n\nJohn — a first-century Jewish writer formed in that culture — recorded that it was this woman who brought an entire city to the Messiah. That cannot be explained apart from the Holy Spirit.\n\n📖 John 4:41-42 (KJV)\n«And many more believed because of his own word; And said unto the woman, Now we believe, not because of your saying: for we have heard him ourselves, and know that this is indeed the Christ, the Savior of the world.»\n\nShe arrived alone. She left as a movement.\nShe arrived carrying shame. She left with a testimony.\nShe arrived to hide. She left to find others.\n\nThat is what Jesus does. In our imperfection He loves us, transforms us, and uses us.",
-      "revelation_key": "God took the person the world disqualified and made her the first evangelist of Samaria."
+      "content": "We must understand what this means.\n\nIn the first century, a woman had no public voice. A Samaritan woman with her history had even less. The men of that city had no cultural or social reason to listen to her.\n\nAnd they went out.\n\nThat is not normal. That is supernatural — many believed because of her testimony.\n\nJohn — a first-century Jewish writer formed in that culture — recorded that it was this woman who brought an entire city to the Messiah. That cannot be explained apart from the Holy Spirit.\n\nEven more believed once they heard Jesus themselves.\n\nShe arrived alone. She left as a movement.\nShe arrived carrying shame. She left with a testimony.\nShe arrived to hide. She left to find others.\n\nThat is what Jesus does. In our imperfection He loves us, transforms us, and uses us.",
+      "revelation_key": "God took the person the world disqualified and made her the first evangelist of Samaria.",
+      "scripture_connections": [
+        {
+          "reference": "John 4:41-42",
+          "text": "And many more believed because of his own word; And said unto the woman, Now we believe, not because of your saying: for we have heard him ourselves, and know that this is indeed the Christ, the Savior of the world."
+        }
+      ]
     },
-
     {
       "order": 13,
       "type": "cinematic_scene",
@@ -231,11 +244,9 @@
       },
       "revelation_key": "An encounter with Jesus always leaves something different in the place where it occurred."
     },
-
     {
       "order": 14,
       "type": "discovery_activation",
-      "icon": "🪣",
       "mood": "intimate",
       "image_url": "woman_running_city.png",
       "title": "Your encounter",
@@ -263,7 +274,6 @@
         "content": "Lord Jesus, I come to this well.\n\nNot because I have it figured out. Not because my story is clean. I come because I am thirsty and I have tried other places.\n\nYou know everything about me. Every well I have returned to. Every time I looked in the wrong place for what only You can give.\n\nAnd You are still here. Not to expose me. To find me.\n\nLike her, I want the encounter that changes what I carry. That what came in as thirst, goes out as testimony.\n\nTransform me. Use me. In my imperfection, in my story, in what I am.\n\nGive me the water that never runs dry. And give me the courage to leave my waterpot.\n\nIn Jesus' name, amen."
       }
     },
-
     {
       "order": 15,
       "type": "completion",
@@ -272,11 +282,10 @@
       "completion_verse": {
         "reference": "John 4:28-29",
         "text": "The woman then left her water pot, and went her way into the city, and said to the men, Come, see a man, who told me all things that ever I did: is not this the Christ?",
-        "bible_version": "King James Version"
+        "bible_version": "KJV"
       },
       "reflection_prompt": "What is the waterpot you need to leave behind today? And who needs to hear your 'come and see'?",
       "celebration_type": "gentle_light"
     }
-
   ]
 }

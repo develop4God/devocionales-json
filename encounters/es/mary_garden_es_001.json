@@ -1,0 +1,263 @@
+{
+  "id": "mary_garden_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "es",
+  "bible_version": "RVR1960",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "María Magdalena",
+    "testament": "new",
+    "scripture_reference": "Juan 20:1-18",
+    "mood_primary": "grief",
+    "accent_color": "#1a0a2e",
+    "emoji": "🌸",
+    "tags": [
+      "duelo",
+      "resurrección",
+      "nombre",
+      "identidad",
+      "fidelidad",
+      "amor",
+      "magdalena",
+      "jesús",
+      "encuentro",
+      "restauración"
+    ]
+  },
+  "key_verse": {
+    "reference": "Juan 20:16",
+    "text": "Jesús le dijo: ¡María! Volviéndose ella, le dijo: ¡Raboni! (que quiere decir, Maestro).",
+    "bible_version": "RVR1960"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "darkness",
+      "image_url": "mary_garden_dawn_tomb.png",
+      "title": "Siendo aún oscuro.",
+      "narrative": "No esperó la luz.\n\nLos demás dormían. Los discípulos se habían encerrado. El sábado había terminado, pero el mundo seguía detenido.\n\nElla no. Ella fue al sepulcro mientras todo seguía oscuro.\n\nNo llevaba un plan. Solo llevaba la única cosa que no le pudieron quitar: su presencia.",
+      "ambient_sound": "wind_predawn",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 20:1",
+        "text": "El primer día de la semana, María Magdalena fue de mañana, siendo aún oscuro, al sepulcro, y vio quitada la piedra del sepulcro."
+      },
+      "revelation_key": "Cuando todos se escondieron, ella caminó hacia la tumba. El amor no espera condiciones perfectas."
+    },
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "panic",
+      "image_url": "mary_garden_empty_tomb.png",
+      "title": "La piedra quitada.",
+      "narrative": "Lo primero que vio fue la piedra movida.\n\nNo pensó en resurrección. Pensó en robo. Pensó que le habían quitado lo último que le quedaba de Él.\n\nCorrió.",
+      "ambient_sound": "footsteps_running",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 20:2",
+        "text": "Entonces corrió, y fue a Simón Pedro y al otro discípulo, aquel al que amaba Jesús, y les dijo: Se han llevado del sepulcro al Señor, y no sabemos dónde le han puesto."
+      },
+      "revelation_key": "Su primer instinto ante la tumba vacía no fue fe. Fue dolor. Y eso no la descalificó."
+    },
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "grief",
+      "image_url": "mary_garden_weeping.png",
+      "verse_reference": "Juan 20:11-13",
+      "verse_text": "Pero María estaba fuera llorando junto al sepulcro; y mientras lloraba, se inclinó para mirar dentro del sepulcro; y vio a dos ángeles con vestiduras blancas, que estaban sentados el uno a la cabecera, y el otro a los pies, donde el cuerpo de Jesús había sido puesto. Y le dijeron: Mujer, ¿por qué lloras? Les dijo: Porque se han llevado a mi Señor, y no sé dónde le han puesto.",
+      "reflection": "Pedro y Juan vinieron, vieron las vendas, creyeron y se fueron a casa.\n\nElla se quedó.\n\nNo porque tuviera más fe. No porque entendiera más. Se quedó porque no podía irse. Porque lo que la unía a Jesús no era comprensión. Era amor.\n\nDos ángeles le hicieron la misma pregunta que pronto haría Jesús: ¿Por qué lloras?\n\nNo la corrigieron. No le dijeron que no debía llorar. Permitieron su dolor.\n\nA veces la fidelidad no se ve como fortaleza. Se ve como alguien que se queda cuando no hay razón para quedarse.",
+      "revelation_key": "Los discípulos se fueron a casa. Ella se quedó. La fidelidad no siempre entiende; pero no se va."
+    },
+    {
+      "order": 4,
+      "type": "character_moment",
+      "mood": "grief",
+      "image_url": "mary_garden_portrait.png",
+      "title": "¿Quién era María Magdalena?",
+      "subtitle": "Lo que dice la Biblia",
+      "content": "Jesús echó de ella siete demonios. Siete. El número de la totalidad. Lo que sea que la atormentaba, la ocupaba por completo.\n\nDespués de su liberación, ella lo siguió. Lucas 8:2-3 la coloca entre las mujeres que sostenían el ministerio de Jesús con sus bienes. No estaba al margen. Estaba presente.\n\nEstuvo al pie de la cruz cuando los discípulos huyeron. Y fue la primera en ir al sepulcro.\n\nNo era perfecta. Era fiel, con un corazón entregado y eso es lo que Jesus ve y busca en su iglesia.",
+      "revelation_key": "No sabemos todo sobre su pasado. Pero sabemos que estuvo donde otros no estuvieron.",
+      "scripture_connections": [
+        {
+          "reference": "Lucas 8:2-3",
+          "text": "y algunas mujeres que habían sido sanadas de espíritus malos y de enfermedades: María, que se llamaba Magdalena, de la que habían salido siete demonios"
+        },
+        {
+          "reference": "Marcos 15:40",
+          "text": "También había algunas mujeres mirando de lejos, entre las cuales estaban María Magdalena, María la madre de Jacobo el menor y de José, y Salomé"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "tense",
+      "image_url": "mary_garden_linen_cloths.png",
+      "title": "Lo que quedó en la tumba",
+      "subtitle": "Las vendas, el sudario, y lo que significan.",
+      "content": "Juan registra un detalle que ningún otro evangelista menciona con tanta precisión: las vendas puestas allí, y el sudario enrollado en un lugar aparte.\n\nEsto no es un detalle menor. Si alguien hubiera robado el cuerpo, no habría desvendado el cadáver. La ropa mortuoria estaba en su lugar, pero el cuerpo no.\n\n📜 El sudario enrollado en un lugar aparte tiene un peso cultural. Algunos estudiosos han sugerido que en la costumbre judía, cuando un amo terminaba de comer, si dejaba la servilleta doblada significaba que volvería. Sea o no verificable esa tradición, lo que Juan vio fue orden, no caos. No hubo robo. Hubo resurrección.\n\nJuan vio eso y creyó. Pero María todavía no entendía. Y Jesús no la descartó por eso.\n\nLa fe no siempre llega al mismo tiempo para todos. Y Dios no tiene prisa.",
+      "revelation_key": "Juan vio y creyó. María vio y lloró. Jesús se reveló a ambos.",
+      "verse_overlay": {
+        "reference": "Juan 20:6-7",
+        "text": "Luego llegó Simón Pedro tras él, y entró en el sepulcro, y vio los lienzos puestos allí, y el sudario, que había estado sobre la cabeza de Jesús, no puesto con los lienzos, sino enrollado en un lugar aparte."
+      }
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "liminal",
+      "image_url": "mary_garden_turned_back.png",
+      "title": "Se volvió.",
+      "narrative": "Respondió a los ángeles. Se volvió.\n\nY allí estaba Él. De pie. Vivo.\n\nPero ella no lo reconoció.\n\nSus ojos, llenos de lágrimas, buscaban un cuerpo muerto. No estaban preparados para ver al que estaba vivo.",
+      "ambient_sound": "garden_morning",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 20:14",
+        "text": "Cuando había dicho esto, se volvió, y vio a Jesús que estaba allí; mas no sabía que era Jesús."
+      },
+      "revelation_key": "A veces Jesús está justo detrás de nosotros y no lo reconocemos porque buscamos en la forma equivocada."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "ache",
+      "image_url": "mary_garden_mistaken_gardener.png",
+      "verse_reference": "Juan 20:15",
+      "verse_text": "Jesús le dijo: Mujer, ¿por qué lloras? ¿A quién buscas? Ella, pensando que era el hortelano, le dijo: Señor, si tú lo has llevado, dime dónde lo has puesto, y yo lo llevaré.",
+      "reflection": "La misma pregunta que hicieron los ángeles, ahora en la voz de Jesús: ¿Por qué lloras?\n\nY luego una segunda: ¿A quién buscas?\n\nNo preguntó qué buscas. Preguntó a quién.\n\nElla lo confundió con el cuidador del huerto y en su confusión dijo algo que revela todo sobre su corazón: yo lo llevaré.\n\nUna mujer sola, sin posición social, sin fuerza para cargar un cuerpo, ofrece cargarlo ella misma. No es lógica. Es amor.\n\nY Jesús lo vio todo.",
+      "revelation_key": "Ella no tenía fuerza para lo que ofrecía. Pero la disposición de su corazón era lo que Jesús estaba buscando."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "revelation",
+      "image_url": "mary_garden_name_called.png",
+      "title": "¡María!",
+      "narrative": "Una palabra.\n\nSu nombre.\n\nNo una explicación teológica. No una corrección. No un reproche por no haberlo reconocido.\n\nSolo su nombre, dicho como solo Él lo decía.\n\nY ella supo.",
+      "ambient_sound": "silence_sacred",
+      "haptic": "light_pulse",
+      "verse_overlay": {
+        "reference": "Juan 20:16",
+        "text": "Jesús le dijo: ¡María! Volviéndose ella, le dijo: ¡Raboni! (que quiere decir, Maestro)."
+      },
+      "revelation_key": "No la convenció con argumentos. La llamó por su nombre. Así es como el Pastor encuentra a sus ovejas."
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "wonder",
+      "image_url": "mary_garden_light_breaking.png",
+      "title": "¡Raboni!",
+      "subtitle": "El peso de una sola palabra.",
+      "content": "Raboni no es lo mismo que Rabí. Es una forma más íntima, más personal. En el arameo del primer siglo, Raboni era reservado casi exclusivamente para dirigirse a Dios en oración. Era la forma que usaban los más cercanos.\n\nElla no dijo Maestro como un título formal. Dijo Raboni como quien reconoce a la persona que cambió su vida.\n\n🔑 Jesús la llamó por nombre. Ella respondió con el nombre que solo los que lo conocían de cerca usaban.\n\nDos nombres. Un reconocimiento mutuo.\n\nEn Juan 10:3, Jesús había dicho que el buen pastor llama a sus ovejas por nombre. Aquí, en un jardín, al amanecer, lo hizo literalmente.\n\nNo fue doctrina. Fue encuentro.",
+      "revelation_key": "Él la llamó por nombre. Ella respondió con el nombre que solo los cercanos usaban. Así funciona la relación de intimidad con Dios.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 10:3",
+          "text": "A éste abre el portero, y las ovejas oyen su voz; y a sus ovejas llama por nombre, y las saca."
+        },
+        {
+          "reference": "Isaías 43:1",
+          "text": "Ahora, así dice Jehová, Creador tuyo, oh Jacob, y Formador tuyo, oh Israel: No temas, porque yo te redimí; te puse nombre, mío eres tú."
+        }
+      ],
+      "verse_overlay": {
+        "reference": "Juan 10:14",
+        "text": "Yo soy el buen pastor; y conozco mis ovejas, y las mías me conocen"
+      }
+    },
+    {
+      "order": 10,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "mary_garden_reaching.png",
+      "title": "No me toques.",
+      "subtitle": "Lo que Jesús le pidió y por qué.",
+      "content": "La reacción natural de María fue aferrarse a Él. Después de tres días de oscuridad, de creer que lo había perdido para siempre, quería retenerlo.\n\nJesús le dijo: No me toques, porque aún no he subido a mi Padre.\n\nNo fue rechazo. Fue redirección.\n\nLe estaba diciendo: no puedes retenerme como antes. La relación no termina aquí, pero cambia. Ya no será presencia física. Será presencia espiritual, permanente, sin límite de tiempo ni lugar.\n\nY luego le dio una misión: ve a mis hermanos.\n\nLa mujer que vino buscando un cuerpo muerto salió del jardín con un mensaje vivo. No fue enviada a buscar. Fue enviada a anunciar.",
+      "revelation_key": "Jesús no la rechazó. Le mostró que su presencia ya no estaría limitada a lo que sus manos podían tocar.",
+      "verse_overlay": {
+        "reference": "Juan 20:17",
+        "text": "Jesús le dijo: No me toques, porque aún no he subido a mi Padre; mas ve a mis hermanos, y diles: Subo a mi Padre y a vuestro Padre, a mi Dios y a vuestro Dios."
+      }
+    },
+    {
+      "order": 11,
+      "type": "cinematic_scene",
+      "mood": "sending",
+      "image_url": "mary_garden_running_dawn.png",
+      "title": "Fue María Magdalena para dar a los discípulos las nuevas.",
+      "narrative": "La misma mujer que corrió al sepulcro en la oscuridad ahora corría de vuelta a la ciudad con la luz del amanecer a sus espaldas.\n\nPero esta vez no corría por dolor. Corría con un mensaje.\n\nHe visto al Señor.\n\nCuatro palabras. La primera proclamación de la resurrección en la historia.",
+      "ambient_sound": "dawn_birds",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 20:18",
+        "text": "Fue entonces María Magdalena para dar a los discípulos las nuevas de que había visto al Señor, y que él le había dicho estas cosas."
+      },
+      "revelation_key": "La primera persona en anunciar la resurrección fue una mujer a la que el mundo no le habría dado credibilidad. Así elige Dios a sus mensajeros."
+    },
+    {
+      "order": 12,
+      "type": "theological_depth",
+      "mood": "wonder",
+      "image_url": "mary_garden_sunrise.png",
+      "title": "La apóstol de los apóstoles",
+      "subtitle": "Por qué ella fue la primera.",
+      "content": "En Israel del primer siglo, el testimonio de una mujer no tenía validez legal. Si los evangelios fueran una invención, jamás habrían puesto a una mujer como primera testigo de la resurrección. Nadie que fabricara una historia elegiría al testigo menos creíble de su cultura.\n\nPero Dios sí.\n\nLa tradición cristiana antigua la llamó apostola apostolorum: la apóstol de los apóstoles. Fue enviada a los enviados.\n\n✝️ Hay un patrón en toda la Escritura: Dios elige lo que el mundo descarta. Lo débil. Lo pequeño. Lo que no tiene voz.\n\nMaría Magdalena no fue un accidente. Fue una elección deliberada. Jesús pudo haberse aparecido primero a Pedro, a Juan, al Sanedrín. Se apareció a la que se quedó llorando junto a una tumba vacía.\n\nPorque la fidelidad, no la posición, es lo que Dios honra.",
+      "revelation_key": "Dios no eligió al testigo más creíble. Eligió al más fiel.",
+      "scripture_connections": [
+        {
+          "reference": "1 Corintios 1:27",
+          "text": "sino que lo necio del mundo escogió Dios, para avergonzar a los sabios; y lo débil del mundo escogió Dios, para avergonzar a lo fuerte"
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "mood": "intimate",
+      "image_url": "mary_garden_prayer.png",
+      "title": "Tu encuentro",
+      "subtitle": "¿Qué nombre necesitas escuchar hoy?",
+      "discovery_questions": [
+        {
+          "category": "Tu oscuridad",
+          "question": "María fue al sepulcro siendo aún oscuro. ¿Hay algo en tu vida que buscas aun siendo oscuro, sin esperar luz? ¿Qué te mueve a seguir yendo aunque no entiendas?"
+        },
+        {
+          "category": "Tu búsqueda",
+          "question": "Ella buscaba un cuerpo muerto y encontró al Jesucristo vivo. ¿Hay algo que estás buscando en la forma equivocada? ¿Qué pasaría si lo que Dios tiene para ti es diferente a lo que esperas?"
+        },
+        {
+          "category": "Tu nombre",
+          "question": "Jesús la llamó por su nombre y ella respondió con esa misma intimidad. ¿Cuándo fue la última vez que sentiste que Dios te llamaba personalmente? ¿Tienes esa cercanía y la intimidad para acercarte a Dios?, sino es así, ¿qué te impide acercarte a Él?"
+        },
+        {
+          "category": "Tu mensaje",
+          "question": "María pasó de buscar a ser enviada. ¿Qué ha hecho Jesús en tu vida que necesitas dejar de guardar para ti? ¿A quién necesitas decirle: he visto al Señor y quiero que vivas con esta misma esperanza?"
+        }
+      ],
+      "prayer": {
+        "title": "Oración del que busca en la oscuridad",
+        "content": "Señor Jesús, vengo a este jardín.\n\nVengo como María: en la oscuridad, sin entender todo, pero sin apartarme de Ti.\n\nA veces te busco en las formas equivocadas. A veces no te reconozco aunque estés justo frente a mí. A veces mis lágrimas me impiden ver lo que ya está sucediendo.\n\nPero Tú me conoces. Conoces mi nombre. Conoces cada parte de mi historia. Y no te has ido.\n\nLlámame por mi nombre hoy. Que yo pueda reconocer tu voz entre todas las otras voces. Y que lo que escuche de Ti me transforme en alguien que no puede quedarse callado.\n\nComo María, quiero pasar de buscar a anunciar. De llorar a correr con tu mensaje y llevar a otros a la esperanza que has traído a mi vida\n\nEn el nombre de Jesús, amén."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "dawn",
+      "image_url": "mary_garden_completion.png",
+      "completion_verse": {
+        "reference": "Juan 20:16",
+        "text": "Jesús le dijo: ¡María! Volviéndose ella, le dijo: ¡Raboni! (que quiere decir, Maestro).",
+        "bible_version": "RVR1960"
+      },
+      "reflection_prompt": "¿Qué nombre necesitas escuchar hoy de parte de Jesús? ¿Y a quién necesitas decirle: he visto al Señor?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

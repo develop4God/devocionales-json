@@ -1,0 +1,109 @@
+{
+  "encounter_id": "thomas_001",
+  "character": "Thomas",
+  "master_character_prompt": "A man in his late twenties, lean build, olive-brown skin weathered by sun and travel, short dark curly hair and a short dark beard, deep-set watchful eyes with a searching expression, wearing a simple earth-toned linen tunic in warm brown with a darker mantle draped over one shoulder, worn leather sandals. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting. Character reference sheet, full body and face close-up.",
+  "intro_image": {
+    "filename": "thomas_intro.png",
+    "prompt": "A man in his late twenties, lean build, olive-brown skin, short dark curly hair, short dark beard, wearing a simple earth-toned linen tunic in warm brown with a darker mantle. He stands alone in the far right of the frame, seen from behind, looking toward a closed wooden door set in a stone wall. Wide atmospheric shot of a narrow Jerusalem street at dusk. Deep blue twilight fills the sky, warm amber lamplight glows faintly through a small window above the door. The man is small against the ancient stone architecture. A sense of isolation and longing. No text. Painterly warm 2D illustration, Mediterranean palette, deep indigo and warm amber tones, cinematic lighting."
+  },
+  "card_prompts": [
+    {
+      "order": 1,
+      "image_url": "thomas_empty_room_evening.png",
+      "mood": "tense",
+      "shot_type": "wide establishing",
+      "prompt": "Wide establishing shot of a dimly lit upper room in first-century Jerusalem at evening. A group of men huddle together near an oil lamp, their faces lit by its warm glow, visible through a doorway from an adjacent empty corridor. The foreground is dark and empty — the space where someone should be but is not. A single cloak or mantle lies abandoned on a stone bench in the foreground. Closed wooden doors and shuttered windows. Tension and fear fill the room. No individual faces detailed. Painterly warm 2D illustration, Mediterranean palette, deep shadow and warm ochre lamplight, cinematic lighting, no text."
+    },
+    {
+      "order": 2,
+      "image_url": "thomas_disciple_portrait.png",
+      "mood": "intense",
+      "shot_type": "close-up portrait",
+      "prompt": "A man in his late twenties, lean build, olive-brown skin weathered by sun, short dark curly hair and a short dark beard, deep-set watchful eyes. Close-up portrait, three-quarter view. His expression is not angry but deeply focused, brow slightly furrowed, jaw set — the face of someone who needs to understand before he can follow. Warm ochre light from one side casts half his face in soft shadow. A rough stone wall behind him, slightly out of focus. Painterly warm 2D illustration, Mediterranean palette, warm brown and ochre tones, cinematic lighting, no text."
+    },
+    {
+      "order": 3,
+      "image_url": "thomas_road_bethany.png",
+      "mood": "storm",
+      "shot_type": "action/movement",
+      "prompt": "A man in his late twenties, lean build, olive-brown skin, short dark curly hair and a short dark beard, wearing a simple earth-toned linen tunic in warm brown with a darker mantle. He walks at the front of a small group of men on a dusty road, his stride determined, his face set forward with resolve. Behind him, the other figures hesitate, some looking back. The road stretches through rocky Judean hills under a heavy overcast sky, dark clouds pressing low. Wind whips the dust. The landscape feels dangerous. He leads anyway. Painterly warm 2D illustration, Mediterranean palette, muted earth tones under storm-grey sky, cinematic lighting, no text."
+    },
+    {
+      "order": 4,
+      "image_url": "thomas_last_supper_question.png",
+      "mood": "mysterious",
+      "shot_type": "medium two-figure",
+      "prompt": "A man in his late twenties, lean build, olive-brown skin, short dark curly hair and a short dark beard, wearing a simple earth-toned linen tunic. He leans slightly forward across a low table strewn with bread and cups, one hand open in a questioning gesture, his face earnest and searching. Across from him, partially visible from behind and in soft silhouette, a figure in a simple white first-century tunic, face never visible, a subtle warm radiant glow of glory emanating from his form, illuminating the bread and cups on the table. Warm lamplight fills the room. Other figures recline in the background, out of focus. Painterly warm 2D illustration, Mediterranean palette, warm amber and deep shadow, cinematic lighting, no text."
+    },
+    {
+      "order": 5,
+      "image_url": "thomas_upper_room_jesus_appears.png",
+      "mood": "awe",
+      "shot_type": "wide establishing",
+      "prompt": "Wide shot of an upper room with closed wooden doors. A group of men are gathered, some standing, some fallen to their knees in astonishment. In the center of the room, a figure in a simple white first-century tunic stands with arms slightly extended, seen from behind, face never visible. A powerful warm radiant glow of glory emanates from his glorified body, casting long golden light across the stone walls and floor, illuminating the faces of the men around him. His hands are slightly raised, showing the wounds in his palms — visible from behind as dark marks against the glow. The room that was dark is now flooded with his presence. Painterly warm 2D illustration, Mediterranean palette, dramatic contrast between golden divine light and dark room, cinematic lighting, no text."
+    },
+    {
+      "order": 6,
+      "image_url": "thomas_disciples_tell_him.png",
+      "mood": "tense",
+      "shot_type": "medium two-figure",
+      "prompt": "A man in his late twenties, lean build, olive-brown skin, short dark curly hair and a short dark beard, wearing a simple earth-toned linen tunic in warm brown. He stands with arms crossed, weight shifted back, face showing a mixture of pain and resistance. Before him, two other men lean toward him urgently, one gripping his arm, their faces lit with a joy and certainty he does not share. A stone courtyard at midday, harsh sunlight casting sharp shadows. The contrast between their animated excitement and his guarded stillness tells the whole story. Painterly warm 2D illustration, Mediterranean palette, bright harsh midday light and deep shadow, cinematic lighting, no text."
+    },
+    {
+      "order": 7,
+      "image_url": "thomas_alone_night.png",
+      "mood": "falling",
+      "shot_type": "close-up portrait",
+      "prompt": "A man in his late twenties, lean build, olive-brown skin, short dark curly hair and a short dark beard, deep-set eyes heavy with exhaustion and inner turmoil. Intimate close-up, slightly from below. He sits alone in darkness, back against a rough stone wall, knees drawn up. His hands hang open on his knees, empty. A faint sliver of moonlight catches the edge of his face and one eye. The rest is deep shadow. His expression is not defiant but quietly devastated — a man who wants to believe but cannot force himself. Painterly warm 2D illustration, Mediterranean palette, near-monochrome deep indigo and cold silver, cinematic lighting, no text."
+    },
+    {
+      "order": 8,
+      "image_url": "thomas_dark_room_candle.png",
+      "mood": "mysterious",
+      "shot_type": "object/still life",
+      "prompt": "A single clay oil lamp burning on a rough stone ledge in a dark room. The flame is small but steady, casting a warm orange circle of light on the surrounding stone. Beyond the light, total darkness. On the ledge beside the lamp, a piece of unleavened bread sits untouched and a small clay cup of water, both untouched — a fast. Dust motes float in the tiny circle of light. No people. Pure metaphor for waiting in darkness. Painterly warm 2D illustration, Mediterranean palette, extreme contrast between the tiny warm flame and surrounding black, cinematic lighting, no text."
+    },
+    {
+      "order": 9,
+      "image_url": "thomas_jesus_appears_doors.png",
+      "mood": "awe",
+      "shot_type": "wide establishing",
+      "prompt": "Wide shot of the same upper room, closed wooden doors. The disciples are gathered again, and among them a man in his late twenties, olive-brown skin, short dark curly hair and dark beard, wearing a warm brown tunic — Thomas, now present, recognizable in the group. In the center of the room, a figure in a simple white first-century tunic materializes, seen from behind, face never visible, his glorified body radiating an intense warm golden glow of divine glory that fills the entire room, light streaming outward from his form like sunrise breaking indoors. The closed doors behind him emphasize that he did not enter by natural means. Every face in the room is lit by his radiance. Painterly warm 2D illustration, Mediterranean palette, dramatic divine golden light flooding a dark stone room, cinematic lighting, no text."
+    },
+    {
+      "order": 10,
+      "image_url": "thomas_jesus_hands_wounds.png",
+      "mood": "grace",
+      "shot_type": "medium two-figure",
+      "prompt": "A man in his late twenties, lean build, olive-brown skin, short dark curly hair and a short dark beard, wearing a simple earth-toned tunic. He has fallen to his knees, face tilted upward, eyes wide with awe and tears, mouth open in the moment of confession. Before him, seen from behind and slightly above, a figure in a simple white first-century tunic extends his hands forward, palms open and facing down toward Thomas — the nail wounds clearly visible as dark marks in each palm, glowing faintly at the edges. The figure's glorified body radiates a powerful warm luminous glow of glory, bathing Thomas's upturned face in golden divine light. Face of Jesus never visible — only his back, shoulders, and outstretched wounded hands. Painterly warm 2D illustration, Mediterranean palette, rich golden radiance against warm ochre, cinematic lighting, no text."
+    },
+    {
+      "order": 11,
+      "image_url": "thomas_nail_marks_closeup.png",
+      "mood": "peace",
+      "shot_type": "object/still life",
+      "prompt": "Extreme close-up of two open hands, palms up, floating in warm golden light. In the center of each palm, a dark wound mark from a nail — not bloody, not gruesome, but present, real, healed yet permanent. The skin around the wounds has a faint luminous glow, as if light comes from within the flesh itself. No arms, no body, no face — only the two open palms and the marks. The background is pure warm golden radiance, soft and infinite. The wounds are not horrific but sacred — they are an offering. Painterly warm 2D illustration, warm gold and deep amber tones, soft divine luminosity, no text."
+    },
+    {
+      "order": 12,
+      "image_url": "thomas_blessed_who_believe.png",
+      "mood": "peace",
+      "shot_type": "wide atmospheric",
+      "prompt": "A man in his late twenties, lean build, olive-brown skin, short dark curly hair and a short dark beard, wearing a simple earth-toned tunic. He kneels in the upper room, head bowed, hands open on his knees in surrender. Before him, a figure in a simple white first-century tunic stands, seen from behind, face never visible, one hand gently extended in blessing. A warm radiant glow of glory emanates from the figure's glorified body, filling the room with soft golden light. The other disciples watch from the edges of the room, their faces peaceful and illuminated. Through a window behind the group, the first light of morning breaks on the horizon. Painterly warm 2D illustration, Mediterranean palette, warm golden divine light and soft dawn amber, cinematic lighting, no text."
+    },
+    {
+      "order": 13,
+      "image_url": "thomas_open_hands_light.png",
+      "mood": "peace",
+      "shot_type": "close-up portrait",
+      "prompt": "A man in his late twenties, olive-brown skin, short dark curly hair and a short dark beard. Intimate close-up of his hands, open and extended forward, palms up, fingers relaxed. His hands are calloused from work, rough but gentle. Warm golden light pours over them from above, casting soft shadows in the creases of his palms. A fold of his warm brown tunic is visible at the wrists. Background is a soft blur of warm amber and deep ochre. No face visible in this shot — only the open, surrendered hands. Painterly warm 2D illustration, Mediterranean palette, warm ochre and gold, soft cinematic lighting, no text."
+    },
+    {
+      "order": 14,
+      "image_url": "thomas_dawn_horizon.png",
+      "mood": "peace",
+      "shot_type": "wide departure",
+      "prompt": "Wide panoramic shot at full dawn. No people in the frame. An open doorway in a stone wall frames the view outward — the door stands wide open, no longer closed or locked. Beyond it, the rooftops of Jerusalem catch the warm golden sunrise light. The room behind the doorway is now empty, peaceful, filled with soft reflected light. A single pair of sandals sits by the threshold, as if someone has just stepped out into the new day. The transition from closed room to open world is the entire composition. Painterly warm 2D illustration, Mediterranean palette, warm gold and soft sandstone tones, cinematic sunrise lighting, no text."
+    }
+  ]
+}

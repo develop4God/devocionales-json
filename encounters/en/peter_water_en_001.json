@@ -5,7 +5,7 @@
   "language": "en",
   "bible_version": "KJV",
   "version": "1.0",
-  "estimated_reading_minutes": 8,
+  "estimated_reading_minutes": 5,
   "meta": {
     "character": "Peter",
     "testament": "new",
@@ -146,7 +146,6 @@
     {
       "order": 10,
       "type": "discovery_activation",
-      "icon": "🙏",
       "mood": "grace",
       "image_url": "jesus_light_water.png",
       "title": "Your Encounter",

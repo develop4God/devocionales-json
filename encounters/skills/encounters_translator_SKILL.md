@@ -49,8 +49,11 @@ Single source of truth for EN book name → `book_number` mapping (MySword/TheWo
 
 Reading speeds (`reading_speed.rate` and `reading_speed.unit`) are available per language in the remote index — read them from there, do not hardcode.
 
-For the `bible_version` field in JSON output, use the display `name` from the index — not the code:
-`SK2003` → `"新改訳2003"`, `CUV1919` → `"和合本1919"`, `HIOV` → `"पवित्र बाइबिल (ओ.वी.)"`, `HERV` → `"पवित्र बाइबिल"`, etc. This applies to **all three** `bible_version` fields (top-level, `key_verse`, `completion_verse`).
+For the `bible_version` field in JSON output:
+- **Latin-script languages (EN, ES, PT, FR, DE)** — use the **code**, unchanged: `KJV`, `RVR1960`, `ARC`, `LSG1910`, `LU17`. Do **not** spell out the full name ("King James Version" is wrong — check existing sibling files in that language before writing this field if unsure).
+- **Non-Latin-script languages (JA, ZH, HI, AR)** — use the display `name` from the index instead of the code, since the code alone means nothing to a native reader: `SK2003` → `"新改訳2003"`, `CUV1919` → `"和合本1919"`, `HIOV` → `"पवित्र बाइबिल (ओ.वी.)"`, `HERV` → `"पवित्र बाइबिल"`.
+
+This applies to **all three** `bible_version` fields (top-level, `key_verse`, `completion_verse`) — keep all three the same form (code or name) for a given language, never mixed.
 
 > If a version used by existing encounters is **not** listed in the remote index, that SQLite file must already be present locally in `bible_database/`.
 
@@ -149,9 +152,26 @@ Structure must be identical to the EN file.
 
 **Prayer:** Natural spoken address to God — no academic language, no untranslated foreign terms.
 
-**Asian and Hindi (JA, ZH, HI):** Use respectful/honorific religious register throughout. This is sacred literature.
-
 **Cognates (FR, PT, ES):** Words identical or near-identical across languages (e.g. `Courage` in French, `Grâce`) are valid translations — do not change them. The validator may warn but these are correct.
+
+---
+
+## MANDATORY GATE: Per-Language Register Rules
+
+Before delivering a translated file, check it against the rule for its language.
+A translation can be grammatically fluent and still fail this gate — check anyway.
+
+**Hindi (HI):** Jesus takes the respectful plural — verbs included, not just pronouns.
+Example: ✗ "यीशु आया...उसने कहा" → ✓ "यीशु आए...उन्होंने कहा". Does not apply to quoted
+verse fields (`verse_text`, `verse_overlay.text`, `completion_verse.text`,
+`scripture_connections[].text`) — those follow the cited Bible version's own grammar.
+
+**Japanese (JA) / Chinese (ZH):** Respectful/honorific register throughout — this is
+sacred literature. Example: avoid casual だ/よ endings in Japanese narration about
+Jesus; use 您 over 你 in Chinese devotional address.
+
+**Spanish / Portuguese / French (ES / PT / FR):** No hard gate — natural register per
+house style. Cognates are valid (see above).
 
 ---
 
@@ -192,6 +212,52 @@ Warnings about cognates (FR/PT/ES) and reading time differences from EN are expe
 
 ---
 
+## MANDATORY: Native-Speaker Critic Review
+
+`validate_encounters.py` checks schema and structure — it cannot catch bad prose. The
+translating agent also cannot reliably catch its own register mistakes (this is exactly
+how the HI plural-Jesus error shipped). So after each language file passes validation,
+before delivery, spawn a **fresh subagent (NOT HAIKU model)** (no shared context with the translator) with
+this prompt, substituting the language and file path:
+
+> You are a native {language} speaker. Read this file line by line, taking your time.
+> Report: Typos / Grammar Errors, and Awkward / Non-native-sounding phrasing. For each
+> issue found, propose the exact diff/fix. Also check it against the per-language
+> register rule in `encounters/skills/encounters_translator_skill.md` § "MANDATORY GATE:
+> Per-Language Register Rules".
+
+Apply the fixes the critic finds, then re-run `validate_encounters.py` to confirm the
+edits didn't break structure. Do this per language file — do not skip it for languages
+that "usually don't have issues."
+
+### MANDATORY GATE: Post-Fix Reverse Validation & Pattern Sweep
+
+A grammar/style fix can silently break meaning — restructuring a clause to fix a case
+error can turn "he walked toward danger with eyes open" into a circular sentence that no
+longer says anything. The agent that applies the fix is the worst-positioned to notice
+this (it's focused on the grammar, not re-deriving the theological point). So after
+applying critic fixes and before reporting done:
+
+1. **Re-read the complete file**, not just the diffed lines — meaning depends on
+   surrounding context the diff view won't show you.
+2. **For every edit made**, verify it still expresses the original point. Anchor the
+   check against the card's paired Bible reference and its `revelation_key` — those are
+   the source of truth for what the sentence is supposed to say. If a rewrite makes a
+   sentence grammatically correct but tautological, vaguer, or logically disconnected
+   from its `revelation_key`, it is a regression — fix it, don't wave it through.
+3. **Scan the entire file for the same error pattern(s)** the critic just flagged —
+   critic passes sample, they don't exhaustively cover. If the critic caught an
+   anglicism, a dangling modifier, an aufstehen/auferstehen-type mistranslation, or a
+   colon-capitalization slip in one card, grep/read for that same pattern in every other
+   card before considering the round done.
+4. **Validate JSON** after every batch of edits (`python3 -m json.tool <file>` or the
+   project validator) — never leave this until the very end.
+
+Repeat steps 2–4 until a full pass finds nothing new. Only then move to the next
+language or report completion.
+
+---
+
 ## index.json Update
 - Update the existing entry in the `encounters` array — do not duplicate or reorder
 - Pull `titles`, `subtitles`, `scripture_reference` directly from each translation file
@@ -205,7 +271,8 @@ Warnings about cognates (FR/PT/ES) and reading time differences from EN are expe
 1. All translated JSON files (one per language)
 2. Updated `encounters/index.json`
 3. Validation log showing ✅ ALL ENCOUNTERS PASSED
-4. Reading time table:
+4. Native-speaker critic review completed for each language (see "MANDATORY: Native-Speaker Critic Review" above) — fixes applied, not just reported
+5. Reading time table:
 
 | Language | Adjustment | Minutes |
 |---|---|---|
@@ -217,4 +284,4 @@ Warnings about cognates (FR/PT/ES) and reading time differences from EN are expe
 | JA | +3 | — |
 | ZH | +3 | — |
 
-5. Flag any verse not found in primary version with fallback version used
+6. Flag any verse not found in primary version with fallback version used

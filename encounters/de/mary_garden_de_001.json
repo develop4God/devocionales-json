@@ -1,0 +1,263 @@
+{
+  "id": "mary_garden_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "de",
+  "bible_version": "LU17",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 9,
+  "meta": {
+    "character": "Maria Magdalena",
+    "testament": "new",
+    "scripture_reference": "Johannes 20:1-18",
+    "mood_primary": "grief",
+    "accent_color": "#1a0a2e",
+    "emoji": "🌸",
+    "tags": [
+      "trauer",
+      "auferstehung",
+      "name",
+      "identität",
+      "treue",
+      "liebe",
+      "magdalena",
+      "jesus",
+      "begegnung",
+      "wiederherstellung"
+    ]
+  },
+  "key_verse": {
+    "reference": "Johannes 20:16",
+    "text": "Spricht Jesus zu ihr: Maria! Da wandte sie sich um und spricht zu ihm auf Hebräisch: Rabbuni!, das heißt: Meister!",
+    "bible_version": "LU17"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "darkness",
+      "image_url": "mary_garden_dawn_tomb.png",
+      "title": "Als es noch finster war.",
+      "narrative": "Sie wartete nicht auf das Licht.\n\nDie anderen schliefen. Die Jünger hatten sich eingeschlossen. Der Sabbat war vorüber, doch die Welt stand noch still.\n\nSie nicht. Sie ging zum Grab, als alles noch finster war.\n\nSie hatte keinen Plan. Sie trug nur das eine, das ihr niemand nehmen konnte: ihre Gegenwart.",
+      "ambient_sound": "wind_predawn",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 20:1",
+        "text": "Am ersten Tag der Woche kommt Maria Magdalena früh, als es noch finster war, zum Grab und sieht, dass der Stein vom Grab weggenommen war."
+      },
+      "revelation_key": "Während alle anderen sich versteckten, ging sie zum Grab. Liebe wartet nicht auf perfekte Bedingungen."
+    },
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "panic",
+      "image_url": "mary_garden_empty_tomb.png",
+      "title": "Der Stein war weggerollt.",
+      "narrative": "Das Erste, was sie sah, war der bewegte Stein.\n\nSie dachte nicht an Auferstehung. Sie dachte an Diebstahl. Sie dachte, man hätte ihr das Letzte genommen, was ihr von Ihm geblieben war.\n\nSie rannte.",
+      "ambient_sound": "footsteps_running",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 20:2",
+        "text": "Da läuft sie und kommt zu Simon Petrus und zu dem andern Jünger, den Jesus lieb hatte, und spricht zu ihnen: Sie haben den Herrn weggenommen aus dem Grab, und wir wissen nicht, wo sie ihn hingelegt haben."
+      },
+      "revelation_key": "Ihr erster Instinkt am leeren Grab war nicht Glaube. Es war Schmerz. Und das hat sie nicht disqualifiziert."
+    },
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "grief",
+      "image_url": "mary_garden_weeping.png",
+      "verse_reference": "Johannes 20:11-13",
+      "verse_text": "Maria aber stand draußen vor dem Grab und weinte. Als sie nun weinte, beugte sie sich in das Grab hinein und sieht zwei Engel in weißen Gewändern sitzen, einen zu Häupten und den andern zu den Füßen, wo der Leichnam Jesu gelegen hatte. Und die sprachen zu ihr: Frau, was weinst du? Sie spricht zu ihnen: Sie haben meinen Herrn weggenommen, und ich weiß nicht, wo sie ihn hingelegt haben.",
+      "reflection": "Petrus und Johannes kamen, sahen die Leinentücher, glaubten und gingen nach Hause.\n\nSie blieb.\n\nNicht weil sie mehr Glauben hatte. Nicht weil sie mehr verstand. Sie blieb, weil sie nicht gehen konnte. Weil das, was sie an Jesus band, nicht Verstehen war. Es war Liebe.\n\nZwei Engel stellten ihr dieselbe Frage, die Jesus bald stellen würde: Was weinst du?\n\nSie korrigierten sie nicht. Sie sagten ihr nicht, sie solle nicht weinen. Sie gaben ihrer Trauer Raum.\n\nManchmal sieht Treue nicht wie Stärke aus. Sie sieht aus wie jemand, der bleibt, wenn es keinen Grund gibt zu bleiben.",
+      "revelation_key": "Die Jünger gingen nach Hause. Sie blieb. Treue versteht nicht immer — aber sie geht nicht weg."
+    },
+    {
+      "order": 4,
+      "type": "character_moment",
+      "mood": "grief",
+      "image_url": "mary_garden_portrait.png",
+      "title": "Wer war Maria Magdalena?",
+      "subtitle": "Was die Bibel sagt",
+      "content": "Jesus trieb sieben Dämonen aus ihr aus. Sieben. Die Zahl der Vollkommenheit. Was auch immer sie quälte, es verzehrte sie völlig.\n\nNach ihrer Befreiung folgte sie ihm nach. Lukas 8:2-3 zählt sie zu den Frauen, die Jesu Dienst mit ihrem Besitz unterstützten. Sie stand nicht am Rand. Sie war dabei.\n\nSie stand am Fuß des Kreuzes, als die Jünger flohen. Und sie war die Erste, die zum Grab ging.\n\nSie war nicht perfekt. Sie war treu, mit einem hingegebenen Herzen — und das ist es, was Jesus in seiner Gemeinde sieht und sucht.",
+      "revelation_key": "Wir wissen nicht alles über ihre Vergangenheit. Aber wir wissen, dass sie dort war, wo andere es nicht waren.",
+      "scripture_connections": [
+        {
+          "reference": "Lukas 8:2-3",
+          "text": "dazu etliche Frauen, die er gesund gemacht hatte von bösen Geistern und Krankheiten, nämlich Maria, genannt Magdalena, von der sieben Dämonen ausgefahren waren,"
+        },
+        {
+          "reference": "Markus 15:40",
+          "text": "Und es waren auch Frauen da, die von ferne zuschauten, unter ihnen Maria Magdalena und Maria, die Mutter Jakobus des Kleinen und des Joses, und Salome,"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "tension",
+      "image_url": "mary_garden_linen_cloths.png",
+      "title": "Was im Grab zurückblieb",
+      "subtitle": "Die Leinentücher, das Schweißtuch und ihre Bedeutung.",
+      "content": "Johannes hält ein Detail fest, das kein anderer Evangelist mit solcher Präzision erwähnt: die Leinentücher, die dalagen, und das Schweißtuch, ordentlich zusammengelegt an einem besonderen Ort.\n\nDas ist kein nebensächliches Detail. Wenn jemand den Leichnam gestohlen hätte, hätte er ihn nicht ausgewickelt. Die Grabkleidung lag an Ort und Stelle, aber der Körper war nicht mehr da.\n\n📜 Das Schweißtuch, ordentlich zusammengelegt an einem besonderen Ort, trägt kulturelles Gewicht. Einige Gelehrte haben darauf hingewiesen, dass es im jüdischen Brauch hieß, wenn ein Herr nach dem Essen die Serviette gefaltet hinterließ, dass er zurückkehren würde. Ob diese Tradition belegbar ist oder nicht — was Johannes sah, war Ordnung, nicht Chaos. Es gab keinen Raub. Es gab Auferstehung.\n\nJohannes sah dies und glaubte. Aber Maria verstand es noch nicht. Und Jesus verwarf sie deswegen nicht.\n\nGlaube kommt nicht bei jedem zur selben Zeit. Und Gott hat es nicht eilig.",
+      "revelation_key": "Johannes sah und glaubte. Maria sah und weinte. Jesus offenbarte sich beiden.",
+      "verse_overlay": {
+        "reference": "Johannes 20:6-7",
+        "text": "Da kam Simon Petrus ihm nach und ging hinein in das Grab und sieht die Leinentücher liegen, und das Schweißtuch, das auf Jesu Haupt gelegen hatte, nicht bei den Leinentüchern, sondern daneben, zusammengewickelt an einem besonderen Ort."
+      }
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "liminal",
+      "image_url": "mary_garden_turned_back.png",
+      "title": "Sie wandte sich um.",
+      "narrative": "Sie antwortete den Engeln. Sie wandte sich um.\n\nUnd da stand Er. Aufrecht. Lebendig.\n\nAber sie erkannte Ihn nicht.\n\nIhre Augen, voller Tränen, suchten einen toten Körper. Sie waren nicht darauf vorbereitet, den zu sehen, der lebte.",
+      "ambient_sound": "garden_morning",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 20:14",
+        "text": "Und als sie das sagte, wandte sie sich um und sieht Jesus stehen und weiß nicht, dass es Jesus ist."
+      },
+      "revelation_key": "Manchmal steht Jesus direkt hinter uns und wir erkennen Ihn nicht, weil wir auf die falsche Weise suchen."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "ache",
+      "image_url": "mary_garden_mistaken_gardener.png",
+      "verse_reference": "Johannes 20:15",
+      "verse_text": "Spricht Jesus zu ihr: Frau, was weinst du? Wen suchst du? Sie meint, es sei der Gärtner, und spricht zu ihm: Herr, hast du ihn weggetragen, so sage mir: Wo hast du ihn hingelegt? Dann will ich ihn holen.",
+      "reflection": "Dieselbe Frage, die die Engel stellten, nun in Jesu Stimme: Was weinst du?\n\nUnd dann eine zweite: Wen suchst du?\n\nEr fragte nicht, was du suchst. Er fragte, wen.\n\nSie hielt Ihn für den Gärtner und sagte in ihrer Verwirrung etwas, das alles über ihr Herz verrät: Dann will ich ihn holen.\n\nEine Frau allein, ohne gesellschaftliche Stellung, ohne die Kraft, einen Leichnam zu tragen, bietet an, ihn selbst zu holen. Es ist keine Logik. Es ist Liebe.\n\nUnd Jesus sah all das.",
+      "revelation_key": "Sie hatte nicht die Kraft für das, was sie anbot. Aber die Bereitschaft ihres Herzens war es, wonach Jesus suchte."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "revelation",
+      "image_url": "mary_garden_name_called.png",
+      "title": "Maria!",
+      "narrative": "Ein Wort.\n\nIhr Name.\n\nKeine theologische Erklärung. Keine Korrektur. Kein Tadel dafür, dass sie Ihn nicht erkannt hatte.\n\nNur ihr Name, ausgesprochen so, wie nur Er es konnte.\n\nUnd sie wusste es.",
+      "ambient_sound": "silence_sacred",
+      "haptic": "light_pulse",
+      "verse_overlay": {
+        "reference": "Johannes 20:16",
+        "text": "Spricht Jesus zu ihr: Maria! Da wandte sie sich um und spricht zu ihm auf Hebräisch: Rabbuni!, das heißt: Meister!"
+      },
+      "revelation_key": "Er überzeugte sie nicht mit Argumenten. Er rief sie bei ihrem Namen. So findet der Hirte seine Schafe."
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "wonder",
+      "image_url": "mary_garden_light_breaking.png",
+      "title": "Rabbuni!",
+      "subtitle": "Das Gewicht eines einzigen Wortes.",
+      "content": "Rabbuni ist nicht dasselbe wie Rabbi. Es ist eine intimere, persönlichere Form. Im Aramäischen des ersten Jahrhunderts war Rabbuni fast ausschließlich dem Gebet zu Gott vorbehalten. Es war die Form derer, die am nächsten standen.\n\nSie sagte nicht Meister als formellen Titel. Sie sagte Rabbuni wie jemand, der die Person erkennt, die ihr Leben verändert hat.\n\n🔑 Jesus rief sie bei ihrem Namen. Sie antwortete mit dem Namen, den nur die Vertrautesten benutzten.\n\nZwei Namen. Ein gegenseitiges Erkennen.\n\nIn Johannes 10:3 hatte Jesus gesagt, dass der gute Hirte seine Schafe mit Namen ruft. Hier, in einem Garten, im Morgengrauen, tat Er es buchstäblich.\n\nEs war keine Doktrin. Es war Begegnung.",
+      "revelation_key": "Er rief sie bei ihrem Namen. Sie antwortete mit dem Namen, den nur die Nächsten benutzten. So funktioniert Intimität mit Gott.",
+      "scripture_connections": [
+        {
+          "reference": "Johannes 10:3",
+          "text": "Dem macht der Türhüter auf, und die Schafe hören seine Stimme; und er ruft seine Schafe mit Namen und führt sie hinaus."
+        },
+        {
+          "reference": "Jesaja 43:1",
+          "text": "Und nun spricht der HERR, der dich geschaffen hat, Jakob, und dich gemacht hat, Israel: Fürchte dich nicht, denn ich habe dich erlöst; ich habe dich bei deinem Namen gerufen; du bist mein!"
+        }
+      ],
+      "verse_overlay": {
+        "reference": "Johannes 10:14",
+        "text": "Ich bin der gute Hirte und kenne die Meinen und die Meinen kennen mich,"
+      }
+    },
+    {
+      "order": 10,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "mary_garden_reaching.png",
+      "title": "Rühre mich nicht an.",
+      "subtitle": "Was Jesus von ihr erbat und warum.",
+      "content": "Marias natürliche Reaktion war, Ihn festzuhalten. Nach drei Tagen der Finsternis, in denen sie glaubte, Ihn für immer verloren zu haben, wollte sie Ihn behalten.\n\nJesus sagte zu ihr: Rühre mich nicht an! Denn ich bin noch nicht aufgefahren zum Vater.\n\nEs war keine Zurückweisung. Es war eine Neuausrichtung.\n\nEr sagte ihr: Du kannst mich nicht festhalten wie zuvor. Die Beziehung endet hier nicht, aber sie verändert sich. Es wird nicht mehr körperliche Gegenwart sein. Es wird geistliche Gegenwart sein — bleibend, ohne Grenzen von Zeit oder Raum.\n\nUnd dann gab Er ihr einen Auftrag: Geh hin zu meinen Brüdern.\n\nDie Frau, die einen toten Körper gesucht hatte, verließ den Garten mit einer lebendigen Botschaft. Sie wurde nicht geschickt, um zu suchen. Sie wurde geschickt, um zu verkünden.",
+      "revelation_key": "Jesus wies sie nicht zurück. Er zeigte ihr, dass seine Gegenwart nicht mehr auf das beschränkt sein würde, was ihre Hände berühren konnten.",
+      "verse_overlay": {
+        "reference": "Johannes 20:17",
+        "text": "Spricht Jesus zu ihr: Rühre mich nicht an! Denn ich bin noch nicht aufgefahren zum Vater. Geh aber hin zu meinen Brüdern und sage ihnen: Ich fahre auf zu meinem Vater und eurem Vater, zu meinem Gott und eurem Gott."
+      }
+    },
+    {
+      "order": 11,
+      "type": "cinematic_scene",
+      "mood": "sending",
+      "image_url": "mary_garden_running_dawn.png",
+      "title": "Maria Magdalena geht und verkündigt den Jüngern.",
+      "narrative": "Dieselbe Frau, die in der Finsternis zum Grab gerannt war, lief nun zurück in die Stadt, mit dem Licht der Morgendämmerung im Rücken.\n\nAber diesmal rannte sie nicht vor dem Schmerz davon. Sie rannte mit einer Botschaft.\n\nIch habe den Herrn gesehen.\n\nVier Worte. Die erste Verkündigung der Auferstehung in der Geschichte.",
+      "ambient_sound": "dawn_birds",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 20:18",
+        "text": "Maria Magdalena geht und verkündigt den Jüngern: »Ich habe den Herrn gesehen«, und was er zu ihr gesagt habe."
+      },
+      "revelation_key": "Die erste Person, die die Auferstehung verkündete, war eine Frau, der die Welt keine Glaubwürdigkeit zugestanden hätte. So wählt Gott seine Boten."
+    },
+    {
+      "order": 12,
+      "type": "theological_depth",
+      "mood": "wonder",
+      "image_url": "mary_garden_sunrise.png",
+      "title": "Die Apostelin der Apostel",
+      "subtitle": "Warum sie die Erste war.",
+      "content": "Im Israel des ersten Jahrhunderts hatte das Zeugnis einer Frau keine rechtliche Gültigkeit. Wenn die Evangelien eine Erfindung wären, hätte man niemals eine Frau als erste Zeugin der Auferstehung gewählt. Niemand, der eine Geschichte erfindet, würde die am wenigsten glaubwürdige Zeugin seiner Kultur wählen.\n\nAber Gott tat es.\n\nDie frühchristliche Tradition nannte sie apostola apostolorum: die Apostelin der Apostel. Sie wurde zu den Gesandten gesandt.\n\n✝️ Es zieht sich ein roter Faden durch die gesamte Schrift: Gott erwählt, was die Welt verwirft. Das Schwache. Das Kleine. Das Stimmlose.\n\nMaria Magdalena war kein Zufall. Sie war eine bewusste Wahl. Jesus hätte zuerst Petrus erscheinen können, Johannes, dem Hohen Rat. Er erschien der, die weinend an einem leeren Grab geblieben war.\n\nDenn Treue, nicht Stellung, ist es, was Gott ehrt.",
+      "revelation_key": "Gott wählte nicht die glaubwürdigste Zeugin. Er wählte die treueste.",
+      "scripture_connections": [
+        {
+          "reference": "1. Korinther 1:27",
+          "text": "Sondern was töricht ist vor der Welt, das hat Gott erwählt, damit er die Weisen zuschanden mache; und was schwach ist vor der Welt, das hat Gott erwählt, damit er zuschanden mache, was stark ist;"
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "mood": "intimate",
+      "image_url": "mary_garden_prayer.png",
+      "title": "Deine Begegnung",
+      "subtitle": "Welchen Namen musst du heute hören?",
+      "discovery_questions": [
+        {
+          "category": "Deine Finsternis",
+          "question": "Maria ging zum Grab, als es noch finster war. Gibt es etwas in deinem Leben, das du auch im Dunkeln suchst, ohne auf das Licht zu warten? Was treibt dich an, weiterzugehen, auch wenn du nicht verstehst?"
+        },
+        {
+          "category": "Deine Suche",
+          "question": "Sie suchte einen toten Körper und fand den lebendigen Christus. Gibt es etwas, das du auf die falsche Weise suchst? Was wäre, wenn das, was Gott für dich hat, anders ist als das, was du erwartest?"
+        },
+        {
+          "category": "Dein Name",
+          "question": "Jesus rief sie bei ihrem Namen, und sie antwortete mit derselben Vertrautheit. Wann hast du das letzte Mal gespürt, dass Gott dich persönlich ruft? Hast du diese Nähe und Vertrautheit, um dich Gott zu nahen? Wenn nicht — was hält dich davon ab, Ihm näherzukommen?"
+        },
+        {
+          "category": "Deine Botschaft",
+          "question": "Maria ging vom Suchen zum Gesandtwerden. Was hat Jesus in deinem Leben getan, das du nicht länger für dich behalten solltest? Wem musst du sagen: Ich habe den Herrn gesehen, und ich möchte, dass du mit derselben Hoffnung lebst?"
+        }
+      ],
+      "prayer": {
+        "title": "Gebet dessen, der in der Finsternis sucht",
+        "content": "Herr Jesus, ich komme in diesen Garten.\n\nIch komme wie Maria: in der Finsternis, nicht alles verstehend, aber ohne mich von Dir abzuwenden.\n\nManchmal suche ich Dich auf die falsche Weise. Manchmal erkenne ich Dich nicht, selbst wenn Du direkt vor mir stehst. Manchmal halten meine Tränen mich davon ab, zu sehen, was bereits geschieht.\n\nAber Du kennst mich. Du kennst meinen Namen. Du kennst jeden Teil meiner Geschichte. Und Du bist nicht gegangen.\n\nRufe mich heute bei meinem Namen. Lass mich Deine Stimme erkennen unter all den anderen Stimmen. Und lass das, was ich von Dir höre, mich verwandeln in jemanden, der nicht schweigen kann.\n\nWie Maria möchte ich vom Suchen zum Verkünden kommen. Vom Weinen zum Laufen mit Deiner Botschaft, damit andere die Hoffnung erfahren, die Du in mein Leben gebracht hast.\n\nIm Namen Jesu, Amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "dawn",
+      "image_url": "mary_garden_completion.png",
+      "completion_verse": {
+        "reference": "Johannes 20:16",
+        "text": "Spricht Jesus zu ihr: Maria! Da wandte sie sich um und spricht zu ihm auf Hebräisch: Rabbuni!, das heißt: Meister!",
+        "bible_version": "LU17"
+      },
+      "reflection_prompt": "Welchen Namen musst du heute von Jesus hören? Und wem musst du sagen: Ich habe den Herrn gesehen?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
