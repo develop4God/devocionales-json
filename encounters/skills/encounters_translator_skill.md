@@ -49,8 +49,11 @@ Single source of truth for EN book name → `book_number` mapping (MySword/TheWo
 
 Reading speeds (`reading_speed.rate` and `reading_speed.unit`) are available per language in the remote index — read them from there, do not hardcode.
 
-For the `bible_version` field in JSON output, use the display `name` from the index — not the code:
-`SK2003` → `"新改訳2003"`, `CUV1919` → `"和合本1919"`, `HIOV` → `"पवित्र बाइबिल (ओ.वी.)"`, `HERV` → `"पवित्र बाइबिल"`, etc. This applies to **all three** `bible_version` fields (top-level, `key_verse`, `completion_verse`).
+For the `bible_version` field in JSON output:
+- **Latin-script languages (EN, ES, PT, FR, DE)** — use the **code**, unchanged: `KJV`, `RVR1960`, `ARC`, `LSG1910`, `LU17`. Do **not** spell out the full name ("King James Version" is wrong — check existing sibling files in that language before writing this field if unsure).
+- **Non-Latin-script languages (JA, ZH, HI, AR)** — use the display `name` from the index instead of the code, since the code alone means nothing to a native reader: `SK2003` → `"新改訳2003"`, `CUV1919` → `"和合本1919"`, `HIOV` → `"पवित्र बाइबिल (ओ.वी.)"`, `HERV` → `"पवित्र बाइबिल"`.
+
+This applies to **all three** `bible_version` fields (top-level, `key_verse`, `completion_verse`) — keep all three the same form (code or name) for a given language, never mixed.
 
 > If a version used by existing encounters is **not** listed in the remote index, that SQLite file must already be present locally in `bible_database/`.
 
