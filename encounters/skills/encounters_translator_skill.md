@@ -209,6 +209,26 @@ Warnings about cognates (FR/PT/ES) and reading time differences from EN are expe
 
 ---
 
+## MANDATORY: Native-Speaker Critic Review
+
+`validate_encounters.py` checks schema and structure — it cannot catch bad prose. The
+translating agent also cannot reliably catch its own register mistakes (this is exactly
+how the HI plural-Jesus error shipped). So after each language file passes validation,
+before delivery, spawn a **fresh subagent** (no shared context with the translator) with
+this prompt, substituting the language and file path:
+
+> You are a native {language} speaker. Read this file line by line, taking your time.
+> Report: Typos / Grammar Errors, and Awkward / Non-native-sounding phrasing. For each
+> issue found, propose the exact diff/fix. Also check it against the per-language
+> register rule in `encounters/skills/encounters_translator_skill.md` § "MANDATORY GATE:
+> Per-Language Register Rules".
+
+Apply the fixes the critic finds, then re-run `validate_encounters.py` to confirm the
+edits didn't break structure. Do this per language file — do not skip it for languages
+that "usually don't have issues."
+
+---
+
 ## index.json Update
 - Update the existing entry in the `encounters` array — do not duplicate or reorder
 - Pull `titles`, `subtitles`, `scripture_reference` directly from each translation file
@@ -222,7 +242,7 @@ Warnings about cognates (FR/PT/ES) and reading time differences from EN are expe
 1. All translated JSON files (one per language)
 2. Updated `encounters/index.json`
 3. Validation log showing ✅ ALL ENCOUNTERS PASSED
-4. Per-language register gate confirmed passed (see "MANDATORY GATE" above) — for HI, re-check that Jesus takes plural verbs, not just plural pronouns
+4. Native-speaker critic review completed for each language (see "MANDATORY: Native-Speaker Critic Review" above) — fixes applied, not just reported
 5. Reading time table:
 
 | Language | Adjustment | Minutes |
