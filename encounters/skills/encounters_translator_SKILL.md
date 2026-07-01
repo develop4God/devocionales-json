@@ -217,7 +217,7 @@ Warnings about cognates (FR/PT/ES) and reading time differences from EN are expe
 `validate_encounters.py` checks schema and structure — it cannot catch bad prose. The
 translating agent also cannot reliably catch its own register mistakes (this is exactly
 how the HI plural-Jesus error shipped). So after each language file passes validation,
-before delivery, spawn a **fresh subagent** (no shared context with the translator) with
+before delivery, spawn a **fresh subagent (NOT HAIKU model)** (no shared context with the translator) with
 this prompt, substituting the language and file path:
 
 > You are a native {language} speaker. Read this file line by line, taking your time.
