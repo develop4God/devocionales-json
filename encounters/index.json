@@ -512,6 +512,39 @@
         "zh": 15,
         "ar": 13
       }
+    },
+    {
+      "id": "bleeding_woman_001",
+      "version": "1.0",
+      "image_version": "1.0",
+      "emoji": "🩸",
+      "status": "coming_soon",
+      "intro_image": "bleeding_woman_intro.png",
+      "intro_image_prompt": "Wide atmospheric shot of a dusty Galilean street packed with a pressing crowd under harsh midday sun. In the distance, barely visible among the bodies, a thin woman in a faded gray-brown headscarf and worn rust-toned tunic reaches one hand forward, fingers just grazing the fringed hem of a man's simple tunic ahead of her, seen only from behind, a subtle warm glow of glory around his form. Dust hangs in the sunlight. No text. Painterly warm 2D illustration, Mediterranean palette, ochre and warm dust tones, cinematic lighting.",
+      "mood_primary": "falling",
+      "accent_color": "#4a0e1a",
+      "has_interactive": false,
+      "testament": "new",
+      "character": "The Bleeding Woman",
+      "files": {
+        "es": "bleeding_woman_es_001.json"
+      },
+      "titles": {
+        "es": "Hija, tu fe te ha hecho salva",
+        "en": "Daughter, Your Faith Has Made You Well"
+      },
+      "subtitles": {
+        "es": "Doce años de aislamiento. Un toque de fe. Una palabra que le devolvió el lugar que había perdido.",
+        "en": "Twelve years of isolation. One touch of faith. A word that restored what she had lost."
+      },
+      "scripture_reference": {
+        "es": "Marcos 5:25-34",
+        "en": "Mark 5:25-34"
+      },
+      "estimated_reading_minutes": {
+        "es": 11,
+        "en": 10
+      }
     }
   ]
 }
