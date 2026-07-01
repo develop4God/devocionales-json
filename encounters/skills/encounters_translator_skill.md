@@ -222,7 +222,8 @@ Warnings about cognates (FR/PT/ES) and reading time differences from EN are expe
 1. All translated JSON files (one per language)
 2. Updated `encounters/index.json`
 3. Validation log showing ✅ ALL ENCOUNTERS PASSED
-4. Reading time table:
+4. Per-language register gate confirmed passed (see "MANDATORY GATE" above) — for HI, re-check that Jesus takes plural verbs, not just plural pronouns
+5. Reading time table:
 
 | Language | Adjustment | Minutes |
 |---|---|---|
@@ -234,4 +235,4 @@ Warnings about cognates (FR/PT/ES) and reading time differences from EN are expe
 | JA | +3 | — |
 | ZH | +3 | — |
 
-5. Flag any verse not found in primary version with fallback version used
+6. Flag any verse not found in primary version with fallback version used
