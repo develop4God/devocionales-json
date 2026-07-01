@@ -315,6 +315,25 @@ Pause for personal naming/reflection. Used sparingly.
 
 ---
 
+## Mood Palette
+
+Every card requires a `mood` field. Use only values from this palette — they map to background colors in the app via `EncounterMoodTheme.fromMood()`. Choosing the right mood creates a visual arc the reader feels without noticing.
+
+| Mood | Color | Use for |
+|------|-------|---------|
+| `storm` | `#0d1a2e` | Danger, external conflict, journey into the unknown |
+| `tense` | `#0f1828` | Inner conflict, anticipation, unresolved situation |
+| `mysterious` | `#0a0e1a` | Hidden meaning, theological depth, what lies beneath |
+| `awe` | `#0a1220` | Divine presence, revelation, overwhelming encounter |
+| `falling` | `#040810` | Despair, isolation, darkness before transformation |
+| `grace` | `#12100a` | Forgiveness, restoration, unmerited gift |
+| `peace` | `#0a120e` | Resolution, acceptance, rest after the encounter |
+| `intense` | `#1a0a0e` | Confrontation, urgency, burning conviction |
+
+> **Rule:** Never invent new mood values. If a card needs a mood not in this list, propose it first so it can be added to both the skill and `EncounterMoodTheme`.
+
+---
+
 ## Image Prompts
 
 Image prompts are delivered as a **separate JSON file** alongside the encounter file:
@@ -432,15 +451,38 @@ Character may appear small or from behind. Still opens with character descriptio
 
 | Rule | Detail |
 |------|--------|
-| No excess of em dashes |
-| No inflated drama or marketing cliches| Avoid "unprecedented", "extraordinary", "awe-inspiring, that changes everthing, etc as filler |
+| Build on affirmation, not negation | See detailed rule below |
+| No excess of em dashes | Use sparingly — one per paragraph at most |
+| No inflated drama or marketing cliches | Avoid "unprecedented", "extraordinary", "awe-inspiring", "that changes everything", "like never before", "words cannot describe", "something shifted" as filler |
 | No theological jargon without explanation | If using a term, unpack it in plain language |
 | Pastoral tone always | God loves, transforms, and uses people in their imperfection |
-| Scripture: complete verses | Never truncate. Use exact RVR1960 text including correct capitalization in the verse formats|
+| Scripture: complete verses | Never truncate. Use exact RVR1960 text including correct capitalization in the verse formats |
 | RVR1960 capitalization | Respect the original: "Dios", "Señor", pronoun case as in source |
 | Theological insight | Include Greek/Hebrew word studies where they illuminate meaning |
 | Card count | 11-15 cards per encounter. ~10 min read. |
 | Arc | Always: setup → scripture → character psychology → theology → application → completion |
+
+### Affirmation over negation (non-negotiable)
+
+The encounter must be built on **what Scripture says, what God does, what the character lives** — not on what things are NOT. Avoid the pattern of defining through negation ("No era X. Era Y." / "No dijo X. Dijo Y."). State what it IS directly.
+
+This is a biblical content principle: we proclaim what God has done, not a catalog of what He hasn't.
+
+**Examples:**
+
+| Negation pattern (avoid) | Affirmative rewrite (use) |
+|--------------------------|---------------------------|
+| "No era una objeción. Era la pregunta más honesta." | "Era la pregunta más honesta que alguien podía hacer." |
+| "No dijo: confiemos en Dios. No dijo: todo saldrá bien. Dijo: Vamos también nosotros." | "Una sola frase: Vamos también nosotros, para que muramos con él." |
+| "No fue una reprimenda. Fue una invitación." | "Fue una invitación." |
+| "Las heridas no eran un defecto. Eran parte de ella." | "Las heridas eran parte de la resurrección." |
+| "Jesús no esperó a que Tomás lo buscara. Vino a él." | "Jesús vino a él." |
+| "No tocó la puerta. No pidió permiso. Entró..." | "Entró en el espacio donde el miedo los tenía cautivos..." |
+
+**When negation is acceptable:**
+- When quoting Scripture that uses negation (e.g. "no creeré" — Thomas's own words)
+- When the biblical text itself describes an absence (e.g. "no estaba con ellos" — John 20:24)
+- Once per card maximum for rhetorical contrast, never in chains of "No X. No Y. No Z."
 
 ---
 
