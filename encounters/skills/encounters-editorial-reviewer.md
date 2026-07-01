@@ -138,6 +138,18 @@ cited Bible version's own grammar.
 
 ---
 
+### 10. Post-fix reverse validation & pattern sweep — MANDATORY
+Whenever a review session (yours or a native-speaker critic's) results in file edits,
+do not report the review done right after applying the fixes. See
+`encounters_translator_SKILL.md` § "MANDATORY GATE: Post-Fix Reverse Validation &
+Pattern Sweep" and run that full procedure: re-read the complete file, verify each edit
+still matches its card's `revelation_key` and scripture reference, sweep the whole file
+for the same error pattern the critic just found, and validate JSON. A grammatically
+correct fix that quietly guts the sentence's meaning is a worse outcome than the
+original error — it looks resolved but isn't.
+
+---
+
 ## CARD-BY-CARD REVIEW PROTOCOL
 
 For each card, check in this order:

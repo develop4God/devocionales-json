@@ -230,6 +230,32 @@ Apply the fixes the critic finds, then re-run `validate_encounters.py` to confir
 edits didn't break structure. Do this per language file — do not skip it for languages
 that "usually don't have issues."
 
+### MANDATORY GATE: Post-Fix Reverse Validation & Pattern Sweep
+
+A grammar/style fix can silently break meaning — restructuring a clause to fix a case
+error can turn "he walked toward danger with eyes open" into a circular sentence that no
+longer says anything. The agent that applies the fix is the worst-positioned to notice
+this (it's focused on the grammar, not re-deriving the theological point). So after
+applying critic fixes and before reporting done:
+
+1. **Re-read the complete file**, not just the diffed lines — meaning depends on
+   surrounding context the diff view won't show you.
+2. **For every edit made**, verify it still expresses the original point. Anchor the
+   check against the card's paired Bible reference and its `revelation_key` — those are
+   the source of truth for what the sentence is supposed to say. If a rewrite makes a
+   sentence grammatically correct but tautological, vaguer, or logically disconnected
+   from its `revelation_key`, it is a regression — fix it, don't wave it through.
+3. **Scan the entire file for the same error pattern(s)** the critic just flagged —
+   critic passes sample, they don't exhaustively cover. If the critic caught an
+   anglicism, a dangling modifier, an aufstehen/auferstehen-type mistranslation, or a
+   colon-capitalization slip in one card, grep/read for that same pattern in every other
+   card before considering the round done.
+4. **Validate JSON** after every batch of edits (`python3 -m json.tool <file>` or the
+   project validator) — never leave this until the very end.
+
+Repeat steps 2–4 until a full pass finds nothing new. Only then move to the next
+language or report completion.
+
 ---
 
 ## index.json Update
