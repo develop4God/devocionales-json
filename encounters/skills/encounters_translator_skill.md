@@ -149,9 +149,26 @@ Structure must be identical to the EN file.
 
 **Prayer:** Natural spoken address to God — no academic language, no untranslated foreign terms.
 
-**Asian and Hindi (JA, ZH, HI):** Use respectful/honorific religious register throughout. This is sacred literature.
-
 **Cognates (FR, PT, ES):** Words identical or near-identical across languages (e.g. `Courage` in French, `Grâce`) are valid translations — do not change them. The validator may warn but these are correct.
+
+---
+
+## MANDATORY GATE: Per-Language Register Rules
+
+Before delivering a translated file, check it against the rule for its language.
+A translation can be grammatically fluent and still fail this gate — check anyway.
+
+**Hindi (HI):** Jesus takes the respectful plural — verbs included, not just pronouns.
+Example: ✗ "यीशु आया...उसने कहा" → ✓ "यीशु आए...उन्होंने कहा". Does not apply to quoted
+verse fields (`verse_text`, `verse_overlay.text`, `completion_verse.text`,
+`scripture_connections[].text`) — those follow the cited Bible version's own grammar.
+
+**Japanese (JA) / Chinese (ZH):** Respectful/honorific register throughout — this is
+sacred literature. Example: avoid casual だ/よ endings in Japanese narration about
+Jesus; use 您 over 你 in Chinese devotional address.
+
+**Spanish / Portuguese / French (ES / PT / FR):** No hard gate — natural register per
+house style. Cognates are valid (see above).
 
 ---
 
