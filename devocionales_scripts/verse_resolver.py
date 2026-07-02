@@ -25,10 +25,13 @@ Usage:
         cita, texto, error = r.resolve("John 3:16")
 """
 
+import gzip
 import json
 import os
 import re
+import shutil
 import sqlite3
+import tempfile
 import urllib.request
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -173,7 +176,16 @@ class VerseResolver:
         sqlite_path: str,
         books_sot_path: str | None = None,
     ) -> None:
-        self.books_sot = load_books_sot(books_sot_path)
+        self.books_sot   = load_books_sot(books_sot_path)
+        self._temp_path  = None
+
+        if sqlite_path.endswith(".gz"):
+            fd, self._temp_path = tempfile.mkstemp(suffix=".SQLite3")
+            os.close(fd)
+            with gzip.open(sqlite_path, "rb") as src, open(self._temp_path, "wb") as dst:
+                shutil.copyfileobj(src, dst)
+            sqlite_path = self._temp_path
+
         self.conn      = sqlite3.connect(sqlite_path)
         self.cursor    = self.conn.cursor()
 
@@ -191,6 +203,9 @@ class VerseResolver:
             self.conn.close()
             self.conn   = None
             self.cursor = None
+        if self._temp_path:
+            os.remove(self._temp_path)
+            self._temp_path = None
 
     # ── internal helpers ──────────────────────────────────────────────────────
 
