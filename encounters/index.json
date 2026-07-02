@@ -528,31 +528,46 @@
         "es": "bleeding_woman_es_001.json",
         "en": "bleeding_woman_en_001.json",
         "pt": "bleeding_woman_pt_001.json",
-        "fr": "bleeding_woman_fr_001.json"
+        "fr": "bleeding_woman_fr_001.json",
+        "de": "bleeding_woman_de_001.json",
+        "hi": "bleeding_woman_hi_001.json",
+        "fil": "bleeding_woman_fil_001.json"
       },
       "titles": {
         "es": "Hija, tu fe te ha hecho salva",
         "en": "Daughter, Your Faith Has Made You Well",
         "pt": "Filha, a Tua Fé Te Salvou",
-        "fr": "Ma Fille, Ta Foi T'a Sauvée"
+        "fr": "Ma Fille, Ta Foi T'a Sauvée",
+        "de": "Meine Tochter, dein Glaube hat dich gesund gemacht",
+        "hi": "पुत्री, तेरे विश्वास ने तुझे चंगा किया है",
+        "fil": "Anak, Pinagaling Ka ng Iyong Pananampalataya"
       },
       "subtitles": {
         "es": "Doce años de aislamiento. Un toque de fe. Una palabra que le devolvió el lugar que había perdido.",
         "en": "Twelve years of isolation. One touch of faith. A word that restored what she had lost.",
         "pt": "Doze anos de isolamento. Um toque de fé. Uma palavra que lhe devolveu o lugar que tinha perdido.",
-        "fr": "Douze ans d'isolement. Un toucher de foi. Une parole qui lui rendit la place qu'elle avait perdue."
+        "fr": "Douze ans d'isolement. Un toucher de foi. Une parole qui lui rendit la place qu'elle avait perdue.",
+        "de": "Zwölf Jahre Isolation. Eine Berührung im Glauben. Ein Wort, das ihr den Platz zurückgab, den sie verloren hatte.",
+        "hi": "बारह वर्ष का अलगाव। विश्वास का एक स्पर्श। एक ऐसा शब्द जिसने उसे वह स्थान लौटाया जो वह खो चुकी थी।",
+        "fil": "Labindalawang taon ng paghihiwalay. Isang paghipo ng pananampalataya. Isang salitang nagsauli sa lugar na nawala sa kanya."
       },
       "scripture_reference": {
         "es": "Marcos 5:25-34",
         "en": "Mark 5:25-34",
         "pt": "Marcos 5:25-34",
-        "fr": "Marc 5:25-34"
+        "fr": "Marc 5:25-34",
+        "de": "Markus 5:25-34",
+        "hi": "मरकुस 5:25-34",
+        "fil": "Marcos 5:25-34"
       },
       "estimated_reading_minutes": {
         "es": 11,
         "en": 10,
         "pt": 12,
-        "fr": 12
+        "fr": 12,
+        "de": 11,
+        "hi": 13,
+        "fil": 12
       }
     }
   ]
