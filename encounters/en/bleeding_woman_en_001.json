@@ -1,0 +1,220 @@
+{
+  "id": "bleeding_woman_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "en",
+  "bible_version": "KJV",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "The Bleeding Woman",
+    "testament": "new",
+    "scripture_reference": "Mark 5:25-34",
+    "mood_primary": "falling",
+    "accent_color": "#4a0e1a",
+    "emoji": "🩸",
+    "tags": [
+      "faith",
+      "healing",
+      "touch",
+      "shame",
+      "isolation",
+      "courage",
+      "restoration",
+      "daughter",
+      "crowd",
+      "purity",
+      "hope",
+      "miracle"
+    ]
+  },
+  "key_verse": {
+    "reference": "Mark 5:34",
+    "text": "And he said unto her, Daughter, your faith has made you whole; go in peace, and be whole of your disease.",
+    "bible_version": "KJV"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "storm",
+      "image_url": "bleeding_woman_crowd_pressing.png",
+      "title": "Twelve years of blood.",
+      "narrative": "The crowd pressed in from every side. Jairus, a ruler of the synagogue, had just fallen at Jesus's feet, pleading for his dying daughter. And Jesus had started walking toward that house, with people pushing and crushing him from every direction.\n\nSomewhere in that crowd, a woman was pushing her way through.\n\nFor twelve years she had lived with a flow of blood that would not stop. For twelve years she had spent everything she had on physicians, and instead of improving, she had grown worse.\n\nTwelve years, too, of living apart, unable to come near anyone without passing on her condition. All of that had been stolen from her by the disease, year after year.\n\nAnd yet there she was, in the middle of the crowd, determined to reach Jesus.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Mark 5:25-26",
+        "text": "And a certain woman, who had an issue of blood twelve years, And had suffered many things of many physicians, and had spent all that she had, and was no better, but rather grew worse,"
+      },
+      "revelation_key": "Twelve years of isolation did not extinguish her hope. They drove her straight toward Jesus."
+    },
+    {
+      "order": 2,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "bleeding_woman_leviticus_scroll.png",
+      "title": "What the law said about her",
+      "subtitle": "The weight of impurity in Leviticus",
+      "content": "The law of Leviticus declared any woman with a continual flow of blood unclean, beyond the normal days of her period. As long as the flow continued, she remained unclean.\n\nThat meant twelve years without being able to come near anyone without passing on that impurity. Twelve years outside the temple, cut off from the center of Israel's religious and social life. Twelve years in which a simple brush with another person marked both her and whoever touched her.\n\nIn that world, touching someone — or being touched by someone — was an act loaded with risk. And she was about to touch Jesus in the middle of a crowd.",
+      "revelation_key": "The law kept her at a distance from everyone. And still, she came near to Jesus.",
+      "scripture_connections": [
+        {
+          "reference": "Leviticus 15:25-27",
+          "text": "And if a woman has a discharge of blood many days other than the time of her impurity, or if it runs beyond the time of her impurity; all the days of the discharge of her uncleanness shall be as the days of her impurity: she shall be unclean. Every bed on which she lies all the days of her discharge shall be unto her as the bed of her impurity: and whatsoever she sits upon shall be unclean, as in the uncleanness of her impurity. And whosoever touches those things shall be unclean, and shall wash his clothes, and bathe himself in water, and be unclean until the evening."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "bleeding_woman_portrait_determined.png",
+      "title": "The woman who pushed through",
+      "subtitle": "Who she was before the miracle",
+      "content": "Jairus had a name. Mark tells us so from the start: a ruler of the synagogue, someone recognized in his community. This same account introduces her only as \"a woman\" — no name, no family mentioned, no place in society. That contrast is no accident: one had status, the other had none.\n\nMark introduces her by her condition and by what she did about it: she spent everything she had seeking healing, and kept seeking even when the physicians left her worse.\n\nThat reveals something about her character: she persisted. Twelve years of failures kept her moving, searching.\n\nShe had heard about Jesus. The text says it precisely: she had heard about him.\n\nAnd on that alone, she decided to act.",
+      "revelation_key": "Her faith was not born from having seen a miracle. It was born from hearing about Jesus and deciding to believe.",
+      "scripture_connections": [
+        {
+          "reference": "Mark 5:27",
+          "text": "When she had heard of Jesus, came in the crowd behind, and touched his garment."
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "bleeding_woman_reaching_hem.png",
+      "verse_reference": "Mark 5:27-28",
+      "verse_text": "When she had heard of Jesus, came in the crowd behind, and touched his garment. For she said, If I may touch but his clothes, I shall be whole.",
+      "reflection": "She came up from behind, in silence, while Jesus kept walking toward Jairus's house. She sought only the edge of his garment — the most discreet point, the farthest from his face and his hand.\n\nThat garment was the clothing Jesus wore every day, with the tassels the law required of every Jewish man as a permanent reminder of the commandments (Numbers 15:38). Matthew and Luke specify that it was exactly that edge she touched: κράσπεδον (kraspedon), the Greek word for the tassel with the blue cord, the tzitzit. To touch that edge was to touch the visible sign that Jesus lived under God's covenant, and she approached that sign with the care of one asking for the smallest space, with reverence.\n\nThe verb Mark uses for touch is ἅπτομαι (haptomai): a contact that binds, that joins two things so that one is transformed by the other. According to the law, that contact should have made Jesus unclean — that is how it always worked: impurity passed from the unclean person or object to whoever touched it. This same gospel records another moment where exactly that reversal happens: when Jesus touches a leper (Mark 1:41), the impurity does not pass to him. In both cases, the law predicted one direction; the power of God revealed another. Here, with this woman, the same thing happens: instead of her impurity passing to Jesus, life passed from Jesus to her.\n\nIf I may touch but his clothes, I shall be whole, she told herself. There is the exact word: all three gospels that record this scene, Mark, Matthew, and Luke, use the same Greek verb, σῴζω (sozo), the word the New Testament reserves for a complete restoration. She touched with humility, expecting only a small space and a single instant, but her faith reached for something greater than what her own need was asking.",
+      "revelation_key": "The law expected her impurity to pass to Jesus. Instead, the life of Jesus passed to her — and her faith, with only a touch of the edge, reached a complete restoration.",
+      "scripture_connections": [
+        {
+          "reference": "Numbers 15:38-39",
+          "text": "Speak unto the children of Israel, and bid them that they make them tassels in the corners of their garments throughout their generations, and that they put upon the tassel of the corners a thread of blue: And it shall be unto you a tassel, that you may look upon it, and remember all the commandments of the LORD, and do them; and that you seek not after your own heart and your own eyes, after which you use to follow harlotry:"
+        },
+        {
+          "reference": "Mark 1:41",
+          "text": "And Jesus, moved with compassion, put forth his hand, and touched him, and said unto him, I will; be clean."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "bleeding_woman_flow_stops.png",
+      "title": "Instantly.",
+      "narrative": "She reached her hand out among the bodies surrounding her. Her fingers reached the edge of his garment.\n\nAnd instantly, the fountain of her blood dried up.\n\nTwelve years of constant flow stopped in a second. She felt it in her body: she knew, without anyone telling her, that she had been healed of that affliction. The word Mark uses is μάστιξ (mastix), literally \"whip\" — the same word used for the Roman scourge. In that era, many believed that so long an illness was God's punishment for some sin; the disciples themselves, facing another man blind from birth, asked Jesus: \"who did sin, this man, or his parents?\" (John 9:2). Jesus answered that neither one nor the other: the affliction was not condemnation. Here, with this woman, he acts on that same truth: he heals her in silence, without asking after any guilt.\n\nBut in that same instant, Jesus stopped.\n\nIn the middle of a crowd pressing him from every side, Jesus felt that power had gone out of him. He turned around and asked: Who has touched my clothes?",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Mark 5:29-30",
+        "text": "And immediately the fountain of her blood was dried up; and she felt in her body that she was healed of that disease. And Jesus, immediately knowing in himself that power had gone out of him, turned about in the crowd, and said, Who touched my clothes?"
+      },
+      "scripture_connections": [
+        {
+          "reference": "John 9:2-3",
+          "text": "And his disciples asked him, saying, Teacher, who did sin, this man, or his parents, that he was born blind? Jesus answered, Neither has this man sinned, nor his parents: but that the works of God should be made manifest in him."
+        }
+      ],
+      "revelation_key": "She was healed in silence, without condemnation. In that same instant, Jesus felt the power go out of him."
+    },
+    {
+      "order": 6,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "bleeding_woman_power_dynamis.png",
+      "title": "The power that went out",
+      "subtitle": "Δύναμις (dynamis): a force that can be felt",
+      "content": "The Greek word Mark uses for power is δύναμις (dynamis): a force capable of producing a real, measurable effect, not an abstract idea or a feeling. It is the same root the New Testament uses to describe Jesus's miracles across all the gospels — capability, force that acts and transforms whatever it touches.\n\nThe verb Mark uses for \"knowing\" is ἐπιγινώσκω (epiginosko): to perceive something that has already happened, to realize it after the fact. The order matters: the power went out first, and only afterward did Jesus recognize it. The power was already in him, permanent, part of who he is. What triggered its release was not the physical contact, but the faith that touched it.\n\nThe disciples, hearing Jesus's question, answered almost with surprise: you see the crowd thronging you, and you say, who touched me? They were right in one sense: hundreds of people were touching his body at that moment, pushing him from every side. But only one touched him with faith.\n\nPaul would later write to the Ephesians that salvation comes by grace, through faith (Ephesians 2:8). Faith does not generate the gift, it receives it. The same thing happens here: among hundreds of hands brushing against Jesus, hers was the only one that opened to receive what he already had to give.",
+      "revelation_key": "Jesus's power answered the faith of a single hand that opened to receive it, among hundreds that only brushed against him.",
+      "scripture_connections": [
+        {
+          "reference": "Mark 5:31",
+          "text": "And his disciples said unto him, You see the multitude thronging you, and you say, Who touched me?"
+        },
+        {
+          "reference": "Ephesians 2:8",
+          "text": "For by grace are you saved through faith; and that not of yourselves: it is the gift of God:"
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "bleeding_woman_falls_trembling.png",
+      "verse_reference": "Mark 5:32-33",
+      "verse_text": "And he looked round about to see her that had done this thing. But the woman fearing and trembling, knowing what was done in her, came and fell down before him, and told him all the truth.",
+      "reflection": "She could have slipped away into the crowd. She already had what she came for: her body was healed. She could have gone unnoticed.\n\nBut Jesus kept looking, searching for her face among the people.\n\nFearing and trembling, knowing what had happened, she fell down before him. The text says she told him all the truth.\n\nIt was a real risk: confessing in public that she had touched a rabbi while she was unclean. This act exposed her to public shame in front of the whole crowd surrounding them, and let us remember what we read of her law. Even so, she was honest.",
+      "revelation_key": "She chose the whole truth in public, though her silence would already have been enough to keep her healing."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "bleeding_woman_jesus_calls_daughter.png",
+      "title": "Daughter.",
+      "narrative": "Jesus received her with grace. He sought her out among the crowd and looked her in the face.\n\nHe called her daughter.\n\nIn the entire record of the gospels, she is the only person Jesus addresses with that word. Daughter: θυγάτηρ (thugater), a term of family closeness, of belonging.\n\nIn the Old Testament, the prophets spoke of the \"daughter of Zion\" — in Hebrew, בת ציון (bat Sion) — to refer to the people of God: suffering, exiled, burdened with shame, and still loved and destined for restoration. When that title was translated into Greek, the same word Mark uses here was used: θυγάτηρ (thugater).\n\nTwelve years had left her with no place in her community, no access to the temple, cut off from those around her. And in an instant, in front of everyone, Jesus gave her back a place: that of daughter.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Mark 5:34",
+        "text": "And he said unto her, Daughter, your faith has made you whole; go in peace, and be whole of your disease."
+      },
+      "revelation_key": "Jesus called her daughter, and with that word gave her back a place that twelve years of illness had taken from her."
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "bleeding_woman_sozo_healing.png",
+      "title": "Whole and healed",
+      "subtitle": "Σῴζω (sozo): one word, two realities",
+      "content": "Your faith has made you whole, Jesus told her. The Greek word is σῴζω (sozo), the same word the New Testament uses to speak of the salvation of the soul. In the original Greek, physical healing and spiritual salvation share the same word.\n\nWhen Jesus declared that her faith had made her whole, he was speaking of a complete restoration: body, community, dignity, and relationship with God, all at once.\n\nGo in peace, he added. The Greek word εἰρήνη (eirene) translates the Hebrew shalom: fullness, the total restoration of what was broken.\n\nThe same verse closes with a third word: whole, in Greek ὑγιής (hugies) — distinct from σῴζω (sozo). With sozo, Jesus named the complete restoration she was truly seeking, beyond the physical. With hugies, he confirmed the concrete: her body, the one that had bled for twelve years, was now healed. The physical miracle and the complete salvation were fulfilled in the same instant.",
+      "revelation_key": "This encounter with Jesus restored her completely: whole, at peace, and healed."
+    },
+    {
+      "order": 10,
+      "type": "discovery_activation",
+      "image_url": "bleeding_woman_open_hand_light.png",
+      "title": "Your encounter",
+      "subtitle": "She reached out her hand in the middle of the crowd, believing that a single touch of Jesus could change everything. The same can happen for you today.",
+      "discovery_questions": [
+        {
+          "category": "Your isolation",
+          "question": "For twelve years she felt set apart, with no place among others. Jesus called her daughter in front of everyone. Is there something in your life where you also need to hear that? The first step, like hers, is to believe."
+        },
+        {
+          "category": "Your faith",
+          "question": "For twelve years she kept seeking an answer, and still she pushed through the crowd, believing that a single touch would be enough. Her perseverance and her faith were what made it all come together. Where do you need to persevere, believing that Jesus can do it?"
+        },
+        {
+          "category": "Your truth",
+          "question": "She could have slipped away in silence with her healing, but she chose to tell the whole truth before Jesus. Is there something you need to tell him today, with an open heart?"
+        }
+      ],
+      "prayer": {
+        "title": "Prayer of the woman who pushed through",
+        "content": "Lord Jesus,\n\nLike her, I have carried heavy burdens for a long time. There are areas of my life where I have spent everything I had seeking an answer, and still I am tired.\n\nToday I want to reach out my hand toward you, even in the middle of the crowd, even if no one else notices. I believe, like her, that a touch of you can transform and restore what time, illness, decisions, or anything else has left unresolved.\n\nThank you for receiving me just as I am. Thank you for calling me son, calling me daughter, and giving me a place where before there was only isolation.\n\nGive me the courage to tell you the whole truth, with an open heart, knowing that your answer is always grace.\n\nSave me, Lord, in body and in soul.\n\nIn Jesus's name, amen."
+      }
+    },
+    {
+      "order": 11,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "bleeding_woman_walking_peace.png",
+      "completion_verse": {
+        "reference": "Mark 5:34",
+        "text": "And he said unto her, Daughter, your faith has made you whole; go in peace, and be whole of your disease.",
+        "bible_version": "KJV"
+      },
+      "reflection_prompt": "She reached out her hand believing that a single touch would be enough. Jesus called her daughter and restored her completely. What do you need to reach out toward him today, trusting that a single touch can change everything?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

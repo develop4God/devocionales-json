@@ -525,23 +525,34 @@
       "testament": "new",
       "character": "The Bleeding Woman",
       "files": {
-        "es": "bleeding_woman_es_001.json"
+        "es": "bleeding_woman_es_001.json",
+        "en": "bleeding_woman_en_001.json",
+        "pt": "bleeding_woman_pt_001.json",
+        "fr": "bleeding_woman_fr_001.json"
       },
       "titles": {
         "es": "Hija, tu fe te ha hecho salva",
-        "en": "Daughter, Your Faith Has Made You Well"
+        "en": "Daughter, Your Faith Has Made You Well",
+        "pt": "Filha, a Tua Fé Te Salvou",
+        "fr": "Ma Fille, Ta Foi T'a Sauvée"
       },
       "subtitles": {
         "es": "Doce años de aislamiento. Un toque de fe. Una palabra que le devolvió el lugar que había perdido.",
-        "en": "Twelve years of isolation. One touch of faith. A word that restored what she had lost."
+        "en": "Twelve years of isolation. One touch of faith. A word that restored what she had lost.",
+        "pt": "Doze anos de isolamento. Um toque de fé. Uma palavra que lhe devolveu o lugar que tinha perdido.",
+        "fr": "Douze ans d'isolement. Un toucher de foi. Une parole qui lui rendit la place qu'elle avait perdue."
       },
       "scripture_reference": {
         "es": "Marcos 5:25-34",
-        "en": "Mark 5:25-34"
+        "en": "Mark 5:25-34",
+        "pt": "Marcos 5:25-34",
+        "fr": "Marc 5:25-34"
       },
       "estimated_reading_minutes": {
         "es": 11,
-        "en": 10
+        "en": 10,
+        "pt": 12,
+        "fr": 12
       }
     }
   ]
