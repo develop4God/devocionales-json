@@ -531,7 +531,10 @@
         "fr": "bleeding_woman_fr_001.json",
         "de": "bleeding_woman_de_001.json",
         "hi": "bleeding_woman_hi_001.json",
-        "fil": "bleeding_woman_fil_001.json"
+        "fil": "bleeding_woman_fil_001.json",
+        "ar": "bleeding_woman_ar_001.json",
+        "ja": "bleeding_woman_ja_001.json",
+        "zh": "bleeding_woman_zh_001.json"
       },
       "titles": {
         "es": "Hija, tu fe te ha hecho salva",
@@ -540,7 +543,10 @@
         "fr": "Ma Fille, Ta Foi T'a Sauvée",
         "de": "Meine Tochter, dein Glaube hat dich gesund gemacht",
         "hi": "पुत्री, तेरे विश्वास ने तुझे चंगा किया है",
-        "fil": "Anak, Pinagaling Ka ng Iyong Pananampalataya"
+        "fil": "Anak, Pinagaling Ka ng Iyong Pananampalataya",
+        "ar": "يَاابْنَةُ، إِيمَانُكِ قَدْ شَفَاكِ",
+        "ja": "娘よ、あなたの信仰があなたを直したのです",
+        "zh": "女儿，你的信救了你"
       },
       "subtitles": {
         "es": "Doce años de aislamiento. Un toque de fe. Una palabra que le devolvió el lugar que había perdido.",
@@ -549,7 +555,10 @@
         "fr": "Douze ans d'isolement. Un toucher de foi. Une parole qui lui rendit la place qu'elle avait perdue.",
         "de": "Zwölf Jahre Isolation. Eine Berührung im Glauben. Ein Wort, das ihr den Platz zurückgab, den sie verloren hatte.",
         "hi": "बारह वर्ष का अलगाव। विश्वास का एक स्पर्श। एक ऐसा शब्द जिसने उसे वह स्थान लौटाया जो वह खो चुकी थी।",
-        "fil": "Labindalawang taon ng paghihiwalay. Isang paghipo ng pananampalataya. Isang salitang nagsauli sa lugar na nawala sa kanya."
+        "fil": "Labindalawang taon ng paghihiwalay. Isang paghipo ng pananampalataya. Isang salitang nagsauli sa lugar na nawala sa kanya.",
+        "ar": "اثْنَتَا عَشْرَةَ سَنَةً مِنَ الْعُزْلَةِ. لَمْسَةُ إِيمَانٍ. كَلِمَةٌ أَعَادَتْ لَهَا الْمَكَانَ الَّذِي فَقَدَتْهُ.",
+        "ja": "十二年の孤立。信仰のひと触れ。彼女が失っていた居場所を取り戻したひとことば。",
+        "zh": "十二年的隔绝。一次信心的触碰。一句归还了她所失去之地位的话。"
       },
       "scripture_reference": {
         "es": "Marcos 5:25-34",
@@ -558,7 +567,10 @@
         "fr": "Marc 5:25-34",
         "de": "Markus 5:25-34",
         "hi": "मरकुस 5:25-34",
-        "fil": "Marcos 5:25-34"
+        "fil": "Marcos 5:25-34",
+        "ar": "إِنْجِيلُ مَرْقُسَ 5:25-34",
+        "ja": "マルコの福音書 5:25-34",
+        "zh": "马可福音 5:25-34"
       },
       "estimated_reading_minutes": {
         "es": 11,
@@ -567,7 +579,10 @@
         "fr": 12,
         "de": 11,
         "hi": 13,
-        "fil": 12
+        "fil": 12,
+        "ar": 11,
+        "ja": 13,
+        "zh": 9
       }
     }
   ]
