@@ -14,7 +14,20 @@
     "mood_primary": "falling",
     "accent_color": "#4a0e1a",
     "emoji": "🩸",
-    "tags": ["fe", "sanidad", "toque", "vergüenza", "aislamiento", "valentía", "restauración", "hija", "multitud", "pureza", "esperanza", "milagro"]
+    "tags": [
+      "fe",
+      "sanidad",
+      "toque",
+      "vergüenza",
+      "aislamiento",
+      "valentía",
+      "restauración",
+      "hija",
+      "multitud",
+      "pureza",
+      "esperanza",
+      "milagro"
+    ]
   },
   "key_verse": {
     "reference": "Marcos 5:34",
@@ -95,14 +108,20 @@
       "mood": "awe",
       "image_url": "bleeding_woman_flow_stops.png",
       "title": "Al instante.",
-      "narrative": "Estiró la mano entre los cuerpos que la rodeaban. Sus dedos alcanzaron el borde del manto.\n\nY al instante, la fuente de su sangre se secó.\n\nDoce años de flujo constante se detuvieron en un segundo. Ella lo sintió en su cuerpo: supo, sin que nadie se lo dijera, que había sido sanada de aquel azote.\n\nPero en ese mismo instante, Jesús se detuvo.\n\nEn medio de una multitud que lo apretaba desde todos los lados, Jesús sintió que poder había salido de él. Se dio la vuelta y preguntó: ¿Quién ha tocado mis vestidos?",
+      "narrative": "Estiró la mano entre los cuerpos que la rodeaban. Sus dedos alcanzaron el borde del manto.\n\nY al instante, la fuente de su sangre se secó.\n\nDoce años de flujo constante se detuvieron en un segundo. Ella lo sintió en su cuerpo: supo, sin que nadie se lo dijera, que había sido sanada de aquel azote. La palabra que Marcos usa es μάστιξ (mastix), literalmente \"látigo\" — la misma palabra que se usaba para el flagelo romano. En esa época, muchos creían que una enfermedad tan larga era un castigo de Dios por algún pecado; los propios discípulos, frente a otro hombre enfermo de nacimiento, le preguntaron a Jesús: \"¿quién pecó, este o sus padres?\" (Juan 9:2). Jesús respondió que ni uno ni el otro: la aflicción no era condena. Aquí, con esta mujer, actúa bajo esa misma verdad: la sana en silencio, sin preguntar por ninguna culpa.\n\nPero en ese mismo instante, Jesús se detuvo.\n\nEn medio de una multitud que lo apretaba desde todos los lados, Jesús sintió que poder había salido de él. Se dio la vuelta y preguntó: ¿Quién ha tocado mis vestidos?",
       "ambient_sound": "crowd_distant",
       "haptic": null,
       "verse_overlay": {
         "reference": "Marcos 5:29-30",
         "text": "Y en seguida la fuente de su sangre se secó; y sintió en el cuerpo que estaba sana de aquel azote. Luego Jesús, conociendo en sí mismo el poder que había salido de él, volviéndose a la multitud, dijo: ¿Quién ha tocado mis vestidos?"
       },
-      "revelation_key": "Jesús sintió el poder salir de él en el mismo instante en que ella fue sanada. Ningún toque de fe pasa inadvertido para él."
+      "scripture_connections": [
+        {
+          "reference": "Juan 9:2-3",
+          "text": "Y le preguntaron sus discípulos, diciendo: Rabí, ¿quién pecó, este o sus padres, para que haya nacido ciego? Respondió Jesús: No es que pecó este, ni sus padres, sino para que las obras de Dios se manifestasen en él."
+        }
+      ],
+      "revelation_key": "Ella fue sanada en silencio, sin condena. En ese mismo instante, Jesús sintió el poder salir de él."
     },
     {
       "order": 6,
@@ -162,9 +181,18 @@
       "title": "Tu encuentro",
       "subtitle": "Ella extendió la mano en medio de la multitud, creyendo que un simple contacto con Jesús podía cambiarlo todo. Lo mismo puede ocurrir contigo hoy.",
       "discovery_questions": [
-        { "category": "Tu aislamiento", "question": "¿Hay algo en tu vida que te ha hecho sentir apartado, como si no tuvieras lugar entre los demás? Ella llevaba doce años así. Jesús la llamó hija delante de todos." },
-        { "category": "Tu fe", "question": "Su fe nació de escuchar hablar de Jesús, no de haberlo visto sanar con sus propios ojos. ¿Qué has escuchado de él que todavía no te has atrevido a creer?" },
-        { "category": "Tu verdad", "question": "Ella pudo haberse ido en silencio con su sanidad, pero eligió decir toda la verdad delante de Jesús. ¿Hay algo que necesitas contarle hoy, sin esconderlo más?" }
+        {
+          "category": "Tu aislamiento",
+          "question": "¿Hay algo en tu vida que te ha hecho sentir apartado, como si no tuvieras lugar entre los demás? Ella llevaba doce años así. Jesús la llamó hija delante de todos."
+        },
+        {
+          "category": "Tu fe",
+          "question": "Su fe nació de escuchar hablar de Jesús, no de haberlo visto sanar con sus propios ojos. ¿Qué has escuchado de él que todavía no te has atrevido a creer?"
+        },
+        {
+          "category": "Tu verdad",
+          "question": "Ella pudo haberse ido en silencio con su sanidad, pero eligió decir toda la verdad delante de Jesús. ¿Hay algo que necesitas contarle hoy, sin esconderlo más?"
+        }
       ],
       "prayer": {
         "title": "Oración de la mujer que se abrió paso",
