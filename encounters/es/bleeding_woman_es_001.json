@@ -28,7 +28,7 @@
       "mood": "storm",
       "image_url": "bleeding_woman_crowd_pressing.png",
       "title": "Doce años de sangre.",
-      "narrative": "La multitud apretaba desde todos los lados. Jairo, un principal de la sinagoga, acababa de caer a los pies de Jesús, rogando por su hija moribunda. Y Jesús había comenzado a caminar hacia esa casa, con la gente empujando y estrujándolo desde todas direcciones.\n\nEn algún punto de esa multitud, una mujer se abría paso.\n\nDoce años llevaba con un flujo de sangre que no cesaba. Doce años había gastado todo lo que tenía en médicos, y en vez de mejorar, había empeorado.\n\nSegún la ley, su condición la hacía impura. Todo lo que tocaba quedaba impuro también. Su casa, su mesa, su lugar en la sinagoga: todo eso se lo había robado la enfermedad, año tras año.\n\nY sin embargo, ahí estaba, entre la multitud, decidida a llegar hasta Jesús.",
+      "narrative": "La multitud apretaba desde todos los lados. Jairo, un principal de la sinagoga, acababa de caer a los pies de Jesús, rogando por su hija moribunda. Y Jesús había comenzado a caminar hacia esa casa, con la gente empujando y estrujándolo desde todas direcciones.\n\nEn algún punto de esa multitud, una mujer se abría paso.\n\nDoce años llevaba con un flujo de sangre que no cesaba. Doce años había gastado todo lo que tenía en médicos, y en vez de mejorar, había empeorado.\n\nDoce años también de vivir apartada, sin poder acercarse a nadie sin transmitir su condición. Todo eso se lo había robado la enfermedad, año tras año.\n\nY sin embargo, ahí estaba, entre la multitud, decidida a llegar hasta Jesús.",
       "ambient_sound": "crowd_distant",
       "haptic": null,
       "verse_overlay": {
@@ -44,12 +44,12 @@
       "image_url": "bleeding_woman_leviticus_scroll.png",
       "title": "Lo que la ley decía de ella",
       "subtitle": "El peso de la impureza en Levítico",
-      "content": "La ley de Levítico 15:25 declaraba impura a toda mujer con flujo de sangre continuo, más allá de los días normales de su período. Mientras el flujo continuara, ella permanecía impura, y todo lo que tocara —su cama, su asiento, cualquier persona— quedaba impuro también.\n\nEsto significaba doce años sin poder acercarse a nadie sin transmitir esa impureza. Doce años sin entrar al templo. Doce años en los que un simple roce con otra persona era motivo de vergüenza para ambos.\n\nEn ese mundo, tocar a alguien —o ser tocada por alguien— era un acto lleno de riesgo. Y ella estaba a punto de tocar a Jesús en medio de una multitud.",
-      "revelation_key": "La ley la mantenía a distancia de todos. Pero nada en la ley podía mantenerla lejos de Jesús.",
+      "content": "La ley de Levítico declaraba impura a toda mujer con flujo de sangre continuo, más allá de los días normales de su período. Mientras el flujo continuara, ella permanecía impura.\n\nEsto significaba doce años sin poder acercarse a nadie sin transmitir esa impureza. Doce años fuera del templo, apartada del centro de la vida religiosa y social de Israel. Doce años en los que un simple roce con otra persona la marcaba a ella y a quien tocara.\n\nEn ese mundo, tocar a alguien —o ser tocada por alguien— era un acto lleno de riesgo. Y ella estaba a punto de tocar a Jesús en medio de una multitud.",
+      "revelation_key": "La ley la mantenía a distancia de todos. Y aun así, ella se acercó a Jesús.",
       "scripture_connections": [
         {
-          "reference": "Levítico 15:25",
-          "text": "Y la mujer, cuando siguiere el flujo de su sangre por muchos días fuera del tiempo de su costumbre, o cuando tuviere flujo de sangre más de su costumbre, todo el tiempo del flujo de su inmundicia, será inmunda como en los días de su costumbre."
+          "reference": "Levítico 15:25-27",
+          "text": "Y la mujer, cuando siguiere el flujo de su sangre por muchos días fuera del tiempo de su costumbre, o cuando tuviere flujo de sangre más de su costumbre, todo el tiempo del flujo de su inmundicia, será inmunda como en los días de su costumbre. Toda cama en que durmiere todos los días de su flujo, le será como la cama de su costumbre; y todo mueble sobre que se sentare, será inmundo, como la inmundicia de su costumbre. Cualquiera que tocare esas cosas será inmundo; y lavará sus vestidos, y a sí mismo se lavará con agua, y será inmundo hasta la noche."
         }
       ]
     },
@@ -60,7 +60,7 @@
       "image_url": "bleeding_woman_portrait_determined.png",
       "title": "La mujer que se abrió paso",
       "subtitle": "Quién era ella antes del milagro",
-      "content": "Marcos la presenta por su condición y por lo que hizo con ella: gastó todo lo que tenía buscando sanidad, y siguió buscando incluso cuando los médicos la dejaron peor.\n\nEso revela algo de su carácter: persistió. Doce años de fracasos la mantuvieron en movimiento, buscando.\n\nHabía oído de Jesús. El texto lo dice con precisión: había oído acerca de él.\n\nY con base en eso, decidió actuar.",
+      "content": "Jairo tenía nombre. Marcos lo dice desde el principio: un principal de la sinagoga, alguien reconocido en su comunidad. A ella, el mismo relato la presenta solo como \"una mujer\" —sin nombre, sin familia mencionada, sin lugar en la sociedad. Ese contraste no es casualidad: uno tenía estatus, la otra no tenía ninguno.\n\nMarcos la presenta por su condición y por lo que hizo con ella: gastó todo lo que tenía buscando sanidad, y siguió buscando incluso cuando los médicos la dejaron peor.\n\nEso revela algo de su carácter: persistió. Doce años de fracasos la mantuvieron en movimiento, buscando.\n\nHabía oído de Jesús. El texto lo dice con precisión: había oído acerca de él.\n\nY con base en eso, decidió actuar.",
       "revelation_key": "Su fe no nació de haber visto un milagro. Nació de escuchar sobre Jesús y decidir creer.",
       "scripture_connections": [
         {
@@ -76,12 +76,16 @@
       "image_url": "bleeding_woman_reaching_hem.png",
       "verse_reference": "Marcos 5:27-28",
       "verse_text": "Cuando oyó hablar de Jesús, vino por detrás entre la multitud, y tocó su manto. Porque decía: Si tocare tan solamente su manto, seré salva.",
-      "reflection": "Ella se acercó por detrás, en silencio, mientras Jesús seguía su camino hacia la casa de Jairo. Solo se acercó lo suficiente para estirar la mano.\n\nEl manto que tocó tenía un detalle importante: los flecos en las puntas, el borde que la ley ordenaba llevar a todo varón judío como recordatorio de los mandamientos (Números 15:38). Ese borde se llamaba tzitzit. Tocarlo no era casual: era tocar la señal visible de que Jesús vivía bajo el pacto de Dios.\n\nEl verbo que Marcos usa para tocar es ἅπτομαι (haptomai): un contacto que une, que ata dos cosas de modo que una queda transformada por la otra. Fue un contacto profundo, el que ella esperaba —y creía— que la cambiaría por completo.\n\nSi tocare tan solamente su manto, seré salva, se decía a sí misma. Eso le bastaba.",
-      "revelation_key": "Tocó el borde del manto de Jesús, la señal del pacto, con una fe que esperaba ser transformada por ese contacto.",
+      "reflection": "Ella se acercó por detrás, en silencio, mientras Jesús seguía su camino hacia la casa de Jairo. Buscó solo el borde de su manto — el punto más discreto, el más lejano de su rostro y de su mano.\n\nEse manto era la ropa que Jesús llevaba puesta todos los días, con los flecos que la ley ordenaba a todo varón judío como recordatorio permanente de los mandamientos (Números 15:38). Mateo y Lucas precisan que fue exactamente ese borde lo que tocó: κράσπεδον (kraspedon), la palabra griega para el fleco con el cordón azul, el tzitzit. Tocar ese borde era tocar la señal visible de que Jesús vivía bajo el pacto de Dios, y ella se acercó a esa señal con el cuidado de quien pide un espacio pequeño, con reverencia.\n\nEl verbo que Marcos usa para tocar es ἅπτομαι (haptomai): un contacto que une, que ata dos cosas de modo que una queda transformada por la otra. Según la ley, ese contacto debía volver impuro a Jesús — así funcionaba siempre: la impureza se transmitía de la persona o el objeto impuro hacia quien tocaba. Este mismo evangelio registra otro momento donde ocurre exactamente esa inversión: cuando Jesús toca a un leproso (Marcos 1:41), la impureza no pasa a él. En ambos casos, la ley predecía una dirección; el poder de Dios reveló otra. Aquí, con la mujer, sucede lo mismo: en vez de que la impureza pasara a Jesús, la vida pasó de Jesús a ella.\n\nSi tocare tan solamente su manto, seré salva, se decía a sí misma. Ahí está la palabra exacta: los tres evangelios que narran esta escena, Marcos, Mateo y Lucas, usan el mismo verbo griego, σῴζω (sozo), la palabra que el Nuevo Testamento reserva para una restauración completa. Ella tocó con humildad, esperando poco espacio y un instante, pero su fe apuntaba a algo más grande de lo que su propia necesidad pedía.",
+      "revelation_key": "La ley esperaba que su impureza pasara a Jesús. En cambio, la vida de Jesús pasó a ella — y su fe, con solo tocar el borde, alcanzó una restauración completa.",
       "scripture_connections": [
         {
           "reference": "Números 15:38-39",
           "text": "Habla a los hijos de Israel, y diles que se hagan flecos en los bordes de sus vestidos, por sus generaciones; y pongan en cada fleco de los bordes un cordón de azul. Y os servirá de fleco, para que cuando lo veáis, os acordéis de todos los mandamientos de Jehová, para ponerlos por obra."
+        },
+        {
+          "reference": "Marcos 1:41",
+          "text": "Y Jesús, teniendo misericordia de él, extendió la mano y le tocó, y le dijo: Quiero, sé limpio."
         }
       ]
     },
