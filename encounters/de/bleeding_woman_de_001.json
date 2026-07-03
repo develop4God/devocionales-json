@@ -1,0 +1,220 @@
+{
+  "id": "bleeding_woman_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "de",
+  "bible_version": "LU17",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 11,
+  "meta": {
+    "character": "Die Frau mit dem Blutfluss",
+    "testament": "new",
+    "scripture_reference": "Markus 5:25-34",
+    "mood_primary": "falling",
+    "accent_color": "#4a0e1a",
+    "emoji": "🩸",
+    "tags": [
+      "glaube",
+      "heilung",
+      "berührung",
+      "scham",
+      "isolation",
+      "mut",
+      "wiederherstellung",
+      "tochter",
+      "menge",
+      "reinheit",
+      "hoffnung",
+      "wunder"
+    ]
+  },
+  "key_verse": {
+    "reference": "Markus 5:34",
+    "text": "Er aber sprach zu ihr: Meine Tochter, dein Glaube hat dich gesund gemacht; geh hin in Frieden und sei gesund von deiner Plage!",
+    "bible_version": "LU17"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "storm",
+      "image_url": "bleeding_woman_crowd_pressing.png",
+      "title": "Zwölf Jahre Blut.",
+      "narrative": "Die Menge drängte von allen Seiten. Jairus, ein Vorsteher der Synagoge, war gerade Jesus zu Füßen gefallen und hatte um seine sterbende Tochter gefleht. Und Jesus hatte sich auf den Weg zu diesem Haus gemacht, während die Leute ihn von allen Seiten schoben und drängten.\n\nIrgendwo in dieser Menge bahnte sich eine Frau ihren Weg.\n\nZwölf Jahre lang hatte sie mit einem Blutfluss gelebt, der nicht aufhörte. Zwölf Jahre lang hatte sie alles, was sie besaß, für Ärzte ausgegeben, und statt besser zu werden, war es schlimmer geworden.\n\nZwölf Jahre auch in Abgeschiedenheit, ohne sich jemandem nähern zu können, ohne ihren Zustand zu übertragen. All das hatte ihr die Krankheit gestohlen, Jahr für Jahr.\n\nUnd doch war sie da, mitten in der Menge, entschlossen, Jesus zu erreichen.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Markus 5:25-26",
+        "text": "Und da war eine Frau, die hatte den Blutfluss seit zwölf Jahren und hatte viel erlitten von vielen Ärzten und all ihr Gut dafür aufgewandt; und es hatte ihr nichts geholfen, sondern es war nur schlimmer geworden."
+      },
+      "revelation_key": "Zwölf Jahre der Isolation haben ihre Hoffnung nicht ausgelöscht. Sie trieben sie direkt zu Jesus."
+    },
+    {
+      "order": 2,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "bleeding_woman_leviticus_scroll.png",
+      "title": "Was das Gesetz über sie sagte",
+      "subtitle": "Die Last der Unreinheit im dritten Buch Mose",
+      "content": "Das Gesetz im dritten Buch Mose erklärte jede Frau mit anhaltendem Blutfluss für unrein, über die normalen Tage ihrer Periode hinaus. Solange der Fluss andauerte, blieb sie unrein.\n\nDas bedeutete zwölf Jahre, in denen sie sich niemandem nähern konnte, ohne diese Unreinheit zu übertragen. Zwölf Jahre außerhalb des Tempels, abgeschnitten vom Zentrum des religiösen und sozialen Lebens Israels. Zwölf Jahre, in denen eine einfache Berührung mit einer anderen Person sowohl sie als auch den anderen kennzeichnete.\n\nIn jener Welt war es eine riskante Handlung, jemanden zu berühren — oder von jemandem berührt zu werden. Und sie war im Begriff, Jesus mitten in einer Menge zu berühren.",
+      "revelation_key": "Das Gesetz hielt sie von allen fern. Und dennoch näherte sie sich Jesus.",
+      "scripture_connections": [
+        {
+          "reference": "3. Mose 15:25-27",
+          "text": "Wenn aber eine Frau den Blutfluss eine lange Zeit hat, zu ungewöhnlicher Zeit oder über die gewöhnliche Zeit hinaus, so wird sie unrein, solange sie ihn hat; wie zu ihrer gewöhnlichen Zeit, so soll sie auch da unrein sein. Jedes Lager, worauf sie liegt die ganze Zeit ihres Blutflusses, soll gelten wie ihr Lager zu ihrer gewöhnlichen Zeit. Und alles, worauf sie sitzt, wird unrein wie bei der Unreinheit ihrer gewöhnlichen Zeit. Wer davon etwas anrührt, der wird unrein und soll seine Kleider waschen und sich mit Wasser abwaschen und unrein sein bis zum Abend."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "bleeding_woman_portrait_determined.png",
+      "title": "Die Frau, die sich einen Weg bahnte",
+      "subtitle": "Wer sie war, bevor das Wunder geschah",
+      "content": "Jairus hatte einen Namen. Markus sagt es uns gleich zu Beginn: ein Vorsteher der Synagoge, jemand, der in seiner Gemeinde anerkannt war. Derselbe Bericht stellt sie hingegen nur als „eine Frau“ vor — ohne Namen, ohne genannte Familie, ohne Platz in der Gesellschaft. Dieser Gegensatz ist kein Zufall: der eine hatte Ansehen, die andere hatte keines.\n\nMarkus stellt sie durch ihren Zustand vor und durch das, was sie deswegen tat: Sie gab alles aus, was sie hatte, auf der Suche nach Heilung, und suchte weiter, selbst als die Ärzte ihren Zustand nur verschlimmerten.\n\nDas offenbart etwas über ihren Charakter: Sie hielt durch. Zwölf Jahre voller Misserfolge hielten sie in Bewegung, auf der Suche.\n\nSie hatte von Jesus gehört. Der Text sagt es genau: Sie hatte von ihm gehört.\n\nUnd allein darauf beschloss sie zu handeln.",
+      "revelation_key": "Ihr Glaube entstand nicht daraus, ein Wunder gesehen zu haben. Er entstand daraus, von Jesus zu hören und sich zu entscheiden, zu glauben.",
+      "scripture_connections": [
+        {
+          "reference": "Markus 5:27",
+          "text": "Da sie von Jesus gehört hatte, kam sie in der Menge von hinten heran und berührte sein Gewand."
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "bleeding_woman_reaching_hem.png",
+      "verse_reference": "Markus 5:27-28",
+      "verse_text": "Da sie von Jesus gehört hatte, kam sie in der Menge von hinten heran und berührte sein Gewand. Denn sie sagte sich: Wenn ich nur seine Kleider berühre, so werde ich gesund.",
+      "reflection": "Sie näherte sich von hinten, in aller Stille, während Jesus weiter auf das Haus des Jairus zuging. Sie suchte nur den Saum seines Gewandes — den unauffälligsten Punkt, am weitesten entfernt von seinem Gesicht und seiner Hand.\n\nDieses Gewand war das Kleidungsstück, das Jesus jeden Tag trug, mit den Quasten, die das Gesetz jedem jüdischen Mann als ständige Erinnerung an die Gebote vorschrieb (4. Mose 15,38). Matthäus und Lukas geben genau an, dass es dieser Saum war, den sie berührte: κράσπεδον (kraspedon), das griechische Wort für die Quaste mit der blauen Schnur, die Zizit. Diesen Saum zu berühren bedeutete, das sichtbare Zeichen zu berühren, dass Jesus im Bund Gottes lebte, und sie näherte sich diesem Zeichen mit Ehrfurcht, wie jemand, der nur um den kleinsten Raum bittet.\n\nDas Verb, das Markus für berühren verwendet, ist ἅπτομαι (haptomai): ein Kontakt, der bindet, der zwei Dinge so verbindet, dass eines vom anderen verwandelt wird. Nach dem Gesetz hätte dieser Kontakt Jesus unrein machen müssen — so funktionierte es immer: Unreinheit ging von der unreinen Person oder dem unreinen Gegenstand auf den über, der sie berührte. Dasselbe Evangelium berichtet von einem anderen Moment, in dem genau diese Umkehrung geschieht: Als Jesus einen Aussätzigen berührt (Markus 1,41), geht die Unreinheit nicht auf ihn über. In beiden Fällen sagte das Gesetz eine Richtung voraus; die Kraft Gottes offenbarte eine andere. Hier, bei dieser Frau, geschieht dasselbe: Statt dass ihre Unreinheit auf Jesus überging, ging Leben von Jesus auf sie über.\n\nWenn ich nur seine Kleider berühre, so werde ich gesund, sagte sie sich. Genau das ist das entscheidende Wort: Alle drei Evangelien, die diese Szene berichten — Markus, Matthäus und Lukas —, verwenden dasselbe griechische Verb, σῴζω (sozo), das Wort, das das Neue Testament für eine vollständige Wiederherstellung reserviert. Sie berührte mit Demut, erwartete nur einen kleinen Raum und einen einzigen Augenblick, aber ihr Glaube griff nach etwas Größerem, als sie selbst zu erbitten wagte.",
+      "revelation_key": "Das Gesetz erwartete, dass ihre Unreinheit auf Jesus übergehe. Stattdessen ging das Leben Jesu auf sie über — und ihr Glaube erreichte, mit nur einer Berührung des Saumes, eine vollständige Wiederherstellung.",
+      "scripture_connections": [
+        {
+          "reference": "4. Mose 15:38-39",
+          "text": "Rede mit den Israeliten und sprich zu ihnen, dass sie und ihre Nachkommen sich Quasten machen an den Zipfeln ihrer Kleider und blaue Schnüre an die Quasten der Zipfel tun. Und dazu sollen die Quasten euch dienen: sooft ihr sie anseht, sollt ihr an alle Gebote des HERRN denken und sie tun, dass ihr euch nicht von eurem Herzen noch von euren Augen verführen lasst und abgöttisch werdet,"
+        },
+        {
+          "reference": "Markus 1:41",
+          "text": "Und es jammerte ihn, und er streckte seine Hand aus, rührte ihn an und sprach zu ihm: Ich will's tun; sei rein!"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "bleeding_woman_flow_stops.png",
+      "title": "Augenblicklich.",
+      "narrative": "Sie streckte ihre Hand zwischen den Körpern aus, die sie umgaben. Ihre Finger erreichten den Saum seines Gewandes.\n\nUnd augenblicklich versiegte die Quelle ihres Blutes.\n\nZwölf Jahre ständigen Flusses hielten in einer Sekunde inne. Sie spürte es in ihrem Körper: Sie wusste, ohne dass jemand es ihr sagte, dass sie von jener Plage geheilt war. Das Wort, das Markus verwendet, ist μάστιξ (mastix), wörtlich „Geißel“ — dasselbe Wort, das für die römische Geißel verwendet wurde. In jener Zeit glaubten viele, eine so lange Krankheit sei eine Strafe Gottes für irgendeine Sünde; die Jünger selbst fragten Jesus angesichts eines anderen Mannes, der von Geburt an blind war: „Wer hat gesündigt, dieser oder seine Eltern?“ (Johannes 9,2). Jesus antwortete, dass es weder der eine noch der andere sei: Das Leiden war keine Verurteilung. Hier, bei dieser Frau, handelt er nach derselben Wahrheit: Er heilt sie in Stille, ohne nach irgendeiner Schuld zu fragen.\n\nAber im selben Augenblick blieb Jesus stehen.\n\nMitten in einer Menge, die ihn von allen Seiten drängte, spürte Jesus, dass Kraft von ihm ausgegangen war. Er wandte sich um und fragte: Wer hat meine Kleider berührt?",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Markus 5:29-30",
+        "text": "Und sogleich versiegte die Quelle ihres Blutes, und sie spürte es am Leibe, dass sie von ihrer Plage geheilt war. Und Jesus spürte sogleich an sich selbst, dass eine Kraft von ihm ausgegangen war, wandte sich um in der Menge und sprach: Wer hat meine Kleider berührt?"
+      },
+      "scripture_connections": [
+        {
+          "reference": "Johannes 9:2-3",
+          "text": "Und seine Jünger fragten ihn und sprachen: Rabbi, wer hat gesündigt, dieser oder seine Eltern, dass er blind geboren ist? Jesus antwortete: Es hat weder dieser gesündigt noch seine Eltern, sondern es sollen die Werke Gottes offenbar werden an ihm."
+        }
+      ],
+      "revelation_key": "Sie wurde in Stille geheilt, ohne Verurteilung. Im selben Augenblick spürte Jesus, wie die Kraft von ihm ausging."
+    },
+    {
+      "order": 6,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "bleeding_woman_power_dynamis.png",
+      "title": "Die Kraft, die ausging",
+      "subtitle": "Δύναμις (dynamis): eine Kraft, die man spüren kann",
+      "content": "Das griechische Wort, das Markus für Kraft verwendet, ist δύναμις (dynamis): eine Kraft, die imstande ist, eine reale, messbare Wirkung hervorzubringen, keine abstrakte Idee und kein Gefühl. Es ist dieselbe Wurzel, die das Neue Testament verwendet, um Jesu Wunder in allen Evangelien zu beschreiben — Fähigkeit und Kraft, die wirkt und alles verwandelt, was sie berührt.\n\nDas Verb, das Markus für „erkennen“ verwendet, ist ἐπιγινώσκω (epiginosko): etwas wahrzunehmen, das bereits geschehen ist, es im Nachhinein zu bemerken. Die Reihenfolge ist wichtig: Die Kraft ging zuerst aus, und erst danach erkannte Jesus sie. Die Kraft war bereits in ihm, dauerhaft, ein Teil dessen, was er ist. Was ihr Freiwerden auslöste, war nicht der körperliche Kontakt, sondern der Glaube, der sie berührte.\n\nDie Jünger antworteten auf Jesu Frage fast verwundert: „Du siehst, dass dich die Menge umdrängt, und sprichst: Wer hat mich berührt?“ Sie hatten in gewissem Sinne recht: Hunderte von Menschen berührten in jenem Moment seinen Körper und drängten ihn von allen Seiten. Aber nur eine berührte ihn im Glauben.\n\nPaulus sollte den Ephesern später schreiben, dass die Rettung aus Gnade durch den Glauben kommt (Epheser 2,8). Der Glaube erzeugt nicht die Gabe, er empfängt sie. Hier geschieht dasselbe: Unter Hunderten von Händen, die Jesus streiften, war ihre die einzige, die sich öffnete, um zu empfangen, was er bereits zu geben hatte.",
+      "revelation_key": "Die Kraft Jesu antwortete auf den Glauben einer einzigen Hand, die sich öffnete, um sie zu empfangen, unter Hunderten, die ihn nur streiften.",
+      "scripture_connections": [
+        {
+          "reference": "Markus 5:31",
+          "text": "Und seine Jünger sprachen zu ihm: Du siehst, dass dich die Menge umdrängt, und sprichst: Wer hat mich berührt?"
+        },
+        {
+          "reference": "Epheser 2:8",
+          "text": "Denn aus Gnade seid ihr gerettet durch Glauben, und das nicht aus euch: Gottes Gabe ist es,"
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "bleeding_woman_falls_trembling.png",
+      "verse_reference": "Markus 5:32-33",
+      "verse_text": "Und er sah sich um nach der, die das getan hatte. Die Frau aber fürchtete sich und zitterte, denn sie wusste, was an ihr geschehen war; sie kam und fiel vor ihm nieder und sagte ihm die ganze Wahrheit.",
+      "reflection": "Sie hätte sich unbemerkt in der Menge davonschleichen können. Sie hatte bereits das, wonach sie gekommen war: Ihr Körper war geheilt. Sie hätte unentdeckt bleiben können.\n\nAber Jesus schaute weiter, suchte ihr Gesicht unter den Menschen.\n\nVoller Furcht und zitternd, wissend, was geschehen war, fiel sie vor ihm nieder. Der Text sagt, sie erzählte ihm die ganze Wahrheit.\n\nEs war ein reales Risiko: öffentlich zu bekennen, dass sie einen Rabbi berührt hatte, während sie unrein war. Diese Tat setzte sie der öffentlichen Schande vor der gesamten Menge aus, die sie umgab — sie, die zwölf Jahre unter der Last dieses Gesetzes gelebt hatte. Dennoch war sie ehrlich.",
+      "revelation_key": "Sie wählte die vollständige Wahrheit in der Öffentlichkeit, obwohl Schweigen bereits genügt hätte, um ihre Heilung zu behalten."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "bleeding_woman_jesus_calls_daughter.png",
+      "title": "Tochter.",
+      "narrative": "Jesus empfing sie mit Gnade. Er suchte sie in der Menge und blickte ihr ins Gesicht.\n\nEr nannte sie Tochter.\n\nIn der gesamten Überlieferung der Evangelien ist sie die einzige Person, die Jesus mit diesem Wort anspricht. Tochter: θυγάτηρ (thugater), ein Begriff familiärer Nähe und der Zugehörigkeit.\n\nIm Alten Testament sprachen die Propheten von der „Tochter Zion“ — auf Hebräisch, בת ציון (bat Zion) — um das Volk Gottes zu bezeichnen: leidend, im Exil, mit Scham beladen und dennoch geliebt und zur Wiederherstellung bestimmt. Als dieser Titel ins Griechische übersetzt wurde, benutzten die Übersetzer dasselbe Wort, das Markus hier verwendet: θυγάτηρ (thugater).\n\nZwölf Jahre hatten sie ohne Platz in ihrer Gemeinde zurückgelassen, ohne Zugang zum Tempel, abgeschnitten von denen um sie herum. Und in einem Augenblick, vor aller Augen, gab Jesus ihr einen Platz zurück: den einer Tochter.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Markus 5:34",
+        "text": "Er aber sprach zu ihr: Meine Tochter, dein Glaube hat dich gesund gemacht; geh hin in Frieden und sei gesund von deiner Plage!"
+      },
+      "revelation_key": "Jesus nannte sie Tochter und gab ihr mit diesem Wort einen Platz zurück, den ihr zwölf Jahre Krankheit genommen hatten."
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "bleeding_woman_sozo_healing.png",
+      "title": "Gesund und geheilt",
+      "subtitle": "Σῴζω (sozo): ein einziges Wort, zwei Wirklichkeiten",
+      "content": "Dein Glaube hat dich gesund gemacht, sagte Jesus zu ihr. Das griechische Wort ist σῴζω (sozo), dasselbe Wort, das das Neue Testament verwendet, um von der Rettung der Seele zu sprechen. Im griechischen Urtext teilen sich körperliche Heilung und geistliche Rettung dasselbe Wort.\n\nAls Jesus erklärte, ihr Glaube habe sie gesund gemacht, sprach er von einer vollständigen Wiederherstellung: Leib, Gemeinschaft, Würde und Beziehung zu Gott, alles zugleich.\n\nGeh hin in Frieden, fügte er hinzu. Das griechische Wort εἰρήνη (eirene) übersetzt das hebräische Schalom: die Fülle, die vollständige Wiederherstellung dessen, was zerbrochen war.\n\nDerselbe Vers schließt mit einem dritten Wort: gesund, auf Griechisch ὑγιής (hygies) — verschieden von σῴζω (sozo). Mit sozo benannte Jesus die vollständige Wiederherstellung, die sie in Wirklichkeit suchte, jenseits des Körperlichen. Mit hygies bestätigte er das Greifbare: Ihr Körper, der zwölf Jahre lang geblutet hatte, war nun geheilt. Das körperliche Wunder und die vollständige Rettung erfüllten sich im selben Augenblick.",
+      "revelation_key": "Diese Begegnung mit Jesus stellte sie vollständig wieder her: gesund, in Frieden und geheilt."
+    },
+    {
+      "order": 10,
+      "type": "discovery_activation",
+      "image_url": "bleeding_woman_open_hand_light.png",
+      "title": "Deine Begegnung",
+      "subtitle": "Sie streckte ihre Hand mitten in der Menge aus, im Glauben, dass eine einzige Berührung Jesu alles verändern könnte. Dasselbe kann dir heute geschehen.",
+      "discovery_questions": [
+        {
+          "category": "Deine Isolation",
+          "question": "Zwölf Jahre lang fühlte sie sich abgesondert, ohne Platz unter anderen. Jesus nannte sie vor allen Tochter. Gibt es etwas in deinem Leben, wo auch du das hören musst? Der erste Schritt ist, wie bei ihr, zu glauben."
+        },
+        {
+          "category": "Dein Glaube",
+          "question": "Zwölf Jahre lang suchte sie nach einer Antwort, und dennoch bahnte sie sich einen Weg durch die Menge, im Glauben, dass eine einzige Berührung genügen würde. Ihre Beharrlichkeit und ihr Glaube waren es, die alles zusammenfügten. Wo musst du durchhalten, im Glauben, dass Jesus es tun kann?"
+        },
+        {
+          "category": "Deine Wahrheit",
+          "question": "Sie hätte sich still mit ihrer Heilung davonschleichen können, doch entschied sich, die ganze Wahrheit vor Jesus zu sagen. Gibt es etwas, das du ihm heute erzählen musst, mit offenem Herzen?"
+        }
+      ],
+      "prayer": {
+        "title": "Gebet der Frau, die sich einen Weg bahnte",
+        "content": "Herr Jesus,\n\nWie sie trage ich schon lange schwere Lasten. Es gibt Bereiche meines Lebens, in denen ich alles ausgegeben habe, was ich hatte, auf der Suche nach einer Antwort, und dennoch bin ich noch müde.\n\nHeute möchte ich meine Hand nach dir ausstrecken, selbst mitten in der Menge, selbst wenn es sonst niemand bemerkt. Ich glaube, wie sie, dass eine Berührung von dir verwandeln und wiederherstellen kann, was Zeit, Krankheit, Entscheidungen oder irgendein anderer Faktor ungelöst gelassen hat.\n\nDanke, dass du mich so annimmst, wie ich bin. Danke, dass du mich Sohn nennst, mich Tochter nennst und mir einen Platz gibst, wo vorher nur Isolation war.\n\nGib mir den Mut, dir die ganze Wahrheit zu sagen, mit offenem Herzen, wissend, dass deine Antwort immer Gnade ist.\n\nRette mich, Herr, an Leib und Seele.\n\nIn Jesu Namen, Amen."
+      }
+    },
+    {
+      "order": 11,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "bleeding_woman_walking_peace.png",
+      "completion_verse": {
+        "reference": "Markus 5:34",
+        "text": "Er aber sprach zu ihr: Meine Tochter, dein Glaube hat dich gesund gemacht; geh hin in Frieden und sei gesund von deiner Plage!",
+        "bible_version": "LU17"
+      },
+      "reflection_prompt": "Sie streckte ihre Hand aus, im Glauben, dass eine einzige Berührung genügen würde. Jesus nannte sie Tochter und stellte sie vollständig wieder her. Was musst du heute nach ihm ausstrecken, im Vertrauen, dass eine einzige Berührung alles verändern kann?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

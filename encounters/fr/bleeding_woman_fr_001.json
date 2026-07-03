@@ -1,0 +1,220 @@
+{
+  "id": "bleeding_woman_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fr",
+  "bible_version": "LSG1910",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 12,
+  "meta": {
+    "character": "La Femme Hémorroïsse",
+    "testament": "new",
+    "scripture_reference": "Marc 5:25-34",
+    "mood_primary": "falling",
+    "accent_color": "#4a0e1a",
+    "emoji": "🩸",
+    "tags": [
+      "foi",
+      "guérison",
+      "toucher",
+      "honte",
+      "isolement",
+      "courage",
+      "restauration",
+      "fille",
+      "foule",
+      "pureté",
+      "espérance",
+      "miracle"
+    ]
+  },
+  "key_verse": {
+    "reference": "Marc 5:34",
+    "text": "Mais Jésus lui dit: Ma fille, ta foi t’a sauvée; va en paix, et sois guérie de ton mal.",
+    "bible_version": "LSG1910"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "storm",
+      "image_url": "bleeding_woman_crowd_pressing.png",
+      "title": "Douze ans de sang.",
+      "narrative": "La foule pressait de tous côtés. Jaïrus, un chef de synagogue, venait de tomber aux pieds de Jésus, le suppliant pour sa fille mourante. Et Jésus s'était mis en marche vers cette maison, tandis que la foule le poussait et le pressait de toutes parts.\n\nQuelque part dans cette foule, une femme se frayait un chemin.\n\nDepuis douze ans, elle souffrait d'une perte de sang qui ne cessait pas. Douze ans qu'elle avait dépensé tout ce qu'elle possédait chez les médecins, et au lieu de guérir, elle avait empiré.\n\nDouze ans, aussi, à vivre à l'écart, incapable de s'approcher de quiconque sans transmettre son mal. La maladie lui avait tout volé, année après année.\n\nEt pourtant, elle était là, au milieu de la foule, résolue à atteindre Jésus.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marc 5:25-26",
+        "text": "Or, il y avait une femme atteinte d’une perte de sang depuis douze ans. Elle avait beaucoup souffert entre les mains de plusieurs médecins, elle avait dépensé tout ce qu’elle possédait, et elle n’avait éprouvé aucun soulagement, mais était allée plutôt en empirant."
+      },
+      "revelation_key": "Douze ans d'isolement n'avaient pas éteint son espérance. Ils l'avaient menée droit vers Jésus."
+    },
+    {
+      "order": 2,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "bleeding_woman_leviticus_scroll.png",
+      "title": "Ce que la loi disait d'elle",
+      "subtitle": "Le poids de l'impureté dans le Lévitique",
+      "content": "La loi du Lévitique déclarait impure toute femme atteinte d'un flux de sang continu, au-delà des jours normaux de ses règles. Tant que le flux durait, elle demeurait impure.\n\nCela signifiait douze ans sans pouvoir s'approcher de quiconque sans lui transmettre cette impureté. Douze ans loin du temple, coupée du centre de la vie religieuse et sociale d'Israël. Douze ans où un simple contact avec une autre personne la marquait, elle et celui qui la touchait.\n\nDans ce monde-là, toucher quelqu'un — ou être touché par quelqu'un — était un acte chargé de risques. Et elle était sur le point de toucher Jésus au milieu d'une foule.",
+      "revelation_key": "La loi la tenait à distance de tous. Et pourtant, elle s'approcha de Jésus.",
+      "scripture_connections": [
+        {
+          "reference": "Lévitique 15:25-27",
+          "text": "La femme qui aura un flux de sang pendant plusieurs jours hors de ses époques régulières, ou dont le flux durera plus qu’à l’ordinaire, sera impure tout le temps de son flux, comme au temps de son indisposition menstruelle. Tout lit sur lequel elle couchera pendant la durée de ce flux sera comme le lit de son flux menstruel, et tout objet sur lequel elle s’assiéra sera impur comme lors de son flux menstruel. Quiconque les touchera sera souillé; il lavera ses vêtements, se lavera dans l’eau, et sera impur jusqu’au soir."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "bleeding_woman_portrait_determined.png",
+      "title": "La femme qui se fraya un chemin",
+      "subtitle": "Qui elle était avant le miracle",
+      "content": "Jaïrus avait un nom. Marc le précise dès le début: un chef de synagogue, quelqu'un de reconnu dans sa communauté. Elle, ce même récit ne la présente que comme \"une femme\" — sans nom, sans famille mentionnée, sans place dans la société. Ce contraste n'est pas un hasard: l'un avait un statut, l'autre n'en avait aucun.\n\nMarc la présente par sa condition et par ce qu'elle en avait fait: elle avait dépensé tout ce qu'elle possédait à chercher la guérison, et avait continué à chercher même quand les médecins l'avaient laissée pire qu'avant.\n\nCela révèle quelque chose de son caractère: elle avait persisté. Douze ans d'échecs l'avaient maintenue en mouvement, à la recherche.\n\nElle avait entendu parler de Jésus. Le texte le dit avec précision: elle avait entendu parler de lui.\n\nEt sur cette seule base, elle décida d'agir.",
+      "revelation_key": "Sa foi n'est pas née d'avoir vu un miracle. Elle est née d'avoir entendu parler de Jésus et d'avoir décidé de croire.",
+      "scripture_connections": [
+        {
+          "reference": "Marc 5:27",
+          "text": "Ayant entendu parler de Jésus, elle vint dans la foule par derrière, et toucha son vêtement."
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "bleeding_woman_reaching_hem.png",
+      "verse_reference": "Marc 5:27-28",
+      "verse_text": "Ayant entendu parler de Jésus, elle vint dans la foule par derrière, et toucha son vêtement. Car elle disait: Si je puis seulement toucher ses vêtements, je serai guérie.",
+      "reflection": "Elle s'approcha par derrière, en silence, tandis que Jésus poursuivait son chemin vers la maison de Jaïrus. Elle ne chercha que le bord de son vêtement — le point le plus discret, le plus éloigné de son visage et de sa main.\n\nCe vêtement était celui que Jésus portait chaque jour, avec les franges que la loi imposait à tout homme juif comme rappel permanent des commandements (Nombres 15:38). Matthieu et Luc précisent que c'est exactement ce bord qu'elle toucha: κράσπεδον (kraspedon), le mot grec pour la frange au cordon bleu, le tzitzit. Toucher ce bord, c'était toucher le signe visible que Jésus vivait sous l'alliance de Dieu, et elle s'approcha de ce signe avec révérence, avec le soin de quelqu'un qui ne demande qu'un tout petit espace.\n\nLe verbe que Marc emploie pour toucher est ἅπτομαι (haptomai): un contact qui lie, qui unit deux choses de sorte que l'une est transformée par l'autre. Selon la loi, ce contact aurait dû rendre Jésus impur — c'est ainsi que cela fonctionnait toujours: l'impureté se transmettait de la personne ou de l'objet impur à celui qui touchait. Ce même évangile rapporte un autre moment où se produit exactement cette inversion: quand Jésus touche un lépreux (Marc 1:41), l'impureté ne passe pas sur lui. Dans les deux cas, la loi prévoyait un sens; la puissance de Dieu en a révélé un autre. Ici, avec cette femme, il se passe la même chose: au lieu que son impureté passe sur Jésus, c'est la vie de Jésus qui passe sur elle.\n\nSi je puis seulement toucher ses vêtements, je serai guérie, se disait-elle. Voilà le mot exact: les trois évangiles qui rapportent cette scène, Marc, Matthieu et Luc, emploient le même verbe grec, σῴζω (sozo), le mot que le Nouveau Testament réserve à une restauration complète. Elle toucha avec humilité, n'espérant qu'un tout petit espace et un seul instant, mais sa foi visait quelque chose de plus grand que ce que son propre besoin réclamait.",
+      "revelation_key": "La loi attendait que son impureté passe sur Jésus. Au lieu de cela, la vie de Jésus passa sur elle — et sa foi, par le simple toucher du bord, atteignit une restauration complète.",
+      "scripture_connections": [
+        {
+          "reference": "Nombres 15:38-39",
+          "text": "Parle aux enfants d’Israël, et dis-leur qu’ils se fassent, de génération en génération, une frange au bord de leurs vêtements, et qu’ils mettent un cordon bleu sur cette frange du bord de leurs vêtements. Quand vous aurez cette frange, vous la regarderez, et vous vous souviendrez de tous les commandements de l’Éternel pour les mettre en pratique, et vous ne suivrez pas les désirs de vos cœurs et de vos yeux pour vous laisser entraîner à l’infidélité."
+        },
+        {
+          "reference": "Marc 1:41",
+          "text": "Jésus, ému de compassion, étendit la main, le toucha, et dit: Je le veux, sois pur."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "bleeding_woman_flow_stops.png",
+      "title": "À l'instant même.",
+      "narrative": "Elle tendit la main parmi les corps qui l'entouraient. Ses doigts atteignirent le bord du vêtement.\n\nEt à l'instant même, la perte de sang s'arrêta.\n\nDouze ans de flux constant s'arrêtèrent en une seconde. Elle le sentit dans son corps: elle sut, sans que personne ne le lui dise, qu'elle avait été guérie de ce mal. Le mot que Marc emploie est μάστιξ (mastix), littéralement \"fouet\" — le même mot utilisé pour le fléau romain. À cette époque, beaucoup croyaient qu'une maladie aussi longue était un châtiment de Dieu pour quelque péché; les disciples eux-mêmes, devant un autre homme aveugle de naissance, demandèrent à Jésus: \"Qui a péché, cet homme ou ses parents?\" (Jean 9:2). Jésus répondit que ce n'était ni l'un ni l'autre: l'affliction n'était pas une condamnation. Ici, avec cette femme, il agit selon cette même vérité: il la guérit en silence, sans lui demander compte d'aucune faute.\n\nMais au même instant, Jésus s'arrêta.\n\nAu milieu d'une foule qui le pressait de tous côtés, Jésus sentit qu'une force était sortie de lui. Il se retourna et demanda: Qui a touché mes vêtements?",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marc 5:29-30",
+        "text": "Au même instant la perte de sang s’arrêta, et elle sentit dans son corps qu’elle était guérie de son mal. Jésus connut aussitôt en lui-même qu’une force était sortie de lui; et, se retournant au milieu de la foule, il dit: Qui a touché mes vêtements?"
+      },
+      "scripture_connections": [
+        {
+          "reference": "Jean 9:2-3",
+          "text": "Ses disciples lui firent cette question: Rabbi, qui a péché, cet homme ou ses parents, pour qu’il soit né aveugle? Jésus répondit: Ce n’est pas que lui ou ses parents aient péché; mais c’est afin que les œuvres de Dieu soient manifestées en lui."
+        }
+      ],
+      "revelation_key": "Elle fut guérie en silence, sans condamnation. Au même instant, Jésus sentit la force sortir de lui."
+    },
+    {
+      "order": 6,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "bleeding_woman_power_dynamis.png",
+      "title": "La force qui sortit",
+      "subtitle": "Δύναμις (dynamis): une force que l'on peut sentir",
+      "content": "Le mot grec que Marc emploie pour force est δύναμις (dynamis): une puissance capable de produire un effet réel et mesurable, non une idée abstraite ni un sentiment. C'est la même racine que le Nouveau Testament utilise pour décrire les miracles de Jésus dans tous les évangiles — capacité, force qui agit et transforme ce qu'elle touche.\n\nLe verbe que Marc emploie pour \"connut\" est ἐπιγινώσκω (epiginosko): percevoir quelque chose qui s'est déjà produit, s'en rendre compte après coup. L'ordre importe: la force sortit d'abord, et Jésus la reconnut ensuite. La force était déjà en lui, permanente, faisant partie de ce qu'il est. Ce qui déclencha sa sortie ne fut pas le contact physique, mais la foi qui la toucha.\n\nLes disciples, entendant la question de Jésus, répondirent presque avec étonnement: \"Tu vois la foule qui te presse, et tu dis: Qui m'a touché?\" Ils avaient raison en un sens: des centaines de personnes touchaient son corps à ce moment-là, le pressant de tous côtés. Mais une seule le toucha avec foi.\n\nPaul écrirait plus tard aux Éphésiens que le salut vient par la grâce, au moyen de la foi (Éphésiens 2:8). La foi n'engendre pas le don, elle le reçoit. Il se passe ici la même chose: parmi des centaines de mains qui effleuraient Jésus, la sienne fut la seule qui s'ouvrit pour recevoir ce qu'il avait déjà à donner.",
+      "revelation_key": "La puissance de Jésus répondit à la foi d'une seule main qui s'ouvrit pour la recevoir, parmi des centaines qui ne faisaient que l'effleurer.",
+      "scripture_connections": [
+        {
+          "reference": "Marc 5:31",
+          "text": "Ses disciples lui dirent: Tu vois la foule qui te presse, et tu dis: Qui m’a touché?"
+        },
+        {
+          "reference": "Éphésiens 2:8",
+          "text": "Car c’est par la grâce que vous êtes sauvés, par le moyen de la foi. Et cela ne vient pas de vous, c’est le don de Dieu."
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "bleeding_woman_falls_trembling.png",
+      "verse_reference": "Marc 5:32-33",
+      "verse_text": "Et il regardait autour de lui, pour voir celle qui avait fait cela. La femme, effrayée et tremblante, sachant ce qui s’était passé en elle, vint se jeter à ses pieds, et lui dit toute la vérité.",
+      "reflection": "Elle aurait pu se glisser hors de la foule sans se faire remarquer. Elle avait déjà ce qu'elle était venue chercher: son corps était guéri. Elle aurait pu passer inaperçue.\n\nMais Jésus continuait de regarder, cherchant son visage parmi la foule.\n\nEffrayée et tremblante, sachant ce qui s'était passé, elle se jeta à ses pieds. Le texte précise qu'elle lui dit toute la vérité.\n\nC'était un risque réel: confesser en public qu'elle avait touché un rabbin alors qu'elle était impure. Cet acte l'exposait à la honte publique devant toute la foule qui les entourait, elle qui avait vécu douze ans sous le poids de cette loi. Malgré cela, elle fut honnête.",
+      "revelation_key": "Elle choisit toute la vérité en public, alors que le silence lui aurait déjà suffi pour garder sa guérison."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "bleeding_woman_jesus_calls_daughter.png",
+      "title": "Ma fille.",
+      "narrative": "Jésus la reçut avec grâce. Il la chercha parmi la foule et la regarda en face.\n\nIl l'appela ma fille.\n\nDans tout le récit des évangiles, elle est la seule personne à qui Jésus s'adresse avec ce mot. Fille: θυγάτηρ (thugater), un terme de proximité familiale, d'appartenance.\n\nDans l'Ancien Testament, les prophètes parlaient de la \"fille de Sion\" — en hébreu, בת ציון (bat Sion) — pour désigner le peuple de Dieu: souffrant, exilé, chargé de honte, et pourtant aimé et destiné à la restauration. Quand ce titre fut traduit en grec, on employa le même mot que Marc utilise ici: θυγάτηρ (thugater).\n\nDouze ans l'avaient laissée sans place dans sa communauté, sans accès au temple, coupée de ceux qui l'entouraient. Et en un instant, devant tous, Jésus lui rendit une place: celle de fille.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marc 5:34",
+        "text": "Mais Jésus lui dit: Ma fille, ta foi t’a sauvée; va en paix, et sois guérie de ton mal."
+      },
+      "revelation_key": "Jésus l'appela ma fille, et par ce mot lui rendit une place que douze ans de maladie lui avaient prise."
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "bleeding_woman_sozo_healing.png",
+      "title": "Sauvée et guérie",
+      "subtitle": "Σῴζω (sozo): un seul mot, deux réalités",
+      "content": "Ta foi t'a sauvée, lui dit Jésus. Le mot grec est σῴζω (sozo), le même que le Nouveau Testament emploie pour parler du salut de l'âme. Dans le grec original, la guérison physique et le salut spirituel partagent le même mot.\n\nQuand Jésus déclara que sa foi l'avait sauvée, il parlait d'une restauration complète: le corps, la communauté, la dignité et la relation avec Dieu, tout à la fois.\n\nVa en paix, ajouta-t-il. Le mot grec εἰρήνη (eirene) traduit l'hébreu shalom: la plénitude, la restauration totale de ce qui était brisé.\n\nCe même verset se termine par un troisième mot: guérie, en grec ὑγιής (hugies) — distinct de σῴζω (sozo). Avec sozo, Jésus a nommé la restauration complète qu'elle recherchait réellement, au-delà du physique. Avec hugies, il a confirmé la réalité concrète: son corps, celui qui avait saigné pendant douze ans, était désormais guéri. Le miracle physique et le salut complet s'accomplirent au même instant.",
+      "revelation_key": "Cette rencontre avec Jésus la restaura complètement: sauvée, en paix, et guérie."
+    },
+    {
+      "order": 10,
+      "type": "discovery_activation",
+      "image_url": "bleeding_woman_open_hand_light.png",
+      "title": "Ta rencontre",
+      "subtitle": "Elle tendit la main au milieu de la foule, croyant qu'un simple contact avec Jésus pouvait tout changer. La même chose peut t'arriver aujourd'hui.",
+      "discovery_questions": [
+        {
+          "category": "Ton isolement",
+          "question": "Depuis douze ans, elle se sentait mise à part, sans place parmi les autres. Jésus l'appela ma fille devant tous. Y a-t-il quelque chose dans ta vie que tu as aussi besoin d'entendre? Le premier pas, comme le sien, est de croire."
+        },
+        {
+          "category": "Ta foi",
+          "question": "Depuis douze ans, elle cherchait une réponse, et pourtant elle se fraya un chemin au milieu de la foule, croyant qu'un seul contact suffirait. Sa persévérance et sa foi sont ce qui permit que tout s'accomplisse. Où as-tu besoin de persévérer, en croyant que Jésus peut le faire?"
+        },
+        {
+          "category": "Ta vérité",
+          "question": "Elle aurait pu partir en silence avec sa guérison, mais elle choisit de dire toute la vérité devant Jésus. Y a-t-il quelque chose que tu dois lui dire aujourd'hui, le cœur ouvert?"
+        }
+      ],
+      "prayer": {
+        "title": "Prière de la femme qui se fraya un chemin",
+        "content": "Seigneur Jésus,\n\nComme elle, j'ai porté de lourds fardeaux depuis longtemps. Il y a des domaines de ma vie où j'ai dépensé tout ce que j'avais à la recherche d'une réponse, et pourtant je suis encore fatigué.\n\nAujourd'hui, je veux tendre la main vers toi, même au milieu de la foule, même si personne d'autre ne le remarque. Je crois, comme elle, qu'un contact avec toi peut transformer et rétablir ce que le temps, la maladie, les décisions, ou tout autre facteur ont laissé sans solution.\n\nMerci de me recevoir tel que je suis. Merci de m'appeler ton fils, de m'appeler ta fille, et de me donner une place là où il n'y avait auparavant que de l'isolement.\n\nDonne-moi le courage de te dire toute la vérité, le cœur ouvert, sachant que ta réponse est toujours pleine de grâce.\n\nSauve-moi, Seigneur, corps et âme.\n\nAu nom de Jésus, amen."
+      }
+    },
+    {
+      "order": 11,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "bleeding_woman_walking_peace.png",
+      "completion_verse": {
+        "reference": "Marc 5:34",
+        "text": "Mais Jésus lui dit: Ma fille, ta foi t’a sauvée; va en paix, et sois guérie de ton mal.",
+        "bible_version": "LSG1910"
+      },
+      "reflection_prompt": "Elle tendit la main croyant qu'un seul contact suffirait. Jésus l'appela ma fille et la restaura complètement. Que dois-tu tendre aujourd'hui vers lui, en croyant qu'un seul contact peut tout changer?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
