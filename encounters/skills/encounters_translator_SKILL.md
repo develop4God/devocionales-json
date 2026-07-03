@@ -258,31 +258,12 @@ applying critic fixes and before reporting done:
 Repeat steps 2–4 until a full pass finds nothing new. Only then move to the next
 language or report completion.
 
-### FINAL GATE: Known Error Pattern Sweep
+### ZH-Specific Check: 您/你 Register
 
-After the native-speaker critic review and its fixes are complete for a language file,
-run one more pass against `encounters/skills/known_error_patterns.md` — a living
-reference of recurring issues found across prior encounters and languages.
-
-**Do not front-load this file's contents into the critic subagent's prompt in the
-section above.** That prompt must stay simple and open-ended — no named error
-categories — because priming a reviewer with a fixed checklist causes it to anchor on
-those items and under-report everything else. The richest findings across this
-project's review history came from critics given no hint of what to look for.
-
-This gate runs *after* that open-ended pass, and splits by entry type:
-
-- **Mechanical entries** (register consistency, theological/legal term drift) — check
-  directly yourself: grep the relevant pronouns/terms across the whole file and confirm
-  consistency. No subagent needed.
-- **Judgment entries** (calque/literal-translation phrasing) — hand a *second*, fresh
-  subagent (no shared context with the first critic) the file plus the specific
-  categories from that file's "Judgment" entries. Priming is appropriate here — this
-  step's job is targeted confirmation of known failure modes, not open discovery.
-
-Apply any fixes found, then repeat the Post-Fix Reverse Validation & Pattern Sweep above.
-If this gate surfaces a genuinely new recurring pattern (not a one-off typo), add it to
-`known_error_patterns.md` for future encounters.
+For Chinese files only, after the critic review, grep the file for 您. This character
+has no legitimate use in this content (no correct quoted-scripture use, no homograph) —
+every hit is a real violation of the project rule (see "MANDATORY GATE: Per-Language
+Register Rules" above) and should be replaced with 你.
 
 ---
 
