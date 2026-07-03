@@ -41,7 +41,7 @@
       "mood": "storm",
       "image_url": "bleeding_woman_crowd_pressing.png",
       "title": "Labindalawang taon ng dugo.",
-      "narrative": "Nagsisiksikan ang maraming tao mula sa lahat ng dako. Si Jairo, isang pinuno ng sinagoga, kababagsak lamang sa paanan ni Jesus, nagmamakaawa para sa kanyang naghihingalong anak na babae. At nagsimula nang maglakad si Jesus patungo sa bahay na iyon, habang itinutulak at sinisiksikan siya ng mga tao mula sa lahat ng direksyon.\n\nSaanman sa karamihang iyon, may isang babaeng sumusuot ng daan.\n\nLabindalawang taon na siyang dinudugo nang hindi tumitigil. Labindalawang taon niyang ginugol ang lahat ng meron siya sa mga manggagamot, at sa halip na gumaling, lalo pa siyang lumala.\n\nLabindalawang taon din ng pamumuhay nang bukod-bukod, hindi makalapit sa kahit sino nang hindi naipapasa ang kanyang kalagayan. Lahat ng iyon ay ninakaw sa kanya ng karamdaman, taon-taon.\n\nAt gayunpaman, naroon siya, sa gitna ng karamihan, determinadong marating si Jesus.",
+      "narrative": "Nagsisiksikan ang maraming tao mula sa lahat ng dako. Si Jairo, isang pinuno ng sinagoga, kababagsak lamang sa paanan ni Jesus, nagmamakaawa para sa kanyang naghihingalong anak na babae. At nagsimula nang maglakad si Jesus patungo sa bahay na iyon, habang itinutulak at sinisiksikan siya ng mga tao mula sa lahat ng direksyon.\n\nSaanman sa karamihang iyon, may isang babaeng naghahanap ng daan.\n\nLabindalawang taon na siyang dinudugo nang hindi tumitigil. Labindalawang taon niyang ginugol ang lahat ng mayroon siya sa mga manggagamot, at sa halip na gumaling, lalo pa siyang lumala.\n\nLabindalawang taon din ng pamumuhay nang bukod-bukod, hindi makalapit sa kahit sino nang hindi naipapasa ang kanyang karumihan. Lahat ng iyon ay ninakaw sa kanya ng karamdaman, taon-taon.\n\nAt gayunpaman, naroon siya, sa gitna ng karamihan, determinadong marating si Jesus.",
       "ambient_sound": "crowd_distant",
       "haptic": null,
       "verse_overlay": {
@@ -57,7 +57,7 @@
       "image_url": "bleeding_woman_leviticus_scroll.png",
       "title": "Ano ang sinabi ng kautusan tungkol sa kanya",
       "subtitle": "Ang bigat ng karumihan sa Levitico",
-      "content": "Idineklara ng kautusan sa Levitico na marumi ang sinumang babaeng may tuluy-tuloy na pagdurugo, lampas sa karaniwang mga araw ng kanyang regla. Habang tumatagal ang pagdurugo, nananatili siyang marumi.\n\nIbig sabihin nito, labindalawang taon nang hindi makalapit sa kahit sino nang hindi naipapasa ang karumihang iyon. Labindalawang taon sa labas ng templo, putol mula sa gitna ng buhay panrelihiyon at panlipunan ng Israel. Labindalawang taon kung saan ang isang simpleng paghipo lang sa ibang tao ay nagmamarka na sa kanya at sa sinumang humipo sa kanya.\n\nSa mundong iyon, ang paghipo sa isang tao — o mahipo ng ibang tao — ay isang kilos na puno ng panganib. At malapit na siyang humipo kay Jesus sa gitna ng maraming tao.",
+      "content": "Idineklara ng kautusan sa Levitico na marumi ang sinumang babaeng may tuluy-tuloy na pagdurugo, lampas sa karaniwang mga araw ng kanyang regla. Habang tumatagal ang pagdurugo, nananatili siyang marumi.\n\nIbig sabihin nito, labindalawang taon nang hindi makalapit sa kahit sino nang hindi naipapasa ang karumihang iyon. Labindalawang taon sa labas ng templo, hiwalay sa gitna ng buhay panrelihiyon at panlipunan ng Israel. Labindalawang taon kung saan ang isang simpleng paghipo lang sa ibang tao ay nagmamarka na sa kanya at sa sinumang humipo sa kanya.\n\nSa mundong iyon, ang paghipo sa isang tao — o mahipo ng ibang tao — ay isang kilos na puno ng panganib. At malapit na siyang humipo kay Jesus sa gitna ng maraming tao.",
       "revelation_key": "Itinabi siya ng kautusan sa layo mula sa lahat. At gayunpaman, lumapit siya kay Jesus.",
       "scripture_connections": [
         {
@@ -71,9 +71,9 @@
       "type": "character_moment",
       "mood": "intense",
       "image_url": "bleeding_woman_portrait_determined.png",
-      "title": "Ang babaeng sumuot ng daan",
+      "title": "Ang babaeng naghanap ng daan",
       "subtitle": "Kung sino siya bago ang himala",
-      "content": "May pangalan si Jairo. Sinabi ito ni Marcos mula sa simula: isang pinuno ng sinagoga, isang kilalang tao sa kanyang komunidad. Siya naman, ipinakilala lamang siya ng parehong salaysay bilang \"isang babae\" — walang pangalan, walang binanggit na pamilya, walang lugar sa lipunan. Hindi aksidente ang pagkakaibang ito: may katayuan ang isa, ang isa naman ay wala.\n\nIpinakilala siya ni Marcos sa pamamagitan ng kanyang kalagayan at kung ano ang ginawa niya tungkol dito: ginugol niya ang lahat ng meron siya sa paghahanap ng kagalingan, at nagpatuloy siyang maghanap kahit na lalo pa siyang pinalala ng mga manggagamot.\n\nNagpapahiwatig ito ng kanyang pagkatao: nagtiyaga siya. Ang labindalawang taon ng kabiguan ang siyang nagpanatili sa kanya sa paghahanap.\n\nNarinig niya ang tungkol kay Jesus. Sinasabi ito ng teksto nang eksakto: narinig niya ang tungkol sa kanya.\n\nAt sa batayang iyon lamang, nagpasya siyang kumilos.",
+      "content": "May pangalan si Jairo. Sinabi ito ni Marcos mula sa simula: isang pinuno ng sinagoga, isang kilalang tao sa kanyang komunidad. Siya naman, ipinakilala lamang siya ng parehong salaysay bilang \"isang babae\" — walang pangalan, walang binanggit na pamilya, walang lugar sa lipunan. Hindi aksidente ang pagkakaibang ito: may katayuan ang isa, ang isa naman ay wala.\n\nIpinakilala siya ni Marcos sa pamamagitan ng kanyang kalagayan at kung ano ang ginawa niya tungkol dito: ginugol niya ang lahat ng mayroon siya sa paghahanap ng kagalingan, at nagpatuloy siyang maghanap kahit na lalo pa siyang pinalala ng mga manggagamot.\n\nNagpapahiwatig ito ng kanyang pagkatao: nagtiyaga siya. Ang labindalawang taon ng kabiguan ang siyang nagpanatili sa kanya sa paghahanap.\n\nNarinig niya ang tungkol kay Jesus. Sinasabi ito ng teksto nang eksakto: narinig niya ang tungkol sa kanya.\n\nAt sa batayang iyon lamang, nagpasya siyang kumilos.",
       "revelation_key": "Ang kanyang pananampalataya ay hindi ipinanganak mula sa pagkakakita ng isang himala. Ipinanganak ito mula sa pagkarinig tungkol kay Jesus at sa pagpapasyang maniwala.",
       "scripture_connections": [
         {
@@ -159,7 +159,7 @@
       "mood": "grace",
       "image_url": "bleeding_woman_jesus_calls_daughter.png",
       "title": "Anak.",
-      "narrative": "Tinanggap siya ni Jesus nang may biyaya. Hinanap niya siya sa karamihan at tumingin siya nang direkta sa kanyang mukha.\n\nTinawag niya siyang anak.\n\nSa buong talaan ng mga ebanghelyo, siya lamang ang taong tinawag ni Jesus sa salitang iyon. Anak: θυγάτηρ (thugater), isang katagang nagpapahiwatig ng pagiging malapit sa pamilya, ng pagiging kabilang.\n\nSa Lumang Tipan, tinukoy ng mga propeta ang \"anak na babae ng Sion\" — sa Hebreo, בת ציון (bat Sion) — upang tukuyin ang bayan ng Diyos: naghihirap, nasa pagkatapon, binibigatan ng kahihiyan, at gayunpaman minamahal at itinalaga para sa pagsasauli. Nang isalin sa Griyego ang titulong iyon, ginamit ng mga tagasalin ang parehong salitang ginagamit ni Marcos dito: θυγάτηρ (thugater).\n\nWalang lugar sa kanyang komunidad, walang akses sa templo, at putol mula sa mga taong nakapaligid sa kanya — ito ang iniwan ng labindalawang taon sa kanya. At sa isang saglit, sa harap ng lahat, ibinalik sa kanya ni Jesus ang isang lugar: ang pagiging anak.",
+      "narrative": "Tinanggap siya ni Jesus nang may biyaya. Hinanap niya siya sa karamihan at tumingin siya nang direkta sa kanyang mukha.\n\nTinawag niya siyang anak.\n\nSa buong talaan ng mga ebanghelyo, siya lamang ang taong tinawag ni Jesus sa salitang iyon. Anak: θυγάτηρ (thugater), isang katagang nagpapahiwatig ng pagiging malapit sa pamilya, ng pagiging kabilang.\n\nSa Lumang Tipan, tinukoy ng mga propeta ang \"anak na babae ng Sion\" — sa Hebreo, בת ציון (bat Sion) — upang tukuyin ang bayan ng Diyos: naghihirap, nasa pagkatapon, binibigatan ng kahihiyan, at gayunpaman minamahal at itinalaga para sa pagsasauli. Nang isalin sa Griyego ang titulong iyon, ginamit ng mga tagasalin ang parehong salitang ginagamit ni Marcos dito: θυγάτηρ (thugater).\n\nWalang lugar sa kanyang komunidad, walang akses sa templo, at hiwalay sa mga taong nakapaligid sa kanya — ito ang iniwan ng labindalawang taon sa kanya. At sa isang saglit, sa harap ng lahat, ibinalik sa kanya ni Jesus ang isang lugar: ang pagiging anak.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
@@ -191,7 +191,7 @@
         },
         {
           "category": "Ang iyong pananampalataya",
-          "question": "Sa loob ng labindalawang taon, naghanap siya ng sagot, at gayunpaman sumuot pa rin siya ng daan sa gitna ng karamihan, naniniwalang sapat na ang isang paghipo. Ang kanyang pagtitiyaga at pananampalataya ang siyang nagpabago sa lahat. Saan mo kailangang magtiyaga, naniniwalang kaya ito ni Jesus?"
+          "question": "Sa loob ng labindalawang taon, naghanap siya ng sagot, at gayunpaman nagpatuloy pa rin siyang naghanap ng daan sa gitna ng karamihan, naniniwalang sapat na ang isang paghipo. Ang kanyang pagtitiyaga at pananampalataya ang siyang nagpabago sa lahat. Saan mo kailangang magtiyaga, naniniwalang kaya ito ni Jesus?"
         },
         {
           "category": "Ang iyong katotohanan",
@@ -199,8 +199,8 @@
         }
       ],
       "prayer": {
-        "title": "Panalangin ng babaeng sumuot ng daan",
-        "content": "Panginoong Jesus,\n\nGaya niya, matagal na akong nagpapasan ng mabibigat na pasanin. May mga bahagi ng aking buhay kung saan ginugol ko ang lahat ng meron ako sa paghahanap ng sagot, at gayunpaman pagod pa rin ako.\n\nNgayon, gusto kong iunat ang aking kamay sa iyo, kahit na sa gitna ng karamihan, kahit walang ibang makakapansin. Naniniwala ako, gaya niya, na ang isang paghipo mo ay makapagbabago at makapagsasauli sa kung ano ang iniwan ng panahon, karamdaman, mga desisyon, o anumang iba pang dahilan nang hindi nalulutas.\n\nSalamat sa pagtanggap sa akin sa kung sino ako. Salamat sa pagtawag sa akin na anak, at sa pagbibigay sa akin ng lugar kung saan may pag-iisa lamang dati.\n\nBigyan mo ako ng tapang na sabihin sa iyo ang buong katotohanan, nang may bukas na puso, alam kong ang iyong sagot ay laging biyaya.\n\nIligtas mo ako, Panginoon, sa katawan at kaluluwa.\n\nSa pangalan ni Jesus, amen."
+        "title": "Panalangin ng babaeng naghanap ng daan",
+        "content": "Panginoong Jesus,\n\nGaya niya, matagal na akong nagpapasan ng mabibigat na pasanin. May mga bahagi ng aking buhay kung saan ginugol ko ang lahat ng mayroon ako sa paghahanap ng sagot, at gayunpaman pagod pa rin ako.\n\nNgayon, gusto kong iunat ang aking kamay sa iyo, kahit na sa gitna ng karamihan, kahit walang ibang makakapansin. Naniniwala ako, gaya niya, na ang isang paghipo mo ay makapagbabago at makapagsasauli sa kung ano ang iniwan ng panahon, karamdaman, mga desisyon, o anumang iba pang dahilan nang hindi nalulutas.\n\nSalamat sa pagtanggap sa akin sa kung sino ako. Salamat sa pagtawag sa akin na anak, at sa pagbibigay sa akin ng lugar kung saan may pag-iisa lamang dati.\n\nBigyan mo ako ng tapang na sabihin sa iyo ang buong katotohanan, nang may bukas na puso, alam kong ang iyong sagot ay laging biyaya.\n\nIligtas mo ako, Panginoon, sa katawan at kaluluwa.\n\nSa pangalan ni Jesus, amen."
       }
     },
     {
