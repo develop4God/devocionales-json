@@ -1,0 +1,220 @@
+{
+  "id": "bleeding_woman_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fil",
+  "bible_version": "Magandang Balita Biblia",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 12,
+  "meta": {
+    "character": "Ang Babaeng Dinudugo",
+    "testament": "new",
+    "scripture_reference": "Marcos 5:25-34",
+    "mood_primary": "falling",
+    "accent_color": "#4a0e1a",
+    "emoji": "🩸",
+    "tags": [
+      "pananampalataya",
+      "paggaling",
+      "paghipo",
+      "kahihiyan",
+      "paghihiwalay",
+      "tapang",
+      "panunumbalik",
+      "anak",
+      "karamihan",
+      "kalinisan",
+      "pag-asa",
+      "himala"
+    ]
+  },
+  "key_verse": {
+    "reference": "Marcos 5:34",
+    "text": "Subalit sinabi sa kanya ni Jesus, “Anak, pinagaling ka ng iyong pananampalataya. Umuwi ka na at ipanatag mo ang iyong kalooban. Ikaw ay magaling na.”",
+    "bible_version": "Magandang Balita Biblia"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "storm",
+      "image_url": "bleeding_woman_crowd_pressing.png",
+      "title": "Labindalawang taon ng dugo.",
+      "narrative": "Nagsisiksikan ang maraming tao mula sa lahat ng dako. Si Jairo, isang pinuno ng sinagoga, kababagsak lamang sa paanan ni Jesus, nagmamakaawa para sa kanyang naghihingalong anak na babae. At nagsimula nang maglakad si Jesus patungo sa bahay na iyon, habang itinutulak at sinisiksikan siya ng mga tao mula sa lahat ng direksyon.\n\nSaanman sa karamihang iyon, may isang babaeng naghahanap ng daan.\n\nLabindalawang taon na siyang dinudugo nang hindi tumitigil. Labindalawang taon niyang ginugol ang lahat ng mayroon siya sa mga manggagamot, at sa halip na gumaling, lalo pa siyang lumala.\n\nLabindalawang taon din ng pamumuhay nang bukod-bukod, hindi makalapit sa kahit sino nang hindi naipapasa ang kanyang karumihan. Lahat ng iyon ay ninakaw sa kanya ng karamdaman, taon-taon.\n\nAt gayunpaman, naroon siya, sa gitna ng karamihan, determinadong marating si Jesus.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marcos 5:25-26",
+        "text": "Kasama rin doon ang isang babaing labindalawang taon nang dinudugo. Hirap na hirap na siya sa sakit na iyon, at marami nang doktor ang sumuri sa kanya. Naubos na ang kanyang ari-arian sa pagpapagamot ngunit hindi pa rin siya gumagaling. Sa halip, lalo pang lumala ang kanyang karamdaman."
+      },
+      "revelation_key": "Labindalawang taon ng paghihiwalay ang hindi nakapatay sa kanyang pag-asa. Dinala siya nito diretso kay Jesus."
+    },
+    {
+      "order": 2,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "bleeding_woman_leviticus_scroll.png",
+      "title": "Ano ang sinabi ng kautusan tungkol sa kanya",
+      "subtitle": "Ang bigat ng karumihan sa Levitico",
+      "content": "Idineklara ng kautusan sa Levitico na marumi ang sinumang babaeng may tuluy-tuloy na pagdurugo, lampas sa karaniwang mga araw ng kanyang regla. Habang tumatagal ang pagdurugo, nananatili siyang marumi.\n\nIbig sabihin nito, labindalawang taon nang hindi makalapit sa kahit sino nang hindi naipapasa ang karumihang iyon. Labindalawang taon sa labas ng templo, hiwalay sa gitna ng buhay panrelihiyon at panlipunan ng Israel. Labindalawang taon kung saan ang isang simpleng paghipo lang sa ibang tao ay nagmamarka na sa kanya at sa sinumang humipo sa kanya.\n\nSa mundong iyon, ang paghipo sa isang tao — o mahipo ng ibang tao — ay isang kilos na puno ng panganib. At malapit na siyang humipo kay Jesus sa gitna ng maraming tao.",
+      "revelation_key": "Itinabi siya ng kautusan sa layo mula sa lahat. At gayunpaman, lumapit siya kay Jesus.",
+      "scripture_connections": [
+        {
+          "reference": "Levitico 15:25-27",
+          "text": "“Kung ang sinumang babae ay dinudugo nang wala sa panahon, o lumampas kaya sa takdang panahon ng kanyang pagreregla, ituturing siyang marumi habang siya'y dinudugo, tulad nang siya'y nireregla. Ang anumang mahigaan o maupuan niya sa loob ng panahong iyon ay ituturing na marumi, tulad din ng siya'y nireregla. Ang sinumang makahipo sa mga bagay na ito ay dapat maligo; lalabhan niya ang kanyang kasuotan at ituturing siyang marumi hanggang gabi."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "bleeding_woman_portrait_determined.png",
+      "title": "Ang babaeng naghanap ng daan",
+      "subtitle": "Kung sino siya bago ang himala",
+      "content": "May pangalan si Jairo. Sinabi ito ni Marcos mula sa simula: isang pinuno ng sinagoga, isang kilalang tao sa kanyang komunidad. Siya naman, ipinakilala lamang siya ng parehong salaysay bilang \"isang babae\" — walang pangalan, walang binanggit na pamilya, walang lugar sa lipunan. Hindi aksidente ang pagkakaibang ito: may katayuan ang isa, ang isa naman ay wala.\n\nIpinakilala siya ni Marcos sa pamamagitan ng kanyang kalagayan at kung ano ang ginawa niya tungkol dito: ginugol niya ang lahat ng mayroon siya sa paghahanap ng kagalingan, at nagpatuloy siyang maghanap kahit na lalo pa siyang pinalala ng mga manggagamot.\n\nNagpapahiwatig ito ng kanyang pagkatao: nagtiyaga siya. Ang labindalawang taon ng kabiguan ang siyang nagpanatili sa kanya sa paghahanap.\n\nNarinig niya ang tungkol kay Jesus. Sinasabi ito ng teksto nang eksakto: narinig niya ang tungkol sa kanya.\n\nAt sa batayang iyon lamang, nagpasya siyang kumilos.",
+      "revelation_key": "Ang kanyang pananampalataya ay hindi ipinanganak mula sa pagkakakita ng isang himala. Ipinanganak ito mula sa pagkarinig tungkol kay Jesus at sa pagpapasyang maniwala.",
+      "scripture_connections": [
+        {
+          "reference": "Marcos 5:27",
+          "text": "Nabalitaan niya ang tungkol kay Jesus kaya't nakipagsiksikan siya hanggang sa makalapit sa likuran ni Jesus, at hinipo ang damit nito,"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "bleeding_woman_reaching_hem.png",
+      "verse_reference": "Marcos 5:27-28",
+      "verse_text": "Nabalitaan niya ang tungkol kay Jesus kaya't nakipagsiksikan siya hanggang sa makalapit sa likuran ni Jesus, at hinipo ang damit nito, sapagkat iniisip niyang: “mahipo ko lang ang kanyang damit, gagaling na ako.”",
+      "reflection": "Lumapit siya mula sa likuran, tahimik, habang patuloy na naglalakad si Jesus patungo sa bahay ni Jairo. Ang laylayan lamang ng kanyang damit ang hinanap niya — ang pinakadiskretong bahagi, ang pinakamalayo sa kanyang mukha at kamay.\n\nAng damit na iyon ang suot ni Jesus araw-araw, kasama ang mga palawit na iniuutos ng kautusan sa bawat lalaking Judio bilang tuluy-tuloy na paalala ng mga utos (Mga Bilang 15:38). Tinutukoy nina Mateo at Lucas na ang eksaktong laylayan ding iyon ang hinipo niya: κράσπεδον (kraspedon), ang salitang Griyego para sa palawit na may asul na tali, ang tzitzit. Ang paghipo sa laylayang iyon ay paghipo sa nakikitang tanda na si Jesus ay namumuhay sa ilalim ng tipan ng Diyos, at lumapit siya sa tandang iyon nang may paggalang, tulad ng isang humihiling lamang ng pinakamaliit na espasyo.\n\nAng pandiwang ginamit ni Marcos para sa paghipo ay ἅπτομαι (haptomai): isang paghipong nag-uugnay, na pinagsasama ang dalawang bagay upang ang isa ay mabago ng isa. Ayon sa kautusan, dapat sanang naging marumi si Jesus sa paghipong iyon — ganoon palagi ang nangyayari: ang karumihan ay ipinapasa mula sa maruming tao o bagay tungo sa humipo. Itala rin ng parehong ebanghelyo ang isang saglit kung saan nangyari ang eksaktong kabaligtaran: nang hipuin ni Jesus ang isang ketongin (Marcos 1:41), hindi napasa sa kanya ang karumihan. Sa magkabilang pangyayari, may direksyon na inaasahan ang kautusan; may ibang direksyon namang ipinahayag ang kapangyarihan ng Diyos. Dito, sa babaeng ito, ganito rin ang nangyari: sa halip na mapasa kay Jesus ang kanyang karumihan, ang buhay ni Jesus ang napasa sa kanya.\n\nKung mahipo ko lamang ang kanyang mga damit, gagaling na ako, sabi niya sa sarili. Nariyan ang eksaktong salita: ang tatlong ebanghelyong nagsasalaysay ng eksenang ito, sina Marcos, Mateo, at Lucas, ay gumagamit ng parehong pandiwang Griyego, σῴζω (sozo), ang salitang ginagamit ng Bagong Tipan para sa isang lubos na pagsasauli. Humipo siya nang may kababaang-loob, umaasa lamang ng maliit na espasyo at isang saglit, ngunit ang kanyang pananampalataya ay umabot sa isang mas malaking bagay kaysa sa hinihiling ng sarili niyang pangangailangan.",
+      "revelation_key": "Inaasahan ng kautusan na mapasa kay Jesus ang kanyang karumihan. Sa halip, ang buhay ni Jesus ang napasa sa kanya — at ang kanyang pananampalataya, sa pamamagitan lamang ng paghipo sa laylayan, ay nakamit ang isang lubos na pagsasauli.",
+      "scripture_connections": [
+        {
+          "reference": "Mga Bilang 15:38-39",
+          "text": "“Sabihin mo sa mga Israelita na habang panahon silang maglalagay ng palawit sa laylayan ng kanilang mga damit. Susuksukan nila ito ng asul na tali. Gagawin ninyo ito upang maalala ninyo at sundin ang mga kautusan ni Yahweh tuwing makikita ninyo ang mga palawit na iyon. Sa ganoon, masusunod ang salita ni Yahweh at hindi ang inyong sariling nasa at kagustuhan."
+        },
+        {
+          "reference": "Marcos 1:41",
+          "text": "Nahabag si Jesus sa ketongin kaya't hinawakan niya ito at sinabi, “Oo, nais ko! Gumaling ka!”"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "bleeding_woman_flow_stops.png",
+      "title": "Agad-agad.",
+      "narrative": "Iniunat niya ang kanyang kamay sa gitna ng mga katawang nakapaligid sa kanya. Naabot ng kanyang mga daliri ang laylayan ng damit.\n\nAt agad-agad, natuyo ang bukal ng kanyang dugo.\n\nHumpay sa isang saglit ang labindalawang taon ng tuluy-tuloy na pagdurugo. Naramdaman niya ito sa kanyang katawan: alam niya, kahit walang nagsasabi sa kanya, na siya ay gumaling na sa karamdamang iyon. Ang salitang ginamit ni Marcos ay μάστιξ (mastix), literal na \"hagupit\" — ang parehong salitang ginamit para sa hagupit ng mga Romano. Noong panahong iyon, marami ang naniniwala na ang ganoong kahabang karamdaman ay parusa ng Diyos para sa ilang kasalanan; ang mga alagad mismo, sa harap ng isa pang lalaking bulag mula pagkasilang, ay nagtanong kay Jesus: \"sino ang nagkasala, ito o ang kanyang mga magulang?\" (Juan 9:2). Sumagot si Jesus na hindi ang alinman sa dalawa: hindi kaparusahan ang paghihirap. Dito, sa babaeng ito, kumilos siya sa parehong katotohanang iyon: pinagaling niya siya sa katahimikan, nang hindi nagtatanong tungkol sa anumang kasalanan.\n\nNgunit sa saglit ding iyon, tumigil si Jesus.\n\nSa gitna ng maraming taong nagsisiksikan mula sa lahat ng dako, naramdaman ni Jesus na may kapangyarihang lumabas sa kanya. Lumingon siya at nagtanong: Sino ang humipo sa aking mga damit?",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marcos 5:29-30",
+        "text": "Agad ngang tumigil ang kanyang pagdurugo at naramdaman niyang magaling na siya. Naramdaman naman ni Jesus na may kapangyarihang lumabas sa kanya, kaya't bumaling siya agad sa mga tao at nagtanong, “Sino ang humipo sa aking damit?”"
+      },
+      "scripture_connections": [
+        {
+          "reference": "Juan 9:2-3",
+          "text": "Tinanong siya ng kanyang mga alagad, “Guro, sino po ang nagkasala at ipinanganak na bulag ang lalaking ito, siya ba o ang kanyang mga magulang?” Sumagot si Jesus, “Ipinanganak siyang bulag, hindi dahil sa nagkasala siya, o ang kanyang mga magulang, kundi upang mahayag ang kapangyarihan ng Diyos sa pamamagitan niya."
+        }
+      ],
+      "revelation_key": "Gumaling siya sa katahimikan, walang paghatol. Sa saglit ding iyon, naramdaman ni Jesus ang kapangyarihang lumabas sa kanya."
+    },
+    {
+      "order": 6,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "bleeding_woman_power_dynamis.png",
+      "title": "Ang kapangyarihang lumabas",
+      "subtitle": "Δύναμις (dynamis): isang kapangyarihang nararamdaman",
+      "content": "Ang salitang Griyego na ginamit ni Marcos para sa kapangyarihan ay δύναμις (dynamis): isang lakas na kayang magdulot ng tunay at masusukat na epekto, hindi isang abstraktong ideya o damdamin lamang. Ito rin ang ugat na ginagamit ng Bagong Tipan para ilarawan ang mga himala ni Jesus sa lahat ng ebanghelyo — kakayahan, isang lakas na kumikilos at nagbabago sa anumang hinihipo nito.\n\nAng pandiwang ginamit ni Marcos para sa \"nalaman\" ay ἐπιγινώσκω (epiginosko): ang pag-unawa sa isang bagay na naganap na, ang pagkatanto rito matapos ito mangyari. Mahalaga ang pagkakasunud-sunod: lumabas muna ang kapangyarihan, at pagkatapos lamang ito nakilala ni Jesus. Ang kapangyarihan ay nasa kanya na, permanente, bilang bahagi ng kung sino siya. Hindi ang pisikal na paghipo ang nagpakawala nito, kundi ang pananampalatayang humipo rito.\n\nNang marinig ang tanong ni Jesus, sumagot ang mga alagad nang halos may pagtataka: \"Nakikita mong nagsisiksikan sa iyo ang maraming tao, at nagtatanong ka pa kung sino ang humipo sa iyo?\" Sa isang paraan, tama sila: daan-daang tao ang humihipo sa kanyang katawan sa sandaling iyon, itinutulak siya mula sa lahat ng dako. Ngunit isa lamang ang humipo sa kanya nang may pananampalataya.\n\nIsinulat ni Pablo sa mga taga-Efeso na ang kaligtasan ay dumarating sa pamamagitan ng biyaya, sa pamamagitan ng pananampalataya (Mga Taga-Efeso 2:8). Hindi nililikha ng pananampalataya ang kaloob, tinatanggap lamang niya ito. Ganito rin ang nangyari dito: sa daan-daang kamay na dumampi kay Jesus, ang kanya lamang ang siyang nagbukas upang tanggapin ang mayroon na siyang ibinibigay.",
+      "revelation_key": "Sumagot ang kapangyarihan ni Jesus sa pananampalataya ng iisang kamay na nagbukas upang tanggapin ito, sa gitna ng daan-daang kamay na dumampi lamang.",
+      "scripture_connections": [
+        {
+          "reference": "Marcos 5:31",
+          "text": "Sumagot ang kanyang mga alagad, “Nakikita po ninyong napakaraming nagsisiksikan sa paligid ninyo, bakit pa ninyo itinatanong kung sino ang humipo sa damit ninyo?”"
+        },
+        {
+          "reference": "Mga Taga-Efeso 2:8",
+          "text": "Sapagkat dahil sa kagandahang-loob ng Diyos kayo ay naligtas sa pamamagitan ng pananampalataya; at ang kaligtasang ito'y kaloob ng Diyos at hindi sa pamamagitan ng inyong sarili;"
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "bleeding_woman_falls_trembling.png",
+      "verse_reference": "Marcos 5:32-33",
+      "verse_text": "Subalit patuloy na lumingun-lingon si Jesus sa paghahanap sa kung sinong humipo sa damit niya. Palibhasa'y alam ng babae ang nangyari, siya'y nanginginig sa takot na lumapit kay Jesus, nagpatirapa, at ipinagtapat ang buong katotohanan.",
+      "reflection": "Maaari sana siyang tahimik na nawala sa karamihan. Nasa kanya na ang hinahanap niya: gumaling na ang kanyang katawan. Maaari siyang makalusot nang hindi napapansin.\n\nNgunit patuloy na tumitingin si Jesus, hinahanap ang kanyang mukha sa gitna ng mga tao.\n\nTakot at nanginginig, alam niya ang nangyari, nagpatirapa siya sa harap niya. Sinabi ng teksto na ipinagtapat niya ang buong katotohanan.\n\nIsang tunay na panganib ito: ang pag-amin sa publiko na hinipo niya ang isang rabbi habang siya ay marumi. Inilagay siya ng kilos na ito sa kahihiyang panlipunan sa harap ng buong karamihang nakapaligid sa kanila — siya na namuhay ng labindalawang taon sa ilalim ng bigat ng kautusang iyon. Gayunpaman, naging tapat siya.",
+      "revelation_key": "Pinili niya ang buong katotohanan sa publiko, kahit na sapat na sana ang katahimikan upang mapanatili ang kanyang kagalingan."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "bleeding_woman_jesus_calls_daughter.png",
+      "title": "Anak.",
+      "narrative": "Tinanggap siya ni Jesus nang may biyaya. Hinanap niya siya sa karamihan at tumingin siya nang direkta sa kanyang mukha.\n\nTinawag niya siyang anak.\n\nSa buong talaan ng mga ebanghelyo, siya lamang ang taong tinawag ni Jesus sa salitang iyon. Anak: θυγάτηρ (thugater), isang katagang nagpapahiwatig ng pagiging malapit sa pamilya, ng pagiging kabilang.\n\nSa Lumang Tipan, tinukoy ng mga propeta ang \"anak na babae ng Sion\" — sa Hebreo, בת ציון (bat Sion) — upang tukuyin ang bayan ng Diyos: naghihirap, nasa pagkatapon, binibigatan ng kahihiyan, at gayunpaman minamahal at itinalaga para sa pagsasauli. Nang isalin sa Griyego ang titulong iyon, ginamit ng mga tagasalin ang parehong salitang ginagamit ni Marcos dito: θυγάτηρ (thugater).\n\nWalang lugar sa kanyang komunidad, walang akses sa templo, at hiwalay sa mga taong nakapaligid sa kanya — ito ang iniwan ng labindalawang taon sa kanya. At sa isang saglit, sa harap ng lahat, ibinalik sa kanya ni Jesus ang isang lugar: ang pagiging anak.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marcos 5:34",
+        "text": "Subalit sinabi sa kanya ni Jesus, “Anak, pinagaling ka ng iyong pananampalataya. Umuwi ka na at ipanatag mo ang iyong kalooban. Ikaw ay magaling na.”"
+      },
+      "revelation_key": "Tinawag siya ni Jesus na anak, at sa salitang iyon ay ibinalik sa kanya ang isang lugar na kinuha ng labindalawang taon ng karamdaman."
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "bleeding_woman_sozo_healing.png",
+      "title": "Gumaling at magaling",
+      "subtitle": "Σῴζω (sozo): isang salita, dalawang katotohanan",
+      "content": "Pinagaling ka ng iyong pananampalataya, sabi ni Jesus sa kanya. Ang salitang Griyego ay σῴζω (sozo), ang parehong salitang ginagamit ng Bagong Tipan upang tukuyin ang kaligtasan ng kaluluwa. Sa orihinal na Griyego, iisang salita lamang ang ginagamit sa pisikal na paggaling at espirituwal na kaligtasan.\n\nNang ipahayag ni Jesus na pinagaling siya ng kanyang pananampalataya, tinutukoy niya ang isang lubos na pagsasauli: ang katawan, ang komunidad, ang dignidad, at ang relasyon sa Diyos, lahat nang sabay-sabay.\n\nUmuwi ka na sa kapayapaan, dagdag niya. Ang salitang Griyego εἰρήνη (eirene) ay salin ng Hebreo na shalom: ang kaganapan, ang lubos na pagsasauli ng nasira.\n\nNagtatapos ang parehong talata sa isang ikatlong salita: magaling, sa Griyego ay ὑγιής (hygies) — naiiba sa σῴζω (sozo). Sa pamamagitan ng sozo, binigyang-pangalan ni Jesus ang lubos na pagsasauli na talagang hinahanap niya, lampas sa pisikal. Sa pamamagitan ng hygies, kinumpirma niya ang konkretong katotohanan: ang kanyang katawan, ang dating dinudugo sa loob ng labindalawang taon, ay magaling na ngayon. Nagkatuparan sa parehong saglit ang pisikal na himala at ang lubos na kaligtasan.",
+      "revelation_key": "Ang pakikipagtagpong ito kay Jesus ang lubos na nagsauli sa kanya: gumaling, may kapayapaan, at magaling."
+    },
+    {
+      "order": 10,
+      "type": "discovery_activation",
+      "image_url": "bleeding_woman_open_hand_light.png",
+      "title": "Ang iyong pagtatagpo",
+      "subtitle": "Iniunat niya ang kanyang kamay sa gitna ng karamihan, naniniwalang ang isang simpleng paghipo kay Jesus ay makapagbabago ng lahat. Maaari itong mangyari sa iyo ngayon.",
+      "discovery_questions": [
+        {
+          "category": "Ang iyong paghihiwalay",
+          "question": "Sa loob ng labindalawang taon, naramdaman niyang bukod-bukod siya, walang lugar sa gitna ng iba. Tinawag siya ni Jesus na anak sa harap ng lahat. May bagay ka ring kailangang marinig? Ang unang hakbang, tulad ng sa kanya, ay ang maniwala."
+        },
+        {
+          "category": "Ang iyong pananampalataya",
+          "question": "Sa loob ng labindalawang taon, naghanap siya ng sagot, at gayunpaman nagpatuloy pa rin siyang naghanap ng daan sa gitna ng karamihan, naniniwalang sapat na ang isang paghipo. Ang kanyang pagtitiyaga at pananampalataya ang siyang nagpabago sa lahat. Saan mo kailangang magtiyaga, naniniwalang kaya ito ni Jesus?"
+        },
+        {
+          "category": "Ang iyong katotohanan",
+          "question": "Maaari sana siyang umalis nang tahimik kasama ang kanyang kagalingan, ngunit pinili niyang sabihin ang buong katotohanan sa harap ni Jesus. May bagay ka bang kailangang sabihin sa kanya ngayon, nang may bukas na puso?"
+        }
+      ],
+      "prayer": {
+        "title": "Panalangin ng babaeng naghanap ng daan",
+        "content": "Panginoong Jesus,\n\nGaya niya, matagal na akong nagpapasan ng mabibigat na pasanin. May mga bahagi ng aking buhay kung saan ginugol ko ang lahat ng mayroon ako sa paghahanap ng sagot, at gayunpaman pagod pa rin ako.\n\nNgayon, gusto kong iunat ang aking kamay sa iyo, kahit na sa gitna ng karamihan, kahit walang ibang makakapansin. Naniniwala ako, gaya niya, na ang isang paghipo mo ay makapagbabago at makapagsasauli sa kung ano ang iniwan ng panahon, karamdaman, mga desisyon, o anumang iba pang dahilan nang hindi nalulutas.\n\nSalamat sa pagtanggap sa akin sa kung sino ako. Salamat sa pagtawag sa akin na anak, at sa pagbibigay sa akin ng lugar kung saan may pag-iisa lamang dati.\n\nBigyan mo ako ng tapang na sabihin sa iyo ang buong katotohanan, nang may bukas na puso, alam kong ang iyong sagot ay laging biyaya.\n\nIligtas mo ako, Panginoon, sa katawan at kaluluwa.\n\nSa pangalan ni Jesus, amen."
+      }
+    },
+    {
+      "order": 11,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "bleeding_woman_walking_peace.png",
+      "completion_verse": {
+        "reference": "Marcos 5:34",
+        "text": "Subalit sinabi sa kanya ni Jesus, “Anak, pinagaling ka ng iyong pananampalataya. Umuwi ka na at ipanatag mo ang iyong kalooban. Ikaw ay magaling na.”",
+        "bible_version": "Magandang Balita Biblia"
+      },
+      "reflection_prompt": "Iniunat niya ang kanyang kamay, naniniwalang sapat na ang isang paghipo. Tinawag siya ni Jesus na anak at lubos siyang isinauli. Ano ang kailangan mong iunat ngayon patungo sa kanya, sa paniniwalang ang isang paghipo ay makapagbabago ng lahat?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

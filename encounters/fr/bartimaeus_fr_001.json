@@ -153,20 +153,20 @@
       "order": 10,
       "type": "discovery_activation",
       "image_url": "bartimaeus_jesus_way.png",
-      "title": "Votre Rencontre",
+      "title": "Ta Rencontre",
       "subtitle": "Bartimée n'attendit pas le moment parfait. Il cria depuis là où il était.",
       "discovery_questions": [
         {
           "category": "Honnêteté",
-          "question": "Dans quel domaine de votre vie êtes-vous assis au bord du chemin, attendant que Jésus passe — plutôt que de crier vers lui ? Qu'est-ce qui vous a réduit au silence ?"
+          "question": "Dans quel domaine de ta vie es-tu assis au bord du chemin, attendant que Jésus passe — plutôt que de crier vers lui ? Qu'est-ce qui t'a réduit au silence ?"
         },
         {
           "category": "Foi",
-          "question": "Bartimée jeta son manteau avant de recevoir son miracle. Y a-t-il quelque chose que vous devez 'jeter' — une sécurité, un plan, une identité — pour suivre Jésus pleinement ?"
+          "question": "Bartimée jeta son manteau avant de recevoir son miracle. Y a-t-il quelque chose que tu dois 'jeter' — une sécurité, un plan, une identité — pour suivre Jésus pleinement ?"
         },
         {
           "category": "Vocation",
-          "question": "Quand Bartimée reçut ce qu'il demandait, il choisit de suivre Jésus plutôt que de partir. Que signifie pour vous suivre Jésus après qu'il a répondu à une prière ?"
+          "question": "Quand Bartimée reçut ce qu'il demandait, il choisit de suivre Jésus plutôt que de partir. Que signifie pour toi suivre Jésus après qu'il a répondu à une prière ?"
         }
       ],
       "prayer": {
@@ -183,7 +183,7 @@
         "text": "Jésus lui dit: Va, ta foi t'a sauvé. Aussitôt il recouvra la vue, et suivit Jésus dans le chemin.",
         "bible_version": "LSG1910"
       },
-      "reflection_prompt": "Quel manteau devez-vous jeter aujourd'hui ? Qu'avez-vous besoin de voir ?",
+      "reflection_prompt": "Quel manteau dois-tu jeter aujourd'hui ? Qu'as-tu besoin de voir ?",
       "celebration_type": "gentle_light"
     }
   ]

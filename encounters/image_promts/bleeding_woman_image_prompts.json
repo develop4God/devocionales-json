@@ -1,0 +1,88 @@
+{
+  "encounter_id": "bleeding_woman_001",
+  "character": "The Bleeding Woman",
+  "master_character_prompt": "A woman in her mid-50s, thin and frail from years of chronic illness, pale sallow skin drained of color from years of blood loss, small narrow eyes, gray-streaked hair pulled back loosely, wearing a simple worn linen tunic in muted slate-gray and charcoal tones, patched at the hem. Her expression carries quiet exhaustion and determination. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting. Character reference sheet, full body and face close-up.",
+  "intro_image": {
+    "filename": "bleeding_woman_intro.png",
+    "prompt": "Wide atmospheric shot of a dusty Galilean street packed with a pressing crowd under harsh midday sun. In the distance, barely visible among the bodies, a frail older woman with pale sallow skin, gray-streaked hair pulled back loosely, small narrow eyes, worn slate-gray tunic reaches one hand forward, fingers just grazing the fringed hem of a man's simple tunic ahead of her, seen only from behind, a subtle warm glow of glory around his form. Dust hangs in the sunlight. No text. Painterly warm 2D illustration, Mediterranean palette, ochre and warm dust tones, cinematic lighting."
+  },
+  "card_prompts": [
+    {
+      "order": 1,
+      "image_url": "bleeding_woman_crowd_pressing.png",
+      "mood": "storm",
+      "shot_type": "wide establishing",
+      "prompt": "A woman in her mid-50s, thin and frail, pale sallow skin, small narrow eyes, gray-streaked hair pulled back loosely, worn slate-gray linen tunic patched at the hem — pressed among a dense crowd of people on a dusty street under a harsh midday sun, her face taut with quiet determination as she pushes forward. Bodies crowd close on every side, dust rising in shafts of sunlight. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 2,
+      "image_url": "bleeding_woman_leviticus_scroll.png",
+      "mood": "mysterious",
+      "shot_type": "object/still life",
+      "prompt": "Close-up of an ancient Hebrew scroll partially unrolled on a stone table, dim oil lamp light flickering across the parchment, columns of handwritten script visible in shadow. A folded piece of undyed linen cloth rests beside the scroll. No people. Pure metaphor for law and separation. Painterly warm 2D illustration, deep amber lamplight, dark stone shadow, Mediterranean palette, cinematic lighting, no text."
+    },
+    {
+      "order": 3,
+      "image_url": "bleeding_woman_portrait_determined.png",
+      "mood": "intense",
+      "shot_type": "close-up portrait",
+      "prompt": "A woman in her mid-50s, thin and frail from years of chronic illness, pale sallow skin, small narrow eyes, gray-streaked hair pulled back loosely, worn slate-gray linen tunic — close-up portrait, her eyes fixed forward with quiet, weary resolve, faint shadows under her eyes from years of suffering, jaw set with determination. Soft directional light from one side. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 4,
+      "image_url": "bleeding_woman_reaching_hem.png",
+      "mood": "tense",
+      "shot_type": "action/movement",
+      "prompt": "Extreme close-up, low angle: a thin pale sallow hand with worn fingers stretches through a gap between crowded bodies, fingertips just touching a blue-corded fringe (tzitzit) hanging from the hem of the tunic worn by a man standing directly in the foreground, his back to the camera, face never visible, a subtle warm glow of glory emanating from his form and robe. No other figures are close enough to be confused with him — the crowd is blurred and distant behind the hand. Dust motes catch the light between the hand and the glowing hem. Painterly warm 2D illustration, Mediterranean palette, warm dust tones, cinematic lighting, no text."
+    },
+    {
+      "order": 5,
+      "image_url": "bleeding_woman_flow_stops.png",
+      "mood": "awe",
+      "shot_type": "medium two-figure",
+      "prompt": "A woman in her mid-50s, thin and frail, pale sallow skin, small narrow eyes, gray-streaked hair pulled back loosely, worn slate-gray tunic — stands frozen mid-crowd, hand still extended, eyes wide with sudden realization, her posture straightening as if a weight has lifted. Just ahead, a man in a simple first-century tunic has stopped and is turning slightly, seen from behind, face never visible, a subtle warm glow of glory around his form. The crowd around them blurs in motion. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 6,
+      "image_url": "bleeding_woman_power_dynamis.png",
+      "mood": "mysterious",
+      "shot_type": "object/still life",
+      "prompt": "Abstract close-up: a single ripple of warm golden light radiating outward from a point of contact on woven fabric, dust particles suspended in the beam, the fabric's blue-corded fringe faintly visible at the edge of frame. No people, no faces. Pure metaphor for unseen power transferring. Painterly warm 2D illustration, deep amber and gold tones, Mediterranean palette, cinematic lighting, no text."
+    },
+    {
+      "order": 7,
+      "image_url": "bleeding_woman_falls_trembling.png",
+      "mood": "falling",
+      "shot_type": "close-up portrait",
+      "prompt": "A woman in her mid-50s, thin and frail, pale sallow skin, small narrow eyes, gray-streaked hair pulled back loosely, worn slate-gray tunic — kneeling on packed dirt ground, head bowed, shoulders trembling, hands pressed together at her chest, visibly afraid yet resolved to speak. Blurred legs of onlookers surround her at the edges of frame. Painterly warm 2D illustration, muted dust tones, Mediterranean palette, cinematic lighting, no text."
+    },
+    {
+      "order": 8,
+      "image_url": "bleeding_woman_jesus_calls_daughter.png",
+      "mood": "grace",
+      "shot_type": "medium two-figure",
+      "prompt": "A woman in her mid-50s, thin and frail, pale sallow skin, small narrow eyes, gray-streaked hair pulled back loosely, worn slate-gray tunic — kneeling on the ground, face lifted, an expression of astonished relief breaking through. Before her stands a man in a simple first-century tunic, seen from behind and slightly to the side, one hand extended toward her in a gesture of blessing, face never visible, a subtle warm glow of glory around his form. Soft warm afternoon light. Painterly warm 2D illustration, Mediterranean palette, ochre and amber tones, cinematic lighting, no text."
+    },
+    {
+      "order": 9,
+      "image_url": "bleeding_woman_sozo_healing.png",
+      "mood": "peace",
+      "shot_type": "object/still life",
+      "prompt": "Close-up: a hand-woven basket of fresh bread and a small clay jar of water resting in warm golden sunlight on a simple wooden table, next to a folded rust-colored cloth no longer stained. No people. Pure metaphor for restoration and wholeness. Painterly warm 2D illustration, warm gold and sandstone tones, Mediterranean palette, cinematic lighting, no text."
+    },
+    {
+      "order": 10,
+      "image_url": "bleeding_woman_open_hand_light.png",
+      "mood": "peace",
+      "shot_type": "close-up portrait",
+      "prompt": "Close-up of an open pale sallow hand, palm up, resting in a soft beam of warm golden light, faint traces of worn calluses visible, fingers relaxed rather than reaching. Blurred warm background suggesting an open sky at dawn. Painterly warm 2D illustration, gentle amber and gold tones, Mediterranean palette, cinematic lighting, no text."
+    },
+    {
+      "order": 11,
+      "image_url": "bleeding_woman_walking_peace.png",
+      "mood": "peace",
+      "shot_type": "wide departure",
+      "prompt": "Wide shot from behind: a woman in her mid-50s, thin frame now standing tall, gray-streaked hair pulled back loosely, small narrow eyes, worn slate-gray tunic, walking away down a quiet sunlit path lined with olive trees, her steps steady and unhurried, the crowd and street now far behind her. Warm late-afternoon light bathes the path in gold. Painterly warm 2D illustration, Mediterranean palette, ochre and amber tones, cinematic lighting, no text."
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "bleeding_woman_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "es",
+  "bible_version": "RVR1960",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 11,
+  "meta": {
+    "character": "La Mujer del Flujo de Sangre",
+    "testament": "new",
+    "scripture_reference": "Marcos 5:25-34",
+    "mood_primary": "falling",
+    "accent_color": "#4a0e1a",
+    "emoji": "🩸",
+    "tags": [
+      "fe",
+      "sanidad",
+      "toque",
+      "vergüenza",
+      "aislamiento",
+      "valentía",
+      "restauración",
+      "hija",
+      "multitud",
+      "pureza",
+      "esperanza",
+      "milagro"
+    ]
+  },
+  "key_verse": {
+    "reference": "Marcos 5:34",
+    "text": "Y él le dijo: Hija, tu fe te ha hecho salva; ve en paz, y queda sana de tu azote.",
+    "bible_version": "RVR1960"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "storm",
+      "image_url": "bleeding_woman_crowd_pressing.png",
+      "title": "Doce años de sangre.",
+      "narrative": "La multitud apretaba desde todos los lados. Jairo, un principal de la sinagoga, acababa de caer a los pies de Jesús, rogando por su hija moribunda. Y Jesús había comenzado a caminar hacia esa casa, con la gente empujando y estrujándolo desde todas direcciones.\n\nEn algún punto de esa multitud, una mujer se abría paso.\n\nDoce años llevaba con un flujo de sangre que no cesaba. Doce años había gastado todo lo que tenía en médicos, y en vez de mejorar, había empeorado.\n\nDoce años también de vivir apartada, sin poder acercarse a nadie sin transmitir su condición. Todo eso se lo había robado la enfermedad, año tras año.\n\nY sin embargo, ahí estaba, entre la multitud, decidida a llegar hasta Jesús.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marcos 5:25-26",
+        "text": "Y una mujer que estaba enferma de flujo de sangre desde hacía doce años, y que había sufrido mucho de muchos médicos, y gastado todo lo que tenía, y nada había aprovechado, antes le iba peor."
+      },
+      "revelation_key": "Doce años de aislamiento no apagaron su esperanza. La llevaron directo hacia Jesús."
+    },
+    {
+      "order": 2,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "bleeding_woman_leviticus_scroll.png",
+      "title": "Lo que la ley decía de ella",
+      "subtitle": "El peso de la impureza en Levítico",
+      "content": "La ley de Levítico declaraba impura a toda mujer con flujo de sangre continuo, más allá de los días normales de su período. Mientras el flujo continuara, ella permanecía impura.\n\nEsto significaba doce años sin poder acercarse a nadie sin transmitir esa impureza. Doce años fuera del templo, apartada del centro de la vida religiosa y social de Israel. Doce años en los que un simple roce con otra persona la marcaba a ella y a quien tocara.\n\nEn ese mundo, tocar a alguien —o ser tocada por alguien— era un acto lleno de riesgo. Y ella estaba a punto de tocar a Jesús en medio de una multitud.",
+      "revelation_key": "La ley la mantenía a distancia de todos. Y aun así, ella se acercó a Jesús.",
+      "scripture_connections": [
+        {
+          "reference": "Levítico 15:25-27",
+          "text": "Y la mujer, cuando siguiere el flujo de su sangre por muchos días fuera del tiempo de su costumbre, o cuando tuviere flujo de sangre más de su costumbre, todo el tiempo del flujo de su inmundicia, será inmunda como en los días de su costumbre. Toda cama en que durmiere todos los días de su flujo, le será como la cama de su costumbre; y todo mueble sobre que se sentare, será inmundo, como la inmundicia de su costumbre. Cualquiera que tocare esas cosas será inmundo; y lavará sus vestidos, y a sí mismo se lavará con agua, y será inmundo hasta la noche."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "bleeding_woman_portrait_determined.png",
+      "title": "La mujer que se abrió paso",
+      "subtitle": "Quién era ella antes del milagro",
+      "content": "Jairo tenía nombre. Marcos lo dice desde el principio: un principal de la sinagoga, alguien reconocido en su comunidad. A ella, el mismo relato la presenta solo como \"una mujer\" —sin nombre, sin familia mencionada, sin lugar en la sociedad. Ese contraste no es casualidad: uno tenía estatus, la otra no tenía ninguno.\n\nMarcos la presenta por su condición y por lo que hizo con ella: gastó todo lo que tenía buscando sanidad, y siguió buscando incluso cuando los médicos la dejaron peor.\n\nEso revela algo de su carácter: persistió. Doce años de fracasos la mantuvieron en movimiento, buscando.\n\nHabía oído de Jesús. El texto lo dice con precisión: había oído acerca de él.\n\nY con base en eso, decidió actuar.",
+      "revelation_key": "Su fe no nació de haber visto un milagro. Nació de escuchar sobre Jesús y decidir creer.",
+      "scripture_connections": [
+        {
+          "reference": "Marcos 5:27",
+          "text": "Cuando oyó hablar de Jesús, vino por detrás entre la multitud, y tocó su manto."
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "bleeding_woman_reaching_hem.png",
+      "verse_reference": "Marcos 5:27-28",
+      "verse_text": "Cuando oyó hablar de Jesús, vino por detrás entre la multitud, y tocó su manto. Porque decía: Si tocare tan solamente su manto, seré salva.",
+      "reflection": "Ella se acercó por detrás, en silencio, mientras Jesús seguía su camino hacia la casa de Jairo. Buscó solo el borde de su manto — el punto más discreto, el más lejano de su rostro y de su mano.\n\nEse manto era la ropa que Jesús llevaba puesta todos los días, con los flecos que la ley ordenaba a todo varón judío como recordatorio permanente de los mandamientos (Números 15:38). Mateo y Lucas precisan que fue exactamente ese borde lo que tocó: κράσπεδον (kraspedon), la palabra griega para el fleco con el cordón azul, el tzitzit. Tocar ese borde era tocar la señal visible de que Jesús vivía bajo el pacto de Dios, y ella se acercó a esa señal con el cuidado de quien pide un espacio pequeño, con reverencia.\n\nEl verbo que Marcos usa para tocar es ἅπτομαι (haptomai): un contacto que une, que ata dos cosas de modo que una queda transformada por la otra. Según la ley, ese contacto debía volver impuro a Jesús — así funcionaba siempre: la impureza se transmitía de la persona o el objeto impuro hacia quien tocaba. Este mismo evangelio registra otro momento donde ocurre exactamente esa inversión: cuando Jesús toca a un leproso (Marcos 1:41), la impureza no pasa a él. En ambos casos, la ley predecía una dirección; el poder de Dios reveló otra. Aquí, con la mujer, sucede lo mismo: en vez de que la impureza pasara a Jesús, la vida pasó de Jesús a ella.\n\nSi tocare tan solamente su manto, seré salva, se decía a sí misma. Ahí está la palabra exacta: los tres evangelios que narran esta escena, Marcos, Mateo y Lucas, usan el mismo verbo griego, σῴζω (sozo), la palabra que el Nuevo Testamento reserva para una restauración completa. Ella tocó con humildad, esperando poco espacio y un instante, pero su fe apuntaba a algo más grande de lo que su propia necesidad pedía.",
+      "revelation_key": "La ley esperaba que su impureza pasara a Jesús. En cambio, la vida de Jesús pasó a ella — y su fe, con solo tocar el borde, alcanzó una restauración completa.",
+      "scripture_connections": [
+        {
+          "reference": "Números 15:38-39",
+          "text": "Habla a los hijos de Israel, y diles que se hagan flecos en los bordes de sus vestidos, por sus generaciones; y pongan en cada fleco de los bordes un cordón de azul. Y os servirá de fleco, para que cuando lo veáis, os acordéis de todos los mandamientos de Jehová, para ponerlos por obra."
+        },
+        {
+          "reference": "Marcos 1:41",
+          "text": "Y Jesús, teniendo misericordia de él, extendió la mano y le tocó, y le dijo: Quiero, sé limpio."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "bleeding_woman_flow_stops.png",
+      "title": "Al instante.",
+      "narrative": "Estiró la mano entre los cuerpos que la rodeaban. Sus dedos alcanzaron el borde del manto.\n\nY al instante, la fuente de su sangre se secó.\n\nDoce años de flujo constante se detuvieron en un segundo. Ella lo sintió en su cuerpo: supo, sin que nadie se lo dijera, que había sido sanada de aquel azote. La palabra que Marcos usa es μάστιξ (mastix), literalmente \"látigo\" — la misma palabra que se usaba para el flagelo romano. En esa época, muchos creían que una enfermedad tan larga era un castigo de Dios por algún pecado; los propios discípulos, frente a otro hombre enfermo de nacimiento, le preguntaron a Jesús: \"¿quién pecó, este o sus padres?\" (Juan 9:2). Jesús respondió que ni uno ni el otro: la aflicción no era condena. Aquí, con esta mujer, actúa bajo esa misma verdad: la sana en silencio, sin preguntar por ninguna culpa.\n\nPero en ese mismo instante, Jesús se detuvo.\n\nEn medio de una multitud que lo apretaba desde todos los lados, Jesús sintió que poder había salido de él. Se dio la vuelta y preguntó: ¿Quién ha tocado mis vestidos?",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marcos 5:29-30",
+        "text": "Y en seguida la fuente de su sangre se secó; y sintió en el cuerpo que estaba sana de aquel azote. Luego Jesús, conociendo en sí mismo el poder que había salido de él, volviéndose a la multitud, dijo: ¿Quién ha tocado mis vestidos?"
+      },
+      "scripture_connections": [
+        {
+          "reference": "Juan 9:2-3",
+          "text": "Y le preguntaron sus discípulos, diciendo: Rabí, ¿quién pecó, este o sus padres, para que haya nacido ciego? Respondió Jesús: No es que pecó este, ni sus padres, sino para que las obras de Dios se manifestasen en él."
+        }
+      ],
+      "revelation_key": "Ella fue sanada en silencio, sin condena. En ese mismo instante, Jesús sintió el poder salir de él."
+    },
+    {
+      "order": 6,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "bleeding_woman_power_dynamis.png",
+      "title": "El poder que salió",
+      "subtitle": "Δύναμις (dynamis): una fuerza que se puede sentir",
+      "content": "La palabra griega que Marcos usa para poder es δύναμις (dynamis): una fuerza capaz de producir un efecto real y medible, no una idea abstracta ni un sentimiento. Es la misma raíz que usa el Nuevo Testamento para describir los milagros de Jesús en todos los evangelios, capacidad, fuerza que actúa y transforma lo que toca.\n\nEl verbo que Marcos usa para \"conoció\" es ἐπιγινώσκω (epiginosko): percibir algo que ya ha ocurrido, darse cuenta después del hecho. El orden importa: primero salió el poder, y después Jesús lo reconoció. El poder ya estaba en él, permanente, como parte de quien es. Lo que activó su salida no fue el contacto físico, sino la fe que lo tocó.\n\nLos discípulos, al escuchar la pregunta de Jesús, respondieron casi con extrañeza: ves que la multitud te aprieta, y dices: ¿quién me ha tocado? Tenían razón en un sentido: cientos de personas tocaban su cuerpo en ese momento, empujándolo desde todos los lados. Pero solo una lo tocó con fe.\n\nPablo escribiría después a los efesios que la salvación llega por gracia, por medio de la fe (Efesios 2:8). La fe no genera el don, lo recibe. Aquí ocurre lo mismo: entre cientos de manos que rozaban a Jesús, la de ella fue la única que se abrió para recibir lo que él ya tenía para dar.",
+      "revelation_key": "El poder de Jesús respondió a la fe de una sola mano que se abrió para recibirlo, entre cientos que solo lo rozaban.",
+      "scripture_connections": [
+        {
+          "reference": "Marcos 5:31",
+          "text": "Sus discípulos le dijeron: Ves que la multitud te aprieta, y dices: ¿Quién me ha tocado?"
+        },
+        {
+          "reference": "Efesios 2:8",
+          "text": "Porque por gracia sois salvos por medio de la fe; y esto no de vosotros, pues es don de Dios."
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "bleeding_woman_falls_trembling.png",
+      "verse_reference": "Marcos 5:32-33",
+      "verse_text": "Pero él miraba alrededor para ver quién había hecho esto. Entonces la mujer, temiendo y temblando, sabiendo lo que en ella había sido hecho, vino y se postró delante de él, y le dijo toda la verdad.",
+      "reflection": "Ella podía haberse escabullido entre la multitud. Ya tenía lo que había venido a buscar: su cuerpo estaba sano. Podía pasar desapercibida.\n\nPero Jesús siguió mirando, buscando su rostro entre la gente.\n\nTemiendo y temblando, sabiendo lo que había sucedido, ella se postró delante de él. El texto dice que le dijo toda la verdad.\n\nEra un riesgo real: confesar en público que había tocado a un rabí mientras estaba impura. Este acto la exponía a la vergüenza social frente a toda la multitud que los rodeaba, y recordemos lo que leímos de su ley. Aun así, ella fue honesta.",
+      "revelation_key": "Ella eligió la verdad completa en público, aunque el silencio ya le habría bastado para quedarse con su sanidad."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "bleeding_woman_jesus_calls_daughter.png",
+      "title": "Hija.",
+      "narrative": "Jesús la recibió con gracia. La buscó entre la multitud y la miró de frente.\n\nLa llamó hija.\n\nEn todo el registro de los evangelios, ella es la única persona a quien Jesús se dirige con esa palabra. Hija: θυγάτηρ (thugater), un término de cercanía familiar, de pertenencia.\n\nEn el Antiguo Testamento, los profetas hablaban de \"hija de Sion\" — en hebreo, בת ציון (bat Sion) — para referirse al pueblo de Dios: sufriente, exiliado, cargado de vergüenza, y aun así amado y destinado a la restauración. Cuando ese título se tradujo al griego, se usó la misma palabra que Marcos usa aquí: θυγάτηρ (thugater).\n\nDoce años la habían dejado sin lugar en su comunidad, sin acceso al templo, aislada de quienes la rodeaban. Y en un instante, en frente de todos, Jesús le devolvió un lugar: el de hija.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marcos 5:34",
+        "text": "Y él le dijo: Hija, tu fe te ha hecho salva; ve en paz, y queda sana de tu azote."
+      },
+      "revelation_key": "Jesús la llamó hija, y con esa palabra le dio un lugar que doce años de enfermedad le habían quitado."
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "bleeding_woman_sozo_healing.png",
+      "title": "Salva y sana",
+      "subtitle": "Σῴζω (sozo): una sola palabra, dos realidades",
+      "content": "Tu fe te ha hecho salva, le dijo Jesús. La palabra griega es σῴζω (sozo), la misma que el Nuevo Testamento usa para hablar de la salvación del alma. En el griego original, sanidad física y salvación espiritual comparten la misma palabra.\n\nCuando Jesús declaró que su fe la había hecho salva, hablaba de una restauración completa: cuerpo, comunidad, dignidad y relación con Dios, todo a la vez.\n\nVe en paz, añadió. La palabra griega εἰρήνη (eirene) traduce el hebreo shalom: la plenitud, la restauración total de lo que estaba roto.\n\nEl mismo versículo cierra con una tercera palabra: sana, en griego ὑγιής (hugies) — distinta de σῴζω (sozo). Con sozo, Jesús nombró la restauración completa que ella en realidad buscaba, más allá de lo físico. Con hugies, confirmó lo concreto: su cuerpo, el que había sangrado doce años, ya estaba sano. El milagro físico y la salvación completa se cumplieron en el mismo instante.",
+      "revelation_key": "Este encuentro con Jesús la restauró por completo: salva, en paz, y sana."
+    },
+    {
+      "order": 10,
+      "type": "discovery_activation",
+      "image_url": "bleeding_woman_open_hand_light.png",
+      "title": "Tu encuentro",
+      "subtitle": "Ella extendió la mano en medio de la multitud, creyendo que un simple contacto con Jesús podía cambiarlo todo. Lo mismo puede ocurrir contigo hoy.",
+      "discovery_questions": [
+        {
+          "category": "Tu aislamiento",
+          "question": "Ella llevaba doce años sintiéndose apartada, sin lugar entre los demás. Jesús la llamó hija delante de todos. ¿Hay algo en tu vida donde también necesitas escuchar eso? El primer paso, como el de ella, es creer."
+        },
+        {
+          "category": "Tu fe",
+          "question": "Ella llevaba doce años buscando respuesta, y aun así se abrió paso entre la multitud, creyendo que un solo toque bastaría. Su perseverancia y su fe fueron lo que hizo que todo encajara. ¿Dónde necesitas perseverar tú, creyendo que Jesús puede hacerlo?"
+        },
+        {
+          "category": "Tu verdad",
+          "question": "Ella pudo haberse ido en silencio con su sanidad, pero eligió decir toda la verdad delante de Jesús. ¿Hay algo que necesitas contarle hoy, con el corazón abierto?"
+        }
+      ],
+      "prayer": {
+        "title": "Oración de la mujer que se abrió paso",
+        "content": "Señor Jesús,\n\nComo ella, he llevado cargas pesadas por mucho tiempo. Hay áreas de mi vida donde he gastado todo lo que tenía buscando una respuesta, y aun así sigo cansado.\n\nHoy quiero extender la mano hacia ti, aunque sea entre la multitud, aunque nadie más lo note. Creo, como ella, que un contacto contigo puede transformar y restablecer lo que el tiempo, la enfermedad, las decisiones, o cualquier otro factor han dejado sin resolver.\n\nGracias porque me recibes tal como estoy. Gracias porque me llamas hijo, me llamas hija, y me das un lugar donde antes solo había aislamiento.\n\nDame la valentía de decirte toda la verdad, con el corazón abierto, sabiendo que tu respuesta siempre es gracia.\n\nSálvame, Señor, en cuerpo y en alma.\n\nEn el nombre de Jesús, amén."
+      }
+    },
+    {
+      "order": 11,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "bleeding_woman_walking_peace.png",
+      "completion_verse": {
+        "reference": "Marcos 5:34",
+        "text": "Y él le dijo: Hija, tu fe te ha hecho salva; ve en paz, y queda sana de tu azote.",
+        "bible_version": "RVR1960"
+      },
+      "reflection_prompt": "Ella extendió la mano creyendo que un solo toque bastaría. Jesús la llamó hija y la restauró por completo. ¿Qué necesitas extender hoy hacia él, confiando en que un solo contacto puede cambiarlo todo?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

@@ -166,9 +166,11 @@ Example: ✗ "यीशु आया...उसने कहा" → ✓ "यी�
 verse fields (`verse_text`, `verse_overlay.text`, `completion_verse.text`,
 `scripture_connections[].text`) — those follow the cited Bible version's own grammar.
 
-**Japanese (JA) / Chinese (ZH):** Respectful/honorific register throughout — this is
-sacred literature. Example: avoid casual だ/よ endings in Japanese narration about
-Jesus; use 您 over 你 in Chinese devotional address.
+**Japanese (JA):** When Jesus (イエス) or God (神) is the subject, the verb must be in
+honorific form (敬語), not plain form. Other characters (Mary, Peter, etc.) stay in
+plain form — that's correct, don't flag it.
+
+**Chinese (ZH):** Never use 您 for God/Jesus — always 你. Flag 您 as the error, not 你.
 
 **Spanish / Portuguese / French (ES / PT / FR):** No hard gate — natural register per
 house style. Cognates are valid (see above).
@@ -255,6 +257,13 @@ applying critic fixes and before reporting done:
 
 Repeat steps 2–4 until a full pass finds nothing new. Only then move to the next
 language or report completion.
+
+### ZH-Specific Check: 您/你 Register
+
+For Chinese files only, after the critic review, grep the file for 您. This character
+has no legitimate use in this content (no correct quoted-scripture use, no homograph) —
+every hit is a real violation of the project rule (see "MANDATORY GATE: Per-Language
+Register Rules" above) and should be replaced with 你.
 
 ---
 

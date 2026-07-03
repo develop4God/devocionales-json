@@ -514,10 +514,10 @@
     },
     {
       "id": "bleeding_woman_001",
-      "version": "0.1",
+      "version": "1.0",
       "image_version": "1.0",
       "emoji": "🩸",
-      "status": "comming_soon",
+      "status": "published",
       "intro_image": "bleeding_woman_portrait_determined.png",
       "mood_primary": "falling",
       "accent_color": "#4a0e1a",
@@ -525,23 +525,64 @@
       "testament": "new",
       "character": "The Bleeding Woman",
       "files": {
-        "es": "bleeding_woman_es_001.json"
+        "es": "bleeding_woman_es_001.json",
+        "en": "bleeding_woman_en_001.json",
+        "pt": "bleeding_woman_pt_001.json",
+        "fr": "bleeding_woman_fr_001.json",
+        "de": "bleeding_woman_de_001.json",
+        "hi": "bleeding_woman_hi_001.json",
+        "fil": "bleeding_woman_fil_001.json",
+        "ar": "bleeding_woman_ar_001.json",
+        "ja": "bleeding_woman_ja_001.json",
+        "zh": "bleeding_woman_zh_001.json"
       },
       "titles": {
-        "es": "Hija, tu fe te ha hecho salva",
-        "en": "Daughter, Your Faith Has Made You Well"
+        "es": "Un toque de fe entre la multitud",
+        "en": "A Touch of Faith in the Crowd",
+        "pt": "Um Toque de Fé Entre a Multidão",
+        "fr": "Un Toucher de Foi dans la Foule",
+        "de": "Eine Berührung im Glauben in der Menge",
+        "hi": "भीड़ में विश्वास का एक स्पर्श",
+        "fil": "Isang Paghipo ng Pananampalataya sa Karamihan",
+        "ar": "لَمْسَةُ إِيمَانٍ وَسْطَ الْحَشْدِ",
+        "ja": "群衆の中の信仰のひと触れ",
+        "zh": "人群中一次信心的触碰"
       },
       "subtitles": {
-        "es": "Doce años de aislamiento. Un toque de fe. Una palabra que le devolvió el lugar que había perdido.",
-        "en": "Twelve years of isolation. One touch of faith. A word that restored what she had lost."
+        "es": "Doce años buscando sanidad. En secreto. Un manto. Un riesgo.",
+        "en": "Twelve years seeking healing. In secret. A cloak. A risk.",
+        "pt": "Doze anos buscando cura. Em segredo. Um manto. Um risco.",
+        "fr": "Douze ans à chercher la guérison. En secret. Un manteau. Un risque.",
+        "de": "Zwölf Jahre auf der Suche nach Heilung. Im Verborgenen. Ein Gewand. Ein Risiko.",
+        "hi": "बारह वर्ष स्वास्थ्य की खोज में। गुप्त रूप से। एक वस्त्र। एक जोखिम।",
+        "fil": "Labindalawang taon na naghahanap ng kagalingan. Palihim. Isang balabal. Isang panganib.",
+        "ar": "اثْنَتَا عَشْرَةَ سَنَةً تَبْحَثُ عَنِ الشِّفَاءِ. فِي الْخَفَاءِ. رِدَاءٌ. مُخَاطَرَةٌ.",
+        "ja": "十二年の癒やしを求める旅。ひそかに。上着。ひとつの賭け。",
+        "zh": "十二年寻求医治。悄悄地。一件外衣。一次冒险。"
       },
       "scripture_reference": {
         "es": "Marcos 5:25-34",
-        "en": "Mark 5:25-34"
+        "en": "Mark 5:25-34",
+        "pt": "Marcos 5:25-34",
+        "fr": "Marc 5:25-34",
+        "de": "Markus 5:25-34",
+        "hi": "मरकुस 5:25-34",
+        "fil": "Marcos 5:25-34",
+        "ar": "إِنْجِيلُ مَرْقُسَ 5:25-34",
+        "ja": "マルコの福音書 5:25-34",
+        "zh": "马可福音 5:25-34"
       },
       "estimated_reading_minutes": {
         "es": 11,
-        "en": 10
+        "en": 10,
+        "pt": 12,
+        "fr": 12,
+        "de": 11,
+        "hi": 13,
+        "fil": 12,
+        "ar": 11,
+        "ja": 13,
+        "zh": 9
       }
     }
   ]
