@@ -271,6 +271,11 @@ def validate_verse_references(data: Dict, lang: str, filename: str,
     _DE_SHARED_BOOK_NAMES = {'Psalm', 'Psalms', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Nahum',
                               'Ezra', 'Job', 'Ruth'}
 
+    # Books that are identical in Filipino and English — must not be flagged as untranslated
+    # (confirmed against bible_database/MBB05_fil.SQLite3 books.long_name: Genesis and Ezekiel
+    # are spelled the same in Filipino Bible translations)
+    _FIL_SHARED_BOOK_NAMES = {'Genesis', 'Ezekiel'}
+
     def _has_english_book_name(ref: str, pattern, lang: str) -> bool:
         """Return True only if ref contains an English book name that should be translated."""
         if not pattern.search(ref):
@@ -278,6 +283,11 @@ def validate_verse_references(data: Dict, lang: str, filename: str,
         if lang == 'de':
             # Psalm etc. are identical in German — not a false positive
             for shared in _DE_SHARED_BOOK_NAMES:
+                if re.match(rf'\b{re.escape(shared)}\b', ref, re.IGNORECASE):
+                    return False
+        if lang == 'fil':
+            # Genesis and Ezekiel are identical in Filipino — not a false positive
+            for shared in _FIL_SHARED_BOOK_NAMES:
                 if re.match(rf'\b{re.escape(shared)}\b', ref, re.IGNORECASE):
                     return False
         return True
