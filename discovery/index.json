@@ -54,6 +54,35 @@
       }
     },
     {
+      "id": "dying_to_self_001",
+      "version": "1.0",
+      "emoji": "✝️",
+      "files": {
+        "es": "dying_to_self_es_001.json",
+        "en": "dying_to_self_en_001.json",
+        "pt": "dying_to_self_pt_001.json",
+        "fr": "dying_to_self_fr_001.json"
+      },
+      "titles": {
+        "es": "Morir al yo",
+        "en": "Dying to Self",
+        "pt": "Morrer para o Eu",
+        "fr": "Mourir à Soi-Même"
+      },
+      "subtitles": {
+        "es": "Lo que cuesta decidir \"hágase tu voluntad\" cuando el corazón todavía tiene miedo",
+        "en": "What it costs to decide \"your will be done\" when the heart is still afraid",
+        "pt": "O que custa decidir \"seja feita a tua vontade\" quando o coração ainda tem medo",
+        "fr": "Ce qu'il en coûte de décider \"que ta volonté soit faite\" quand le cœur a encore peur"
+      },
+      "estimated_reading_minutes": {
+        "es": 8,
+        "en": 8,
+        "pt": 9,
+        "fr": 9
+      }
+    },
+    {
       "id": "morning_star_001",
       "version": "1.3",
       "emoji": "🌟",
