@@ -587,10 +587,10 @@
     },
     {
       "id": "nicodemus_001",
-      "version": "1.0",
+      "version": "0.1",
       "image_version": "1.0",
       "emoji": "🌙",
-      "status": "coming_soon",
+      "status": "published",
       "intro_image": "nicodemus_sanhedrin_defense.png",
       "mood_primary": "night",
       "accent_color": "#0d1526",
