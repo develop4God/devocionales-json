@@ -1,0 +1,156 @@
+{
+  "id": "resurrection_and_life_001",
+  "type": "discovery",
+  "date": "2026-07-09",
+  "title": "Yo Soy la Resurrección y la Vida",
+  "subtitle": "Cuando Jesús se presenta ante la muerte y la muerte retrocede",
+  "language": "es",
+  "version": "RVR1960",
+  "estimated_reading_minutes": 7,
+  "key_verse": {
+    "reference": "Juan 11:25-26",
+    "text": "Le dijo Jesús: Yo soy la resurrección y la vida; el que cree en mí, aunque esté muerto, vivirá. Y todo aquel que vive y cree en mí, no morirá eternamente. ¿Crees esto?"
+  },
+
+  "cards": [
+    {
+      "order": 1,
+      "type": "historical_context",
+      "icon": "⚰️",
+      "title": "Betania: Un Hogar Partido por el Duelo",
+      "subtitle": "Por qué Jesús esperó a propósito",
+      "content": "Marta y María envían un mensaje urgente a Jesús: 'Señor, he aquí el que amas está enfermo' (Juan 11:3). No piden que venga; dan por hecho que, al saberlo, Él actuará. Pero Jesús responde de una forma que desconcierta: 'Esta enfermedad no es para muerte, sino para la gloria de Dios' (v.4) — y se queda dos días más donde estaba.\n\n🕯️ EL LUTO JUDÍO DEL SIGLO I:\n\n• Los cuerpos se sepultaban el mismo día de la muerte, por el clima y por la ley ritual\n• Familiares y vecinos guardaban duelo formal durante siete días, con lamento en voz alta\n• Existía la creencia popular de que el alma permanecía cerca del cuerpo hasta el tercer día, con esperanza de reanimación\n• Al cuarto día, esa esperanza se consideraba oficialmente perdida — la descomposición confirmaba que no había vuelta atrás\n\n📖 LA DEMORA INTENCIONAL:\n\nCuando Jesús finalmente dice a los discípulos: 'Lázaro ha muerto; y me alegro por vosotros, de no haber estado allí, para que creáis' (Juan 11:14-15), queda claro que la tardanza no fue negligencia. Fue una decisión deliberada para llegar después del cuarto día — después de que toda esperanza humana se hubiera agotado.\n\nJesús no llega a tiempo de evitar la muerte. Llega a tiempo de vencerla cuando ya nadie esperaba nada distinto.",
+      "revelation_key": "Jesús no siempre llega cuando esperamos que actúe para prevenir el dolor. Llega cuando toda esperanza humana se ha agotado, para que lo que suceda no tenga otra explicación posible que Él."
+    },
+
+    {
+      "order": 2,
+      "type": "greek_exegesis",
+      "icon": "📖",
+      "title": "Enebrimḗsato y Edákrysen: Dos Formas de Llorar",
+      "subtitle": "La diferencia entre el dolor de la multitud y el de Jesús",
+      "greek_words": [
+        {
+          "word": "Enebrimḗsato",
+          "transliteration": "ἐνεβριμήσατο",
+          "reference": "Juan 11:33",
+          "meaning": "Se estremeció, se conmovió profundamente — literalmente, un resoplido de indignación visceral",
+          "revelation": "Cuando Jesús ve llorar a María y a los judíos que la acompañaban, el texto dice que 'se estremeció en espíritu y se conmovió' (Juan 11:33). El verbo griego describe algo más cercano a un bufido de indignación que a una simple tristeza.\n\nJesús no está solamente triste por Lázaro. Está indignado contra la muerte misma — contra lo que el pecado le ha hecho a su creación amada. Se enfrenta a la tumba como quien se enfrenta a un enemigo, no solo como quien lamenta una pérdida.",
+          "application": "Cristo no observa tu dolor con distancia serena. Se indigna con la muerte y con todo lo que rompe lo que Él ama, tanto como tú."
+        },
+        {
+          "word": "Edákrysen",
+          "transliteration": "ἐδάκρυσεν",
+          "reference": "Juan 11:35",
+          "meaning": "Derramó lágrimas en silencio — distinto del lamento ruidoso y público",
+          "revelation": "'Jesús lloró' es el versículo más corto de toda la Biblia, pero el verbo elegido es preciso. No es 'klaíō', el llanto sonoro y público que usa el texto para describir a María y a los que lamentaban (v.33). Es 'edákrysen' — lágrimas silenciosas, personales, íntimas.\n\nJesús, que en un momento resucitará a Lázaro, igual llora primero. Sabe cómo termina la escena y aun así siente el peso completo de la pérdida en ese instante.",
+          "application": "Conocer el final feliz no te exime de sentir el dolor presente. Ni siquiera a Jesús lo eximió."
+        }
+      ],
+      "revelation_key": "Jesús no reprime su dolor por tener el poder de resolverlo. Siente la pérdida por completo, y aun así, avanza hacia la tumba con autoridad."
+    },
+
+    {
+      "order": 3,
+      "type": "prophetic_thread",
+      "icon": "🧵",
+      "title": "Yo Soy la Resurrección",
+      "subtitle": "Cuando Jesús traslada una esperanza futura a su propia persona",
+      "timeline": [
+        {
+          "event": "Job 19:25",
+          "description": "En medio de su sufrimiento, Job declara: 'Yo sé que mi Redentor vive, y al fin se levantará sobre el polvo'",
+          "revelation": "Siglos antes de Belén, un hombre que lo había perdido casi todo se aferró a una esperanza de resurrección que ni él mismo podía explicar del todo."
+        },
+        {
+          "event": "Juan 11:21",
+          "description": "Marta le dice a Jesús: 'Señor, si hubieses estado aquí, mi hermano no habría muerto'",
+          "revelation": "Su fe cree en lo que Jesús puede prevenir. Todavía no imagina lo que Jesús puede revertir."
+        },
+        {
+          "event": "Juan 11:23-24",
+          "description": "Jesús dice: 'Tu hermano resucitará'. Marta responde que sabe que resucitará 'en el día postrero'",
+          "revelation": "Marta tiene teología correcta pero distante — una esperanza guardada para el futuro final, no para ese mismo momento junto a la tumba."
+        },
+        {
+          "event": "Juan 11:25-26",
+          "description": "Jesús responde: 'Yo soy la resurrección y la vida'",
+          "revelation": "Jesús no le enseña una doctrina nueva sobre el fin de los tiempos. Se coloca a sí mismo como el lugar donde esa esperanza vive. La resurrección no es solo un evento futuro; es una Persona presente."
+        },
+        {
+          "event": "Juan 11:43-44",
+          "description": "Jesús clama: '¡Lázaro, ven fuera!' y el que había muerto sale, todavía atado con vendas",
+          "revelation": "Lázaro sale de la tumba, pero sigue envuelto en las vendas de la muerte — necesita ayuda para caminar en libertad ('Desatadle, y dejadle ir'). Volverá a morir un día. Es una resurrección real, pero no la definitiva."
+        },
+        {
+          "event": "1 Corintios 15:26",
+          "description": "Pablo escribe: 'el postrer enemigo que será destruido es la muerte'",
+          "revelation": "Lo que Jesús hizo con Lázaro fue una señal, no el final de la historia. Apuntaba hacia su propia resurrección, donde la muerte no solo retrocedería, sino que sería vencida para siempre."
+        }
+      ],
+      "revelation_key": "Marta esperaba una resurrección lejana, guardada para el último día. Jesús le mostró que esa esperanza tenía nombre y estaba de pie frente a ella."
+    },
+
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "icon": "🪨",
+      "title": "Quitad la Piedra",
+      "subtitle": "La fe que precede a la gloria, no la que la sigue",
+      "content": "Ante la tumba, Jesús da una orden sencilla: 'Quitad la piedra' (Juan 11:39). La respuesta de Marta es dolorosamente humana: 'Señor, hiede ya, porque es de cuatro días'. Ella cree en Jesús, pero su fe todavía calcula lo que es razonable esperar.\n\n👁️ LA CONDICIÓN DE LA GLORIA:\n\nJesús responde: '¿No te he dicho que si crees, verás la gloria de Dios?' (v.40). El orden importa: no es 've primero, y luego cree'. Es 'cree primero, y entonces verás'. La fe no es la conclusión después del milagro; es la condición antes de él.\n\n🙏 UNA ORACIÓN PARA LA MULTITUD:\n\nAntes de llamar a Lázaro, Jesús ora en voz alta: 'Padre, gracias te doy por haberme oído. Yo sabía que siempre me oyes; pero lo dije por causa de la multitud que está alrededor, para que crean que tú me has enviado' (Juan 11:41-42). El milagro nunca fue solo para Lázaro, Marta o María. Fue una prueba pública de que el Padre había enviado al Hijo.\n\n📣 LA VOZ QUE LA MUERTE NO PUDO IGNORAR:\n\n'Clamó a gran voz: ¡Lázaro, ven fuera!' (v.43). Y el que había muerto salió — todavía atado de pies y manos, el rostro envuelto en un sudario. Jesús añade una última instrucción: 'Desatadle, y dejadle ir' (v.44).\n\nEsta escena contrasta de forma deliberada con otra tumba, unos capítulos después: cuando Pedro y Juan entran al sepulcro vacío de Jesús, encuentran los lienzos allí, pero el sudario que había cubierto su rostro 'no puesto con los lienzos, sino enrollado en un lugar aparte' (Juan 20:6-7). Lázaro salió necesitando ayuda para quedar libre de las vendas de la muerte. Jesús salió sin necesitar que nadie lo desatara — porque Él no fue resucitado por otro; Él ES la resurrección.",
+      "scripture_anchor": {
+        "reference": "Juan 11:40",
+        "text": "Jesús le dijo: ¿No te he dicho que si crees, verás la gloria de Dios?"
+      },
+      "revelation_key": "La iglesia todavía tiene una tarea después del milagro: desatar a quienes Cristo ya llamó a salir de la tumba, pero que siguen envueltos en vendas viejas."
+    },
+
+    {
+      "order": 5,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Descubrimiento Personal",
+      "discovery_questions": [
+        {
+          "category": "Espera",
+          "question": "Jesús esperó a propósito hasta que toda esperanza humana se había agotado. ¿Hay algo en tu vida donde interpretas el silencio de Dios como ausencia, en lugar de como preparación?"
+        },
+        {
+          "category": "Fe",
+          "question": "Marta tenía una teología correcta sobre la resurrección futura, pero le costaba creer que Jesús podía actuar en ese mismo momento. ¿Tu fe está guardada para 'algún día', o confías en que Cristo actúa hoy?"
+        },
+        {
+          "category": "Libertad",
+          "question": "Lázaro salió vivo, pero todavía atado — necesitó que otros lo desataran. ¿Hay áreas donde Cristo ya te llamó a la vida, pero sigues envuelto en vendas viejas que necesitas que la comunidad te ayude a soltar?"
+        }
+      ],
+      "prayer": {
+        "title": "Oración a la Resurrección y la Vida",
+        "content": "Jesús, tú eres la resurrección y la vida. Confieso que muchas veces mi fe espera un milagro lejano, guardado para el último día, cuando tú quieres actuar hoy, junto a mi propia tumba. Gracias porque no observas mi dolor con distancia; te estremeces con lo que me duele, y aun así avanzas con autoridad sobre la muerte y todo lo que ella representa en mi vida. Ayúdame a creer antes de ver, para poder ver tu gloria. Y si hay partes de mí que ya llamaste a salir a la vida, pero que siguen atadas por vendas viejas, envía a otros que me ayuden a desatarme y dejarme ir en libertad. Creo esto. En tu nombre, Amén."
+      }
+    }
+  ],
+
+  "tags": [
+    "resurrección",
+    "vida_eterna",
+    "duelo",
+    "fe",
+    "lázaro",
+    "muerte",
+    "esperanza"
+  ],
+
+  "metadata": {
+    "total_word_count": 1260,
+    "greek_words_count": 2,
+    "scripture_references_count": 13,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "Identidad de Cristo",
+      "Consuelo en el duelo",
+      "Vida eterna",
+      "Fe más allá de lo visible"
+    ]
+  }
+}
