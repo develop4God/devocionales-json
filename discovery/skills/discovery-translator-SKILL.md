@@ -156,6 +156,27 @@ Key structure must be identical to the EN file. Run `validate_pair.py` to confir
 
 ---
 
+## MANDATORY GATE: Per-Language Register Rules
+
+Before delivering a translated file, check it against the rule for its language.
+A translation can be grammatically fluent and still fail this gate — check anyway.
+
+**Hindi (HI):** Jesus takes the respectful plural — verbs included, not just pronouns.
+Example: ✗ "यीशु आया...उसने कहा" → ✓ "यीशु आए...उन्होंने कहा". Does not apply to quoted
+verse fields (`key_verse.text`, `scripture_connections[].text`) — those follow the cited
+Bible version's own grammar.
+
+**Japanese (JA):** When Jesus (イエス) or God (神) is the subject, the verb must be in
+honorific form (敬語), not plain form. Other characters stay in plain form — that's
+correct, don't flag it.
+
+**Chinese (ZH):** Never use 您 for God/Jesus — always 你. Flag 您 as the error, not 你.
+
+**Spanish / Portuguese / French (ES / PT / FR):** No hard gate — natural register per
+house style. Cognates are valid translations, not errors.
+
+---
+
 ## Reading Time
 `estimated_reading_minutes` is an **editorial value** — it reflects the intended reading experience, not a raw word count calculation. The author sets it based on content density, depth of study, and expected user pace.
 
@@ -190,58 +211,97 @@ python3 validate_translations.py
 
 **Zero errors required.** Warnings about `estimated_reading_minutes` differing from EN are expected and acceptable. All other warnings must be investigated and resolved.
 
-markdown---
+---
 
-## Quality Gate — Native Critic Review  MUST RUN BEFORE MARKING THE TRANSLATION as DONE
+## MANDATORY: Native-Speaker Critic Review — MUST RUN BEFORE MARKING ANY TRANSLATION AS DONE
 
-After all translations in the batch are complete, spawn one critic subagent per translated file **in parallel** before running final validation.
+`validate_pair.py` checks schema and structure — it cannot catch bad prose. The
+translating agent also cannot reliably catch its own register mistakes. So after each
+language file passes `validate_pair.py`, **before delivery**, spawn a **fresh subagent
+(NOT HAIKU model)** (no shared context with the translator) — one critic per translated
+file, in parallel across the batch.
 
 ### When to spawn
-After the last translation file in the batch is written and `validate_pair.py` passes for each file.
+Immediately after a translation file is written and `validate_pair.py` passes for it —
+do not batch this up and defer it to the end of the whole run.
 
 ### Delegation prompt template
-You are a native [LANGUAGE] Christian speaker. Review the following [LANGUAGE] Bible study translation for errors (DOES NOT APPLY to the verses only in the translated content):
-File: [FILE_PATH]
-For EACH file, carefully check for:
-CRITICAL ERRORS (must be fixed):
-
-Typos and spacing errors
-Wrong word meanings that change theological meaning
-Untranslated English words or phrases
-Incorrect characters or diacritics
-Wrong verb conjugations or tenses
-Expressions that sound unnatural for a native speaker
-Theological terminology errors for this language and culture
-
-MODERATE ISSUES (should be improved):
-
-Word choices with wrong connotations
-Unnatural phrasing that doesn't sound native
-Inconsistent terminology across sections
-Better synonym choices for clarity
-
-MINOR SUGGESTIONS:
-
-Style improvements
-More natural idioms
-Better flow
-
-Provide:
-
-File name
-List of ALL findings (with text context)
-Severity: CRITICAL / MODERATE / MINOR
-Suggested correction: elaborate diff for all the purpose changes
-
-
+> You are a native [LANGUAGE] Christian speaker. Read this file line by line, taking
+> your time. Review the following [LANGUAGE] Bible study translation for errors (DOES
+> NOT APPLY to verses only in the translated content):
+> File: [FILE_PATH]
+>
+> For EACH file, carefully check for:
+>
+> **CRITICAL ERRORS (must be fixed):**
+> - Typos and spacing errors
+> - Wrong word meanings that change theological meaning
+> - Untranslated English words or phrases
+> - Incorrect characters or diacritics
+> - Wrong verb conjugations or tenses
+> - Expressions that sound unnatural for a native speaker
+> - Theological terminology errors for this language and culture
+> - Violation of the per-language register rule in
+>   `discovery/skills/discovery-translator-SKILL.md` § "MANDATORY GATE: Per-Language
+>   Register Rules"
+>
+> **MODERATE ISSUES (should be improved):**
+> - Word choices with wrong connotations
+> - Unnatural phrasing that doesn't sound native
+> - Inconsistent terminology across sections
+> - Better synonym choices for clarity
+>
+> **MINOR SUGGESTIONS:**
+> - Style improvements
+> - More natural idioms
+> - Better flow
+>
+> Provide: file name, list of ALL findings (with text context), severity
+> (CRITICAL/MODERATE/MINOR), and a suggested correction (elaborate diff) for each.
 
 ### Coordinator review
 After all critic reports return:
 1. CRITICAL findings are a checklist. The coordinator must iterate through every item marked CRITICAL, apply each fix one by one, and confirm each one before closing the review. Do not mark a file as reviewed until every CRITICAL item has a fix applied and confirmed.
-2. Review MODERATE findings — review one by one, dismiss or apply the fix, document each one. 
+2. Review MODERATE findings — review one by one, dismiss or apply the fix, document each one.
 3. Review MINOR suggestions — review one by one, dismiss or apply the fix, document each one.
-4. Re-run `validate_pair.py` on any file that was modified
-5. Proceed to final validation
+4. Re-run `validate_pair.py` on any file that was modified.
+5. Proceed to the reverse-validation gate below before final validation.
+
+---
+
+## MANDATORY GATE: Post-Fix Reverse Validation & Pattern Sweep
+
+A grammar/style fix can silently break meaning — restructuring a clause to fix a case
+error can turn a sentence into something that no longer says anything. The agent that
+applies the fix is the worst-positioned to notice this (it's focused on the grammar, not
+re-deriving the theological point). So after applying critic fixes and before reporting
+a file done:
+
+1. **Re-read the complete file**, not just the diffed lines — meaning depends on
+   surrounding context the diff view won't show you.
+2. **For every edit made**, verify it still expresses the original point. Anchor the
+   check against the card's paired `key_verse`/`scripture_connections` and its
+   `revelation_key` or `identity_statement` — those are the source of truth for what the
+   sentence is supposed to say. If a rewrite makes a sentence grammatically correct but
+   tautological, vaguer, or logically disconnected from its `revelation_key`, it is a
+   regression — fix it, don't wave it through.
+3. **Scan the entire file for the same error pattern(s)** the critic just flagged —
+   critics pass a sample, they don't exhaustively cover. If the critic caught an
+   anglicism, a dangling modifier, a mistranslation, or a register slip in one card, grep/read
+   for that same pattern in every other card before considering the round done.
+4. **Validate JSON** after every batch of edits (`python3 -m json.tool <file>` or
+   `validate_pair.py`) — never leave this until the very end.
+
+Repeat steps 2–4 until a full pass finds nothing new. Only then move to the next
+language or report completion.
+
+### ZH-Specific Check: 您/你 Register
+
+For Chinese files only, after the critic review, grep the file for 您. This character
+has no legitimate use in this content (no correct quoted-scripture use, no homograph) —
+every hit is a real violation of the project rule (see "MANDATORY GATE: Per-Language
+Register Rules" above) and should be replaced with 你.
+
 ---
 
 ## index.json Update
@@ -258,7 +318,8 @@ After all languages are validated, update the study entry in `index.json`:
 1. All translated JSON files
 2. Updated `index.json`
 3. Validation log (✅ PERFECT for each pair)
-4. Reading time table — use the format below; retrieve each language's rate and unit from `reading_speed` in the remote index:
+4. Native-speaker critic review completed for each language (see "MANDATORY: Native-Speaker Critic Review" above) — fixes applied, not just reported
+5. Reading time table — use the format below; retrieve each language's rate and unit from `reading_speed` in the remote index:
 
 | Language | Words/Chars | Rate (from index) | Minutes |
 |---|---|---|---|
@@ -268,4 +329,4 @@ After all languages are validated, update the study entry in `index.json`:
 | JA | — | — | — |
 | ZH | — | — | — |
 
-5. Flag any verse not found in primary version with the fallback version used
+6. Flag any verse not found in primary version with the fallback version used

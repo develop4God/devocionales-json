@@ -54,6 +54,59 @@
       }
     },
     {
+      "id": "dying_to_self_001",
+      "version": "1.0",
+      "emoji": "✝️",
+      "files": {
+        "es": "dying_to_self_es_001.json",
+        "en": "dying_to_self_en_001.json",
+        "pt": "dying_to_self_pt_001.json",
+        "fr": "dying_to_self_fr_001.json",
+        "de": "dying_to_self_de_001.json",
+        "ar": "dying_to_self_ar_001.json",
+        "fil": "dying_to_self_fil_001.json",
+        "hi": "dying_to_self_hi_001.json",
+        "ja": "dying_to_self_ja_001.json",
+        "zh": "dying_to_self_zh_001.json"
+      },
+      "titles": {
+        "es": "Morir al yo",
+        "en": "Dying to Self",
+        "pt": "Morrer para o Eu",
+        "fr": "Mourir à Soi-Même",
+        "de": "Dem eigenen Ich sterben",
+        "ar": "أن تموت عن نفسك",
+        "fil": "Mamatay sa Sarili",
+        "hi": "स्वयं के प्रति मरना",
+        "ja": "自分に死ぬということ",
+        "zh": "向自己死"
+      },
+      "subtitles": {
+        "es": "Lo que cuesta decidir \"hágase tu voluntad\" cuando el corazón todavía tiene miedo",
+        "en": "What it costs to decide \"your will be done\" when the heart is still afraid",
+        "pt": "O que custa decidir \"seja feita a tua vontade\" quando o coração ainda tem medo",
+        "fr": "Ce qu'il en coûte de décider \"que ta volonté soit faite\" quand le cœur a encore peur",
+        "de": "Was es kostet, \"dein Wille geschehe\" zu entscheiden, wenn das Herz sich noch fürchtet",
+        "ar": "ماذا يُكلِّف أن تقرر \"لتكن مشيئتك\" بينما القلب لا يزال خائفاً",
+        "fil": "Ang halaga ng pagpapasyang \"mangyari nawa ang iyong kalooban\" kahit natatakot pa ang puso",
+        "hi": "जब हृदय अब भी भयभीत हो, तब \"तेरी इच्छा पूरी हो\" कहने में क्या मूल्य चुकाना पड़ता है",
+        "ja": "心がまだ恐れているとき、「みこころのままに」と決めるためには何が必要なのか",
+        "zh": "当心里仍然害怕的时候，决定说「愿你的旨意成就」，要付上什么代价"
+      },
+      "estimated_reading_minutes": {
+        "es": 8,
+        "en": 8,
+        "pt": 9,
+        "fr": 9,
+        "de": 8,
+        "ar": 10,
+        "fil": 8,
+        "hi": 10,
+        "ja": 11,
+        "zh": 10
+      }
+    },
+    {
       "id": "morning_star_001",
       "version": "1.3",
       "emoji": "🌟",
