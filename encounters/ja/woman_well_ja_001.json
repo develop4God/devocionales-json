@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "ja",
-  "bible_version": "新改訳2003",
+  "bible_version": "SK2003",
   "version": "6.0",
   "estimated_reading_minutes": 13,
   "meta": {
@@ -29,7 +29,7 @@
   "key_verse": {
     "reference": "ヨハネの福音書 4:14",
     "text": "しかし、わたしが与える水を飲む者はだれでも、決して渇くことがありません。わたしが与える水は、その人のうちで泉となり、永遠のいのちへの水がわき出ます。」",
-    "bible_version": "新改訳2003"
+    "bible_version": "SK2003"
   },
   "cards": [
     {
@@ -282,7 +282,7 @@
       "completion_verse": {
         "reference": "ヨハネの福音書 4:28-29",
         "text": "女は、自分の水がめを置いて町へ行き、人々に言った。「来て、見てください。私のしたこと全部を私に言った人がいるのです。この方がキリストなのでしょうか。」",
-        "bible_version": "新改訳2003"
+        "bible_version": "SK2003"
       },
       "reflection_prompt": "今日、あなたが置いていく必要のある水がめは何ですか？そして『来て、見てください』とあなたが伝える必要のある人は誰ですか？",
       "celebration_type": "gentle_light"

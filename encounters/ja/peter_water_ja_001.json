@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "ja",
-  "bible_version": "新改訳2003",
+  "bible_version": "SK2003",
   "version": "1.0",
   "estimated_reading_minutes": 6,
   "meta": {
@@ -26,7 +26,7 @@
   "key_verse": {
     "reference": "マタイ 14:31",
     "text": "イエスはすぐに手を伸ばし、彼をつかんで言われた。「信仰の薄い人よ、なぜ疑ったのか。」",
-    "bible_version": "新改訳2003"
+    "bible_version": "SK2003"
   },
   "cards": [
     {
@@ -177,7 +177,7 @@
       "completion_verse": {
         "reference": "マタイ 14:33",
         "text": "舟の中にいた人たちは、「本当に、あなたは神の子です」と言って、イエスを拝んだ。",
-        "bible_version": "新改訳2003"
+        "bible_version": "SK2003"
       },
       "reflection_prompt": "ペテロの出会いから、今日持ち帰りたい真理は何ですか？",
       "celebration_type": "gentle_light"
