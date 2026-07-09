@@ -584,6 +584,34 @@
         "ja": 13,
         "zh": 9
       }
+    },
+    {
+      "id": "gadarene_demoniac_001",
+      "version": "0.1",
+      "image_version": "1.0",
+      "emoji": "⛓️",
+      "status": "coming_soon",
+      "intro_image": "gadarene_demoniac_intro.png",
+      "mood_primary": "falling",
+      "accent_color": "#040810",
+      "has_interactive": false,
+      "testament": "new",
+      "character": "The Gadarene Demoniac",
+      "files": {
+        "es": "gadarene_demoniac_es_001.json"
+      },
+      "titles": {
+        "es": "Legión y el Hombre entre las Tumbas"
+      },
+      "subtitles": {
+        "es": "Vivía entre los sepulcros, encadenado por lo que no podía controlar. Jesús cruzó el mar solo para él."
+      },
+      "scripture_reference": {
+        "es": "Marcos 5:1-20"
+      },
+      "estimated_reading_minutes": {
+        "es": 12
+      }
     }
   ]
 }
