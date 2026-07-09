@@ -584,6 +584,34 @@
         "ja": 13,
         "zh": 9
       }
+    },
+    {
+      "id": "nicodemus_001",
+      "version": "0.1",
+      "image_version": "1.0",
+      "emoji": "🌙",
+      "status": "published",
+      "intro_image": "nicodemus_sanhedrin_defense.png",
+      "mood_primary": "night",
+      "accent_color": "#0d1526",
+      "has_interactive": false,
+      "testament": "new",
+      "character": "Nicodemus",
+      "files": {
+        "es": "nicodemus_es_001.json"
+      },
+      "titles": {
+        "es": "El Maestro Que Vino de Noche"
+      },
+      "subtitles": {
+        "es": "Un fariseo, un maestro de Israel, y una pregunta que no se atrevía a hacer en público"
+      },
+      "scripture_reference": {
+        "es": "Juan 3:1-21"
+      },
+      "estimated_reading_minutes": {
+        "es": 11
+      }
     }
   ]
 }
