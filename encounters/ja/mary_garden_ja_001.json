@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "ja",
-  "bible_version": "新改訳2003",
+  "bible_version": "SK2003",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 13,
@@ -30,7 +30,7 @@
   "key_verse": {
     "reference": "ヨハネの福音書 20:16",
     "text": "イエスは彼女に言われた。「マリヤ。」彼女は振り向いて、ヘブル語で、「ラボニ(すなわち、先生)」とイエスに言った。",
-    "bible_version": "新改訳2003"
+    "bible_version": "SK2003"
   },
   "cards": [
     {
@@ -254,7 +254,7 @@
       "completion_verse": {
         "reference": "ヨハネの福音書 20:16",
         "text": "イエスは彼女に言われた。「マリヤ。」彼女は振り向いて、ヘブル語で、「ラボニ(すなわち、先生)」とイエスに言った。",
-        "bible_version": "新改訳2003"
+        "bible_version": "SK2003"
       },
       "reflection_prompt": "あなたは今日、イエスからどんな名前を聞く必要がありますか。そして、だれに告げる必要がありますか——私は主にお目にかかりました、と。",
       "celebration_type": "gentle_light"

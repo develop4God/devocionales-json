@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "hi",
-  "bible_version": "पवित्र बाइबिल (ओ.वी.)",
+  "bible_version": "HIOV",
   "version": "1.0",
   "estimated_reading_minutes": 6,
   "meta": {
@@ -26,7 +26,7 @@
   "key_verse": {
     "reference": "मत्ती 14:31",
     "text": "यीशु ने तुरन्त हाथ बढ़ाकर उसे थाम लिया, और उससे कहा: हे अल्पविश्वासी, तुने सन्देह क्यों किया?",
-    "bible_version": "पवित्र बाइबिल (ओ.वी.)"
+    "bible_version": "HIOV"
   },
   "cards": [
     {
@@ -177,7 +177,7 @@
       "completion_verse": {
         "reference": "मत्ती 14:33",
         "text": "तब जो नाव पर थे उन्होंने उसे दण्डवत् की और कहा, सच में तू परमेश्वर का पुत्र है।",
-        "bible_version": "पवित्र बाइबिल (ओ.वी.)"
+        "bible_version": "HIOV"
       },
       "reflection_prompt": "पतरस की मुलाकात से एक सत्य क्या है जो तुम आज अपने साथ ले जाना चाहते हो?",
       "celebration_type": "gentle_light"

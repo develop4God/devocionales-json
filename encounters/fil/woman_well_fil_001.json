@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "fil",
-  "bible_version": "Magandang Balita Biblia",
+  "bible_version": "MBB05",
   "version": "1.0",
   "estimated_reading_minutes": 12,
   "meta": {
@@ -29,7 +29,7 @@
   "key_verse": {
     "reference": "Juan 4:14",
     "text": "Ngunit ang sinumang uminom ng tubig na ibibigay ko sa kanya ay hindi na muling mauuhaw kailanman. Ang tubig na ibibigay ko ay magiging batis sa loob niya, at patuloy na bubukal at magbibigay sa kanya ng buhay na walang hanggan.",
-    "bible_version": "Magandang Balita Biblia"
+    "bible_version": "MBB05"
   },
   "cards": [
     {
@@ -282,7 +282,7 @@
       "completion_verse": {
         "reference": "Juan 4:28-29",
         "text": "Iniwanan ng babae ang kanyang banga, bumalik sa bayan at sinabi sa mga tagaroon, \"Halikayo! Tingnan ninyo ang taong nagsabi sa akin ng lahat ng ginawa ko. Siya na kaya ang Cristo?\"",
-        "bible_version": "Magandang Balita Biblia"
+        "bible_version": "MBB05"
       },
       "reflection_prompt": "Anong banga ang kailangan mong iwan ngayon? At sino ang kailangang marinig ang iyong 'halika at tingnan'?",
       "celebration_type": "gentle_light"

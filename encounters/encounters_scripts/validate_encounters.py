@@ -26,12 +26,96 @@ SCHEMA_VERSION = 'encounters_v1'
 VALID_STATUSES = {'published', 'coming_soon'}
 VALID_TESTAMENT = {'old', 'new'}
 
-# Load Bible versions from shared config
-def _load_bible_versions() -> dict:
-    path = SCRIPTS_DIR / 'bible_versions.json'
-    return json.loads(path.read_text(encoding='utf-8'))['languages']
+REMOTE_INDEX_URL = "https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json"
+REMOTE_FETCH_ATTEMPTS = 3
+REMOTE_FETCH_TIMEOUT = 15  # seconds, per attempt
 
-_BIBLE_VERSIONS = _load_bible_versions()
+# bible_versions.json is a local CACHE of the remote SOT, refreshed on every
+# successful live fetch and used only as a fallback when the network is
+# unreachable. It is never hand-maintained as a source of truth.
+_LOCAL_CACHE_PATH = SCRIPTS_DIR / 'bible_versions.json'
+
+
+def _local_cache_languages() -> dict:
+    """Read the local cache file (used only as an offline fallback)."""
+    return json.loads(_LOCAL_CACHE_PATH.read_text(encoding='utf-8'))['languages']
+
+
+def _remote_to_local_shape(remote_entry: dict) -> dict:
+    """Adapt a remote SOT language entry to this validator's expected shape."""
+    primary = remote_entry['primary_version']
+    fallback = remote_entry['fallback_version']
+    return {
+        'name': remote_entry['name'],
+        'script': remote_entry['script'],
+        'primary_version': primary,
+        'fallback_version': fallback,
+        'allowed_versions': [primary, fallback],
+        'reading_speed': remote_entry['reading_speed'],
+    }
+
+
+def _fetch_remote_index(attempts: int = REMOTE_FETCH_ATTEMPTS) -> Optional[dict]:
+    """Fetch the remote bible_versions SOT index, retrying transient failures
+    a few times before giving up (a single flaky network blip shouldn't be
+    indistinguishable from genuine unreachability)."""
+    import time
+    import urllib.request
+    import urllib.error
+
+    last_err = None
+    for attempt in range(1, attempts + 1):
+        try:
+            with urllib.request.urlopen(REMOTE_INDEX_URL, timeout=REMOTE_FETCH_TIMEOUT) as resp:
+                return json.loads(resp.read())
+        except (urllib.error.URLError, TimeoutError, OSError, json.JSONDecodeError) as e:
+            last_err = e
+            if attempt < attempts:
+                time.sleep(min(2 ** attempt, 8))  # 2s, 4s, ...
+    return None
+
+
+def _write_local_cache(remote_langs: dict) -> None:
+    """Refresh the local bible_versions.json cache from a successful live
+    fetch, so the offline fallback is always recent rather than a
+    hand-maintained file that can silently go stale between fetches."""
+    payload = {
+        'meta': {
+            'version': '1.0.0',
+            'source': f'Cached from {REMOTE_INDEX_URL} on last successful validator run',
+            'note': 'Offline fallback only. Never hand-edit — this file is overwritten on every successful live fetch.',
+        },
+        'languages': {
+            lang: _remote_to_local_shape(entry) for lang, entry in remote_langs.items()
+        },
+    }
+    try:
+        _LOCAL_CACHE_PATH.write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False) + '\n', encoding='utf-8'
+        )
+    except OSError:
+        pass  # best-effort — a read-only filesystem shouldn't fail validation
+
+
+def _load_bible_versions() -> tuple[dict, bool]:
+    """Load bible version config for every language the remote SOT defines.
+
+    Tries the live remote SOT first (source of truth, with retries); only
+    falls back to the local bible_versions.json cache if the network is
+    unreachable after all attempts. On a successful fetch, refreshes the
+    local cache file so the fallback path is always recent.
+    Returns (languages_dict, used_remote: bool).
+    """
+    remote = _fetch_remote_index()
+    if remote is not None:
+        remote_langs = remote.get('languages', {})
+        _write_local_cache(remote_langs)
+        return {lang: _remote_to_local_shape(entry) for lang, entry in remote_langs.items()}, True
+
+    return _local_cache_languages(), False
+
+
+_BIBLE_VERSIONS, _USED_REMOTE_SOT = _load_bible_versions()
 EXPECTED_LANGUAGES = list(_BIBLE_VERSIONS.keys())
 
 # Required card keys by type
@@ -69,6 +153,20 @@ _FIL_SHARED_BOOK_NAMES = {
     'genesis', 'ruth', 'samuel', 'ezra', 'job', 'ezekiel', 'daniel',
     'hosea', 'joel', 'amos', 'nahum',
 }
+
+# Words identical (or near-identical) across English and Romance languages —
+# valid cognate translations, not untranslated leftovers. Per translator skill
+# § "Cognates (FR, PT, ES)": these are correct and should not be flagged.
+_ROMANCE_COGNATES = {
+    'fr': {'courage', 'grace', 'grâce'},
+    'pt': {'coragem', 'graça'},
+    'es': {'coraje', 'gracia'},
+}
+
+
+def _is_cognate(value: str, lang: str) -> bool:
+    """Return True if value is a known valid cognate word for lang."""
+    return value.strip().lower() in _ROMANCE_COGNATES.get(lang, set())
 
 
 def _has_english_book_name(reference: str, lang: str) -> bool:
@@ -122,6 +220,27 @@ def _check_quote_anomalies(text: str, ctx: str, lang: str, report: 'Report'):
     # Straight double quotes should appear in pairs
     if text.count('"') % 2 != 0:
         report.W(f"{ctx}: odd number of straight double quotes (\") — possible stray quote")
+
+
+def validate_sot_source(report: 'Report') -> bool:
+    """Report whether this run resolved bible_version codes from the live
+    remote SOT or fell back to the local bible_versions.json cache.
+
+    _BIBLE_VERSIONS is populated at import time by fetching the remote SOT
+    first — this function only surfaces which source was actually used, so
+    a validation run that silently fell back to a stale local cache (e.g. in
+    a sandboxed/offline CI runner) is visible in the report rather than
+    indistinguishable from a fully live run.
+    """
+    if _USED_REMOTE_SOT:
+        report.I(f"✓ bible_version codes resolved live from remote SOT ({REMOTE_INDEX_URL}) for all {len(_BIBLE_VERSIONS)} languages")
+        return True
+    report.W(
+        f"Could not reach remote SOT ({REMOTE_INDEX_URL}) — fell back to local "
+        f"bible_versions.json cache. Results reflect the LOCAL CACHE, not confirmed "
+        f"live data; re-run once network access is available before merging."
+    )
+    return True
 
 
 # ── Report ────────────────────────────────────────────────────────────────────
@@ -520,7 +639,7 @@ def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
                 if not tr_val or not str(tr_val).strip():
                     report.E(f"{ctx}: field '{field}' is empty in {lang.upper()}")
                 elif isinstance(en_val, str) and isinstance(tr_val, str):
-                    if en_val.strip() == tr_val.strip():
+                    if en_val.strip() == tr_val.strip() and not _is_cognate(tr_val, lang):
                         report.W(f"{ctx}: field '{field}' appears untranslated")
 
         # discovery_questions count
@@ -531,7 +650,9 @@ def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
                 report.E(f"{ctx}: discovery_questions count mismatch EN={len(en_qs)}, {lang.upper()}={len(tr_qs)}")
             for j, (eq, tq) in enumerate(zip(en_qs, tr_qs)):
                 for field in ('category', 'question'):
-                    if eq.get(field, '').strip() == tq.get(field, '').strip():
+                    eq_val = eq.get(field, '').strip()
+                    tq_val = tq.get(field, '').strip()
+                    if eq_val == tq_val and not _is_cognate(tq_val, lang):
                         report.W(f"{ctx} question[{j+1}]: '{field}' appears untranslated")
 
         # scripture_connections count
@@ -564,6 +685,15 @@ def main():
 
     if not passed_a or index_data is None:
         print("\n❌ PHASE A FAILED - Stopping validation")
+        sys.exit(1)
+
+    # ── PHASE SOT: confirm bible_version codes came from the live remote SOT ──
+    report_sot = Report("PHASE SOT: BIBLE VERSIONS SOURCE")
+    validate_sot_source(report_sot)
+    passed_sot = report_sot.print(final=False)
+
+    if not passed_sot:
+        print("\n❌ PHASE SOT FAILED")
         sys.exit(1)
 
     # ── PHASE B ──

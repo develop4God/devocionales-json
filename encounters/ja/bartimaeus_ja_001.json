@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "ja",
-  "bible_version": "新改訳2003",
+  "bible_version": "SK2003",
   "version": "1.0",
   "estimated_reading_minutes": 8,
   "meta": {
@@ -27,7 +27,7 @@
   "key_verse": {
     "reference": "マルコ 10:52",
     "text": "イエスは彼に言われた。「さあ、行きなさい。あなたの信仰が、あなたを救った。」すると、すぐに彼は見えるようになり、イエスの後について行った。",
-    "bible_version": "新改訳2003"
+    "bible_version": "SK2003"
   },
   "cards": [
     {
@@ -181,7 +181,7 @@
       "completion_verse": {
         "reference": "マルコ 10:52",
         "text": "イエスは彼に言われた。「さあ、行きなさい。あなたの信仰が、あなたを救った。」すると、すぐに彼は見えるようになり、イエスの後について行った。",
-        "bible_version": "新改訳2003"
+        "bible_version": "SK2003"
       },
       "reflection_prompt": "今日、あなたは何を投げ捨てる必要がありますか？何を見る必要がありますか？",
       "celebration_type": "gentle_light"

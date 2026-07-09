@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "fil",
-  "bible_version": "Magandang Balita Biblia",
+  "bible_version": "MBB05",
   "version": "1.0",
   "estimated_reading_minutes": 15,
   "meta": {
@@ -29,7 +29,7 @@
   "key_verse": {
     "reference": "Lucas 19:10",
     "text": "Ang Anak ng Tao ay naparito upang hanapin at iligtas ang naligaw.",
-    "bible_version": "Magandang Balita Biblia"
+    "bible_version": "MBB05"
   },
   "cards": [
     {
@@ -229,7 +229,7 @@
       "completion_verse": {
         "reference": "Lucas 19:10",
         "text": "Ang Anak ng Tao ay naparito upang hanapin at iligtas ang naligaw.",
-        "bible_version": "Magandang Balita Biblia"
+        "bible_version": "MBB05"
       },
       "reflection_prompt": "Anong puno ang kailangan mong akyatin ngayon? At ano ang kailangan mong bitawan kapag tinawag Niya ang pangalan mo?",
       "celebration_type": "gentle_light"

@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "zh",
-  "bible_version": "和合本1919",
+  "bible_version": "CUV1919",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 8,
@@ -30,7 +30,7 @@
   "key_verse": {
     "reference": "约翰福音 20:16",
     "text": "耶稣说：「马利亚。」马利亚就转过来，用希伯来话对他说：「拉波尼！」（拉波尼就是夫子的意思。）",
-    "bible_version": "和合本1919"
+    "bible_version": "CUV1919"
   },
   "cards": [
     {
@@ -254,7 +254,7 @@
       "completion_verse": {
         "reference": "约翰福音 20:16",
         "text": "耶稣说：「马利亚。」马利亚就转过来，用希伯来话对他说：「拉波尼！」（拉波尼就是夫子的意思。）",
-        "bible_version": "和合本1919"
+        "bible_version": "CUV1919"
       },
       "reflection_prompt": "今天你需要从耶稣那里听见什么名字？你又需要去告诉谁：我已经看见了主？",
       "celebration_type": "gentle_light"

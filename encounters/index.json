@@ -584,6 +584,79 @@
         "ja": 13,
         "zh": 9
       }
+    },
+    {
+      "id": "nicodemus_001",
+      "version": "1.0",
+      "image_version": "1.0",
+      "emoji": "🌙",
+      "status": "published",
+      "intro_image": "nicodemus_sanhedrin_defense.png",
+      "mood_primary": "night",
+      "accent_color": "#0d1526",
+      "has_interactive": false,
+      "testament": "new",
+      "character": "Nicodemus",
+      "files": {
+        "es": "nicodemus_es_001.json",
+        "en": "nicodemus_en_001.json",
+        "fr": "nicodemus_fr_001.json",
+        "pt": "nicodemus_pt_001.json",
+        "de": "nicodemus_de_001.json",
+        "fil": "nicodemus_fil_001.json",
+        "ar": "nicodemus_ar_001.json",
+        "hi": "nicodemus_hi_001.json",
+        "ja": "nicodemus_ja_001.json",
+        "zh": "nicodemus_zh_001.json"
+      },
+      "titles": {
+        "es": "El Maestro Que Vino de Noche",
+        "en": "The Teacher Who Came by Night",
+        "fr": "Le Maître Qui Vint de Nuit",
+        "pt": "O Mestre Que Veio de Noite",
+        "de": "Der Lehrer, der bei Nacht kam",
+        "fil": "Ang Guro Na Dumating sa Gabi",
+        "ar": "المعلم الذي أتى ليلاً",
+        "hi": "वह गुरु जो रात में आया",
+        "ja": "夜に訪れた教師",
+        "zh": "夜里来访的教师"
+      },
+      "subtitles": {
+        "es": "Un fariseo, un maestro de Israel, y una pregunta que no se atrevía a hacer en público",
+        "en": "A Pharisee, a teacher of Israel, and a question he did not dare ask in public",
+        "fr": "Un pharisien, un docteur d'Israël, et une question qu'il n'osait pas poser en public",
+        "pt": "Um fariseu, um mestre de Israel, e uma pergunta que não ousava fazer em público",
+        "de": "Ein Pharisäer, ein Lehrer Israels, und eine Frage, die er nicht öffentlich zu stellen wagte",
+        "fil": "Isang Pariseo, isang guro ng Israel, at isang tanong na hindi niya inaming hayagan",
+        "ar": "فريسي، معلم في إسرائيل، وسؤال لم يجرؤ على طرحه علانية",
+        "hi": "एक फरीसी, इस्राएल का एक गुरु, और एक प्रश्न जो वह खुले में पूछने का साहस नहीं कर सका",
+        "ja": "パリサイ人、イスラエルの教師、そして人前では問えなかった問い",
+        "zh": "一位法利赛人,一位以色列的教师,一个他不敢公开提出的问题"
+      },
+      "scripture_reference": {
+        "es": "Juan 3:1-21",
+        "en": "John 3:1-21",
+        "fr": "Jean 3:1-21",
+        "pt": "S. João 3:1-21",
+        "de": "Johannes 3:1-21",
+        "fil": "Juan 3:1-21",
+        "ar": "إِنْجِيلُ يُوحَنَّا 3:1-21",
+        "hi": "यूहन्ना 3:1-21",
+        "ja": "ヨハネの福音書 3:1-21",
+        "zh": "约翰福音 3:1-21"
+      },
+      "estimated_reading_minutes": {
+        "es": 11,
+        "en": 11,
+        "fr": 12,
+        "pt": 12,
+        "de": 12,
+        "fil": 12,
+        "ar": 15,
+        "hi": 13,
+        "ja": 14,
+        "zh": 14
+      }
     }
   ]
 }

@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "ja",
-  "bible_version": "新改訳2003",
+  "bible_version": "SK2003",
   "version": "1.0",
   "estimated_reading_minutes": 15,
   "meta": {
@@ -29,7 +29,7 @@
   "key_verse": {
     "reference": "ルカ 19:10",
     "text": "人の子は、失われた人を捜して救うために来たのです。",
-    "bible_version": "新改訳2003"
+    "bible_version": "SK2003"
   },
   "cards": [
     {
@@ -229,7 +229,7 @@
       "completion_verse": {
         "reference": "ルカ 19:10",
         "text": "人の子は、失われた人を捜して救うために来たのです。",
-        "bible_version": "新改訳2003"
+        "bible_version": "SK2003"
       },
       "reflection_prompt": "今日、あなたが登るべき木は何ですか。主が名を呼ばれるとき、あなたは何を手放す必要があるでしょうか。",
       "celebration_type": "gentle_light"

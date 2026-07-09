@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "fil",
-  "bible_version": "Magandang Balita Biblia",
+  "bible_version": "MBB05",
   "version": "2.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 17,
@@ -33,7 +33,7 @@
   "key_verse": {
     "reference": "Mga Gawa 9:5-6",
     "text": "\"Sino kayo, Panginoon?\" tanong niya. \"Ako'y si Jesus, ang iyong inuusig,\" tugon ng tinig sa kanya. \"Tumayo ka't pumasok sa lunsod, at doo'y sasabihin sa iyo kung ano ang dapat mong gawin.\"",
-    "bible_version": "Magandang Balita Biblia"
+    "bible_version": "MBB05"
   },
   "cards": [
     {
@@ -257,7 +257,7 @@
       "completion_verse": {
         "reference": "Mga Gawa 9:15",
         "text": "Ngunit sinabi sa kanya ng Panginoon, \"Pumunta ka roon, sapagkat pinili ko siya upang ipangaral ang aking pangalan sa mga Hentil, sa mga hari, at sa mga anak ng Israel.\"",
-        "bible_version": "Magandang Balita Biblia"
+        "bible_version": "MBB05"
       },
       "reflection_prompt": "Kinuha ng Diyos ang pinakamatinding taga-usig ng iglesya at ginawa siyang halimbawa ng Kanyang awa para sa lahat ng darating pagkatapos. Walang anumang ikaw o naging ikaw ang lampas sa Kanyang maabot. Handa ka bang hayaan ang Diyos na gawin ang pareho sa iyo — kunin ang lahat ng ikaw at gamitin ito para sa Kanyang layunin?",
       "celebration_type": "burst"
