@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "zh",
-  "bible_version": "和合本1919",
+  "bible_version": "CUV1919",
   "version": "2.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 17,
@@ -33,7 +33,7 @@
   "key_verse": {
     "reference": "使徒行传 9:5-6",
     "text": "他说：「主啊，你是谁？」主说：「我就是你所逼迫的耶稣。起来！进城去，你所当作的事，必有人告诉你。」",
-    "bible_version": "和合本1919"
+    "bible_version": "CUV1919"
   },
   "cards": [
     {
@@ -257,7 +257,7 @@
       "completion_verse": {
         "reference": "使徒行传 9:15",
         "text": "主对亚拿尼亚说：「你只管去。他是我所拣选的器皿，要在外邦人和君王并以色列人面前宣扬我的名。」",
-        "bible_version": "和合本1919"
+        "bible_version": "CUV1919"
       },
       "reflection_prompt": "神将教会最大的逼迫者变成了祂怜悯的见证，给后来所有人作榜样。你是什么人、你曾经做过什么，没有一样是祂的恩典所不能及的。你是否愿意让神在你身上做同样的事——将你的一切拿起，用在祂的旨意中？",
       "celebration_type": "burst"

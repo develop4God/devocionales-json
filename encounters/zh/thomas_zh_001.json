@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "zh",
-  "bible_version": "和合本1919",
+  "bible_version": "CUV1919",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 15,
@@ -32,7 +32,7 @@
   "key_verse": {
     "reference": "约翰福音 20:28",
     "text": "多马说：「我的主！我的神！」",
-    "bible_version": "和合本1919"
+    "bible_version": "CUV1919"
   },
   "cards": [
     {
@@ -275,7 +275,7 @@
       "completion_verse": {
         "reference": "约翰福音 20:29",
         "text": "耶稣对他说：「你因看见了我才信，那没有看见就信的有福了。」",
-        "bible_version": "和合本1919"
+        "bible_version": "CUV1919"
       },
       "reflection_prompt": "多马不需要明白一切，才能把自己交托给耶稣。他只需要在耶稣来的时候在场。今天，耶稣对你说同样的话：你不需要拥有所有的答案，只需要愿意接受祂。你愿意吗？",
       "celebration_type": "gentle_light"

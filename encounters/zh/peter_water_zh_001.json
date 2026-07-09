@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "zh",
-  "bible_version": "和合本1919",
+  "bible_version": "CUV1919",
   "version": "1.0",
   "estimated_reading_minutes": 4,
   "meta": {
@@ -26,7 +26,7 @@
   "key_verse": {
     "reference": "马太福音 14:31",
     "text": "耶稣赶紧伸手拉住他，说：你这小信的人哪，为什么疑惑呢？",
-    "bible_version": "和合本1919"
+    "bible_version": "CUV1919"
   },
   "cards": [
     {
@@ -177,7 +177,7 @@
       "completion_verse": {
         "reference": "马太福音 14:33",
         "text": "在船上的人都拜他，说：你真是神的儿子了。",
-        "bible_version": "和合本1919"
+        "bible_version": "CUV1919"
       },
       "reflection_prompt": "彼得相遇中有哪一个真理是你今天想带走的？",
       "celebration_type": "gentle_light"
