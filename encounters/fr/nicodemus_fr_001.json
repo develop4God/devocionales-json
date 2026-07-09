@@ -1,0 +1,280 @@
+{
+  "id": "nicodemus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fr",
+  "bible_version": "LSG1910",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 12,
+  "meta": {
+    "character": "Nicodemus",
+    "testament": "new",
+    "scripture_reference": "Jean 3:1-21",
+    "mood_primary": "night",
+    "accent_color": "#0d1526",
+    "emoji": "🌙",
+    "tags": [
+      "nouvelle_naissance",
+      "esprit_saint",
+      "foi_secrete",
+      "transformation",
+      "grace"
+    ]
+  },
+  "key_verse": {
+    "reference": "Jean 3:16",
+    "text": "Car Dieu a tant aimé le monde qu’il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu’il ait la vie éternelle.",
+    "bible_version": "LSG1910"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "mysterious",
+      "image_url": "nicodemus_night_journey.png",
+      "title": "Un maître d'Israël marche de nuit",
+      "narrative": "Jérusalem, la nuit, appartient à peu de gens : à ceux qui veillent sur le temple, et à ceux qui gouvernent. Un homme âgé remonte une rue étroite. C'est Nicodème, l'un des chefs des Juifs, membre respecté du Sanhédrin — le conseil suprême des Juifs, composé de sacrificateurs, d'anciens et de docteurs de la loi, chargé des décisions religieuses et légales du peuple —, docteur reconnu de la loi. Cette nuit, Nicodème cherche un maître différent de tous ceux qu'il a connus.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 3:1-2",
+        "text": "Mais il y eut un homme d’entre les pharisiens, nommé Nicodème, un chef des Juifs, qui vint, lui, auprès de Jésus, de nuit, et lui dit: Rabbi, nous savons que tu es un docteur venu de Dieu; car personne ne peut faire ces miracles que tu fais, si Dieu n’est avec lui."
+      },
+      "revelation_key": "Un homme avec une position, un savoir et une réputation décide de tout risquer pour chercher de nuit ce même maître que son propre conseil rejetait."
+    },
+    {
+      "order": 2,
+      "type": "character_moment",
+      "mood": "tense",
+      "image_url": "nicodemus_sanhedrin_status.png",
+      "title": "Tout ce qu'il avait à perdre",
+      "subtitle": "Un homme établi, pas un chercheur ordinaire",
+      "content": "Le texte l'appelle ἄρχων (archon) — \"chef\" — des Juifs (Jean 3:1), et plus loin, Jésus lui-même le nomme \"le docteur d'Israël\" (v.10). Ce même mot, ἄρχων, désigne aussi les chefs du Sanhédrin qui, plus tard, décideraient la mort de Jésus.\n\nNicodème était l'un de ces chefs. 🔑 Venir à Jésus de nuit, c'était s'approcher, en privé, de l'homme que son propre corps finirait par condamner.",
+      "revelation_key": "Le même titre que Nicodème portait au Sanhédrin appartenait au corps qui chercherait plus tard la mort de Jésus ; malgré cela, il a choisi de s'approcher.",
+      "scripture_connections": [
+        {
+          "reference": "Jean 11:47-53",
+          "text": "Alors les principaux sacrificateurs et les pharisiens assemblèrent le sanhédrin, et dirent: Que ferons-nous? Car cet homme fait beaucoup de miracles. Si nous le laissons faire, tous croiront en lui, et les Romains viendront détruire et notre ville et notre nation. L’un d’eux, Caïphe, qui était souverain sacrificateur cette année-là, leur dit: Vous n’y entendez rien; vous ne réfléchissez pas qu’il est dans votre intérêt qu’un seul homme meure pour le peuple, et que la nation entière ne périsse pas. Or, il ne dit pas cela de lui-même; mais étant souverain sacrificateur cette année-là, il prophétisa que Jésus devait mourir pour la nation. Et ce n’était pas pour la nation seulement; c’était aussi afin de réunir en un seul corps les enfants de Dieu dispersés. Dès ce jour, ils résolurent de le faire mourir."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "nicodemus_rabbi_greeting.png",
+      "verse_reference": "Jean 3:2",
+      "verse_text": "qui vint, lui, auprès de Jésus, de nuit, et lui dit: Rabbi, nous savons que tu es un docteur venu de Dieu; car personne ne peut faire ces miracles que tu fais, si Dieu n’est avec lui.",
+      "reflection": "Nicodème ouvre la conversation avec un respect sincère. Il emploie le pluriel, \"nous savons\", parlant peut-être aussi au nom d'autres hommes de son rang qui reconnaissaient les mêmes signes. Il reconnaît en Jésus un maître envoyé de Dieu, et fonde cette conclusion sur la preuve qu'il a devant lui : les signes. C'est un début honnête, venant d'un homme habitué à peser chaque mot avant de le prononcer.",
+      "revelation_key": "Nicodème arrive avec une question préparée, sans savoir que Jésus est sur le point de la laisser complètement de côté pour aller droit à ce qu'il a vraiment besoin d'entendre."
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "nicodemus_jesus_response.png",
+      "title": "Jésus répond à ce dont Nicodème avait besoin",
+      "narrative": "Nicodème achève à peine d'exposer son raisonnement que Jésus répond déjà. Il va droit au cœur de ce qu'un docteur d'Israël a besoin d'entendre, même si cette phrase s'écarte entièrement du sujet par lequel Nicodème avait ouvert la conversation.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 3:3",
+        "text": "Jésus lui répondit: En vérité, en vérité, je te le dis, si un homme ne naît de nouveau, il ne peut voir le royaume de Dieu."
+      },
+      "revelation_key": "Jésus répond au vrai besoin caché sous la question courtoise de Nicodème."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "nicodemus_anothen_wordplay.png",
+      "title": "Anōthen : un mot, deux chemins",
+      "subtitle": "Pourquoi Nicodème a compris tout autre chose que ce que Jésus voulait dire",
+      "content": "Le mot grec que Jésus emploie est ἄνωθεν (anōthen), qui porte deux sens possibles à la fois : \"de nouveau\" et \"d'en haut\". Nicodème, n'entendant que le premier sens, imagine quelque chose physiquement impossible : \"Comment un homme peut-il naître quand il est vieux ? Peut-il rentrer dans le sein de sa mère et naître une seconde fois ?\" (Jean 3:4).\n\nJésus décrit une naissance qui vient d'en haut, de Dieu lui-même, quelque chose que seul le Saint-Esprit peut produire. Ce même mot, anōthen, apparaît en Jacques 1:17 pour décrire \"tout don parfait\" qui descend d'en haut, du Père des lumières.",
+      "revelation_key": "La nouvelle naissance est une vie qui vient d'en haut — un don que Dieu accorde, non un accomplissement que l'homme atteint."
+    },
+    {
+      "order": 6,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "nicodemus_water_and_spirit.png",
+      "verse_reference": "Jean 3:5",
+      "verse_text": "Jésus répondit: En vérité, en vérité, je te le dis, si un homme ne naît d’eau et d’Esprit, il ne peut entrer dans le royaume de Dieu.",
+      "reflection": "Jésus ajoute une seconde dimension à sa réponse : l'eau et l'Esprit. Le mot grec est πνεῦμα (pneuma) — \"esprit\", \"souffle\", \"vent\" —, le même terme qui décrit le souffle de vie et la présence de Dieu en action. Pour un docteur de la loi, l'eau évoquait aussitôt les rites de purification et les promesses des prophètes, comme celle d'Ézéchiel : \"Je répandrai sur vous une eau pure... Je mettrai en vous un esprit nouveau\" (Ézéchiel 36:25-26). Jésus affirme que cette promesse prophétique — la purification et l'Esprit nouveau promis à Israël — s'accomplit maintenant, dans cette conversation même, pour quiconque la reçoit.",
+      "revelation_key": "Nicodème connaissait la promesse d'un esprit nouveau annoncée par les prophètes. Jésus lui montre que cette promesse a un visage, et qu'elle se tient devant lui."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "nicodemus_wind_and_spirit.png",
+      "verse_reference": "Jean 3:8",
+      "verse_text": "Le vent souffle où il veut, et tu en entends le bruit; mais tu ne sais d’où il vient, ni où il va. Il en est ainsi de tout homme qui est né de l’Esprit.",
+      "reflection": "Jésus emploie un seul mot grec pour deux réalités à la fois : πνεῦμα (pneuma), qui signifie à la fois \"vent\" et \"esprit\". Jean choisit ce mot exprès — il aurait pu utiliser ἄνεμος (anemos), le terme courant pour \"vent\", mais il a préféré pneuma pour que résonne aussi le sens \"esprit\". Le vent se sent, s'entend, meut ce qu'il touche ; son origine et sa course appartiennent à un mystère plus grand que ce que l'homme peut saisir — il ne peut que l'observer. C'est ainsi que Jésus décrit quiconque naît de l'Esprit : une vie réelle, aux effets perceptibles, mue par une volonté qui appartient à Dieu.",
+      "revelation_key": "Le même Esprit qui donne la nouvelle naissance se déplace comme le vent — il se reconnaît à ce qu'il fait, selon la volonté de Dieu."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "tense",
+      "image_url": "nicodemus_honest_confusion.png",
+      "title": "Comment cela peut-il se faire ?",
+      "subtitle": "L'humilité d'un maître qui admet ne pas comprendre",
+      "content": "Nicodème répond par une seule question : \"Comment cela peut-il se faire ?\" (Jean 3:9). C'est une question courte, sans détour, et remarquablement honnête pour un homme de son rang. Jésus lui répond par une observation directe : \"Tu es le docteur d'Israël, et tu ne sais pas ces choses !\" (v.10).\n\nUn docteur d'Israël de son niveau connaissait bien les Écritures qui parlaient d'un esprit nouveau et d'un cœur renouvelé. Ce qui manque à Nicodème, c'est la disposition à recevoir comme un don ce qu'il avait étudié toute sa vie comme une doctrine. 🔑 Sa question ouverte, sans défense, est déjà en elle-même un premier pas vers cette disposition.",
+      "revelation_key": "Le premier mouvement vers la foi véritable n'est parfois pas une réponse assurée, mais une question honnête posée à voix haute.",
+      "scripture_connections": [
+        {
+          "reference": "Jean 3:9-10",
+          "text": "Nicodème lui dit: Comment cela peut-il se faire? Jésus lui répondit: Tu es le docteur d’Israël, et tu ne sais pas ces choses!"
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "nicodemus_bronze_serpent.png",
+      "title": "Comme Moïse éleva le serpent",
+      "subtitle": "Une image que tout Israélite connaissait",
+      "content": "Jésus reprend une scène que tout Israélite aurait aussitôt reconnue : dans le désert, lorsque des serpents venimeux mordaient le peuple à cause de sa rébellion, Dieu ordonna à Moïse d'élever un serpent d'airain sur une perche. Il suffisait de le regarder pour vivre ; le regard de la foi était la seule réponse que Dieu demandait. Ce qui rendait ce remède si étonnant, c'est que l'image même de ce qui portait la mort devenait le moyen de la vie.\n\nJésus reprend cette même image et se l'applique à lui-même, en employant le verbe grec ὑψόω (hypsoō) — \"élever\", \"exalter\" —, un mot qui, dans l'évangile de Jean, porte toujours un double sens : il décrit à la fois l'acte physique d'être élevé sur la croix et l'acte d'être exalté, glorifié. Ce même mot revient en Jean 8:28 et 12:32, toujours tourné vers ce même moment. Tout comme le serpent portait l'image du jugement et devint symbole de vie, Jésus serait élevé au lieu de la plus grande honte pour devenir la source de vie éternelle pour quiconque croit en lui.\n\nEt alors Jésus arrive à la phrase qui résumerait toute la conversation — la promesse de vie éternelle pour quiconque croit en lui (v.16).\n\nLe mot grec pour \"unique\" est μονογενής (monogenēs) — unique en son genre, d'une seule espèce. Il décrit quelque chose d'irremplaçable, sans égal.",
+      "scripture_anchor": {
+        "reference": "Jean 3:16",
+        "text": "Car Dieu a tant aimé le monde qu’il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu’il ait la vie éternelle."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Nombres 21:9",
+          "text": "Moïse fit un serpent d’airain, et le plaça sur une perche; et quiconque avait été mordu par un serpent, et regardait le serpent d’airain, conservait la vie."
+        },
+        {
+          "reference": "Jean 3:14-15",
+          "text": "Et comme Moïse éleva le serpent dans le désert, il faut de même que le Fils de l’homme soit élevé, afin que quiconque croit en lui ait la vie éternelle."
+        }
+      ],
+      "revelation_key": "Le moment même où Jésus fut élevé sur la croix, apparemment dans la plus grande honte, fut aussi le moment de sa plus grande gloire — et quiconque le regarde avec foi reçoit la vie."
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "nicodemus_light_and_darkness.png",
+      "verse_reference": "Jean 3:19-21",
+      "verse_text": "Et ce jugement c’est que, la lumière étant venue dans le monde, les hommes ont préféré les ténèbres à la lumière, parce que leurs œuvres étaient mauvaises. Car quiconque fait le mal hait la lumière, et ne vient point à la lumière, de peur que ses œuvres ne soient dévoilées; mais celui qui agit selon la vérité vient à la lumière, afin que ses œuvres soient manifestées, parce qu’elles sont faites en Dieu.",
+      "reflection": "Jésus clôt la conversation par une image qui atteint directement Nicodème, un homme venu précisément dans l'obscurité : la lumière est venue dans le monde, et chaque personne choisit de s'en approcher ou de la fuir. Jean laisse cette nuit dans le silence, sans consigner la réaction immédiate de Nicodème — un silence auquel le reste de son histoire répondra par des actes.",
+      "revelation_key": "Jésus laisse la porte ouverte. La lumière était déjà venue ; le pas vers elle restait entre les mains de Nicodème."
+    },
+    {
+      "order": 11,
+      "type": "character_moment",
+      "mood": "tense",
+      "image_url": "nicodemus_sanhedrin_defense.png",
+      "title": "Une fissure de courage",
+      "subtitle": "Des mois ou des années plus tard, en plein Sanhédrin",
+      "content": "Le nom de Nicodème réapparaît plus tard, lorsque les principaux sacrificateurs et les pharisiens cherchent à arrêter Jésus. Au milieu de cette réunion, Nicodème — de nouveau identifié par le texte comme \"celui qui était venu de nuit vers Jésus\" (Jean 7:50) — soulève une objection : \"Notre loi condamne-t-elle un homme avant qu'on l'entende et qu'on sache ce qu'il a fait ?\" (v.51).\n\nCe n'est pas une défense publique et ouverte de Jésus comme Messie. C'est quelque chose de plus modeste et, pour cette raison même, de plus réel : un homme qui ose réclamer un simple procès équitable, au sein d'un conseil où personne d'autre ne le réclame. Ses collègues répondent avec mépris : \"Es-tu aussi Galiléen ?\" (v.52). Ils affirment qu'aucun prophète n'est jamais sorti de Galilée. Le prophète Jonas, fils d'Amitthaï, était de Gath-Hépher, une ville galiléenne (2 Rois 14:25). Ceux-là mêmes qui accusent Nicodème d'ignorance parlent sans connaître leurs propres Écritures. 🔑 Nicodème ne répond pas. Mais il ne se rétracte pas non plus.",
+      "revelation_key": "La foi qui avait commencé comme une question posée de nuit ose désormais, des années plus tard, élever la voix une seule fois en public.",
+      "scripture_connections": [
+        {
+          "reference": "2 Rois 14:25",
+          "text": "Il rétablit les limites d’Israël depuis l’entrée de Hamath jusqu’à la mer de la plaine, selon la parole que l’Éternel, le Dieu d’Israël, avait prononcée par son serviteur Jonas, le prophète, fils d’Amitthaï, de Gath-Hépher."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "nicodemus_crucifixion_day.png",
+      "title": "Avant l'arrivée de Nicodème",
+      "narrative": "Jésus meurt sur la croix un vendredi après-midi. Son corps est remis à Pilate pour être enseveli avant le début du sabbat. Les disciples les plus proches se sont dispersés, accomplissant ce que Jésus lui-même avait annoncé. C'est un moment de perte profonde pour quiconque déciderait de s'approcher de Jésus en public.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 19:38",
+        "text": "Après cela, Joseph d’Arimathée, qui était disciple de Jésus, mais en secret par crainte des Juifs, demanda à Pilate la permission de prendre le corps de Jésus. Et Pilate le permit. Il vint donc, et prit le corps de Jésus."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Matthieu 26:56",
+          "text": "Mais tout cela est arrivé afin que les écrits des prophètes fussent accomplis. Alors tous les disciples l’abandonnèrent, et prirent la fuite."
+        }
+      ],
+      "revelation_key": "Au moment de la plus grande perte apparente, deux hommes qui avaient gardé leur foi en secret décident d'agir publiquement."
+    },
+    {
+      "order": 13,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "nicodemus_daylight_burial.png",
+      "title": "L'homme de la nuit arrive de jour",
+      "narrative": "Aux côtés de Joseph d'Arimathée, Nicodème se présente devant le corps de Jésus — cette fois en plein jour, sans attendre l'obscurité. Il apporte une quantité extraordinaire d'aromates, environ cent livres de myrrhe et d'aloès — le même genre de geste que les Écritures réservaient à l'ensevelissement d'un roi de Juda. Ensemble, ils enveloppent le corps de bandes de lin et d'aromates, selon la coutume juive d'ensevelir, et le déposent dans le tombeau.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 19:39-40",
+        "text": "Nicodème, qui auparavant était allé de nuit vers Jésus, vint aussi, apportant un mélange d’environ cent livres de myrrhe et d’aloès. Ils prirent donc le corps de Jésus, et l’enveloppèrent de bandes, avec les aromates, comme c’est la coutume d’ensevelir chez les Juifs."
+      },
+      "scripture_connections": [
+        {
+          "reference": "2 Chroniques 16:14",
+          "text": "on l’enterra dans le sépulcre qu’il s’était creusé dans la ville de David. On le coucha sur un lit qu’on avait garni d’aromates et de parfums préparés selon l’art du parfumeur, et l’on en brûla en son honneur une quantité très considérable."
+        }
+      ],
+      "revelation_key": "Le texte l'identifie une dernière fois comme \"celui qui était allé de nuit vers Jésus\" — pour montrer toute la distance qu'il a parcourue : de l'ombre à la lumière du jour."
+    },
+    {
+      "order": 14,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "nicodemus_from_night_to_day.png",
+      "title": "Celui qui agit selon la vérité vient à la lumière",
+      "subtitle": "La conversation de Jean 3 trouve sa réponse en Jean 19",
+      "content": "Jésus lui avait dit, la nuit de leur première rencontre, que celui qui agit selon la vérité vient à la lumière (Jean 3:21). Lors de l'ensevelissement de Jésus, Nicodème accomplit exactement cette promesse : il vient à la lumière, publiquement, avec ses propres ressources, pour accomplir une œuvre qu'il ne peut plus ni cacher ni nier.\n\nLe même homme qui avait autrefois eu besoin de l'obscurité pour poser ses questions a maintenant besoin de la lumière du jour pour répondre, par sa vie, à ce qu'il avait entendu cette nuit-là. Le fruit de cette nouvelle naissance reste inscrit pour toujours : cent livres d'aromates, offertes devant tous.",
+      "scripture_connections": [
+        {
+          "reference": "Jean 3:21",
+          "text": "mais celui qui agit selon la vérité vient à la lumière, afin que ses œuvres soient manifestées, parce qu’elles sont faites en Dieu."
+        }
+      ],
+      "revelation_key": "La nouvelle naissance ne s'annonce pas toujours. Elle se reconnaît plus tard, dans une vie qui commence à porter du fruit."
+    },
+    {
+      "order": 15,
+      "type": "discovery_activation",
+      "image_url": "nicodemus_your_encounter.png",
+      "title": "Ta Rencontre",
+      "subtitle": "Du secret à la lumière, comme Nicodème",
+      "discovery_questions": [
+        {
+          "category": "Honnêteté",
+          "question": "Nicodème a osé demander \"Comment cela peut-il se faire ?\", même en étant docteur d'Israël. Y a-t-il une question sur ta foi que tu évites de poser à voix haute, par peur de ce que les autres pourraient penser de toi ?"
+        },
+        {
+          "category": "Nature nouvelle",
+          "question": "Celui qui naît de l'Esprit reçoit une nature qui ne vit plus comme avant (1 Jean 3:9). Comme Nicodème, qui connaissait les Écritures par cœur mais avait besoin de quelque chose que seul Dieu pouvait lui donner — quelle preuve y a-t-il dans ta vie de cette nature nouvelle, au-delà de ce que tu sais ou crois déjà ?"
+        },
+        {
+          "category": "Courage",
+          "question": "Nicodème est passé de la visite secrète à Jésus au service public, en plein jour. Dans quel domaine de ta vie Dieu t'invite-t-il à quitter l'obscurité pour agir à la lumière ?"
+        }
+      ],
+      "prayer": {
+        "title": "Prière de Nicodème",
+        "content": "Seigneur Jésus, comme Nicodème, je viens parfois à toi avec des questions que je garde en silence devant les autres. Merci de recevoir mes questions sincères et de les utiliser pour me conduire à ce dont j'ai vraiment besoin d'entendre. Je reconnais que la nouvelle naissance est un don qui vient d'en haut : une nature nouvelle que ton Esprit produit en moi. Ton Esprit se déplace comme le vent, sans que je puisse le diriger, mais il vit en moi comme un sceau et une garantie que je t'appartiens. Aujourd'hui, je choisis de regarder vers toi, comme Israël regardait le serpent dans le désert, et de croire qu'en toi j'ai la vie éternelle. Donne-moi le courage que tu as donné à Nicodème : que ce que je garde secret aujourd'hui, je le vive un jour ouvertement, à la lumière. En ton nom, Amen."
+      }
+    },
+    {
+      "order": 16,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "nicodemus_completion.png",
+      "completion_verse": {
+        "reference": "Jean 3:16",
+        "text": "Car Dieu a tant aimé le monde qu’il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu’il ait la vie éternelle.",
+        "bible_version": "LSG1910"
+      },
+      "reflection_prompt": "Quelle preuve y a-t-il aujourd'hui dans ta vie de la nature nouvelle ? Es-tu vraiment né de nouveau ?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

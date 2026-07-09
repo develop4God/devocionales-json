@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "hi",
-  "bible_version": "पवित्र बाइबिल (ओ.वी.)",
+  "bible_version": "HIOV",
   "version": "6.0",
   "estimated_reading_minutes": 13,
   "meta": {
@@ -29,7 +29,7 @@
   "key_verse": {
     "reference": "यूहन्ना 4:14",
     "text": "परन्तु जो कोई उस जल में से पीएगा जो मैं उसे दूँगा, वह फिर अनन्तकाल तक प्यासा न होगा; वरन् जो जल मैं उसे दूँगा, वह उसमें एक सोता बन जाएगा जो अनन्त जीवन के लिये उमड़ता रहेगा।",
-    "bible_version": "पवित्र बाइबिल (ओ.वी.)"
+    "bible_version": "HIOV"
   },
   "cards": [
     {
@@ -282,7 +282,7 @@
       "completion_verse": {
         "reference": "यूहन्ना 4:28-29",
         "text": "तब स्त्री अपना घड़ा छोड़कर नगर में चली गई, और लोगों से कहने लगी, \"आओ, एक मनुष्य को देखो, जिसने सब कुछ जो मैं ने किया मुझे बता दिया। कहीं यही तो मसीह नहीं है?\"",
-        "bible_version": "पवित्र बाइबिल (ओ.वी.)"
+        "bible_version": "HIOV"
       },
       "reflection_prompt": "आज तुम्हें कौन सा घड़ा छोड़ना है? और कौन है जिसे तुम्हारा 'आओ और देखो' सुनने की ज़रूरत है?",
       "celebration_type": "gentle_light"

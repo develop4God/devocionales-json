@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "hi",
-  "bible_version": "पवित्र बाइबिल (ओ.वी.)",
+  "bible_version": "HIOV",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 13,
@@ -30,7 +30,7 @@
   "key_verse": {
     "reference": "यूहन्ना 20:16",
     "text": "यीशु ने उससे कहा, \"मरियम!\" उसने पीछे मुड़कर उससे इब्रानी में कहा, \"रब्बूनी!\" अर्थात् 'हे गुरु'।",
-    "bible_version": "पवित्र बाइबिल (ओ.वी.)"
+    "bible_version": "HIOV"
   },
   "cards": [
     {
@@ -254,7 +254,7 @@
       "completion_verse": {
         "reference": "यूहन्ना 20:16",
         "text": "यीशु ने उससे कहा, \"मरियम!\" उसने पीछे मुड़कर उससे इब्रानी में कहा, \"रब्बूनी!\" अर्थात् 'हे गुरु'।",
-        "bible_version": "पवित्र बाइबिल (ओ.वी.)"
+        "bible_version": "HIOV"
       },
       "reflection_prompt": "आज तुम्हें यीशु से कौन सा नाम सुनने की आवश्यकता है? और किसे तुम्हें बताना है: मैं ने प्रभु को देखा?",
       "celebration_type": "gentle_light"

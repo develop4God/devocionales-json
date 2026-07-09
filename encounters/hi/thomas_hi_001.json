@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "hi",
-  "bible_version": "पवित्र बाइबिल (ओ.वी.)",
+  "bible_version": "HIOV",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 14,
@@ -32,7 +32,7 @@
   "key_verse": {
     "reference": "यूहन्ना 20:28",
     "text": "यह सुन थोमा ने उत्तर दिया, \"हे मेरे प्रभु, हे मेरे परमेश्‍वर!\"",
-    "bible_version": "पवित्र बाइबिल (ओ.वी.)"
+    "bible_version": "HIOV"
   },
   "cards": [
     {
@@ -275,7 +275,7 @@
       "completion_verse": {
         "reference": "यूहन्ना 20:29",
         "text": "यीशु ने उससे कहा, \"तू ने मुझे देखा है, क्या इसलिये विश्‍वास किया है? धन्य वे हैं जिन्होंने बिना देखे विश्‍वास किया।\"",
-        "bible_version": "पवित्र बाइबिल (ओ.वी.)"
+        "bible_version": "HIOV"
       },
       "reflection_prompt": "थोमा को सब कुछ समझने की ज़रूरत नहीं थी ताकि वह यीशु के सामने समर्पण कर सके। उसे केवल उपस्थित रहना था जब वे आए। आज यीशु तुमसे भी वही कहते हैं: तुम्हें सभी उत्तर नहीं चाहिए। तुम्हें केवल उन्हें ग्रहण करने को तैयार रहना है। क्या तुम तैयार हो?",
       "celebration_type": "gentle_light"

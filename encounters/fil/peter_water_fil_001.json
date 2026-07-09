@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "fil",
-  "bible_version": "Magandang Balita Biblia",
+  "bible_version": "MBB05",
   "version": "1.0",
   "estimated_reading_minutes": 6,
   "meta": {
@@ -26,7 +26,7 @@
   "key_verse": {
     "reference": "Mateo 14:31",
     "text": "Agad siyang inabot ni Jesus. \"Bakit ka nag-alinlangan? Napakaliit ng iyong pananampalataya!\" sabi niya kay Pedro.",
-    "bible_version": "Magandang Balita Biblia"
+    "bible_version": "MBB05"
   },
   "cards": [
     {
@@ -177,7 +177,7 @@
       "completion_verse": {
         "reference": "Mateo 14:33",
         "text": "At sinamba siya ng mga nasa bangka. \"Tunay nga pong kayo ang Anak ng Diyos!\" sabi nila.",
-        "bible_version": "Magandang Balita Biblia"
+        "bible_version": "MBB05"
       },
       "reflection_prompt": "Anong katotohanang mula sa pagtatagpo ni Pedro ang nais mong dalhin sa iyo ngayon?",
       "celebration_type": "gentle_light"
