@@ -27,17 +27,17 @@ VALID_STATUSES = {'published', 'coming_soon'}
 VALID_TESTAMENT = {'old', 'new'}
 
 REMOTE_INDEX_URL = "https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json"
+REMOTE_FETCH_ATTEMPTS = 3
+REMOTE_FETCH_TIMEOUT = 15  # seconds, per attempt
 
-# Languages this repo publishes encounters in. bible_versions.json is a local
-# CACHE of the remote SOT (used only when offline) — it is never the source
-# of truth. Every run tries the live remote index first.
+# bible_versions.json is a local CACHE of the remote SOT, refreshed on every
+# successful live fetch and used only as a fallback when the network is
+# unreachable. It is never hand-maintained as a source of truth.
 _LOCAL_CACHE_PATH = SCRIPTS_DIR / 'bible_versions.json'
 
 
 def _local_cache_languages() -> dict:
-    """Read language codes this repo cares about from the local cache file
-    (used only to know which languages to check — never to source version
-    codes when the remote SOT is reachable)."""
+    """Read the local cache file (used only as an offline fallback)."""
     return json.loads(_LOCAL_CACHE_PATH.read_text(encoding='utf-8'))['languages']
 
 
@@ -55,33 +55,64 @@ def _remote_to_local_shape(remote_entry: dict) -> dict:
     }
 
 
-def _load_bible_versions() -> tuple[dict, bool]:
-    """Load bible version config for every language this repo uses.
-
-    Tries the live remote SOT first (source of truth); only falls back to
-    the local bible_versions.json cache if the network is unreachable, so a
-    stale/hand-edited local file can never silently override live data.
-    Returns (languages_dict, used_remote: bool).
-    """
+def _fetch_remote_index(attempts: int = REMOTE_FETCH_ATTEMPTS) -> Optional[dict]:
+    """Fetch the remote bible_versions SOT index, retrying transient failures
+    a few times before giving up (a single flaky network blip shouldn't be
+    indistinguishable from genuine unreachability)."""
+    import time
     import urllib.request
     import urllib.error
 
-    local_langs = _local_cache_languages()
+    last_err = None
+    for attempt in range(1, attempts + 1):
+        try:
+            with urllib.request.urlopen(REMOTE_INDEX_URL, timeout=REMOTE_FETCH_TIMEOUT) as resp:
+                return json.loads(resp.read())
+        except (urllib.error.URLError, TimeoutError, OSError, json.JSONDecodeError) as e:
+            last_err = e
+            if attempt < attempts:
+                time.sleep(min(2 ** attempt, 8))  # 2s, 4s, ...
+    return None
 
+
+def _write_local_cache(remote_langs: dict) -> None:
+    """Refresh the local bible_versions.json cache from a successful live
+    fetch, so the offline fallback is always recent rather than a
+    hand-maintained file that can silently go stale between fetches."""
+    payload = {
+        'meta': {
+            'version': '1.0.0',
+            'source': f'Cached from {REMOTE_INDEX_URL} on last successful validator run',
+            'note': 'Offline fallback only. Never hand-edit — this file is overwritten on every successful live fetch.',
+        },
+        'languages': {
+            lang: _remote_to_local_shape(entry) for lang, entry in remote_langs.items()
+        },
+    }
     try:
-        with urllib.request.urlopen(REMOTE_INDEX_URL, timeout=15) as resp:
-            remote = json.loads(resp.read())
+        _LOCAL_CACHE_PATH.write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False) + '\n', encoding='utf-8'
+        )
+    except OSError:
+        pass  # best-effort — a read-only filesystem shouldn't fail validation
+
+
+def _load_bible_versions() -> tuple[dict, bool]:
+    """Load bible version config for every language the remote SOT defines.
+
+    Tries the live remote SOT first (source of truth, with retries); only
+    falls back to the local bible_versions.json cache if the network is
+    unreachable after all attempts. On a successful fetch, refreshes the
+    local cache file so the fallback path is always recent.
+    Returns (languages_dict, used_remote: bool).
+    """
+    remote = _fetch_remote_index()
+    if remote is not None:
         remote_langs = remote.get('languages', {})
-        merged = {}
-        for lang in local_langs:
-            if lang in remote_langs:
-                merged[lang] = _remote_to_local_shape(remote_langs[lang])
-            else:
-                # Language not (yet) in the remote SOT — keep local cache entry.
-                merged[lang] = local_langs[lang]
-        return merged, True
-    except (urllib.error.URLError, TimeoutError, OSError, KeyError):
-        return local_langs, False
+        _write_local_cache(remote_langs)
+        return {lang: _remote_to_local_shape(entry) for lang, entry in remote_langs.items()}, True
+
+    return _local_cache_languages(), False
 
 
 _BIBLE_VERSIONS, _USED_REMOTE_SOT = _load_bible_versions()

@@ -1,9 +1,8 @@
 {
   "meta": {
     "version": "1.0.0",
-    "last_updated": "2026-07-09",
-    "source": "Generated from https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json",
-    "note": "Single source of truth for Bible versions and reading speeds. Used by all validators and translation agents. To add a language: add one block under languages, zero code changes required."
+    "source": "Cached from https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json on last successful validator run",
+    "note": "Offline fallback only. Never hand-edit — this file is overwritten on every successful live fetch."
   },
   "languages": {
     "en": {
@@ -62,20 +61,6 @@
         "rate": 200
       }
     },
-    "de": {
-      "name": "Deutsch",
-      "script": "latin",
-      "primary_version": "LU17",
-      "fallback_version": "SCH2000",
-      "allowed_versions": [
-        "LU17",
-        "SCH2000"
-      ],
-      "reading_speed": {
-        "unit": "wpm",
-        "rate": 200
-      }
-    },
     "ja": {
       "name": "日本語",
       "script": "cjk",
@@ -116,6 +101,20 @@
       "reading_speed": {
         "unit": "wpm",
         "rate": 180
+      }
+    },
+    "de": {
+      "name": "Deutsch",
+      "script": "latin",
+      "primary_version": "LU17",
+      "fallback_version": "SCH2000",
+      "allowed_versions": [
+        "LU17",
+        "SCH2000"
+      ],
+      "reading_speed": {
+        "unit": "wpm",
+        "rate": 200
       }
     },
     "ar": {
