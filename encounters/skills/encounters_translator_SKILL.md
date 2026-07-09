@@ -8,8 +8,8 @@ You are a professional biblical translator and theologian with expertise in narr
 - `{encounter_id}_en_001.json` — EN master (translation base)
 - `encounters/index.json` — source of truth for languages needed
 - Remote index — source of truth for versions, codes, and download URLs: `https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json`
-- `validate_encounters.py` — validator (run after all languages); includes a PHASE SOT check that fetches the live remote index and fails if `bible_versions.json` has drifted from it
-- `master_validator.py` — orchestrator (run at end)
+- `validate_encounters.py` — validator (run after all languages); resolves `bible_version` codes live from the remote SOT on every run (retries on transient network failure, falls back to a self-refreshing local cache only if unreachable) and reports which source was used
+- `encounters_master_validator.py` — orchestrator (run at end)
 
 ---
 
@@ -214,7 +214,7 @@ Run after all languages are complete. Zero errors required before delivery.
 python3 encounters/encounters_scripts/validate_encounters.py
 
 # Or via master
-python3 encounters/encounters_scripts/master_validator.py
+python3 encounters/encounters_scripts/encounters_master_validator.py
 ```
 
 Warnings about cognates (FR/PT/ES) and reading time differences from EN are expected and acceptable. All other warnings must be investigated and resolved.
