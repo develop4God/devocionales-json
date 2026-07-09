@@ -1,8 +1,9 @@
 {
   "meta": {
     "version": "1.0.0",
-    "last_updated": "2026-03-20",
-    "note": "Single source of truth for Bible versions and reading speeds. Used by all validators and translation agents. To add a language: add one block under 'languages', zero code changes required."
+    "last_updated": "2026-07-09",
+    "source": "Generated from https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json",
+    "note": "Single source of truth for Bible versions and reading speeds. Used by all validators and translation agents. To add a language: add one block under languages, zero code changes required."
   },
   "languages": {
     "en": {
@@ -10,80 +11,140 @@
       "script": "latin",
       "primary_version": "KJV",
       "fallback_version": "NIV",
-      "allowed_versions": ["KJV", "NIV"],
-      "reading_speed": { "unit": "wpm", "rate": 200 }
+      "allowed_versions": [
+        "KJV",
+        "NIV"
+      ],
+      "reading_speed": {
+        "unit": "wpm",
+        "rate": 200
+      }
     },
     "es": {
       "name": "Español",
       "script": "latin",
       "primary_version": "RVR1960",
       "fallback_version": "NVI",
-      "allowed_versions": ["RVR1960", "NVI"],
-      "reading_speed": { "unit": "wpm", "rate": 200 }
+      "allowed_versions": [
+        "RVR1960",
+        "NVI"
+      ],
+      "reading_speed": {
+        "unit": "wpm",
+        "rate": 200
+      }
     },
     "pt": {
       "name": "Português",
       "script": "latin",
       "primary_version": "ARC",
       "fallback_version": "NVI",
-      "allowed_versions": ["ARC", "NVI"],
-      "reading_speed": { "unit": "wpm", "rate": 200 }
+      "allowed_versions": [
+        "ARC",
+        "NVI"
+      ],
+      "reading_speed": {
+        "unit": "wpm",
+        "rate": 200
+      }
     },
     "fr": {
       "name": "Français",
       "script": "latin",
       "primary_version": "LSG1910",
-      "fallback_version": "TOB",
-      "allowed_versions": ["LSG1910", "TOB"],
-      "reading_speed": { "unit": "wpm", "rate": 200 }
+      "fallback_version": "BDS",
+      "allowed_versions": [
+        "LSG1910",
+        "BDS"
+      ],
+      "reading_speed": {
+        "unit": "wpm",
+        "rate": 200
+      }
     },
     "de": {
       "name": "Deutsch",
       "script": "latin",
       "primary_version": "LU17",
       "fallback_version": "SCH2000",
-      "allowed_versions": ["LU17", "SCH2000"],
-      "reading_speed": { "unit": "wpm", "rate": 200 }
+      "allowed_versions": [
+        "LU17",
+        "SCH2000"
+      ],
+      "reading_speed": {
+        "unit": "wpm",
+        "rate": 200
+      }
     },
     "ja": {
       "name": "日本語",
       "script": "cjk",
-      "primary_version": "新改訳2003",
-      "fallback_version": "リビングバイブル",
-      "allowed_versions": ["新改訳2003", "リビングバイブル"],
-      "reading_speed": { "unit": "cpm", "rate": 400 }
+      "primary_version": "SK2003",
+      "fallback_version": "JCB",
+      "allowed_versions": [
+        "SK2003",
+        "JCB"
+      ],
+      "reading_speed": {
+        "unit": "cpm",
+        "rate": 400
+      }
     },
     "zh": {
       "name": "中文",
       "script": "cjk",
-      "primary_version": "和合本1919",
-      "fallback_version": "新译本",
-      "allowed_versions": ["和合本1919", "新译本"],
-      "reading_speed": { "unit": "cpm", "rate": 400 }
+      "primary_version": "CUV1919",
+      "fallback_version": "CNVS",
+      "allowed_versions": [
+        "CUV1919",
+        "CNVS"
+      ],
+      "reading_speed": {
+        "unit": "cpm",
+        "rate": 400
+      }
     },
     "hi": {
       "name": "हिन्दी",
       "script": "devanagari",
-      "primary_version": "पवित्र बाइबिल (ओ.वी.)",
-      "fallback_version": "पवित्र बाइबिल",
-      "allowed_versions": ["पवित्र बाइबिल (ओ.वी.)", "पवित्र बाइबिल"],
-      "reading_speed": { "unit": "wpm", "rate": 180 }
+      "primary_version": "HIOV",
+      "fallback_version": "HERV",
+      "allowed_versions": [
+        "HIOV",
+        "HERV"
+      ],
+      "reading_speed": {
+        "unit": "wpm",
+        "rate": 180
+      }
     },
     "ar": {
       "name": "العربية",
       "script": "arabic",
-      "primary_version": "الترجمة العربية الجديدة",
-      "fallback_version": "ترجمة سميث وفاندايك",
-      "allowed_versions": ["الترجمة العربية الجديدة", "ترجمة سميث وفاندايك"],
-      "reading_speed": { "unit": "wpm", "rate": 150 }
+      "primary_version": "NAV",
+      "fallback_version": "SVDA",
+      "allowed_versions": [
+        "NAV",
+        "SVDA"
+      ],
+      "reading_speed": {
+        "unit": "wpm",
+        "rate": 150
+      }
     },
     "fil": {
       "name": "Filipino",
       "script": "latin",
-      "primary_version": "Magandang Balita Biblia",
-      "fallback_version": "Ang Salita ng Dios",
-      "allowed_versions": ["Magandang Balita Biblia", "Ang Salita ng Dios"],
-      "reading_speed": { "unit": "wpm", "rate": 200 }
+      "primary_version": "MBB05",
+      "fallback_version": "ASND",
+      "allowed_versions": [
+        "MBB05",
+        "ASND"
+      ],
+      "reading_speed": {
+        "unit": "wpm",
+        "rate": 200
+      }
     }
   }
 }
