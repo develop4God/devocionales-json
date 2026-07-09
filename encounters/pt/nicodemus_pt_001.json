@@ -1,0 +1,280 @@
+{
+  "id": "nicodemus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "pt",
+  "bible_version": "ARC",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 12,
+  "meta": {
+    "character": "Nicodemus",
+    "testament": "new",
+    "scripture_reference": "S. João 3:1-21",
+    "mood_primary": "night",
+    "accent_color": "#0d1526",
+    "emoji": "🌙",
+    "tags": [
+      "novo_nascimento",
+      "espirito_santo",
+      "fe_secreta",
+      "transformacao",
+      "graca"
+    ]
+  },
+  "key_verse": {
+    "reference": "S. João 3:16",
+    "text": "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.",
+    "bible_version": "ARC"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "mysterious",
+      "image_url": "nicodemus_night_journey.png",
+      "title": "Um mestre de Israel caminha de noite",
+      "narrative": "Jerusalém, à noite, pertence a poucos: aos que vigiam o templo, e aos que governam. Um homem mais velho percorre uma rua estreita. É Nicodemos, um dos principais entre os judeus, membro respeitado do Sinédrio — o conselho supremo dos judeus, formado por sacerdotes, anciãos e mestres da lei, encarregado das decisões religiosas e legais do povo —, mestre reconhecido da lei. Nesta noite, Nicodemos busca um mestre diferente de todos os que já conheceu.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "S. João 3:1-2",
+        "text": "E havia entre os fariseus um homem chamado Nicodemos, príncipe dos judeus. Este foi ter de noite com Jesus e disse-lhe: Rabi, bem sabemos que és mestre vindo de Deus, porque ninguém pode fazer estes sinais que tu fazes, se Deus não for com ele."
+      },
+      "revelation_key": "Um homem com posição, estudos e reputação decide arriscar tudo para buscar de noite o mesmo mestre que o seu próprio conselho rejeitava."
+    },
+    {
+      "order": 2,
+      "type": "character_moment",
+      "mood": "tense",
+      "image_url": "nicodemus_sanhedrin_status.png",
+      "title": "Tudo o que tinha a perder",
+      "subtitle": "Um homem estabelecido, não um simples buscador",
+      "content": "O texto o chama de ἄρχων (archon) — \"governante\" — dos judeus (João 3:1), e mais adiante o próprio Jesus o chama de \"mestre de Israel\" (v.10). Essa mesma palavra, ἄρχων, também identifica os governantes do Sinédrio que, tempo depois, decidiriam a morte de Jesus.\n\nNicodemos era um desses governantes. 🔑 Vir a Jesus de noite era aproximar-se, em particular, do homem que o próprio corpo ao qual pertencia terminaria por condenar.",
+      "revelation_key": "O mesmo título que Nicodemos levava no Sinédrio pertencia ao corpo que depois buscaria a morte de Jesus; ainda assim, ele decidiu aproximar-se.",
+      "scripture_connections": [
+        {
+          "reference": "S. João 11:47-53",
+          "text": "Depois, os principais dos sacerdotes e os fariseus formaram conselho e diziam: Que faremos? Porquanto este homem faz muitos sinais. Se o deixamos assim, todos crerão nele, e virão os romanos e tirar-nos-ão o nosso lugar e a nação. E Caifás, um deles, que era sumo sacerdote naquele ano, lhes disse: Vós nada sabeis, nem considerais que nos convém que um homem morra pelo povo e que não pereça toda a nação. Ora, ele não disse isso de si mesmo, mas, sendo o sumo sacerdote naquele ano, profetizou que Jesus devia morrer pela nação. E não somente pela nação, mas também para reunir em um corpo os filhos de Deus que andavam dispersos. Desde aquele dia, pois, consultavam-se para o matarem."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "nicodemus_rabbi_greeting.png",
+      "verse_reference": "S. João 3:2",
+      "verse_text": "Este foi ter de noite com Jesus e disse-lhe: Rabi, bem sabemos que és mestre vindo de Deus, porque ninguém pode fazer estes sinais que tu fazes, se Deus não for com ele.",
+      "reflection": "Nicodemos abre a conversa com respeito genuíno. Usa o plural, \"bem sabemos\", possivelmente falando também por outros de sua mesma classe que reconheciam os mesmos sinais. Reconhece em Jesus um mestre enviado por Deus, e baseia essa conclusão na evidência que tem diante de si: os sinais. É um começo honesto, feito por um homem acostumado a pesar cada palavra antes de dizê-la.",
+      "revelation_key": "Nicodemos chega com uma pergunta preparada, sem saber que Jesus está prestes a ignorá-la por completo para ir direto ao que ele realmente precisa ouvir."
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "nicodemus_jesus_response.png",
+      "title": "Jesus responde ao que Nicodemos precisava",
+      "narrative": "Nicodemos mal termina de expor seu raciocínio quando Jesus responde. Vai direto ao centro do que um mestre de Israel precisa ouvir, ainda que essa frase se afaste completamente do assunto com que Nicodemos abriu a conversa.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "S. João 3:3",
+        "text": "Jesus respondeu e disse-lhe: Na verdade, na verdade te digo que aquele que não nascer de novo não pode ver o Reino de Deus."
+      },
+      "revelation_key": "Jesus responde à necessidade real que estava por trás da pergunta cortês de Nicodemos."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "nicodemus_anothen_wordplay.png",
+      "title": "Ánōthen: uma palavra com dois caminhos",
+      "subtitle": "Por que Nicodemos entendeu algo diferente do que Jesus quis dizer",
+      "content": "A palavra grega que Jesus usa é ἄνωθεν (ánōthen), e tem dois significados possíveis ao mesmo tempo: \"de novo\" e \"do alto\". Nicodemos, ouvindo apenas o primeiro sentido, imagina algo fisicamente impossível: \"Como pode um homem nascer, sendo velho? Poderá tornar a entrar no ventre de sua mãe, e nascer?\" (João 3:4).\n\nJesus descreve um nascimento que vem do alto, do próprio Deus, algo que só o Espírito Santo pode produzir. A mesma palavra ánōthen aparece em Tiago 1:17 para descrever \"todo dom perfeito\" que desce do alto, do Pai das luzes.",
+      "revelation_key": "O novo nascimento é uma vida que vem do alto — um dom que Deus dá, não uma conquista que o homem alcança."
+    },
+    {
+      "order": 6,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "nicodemus_water_and_spirit.png",
+      "verse_reference": "S. João 3:5",
+      "verse_text": "Jesus respondeu: Na verdade, na verdade te digo que aquele que não nascer da água e do Espírito não pode entrar no Reino de Deus.",
+      "reflection": "Jesus acrescenta uma segunda camada à sua resposta: água e Espírito. A palavra grega é πνεῦμα (pneuma) — \"espírito\", \"fôlego\", \"vento\" —, o mesmo termo que descreve o fôlego de vida e a presença de Deus em ação. Para um mestre da lei, a água evocava de imediato os ritos de purificação e as promessas dos profetas, como a de Ezequiel: \"Então aspergirei água limpa sobre vós... E vos darei um coração novo, e porei dentro de vós um espírito novo\" (Ezequiel 36:25-26). Jesus está dizendo que essa promessa profética, a purificação e o Espírito novo prometidos a Israel, se cumpre agora, nesta mesma conversa, para todo aquele que a recebe.",
+      "revelation_key": "Nicodemos conhecia a promessa de um espírito novo desde os profetas. Jesus lhe mostra que essa promessa tem rosto, e está diante dele."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "nicodemus_wind_and_spirit.png",
+      "verse_reference": "S. João 3:8",
+      "verse_text": "O vento assopra onde quer, e ouves a sua voz, mas não sabes donde vem, nem para onde vai; assim é todo aquele que é nascido do Espírito.",
+      "reflection": "Jesus usa uma única palavra grega para duas realidades ao mesmo tempo: πνεῦμα (pneuma), que significa tanto \"vento\" quanto \"espírito\". João escolhe essa palavra de propósito — poderia ter usado ἄνεμος (ánemos), o termo comum para \"vento\", mas preferiu pneuma para que ressoasse também como \"espírito\". O vento se sente, se escuta, move o que toca; sua origem e seu curso pertencem a um mistério maior do que o homem pode alcançar — ele só pode observá-lo. Assim descreve Jesus todo aquele que nasce do Espírito: uma vida real, com efeitos que se notam, movida por uma vontade que pertence a Deus.",
+      "revelation_key": "O mesmo Espírito que dá o novo nascimento se move como o vento — se reconhece pelo que faz, segundo a vontade de Deus."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "tense",
+      "image_url": "nicodemus_honest_confusion.png",
+      "title": "Como pode ser isso?",
+      "subtitle": "A humildade de um mestre que admite não entender",
+      "content": "Nicodemos responde com uma única pergunta: \"Como pode ser isso?\" (João 3:9). É uma pergunta curta, sem rodeios, e notavelmente honesta para um homem de sua posição. Jesus lhe responde com uma observação direta: \"Tu és mestre de Israel e não sabes isso?\" (v.10).\n\nUm mestre de Israel de seu nível conhecia bem as Escrituras que falavam de um espírito novo e um coração renovado. O que falta a Nicodemos é a disposição de receber como um dom aquilo que havia estudado a vida inteira como doutrina. 🔑 Sua pergunta aberta, sem defesas, é em si mesma um primeiro passo rumo a essa disposição.",
+      "revelation_key": "O primeiro movimento em direção à fé verdadeira às vezes não é uma resposta segura, mas uma pergunta honesta feita em voz alta.",
+      "scripture_connections": [
+        {
+          "reference": "S. João 3:9-10",
+          "text": "Nicodemos respondeu e disse-lhe: Como pode ser isso? Jesus respondeu e disse-lhe: Tu és mestre de Israel e não sabes isso?"
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "nicodemus_bronze_serpent.png",
+      "title": "Como Moisés levantou a serpente",
+      "subtitle": "Uma imagem que todo israelita conhecia",
+      "content": "Jesus recorre a uma cena que qualquer israelita reconheceria de imediato: no deserto, quando serpentes venenosas mordiam o povo por sua rebelião, Deus ordenou a Moisés que levantasse uma serpente de metal sobre uma haste. Bastava olhar para ela para viver; o olhar de fé era a única resposta que Deus pedia. O impressionante desse remédio era que a própria imagem daquilo que trazia a morte se tornava o meio da vida.\n\nJesus toma essa mesma imagem e a aplica a si mesmo, usando o verbo grego ὑψόω (hypsoō) — \"levantar\", \"erguer ao alto\" —, uma palavra que no evangelho de João sempre carrega um duplo sentido: descreve ao mesmo tempo o ato físico de ser erguido na cruz e o ato de ser exaltado, glorificado. A mesma palavra aparece em João 8:28 e 12:32, sempre apontando para esse mesmo momento. Assim como a serpente carregava a imagem do juízo e se tornou símbolo de vida, Jesus seria levantado no lugar de maior vergonha para se tornar a fonte de vida eterna para todo aquele que nele crê.\n\nE então Jesus chega à frase que resumiria toda a conversa — a promessa de vida eterna para todo aquele que nele crê (v.16).\n\nA palavra grega para \"unigênito\" é μονογενής (monogenēs) — único em seu gênero, de uma só espécie. Descreve algo irrepetível, sem igual.",
+      "scripture_anchor": {
+        "reference": "S. João 3:16",
+        "text": "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Números 21:9",
+          "text": "E Moisés fez uma serpente de metal e pô-la sobre uma haste; e era que, mordendo alguma serpente a alguém, olhava para a serpente de metal e ficava vivo."
+        },
+        {
+          "reference": "S. João 3:14-15",
+          "text": "E, como Moisés levantou a serpente no deserto, assim importa que o Filho do Homem seja levantado, para que todo aquele que nele crê não pereça, mas tenha a vida eterna."
+        }
+      ],
+      "revelation_key": "O mesmo momento em que Jesus foi levantado na cruz, aparentemente na maior vergonha, foi também o momento de sua maior glória — e todo aquele que olha para ele com fé recebe vida."
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "nicodemus_light_and_darkness.png",
+      "verse_reference": "S. João 3:19-21",
+      "verse_text": "E a condenação é esta: Que a luz veio ao mundo, e os homens amaram mais as trevas do que a luz, porque as suas obras eram más. Porque todo aquele que faz o mal aborrece a luz e não vem para a luz para que as suas obras não sejam reprovadas. Mas quem pratica a verdade vem para a luz, a fim de que as suas obras sejam manifestas, porque são feitas em Deus.",
+      "reflection": "Jesus encerra a conversa com uma imagem que ressoa diretamente em Nicodemos, um homem que chegou justamente na escuridão: a luz veio ao mundo, e cada pessoa escolhe aproximar-se dela ou evitá-la. João deixa aquela noite em silêncio, sem registrar a resposta imediata de Nicodemos — um silêncio que o resto de sua história responderá com atos.",
+      "revelation_key": "Jesus deixa a porta aberta. A luz já havia chegado; o passo em direção a ela ficava nas mãos de Nicodemos."
+    },
+    {
+      "order": 11,
+      "type": "character_moment",
+      "mood": "tense",
+      "image_url": "nicodemus_sanhedrin_defense.png",
+      "title": "Uma fresta de coragem",
+      "subtitle": "Meses ou anos depois, em pleno Sinédrio",
+      "content": "O nome de Nicodemos reaparece mais adiante, quando os principais sacerdotes e fariseus buscam prender Jesus. No meio dessa reunião, Nicodemos — identificado novamente pelo texto como \"aquele que antes viera a Jesus de noite\" (João 7:50) — levanta uma objeção: \"Porventura julga a nossa lei um homem sem primeiro ouvi-lo e ter conhecimento do que faz?\" (v.51).\n\nNão é uma defesa pública e aberta de Jesus como o Messias. É algo menor e, justamente por isso, mais real: um homem que se atreve a pedir um simples processo justo, num corpo em que ninguém mais o pede. Seus colegas respondem com desprezo: \"És tu também galileu?\" (v.52). Afirmam que da Galileia nunca surgiu profeta. O profeta Jonas, filho de Amitai, era de Gate-Hefer, uma cidade galileia (2 Reis 14:25). Os mesmos que acusam Nicodemos de ignorância falam sem conhecer a própria Escritura. 🔑 Nicodemos não responde. Mas também não se retrata.",
+      "revelation_key": "A fé que começou como uma pergunta feita de noite já se atreve, anos depois, a levantar a voz uma única vez em público.",
+      "scripture_connections": [
+        {
+          "reference": "2 Reis 14:25",
+          "text": "Também este restabeleceu os termos de Israel, desde a entrada de Hamate até ao mar da Planície, conforme a palavra do SENHOR, Deus de Israel, a qual falara pelo ministério de seu servo Jonas, filho do profeta Amitai, o qual era de Gate-Hefer."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "nicodemus_crucifixion_day.png",
+      "title": "Antes de Nicodemos chegar",
+      "narrative": "Jesus morre na cruz numa sexta-feira à tarde. Seu corpo é entregue a Pilatos para ser sepultado antes que começasse o sábado. Os discípulos mais próximos se dispersaram, cumprindo o que o próprio Jesus havia anunciado. É um momento de perda profunda — justamente quando alguém decide aproximar-se de Jesus em público.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "S. João 19:38",
+        "text": "Depois disso, José de Arimateia (o que era discípulo de Jesus, mas oculto, por medo dos judeus) rogou a Pilatos que lhe permitisse tirar o corpo de Jesus. E Pilatos lho permitiu. Então, foi e tirou o corpo de Jesus."
+      },
+      "scripture_connections": [
+        {
+          "reference": "S. Mateus 26:56",
+          "text": "Mas tudo isso aconteceu para que se cumpram as Escrituras dos profetas. Então, todos os discípulos, deixando-o, fugiram."
+        }
+      ],
+      "revelation_key": "No momento de maior perda aparente, dois homens que haviam guardado sua fé em segredo decidem agir em público."
+    },
+    {
+      "order": 13,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "nicodemus_daylight_burial.png",
+      "title": "O homem da noite chega de dia",
+      "narrative": "Ao lado de José de Arimateia, Nicodemos se apresenta diante do corpo de Jesus — desta vez à plena luz do dia, sem esperar pela escuridão. Traz consigo uma quantidade extraordinária de especiarias, cerca de cem libras de mirra e aloés — o mesmo tipo de gesto que as Escrituras reservavam ao sepultamento de um rei de Judá. Juntos, envolvem o corpo com lençóis e especiarias aromáticas, segundo o costume judaico de sepultar, e o colocam no túmulo.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "S. João 19:39-40",
+        "text": "E foi também Nicodemos (aquele que, anteriormente, se dirigira de noite a Jesus), levando quase cem libras de um composto de mirra e aloés. Tomaram, pois, o corpo de Jesus e o envolveram em lençóis com as especiarias, como os judeus costumam fazer na preparação para o sepulcro."
+      },
+      "scripture_connections": [
+        {
+          "reference": "2 Crônicas 16:14",
+          "text": "E o sepultaram no seu sepulcro que tinha cavado para si na Cidade de Davi, havendo-o deitado na cama, que se enchera de cheiros e especiarias preparadas segundo a arte dos perfumistas; e fizeram-lhe queima mui grande."
+        }
+      ],
+      "revelation_key": "O texto o identifica uma última vez como \"aquele que antes viera a Jesus de noite\" — para mostrar a distância completa que percorreu: da sombra à luz do dia."
+    },
+    {
+      "order": 14,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "nicodemus_from_night_to_day.png",
+      "title": "Quem pratica a verdade vem para a luz",
+      "subtitle": "A conversa de João 3 encontra sua resposta em João 19",
+      "content": "Jesus lhe havia dito, na noite de seu primeiro encontro, que quem pratica a verdade vem para a luz (João 3:21). No sepultamento de Jesus, Nicodemos cumpre exatamente essa promessa: vem para a luz, em público, com seus próprios recursos, para realizar uma obra que já não pode ocultar nem negar.\n\nO mesmo homem que uma vez precisou da escuridão para fazer suas perguntas agora precisa da luz do dia para responder, com sua vida, ao que ouviu naquela noite. O fruto desse novo nascimento fica registrado para sempre: cem libras de especiarias, entregues diante de todos.",
+      "scripture_connections": [
+        {
+          "reference": "S. João 3:21",
+          "text": "Mas quem pratica a verdade vem para a luz, a fim de que as suas obras sejam manifestas, porque são feitas em Deus."
+        }
+      ],
+      "revelation_key": "O novo nascimento nem sempre se anuncia. Reconhece-se depois, na vida que começa a dar fruto."
+    },
+    {
+      "order": 15,
+      "type": "discovery_activation",
+      "image_url": "nicodemus_your_encounter.png",
+      "title": "Seu Encontro",
+      "subtitle": "Do segredo à luz, como Nicodemos",
+      "discovery_questions": [
+        {
+          "category": "Honestidade",
+          "question": "Nicodemos se atreveu a perguntar \"Como pode ser isso?\", mesmo sendo mestre de Israel. Há alguma pergunta sobre sua fé que você evita fazer em voz alta por medo do que os outros pensariam de você?"
+        },
+        {
+          "category": "Natureza nova",
+          "question": "Aquele que nasce do Espírito recebe uma natureza que já não vive como antes (1 João 3:9). Como Nicodemos, que sabia as Escrituras de memória mas precisava de algo que só Deus podia lhe dar — que evidência há em sua vida dessa natureza nova, além do que você já sabe ou crê?"
+        },
+        {
+          "category": "Coragem",
+          "question": "Nicodemos passou de visitar Jesus em segredo a servi-lo em público, à plena luz do dia. Em que área da sua vida Deus está lhe convidando a deixar a escuridão e agir na luz?"
+        }
+      ],
+      "prayer": {
+        "title": "Oração de Nicodemos",
+        "content": "Senhor Jesus, como Nicodemos, às vezes venho a ti com perguntas que guardo em silêncio diante dos outros. Obrigado porque recebes minhas perguntas honestas e as usas para me levar ao que realmente preciso ouvir. Reconheço que o novo nascimento é um dom que vem do alto: uma natureza nova que teu Espírito produz em mim. Teu Espírito se move como o vento, sem que eu possa dirigi-lo, mas vive em mim como selo e garantia de que sou teu. Hoje escolho olhar para ti, como Israel olhava para a serpente no deserto, e crer que em ti tenho a vida eterna. Dá-me a coragem que deste a Nicodemos: que o que hoje guardo em segredo, um dia eu viva abertamente, à luz. Em teu nome, Amém."
+      }
+    },
+    {
+      "order": 16,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "nicodemus_completion.png",
+      "completion_verse": {
+        "reference": "S. João 3:16",
+        "text": "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.",
+        "bible_version": "ARC"
+      },
+      "reflection_prompt": "Que evidência há hoje em sua vida da natureza nova? Você realmente nasceu de novo?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

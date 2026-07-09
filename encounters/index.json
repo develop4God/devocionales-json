@@ -598,19 +598,34 @@
       "testament": "new",
       "character": "Nicodemus",
       "files": {
-        "es": "nicodemus_es_001.json"
+        "es": "nicodemus_es_001.json",
+        "en": "nicodemus_en_001.json",
+        "fr": "nicodemus_fr_001.json",
+        "pt": "nicodemus_pt_001.json"
       },
       "titles": {
-        "es": "El Maestro Que Vino de Noche"
+        "es": "El Maestro Que Vino de Noche",
+        "en": "The Teacher Who Came by Night",
+        "fr": "Le Maître Qui Vint de Nuit",
+        "pt": "O Mestre Que Veio de Noite"
       },
       "subtitles": {
-        "es": "Un fariseo, un maestro de Israel, y una pregunta que no se atrevía a hacer en público"
+        "es": "Un fariseo, un maestro de Israel, y una pregunta que no se atrevía a hacer en público",
+        "en": "A Pharisee, a teacher of Israel, and a question he did not dare ask in public",
+        "fr": "Un pharisien, un docteur d'Israël, et une question qu'il n'osait pas poser en public",
+        "pt": "Um fariseu, um mestre de Israel, e uma pergunta que não ousava fazer em público"
       },
       "scripture_reference": {
-        "es": "Juan 3:1-21"
+        "es": "Juan 3:1-21",
+        "en": "John 3:1-21",
+        "fr": "Jean 3:1-21",
+        "pt": "S. João 3:1-21"
       },
       "estimated_reading_minutes": {
-        "es": 11
+        "es": 11,
+        "en": 11,
+        "fr": 12,
+        "pt": 12
       }
     }
   ]
