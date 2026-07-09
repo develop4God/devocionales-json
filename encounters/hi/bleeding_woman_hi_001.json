@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "hi",
-  "bible_version": "पवित्र बाइबिल (ओ.वी.)",
+  "bible_version": "HIOV",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 13,
@@ -32,7 +32,7 @@
   "key_verse": {
     "reference": "मरकुस 5:34",
     "text": "उसने उससे कहा, “पुत्री, तेरे विश्‍वास ने तुझे चंगा किया है : कुशल से जा, और अपनी इस बीमारी से बची रह।”",
-    "bible_version": "पवित्र बाइबिल (ओ.वी.)"
+    "bible_version": "HIOV"
   },
   "cards": [
     {
@@ -211,7 +211,7 @@
       "completion_verse": {
         "reference": "मरकुस 5:34",
         "text": "उसने उससे कहा, “पुत्री, तेरे विश्‍वास ने तुझे चंगा किया है : कुशल से जा, और अपनी इस बीमारी से बची रह।”",
-        "bible_version": "पवित्र बाइबिल (ओ.वी.)"
+        "bible_version": "HIOV"
       },
       "reflection_prompt": "उसने अपना हाथ बढ़ाया, यह विश्वास करते हुए कि एक ही स्पर्श पर्याप्त होगा। यीशु ने उसे पुत्री कहा और उसे पूरी तरह बहाल किया। आज तुम्हें उनकी ओर क्या बढ़ाने की आवश्यकता है, यह भरोसा करते हुए कि एक ही स्पर्श सब कुछ बदल सकता है?",
       "celebration_type": "gentle_light"
