@@ -70,6 +70,20 @@ _FIL_SHARED_BOOK_NAMES = {
     'hosea', 'joel', 'amos', 'nahum',
 }
 
+# Words identical (or near-identical) across English and Romance languages —
+# valid cognate translations, not untranslated leftovers. Per translator skill
+# § "Cognates (FR, PT, ES)": these are correct and should not be flagged.
+_ROMANCE_COGNATES = {
+    'fr': {'courage', 'grace', 'grâce'},
+    'pt': {'coragem', 'graça'},
+    'es': {'coraje', 'gracia'},
+}
+
+
+def _is_cognate(value: str, lang: str) -> bool:
+    """Return True if value is a known valid cognate word for lang."""
+    return value.strip().lower() in _ROMANCE_COGNATES.get(lang, set())
+
 
 def _has_english_book_name(reference: str, lang: str) -> bool:
     """Return True if reference contains an English-only book name for lang."""
@@ -520,7 +534,7 @@ def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
                 if not tr_val or not str(tr_val).strip():
                     report.E(f"{ctx}: field '{field}' is empty in {lang.upper()}")
                 elif isinstance(en_val, str) and isinstance(tr_val, str):
-                    if en_val.strip() == tr_val.strip():
+                    if en_val.strip() == tr_val.strip() and not _is_cognate(tr_val, lang):
                         report.W(f"{ctx}: field '{field}' appears untranslated")
 
         # discovery_questions count
@@ -531,7 +545,9 @@ def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
                 report.E(f"{ctx}: discovery_questions count mismatch EN={len(en_qs)}, {lang.upper()}={len(tr_qs)}")
             for j, (eq, tq) in enumerate(zip(en_qs, tr_qs)):
                 for field in ('category', 'question'):
-                    if eq.get(field, '').strip() == tq.get(field, '').strip():
+                    eq_val = eq.get(field, '').strip()
+                    tq_val = tq.get(field, '').strip()
+                    if eq_val == tq_val and not _is_cognate(tq_val, lang):
                         report.W(f"{ctx} question[{j+1}]: '{field}' appears untranslated")
 
         # scripture_connections count
