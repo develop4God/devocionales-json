@@ -68,16 +68,16 @@
       "order": 4,
       "type": "cinematic_scene",
       "mood": "intense",
-      "image_url": "gadarene_boat_approaching.png",
+      "image_url": "gadarene_night_torment.png",
       "title": "Antes de que el sol saliera",
-      "narrative": "Esa mañana no había señal de que fuera distinta a las demás. El hombre seguía entre las tumbas cuando algo cambió en el horizonte: una barca cruzaba las aguas del mar de Galilea, acercándose a la orilla que todos los demás evitaban. Nadie en la región se atrevía a desembarcar aquí. Pero la barca no se detuvo, no cambió de rumbo. Se acercó directamente a la costa donde él vivía.",
+      "narrative": "Noche tras noche era igual. La voz se le rompía de tanto gritar entre las lápidas, y las piedras que usaba contra su propio cuerpo dejaban marcas que nunca sanaban del todo antes de la siguiente vez. Los pastores que apacentaban ovejas cerca de allí aprendieron a rodear el camino largo. Los niños del pueblo sabían el nombre del lugar antes de saber el nombre del hombre. Nadie recuerda ya cuánto tiempo llevaba así. El texto solo dice: siempre, de día y de noche. No había una sola hora de tregua en su historia hasta esta mañana.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
         "reference": "Lucas 8:29",
         "text": "Porque mandaba al espíritu inmundo que saliese del hombre, pues hacía mucho tiempo que se había apoderado de él; y le ataban con cadenas y grillos, pero rompiendo las cadenas, era impelido por el demonio a los desiertos."
       },
-      "revelation_key": "Jesús mantuvo el rumbo hacia la única orilla que todos evitaban."
+      "revelation_key": "No hubo una hora de tregua hasta la mañana en que Jesús cruzó el mar."
     },
     {
       "order": 5,
