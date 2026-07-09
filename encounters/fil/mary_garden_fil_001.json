@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "fil",
-  "bible_version": "Magandang Balita Biblia",
+  "bible_version": "MBB05",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 12,
@@ -30,7 +30,7 @@
   "key_verse": {
     "reference": "Juan 20:16",
     "text": "“Maria!” sabi ni Jesus. Humarap siya at kanyang sinabi sa wikang Hebreo, “Raboni!” na ang ibig sabihi'y “Guro.”",
-    "bible_version": "Magandang Balita Biblia"
+    "bible_version": "MBB05"
   },
   "cards": [
     {
@@ -254,7 +254,7 @@
       "completion_verse": {
         "reference": "Juan 20:16",
         "text": "“Maria!” sabi ni Jesus. Humarap siya at kanyang sinabi sa wikang Hebreo, “Raboni!” na ang ibig sabihi'y “Guro.”",
-        "bible_version": "Magandang Balita Biblia"
+        "bible_version": "MBB05"
       },
       "reflection_prompt": "Anong pangalan ang kailangan mong marinig ngayon mula kay Jesus? At sino ang kailangan mong sabihan: Nakita ko ang Panginoon?",
       "celebration_type": "gentle_light"

@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "fil",
-  "bible_version": "Magandang Balita Biblia",
+  "bible_version": "MBB05",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 12,
@@ -32,7 +32,7 @@
   "key_verse": {
     "reference": "Marcos 5:34",
     "text": "Subalit sinabi sa kanya ni Jesus, “Anak, pinagaling ka ng iyong pananampalataya. Umuwi ka na at ipanatag mo ang iyong kalooban. Ikaw ay magaling na.”",
-    "bible_version": "Magandang Balita Biblia"
+    "bible_version": "MBB05"
   },
   "cards": [
     {
@@ -211,7 +211,7 @@
       "completion_verse": {
         "reference": "Marcos 5:34",
         "text": "Subalit sinabi sa kanya ni Jesus, “Anak, pinagaling ka ng iyong pananampalataya. Umuwi ka na at ipanatag mo ang iyong kalooban. Ikaw ay magaling na.”",
-        "bible_version": "Magandang Balita Biblia"
+        "bible_version": "MBB05"
       },
       "reflection_prompt": "Iniunat niya ang kanyang kamay, naniniwalang sapat na ang isang paghipo. Tinawag siya ni Jesus na anak at lubos siyang isinauli. Ano ang kailangan mong iunat ngayon patungo sa kanya, sa paniniwalang ang isang paghipo ay makapagbabago ng lahat?",
       "celebration_type": "gentle_light"

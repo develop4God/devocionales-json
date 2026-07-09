@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "fil",
-  "bible_version": "Magandang Balita Biblia",
+  "bible_version": "MBB05",
   "version": "1.0",
   "estimated_reading_minutes": 9,
   "meta": {
@@ -27,7 +27,7 @@
   "key_verse": {
     "reference": "Marcos 10:52",
     "text": "Sinabi ni Jesus, \"Kung gayon, magaling ka na dahil sa iyong pananampalataya.\" Noon di'y nakakita siyang muli, at sumunod kay Jesus.",
-    "bible_version": "Magandang Balita Biblia"
+    "bible_version": "MBB05"
   },
   "cards": [
     {
@@ -181,7 +181,7 @@
       "completion_verse": {
         "reference": "Marcos 10:52",
         "text": "Sinabi ni Jesus, \"Kung gayon, magaling ka na dahil sa iyong pananampalataya.\" Noon di'y nakakita siyang muli, at sumunod kay Jesus.",
-        "bible_version": "Magandang Balita Biblia"
+        "bible_version": "MBB05"
       },
       "reflection_prompt": "Anong balabal ang kailangan mong ihagis ngayon? Ano ang kailangan mong makita?",
       "celebration_type": "gentle_light"
