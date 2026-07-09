@@ -57,7 +57,7 @@
       "image_url": "gadarene_broken_chains.png",
       "title": "Un hombre, no un monstruo",
       "subtitle": "Lo que el pueblo vio y lo que en verdad había ahí",
-      "content": "Los vecinos de la región lo conocían de nombre, de historia, quizás de familia. Antes de las tumbas hubo una casa, una mesa, un lugar donde alguien lo llamaba por su nombre. Eso se perdió en algún punto que el texto no relata. Lo que quedó fue el terror que causaba, tanto que 'nadie podía pasar por aquel camino' donde él vivía. 🔑 Pero el terror que provoca una persona rota casi nunca es la historia completa de quién es. Detrás de la fama de peligroso había un ser humano que se hería a sí mismo con piedras, noche tras noche, sin que nadie —ni él mismo— pudiera detenerlo.",
+      "content": "Los vecinos de la región lo conocían de nombre, de historia, quizás de familia. Lo que quedó de él fue el terror que causaba, tanto que 'nadie podía pasar por aquel camino' donde vivía. 🔑 Pero el terror que provoca una persona rota casi nunca es la historia completa de quién es. Detrás de la fama de peligroso había un ser humano que se hería a sí mismo con piedras, noche tras noche, sin que nadie pudiera detenerlo.",
       "revelation_key": "El miedo que un hombre destruido provoca en otros rara vez cuenta toda su historia.",
       "verse_overlay": {
         "reference": "Mateo 8:28",
@@ -68,16 +68,16 @@
       "order": 4,
       "type": "cinematic_scene",
       "mood": "intense",
-      "image_url": "gadarene_night_torment.png",
+      "image_url": "gadarene_boat_approaching.png",
       "title": "Antes de que el sol saliera",
-      "narrative": "Noche tras noche era igual. La voz se le rompía de tanto gritar entre las lápidas, y las piedras que usaba contra su propio cuerpo dejaban marcas que nunca sanaban del todo antes de la siguiente vez. Los pastores que apacentaban ovejas cerca de allí aprendieron a rodear el camino largo. Los niños del pueblo sabían el nombre del lugar antes de saber el nombre del hombre. Nadie recuerda ya cuánto tiempo llevaba así. El texto solo dice: siempre, de día y de noche. No había una sola hora de tregua en su historia hasta esta mañana.",
+      "narrative": "Esa mañana no había señal de que fuera distinta a las demás. El hombre seguía entre las tumbas cuando algo cambió en el horizonte: una barca cruzaba las aguas del mar de Galilea, acercándose a la orilla que todos los demás evitaban. Nadie en la región se atrevía a desembarcar aquí. Pero la barca no se detuvo, no cambió de rumbo. Se acercó directamente a la costa donde él vivía.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
         "reference": "Lucas 8:29",
         "text": "Porque mandaba al espíritu inmundo que saliese del hombre, pues hacía mucho tiempo que se había apoderado de él; y le ataban con cadenas y grillos, pero rompiendo las cadenas, era impelido por el demonio a los desiertos."
       },
-      "revelation_key": "No hubo una hora de tregua hasta la mañana en que Jesús cruzó el mar."
+      "revelation_key": "Jesús mantuvo el rumbo hacia la única orilla que todos evitaban."
     },
     {
       "order": 5,
@@ -212,9 +212,9 @@
       "title": "Tu Encuentro",
       "subtitle": "Lo que te ata puede no ser lo que otros ven a primera vista.",
       "discovery_questions": [
-        { "category": "Honesty", "question": "¿Hay algo en tu vida que otros llaman fortaleza, pero que tú sabes que en realidad es una cadena que no logras romper del todo?" },
-        { "category": "Faith", "question": "¿Qué zona 'impura' o descartada de tu historia crees que Jesús no cruzaría a buscar? ¿Por qué crees que sí lo haría?" },
-        { "category": "Purpose", "question": "Si Jesús te enviara hoy de vuelta a las personas que te conocieron en tu peor momento, ¿qué les contarías que él ha hecho contigo?" }
+        { "category": "Honestidad", "question": "¿Hay algo en tu vida que otros llaman fortaleza, pero que tú sabes que en realidad es una cadena que no logras romper del todo?" },
+        { "category": "Fe", "question": "¿Qué zona 'impura' o descartada de tu historia crees que Jesús no cruzaría a buscar? ¿Por qué crees que sí lo haría?" },
+        { "category": "Propósito", "question": "Si Jesús te enviara hoy de vuelta a las personas que te conocieron en tu peor momento, ¿qué les contarías que él ha hecho contigo?" }
       ],
       "prayer": {
         "title": "Oración de un hombre restaurado",

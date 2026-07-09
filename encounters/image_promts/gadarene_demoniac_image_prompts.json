@@ -30,10 +30,10 @@
     },
     {
       "order": 4,
-      "image_url": "gadarene_night_torment.png",
+      "image_url": "gadarene_boat_approaching.png",
       "mood": "intense",
-      "shot_type": "close-up portrait",
-      "prompt": "A man in his 30s, wiry and gaunt, deeply sun-weathered olive skin scarred with old wounds, matted tangled dark hair, wild unkempt beard, bare-chested and unclothed — close-up portrait under a dark night sky among the tombs, head thrown back mid-cry, veins taut in his neck, a jagged stone gripped in one scarred hand raised toward his own chest. Cold moonlight falls across his haunted face. Painterly warm 2D illustration, deep indigo night tones, Mediterranean palette, cinematic lighting, no text."
+      "shot_type": "medium two-figure",
+      "prompt": "A man in his 30s, wiry and gaunt, deeply sun-weathered olive skin scarred with old wounds, matted tangled dark hair, wild unkempt beard, bare-chested and unclothed with ragged torn cloth remnants, broken iron shackle fragments at his wrist and ankle — crouches among the tombs on the rocky shoreline at dawn, head turned sharply toward the water, eyes fixed on a small wooden fishing boat crossing the calm sea toward him in the middle distance. Painterly warm 2D illustration, Mediterranean palette, cool dawn blues warming toward the horizon, cinematic lighting, no text."
     },
     {
       "order": 5,
