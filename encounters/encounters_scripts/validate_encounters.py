@@ -26,12 +26,65 @@ SCHEMA_VERSION = 'encounters_v1'
 VALID_STATUSES = {'published', 'coming_soon'}
 VALID_TESTAMENT = {'old', 'new'}
 
-# Load Bible versions from shared config
-def _load_bible_versions() -> dict:
-    path = SCRIPTS_DIR / 'bible_versions.json'
-    return json.loads(path.read_text(encoding='utf-8'))['languages']
+REMOTE_INDEX_URL = "https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json"
 
-_BIBLE_VERSIONS = _load_bible_versions()
+# Languages this repo publishes encounters in. bible_versions.json is a local
+# CACHE of the remote SOT (used only when offline) — it is never the source
+# of truth. Every run tries the live remote index first.
+_LOCAL_CACHE_PATH = SCRIPTS_DIR / 'bible_versions.json'
+
+
+def _local_cache_languages() -> dict:
+    """Read language codes this repo cares about from the local cache file
+    (used only to know which languages to check — never to source version
+    codes when the remote SOT is reachable)."""
+    return json.loads(_LOCAL_CACHE_PATH.read_text(encoding='utf-8'))['languages']
+
+
+def _remote_to_local_shape(remote_entry: dict) -> dict:
+    """Adapt a remote SOT language entry to this validator's expected shape."""
+    primary = remote_entry['primary_version']
+    fallback = remote_entry['fallback_version']
+    return {
+        'name': remote_entry['name'],
+        'script': remote_entry['script'],
+        'primary_version': primary,
+        'fallback_version': fallback,
+        'allowed_versions': [primary, fallback],
+        'reading_speed': remote_entry['reading_speed'],
+    }
+
+
+def _load_bible_versions() -> tuple[dict, bool]:
+    """Load bible version config for every language this repo uses.
+
+    Tries the live remote SOT first (source of truth); only falls back to
+    the local bible_versions.json cache if the network is unreachable, so a
+    stale/hand-edited local file can never silently override live data.
+    Returns (languages_dict, used_remote: bool).
+    """
+    import urllib.request
+    import urllib.error
+
+    local_langs = _local_cache_languages()
+
+    try:
+        with urllib.request.urlopen(REMOTE_INDEX_URL, timeout=15) as resp:
+            remote = json.loads(resp.read())
+        remote_langs = remote.get('languages', {})
+        merged = {}
+        for lang in local_langs:
+            if lang in remote_langs:
+                merged[lang] = _remote_to_local_shape(remote_langs[lang])
+            else:
+                # Language not (yet) in the remote SOT — keep local cache entry.
+                merged[lang] = local_langs[lang]
+        return merged, True
+    except (urllib.error.URLError, TimeoutError, OSError, KeyError):
+        return local_langs, False
+
+
+_BIBLE_VERSIONS, _USED_REMOTE_SOT = _load_bible_versions()
 EXPECTED_LANGUAGES = list(_BIBLE_VERSIONS.keys())
 
 # Required card keys by type
@@ -136,6 +189,27 @@ def _check_quote_anomalies(text: str, ctx: str, lang: str, report: 'Report'):
     # Straight double quotes should appear in pairs
     if text.count('"') % 2 != 0:
         report.W(f"{ctx}: odd number of straight double quotes (\") — possible stray quote")
+
+
+def validate_sot_source(report: 'Report') -> bool:
+    """Report whether this run resolved bible_version codes from the live
+    remote SOT or fell back to the local bible_versions.json cache.
+
+    _BIBLE_VERSIONS is populated at import time by fetching the remote SOT
+    first — this function only surfaces which source was actually used, so
+    a validation run that silently fell back to a stale local cache (e.g. in
+    a sandboxed/offline CI runner) is visible in the report rather than
+    indistinguishable from a fully live run.
+    """
+    if _USED_REMOTE_SOT:
+        report.I(f"✓ bible_version codes resolved live from remote SOT ({REMOTE_INDEX_URL}) for all {len(_BIBLE_VERSIONS)} languages")
+        return True
+    report.W(
+        f"Could not reach remote SOT ({REMOTE_INDEX_URL}) — fell back to local "
+        f"bible_versions.json cache. Results reflect the LOCAL CACHE, not confirmed "
+        f"live data; re-run once network access is available before merging."
+    )
+    return True
 
 
 # ── Report ────────────────────────────────────────────────────────────────────
@@ -580,6 +654,15 @@ def main():
 
     if not passed_a or index_data is None:
         print("\n❌ PHASE A FAILED - Stopping validation")
+        sys.exit(1)
+
+    # ── PHASE SOT: confirm bible_version codes came from the live remote SOT ──
+    report_sot = Report("PHASE SOT: BIBLE VERSIONS SOURCE")
+    validate_sot_source(report_sot)
+    passed_sot = report_sot.print(final=False)
+
+    if not passed_sot:
+        print("\n❌ PHASE SOT FAILED")
         sys.exit(1)
 
     # ── PHASE B ──

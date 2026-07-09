@@ -8,7 +8,7 @@ You are a professional biblical translator and theologian with expertise in narr
 - `{encounter_id}_en_001.json` — EN master (translation base)
 - `encounters/index.json` — source of truth for languages needed
 - Remote index — source of truth for versions, codes, and download URLs: `https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json`
-- `validate_encounters.py` — validator (run after all languages)
+- `validate_encounters.py` — validator (run after all languages); includes a PHASE SOT check that fetches the live remote index and fails if `bible_versions.json` has drifted from it
 - `master_validator.py` — orchestrator (run at end)
 
 ---
@@ -50,12 +50,19 @@ Single source of truth for EN book name → `book_number` mapping (MySword/TheWo
 Reading speeds (`reading_speed.rate` and `reading_speed.unit`) are available per language in the remote index — read them from there, do not hardcode.
 
 For the `bible_version` field in JSON output:
-- **Latin-script languages (EN, ES, PT, FR, DE)** — use the **code**, unchanged: `KJV`, `RVR1960`, `ARC`, `LSG1910`, `LU17`. Do **not** spell out the full name ("King James Version" is wrong — check existing sibling files in that language before writing this field if unsure).
-- **Non-Latin-script languages (JA, ZH, HI, AR)** — use the display `name` from the index instead of the code, since the code alone means nothing to a native reader: `SK2003` → `"新改訳2003"`, `CUV1919` → `"和合本1919"`, `HIOV` → `"पवित्र बाइबिल (ओ.वी.)"`, `HERV` → `"पवित्र बाइबिल"`.
 
-This applies to **all three** `bible_version` fields (top-level, `key_verse`, `completion_verse`) — keep all three the same form (code or name) for a given language, never mixed.
+**ALWAYS use the short `primary_version`/`fallback_version` code from the remote SOT index — for every language, with no exception.** Examples: `KJV`, `RVR1960`, `ARC`, `LSG1910`, `LU17`, `SK2003`, `CUV1919`, `HIOV`, `NAV`, `MBB05`. Script (Latin vs. non-Latin) is **irrelevant** to this rule — the SOT index itself only defines codes as `primary_version`/`fallback_version`; the `name` field under `versions[code].name` (e.g. `"新改訳2003"`, `"Reina-Valera 1960"`) is display metadata for humans reading the index and must **never** be written into a `bible_version` field.
+
+This applies to **all three** `bible_version` fields (top-level, `key_verse`, `completion_verse`) — all three must hold the identical code for a given language.
 
 > If a version used by existing encounters is **not** listed in the remote index, that SQLite file must already be present locally in `bible_database/`.
+
+### MANDATORY: Validate `bible_version` Against the SOT Before Delivery
+Before marking any language file complete, re-fetch the remote index and confirm every `bible_version` value in the file (all 3 occurrences) is exactly `lang_entry["primary_version"]` or `lang_entry["fallback_version"]` for that language — a literal string match, not "looks right." Do this even if you copied the value from an existing sibling file, since sibling files can themselves be wrong (this happened before: `bible_versions.json` and several shipped encounter files across ja/zh/hi/ar/fil all held display names instead of codes, undetected until an explicit SOT diff caught it). A one-line check:
+```python
+assert data["bible_version"] in (lang_entry["primary_version"], lang_entry["fallback_version"])
+```
+If this assertion fails, fix the file — never adjust the assertion or fall back to a display name to make it pass.
 
 ### Pre-Translation: Lookup & Download
 Before translating each language, ensure the required SQLite is available locally:
