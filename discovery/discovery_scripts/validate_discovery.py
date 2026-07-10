@@ -275,6 +275,21 @@ def _iter_strings(obj, path: str = ""):
         yield path, obj
 
 
+def _is_verse_continuation_close(text: str, mark_chars: str) -> bool:
+    """True if `text` looks like the tail fragment of a multi-verse quotation:
+    it carries exactly one quote-like mark from `mark_chars`, sitting at the
+    very end of the field (only trailing punctuation/whitespace after it).
+    This corpus stores consecutive Bible verses as separate string fields, so
+    a quotation that began in an earlier verse legitimately closes here with
+    no opener of its own — not a stray-punctuation typo.
+    """
+    positions = [i for i, c in enumerate(text) if c in mark_chars]
+    if len(positions) != 1:
+        return False
+    idx = positions[0]
+    return bool(re.match(r'^[\s.!?,;:]*$', text[idx + 1:]))
+
+
 def _check_quote_anomalies(text: str, ctx: str, lang: str, report: ValidationReport):
     """Flag stray/duplicated/unbalanced quote-like punctuation in a text field."""
     # Doubled identical quote-like characters back-to-back (e.g. »», "", '')
@@ -283,13 +298,16 @@ def _check_quote_anomalies(text: str, ctx: str, lang: str, report: ValidationRep
         if c in _DOUBLE_CHECK_CHARS and text[i + 1] == c:
             report.add_error(f"{ctx}: contains doubled '{c}{c}' — likely stray punctuation")
 
-    # Balanced guillemets (used in AR/FR/etc.)
+    # Balanced guillemets (used in AR/FR/etc.). Skip fields that are the
+    # trailing fragment of a quotation opened in a preceding verse — see
+    # _is_verse_continuation_close.
     oc, cc = text.count('«'), text.count('»')
-    if oc != cc:
+    if oc != cc and not (oc + cc == 1 and _is_verse_continuation_close(text, '«»')):
         report.add_warning(f"{ctx}: unbalanced '«'/'»' — {oc} open vs {cc} close")
 
-    # Straight double quotes should appear in pairs
-    if text.count('"') % 2 != 0:
+    # Straight double quotes should appear in pairs, with the same
+    # verse-continuation exception as guillemets above.
+    if text.count('"') % 2 != 0 and not (text.count('"') == 1 and _is_verse_continuation_close(text, '"')):
         report.add_warning(f"{ctx}: odd number of straight double quotes (\") — possible stray quote")
 
 
