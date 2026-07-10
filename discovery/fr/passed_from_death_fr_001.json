@@ -5,11 +5,11 @@
   "title": "Passé de la Mort à la Vie",
   "subtitle": "La révélation finale : vous ne pouvez plus 'dé-naître'",
   "language": "fr",
-  "version": "TOB",
+  "version": "LSG1910",
   "estimated_reading_minutes": 8,
   "key_verse": {
     "reference": "Jean 5:24",
-    "text": "En vérité, en vérité, je vous le dis, celui qui écoute ma parole et croit à celui qui m'a envoyé a la vie éternelle ; il ne vient pas en jugement, mais il est passé de la mort à la vie."
+    "text": "En vérité, en vérité, je vous le dis, celui qui écoute ma parole, et qui croit à celui qui m'a envoyé, a la vie éternelle et ne vient point en jugement, mais il est passé de la mort à la vie."
   },
   
   "cards": [
@@ -63,19 +63,19 @@
       "scripture_connections": [
         {
           "reference": "Jean 10:28-29",
-          "text": "Je leur donne la vie éternelle ; elles ne périront jamais et nul ne les arrachera de ma main. Mon Père... nul ne peut arracher quoi que ce soit de la main du Père"
+          "text": "Je leur donne la vie éternelle; et elles ne périront jamais, et personne ne les ravira de ma main. Mon Père, qui me les a données, est plus grand que tous; et personne ne peut les ravir de la main de mon Père."
         },
         {
           "reference": "Romains 8:38-39",
-          "text": "Ni la hauteur, ni la profondeur, ni aucune autre créature ne pourra nous séparer de l'amour de Dieu manifesté en Jésus-Christ notre Seigneur"
+          "text": "Car j'ai l'assurance que ni la mort ni la vie, ni les anges ni les dominations, ni les choses présentes ni les choses à venir, ni les puissances, ni la hauteur, ni la profondeur, ni aucune autre créature ne pourra nous séparer de l'amour de Dieu manifesté en Jésus-Christ notre Seigneur."
         },
         {
           "reference": "Philippiens 1:6",
-          "text": "J'en suis fermement persuadé, celui qui a commencé en vous une œuvre bonne en poursuivra l'achèvement jusqu'au jour du Christ Jésus"
+          "text": "Je suis persuadé que celui qui a commencé en vous cette bonne œuvre la rendra parfaite pour le jour de Jésus-Christ."
         },
         {
           "reference": "2 Timothée 2:13",
-          "text": "Si nous sommes infidèles, lui reste fidèle, car il ne peut se renier lui-même"
+          "text": "si nous sommes infidèles, il demeure fidèle, car il ne peut se renier lui-même."
         }
       ],
       "revelation_key": "Le salut ne dépend pas de votre capacité à vous accrocher à Dieu. Il dépend de la capacité de Dieu à s'accrocher à vous. Et Il ne lâche pas."
