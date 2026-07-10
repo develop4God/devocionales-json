@@ -158,7 +158,7 @@
       "title": "Comme Moïse éleva le serpent",
       "subtitle": "Une image que tout Israélite connaissait",
       "content": "Jésus reprend une scène que tout Israélite aurait aussitôt reconnue : dans le désert, lorsque des serpents venimeux mordaient le peuple à cause de sa rébellion, Dieu ordonna à Moïse d'élever un serpent d'airain sur une perche. Il suffisait de le regarder pour vivre ; le regard de la foi était la seule réponse que Dieu demandait. Ce qui rendait ce remède si étonnant, c'est que l'image même de ce qui portait la mort devenait le moyen de la vie.\n\nJésus reprend cette même image et se l'applique à lui-même, en employant le verbe grec ὑψόω (hypsoō) — \"élever\", \"exalter\" —, un mot qui, dans l'évangile de Jean, porte toujours un double sens : il décrit à la fois l'acte physique d'être élevé sur la croix et l'acte d'être exalté, glorifié. Ce même mot revient en Jean 8:28 et 12:32, toujours tourné vers ce même moment. Tout comme le serpent portait l'image du jugement et devint symbole de vie, Jésus serait élevé au lieu de la plus grande honte pour devenir la source de vie éternelle pour quiconque croit en lui.\n\nEt alors Jésus arrive à la phrase qui résumerait toute la conversation — la promesse de vie éternelle pour quiconque croit en lui (v.16).\n\nLe mot grec pour \"unique\" est μονογενής (monogenēs) — unique en son genre, d'une seule espèce. Il décrit quelque chose d'irremplaçable, sans égal.",
-      "scripture_anchor": {
+      "verse_overlay": {
         "reference": "Jean 3:16",
         "text": "Car Dieu a tant aimé le monde qu’il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu’il ait la vie éternelle."
       },
@@ -170,6 +170,14 @@
         {
           "reference": "Jean 3:14-15",
           "text": "Et comme Moïse éleva le serpent dans le désert, il faut de même que le Fils de l’homme soit élevé, afin que quiconque croit en lui ait la vie éternelle."
+        },
+        {
+          "reference": "Jean 8:28",
+          "text": "Jésus donc leur dit: Quand vous aurez élevé le Fils de l’homme, alors vous connaîtrez ce que je suis, et que je ne fais rien de moi-même, mais que je parle selon ce que le Père m’a enseigné."
+        },
+        {
+          "reference": "Jean 12:32",
+          "text": "Et moi, quand j’aurai été élevé de la terre, j’attirerai tous les hommes à moi."
         }
       ],
       "revelation_key": "Le moment même où Jésus fut élevé sur la croix, apparemment dans la plus grande honte, fut aussi le moment de sa plus grande gloire — et quiconque le regarde avec foi reçoit la vie."

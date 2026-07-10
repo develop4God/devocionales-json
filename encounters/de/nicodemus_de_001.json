@@ -158,7 +158,7 @@
       "title": "Wie Mose die Schlange erhöhte",
       "subtitle": "Ein Bild, das jeder Israelit kannte",
       "content": "Jesus greift auf eine Szene zurück, die jeder Israelit sofort wiedererkennen würde: In der Wüste, als giftige Schlangen das Volk für seine Auflehnung bissen, befahl Gott Mose, eine eherne Schlange auf eine Stange zu erhöhen. Sie anzuschauen genügte, um zu leben; der Blick des Glaubens war die einzige Antwort, die Gott verlangte. Das Erstaunliche an diesem Heilmittel war, dass gerade das Bild dessen, was den Tod brachte, zum Mittel des Lebens wurde.\n\nJesus greift dasselbe Bild auf und wendet es auf sich selbst an, mit dem griechischen Verb ὑψόω (hypsoō) — \"erhöhen\", \"emporheben\" — einem Wort, das im Johannesevangelium stets eine doppelte Bedeutung trägt: Es beschreibt zugleich den physischen Akt, ans Kreuz erhöht zu werden, und den Akt, verherrlicht und erhöht zu werden. Dasselbe Wort erscheint in Johannes 8:28 und 12:32, immer auf denselben Augenblick verweisend. So wie die Schlange das Bild des Gerichts trug und zum Zeichen des Lebens wurde, würde Jesus an dem Ort größter Schande erhöht werden, um die Quelle des ewigen Lebens für jeden zu werden, der an ihn glaubt.\n\nUnd dann kommt Jesus zu dem Satz, der das ganze Gespräch zusammenfasst — die Verheißung des ewigen Lebens für jeden, der an ihn glaubt (V.16).\n\nDas griechische Wort für \"eingeboren\" ist μονογενής (monogenēs) — einzigartig in seiner Art, unvergleichlich. Es beschreibt etwas Unwiederholbares, ohne Gleichen.",
-      "scripture_anchor": {
+      "verse_overlay": {
         "reference": "Johannes 3:16",
         "text": "Denn also hat Gott die Welt geliebt, dass er seinen eingeborenen Sohn gab, auf dass alle, die an ihn glauben, nicht verloren werden, sondern das ewige Leben haben."
       },
@@ -170,6 +170,14 @@
         {
           "reference": "Johannes 3:14-15",
           "text": "Und wie Mose in der Wüste die Schlange erhöht hat, so muss der Menschensohn erhöht werden, auf dass alle, die an ihn glauben, das ewige Leben haben."
+        },
+        {
+          "reference": "Das Evangelium nach Johannes 8:28",
+          "text": "Da sprach Jesus zu ihnen: Wenn ihr den Menschensohn erhöhen werdet, dann werdet ihr erkennen, dass ich es bin und nichts von mir aus tue, sondern, wie mich der Vater gelehrt hat, so rede ich."
+        },
+        {
+          "reference": "Das Evangelium nach Johannes 12:32",
+          "text": "Und ich, wenn ich erhöht werde von der Erde, so will ich alle zu mir ziehen."
         }
       ],
       "revelation_key": "Genau der Augenblick, in dem Jesus am Kreuz erhöht wurde, in scheinbar tiefster Schande, war zugleich der Augenblick seiner größten Herrlichkeit — und jeder, der im Glauben zu ihm aufschaut, empfängt Leben."

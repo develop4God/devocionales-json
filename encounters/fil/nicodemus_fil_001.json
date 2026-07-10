@@ -158,7 +158,7 @@
       "title": "Gaya ng itinaas ni Moises ang ahas",
       "subtitle": "Isang larawang kilala ng bawat Israelita",
       "content": "Gumagamit si Jesus ng isang eksenang agad na makikilala ng sinumang Israelita: sa ilang, nang kagatin ang bayan ng mga makamandag na ahas dahil sa kanilang paghihimagsik, inutusan ng Diyos si Moises na magtaas ng isang tansong ahas sa isang tikin. Ang pagtingin dito ay sapat na upang mabuhay; ang tingin ng pananampalataya ang tanging kinakailangan ng Diyos. Ang kamangha-manghang bahagi ng lunas ay ang mismong larawan ng nagdudulot ng kamatayan ang naging paraan ng buhay.\n\nKinuha ni Jesus ang parehong larawan at inilapat sa kanyang sarili, gamit ang salitang Griyegong pandiwang ὑψόω (hypsoō) — \"itaas,\" \"iangat sa mataas\" — isang salitang laging may dalawang kahulugan sa ebanghelyo ni Juan: inilalarawan nito sabay-sabay ang pisikal na pagkakataas sa krus at ang pagiging dinakila, niluwalhati. Lumilitaw ang parehong salita sa Juan 8:28 at 12:32, palaging tumuturo sa iisang sandaling iyon. Kung paanong ang ahas ay may larawan ng paghatol at naging simbolo ng buhay, si Jesus ay itataas sa pinakamababang kahihiyan upang maging pinagmulan ng buhay na walang hanggan para sa sinumang sumasampalataya sa kanya.\n\nAt saka narating ni Jesus ang pahayag na magbubuod sa buong usapan — ang pangako ng buhay na walang hanggan para sa sinumang sumasampalataya sa kanya (talata 16).\n\nAng salitang Griyego para sa \"kaisa-isa\" ay μονογενής (monogenēs) — natatangi sa kanyang uri, walang kapareho. Naglalarawan ito ng isang bagay na hindi na maaaring mangyari muli, walang kaparis.",
-      "scripture_anchor": {
+      "verse_overlay": {
         "reference": "Juan 3:16",
         "text": "Sapagkat gayon na lamang ang pag-ibig ng Diyos sa sangkatauhan, kaya't ibinigay niya ang kanyang kaisa-isang Anak, upang ang sinumang sumampalataya sa kanya ay hindi mapahamak, kundi magkaroon ng buhay na walang hanggan."
       },
@@ -170,6 +170,14 @@
         {
           "reference": "Juan 3:14-15",
           "text": "At kung paanong itinaas ni Moises ang tansong ahas doon sa ilang, gayundin naman, kailangang itaas ang Anak ng Tao, upang ang sinumang sumampalataya sa kanya ay magkaroon ng buhay na walang hanggan."
+        },
+        {
+          "reference": "Juan 8:28",
+          "text": "Kaya't sinabi ni Jesus, \"Kapag naitaas na ninyo ang Anak ng Tao, malalaman ninyong 'Ako'y Ako Nga.' Wala akong ginagawa batay sa sarili kong kapangyarihan. Ang ipinapasabi lamang ng Ama ang siya kong sinasabi,"
+        },
+        {
+          "reference": "Juan 12:32",
+          "text": "At kung ako'y maitaas na, ilalapit ko sa akin ang lahat ng tao.\""
         }
       ],
       "revelation_key": "Ang mismong sandaling itinaas si Jesus sa krus, sa tila pinakamalalim na kahihiyan, ay siya ring sandali ng kanyang pinakadakilang kaluwalhatian — at ang bawat tumitingin sa kanya nang may pananampalataya ay tumatanggap ng buhay."

@@ -158,7 +158,7 @@
       "title": "Como Moisés levantou a serpente",
       "subtitle": "Uma imagem que todo israelita conhecia",
       "content": "Jesus recorre a uma cena que qualquer israelita reconheceria de imediato: no deserto, quando serpentes venenosas mordiam o povo por sua rebelião, Deus ordenou a Moisés que levantasse uma serpente de metal sobre uma haste. Bastava olhar para ela para viver; o olhar de fé era a única resposta que Deus pedia. O impressionante desse remédio era que a própria imagem daquilo que trazia a morte se tornava o meio da vida.\n\nJesus toma essa mesma imagem e a aplica a si mesmo, usando o verbo grego ὑψόω (hypsoō) — \"levantar\", \"erguer ao alto\" —, uma palavra que no evangelho de João sempre carrega um duplo sentido: descreve ao mesmo tempo o ato físico de ser erguido na cruz e o ato de ser exaltado, glorificado. A mesma palavra aparece em João 8:28 e 12:32, sempre apontando para esse mesmo momento. Assim como a serpente carregava a imagem do juízo e se tornou símbolo de vida, Jesus seria levantado no lugar de maior vergonha para se tornar a fonte de vida eterna para todo aquele que nele crê.\n\nE então Jesus chega à frase que resumiria toda a conversa — a promessa de vida eterna para todo aquele que nele crê (v.16).\n\nA palavra grega para \"unigênito\" é μονογενής (monogenēs) — único em seu gênero, de uma só espécie. Descreve algo irrepetível, sem igual.",
-      "scripture_anchor": {
+      "verse_overlay": {
         "reference": "S. João 3:16",
         "text": "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna."
       },
@@ -170,6 +170,14 @@
         {
           "reference": "S. João 3:14-15",
           "text": "E, como Moisés levantou a serpente no deserto, assim importa que o Filho do Homem seja levantado, para que todo aquele que nele crê não pereça, mas tenha a vida eterna."
+        },
+        {
+          "reference": "S. João 8:28",
+          "text": "Disse-lhes, pois, Jesus: Quando levantardes o Filho do Homem, então, conhecereis quem eu sou e que nada faço por mim mesmo; mas falo como o Pai me ensinou."
+        },
+        {
+          "reference": "S. João 12:32",
+          "text": "E eu, quando for levantado da terra, todos atrairei a mim."
         }
       ],
       "revelation_key": "O mesmo momento em que Jesus foi levantado na cruz, aparentemente na maior vergonha, foi também o momento de sua maior glória — e todo aquele que olha para ele com fé recebe vida."
