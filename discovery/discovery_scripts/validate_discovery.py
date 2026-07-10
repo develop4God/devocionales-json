@@ -391,34 +391,61 @@ def validate_structure(data: Dict, lang: str, filename: str, report: ValidationR
     return is_valid
 
 
+def _check_key_parity(en_obj, trans_obj, path: str, filename: str, lang: str, report: ValidationReport):
+    """Recursively diff en_obj vs trans_obj for data-integrity only — key
+    presence and list length, not text content/quality. Generic over any
+    field name and nesting depth so it covers discovery's 50+ free-form
+    card types without a hand-maintained field list:
+      - dict: every key EN has must exist in the translation (error); any
+        key the translation has that EN lacks is reported once (warning —
+        likely a stray/leftover field).
+      - list: length mismatch is reported once (error) rather than walking
+        past the shorter list and reporting per-missing-item noise.
+    """
+    if isinstance(en_obj, dict):
+        trans_dict = trans_obj if isinstance(trans_obj, dict) else {}
+        if not isinstance(trans_obj, dict):
+            report.add_error(f"{filename}: '{path}' is an object in EN but not in {lang.upper()}")
+            return
+        for k in en_obj:
+            child_path = f"{path}.{k}" if path else k
+            if k not in trans_dict:
+                report.add_error(f"{filename}: '{child_path}' present in EN but missing in {lang.upper()}")
+            else:
+                _check_key_parity(en_obj[k], trans_dict[k], child_path, filename, lang, report)
+        for k in trans_dict:
+            if k not in en_obj:
+                report.add_warning(f"{filename}: '{path}.{k}' present in {lang.upper()} but missing in EN (possible extra/stray field)")
+
+    elif isinstance(en_obj, list):
+        trans_list = trans_obj if isinstance(trans_obj, list) else []
+        if not isinstance(trans_obj, list):
+            report.add_error(f"{filename}: '{path}' is an array in EN but not in {lang.upper()}")
+            return
+        if len(en_obj) != len(trans_list):
+            report.add_error(
+                f"{filename}: '{path}' length mismatch - EN has {len(en_obj)}, {lang.upper()} has {len(trans_list)}"
+            )
+            return
+        for i, (ev, tv) in enumerate(zip(en_obj, trans_list)):
+            _check_key_parity(ev, tv, f"{path}[{i}]", filename, lang, report)
+
+    elif isinstance(en_obj, str):
+        if not en_obj.strip():
+            return
+        if trans_obj is None or (isinstance(trans_obj, str) and not trans_obj.strip()):
+            report.add_error(f"{filename}: '{path}' is empty in {lang.upper()}")
+
+
 def validate_content_translation(en_data: Dict, trans_data: Dict, lang: str,
                                   filename: str, report: ValidationReport):
-    """Validate that translation has same structure as English version."""
-
-    # Compare number of cards
-    en_cards = len(en_data.get('cards', []))
-    trans_cards = len(trans_data.get('cards', []))
-    if en_cards != trans_cards:
-        report.add_error(f"{filename}: Card count mismatch - EN has {en_cards}, {lang.upper()} has {trans_cards}")
-
-    # Compare number of tags
-    en_tags = len(en_data.get('tags', []))
-    trans_tags = len(trans_data.get('tags', []))
-    if en_tags != trans_tags:
-        report.add_error(f"{filename}: Tag count mismatch - EN has {en_tags}, {lang.upper()} has {trans_tags}")
-
-    # Compare number of themes
-    en_themes = len(en_data.get('metadata', {}).get('themes', []))
-    trans_themes = len(trans_data.get('metadata', {}).get('themes', []))
-    if en_themes != trans_themes:
-        report.add_error(f"{filename}: Theme count mismatch - EN has {en_themes}, {lang.upper()} has {trans_themes}")
-
-    # Top-level free-text fields left as verbatim English copy
-    for field in ('title', 'subtitle'):
-        en_val = en_data.get(field)
-        trans_val = trans_data.get(field)
-        if en_val and trans_val and trans_val == en_val and not _is_cognate(trans_val, lang):
-            report.add_warning(f"{filename}: '{field}' may not be translated (identical to EN)")
+    """Validate translation has the same data shape as EN: same fields,
+    same list lengths, no empty text where EN has content. Deliberately
+    does not judge translation quality (identical-to-EN text is not
+    flagged) — that's out of scope, this corpus has its own review
+    pipeline for translation quality.
+    """
+    _check_key_parity(en_data, trans_data, "", filename, lang, report)
 
     # Validate each card structure
     for i, (en_card, trans_card) in enumerate(zip(en_data.get('cards', []),
@@ -428,17 +455,6 @@ def validate_content_translation(en_data: Dict, trans_data: Dict, lang: str,
 
         if en_card.get('order') != trans_card.get('order'):
             report.add_error(f"{filename}: Card {i+1} order mismatch")
-
-        # Check free-text fields for translation (shouldn't be empty or
-        # left as a verbatim English copy)
-        for field in ('content', 'title', 'subtitle', 'revelation_key'):
-            if field in en_card:
-                en_val = en_card[field]
-                trans_val = trans_card.get(field, '')
-                if not trans_val:
-                    report.add_warning(f"{filename}: Card {i+1} '{field}' may not be translated")
-                elif trans_val == en_val and not _is_cognate(trans_val, lang):
-                    report.add_warning(f"{filename}: Card {i+1} '{field}' may not be translated")
 
 
 def validate_verse_references(data: Dict, lang: str, filename: str,
