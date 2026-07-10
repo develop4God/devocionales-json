@@ -95,28 +95,30 @@ def _write_local_cache(remote_langs: dict) -> None:
         pass  # best-effort — a read-only filesystem shouldn't fail validation
 
 
-def _load_bible_versions() -> dict:
+def _load_bible_versions() -> Tuple[dict, bool]:
     """Load bible version config for every language the remote SOT defines.
 
     Tries the live remote SOT first (source of truth, with retries); only
     falls back to the local temp cache if the network is unreachable after
     all attempts and a cache from earlier in this run exists.
+    Returns (languages_dict, used_remote: bool) so callers can surface
+    whether this run actually hit the live SOT or fell back to a cache.
     """
     remote = _fetch_remote_index()
     if remote is not None:
         remote_langs = remote.get('languages', {})
         _write_local_cache(remote_langs)
-        return {lang: _remote_to_local_shape(entry) for lang, entry in remote_langs.items()}
+        return {lang: _remote_to_local_shape(entry) for lang, entry in remote_langs.items()}, True
 
     if _LOCAL_CACHE_PATH.exists():
-        return json.loads(_LOCAL_CACHE_PATH.read_text(encoding='utf-8'))['languages']
+        return json.loads(_LOCAL_CACHE_PATH.read_text(encoding='utf-8'))['languages'], False
 
     raise RuntimeError(
         f"Could not reach the Bible versions SOT at {REMOTE_INDEX_URL} "
         "and no local fallback cache is available. Check network connectivity."
     )
 
-_BIBLE_VERSIONS = _load_bible_versions()
+_BIBLE_VERSIONS, _USED_REMOTE_SOT = _load_bible_versions()
 
 # Build EXPECTED_LANGUAGES directly from the SOT
 EXPECTED_LANGUAGES = {
@@ -250,6 +252,21 @@ def detect_language_mix(text: str, expected_lang: str, report: ValidationReport,
             return False
     
     return True
+
+
+# Words identical (or near-identical) across English and Romance languages —
+# valid cognate translations, not untranslated leftovers. Per translator skill
+# § "Cognates (FR, PT, ES)": these are correct and should not be flagged.
+_ROMANCE_COGNATES = {
+    'fr': {'courage', 'grace', 'grâce'},
+    'pt': {'coragem', 'graça'},
+    'es': {'coraje', 'gracia'},
+}
+
+
+def _is_cognate(value: str, lang: str) -> bool:
+    """Return True if value is a known valid cognate word for lang."""
+    return value.strip().lower() in _ROMANCE_COGNATES.get(lang, set())
 
 
 # Quote-like characters whose accidental back-to-back doubling indicates a
@@ -396,7 +413,7 @@ def validate_content_translation(en_data: Dict, trans_data: Dict, lang: str,
     for field in ('title', 'subtitle'):
         en_val = en_data.get(field)
         trans_val = trans_data.get(field)
-        if en_val and trans_val and trans_val == en_val:
+        if en_val and trans_val and trans_val == en_val and not _is_cognate(trans_val, lang):
             report.add_warning(f"{filename}: '{field}' may not be translated (identical to EN)")
 
     # Validate each card structure
@@ -414,7 +431,9 @@ def validate_content_translation(en_data: Dict, trans_data: Dict, lang: str,
             if field in en_card:
                 en_val = en_card[field]
                 trans_val = trans_card.get(field, '')
-                if not trans_val or trans_val == en_val:
+                if not trans_val:
+                    report.add_warning(f"{filename}: Card {i+1} '{field}' may not be translated")
+                elif trans_val == en_val and not _is_cognate(trans_val, lang):
                     report.add_warning(f"{filename}: Card {i+1} '{field}' may not be translated")
 
 
@@ -614,6 +633,57 @@ def validate_filename_format(filepath: Path, lang: str, report: ValidationReport
     return True
 
 
+def validate_sot_source(report: ValidationReport) -> None:
+    """Report whether this run resolved bible_version codes from the live
+    remote SOT or fell back to the temp-dir bible_versions cache, so a run
+    that silently used stale cached data (e.g. offline CI) is visible in
+    the report instead of indistinguishable from a fully live run.
+    """
+    if _USED_REMOTE_SOT:
+        report.add_info(f"✓ bible_version codes resolved live from remote SOT ({REMOTE_INDEX_URL}) for all {len(_BIBLE_VERSIONS)} languages")
+    else:
+        report.add_warning(
+            f"Could not reach remote SOT ({REMOTE_INDEX_URL}) — fell back to the "
+            f"temp-dir bible_versions cache. Results reflect the LOCAL CACHE, not confirmed "
+            f"live data; re-run once network access is available before merging."
+        )
+
+
+def validate_lint(discovery_dir: Path, report: ValidationReport) -> None:
+    """Check that all JSON files use indent=2 formatting and end with a
+    trailing newline. Formatting issues are warnings, not errors — they
+    don't affect JSON validity, just diff/lint hygiene.
+    """
+    report.add_info("=" * 60)
+    report.add_info("PHASE 1: Lint — checking JSON formatting (indent=2)")
+    report.add_info("=" * 60)
+
+    json_files = sorted(f for f in discovery_dir.rglob('*.json')
+                         if f.is_file() and 'discovery_scripts' not in f.parts)
+    checked = 0
+    for fpath in json_files:
+        raw = fpath.read_text(encoding='utf-8')
+        try:
+            json.loads(raw)
+        except json.JSONDecodeError:
+            continue  # invalid JSON is reported elsewhere with full detail
+        rel = fpath.relative_to(discovery_dir)
+        for line_no, line in enumerate(raw.splitlines(), 1):
+            stripped = line.lstrip(' ')
+            indent = len(line) - len(stripped)
+            if indent > 0 and indent % 2 != 0:
+                report.add_warning(f"{rel}:{line_no}: odd indentation ({indent} spaces), expected multiples of 2")
+                break
+            if '\t' in line:
+                report.add_warning(f"{rel}:{line_no}: contains tab character, use 2-space indent")
+                break
+        if not raw.endswith('\n'):
+            report.add_warning(f"{rel}: missing trailing newline")
+        checked += 1
+
+    report.add_info(f"✓ Checked {checked} JSON files")
+
+
 def validate_index_json(discovery_dir: Path, report: ValidationReport) -> Optional[Dict]:
     """
     PHASE A: Validate index.json format, structure, and data integrity.
@@ -763,6 +833,16 @@ def main():
     print(f"📁 Discovery directory: {discovery_dir}")
     print()
     
+    # ==========================================
+    # PHASE 1: Lint — JSON formatting
+    # ==========================================
+    validate_lint(discovery_dir, report)
+
+    # ==========================================
+    # SOT source visibility — live remote vs. offline cache
+    # ==========================================
+    validate_sot_source(report)
+
     # ==========================================
     # PHASE A: Validate index.json
     # ==========================================
