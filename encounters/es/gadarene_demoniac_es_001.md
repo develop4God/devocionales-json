@@ -158,15 +158,14 @@ Jesús le dice una palabra simple: ὕπαγε (hýpage), 'vete, retírate' (Mar
 ---
 
 ## Card 12
-### De Legión a testigo
-*El primer misionero enviado a los gentiles*
+### El terreno que quedó preparado
+*Lo que pasó en Decápolis entre Marcos 5 y Marcos 7*
 
-Se fue, y comenzó a publicar en Decápolis cuán grandes cosas había hecho Jesús con él; y todos se maravillaban (Marcos 5:20). El hombre que una vez respondió a su propio nombre con la palabra de un ejército extranjero ahora recorre las diez ciudades de la región contando una historia que es completamente suya. No lo hizo un discípulo entrenado ni un apóstol elegido entre los doce. Lo hizo el hombre que vivía entre tumbas. Antes de que Jesús enviara oficialmente a los doce a los gentiles, ya había enviado a este hombre, sin comisión formal, solo con una historia verdadera y un cuerpo vestido y en paz.
+El pueblo había rogado (παρακαλέω, parakaleō) que Jesús se fuera de esa región (Marcos 5:17). Capítulos después, cuando Jesús regresa a la misma zona, la gente le trae a un hombre sordo y tartamudo y le ruega —el mismo verbo, parakaleō— que le imponga las manos (Marcos 7:32). Entre esos dos momentos, Jesús no vuelve a pisar Decápolis. Lo único que queda sembrado en esas diez ciudades es un solo hombre, caminando de plaza en plaza, contando lo que Jesús había hecho con él. Nadie más predicó ahí. Nadie más lo intentó. Cuando Jesús regresa, ya no lo reciben con miedo, sino con fe suficiente para traerle a sus enfermos.
 
-> "Y se fue, y comenzó a publicar en Decápolis cuán grandes cosas había hecho Jesús con él; y todos se maravillaban."
-> — Marcos 5:20
+**Conexión:** Marcos 7:32 — "Y le trajeron un sordo y tartamudo, y le rogaron que le pusiese la mano encima."
 
-💡 El primer misionero a los gentiles no fue elegido por su preparación, sino por lo que había vivido.
+💡 El mismo pueblo que le rogó que se fuera, gracias a la semilla plantada en el testimonio de un hombre, ahora traía a sus enfermos para que Jesús los sanara.
 
 ---
 
