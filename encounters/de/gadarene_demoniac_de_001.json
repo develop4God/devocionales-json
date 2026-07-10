@@ -1,0 +1,291 @@
+{
+  "id": "gadarene_demoniac_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "de",
+  "bible_version": "LU17",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 14,
+  "meta": {
+    "character": "The Gadarene demoniac",
+    "testament": "new",
+    "scripture_reference": "Markus 5:1-20",
+    "mood_primary": "falling",
+    "accent_color": "#040810",
+    "emoji": "⛓️",
+    "tags": [
+      "befreiung",
+      "besessenheit",
+      "wiederherstellung",
+      "identität",
+      "sendung",
+      "legion",
+      "gadarener",
+      "jesus",
+      "begegnung",
+      "heilung"
+    ]
+  },
+  "key_verse": {
+    "reference": "Markus 5:2",
+    "text": "Und als er aus dem Boot stieg, lief ihm alsbald von den Gräbern her ein Mensch entgegen mit einem unreinen Geist.",
+    "bible_version": "LU17"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "storm",
+      "image_url": "gadarene_arrival.png",
+      "title": "Das andere Ufer des Sees",
+      "narrative": "Der Sturm hat sich kaum gelegt. Das Wasser trägt noch die Erinnerung an den Wind, den Jesus zum Schweigen gebracht hat. Das Boot berührt Land im Gebiet der Gerasener, auf der anderen Seite des Sees Genezareth. Es ist heidnisches Gebiet. Kein frommer Jude würde sich freiwillig hierher wagen: Gräber sind in den Hang geschlagen, und darüber weidet ungeniert eine Herde Schweine. Alles hier trägt das Zeichen der Unreinheit. Und doch steigt Jesus als Erster aus.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Markus 5:1",
+        "text": "Und sie kamen ans andre Ufer des Meeres in die Gegend der Gerasener."
+      },
+      "revelation_key": "Jesus setzt bewusst über, an den Ort, den alle meiden."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "gadarene_tombs.png",
+      "verse_reference": "Markus 5:2-5",
+      "verse_text": "Und als er aus dem Boot stieg, lief ihm alsbald von den Gräbern her ein Mensch entgegen mit einem unreinen Geist. Der hatte seine Wohnung in den Grabhöhlen. Und niemand konnte ihn mehr binden, auch nicht mit einer Kette; denn er war oft mit Fesseln an den Füßen und mit Ketten gebunden gewesen und hatte die Ketten zerrissen und die Fesseln zerrieben; und niemand konnte ihn bändigen. Und er war allezeit, Tag und Nacht, in den Grabhöhlen und auf den Bergen, schrie und schlug sich mit Steinen.",
+      "reflection": "Er lebte unter den Toten, weil unter den Lebenden kein Platz mehr für ihn war. Lukas fügt noch ein Detail hinzu: Er trug keine Kleider. Er hatte selbst das Mindeste verloren, das einen Menschen von seinem eigenen, bloßgelegten Schmerz trennt. Die Ketten, mit denen andere ihn zu bändigen suchten, richteten nichts aus; er zerriss sie immer wieder, und jene Kraft, die ihn hätte schützen sollen, wurde zu seinem Urteil und ließ ihn jedes Mal einsamer zurück. Tag und Nacht schrie er unter den Gräbern und schlug sich mit Steinen. Der Text hält nur fest, wozu die Qual ihn trieb.",
+      "revelation_key": "Niemand konnte ihn binden, aber auch niemand konnte sich ihm nähern: Seine Kraft machte ihn einsamer, nicht freier.",
+      "scripture_connections": [
+        {
+          "reference": "Lukas 8:27",
+          "text": "Und als er ans Land trat, begegnete ihm ein Mann aus der Stadt, der war von Dämonen besessen; er trug seit langer Zeit keine Kleider mehr und blieb in keinem Hause, sondern in den Grabhöhlen."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "gadarene_night_torment.png",
+      "title": "Bevor die Sonne aufging",
+      "narrative": "Jedes Mal, wenn dieser Mann seine Ketten zerriss, trieb ihn der Dämon in die Wüste. Ein Detail von schwerem theologischem Gewicht. Vor dem Hintergrund des Alten Testaments war die Wüste der Ort, der mit dem Dämonischen verbunden war, das Gegenstück zu Leben und Gemeinschaft. Dieser Mann lebte gequält, immer wieder hineingezerrt in das Sinnbild der Verlassenheit selbst. Und immer, Tag und Nacht, wiederholte sich die Szene.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lukas 8:29",
+        "text": "Denn er hatte dem unreinen Geist geboten, aus dem Menschen auszufahren. Denn der hatte ihn lange Zeit geplagt; und er wurde mit Ketten und Fesseln an den Füßen gebunden und gefangen gehalten, doch er zerriss seine Fesseln und wurde von dem Dämon in die Wüste getrieben."
+      },
+      "revelation_key": "Jesus überquerte den See genau in das Gebiet der Verlassenheit, in das der Dämon ihn zerrte."
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "gadarene_running_toward.png",
+      "title": "Er lief ihm entgegen",
+      "narrative": "Der Mann, den niemand bändigen konnte, der Ketten und Fesseln zerriss wie Fäden, sieht Jesus von weitem und läuft auf ihn zu. Und als er ankommt, fällt er auf die Knie. Der Schrei, der aus seinem Mund kommt, ist Entsetzen und Flehen zugleich: Was habe ich mit dir zu schaffen, Jesus, du Sohn des höchsten Gottes? Ich beschwöre dich bei Gott, quäle mich nicht. Es ist derselbe Titel — 'Sohn Gottes' —, den andere unreine Geister gebrauchen, wenn sie Jesus in anderen Berichten begegnen: Sie wissen genau, wer vor ihnen steht.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Markus 5:6-7",
+        "text": "Da er aber Jesus sah von ferne, lief er hinzu und fiel vor ihm nieder, schrie laut und sprach: Was habe ich mit dir zu schaffen, Jesus, du Sohn des höchsten Gottes? Ich beschwöre dich bei Gott: Quäle mich nicht!"
+      },
+      "revelation_key": "Die Dämonen kannten die Wahrheit über Jesus besser als viele religiöse Führer, doch dieses Wissen rettete sie nicht; nur der Glaube, der sich unterwirft, rettet.",
+      "scripture_connections": [
+        {
+          "reference": "Markus 1:24",
+          "text": "Was haben wir mit dir zu schaffen, Jesus von Nazareth? Bist du gekommen, uns zu vernichten? Ich weiß, wer du bist: der Heilige Gottes!"
+        },
+        {
+          "reference": "Markus 3:11",
+          "text": "Und wenn ihn die unreinen Geister sahen, fielen sie vor ihm nieder und schrien: Du bist Gottes Sohn!"
+        },
+        {
+          "reference": "Jakobus 2:19",
+          "text": "Du glaubst, dass nur einer Gott ist? Du tust recht daran; die Teufel glauben's auch und zittern."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "gadarene_legion_metaphor.png",
+      "title": "Legion",
+      "subtitle": "Ein Name, entliehen dem Heer, das Israel unterdrückte",
+      "content": "Als Jesus nach seinem Namen fragt, ist die Antwort nicht die eines Menschen: 'Legion heiße ich; denn wir sind viele' (Markus 5,9). Im Griechischen war *legiṓn* (λεγιών) der feste Begriff für eine römische Militäreinheit von etwa fünf- bis sechstausend Soldaten — die größte Besatzungsmacht, die Rom aufbieten konnte. Jeder Jude oder Heide, der unter römischer Herrschaft in Galiläa lebte, kannte genau das Gewicht dieses Wortes. Der Dämon wählte gerade das Sinnbild der Macht, die sein Volk unterjochte, und ließ es in einem einzigen Menschen wohnen. Was eine ganze Nation unterdrückte, hatte sich, im Kleinen, in einem einzigen menschlichen Körper zusammengezogen. Legion fleht darum, in derselben Gegend bleiben zu dürfen (Markus 5,10), und bittet später darum, nicht in den Abgrund geschickt zu werden (Lukas 8,31): Lieber irgendein Körper als gar keiner. Und doch fleht diese ganze Legion vor Jesus — sie fordert nicht.",
+      "revelation_key": "Der Name 'Legion' offenbart zugleich das Gewicht der Unterdrückung, die Jesus zu entwaffnen kam, und das Entsetzen des Dämons davor, ohne einen Körper zurückzubleiben, den er bewohnen kann.",
+      "verse_overlay": {
+        "reference": "Markus 5:9",
+        "text": "Und er fragte ihn: Wie heißt du? Und er sprach zu ihm: Legion heiße ich; denn wir sind viele."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Markus 5:10",
+          "text": "Und er bat Jesus sehr, dass er sie nicht aus der Gegend vertreibe."
+        },
+        {
+          "reference": "Lukas 8:31",
+          "text": "Und sie baten ihn, dass er ihnen nicht gebiete, in den Abgrund zu fahren."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "scripture_moment",
+      "mood": "intense",
+      "image_url": "gadarene_pigs_herd.png",
+      "verse_reference": "Markus 5:10-13",
+      "verse_text": "Und er bat Jesus sehr, dass er sie nicht aus der Gegend vertreibe. Es war aber dort am Berg eine große Herde Säue auf der Weide. Und die unreinen Geister baten ihn und sprachen: Lass uns in die Säue fahren! Und er erlaubte es ihnen. Da fuhren sie aus und fuhren in die Säue, und die Herde stürmte den Abhang hinunter ins Meer, etwa zweitausend, und sie ersoffen im Meer.",
+      "reflection": "Die Schweine tragen in diesem Bericht ihr eigenes symbolisches Gewicht. Das Gesetz des Levitikus erklärte sie für unrein (3. Mose 11,7); ihre Anwesenheit in so großer Zahl, zweitausend, bestätigt, dass es sich um heidnisches Gebiet handelte, wo dieses Gesetz den Alltag nicht bestimmte. Legion hatte schon darum gefleht, in der Gegend bleiben zu dürfen (Markus 5,10) und nicht in den Abgrund geschickt zu werden (Lukas 8,31); die Bitte, in die Schweine fahren zu dürfen, war der Weg, beides zu sichern: einen Körper zu behalten und an diesem Ort zu bleiben. Derselbe Mann hatte sich einst mit Steinen geschlagen (Markus 5,5): Dämonen besetzen nicht nur, sie zerstören, was sie bewohnen. Als sie in die Schweine fuhren, taten sie ihnen in Sekunden an, wofür sie bei ihm Jahre gebraucht hatten, nun sichtbar vor der ganzen Stadt. Die Herde stürmte geradewegs ins Meer, das Sinnbild des Abgrunds selbst, den sie so sehr fürchteten, und ertrank dort.",
+      "revelation_key": "Die Dämonen feilschten darum, einen Körper und ein Gebiet zu behalten, und eben dieser Handel versenkte sie in dem Abgrund, den sie am meisten fürchteten.",
+      "scripture_connections": [
+        {
+          "reference": "3. Mose 11:7",
+          "text": "das Schwein, denn es hat wohl durchgespaltene Klauen, ist aber kein Wiederkäuer; darum soll es euch unrein sein."
+        },
+        {
+          "reference": "Markus 5:10",
+          "text": "Und er bat Jesus sehr, dass er sie nicht aus der Gegend vertreibe."
+        },
+        {
+          "reference": "Lukas 8:31",
+          "text": "Und sie baten ihn, dass er ihnen nicht gebiete, in den Abgrund zu fahren."
+        },
+        {
+          "reference": "Matthäus 8:31-32",
+          "text": "Da baten ihn die Dämonen und sprachen: Willst du uns austreiben, so schick uns in die Herde Säue. Und er sprach: Weg mit euch! Da fuhren sie aus und fuhren in die Säue. Und siehe, die ganze Herde stürmte den Abhang hinunter ins Meer, und sie ersoffen im Wasser."
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "gadarene_cliff_fall.png",
+      "title": "Der steile Abhang",
+      "narrative": "Zweitausend Tiere stürzen in einem einzigen Augenblick den Hang hinab ins Wasser, ein Getöse, das bis zur Stadt reicht. Die Hirten fliehen, ohne sich umzusehen, und laufen, um die Nachricht in Stadt und Land zu verbreiten. Sie kommen heraus, um zu sehen: Das Griechische gebraucht ἰδεῖν (idein), genau hinschauen, aus der Nähe prüfen. Und was geschehen war, ist τὸ γεγονός (to gegonos), ein Ereignis, dessen Wirkung bereits bleibend war, kein flüchtiger Schrecken. Doch während alle noch vom Getöse der Schweine wie betäubt sind, ist im Inneren des Mannes, der bis vor kurzem noch unter den Gräbern schrie, still etwas zerbrochen.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Markus 5:14",
+        "text": "Und die Sauhirten flohen und verkündeten das in der Stadt und auf dem Lande. Und die Leute gingen, um zu sehen, was da geschehen war,"
+      },
+      "revelation_key": "Das leiseste Wunder geschieht, während alle auf das Getöse starren."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "gadarene_seated_clothed.png",
+      "title": "Sitzend, bekleidet, bei klarem Verstand",
+      "subtitle": "Drei Worte, die eine vollständige Wiederherstellung beschreiben",
+      "content": "Als die Leute aus der Stadt ankommen, finden sie den Mann, der einst Ketten zerriss, nun zu Füßen Jesu sitzend. Der griechische Urtext gebraucht drei Worte, die zusammen eine völlige Umkehr zeichnen: καθήμενον (kathḗmenon), sitzend, in der Haltung eines Jüngers, der lernt; ἱματισμένον (himatisménon), bekleidet; σωφρονοῦντα (sōphronoûnta), bei klarem Verstand, gesunden Sinnes, ein Wort, das im ganzen Markusevangelium sonst nirgends vorkommt. Bekleidet und bei klarem Verstand sind der leibliche und geistige Beweis, dass die Legion, die in ihm wohnte, nicht mehr da war. Und die Stadt geriet, statt sich zu freuen, in Furcht.",
+      "revelation_key": "Die Wiederherstellung war so vollständig, dass die Stadt sich mehr vor dem Wunder fürchtete als vor der Besessenheit.",
+      "verse_overlay": {
+        "reference": "Markus 5:15",
+        "text": "und kamen zu Jesus und sahen den Besessenen, der den Geist »Legion« gehabt hatte, wie er dasaß, bekleidet und vernünftig, und sie fürchteten sich."
+      }
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "gadarene_crowd_fear.png",
+      "title": "Furcht vor dem, was sich nicht kontrollieren lässt",
+      "subtitle": "Warum sie Jesus baten zu gehen",
+      "content": "Ein Mann wird vollkommen gesund, und die Antwort der Stadt ist nicht Freude, sondern die Bitte, Jesus möge fortgehen. Das Griechische gebraucht hier παρακαλέω (parakaleō), dasselbe Verb, das an anderer Stelle die Kranken gebrauchen, um Jesus um Heilung zu bitten. Hier gebraucht die Stadt es umgekehrt: Sie bittet nicht darum, ihn nahe zu haben, sondern ihn fortzuschicken. Und sie bitten ihn nicht, die Stadt zu verlassen, sondern ὅρια (horia), das ganze Gebiet, bis an seine äußersten Grenzen. Vor Jesus hatte die Stadt eine vertraute Gefahr: Man wusste, wo der Besessene lebte, was er tat, und dass keine Kette ihn halten konnte, aber man wusste wenigstens, was von ihm zu erwarten war. Jesu Macht lässt sich weder in Ketten legen noch berechnen. Sie zogen die Gefahr vor, die sie schon kannten, einer Güte, die so groß war, dass sie nicht zu beherrschen war.",
+      "revelation_key": "Manchmal fürchten wir die Freiheit, die Jesus bringt, mehr als die Gefangenschaft, die sie ablöst.",
+      "verse_overlay": {
+        "reference": "Markus 5:17",
+        "text": "Und sie fingen an und baten Jesus, aus ihrem Gebiet fortzugehen."
+      }
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "grace",
+      "image_url": "gadarene_begging_to_follow.png",
+      "verse_reference": "Markus 5:18-19",
+      "verse_text": "Und als er in das Boot stieg, bat ihn, der zuvor besessen war, dass er bei ihm bleiben dürfe. Aber er ließ es ihm nicht zu, sondern sprach zu ihm: Geh hin in dein Haus zu den Deinen und verkünde ihnen, welch große Dinge der Herr an dir getan und wie er sich deiner erbarmt hat.",
+      "reflection": "Der Mann bittet darum, bleiben zu dürfen. Es ist verständlich: An der Seite Jesu ist er sicher, und die Gemeinschaft, die gerade seine Heilung miterlebt hatte, hatte ihn soeben erst zurückgewiesen. Jesus selbst zieht sich wegen dieser Ablehnung aus jenem Gebiet zurück (Markus 5,17), doch er lässt den Ort nicht ganz im Stich: An seiner statt sendet er den Mann, der dort bleiben kann, wo er selbst nicht mehr willkommen ist. Geh heim zu den Deinen, sagt er ihm. Dieselben Menschen, die ihn wohl gefürchtet, gemieden, vielleicht schon verloren gegeben hatten, würden nun als Erste aus seinem eigenen Mund hören, was Gottes Barmherzigkeit getan hatte.",
+      "revelation_key": "Wo Jesus nicht mehr willkommen war, ließ er jemanden zurück, der durch seine eigene Befreiung und Verwandlung Zeugnis gab.",
+      "scripture_connections": [
+        {
+          "reference": "Lukas 8:39",
+          "text": "Geh wieder heim und sage, wie große Dinge Gott an dir getan hat. Und er ging hin und verkündigte überall in der Stadt, wie große Dinge Jesus an ihm getan hatte."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "gadarene_sent_without_staff.png",
+      "title": "Der Herold der zehn Städte",
+      "subtitle": "Von der Stimme der Legion zur Stimme eines Boten des Königs",
+      "content": "Jesus spricht ein einziges, schlichtes Wort: ὕπαγε (hýpage), 'geh, zieh fort' (Markus 5,19). Der Mann gehorcht, und der Text gebraucht κηρύσσω (kēryssō), um zu beschreiben, was er dann tut: dasselbe Verb, das Markus für die amtliche Verkündigung des Evangeliums reserviert, die Ansage eines Herolds mit königlicher Vollmacht. Er tut es nicht nur in einer Stadt: Er zieht durch die Dekapolis, die zehn Städte der Gegend. Wenige Stunden zuvor sprach dieser Mann mit der Stimme einer dämonischen Legion. Jetzt verkündet er mit der Stimme eines königlichen Boten in zehn verschiedenen Städten. Die Leute, so sagt der Text, ἐθαύμαζον (ethaúmazon): Sie verwunderten sich, im fortdauernden Aspekt, ein Staunen, das Tag für Tag in jeder dieser Städte anhielt.",
+      "revelation_key": "Derselbe Mann, der einst mit der Stimme einer dämonischen Legion sprach, zieht nun mit der Stimme eines königlichen Herolds durch zehn Städte.",
+      "verse_overlay": {
+        "reference": "Markus 5:20",
+        "text": "Und er ging hin und fing an, in den Zehn Städten auszurufen, wie viel Jesus an ihm getan hatte; und jedermann verwunderte sich."
+      }
+    },
+    {
+      "order": 12,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "gadarene_decapolis_proclaiming.png",
+      "title": "Der Boden, der bereitet wurde",
+      "subtitle": "Was in der Dekapolis zwischen Markus 5 und Markus 7 geschah",
+      "content": "Die Stadt hatte Jesus gebeten (παρακαλέω, parakaleō), das Gebiet zu verlassen (Markus 5,17). Kapitel später, als Jesus in dieselbe Gegend zurückkehrt, bringen ihm die Leute einen Tauben mit einem Sprachfehler und bitten ihn — dasselbe Verb, parakaleō —, ihm die Hand aufzulegen (Markus 7,32). Zwischen diesen beiden Augenblicken betritt Jesus die Dekapolis nie wieder. Das Einzige, was in diesen zehn Städten gesät wurde, ist ein einziger Mann, der von Platz zu Platz zieht und erzählt, was Jesus an ihm getan hat. Niemand sonst predigte dort. Niemand sonst versuchte es. Als Jesus zurückkehrt, empfangen sie ihn nicht mehr mit Furcht, sondern mit Glauben genug, um ihre Kranken zu ihm zu bringen.",
+      "revelation_key": "Dieselbe Stadt, die ihn einst zu gehen bat, brachte nun, dank des Samens, der im Zeugnis eines einzigen Mannes gepflanzt worden war, ihre Kranken, damit Jesus sie heile.",
+      "scripture_connections": [
+        {
+          "reference": "Markus 7:32",
+          "text": "Und sie brachten zu ihm einen, der taub war und stammelte, und baten ihn, dass er ihm die Hand auflege."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "gadarene_discovery.png",
+      "title": "Deine Begegnung",
+      "subtitle": "Nichts hindert ihn daran, dich zu erreichen, und nichts entbindet dich davon, es weiterzuerzählen.",
+      "discovery_questions": [
+        {
+          "category": "Glaube",
+          "question": "Jesus überquerte ein Meer und betrat heidnisches Gebiet, um einen Mann zu suchen, der von einer Legion Dämonen besessen war und dem sein eigenes Volk nicht mehr zu helfen wusste. Glaubst du, es gibt etwas in dir, das ihn davon abhalten könnte, dich dort zu erreichen, wo du bist?"
+        },
+        {
+          "category": "Unterwerfung",
+          "question": "Der befreite Mann wollte an der Seite Jesu bleiben, doch Jesus erlaubte es ihm nicht: Er hatte einen anderen Auftrag für ihn. Hast du erlebt, dass Gott eine Tür schloss, von der du dachtest, sie sei der nächste richtige Schritt, und musstest du deinen Willen unterordnen, damit sich sein Plan erfüllen konnte?"
+        },
+        {
+          "category": "Zeugnis",
+          "question": "Dieser Mann, von Jesus verwandelt, ging hin, um zu erzählen, was er erlebt hatte, ohne dass jemand es ihm beigebracht hätte. Du, der du auch die Hand Gottes in deinem Leben gesehen hast: Was hast du getan, um von den großen Dingen zu zeugen, die Jesus für dich getan hat? Wem hast du diesen Glauben und diese Hoffnung getragen?"
+        }
+      ],
+      "prayer": {
+        "title": "Gebet eines wiederhergestellten Menschen",
+        "content": "Herr, so wie der Gadarener unter den Toten lebte, lebte ich im Tod der Welt und der Sünde. Du hast nicht gezögert, ihm nachzugehen, und du hast nicht gezögert, mir nachzugehen. Mit dir habe ich ein neues, ewiges und unvergängliches Leben empfangen. Heute, wie ich es in dieser Begegnung gesehen habe, bitte ich dich, mich von allem Bösen zu befreien, damit nichts in mir wohnt, das nicht du bist. Lass mich das Zeugnis der großen Dinge, die du in meinem Leben getan hast, zu meinen Freunden tragen, zu meiner Familie, zu meinen Weggefährten, zu jedem, den ich erreichen kann. Denn ich habe deine Hand gesehen, und ich will Hoffnung, Liebe und ewiges Leben zu anderen tragen. Danke, Herr, denn ich bin in dir wiederhergestellt; das Wunder ist bereits geschehen. Gib mir nun die Kraft zu säen und den Boden zu bereiten für die Zeit, wenn du für sie zurückkommst. In Jesu Namen, Amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "gadarene_completion.png",
+      "completion_verse": {
+        "reference": "Markus 5:19",
+        "text": "Aber er ließ es ihm nicht zu, sondern sprach zu ihm: Geh hin in dein Haus zu den Deinen und verkünde ihnen, welch große Dinge der Herr an dir getan und wie er sich deiner erbarmt hat.",
+        "bible_version": "LU17"
+      },
+      "reflection_prompt": "Zu wem musst du heute zurückkehren, um zu erzählen, was Gottes Barmherzigkeit in dir getan hat?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

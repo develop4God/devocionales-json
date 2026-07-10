@@ -172,6 +172,14 @@ A translation can be grammatically fluent and still fail this gate — check any
 Example: ✗ "यीशु आया...उसने कहा" → ✓ "यीशु आए...उन्होंने कहा". Does not apply to quoted
 verse fields (`verse_text`, `verse_overlay.text`, `completion_verse.text`,
 `scripture_connections[].text`) — those follow the cited Bible version's own grammar.
+**Trap:** this rule governs subject agreement only. In ने-ergative compound-verb
+constructions ("X ने ... करने दिया/न दिया", "जिसे यीशु ने बदल दिया"), the verb agrees with
+the direct object, not the subject — and when the object is postposition-marked (उसे,
+जिसे, etc.) or absent, the verb defaults to masculine singular (दिया), never दिए. Applying
+the respectful-plural rule here produces a real grammar error (यीशु ने ... दिए ✗), not a
+register fix — this exact mistake shipped once and was only caught on a second review
+pass. Always distinguish subject-agreement contexts from ने-ergative object-agreement
+contexts before "fixing" a दिया/दिए-type verb near यीशु.
 
 **Japanese (JA):** When Jesus (イエス) or God (神) is the subject, the verb must be in
 honorific form (敬語), not plain form. Other characters (Mary, Peter, etc.) stay in
