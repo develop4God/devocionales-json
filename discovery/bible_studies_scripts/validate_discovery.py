@@ -252,14 +252,59 @@ def detect_language_mix(text: str, expected_lang: str, report: ValidationReport,
     return True
 
 
+# Quote-like characters whose accidental back-to-back doubling indicates a
+# stray-punctuation typo (e.g. »» , "" , '')
+_DOUBLE_CHECK_CHARS = {'"', "'", '«', '»', '“', '”', '‘', '’'}
+
+# Paired quote characters that should appear in balanced counts within a field.
+# Note: curly double quotes (“ ” „) are intentionally NOT balance-checked here —
+# this corpus mixes „...“ and „...” conventions across different German
+# studies, so a fixed pair produces false positives. Guillemets « » are
+# checked for all languages (used in AR/FR/etc.) since their usage is consistent.
+
+
+def _iter_strings(obj, path: str = ""):
+    """Recursively yield (path, value) for every string leaf in obj."""
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            yield from _iter_strings(v, f"{path}.{k}" if path else k)
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            yield from _iter_strings(v, f"{path}[{i}]")
+    elif isinstance(obj, str):
+        yield path, obj
+
+
+def _check_quote_anomalies(text: str, ctx: str, lang: str, report: ValidationReport):
+    """Flag stray/duplicated/unbalanced quote-like punctuation in a text field."""
+    # Doubled identical quote-like characters back-to-back (e.g. »», "", '')
+    for i in range(len(text) - 1):
+        c = text[i]
+        if c in _DOUBLE_CHECK_CHARS and text[i + 1] == c:
+            report.add_error(f"{ctx}: contains doubled '{c}{c}' — likely stray punctuation")
+
+    # Balanced guillemets (used in AR/FR/etc.)
+    oc, cc = text.count('«'), text.count('»')
+    if oc != cc:
+        report.add_warning(f"{ctx}: unbalanced '«'/'»' — {oc} open vs {cc} close")
+
+    # Straight double quotes should appear in pairs
+    if text.count('"') % 2 != 0:
+        report.add_warning(f"{ctx}: odd number of straight double quotes (\") — possible stray quote")
+
+
 def validate_structure(data: Dict, lang: str, filename: str, report: ValidationReport) -> bool:
     """Validate the structure of a discovery study file."""
-    required_fields = ['id', 'type', 'date', 'title', 'subtitle', 'language', 
-                       'version', 'estimated_reading_minutes', 'key_verse', 
+    required_fields = ['id', 'type', 'date', 'title', 'subtitle', 'language',
+                       'version', 'estimated_reading_minutes', 'key_verse',
                        'cards', 'tags', 'metadata']
-    
+
     is_valid = True
-    
+
+    # Quote / stray-punctuation anomaly scan across all text fields
+    for path, text in _iter_strings(data):
+        _check_quote_anomalies(text, f"{filename}:{path}", lang, report)
+
     # Check required fields
     for field in required_fields:
         if field not in data:

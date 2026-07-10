@@ -8,8 +8,8 @@ This folder contains all scripts needed to validate the structure, translation, 
 
 ## 🧑‍💻 Main Scripts
 
-- **🚀 master_validator.py**: The all-in-one orchestrator. Runs all validations for the entire codebase automatically.
-- **🌐 validate_translations.py**: Global validator. Checks all translation files for JSON validity, structure, language codes, and completeness using index.json as the source of truth.
+- **🚀 discovery_master_validator.py**: The all-in-one orchestrator. Runs all validations for the entire codebase automatically.
+- **🌐 validate_discovery.py**: Global validator. Checks all translation files for JSON validity, structure, language codes, and completeness using index.json as the source of truth.
 - **📊 validate_structure_bulk.py**: Per-study structure validator. Checks that all language versions of a specific study match the structure of the English base file.
 
 ---
@@ -20,7 +20,7 @@ This folder contains all scripts needed to validate the structure, translation, 
 Run this to check everything in one go:
 
 ```bash
-python3 master_validator.py
+python3 discovery_master_validator.py
 ```
 - ✅ Runs global translation/JSON validation for all files
 - ✅ Then, for every study, uses the English file as a template to check all language versions for structure
@@ -30,7 +30,7 @@ python3 master_validator.py
 ### 2️⃣ Validate All Translations Only
 
 ```bash
-python3 validate_translations.py
+python3 validate_discovery.py
 ```
 - 🌐 Checks all translation files for JSON, structure, and language issues
 - Uses index.json as the source of truth
@@ -50,7 +50,7 @@ python3 validate_structure_bulk.py discovery/en/<study_file_en>.json
 
 ## 🤖 How It Works
 
-- **master_validator.py** automatically finds all English base files in the en/ folder and runs the bulk structure validator for each, so you never have to do it manually for every study.
+- **discovery_master_validator.py** automatically finds all English base files in the en/ folder and runs the bulk structure validator for each, so you never have to do it manually for every study.
 - If you run validate_structure_bulk.py directly, you must specify the English base file for the study you want to check.
 - All scripts print clear error messages and stop on failure, so you always know what to fix.
 
@@ -58,15 +58,15 @@ python3 validate_structure_bulk.py discovery/en/<study_file_en>.json
 
 ## 📝 Quick Reference
 
-- ▶️ Run `master_validator.py` for full validation (global + all studies)
-- ▶️ Run `validate_translations.py` for global translation/JSON checks
+- ▶️ Run `discovery_master_validator.py` for full validation (global + all studies)
+- ▶️ Run `validate_discovery.py` for global translation/JSON checks
 - ▶️ Run `validate_structure_bulk.py` with an English file for per-study structure checks
 
 ---
 
 ## 📋 Validation Details & Rules
 
-### 🌐 validate_translations.py — Two-Phase Validation
+### 🌐 validate_discovery.py — Two-Phase Validation
 
 **PHASE A: Index Validation**
 - 🗂️ Validates index.json format, structure, and data integrity
@@ -111,10 +111,10 @@ python3 validate_structure_bulk.py discovery/en/<study_file_en>.json
 
 ```bash
 # From the discovery folder
-python3 scripts/validate_translations.py
+python3 scripts/validate_discovery.py
 # Make it executable (optional)
-chmod +x scripts/validate_translations.py
-./scripts/validate_translations.py
+chmod +x scripts/validate_discovery.py
+./scripts/validate_discovery.py
 ```
 
 #### 🟢 Expected Output
