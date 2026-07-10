@@ -126,16 +126,23 @@ EXPECTED_LANGUAGES = {
     for lang, cfg in _BIBLE_VERSIONS.items()
 }
 
-# Language character patterns for detection
+# Character patterns keyed by script (not language code) \u2014 the SOT's
+# per-language 'script' field (see _BIBLE_VERSIONS) already identifies which
+# writing system each language uses, so detection is driven by that instead
+# of a hand-maintained language-code list that silently misses new languages.
+SCRIPT_PATTERNS = {
+    'latin': re.compile(r'[a-zA-Z]{3,}'),
+    'cjk': re.compile(r'[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+'),
+    'devanagari': re.compile(r'[\u0900-\u097F]+'),
+    'arabic': re.compile(r'[\u0600-\u06FF]+'),
+}
+
+# Backward-compatible alias kept for the ja/zh-specific CJK check below,
+# which needs the two individual language patterns rather than the
+# unified 'cjk' script pattern.
 LANGUAGE_PATTERNS = {
-    'en': re.compile(r'[a-zA-Z]{3,}'),  # English words
-    'es': re.compile(r'[a-zA-Z]{3,}'),  # Spanish words (similar to English)
-    'pt': re.compile(r'[a-zA-Z]{3,}'),  # Portuguese words (similar to English)
-    'fr': re.compile(r'[a-zA-Z]{3,}'),  # French words (similar to English)
     'ja': re.compile(r'[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+'),  # Japanese
     'zh': re.compile(r'[\u4E00-\u9FFF]+'),  # Chinese
-    'hi': re.compile(r'[\u0900-\u097F]+'),  # Hindi (Devanagari script)
-    'ar': re.compile(r'[\u0600-\u06FF]+')   # Arabic
 }
 
 
@@ -226,31 +233,28 @@ def load_json_file(filepath: Path, report: ValidationReport) -> Dict:
 
 
 def detect_language_mix(text: str, expected_lang: str, report: ValidationReport, context: str) -> bool:
-    """Detect if text contains mixed languages."""
+    """Detect if text contains mixed languages, driven by the SOT's per-language
+    'script' field (latin/cjk/devanagari/arabic) rather than a hardcoded list of
+    language codes, so every language the SOT defines is covered automatically.
+    """
     if not text or len(text.strip()) < 3:
         return True
-    
-    # For Asian languages, check if they're present
-    if expected_lang in ['ja', 'zh']:
-        pattern = LANGUAGE_PATTERNS[expected_lang]
-        if not pattern.search(text):
-            report.add_warning(f"{context}: Expected {expected_lang} characters but found none in: {text[:50]}...")
+
+    script = _BIBLE_VERSIONS.get(expected_lang, {}).get('script')
+
+    # For non-Latin scripts, check the expected script's characters are present
+    if script and script != 'latin':
+        pattern = SCRIPT_PATTERNS.get(script)
+        if pattern and not pattern.search(text):
+            report.add_warning(f"{context}: Expected {expected_lang} ({script}) characters but found none in: {text[:50]}...")
             return False
 
-    # For Arabic, check that Arabic characters are present
-    elif expected_lang == 'ar':
-        pattern = LANGUAGE_PATTERNS['ar']
-        if not pattern.search(text):
-            report.add_warning(f"{context}: Expected Arabic characters but found none in: {text[:50]}...")
-            return False
-
-    # For Latin-based languages, check for unexpected characters
-    elif expected_lang in ['en', 'es', 'pt', 'fr']:
-        # Check if Asian characters are present (shouldn't be)
+    # For Latin-script languages, check for unexpected CJK characters
+    elif script == 'latin':
         if LANGUAGE_PATTERNS['ja'].search(text) or LANGUAGE_PATTERNS['zh'].search(text):
             report.add_error(f"{context}: Found Asian characters in {expected_lang} text: {text[:50]}...")
             return False
-    
+
     return True
 
 
@@ -949,8 +953,8 @@ def main():
     
     # Cross-validate translations against English using index.json as source
     if 'en' in all_studies:
-        for lang in ['es', 'pt', 'fr', 'ja', 'zh', 'hi']:
-            if lang not in all_studies:
+        for lang in EXPECTED_LANGUAGES:
+            if lang == 'en' or lang not in all_studies:
                 continue
             
             # Use index_studies instead of EXPECTED_STUDIES
