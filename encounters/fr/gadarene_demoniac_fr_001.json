@@ -1,0 +1,291 @@
+{
+  "id": "gadarene_demoniac_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fr",
+  "bible_version": "LSG1910",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 14,
+  "meta": {
+    "character": "Le démoniaque gadarénien",
+    "testament": "new",
+    "scripture_reference": "Marc 5:1-20",
+    "mood_primary": "falling",
+    "accent_color": "#040810",
+    "emoji": "⛓️",
+    "tags": [
+      "délivrance",
+      "possession",
+      "restauration",
+      "identité",
+      "mission",
+      "légion",
+      "gadarénien",
+      "jésus",
+      "rencontre",
+      "guérison"
+    ]
+  },
+  "key_verse": {
+    "reference": "Marc 5:2",
+    "text": "Aussitôt que Jésus fut hors de la barque, il vint au-devant de lui un homme, sortant des sépulcres, et possédé d'un esprit impur.",
+    "bible_version": "LSG1910"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "storm",
+      "image_url": "gadarene_arrival.png",
+      "title": "L'autre rive de la mer",
+      "narrative": "La tempête s'est à peine calmée. L'eau garde encore le souvenir du vent que Jésus a fait taire. La barque touche terre dans le pays des Gadaréniens, de l'autre côté de la mer de Galilée. C'est un territoire païen. Aucun Juif pieux ne traverserait volontairement jusqu'ici : des tombeaux sont taillés dans la colline et, plus haut, un troupeau de pourceaux paît en toute liberté. Tout, ici, porte la marque de l'impur. Et pourtant Jésus descend le premier.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marc 5:1",
+        "text": "Ils arrivèrent à l'autre bord de la mer, dans le pays des Gadaréniens."
+      },
+      "revelation_key": "Jésus traverse délibérément vers le lieu que tous évitent."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "gadarene_tombs.png",
+      "verse_reference": "Marc 5:2-5",
+      "verse_text": "Aussitôt que Jésus fut hors de la barque, il vint au-devant de lui un homme, sortant des sépulcres, et possédé d'un esprit impur. Cet homme avait sa demeure dans les sépulcres, et personne ne pouvait plus le lier, même avec une chaîne. Car souvent il avait eu les fers aux pieds et avait été lié de chaînes, mais il avait rompu les chaînes et brisé les fers, et personne n'avait la force de le dompter. Il était sans cesse, nuit et jour, dans les sépulcres et sur les montagnes, criant, et se meurtrissant avec des pierres.",
+      "reflection": "Il vivait parmi les morts parce que, parmi les vivants, il n'y avait plus de place pour lui. Luc ajoute un détail : il ne portait pas de vêtements. Il avait perdu jusqu'au minimum qui sépare une personne de sa propre douleur exposée. Les chaînes que d'autres lui mettaient pour le contenir ne servaient à rien ; il les brisait sans cesse, et cette force qui aurait dû le défendre devenait sa condamnation, le laissant chaque fois plus seul. Nuit et jour il criait parmi les tombeaux, se meurtrissant avec des pierres. Le texte ne rapporte que ce que le tourment le poussait à faire.",
+      "revelation_key": "Personne ne pouvait le lier, mais personne non plus ne pouvait s'approcher de lui : sa force le laissait plus seul, et non pas libre.",
+      "scripture_connections": [
+        {
+          "reference": "Luc 8:27",
+          "text": "Lorsque Jésus fut descendu à terre, il vint au-devant de lui un homme de la ville, qui était possédé de plusieurs démons. Depuis longtemps il ne portait point de vêtement, et avait sa demeure non dans une maison, mais dans les sépulcres."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "gadarene_night_torment.png",
+      "title": "Avant que le soleil ne se lève",
+      "narrative": "Chaque fois que cet homme brisait ses chaînes, le démon le poussait vers les déserts. C'est un détail lourd de sens théologique. Dans le contexte de l'Ancien Testament, le désert était le lieu associé au démoniaque, le territoire opposé à la vie et à la communauté. Cet homme vivait tourmenté, entraîné sans cesse vers le symbole même de la désolation. Et toujours, nuit et jour, la scène se répétait.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luc 8:29",
+        "text": "Car Jésus commandait à l'esprit impur de sortir de cet homme, dont il s'était emparé depuis longtemps; on le gardait lié de chaînes et les fers aux pieds, mais il rompait les liens, et il était entraîné par le démon dans les déserts."
+      },
+      "revelation_key": "Jésus a traversé la mer vers le territoire même de désolation où le démon l'entraînait."
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "gadarene_running_toward.png",
+      "title": "Il courut à sa rencontre",
+      "narrative": "L'homme que personne ne pouvait dompter, qui brisait chaînes et fers comme un fil, voit Jésus de loin et court à sa rencontre. Et, en arrivant, il se prosterne. Le cri qui sort de sa bouche est à la fois terreur et supplication : Qu'y a-t-il entre moi et toi, Jésus, Fils du Dieu Très-Haut ? Je t'en conjure au nom de Dieu, ne me tourmente pas. C'est le même titre — 'Fils de Dieu' — que d'autres esprits impurs emploient en rencontrant Jésus dans d'autres passages : ils savaient exactement qui se tenait devant eux.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marc 5:6-7",
+        "text": "Ayant vu Jésus de loin, il accourut, se prosterna devant lui, et s'écria d'une voix forte: Qu'y a-t-il entre moi et toi, Jésus, Fils du Dieu Très-Haut? Je t'en conjure au nom de Dieu, ne me tourmente pas."
+      },
+      "revelation_key": "Les démons connaissaient la vérité sur Jésus mieux que bien des chefs religieux, mais le connaître ne les a pas sauvés ; seule la foi qui se soumet sauve.",
+      "scripture_connections": [
+        {
+          "reference": "Marc 1:24",
+          "text": "Qu'y a-t-il entre nous et toi, Jésus de Nazareth? Tu es venu pour nous perdre. Je sais qui tu es: le Saint de Dieu."
+        },
+        {
+          "reference": "Marc 3:11",
+          "text": "Les esprits impurs, quand ils le voyaient, se prosternaient devant lui, et s'écriaient: Tu es le Fils de Dieu."
+        },
+        {
+          "reference": "Jacques 2:19",
+          "text": "Tu crois qu'il y a un seul Dieu, tu fais bien; les démons le croient aussi, et ils tremblent."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "gadarene_legion_metaphor.png",
+      "title": "Légion",
+      "subtitle": "Un nom emprunté à l'armée qui opprimait Israël",
+      "content": "Quand Jésus lui demande son nom, la réponse n'est pas celle d'un homme : 'Légion est mon nom, car nous sommes plusieurs' (Marc 5:9). En grec, *legiṓn* (λεγιών) était le terme technique d'une unité militaire romaine d'environ cinq à six mille soldats — la force d'occupation maximale que Rome pouvait déployer. Tout Juif ou païen vivant sous la domination romaine en Galilée connaissait exactement le poids de ce mot. Le démon a choisi le symbole même du pouvoir qui asservissait ce peuple, et l'a fait vivre à l'intérieur d'un seul homme. Ce qui opprimait toute une nation s'était concentré, en miniature, dans un seul corps humain. Légion supplie de rester dans cette même région (Marc 5:10) et, plus tard, supplie de ne pas être envoyée dans l'abîme (Luc 8:31) : elle préfère n'importe quel corps plutôt que de n'en avoir aucun. Et pourtant, devant Jésus, cette légion tout entière supplie, elle n'exige pas.",
+      "revelation_key": "Le nom 'Légion' révèle à la fois le poids de l'oppression que Jésus est venu désarmer et la terreur du démon de rester sans corps à habiter.",
+      "verse_overlay": {
+        "reference": "Marc 5:9",
+        "text": "Et, il lui demanda: Quel est ton nom? Légion est mon nom, lui répondit-il, car nous sommes plusieurs."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Marc 5:10",
+          "text": "Et il le priait instamment de ne pas les envoyer hors du pays."
+        },
+        {
+          "reference": "Luc 8:31",
+          "text": "Et ils priaient instamment Jésus de ne pas leur ordonner d'aller dans l'abîme."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "scripture_moment",
+      "mood": "intense",
+      "image_url": "gadarene_pigs_herd.png",
+      "verse_reference": "Marc 5:10-13",
+      "verse_text": "Et il le priait instamment de ne pas les envoyer hors du pays. Il y avait là, vers la montagne, un grand troupeau de pourceaux qui paissaient. Et les démons le prièrent, disant: Envoie-nous dans ces pourceaux, afin que nous entrions en eux. Il le leur permit. Et les esprits impurs sortirent, entrèrent dans les pourceaux, et le troupeau se précipita des pentes escarpées dans la mer: il y en avait environ deux mille, et ils se noyèrent dans la mer.",
+      "reflection": "Les pourceaux ont une importance capitale dans ce récit. La loi du Lévitique les déclarait impurs (Lévitique 11:7) ; leur présence en si grand nombre, deux mille, confirme qu'il s'agissait d'un territoire païen, où cette loi ne régissait pas la vie quotidienne. Légion avait déjà supplié de rester dans la région (Marc 5:10) et de ne pas être envoyée dans l'abîme (Luc 8:31) ; demander à entrer dans les pourceaux était sa manière d'obtenir les deux : garder un corps, rester dans ce lieu. Ce même homme se meurtrissait avec des pierres (Marc 5:5) : les démons ne se contentent pas d'occuper un corps, ils détruisent ce qu'ils habitent. En entrant dans les pourceaux, ils leur ont fait, en quelques secondes, ce qu'ils lui faisaient depuis des années, visible devant tout le peuple. Le troupeau s'est précipité droit vers la mer, l'image même de l'abîme qu'ils redoutaient tant, et s'y est noyé.",
+      "revelation_key": "Les démons ont négocié pour garder un corps et un territoire, et cette même négociation les a précipités dans l'abîme qu'ils redoutaient tant.",
+      "scripture_connections": [
+        {
+          "reference": "Lévitique 11:7",
+          "text": "Vous ne mangerez pas le porc, qui a la corne fendue et le pied fourchu, mais qui ne rumine pas: vous le regarderez comme impur."
+        },
+        {
+          "reference": "Marc 5:10",
+          "text": "Et il le priait instamment de ne pas les envoyer hors du pays."
+        },
+        {
+          "reference": "Luc 8:31",
+          "text": "Et ils priaient instamment Jésus de ne pas leur ordonner d'aller dans l'abîme."
+        },
+        {
+          "reference": "Matthieu 8:31-32",
+          "text": "Les démons priaient Jésus, disant: Si tu nous chasses, envoie-nous dans ce troupeau de pourceaux. Il leur dit: Allez! Ils sortirent, et entrèrent dans les pourceaux. Et voici, tout le troupeau se précipita des pentes escarpées dans la mer, et ils périrent dans les eaux."
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "gadarene_cliff_fall.png",
+      "title": "La pente escarpée",
+      "narrative": "Deux mille animaux se précipitent sur la pente vers l'eau en un seul instant, un grondement qu'on entend depuis le village. Ceux qui les gardaient s'enfuient sans se retourner et courent donner l'alerte en ville et dans les campagnes. Ils sortent pour voir : le grec emploie ἰδεῖν (idein), regarder avec attention, examiner de près. Et ce qui s'était passé est τὸ γεγονός (to gegonos), un fait dont les effets étaient déjà permanents, non une simple frayeur passagère. Mais tandis que tous ont les yeux fixés sur le tumulte des pourceaux, quelque chose s'est brisé en silence à l'intérieur de l'homme qui, un instant plus tôt, criait parmi les tombeaux.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marc 5:14",
+        "text": "Ceux qui les faisaient paître s'enfuirent, et répandirent la nouvelle dans la ville et dans les campagnes. Les gens allèrent voir ce qui était arrivé."
+      },
+      "revelation_key": "Le miracle le plus silencieux se produit pendant que tous regardent vers le fracas."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "gadarene_seated_clothed.png",
+      "title": "Assis, vêtu, dans son bon sens",
+      "subtitle": "Trois mots qui décrivent une restauration complète",
+      "content": "Quand le peuple arrive, il trouve l'homme qui brisait autrefois les chaînes maintenant assis aux pieds de Jésus. Le grec original emploie trois mots qui, ensemble, dépeignent un renversement total : καθήμενον (kathḗmenon), assis, dans la posture d'un disciple qui apprend ; ἱματισμένον (himatisménon), vêtu ; σωφρονοῦντα (sōphronoûnta), dans son bon sens, sain d'esprit, un terme qui n'apparaît d'ailleurs que dans ce passage. Le fait qu'il soit vêtu et sain d'esprit est la preuve physique et mentale que la légion qui l'habitait n'était plus là. Et le peuple, au lieu de se réjouir, eut peur.",
+      "revelation_key": "La restauration fut si complète que le peuple craignit davantage le miracle que la possession.",
+      "verse_overlay": {
+        "reference": "Marc 5:15",
+        "text": "Ils vinrent auprès de Jésus, et ils virent le démoniaque, celui qui avait eu la légion, assis, vêtu, et dans son bon sens; et ils furent saisis de frayeur."
+      }
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "gadarene_crowd_fear.png",
+      "title": "Peur de ce qu'on ne peut pas contrôler",
+      "subtitle": "Pourquoi ils supplièrent Jésus de partir",
+      "content": "Un homme se retrouve complètement guéri, et la réponse du peuple n'est pas la célébration, mais la supplication pour que Jésus s'en aille. Le grec emploie ici παρακαλέω (parakaleō), le même verbe que les malades utilisent ailleurs pour supplier Jésus de les guérir. Ici le peuple l'emploie à l'envers : il supplie, non pour l'attirer, mais pour l'éloigner. Et ils ne lui demandent pas de quitter la ville, mais de quitter ὅρια (horia), toute la région, ses frontières entières. Avant Jésus, le peuple avait un danger connu : il savait où vivait l'homme possédé, ce qu'il faisait, et qu'aucune chaîne ne le retenait, mais au moins il savait à quoi s'attendre de lui. La puissance de Jésus ne se laisse ni enchaîner ni prévoir. Il préférait le danger qu'il connaissait déjà à un bien si grand qu'il ne pouvait le maîtriser.",
+      "revelation_key": "Parfois nous craignons davantage la liberté que Jésus apporte que la captivité qu'elle remplace.",
+      "verse_overlay": {
+        "reference": "Marc 5:17",
+        "text": "Alors ils se mirent à supplier Jésus de quitter leur territoire."
+      }
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "grace",
+      "image_url": "gadarene_begging_to_follow.png",
+      "verse_reference": "Marc 5:18-19",
+      "verse_text": "Comme il montait dans la barque, celui qui avait été démoniaque lui demanda la permission de rester avec lui. Jésus ne le lui permit pas, mais il lui dit: Va dans ta maison, vers les tiens, et raconte-leur tout ce que le Seigneur t'a fait, et comment il a eu pitié de toi.",
+      "reflection": "L'homme demande à rester. C'est compréhensible : auprès de Jésus il est en sécurité, et le peuple qui venait de le voir guéri venait aussi de le rejeter. Jésus lui-même se retire de cette région à cause de ce rejet (Marc 5:17), mais il n'abandonne pas complètement le lieu : il envoie à sa place l'homme qui peut rester là où lui-même n'est plus le bienvenu. Va dans ta maison, vers les tiens, lui dit-il. Les mêmes gens qui probablement le craignaient, l'évitaient, le tenaient peut-être pour perdu, seraient désormais les premiers à entendre de ses propres lèvres ce que la miséricorde de Dieu avait fait.",
+      "revelation_key": "Là où Jésus n'était plus le bienvenu, il a laissé quelqu'un pour témoigner par sa propre délivrance et sa transformation.",
+      "scripture_connections": [
+        {
+          "reference": "Luc 8:39",
+          "text": "Retourne dans ta maison, et raconte tout ce que Dieu t'a fait. Il s'en alla, et publia par toute la ville tout ce que Jésus avait fait pour lui."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "gadarene_sent_without_staff.png",
+      "title": "Le héraut des dix villes",
+      "subtitle": "De la voix de Légion à la voix d'un messager du Roi",
+      "content": "Jésus lui dit un mot simple : ὕπαγε (hýpage), 'va, retire-toi' (Marc 5:19). L'homme obéit, et le texte emploie κηρύσσω (kēryssō) pour décrire ce qu'il fait ensuite : le même verbe que Marc réserve à la proclamation officielle de l'évangile, l'annonce d'un héraut porteur de l'autorité d'un royaume. Il ne le fait pas dans une seule ville : il parcourt la Décapole, les dix villes de la région. Quelques heures plus tôt, cet homme parlait avec la voix d'une légion démoniaque. Maintenant il proclame avec la voix d'un messager du Roi dans dix villes différentes. Le peuple, dit le texte, ἐθαύμαζον (ethaúmazon) : s'étonnait, à l'imparfait, un étonnement qui se maintenait jour après jour dans chacune de ces villes.",
+      "revelation_key": "Le même homme qui parlait autrefois avec la voix d'une légion démoniaque parcourt maintenant dix villes avec la voix d'un héraut du Roi.",
+      "verse_overlay": {
+        "reference": "Marc 5:20",
+        "text": "Il s'en alla, et se mit à publier dans la Décapole tout ce que Jésus avait fait pour lui. Et tous furent dans l'étonnement."
+      }
+    },
+    {
+      "order": 12,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "gadarene_decapolis_proclaiming.png",
+      "title": "Le terrain qui fut préparé",
+      "subtitle": "Ce qui s'est passé dans la Décapole entre Marc 5 et Marc 7",
+      "content": "Le peuple avait supplié (παρακαλέω, parakaleō) Jésus de quitter cette région (Marc 5:17). Des chapitres plus tard, quand Jésus revient dans la même zone, on lui amène un homme sourd et bègue et on le supplie — le même verbe, parakaleō — de lui imposer les mains (Marc 7:32). Entre ces deux moments, Jésus ne remet jamais les pieds dans la Décapole. La seule semence laissée dans ces dix villes est le témoignage d'un seul homme, marchant de place en place, racontant ce que Jésus avait fait pour lui. Personne d'autre n'y a prêché. Personne d'autre n'a essayé. Quand Jésus revient, on ne l'accueille plus avec crainte, mais avec assez de foi pour lui amener ses malades.",
+      "revelation_key": "Le même peuple qui l'avait supplié de partir, grâce à la graine plantée dans le témoignage d'un homme, amenait maintenant ses malades pour que Jésus les guérisse.",
+      "scripture_connections": [
+        {
+          "reference": "Marc 7:32",
+          "text": "On lui amena un sourd, qui avait de la difficulté à parler, et on le pria de lui imposer les mains."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "gadarene_discovery.png",
+      "title": "Ta Rencontre",
+      "subtitle": "Rien ne le limite pour te rejoindre, et rien ne t'excuse de le raconter.",
+      "discovery_questions": [
+        {
+          "category": "Foi",
+          "question": "Jésus a traversé une mer et est entré en territoire païen pour chercher un homme possédé par une légion de démons, que son propre peuple ne savait plus comment aider. Crois-tu qu'il y a quelque chose en toi qui l'empêcherait d'arriver jusqu'où tu es ?"
+        },
+        {
+          "category": "Soumission",
+          "question": "L'homme délivré voulait rester auprès de Jésus, mais Jésus ne le lui a pas permis : il avait pour lui un dessein différent. As-tu senti Dieu fermer une porte que tu croyais être la prochaine étape légitime, et as-tu dû soumettre ta volonté pour que son dessein s'accomplisse ?"
+        },
+        {
+          "category": "Témoignage",
+          "question": "Cet homme, transformé par Jésus, est allé raconter ce qu'il avait vécu sans que personne le lui enseigne. Toi qui as aussi vu la main de Dieu dans ta vie, qu'as-tu fait pour témoigner de tout ce que Jésus a fait pour toi ? À qui as-tu porté cette foi et cette espérance ?"
+        }
+      ],
+      "prayer": {
+        "title": "Prière d'un homme restauré",
+        "content": "Seigneur, tout comme l'homme gadarénien vivait parmi les morts, moi je vivais dans la mort du monde et du péché. Tu n'as pas hésité à aller le chercher, et tu n'as pas hésité à venir me chercher. Avec toi j'ai reçu une vie nouvelle, éternelle et incorruptible. Aujourd'hui, comme je l'ai vu dans cette rencontre, je te demande de me libérer de tout mal, que rien n'habite en moi qui ne soit toi. Permets-moi de porter tout ce que tu as fait dans ma vie à mes amis, à ma famille, à mes compagnons, à tous ceux que je peux atteindre, car j'ai vu ta main et je veux témoigner en portant l'espérance, l'amour et la vie éternelle aux autres. Merci, Seigneur, car je suis restauré en toi ; le miracle est déjà accompli. Donne-moi maintenant la force de semer et de préparer le terrain pour le moment où tu reviendras vers eux. Au nom de Jésus, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "gadarene_completion.png",
+      "completion_verse": {
+        "reference": "Marc 5:19",
+        "text": "Jésus ne le lui permit pas, mais il lui dit: Va dans ta maison, vers les tiens, et raconte-leur tout ce que le Seigneur t'a fait, et comment il a eu pitié de toi.",
+        "bible_version": "LSG1910"
+      },
+      "reflection_prompt": "Vers qui as-tu besoin de retourner aujourd'hui pour lui raconter ce que la miséricorde de Dieu a fait en toi ?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
