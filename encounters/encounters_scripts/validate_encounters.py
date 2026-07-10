@@ -13,6 +13,7 @@ Exit codes: 0 = all passed, 1 = errors found
 import json
 import re
 import sys
+import tempfile
 from pathlib import Path
 from typing import List, Optional
 
@@ -30,14 +31,15 @@ REMOTE_INDEX_URL = "https://raw.githubusercontent.com/develop4God/bible_versions
 REMOTE_FETCH_ATTEMPTS = 3
 REMOTE_FETCH_TIMEOUT = 15  # seconds, per attempt
 
-# bible_versions.json is a local CACHE of the remote SOT, refreshed on every
+# bible_versions.json is a CACHE of the remote SOT, refreshed on every
 # successful live fetch and used only as a fallback when the network is
-# unreachable. It is never hand-maintained as a source of truth.
-_LOCAL_CACHE_PATH = SCRIPTS_DIR / 'bible_versions.json'
+# unreachable. It lives in the system temp dir (not the repo) so validator
+# runs never leave an untracked/stale file behind in encounters_scripts/.
+_LOCAL_CACHE_PATH = Path(tempfile.gettempdir()) / 'devocionales_encounters_bible_versions_cache.json'
 
 
 def _local_cache_languages() -> dict:
-    """Read the local cache file (used only as an offline fallback)."""
+    """Read the temp-dir cache file (used only as an offline fallback)."""
     return json.loads(_LOCAL_CACHE_PATH.read_text(encoding='utf-8'))['languages']
 
 
@@ -76,14 +78,15 @@ def _fetch_remote_index(attempts: int = REMOTE_FETCH_ATTEMPTS) -> Optional[dict]
 
 
 def _write_local_cache(remote_langs: dict) -> None:
-    """Refresh the local bible_versions.json cache from a successful live
+    """Refresh the temp-dir bible_versions cache from a successful live
     fetch, so the offline fallback is always recent rather than a
-    hand-maintained file that can silently go stale between fetches."""
+    hand-maintained file that can silently go stale between fetches.
+    Written outside the repo so it's never an untracked/committed file."""
     payload = {
         'meta': {
             'version': '1.0.0',
             'source': f'Cached from {REMOTE_INDEX_URL} on last successful validator run',
-            'note': 'Offline fallback only. Never hand-edit — this file is overwritten on every successful live fetch.',
+            'note': 'Offline fallback only. Lives in the system temp dir — never hand-edit, never commit.',
         },
         'languages': {
             lang: _remote_to_local_shape(entry) for lang, entry in remote_langs.items()
@@ -101,9 +104,9 @@ def _load_bible_versions() -> tuple[dict, bool]:
     """Load bible version config for every language the remote SOT defines.
 
     Tries the live remote SOT first (source of truth, with retries); only
-    falls back to the local bible_versions.json cache if the network is
+    falls back to the temp-dir bible_versions cache if the network is
     unreachable after all attempts. On a successful fetch, refreshes the
-    local cache file so the fallback path is always recent.
+    cache file so the fallback path is always recent.
     Returns (languages_dict, used_remote: bool).
     """
     remote = _fetch_remote_index()
@@ -224,7 +227,7 @@ def _check_quote_anomalies(text: str, ctx: str, lang: str, report: 'Report'):
 
 def validate_sot_source(report: 'Report') -> bool:
     """Report whether this run resolved bible_version codes from the live
-    remote SOT or fell back to the local bible_versions.json cache.
+    remote SOT or fell back to the temp-dir bible_versions cache.
 
     _BIBLE_VERSIONS is populated at import time by fetching the remote SOT
     first — this function only surfaces which source was actually used, so
@@ -236,8 +239,8 @@ def validate_sot_source(report: 'Report') -> bool:
         report.I(f"✓ bible_version codes resolved live from remote SOT ({REMOTE_INDEX_URL}) for all {len(_BIBLE_VERSIONS)} languages")
         return True
     report.W(
-        f"Could not reach remote SOT ({REMOTE_INDEX_URL}) — fell back to local "
-        f"bible_versions.json cache. Results reflect the LOCAL CACHE, not confirmed "
+        f"Could not reach remote SOT ({REMOTE_INDEX_URL}) — fell back to the "
+        f"temp-dir bible_versions cache. Results reflect the LOCAL CACHE, not confirmed "
         f"live data; re-run once network access is available before merging."
     )
     return True
