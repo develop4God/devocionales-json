@@ -111,8 +111,18 @@
       "image_url": "nicodemus_water_and_spirit.png",
       "verse_reference": "Juan 3:5",
       "verse_text": "Respondió Jesús: De cierto, de cierto te digo, que el que no naciere de agua y del Espíritu, no puede entrar en el reino de Dios.",
-      "reflection": "Jesús añade una segunda capa a su respuesta: agua y Espíritu. La palabra griega es πνεῦμα (pneûma) — \"espíritu\", \"aliento\", \"viento\" —, el mismo término que describe el aliento de vida y la presencia de Dios en acción. Para un maestro de la ley, el agua evocaba de inmediato los ritos de purificación y las promesas de los profetas, como la de Ezequiel: \"Esparciré sobre vosotros agua limpia... Y pondré dentro de vosotros un espíritu nuevo\" (Ezequiel 36:25-26). Jesús está diciendo que esa promesa profética, la limpieza y el Espíritu nuevo prometidos para Israel, se cumple ahora, en esta conversación, para cualquiera que la reciba.",
-      "revelation_key": "Nicodemo conocía la promesa de un espíritu nuevo desde los profetas. Jesús le muestra que esa promesa tiene rostro, y está frente a él."
+      "reflection": "Jesús añade una segunda capa a su respuesta: agua y Espíritu. La palabra griega es πνεῦμα (pneûma) — \"espíritu\", \"aliento\", \"viento\" —, la misma que usará más adelante en el v.8 para describir cómo se mueve todo aquel que nace del Espíritu. Para un maestro de la ley, el agua evocaba de inmediato los ritos de purificación y las promesas de los profetas, como la de Ezequiel: \"Esparciré sobre vosotros agua limpia... Y pondré dentro de vosotros un espíritu nuevo\" (Ezequiel 36:25-26). En la traducción griega que Nicodemo conocía, esa promesa usa la misma palabra, pneûma, que Jesús acaba de pronunciar. Años después, ese mismo pneûma se derramaría de forma visible sobre los discípulos en Pentecostés: \"vino del cielo un estruendo como de un viento recio... y fueron todos llenos del Espíritu Santo\" (Hechos 2:2-4). Jesús está diciendo que esa promesa profética, la limpieza y el Espíritu nuevo prometidos para Israel, se cumple ahora, en esta conversación, para cualquiera que la reciba — y un día se haría visible ante todos.",
+      "scripture_connections": [
+        {
+          "reference": "Ezequiel 36:25-26",
+          "text": "Esparciré sobre vosotros agua limpia, y seréis limpiados de todas vuestras inmundicias; y de todos vuestros ídolos os limpiaré. Os daré corazón nuevo, y pondré espíritu nuevo dentro de vosotros; y quitaré de vuestra carne el corazón de piedra, y os daré un corazón de carne."
+        },
+        {
+          "reference": "Hechos 2:2-4",
+          "text": "Y de repente vino del cielo un estruendo como de un viento recio que soplaba, el cual llenó toda la casa donde estaban sentados; y se les aparecieron lenguas repartidas, como de fuego, asentándose sobre cada uno de ellos. Y fueron todos llenos del Espíritu Santo, y comenzaron a hablar en otras lenguas, según el Espíritu les daba que hablasen."
+        }
+      ],
+      "revelation_key": "Nicodemo conocía la promesa de un espíritu nuevo desde los profetas. Jesús le muestra que esa promesa tiene rostro, está frente a él, y un día se derramaría visiblemente sobre todos."
     },
     {
       "order": 7,

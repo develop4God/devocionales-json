@@ -111,8 +111,18 @@
       "image_url": "nicodemus_water_and_spirit.png",
       "verse_reference": "Jean 3:5",
       "verse_text": "Jésus répondit: En vérité, en vérité, je te le dis, si un homme ne naît d’eau et d’Esprit, il ne peut entrer dans le royaume de Dieu.",
-      "reflection": "Jésus ajoute une seconde dimension à sa réponse : l'eau et l'Esprit. Le mot grec est πνεῦμα (pneuma) — \"esprit\", \"souffle\", \"vent\" —, le même terme qui décrit le souffle de vie et la présence de Dieu en action. Pour un docteur de la loi, l'eau évoquait aussitôt les rites de purification et les promesses des prophètes, comme celle d'Ézéchiel : \"Je répandrai sur vous une eau pure... Je mettrai en vous un esprit nouveau\" (Ézéchiel 36:25-26). Jésus affirme que cette promesse prophétique — la purification et l'Esprit nouveau promis à Israël — s'accomplit maintenant, dans cette conversation même, pour quiconque la reçoit.",
-      "revelation_key": "Nicodème connaissait la promesse d'un esprit nouveau annoncée par les prophètes. Jésus lui montre que cette promesse a un visage, et qu'elle se tient devant lui."
+      "reflection": "Jésus ajoute une seconde dimension à sa réponse : l'eau et l'Esprit. Le mot grec est πνεῦμα (pneuma) — \"esprit\", \"souffle\", \"vent\" —, le même mot qu'il emploiera de nouveau au v.8 pour décrire comment se meut quiconque est né de l'Esprit. Pour un docteur de la loi, l'eau évoquait aussitôt les rites de purification et les promesses des prophètes, comme celle d'Ézéchiel : \"Je répandrai sur vous une eau pure... Je mettrai en vous un esprit nouveau\" (Ézéchiel 36:25-26). Dans la traduction grecque que Nicodème connaissait, cette promesse emploie le même mot, pneuma, que Jésus vient de prononcer. Des années plus tard, ce même pneuma se répandrait de façon visible sur les disciples à la Pentecôte : \"il vint du ciel un bruit comme celui d'un vent impétueux... et ils furent tous remplis du Saint-Esprit\" (Actes 2:2-4). Jésus affirme que cette promesse prophétique — la purification et l'Esprit nouveau promis à Israël — s'accomplit maintenant, dans cette conversation même, pour quiconque la reçoit — et qu'un jour elle deviendrait visible devant tous.",
+      "scripture_connections": [
+        {
+          "reference": "Ézékiel 36:25-26",
+          "text": "Je répandrai sur vous une eau pure, et vous serez purifiés; je vous purifierai de toutes vos souillures et de toutes vos idoles. Je vous donnerai un cœur nouveau, et je mettrai en vous un esprit nouveau; j'ôterai de votre corps le cœur de pierre, et je vous donnerai un cœur de chair."
+        },
+        {
+          "reference": "Actes 2:2-4",
+          "text": "Tout à coup il vint du ciel un bruit comme celui d'un vent impétueux, et il remplit toute la maison où ils étaient assis. Des langues, semblables à des langues de feu, leur apparurent, séparées les unes des autres, et se posèrent sur chacun d'eux. Et ils furent tous remplis du Saint-Esprit, et se mirent à parler en d'autres langues, selon que l'Esprit leur donnait de s'exprimer."
+        }
+      ],
+      "revelation_key": "Nicodème connaissait la promesse d'un esprit nouveau annoncée par les prophètes. Jésus lui montre que cette promesse a un visage, se tient devant lui, et qu'un jour elle serait répandue visiblement sur tous."
     },
     {
       "order": 7,
