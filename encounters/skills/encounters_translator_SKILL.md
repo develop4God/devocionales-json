@@ -239,6 +239,54 @@ Apply the fixes the critic finds, then re-run `validate_encounters.py` to confir
 edits didn't break structure. Do this per language file — do not skip it for languages
 that "usually don't have issues."
 
+### MANDATORY GATE: Verify Every Critic Claim Before Applying
+
+Critic subagents can hallucinate findings that read exactly like real ones — same tone,
+same apparent specificity — so confidence and detail are not signals of correctness.
+Before applying or reporting any finding, verify it independently of the critic's say-so:
+
+1. **String-literal claims** (a typo, a specific broken phrase, "space before comma", a
+   quoted sentence) — `grep` the file for the exact string the critic quotes. If it
+   doesn't match, the finding is stale or fabricated: discard it, don't downgrade it to
+   "minor."
+2. **Count claims** ("N double spaces", "M occurrences of X") — verify with a script, not
+   by eye, and check inside string *values* only. A naive search over a pretty-printed
+   JSON file will match structural whitespace (indentation) and produce a large,
+   meaningless number that has nothing to do with the prose.
+3. **Grammar-rule claims** ("X is mandatory in this language") — confirm against a real
+   reference before applying, especially when the claim would *add* something (a comma,
+   a word, an article). A confidently-cited grammar rule can still be wrong or backwards;
+   citing a rule is not the same as the rule being correct.
+4. Only findings that survive verification get applied. When rejecting a finding, note
+   briefly why (false / stylistic-not-error / rule cited incorrectly) so the reasoning
+   doesn't have to be redone if the same finding resurfaces.
+
+### MANDATORY GATE: Cross-Language Pattern Sweep
+
+The same ES source sentence, translated independently into each target language, tends
+to produce the *same shape* of mistranslation in every language it's rendered into,
+because each translation pass mirrors the source's syntax rather than re-deriving the
+idiom natively. A critic (or your own read) samples one language and one card — it does
+not, by itself, tell you whether the identical bug is sitting untouched in the other
+language files for this same encounter.
+
+Do not let critic review narrow into a search for isolated, unrelated one-off errors.
+When any finding turns out to be a *category* of mistake — a calqued idiom, an
+agent/patient inversion, an ambiguous possessive, a mixed metaphor, a category-mismatch
+verb (e.g. a visual verb applied to a sound) — treat it as evidence that the same
+category may recur elsewhere, not as a single fix-and-move-on:
+
+1. **Within the file**: grep/read for the same *shape* of error in every other card, not
+   just the flagged line — a critic samples, it does not exhaustively cover.
+2. **Across languages**: once a pattern is identified in one language file for this
+   encounter, check whether the same underlying ES sentence/concept was mistranslated the
+   same way in the other already-translated language files. Fixing it in one language but
+   leaving the identical bug live in another because that file was "already reviewed"
+   defeats the point of having noticed the pattern.
+3. **Across encounters**: if a pattern shows up on more than one encounter, it belongs in
+   this skill file as a named trap for future translation passes to check against
+   proactively, not rediscovered fix-by-fix each time.
+
 ### MANDATORY GATE: Post-Fix Reverse Validation & Pattern Sweep
 
 A grammar/style fix can silently break meaning — restructuring a clause to fix a case
