@@ -10,9 +10,11 @@ Three-phase validation:
 Exit codes: 0 = all passed, 1 = errors found
 """
 
+import atexit
 import json
 import re
 import sys
+import tempfile
 from pathlib import Path
 from typing import List, Optional
 
@@ -30,10 +32,21 @@ REMOTE_INDEX_URL = "https://raw.githubusercontent.com/develop4God/bible_versions
 REMOTE_FETCH_ATTEMPTS = 3
 REMOTE_FETCH_TIMEOUT = 15  # seconds, per attempt
 
-# bible_versions.json is a local CACHE of the remote SOT, refreshed on every
-# successful live fetch and used only as a fallback when the network is
-# unreachable. It is never hand-maintained as a source of truth.
-_LOCAL_CACHE_PATH = SCRIPTS_DIR / 'bible_versions.json'
+# bible_versions.json is a CACHE of the remote SOT, used only as a fallback
+# within a single run when the live fetch fails. It lives in the system temp
+# dir (never inside the repo) and is deleted when the process exits, so the
+# SOT is always fetched fresh on the next run rather than persisted locally.
+_LOCAL_CACHE_PATH = Path(tempfile.gettempdir()) / 'encounters_bible_versions_cache.json'
+
+
+def _cleanup_local_cache() -> None:
+    try:
+        _LOCAL_CACHE_PATH.unlink(missing_ok=True)
+    except OSError:
+        pass
+
+
+atexit.register(_cleanup_local_cache)
 
 
 def _local_cache_languages() -> dict:
