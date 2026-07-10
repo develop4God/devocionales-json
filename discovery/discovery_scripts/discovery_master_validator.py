@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Master validator: orchestrates all validation for the entire database.
-1. validate_translations.py  — global translation/JSON/structure/index validation
+discovery_master_validator.py — orchestrates all validation for the discovery
+content type.
+1. validate_discovery.py      — global translation/JSON/structure/index validation
 2. validate_structure_bulk.py — schema drift check per study (EN as base)
 
 Exit codes: 0 = all passed, 1 = errors found (stops at first failure)
@@ -29,7 +30,7 @@ def run(script, args=None, label=''):
 print("=" * 30)
 print("GLOBAL TRANSLATION/JSON VALIDATION")
 print("=" * 30)
-run("validate_translations.py", label="Translation/JSON validation")
+run("validate_discovery.py", label="Translation/JSON validation")
 
 # ── Phase 2: Schema drift check per study ────────────────────────────────────
 print("=" * 30)

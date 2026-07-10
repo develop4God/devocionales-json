@@ -13,38 +13,136 @@ PHASE B: Validate translation files using index.json as source of truth
 5. Proper language codes and Bible versions
 """
 
+import atexit
 import json
 import os
 import re
 import sys
+import tempfile
 from pathlib import Path
 from typing import Dict, List, Tuple, Set, Optional
 from collections import Counter
 
-# Load Bible versions from JSON (single source of truth)
-# To add a language or version: edit bible_versions.json only
-def _load_bible_versions() -> dict:
-    path = Path(__file__).parent / 'bible_versions.json'
-    return json.loads(path.read_text(encoding='utf-8'))['languages']
+# Bible versions are resolved live from the remote SOT (source of truth):
+# https://github.com/develop4God/bible_versions. To add a language or
+# version, edit that repo — not a local file here.
+REMOTE_INDEX_URL = "https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json"
+REMOTE_FETCH_ATTEMPTS = 3
+REMOTE_FETCH_TIMEOUT = 15  # seconds, per attempt
 
-_BIBLE_VERSIONS = _load_bible_versions()
+# Local cache is a fallback for this run only when the network is
+# unreachable. It lives in the system temp dir (never inside the repo) and
+# is deleted on exit, so the SOT is always fetched fresh on the next run.
+_LOCAL_CACHE_PATH = Path(tempfile.gettempdir()) / 'discovery_bible_versions_cache.json'
 
-# Build EXPECTED_LANGUAGES directly from JSON
+
+def _cleanup_local_cache() -> None:
+    try:
+        _LOCAL_CACHE_PATH.unlink(missing_ok=True)
+    except OSError:
+        pass
+
+
+atexit.register(_cleanup_local_cache)
+
+
+def _remote_to_local_shape(remote_entry: dict) -> dict:
+    """Adapt a remote SOT language entry to this validator's expected shape."""
+    primary = remote_entry['primary_version']
+    fallback = remote_entry['fallback_version']
+    return {
+        'name': remote_entry['name'],
+        'script': remote_entry['script'],
+        'primary_version': primary,
+        'fallback_version': fallback,
+        'allowed_versions': [primary, fallback],
+        'reading_speed': remote_entry['reading_speed'],
+    }
+
+
+def _fetch_remote_index(attempts: int = REMOTE_FETCH_ATTEMPTS) -> Optional[dict]:
+    """Fetch the remote bible_versions SOT index, retrying transient failures
+    a few times before giving up."""
+    import time
+    import urllib.request
+    import urllib.error
+
+    for attempt in range(1, attempts + 1):
+        try:
+            with urllib.request.urlopen(REMOTE_INDEX_URL, timeout=REMOTE_FETCH_TIMEOUT) as resp:
+                return json.loads(resp.read())
+        except (urllib.error.URLError, TimeoutError, OSError, json.JSONDecodeError):
+            if attempt < attempts:
+                time.sleep(min(2 ** attempt, 8))  # 2s, 4s, ...
+    return None
+
+
+def _write_local_cache(remote_langs: dict) -> None:
+    payload = {
+        'meta': {
+            'source': f'Cached from {REMOTE_INDEX_URL} on last successful validator run',
+            'note': 'Offline fallback only, valid for this run — never hand-edit.',
+        },
+        'languages': {
+            lang: _remote_to_local_shape(entry) for lang, entry in remote_langs.items()
+        },
+    }
+    try:
+        _LOCAL_CACHE_PATH.write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False) + '\n', encoding='utf-8'
+        )
+    except OSError:
+        pass  # best-effort — a read-only filesystem shouldn't fail validation
+
+
+def _load_bible_versions() -> Tuple[dict, bool]:
+    """Load bible version config for every language the remote SOT defines.
+
+    Tries the live remote SOT first (source of truth, with retries); only
+    falls back to the local temp cache if the network is unreachable after
+    all attempts and a cache from earlier in this run exists.
+    Returns (languages_dict, used_remote: bool) so callers can surface
+    whether this run actually hit the live SOT or fell back to a cache.
+    """
+    remote = _fetch_remote_index()
+    if remote is not None:
+        remote_langs = remote.get('languages', {})
+        _write_local_cache(remote_langs)
+        return {lang: _remote_to_local_shape(entry) for lang, entry in remote_langs.items()}, True
+
+    if _LOCAL_CACHE_PATH.exists():
+        return json.loads(_LOCAL_CACHE_PATH.read_text(encoding='utf-8'))['languages'], False
+
+    raise RuntimeError(
+        f"Could not reach the Bible versions SOT at {REMOTE_INDEX_URL} "
+        "and no local fallback cache is available. Check network connectivity."
+    )
+
+_BIBLE_VERSIONS, _USED_REMOTE_SOT = _load_bible_versions()
+
+# Build EXPECTED_LANGUAGES directly from the SOT
 EXPECTED_LANGUAGES = {
     lang: cfg['allowed_versions']
     for lang, cfg in _BIBLE_VERSIONS.items()
 }
 
-# Language character patterns for detection
+# Character patterns keyed by script (not language code) \u2014 the SOT's
+# per-language 'script' field (see _BIBLE_VERSIONS) already identifies which
+# writing system each language uses, so detection is driven by that instead
+# of a hand-maintained language-code list that silently misses new languages.
+SCRIPT_PATTERNS = {
+    'latin': re.compile(r'[a-zA-Z]{3,}'),
+    'cjk': re.compile(r'[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+'),
+    'devanagari': re.compile(r'[\u0900-\u097F]+'),
+    'arabic': re.compile(r'[\u0600-\u06FF]+'),
+}
+
+# Backward-compatible alias kept for the ja/zh-specific CJK check below,
+# which needs the two individual language patterns rather than the
+# unified 'cjk' script pattern.
 LANGUAGE_PATTERNS = {
-    'en': re.compile(r'[a-zA-Z]{3,}'),  # English words
-    'es': re.compile(r'[a-zA-Z]{3,}'),  # Spanish words (similar to English)
-    'pt': re.compile(r'[a-zA-Z]{3,}'),  # Portuguese words (similar to English)
-    'fr': re.compile(r'[a-zA-Z]{3,}'),  # French words (similar to English)
     'ja': re.compile(r'[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+'),  # Japanese
     'zh': re.compile(r'[\u4E00-\u9FFF]+'),  # Chinese
-    'hi': re.compile(r'[\u0900-\u097F]+'),  # Hindi (Devanagari script)
-    'ar': re.compile(r'[\u0600-\u06FF]+')   # Arabic
 }
 
 
@@ -135,42 +233,117 @@ def load_json_file(filepath: Path, report: ValidationReport) -> Dict:
 
 
 def detect_language_mix(text: str, expected_lang: str, report: ValidationReport, context: str) -> bool:
-    """Detect if text contains mixed languages."""
+    """Detect if text contains mixed languages, driven by the SOT's per-language
+    'script' field (latin/cjk/devanagari/arabic) rather than a hardcoded list of
+    language codes, so every language the SOT defines is covered automatically.
+    """
     if not text or len(text.strip()) < 3:
         return True
-    
-    # For Asian languages, check if they're present
-    if expected_lang in ['ja', 'zh']:
-        pattern = LANGUAGE_PATTERNS[expected_lang]
-        if not pattern.search(text):
-            report.add_warning(f"{context}: Expected {expected_lang} characters but found none in: {text[:50]}...")
+
+    script = _BIBLE_VERSIONS.get(expected_lang, {}).get('script')
+
+    # For non-Latin scripts, check the expected script's characters are present
+    if script and script != 'latin':
+        pattern = SCRIPT_PATTERNS.get(script)
+        if pattern and not pattern.search(text):
+            report.add_warning(f"{context}: Expected {expected_lang} ({script}) characters but found none in: {text[:50]}...")
             return False
 
-    # For Arabic, check that Arabic characters are present
-    elif expected_lang == 'ar':
-        pattern = LANGUAGE_PATTERNS['ar']
-        if not pattern.search(text):
-            report.add_warning(f"{context}: Expected Arabic characters but found none in: {text[:50]}...")
-            return False
-
-    # For Latin-based languages, check for unexpected characters
-    elif expected_lang in ['en', 'es', 'pt', 'fr']:
-        # Check if Asian characters are present (shouldn't be)
+    # For Latin-script languages, check for unexpected CJK characters
+    elif script == 'latin':
         if LANGUAGE_PATTERNS['ja'].search(text) or LANGUAGE_PATTERNS['zh'].search(text):
             report.add_error(f"{context}: Found Asian characters in {expected_lang} text: {text[:50]}...")
             return False
-    
+
     return True
+
+
+# Words identical (or near-identical) across English and Romance languages —
+# valid cognate translations, not untranslated leftovers. Per translator skill
+# § "Cognates (FR, PT, ES)": these are correct and should not be flagged.
+_ROMANCE_COGNATES = {
+    'fr': {'courage', 'grace', 'grâce'},
+    'pt': {'coragem', 'graça'},
+    'es': {'coraje', 'gracia'},
+}
+
+
+def _is_cognate(value: str, lang: str) -> bool:
+    """Return True if value is a known valid cognate word for lang."""
+    return value.strip().lower() in _ROMANCE_COGNATES.get(lang, set())
+
+
+# Quote-like characters whose accidental back-to-back doubling indicates a
+# stray-punctuation typo (e.g. »» , "" , '')
+_DOUBLE_CHECK_CHARS = {'"', "'", '«', '»', '“', '”', '‘', '’'}
+
+# Paired quote characters that should appear in balanced counts within a field.
+# Note: curly double quotes (“ ” „) are intentionally NOT balance-checked here —
+# this corpus mixes „...“ and „...” conventions across different German
+# studies, so a fixed pair produces false positives. Guillemets « » are
+# checked for all languages (used in AR/FR/etc.) since their usage is consistent.
+
+
+def _iter_strings(obj, path: str = ""):
+    """Recursively yield (path, value) for every string leaf in obj."""
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            yield from _iter_strings(v, f"{path}.{k}" if path else k)
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            yield from _iter_strings(v, f"{path}[{i}]")
+    elif isinstance(obj, str):
+        yield path, obj
+
+
+def _is_verse_continuation_close(text: str, mark_chars: str) -> bool:
+    """True if `text` looks like the tail fragment of a multi-verse quotation:
+    it carries exactly one quote-like mark from `mark_chars`, sitting at the
+    very end of the field (only trailing punctuation/whitespace after it).
+    This corpus stores consecutive Bible verses as separate string fields, so
+    a quotation that began in an earlier verse legitimately closes here with
+    no opener of its own — not a stray-punctuation typo.
+    """
+    positions = [i for i, c in enumerate(text) if c in mark_chars]
+    if len(positions) != 1:
+        return False
+    idx = positions[0]
+    return bool(re.match(r'^[\s.!?,;:]*$', text[idx + 1:]))
+
+
+def _check_quote_anomalies(text: str, ctx: str, lang: str, report: ValidationReport):
+    """Flag stray/duplicated/unbalanced quote-like punctuation in a text field."""
+    # Doubled identical quote-like characters back-to-back (e.g. »», "", '')
+    for i in range(len(text) - 1):
+        c = text[i]
+        if c in _DOUBLE_CHECK_CHARS and text[i + 1] == c:
+            report.add_error(f"{ctx}: contains doubled '{c}{c}' — likely stray punctuation")
+
+    # Balanced guillemets (used in AR/FR/etc.). Skip fields that are the
+    # trailing fragment of a quotation opened in a preceding verse — see
+    # _is_verse_continuation_close.
+    oc, cc = text.count('«'), text.count('»')
+    if oc != cc and not (oc + cc == 1 and _is_verse_continuation_close(text, '«»')):
+        report.add_warning(f"{ctx}: unbalanced '«'/'»' — {oc} open vs {cc} close")
+
+    # Straight double quotes should appear in pairs, with the same
+    # verse-continuation exception as guillemets above.
+    if text.count('"') % 2 != 0 and not (text.count('"') == 1 and _is_verse_continuation_close(text, '"')):
+        report.add_warning(f"{ctx}: odd number of straight double quotes (\") — possible stray quote")
 
 
 def validate_structure(data: Dict, lang: str, filename: str, report: ValidationReport) -> bool:
     """Validate the structure of a discovery study file."""
-    required_fields = ['id', 'type', 'date', 'title', 'subtitle', 'language', 
-                       'version', 'estimated_reading_minutes', 'key_verse', 
+    required_fields = ['id', 'type', 'date', 'title', 'subtitle', 'language',
+                       'version', 'estimated_reading_minutes', 'key_verse',
                        'cards', 'tags', 'metadata']
-    
+
     is_valid = True
-    
+
+    # Quote / stray-punctuation anomaly scan across all text fields
+    for path, text in _iter_strings(data):
+        _check_quote_anomalies(text, f"{filename}:{path}", lang, report)
+
     # Check required fields
     for field in required_fields:
         if field not in data:
@@ -218,42 +391,70 @@ def validate_structure(data: Dict, lang: str, filename: str, report: ValidationR
     return is_valid
 
 
-def validate_content_translation(en_data: Dict, trans_data: Dict, lang: str, 
+def _check_key_parity(en_obj, trans_obj, path: str, filename: str, lang: str, report: ValidationReport):
+    """Recursively diff en_obj vs trans_obj for data-integrity only — key
+    presence and list length, not text content/quality. Generic over any
+    field name and nesting depth so it covers discovery's 50+ free-form
+    card types without a hand-maintained field list:
+      - dict: every key EN has must exist in the translation (error); any
+        key the translation has that EN lacks is reported once (warning —
+        likely a stray/leftover field).
+      - list: length mismatch is reported once (error) rather than walking
+        past the shorter list and reporting per-missing-item noise.
+    """
+    if isinstance(en_obj, dict):
+        trans_dict = trans_obj if isinstance(trans_obj, dict) else {}
+        if not isinstance(trans_obj, dict):
+            report.add_error(f"{filename}: '{path}' is an object in EN but not in {lang.upper()}")
+            return
+        for k in en_obj:
+            child_path = f"{path}.{k}" if path else k
+            if k not in trans_dict:
+                report.add_error(f"{filename}: '{child_path}' present in EN but missing in {lang.upper()}")
+            else:
+                _check_key_parity(en_obj[k], trans_dict[k], child_path, filename, lang, report)
+        for k in trans_dict:
+            if k not in en_obj:
+                report.add_warning(f"{filename}: '{path}.{k}' present in {lang.upper()} but missing in EN (possible extra/stray field)")
+
+    elif isinstance(en_obj, list):
+        trans_list = trans_obj if isinstance(trans_obj, list) else []
+        if not isinstance(trans_obj, list):
+            report.add_error(f"{filename}: '{path}' is an array in EN but not in {lang.upper()}")
+            return
+        if len(en_obj) != len(trans_list):
+            report.add_error(
+                f"{filename}: '{path}' length mismatch - EN has {len(en_obj)}, {lang.upper()} has {len(trans_list)}"
+            )
+            return
+        for i, (ev, tv) in enumerate(zip(en_obj, trans_list)):
+            _check_key_parity(ev, tv, f"{path}[{i}]", filename, lang, report)
+
+    elif isinstance(en_obj, str):
+        if not en_obj.strip():
+            return
+        if trans_obj is None or (isinstance(trans_obj, str) and not trans_obj.strip()):
+            report.add_error(f"{filename}: '{path}' is empty in {lang.upper()}")
+
+
+def validate_content_translation(en_data: Dict, trans_data: Dict, lang: str,
                                   filename: str, report: ValidationReport):
-    """Validate that translation has same structure as English version."""
-    
-    # Compare number of cards
-    en_cards = len(en_data.get('cards', []))
-    trans_cards = len(trans_data.get('cards', []))
-    if en_cards != trans_cards:
-        report.add_error(f"{filename}: Card count mismatch - EN has {en_cards}, {lang.upper()} has {trans_cards}")
-    
-    # Compare number of tags
-    en_tags = len(en_data.get('tags', []))
-    trans_tags = len(trans_data.get('tags', []))
-    if en_tags != trans_tags:
-        report.add_error(f"{filename}: Tag count mismatch - EN has {en_tags}, {lang.upper()} has {trans_tags}")
-    
-    # Compare number of themes
-    en_themes = len(en_data.get('metadata', {}).get('themes', []))
-    trans_themes = len(trans_data.get('metadata', {}).get('themes', []))
-    if en_themes != trans_themes:
-        report.add_error(f"{filename}: Theme count mismatch - EN has {en_themes}, {lang.upper()} has {trans_themes}")
-    
+    """Validate translation has the same data shape as EN: same fields,
+    same list lengths, no empty text where EN has content. Deliberately
+    does not judge translation quality (identical-to-EN text is not
+    flagged) — that's out of scope, this corpus has its own review
+    pipeline for translation quality.
+    """
+    _check_key_parity(en_data, trans_data, "", filename, lang, report)
+
     # Validate each card structure
-    for i, (en_card, trans_card) in enumerate(zip(en_data.get('cards', []), 
+    for i, (en_card, trans_card) in enumerate(zip(en_data.get('cards', []),
                                                    trans_data.get('cards', []))):
         if en_card.get('type') != trans_card.get('type'):
             report.add_error(f"{filename}: Card {i+1} type mismatch")
-        
+
         if en_card.get('order') != trans_card.get('order'):
             report.add_error(f"{filename}: Card {i+1} order mismatch")
-        
-        # Check for content translation (shouldn't be empty)
-        if 'content' in en_card:
-            trans_content = trans_card.get('content', '')
-            if not trans_content or trans_content == en_card['content']:
-                report.add_warning(f"{filename}: Card {i+1} content may not be translated")
 
 
 def validate_verse_references(data: Dict, lang: str, filename: str,
@@ -452,6 +653,57 @@ def validate_filename_format(filepath: Path, lang: str, report: ValidationReport
     return True
 
 
+def validate_sot_source(report: ValidationReport) -> None:
+    """Report whether this run resolved bible_version codes from the live
+    remote SOT or fell back to the temp-dir bible_versions cache, so a run
+    that silently used stale cached data (e.g. offline CI) is visible in
+    the report instead of indistinguishable from a fully live run.
+    """
+    if _USED_REMOTE_SOT:
+        report.add_info(f"✓ bible_version codes resolved live from remote SOT ({REMOTE_INDEX_URL}) for all {len(_BIBLE_VERSIONS)} languages")
+    else:
+        report.add_warning(
+            f"Could not reach remote SOT ({REMOTE_INDEX_URL}) — fell back to the "
+            f"temp-dir bible_versions cache. Results reflect the LOCAL CACHE, not confirmed "
+            f"live data; re-run once network access is available before merging."
+        )
+
+
+def validate_lint(discovery_dir: Path, report: ValidationReport) -> None:
+    """Check that all JSON files use indent=2 formatting and end with a
+    trailing newline. Formatting issues are warnings, not errors — they
+    don't affect JSON validity, just diff/lint hygiene.
+    """
+    report.add_info("=" * 60)
+    report.add_info("PHASE 1: Lint — checking JSON formatting (indent=2)")
+    report.add_info("=" * 60)
+
+    json_files = sorted(f for f in discovery_dir.rglob('*.json')
+                         if f.is_file() and 'discovery_scripts' not in f.parts)
+    checked = 0
+    for fpath in json_files:
+        raw = fpath.read_text(encoding='utf-8')
+        try:
+            json.loads(raw)
+        except json.JSONDecodeError:
+            continue  # invalid JSON is reported elsewhere with full detail
+        rel = fpath.relative_to(discovery_dir)
+        for line_no, line in enumerate(raw.splitlines(), 1):
+            stripped = line.lstrip(' ')
+            indent = len(line) - len(stripped)
+            if indent > 0 and indent % 2 != 0:
+                report.add_warning(f"{rel}:{line_no}: odd indentation ({indent} spaces), expected multiples of 2")
+                break
+            if '\t' in line:
+                report.add_warning(f"{rel}:{line_no}: contains tab character, use 2-space indent")
+                break
+        if not raw.endswith('\n'):
+            report.add_warning(f"{rel}: missing trailing newline")
+        checked += 1
+
+    report.add_info(f"✓ Checked {checked} JSON files")
+
+
 def validate_index_json(discovery_dir: Path, report: ValidationReport) -> Optional[Dict]:
     """
     PHASE A: Validate index.json format, structure, and data integrity.
@@ -602,6 +854,16 @@ def main():
     print()
     
     # ==========================================
+    # PHASE 1: Lint — JSON formatting
+    # ==========================================
+    validate_lint(discovery_dir, report)
+
+    # ==========================================
+    # SOT source visibility — live remote vs. offline cache
+    # ==========================================
+    validate_sot_source(report)
+
+    # ==========================================
     # PHASE A: Validate index.json
     # ==========================================
     index_data = validate_index_json(discovery_dir, report)
@@ -702,33 +964,13 @@ def main():
                     f"{filename}: internal 'id' field '{internal_id}' does not match "
                     f"filename-derived id '{study_base}' — must be consistent"
                 )
-
-            # ── Index integrity check ─────────────────────────────────────
-            # Verify internal id field matches index.json (single source of truth)
-            internal_id = data.get('id', '')
-            if not internal_id:
-                report.add_error(
-                    f"{filename}: missing internal 'id' field"
-                )
-            elif internal_id not in index_studies:
-                report.add_error(
-                    f"{filename}: internal 'id' field '{internal_id}' "
-                    f"is not registered in index.json — "
-                    f"file may be orphaned or have an incorrect id"
-                )
-            elif study_base != internal_id:
-                report.add_error(
-                    f"{filename}: internal 'id' field '{internal_id}' "
-                    f"does not match filename-derived id '{study_base}' — "
-                    f"filename and internal id must be consistent"
-                )
         
         all_studies[lang] = lang_studies
     
     # Cross-validate translations against English using index.json as source
     if 'en' in all_studies:
-        for lang in ['es', 'pt', 'fr', 'ja', 'zh', 'hi']:
-            if lang not in all_studies:
+        for lang in EXPECTED_LANGUAGES:
+            if lang == 'en' or lang not in all_studies:
                 continue
             
             # Use index_studies instead of EXPECTED_STUDIES

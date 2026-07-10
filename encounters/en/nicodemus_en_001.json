@@ -92,6 +92,16 @@
       "title": "Anōthen: a word with two paths",
       "subtitle": "Why Nicodemus understood something different from what Jesus meant",
       "content": "The Greek word Jesus uses is ἄνωθεν (anōthen), and it carries two possible meanings at once: \"again\" and \"from above.\" Nicodemus, hearing only the first sense, imagines something physically impossible: \"How can a man be born when he is old? Can he enter the second time into his mother's womb, and be born?\" (John 3:4).\n\nJesus is describing a birth that comes from above, from God himself, something only the Holy Spirit can produce. The same word anōthen appears in James 1:17 to describe \"every good gift\" that comes down from above, from the Father of lights.",
+      "scripture_connections": [
+        {
+          "reference": "John 3:4",
+          "text": "Nicodemus said unto him, How can a man be born when he is old? can he enter the second time into his mother's womb, and be born?"
+        },
+        {
+          "reference": "James 1:17",
+          "text": "Every good gift and every perfect gift is from above, and comes down from the Father of lights, with whom is no variableness, neither shadow of turning."
+        }
+      ],
       "revelation_key": "The new birth is a life that arrives from above — a gift God gives, not an achievement man attains."
     },
     {
@@ -101,8 +111,18 @@
       "image_url": "nicodemus_water_and_spirit.png",
       "verse_reference": "John 3:5",
       "verse_text": "Jesus answered, Verily, verily, I say unto you, Except a man be born of water and of the Spirit, he cannot enter into the kingdom of God.",
-      "reflection": "Jesus adds a second layer to his answer: water and Spirit. The Greek word is πνεῦμα (pneuma) — \"spirit,\" \"breath,\" \"wind\" — the same term that describes the breath of life and the presence of God in action. For a teacher of the law, water immediately evoked the rites of purification and the promises of the prophets, like that of Ezekiel: \"I will sprinkle clean water upon you... A new spirit will I put within you\" (Ezekiel 36:25-26). Jesus is saying that this prophetic promise, the cleansing and the new Spirit promised to Israel, is fulfilled now, in this very conversation, for anyone who receives it.",
-      "revelation_key": "Nicodemus knew the promise of a new spirit from the prophets. Jesus shows him that promise has a face, and stands before him."
+      "reflection": "Jesus adds a second layer to his answer: water and Spirit. The Greek word is πνεῦμα (pneuma) — \"spirit,\" \"breath,\" \"wind\" — the same word he will use again in v.8 to describe how everyone born of the Spirit moves. For a teacher of the law, water immediately evoked the rites of purification and the promises of the prophets, like that of Ezekiel: \"I will sprinkle clean water upon you... A new spirit will I put within you\" (Ezekiel 36:25-26). In the Greek translation Nicodemus knew, that promise uses the same word, pneuma, that Jesus has just spoken. Years later, that same pneuma would be poured out visibly on the disciples at Pentecost: \"there came a sound from heaven as of a rushing mighty wind... and they were all filled with the Holy Spirit\" (Acts 2:2-4). Jesus is saying that this prophetic promise, the cleansing and the new Spirit promised to Israel, is fulfilled now, in this very conversation, for anyone who receives it — and one day would become visible before everyone.",
+      "scripture_connections": [
+        {
+          "reference": "Ezekiel 36:25-26",
+          "text": "Then will I sprinkle clean water upon you, and you shall be clean: from all your filthiness, and from all your idols, will I cleanse you. A new heart also will I give you, and a new spirit will I put within you: and I will take away the stony heart out of your flesh, and I will give you a heart of flesh."
+        },
+        {
+          "reference": "Acts 2:2-4",
+          "text": "And suddenly there came a sound from heaven as of a rushing mighty wind, and it filled all the house where they were sitting. And there appeared unto them separated tongues like as of fire, and it sat upon each of them. And they were all filled with the Holy Spirit, and began to speak with other tongues, as the Spirit gave them utterance."
+        }
+      ],
+      "revelation_key": "Nicodemus knew the promise of a new spirit from the prophets. Jesus shows him that promise has a face, stands before him, and one day would be poured out visibly on everyone."
     },
     {
       "order": 7,
@@ -121,7 +141,7 @@
       "image_url": "nicodemus_honest_confusion.png",
       "title": "How can this be?",
       "subtitle": "The humility of a teacher who admits he doesn't understand",
-      "content": "Nicodemus answers with a single question: \"How can this be?\" (John 3:9). It is a short question, without evasion, and remarkably honest for a man of his standing. Jesus responds with a direct observation: \"Are you a teacher of Israel, and do not know these things?\" (v.10).\n\nA teacher of Israel of his caliber knew well the Scriptures that spoke of a new spirit and a renewed heart. What Nicodemus lacks is the willingness to receive as a gift what he had studied his whole life as doctrine. 🔑 His open, undefended question is itself a first step toward that willingness.",
+      "content": "Nicodemus answers with a single question: \"How can this be?\" (John 3:9). It is a short question, without evasion, and remarkably honest for a man of his standing. Jesus responds with a direct observation: \"Are you a teacher of Israel, and do not know these things?\" (v.10).\n\nA teacher of Israel of his caliber knew well the Scriptures that spoke of a new spirit and a renewed heart. What Nicodemus lacks is the willingness to receive as a gift what he had studied his whole life as doctrine. His open, undefended question is itself a first step toward that willingness.",
       "revelation_key": "The first movement toward true faith is sometimes not a confident answer, but an honest question spoken out loud.",
       "scripture_connections": [
         {
@@ -138,7 +158,7 @@
       "title": "As Moses lifted up the serpent",
       "subtitle": "An image every Israelite knew",
       "content": "Jesus draws on a scene any Israelite would instantly recognize: in the wilderness, when venomous serpents bit the people for their rebellion, God commanded Moses to lift up a bronze serpent on a pole. Looking at it was enough to live; the look of faith was the only response God asked. The astonishing part of the remedy was that the very image of what brought death became the means of life.\n\nJesus takes that same image and applies it to himself, using the Greek verb ὑψόω (hypsoō) — \"to lift up,\" \"to raise on high\" — a word that in John's gospel always carries a double meaning: it describes at once the physical act of being raised on the cross and the act of being exalted, glorified. The same word appears in John 8:28 and 12:32, always pointing toward that same moment. Just as the serpent carried the image of judgment and became a symbol of life, Jesus would be lifted up in the place of greatest shame to become the source of eternal life for everyone who believes in him.\n\nAnd then Jesus arrives at the sentence that would sum up the whole conversation — the promise of eternal life for everyone who believes in him (v.16).\n\nThe Greek word for \"only begotten\" is μονογενής (monogenēs) — one of a kind, unique in its category. It describes something unrepeatable, without equal.",
-      "scripture_anchor": {
+      "verse_overlay": {
         "reference": "John 3:16",
         "text": "For God so loved the world, that he gave his only begotten Son, that whosoever believes in him should not perish, but have everlasting life."
       },
@@ -150,6 +170,14 @@
         {
           "reference": "John 3:14-15",
           "text": "And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up: That whosoever believes in him should not perish, but have eternal life."
+        },
+        {
+          "reference": "John 8:28",
+          "text": "Then said Jesus unto them, When you have lifted up the Son of man, then shall you know that I am he, and that I do nothing of myself; but as my Father has taught me, I speak these things."
+        },
+        {
+          "reference": "John 12:32",
+          "text": "And I, if I be lifted up from the earth, will draw all men unto me."
         }
       ],
       "revelation_key": "The very moment Jesus was lifted up on the cross, in what appeared to be the deepest shame, was also the moment of his greatest glory — and everyone who looks to him in faith receives life."
@@ -170,10 +198,14 @@
       "mood": "tense",
       "image_url": "nicodemus_sanhedrin_defense.png",
       "title": "A crack of courage",
-      "subtitle": "Months or years later, in the middle of the Sanhedrin",
-      "content": "Nicodemus's name reappears later, when the chief priests and Pharisees seek to arrest Jesus. In the middle of that meeting, Nicodemus — identified once again by the text as \"he that came to Jesus by night\" (John 7:50) — raises an objection: \"Does our law judge any man, before it hears him, and knows what he does?\" (v.51).\n\nIt is not a public, open defense of Jesus as the Messiah. It is something smaller and, for that very reason, more real: a man who dares to ask for a simple fair process, in a body where no one else asks for it. His colleagues respond with contempt: \"Are you also of Galilee?\" (v.52). They claim that out of Galilee no prophet has ever arisen. The prophet Jonah, son of Amittai, was from Gath-hepher, a town in Galilee (2 Kings 14:25). The very men who accuse Nicodemus of ignorance are speaking without knowing their own Scripture. 🔑 Nicodemus does not answer. But he does not retract either.",
-      "revelation_key": "The faith that began as a question asked by night now dares, years later, to raise its voice once in public.",
+      "subtitle": "Nearly two years later, in the middle of the Sanhedrin",
+      "content": "Nicodemus's name reappears later, when the chief priests and Pharisees seek to arrest Jesus. In the middle of that meeting, Nicodemus — identified once again by the text as \"he that came to Jesus by night\" (John 7:50) — raises an objection: \"Does our law judge any man, before it hears him, and knows what he does?\" (v.51).\n\nIt is not a public, open defense of Jesus as the Messiah. It is something smaller and, for that very reason, more real: a man who dares to ask for a simple fair process, in a body where no one else asks for it. His colleagues respond with contempt: \"Are you also of Galilee?\" (v.52). They claim that out of Galilee no prophet has ever arisen. The prophet Jonah, son of Amittai, was from Gath-hepher, a town in Galilee (2 Kings 14:25). The very men who accuse Nicodemus of ignorance are speaking without knowing their own Scripture. Nicodemus does not answer. But he does not retract either.",
+      "revelation_key": "Nearly two years after that night, the faith that began as a question asked in secret now dares to raise its voice once in public.",
       "scripture_connections": [
+        {
+          "reference": "John 7:50-52",
+          "text": "Nicodemus said unto them, (he that came to Jesus by night, being one of them,) Does our law judge any man, before it hears him, and knows what he does? They answered and said unto him, Are you also of Galilee? Search, and look: for out of Galilee arises no prophet."
+        },
         {
           "reference": "2 Kings 14:25",
           "text": "He restored the border of Israel from the entering of Hamath unto the sea of the plain, according to the word of the LORD God of Israel, which he spoke by the hand of his servant Jonah, the son of Amittai, the prophet, who was from Gath-hepher."
@@ -194,6 +226,10 @@
         "text": "And after this Joseph of Arimathaea, being a disciple of Jesus, but secretly for fear of the Jews, besought Pilate that he might take away the body of Jesus: and Pilate gave him permission. He came therefore, and took the body of Jesus."
       },
       "scripture_connections": [
+        {
+          "reference": "John 19:30-31",
+          "text": "When Jesus therefore had received the vinegar, he said, It is finished: and he bowed his head, and gave up his spirit. The Jews therefore, because it was the preparation, that the bodies should not remain upon the cross on the sabbath day, (for that sabbath day was a high day,) besought Pilate that their legs might be broken, and that they might be taken away."
+        },
         {
           "reference": "Matthew 26:56",
           "text": "But all this was done, that the scriptures of the prophets might be fulfilled. Then all the disciples forsook him, and fled."

@@ -10,6 +10,7 @@ Three-phase validation:
 Exit codes: 0 = all passed, 1 = errors found
 """
 
+import atexit
 import json
 import re
 import sys
@@ -31,11 +32,21 @@ REMOTE_INDEX_URL = "https://raw.githubusercontent.com/develop4God/bible_versions
 REMOTE_FETCH_ATTEMPTS = 3
 REMOTE_FETCH_TIMEOUT = 15  # seconds, per attempt
 
-# bible_versions.json is a CACHE of the remote SOT, refreshed on every
-# successful live fetch and used only as a fallback when the network is
-# unreachable. It lives in the system temp dir (not the repo) so validator
-# runs never leave an untracked/stale file behind in encounters_scripts/.
-_LOCAL_CACHE_PATH = Path(tempfile.gettempdir()) / 'devocionales_encounters_bible_versions_cache.json'
+# bible_versions.json is a CACHE of the remote SOT, used only as a fallback
+# within a single run when the live fetch fails. It lives in the system temp
+# dir (never inside the repo) and is deleted when the process exits, so the
+# SOT is always fetched fresh on the next run rather than persisted locally.
+_LOCAL_CACHE_PATH = Path(tempfile.gettempdir()) / 'encounters_bible_versions_cache.json'
+
+
+def _cleanup_local_cache() -> None:
+    try:
+        _LOCAL_CACHE_PATH.unlink(missing_ok=True)
+    except OSError:
+        pass
+
+
+atexit.register(_cleanup_local_cache)
 
 
 def _local_cache_languages() -> dict:
@@ -207,6 +218,21 @@ def _iter_strings(obj, path: str = ""):
         yield path, obj
 
 
+def _is_verse_continuation_close(text: str, mark_chars: str) -> bool:
+    """True if `text` looks like the tail fragment of a multi-verse quotation:
+    it carries exactly one quote-like mark from `mark_chars`, sitting at the
+    very end of the field (only trailing punctuation/whitespace after it).
+    This corpus stores consecutive Bible verses as separate string fields, so
+    a quotation that began in an earlier verse legitimately closes here with
+    no opener of its own — not a stray-punctuation typo.
+    """
+    positions = [i for i, c in enumerate(text) if c in mark_chars]
+    if len(positions) != 1:
+        return False
+    idx = positions[0]
+    return bool(re.match(r'^[\s.!?,;:]*$', text[idx + 1:]))
+
+
 def _check_quote_anomalies(text: str, ctx: str, lang: str, report: 'Report'):
     """Flag stray/duplicated/unbalanced quote-like punctuation in a text field."""
     # Doubled identical quote-like characters back-to-back (e.g. »», "", '')
@@ -215,13 +241,16 @@ def _check_quote_anomalies(text: str, ctx: str, lang: str, report: 'Report'):
         if c in _DOUBLE_CHECK_CHARS and text[i + 1] == c:
             report.E(f"{ctx}: contains doubled '{c}{c}' — likely stray punctuation")
 
-    # Balanced guillemets (used in AR/FR/etc.)
+    # Balanced guillemets (used in AR/FR/etc.). Skip fields that are the
+    # trailing fragment of a quotation opened in a preceding verse — see
+    # _is_verse_continuation_close.
     oc, cc = text.count('«'), text.count('»')
-    if oc != cc:
+    if oc != cc and not (oc + cc == 1 and _is_verse_continuation_close(text, '«»')):
         report.W(f"{ctx}: unbalanced '«'/'»' — {oc} open vs {cc} close")
 
-    # Straight double quotes should appear in pairs
-    if text.count('"') % 2 != 0:
+    # Straight double quotes should appear in pairs, with the same
+    # verse-continuation exception as guillemets above.
+    if text.count('"') % 2 != 0 and not (text.count('"') == 1 and _is_verse_continuation_close(text, '"')):
         report.W(f"{ctx}: odd number of straight double quotes (\") — possible stray quote")
 
 

@@ -22,6 +22,15 @@ editorial session — June 2026. Every rule here was earned from real mistakes c
 3. Note card types, moods, verse references — check for gaps or overlaps
 4. Only then begin card-by-card review
 
+**If this review is happening inside a Claude chat session** (not a subagent with file
+tools), convert the encounter JSON to Markdown first with
+`encounters/encounters_scripts/json_to_md.py encode <file.json>` before reading it —
+raw JSON with deep nesting is harder to read in chat than the flat, field-labeled
+Markdown output. Only ever read/edit the `.json` as the source of truth; the `.md` is a
+disposable reading aid. After any edit to the JSON, re-run
+`json_to_md.py verify <file.json>` to confirm no field was dropped or corrupted, and
+regenerate the `.md` (or discard it) rather than editing the `.md` directly.
+
 ---
 
 ## THE CARDINAL RULES

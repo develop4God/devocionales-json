@@ -1,0 +1,116 @@
+{
+  "encounter_id": "gadarene_demoniac_es_001",
+  "character": "The Gadarene Demoniac",
+  "master_character_prompt": "A man in his 30s, wiry and gaunt from years of exposure, deeply sun-weathered olive skin scarred with old wounds, matted dark hair overgrown and tangled, wild unkempt beard, bare-chested and unclothed with only ragged remnants of a torn loincloth, broken iron shackle fragments still clasped around one wrist and ankle. His eyes carry a haunted, exhausted intensity. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting. Character reference sheet, full body and face close-up.",
+  "intro_image": {
+    "filename": "gadarene_demoniac_intro.png",
+    "prompt": "Wide atmospheric shot of a rocky hillside at dawn dotted with rock-cut tombs, their dark openings visible among scrub brush. In the far distance a small fishing boat rests on the shore below, mist rising off the water. Barely visible near the tombs, a distant gaunt figure in ragged torn cloth crouches among the rocks, broken chain fragments glinting faintly at his wrist. A herd of pigs grazes further up the slope. No text. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, muted dawn light, cinematic lighting."
+  },
+  "card_prompts": [
+    {
+      "order": 1,
+      "image_url": "gadarene_arrival.png",
+      "mood": "storm",
+      "shot_type": "wide establishing",
+      "prompt": "Wide establishing shot of a small wooden fishing boat touching the rocky shore of a foreign coastline just after a storm, the sea still churning with residual swells under a heavy gray-blue sky. A man in a simple first-century tunic steps out of the boat first, seen from behind, face never visible, a subtle warm glow of glory around his form. Rock-cut tombs are visible carved into the hillside beyond, and a distant herd of pigs grazes on the upper slope. Painterly warm 2D illustration, Mediterranean palette, deep storm-blue and ochre tones, cinematic lighting, no text."
+    },
+    {
+      "order": 2,
+      "image_url": "gadarene_tombs.png",
+      "mood": "falling",
+      "shot_type": "wide establishing",
+      "prompt": "A man in his 30s, wiry and gaunt, deeply sun-weathered olive skin scarred with old wounds, matted tangled dark hair, wild unkempt beard, bare-chested and unclothed with ragged torn cloth remnants, broken iron shackle fragments at his wrist and ankle — emerges from the dark opening of a rock-cut tomb among scattered gravestones on a barren hillside, his posture hunched and feral. Loose broken chain links lie scattered on the ground around him. Painterly warm 2D illustration, Mediterranean palette, deep shadow and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 3,
+      "image_url": "gadarene_broken_chains.png",
+      "mood": "falling",
+      "shot_type": "object/still life",
+      "prompt": "Close-up of broken iron shackles and shattered chain links scattered across bare rock ground near a tomb entrance, rust-dark metal catching dim light, a few loose stones nearby stained faintly red. No people. Pure metaphor for a strength that could not be contained. Painterly warm 2D illustration, deep sandstone and rust tones, Mediterranean palette, cinematic lighting, no text."
+    },
+    {
+      "order": 4,
+      "image_url": "gadarene_night_torment.png",
+      "mood": "intense",
+      "shot_type": "close-up portrait",
+      "prompt": "A man in his 30s, wiry and gaunt, deeply sun-weathered olive skin scarred with old wounds, matted tangled dark hair, wild unkempt beard, bare-chested and unclothed — close-up portrait under a dark night sky among the tombs, head thrown back mid-cry, veins taut in his neck, a jagged stone gripped in one scarred hand raised toward his own chest. Cold moonlight falls across his haunted face. Painterly warm 2D illustration, deep indigo night tones, Mediterranean palette, cinematic lighting, no text."
+    },
+    {
+      "order": 5,
+      "image_url": "gadarene_running_toward.png",
+      "mood": "tense",
+      "shot_type": "action/movement",
+      "prompt": "A man in his 30s, wiry and gaunt, deeply sun-weathered olive skin scarred with old wounds, matted tangled dark hair, wild unkempt beard, bare-chested and unclothed with ragged torn cloth remnants, broken shackle fragments at wrist and ankle — sprinting down a rocky slope toward the shoreline, arms outstretched, dust kicked up behind him. Ahead in the middle distance stands a man in a simple first-century tunic, seen from behind, face never visible, a subtle warm glow of glory around his form, standing calmly by the shore. Painterly warm 2D illustration, Mediterranean palette, ochre and dust tones, cinematic lighting, no text."
+    },
+    {
+      "order": 6,
+      "image_url": "gadarene_legion_metaphor.png",
+      "mood": "mysterious",
+      "shot_type": "object/still life",
+      "prompt": "Abstract close-up of a cracked stone tablet half-buried in dust, faint eroded carvings resembling a row of soldier silhouettes marching in formation, barely visible in raking dim light. Dark shadow pools around its edges. No people. Pure metaphor for an occupying force hidden within. Painterly warm 2D illustration, deep charcoal and sandstone tones, Mediterranean palette, cinematic lighting, no text."
+    },
+    {
+      "order": 7,
+      "image_url": "gadarene_pigs_herd.png",
+      "mood": "intense",
+      "shot_type": "wide establishing",
+      "prompt": "Wide shot of a large herd of pigs — nearly two thousand suggested through density and distance — grazing on a steep grassy hillside above a rocky coastline, their forms restless and shifting uneasily as if sensing something. Below, the sea churns faintly along the shore. Painterly warm 2D illustration, Mediterranean palette, muted olive-green and ochre tones, cinematic lighting, no text."
+    },
+    {
+      "order": 8,
+      "image_url": "gadarene_cliff_fall.png",
+      "mood": "intense",
+      "shot_type": "action/movement",
+      "prompt": "Dramatic wide shot from a distance of a herd of pigs stampeding over a steep rocky cliff edge into churning dark sea water below, dust and spray rising where bodies meet the waves. Two shepherds are seen fleeing up the far slope toward a distant village. Painterly warm 2D illustration, deep storm-gray and ochre tones, Mediterranean palette, cinematic lighting, no text."
+    },
+    {
+      "order": 9,
+      "image_url": "gadarene_seated_clothed.png",
+      "mood": "awe",
+      "shot_type": "medium two-figure",
+      "prompt": "A man in his 30s, now clean and calm, sun-weathered olive skin still bearing faint healed scars, dark hair combed back, wearing a simple clean tunic wrapped around him, sits peacefully on the ground at the feet of a man in a simple first-century tunic who stands beside him, seen from behind, face never visible, a subtle warm glow of glory around his form. A small crowd of villagers gathers at a distance, faces showing fear rather than joy. Painterly warm 2D illustration, Mediterranean palette, soft morning light, cinematic lighting, no text."
+    },
+    {
+      "order": 10,
+      "image_url": "gadarene_crowd_fear.png",
+      "mood": "mysterious",
+      "shot_type": "medium two-figure",
+      "prompt": "A cluster of villagers stand at a cautious distance on a rocky path, faces etched with fear and uncertainty, some pointing toward the shoreline where a small boat waits. Behind them the empty hillside shows drag marks and overturned earth where the herd once grazed. Painterly warm 2D illustration, muted dust and shadow tones, Mediterranean palette, cinematic lighting, no text."
+    },
+    {
+      "order": 11,
+      "image_url": "gadarene_begging_to_follow.png",
+      "mood": "grace",
+      "shot_type": "medium two-figure",
+      "prompt": "A man in his 30s, clean and calm, sun-weathered olive skin with faint healed scars, dark hair combed back, wearing a simple clean tunic, kneels at the edge of the shore beside a wooden boat, one hand reaching toward a man in a simple first-century tunic who stands at the boat's edge, seen from behind, face never visible, a subtle warm glow of glory around his form, gesturing gently back toward the land. Soft warm morning light bathes the shoreline. Painterly warm 2D illustration, Mediterranean palette, ochre and amber tones, cinematic lighting, no text."
+    },
+    {
+      "order": 12,
+      "image_url": "gadarene_sent_without_staff.png",
+      "mood": "grace",
+      "shot_type": "close-up portrait",
+      "prompt": "Close-up of a pair of bare feet standing steady on a dusty road at the edge of a village, no staff or walking stick in hand, morning light casting a long steady shadow ahead. A folded clean tunic hem is visible at the frame's edge. No face shown. Pure metaphor for being sent with nothing but a testimony. Painterly warm 2D illustration, warm gold and ochre tones, Mediterranean palette, cinematic lighting, no text."
+    },
+    {
+      "order": 13,
+      "image_url": "gadarene_decapolis_proclaiming.png",
+      "mood": "peace",
+      "shot_type": "wide departure",
+      "prompt": "Wide shot of a man in his 30s, clean and calm, sun-weathered olive skin, dark hair combed back, wearing a simple clean tunic, standing at the edge of a bustling Decapolis marketplace at midday, arms open mid-speech, a small gathering of curious onlookers turning to listen. Sunlit stone buildings and market stalls fill the background. Painterly warm 2D illustration, Mediterranean palette, warm gold and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 14,
+      "image_url": "gadarene_discovery.png",
+      "mood": "peace",
+      "shot_type": "object/still life",
+      "prompt": "Close-up of a single lit oil lamp resting on a stone windowsill at dusk, warm golden light spilling outward onto a simple wooden table below where a folded clean tunic rests beside a plain cup of water. No people. Pure metaphor for quiet restored life. Painterly warm 2D illustration, warm amber and gold tones, Mediterranean palette, cinematic lighting, no text."
+    },
+    {
+      "order": 15,
+      "image_url": "gadarene_completion.png",
+      "mood": "peace",
+      "shot_type": "wide departure",
+      "prompt": "Wide shot from behind of a man in his 30s, clean and calm, dark hair combed back, wearing a simple clean tunic, walking steadily along a sunlit path toward a distant village of low stone houses, warm late-afternoon light bathing the road in gold, his shadow stretching long and unhurried behind him. Painterly warm 2D illustration, Mediterranean palette, ochre and amber tones, cinematic lighting, no text."
+    }
+  ]
+}

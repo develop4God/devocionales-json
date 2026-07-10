@@ -5,45 +5,45 @@
   "title": "Le Souffle du Nouvel Adam",
   "subtitle": "Quand Jésus reconnecte l'homme avec Dieu",
   "language": "fr",
-  "version": "TOB",
+  "version": "LSG1910",
   "estimated_reading_minutes": 7,
   "key_verse": {
     "reference": "Jean 20:22",
-    "text": "Après ces paroles, il souffla sur eux et il leur dit : « Recevez l'Esprit Saint.\""
+    "text": "Après ces paroles, il souffla sur eux, et leur dit: Recevez le Saint-Esprit."
   },
-  
+
   "scripture_passage": {
     "reference": "Jean 20:19-23",
     "verses": [
       {
         "number": 19,
-        "text": "Le soir de ce même jour, qui était le premier de la semaine, alors que, par crainte des autorités juives, les portes de la maison où se trouvaient les disciples étaient verrouillées, Jésus vint, il se tint au milieu d'eux et il leur dit : « La paix soit avec vous. »"
+        "text": "Le soir de ce jour, qui était le premier de la semaine, les portes du lieu où se trouvaient les disciples étant fermées, à cause de la crainte qu'ils avaient des Juifs, Jésus vint, se présenta au milieu d'eux, et leur dit: La paix soit avec vous!"
       },
       {
         "number": 20,
-        "text": "Tout en parlant, il leur montra ses mains et son côté. En voyant le Seigneur, les disciples furent tout à la joie."
+        "text": "Et quand il eut dit cela, il leur montra ses mains et son côté. Les disciples furent dans la joie en voyant le Seigneur."
       },
       {
         "number": 21,
-        "text": "Alors, à nouveau, Jésus leur dit : « La paix soit avec vous. Comme le Père m'a envoyé, à mon tour je vous envoie. »"
+        "text": "Jésus leur dit de nouveau: La paix soit avec vous! Comme le Père m'a envoyé, moi aussi je vous envoie."
       },
       {
         "number": 22,
-        "text": "Après ces paroles, il souffla sur eux et il leur dit : « Recevez l'Esprit Saint.\""
+        "text": "Après ces paroles, il souffla sur eux, et leur dit: Recevez le Saint-Esprit."
       },
       {
         "number": 23,
-        "text": "Ceux à qui vous remettrez les péchés, ils leur seront remis ; ceux à qui vous les retiendrez, ils leur seront retenus. »"
+        "text": "Ceux à qui vous pardonnerez les péchés, ils leur seront pardonnés; et ceux à qui vous les retiendrez, ils leur seront retenus."
       }
     ],
     "context_verses": [
       {
         "reference": "Genèse 2:7",
-        "text": "Alors le SEIGNEUR Dieu modela l'homme avec la poussière tirée du sol, il insuffla dans ses narines une haleine de vie et l'homme devint un être vivant."
+        "text": "L'Éternel Dieu forma l'homme de la poussière de la terre, il souffla dans ses narines un souffle de vie et l'homme devint un être vivant."
       },
       {
         "reference": "1 Corinthiens 15:45",
-        "text": "C'est bien ce que dit l'Écriture : Le premier homme, Adam, devint un être vivant ; le dernier Adam, lui, est devenu l'esprit qui donne la vie."
+        "text": "C'est pourquoi il est écrit: Le premier homme, Adam, devint une âme vivante. Le dernier Adam est devenu un esprit vivifiant."
       }
     ]
   },
