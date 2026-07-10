@@ -109,7 +109,7 @@ Dos mil animales se precipitan por la ladera hacia el agua en un solo instante, 
 ### Sentado, vestido, en su juicio cabal
 *Tres palabras que describen una restauración completa*
 
-Cuando el pueblo llega, encuentra al hombre que antes rompía cadenas ahora sentado a los pies de Jesús. El griego original usa tres participios que juntos pintan una reversión total: *kathḗmenon* —sentado, en la postura de un discípulo que aprende, no de un hombre agitado; *himatisménon* —vestido, palabra que en Marcos aparece solo aquí, y que confirma lo que Lucas dice sin rodeos: antes estaba desnudo; *sōphronoûnta* —en su sano juicio, cuerdo, palabra que también aparece únicamente en este pasaje. Vestido y cuerdo no son adornos del relato: son la prueba física y mental de que la legión que lo habitaba ya no estaba. Y el pueblo, en vez de alegrarse, tuvo miedo.
+Cuando el pueblo llega, encuentra al hombre que antes rompía cadenas ahora sentado a los pies de Jesús. El griego original usa tres palabras que juntas pintan una reversión total: καθήμενον (kathḗmenon), sentado, en la postura de un discípulo que aprende; ἱματισμένον (himatisménon), vestido; σωφρονοῦντα (sōphronoûnta), en su sano juicio, cuerdo, palabra que también aparece únicamente en este pasaje. Vestido y cuerdo son la prueba física y mental de que la legión que lo habitaba ya no estaba. Y el pueblo, en vez de alegrarse, tuvo miedo.
 
 > "Vienen a Jesús, y ven al que había sido atormentado del demonio, y que había tenido la legión, sentado, vestido y en su juicio cabal; y tuvieron miedo."
 > — Marcos 5:15
@@ -188,7 +188,7 @@ Señor, tú cruzaste el mar por mí cuando nadie más se hubiera atrevido a acer
 ## Card 14
 
 > "Vete a tu casa, a los tuyos, y cuéntales cuán grandes cosas el Señor ha hecho contigo, y cómo ha tenido misericordia de ti."
-> — Marcos 5:19
+> — Marcos 5:19 (RVR1960)
 
 *¿A quién necesitas volver hoy para contarle lo que la misericordia de Dios ha hecho en ti?*
 
