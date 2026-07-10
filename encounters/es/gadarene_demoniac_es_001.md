@@ -133,14 +133,14 @@ Un hombre queda completamente sano, y la respuesta del pueblo no es celebración
 
 ## Card 10
 
-El hombre pide quedarse. Es comprensible: junto a Jesús está a salvo, y el pueblo que acaba de sanar lo acaba de rechazar. Pero Jesús le niega ese refugio y le da, en cambio, una misión. Vete a tu casa. A los tuyos. La misma gente que probablemente lo temía, lo evitaba, quizás lo dio por perdido, ahora sería la primera en escuchar de sus propios labios lo que la misericordia de Dios había hecho. No hay restauración más completa que ser enviado de vuelta al lugar exacto donde antes fuiste el terror del camino.
+El hombre pide quedarse. Es comprensible: junto a Jesús está a salvo, y el pueblo que acaba de sanar lo acaba de rechazar. Jesús mismo se retira de esa región por ese rechazo (Marcos 5:17), pero no abandona el lugar del todo: envía en su lugar al hombre que puede quedarse donde él ya no es bienvenido. Vete a tu casa, a los tuyos, le dice. La misma gente que probablemente lo temía, lo evitaba, quizás lo dio por perdido, ahora sería la primera en escuchar de sus propios labios lo que la misericordia de Dios había hecho.
 
 > "Al entrar él en la barca, el que había estado endemoniado le rogaba que le dejase estar con él. Mas Jesús no se lo permitió, sino que le dijo: Vete a tu casa, a los tuyos, y cuéntales cuán grandes cosas el Señor ha hecho contigo, y cómo ha tenido misericordia de ti."
 > — Marcos 5:18-19
 
 **Conexión:** Lucas 8:39 — "Vuélvete a tu casa, y cuenta cuán grandes cosas ha hecho Dios contigo. Y él se fue, publicando por toda la ciudad cuán grandes cosas había hecho Jesús con él."
 
-💡 Jesús no lo mantuvo cerca; lo envió de vuelta al lugar donde su testimonio pesaría más.
+💡 Donde Jesús ya no era bienvenido, dejó a alguien que testificara con su propia liberación y transformación.
 
 ---
 
