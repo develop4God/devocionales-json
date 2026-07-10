@@ -671,19 +671,34 @@
       "testament": "new",
       "character": "The Gadarene Demoniac",
       "files": {
-        "es": "gadarene_demoniac_es_001.json"
+        "es": "gadarene_demoniac_es_001.json",
+        "en": "gadarene_demoniac_en_001.json",
+        "pt": "gadarene_demoniac_pt_001.json",
+        "fr": "gadarene_demoniac_fr_001.json"
       },
       "titles": {
-        "es": "Legión y el hombre entre las tumbas"
+        "es": "Legión y el hombre entre las tumbas",
+        "en": "Legion and the man among the tombs",
+        "pt": "Legião e o homem entre os túmulos",
+        "fr": "Légion et l'homme parmi les tombeaux"
       },
       "subtitles": {
-        "es": "Vivía entre los sepulcros, encadenado por lo que no podía controlar."
+        "es": "Vivía entre los sepulcros, encadenado por lo que no podía controlar.",
+        "en": "He lived among the tombs, chained by what he could not control.",
+        "pt": "Vivia entre os sepulcros, acorrentado pelo que não podia controlar.",
+        "fr": "Il vivait parmi les tombeaux, enchaîné par ce qu'il ne pouvait contrôler."
       },
       "scripture_reference": {
-        "es": "Marcos 5:1-20"
+        "es": "Marcos 5:1-20",
+        "en": "Mark 5:1-20",
+        "pt": "Marcos 5:1-20",
+        "fr": "Marc 5:1-20"
       },
       "estimated_reading_minutes": {
-        "es": 12
+        "es": 12,
+        "en": 13,
+        "pt": 14,
+        "fr": 14
       }
     }
   ]
