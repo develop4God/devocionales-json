@@ -143,6 +143,10 @@ All verse lookups, citation translation, and verse text extraction must use `dev
 - `prayer.title` and `prayer.content`
 - `meta.scripture_reference` → translate book name only
 - `meta.tags` → natural target language slugs
+- `meta.character` → translate the character description (e.g. `The Gadarene demoniac` →
+  `El endemoniado gadareno`). This field is easy to miss because it sits in `meta`
+  alongside untranslated UI fields — it shipped untranslated in DE/HI/JA once, caught
+  only on a second critic pass. Always check it explicitly.
 
 ### Never add or remove JSON keys.
 Structure must be identical to the EN file.
