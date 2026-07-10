@@ -145,15 +145,15 @@ El hombre pide quedarse. Es comprensible: junto a Jesús está a salvo, y el pue
 ---
 
 ## Card 11
-### Enviado sin bordón
-*El mismo verbo que usaría después con los Doce*
+### El heraldo de las diez ciudades
+*De la voz de Legión a la voz de un mensajero del Rey*
 
-Más adelante, Jesús llamará a los Doce y comenzará a 'enviarlos' de dos en dos, dándoles autoridad, instrucción y hasta un bordón para el camino (Marcos 6:7-13). El verbo griego para 'enviar' en ambos pasajes es el mismo: *apostéllō* —la raíz de la palabra 'apóstol'. Pero a este hombre nadie le entregó autoridad formal, ni compañero de viaje, ni instrucciones sobre qué llevar o qué ciudad rechazarlo. Solo tenía su propio cuerpo, antes desnudo y ahora vestido, y una frase que ya sabía de memoria porque la había vivido: cuán grandes cosas el Señor ha hecho conmigo. A veces el envío de Dios no espera preparación ni comisión oficial; solo espera una historia verdadera y un corazón dispuesto a contarla.
+Jesús le dice una palabra simple: ὕπαγε (hýpage), 'vete, retírate' (Marcos 5:19). El hombre obedece, y el texto usa κηρύσσω (kēryssō) para describir lo que hace después: el mismo verbo que Marcos reserva para la proclamación oficial del evangelio, el anuncio de un heraldo con autoridad de reino. No lo hace en un solo pueblo: recorre Decápolis, las diez ciudades de la región. Horas antes, este hombre hablaba con la voz de una legión demoníaca. Ahora proclama con la voz de un mensajero del Rey en diez ciudades distintas. El pueblo, dice el texto, ἐθαύμαζον (ethaúmazon): se maravillaba, en tiempo continuo, un asombro que se sostenía día tras día en cada una de esas ciudades.
 
-> "Después llamó a los doce, y comenzó a enviarlos de dos en dos; y les dio autoridad sobre los espíritus inmundos."
-> — Marcos 6:7
+> "Y se fue, y comenzó a publicar en Decápolis cuán grandes cosas había hecho Jesús con él; y todos se maravillaban."
+> — Marcos 5:20
 
-💡 El mismo verbo que envía apóstoles envió primero a un hombre sin más credencial que su propio testimonio.
+💡 El mismo hombre que antes hablaba con la voz de una legión demoníaca, ahora recorre diez ciudades con la voz de un heraldo del Rey.
 
 ---
 
