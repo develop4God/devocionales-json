@@ -370,42 +370,52 @@ def validate_structure(data: Dict, lang: str, filename: str, report: ValidationR
     return is_valid
 
 
-def validate_content_translation(en_data: Dict, trans_data: Dict, lang: str, 
+def validate_content_translation(en_data: Dict, trans_data: Dict, lang: str,
                                   filename: str, report: ValidationReport):
     """Validate that translation has same structure as English version."""
-    
+
     # Compare number of cards
     en_cards = len(en_data.get('cards', []))
     trans_cards = len(trans_data.get('cards', []))
     if en_cards != trans_cards:
         report.add_error(f"{filename}: Card count mismatch - EN has {en_cards}, {lang.upper()} has {trans_cards}")
-    
+
     # Compare number of tags
     en_tags = len(en_data.get('tags', []))
     trans_tags = len(trans_data.get('tags', []))
     if en_tags != trans_tags:
         report.add_error(f"{filename}: Tag count mismatch - EN has {en_tags}, {lang.upper()} has {trans_tags}")
-    
+
     # Compare number of themes
     en_themes = len(en_data.get('metadata', {}).get('themes', []))
     trans_themes = len(trans_data.get('metadata', {}).get('themes', []))
     if en_themes != trans_themes:
         report.add_error(f"{filename}: Theme count mismatch - EN has {en_themes}, {lang.upper()} has {trans_themes}")
-    
+
+    # Top-level free-text fields left as verbatim English copy
+    for field in ('title', 'subtitle'):
+        en_val = en_data.get(field)
+        trans_val = trans_data.get(field)
+        if en_val and trans_val and trans_val == en_val:
+            report.add_warning(f"{filename}: '{field}' may not be translated (identical to EN)")
+
     # Validate each card structure
-    for i, (en_card, trans_card) in enumerate(zip(en_data.get('cards', []), 
+    for i, (en_card, trans_card) in enumerate(zip(en_data.get('cards', []),
                                                    trans_data.get('cards', []))):
         if en_card.get('type') != trans_card.get('type'):
             report.add_error(f"{filename}: Card {i+1} type mismatch")
-        
+
         if en_card.get('order') != trans_card.get('order'):
             report.add_error(f"{filename}: Card {i+1} order mismatch")
-        
-        # Check for content translation (shouldn't be empty)
-        if 'content' in en_card:
-            trans_content = trans_card.get('content', '')
-            if not trans_content or trans_content == en_card['content']:
-                report.add_warning(f"{filename}: Card {i+1} content may not be translated")
+
+        # Check free-text fields for translation (shouldn't be empty or
+        # left as a verbatim English copy)
+        for field in ('content', 'title', 'subtitle', 'revelation_key'):
+            if field in en_card:
+                en_val = en_card[field]
+                trans_val = trans_card.get(field, '')
+                if not trans_val or trans_val == en_val:
+                    report.add_warning(f"{filename}: Card {i+1} '{field}' may not be translated")
 
 
 def validate_verse_references(data: Dict, lang: str, filename: str,
@@ -853,26 +863,6 @@ def main():
                 report.add_error(
                     f"{filename}: internal 'id' field '{internal_id}' does not match "
                     f"filename-derived id '{study_base}' — must be consistent"
-                )
-
-            # ── Index integrity check ─────────────────────────────────────
-            # Verify internal id field matches index.json (single source of truth)
-            internal_id = data.get('id', '')
-            if not internal_id:
-                report.add_error(
-                    f"{filename}: missing internal 'id' field"
-                )
-            elif internal_id not in index_studies:
-                report.add_error(
-                    f"{filename}: internal 'id' field '{internal_id}' "
-                    f"is not registered in index.json — "
-                    f"file may be orphaned or have an incorrect id"
-                )
-            elif study_base != internal_id:
-                report.add_error(
-                    f"{filename}: internal 'id' field '{internal_id}' "
-                    f"does not match filename-derived id '{study_base}' — "
-                    f"filename and internal id must be consistent"
                 )
         
         all_studies[lang] = lang_studies
