@@ -660,10 +660,10 @@
     },
     {
       "id": "gadarene_demoniac_001",
-      "version": "0.1",
+      "version": "1.0",
       "image_version": "1.0",
       "emoji": "⛓️",
-      "status": "coming_soon",
+      "status": "published",
       "intro_image": "gadarene_night_torment.png",
       "mood_primary": "falling",
       "accent_color": "#040810",
