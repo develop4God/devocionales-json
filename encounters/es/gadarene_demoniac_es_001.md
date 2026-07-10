@@ -96,7 +96,7 @@ Los cerdos tienen un peso propio en este relato. La ley de Levítico los declara
 ## Card 7
 ### El despeñadero
 
-Dos mil animales se precipitan por la ladera hacia el agua en un solo instante, un estruendo que se escucha desde el pueblo. Los que los cuidaban huyen sin mirar atrás y corren a dar aviso en la ciudad y en los campos. En cuestión de minutos, todos saldrán a ver qué fue lo que ocurrió. Pero en medio del caos económico y del pánico, algo se ha quebrado en silencio dentro del hombre que hasta hace un momento gritaba entre las tumbas.
+Dos mil animales se precipitan por la ladera hacia el agua en un solo instante, un estruendo que se escucha desde el pueblo. Los que los cuidaban huyen sin mirar atrás y corren a dar aviso en la ciudad y en los campos. Salen a ver: el griego usa ἰδεῖν (idein), mirar con atención, examinar de cerca. Y lo que había sucedido es τὸ γεγονός (to gegonos), un hecho cuyos efectos ya eran permanentes, no un simple susto pasajero. Pero mientras todos examinan el estruendo de los cerdos, algo se ha quebrado en silencio dentro del hombre que hasta hace un momento gritaba entre las tumbas.
 
 > "Y los que apacentaban los cerdos huyeron, y dieron aviso en la ciudad y en los campos. Y salieron a ver qué era aquello que había sucedido."
 > — Marcos 5:14
@@ -188,7 +188,7 @@ Señor, tú cruzaste el mar por mí cuando nadie más se hubiera atrevido a acer
 ## Card 14
 
 > "Vete a tu casa, a los tuyos, y cuéntales cuán grandes cosas el Señor ha hecho contigo, y cómo ha tenido misericordia de ti."
-> — Marcos 5:19 (RVR1960)
+> — Marcos 5:19
 
 *¿A quién necesitas volver hoy para contarle lo que la misericordia de Dios ha hecho en ti?*
 
