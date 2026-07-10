@@ -79,14 +79,17 @@ Cuando Jesús pregunta su nombre, la respuesta no es la de un hombre: 'Legión m
 
 ## Card 6
 
-Los cerdos no son un detalle incidental. Bajo la Ley, eran el animal impuro por excelencia; su presencia en gran número —dos mil— confirma que este era territorio gentil, donde la Ley mosaica no regía la vida cotidiana. Jesús concede la petición de los demonios, y lo impuro se precipita hacia lo impuro: el mar, que en el Antiguo Testamento representaba el caos y lo que se oponía a la vida. La liberación de un hombre cuesta un hato entero. Jesús no calcula ese costo como pérdida; lo entrega sin negociar, porque la persona vale más que la propiedad de toda una región.
+Los cerdos tienen un peso propio en este relato. La ley de Levítico los declaraba impuros (Levítico 11:7); su presencia en gran número, dos mil, confirma que este era territorio gentil, donde esa ley no regía la vida cotidiana. Legión ya había rogado quedarse en la región (Marcos 5:10) y no ser enviada al abismo (Lucas 8:31); pedir entrar en los cerdos era su forma de conseguir ambas cosas: seguir con cuerpo, seguir en ese lugar. Este mismo hombre se hería con piedras (Marcos 5:5): los demonios no solo ocupan, destruyen lo que habitan. Al entrar en los cerdos, hicieron con ellos lo mismo que llevaban años haciéndole a él, visible en segundos ante todo el pueblo. El hato corrió directo al mar, la imagen misma del abismo que tanto temían, y ahí terminaron hundidos.
 
 > "Y le rogaba mucho que no los enviase fuera de aquella región. Estaba allí cerca del monte un gran hato de cerdos paciendo. Y le rogaron todos los demonios, diciendo: Envíanos a los cerdos para que entremos en ellos. Y luego Jesús les dio permiso. Y saliendo aquellos espíritus inmundos, entraron en los cerdos, los cuales eran como dos mil; y el hato se precipitó en el mar por un despeñadero, y en el mar se ahogaron."
 > — Marcos 5:10-13
 
+**Conexión:** Levítico 11:7 — "También el cerdo, porque tiene pezuña hendida y es de pezuña partida, pero no rumia; lo tendréis por inmundo."
+**Conexión:** Marcos 5:10 — "Y le rogaba mucho que no los enviase fuera de aquella región."
+**Conexión:** Lucas 8:31 — "Y le rogaban que no los mandase ir al abismo."
 **Conexión:** Mateo 8:31-32 — "Y los demonios le rogaron diciendo: Si nos echas fuera, permítenos ir a aquel hato de cerdos. Él les dijo: Id. Y ellos salieron, y se fueron a aquel hato de cerdos; y he aquí, todo el hato de cerdos se precipitó en el mar por un despeñadero, y perecieron en las aguas."
 
-💡 Jesús no negoció el valor de un hombre a cambio de mantener intacta la economía del lugar.
+💡 Los demonios negociaron quedarse con cuerpo y territorio, y esa misma negociación los hundió en el abismo que tanto temían.
 
 ---
 
