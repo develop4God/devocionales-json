@@ -254,12 +254,8 @@
       "type": "discovery_activation",
       "image_url": "gadarene_discovery.png",
       "title": "Tu Encuentro",
-      "subtitle": "Lo que te ata puede no ser lo que otros ven a primera vista.",
+      "subtitle": "Nada te limita de él, y nada te excusa de contarlo.",
       "discovery_questions": [
-        {
-          "category": "Honestidad",
-          "question": "¿Hay algo en tu vida que otros llaman fortaleza, pero que tú sabes que en realidad es una cadena que no logras romper del todo?"
-        },
         {
           "category": "Fe",
           "question": "Jesús cruzó un mar y entró en territorio pagano para buscar a un hombre poseído por una legión de demonios, a quien su propio pueblo ya no sabía cómo ayudar. ¿Crees que hay algo en ti que lo detendría a llegar hasta donde estás?"

@@ -171,10 +171,9 @@ El pueblo había rogado (παρακαλέω, parakaleō) que Jesús se fuera de 
 
 ## Card 13
 ### Tu Encuentro
-*Lo que te ata puede no ser lo que otros ven a primera vista.*
+*Nada te limita de él, y nada te excusa de contarlo.*
 
 **Preguntas para reflexionar:**
-- (Honestidad) ¿Hay algo en tu vida que otros llaman fortaleza, pero que tú sabes que en realidad es una cadena que no logras romper del todo?
 - (Fe) Jesús cruzó un mar y entró en territorio pagano para buscar a un hombre poseído por una legión de demonios, a quien su propio pueblo ya no sabía cómo ayudar. ¿Crees que hay algo en ti que lo detendría a llegar hasta donde estás?
 - (Sumisión) El hombre liberado quería quedarse junto a Jesús, pero Jesús no se lo permitió: tenía un propósito distinto para él. ¿Has sentido que Dios te cierra una puerta que tú creías era el siguiente paso correcto, y has tenido que someter tu voluntad para que se cumpla su propósito?
 - (Testimonio) Este hombre, transformado por Jesús, fue a contar lo que había vivido sin que nadie se lo enseñara. Tú que también has visto la mano de Dios en tu vida, ¿qué has hecho para testificar cuán grandes cosas Jesús ha hecho por ti? ¿A quién has ido llevando esa fe y esperanza?
