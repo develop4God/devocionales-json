@@ -14,11 +14,22 @@
     "mood_primary": "falling",
     "accent_color": "#040810",
     "emoji": "⛓️",
-    "tags": ["liberación", "posesión", "restauración", "identidad", "misión", "legión", "gadareno", "jesús", "encuentro", "sanidad"]
+    "tags": [
+      "liberación",
+      "posesión",
+      "restauración",
+      "identidad",
+      "misión",
+      "legión",
+      "gadareno",
+      "jesús",
+      "encuentro",
+      "sanidad"
+    ]
   },
   "key_verse": {
-    "reference": "Marcos 5:15",
-    "text": "Vienen a Jesús, y ven al que había sido atormentado del demonio, y que había tenido la legión, sentado, vestido y en su juicio cabal; y tuvieron miedo.",
+    "reference": "Marcos 5:2",
+    "text": "Y cuando salió él de la barca, en seguida vino a su encuentro, de los sepulcros, un hombre con un espíritu inmundo.",
     "bible_version": "RVR1960"
   },
   "cards": [
@@ -44,58 +55,61 @@
       "image_url": "gadarene_tombs.png",
       "verse_reference": "Marcos 5:2-5",
       "verse_text": "Y cuando salió él de la barca, en seguida vino a su encuentro, de los sepulcros, un hombre con un espíritu inmundo, que tenía su morada en los sepulcros, y nadie podía atarle, ni aun con cadenas. Porque muchas veces había sido atado con grillos y cadenas, mas las cadenas habían sido hechas pedazos por él, y desmenuzados los grillos; y nadie le podía dominar. Y siempre, de día y de noche, andaba dando voces en los montes y en los sepulcros, e hiriéndose con piedras.",
-      "reflection": "Vivía entre los muertos porque entre los vivos ya no había lugar para él. Lucas añade un detalle que Marcos calla con delicadeza: no vestía ropa. Había perdido incluso lo mínimo que separa a una persona de su propio dolor expuesto. Las cadenas que otros le pusieron para contenerlo no lograban nada; las rompía una y otra vez, y esa fuerza que debía ser su defensa se convertía en su condena, dejándolo cada vez más solo. De día y de noche gritaba entre las tumbas, hiriéndose con piedras. El texto solo registra lo que el tormento le hacía hacer.",
-      "revelation_key": "Su fuerza no era libertad; era la forma que tomaba su aislamiento.",
+      "reflection": "Vivía entre los muertos porque entre los vivos ya no había lugar para él. Lucas añade un detalle adicional: no vestía ropa. Había perdido incluso lo mínimo que separa a una persona de su propio dolor expuesto. Las cadenas que otros le pusieron para contenerlo no lograban nada; las rompía una y otra vez, y esa fuerza que debía ser su defensa se convertía en su condena, dejándolo cada vez más solo. De día y de noche gritaba entre las tumbas, hiriéndose con piedras. El texto solo registra lo que el tormento le hacía hacer.",
+      "revelation_key": "Nadie podía atarlo, pero tampoco podía acercarse a él: su fuerza lo dejaba más solo, no más libre.",
       "scripture_connections": [
-        { "reference": "Lucas 8:27", "text": "Al llegar él a tierra, vino a su encuentro un hombre de la ciudad, endemoniado desde hacía mucho tiempo; y no vestía ropa, ni moraba en casa, sino en los sepulcros." }
+        {
+          "reference": "Lucas 8:27",
+          "text": "Al llegar él a tierra, vino a su encuentro un hombre de la ciudad, endemoniado desde hacía mucho tiempo; y no vestía ropa, ni moraba en casa, sino en los sepulcros."
+        }
       ]
     },
     {
       "order": 3,
-      "type": "character_moment",
-      "mood": "falling",
-      "image_url": "gadarene_broken_chains.png",
-      "title": "Un hombre, no un monstruo",
-      "subtitle": "Lo que el pueblo vio y lo que en verdad había ahí",
-      "content": "Los vecinos de la región lo conocían de nombre, de historia, quizás de familia. Lo que quedó de él fue el terror que causaba, tanto que 'nadie podía pasar por aquel camino' donde vivía. 🔑 Pero el terror que provoca una persona rota casi nunca es la historia completa de quién es. Detrás de la fama de peligroso había un ser humano que se hería a sí mismo con piedras, noche tras noche, sin que nadie pudiera detenerlo.",
-      "revelation_key": "El miedo que un hombre destruido provoca en otros rara vez cuenta toda su historia.",
-      "verse_overlay": {
-        "reference": "Mateo 8:28",
-        "text": "Vinieron a su encuentro dos endemoniados que salían de los sepulcros, feroces en gran manera, tanto que nadie podía pasar por aquel camino."
-      }
-    },
-    {
-      "order": 4,
       "type": "cinematic_scene",
       "mood": "intense",
       "image_url": "gadarene_night_torment.png",
       "title": "Antes de que el sol saliera",
-      "narrative": "Noche tras noche era igual. La voz se le rompía de tanto gritar entre las lápidas, y las piedras que usaba contra su propio cuerpo dejaban marcas que nunca sanaban del todo antes de la siguiente vez. Los pastores que apacentaban ovejas cerca de allí aprendieron a rodear el camino largo. Los niños del pueblo sabían el nombre del lugar antes de saber el nombre del hombre. Nadie recuerda ya cuánto tiempo llevaba así. El texto solo dice: siempre, de día y de noche. No había una sola hora de tregua en su historia hasta esta mañana.",
+      "narrative": "Cada vez que este hombre rompía las cadenas, el demonio lo empujaba hacia los desiertos. Es un dato con peso teológico. En el trasfondo del Antiguo Testamento, el desierto era el lugar asociado a lo demoníaco, el territorio opuesto a la vida y la comunidad. Este hombre vivía atormentado, arrastrado una y otra vez hacia el símbolo mismo de la desolación. Y siempre, de día y de noche, la escena se repetía.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
         "reference": "Lucas 8:29",
         "text": "Porque mandaba al espíritu inmundo que saliese del hombre, pues hacía mucho tiempo que se había apoderado de él; y le ataban con cadenas y grillos, pero rompiendo las cadenas, era impelido por el demonio a los desiertos."
       },
-      "revelation_key": "No hubo una hora de tregua hasta la mañana en que Jesús cruzó el mar."
+      "revelation_key": "Jesús cruzó el mar hacia el mismo territorio de desolación al que el demonio lo arrastraba."
     },
     {
-      "order": 5,
+      "order": 4,
       "type": "cinematic_scene",
       "mood": "tense",
       "image_url": "gadarene_running_toward.png",
       "title": "Corrió hacia él",
-      "narrative": "El hombre que nadie podía dominar, que rompía cadenas y grillos como si fueran hilo, ve a Jesús de lejos y corre hacia él. Y al llegar se arrodilla. Algo dentro de ese cuerpo torturado reconoce, antes que la mente pueda procesarlo, quién tiene delante. El grito que sale de su boca es de terror y de súplica al mismo tiempo: ¿Qué tienes conmigo, Jesús, Hijo del Dios Altísimo? Te conjuro por Dios que no me atormentes.",
+      "narrative": "El hombre que nadie podía dominar, que rompía cadenas y grillos como si fueran hilo, ve a Jesús de lejos y corre hacia él. Y al llegar se arrodilla. El grito que sale de su boca es de terror y de súplica al mismo tiempo: ¿Qué tienes conmigo, Jesús, Hijo del Dios Altísimo? Te conjuro por Dios que no me atormentes. Es el mismo título — 'Hijo de Dios' — que otros espíritus inmundos usan al encontrarse con Jesús en otros pasajes: sabían exactamente quién tenían delante.",
       "ambient_sound": "wind",
       "haptic": null,
       "verse_overlay": {
         "reference": "Marcos 5:6-7",
         "text": "Cuando vio, pues, a Jesús de lejos, corrió, y se arrodilló ante él. Y clamando a gran voz, dijo: ¿Qué tienes conmigo, Jesús, Hijo del Dios Altísimo? Te conjuro por Dios que no me atormentes."
       },
-      "revelation_key": "Incluso lo que lo dominaba reconoció una autoridad mayor."
+      "revelation_key": "Los demonios conocían la verdad sobre Jesús mejor que muchos líderes religiosos, pero conocerlo no los salvó; solo la fe que se somete, salva.",
+      "scripture_connections": [
+        {
+          "reference": "Marcos 1:24",
+          "text": "¡Ah! ¿qué tienes con nosotros, Jesús nazareno? ¿Has venido para destruirnos? Sé quién eres, el Santo de Dios."
+        },
+        {
+          "reference": "Marcos 3:11",
+          "text": "Y los espíritus inmundos, al verle, se postraban delante de él, y daban voces, diciendo: Tú eres el Hijo de Dios."
+        },
+        {
+          "reference": "Santiago 2:19",
+          "text": "Tú crees que Dios es uno; bien haces. También los demonios creen, y tiemblan."
+        }
+      ]
     },
     {
-      "order": 6,
+      "order": 5,
       "type": "theological_depth",
       "mood": "mysterious",
       "image_url": "gadarene_legion_metaphor.png",
@@ -109,7 +123,7 @@
       }
     },
     {
-      "order": 7,
+      "order": 6,
       "type": "scripture_moment",
       "mood": "intense",
       "image_url": "gadarene_pigs_herd.png",
@@ -118,11 +132,14 @@
       "reflection": "Los cerdos no son un detalle incidental. Bajo la Ley, eran el animal impuro por excelencia; su presencia en gran número —dos mil— confirma que este era territorio gentil, donde la Ley mosaica no regía la vida cotidiana. Jesús concede la petición de los demonios, y lo impuro se precipita hacia lo impuro: el mar, que en la imaginación bíblica representaba el caos primordial. La liberación de un hombre cuesta un hato entero. Jesús no calcula ese costo como pérdida; lo entrega sin negociar, porque la persona vale más que la propiedad de toda una región.",
       "revelation_key": "Jesús no negoció el valor de un hombre a cambio de mantener intacta la economía del lugar.",
       "scripture_connections": [
-        { "reference": "Mateo 8:31-32", "text": "Y los demonios le rogaron diciendo: Si nos echas fuera, permítenos ir a aquel hato de cerdos. Él les dijo: Id. Y ellos salieron, y se fueron a aquel hato de cerdos; y he aquí, todo el hato de cerdos se precipitó en el mar por un despeñadero, y perecieron en las aguas." }
+        {
+          "reference": "Mateo 8:31-32",
+          "text": "Y los demonios le rogaron diciendo: Si nos echas fuera, permítenos ir a aquel hato de cerdos. Él les dijo: Id. Y ellos salieron, y se fueron a aquel hato de cerdos; y he aquí, todo el hato de cerdos se precipitó en el mar por un despeñadero, y perecieron en las aguas."
+        }
       ]
     },
     {
-      "order": 8,
+      "order": 7,
       "type": "cinematic_scene",
       "mood": "intense",
       "image_url": "gadarene_cliff_fall.png",
@@ -137,7 +154,7 @@
       "revelation_key": "El milagro más silencioso ocurre mientras todos miran hacia el estruendo."
     },
     {
-      "order": 9,
+      "order": 8,
       "type": "character_moment",
       "mood": "awe",
       "image_url": "gadarene_seated_clothed.png",
@@ -151,7 +168,7 @@
       }
     },
     {
-      "order": 10,
+      "order": 9,
       "type": "theological_depth",
       "mood": "mysterious",
       "image_url": "gadarene_crowd_fear.png",
@@ -165,7 +182,7 @@
       }
     },
     {
-      "order": 11,
+      "order": 10,
       "type": "scripture_moment",
       "mood": "grace",
       "image_url": "gadarene_begging_to_follow.png",
@@ -174,11 +191,14 @@
       "reflection": "El hombre pide quedarse. Es comprensible: junto a Jesús está a salvo, y el pueblo que acaba de sanar lo acaba de rechazar. Pero Jesús le niega ese refugio y le da, en cambio, una misión. Vete a tu casa. A los tuyos. La misma gente que probablemente lo temía, lo evitaba, quizás lo dio por perdido, ahora sería la primera en escuchar de sus propios labios lo que la misericordia de Dios había hecho. No hay restauración más completa que ser enviado de vuelta al lugar exacto donde antes fuiste el terror del camino.",
       "revelation_key": "Jesús no lo mantuvo cerca; lo envió de vuelta al lugar donde su testimonio pesaría más.",
       "scripture_connections": [
-        { "reference": "Lucas 8:39", "text": "Vuélvete a tu casa, y cuenta cuán grandes cosas ha hecho Dios contigo. Y él se fue, publicando por toda la ciudad cuán grandes cosas había hecho Jesús con él." }
+        {
+          "reference": "Lucas 8:39",
+          "text": "Vuélvete a tu casa, y cuenta cuán grandes cosas ha hecho Dios contigo. Y él se fue, publicando por toda la ciudad cuán grandes cosas había hecho Jesús con él."
+        }
       ]
     },
     {
-      "order": 12,
+      "order": 11,
       "type": "theological_depth",
       "mood": "grace",
       "image_url": "gadarene_sent_without_staff.png",
@@ -192,7 +212,7 @@
       }
     },
     {
-      "order": 13,
+      "order": 12,
       "type": "character_moment",
       "mood": "peace",
       "image_url": "gadarene_decapolis_proclaiming.png",
@@ -206,15 +226,24 @@
       }
     },
     {
-      "order": 14,
+      "order": 13,
       "type": "discovery_activation",
       "image_url": "gadarene_discovery.png",
       "title": "Tu Encuentro",
       "subtitle": "Lo que te ata puede no ser lo que otros ven a primera vista.",
       "discovery_questions": [
-        { "category": "Honestidad", "question": "¿Hay algo en tu vida que otros llaman fortaleza, pero que tú sabes que en realidad es una cadena que no logras romper del todo?" },
-        { "category": "Fe", "question": "¿Qué zona 'impura' o descartada de tu historia crees que Jesús no cruzaría a buscar? ¿Por qué crees que sí lo haría?" },
-        { "category": "Propósito", "question": "Si Jesús te enviara hoy de vuelta a las personas que te conocieron en tu peor momento, ¿qué les contarías que él ha hecho contigo?" }
+        {
+          "category": "Honestidad",
+          "question": "¿Hay algo en tu vida que otros llaman fortaleza, pero que tú sabes que en realidad es una cadena que no logras romper del todo?"
+        },
+        {
+          "category": "Fe",
+          "question": "¿Qué zona 'impura' o descartada de tu historia crees que Jesús no cruzaría a buscar? ¿Por qué crees que sí lo haría?"
+        },
+        {
+          "category": "Propósito",
+          "question": "Si Jesús te enviara hoy de vuelta a las personas que te conocieron en tu peor momento, ¿qué les contarías que él ha hecho contigo?"
+        }
       ],
       "prayer": {
         "title": "Oración de un hombre restaurado",
@@ -222,7 +251,7 @@
       }
     },
     {
-      "order": 15,
+      "order": 14,
       "type": "completion",
       "mood": "peace",
       "image_url": "gadarene_completion.png",
