@@ -13,23 +13,112 @@ PHASE B: Validate translation files using index.json as source of truth
 5. Proper language codes and Bible versions
 """
 
+import atexit
 import json
 import os
 import re
 import sys
+import tempfile
 from pathlib import Path
 from typing import Dict, List, Tuple, Set, Optional
 from collections import Counter
 
-# Load Bible versions from JSON (single source of truth)
-# To add a language or version: edit bible_versions.json only
+# Bible versions are resolved live from the remote SOT (source of truth):
+# https://github.com/develop4God/bible_versions. To add a language or
+# version, edit that repo — not a local file here.
+REMOTE_INDEX_URL = "https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json"
+REMOTE_FETCH_ATTEMPTS = 3
+REMOTE_FETCH_TIMEOUT = 15  # seconds, per attempt
+
+# Local cache is a fallback for this run only when the network is
+# unreachable. It lives in the system temp dir (never inside the repo) and
+# is deleted on exit, so the SOT is always fetched fresh on the next run.
+_LOCAL_CACHE_PATH = Path(tempfile.gettempdir()) / 'discovery_bible_versions_cache.json'
+
+
+def _cleanup_local_cache() -> None:
+    try:
+        _LOCAL_CACHE_PATH.unlink(missing_ok=True)
+    except OSError:
+        pass
+
+
+atexit.register(_cleanup_local_cache)
+
+
+def _remote_to_local_shape(remote_entry: dict) -> dict:
+    """Adapt a remote SOT language entry to this validator's expected shape."""
+    primary = remote_entry['primary_version']
+    fallback = remote_entry['fallback_version']
+    return {
+        'name': remote_entry['name'],
+        'script': remote_entry['script'],
+        'primary_version': primary,
+        'fallback_version': fallback,
+        'allowed_versions': [primary, fallback],
+        'reading_speed': remote_entry['reading_speed'],
+    }
+
+
+def _fetch_remote_index(attempts: int = REMOTE_FETCH_ATTEMPTS) -> Optional[dict]:
+    """Fetch the remote bible_versions SOT index, retrying transient failures
+    a few times before giving up."""
+    import time
+    import urllib.request
+    import urllib.error
+
+    for attempt in range(1, attempts + 1):
+        try:
+            with urllib.request.urlopen(REMOTE_INDEX_URL, timeout=REMOTE_FETCH_TIMEOUT) as resp:
+                return json.loads(resp.read())
+        except (urllib.error.URLError, TimeoutError, OSError, json.JSONDecodeError):
+            if attempt < attempts:
+                time.sleep(min(2 ** attempt, 8))  # 2s, 4s, ...
+    return None
+
+
+def _write_local_cache(remote_langs: dict) -> None:
+    payload = {
+        'meta': {
+            'source': f'Cached from {REMOTE_INDEX_URL} on last successful validator run',
+            'note': 'Offline fallback only, valid for this run — never hand-edit.',
+        },
+        'languages': {
+            lang: _remote_to_local_shape(entry) for lang, entry in remote_langs.items()
+        },
+    }
+    try:
+        _LOCAL_CACHE_PATH.write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False) + '\n', encoding='utf-8'
+        )
+    except OSError:
+        pass  # best-effort — a read-only filesystem shouldn't fail validation
+
+
 def _load_bible_versions() -> dict:
-    path = Path(__file__).parent / 'bible_versions.json'
-    return json.loads(path.read_text(encoding='utf-8'))['languages']
+    """Load bible version config for every language the remote SOT defines.
+
+    Tries the live remote SOT first (source of truth, with retries); only
+    falls back to the local temp cache if the network is unreachable after
+    all attempts and a cache from earlier in this run exists.
+    """
+    remote = _fetch_remote_index()
+    if remote is not None:
+        remote_langs = remote.get('languages', {})
+        _write_local_cache(remote_langs)
+        return {lang: _remote_to_local_shape(entry) for lang, entry in remote_langs.items()}
+
+    if _LOCAL_CACHE_PATH.exists():
+        return json.loads(_LOCAL_CACHE_PATH.read_text(encoding='utf-8'))['languages']
+
+    raise RuntimeError(
+        f"Could not reach the Bible versions SOT at {REMOTE_INDEX_URL} "
+        "and no local fallback cache is available. Check network connectivity."
+    )
 
 _BIBLE_VERSIONS = _load_bible_versions()
 
-# Build EXPECTED_LANGUAGES directly from JSON
+# Build EXPECTED_LANGUAGES directly from the SOT
 EXPECTED_LANGUAGES = {
     lang: cfg['allowed_versions']
     for lang, cfg in _BIBLE_VERSIONS.items()
