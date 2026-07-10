@@ -115,12 +115,22 @@
       "image_url": "gadarene_legion_metaphor.png",
       "title": "Legión",
       "subtitle": "Un nombre tomado del ejército que oprimía a Israel",
-      "content": "Cuando Jesús pregunta su nombre, la respuesta no es la de un hombre: 'Legión me llamo; porque somos muchos' (Mc 5:9). En griego, *legiṓn* (λεγιών) era el término técnico de una unidad militar romana de aproximadamente cinco a seis mil soldados —la máxima fuerza de ocupación que Roma podía desplegar. Todo judío o gentil bajo el dominio romano en Galilea sabía exactamente el peso de esa palabra. 🔑 El demonio eligió el símbolo mismo del poder que sometía a su pueblo, y lo llevó a vivir dentro de un solo hombre. Lo que oprimía a una nación entera se había concentrado, en miniatura, dentro de un solo cuerpo humano. ⚠️ Y aun así, frente a Jesús, esa legión entera suplica, no exige.",
-      "revelation_key": "El nombre 'Legión' convierte a este hombre en un espejo de toda opresión que Jesús vino a desarmar.",
+      "content": "Cuando Jesús pregunta su nombre, la respuesta no es la de un hombre: 'Legión me llamo; porque somos muchos' (Marcos 5:9). En griego, *legiṓn* (λεγιών) era el término técnico de una unidad militar romana de aproximadamente cinco a seis mil soldados —la máxima fuerza de ocupación que Roma podía desplegar. Todo judío o gentil bajo el dominio romano en Galilea sabía exactamente el peso de esa palabra. El demonio eligió el símbolo mismo del poder que sometía a su pueblo, y lo llevó a vivir dentro de un solo hombre. Lo que oprimía a una nación entera se había concentrado, en miniatura, dentro de un solo cuerpo humano. Legión ruega quedarse en esa misma región (Marcos 5:10) y, más tarde, ruega no ser enviada al abismo (Lucas 8:31): prefiere cualquier cuerpo antes que quedar sin uno. Y aun así, frente a Jesús, esa legión entera suplica, no exige.",
+      "revelation_key": "El nombre 'Legión' revela tanto el peso de la opresión que Jesús vino a desarmar como el terror del demonio a quedarse sin cuerpo que habitar.",
       "verse_overlay": {
         "reference": "Marcos 5:9",
         "text": "Y le preguntó: ¿Cómo te llamas? Y respondió diciendo: Legión me llamo; porque somos muchos."
-      }
+      },
+      "scripture_connections": [
+        {
+          "reference": "Marcos 5:10",
+          "text": "Y le rogaba mucho que no los enviase fuera de aquella región."
+        },
+        {
+          "reference": "Lucas 8:31",
+          "text": "Y le rogaban que no los mandase ir al abismo."
+        }
+      ]
     },
     {
       "order": 6,
@@ -160,7 +170,7 @@
       "image_url": "gadarene_seated_clothed.png",
       "title": "Sentado, vestido, en su juicio cabal",
       "subtitle": "Tres palabras que describen una restauración completa",
-      "content": "Cuando el pueblo llega, encuentra al hombre que antes rompía cadenas ahora sentado a los pies de Jesús. El griego original usa tres participios que juntos pintan una reversión total: *kathḗmenon* —sentado, en la postura de un discípulo que aprende, no de un hombre agitado; *himatisménon* —vestido, palabra que en Marcos aparece solo aquí, y que confirma lo que Lucas dice sin rodeos: antes estaba desnudo; *sōphronoûnta* —en su sano juicio, cuerdo, palabra que también aparece únicamente en este pasaje. 🔑 Vestido y cuerdo no son adornos del relato: son la prueba física y mental de que la legión que lo habitaba ya no estaba. Y el pueblo, en vez de alegrarse, tuvo miedo.",
+      "content": "Cuando el pueblo llega, encuentra al hombre que antes rompía cadenas ahora sentado a los pies de Jesús. El griego original usa tres participios que juntos pintan una reversión total: *kathḗmenon* —sentado, en la postura de un discípulo que aprende, no de un hombre agitado; *himatisménon* —vestido, palabra que en Marcos aparece solo aquí, y que confirma lo que Lucas dice sin rodeos: antes estaba desnudo; *sōphronoûnta* —en su sano juicio, cuerdo, palabra que también aparece únicamente en este pasaje. Vestido y cuerdo no son adornos del relato: son la prueba física y mental de que la legión que lo habitaba ya no estaba. Y el pueblo, en vez de alegrarse, tuvo miedo.",
       "revelation_key": "La restauración fue tan completa que el pueblo temió más al milagro que a la posesión.",
       "verse_overlay": {
         "reference": "Marcos 5:15",
@@ -174,7 +184,7 @@
       "image_url": "gadarene_crowd_fear.png",
       "title": "Miedo a lo que no se puede controlar",
       "subtitle": "Por qué le rogaron a Jesús que se fuera",
-      "content": "Es una de las escenas más incómodas de los evangelios: un hombre queda completamente sano, y la respuesta del pueblo no es celebración, sino súplica para que Jesús se marche. ⚠️ El poder que acababa de liberar a un ser humano de una legión de demonios era el mismo poder capaz de hundir en un instante el sustento económico de toda una región. Lo que ellos temían no era el mal; era un bien que no podían predecir ni controlar. Es una advertencia honesta: a veces preferimos la miseria conocida —incluso la de alguien más— antes que un poder tan grande que no sabemos hacia dónde se dirigirá después.",
+      "content": "Es una de las escenas más incómodas de los evangelios: un hombre queda completamente sano, y la respuesta del pueblo no es celebración, sino súplica para que Jesús se marche. El poder que acababa de liberar a un ser humano de una legión de demonios era el mismo poder capaz de hundir en un instante el sustento económico de toda una región. Lo que ellos temían no era el mal; era un bien que no podían predecir ni controlar. Es una advertencia honesta: a veces preferimos la miseria conocida —incluso la de alguien más— antes que un poder tan grande que no sabemos hacia dónde se dirigirá después.",
       "revelation_key": "A veces tememos más la libertad que trae Jesús que el cautiverio que reemplaza.",
       "verse_overlay": {
         "reference": "Marcos 5:17",
@@ -204,7 +214,7 @@
       "image_url": "gadarene_sent_without_staff.png",
       "title": "Enviado sin bordón",
       "subtitle": "El mismo verbo que usaría después con los Doce",
-      "content": "Más adelante, Jesús llamará a los Doce y comenzará a 'enviarlos' de dos en dos, dándoles autoridad, instrucción y hasta un bordón para el camino (Mc 6:7-13). El verbo griego para 'enviar' en ambos pasajes es el mismo: *apostéllō* —la raíz de la palabra 'apóstol'. 🔑 Pero a este hombre nadie le entregó autoridad formal, ni compañero de viaje, ni instrucciones sobre qué llevar o qué ciudad rechazarlo. Solo tenía su propio cuerpo, antes desnudo y ahora vestido, y una frase que ya sabía de memoria porque la había vivido: cuán grandes cosas el Señor ha hecho conmigo. A veces el envío de Dios no espera preparación ni comisión oficial; solo espera una historia verdadera y un corazón dispuesto a contarla.",
+      "content": "Más adelante, Jesús llamará a los Doce y comenzará a 'enviarlos' de dos en dos, dándoles autoridad, instrucción y hasta un bordón para el camino (Marcos 6:7-13). El verbo griego para 'enviar' en ambos pasajes es el mismo: *apostéllō* —la raíz de la palabra 'apóstol'. Pero a este hombre nadie le entregó autoridad formal, ni compañero de viaje, ni instrucciones sobre qué llevar o qué ciudad rechazarlo. Solo tenía su propio cuerpo, antes desnudo y ahora vestido, y una frase que ya sabía de memoria porque la había vivido: cuán grandes cosas el Señor ha hecho conmigo. A veces el envío de Dios no espera preparación ni comisión oficial; solo espera una historia verdadera y un corazón dispuesto a contarla.",
       "revelation_key": "El mismo verbo que envía apóstoles envió primero a un hombre sin más credencial que su propio testimonio.",
       "verse_overlay": {
         "reference": "Marcos 6:7",
@@ -218,7 +228,7 @@
       "image_url": "gadarene_decapolis_proclaiming.png",
       "title": "De Legión a testigo",
       "subtitle": "El primer misionero enviado a los gentiles",
-      "content": "Se fue, y comenzó a publicar en Decápolis cuán grandes cosas había hecho Jesús con él; y todos se maravillaban (Mc 5:20). El hombre que una vez respondió a su propio nombre con la palabra de un ejército extranjero ahora recorre las diez ciudades de la región contando una historia que es completamente suya. No lo hizo un discípulo entrenado ni un apóstol elegido entre los doce. Lo hizo el hombre que vivía entre tumbas. 🔑 Antes de que Jesús enviara oficialmente a los doce a los gentiles, ya había enviado a este hombre, sin comisión formal, solo con una historia verdadera y un cuerpo vestido y en paz.",
+      "content": "Se fue, y comenzó a publicar en Decápolis cuán grandes cosas había hecho Jesús con él; y todos se maravillaban (Marcos 5:20). El hombre que una vez respondió a su propio nombre con la palabra de un ejército extranjero ahora recorre las diez ciudades de la región contando una historia que es completamente suya. No lo hizo un discípulo entrenado ni un apóstol elegido entre los doce. Lo hizo el hombre que vivía entre tumbas. Antes de que Jesús enviara oficialmente a los doce a los gentiles, ya había enviado a este hombre, sin comisión formal, solo con una historia verdadera y un cuerpo vestido y en paz.",
       "revelation_key": "El primer misionero a los gentiles no fue elegido por su preparación, sino por lo que había vivido.",
       "verse_overlay": {
         "reference": "Marcos 5:20",

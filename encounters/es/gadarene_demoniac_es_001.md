@@ -65,18 +65,21 @@ El hombre que nadie podía dominar, que rompía cadenas y grillos como si fueran
 ### Legión
 *Un nombre tomado del ejército que oprimía a Israel*
 
-Cuando Jesús pregunta su nombre, la respuesta no es la de un hombre: 'Legión me llamo; porque somos muchos' (Mc 5:9). En griego, *legiṓn* (λεγιών) era el término técnico de una unidad militar romana de aproximadamente cinco a seis mil soldados —la máxima fuerza de ocupación que Roma podía desplegar. Todo judío o gentil bajo el dominio romano en Galilea sabía exactamente el peso de esa palabra. 🔑 El demonio eligió el símbolo mismo del poder que sometía a su pueblo, y lo llevó a vivir dentro de un solo hombre. Lo que oprimía a una nación entera se había concentrado, en miniatura, dentro de un solo cuerpo humano. ⚠️ Y aun así, frente a Jesús, esa legión entera suplica, no exige.
+Cuando Jesús pregunta su nombre, la respuesta no es la de un hombre: 'Legión me llamo; porque somos muchos' (Marcos 5:9). En griego, *legiṓn* (λεγιών) era el término técnico de una unidad militar romana de aproximadamente cinco a seis mil soldados —la máxima fuerza de ocupación que Roma podía desplegar. Todo judío o gentil bajo el dominio romano en Galilea sabía exactamente el peso de esa palabra. El demonio eligió el símbolo mismo del poder que sometía a su pueblo, y lo llevó a vivir dentro de un solo hombre. Lo que oprimía a una nación entera se había concentrado, en miniatura, dentro de un solo cuerpo humano. Legión ruega quedarse en esa misma región (Marcos 5:10) y, más tarde, ruega no ser enviada al abismo (Lucas 8:31): prefiere cualquier cuerpo antes que quedar sin uno. Y aun así, frente a Jesús, esa legión entera suplica, no exige.
 
 > "Y le preguntó: ¿Cómo te llamas? Y respondió diciendo: Legión me llamo; porque somos muchos."
 > — Marcos 5:9
 
-💡 El nombre 'Legión' convierte a este hombre en un espejo de toda opresión que Jesús vino a desarmar.
+**Conexión:** Marcos 5:10 — "Y le rogaba mucho que no los enviase fuera de aquella región."
+**Conexión:** Lucas 8:31 — "Y le rogaban que no los mandase ir al abismo."
+
+💡 El nombre 'Legión' revela tanto el peso de la opresión que Jesús vino a desarmar como el terror del demonio a quedarse sin cuerpo que habitar.
 
 ---
 
 ## Card 6
 
-Los cerdos no son un detalle incidental. Bajo la Ley, eran el animal impuro por excelencia; su presencia en gran número —dos mil— confirma que este era territorio gentil, donde la Ley mosaica no regía la vida cotidiana. Jesús concede la petición de los demonios, y lo impuro se precipita hacia lo impuro: el mar, que en la imaginación bíblica representaba el caos primordial. La liberación de un hombre cuesta un hato entero. Jesús no calcula ese costo como pérdida; lo entrega sin negociar, porque la persona vale más que la propiedad de toda una región.
+Los cerdos no son un detalle incidental. Bajo la Ley, eran el animal impuro por excelencia; su presencia en gran número —dos mil— confirma que este era territorio gentil, donde la Ley mosaica no regía la vida cotidiana. Jesús concede la petición de los demonios, y lo impuro se precipita hacia lo impuro: el mar, que en el Antiguo Testamento representaba el caos y lo que se oponía a la vida. La liberación de un hombre cuesta un hato entero. Jesús no calcula ese costo como pérdida; lo entrega sin negociar, porque la persona vale más que la propiedad de toda una región.
 
 > "Y le rogaba mucho que no los enviase fuera de aquella región. Estaba allí cerca del monte un gran hato de cerdos paciendo. Y le rogaron todos los demonios, diciendo: Envíanos a los cerdos para que entremos en ellos. Y luego Jesús les dio permiso. Y saliendo aquellos espíritus inmundos, entraron en los cerdos, los cuales eran como dos mil; y el hato se precipitó en el mar por un despeñadero, y en el mar se ahogaron."
 > — Marcos 5:10-13
@@ -103,7 +106,7 @@ Dos mil animales se precipitan por la ladera hacia el agua en un solo instante, 
 ### Sentado, vestido, en su juicio cabal
 *Tres palabras que describen una restauración completa*
 
-Cuando el pueblo llega, encuentra al hombre que antes rompía cadenas ahora sentado a los pies de Jesús. El griego original usa tres participios que juntos pintan una reversión total: *kathḗmenon* —sentado, en la postura de un discípulo que aprende, no de un hombre agitado; *himatisménon* —vestido, palabra que en Marcos aparece solo aquí, y que confirma lo que Lucas dice sin rodeos: antes estaba desnudo; *sōphronoûnta* —en su sano juicio, cuerdo, palabra que también aparece únicamente en este pasaje. 🔑 Vestido y cuerdo no son adornos del relato: son la prueba física y mental de que la legión que lo habitaba ya no estaba. Y el pueblo, en vez de alegrarse, tuvo miedo.
+Cuando el pueblo llega, encuentra al hombre que antes rompía cadenas ahora sentado a los pies de Jesús. El griego original usa tres participios que juntos pintan una reversión total: *kathḗmenon* —sentado, en la postura de un discípulo que aprende, no de un hombre agitado; *himatisménon* —vestido, palabra que en Marcos aparece solo aquí, y que confirma lo que Lucas dice sin rodeos: antes estaba desnudo; *sōphronoûnta* —en su sano juicio, cuerdo, palabra que también aparece únicamente en este pasaje. Vestido y cuerdo no son adornos del relato: son la prueba física y mental de que la legión que lo habitaba ya no estaba. Y el pueblo, en vez de alegrarse, tuvo miedo.
 
 > "Vienen a Jesús, y ven al que había sido atormentado del demonio, y que había tenido la legión, sentado, vestido y en su juicio cabal; y tuvieron miedo."
 > — Marcos 5:15
@@ -116,7 +119,7 @@ Cuando el pueblo llega, encuentra al hombre que antes rompía cadenas ahora sent
 ### Miedo a lo que no se puede controlar
 *Por qué le rogaron a Jesús que se fuera*
 
-Es una de las escenas más incómodas de los evangelios: un hombre queda completamente sano, y la respuesta del pueblo no es celebración, sino súplica para que Jesús se marche. ⚠️ El poder que acababa de liberar a un ser humano de una legión de demonios era el mismo poder capaz de hundir en un instante el sustento económico de toda una región. Lo que ellos temían no era el mal; era un bien que no podían predecir ni controlar. Es una advertencia honesta: a veces preferimos la miseria conocida —incluso la de alguien más— antes que un poder tan grande que no sabemos hacia dónde se dirigirá después.
+Es una de las escenas más incómodas de los evangelios: un hombre queda completamente sano, y la respuesta del pueblo no es celebración, sino súplica para que Jesús se marche. El poder que acababa de liberar a un ser humano de una legión de demonios era el mismo poder capaz de hundir en un instante el sustento económico de toda una región. Lo que ellos temían no era el mal; era un bien que no podían predecir ni controlar. Es una advertencia honesta: a veces preferimos la miseria conocida —incluso la de alguien más— antes que un poder tan grande que no sabemos hacia dónde se dirigirá después.
 
 > "Y comenzaron a rogarle que se fuera de sus contornos."
 > — Marcos 5:17
@@ -142,7 +145,7 @@ El hombre pide quedarse. Es comprensible: junto a Jesús está a salvo, y el pue
 ### Enviado sin bordón
 *El mismo verbo que usaría después con los Doce*
 
-Más adelante, Jesús llamará a los Doce y comenzará a 'enviarlos' de dos en dos, dándoles autoridad, instrucción y hasta un bordón para el camino (Mc 6:7-13). El verbo griego para 'enviar' en ambos pasajes es el mismo: *apostéllō* —la raíz de la palabra 'apóstol'. 🔑 Pero a este hombre nadie le entregó autoridad formal, ni compañero de viaje, ni instrucciones sobre qué llevar o qué ciudad rechazarlo. Solo tenía su propio cuerpo, antes desnudo y ahora vestido, y una frase que ya sabía de memoria porque la había vivido: cuán grandes cosas el Señor ha hecho conmigo. A veces el envío de Dios no espera preparación ni comisión oficial; solo espera una historia verdadera y un corazón dispuesto a contarla.
+Más adelante, Jesús llamará a los Doce y comenzará a 'enviarlos' de dos en dos, dándoles autoridad, instrucción y hasta un bordón para el camino (Marcos 6:7-13). El verbo griego para 'enviar' en ambos pasajes es el mismo: *apostéllō* —la raíz de la palabra 'apóstol'. Pero a este hombre nadie le entregó autoridad formal, ni compañero de viaje, ni instrucciones sobre qué llevar o qué ciudad rechazarlo. Solo tenía su propio cuerpo, antes desnudo y ahora vestido, y una frase que ya sabía de memoria porque la había vivido: cuán grandes cosas el Señor ha hecho conmigo. A veces el envío de Dios no espera preparación ni comisión oficial; solo espera una historia verdadera y un corazón dispuesto a contarla.
 
 > "Después llamó a los doce, y comenzó a enviarlos de dos en dos; y les dio autoridad sobre los espíritus inmundos."
 > — Marcos 6:7
@@ -155,7 +158,7 @@ Más adelante, Jesús llamará a los Doce y comenzará a 'enviarlos' de dos en d
 ### De Legión a testigo
 *El primer misionero enviado a los gentiles*
 
-Se fue, y comenzó a publicar en Decápolis cuán grandes cosas había hecho Jesús con él; y todos se maravillaban (Mc 5:20). El hombre que una vez respondió a su propio nombre con la palabra de un ejército extranjero ahora recorre las diez ciudades de la región contando una historia que es completamente suya. No lo hizo un discípulo entrenado ni un apóstol elegido entre los doce. Lo hizo el hombre que vivía entre tumbas. 🔑 Antes de que Jesús enviara oficialmente a los doce a los gentiles, ya había enviado a este hombre, sin comisión formal, solo con una historia verdadera y un cuerpo vestido y en paz.
+Se fue, y comenzó a publicar en Decápolis cuán grandes cosas había hecho Jesús con él; y todos se maravillaban (Marcos 5:20). El hombre que una vez respondió a su propio nombre con la palabra de un ejército extranjero ahora recorre las diez ciudades de la región contando una historia que es completamente suya. No lo hizo un discípulo entrenado ni un apóstol elegido entre los doce. Lo hizo el hombre que vivía entre tumbas. Antes de que Jesús enviara oficialmente a los doce a los gentiles, ya había enviado a este hombre, sin comisión formal, solo con una historia verdadera y un cuerpo vestido y en paz.
 
 > "Y se fue, y comenzó a publicar en Decápolis cuán grandes cosas había hecho Jesús con él; y todos se maravillaban."
 > — Marcos 5:20
