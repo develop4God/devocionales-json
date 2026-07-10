@@ -10,9 +10,11 @@ Three-phase validation:
 Exit codes: 0 = all passed, 1 = errors found
 """
 
+import atexit
 import json
 import re
 import sys
+import tempfile
 from pathlib import Path
 from typing import List, Optional
 
@@ -30,14 +32,25 @@ REMOTE_INDEX_URL = "https://raw.githubusercontent.com/develop4God/bible_versions
 REMOTE_FETCH_ATTEMPTS = 3
 REMOTE_FETCH_TIMEOUT = 15  # seconds, per attempt
 
-# bible_versions.json is a local CACHE of the remote SOT, refreshed on every
-# successful live fetch and used only as a fallback when the network is
-# unreachable. It is never hand-maintained as a source of truth.
-_LOCAL_CACHE_PATH = SCRIPTS_DIR / 'bible_versions.json'
+# bible_versions.json is a CACHE of the remote SOT, used only as a fallback
+# within a single run when the live fetch fails. It lives in the system temp
+# dir (never inside the repo) and is deleted when the process exits, so the
+# SOT is always fetched fresh on the next run rather than persisted locally.
+_LOCAL_CACHE_PATH = Path(tempfile.gettempdir()) / 'encounters_bible_versions_cache.json'
+
+
+def _cleanup_local_cache() -> None:
+    try:
+        _LOCAL_CACHE_PATH.unlink(missing_ok=True)
+    except OSError:
+        pass
+
+
+atexit.register(_cleanup_local_cache)
 
 
 def _local_cache_languages() -> dict:
-    """Read the local cache file (used only as an offline fallback)."""
+    """Read the temp-dir cache file (used only as an offline fallback)."""
     return json.loads(_LOCAL_CACHE_PATH.read_text(encoding='utf-8'))['languages']
 
 
@@ -76,14 +89,15 @@ def _fetch_remote_index(attempts: int = REMOTE_FETCH_ATTEMPTS) -> Optional[dict]
 
 
 def _write_local_cache(remote_langs: dict) -> None:
-    """Refresh the local bible_versions.json cache from a successful live
+    """Refresh the temp-dir bible_versions cache from a successful live
     fetch, so the offline fallback is always recent rather than a
-    hand-maintained file that can silently go stale between fetches."""
+    hand-maintained file that can silently go stale between fetches.
+    Written outside the repo so it's never an untracked/committed file."""
     payload = {
         'meta': {
             'version': '1.0.0',
             'source': f'Cached from {REMOTE_INDEX_URL} on last successful validator run',
-            'note': 'Offline fallback only. Never hand-edit — this file is overwritten on every successful live fetch.',
+            'note': 'Offline fallback only. Lives in the system temp dir — never hand-edit, never commit.',
         },
         'languages': {
             lang: _remote_to_local_shape(entry) for lang, entry in remote_langs.items()
@@ -101,9 +115,9 @@ def _load_bible_versions() -> tuple[dict, bool]:
     """Load bible version config for every language the remote SOT defines.
 
     Tries the live remote SOT first (source of truth, with retries); only
-    falls back to the local bible_versions.json cache if the network is
+    falls back to the temp-dir bible_versions cache if the network is
     unreachable after all attempts. On a successful fetch, refreshes the
-    local cache file so the fallback path is always recent.
+    cache file so the fallback path is always recent.
     Returns (languages_dict, used_remote: bool).
     """
     remote = _fetch_remote_index()
@@ -204,6 +218,21 @@ def _iter_strings(obj, path: str = ""):
         yield path, obj
 
 
+def _is_verse_continuation_close(text: str, mark_chars: str) -> bool:
+    """True if `text` looks like the tail fragment of a multi-verse quotation:
+    it carries exactly one quote-like mark from `mark_chars`, sitting at the
+    very end of the field (only trailing punctuation/whitespace after it).
+    This corpus stores consecutive Bible verses as separate string fields, so
+    a quotation that began in an earlier verse legitimately closes here with
+    no opener of its own — not a stray-punctuation typo.
+    """
+    positions = [i for i, c in enumerate(text) if c in mark_chars]
+    if len(positions) != 1:
+        return False
+    idx = positions[0]
+    return bool(re.match(r'^[\s.!?,;:]*$', text[idx + 1:]))
+
+
 def _check_quote_anomalies(text: str, ctx: str, lang: str, report: 'Report'):
     """Flag stray/duplicated/unbalanced quote-like punctuation in a text field."""
     # Doubled identical quote-like characters back-to-back (e.g. »», "", '')
@@ -212,19 +241,22 @@ def _check_quote_anomalies(text: str, ctx: str, lang: str, report: 'Report'):
         if c in _DOUBLE_CHECK_CHARS and text[i + 1] == c:
             report.E(f"{ctx}: contains doubled '{c}{c}' — likely stray punctuation")
 
-    # Balanced guillemets (used in AR/FR/etc.)
+    # Balanced guillemets (used in AR/FR/etc.). Skip fields that are the
+    # trailing fragment of a quotation opened in a preceding verse — see
+    # _is_verse_continuation_close.
     oc, cc = text.count('«'), text.count('»')
-    if oc != cc:
+    if oc != cc and not (oc + cc == 1 and _is_verse_continuation_close(text, '«»')):
         report.W(f"{ctx}: unbalanced '«'/'»' — {oc} open vs {cc} close")
 
-    # Straight double quotes should appear in pairs
-    if text.count('"') % 2 != 0:
+    # Straight double quotes should appear in pairs, with the same
+    # verse-continuation exception as guillemets above.
+    if text.count('"') % 2 != 0 and not (text.count('"') == 1 and _is_verse_continuation_close(text, '"')):
         report.W(f"{ctx}: odd number of straight double quotes (\") — possible stray quote")
 
 
 def validate_sot_source(report: 'Report') -> bool:
     """Report whether this run resolved bible_version codes from the live
-    remote SOT or fell back to the local bible_versions.json cache.
+    remote SOT or fell back to the temp-dir bible_versions cache.
 
     _BIBLE_VERSIONS is populated at import time by fetching the remote SOT
     first — this function only surfaces which source was actually used, so
@@ -236,8 +268,8 @@ def validate_sot_source(report: 'Report') -> bool:
         report.I(f"✓ bible_version codes resolved live from remote SOT ({REMOTE_INDEX_URL}) for all {len(_BIBLE_VERSIONS)} languages")
         return True
     report.W(
-        f"Could not reach remote SOT ({REMOTE_INDEX_URL}) — fell back to local "
-        f"bible_versions.json cache. Results reflect the LOCAL CACHE, not confirmed "
+        f"Could not reach remote SOT ({REMOTE_INDEX_URL}) — fell back to the "
+        f"temp-dir bible_versions cache. Results reflect the LOCAL CACHE, not confirmed "
         f"live data; re-run once network access is available before merging."
     )
     return True

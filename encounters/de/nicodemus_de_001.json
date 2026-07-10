@@ -92,6 +92,16 @@
       "title": "Anōthen: ein Wort mit zwei Wegen",
       "subtitle": "Warum Nikodemus etwas anderes verstand, als Jesus meinte",
       "content": "Das griechische Wort, das Jesus benutzt, ist ἄνωθεν (anōthen), und es trägt zwei mögliche Bedeutungen zugleich: \"von Neuem\" und \"von oben\". Nikodemus hört nur den ersten Sinn und stellt sich etwas physisch Unmögliches vor: \"Wie kann ein Mensch geboren werden, wenn er alt ist? Kann er wieder in seiner Mutter Leib gehen und geboren werden?\" (Johannes 3:4).\n\nJesus beschreibt eine Geburt, die von oben kommt, von Gott selbst, etwas, das nur der Heilige Geist hervorbringen kann. Dasselbe Wort anōthen erscheint in Jakobus 1:17, wo es \"jede gute Gabe\" beschreibt, die von oben herabkommt, vom Vater des Lichts.",
+      "scripture_connections": [
+        {
+          "reference": "Johannes 3:4",
+          "text": "Nikodemus spricht zu ihm: Wie kann ein Mensch geboren werden, wenn er alt ist? Kann er denn wieder in seiner Mutter Leib gehen und geboren werden?"
+        },
+        {
+          "reference": "Jakobus 1:17",
+          "text": "Alle gute Gabe und alle vollkommene Gabe kommt von oben herab, von dem Vater des Lichts, bei dem keine Veränderung ist noch Wechsel von Licht und Finsternis."
+        }
+      ],
       "revelation_key": "Die neue Geburt ist ein Leben, das von oben kommt — eine Gabe, die Gott schenkt, keine Leistung, die der Mensch erreicht."
     },
     {
@@ -101,8 +111,18 @@
       "image_url": "nicodemus_water_and_spirit.png",
       "verse_reference": "Johannes 3:5",
       "verse_text": "Jesus antwortete: Wahrlich, wahrlich, ich sage dir: Wenn jemand nicht geboren wird aus Wasser und Geist, so kann er nicht in das Reich Gottes kommen.",
-      "reflection": "Jesus fügt seiner Antwort eine zweite Schicht hinzu: Wasser und Geist. Das griechische Wort ist πνεῦμα (pneuma) — \"Geist\", \"Atem\", \"Wind\" — derselbe Begriff, der den Lebensatem und die wirkende Gegenwart Gottes beschreibt. Für einen Gesetzeslehrer rief Wasser sofort die Reinigungsriten wach und die Verheißungen der Propheten, wie die Hesekiels: \"Ich will reines Wasser über euch sprengen ... Ich will euch einen neuen Geist geben\" (Hesekiel 36:25-26). Jesus sagt, dass diese prophetische Verheißung, die Reinigung und der neue Geist, die Israel zugesagt waren, jetzt erfüllt sind, in eben diesem Gespräch, für jeden, der sie empfängt.",
-      "revelation_key": "Nikodemus kannte die Verheißung eines neuen Geistes aus den Propheten. Jesus zeigt ihm, dass diese Verheißung ein Gesicht hat und vor ihm steht."
+      "reflection": "Jesus fügt seiner Antwort eine zweite Schicht hinzu: Wasser und Geist. Das griechische Wort ist πνεῦμα (pneuma) — \"Geist\", \"Atem\", \"Wind\" — dasselbe Wort, das er in V.8 wieder verwenden wird, um zu beschreiben, wie sich jeder bewegt, der aus dem Geist geboren ist. Für einen Gesetzeslehrer rief Wasser sofort die Reinigungsriten wach und die Verheißungen der Propheten, wie die Hesekiels: \"Ich will reines Wasser über euch sprengen ... Ich will euch einen neuen Geist geben\" (Hesekiel 36:25-26). In der griechischen Übersetzung, die Nikodemus kannte, verwendet diese Verheißung dasselbe Wort, pneuma, das Jesus soeben ausgesprochen hat. Jahre später würde dasselbe pneuma sichtbar über die Jünger an Pfingsten ausgegossen werden: \"es geschah plötzlich ein Brausen vom Himmel wie von einem gewaltigen Sturm ... und sie wurden alle erfüllt von dem Heiligen Geist\" (Apostelgeschichte 2:2-4). Jesus sagt, dass diese prophetische Verheißung, die Reinigung und der neue Geist, die Israel zugesagt waren, jetzt erfüllt sind, in eben diesem Gespräch, für jeden, der sie empfängt — und eines Tages sichtbar vor allen werden würde.",
+      "scripture_connections": [
+        {
+          "reference": "Der Prophet Hesekiel (Ezechiel) 36:25-26",
+          "text": "und ich will reines Wasser über euch sprengen, dass ihr rein werdet; von all eurer Unreinheit und von allen euren Götzen will ich euch reinigen. Und ich will euch ein neues Herz und einen neuen Geist in euch geben und will das steinerne Herz aus eurem Fleisch wegnehmen und euch ein fleischernes Herz geben."
+        },
+        {
+          "reference": "Die Apostelgeschichte des Lukas 2:2-4",
+          "text": "Und es geschah plötzlich ein Brausen vom Himmel wie von einem gewaltigen Sturm und erfüllte das ganze Haus, in dem sie saßen. Und es erschienen ihnen Zungen, zerteilt und wie von Feuer, und setzten sich auf einen jeden von ihnen, und sie wurden alle erfüllt von dem Heiligen Geist und fingen an zu predigen in andern Sprachen, wie der Geist ihnen zu reden eingab."
+        }
+      ],
+      "revelation_key": "Nikodemus kannte die Verheißung eines neuen Geistes aus den Propheten. Jesus zeigt ihm, dass diese Verheißung ein Gesicht hat, vor ihm steht, und eines Tages sichtbar über alle ausgegossen werden würde."
     },
     {
       "order": 7,
@@ -121,7 +141,7 @@
       "image_url": "nicodemus_honest_confusion.png",
       "title": "Wie kann das geschehen?",
       "subtitle": "Die Demut eines Lehrers, der zugibt, dass er nicht versteht",
-      "content": "Nikodemus antwortet mit einer einzigen Frage: \"Wie mag das zugehen?\" (Johannes 3:9). Es ist eine kurze Frage, ohne Ausflucht, und bemerkenswert ehrlich für einen Mann seines Standes. Jesus antwortet mit einer direkten Feststellung: \"Du bist Israels Lehrer und weißt das nicht?\" (V.10).\n\nEin Lehrer Israels von seinem Rang kannte die Schriften gut, die von einem neuen Geist und einem erneuerten Herzen sprachen. Was Nikodemus fehlt, ist die Bereitschaft, das, was er sein Leben lang als Lehre studiert hatte, als Geschenk anzunehmen. 🔑 Seine offene, ungeschützte Frage ist selbst schon ein erster Schritt zu dieser Bereitschaft.",
+      "content": "Nikodemus antwortet mit einer einzigen Frage: \"Wie mag das zugehen?\" (Johannes 3:9). Es ist eine kurze Frage, ohne Ausflucht, und bemerkenswert ehrlich für einen Mann seines Standes. Jesus antwortet mit einer direkten Feststellung: \"Du bist Israels Lehrer und weißt das nicht?\" (V.10).\n\nEin Lehrer Israels von seinem Rang kannte die Schriften gut, die von einem neuen Geist und einem erneuerten Herzen sprachen. Was Nikodemus fehlt, ist die Bereitschaft, das, was er sein Leben lang als Lehre studiert hatte, als Geschenk anzunehmen. Seine offene, ungeschützte Frage ist selbst schon ein erster Schritt zu dieser Bereitschaft.",
       "revelation_key": "Die erste Bewegung hin zu wahrem Glauben ist manchmal keine selbstsichere Antwort, sondern eine ehrlich ausgesprochene Frage.",
       "scripture_connections": [
         {
@@ -138,7 +158,7 @@
       "title": "Wie Mose die Schlange erhöhte",
       "subtitle": "Ein Bild, das jeder Israelit kannte",
       "content": "Jesus greift auf eine Szene zurück, die jeder Israelit sofort wiedererkennen würde: In der Wüste, als giftige Schlangen das Volk für seine Auflehnung bissen, befahl Gott Mose, eine eherne Schlange auf eine Stange zu erhöhen. Sie anzuschauen genügte, um zu leben; der Blick des Glaubens war die einzige Antwort, die Gott verlangte. Das Erstaunliche an diesem Heilmittel war, dass gerade das Bild dessen, was den Tod brachte, zum Mittel des Lebens wurde.\n\nJesus greift dasselbe Bild auf und wendet es auf sich selbst an, mit dem griechischen Verb ὑψόω (hypsoō) — \"erhöhen\", \"emporheben\" — einem Wort, das im Johannesevangelium stets eine doppelte Bedeutung trägt: Es beschreibt zugleich den physischen Akt, ans Kreuz erhöht zu werden, und den Akt, verherrlicht und erhöht zu werden. Dasselbe Wort erscheint in Johannes 8:28 und 12:32, immer auf denselben Augenblick verweisend. So wie die Schlange das Bild des Gerichts trug und zum Zeichen des Lebens wurde, würde Jesus an dem Ort größter Schande erhöht werden, um die Quelle des ewigen Lebens für jeden zu werden, der an ihn glaubt.\n\nUnd dann kommt Jesus zu dem Satz, der das ganze Gespräch zusammenfasst — die Verheißung des ewigen Lebens für jeden, der an ihn glaubt (V.16).\n\nDas griechische Wort für \"eingeboren\" ist μονογενής (monogenēs) — einzigartig in seiner Art, unvergleichlich. Es beschreibt etwas Unwiederholbares, ohne Gleichen.",
-      "scripture_anchor": {
+      "verse_overlay": {
         "reference": "Johannes 3:16",
         "text": "Denn also hat Gott die Welt geliebt, dass er seinen eingeborenen Sohn gab, auf dass alle, die an ihn glauben, nicht verloren werden, sondern das ewige Leben haben."
       },
@@ -150,6 +170,14 @@
         {
           "reference": "Johannes 3:14-15",
           "text": "Und wie Mose in der Wüste die Schlange erhöht hat, so muss der Menschensohn erhöht werden, auf dass alle, die an ihn glauben, das ewige Leben haben."
+        },
+        {
+          "reference": "Das Evangelium nach Johannes 8:28",
+          "text": "Da sprach Jesus zu ihnen: Wenn ihr den Menschensohn erhöhen werdet, dann werdet ihr erkennen, dass ich es bin und nichts von mir aus tue, sondern, wie mich der Vater gelehrt hat, so rede ich."
+        },
+        {
+          "reference": "Das Evangelium nach Johannes 12:32",
+          "text": "Und ich, wenn ich erhöht werde von der Erde, so will ich alle zu mir ziehen."
         }
       ],
       "revelation_key": "Genau der Augenblick, in dem Jesus am Kreuz erhöht wurde, in scheinbar tiefster Schande, war zugleich der Augenblick seiner größten Herrlichkeit — und jeder, der im Glauben zu ihm aufschaut, empfängt Leben."
@@ -170,10 +198,14 @@
       "mood": "tense",
       "image_url": "nicodemus_sanhedrin_defense.png",
       "title": "Ein Riss im Mut",
-      "subtitle": "Monate oder Jahre später, mitten im Sanhedrin",
-      "content": "Nikodemus' Name taucht später wieder auf, als die Hohenpriester und Pharisäer versuchen, Jesus festzunehmen. Mitten in dieser Versammlung erhebt Nikodemus — vom Text erneut identifiziert als \"der bei Nacht zu Jesus gekommen war\" (Johannes 7:50) — einen Einwand: \"Richtet unser Gesetz einen Menschen, ehe man ihn verhört und erkennt, was er tut?\" (V.51).\n\nEs ist keine öffentliche, offene Verteidigung Jesu als Messias. Es ist etwas Kleineres und gerade deshalb Echteres: ein Mann, der es wagt, ein einfaches, faires Verfahren einzufordern, in einem Gremium, in dem sonst niemand das tut. Seine Kollegen antworten mit Verachtung: \"Bist du auch aus Galiläa?\" (V.52). Sie behaupten, dass aus Galiläa nie ein Prophet aufgestanden sei. Der Prophet Jona, der Sohn Amittais, stammte aus Gat-Hefer, einer Stadt in Galiläa (2. Könige 14:25). Gerade die Männer, die Nikodemus der Unwissenheit bezichtigen, reden, ohne ihre eigene Schrift zu kennen. 🔑 Nikodemus antwortet nicht. Aber er nimmt seine Worte auch nicht zurück.",
-      "revelation_key": "Der Glaube, der als eine bei Nacht gestellte Frage begann, wagt jetzt, Jahre später, einmal öffentlich seine Stimme zu erheben.",
+      "subtitle": "Fast zwei Jahre später, mitten im Sanhedrin",
+      "content": "Nikodemus' Name taucht später wieder auf, als die Hohenpriester und Pharisäer versuchen, Jesus festzunehmen. Mitten in dieser Versammlung erhebt Nikodemus — vom Text erneut identifiziert als \"der bei Nacht zu Jesus gekommen war\" (Johannes 7:50) — einen Einwand: \"Richtet unser Gesetz einen Menschen, ehe man ihn verhört und erkennt, was er tut?\" (V.51).\n\nEs ist keine öffentliche, offene Verteidigung Jesu als Messias. Es ist etwas Kleineres und gerade deshalb Echteres: ein Mann, der es wagt, ein einfaches, faires Verfahren einzufordern, in einem Gremium, in dem sonst niemand das tut. Seine Kollegen antworten mit Verachtung: \"Bist du auch aus Galiläa?\" (V.52). Sie behaupten, dass aus Galiläa nie ein Prophet aufgestanden sei. Der Prophet Jona, der Sohn Amittais, stammte aus Gat-Hefer, einer Stadt in Galiläa (2. Könige 14:25). Gerade die Männer, die Nikodemus der Unwissenheit bezichtigen, reden, ohne ihre eigene Schrift zu kennen. Nikodemus antwortet nicht. Aber er nimmt seine Worte auch nicht zurück.",
+      "revelation_key": "Fast zwei Jahre nach jener Nacht wagt der Glaube, der als eine im Verborgenen gestellte Frage begann, nun, einmal öffentlich seine Stimme zu erheben.",
       "scripture_connections": [
+        {
+          "reference": "Das Evangelium nach Johannes 7:50-52",
+          "text": "Spricht zu ihnen Nikodemus, der vormals zu ihm gekommen war und der einer von ihnen war: Richtet denn unser Gesetz einen Menschen, ehe man ihn angehört und erkannt hat, was er tut? Sie antworteten und sprachen zu ihm: Bist du auch aus Galiläa? Forsche und sieh: Aus Galiläa steht kein Prophet auf."
+        },
         {
           "reference": "2. Könige 14:25",
           "text": "Er stellte wieder her das Gebiet Israels von dort, wo es nach Hamat geht, bis an das Meer der Araba nach dem Wort des HERRN, des Gottes Israels, das er geredet hatte durch seinen Knecht Jona, den Sohn Amittais, den Propheten, der von Gat-Hefer war."
@@ -194,6 +226,10 @@
         "text": "Danach bat Josef von Arimathäa, der ein Jünger Jesu war, doch heimlich, aus Furcht vor den Juden, den Pilatus, dass er den Leichnam Jesu abnehmen dürfe. Und Pilatus erlaubte es. Da kam er und nahm den Leichnam Jesu ab."
       },
       "scripture_connections": [
+        {
+          "reference": "Das Evangelium nach Johannes 19:30-31",
+          "text": "Da nun Jesus den Essig genommen hatte, sprach er: Es ist vollbracht. Und neigte das Haupt und verschied. Weil es aber Rüsttag war und die Leichname nicht am Kreuz bleiben sollten den Sabbat über — denn dieser Sabbat war ein hoher Festtag —, baten die Juden Pilatus, dass ihnen die Beine gebrochen und sie abgenommen würden."
+        },
         {
           "reference": "Matthäus 26:56",
           "text": "Aber das ist alles geschehen, auf dass erfüllt würden die Schriften der Propheten. Da verließen ihn alle Jünger und flohen."
