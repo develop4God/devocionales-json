@@ -1,0 +1,224 @@
+{
+  "id": "adultery_woman_es_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "es",
+  "bible_version": "RVR1960",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "La Mujer Sorprendida en Adulterio",
+    "testament": "new",
+    "scripture_reference": "Juan 8:1-11",
+    "mood_primary": "intense",
+    "accent_color": "#7a2e2e",
+    "emoji": "🪨",
+    "tags": ["gracia", "vergüenza pública", "condenación", "trampa", "misericordia", "restauración"]
+  },
+  "key_verse": {
+    "reference": "Juan 8:11",
+    "text": "Y ella dijo: Ninguno, Señor. Entonces Jesús le dijo: Ni yo te condeno; vete, y no peques más.",
+    "bible_version": "RVR1960"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_temple_dawn.png",
+      "title": "Al amanecer, en el templo",
+      "narrative": "El templo despierta antes que la ciudad. Jesús ha pasado la noche en el monte de los Olivos y vuelve temprano, y la gente ya se junta a su alrededor, sentado, enseñando. Se escuchan pasos apresurados y voces que se acercan entre la multitud. La traen y la ponen en medio, delante de todos.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 8:2-3",
+        "text": "Y por la mañana volvió al templo, y todo el pueblo vino a él; y sentado él, les enseñaba. Entonces los escribas y los fariseos le trajeron una mujer sorprendida en adulterio; y poniéndola en medio,"
+      },
+      "revelation_key": "La exponen en el lugar donde Jesús enseña gracia, para usarla como arma contra él."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "intense",
+      "image_url": "adultery_woman_trap_laid.png",
+      "verse_reference": "Juan 8:4-6",
+      "verse_text": "Le dijeron: Maestro, esta mujer ha sido sorprendida en el mismo acto de adulterio. Y en la ley nos mandó Moisés apedrear a tales mujeres. Tú, pues, ¿qué dices? Mas esto decían tentándole, para poder acusarle. Pero Jesús, inclinado hacia el suelo, escribía en tierra con el dedo.",
+      "reflection": "La pregunta está diseñada para no tener salida. Si Jesús dice que la suelten, contradice la ley de Moisés. Si dice que la apedreen, contradice todo lo que ha enseñado sobre misericordia. Según el contexto histórico de la época, la ley romana tampoco permitía ejecuciones sin autorización de Roma, lo cual habría puesto a Jesús en riesgo legal ante cualquier respuesta. Ella no es el objetivo real. Es el cebo.",
+      "revelation_key": "La trampa está tendida para Jesús. Ella es solo el instrumento.",
+      "scripture_connections": [
+        { "reference": "Levítico 20:10", "text": "Si un hombre cometiere adulterio con la mujer de su prójimo, el adúltero y la adúltera indefectiblemente serán muertos." }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "adultery_woman_alone_center.png",
+      "title": "En medio de todos",
+      "subtitle": "Lo que se siente cuando el pecado se vuelve espectáculo",
+      "content": "No sabemos su nombre. Juan no lo registra, y tal vez sea parte del punto: en ese momento ella ha dejado de ser una persona para sus acusadores. Es una prueba, un caso, una pieza en un juego legal. La ley menciona a dos personas — 'el adúltero y la adúltera' — pero el relato solo trae a ella. 🔑 El hombre no aparece en ningún momento del relato. Solo su vergüenza queda expuesta.\n\nEllos conocen su pecado con precisión — 'sorprendida en el mismo acto' — y lo usan como munición. Ella no tiene voz todavía en el relato. Solo está ahí, en medio, mientras hombres discuten su destino sobre su cabeza.",
+      "revelation_key": "Su humanidad desaparece bajo el peso de convertirse en un caso legal.",
+      "verse_overlay": {
+        "reference": "Juan 8:3",
+        "text": "Entonces los escribas y los fariseos le trajeron una mujer sorprendida en adulterio; y poniéndola en medio,"
+      }
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_jesus_writing.png",
+      "title": "El dedo en el polvo",
+      "narrative": "Jesús no responde de inmediato. Se inclina y escribe en la tierra con el dedo, y el texto no dice qué escribe. El silencio se alarga. Los acusadores insisten, repiten la pregunta, presionan. Es entonces cuando se endereza y habla, una sola frase, dirigida no a ella sino a ellos.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 8:7",
+        "text": "Y como insistieran en preguntarle, se enderezó y les dijo: El que de vosotros esté sin pecado sea el primero en arrojar la piedra contra ella."
+      },
+      "revelation_key": "Jesús no responde a la trampa con un argumento legal. Responde con un espejo."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "adultery_woman_dust_closeup.png",
+      "title": "Lo que escribió en el polvo",
+      "subtitle": "Un gesto que la tradición judía habría reconocido",
+      "content": "El verbo griego usado para 'escribía' (κατέγραφεν, kategraphen) es distinto del verbo simple 'escribir' — lleva el prefijo kata, que sugiere escribir en contra de algo, o registrar formalmente, como un escriba llevando un registro de cargos. Algunos estudiosos ven aquí un eco de Jeremías 17:13: 'los que se apartan de mí serán escritos en el polvo, porque dejaron a Jehová.' Si es así, Jesús no dibuja distraídamente. Está escribiendo un cargo, y los acusadores, versados en las Escrituras, lo habrían reconocido de inmediato.\n\n⚠️ El texto no lo confirma con certeza — es la única vez en los evangelios que Jesús escribe, y no se preserva lo que escribió. Vale también saber que algunos manuscritos griegos antiguos no incluyen este pasaje, pero la iglesia lo ha conservado y transmitido como Escritura por siglos, y así aparece en la RVR1960. Ninguna de estas dos incertidumbres cambia el peso de lo que ocurre en la escena: el que vino a juzgar a la mujer se encuentra, sin poder nombrarlo en voz alta, siendo juzgado por su propia conciencia.",
+      "revelation_key": "El polvo se convierte en un espejo que ninguno de ellos puede evitar mirar.",
+      "verse_overlay": {
+        "reference": "Juan 8:6",
+        "text": "Mas esto decían tentándole, para poder acusarle. Pero Jesús, inclinado hacia el suelo, escribía en tierra con el dedo."
+      },
+      "scripture_connections": [
+        { "reference": "Jeremías 17:13", "text": "¡Oh Jehová, esperanza de Israel! Todos los que te dejan serán avergonzados; y los que se apartan de mí serán escritos en el polvo, porque dejaron a Jehová, manantial de aguas vivas." }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "adultery_woman_stones_dropped.png",
+      "title": "Uno a uno",
+      "narrative": "Nadie tira la primera piedra. Nadie tira ninguna. Comienzan a irse, dice el texto, empezando por los más viejos — posiblemente porque son los que más tiempo han tenido para examinar su propio corazón. Las piedras que trajeron para condenarla caen de sus manos, sin sonido, en la tierra. Uno por uno, hasta que ya no queda ninguno.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 8:9",
+        "text": "Pero ellos, al oír esto, acusados por su conciencia, salían uno a uno, comenzando desde los más viejos hasta los postreros; y quedó solo Jesús, y la mujer que estaba en medio."
+      },
+      "revelation_key": "La multitud que vino a condenar se disuelve ante su propia conciencia."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "adultery_woman_alone_with_jesus.png",
+      "title": "Solos los dos",
+      "narrative": "El templo, que hace un momento estaba lleno de acusadores, ahora tiene solo dos personas: Jesús y ella, de pie donde la dejaron, sin nadie más alrededor. Es el punto de inflexión más silencioso del relato. El que tenía toda la autoridad para condenarla es el que se queda.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 8:9",
+        "text": "...y quedó solo Jesús, y la mujer que estaba en medio."
+      },
+      "revelation_key": "Todos se fueron. Él se quedó."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "adultery_woman_face_jesus.png",
+      "title": "Ninguno, Señor",
+      "subtitle": "Su primera y única línea en todo el relato",
+      "content": "Jesús le pregunta dónde están sus acusadores, si ninguno la condenó. Ella responde con tres palabras: 'Ninguno, Señor.' Es todo lo que el relato le da, y es suficiente. Es el reconocimiento simple de lo que acaba de presenciar: que la condenación que la rodeaba se ha ido, y que la única persona que queda frente a ella tiene autoridad para condenar y elige otra cosa.\n\n🔑 En esa sola línea está su dignidad restaurada. Ya no es 'la mujer sorprendida en adulterio.' Es alguien a quien Jesús se dirige directamente, cara a cara.",
+      "revelation_key": "Su primera palabra en el relato es también su liberación.",
+      "verse_overlay": {
+        "reference": "Juan 8:10-11",
+        "text": "Enderezándose Jesús, y no viendo a nadie sino a la mujer, le dijo: Mujer, ¿dónde están los que te acusaban? ¿Ninguno te condenó? Ella dijo: Ninguno, Señor."
+      }
+    },
+    {
+      "order": 9,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "adultery_woman_ni_yo_te_condeno.png",
+      "verse_reference": "Juan 8:11",
+      "verse_text": "Entonces Jesús le dijo: Ni yo te condeno; vete, y no peques más.",
+      "reflection": "Jesús nombra el pecado directamente — 'no peques más' — y al mismo tiempo declara que no hay condenación de su parte. Gracia y verdad sostenidas juntas, sin que una anule a la otra. Es la misma tensión que Juan describe desde el primer capítulo de su evangelio: 'la ley por medio de Moisés fue dada, mas la gracia y la verdad vinieron por medio de Jesucristo.'",
+      "revelation_key": "La gracia nombra el pecado y lo suelta al mismo tiempo.",
+      "scripture_connections": [
+        { "reference": "Juan 1:17", "text": "Pues la ley por medio de Moisés fue dada, mas la gracia y la verdad vinieron por medio de Jesucristo." },
+        { "reference": "Romanos 8:1", "text": "Ahora, pues, ninguna condenación hay para los que están en Cristo Jesús, los que no andan conforme a la carne, sino conforme al Espíritu." }
+      ]
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "adultery_woman_law_fulfilled.png",
+      "title": "El único sin pecado no tira la piedra",
+      "subtitle": "Lo que la escena revela sobre quién es Jesús",
+      "content": "Hay una ironía central en el relato: de todos los presentes, Jesús es el único calificado, según su propia condición, para arrojar la primera piedra. Es el único sin pecado. Y es precisamente el que elige no hacerlo.\n\nLa palabra griega para 'condeno' aquí (κατακρίνω, katakrino) implica un veredicto formal, una sentencia pronunciada. Jesús tiene el derecho de pronunciarla. No la pronuncia. La persona con más autoridad para juzgar es la misma que ofrece la vía hacia la restauración.",
+      "revelation_key": "El más calificado para juzgar es el más dispuesto a restaurar.",
+      "verse_overlay": {
+        "reference": "Juan 8:7",
+        "text": "El que de vosotros esté sin pecado sea el primero en arrojar la piedra contra ella."
+      }
+    },
+    {
+      "order": 11,
+      "type": "interactive_moment",
+      "icon": "🪨",
+      "image_url": "adultery_woman_interactive_stone.png",
+      "title": "Suelta la piedra",
+      "subtitle": "Antes de seguir, un momento de quietud",
+      "reflection_prompt": "¿Qué piedra sostienes hoy — contra otra persona, o contra ti mismo?"
+    },
+    {
+      "order": 12,
+      "type": "character_moment",
+      "mood": "peace",
+      "image_url": "adultery_woman_walking_away.png",
+      "title": "Vete, y no peques más",
+      "subtitle": "La gracia que envía, no solo la que perdona",
+      "content": "Jesús no le dice solo que se vaya. Le da una dirección: 'no peques más.' La gracia que ella recibe es una invitación a caminar hacia otra vida. El relato termina ahí, sin epílogo, y cada lector completa la escena con su propia respuesta a la misma gracia.",
+      "revelation_key": "La gracia que la libera es la misma que la envía a una vida distinta.",
+      "verse_overlay": {
+        "reference": "Juan 8:11",
+        "text": "Ni yo te condeno; vete, y no peques más."
+      }
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "adultery_woman_discovery.png",
+      "title": "Tu Encuentro",
+      "subtitle": "Todos hemos estado en medio del círculo, o sosteniendo una piedra.",
+      "discovery_questions": [
+        { "category": "Honesty", "question": "¿Hay una parte de tu vida que sientes expuesta, como si estuvieras 'en medio' de todos, esperando juicio?" },
+        { "category": "Grace", "question": "¿A quién te cuesta soltarle la piedra que sostienes — condenación, resentimiento, un juicio guardado?" },
+        { "category": "Purpose", "question": "Si hoy Jesús te dijera 'ni yo te condeno, vete y no peques más', ¿hacia dónde caminarías distinto?" }
+      ],
+      "prayer": {
+        "title": "Oración de gracia recibida",
+        "content": "Señor, gracias porque no me miras solo por mi pecado, sino que me ves a mí. Gracias porque tu gracia no ignora la verdad, pero tampoco me condena. Te entrego las piedras que sostengo contra otros y las que sostengo contra mí mismo. Ayúdame a caminar hoy hacia la vida que tú me llamas a vivir. En el nombre de Jesús, amén."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "adultery_woman_completion.png",
+      "completion_verse": {
+        "reference": "Juan 8:11",
+        "text": "Y ella dijo: Ninguno, Señor. Entonces Jesús le dijo: Ni yo te condeno; vete, y no peques más.",
+        "bible_version": "RVR1960"
+      },
+      "reflection_prompt": "¿Qué piedra necesitas soltar hoy?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
