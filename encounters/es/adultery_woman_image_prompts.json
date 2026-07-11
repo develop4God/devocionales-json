@@ -1,7 +1,7 @@
 {
   "encounter_id": "adultery_woman_es_001",
   "character": "The Woman Caught in Adultery",
-  "master_character_prompt": "A woman in her mid-thirties, clearly a grown adult woman, fuller matronly build and average height, a round ordinary face with visible fine lines at the eyes and mouth, a slightly crooked nose, downturned hooded eyes with heavy lids, red-rimmed from crying, olive-tan sun-touched skin with a weathered texture, dark wavy hair loose and slightly disheveled, uncovered, wearing a simple faded rust-brown wool tunic, plain and modest, no jewelry, bare feet dusty from the walk. Her posture is tense, arms wrapped protectively across her body. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting. Character reference sheet, full body and face close-up.",
+  "master_character_prompt": "A woman in her mid-thirties, clearly a grown adult woman, fuller matronly build and average height, a round asymmetric face with visible fine lines at the eyes and mouth, a small nose, downturned hooded eyes with heavy lids, red-rimmed from crying, olive-tan sun-touched skin with a weathered texture, dark wavy hair loose and slightly disheveled, uncovered, wearing a simple faded rust-brown wool tunic, plain and modest, no jewelry, bare feet dusty from the walk. Her posture is tense, arms wrapped protectively across her body. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting. Character reference sheet, full body and face close-up.",
   "intro_image": {
     "filename": "adultery_woman_intro.png",
     "prompt": "Wide atmospheric shot of a temple courtyard at first light, long stone shadows stretching across worn flagstones, a scatter of small gray stones abandoned mid-courtyard where hands once dropped them. A woman in her mid-thirties, clearly an adult woman, softly built, olive-tan skin, dark wavy hair loose and uncovered, a simple faded rust-brown tunic, stands alone and small in the center of the frame, seen from behind and at a distance, arms wrapped across her body, shoulders hunched. No crowd remains. Empty archways frame the scene. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic dawn lighting, no text."
@@ -19,14 +19,14 @@
       "image_url": "adultery_woman_trap_laid.png",
       "mood": "intense",
       "shot_type": "medium two-figure",
-      "prompt": "Medium shot, low angle looking up. A woman in her mid-thirties, clearly an adult woman, softly built, round ordinary face, downturned hooded eyes, heavy lids, red-rimmed, olive-tan skin, dark wavy hair loose and disheveled, simple faded rust-brown tunic, stands rigid in the center of a stone courtyard, arms wrapped across her body, shoulders hunched, surrounded by the robed legs and pointing hands of religious leaders pressing close from every side. In the foreground a man in a simple first-century tunic kneels, seen from behind, face never visible, a subtle warm glow of glory around his form, one finger touching the dust. Painterly warm 2D illustration, Mediterranean palette, deep ochre shadows, tense cinematic lighting, no text."
+      "prompt": "Medium shot, low angle looking up. A woman in her mid-thirties, clearly an adult woman, softly built, round asymmetric face, downturned hooded eyes, heavy lids, red-rimmed, olive-tan skin, dark wavy hair loose and disheveled, simple faded rust-brown tunic, stands rigid in the center of a stone courtyard, arms wrapped across her body, shoulders hunched, surrounded by the robed legs and pointing hands of religious leaders pressing close from every side. In the foreground a man in a simple first-century tunic kneels, seen from behind, face never visible, a subtle warm glow of glory around his form, one finger touching the dust. Painterly warm 2D illustration, Mediterranean palette, deep ochre shadows, tense cinematic lighting, no text."
     },
     {
       "order": 3,
       "image_url": "adultery_woman_alone_center.png",
       "mood": "falling",
       "shot_type": "close-up portrait",
-      "prompt": "Close-up portrait of a woman in her mid-thirties, clearly an adult woman, round ordinary face, slightly crooked nose, downturned hooded eyes, heavy lids, red-rimmed from crying, olive-tan skin, dark wavy hair loose falling across her face. Her eyes are cast down, unwilling to meet anyone's gaze, jaw tight. Blurred robed figures crowd at the edges of the frame, out of focus, closing in. Painterly warm 2D illustration, Mediterranean palette, deep shadow, harsh directional light from one side, cinematic, no text."
+      "prompt": "Close-up portrait of a woman in her mid-thirties, clearly an adult woman, round asymmetric face, small nose, downturned hooded eyes, heavy lids, red-rimmed from crying, olive-tan skin, dark wavy hair loose falling across her face. Her eyes are cast down, unwilling to meet anyone's gaze, jaw tight. Blurred robed figures crowd at the edges of the frame, out of focus, closing in. Painterly warm 2D illustration, Mediterranean palette, deep shadow, harsh directional light from one side, cinematic, no text."
     },
     {
       "order": 4,
@@ -61,7 +61,7 @@
       "image_url": "adultery_woman_face_jesus.png",
       "mood": "grace",
       "shot_type": "close-up portrait",
-      "prompt": "Close-up portrait, over-the-shoulder composition. In the near foreground, out of focus, the back of a man's shoulder and head in a simple first-century tunic, face never visible, a subtle warm glow of glory softly lighting the edge of the frame. In sharp focus beyond him, a woman in her mid-thirties, clearly an adult woman, round ordinary face, downturned hooded eyes now open and searching rather than downcast, olive-tan skin, dark wavy hair loose. Her expression shifts from fear toward something unguarded. Painterly warm 2D illustration, Mediterranean palette, warm golden light, cinematic, no text."
+      "prompt": "Close-up portrait, over-the-shoulder composition. In the near foreground, out of focus, the back of a man's shoulder and head in a simple first-century tunic, face never visible, a subtle warm glow of glory softly lighting the edge of the frame. In sharp focus beyond him, a woman in her mid-thirties, clearly an adult woman, round asymmetric face, downturned hooded eyes now open and searching rather than downcast, olive-tan skin, dark wavy hair loose. Her expression shifts from fear toward something unguarded. Painterly warm 2D illustration, Mediterranean palette, warm golden light, cinematic, no text."
     },
     {
       "order": 9,
