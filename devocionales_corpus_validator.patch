@@ -1,0 +1,756 @@
+diff --git a/devocionales_scripts/corpus_calendar_checker.py b/devocionales_scripts/corpus_calendar_checker.py
+new file mode 100644
+index 0000000..adebba0
+--- /dev/null
++++ b/devocionales_scripts/corpus_calendar_checker.py
+@@ -0,0 +1,90 @@
++"""corpus_calendar_checker.py — cross-file check that every declared combo
++for a given devotional year shares the exact same set of entry dates
++(same start date, same end date, same day-by-day coverage — no gaps, no
++duplicates).
++
++No date is ever hardcoded here. The expected date-set for a year is not
++assumed (e.g. "must be 2025-08-01..2026-07-31") — it is derived entirely
++from the corpus's own data: for each declared year, one combo's date-set
++is taken as the reference, and every other combo declared for that same
++year must match it exactly. If the Aug-N-to-Jul-(N+1) convention ever
++changes, this check adapts automatically — it only asserts internal
++corpus-wide consistency, never a fixed calendar assumption.
++
++This is a genuinely cross-file concern (unlike CorpusFileValidator, which
++validates one file against its own declared combo) so it is a separate
++collaborator, not a method added to CorpusFileValidator — SRP: one class
++owns single-file rules, this one owns the "do all files for year N agree
++with each other" rule.
++"""
++
++from collections import defaultdict
++from typing import Dict, Set
++
++from shared_validation.report import ReportLike
++
++from corpus_index_reader import CorpusCombo
++
++
++class CorpusCalendarChecker:
++    """Accumulates each combo's entry-date set as it's collected, then
++    compares all combos sharing the same declared year against a reference
++    date-set for that year."""
++
++    def __init__(self):
++        self._dates_by_year: Dict[str, Dict[CorpusCombo, Set[str]]] = defaultdict(dict)
++
++    def record(self, combo: CorpusCombo, entry_dates: Set[str]) -> None:
++        """Record one combo's entry-date set. Call once per combo as files
++        are validated; call check() once at the end after all combos for
++        all years have been recorded."""
++        if entry_dates:
++            self._dates_by_year[combo.year][combo] = entry_dates
++
++    def check(self, report: ReportLike) -> None:
++        """Compare every combo's date-set against a reference for its
++        declared year. The reference is simply the first combo recorded
++        for that year — no assumption about which language/version it is,
++        since the point is corpus-wide agreement, not agreement with any
++        particular "base" language."""
++        for year, combos_dates in sorted(self._dates_by_year.items()):
++            if len(combos_dates) < 2:
++                continue  # nothing to cross-compare
++
++            combos = list(combos_dates.keys())
++            reference_combo = combos[0]
++            reference_dates = combos_dates[reference_combo]
++            ref_start, ref_end = min(reference_dates), max(reference_dates)
++
++            report.I(
++                f"Year {year}: comparing {len(combos)} combos against reference "
++                f"{reference_combo.lang}/{reference_combo.version} "
++                f"({ref_start} → {ref_end}, {len(reference_dates)} dates)"
++            )
++
++            for combo in combos[1:]:
++                dates = combos_dates[combo]
++                if dates == reference_dates:
++                    continue
++
++                start, end = min(dates), max(dates)
++                missing = reference_dates - dates
++                extra = dates - reference_dates
++
++                if start != ref_start or end != ref_end:
++                    report.E(
++                        f"{combo.filename}: date range {start} → {end} does not match "
++                        f"the year {year} reference range {ref_start} → {ref_end} "
++                        f"(reference: {reference_combo.lang}/{reference_combo.version})"
++                    )
++                elif missing or extra:
++                    detail = []
++                    if missing:
++                        detail.append(f"missing {len(missing)} date(s), e.g. {sorted(missing)[:3]}")
++                    if extra:
++                        detail.append(f"{len(extra)} unexpected date(s), e.g. {sorted(extra)[:3]}")
++                    report.E(
++                        f"{combo.filename}: same start/end as reference but "
++                        f"{'; '.join(detail)} — day-by-day coverage does not match "
++                        f"{reference_combo.lang}/{reference_combo.version}"
++                    )
+diff --git a/devocionales_scripts/corpus_file_validator.py b/devocionales_scripts/corpus_file_validator.py
+new file mode 100644
+index 0000000..bbbdfe0
+--- /dev/null
++++ b/devocionales_scripts/corpus_file_validator.py
+@@ -0,0 +1,122 @@
++"""corpus_file_validator.py — validates one loaded devotional-year JSON file
++against its declared (lang, version, year) combo from index.json, and
++against the remote Bible-versions SOT (shared_validation.bible_sot).
++
++This intentionally does NOT re-implement per-entry content-quality checks
++(min length, truncation, Amen endings, seasonal-leak detection, etc.) —
++that is validate_devocional_gui.py's job, a separate concern with a
++separate (manual/interactive) lifecycle. This module owns exactly one
++thing: does this file's content match what the index — and the Bible
++version SOT — say it should be.
++"""
++
++from typing import Optional
++
++from shared_validation.report import ReportLike
++
++from corpus_index_reader import CorpusCombo
++from sot_exceptions import ACKNOWLEDGED_SOT_MISMATCHES
++
++
++class CorpusFileValidator:
++    """Validates one parsed devotional-year file's entries against its
++    declared combo. Constructed once per run with the Bible-versions SOT
++    (allowed_versions per language) so every file check can cross-reference
++    it without re-fetching."""
++
++    def __init__(self, bible_versions: dict):
++        self._bible_versions = bible_versions
++
++    def validate(self, combo: CorpusCombo, data: dict, report: ReportLike) -> "tuple[list, set]":
++        """Validates this file's entries against its declared combo. Returns
++        (entries, entry_dates) — ([], set()) on any structural failure — so
++        the caller can feed them to cross-file checks (calendar, schema)
++        without re-parsing the file. This module stays scoped to
++        single-file validation; it does not itself compare across combos."""
++        lang_root = data.get("data", {})
++        if combo.lang not in lang_root:
++            report.E(
++                f"{combo.filename}: language key '{combo.lang}' not in data "
++                f"(found: {list(lang_root.keys())})"
++            )
++            return [], set()
++
++        entries = [e for day in lang_root[combo.lang].values() for e in day]
++        if not entries:
++            report.E(f"{combo.filename}: no entries found")
++            return [], set()
++
++        self._check_declared_consistency(combo, entries, report)
++        self._check_against_bible_sot(combo, report)
++        self._check_date_range(combo, entries, report)
++
++        entry_dates = {e.get("date", "") for e in entries if e.get("date")}
++        return entries, entry_dates
++
++    def _check_declared_consistency(self, combo: CorpusCombo, entries: list, report: ReportLike) -> None:
++        """Every entry's own version/language fields must match what
++        index.json declares for this file. This is the check that catches
++        drift like a batch mislabeling entries as language='tl',
++        version='ADB' inside a file index.json declares as fil/MBB05."""
++        wrong_version = [e.get("id", "?") for e in entries if e.get("version") != combo.version]
++        wrong_lang = [e.get("id", "?") for e in entries if e.get("language") != combo.lang]
++
++        if wrong_version:
++            report.E(
++                f"{combo.filename}: {len(wrong_version)}/{len(entries)} entries have "
++                f"wrong version (expected '{combo.version}') — e.g. {wrong_version[:3]}"
++            )
++        if wrong_lang:
++            report.E(
++                f"{combo.filename}: {len(wrong_lang)}/{len(entries)} entries have "
++                f"wrong language (expected '{combo.lang}') — e.g. {wrong_lang[:3]}"
++            )
++
++    def _check_against_bible_sot(self, combo: CorpusCombo, report: ReportLike) -> None:
++        """Cross-check the declared version itself against the remote Bible
++        versions SOT — catches a version code that isn't even legitimate
++        for this language (independent of whether the file's own entries
++        match the declaration checked above)."""
++        lang_cfg = self._bible_versions.get(combo.lang)
++        if lang_cfg is None:
++            report.W(
++                f"{combo.filename}: language '{combo.lang}' not found in Bible versions SOT "
++                f"— cannot verify '{combo.version}' is a legitimate version"
++            )
++            return
++
++        allowed = lang_cfg.get("allowed_versions", [])
++        if combo.version not in allowed:
++            exception_note = ACKNOWLEDGED_SOT_MISMATCHES.get((combo.lang, combo.version))
++            if exception_note is not None:
++                report.W(
++                    f"{combo.filename}: declared version '{combo.version}' is not in the "
++                    f"Bible versions SOT allowed list for '{combo.lang}' ({allowed}) — "
++                    f"acknowledged exception: {exception_note}"
++                )
++            else:
++                report.E(
++                    f"{combo.filename}: declared version '{combo.version}' is not in the "
++                    f"Bible versions SOT allowed list for '{combo.lang}' ({allowed})"
++                )
++
++    def _check_date_range(self, combo: CorpusCombo, entries: list, report: ReportLike) -> None:
++        """Convention: devotional year N covers Aug N .. Jul N+1."""
++        entry_dates = sorted(e.get("date", "") for e in entries if e.get("date"))
++        if not entry_dates:
++            return
++
++        try:
++            first_yr = int(entry_dates[0][:4])
++            last_yr = int(entry_dates[-1][:4])
++        except ValueError:
++            report.E(f"{combo.filename}: could not parse entry dates for range check")
++            return
++
++        year_int = int(combo.year)
++        expected_years = {year_int, year_int + 1}
++        if first_yr not in expected_years or last_yr not in expected_years:
++            report.E(
++                f"{combo.filename}: date range {entry_dates[0]} -> {entry_dates[-1]} "
++                f"inconsistent with declared year {combo.year}"
++            )
+diff --git a/devocionales_scripts/corpus_index_reader.py b/devocionales_scripts/corpus_index_reader.py
+new file mode 100644
+index 0000000..214c979
+--- /dev/null
++++ b/devocionales_scripts/corpus_index_reader.py
+@@ -0,0 +1,135 @@
++"""corpus_index_reader.py — parses the repo-root index.json for the
++devocionales (devotional-year) corpus.
++
++This is the ONLY place a devotional-year filename is ever resolved. There is
++no filename-convention fallback (e.g. the old BASE_FILE_MAP special-case for
++es/RVR1960) — index.json's files.<lang>.<version>.files.<year> value is
++taken as-is and is the sole source of truth, exactly as Discovery and
++Encounters already treat their own index.json.
++
++Mirrors the Discovery/Encounters pattern of a thin, single-purpose reader
++feeding a Report — but the devocionales index schema (a 3-level nested dict:
++files.<lang>.<version>.files.<year>) is structurally different from
++Discovery's {studies: [...]} or Encounters' {encounters: [...]} array-of-
++objects shape, so this parsing logic is not a shared_validation candidate:
++forcing one shared reader to branch on content-type schema would be worse
++than three small, content-type-specific readers.
++"""
++
++import json
++from dataclasses import dataclass
++from datetime import date
++from pathlib import Path
++from typing import Iterator, Optional
++
++from shared_validation.report import ReportLike
++
++EXPECTED_SCHEMA_VERSION = 1
++EXPECTED_YEARS = {"2025", "2026"}
++
++
++@dataclass(frozen=True)
++class CorpusCombo:
++    """One declared (lang, version, year) -> filename entry from index.json."""
++    lang: str
++    version: str
++    year: str
++    filename: str
++
++
++class CorpusIndexReader:
++    """Parses index.json and exposes declared (lang, version, year, filename)
++    combos. Owns schema_version/updated_at/year-completeness checks — the
++    concerns that belong to the index document itself, not to any individual
++    corpus file."""
++
++    def __init__(self, index_path: Path):
++        self._index_path = index_path
++        self._data: Optional[dict] = None
++
++    def load(self, report: ReportLike) -> bool:
++        """Parse index.json and validate its own shape. Returns False (and
++        reports errors) if the index itself is malformed enough that combo
++        iteration cannot proceed."""
++        try:
++            self._data = json.loads(self._index_path.read_text(encoding="utf-8"))
++        except json.JSONDecodeError as ex:
++            report.E(f"index.json: invalid JSON: {ex}")
++            return False
++        except OSError as ex:
++            report.E(f"index.json: cannot read {self._index_path}: {ex}")
++            return False
++
++        sv = self._data.get("schema_version")
++        if sv != EXPECTED_SCHEMA_VERSION:
++            report.E(f"index.json: schema_version expected {EXPECTED_SCHEMA_VERSION}, got {sv!r}")
++        else:
++            report.I(f"✓ index.json schema_version = {sv}")
++
++        self._validate_iso_date(self._data.get("updated_at"), "index.json: updated_at", report)
++
++        if not isinstance(self._data.get("files"), dict):
++            report.E("index.json: 'files' key missing or not an object")
++            return False
++
++        return True
++
++    @staticmethod
++    def _validate_iso_date(value, label: str, report: ReportLike) -> bool:
++        try:
++            date.fromisoformat(str(value))
++            return True
++        except (ValueError, TypeError):
++            report.E(f"{label}: invalid ISO date — got {value!r}")
++            return False
++
++    def iter_combos(self, report: ReportLike) -> Iterator[CorpusCombo]:
++        """Yield every declared (lang, version, year) combo with its exact
++        filename, straight from index.json. Also reports year-completeness
++        problems (missing/extra years) and per-entry updated_at validity —
++        these are properties of the index declaration itself, checked once
++        here rather than re-derived by every caller."""
++        files_section = self._data.get("files", {})
++
++        for lang, versions in files_section.items():
++            if not isinstance(versions, dict):
++                report.E(f"index.json: files.{lang} expected object, got {type(versions).__name__}")
++                continue
++
++            for version, payload in versions.items():
++                if not isinstance(payload, dict):
++                    report.E(f"index.json: files.{lang}.{version} expected object, got {type(payload).__name__}")
++                    continue
++
++                files_map = payload.get("files", {})
++                if not isinstance(files_map, dict):
++                    report.E(f"index.json: files.{lang}.{version}.files missing or not an object")
++                    continue
++
++                declared_years = set(files_map.keys())
++                missing_years = EXPECTED_YEARS - declared_years
++                if missing_years:
++                    report.E(f"index.json: files.{lang}.{version} missing year(s) {sorted(missing_years)}")
++                extra_years = declared_years - EXPECTED_YEARS
++                if extra_years:
++                    report.E(f"index.json: files.{lang}.{version} unexpected year(s) {sorted(extra_years)}")
++
++                for year, filename in files_map.items():
++                    upd_date = payload.get(year)
++                    self._validate_iso_date(
++                        upd_date, f"index.json: files.{lang}.{version}.{year}", report
++                    )
++                    yield CorpusCombo(lang=lang, version=version, year=str(year), filename=filename)
++
++    def declared_filenames(self) -> set:
++        """All filenames declared anywhere in index.json — used by the
++        orphan check (files on disk with no index.json entry)."""
++        result = set()
++        for versions in self._data.get("files", {}).values():
++            if not isinstance(versions, dict):
++                continue
++            for payload in versions.values():
++                if not isinstance(payload, dict):
++                    continue
++                result.update(payload.get("files", {}).values())
++        return result
+diff --git a/devocionales_scripts/corpus_schema_checker.py b/devocionales_scripts/corpus_schema_checker.py
+new file mode 100644
+index 0000000..499dbad
+--- /dev/null
++++ b/devocionales_scripts/corpus_schema_checker.py
+@@ -0,0 +1,83 @@
++"""corpus_schema_checker.py — cross-corpus check that every entry, across
++every file, shares the exact same top-level key structure (and the same
++nested para_meditar key structure).
++
++No field list is ever hardcoded here. The reference schema is not assumed
++(e.g. "must have id, date, language, ..."); it is derived from the first
++entry encountered in the corpus, and every other entry — in every file —
++must match that key set exactly. If the schema legitimately changes in the
++future (a new field added everywhere), this check adapts automatically —
++it only asserts internal corpus-wide agreement, never a fixed field list.
++
++This mirrors CorpusCalendarChecker's shape (a cross-file collaborator, not
++a method on CorpusFileValidator, since structural agreement is inherently
++a cross-file concern) but is intentionally NOT merged into the same class:
++calendar consistency and schema consistency are two independent axes that
++happen to both be "compare everything to a corpus-derived reference" —
++combining them into one god-class would obscure that each has its own
++reference, its own comparison unit (dates vs. key-sets), and its own
++reporting shape.
++"""
++
++from typing import Dict, Optional, Tuple
++
++from shared_validation.report import ReportLike
++
++from corpus_index_reader import CorpusCombo
++
++_KeySet = Tuple[str, ...]
++
++
++class CorpusSchemaChecker:
++    """Tracks the first entry's key-set (top-level and para_meditar) as the
++    corpus-wide reference schema, then flags any entry — in any file — that
++    doesn't match it."""
++
++    def __init__(self):
++        self._reference_keys: Optional[_KeySet] = None
++        self._reference_pm_keys: Optional[_KeySet] = None
++        self._reference_source: Optional[str] = None
++
++    def check_file(self, combo: CorpusCombo, entries: list, report: ReportLike) -> None:
++        """Call once per file, after CorpusFileValidator has already
++        confirmed `entries` is a non-empty list of dicts. Reports any entry
++        whose key-set (or whose para_meditar items' key-set) diverges from
++        the corpus-wide reference established by the first file/entry
++        checked."""
++        mismatched_entries = []
++        mismatched_pm = []
++
++        for entry in entries:
++            keys = tuple(sorted(entry.keys()))
++
++            if self._reference_keys is None:
++                self._reference_keys = keys
++                self._reference_source = f"{combo.filename}:{entry.get('id', '?')}"
++            elif keys != self._reference_keys:
++                mismatched_entries.append((entry.get("id", "?"), keys))
++
++            pm = entry.get("para_meditar")
++            if isinstance(pm, list):
++                for ref in pm:
++                    if not isinstance(ref, dict):
++                        continue
++                    pm_keys = tuple(sorted(ref.keys()))
++                    if self._reference_pm_keys is None:
++                        self._reference_pm_keys = pm_keys
++                    elif pm_keys != self._reference_pm_keys:
++                        mismatched_pm.append((entry.get("id", "?"), pm_keys))
++
++        if mismatched_entries:
++            report.E(
++                f"{combo.filename}: {len(mismatched_entries)}/{len(entries)} entries have "
++                f"a different key structure than the corpus reference "
++                f"{self._reference_keys} (established from {self._reference_source}) — "
++                f"e.g. {mismatched_entries[0][0]} has {mismatched_entries[0][1]}"
++            )
++        if mismatched_pm:
++            report.E(
++                f"{combo.filename}: {len(mismatched_pm)} para_meditar item(s) have a "
++                f"different key structure than the corpus reference "
++                f"{self._reference_pm_keys} — e.g. entry {mismatched_pm[0][0]} has "
++                f"{mismatched_pm[0][1]}"
++            )
+diff --git a/devocionales_scripts/devocionales_master_validator.py b/devocionales_scripts/devocionales_master_validator.py
+new file mode 100644
+index 0000000..543a48e
+--- /dev/null
++++ b/devocionales_scripts/devocionales_master_validator.py
+@@ -0,0 +1,35 @@
++#!/usr/bin/env python3
++"""
++devocionales_master_validator.py — Devocionales corpus pipeline entry point.
++
++Runs validate_devocionales_corpus.py, which owns the full phased pipeline
++(lint, index, Bible-versions SOT, corpus files). This wrapper exists as a
++stable, memorable entry point; all phase logic lives in
++validate_devocionales_corpus.py.
++
++Run from devocionales_scripts/ or anywhere.
++
++Exit codes: 0 = all passed, 1 = errors found
++"""
++
++import subprocess
++import sys
++from pathlib import Path
++
++SCRIPTS_DIR = Path(__file__).parent
++
++
++def run(script, args=None, label=''):
++    cmd = [sys.executable, str(SCRIPTS_DIR / script)] + (args or [])
++    result = subprocess.run(cmd, text=True)
++    if result.returncode != 0:
++        print(f"\n❌ {label or script} failed.")
++        sys.exit(result.returncode)
++
++
++print("=" * 30)
++print("DEVOCIONALES CORPUS VALIDATION")
++print("=" * 30)
++run("validate_devocionales_corpus.py", label="Devocionales corpus validation")
++
++print("\n✅ ALL DEVOCIONALES CHECKS PASSED\n")
+diff --git a/devocionales_scripts/sot_exceptions.py b/devocionales_scripts/sot_exceptions.py
+new file mode 100644
+index 0000000..84a0f3d
+--- /dev/null
++++ b/devocionales_scripts/sot_exceptions.py
+@@ -0,0 +1,23 @@
++"""sot_exceptions.py — acknowledged (lang, version) SOT mismatches.
++
++The remote Bible-versions SOT (shared_validation.bible_sot) does not
++recognize every version code this corpus actually uses in production.
++Some of these are known, accepted divergences (confirmed not a user-facing
++risk); others are still open questions pending a decision.
++
++This is DATA, not logic — CorpusFileValidator reads it, never branches on
++language or version by name itself. To change a mismatch from warning to
++error (e.g. once a decision is made), remove its entry here — nothing else
++in the validator needs to change.
++
++Each key is (lang, version); the value is a short note for why it's
++acknowledged, shown in the warning message for traceability.
++"""
++
++ACKNOWLEDGED_SOT_MISMATCHES = {
++    ("ja", "新改訳2003"): "Confirmed not a user-facing risk — pending formal SOT update",
++    ("ja", "リビングバイブル"): "Confirmed not a user-facing risk — pending formal SOT update",
++    ("zh", "和合本1919"): "Confirmed not a user-facing risk — pending formal SOT update",
++    ("zh", "新译本"): "Confirmed not a user-facing risk — pending formal SOT update",
++    # ("fr", "TOB"): still open — usage/risk not yet confirmed, stays an error.
++}
+diff --git a/devocionales_scripts/validate_devocionales_corpus.py b/devocionales_scripts/validate_devocionales_corpus.py
+new file mode 100644
+index 0000000..f3e88ab
+--- /dev/null
++++ b/devocionales_scripts/validate_devocionales_corpus.py
+@@ -0,0 +1,226 @@
++#!/usr/bin/env python3
++"""
++validate_devocionales_corpus.py — Validator for the devocionales (devotional
++-year) content type.
++
++This is the live validator, invoked by devocionales_master_validator.py.
++Built on shared_validation/ — reused directly, unchanged: lint_json_files
++(Phase 1), Report/RunReport (phase orchestration + summary), and
++load_bible_versions (Phase SOT, Bible-version legitimacy). Only the
++devocionales index schema (files.<lang>.<version>.files.<year>, a 3-level
++nested dict — structurally different from Discovery's {studies: [...]} and
++Encounters' {encounters: [...]} array-of-objects shape) and its file-level
++consistency checks are new: CorpusIndexReader and CorpusFileValidator in
++this directory.
++
++Unlike Discovery/Encounters, there is no Phase B translation cross-check —
++devocionales-year content is independently authored per language, not a
++translation of one canonical EN source, so that comparison does not apply.
++Content-quality checks (min length, truncation, Amen endings, seasonal-leak
++detection) are intentionally out of scope here — that is
++validate_devocional_gui.py's job, a separate concern with a separate
++(manual/interactive) lifecycle.
++
++  PHASE 1:   Lint — verify all JSON files use indent=2 formatting
++  PHASE A:   Validate index.json (schema_version, updated_at, year
++             completeness) and resolve every declared (lang, version, year)
++             combo — index.json is the sole filename authority, no
++             convention-based fallback
++  PHASE SOT: Confirm bible_version codes resolved from the live remote SOT
++  PHASE B:   Validate each declared file: entries' version/language fields
++             match the declaration, declared version is legitimate per the
++             Bible SOT, date range matches declared year, no orphaned files
++             on disk
++
++Exit codes: 0 = all passed, 1 = errors found
++"""
++
++import sys
++from pathlib import Path
++
++
++def _find_repo_root(start: Path) -> Path:
++    """Walk upward from `start` looking for the shared_validation/ package,
++    rather than assuming a fixed directory depth (which silently breaks if
++    this script is ever moved). Raises clearly instead of resolving to the
++    wrong place."""
++    for candidate in [start, *start.parents]:
++        if (candidate / 'shared_validation').is_dir():
++            return candidate
++    raise RuntimeError(
++        f"Could not find shared_validation/ above {start} — "
++        "is this script still inside the devocionales-json repo?"
++    )
++
++
++_REPO_ROOT = _find_repo_root(Path(__file__).resolve().parent)
++sys.path.insert(0, str(_REPO_ROOT))
++sys.path.insert(0, str(Path(__file__).resolve().parent))
++
++from shared_validation.report import Report, ReportLike
++from shared_validation.run_report import RunReport
++from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL
++from shared_validation.lint import lint_json_files
++
++from corpus_index_reader import CorpusIndexReader
++from corpus_file_validator import CorpusFileValidator
++from corpus_calendar_checker import CorpusCalendarChecker
++from corpus_schema_checker import CorpusSchemaChecker
++
++SCRIPTS_DIR = Path(__file__).parent
++CORPUS_DIR = SCRIPTS_DIR.parent
++INDEX_PATH = CORPUS_DIR / 'index.json'
++
++
++# ── Phase 1: Lint ────────────────────────────────────────────────────────────
++
++def validate_lint(report: ReportLike) -> dict:
++    report.I("=" * 60)
++    report.I("PHASE 1: Lint — checking JSON formatting (indent=2)")
++    report.I("=" * 60)
++
++    cache = lint_json_files(CORPUS_DIR, report, 'devocionales_scripts', severity='error')
++
++    report.I(f"✓ Checked {len(cache)} JSON files")
++    return cache
++
++
++# ── Phase A: Index validation ─────────────────────────────────────────────────
++
++def validate_index(report: ReportLike):
++    report.I("=" * 60)
++    report.I("PHASE A: Validating index.json")
++    report.I("=" * 60)
++
++    if not INDEX_PATH.exists():
++        report.E(f"index.json not found at {INDEX_PATH}")
++        return None
++
++    reader = CorpusIndexReader(INDEX_PATH)
++    if not reader.load(report):
++        return None
++
++    combos = list(reader.iter_combos(report))
++    report.I(f"✓ index.json declares {len(combos)} (lang, version, year) combos")
++    return reader, combos
++
++
++# ── Phase SOT: Bible versions source ─────────────────────────────────────────
++
++def validate_sot_source(report: ReportLike, bible_versions: dict, used_remote_sot: bool,
++                         last_fetch_error) -> bool:
++    if used_remote_sot:
++        report.I(f"✓ bible_version codes resolved live from remote SOT ({REMOTE_INDEX_URL}) for all {len(bible_versions)} languages")
++        return True
++    reason = f" ({last_fetch_error})" if last_fetch_error else ""
++    report.W(
++        f"Could not reach remote SOT ({REMOTE_INDEX_URL}){reason} — fell back to the "
++        f"temp-dir bible_versions cache. Results reflect the LOCAL CACHE, not confirmed "
++        f"live data; re-run once network access is available before merging."
++    )
++    return True
++
++
++# ── Phase B: Corpus files ─────────────────────────────────────────────────────
++
++def validate_corpus_files(report: ReportLike, combos: list, bible_versions: dict) -> None:
++    import json
++
++    report.I("=" * 60)
++    report.I("PHASE B: Validating corpus files against index.json + Bible SOT")
++    report.I("=" * 60)
++
++    validator = CorpusFileValidator(bible_versions)
++    calendar_checker = CorpusCalendarChecker()
++    schema_checker = CorpusSchemaChecker()
++    declared_filenames = set()
++    files_checked = 0
++    languages_present = set()
++
++    for combo in combos:
++        declared_filenames.add(combo.filename)
++        fpath = CORPUS_DIR / combo.filename
++
++        if not fpath.exists():
++            report.E(f"FILE MISSING: {combo.filename} (index declares {combo.lang}/{combo.version}/{combo.year})")
++            continue
++
++        try:
++            data = json.loads(fpath.read_text(encoding='utf-8'))
++        except json.JSONDecodeError as ex:
++            report.E(f"{combo.filename}: invalid JSON: {ex}")
++            continue
++
++        entries, entry_dates = validator.validate(combo, data, report)
++        calendar_checker.record(combo, entry_dates)
++        if entries:
++            schema_checker.check_file(combo, entries, report)
++        files_checked += 1
++        languages_present.add(combo.lang)
++
++    # Orphan check: files on disk with no index.json entry.
++    for fpath in sorted(CORPUS_DIR.glob("Devocional_year_*.json")):
++        if fpath.name not in declared_filenames:
++            report.E(f"ORPHANED FILE (not declared in index.json): {fpath.name}")
++
++    # Cross-file calendar consistency: every combo declared for the same
++    # year must share the same start date, end date, and full day-by-day
++    # coverage as every other combo for that year — derived from the
++    # corpus's own data, no hardcoded dates.
++    calendar_checker.check(report)
++
++    report.I(f"✓ Checked {files_checked}/{len(combos)} declared files across {len(languages_present)} languages")
++
++
++# ── Main ──────────────────────────────────────────────────────────────────────
++
++def main():
++    print("🔍 Starting Devocionales Corpus Validation...")
++    print(f"📁 Corpus directory: {CORPUS_DIR}")
++    print()
++
++    run_report = RunReport("DEVOCIONALES CORPUS VALIDATION")
++
++    bible_versions, used_remote_sot, last_fetch_error = load_bible_versions('devocionales')
++
++    run_report.wrap("PHASE 1: LINT", validate_lint)
++    index_result = run_report.wrap("PHASE A: INDEX", validate_index)
++
++    if index_result is None:
++        print("\n❌ PHASE A FAILED - Stopping validation")
++        run_report.print_summary()
++        sys.exit(1)
++
++    reader, combos = index_result
++
++    run_report.wrap("PHASE SOT: BIBLE VERSIONS SOURCE", validate_sot_source,
++                     bible_versions, used_remote_sot, last_fetch_error)
++
++    # Coverage must be recorded before the gating Phase B call below —
++    # RunReport.wrap() calls sys.exit() internally on gate failure, before
++    # control returns here, so anything after that call never runs on a
++    # failing Phase B. All coverage figures needed are already known from
++    # Phase A (combos, declared languages), so there is no need to wait on
++    # Phase B's return value the way this was previously (incorrectly)
++    # ordered.
++    run_report.add_coverage(
++        content_units=len(combos),
++        files_scanned=len(combos),
++        languages_present=sorted({c.lang for c in combos}),
++        expected_languages=len(bible_versions),
++        sot_live=used_remote_sot,
++    )
++
++    run_report.wrap(
++        "PHASE B: CORPUS FILES", validate_corpus_files, combos, bible_versions,
++        final=True,
++    )
++
++    run_report.print_summary()
++
++    overall_passed = all(p.passed for p in run_report.phases)
++    sys.exit(0 if overall_passed else 1)
++
++
++if __name__ == '__main__':
++    main()
