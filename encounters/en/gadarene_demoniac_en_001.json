@@ -1,0 +1,291 @@
+{
+  "id": "gadarene_demoniac_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "en",
+  "bible_version": "KJV",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 13,
+  "meta": {
+    "character": "The Gadarene demoniac",
+    "testament": "new",
+    "scripture_reference": "Mark 5:1-20",
+    "mood_primary": "falling",
+    "accent_color": "#040810",
+    "emoji": "⛓️",
+    "tags": [
+      "deliverance",
+      "possession",
+      "restoration",
+      "identity",
+      "mission",
+      "legion",
+      "gadarene",
+      "jesus",
+      "encounter",
+      "healing"
+    ]
+  },
+  "key_verse": {
+    "reference": "Mark 5:2",
+    "text": "And when he came out of the ship, immediately there met him out of the tombs a man with an unclean spirit,",
+    "bible_version": "KJV"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "storm",
+      "image_url": "gadarene_arrival.png",
+      "title": "The other side of the sea",
+      "narrative": "The storm has barely subsided. The water still rocks with the memory of the wind Jesus had commanded to be still. The boat touches shore in the country of the Gadarenes, on the far side of the Sea of Galilee. It is Gentile territory. No devout Jew would willingly cross into it: tombs are cut into the hillside, and above them a herd of pigs grazes without shame. Everything here is marked unclean. And yet Jesus steps out first.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Mark 5:1",
+        "text": "And they came over unto the other side of the sea, into the country of the Gadarenes."
+      },
+      "revelation_key": "Jesus deliberately crosses toward the place everyone avoids."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "gadarene_tombs.png",
+      "verse_reference": "Mark 5:2-5",
+      "verse_text": "And when he came out of the ship, immediately there met him out of the tombs a man with an unclean spirit, Who had his dwelling among the tombs; and no man could bind him, no, not with chains: Because he had been often bound with fetters and chains, and the chains had been wrenched apart by him, and the fetters broken in pieces: neither could any man subdue him. And always, night and day, he was in the mountains, and in the tombs, crying, and cutting himself with stones.",
+      "reflection": "He lived among the dead because among the living there was no longer room for him. Luke adds one more detail: he wore no clothes. He had lost even the minimum that separates a person from his own exposed pain. The chains others fastened on him accomplished nothing; he broke them again and again, and that strength that should have protected him became his sentence instead, leaving him more alone each time. Day and night he cried out among the tombs, cutting himself with stones. The text only records what the torment made him do.",
+      "revelation_key": "No one could bind him, but no one could come near him either: his strength left him more alone, not more free.",
+      "scripture_connections": [
+        {
+          "reference": "Luke 8:27",
+          "text": "And when he went forth to land, there met him out of the city a certain man, who had demons for a long time, and wore no clothes, neither abode in any house, but in the tombs."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "gadarene_night_torment.png",
+      "title": "Before the sun rose",
+      "narrative": "Every time this man broke his chains, the demon drove him into the desert. It is a detail heavy with theological weight. Against the backdrop of the Old Testament, the desert was the place associated with the demonic, the territory opposite to life and community. This man lived tormented, dragged again and again toward the very symbol of desolation. And always, night and day, the scene repeated itself.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luke 8:29",
+        "text": "(For he had commanded the unclean spirit to come out of the man. For often it had seized him: and he was kept bound with chains and in fetters; and he broke the bonds, and was driven by the demon into the desert.)"
+      },
+      "revelation_key": "Jesus crossed the sea toward the very territory of desolation into which the demon dragged him."
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "gadarene_running_toward.png",
+      "title": "He ran toward him",
+      "narrative": "The man no one could subdue, who snapped chains and fetters like thread, sees Jesus from a distance and runs toward him. And when he arrives, he falls to his knees. The cry that comes from his mouth is terror and plea at once: What have I to do with you, Jesus, Son of the most high God? I adjure you by God, that you torment me not. It is the same title — 'Son of God' — that other unclean spirits use when they encounter Jesus in other passages: they know exactly who stands before them.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Mark 5:6-7",
+        "text": "But when he saw Jesus afar off, he ran and worshiped him, And cried with a loud voice, and said, What have I to do with you, Jesus, you Son of the most high God? I adjure you by God, that you torment me not."
+      },
+      "revelation_key": "The demons knew the truth about Jesus better than many religious leaders did, but knowing him did not save them; only faith that submits, saves.",
+      "scripture_connections": [
+        {
+          "reference": "Mark 1:24",
+          "text": "Saying, Let us alone; what have we to do with you, Jesus of Nazareth? are you come to destroy us? I know you, who you are, the Holy One of God."
+        },
+        {
+          "reference": "Mark 3:11",
+          "text": "And unclean spirits, when they saw him, fell down before him, and cried, saying, You are the Son of God."
+        },
+        {
+          "reference": "James 2:19",
+          "text": "You believe that there is one God; you do well: the demons also believe, and tremble."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "gadarene_legion_metaphor.png",
+      "title": "Legion",
+      "subtitle": "A name borrowed from the army that oppressed Israel",
+      "content": "When Jesus asks his name, the answer is not that of a man: 'My name is Legion: for we are many' (Mark 5:9). In Greek, *legiṓn* (λεγιών) was the technical term for a Roman military unit of roughly five to six thousand soldiers — the maximum occupying force Rome could deploy. Every Jew or Gentile living under Roman rule in Galilee knew exactly the weight of that word. The demon chose the very symbol of the power that subjugated his people, and made it live inside a single man. What oppressed an entire nation had been concentrated, in miniature, within one human body. Legion begs to remain in that same region (Mark 5:10) and, later, begs not to be sent into the abyss (Luke 8:31): it would rather have any body than none at all. And yet, before Jesus, that entire legion pleads — it does not demand.",
+      "revelation_key": "The name 'Legion' reveals both the weight of the oppression Jesus came to disarm and the demon's terror of being left without a body to inhabit.",
+      "verse_overlay": {
+        "reference": "Mark 5:9",
+        "text": "And he asked him, What is your name? And he answered, saying, My name is Legion: for we are many."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Mark 5:10",
+          "text": "And he begged him much that he would not send them away out of the country."
+        },
+        {
+          "reference": "Luke 8:31",
+          "text": "And they besought him that he would not command them to go out into the abyss."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "scripture_moment",
+      "mood": "intense",
+      "image_url": "gadarene_pigs_herd.png",
+      "verse_reference": "Mark 5:10-13",
+      "verse_text": "And he begged him much that he would not send them away out of the country. Now there was there near unto the mountains a great herd of swine feeding. And all the demons begged him, saying, Send us into the swine, that we may enter into them. And Jesus gave them leave. And the unclean spirits went out, and entered into the swine: and the herd ran violently down a steep place into the sea, (there were about two thousand;) and were drowned in the sea.",
+      "reflection": "The pigs carry their own symbolic weight in this account. The law of Leviticus declared them unclean (Leviticus 11:7); their presence in such large numbers, two thousand, confirms this was Gentile territory, where that law did not govern daily life. Legion had already begged to stay in the region (Mark 5:10) and not be sent to the abyss (Luke 8:31); asking to enter the pigs was its way of securing both: keeping a body and staying in that place. This same man used to cut himself with stones (Mark 5:5): demons do not merely occupy, they destroy what they inhabit. On entering the pigs, they did to them in seconds what they had spent years doing to him, now visible before the whole town. The herd ran straight into the sea, the very image of the abyss they feared so much, and there they drowned.",
+      "revelation_key": "The demons bargained to keep a body and a territory, and that same bargain sank them into the abyss they feared most.",
+      "scripture_connections": [
+        {
+          "reference": "Leviticus 11:7",
+          "text": "And the swine, though it divides the hoof, and is cloven footed, yet it chews not the cud; it is unclean to you."
+        },
+        {
+          "reference": "Mark 5:10",
+          "text": "And he begged him much that he would not send them away out of the country."
+        },
+        {
+          "reference": "Luke 8:31",
+          "text": "And they besought him that he would not command them to go out into the abyss."
+        },
+        {
+          "reference": "Matthew 8:31-32",
+          "text": "So the demons besought him, saying, If you cast us out, allow us to go away into the herd of swine. And he said unto them, Go. And when they came out, they went into the herd of swine: and, behold, the whole herd of swine ran violently down a steep place into the sea, and perished in the waters."
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "gadarene_cliff_fall.png",
+      "title": "The steep place",
+      "narrative": "Two thousand animals plunge down the slope into the water in a single instant, a roar that reaches the town. Those who tended them flee without looking back and run to spread the word in the city and in the countryside. They come out to see: the Greek uses ἰδεῖν (idein), to look closely, to examine up close. And what had happened is τὸ γεγονός (to gegonos), an event whose effects were already permanent, not a passing fright. But while everyone reels from the roar of the pigs, something has broken silently inside the man who, until a moment ago, was screaming among the tombs.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Mark 5:14",
+        "text": "And they that fed the swine fled, and told it in the city, and in the country. And they went out to see what it was that was done."
+      },
+      "revelation_key": "The quietest miracle happens while everyone stares at the roar."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "gadarene_seated_clothed.png",
+      "title": "Sitting, clothed, in his right mind",
+      "subtitle": "Three words that describe a complete restoration",
+      "content": "When the townspeople arrive, they find the man who once broke chains now sitting at Jesus' feet. The original Greek uses three words that together paint a total reversal: καθήμενον (kathḗmenon), sitting, in the posture of a disciple who learns; ἱματισμένον (himatisménon), clothed; σωφρονοῦντα (sōphronoûnta), in his right mind, sane, a word used nowhere else in Mark's Gospel. Clothed and sane are the physical and mental proof that the legion inhabiting him was no longer there. And the town, instead of rejoicing, was afraid.",
+      "revelation_key": "The restoration was so complete that the town feared the miracle more than the possession.",
+      "verse_overlay": {
+        "reference": "Mark 5:15",
+        "text": "And they came to Jesus, and saw him that was possessed with the demon, and had the legion, sitting, and clothed, and in his right mind: and they were afraid."
+      }
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "gadarene_crowd_fear.png",
+      "title": "Fear of what cannot be controlled",
+      "subtitle": "Why they begged Jesus to leave",
+      "content": "A man is left completely whole, and the town's response is not celebration but a plea for Jesus to leave. The Greek here uses παρακαλέω (parakaleō), the same verb the sick use elsewhere to beg Jesus to heal them. Here the town uses it in reverse: it begs, not to draw him near, but to send him away. And they do not ask him to leave the city, but to leave ὅρια (horia), the region entirely, out to its very borders. Before Jesus, the town had a familiar danger: they knew where the possessed man lived, what he did, and that no chain could hold him, but at least they knew what to expect from him. Jesus' power cannot be chained or predicted. They preferred the danger they already knew to a goodness so great they could not govern it.",
+      "revelation_key": "Sometimes we fear the freedom Jesus brings more than the captivity it replaces.",
+      "verse_overlay": {
+        "reference": "Mark 5:17",
+        "text": "And they began to ask him to depart out of their region."
+      }
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "grace",
+      "image_url": "gadarene_begging_to_follow.png",
+      "verse_reference": "Mark 5:18-19",
+      "verse_text": "And when he was come into the ship, he that had been possessed with the demon asked him that he might be with him. But Jesus permitted him not, but said unto him, Go home to your friends, and tell them what great things the Lord has done for you, and has had compassion on you.",
+      "reflection": "The man asks to stay. It is understandable: beside Jesus he is safe, and the community that had just witnessed his healing had just rejected him. Jesus himself withdraws from that region because of that rejection (Mark 5:17), but he does not abandon the place altogether: he sends in his place the man who can remain where he himself is no longer welcome. Go home to your friends, he tells him. The same people who probably feared him, avoided him, perhaps counted him lost, would now be the first to hear from his own lips what God's mercy had done.",
+      "revelation_key": "Where Jesus was no longer welcome, he left behind someone to testify through his own deliverance and transformation.",
+      "scripture_connections": [
+        {
+          "reference": "Luke 8:39",
+          "text": "Return to your own house, and show what great things God has done unto you. And he went his way, and proclaimed throughout the whole city what great things Jesus had done unto him."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "gadarene_sent_without_staff.png",
+      "title": "The herald of the ten cities",
+      "subtitle": "From the voice of Legion to the voice of a King's messenger",
+      "content": "Jesus speaks one simple word: ὕπαγε (hýpage), 'go, depart' (Mark 5:19). The man obeys, and the text uses κηρύσσω (kēryssō) to describe what he does next: the same verb Mark reserves for the official proclamation of the gospel, the announcement of a herald with a kingdom's authority. He does not do it in one town alone: he travels through Decapolis, the ten cities of the region. Hours earlier, this man spoke with the voice of a demonic legion. Now he proclaims with the voice of a King's messenger in ten different cities. The people, the text says, ἐθαύμαζον (ethaúmazon): they marveled, in continuous tense, an amazement that lingered day after day in each of those cities.",
+      "revelation_key": "The same man who once spoke with the voice of a demonic legion now travels through ten cities with the voice of a King's herald.",
+      "verse_overlay": {
+        "reference": "Mark 5:20",
+        "text": "And he departed, and began to announce in Decapolis what great things Jesus had done for him: and all men did marvel."
+      }
+    },
+    {
+      "order": 12,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "gadarene_decapolis_proclaiming.png",
+      "title": "The ground that was prepared",
+      "subtitle": "What happened in Decapolis between Mark 5 and Mark 7",
+      "content": "The town had begged (παρακαλέω, parakaleō) Jesus to leave that region (Mark 5:17). Chapters later, when Jesus returns to the same area, the people bring him a deaf man with a speech impediment and beg him — the same verb, parakaleō — to lay hands on him (Mark 7:32). Between those two moments, Jesus never sets foot in Decapolis again. The only thing sown in those ten cities is one man, walking from square to square, telling what Jesus had done for him. No one else preached there. No one else tried. When Jesus returns, they no longer receive him with fear, but with faith enough to bring him their sick.",
+      "revelation_key": "The same town that begged him to leave, thanks to the seed planted in one man's testimony, now brought their sick for Jesus to heal.",
+      "scripture_connections": [
+        {
+          "reference": "Mark 7:32",
+          "text": "And they brought unto him one that was deaf, and had an impediment in his speech; and they besought him to put his hand upon him."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "gadarene_discovery.png",
+      "title": "Your Encounter",
+      "subtitle": "Nothing limits him from reaching you, and nothing excuses you from telling it.",
+      "discovery_questions": [
+        {
+          "category": "Faith",
+          "question": "Jesus crossed a sea and entered pagan territory to seek a man possessed by a legion of demons, whom his own people no longer knew how to help. Do you believe there is anything in you that would stop him from reaching where you are?"
+        },
+        {
+          "category": "Submission",
+          "question": "The delivered man wanted to stay beside Jesus, but Jesus did not allow it: he had a different purpose for him. Have you felt God close a door you believed was the next right step, and had to submit your will so his purpose could be fulfilled?"
+        },
+        {
+          "category": "Testimony",
+          "question": "This man, transformed by Jesus, went to share what he had experienced without anyone teaching him how. You who have also seen the hand of God in your life, what have you done to testify to the great things Jesus has done for you? Who have you been carrying that faith and hope to?"
+        }
+      ],
+      "prayer": {
+        "title": "Prayer of a restored man",
+        "content": "Lord, just as the Gadarene man lived among the dead, I lived in the death of the world and of sin. You did not hesitate to go after him, and you did not hesitate to go after me. With you I have received a new, eternal, and incorruptible life. Today, as I have seen in this encounter, I ask you to free me from all evil, that nothing dwell in me that is not you. Let me carry the testimony of the great things you have done in my life to my friends, to my family, to my companions, to everyone I can reach, because I have seen your hand and I want to testify by carrying hope, love, and eternal life to others. Thank you, Lord, because I am restored in you; the miracle is already done. Now give me the strength to sow and prepare the ground for when you come back for them. In Jesus' name, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "gadarene_completion.png",
+      "completion_verse": {
+        "reference": "Mark 5:19",
+        "text": "But Jesus permitted him not, but said unto him, Go home to your friends, and tell them what great things the Lord has done for you, and has had compassion on you.",
+        "bible_version": "KJV"
+      },
+      "reflection_prompt": "Who do you need to return to today to tell them what God's mercy has done in you?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

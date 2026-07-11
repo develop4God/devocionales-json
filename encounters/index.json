@@ -660,10 +660,10 @@
     },
     {
       "id": "gadarene_demoniac_001",
-      "version": "0.1",
+      "version": "1.0",
       "image_version": "1.0",
       "emoji": "⛓️",
-      "status": "coming_soon",
+      "status": "published",
       "intro_image": "gadarene_night_torment.png",
       "mood_primary": "falling",
       "accent_color": "#040810",
@@ -671,19 +671,64 @@
       "testament": "new",
       "character": "The Gadarene Demoniac",
       "files": {
-        "es": "gadarene_demoniac_es_001.json"
+        "es": "gadarene_demoniac_es_001.json",
+        "en": "gadarene_demoniac_en_001.json",
+        "pt": "gadarene_demoniac_pt_001.json",
+        "fr": "gadarene_demoniac_fr_001.json",
+        "de": "gadarene_demoniac_de_001.json",
+        "ar": "gadarene_demoniac_ar_001.json",
+        "hi": "gadarene_demoniac_hi_001.json",
+        "ja": "gadarene_demoniac_ja_001.json",
+        "fil": "gadarene_demoniac_fil_001.json",
+        "zh": "gadarene_demoniac_zh_001.json"
       },
       "titles": {
-        "es": "Legión y el hombre entre las tumbas"
+        "es": "Legión y el hombre entre las tumbas",
+        "en": "Legion and the man among the tombs",
+        "pt": "Legião e o homem entre os túmulos",
+        "fr": "Légion et l'homme parmi les tombeaux",
+        "de": "Legion und der Mann unter den Gräbern",
+        "ar": "لجيون والرجل الذي بين القبور",
+        "hi": "सेना और कब्रों के बीच का मनुष्य",
+        "ja": "レギオンと墓の間の男",
+        "fil": "Ang Batalyon at ang Lalaking Nasa Gitna ng mga Libingan",
+        "zh": "群与坟墓间的那个人"
       },
       "subtitles": {
-        "es": "Vivía entre los sepulcros, encadenado por lo que no podía controlar."
+        "es": "Vivía entre los sepulcros, encadenado por lo que no podía controlar.",
+        "en": "He lived among the tombs, chained by what he could not control.",
+        "pt": "Vivia entre os sepulcros, acorrentado pelo que não podia controlar.",
+        "fr": "Il vivait parmi les tombeaux, enchaîné par ce qu'il ne pouvait contrôler.",
+        "de": "Er lebte unter den Gräbern, gefesselt von dem, was er nicht beherrschen konnte.",
+        "ar": "كان يعيش بين القبور، مقيَّداً بما لا يستطيع السيطرة عليه.",
+        "hi": "वह कब्रों के बीच रहता था, उस चीज़ से जकड़ा हुआ जिसे वह नियंत्रित नहीं कर सकता था।",
+        "ja": "自分では制御できないものに縛られ、墓の間で生きていた。",
+        "fil": "Namuhay siya sa gitna ng mga libingan, nakagapos ng bagay na hindi niya makontrol.",
+        "zh": "他住在坟墓之间，被自己无法控制的东西捆绑。"
       },
       "scripture_reference": {
-        "es": "Marcos 5:1-20"
+        "es": "Marcos 5:1-20",
+        "en": "Mark 5:1-20",
+        "pt": "Marcos 5:1-20",
+        "fr": "Marc 5:1-20",
+        "de": "Markus 5:1-20",
+        "ar": "إِنْجِيلُ مَرْقُسَ 5:1-20",
+        "hi": "मरकुस 5:1-20",
+        "ja": "マルコの福音書 5:1-20",
+        "fil": "Marcos 5:1-20",
+        "zh": "马可福音 5:1-20"
       },
       "estimated_reading_minutes": {
-        "es": 12
+        "es": 12,
+        "en": 13,
+        "pt": 14,
+        "fr": 14,
+        "de": 14,
+        "ar": 15,
+        "hi": 15,
+        "ja": 16,
+        "fil": 14,
+        "zh": 16
       }
     }
   ]
