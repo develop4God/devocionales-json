@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """
-master_validator.py — Encounters pipeline orchestrator.
+master_validator.py — Encounters pipeline entry point.
 
-Runs validate_encounters.py for the encounters content type.
+Runs validate_encounters.py, which owns the full phased pipeline (lint,
+index, bible-versions SOT, encounter files, image URLs). This wrapper
+exists as a stable, memorable entry point; all phase logic lives in
+validate_encounters.py.
+
 Run from encounters/encounters_scripts/ or anywhere.
 
 Exit codes: 0 = all passed, 1 = errors found

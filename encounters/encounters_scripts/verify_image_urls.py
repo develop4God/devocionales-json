@@ -16,6 +16,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Optional
@@ -26,6 +27,7 @@ ASSETS_REPO_RAW_BASE = (
 RETRY_ATTEMPTS = 3
 RETRY_BACKOFF_SECONDS = 2
 REQUEST_TIMEOUT_SECONDS = 10
+MAX_CONCURRENT_REQUESTS = 16
 
 
 @dataclass(frozen=True)
@@ -186,7 +188,8 @@ def main() -> int:
     references = extractor.extract()
 
     checker = GitHubAssetChecker()
-    results = [checker.check(ref) for ref in references]
+    with ThreadPoolExecutor(max_workers=MAX_CONCURRENT_REQUESTS) as pool:
+        results = list(pool.map(checker.check, references))
 
     files_checked = len({r.reference.source_file for r in results})
     report = VerificationReport(results, files_checked)

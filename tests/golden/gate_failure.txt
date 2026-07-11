@@ -1,0 +1,44 @@
+
+================================================================================
+PHASE 1: FIRST VALIDATION REPORT
+================================================================================
+
+ℹ️  INFORMATION (1):
+  ℹ️  INFO: phase completed with no issues
+
+✅ PHASE PASSED - Proceeding to next phase
+================================================================================
+
+================================================================================
+PHASE 2: FAILS VALIDATION REPORT
+================================================================================
+
+❌ ERRORS (2):
+  ❌ ERROR: a required field was missing
+  ❌ ERROR: a second, unrelated error
+================================================================================
+
+❌ PHASE 2: FAILS FAILED - Stopping validation
+
+================================================================================
+TEST VALIDATION — <TIMESTAMP> — branch <BRANCH>
+================================================================================
+
+📊 COVERAGE
+  Content units checked:     3
+  Files scanned:             42 JSON files across 0 languages
+  Bible SOT source:          ✓ live remote
+
+────────────────────────────────────────────────────────────────────────────────
+PHASE 1: FIRST                                               ✅ PASS  (<ELAPSED>s)
+PHASE 2: FAILS                                               ❌ FAIL  (<ELAPSED>s)
+────────────────────────────────────────────────────────────────────────────────
+
+ℹ️  INFO (1)     ⚠️  WARNINGS (0)     ❌ ERRORS (2)
+
+  [PHASE 2: FAILS] ❌ ERROR: a required field was missing
+  [PHASE 2: FAILS] ❌ ERROR: a second, unrelated error
+
+================================================================================
+❌ RUN FAILED — 2 errors, 0 warnings, exit code 1     (total: <ELAPSED>s)
+================================================================================
