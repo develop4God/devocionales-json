@@ -26,6 +26,7 @@ PHASE B: Validate translation files using index.json as source of truth
 import json
 import re
 import sys
+import time
 from pathlib import Path
 from typing import Dict, List, Tuple, Set, Optional
 from collections import Counter
@@ -46,6 +47,7 @@ def _find_repo_root(start: Path) -> Path:
 
 
 sys.path.insert(0, str(_find_repo_root(Path(__file__).resolve().parent)))
+from shared_validation.run_report import RunReport
 from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL
 from shared_validation.text_checks import (
     iter_strings, check_quote_anomalies, is_cognate,
@@ -693,6 +695,7 @@ def main():
     discovery_dir = script_dir.parent
 
     report = ValidationReport()
+    run_report = RunReport("DISCOVERY VALIDATION")
 
     print("🔍 Starting Discovery Studies Validation...")
     print(f"📁 Discovery directory: {discovery_dir}")
@@ -705,22 +708,32 @@ def main():
     }
 
     # ==========================================
-    # PHASE 1: Lint — JSON formatting
+    # PHASE A (coarse): Lint + SOT visibility + index.json structure
+    #
+    # Discovery's ValidationReport spans these three concerns in one
+    # long-lived object (unlike encounters' one-Report-per-phase model),
+    # so they're recorded here as a single coarse "phase" for RunReport's
+    # summary table rather than split into three rows that don't reflect
+    # how discovery's own report object actually accumulates.
     # ==========================================
+    phase_a_start = time.monotonic()
+
+    # PHASE 1: Lint — JSON formatting
     validate_lint(discovery_dir, report)
 
-    # ==========================================
     # SOT source visibility — live remote vs. offline cache
-    # ==========================================
     validate_sot_source(report, used_remote_sot, bible_versions)
 
-    # ==========================================
     # PHASE A: Validate index.json
-    # ==========================================
     index_data = validate_index_json(discovery_dir, report, expected_languages)
 
     # Print Phase A report
     phase_a_success = report.print_report(final=False)
+    phase_a_elapsed = time.monotonic() - phase_a_start
+
+    run_report.record_phase(
+        "PHASE A: LINT + SOT + INDEX", report, phase_a_success, phase_a_elapsed, gate=True,
+    )
 
     if not phase_a_success or index_data is None:
         print("\n❌ PHASE A FAILED - Stopping validation")
@@ -736,6 +749,7 @@ def main():
     # ==========================================
     # PHASE B: Validate translation files
     # ==========================================
+    phase_b_start = time.monotonic()
     report.phase = "PHASE_B"
     report.errors = []  # Reset errors for Phase B
     report.warnings = []  # Reset warnings for Phase B
@@ -845,9 +859,28 @@ def main():
             if not filepath.exists():
                 report.add_error(f"index.json: Study {study_id} lists {lang}/{filename} but file doesn't exist")
 
-    # Print final report
-    success = report.print_report(final=True)
-    return 0 if success else 1
+    # Print Phase B report. final=False here — the 📊 STATISTICS block and
+    # the final pass/fail banner now come from run_report.print_summary()
+    # below, so discovery's coverage renders exactly once rather than
+    # twice (once via ValidationReport's own stats block, once via
+    # RunReport).
+    phase_b_success = report.print_report(final=False)
+    phase_b_elapsed = time.monotonic() - phase_b_start
+
+    run_report.record_phase(
+        "PHASE B: TRANSLATION FILES", report, phase_b_success, phase_b_elapsed, gate=True,
+    )
+
+    run_report.add_coverage(
+        studies_found=len(report.stats['studies_found']),
+        files_scanned=report.stats['total_files'],
+        languages_present=sorted(report.stats['languages_found']),
+        expected_languages=len(expected_languages),
+        sot_live=used_remote_sot,
+    )
+    run_report.print_summary()
+
+    return 0 if phase_b_success else 1
 
 
 if __name__ == '__main__':

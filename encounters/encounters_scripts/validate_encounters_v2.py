@@ -46,7 +46,8 @@ def _find_repo_root(start: Path) -> Path:
 
 
 sys.path.insert(0, str(_find_repo_root(Path(__file__).resolve().parent)))
-from shared_validation.report import Report, run_phase
+from shared_validation.report import Report
+from shared_validation.run_report import RunReport
 from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL
 from shared_validation.text_checks import (
     iter_strings, check_quote_anomalies, is_cognate,
@@ -645,47 +646,46 @@ def validate_image_urls(report: Report) -> None:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
-def _run_phase(name: str, fn, *args, gate: bool = True, final: bool = False):
-    """Local wrapper matching validate_encounters.py's run_phase signature
-    (*args, gate, final, sys.exit on gate failure) — shared_validation.report
-    provides a differently-shaped run_phase (no *args, no sys.exit) intended
-    for future callers; this keeps this script's phase orchestration
-    byte-identical to the original for comparison purposes.
-    """
-    report = Report(name)
-    result = fn(report, *args)
-    passed = report.print(final=final)
-
-    if gate and not passed:
-        print(f"\n❌ {name} FAILED - Stopping validation")
-        sys.exit(1)
-
-    return result
-
-
 def main():
     print("🔍 Starting Encounters Validation...")
     print(f"📁 Encounters directory: {ENCOUNTERS_DIR}")
     print()
 
+    run_report = RunReport("ENCOUNTERS VALIDATION")
+
     bible_versions, used_remote_sot, last_fetch_error = load_bible_versions('encounters')
     expected_languages = list(bible_versions.keys())
 
-    lint_cache = _run_phase("PHASE 1: LINT", validate_lint)
-    index_data = _run_phase("PHASE A: INDEX", validate_index, expected_languages)
+    lint_cache = run_report.wrap("PHASE 1: LINT", validate_lint)
+    index_data = run_report.wrap("PHASE A: INDEX", validate_index, expected_languages)
 
     if index_data is None:
         print("\n❌ PHASE A FAILED - Stopping validation")
+        run_report.print_summary()
         sys.exit(1)
 
-    _run_phase("PHASE SOT: BIBLE VERSIONS SOURCE", validate_sot_source, bible_versions, used_remote_sot, last_fetch_error)
-    _run_phase("PHASE B: ENCOUNTER FILES", validate_encounter_files, index_data, lint_cache,
-               bible_versions, expected_languages)
+    run_report.wrap("PHASE SOT: BIBLE VERSIONS SOURCE", validate_sot_source, bible_versions, used_remote_sot, last_fetch_error)
+    run_report.wrap("PHASE B: ENCOUNTER FILES", validate_encounter_files, index_data, lint_cache,
+                     bible_versions, expected_languages)
 
     # Phase C runs last, after the real gate (Phase B) has passed. Its
     # findings are warnings only (see validate_image_urls) — an unreachable
     # image never fails the run, so gate=False and it's always final.
-    _run_phase("PHASE C: IMAGE URLS", validate_image_urls, gate=False, final=True)
+    run_report.wrap("PHASE C: IMAGE URLS", validate_image_urls, gate=False, final=True)
+
+    encounters = index_data['encounters']
+    published = [e for e in encounters if e.get('status') == 'published']
+    coming_soon = [e for e in encounters if e.get('status') == 'coming_soon']
+    run_report.add_coverage(
+        content_units=len(encounters),
+        published=len(published),
+        coming_soon=len(coming_soon),
+        files_scanned=len(lint_cache),
+        languages_present=expected_languages,
+        expected_languages=len(expected_languages),
+        sot_live=used_remote_sot,
+    )
+    run_report.print_summary()
 
     sys.exit(0)
 
