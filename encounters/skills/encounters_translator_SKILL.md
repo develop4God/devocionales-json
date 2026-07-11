@@ -245,7 +245,9 @@ this prompt, substituting the language and file path:
 > Report: Typos / Grammar Errors, and Awkward / Non-native-sounding phrasing. For each
 > issue found, propose the exact diff/fix. Also check it against the per-language
 > register rule in `encounters/skills/encounters_translator_skill.md` § "MANDATORY GATE:
-> Per-Language Register Rules".
+> Per-Language Register Rules". After completing the validation, for any error you find,
+> search broader in the file to see if there is a repeat pattern to document, and report
+> your findings.
 
 Apply the fixes the critic finds, then re-run `validate_encounters.py` to confirm the
 edits didn't break structure. Do this per language file — do not skip it for languages
