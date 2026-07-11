@@ -16,17 +16,17 @@
     },
     {
       "order": 2,
-      "image_url": "nicodemus_rabbi_greeting.png",
-      "mood": "mysterious",
-      "shot_type": "medium two-figure",
-      "prompt": "A man in his late fifties, dignified and thoughtful bearing, olive Mediterranean skin, a well-groomed gray-streaked beard, dark intelligent eyes with a guarded, searching expression. Wearing a fine dark indigo wool robe with visible blue-corded tassels (tzitzit) at the hem, a simple woven belt, and a light shawl draped over one shoulder. Leather sandals. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones with deep indigo night accents, cinematic lighting. Character reference sheet, full body and face close-up. Medium shot, Nicodemus standing just inside a doorway lit by a single oil lamp, speaking with respectful posture toward a man in a simple first-century tunic, seen from behind or in partial silhouette, face never visible, a subtle warm glow of glory around his form seated in soft lamplight nearby. Warm amber light against deep indigo darkness outside. Painterly warm 2D illustration, Mediterranean palette, cinematic lighting, no text."
-    },
-    {
-      "order": 3,
       "image_url": "nicodemus_sanhedrin_status.png",
       "shot_type": "close-up portrait",
       "mood": "tense",
       "prompt": "A man in his late fifties, dignified and thoughtful bearing, olive Mediterranean skin, a well-groomed gray-streaked beard, dark intelligent eyes with a guarded, searching expression. Wearing a fine dark indigo wool robe with visible blue-corded tassels (tzitzit) at the hem, a simple woven belt, and a light shawl draped over one shoulder. Leather sandals. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones with deep indigo night accents, cinematic lighting. Character reference sheet, full body and face close-up. Close-up portrait, Nicodemus's face in three-quarter view, thoughtful and guarded, faint oil-lamp light catching the lines of age and the gray in his beard. Deep shadow behind him. Painterly warm 2D illustration, Mediterranean palette, cinematic lighting, no text."
+    },
+    {
+      "order": 3,
+      "image_url": "nicodemus_rabbi_greeting.png",
+      "mood": "mysterious",
+      "shot_type": "medium two-figure",
+      "prompt": "A man in his late fifties, dignified and thoughtful bearing, olive Mediterranean skin, a well-groomed gray-streaked beard, dark intelligent eyes with a guarded, searching expression. Wearing a fine dark indigo wool robe with visible blue-corded tassels (tzitzit) at the hem, a simple woven belt, and a light shawl draped over one shoulder. Leather sandals. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones with deep indigo night accents, cinematic lighting. Character reference sheet, full body and face close-up. Medium shot, Nicodemus standing just inside a doorway lit by a single oil lamp, speaking with respectful posture toward a man in a simple first-century tunic, seen from behind or in partial silhouette, face never visible, a subtle warm glow of glory around his form seated in soft lamplight nearby. Warm amber light against deep indigo darkness outside. Painterly warm 2D illustration, Mediterranean palette, cinematic lighting, no text."
     },
     {
       "order": 4,
@@ -51,62 +51,69 @@
     },
     {
       "order": 7,
+      "image_url": "nicodemus_wind_and_spirit.png",
+      "shot_type": "object/still life",
+      "mood": "mysterious",
+      "prompt": "Close-up night scene on a flat Jerusalem rooftop: a single oil lamp's flame bends and gutters sideways as an unseen wind passes through, its light scattering faintly across nearby laundry or a loose curtain caught mid-billow. Deep indigo sky above, no stars visible through the motion-blurred air. No people. Pure metaphor for something felt and heard but never seen. Painterly warm 2D illustration, deep indigo shadow, warm amber flame light bending in the wind, Mediterranean palette, cinematic lighting, no text."
+    },
+    {
+      "order": 8,
       "image_url": "nicodemus_honest_confusion.png",
       "shot_type": "close-up portrait",
       "mood": "tense",
       "prompt": "A man in his late fifties, dignified and thoughtful bearing, olive Mediterranean skin, a well-groomed gray-streaked beard, dark intelligent eyes with a guarded, searching expression. Wearing a fine dark indigo wool robe with visible blue-corded tassels (tzitzit) at the hem, a simple woven belt, and a light shawl draped over one shoulder. Leather sandals. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones with deep indigo night accents, cinematic lighting. Character reference sheet, full body and face close-up. Close-up portrait, brow furrowed in genuine, humble confusion, eyes lowered in thought rather than defensiveness. Warm lamplight from one side, deep shadow on the other. Painterly warm 2D illustration, Mediterranean palette, cinematic lighting, no text."
     },
     {
-      "order": 8,
+      "order": 9,
       "image_url": "nicodemus_bronze_serpent.png",
       "shot_type": "object/still life",
       "mood": "awe",
       "prompt": "Wide desert night scene, a bronze serpent figure mounted on a tall wooden pole silhouetted against a star-filled sky, small distant figures of ancient Israelites looking up toward it. No modern elements. Painterly warm 2D illustration, deep indigo sky, warm bronze glow on the serpent, Mediterranean palette, cinematic lighting, no text."
     },
     {
-      "order": 9,
+      "order": 10,
       "image_url": "nicodemus_light_and_darkness.png",
       "shot_type": "action/movement",
       "mood": "falling",
       "prompt": "A man in his late fifties, dignified and thoughtful bearing, olive Mediterranean skin, a well-groomed gray-streaked beard, dark intelligent eyes with a guarded, searching expression. Wearing a fine dark indigo wool robe with visible blue-corded tassels (tzitzit) at the hem, a simple woven belt, and a light shawl draped over one shoulder. Leather sandals. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones with deep indigo night accents, cinematic lighting. Character reference sheet, full body and face close-up. adapted to a distant, small figure. Wide departure shot, Nicodemus walking away down the same narrow street, back turned to a warmly lit doorway behind him, moving toward deeper darkness ahead. Painterly warm 2D illustration, deep indigo tones fading to black, single warm light source behind him, Mediterranean palette, cinematic lighting, no text."
     },
     {
-      "order": 10,
+      "order": 11,
       "image_url": "nicodemus_sanhedrin_defense.png",
       "shot_type": "medium two-figure",
       "mood": "tense",
       "prompt": "A man in his late fifties, dignified and thoughtful bearing, olive Mediterranean skin, a well-groomed gray-streaked beard, dark intelligent eyes with a guarded, searching expression. Wearing a fine dark indigo wool robe with visible blue-corded tassels (tzitzit) at the hem, a simple woven belt, and a light shawl draped over one shoulder. Leather sandals. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones with deep indigo night accents, cinematic lighting. Character reference sheet, full body and face close-up. standing among sitting older men in fine robes inside a stone council chamber, candlelight, Nicodemus mid-gesture speaking while the others react with cold disapproval. Painterly warm 2D illustration, Mediterranean palette, warm candle tones against stone gray, cinematic lighting, no text."
     },
     {
-      "order": 11,
+      "order": 12,
       "image_url": "nicodemus_crucifixion_day.png",
       "shot_type": "wide establishing",
       "mood": "intense",
       "prompt": "Wide somber shot of a hill outside Jerusalem walls at dusk, three empty crosses silhouetted against a darkening orange-red sky, small distant figures dispersing. No close faces. Painterly warm 2D illustration, Mediterranean palette, deep rust and indigo tones, cinematic lighting, no text."
     },
     {
-      "order": 12,
+      "order": 13,
       "image_url": "nicodemus_daylight_burial.png",
       "shot_type": "medium two-figure",
       "mood": "grace",
       "prompt": "A man in his late fifties, dignified and thoughtful bearing, olive Mediterranean skin, a well-groomed gray-streaked beard, dark intelligent eyes with a guarded, searching expression. Wearing a fine dark indigo wool robe with visible blue-corded tassels (tzitzit) at the hem, a simple woven belt, and a light shawl draped over one shoulder. Leather sandals. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones with deep indigo night accents, cinematic lighting. Character reference sheet, full body and face close-up. kneeling in full daylight beside another older robed man near a stone tomb entrance, both carefully wrapping a linen-covered form with aromatic spices, a clay jar of myrrh resting nearby. Bright but soft daylight, no harsh shadows. Painterly warm 2D illustration, Mediterranean palette, warm ochre and sandstone tones, cinematic lighting, no text."
     },
     {
-      "order": 13,
+      "order": 14,
       "image_url": "nicodemus_from_night_to_day.png",
       "shot_type": "wide departure",
       "mood": "grace",
       "prompt": "A man in his late fifties, dignified and thoughtful bearing, olive Mediterranean skin, a well-groomed gray-streaked beard, dark intelligent eyes with a guarded, searching expression. Wearing a fine dark indigo wool robe with visible blue-corded tassels (tzitzit) at the hem, a simple woven belt, and a light shawl draped over one shoulder. Leather sandals. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones with deep indigo night accents, cinematic lighting. Character reference sheet, full body and face close-up. standing alone just outside a tomb entrance in full daylight, looking back toward the light rather than away from it, empty spice jar at his feet. Painterly warm 2D illustration, Mediterranean palette, warm golden daylight, cinematic lighting, no text."
     },
     {
-      "order": 14,
+      "order": 15,
       "image_url": "nicodemus_your_encounter.png",
       "shot_type": "object/still life",
       "mood": "grace",
       "prompt": "Close-up of an open hand resting palm-up in warm daylight, a single small flame or soft light hovering just above it. No face visible. Pure metaphor for receiving a gift rather than earning it. Painterly warm 2D illustration, Mediterranean palette, warm golden light, cinematic lighting, no text."
     },
     {
-      "order": 15,
+      "order": 16,
       "image_url": "nicodemus_completion.png",
       "shot_type": "wide establishing",
       "mood": "peace",
