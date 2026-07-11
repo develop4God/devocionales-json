@@ -749,7 +749,7 @@ def main():
     )
     run_report.print_summary()
 
-    return 0 if phase_b_success else 1
+    return run_report.exit_code
 
 
 if __name__ == '__main__':

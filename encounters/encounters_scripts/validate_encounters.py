@@ -668,8 +668,9 @@ def main():
                      bible_versions, expected_languages)
 
     # Phase C runs last, after the real gate (Phase B) has passed. Its
-    # findings are warnings only (see validate_image_urls) — an unreachable
-    # image never fails the run, so gate=False and it's always final.
+    # findings are warnings only (see validate_image_urls); gate=False means
+    # an unreachable image doesn't stop later phases from running, but any
+    # warning it produces still fails the overall run via print_summary().
     run_report.wrap("PHASE C: IMAGE URLS", validate_image_urls, gate=False, final=True)
 
     encounters = index_data['encounters']
@@ -686,7 +687,7 @@ def main():
     )
     run_report.print_summary()
 
-    sys.exit(0)
+    sys.exit(run_report.exit_code)
 
 
 if __name__ == '__main__':

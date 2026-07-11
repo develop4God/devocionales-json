@@ -73,6 +73,7 @@ class RunReport:
         self.title = title
         self.phases: List[_PhaseResult] = []
         self.coverage: Coverage = Coverage()
+        self.exit_code: int = 0
         self._start_time = time.monotonic()
         self._started_at = datetime.now()
         self._branch = _current_branch()
@@ -208,11 +209,12 @@ class RunReport:
                 for msg in phase.report.errors:
                     print(f"  [{phase.name}] {msg}")
 
-        overall_passed = all(p.passed for p in self.phases)
+        overall_passed = all(p.passed for p in self.phases) and total_warnings == 0
         print(f"\n{'='*80}")
         if overall_passed:
-            verdict = "✅ RUN PASSED" if total_warnings == 0 else "✅ RUN PASSED"
-            print(f"{verdict} — {total_errors} errors, {total_warnings} warnings, exit code 0     (total: {total_elapsed:.1f}s)")
+            print(f"✅ RUN PASSED — {total_errors} errors, {total_warnings} warnings, exit code 0     (total: {total_elapsed:.1f}s)")
         else:
-            print(f"❌ RUN FAILED — {total_errors} errors, {total_warnings} warnings, exit code 1     (total: {total_elapsed:.1f}s)")
+            exit_code = 1
+            print(f"❌ RUN FAILED — {total_errors} errors, {total_warnings} warnings, exit code {exit_code}     (total: {total_elapsed:.1f}s)")
         print('='*80)
+        self.exit_code = 0 if overall_passed else 1

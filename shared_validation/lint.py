@@ -48,9 +48,12 @@ def lint_json_files(directory: Path, report: ReportLike, exclude_dir_part: str,
         raise ValueError(f"severity must be 'error' or 'warning', got {severity!r}")
     findings_fn = report.E if severity == 'error' else report.W
 
+    EXCLUDED_DIR_PARTS = {'.venv', '.claude', '.git', 'node_modules'}
+
     cache: dict = {}
     json_files = sorted(f for f in directory.rglob('*.json')
-                         if f.is_file() and exclude_dir_part not in f.parts)
+                         if f.is_file() and exclude_dir_part not in f.parts
+                         and EXCLUDED_DIR_PARTS.isdisjoint(f.parts))
     checked = 0
     for fpath in json_files:
         raw = fpath.read_text(encoding='utf-8')
