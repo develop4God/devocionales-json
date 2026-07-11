@@ -1,19 +1,24 @@
 #!/usr/bin/env python3
 """
-validate_encounters_v2.py — Parallel validator for the encounters content
-type, built on the shared_validation/ library.
+=========================== ARCHIVED — 2026-07-11 ===========================
+This file is NOT executed by any pipeline or master validator. It is kept
+as a frozen, standalone reference only — including its own copy of
+verify_image_urls.py in this same legacy/ folder, so it never depends on
+(or is affected by) the live code.
 
-This is NOT a replacement for validate_encounters.py — both scripts exist
-side by side so their output can be compared directly. validate_encounters.py
-remains the script anyone actually runs; this one exists to prove
-shared_validation/ is a safe substrate before any future decision to swap.
+The live validator is ../validate_encounters.py, invoked by
+encounters_master_validator.py. Edits to this file have no effect on
+production validation.
+===============================================================================
 
-Tier-1 concerns (identical logic in both encounters and discovery) are
-delegated to shared_validation: SOT fetch/cache, quote-anomaly checks,
-lint, and the Report/run_phase contract. Tier-3 concerns (card-schema
-dispatch, index structure, cross-translation policy) stay local, copied
-unchanged from validate_encounters.py, since they encode encounters-specific
-rules that must not be shared with discovery.
+validate_encounters_legacy.py (originally validate_encounters.py) —
+Validator for the encounters content type, pre-shared_validation.
+
+Phased validation, one Report per phase, same reporting contract throughout.
+Phases 1/A/SOT/B are gates — an ERROR in any of them stops the run and fails
+the exit code. Phase C always runs last, after B (the real data-integrity
+gate) has passed, and only ever reports WARNINGs: an unreachable image is a
+content-completeness gap, not a structural defect, and never blocks a merge.
 
   PHASE 1:   Lint — verify all JSON files use indent=2 formatting
   PHASE A:   Validate encounters/index.json
@@ -25,34 +30,13 @@ rules that must not be shared with discovery.
 Exit codes: 0 = all passed (Phase C warnings do not affect this), 1 = errors found in 1/A/SOT/B
 """
 
+import atexit
+import json
 import re
 import sys
+import tempfile
 from pathlib import Path
-from typing import Optional
-
-
-def _find_repo_root(start: Path) -> Path:
-    """Walk upward from `start` looking for the shared_validation/ package,
-    rather than assuming a fixed directory depth (which silently breaks if
-    this script is ever moved). Raises clearly instead of resolving to the
-    wrong place."""
-    for candidate in [start, *start.parents]:
-        if (candidate / 'shared_validation').is_dir():
-            return candidate
-    raise RuntimeError(
-        f"Could not find shared_validation/ above {start} — "
-        "is this script still inside the devocionales-json repo?"
-    )
-
-
-sys.path.insert(0, str(_find_repo_root(Path(__file__).resolve().parent)))
-from shared_validation.report import Report
-from shared_validation.run_report import RunReport
-from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL
-from shared_validation.text_checks import (
-    iter_strings, check_quote_anomalies, is_cognate,
-)
-from shared_validation.lint import lint_json_files
+from typing import List, Optional
 
 from verify_image_urls import (
     EncounterIndexReader as ImageIndexReader,
@@ -64,13 +48,121 @@ from concurrent.futures import ThreadPoolExecutor
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
-SCRIPTS_DIR = Path(__file__).parent
+SCRIPTS_DIR = Path(__file__).parent.parent  # legacy/ lives one level below the
+                                             # original encounters_scripts/ location
 ENCOUNTERS_DIR = SCRIPTS_DIR.parent
 INDEX_PATH = ENCOUNTERS_DIR / 'index.json'
 
 SCHEMA_VERSION = 'encounters_v1'
 VALID_STATUSES = {'published', 'coming_soon'}
 VALID_TESTAMENT = {'old', 'new'}
+
+REMOTE_INDEX_URL = "https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json"
+REMOTE_FETCH_ATTEMPTS = 3
+REMOTE_FETCH_TIMEOUT = 15  # seconds, per attempt
+
+# Set by _fetch_remote_index on the last failed attempt; None if the fetch
+# succeeded or hasn't been tried yet. Surfaced by validate_sot_source.
+_LAST_REMOTE_FETCH_ERROR: Optional[Exception] = None
+
+# bible_versions.json is a CACHE of the remote SOT, used only as a fallback
+# within a single run when the live fetch fails. It lives in the system temp
+# dir (never inside the repo) and is deleted when the process exits, so the
+# SOT is always fetched fresh on the next run rather than persisted locally.
+_LOCAL_CACHE_PATH = Path(tempfile.gettempdir()) / 'encounters_bible_versions_cache.json'
+
+
+def _cleanup_local_cache() -> None:
+    try:
+        _LOCAL_CACHE_PATH.unlink(missing_ok=True)
+    except OSError:
+        pass
+
+
+atexit.register(_cleanup_local_cache)
+
+
+def _local_cache_languages() -> dict:
+    """Read the temp-dir cache file (used only as an offline fallback)."""
+    return json.loads(_LOCAL_CACHE_PATH.read_text(encoding='utf-8'))['languages']
+
+
+def _remote_to_local_shape(remote_entry: dict) -> dict:
+    """Adapt a remote SOT language entry to this validator's expected shape."""
+    primary = remote_entry['primary_version']
+    fallback = remote_entry['fallback_version']
+    return {
+        'name': remote_entry['name'],
+        'script': remote_entry['script'],
+        'primary_version': primary,
+        'fallback_version': fallback,
+        'allowed_versions': [primary, fallback],
+        'reading_speed': remote_entry['reading_speed'],
+    }
+
+
+def _fetch_remote_index(attempts: int = REMOTE_FETCH_ATTEMPTS) -> Optional[dict]:
+    """Fetch the remote bible_versions SOT index, retrying transient failures
+    a few times before giving up (a single flaky network blip shouldn't be
+    indistinguishable from genuine unreachability). Records the last error
+    on the module so validate_sot_source can report *why* it fell back to
+    the local cache, not just that it did."""
+    import time
+    import urllib.request
+    import urllib.error
+
+    global _LAST_REMOTE_FETCH_ERROR
+    for attempt in range(1, attempts + 1):
+        try:
+            with urllib.request.urlopen(REMOTE_INDEX_URL, timeout=REMOTE_FETCH_TIMEOUT) as resp:
+                return json.loads(resp.read())
+        except (urllib.error.URLError, TimeoutError, OSError, json.JSONDecodeError) as e:
+            _LAST_REMOTE_FETCH_ERROR = e
+            if attempt < attempts:
+                time.sleep(min(2 ** attempt, 8))  # 2s, 4s, ...
+    return None
+
+
+def _write_local_cache(remote_langs: dict) -> None:
+    """Refresh the temp-dir bible_versions cache from a successful live
+    fetch, so the offline fallback is always recent rather than a
+    hand-maintained file that can silently go stale between fetches.
+    Written outside the repo so it's never an untracked/committed file."""
+    payload = {
+        'meta': {
+            'version': '1.0.0',
+            'source': f'Cached from {REMOTE_INDEX_URL} on last successful validator run',
+            'note': 'Offline fallback only. Lives in the system temp dir — never hand-edit, never commit.',
+        },
+        'languages': {
+            lang: _remote_to_local_shape(entry) for lang, entry in remote_langs.items()
+        },
+    }
+    try:
+        _LOCAL_CACHE_PATH.write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False) + '\n', encoding='utf-8'
+        )
+    except OSError:
+        pass  # best-effort — a read-only filesystem shouldn't fail validation
+
+
+def _load_bible_versions() -> tuple[dict, bool]:
+    """Load bible version config for every language the remote SOT defines.
+
+    Tries the live remote SOT first (source of truth, with retries); only
+    falls back to the temp-dir bible_versions cache if the network is
+    unreachable after all attempts. On a successful fetch, refreshes the
+    cache file so the fallback path is always recent.
+    Returns (languages_dict, used_remote: bool).
+    """
+    remote = _fetch_remote_index()
+    if remote is not None:
+        remote_langs = remote.get('languages', {})
+        _write_local_cache(remote_langs)
+        return {lang: _remote_to_local_shape(entry) for lang, entry in remote_langs.items()}, True
+
+    return _local_cache_languages(), False
+
 
 # Required card keys by type
 CARD_REQUIRED_KEYS = {
@@ -108,6 +200,23 @@ _FIL_SHARED_BOOK_NAMES = {
     'hosea', 'joel', 'amos', 'nahum',
 }
 
+# Words identical (or near-identical) across English and Romance languages —
+# valid cognate translations, not untranslated leftovers. Per translator skill
+# § "Cognates (FR, PT, ES)": these are correct and should not be flagged.
+_ROMANCE_COGNATES = {
+    'fr': {'courage', 'grace', 'grâce'},
+    'pt': {'coragem', 'graça'},
+    'es': {'coraje', 'gracia'},
+    # 'Legion' is spelled identically in German (from Latin legio) and is the
+    # word used in the LU17 Bible text itself (Mark 5:9) — not a missed translation.
+    'de': {'legion'},
+}
+
+
+def _is_cognate(value: str, lang: str) -> bool:
+    """Return True if value is a known valid cognate word for lang."""
+    return value.strip().lower() in _ROMANCE_COGNATES.get(lang, set())
+
 
 def _has_english_book_name(reference: str, lang: str) -> bool:
     """Return True if reference contains an English-only book name for lang."""
@@ -121,15 +230,79 @@ def _has_english_book_name(reference: str, lang: str) -> bool:
     return True
 
 
-def validate_sot_source(report: Report, bible_versions: dict, used_remote_sot: bool,
-                         last_fetch_error: Optional[Exception]) -> bool:
+# Quote-like characters whose accidental back-to-back doubling indicates a
+# stray-punctuation typo (e.g. »» , "" , '')
+_DOUBLE_CHECK_CHARS = {'"', "'", '«', '»', '“', '”', '‘', '’'}
+
+# Paired quote characters that should appear in balanced counts within a field.
+# Note: curly double quotes (“ ” „) are intentionally NOT balance-checked here —
+# this corpus mixes „...“ and „...” conventions across different German
+# encounters, so a fixed pair produces false positives. Guillemets « » are
+# checked for all languages (used in AR/FR/etc.) since their usage is consistent.
+
+
+def _iter_strings(obj, path: str = ""):
+    """Recursively yield (path, value) for every string leaf in obj."""
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            yield from _iter_strings(v, f"{path}.{k}" if path else k)
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            yield from _iter_strings(v, f"{path}[{i}]")
+    elif isinstance(obj, str):
+        yield path, obj
+
+
+def _is_verse_continuation_close(text: str, mark_chars: str) -> bool:
+    """True if `text` looks like the tail fragment of a multi-verse quotation:
+    it carries exactly one quote-like mark from `mark_chars`, sitting at the
+    very end of the field (only trailing punctuation/whitespace after it).
+    This corpus stores consecutive Bible verses as separate string fields, so
+    a quotation that began in an earlier verse legitimately closes here with
+    no opener of its own — not a stray-punctuation typo.
+    """
+    positions = [i for i, c in enumerate(text) if c in mark_chars]
+    if len(positions) != 1:
+        return False
+    idx = positions[0]
+    return bool(re.match(r'^[\s.!?,;:]*$', text[idx + 1:]))
+
+
+def _check_quote_anomalies(text: str, ctx: str, lang: str, report: 'Report'):
+    """Flag stray/duplicated/unbalanced quote-like punctuation in a text field."""
+    # Doubled identical quote-like characters back-to-back (e.g. »», "", '')
+    for i in range(len(text) - 1):
+        c = text[i]
+        if c in _DOUBLE_CHECK_CHARS and text[i + 1] == c:
+            report.E(f"{ctx}: contains doubled '{c}{c}' — likely stray punctuation")
+
+    # Balanced guillemets (used in AR/FR/etc.). Skip fields that are the
+    # trailing fragment of a quotation opened in a preceding verse — see
+    # _is_verse_continuation_close.
+    oc, cc = text.count('«'), text.count('»')
+    if oc != cc and not (oc + cc == 1 and _is_verse_continuation_close(text, '«»')):
+        report.W(f"{ctx}: unbalanced '«'/'»' — {oc} open vs {cc} close")
+
+    # Straight double quotes should appear in pairs, with the same
+    # verse-continuation exception as guillemets above.
+    if text.count('"') % 2 != 0 and not (text.count('"') == 1 and _is_verse_continuation_close(text, '"')):
+        report.W(f"{ctx}: odd number of straight double quotes (\") — possible stray quote")
+
+
+def validate_sot_source(report: 'Report', bible_versions: dict, used_remote_sot: bool) -> bool:
     """Report whether this run resolved bible_version codes from the live
     remote SOT or fell back to the temp-dir bible_versions cache.
+
+    bible_versions/used_remote_sot are resolved once in main() by fetching
+    the remote SOT first — this function only surfaces which source was
+    actually used, so a validation run that silently fell back to a stale
+    local cache (e.g. in a sandboxed/offline CI runner) is visible in the
+    report rather than indistinguishable from a fully live run.
     """
     if used_remote_sot:
         report.I(f"✓ bible_version codes resolved live from remote SOT ({REMOTE_INDEX_URL}) for all {len(bible_versions)} languages")
         return True
-    reason = f" ({last_fetch_error})" if last_fetch_error else ""
+    reason = f" ({_LAST_REMOTE_FETCH_ERROR})" if _LAST_REMOTE_FETCH_ERROR else ""
     report.W(
         f"Could not reach remote SOT ({REMOTE_INDEX_URL}){reason} — fell back to the "
         f"temp-dir bible_versions cache. Results reflect the LOCAL CACHE, not confirmed "
@@ -138,8 +311,41 @@ def validate_sot_source(report: Report, bible_versions: dict, used_remote_sot: b
     return True
 
 
+# ── Report ────────────────────────────────────────────────────────────────────
+
+class Report:
+    def __init__(self, phase: str):
+        self.phase = phase
+        self.errors: List[str] = []
+        self.warnings: List[str] = []
+        self.info: List[str] = []
+
+    def E(self, msg): self.errors.append(f"❌ ERROR: {msg}")
+    def W(self, msg): self.warnings.append(f"⚠️  WARNING: {msg}")
+    def I(self, msg): self.info.append(f"ℹ️  INFO: {msg}")
+
+    def print(self, final=True) -> bool:
+        print(f"\n{'='*80}")
+        print(f"{self.phase} VALIDATION REPORT")
+        print('='*80)
+        if self.info:
+            print(f"\nℹ️  INFORMATION ({len(self.info)}):")
+            for m in self.info: print(f"  {m}")
+        if self.warnings:
+            print(f"\n⚠️  WARNINGS ({len(self.warnings)}):")
+            for m in self.warnings: print(f"  {m}")
+        if self.errors:
+            print(f"\n❌ ERRORS ({len(self.errors)}):")
+            for m in self.errors: print(f"  {m}")
+            print('='*80)
+            return False
+        msg = "✅ ALL VALIDATIONS PASSED!" if final else "✅ PHASE PASSED - Proceeding to next phase"
+        print(f"\n{msg}")
+        print('='*80)
+        return True
+
+
 def load_json(path: Path, report: Report) -> Optional[dict]:
-    import json
     try:
         return json.loads(path.read_text(encoding='utf-8'))
     except json.JSONDecodeError as e:
@@ -156,16 +362,39 @@ def validate_lint(report: Report) -> dict:
     """Check that all JSON files use indent=2 formatting and end with newline.
 
     Returns a cache mapping absolute Path -> parsed dict for valid files.
-    Delegates to shared_validation.lint with severity='error' to reproduce
-    validate_encounters.py's existing gating behavior exactly.
     """
     report.I("=" * 60)
     report.I("PHASE 1: Lint — checking JSON formatting (indent=2)")
     report.I("=" * 60)
 
-    cache = lint_json_files(ENCOUNTERS_DIR, report, 'encounters_scripts', severity='error')
+    cache: dict = {}
+    json_files = sorted(ENCOUNTERS_DIR.rglob('*.json'))
+    json_files = [f for f in json_files if f.is_file()
+                  and 'encounters_scripts' not in f.parts]
+    checked = 0
+    for fpath in json_files:
+        raw = fpath.read_text(encoding='utf-8')
+        try:
+            data = json.loads(raw)
+        except json.JSONDecodeError:
+            report.E(f"{fpath.name}: invalid JSON")
+            continue
+        rel = fpath.relative_to(ENCOUNTERS_DIR)
+        for line_no, line in enumerate(raw.splitlines(), 1):
+            stripped = line.lstrip(' ')
+            indent = len(line) - len(stripped)
+            if indent > 0 and indent % 2 != 0:
+                report.E(f"{rel}:{line_no}: odd indentation ({indent} spaces), expected multiples of 2")
+                break
+            if '\t' in line:
+                report.E(f"{rel}:{line_no}: contains tab character, use 2-space indent")
+                break
+        if not raw.endswith('\n'):
+            report.W(f"{rel}: missing trailing newline")
+        cache[fpath] = data
+        checked += 1
 
-    report.I(f"✓ Checked {len(cache)} JSON files")
+    report.I(f"✓ Checked {checked} JSON files")
     return cache
 
 
@@ -298,8 +527,8 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
     """Validate a single encounter file."""
 
     # Quote / stray-punctuation anomaly scan across all text fields
-    for path, text in iter_strings(data):
-        check_quote_anomalies(text, f"{filename}:{path}", report)
+    for path, text in _iter_strings(data):
+        _check_quote_anomalies(text, f"{filename}:{path}", lang, report)
 
     # Required top-level fields
     required = ['id', 'type', 'schema_version', 'language', 'bible_version',
@@ -502,7 +731,7 @@ def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
                 if not tr_val or not str(tr_val).strip():
                     report.E(f"{ctx}: field '{field}' is empty in {lang.upper()}")
                 elif isinstance(en_val, str) and isinstance(tr_val, str):
-                    if en_val.strip() == tr_val.strip() and not is_cognate(tr_val, lang):
+                    if en_val.strip() == tr_val.strip() and not _is_cognate(tr_val, lang):
                         report.W(f"{ctx}: field '{field}' appears untranslated")
 
         # discovery_questions count
@@ -515,7 +744,7 @@ def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
                 for field in ('category', 'question'):
                     eq_val = eq.get(field, '').strip()
                     tq_val = tq.get(field, '').strip()
-                    if eq_val == tq_val and not is_cognate(tq_val, lang):
+                    if eq_val == tq_val and not _is_cognate(tq_val, lang):
                         report.W(f"{ctx} question[{j+1}]: '{field}' appears untranslated")
 
         # scripture_connections count
@@ -646,46 +875,51 @@ def validate_image_urls(report: Report) -> None:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
+def run_phase(name: str, fn, *args, gate: bool = True, final: bool = False):
+    """Run one validation phase: build its Report, call fn(report, *args),
+    print the report, and (for gating phases) exit(1) on failure.
+
+    fn may optionally return a value (e.g. Phase 1 returns a lint cache,
+    Phase A returns parsed index data) — that return value is passed back
+    to the caller unchanged so downstream phases can use it.
+
+    gate=False (Phase C) prints the report but never exits on failure —
+    used for phases whose findings are warnings-only by design.
+    """
+    report = Report(name)
+    result = fn(report, *args)
+    passed = report.print(final=final)
+
+    if gate and not passed:
+        print(f"\n❌ {name} FAILED - Stopping validation")
+        sys.exit(1)
+
+    return result
+
+
 def main():
     print("🔍 Starting Encounters Validation...")
     print(f"📁 Encounters directory: {ENCOUNTERS_DIR}")
     print()
 
-    run_report = RunReport("ENCOUNTERS VALIDATION")
-
-    bible_versions, used_remote_sot, last_fetch_error = load_bible_versions('encounters')
+    bible_versions, used_remote_sot = _load_bible_versions()
     expected_languages = list(bible_versions.keys())
 
-    lint_cache = run_report.wrap("PHASE 1: LINT", validate_lint)
-    index_data = run_report.wrap("PHASE A: INDEX", validate_index, expected_languages)
+    lint_cache = run_phase("PHASE 1: LINT", validate_lint)
+    index_data = run_phase("PHASE A: INDEX", validate_index, expected_languages)
 
     if index_data is None:
         print("\n❌ PHASE A FAILED - Stopping validation")
-        run_report.print_summary()
         sys.exit(1)
 
-    run_report.wrap("PHASE SOT: BIBLE VERSIONS SOURCE", validate_sot_source, bible_versions, used_remote_sot, last_fetch_error)
-    run_report.wrap("PHASE B: ENCOUNTER FILES", validate_encounter_files, index_data, lint_cache,
-                     bible_versions, expected_languages)
+    run_phase("PHASE SOT: BIBLE VERSIONS SOURCE", validate_sot_source, bible_versions, used_remote_sot)
+    run_phase("PHASE B: ENCOUNTER FILES", validate_encounter_files, index_data, lint_cache,
+              bible_versions, expected_languages)
 
     # Phase C runs last, after the real gate (Phase B) has passed. Its
     # findings are warnings only (see validate_image_urls) — an unreachable
     # image never fails the run, so gate=False and it's always final.
-    run_report.wrap("PHASE C: IMAGE URLS", validate_image_urls, gate=False, final=True)
-
-    encounters = index_data['encounters']
-    published = [e for e in encounters if e.get('status') == 'published']
-    coming_soon = [e for e in encounters if e.get('status') == 'coming_soon']
-    run_report.add_coverage(
-        content_units=len(encounters),
-        published=len(published),
-        coming_soon=len(coming_soon),
-        files_scanned=len(lint_cache),
-        languages_present=expected_languages,
-        expected_languages=len(expected_languages),
-        sot_live=used_remote_sot,
-    )
-    run_report.print_summary()
+    run_phase("PHASE C: IMAGE URLS", validate_image_urls, gate=False, final=True)
 
     sys.exit(0)
 

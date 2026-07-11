@@ -10,17 +10,23 @@ scripts and does nothing on its own.
 
 ## Status
 
-Two parallel entry-point scripts prove this library is a safe substrate, by reproducing their
-originals' output byte-for-byte on real repo content:
+**This is now a load-bearing dependency of both live validators**, promoted 2026-07-11 after a
+period of parallel comparison (`_v2` scripts proven byte-identical to their originals) and an
+independent SOLID review. `encounters_master_validator.py` and `discovery_master_validator.py`
+invoke these directly:
 
-| Original (unchanged, still the one anyone runs) | Parallel build on `shared_validation` |
+| Live validator (built on `shared_validation`) | Archived pre-migration version |
 |---|---|
-| `encounters/encounters_scripts/validate_encounters.py` | `encounters/encounters_scripts/validate_encounters_v2.py` |
-| `discovery/discovery_scripts/validate_discovery.py` | `discovery/discovery_scripts/validate_discovery_v2.py` |
+| `encounters/encounters_scripts/validate_encounters.py` | `encounters/encounters_scripts/legacy/validate_encounters_legacy.py` |
+| `discovery/discovery_scripts/validate_discovery.py` | `discovery/discovery_scripts/legacy/validate_discovery_legacy.py` |
 
-Both `_v2` scripts are **not wired into CI, git hooks, or any documented workflow.** They exist
-side-by-side with the originals for comparison only. No decision has been made yet to ever swap
-one in for the other — that is future, separate work.
+The archived versions are frozen, standalone references (each `legacy/` folder has its own README)
+— not executed by any pipeline, kept only because they were correct and working and there was no
+reason to delete them. See each `legacy/README.md` for details.
+
+A durable smoke-test gate (`tests/test_promoted_validators.py`) shells out to the real master
+validators against real repo content on every test run, so this promotion's correctness is a
+maintained property, not a one-time verification claim.
 
 ## What's shared vs. what stays custom per pipeline
 
@@ -38,9 +44,9 @@ piece of overlapping logic into one of three tiers — not by guessing from simi
 
 ### Custom per pipeline — deliberately NOT shared
 
-Each `validate_*_v2.py` keeps a full local copy of its pipeline's own rules, unchanged from the
-original. These were evaluated and rejected as extraction candidates because they encode
-genuinely different structure or policy, not just different field names:
+Each live validator keeps a full local copy of its pipeline's own rules, unchanged from the
+pre-migration original. These were evaluated and rejected as extraction candidates because they
+encode genuinely different structure or policy, not just different field names:
 
 - **Card/type-specific schema validation** — encounters' `CARD_REQUIRED_KEYS` dispatch table
   (`cinematic_scene`, `scripture_moment`, `discovery_activation`, etc.) has no discovery
@@ -71,7 +77,7 @@ Discovery's `ValidationReport` does not — it uses `add_error` / `add_warning` 
 tracks run statistics (`stats['total_files']`, etc.) and a different `print_report()` format that
 the original discovery output depends on.
 
-Rather than rewrite discovery's report class (which would change its output), `validate_discovery_v2.py`
+Rather than rewrite discovery's report class (which would change its output), `validate_discovery.py`
 keeps `ValidationReport` exactly as it is and adds three one-line aliases:
 
 ```python
@@ -87,22 +93,28 @@ decision to reconcile the two `Report` implementations into one.
 
 ## Verification performed
 
-Both `_v2` scripts were run against real repository content and diffed against their originals'
-output, more than once across this work (including a fresh re-run at the end to catch any drift):
+Before promotion, both live validators (then `_v2`) were run against real repository content and
+diffed against the pre-migration originals' output, more than once across this work:
 
-- `validate_encounters_v2.py` output is byte-identical to `validate_encounters.py`, exit code 0.
-- `validate_discovery_v2.py` output is byte-identical to `validate_discovery.py`, exit code 0
-  (after fixing the `E`/`W`/`I` alias gap above, which a first run caught as an `AttributeError`).
+- `validate_encounters.py` (post-migration) output is byte-identical to the pre-migration original,
+  exit code 0.
+- `validate_discovery.py` (post-migration) output is byte-identical to the pre-migration original,
+  exit code 0 (after fixing the `E`/`W`/`I` alias gap above, which a first run caught as an
+  `AttributeError`).
 - `bible_sot.load_bible_versions`'s cache-miss `RuntimeError` path was exercised directly (network
   fetch mocked to fail, no cache present) and confirmed to raise cleanly instead of leaking an
   unhandled `FileNotFoundError`.
-- Confirmed via `git diff --stat` that neither original script, nor either
-  `*_master_validator.py` wrapper, was modified — only new files exist.
+- After promotion (moving the pre-migration originals to `legacy/`), both legacy scripts were
+  independently re-verified as still fully functional standalone — including a directory-depth bug
+  in each (`SCRIPTS_DIR`/`script_dir` resolution assumed a fixed depth that broke once moved one
+  level deeper into `legacy/`) that was found and fixed as part of promotion.
+- `tests/test_promoted_validators.py` shells out to both real master validators on every test run,
+  so byte-identical correctness is now a maintained property, not just a one-time verification.
 
-## If a future migration is ever decided
+## Remaining known gaps
 
-This package and the two `_v2` scripts are not a commitment to swap anything. If that's decided
-later: migrate one pipeline at a time (encounters first, since its `Report` already matches the
-shared `ReportLike` protocol with no adapter needed), keep it timeboxed, and reconcile discovery's
-`ValidationReport` vs. shared `Report` gap as part of that work rather than leaving the alias
-workaround in place indefinitely.
+- Discovery's `ValidationReport` vs. shared `Report` interface gap (the alias bridge above) is
+  unresolved — reconciling the two into one report class is future work, not required for
+  `shared_validation` to be the live dependency it is today.
+- Discovery's `RunReport` phase table is coarse (2 rows) vs. encounters' (5 rows), since discovery's
+  `main()` doesn't have per-phase report objects the way encounters does.
