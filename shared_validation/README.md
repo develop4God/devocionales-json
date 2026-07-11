@@ -73,6 +73,35 @@ encode genuinely different structure or policy, not just different field names:
   would hide that policy difference behind a boolean, which is worse than two small, honest,
   separate functions.
 
+### Schema-templating — considered again, still rejected (2026-07-11)
+
+After this migration shipped, a further idea was floated: since both pipelines' Phase A/B structure
+checks are mostly "does this field exist, is it the right type," could that be pulled one layer
+further into a generic schema-driven core, with `discovery_template` / `encounters_template` as
+the only per-pipeline difference?
+
+The field-presence/type-checking slice of this is real and would be a legitimate future extraction
+— it's genuinely mechanical. But it doesn't shrink the list above, because none of those four
+items are schema-shape differences to begin with:
+
+- `CARD_REQUIRED_KEYS` isn't a flat schema — it's conditional dispatch keyed on a card's own `type`
+  field. Expressible in a schema language (`oneOf`/`if-then-else`), but that's the hardest part to
+  get right, not the boilerplate part — a template wouldn't make it safer to share, just differently
+  shaped.
+- The English-leakage and cross-translation checks are editorial policy running on top of
+  similar-looking shapes, not schema. Templating the shape doesn't remove the policy divergence
+  (see "different editorial policies" above) — it would just relocate the same boolean-flag problem
+  one layer deeper.
+- Phase A's "missing language" handling differs in *meaning*, not just field names: encounters'
+  `status: coming_soon` changes what a missing translation means for that content unit; discovery
+  has no such status concept. A shared template still needs per-pipeline logic to interpret this.
+
+Conclusion: this migration's actual win — encounters' bug fixes automatically reaching discovery —
+was already captured by the Tier-1 extraction above (`bible_sot`, `lint`, `text_checks`). The
+remaining duplication is not unrealized shared logic; it's the two pipelines correctly diverging.
+Not revisiting this again without a concrete new case of duplicated *mechanical* logic (not policy)
+showing up.
+
 ### One real interface gap this surfaced
 
 `shared_validation.lint` and `shared_validation.text_checks.check_quote_anomalies` call
