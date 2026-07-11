@@ -4,7 +4,7 @@ validate_encounters.py — Validator for the encounters content type.
 
 Phased validation, one Report per phase, same reporting contract throughout.
 Phases 1/A/SOT/B are gates — an ERROR in any of them stops the run and fails
-the exit code. Phase D always runs last, after B (the real data-integrity
+the exit code. Phase C always runs last, after B (the real data-integrity
 gate) has passed, and only ever reports WARNINGs: an unreachable image is a
 content-completeness gap, not a structural defect, and never blocks a merge.
 
@@ -12,10 +12,10 @@ content-completeness gap, not a structural defect, and never blocks a merge.
   PHASE A:   Validate encounters/index.json
   PHASE SOT: Confirm bible_version codes resolved from the live remote SOT
   PHASE B:   Validate encounter files (published only) using EN as base — GATE
-  PHASE D:   Verify image_url references resolve on the Devocionales-assets
+  PHASE C:   Verify image_url references resolve on the Devocionales-assets
              CDN — warnings only, runs last, never fails the build
 
-Exit codes: 0 = all passed (Phase D warnings do not affect this), 1 = errors found in 1/A/SOT/B
+Exit codes: 0 = all passed (Phase C warnings do not affect this), 1 = errors found in 1/A/SOT/B
 """
 
 import atexit
@@ -736,7 +736,7 @@ def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
             report.E(f"{ctx}: scripture_connections count mismatch EN={len(en_sc)}, {lang.upper()}={len(tr_sc)}")
 
 
-# ── Phase D: Image URL verification ─────────────────────────────────────────
+# ── Phase C: Image URL verification ─────────────────────────────────────────
 #
 # Runs last, after Phase B (data integrity — the real gate). A broken or
 # unreachable image is a content-completeness problem, not a structural one:
@@ -750,7 +750,7 @@ def validate_image_urls(report: Report) -> None:
     adapter that feeds their results into the shared Report, it does not
     reimplement the checking logic."""
     report.I("=" * 60)
-    report.I("PHASE D: Verifying image_url references resolve on the asset CDN")
+    report.I("PHASE C: Verifying image_url references resolve on the asset CDN")
     report.I("=" * 60)
 
     index_reader = ImageIndexReader(ENCOUNTERS_DIR)
@@ -892,12 +892,12 @@ def main():
         print("\n❌ PHASE B FAILED - Stopping validation")
         sys.exit(1)
 
-    # ── PHASE D: runs last, after the real gate (Phase B) has passed.
+    # ── PHASE C: runs last, after the real gate (Phase B) has passed.
     # Findings here are warnings only (see validate_image_urls) — an
     # unreachable image never fails the run. ──
-    report_d = Report("PHASE D: IMAGE URLS")
-    validate_image_urls(report_d)
-    report_d.print(final=True)
+    report_c = Report("PHASE C: IMAGE URLS")
+    validate_image_urls(report_c)
+    report_c.print(final=True)
 
     sys.exit(0)
 
