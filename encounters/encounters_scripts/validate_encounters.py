@@ -151,9 +151,6 @@ def _load_bible_versions() -> tuple[dict, bool]:
     return _local_cache_languages(), False
 
 
-_BIBLE_VERSIONS, _USED_REMOTE_SOT = _load_bible_versions()
-EXPECTED_LANGUAGES = list(_BIBLE_VERSIONS.keys())
-
 # Required card keys by type
 CARD_REQUIRED_KEYS = {
     'cinematic_scene':    ['order', 'type', 'image_url', 'title', 'narrative', 'revelation_key'],
@@ -279,18 +276,18 @@ def _check_quote_anomalies(text: str, ctx: str, lang: str, report: 'Report'):
         report.W(f"{ctx}: odd number of straight double quotes (\") — possible stray quote")
 
 
-def validate_sot_source(report: 'Report') -> bool:
+def validate_sot_source(report: 'Report', bible_versions: dict, used_remote_sot: bool) -> bool:
     """Report whether this run resolved bible_version codes from the live
     remote SOT or fell back to the temp-dir bible_versions cache.
 
-    _BIBLE_VERSIONS is populated at import time by fetching the remote SOT
-    first — this function only surfaces which source was actually used, so
-    a validation run that silently fell back to a stale local cache (e.g. in
-    a sandboxed/offline CI runner) is visible in the report rather than
-    indistinguishable from a fully live run.
+    bible_versions/used_remote_sot are resolved once in main() by fetching
+    the remote SOT first — this function only surfaces which source was
+    actually used, so a validation run that silently fell back to a stale
+    local cache (e.g. in a sandboxed/offline CI runner) is visible in the
+    report rather than indistinguishable from a fully live run.
     """
-    if _USED_REMOTE_SOT:
-        report.I(f"✓ bible_version codes resolved live from remote SOT ({REMOTE_INDEX_URL}) for all {len(_BIBLE_VERSIONS)} languages")
+    if used_remote_sot:
+        report.I(f"✓ bible_version codes resolved live from remote SOT ({REMOTE_INDEX_URL}) for all {len(bible_versions)} languages")
         return True
     reason = f" ({_LAST_REMOTE_FETCH_ERROR})" if _LAST_REMOTE_FETCH_ERROR else ""
     report.W(
@@ -390,7 +387,7 @@ def validate_lint(report: Report) -> dict:
 
 # ── Phase A: Index validation ─────────────────────────────────────────────────
 
-def validate_index(report: Report) -> Optional[dict]:
+def validate_index(report: Report, expected_languages: list) -> Optional[dict]:
     report.I("=" * 60)
     report.I("PHASE A: Validating encounters/index.json")
     report.I("=" * 60)
@@ -471,7 +468,7 @@ def validate_index(report: Report) -> Optional[dict]:
             langs = set(obj.keys())
             if present_langs is None:
                 present_langs = langs
-            missing = set(EXPECTED_LANGUAGES) - langs
+            missing = set(expected_languages) - langs
             if missing:
                 missing_by_field[obj_key] = missing
 
@@ -480,7 +477,7 @@ def validate_index(report: Report) -> Optional[dict]:
             have = sorted(present_langs) if present_langs else []
             if all_same:
                 missing_langs = sorted(next(iter(missing_by_field.values())))
-                summary = f"missing {len(missing_langs)}/{len(EXPECTED_LANGUAGES)} languages {missing_langs} across all fields (has: {have})"
+                summary = f"missing {len(missing_langs)}/{len(expected_languages)} languages {missing_langs} across all fields (has: {have})"
             else:
                 parts = ", ".join(f"{k}: {sorted(v)}" for k, v in missing_by_field.items())
                 summary = f"uneven language coverage — {parts}"
@@ -512,6 +509,7 @@ def validate_index(report: Report) -> Optional[dict]:
 
 def validate_encounter_file(data: dict, lang: str, filename: str,
                              enc_id: str, report: Report,
+                             bible_versions: dict,
                              index_entry: Optional[dict] = None):
     """Validate a single encounter file."""
 
@@ -546,7 +544,7 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
         report.E(f"{filename}: language field '{data.get('language')}' does not match folder '{lang}'")
 
     # bible_version
-    allowed = _BIBLE_VERSIONS.get(lang, {}).get('allowed_versions', [])
+    allowed = bible_versions.get(lang, {}).get('allowed_versions', [])
     if data.get('bible_version') not in allowed:
         report.E(f"{filename}: bible_version '{data.get('bible_version')}' not valid for '{lang}', expected one of {allowed}")
 
@@ -743,7 +741,8 @@ def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
             report.E(f"{ctx}: scripture_connections count mismatch EN={len(en_sc)}, {lang.upper()}={len(tr_sc)}")
 
 
-def validate_encounter_files(report: Report, index_data: dict, lint_cache: dict) -> None:
+def validate_encounter_files(report: Report, index_data: dict, lint_cache: dict,
+                              bible_versions: dict, expected_languages: list) -> None:
     """Phase B: load and validate every published encounter's files, then
     cross-validate every non-EN language against the EN base."""
     report.I("=" * 60)
@@ -772,7 +771,7 @@ def validate_encounter_files(report: Report, index_data: dict, lint_cache: dict)
                 continue
 
             # Individual file validation
-            validate_encounter_file(data, lang, fname, enc_id, report, index_entry=enc)
+            validate_encounter_file(data, lang, fname, enc_id, report, bible_versions, index_entry=enc)
 
             # has_interactive cross-check
             has_interactive_in_file = any(
@@ -796,7 +795,7 @@ def validate_encounter_files(report: Report, index_data: dict, lint_cache: dict)
     report.I("Cross-validating all languages against EN base...")
     en_studies = all_loaded.get('en', {})
 
-    for lang in EXPECTED_LANGUAGES:
+    for lang in expected_languages:
         if lang == 'en':
             continue
         if lang not in all_loaded:
@@ -890,15 +889,19 @@ def main():
     print(f"📁 Encounters directory: {ENCOUNTERS_DIR}")
     print()
 
+    bible_versions, used_remote_sot = _load_bible_versions()
+    expected_languages = list(bible_versions.keys())
+
     lint_cache = run_phase("PHASE 1: LINT", validate_lint)
-    index_data = run_phase("PHASE A: INDEX", validate_index)
+    index_data = run_phase("PHASE A: INDEX", validate_index, expected_languages)
 
     if index_data is None:
         print("\n❌ PHASE A FAILED - Stopping validation")
         sys.exit(1)
 
-    run_phase("PHASE SOT: BIBLE VERSIONS SOURCE", validate_sot_source)
-    run_phase("PHASE B: ENCOUNTER FILES", validate_encounter_files, index_data, lint_cache)
+    run_phase("PHASE SOT: BIBLE VERSIONS SOURCE", validate_sot_source, bible_versions, used_remote_sot)
+    run_phase("PHASE B: ENCOUNTER FILES", validate_encounter_files, index_data, lint_cache,
+              bible_versions, expected_languages)
 
     # Phase C runs last, after the real gate (Phase B) has passed. Its
     # findings are warnings only (see validate_image_urls) — an unreachable
