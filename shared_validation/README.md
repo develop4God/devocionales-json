@@ -15,14 +15,18 @@ period of parallel comparison (`_v2` scripts proven byte-identical to their orig
 independent SOLID review. `encounters_master_validator.py` and `discovery_master_validator.py`
 invoke these directly:
 
-| Live validator (built on `shared_validation`) | Archived pre-migration version |
-|---|---|
-| `encounters/encounters_scripts/validate_encounters.py` | `encounters/encounters_scripts/legacy/validate_encounters_legacy.py` |
-| `discovery/discovery_scripts/validate_discovery.py` | `discovery/discovery_scripts/legacy/validate_discovery_legacy.py` |
+| Live validator (built on `shared_validation`) |
+|---|
+| `encounters/encounters_scripts/validate_encounters.py` |
+| `discovery/discovery_scripts/validate_discovery.py` |
 
-The archived versions are frozen, standalone references (each `legacy/` folder has its own README)
-— not executed by any pipeline, kept only because they were correct and working and there was no
-reason to delete them. See each `legacy/README.md` for details.
+The pre-migration originals are not kept in the tree. They're recoverable via:
+
+```
+git checkout pre-shared-validation -- encounters/encounters_scripts discovery/discovery_scripts
+```
+
+`pre-shared-validation` is a git tag pointing at the last commit before this migration.
 
 A durable smoke-test gate (`tests/test_promoted_validators.py`) shells out to the real master
 validators against real repo content on every test run, so this promotion's correctness is a
@@ -104,10 +108,13 @@ diffed against the pre-migration originals' output, more than once across this w
 - `bible_sot.load_bible_versions`'s cache-miss `RuntimeError` path was exercised directly (network
   fetch mocked to fail, no cache present) and confirmed to raise cleanly instead of leaking an
   unhandled `FileNotFoundError`.
-- After promotion (moving the pre-migration originals to `legacy/`), both legacy scripts were
-  independently re-verified as still fully functional standalone — including a directory-depth bug
-  in each (`SCRIPTS_DIR`/`script_dir` resolution assumed a fixed depth that broke once moved one
-  level deeper into `legacy/`) that was found and fixed as part of promotion.
+- Promotion initially archived the pre-migration originals in a `legacy/` folder rather than a git
+  tag. That approach was short-lived: moving the files one directory level deeper immediately broke
+  a hardcoded depth assumption (`SCRIPTS_DIR`/`script_dir` resolution), and encounters' archived
+  copy needed its own frozen `verify_image_urls.py` to avoid an import-shadowing risk. Both were
+  fixable, but a "frozen" archive that needs its own bugfix the moment it's created is the wrong
+  shape — a git tag has neither problem, so `legacy/` was removed in favor of `pre-shared-validation`
+  above.
 - `tests/test_promoted_validators.py` shells out to both real master validators on every test run,
   so byte-identical correctness is now a maintained property, not just a one-time verification.
 
