@@ -1,34 +1,6 @@
 {
   "encounters": [
     {
-      "id": "adultery_woman_001",
-      "version": "0.1",
-      "image_version": "1.0",
-      "emoji": "🪨",
-      "status": "coming_soon",
-      "intro_image": "adultery_woman_alone_center.png",
-      "mood_primary": "intense",
-      "accent_color": "#7a2e2e",
-      "has_interactive": true,
-      "testament": "new",
-      "character": "The Woman Caught in Adultery",
-      "files": {
-        "es": "adultery_woman_es_001.json"
-      },
-      "titles": {
-        "es": "La mujer sorprendida en adulterio"
-      },
-      "subtitles": {
-        "es": "La expusieron para condenarlo a él. Una lección para muchos."
-      },
-      "scripture_reference": {
-        "es": "Juan 8:1-11"
-      },
-      "estimated_reading_minutes": {
-        "es": 10
-      }
-    },
-    {
       "id": "peter_water_001",
       "version": "1.3",
       "image_version": "1.0",
@@ -757,6 +729,34 @@
         "ja": 16,
         "fil": 14,
         "zh": 16
+      }
+    },
+    {
+      "id": "adultery_woman_001",
+      "version": "0.1",
+      "image_version": "1.0",
+      "emoji": "🪨",
+      "status": "coming_soon",
+      "intro_image": "adultery_woman_alone_center.png",
+      "mood_primary": "intense",
+      "accent_color": "#7a2e2e",
+      "has_interactive": true,
+      "testament": "new",
+      "character": "The Woman Caught in Adultery",
+      "files": {
+        "es": "adultery_woman_es_001.json"
+      },
+      "titles": {
+        "es": "La mujer sorprendida en adulterio"
+      },
+      "subtitles": {
+        "es": "La usaron como trampa para atraparlo. El día que las piedras cayeron."
+      },
+      "scripture_reference": {
+        "es": "Juan 8:1-11"
+      },
+      "estimated_reading_minutes": {
+        "es": 10
       }
     }
   ]
