@@ -48,6 +48,10 @@ REMOTE_INDEX_URL = "https://raw.githubusercontent.com/develop4God/bible_versions
 REMOTE_FETCH_ATTEMPTS = 3
 REMOTE_FETCH_TIMEOUT = 15  # seconds, per attempt
 
+# Set by _fetch_remote_index on the last failed attempt; None if the fetch
+# succeeded or hasn't been tried yet. Surfaced by validate_sot_source.
+_LAST_REMOTE_FETCH_ERROR: Optional[Exception] = None
+
 # bible_versions.json is a CACHE of the remote SOT, used only as a fallback
 # within a single run when the live fetch fails. It lives in the system temp
 # dir (never inside the repo) and is deleted when the process exits, so the
@@ -87,18 +91,20 @@ def _remote_to_local_shape(remote_entry: dict) -> dict:
 def _fetch_remote_index(attempts: int = REMOTE_FETCH_ATTEMPTS) -> Optional[dict]:
     """Fetch the remote bible_versions SOT index, retrying transient failures
     a few times before giving up (a single flaky network blip shouldn't be
-    indistinguishable from genuine unreachability)."""
+    indistinguishable from genuine unreachability). Records the last error
+    on the module so validate_sot_source can report *why* it fell back to
+    the local cache, not just that it did."""
     import time
     import urllib.request
     import urllib.error
 
-    last_err = None
+    global _LAST_REMOTE_FETCH_ERROR
     for attempt in range(1, attempts + 1):
         try:
             with urllib.request.urlopen(REMOTE_INDEX_URL, timeout=REMOTE_FETCH_TIMEOUT) as resp:
                 return json.loads(resp.read())
         except (urllib.error.URLError, TimeoutError, OSError, json.JSONDecodeError) as e:
-            last_err = e
+            _LAST_REMOTE_FETCH_ERROR = e
             if attempt < attempts:
                 time.sleep(min(2 ** attempt, 8))  # 2s, 4s, ...
     return None
@@ -286,8 +292,9 @@ def validate_sot_source(report: 'Report') -> bool:
     if _USED_REMOTE_SOT:
         report.I(f"✓ bible_version codes resolved live from remote SOT ({REMOTE_INDEX_URL}) for all {len(_BIBLE_VERSIONS)} languages")
         return True
+    reason = f" ({_LAST_REMOTE_FETCH_ERROR})" if _LAST_REMOTE_FETCH_ERROR else ""
     report.W(
-        f"Could not reach remote SOT ({REMOTE_INDEX_URL}) — fell back to the "
+        f"Could not reach remote SOT ({REMOTE_INDEX_URL}){reason} — fell back to the "
         f"temp-dir bible_versions cache. Results reflect the LOCAL CACHE, not confirmed "
         f"live data; re-run once network access is available before merging."
     )
@@ -736,6 +743,82 @@ def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
             report.E(f"{ctx}: scripture_connections count mismatch EN={len(en_sc)}, {lang.upper()}={len(tr_sc)}")
 
 
+def validate_encounter_files(report: Report, index_data: dict, lint_cache: dict) -> None:
+    """Phase B: load and validate every published encounter's files, then
+    cross-validate every non-EN language against the EN base."""
+    report.I("=" * 60)
+    report.I("PHASE B: Validating encounter files using EN as base")
+    report.I("=" * 60)
+
+    encounters = index_data['encounters']
+    published = [e for e in encounters if e.get('status') == 'published']
+    coming_soon = [e for e in encounters if e.get('status') == 'coming_soon']
+
+    report.I(f"Published: {len(published)} | Coming soon: {len(coming_soon)} (skipped)")
+
+    all_loaded = {}  # {lang: {enc_id: data}}
+
+    for enc in published:
+        enc_id = enc['id']
+        files = enc.get('files', {})
+
+        for lang, fname in files.items():
+            fpath = ENCOUNTERS_DIR / lang / fname
+            if not fpath.exists():
+                continue  # already caught in Phase A
+
+            data = lint_cache.get(fpath) or load_json(fpath, report)
+            if data is None:
+                continue
+
+            # Individual file validation
+            validate_encounter_file(data, lang, fname, enc_id, report, index_entry=enc)
+
+            # has_interactive cross-check
+            has_interactive_in_file = any(
+                c.get('type') == 'interactive_moment'
+                for c in data.get('cards', [])
+            )
+            index_has_interactive = enc.get('has_interactive', False)
+            if has_interactive_in_file != index_has_interactive:
+                report.E(
+                    f"{fname}: index has_interactive={index_has_interactive} "
+                    f"but file {'has' if has_interactive_in_file else 'does not have'} "
+                    f"an interactive_moment card"
+                )
+
+            # Store for cross-validation
+            if lang not in all_loaded:
+                all_loaded[lang] = {}
+            all_loaded[lang][enc_id] = data
+
+    # Cross-validate all languages against EN
+    report.I("Cross-validating all languages against EN base...")
+    en_studies = all_loaded.get('en', {})
+
+    for lang in EXPECTED_LANGUAGES:
+        if lang == 'en':
+            continue
+        if lang not in all_loaded:
+            continue
+        for enc_id, en_data in en_studies.items():
+            if enc_id in all_loaded[lang]:
+                fname = f"{enc_id.replace('_001', '')}_{lang}_001.json"
+                validate_cross_translation(
+                    en_data, all_loaded[lang][enc_id],
+                    lang, fname, report
+                )
+
+    # Verify all index file references exist
+    report.I("Verifying all published index file references exist...")
+    for enc in published:
+        enc_id = enc['id']
+        for lang, fname in enc.get('files', {}).items():
+            fpath = ENCOUNTERS_DIR / lang / fname
+            if not fpath.exists():
+                report.E(f"index.json: encounter {enc_id} lists {lang}/{fname} but file does not exist")
+
+
 # ── Phase C: Image URL verification ─────────────────────────────────────────
 #
 # Runs last, after Phase B (data integrity — the real gate). A broken or
@@ -780,124 +863,47 @@ def validate_image_urls(report: Report) -> None:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
+def run_phase(name: str, fn, *args, gate: bool = True, final: bool = False):
+    """Run one validation phase: build its Report, call fn(report, *args),
+    print the report, and (for gating phases) exit(1) on failure.
+
+    fn may optionally return a value (e.g. Phase 1 returns a lint cache,
+    Phase A returns parsed index data) — that return value is passed back
+    to the caller unchanged so downstream phases can use it.
+
+    gate=False (Phase C) prints the report but never exits on failure —
+    used for phases whose findings are warnings-only by design.
+    """
+    report = Report(name)
+    result = fn(report, *args)
+    passed = report.print(final=final)
+
+    if gate and not passed:
+        print(f"\n❌ {name} FAILED - Stopping validation")
+        sys.exit(1)
+
+    return result
+
+
 def main():
     print("🔍 Starting Encounters Validation...")
     print(f"📁 Encounters directory: {ENCOUNTERS_DIR}")
     print()
 
-    # ── PHASE 1: Lint ──
-    report_lint = Report("PHASE 1: LINT")
-    lint_cache = validate_lint(report_lint)
-    passed_lint = report_lint.print(final=False)
+    lint_cache = run_phase("PHASE 1: LINT", validate_lint)
+    index_data = run_phase("PHASE A: INDEX", validate_index)
 
-    if not passed_lint:
-        print("\n❌ PHASE 1 FAILED - Fix formatting before proceeding")
-        sys.exit(1)
-
-    # ── PHASE A ──
-    report_a = Report("PHASE A: INDEX")
-    index_data = validate_index(report_a)
-    passed_a = report_a.print(final=False)
-
-    if not passed_a or index_data is None:
+    if index_data is None:
         print("\n❌ PHASE A FAILED - Stopping validation")
         sys.exit(1)
 
-    # ── PHASE SOT: confirm bible_version codes came from the live remote SOT ──
-    report_sot = Report("PHASE SOT: BIBLE VERSIONS SOURCE")
-    validate_sot_source(report_sot)
-    passed_sot = report_sot.print(final=False)
+    run_phase("PHASE SOT: BIBLE VERSIONS SOURCE", validate_sot_source)
+    run_phase("PHASE B: ENCOUNTER FILES", validate_encounter_files, index_data, lint_cache)
 
-    if not passed_sot:
-        print("\n❌ PHASE SOT FAILED")
-        sys.exit(1)
-
-    # ── PHASE B ──
-    report_b = Report("PHASE B: ENCOUNTER FILES")
-    report_b.I("=" * 60)
-    report_b.I("PHASE B: Validating encounter files using EN as base")
-    report_b.I("=" * 60)
-
-    encounters = index_data['encounters']
-    published = [e for e in encounters if e.get('status') == 'published']
-    coming_soon = [e for e in encounters if e.get('status') == 'coming_soon']
-
-    report_b.I(f"Published: {len(published)} | Coming soon: {len(coming_soon)} (skipped)")
-
-    all_loaded = {}  # {lang: {enc_id: data}}
-
-    for enc in published:
-        enc_id = enc['id']
-        files = enc.get('files', {})
-
-        for lang, fname in files.items():
-            fpath = ENCOUNTERS_DIR / lang / fname
-            if not fpath.exists():
-                continue  # already caught in Phase A
-
-            data = lint_cache.get(fpath) or load_json(fpath, report_b)
-            if data is None:
-                continue
-
-            # Individual file validation
-            validate_encounter_file(data, lang, fname, enc_id, report_b, index_entry=enc)
-
-            # has_interactive cross-check
-            has_interactive_in_file = any(
-                c.get('type') == 'interactive_moment'
-                for c in data.get('cards', [])
-            )
-            index_has_interactive = enc.get('has_interactive', False)
-            if has_interactive_in_file != index_has_interactive:
-                report_b.E(
-                    f"{fname}: index has_interactive={index_has_interactive} "
-                    f"but file {'has' if has_interactive_in_file else 'does not have'} "
-                    f"an interactive_moment card"
-                )
-
-            # Store for cross-validation
-            if lang not in all_loaded:
-                all_loaded[lang] = {}
-            all_loaded[lang][enc_id] = data
-
-    # Cross-validate all languages against EN
-    report_b.I("Cross-validating all languages against EN base...")
-    en_studies = all_loaded.get('en', {})
-
-    for lang in EXPECTED_LANGUAGES:
-        if lang == 'en':
-            continue
-        if lang not in all_loaded:
-            continue
-        for enc_id, en_data in en_studies.items():
-            if enc_id in all_loaded[lang]:
-                fname = f"{enc_id.replace('_001', '')}_{lang}_001.json"
-                validate_cross_translation(
-                    en_data, all_loaded[lang][enc_id],
-                    lang, fname, report_b
-                )
-
-    # Verify all index file references exist
-    report_b.I("Verifying all published index file references exist...")
-    for enc in published:
-        enc_id = enc['id']
-        for lang, fname in enc.get('files', {}).items():
-            fpath = ENCOUNTERS_DIR / lang / fname
-            if not fpath.exists():
-                report_b.E(f"index.json: encounter {enc_id} lists {lang}/{fname} but file does not exist")
-
-    passed_b = report_b.print(final=False)
-
-    if not passed_b:
-        print("\n❌ PHASE B FAILED - Stopping validation")
-        sys.exit(1)
-
-    # ── PHASE C: runs last, after the real gate (Phase B) has passed.
-    # Findings here are warnings only (see validate_image_urls) — an
-    # unreachable image never fails the run. ──
-    report_c = Report("PHASE C: IMAGE URLS")
-    validate_image_urls(report_c)
-    report_c.print(final=True)
+    # Phase C runs last, after the real gate (Phase B) has passed. Its
+    # findings are warnings only (see validate_image_urls) — an unreachable
+    # image never fails the run, so gate=False and it's always final.
+    run_phase("PHASE C: IMAGE URLS", validate_image_urls, gate=False, final=True)
 
     sys.exit(0)
 
