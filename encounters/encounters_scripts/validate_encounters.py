@@ -432,17 +432,40 @@ def validate_index(report: Report) -> Optional[dict]:
         if not re.match(r'^\d+\.\d+(\.\d+)?$', image_version):
             report.W(f"Encounter {enc_id}: image_version '{image_version}' should follow semantic versioning (e.g., '1.0' or '1.0.0')")
 
-        # Language coverage for all language objects
+        # Language coverage for all language objects. Report once per encounter
+        # (not once per field) so a Spanish-only draft doesn't produce five
+        # near-identical warnings — and frame it by status: a coming_soon
+        # encounter missing languages is expected (translation is a follow-up
+        # step), a published one missing languages is a real gap.
         lang_objects = ['files', 'titles', 'subtitles', 'scripture_reference', 'estimated_reading_minutes']
+        missing_by_field = {}
+        present_langs = None
         for obj_key in lang_objects:
             obj = enc.get(obj_key, {})
             if not isinstance(obj, dict):
                 report.E(f"Encounter {enc_id}: '{obj_key}' must be an object")
                 continue
             langs = set(obj.keys())
+            if present_langs is None:
+                present_langs = langs
             missing = set(EXPECTED_LANGUAGES) - langs
             if missing:
-                report.W(f"Encounter {enc_id}: '{obj_key}' missing languages: {sorted(missing)}")
+                missing_by_field[obj_key] = missing
+
+        if missing_by_field:
+            all_same = len(set(map(frozenset, missing_by_field.values()))) == 1
+            have = sorted(present_langs) if present_langs else []
+            if all_same:
+                missing_langs = sorted(next(iter(missing_by_field.values())))
+                summary = f"missing {len(missing_langs)}/{len(EXPECTED_LANGUAGES)} languages {missing_langs} across all fields (has: {have})"
+            else:
+                parts = ", ".join(f"{k}: {sorted(v)}" for k, v in missing_by_field.items())
+                summary = f"uneven language coverage — {parts}"
+
+            if status == 'coming_soon':
+                report.I(f"Encounter {enc_id}: {summary} — expected for coming_soon (translation pending)")
+            else:
+                report.W(f"Encounter {enc_id}: {summary} — encounter is published, translations should be complete")
 
         # File existence — only for published
         if status == 'published' and 'files' in enc:

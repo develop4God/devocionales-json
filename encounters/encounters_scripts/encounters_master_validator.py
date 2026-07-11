@@ -12,6 +12,7 @@ Run from encounters/encounters_scripts/ or anywhere.
 Exit codes: 0 = all passed, 1 = errors found in any phase
 """
 
+import re
 import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor
@@ -27,6 +28,35 @@ def run(script, args=None, label=''):
     cmd = [sys.executable, str(SCRIPTS_DIR / script)] + (args or [])
     result = subprocess.run(cmd, text=True, capture_output=True)
     return label, result.returncode, result.stdout, result.stderr
+
+
+def _count(pattern, text):
+    m = re.search(pattern, text)
+    return m.group(1) if m else "?"
+
+
+def summarize_content_validation(stdout: str) -> str:
+    files = _count(r'Checked (\d+) JSON files', stdout)
+    encounters = _count(r'Found (\d+) encounters', stdout)
+    errors = len(re.findall(r'^\s*❌ ERROR:', stdout, re.MULTILINE))
+    warnings = len(re.findall(r'^\s*⚠️\s*WARNING:', stdout, re.MULTILINE))
+    return (f"{files} JSON files · {encounters} encounters indexed · "
+            f"{errors} errors · {warnings} warnings")
+
+
+def summarize_image_urls(stdout: str) -> str:
+    checked = _count(r'Unique images checked: (\d+)', stdout)
+    summary_line = re.search(r'Summary: (\d+)/(\d+) OK, (\d+) failed', stdout)
+    if summary_line:
+        ok, total, failed = summary_line.groups()
+        return f"{checked} unique images · {ok}/{total} resolved · {failed} failed"
+    return f"{checked} unique images checked (summary line not found)"
+
+
+SUMMARIZERS = {
+    "Encounters content validation": summarize_content_validation,
+    "Image URL verification": summarize_image_urls,
+}
 
 
 print("=" * 30)
@@ -48,6 +78,18 @@ for label, code, stdout, stderr in results:
         print(stderr, end='', file=sys.stderr)
 
 failed = [label for label, code, _, _ in results if code != 0]
+
+# Final rollup — the per-phase reports above are long; pull the numbers that
+# actually matter into one place so nothing (like image URL results) gets
+# lost by scrolling past it.
+print(f"\n{'=' * 30}")
+print("SUMMARY")
+print("=" * 30)
+for label, code, stdout, _ in results:
+    status = "✅" if code == 0 else "❌"
+    summarizer = SUMMARIZERS.get(label)
+    detail = summarizer(stdout) if summarizer else f"exit code {code}"
+    print(f"{status} {label}: {detail}")
 
 if failed:
     print(f"\n❌ Failed: {', '.join(failed)}")
