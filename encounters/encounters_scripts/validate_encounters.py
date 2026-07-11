@@ -2,10 +2,12 @@
 """
 validate_encounters.py — Validator for the encounters content type.
 
-Three-phase validation:
-  PHASE 1: Lint — verify all JSON files use indent=2 formatting
-  PHASE A: Validate encounters/index.json
-  PHASE B: Validate encounter files (published only) using EN as base
+Phased validation, one Report per phase, same pass/fail contract throughout:
+  PHASE 1:   Lint — verify all JSON files use indent=2 formatting
+  PHASE A:   Validate encounters/index.json
+  PHASE SOT: Confirm bible_version codes resolved from the live remote SOT
+  PHASE B:   Validate encounter files (published only) using EN as base
+  PHASE C:   Verify image_url references resolve on the Devocionales-assets CDN
 
 Exit codes: 0 = all passed, 1 = errors found
 """
@@ -17,6 +19,14 @@ import sys
 import tempfile
 from pathlib import Path
 from typing import List, Optional
+
+from verify_image_urls import (
+    EncounterIndexReader as ImageIndexReader,
+    ImageReferenceExtractor,
+    GitHubAssetChecker,
+    MAX_CONCURRENT_REQUESTS,
+)
+from concurrent.futures import ThreadPoolExecutor
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
@@ -720,6 +730,43 @@ def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
             report.E(f"{ctx}: scripture_connections count mismatch EN={len(en_sc)}, {lang.upper()}={len(tr_sc)}")
 
 
+# ── Phase C: Image URL verification ─────────────────────────────────────────
+
+def validate_image_urls(report: Report) -> None:
+    """Verify every image_url referenced in an encounter card resolves on the
+    Devocionales-assets GitHub CDN. Reuses the reference-extraction and
+    HTTP-checking classes from verify_image_urls.py — this phase is a thin
+    adapter that feeds their results into the shared Report, it does not
+    reimplement the checking logic."""
+    report.I("=" * 60)
+    report.I("PHASE C: Verifying image_url references resolve on the asset CDN")
+    report.I("=" * 60)
+
+    index_reader = ImageIndexReader(ENCOUNTERS_DIR)
+    file_to_encounter_id = index_reader.build_file_to_encounter_id()
+
+    extractor = ImageReferenceExtractor(ENCOUNTERS_DIR, file_to_encounter_id)
+    references = extractor.extract()
+
+    checker = GitHubAssetChecker()
+    with ThreadPoolExecutor(max_workers=MAX_CONCURRENT_REQUESTS) as pool:
+        results = list(pool.map(checker.check, references))
+
+    files_checked = len({r.reference.source_file for r in results})
+    report.I(f"✓ Scanned {files_checked} encounter card files, {len(results)} unique images")
+
+    failures = [r for r in results if not r.ok]
+    for r in failures:
+        report.E(
+            f"{r.reference.encounter_id}/{r.reference.filename} "
+            f"(referenced in {r.reference.source_file}): {r.status} "
+            f"— {r.reference.url}"
+        )
+
+    if not failures:
+        report.I(f"✓ All {len(results)} image references resolved")
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -753,6 +800,14 @@ def main():
     if not passed_sot:
         print("\n❌ PHASE SOT FAILED")
         sys.exit(1)
+
+    # ── PHASE B (disk/CPU-bound) and PHASE C (network-bound) run concurrently —
+    # neither depends on the other's result, so there's no reason to serialize
+    # a JSON cross-validation pass and a batch of CDN HEAD requests. Phase C
+    # runs in a background thread while Phase B executes on the main thread.
+    report_c = Report("PHASE C: IMAGE URLS")
+    image_pool = ThreadPoolExecutor(max_workers=1)
+    image_future = image_pool.submit(validate_image_urls, report_c)
 
     # ── PHASE B ──
     report_b = Report("PHASE B: ENCOUNTER FILES")
@@ -828,8 +883,14 @@ def main():
             if not fpath.exists():
                 report_b.E(f"index.json: encounter {enc_id} lists {lang}/{fname} but file does not exist")
 
-    passed_b = report_b.print(final=True)
-    sys.exit(0 if passed_b else 1)
+    passed_b = report_b.print(final=False)
+
+    # ── Wait for PHASE C to finish, then print it ──
+    image_future.result()
+    image_pool.shutdown(wait=True)
+    passed_c = report_c.print(final=True)
+
+    sys.exit(0 if (passed_b and passed_c) else 1)
 
 
 if __name__ == '__main__':
