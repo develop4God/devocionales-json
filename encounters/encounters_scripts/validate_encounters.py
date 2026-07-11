@@ -479,7 +479,7 @@ def validate_index(report: Report) -> Optional[dict]:
                 summary = f"uneven language coverage — {parts}"
 
             if status == 'coming_soon':
-                report.I(f"Encounter {enc_id}: {summary} — expected for coming_soon (translation pending)")
+                report.W(f"Encounter {enc_id}: {summary} — coming_soon, translation pending")
             else:
                 report.W(f"Encounter {enc_id}: {summary} — encounter is published, translations should be complete")
 
