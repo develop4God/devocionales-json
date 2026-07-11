@@ -1,0 +1,46 @@
+
+================================================================================
+PHASE 1: GATE VALIDATION REPORT
+================================================================================
+
+ℹ️  INFORMATION (1):
+  ℹ️  INFO: phase completed with no issues
+
+✅ PHASE PASSED - Proceeding to next phase
+================================================================================
+
+================================================================================
+PHASE 2: WARNS VALIDATION REPORT
+================================================================================
+
+ℹ️  INFORMATION (1):
+  ℹ️  INFO: scanned some things
+
+⚠️  WARNINGS (1):
+  ⚠️  WARNING: one item could not be reached, but this is non-fatal
+
+✅ ALL VALIDATIONS PASSED!
+================================================================================
+
+================================================================================
+TEST VALIDATION — <TIMESTAMP> — branch <BRANCH>
+================================================================================
+
+📊 COVERAGE
+  Content units checked:     5
+  Files scanned:             10 JSON files across 1 languages
+  Languages present:         en (1/1 expected)
+  Bible SOT source:          ⚠️  cached fallback (re-run before merging)
+
+────────────────────────────────────────────────────────────────────────────────
+PHASE 1: GATE                                                ✅ PASS  (<ELAPSED>s)
+PHASE 2: WARNS                                               ⚠️  WARN  (<ELAPSED>s)
+────────────────────────────────────────────────────────────────────────────────
+
+ℹ️  INFO (2)     ⚠️  WARNINGS (1)     ❌ ERRORS (0)
+
+  [PHASE 2: WARNS] ⚠️  WARNING: one item could not be reached, but this is non-fatal
+
+================================================================================
+✅ RUN PASSED — 0 errors, 1 warnings, exit code 0     (total: <ELAPSED>s)
+================================================================================
