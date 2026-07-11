@@ -10,8 +10,7 @@ You are a professional biblical translator and theologian with expertise in devo
 - `index.json` — source of truth for which languages this study needs
 - Remote index — source of truth for versions, codes, and download URLs: `https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json`
 - `validate_pair.py` — pair validator (run after each language)
-- `validate_structure_bulk.py` — bulk structure validator (run at end)
-- `validate_discovery.py` — full suite validator (run at end)
+- `discovery_master_validator.py` — full suite validator, including per-study structure checks (run at end)
 
 ---
 
@@ -205,8 +204,7 @@ Run in this order. Fix all errors before proceeding to the next language.
 python3 validate_pair.py {study_id}_en_001.json {study_id}_{lang}_001.json
 
 # After all languages are done:
-python3 validate_structure_bulk.py {study_id}_en_001.json
-python3 validate_discovery.py
+python3 discovery_master_validator.py
 ```
 
 **Zero errors required.** Warnings about `estimated_reading_minutes` differing from EN are expected and acceptable. All other warnings must be investigated and resolved.

@@ -64,17 +64,12 @@ class TestPromotedValidatorsCleanPass(unittest.TestCase):
         )
         self.assertIn("📊 COVERAGE", result.stdout)
         self.assertIn("RUN PASSED", result.stdout)
-        # discovery_master_validator.py also runs validate_structure_bulk.py
-        # as a second phase, unrelated to this migration — confirm it still
-        # ran and passed, so the promotion didn't silently break Phase 2.
-        self.assertIn("bulk structure validation", result.stdout.lower())
 
 
 class TestPromotedValidatorsGateOnFailure(unittest.TestCase):
     """Builds an isolated temp copy of just enough of the real tree to run
     the promoted validator directly (not the master wrapper, to keep this
-    fast and avoid invoking validate_structure_bulk.py's own fixture needs),
-    deliberately corrupts the copy's index.json, and confirms a real
+    fast), deliberately corrupts the copy's index.json, and confirms a real
     structural error actually gates the run — i.e. this is not a test that
     only ever sees the happy path.
     """
