@@ -218,8 +218,7 @@ def main():
 
     run_report.print_summary()
 
-    overall_passed = all(p.passed for p in run_report.phases)
-    sys.exit(0 if overall_passed else 1)
+    sys.exit(run_report.exit_code)
 
 
 if __name__ == '__main__':
