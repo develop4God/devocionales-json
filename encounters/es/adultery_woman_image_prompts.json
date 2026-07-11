@@ -1,0 +1,109 @@
+{
+  "encounter_id": "adultery_woman_es_001",
+  "character": "The Woman Caught in Adultery",
+  "master_character_prompt": "A woman in her late twenties, softly built and average height, a round ordinary face with a slightly crooked nose, downturned hooded eyes with heavy lids, red-rimmed from crying, olive-tan sun-touched skin, dark wavy hair loose and slightly disheveled, uncovered, wearing a simple faded rust-brown wool tunic, plain and modest, no jewelry, bare feet dusty from the walk. Her posture is tense, arms wrapped protectively across her body. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting. Character reference sheet, full body and face close-up.",
+  "intro_image": {
+    "filename": "adultery_woman_intro.png",
+    "prompt": "Wide atmospheric shot of a temple courtyard at first light, long stone shadows stretching across worn flagstones, a scatter of small gray stones abandoned mid-courtyard where hands once dropped them. A woman in her late twenties, softly built, olive-tan skin, dark wavy hair loose and uncovered, a simple faded rust-brown tunic, stands alone and small in the center of the frame, seen from behind and at a distance, arms wrapped across her body, shoulders hunched. No crowd remains. Empty archways frame the scene. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic dawn lighting, no text."
+  },
+  "card_prompts": [
+    {
+      "order": 1,
+      "image_url": "adultery_woman_temple_dawn.png",
+      "mood": "tense",
+      "shot_type": "wide establishing",
+      "prompt": "Wide establishing shot of a temple courtyard at dawn, golden low-angle light cutting long shadows across stone columns. A crowd of seated listeners faces a man in a simple first-century tunic, seen from behind, face never visible, a subtle warm glow of glory around his form, teaching with one hand raised. In the middle distance, a commotion breaks the calm: a small group hustles a woman forward. A woman in her late twenties, softly built, olive-tan skin, dark wavy hair loose and disheveled, simple faded rust-brown tunic, is being pulled by the arm toward the center, body angled away, shoulders hunched. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic dawn lighting, no text."
+    },
+    {
+      "order": 2,
+      "image_url": "adultery_woman_trap_laid.png",
+      "mood": "intense",
+      "shot_type": "medium two-figure",
+      "prompt": "Medium shot, low angle looking up. A woman in her late twenties, softly built, round ordinary face, downturned hooded eyes, heavy lids, red-rimmed, olive-tan skin, dark wavy hair loose and disheveled, simple faded rust-brown tunic, stands rigid in the center of a stone courtyard, arms wrapped across her body, shoulders hunched, surrounded by the robed legs and pointing hands of religious leaders pressing close from every side. In the foreground a man in a simple first-century tunic kneels, seen from behind, face never visible, a subtle warm glow of glory around his form, one finger touching the dust. Painterly warm 2D illustration, Mediterranean palette, deep ochre shadows, tense cinematic lighting, no text."
+    },
+    {
+      "order": 3,
+      "image_url": "adultery_woman_alone_center.png",
+      "mood": "falling",
+      "shot_type": "close-up portrait",
+      "prompt": "Close-up portrait of a woman in her late twenties, round ordinary face, slightly crooked nose, downturned hooded eyes, heavy lids, red-rimmed from crying, olive-tan skin, dark wavy hair loose falling across her face. Her eyes are cast down, unwilling to meet anyone's gaze, jaw tight. Blurred robed figures crowd at the edges of the frame, out of focus, closing in. Painterly warm 2D illustration, Mediterranean palette, deep shadow, harsh directional light from one side, cinematic, no text."
+    },
+    {
+      "order": 4,
+      "image_url": "adultery_woman_jesus_writing.png",
+      "mood": "tense",
+      "shot_type": "medium two-figure",
+      "prompt": "Medium shot, ground-level angle. A man in a simple first-century tunic kneels in a stone courtyard, seen from behind, face never visible, a subtle warm glow of glory around his form, one finger dragging slowly through a thin layer of dust on the flagstones, faint marks visible in the dirt. In the background, slightly elevated and out of focus, a woman in her late twenties, softly built, olive-tan skin, dark wavy hair loose and uncovered, simple faded rust-brown tunic, stands frozen, watching him in confusion. A ring of sandaled feet and robe hems surrounds them, motionless, waiting. Painterly warm 2D illustration, Mediterranean palette, ochre dust tones, still and heavy cinematic light, no text."
+    },
+    {
+      "order": 5,
+      "image_url": "adultery_woman_dust_closeup.png",
+      "mood": "mysterious",
+      "shot_type": "object/still life",
+      "prompt": "Extreme close-up looking straight down at pale stone flagstones dusted with fine dry earth. A single fingertip has just lifted away, leaving faint half-formed marks scratched into the dust, illegible, half-erased by a breath of wind. Small gray stones lie scattered just outside the frame's edge, dropped and abandoned. No people visible. Pure metaphor shot. Painterly warm 2D illustration, Mediterranean palette, pale ochre and bone-dust tones, low raking light, cinematic, no text."
+    },
+    {
+      "order": 6,
+      "image_url": "adultery_woman_stones_dropped.png",
+      "mood": "grace",
+      "shot_type": "action/movement",
+      "prompt": "Wide shot at ground level, focused on hands and feet. Several small gray stones fall in mid-air and land scattered across sunlit flagstones, dropped from the loosening grip of robed elders whose upper bodies are cropped out of frame. Sandaled feet turn and begin to shuffle away in different directions, robes swaying with movement, the courtyard emptying. In the soft background, a woman in her late twenties, softly built, olive-tan skin, dark wavy hair loose and uncovered, simple faded rust-brown tunic, stands still, watching the stones fall. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, dispersing cinematic light, no text."
+    },
+    {
+      "order": 7,
+      "image_url": "adultery_woman_alone_with_jesus.png",
+      "mood": "awe",
+      "shot_type": "wide establishing",
+      "prompt": "Wide establishing shot of an empty temple courtyard, morning light now soft and even, long shadows gone. Only two figures remain, small within the wide stone space: a man in a simple first-century tunic, seen from behind, face never visible, a subtle warm glow of glory around his form, has just straightened up from kneeling; a few paces from him stands a woman in her late twenties, softly built, olive-tan skin, dark wavy hair loose and uncovered, simple faded rust-brown tunic, arms still wrapped across her body, watching him. Scattered stones lie forgotten on the stones between where the crowd once stood. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, calm cinematic light, no text."
+    },
+    {
+      "order": 8,
+      "image_url": "adultery_woman_face_jesus.png",
+      "mood": "grace",
+      "shot_type": "close-up portrait",
+      "prompt": "Close-up portrait, over-the-shoulder composition. In the near foreground, out of focus, the back of a man's shoulder and head in a simple first-century tunic, face never visible, a subtle warm glow of glory softly lighting the edge of the frame. In sharp focus beyond him, a woman in her late twenties, round ordinary face, downturned hooded eyes now open and searching rather than downcast, olive-tan skin, dark wavy hair loose. Her expression shifts from fear toward something unguarded. Painterly warm 2D illustration, Mediterranean palette, warm golden light, cinematic, no text."
+    },
+    {
+      "order": 9,
+      "image_url": "adultery_woman_ni_yo_te_condeno.png",
+      "mood": "peace",
+      "shot_type": "medium two-figure",
+      "prompt": "Medium two-figure shot in a sunlit temple courtyard. A man in a simple first-century tunic stands with quiet ease, seen from behind, face never visible, a subtle warm glow of glory around his form, one hand gesturing gently outward as if releasing something. Facing him, a woman in her late twenties, softly built, olive-tan skin, dark wavy hair loose and uncovered, simple faded rust-brown tunic, stands a little straighter now, shoulders lowering, arms no longer crossed tight against her body. Warm morning light fills the space between them. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, warm cinematic light, no text."
+    },
+    {
+      "order": 10,
+      "image_url": "adultery_woman_law_fulfilled.png",
+      "mood": "mysterious",
+      "shot_type": "object/still life",
+      "prompt": "Still life close-up of a single small gray stone resting on sunlit stone flagstones, its rounded shadow sharp beside it. Beyond it, out of focus, an ancient stone tablet fragment or scroll edge rests half-visible against a column base, suggesting law and judgment. No people in frame. Pure metaphor shot. Painterly warm 2D illustration, Mediterranean palette, cool stone grays against warm ochre ground, directional cinematic light, no text."
+    },
+    {
+      "order": 11,
+      "image_url": "adultery_woman_interactive_stone.png",
+      "mood": "grace",
+      "shot_type": "object/still life",
+      "prompt": "Close-up of an open human palm, olive-tan skin, holding a single small gray stone loosely, fingers beginning to uncurl as if about to let it fall. Soft warm courtyard light behind the hand, out of focus. No face visible. Pure metaphor shot. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, soft cinematic light, no text."
+    },
+    {
+      "order": 12,
+      "image_url": "adultery_woman_walking_away.png",
+      "mood": "peace",
+      "shot_type": "wide departure",
+      "prompt": "Wide departure shot down a sunlit stone street leading away from the temple courtyard, morning light warm and low. A woman in her late twenties, softly built, olive-tan skin, dark wavy hair loose, simple faded rust-brown tunic, her posture upright, walks away from the camera down the street, unhurried, alone but not fearful. Behind her the temple courtyard glows soft in the distance. Painterly warm 2D illustration, Mediterranean palette, ochre and gold-lit stone, gentle cinematic light, no text."
+    },
+    {
+      "order": 13,
+      "image_url": "adultery_woman_discovery.png",
+      "mood": "peace",
+      "shot_type": "object/still life",
+      "prompt": "Overhead still life of a circle drawn loosely in dust on stone, a few small gray stones resting just outside its edge rather than inside it, morning light falling soft and even across the scene. No people visible. Pure metaphor shot suggesting a boundary no longer enforced. Painterly warm 2D illustration, Mediterranean palette, warm ochre dust tones, even soft cinematic light, no text."
+    },
+    {
+      "order": 14,
+      "image_url": "adultery_woman_completion.png",
+      "mood": "peace",
+      "shot_type": "wide departure",
+      "prompt": "Wide, gentle shot of an empty temple courtyard bathed in full soft morning light, no shadows harsh, the stones warm gold. A single small gray stone lies forgotten near the courtyard's center, catching the light. No people in frame. Pure metaphor shot marking what was left behind. Painterly warm 2D illustration, Mediterranean palette, warm golden light, cinematic, gentle, no text."
+    }
+  ]
+}
