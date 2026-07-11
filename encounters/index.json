@@ -2,7 +2,7 @@
   "encounters": [
     {
       "id": "adultery_woman_001",
-      "version": "1.0",
+      "version": "0.1",
       "image_version": "1.0",
       "emoji": "🪨",
       "status": "coming_soon",
@@ -19,7 +19,7 @@
         "es": "La mujer sorprendida en adulterio"
       },
       "subtitles": {
-        "es": "La expusieron para condenarlo a él. Él la miró a ella."
+        "es": "La expusieron para condenarlo a él. Una lección para muchos."
       },
       "scripture_reference": {
         "es": "Juan 8:1-11"
