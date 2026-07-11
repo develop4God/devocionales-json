@@ -747,13 +747,40 @@
         "es": "adultery_woman_es_001.json"
       },
       "titles": {
-        "es": "La mujer sorprendida en adulterio"
+        "es": "La mujer sorprendida en adulterio",
+        "en": "The Woman Caught in Adultery",
+        "pt": "A mulher surpreendida em adultério",
+        "fr": "La femme surprise en adultère",
+        "de": "Die Frau, die beim Ehebruch ertappt wurde",
+        "ja": "姦淫の場で捕らえられた女",
+        "zh": "行淫时被拿的妇人",
+        "hi": "व्यभिचार में पकड़ी गई स्त्री",
+        "ar": "المرأة التي أُمسكت في الزنا",
+        "fil": "Ang Babaeng Nahuli sa Pangangalunya"
       },
       "subtitles": {
-        "es": "La usaron como trampa para atraparlo. El día que las piedras cayeron."
+        "es": "La usaron como trampa para atraparlo. El día que las piedras cayeron.",
+        "en": "They used her as bait to trap him. The day the stones were dropped.",
+        "pt": "Usaram-na como armadilha para pegá-lo. O dia em que as pedras caíram no chão.",
+        "fr": "Ils l'ont utilisée comme piège pour le piéger. Le jour où les pierres sont tombées.",
+        "de": "Sie benutzten sie als Falle, um ihn zu fangen. Der Tag, an dem die Steine fielen.",
+        "ja": "彼を捕らえる罠として彼女を利用した。石が落とされた日。",
+        "zh": "他们利用她设下圈套来陷害他。石头落地的这一天。",
+        "hi": "उन्होंने उसे जाल के रूप में इस्तेमाल किया ताकि उसे फँसा सकें। वह दिन जब पत्थर गिर गए।",
+        "ar": "استخدموها فخاً لإيقاعه. اليوم الذي سقطت فيه الحجارة.",
+        "fil": "Ginamit nila siya bilang bitag upang siya'y mahuli. Ang araw na bumagsak ang mga bato."
       },
       "scripture_reference": {
-        "es": "Juan 8:1-11"
+        "es": "Juan 8:1-11",
+        "en": "John 8:1-11",
+        "pt": "João 8:1-11",
+        "fr": "Jean 8:1-11",
+        "de": "Johannes 8:1-11",
+        "ja": "ヨハネ8:1-11",
+        "zh": "约翰福音8:1-11",
+        "hi": "यूहन्ना 8:1-11",
+        "ar": "يوحنا 8:1-11",
+        "fil": "Juan 8:1-11"
       },
       "estimated_reading_minutes": {
         "es": 10
