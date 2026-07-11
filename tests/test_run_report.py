@@ -103,7 +103,7 @@ class TestRunReportGateFailure(unittest.TestCase):
         self.assertNotIn("PHASE 3: NEVER REACHED", output)
 
 
-class TestRunReportWarningsOnlyPass(unittest.TestCase):
+class TestRunReportWarningsOnlyFails(unittest.TestCase):
     def run_scenario(self):
         run_report = RunReport("TEST VALIDATION")
         run_report.wrap("PHASE 1: GATE", _phase_ok, final=False)
@@ -113,18 +113,19 @@ class TestRunReportWarningsOnlyPass(unittest.TestCase):
             languages_present=["en"], expected_languages=1, sot_live=False,
         )
         run_report.print_summary()
-        sys.exit(0)
+        sys.exit(run_report.exit_code)
 
     def test_warnings_only_matches_golden(self):
         output = capture(self.run_scenario)
         assert_matches_golden(self, output, "warnings_only_pass.txt")
 
-    def test_warnings_only_exit_code_is_still_zero(self):
-        """A non-gating phase's warnings must not fail the overall run —
-        mirrors encounters' real Phase C (image URL checks)."""
+    def test_warnings_only_exit_code_is_nonzero(self):
+        """Any warning anywhere fails the overall run, even from a
+        non-gating phase — mirrors encounters' real Phase C (image URL
+        checks), which now must also fail CI on unreachable images."""
         with self.assertRaises(SystemExit) as ctx:
             self.run_scenario()
-        self.assertEqual(ctx.exception.code, 0)
+        self.assertEqual(ctx.exception.code, 1)
 
     def test_sot_cached_fallback_wording_appears(self):
         output = capture(self.run_scenario)
