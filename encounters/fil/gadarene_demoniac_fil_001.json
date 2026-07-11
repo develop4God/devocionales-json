@@ -1,0 +1,291 @@
+{
+  "id": "gadarene_demoniac_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fil",
+  "bible_version": "MBB05",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 14,
+  "meta": {
+    "character": "Ang Gerasenong sinapian ng demonyo",
+    "testament": "new",
+    "scripture_reference": "Marcos 5:1-20",
+    "mood_primary": "falling",
+    "accent_color": "#040810",
+    "emoji": "⛓️",
+    "tags": [
+      "kaligtasan",
+      "pagsapi",
+      "pagbabalik-loob",
+      "pagkakakilanlan",
+      "misyon",
+      "batalyon",
+      "geraseno",
+      "jesus",
+      "pakikipagtagpo",
+      "paggaling"
+    ]
+  },
+  "key_verse": {
+    "reference": "Marcos 5:2",
+    "text": "Pagkababa ni Jesus sa bangka, siya'y sinalubong ng isang lalaking sinasapian ng masamang espiritu.",
+    "bible_version": "MBB05"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "storm",
+      "image_url": "gadarene_arrival.png",
+      "title": "Ang kabilang dako ng dagat",
+      "narrative": "Bahagya pang humupa ang bagyo. Ang tubig ay nag-aalimbukay pa rin, tila naaalala ang hangin na pinapayapa ni Jesus. Dumaong ang bangka sa dalampasigan sa lupain ng mga Geraseno, sa kabilang dako ng Dagat ng Galilea. Lupain ito ng mga Hentil. Walang Judiong may takot sa Diyos ang kusang tatawid dito: may mga libingang inukit sa gilid ng burol, at sa itaas nito'y nanginginain nang walang kahihiyan ang isang kawan ng mga baboy. Marumi ang lahat dito. Ngunit unang bumaba si Jesus.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marcos 5:1",
+        "text": "Dumating sila sa ibayo ng lawa, sa lupain ng mga Geraseno."
+      },
+      "revelation_key": "Sinadya ni Jesus na tumawid patungo sa lugar na iniiwasan ng lahat."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "gadarene_tombs.png",
+      "verse_reference": "Marcos 5:2-5",
+      "verse_text": "Pagkababa ni Jesus sa bangka, siya'y sinalubong ng isang lalaking sinasapian ng masamang espiritu. Ang lalaking ito'y nakatira sa mga libingan. Hindi na siya maigapos, kahit tanikala pa ang gamitin. Bagama't madalas siyang gapusin ng tanikala sa kamay at paa, nilalagot lamang niya ang mga ito. Wala nang nakakapigil sa kanya. Araw-gabi'y nagsisisigaw siya sa mga libingan at sa kabundukan, at sinusugatan din niya ng matalas na bato ang kanyang sarili.",
+      "reflection": "Namuhay siya kasama ng mga patay sapagkat sa mga buhay ay wala nang lugar para sa kanya. Idinagdag pa ni Lucas ang isang detalye: wala siyang saplot. Nawala na sa kanya ang huling bagay na nagtatakip sa kanyang lantad na paghihirap. Walang naitulong ang mga tanikalang ikinapit sa kanya ng iba; paulit-ulit niya itong nilalagot, at ang lakas na dapat sana'y magpoprotekta sa kanya ay naging kanyang hatol, na naiiwan siyang mas nag-iisa sa bawat pagkakataon. Araw-gabi siyang sumisigaw sa mga libingan, sinusugatan ang sarili ng matalas na bato. Ang teksto ay itinala lamang kung ano ang idinulot sa kanya ng pagpapahirap.",
+      "revelation_key": "Walang makapigil sa kanya, ngunit wala ring makalapit sa kanya: ang kanyang lakas ay naiwan siyang mas nag-iisa, hindi mas malaya.",
+      "scripture_connections": [
+        {
+          "reference": "Lucas 8:27",
+          "text": "Pagbaba ni Jesus sa bangka, sinalubong siya ng isang lalaking tagaroon na sinasapian ng mga demonyo. Matagal na itong hindi nagsusuot ng damit, ni ayaw ring tumira sa bahay kundi sa mga kuwebang libingan ito namamalagi."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "gadarene_night_torment.png",
+      "title": "Bago pa sumikat ang araw",
+      "narrative": "Sa tuwing nalalagot ng lalaking ito ang kanyang mga tanikala, itinutulak siya ng demonyo patungo sa ilang. Isang detalyeng may mabigat na kahulugang teolohikal ito. Sa Lumang Tipan, ang ilang ay kinikilala bilang lugar ng demonyo, ang teritoryong kabaligtaran ng buhay at pagsasama-sama. Naghirap ang lalaking ito, patuloy siyang hinihila palapit sa mismong sagisag ng kapinsalaan. At araw-gabi, paulit-ulit ang eksenang ito.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 8:29",
+        "text": "Ganoon ang sinabi nito sapagkat inutusan ni Jesus na lumabas ang masamang espiritu. Madalas itong sinasapian ng masasamang espiritu, at kahit ito'y bantayan at tanikalaan ang paa't kamay, pinaglalagut-lagot lamang nito ang mga iyon. Siya'y dinadala ng demonyo sa mga liblib na pook."
+      },
+      "revelation_key": "Tinawid ni Jesus ang dagat patungo sa mismong teritoryo ng kapinsalaan kung saan siya hinihila ng demonyo."
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "gadarene_running_toward.png",
+      "title": "Tumakbo siya patungo sa kanya",
+      "narrative": "Ang lalaking walang makapigil, na sumisira ng tanikala at gapos na parang sinulid, ay nakita si Jesus sa malayo at tumakbo patungo sa kanya. At pagdating niya, lumuhod siya. Ang hiyaw na lumabas sa kanyang bibig ay pagkasindak at pagsusumamo nang sabay: 'Jesus, Anak ng Kataas-taasang Diyos, bakit mo ako pinapakialaman? Ipangako mo sa pangalan ng Diyos na hindi mo ako pahihirapan!' Iyon din ang titulong 'Anak ng Diyos' na ginagamit ng ibang masasamang espiritu kapag nakakaharap si Jesus sa ibang bahagi ng ebanghelyo: alam nilang mabuti kung sino ang nasa harap nila.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marcos 5:6-7",
+        "text": "Malayo pa'y natanaw na nito si Jesus. Patakbo itong lumapit at lumuhod sa harapan niya. Sumigaw siya nang malakas, \"Jesus, Anak ng Kataas-taasang Diyos, bakit mo ako pinapakialaman? Ipangako mo sa pangalan ng Diyos na hindi mo ako pahihirapan!\""
+      },
+      "revelation_key": "Alam ng mga demonyo ang katotohanan tungkol kay Jesus nang higit pa sa maraming pinuno ng relihiyon, ngunit ang pagkakilala sa kanya ay hindi nagligtas sa kanila; ang pananampalatayang nagpapasakop lamang ang nagliligtas.",
+      "scripture_connections": [
+        {
+          "reference": "Marcos 1:24",
+          "text": "\"Ano ang pakay mo sa amin, Jesus na taga-Nazaret? Naparito ka ba upang kami'y puksain? Kilala kita, ikaw ang Banal na mula sa Diyos.\""
+        },
+        {
+          "reference": "Marcos 3:11",
+          "text": "Bawat taong sinasapian ng masamang espiritu na makakita sa kanya ay nagpapatirapa sa harapan niya at sumisigaw, \"Ikaw ang Anak ng Diyos!\""
+        },
+        {
+          "reference": "Santiago 2:19",
+          "text": "Sumasampalataya ka na ang Diyos ay iisa, hindi ba? Mabuti iyan! Ang mga demonyo man ay sumasampalataya rin, at nanginginig pa."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "gadarene_legion_metaphor.png",
+      "title": "Batalyon",
+      "subtitle": "Isang pangalang hiniram sa hukbong nang-api sa Israel",
+      "content": "Nang tanungin siya ni Jesus ng kanyang pangalan, ang sagot ay hindi sagot ng isang tao: 'Batalyon, sapagkat marami kami' (Marcos 5:9). Sa Griego, ang *legiṓn* (λεγιών) ay ang teknikal na termino para sa isang yunit militar ng Roma na binubuo ng humigit-kumulang lima hanggang anim na libong sundalo — ang pinakamalaking hukbong pananakop na maaaring ideploy ng Roma. Bawat Judio o Hentil na namumuhay sa ilalim ng pamamahala ng Roma sa Galilea ay lubos na alam ang bigat ng salitang iyon. Pinili ng demonyo ang mismong sagisag ng kapangyarihang nang-alipin sa kanyang bayan, at ipinasok ito sa katawan ng iisang tao lamang. Ang nang-api sa isang buong bansa ay naipon sa isang maliit na anyo sa loob ng isang katawan ng tao. Nakikiusap ang Batalyon na manatili sa mismong rehiyong iyon (Marcos 5:10) at, kalaunan, nakikiusap na huwag ipadala sa kalaliman (Lucas 8:31): mas gugustuhin nito ang alinmang katawan kaysa wala. Gayunpaman, sa harap ni Jesus, ang buong batalyong ito ay nakikiusap — hindi ito nag-uutos.",
+      "revelation_key": "Ipinapakita ng pangalang 'Batalyon' ang bigat ng pang-aapi na dumating si Jesus upang lansagin, at ang pangamba ng demonyo na maiwang walang katawang matitirhan.",
+      "verse_overlay": {
+        "reference": "Marcos 5:9",
+        "text": "Tinanong siya ni Jesus, \"Ano ang pangalan mo?\" \"Batalyon, sapagkat marami kami,\" tugon niya."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Marcos 5:10",
+          "text": "At nakikiusap siya kay Jesus na huwag silang palayasin sa lugar na iyon."
+        },
+        {
+          "reference": "Lucas 8:31",
+          "text": "Nagmamakaawa kay Jesus ang mga demonyo na huwag silang itapon sa kalalimang walang hanggan."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "scripture_moment",
+      "mood": "intense",
+      "image_url": "gadarene_pigs_herd.png",
+      "verse_reference": "Marcos 5:10-13",
+      "verse_text": "At nakikiusap siya kay Jesus na huwag silang palayasin sa lugar na iyon. Doon naman sa libis ng bundok ay may malaking kawan ng mga baboy na nagsisikain. Nagmakaawa kay Jesus ang masasamang espiritu, \"Pasapiin mo na lamang kami sa mga baboy,\" at sila'y pinahintulutan niya. Lumabas nga sa lalaki ang masasamang espiritu at sumapi sa mga baboy. Ang kawan, na may dalawang libo, ay nagtakbuhan sa gilid ng matarik na bangin hanggang sa nahulog ang mga ito sa lawa at nalunod.",
+      "reflection": "May sariling bigat na simbolo ang mga baboy sa ulat na ito. Ipinahayag ng kautusan sa Levitico na marumi ang mga ito (Levitico 11:7); ang kanilang bilang na napakarami, dalawang libo, ay nagpapatunay na Hentil na teritoryo ito, kung saan hindi umiiral ang kautusang iyon sa araw-araw na buhay. Nakiusap na ang Batalyon na manatili sa rehiyong iyon (Marcos 5:10) at huwag ipadala sa kalaliman (Lucas 8:31); ang paghingi na pasapiin sa mga baboy ay paraan nitong matiyak ang dalawa: mananatiling may katawan at mananatili sa lugar na iyon. Ang mismong lalaking ito ay sinusugatan ang sarili ng matalas na bato (Marcos 5:5): hindi lang sumasapi ang mga demonyo, winawasak nila ang kanilang sinasapian. Nang sumapi sila sa mga baboy, ginawa nila sa mga ito sa loob ng ilang segundo ang ginawa nila sa lalaki sa loob ng mga taon, ngayon ay nasaksihan ng buong bayan. Ang kawan ay nagtakbuhan diretso patungo sa dagat, ang mismong larawan ng kalaliman na lubos nilang kinatatakutan, at doon sila nalunod.",
+      "revelation_key": "Nakiusap ang mga demonyo na mapanatili ang katawan at teritoryo, at ang pakikiusap ding iyon ang naghatid sa kanila sa kalaliman na lubos nilang kinatatakutan.",
+      "scripture_connections": [
+        {
+          "reference": "Levitico 11:7",
+          "text": "Ang baboy, biyak nga ang kuko, ngunit hindi naman ngumunguya ng pagkaing mula sa sikmura, kaya hindi ito dapat kainin."
+        },
+        {
+          "reference": "Marcos 5:10",
+          "text": "At nakikiusap siya kay Jesus na huwag silang palayasin sa lugar na iyon."
+        },
+        {
+          "reference": "Lucas 8:31",
+          "text": "Nagmamakaawa kay Jesus ang mga demonyo na huwag silang itapon sa kalalimang walang hanggan."
+        },
+        {
+          "reference": "Mateo 8:31-32",
+          "text": "Nakiusap sa kanya ang mga demonyo, \"Kung palalayasin mo kami, hayaan mong pumasok kami sa mga baboy na iyon.\" Sinabi ni Jesus, \"Sige, lumayas kayo.\" Lumabas nga sila sa dalawang lalaki at pumasok sa mga baboy. Ang buong kawan ay biglang sumibad ng takbo papunta sa bangin, nahulog sa lawa at nalunod."
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "gadarene_cliff_fall.png",
+      "title": "Ang matarik na bangin",
+      "narrative": "Dalawang libong hayop ang biglang bumagsak sa dalisdis patungo sa tubig sa loob lamang ng isang sandali, at umabot hanggang sa bayan ang ingay nito. Ang mga nag-aalaga sa mga ito ay tumakas nang hindi lumingon at nagmadaling ikalat ang balita sa lungsod at sa mga karatig-nayon. Lumabas sila upang tumingin: ginagamit ng Griego ang ἰδεῖν (idein), ang tumingin nang mabuti, ang suriin nang malapitan. At ang nangyari ay τὸ γεγονός (to gegonos), isang pangyayaring ang bunga ay permanente na, hindi isang panandaliang pagkasindak. Ngunit habang natitigilan ang lahat sa ingay ng mga baboy, may tahimik na nabago sa loob ng lalaki — ang lalaking, ilang saglit lamang bago iyon, ay sumisigaw pa sa mga libingan.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marcos 5:14",
+        "text": "Tumakbo ang mga tagapag-alaga ng kawan ng baboy at ibinalita sa bayan at sa karatig-pook ang mga pangyayari. Kaya't ang mga tao ay nagpuntahan doon upang alamin ang tunay na nangyari."
+      },
+      "revelation_key": "Ang pinakatahimik na himala ay nangyayari habang nakatitig ang lahat sa ingay."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "gadarene_seated_clothed.png",
+      "title": "Nakaupo, nakadamit, matino ang isip",
+      "subtitle": "Tatlong salitang naglalarawan ng ganap na pagbabalik-loob",
+      "content": "Nang dumating ang mga taganayon, natagpuan nila ang lalaking dati'y sumisira ng tanikala, ngayo'y nakaupo sa paanan ni Jesus. Gumagamit ang orihinal na Griego ng tatlong salitang magkakasamang naglalarawan ng ganap na pagbaligtad: καθήμενον (kathḗmenon), nakaupo, sa pustura ng isang alagad na natututo; ἱματισμένον (himatisménon), nakadamit; σωφρονοῦντα (sōphronoûnta), matino ang isip, isang salitang hindi na muling lumilitaw sa buong Ebanghelyo ni Marcos. Ang pagkakaroon niya ng damit at matinong isip ang pisikal at pangkaisipang patunay na wala na ang batalyong dating sumasapi sa kanya. At ang bayan, sa halip na magalak, natakot.",
+      "revelation_key": "Napakaganap ng pagbabalik-loob kaya't natakot pa ang bayan sa himala nang higit sa pagsapi.",
+      "verse_overlay": {
+        "reference": "Marcos 5:15",
+        "text": "Paglapit nila kay Jesus, nakita nila ang lalaking dating sinasapian ng mga demonyo; nakaupo ito, nakadamit at matino na ang isip, at sila'y natakot."
+      }
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "gadarene_crowd_fear.png",
+      "title": "Takot sa hindi makokontrol",
+      "subtitle": "Kung bakit sila nakiusap kay Jesus na umalis",
+      "content": "Ganap na napagaling ang isang tao, at ang tugon ng bayan ay hindi kagalakan kundi pakiusap kay Jesus na umalis. Ginagamit dito ng Griego ang παρακαλέω (parakaleō), ang mismong pandiwang ginagamit ng mga maysakit sa ibang bahagi upang makiusap kay Jesus na sila'y pagalingin. Dito, ginamit ito ng bayan sa kabaliktaran: nakikiusap sila, hindi upang palapitin siya, kundi upang paalisin siya. At hindi lang lungsod ang hiniling nilang iwan niya, kundi ang buong ὅρια (horia), ang buong rehiyon, hanggang sa mga hangganan nito. Bago dumating si Jesus, may pamilyar na panganib ang bayan: alam nila kung saan nakatira ang lalaking sinasapian, kung ano ang ginagawa niya, at na walang tanikalang makapipigil sa kanya, ngunit alam nila kung ano ang aasahan mula sa kanya. Hindi maigapos o mahulaan ang kapangyarihan ni Jesus. Mas pinili nilang panatilihin ang panganib na kilala na nila kaysa sa isang kabutihang lubhang dakila na hindi na nila makontrol.",
+      "revelation_key": "Minsan, mas kinakatakutan natin ang kalayaang dala ni Jesus kaysa sa pagkabihag na papalitan nito.",
+      "verse_overlay": {
+        "reference": "Marcos 5:17",
+        "text": "Dahil dito, nakiusap ang mga tao kay Jesus na umalis siya sa kanilang lupain."
+      }
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "grace",
+      "image_url": "gadarene_begging_to_follow.png",
+      "verse_reference": "Marcos 5:18-19",
+      "verse_text": "Nang sumasakay na si Jesus sa bangka, nakiusap ang dating sinasapian ng mga demonyo na siya'y isama niya, ngunit hindi pumayag si Jesus. Sa halip ay sinabi niya sa lalaki, \"Umuwi ka na at sabihin mo sa iyong mga kamag-anak ang lahat ng ginawa sa iyo ng Panginoon, at kung paano siya nahabag sa iyo.\"",
+      "reflection": "Humihiling ang lalaki na manatili. Naiintindihan naman ito: sa piling ni Jesus siya ay ligtas, samantalang ang bayang kasasaksi lamang sa kanyang paggaling ay siya ring tumanggi sa kanya. Umalis si Jesus sa rehiyong iyon dahil sa pagtangging iyon (Marcos 5:17), ngunit hindi niya lubos na iniwan ang pook: sa halip, isinugo niya ang lalaking maaaring manatili doon kung saan siya mismo ay hindi na malugod na tanggapin. 'Umuwi ka sa iyong mga kamag-anak,' sabi niya sa kanya. Ang mismong mga taong marahil natakot sa kanya, umiwas sa kanya, marahil ay itinuring na siya ay nawala na, ang siyang unang makakarinig mula sa kanyang mismong bibig kung ano ang ginawa ng habag ng Diyos.",
+      "revelation_key": "Kung saan si Jesus ay hindi na malugod na tanggapin, nag-iwan siya ng isang taong sasaksi sa pamamagitan ng kanyang sariling paggaling at pagbabago.",
+      "scripture_connections": [
+        {
+          "reference": "Lucas 8:39",
+          "text": "\"Umuwi ka na at ipamalita mo ang dakilang bagay na ginawa sa iyo ng Diyos.\" Umuwi nga ang lalaki at ipinamalita sa buong bayan ang ginawa sa kanya ni Jesus."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "gadarene_sent_without_staff.png",
+      "title": "Ang tagapaghayag ng sampung lungsod",
+      "subtitle": "Mula sa tinig ng Batalyon patungo sa tinig ng sugo ng Hari",
+      "content": "Isang payak na salita lamang ang sinabi ni Jesus: ὕπαγε (hýpage), 'humayo, umalis' (Marcos 5:19). Sumunod ang lalaki, at ginagamit ng teksto ang κηρύσσω (kēryssō) upang ilarawan ang kanyang ginawa: ang mismong pandiwang inilalaan ni Marcos para sa opisyal na paghahayag ng ebanghelyo, ang pahayag ng isang tagapaghayag na may awtoridad ng isang kaharian. Hindi lamang sa isang bayan niya ito ginawa: nilibot niya ang Decapolis, ang sampung lungsod ng rehiyon. Ilang oras na lang ang nakalipas, nagsasalita pa ang lalaking ito ng tinig ng isang demonyong batalyon. Ngayon, siya'y naghahayag ng tinig ng isang sugo ng Hari sa sampung magkakaibang lungsod. Ang mga tao, ayon sa teksto, ay ἐθαύμαζον (ethaúmazon): sila'y namangha, sa patuloy na anyo, isang pagkamangha na nanatili araw-araw sa bawat isa sa mga lungsod na iyon.",
+      "revelation_key": "Ang mismong lalaking dati'y nagsasalita ng tinig ng isang demonyong batalyon ngayo'y naglilibot sa sampung lungsod nang may tinig ng isang sugo ng Hari.",
+      "verse_overlay": {
+        "reference": "Marcos 5:20",
+        "text": "Umalis ang lalaki at ipinamalita sa buong Decapolis ang ginawa sa kanya ni Jesus. At namangha ang lahat ng nakarinig noon."
+      }
+    },
+    {
+      "order": 12,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "gadarene_decapolis_proclaiming.png",
+      "title": "Ang lupang inihanda",
+      "subtitle": "Ang nangyari sa Decapolis sa pagitan ng Marcos 5 at Marcos 7",
+      "content": "Nakiusap (παρακαλέω, parakaleō) ang bayan kay Jesus na umalis sa rehiyong iyon (Marcos 5:17). Pagkaraan ng mga kabanata, nang bumalik si Jesus sa mismong lugar na iyon, dinala sa kanya ng mga tao ang isang lalaking bingi at pipi at nakiusap sila — ang mismong pandiwa, parakaleō — na ipatong niya rito ang kanyang kamay (Marcos 7:32). Sa pagitan ng dalawang sandaling iyon, hindi na muling tumapak si Jesus sa Decapolis. Ang tanging binhing itinanim sa sampung lungsod na iyon ay isang tao lamang, naglalakad mula plaza hanggang plaza, nagsasalaysay kung ano ang ginawa ni Jesus para sa kanya. Walang ibang nangaral doon. Walang ibang sumubok. Nang bumalik si Jesus, hindi na siya tinanggap ng mga tao nang may takot, kundi may sapat na pananampalataya upang dalhin sa kanya ang kanilang mga maysakit.",
+      "revelation_key": "Ang mismong bayang nakiusap sa kanya na umalis, dahil sa binhing itinanim sa patotoo ng isang tao, ay dinala na ngayon ang kanilang mga maysakit upang pagalingin ni Jesus.",
+      "scripture_connections": [
+        {
+          "reference": "Marcos 7:32",
+          "text": "Dinala ng mga tao sa kanya ang isang lalaking bingi at pipi, at nakiusap sila sa kanya na ipatong niya rito ang kanyang kamay."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "gadarene_discovery.png",
+      "title": "Ang Iyong Pakikipagtagpo",
+      "subtitle": "Walang makapipigil sa kanya na abutin ka, at wala kang maidadahilan upang hindi ito ipahayag.",
+      "discovery_questions": [
+        {
+          "category": "Pananampalataya",
+          "question": "Tumawid si Jesus ng dagat at pumasok sa lupain ng mga Hentil upang hanapin ang isang lalaking sinasapian ng isang batalyon ng mga demonyo, na hindi na alam ng kanyang sariling bayan kung paano tutulungan. Naniniwala ka bang may anumang bagay sa iyo na makapipigil sa kanya na abutin ka kung saan ka man naroroon?"
+        },
+        {
+          "category": "Pagpapasakop",
+          "question": "Ang lalaking napagaling ay nais manatili sa piling ni Jesus, ngunit hindi ito ipinahintulot ni Jesus: may kaibang layunin siya para sa kanya. Naranasan mo bang isinara ng Diyos ang isang pintong akala mo'y siyang susunod na tamang hakbang, at kinailangan mong isuko ang iyong sariling kalooban upang matupad ang kanyang layunin?"
+        },
+        {
+          "category": "Patotoo",
+          "question": "Ang taong ito, na binago ni Jesus, ay pumunta upang ibahagi ang kanyang naranasan nang walang nagturo sa kanya kung paano. Ikaw na nakakita rin ng kamay ng Diyos sa iyong buhay, ano na ang iyong ginawa upang isaksi ang mga dakilang bagay na ginawa ni Jesus para sa iyo? Sino ang iyong dinadalhan ng pananampalataya at pag-asa?"
+        }
+      ],
+      "prayer": {
+        "title": "Panalangin ng isang taong nabalik-loob",
+        "content": "Panginoon, kung papaanong ang taong taga-Geraseno ay namuhay kasama ng mga patay, ako naman ay namuhay sa kamatayan ng mundo at ng kasalanan. Hindi ka nag-alinlangan na hanapin siya, at hindi ka rin nag-alinlangan na hanapin ako. Sa iyo, tumanggap ako ng bagong, walang hanggan, at hindi nasisirang buhay. Ngayon, tulad ng nasaksihan ko sa pakikipagtagpong ito, hinihiling ko sa iyo na palayain mo ako sa lahat ng kasamaan, na wala nang manirahan sa akin na hindi ikaw. Hayaan mo akong dalhin ang patotoo ng mga dakilang bagay na iyong ginawa sa aking buhay tungo sa aking mga kaibigan, sa aking pamilya, sa aking mga kasamahan, sa lahat ng aking maaabot, sapagkat nakita ko ang iyong kamay at nais kong magpatotoo, taglay ang pag-asa, pag-ibig, at buhay na walang hanggan patungo sa iba. Salamat, Panginoon, sapagkat ako ay naibalik na sa iyo; natupad na ang himala. Ngayon, bigyan mo ako ng lakas upang maghasik at ihanda ang lupa para sa araw na ikaw ay bumalik para sa kanila. Sa pangalan ni Jesus, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "gadarene_completion.png",
+      "completion_verse": {
+        "reference": "Marcos 5:19",
+        "text": "ngunit hindi pumayag si Jesus. Sa halip ay sinabi niya sa lalaki, \"Umuwi ka na at sabihin mo sa iyong mga kamag-anak ang lahat ng ginawa sa iyo ng Panginoon, at kung paano siya nahabag sa iyo.\"",
+        "bible_version": "MBB05"
+      },
+      "reflection_prompt": "Sino ang kailangan mong balikan ngayon upang sabihin sa kanila kung ano ang ginawa ng habag ng Diyos sa iyo?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

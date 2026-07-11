@@ -175,6 +175,9 @@ _ROMANCE_COGNATES = {
     'fr': {'courage', 'grace', 'grâce'},
     'pt': {'coragem', 'graça'},
     'es': {'coraje', 'gracia'},
+    # 'Legion' is spelled identically in German (from Latin legio) and is the
+    # word used in the LU17 Bible text itself (Mark 5:9) — not a missed translation.
+    'de': {'legion'},
 }
 
 
