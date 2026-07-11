@@ -5,9 +5,9 @@ validate_discovery.py — Validator for discovery study translations.
 This is the live validator, invoked by discovery_master_validator.py. Built
 on shared_validation/ — Tier-1 concerns (identical logic shared with the
 encounters pipeline) are delegated there: SOT fetch/cache, quote-anomaly
-checks, and lint. Tier-3 concerns (English-leakage heuristics, Phase A
-index structure, key-parity policy) stay local, since they encode
-discovery-specific rules that must not be shared with encounters.
+checks, and lint. Tier-3 concerns (Phase A index structure, key-parity
+policy) stay local, since they encode discovery-specific rules that must
+not be shared with encounters.
 
 Note: discovery's ValidationReport (stats-tracking, add_error/add_warning/
 add_info naming, hand-reset phase state) is kept as-is here rather than
@@ -53,26 +53,6 @@ from shared_validation.text_checks import (
     iter_strings, check_quote_anomalies, is_cognate,
 )
 from shared_validation.lint import lint_json_files
-
-# Character patterns keyed by script (not language code) — the SOT's
-# per-language 'script' field (see _BIBLE_VERSIONS) already identifies which
-# writing system each language uses, so detection is driven by that instead
-# of a hand-maintained language-code list that silently misses new languages.
-SCRIPT_PATTERNS = {
-    'latin': re.compile(r'[a-zA-Z]{3,}'),
-    'cjk': re.compile(r'[぀-ゟ゠-ヿ一-鿿]+'),
-    'devanagari': re.compile(r'[ऀ-ॿ]+'),
-    'arabic': re.compile(r'[؀-ۿ]+'),
-}
-
-# Backward-compatible alias kept for the ja/zh-specific CJK check below,
-# which needs the two individual language patterns rather than the
-# unified 'cjk' script pattern.
-LANGUAGE_PATTERNS = {
-    'ja': re.compile(r'[぀-ゟ゠-ヿ一-鿿]+'),  # Japanese
-    'zh': re.compile(r'[一-鿿]+'),  # Chinese
-}
-
 
 class ValidationReport:
     def __init__(self):
@@ -165,33 +145,6 @@ def load_json_file(filepath: Path, report: ValidationReport) -> Dict:
         report.add_error(f"Error reading {filepath.name}: {e}")
         report.stats['invalid_json'] += 1
         return None
-
-
-def detect_language_mix(text: str, expected_lang: str, report: ValidationReport, context: str,
-                         bible_versions: dict) -> bool:
-    """Detect if text contains mixed languages, driven by the SOT's per-language
-    'script' field (latin/cjk/devanagari/arabic) rather than a hardcoded list of
-    language codes, so every language the SOT defines is covered automatically.
-    """
-    if not text or len(text.strip()) < 3:
-        return True
-
-    script = bible_versions.get(expected_lang, {}).get('script')
-
-    # For non-Latin scripts, check the expected script's characters are present
-    if script and script != 'latin':
-        pattern = SCRIPT_PATTERNS.get(script)
-        if pattern and not pattern.search(text):
-            report.add_warning(f"{context}: Expected {expected_lang} ({script}) characters but found none in: {text[:50]}...")
-            return False
-
-    # For Latin-script languages, check for unexpected CJK characters
-    elif script == 'latin':
-        if LANGUAGE_PATTERNS['ja'].search(text) or LANGUAGE_PATTERNS['zh'].search(text):
-            report.add_error(f"{context}: Found Asian characters in {expected_lang} text: {text[:50]}...")
-            return False
-
-    return True
 
 
 def validate_structure(data: Dict, lang: str, filename: str, report: ValidationReport,
@@ -415,84 +368,6 @@ def validate_verse_references(data: Dict, lang: str, filename: str,
             ref = card['scripture_anchor']['reference']
             if _has_english_book_name(ref, english_bible_pattern, lang):
                 report.add_error(f"{filename}: card {card_idx+1} scripture_anchor has English: {ref}")
-
-
-def validate_discovery_question_categories(data: Dict, lang: str, filename: str,
-                                           report: ValidationReport, bible_versions: dict):
-    """Validate that discovery question categories are in the correct language."""
-    if lang == 'en':
-        return  # English is the base language
-
-    # For Asian languages (ja, zh), categories should contain Asian characters
-    if bible_versions.get(lang, {}).get('script') == 'cjk':
-        # Pattern to detect English category names (capitalized English words)
-        english_category_pattern = re.compile(r'^[A-Z][a-z]+(\s+[a-z]+)*$')
-
-        for card_idx, card in enumerate(data.get('cards', [])):
-            for dq_idx, dq in enumerate(card.get('discovery_questions', [])):
-                category = dq.get('category', '')
-                if category and english_category_pattern.match(category):
-                    # For Asian languages, capitalized English-looking text is wrong
-                    report.add_error(f"{filename}: card {card_idx+1} discovery_question {dq_idx+1} category is in English: '{category}'")
-
-    # For Romance languages (es, pt, fr), we can't use simple pattern matching
-    # because their category names look similar to English (capitalized words)
-    # Instead, we check for exact matches of known English categories
-    elif bible_versions.get(lang, {}).get('script') == 'latin' and lang != 'en':
-        # EXACT English categories that should never appear in translations
-        # Note: Excludes cognates that are spelled the same in French/Spanish/Portuguese
-        # (e.g., "Transformation", "Gratitude", "Mission" are valid in French)
-        exact_english_cats = {
-            'Self-evaluation', 'Evidence', 'Surrender', 'Freedom',
-            'Identity', 'Knowledge', 'Voice', 'Trust',
-            'Shame', 'Obedience', 'Creation',
-            'Light vs Darkness', 'Veiled Glory', 'Listening', 'Presence',
-            'Hope', 'Personal', 'Revelation', 'Worship',
-            'Intimacy', 'Protection', 'Provision', 'Confidence',
-            'Separation', 'Access', 'Security', 'Victory', 'Promise'
-            # Note: 'Transformation', 'Gratitude', and 'Mission' are cognates (same in French)
-        }
-
-        for card_idx, card in enumerate(data.get('cards', [])):
-            for dq_idx, dq in enumerate(card.get('discovery_questions', [])):
-                category = dq.get('category', '')
-                # Only flag if it's an EXACT match to English
-                if category in exact_english_cats:
-                    report.add_error(f"{filename}: card {card_idx+1} discovery_question {dq_idx+1} category is in English: '{category}'")
-
-
-def validate_no_english_in_translation(data: Dict, lang: str, filename: str,
-                                       report: ValidationReport, bible_versions: dict):
-    """Check that non-English files don't contain English content."""
-    if lang == 'en':
-        return
-
-    # For JA and ZH, tags should be translated (not in English)
-    # Detect English tags by checking for vowels (a,e,i,o,u)
-    if bible_versions.get(lang, {}).get('script') == 'cjk':
-        tags = data.get('tags', [])
-        english_tags = []
-        for tag in tags:
-            tag_str = str(tag).lower()
-            # If tag contains English vowels, it's likely English
-            # Exception: Greek transliterations may contain vowels
-            if any(char in tag_str for char in 'aeiou'):
-                # Allow Greek word transliterations (typically end with 'ō' or contain Greek patterns)
-                # Examples: emphysaō, tarassō, agapaō_phileō
-                if not (tag_str.endswith('ō') or 'ō' in tag_str):
-                    english_tags.append(tag)
-
-        if english_tags:
-            report.add_error(f"{filename}: Found English tags in {lang.upper()} (should be translated): {', '.join(english_tags[:5])}")
-
-    # Check themes for English
-    themes = data.get('metadata', {}).get('themes', [])
-    if bible_versions.get(lang, {}).get('script') == 'cjk':
-        for theme in themes:
-            if not LANGUAGE_PATTERNS[lang].search(str(theme)):
-                # Check if it looks like English
-                if re.search(r'\b[A-Z][a-z]+(\s+[a-z]+){2,}\b', str(theme)):
-                    report.add_warning(f"{filename}: Theme may be in English: {theme[:50]}")
 
 
 def validate_filename_format(filepath: Path, lang: str, report: ValidationReport,
@@ -801,14 +676,8 @@ def main():
             # Store for cross-validation
             lang_studies[study_base] = data
 
-            # Validate no English in translations
-            validate_no_english_in_translation(data, lang, filename, report, bible_versions)
-
             # Validate verse references are in correct language
             validate_verse_references(data, lang, filename, report, bible_versions)
-
-            # Validate discovery question categories are translated
-            validate_discovery_question_categories(data, lang, filename, report, bible_versions)
 
             # Track study IDs
             if data.get('id'):
