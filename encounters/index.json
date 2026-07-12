@@ -740,7 +740,7 @@
       "intro_image": "adultery_woman_alone_center.png",
       "mood_primary": "intense",
       "accent_color": "#7a2e2e",
-      "has_interactive": true,
+      "has_interactive": false,
       "testament": "new",
       "character": "The Woman Caught in Adultery",
       "files": {

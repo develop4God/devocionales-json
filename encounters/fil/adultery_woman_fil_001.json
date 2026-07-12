@@ -93,7 +93,13 @@
         "reference": "Juan 8:6",
         "text": "Itinanong nila ito upang subukin siya, at upang may maiparatang sila laban sa kanya. Ngunit yumuko lamang si Jesus at sumulat sa lupa sa pamamagitan ng daliri."
       },
-      "revelation_key": "Sa harap ng bitag, unang sumagot si Jesus sa katahimikan, nakasulat sa alabok."
+      "revelation_key": "Sa harap ng bitag, unang sumagot si Jesus sa katahimikan, nakasulat sa alabok.",
+      "scripture_connections": [
+        {
+          "reference": "Marcos 1:7",
+          "text": "At nangaral siya, sinasabi, \"Darating ang isa pagkatapos ko na makapangyarihan pa kaysa sa akin, na hindi ako karapat-dapat yumuko upang kalagan ang tali ng kanyang sandalyas.\""
+        }
+      ]
     },
     {
       "order": 5,
