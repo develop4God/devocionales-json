@@ -122,6 +122,28 @@ All verse lookups, citation translation, and verse text extraction must use `dev
 - `accent_color`, `celebration_type` — visual config
 - `meta.mood_primary`, `meta.accent_color`, `meta.emoji`
 
+**`id` trap:** `id` must be the bare encounter id with **no language suffix**
+(e.g. `adultery_woman_001`), identical across all 10 language files and matching
+`index.json`'s top-level `id` for this encounter exactly. It must **never** become
+`adultery_woman_{lang}_001` — that pattern belongs only in the *filename*
+(`{encounter_id}_{lang}_001.json`), not inside the JSON content. This shipped wrong
+in all 10 language files for one encounter (every file, including the EN master,
+had the language suffix baked into `id`), because the per-language filename pattern
+bled into the field value and no single-language critic review checks a value that
+looks "correct" in isolation. Before delivery, run this exact check against
+`index.json`'s canonical id and fail the batch if any file differs:
+```bash
+python3 -c "
+import json, glob
+canon = json.load(open('encounters/index.json'))
+canon_id = next(e['id'] for e in canon['encounters'] if e['id'] == '{encounter_id}')
+for f in glob.glob('encounters/*/{encounter_id}_*_001.json'):
+    fid = json.load(open(f))['id']
+    assert fid == canon_id, f'{f} has id={fid!r}, expected {canon_id!r}'
+print('OK: all files match canonical id', canon_id)
+"
+```
+
 ### Always translate:
 - `language` → target language code
 - `bible_version` — appears in **3 places**, translate ALL three consistently:
@@ -345,7 +367,8 @@ Register Rules" above) and should be replaced with 你.
 2. Updated `encounters/index.json`
 3. Validation log showing ✅ ALL ENCOUNTERS PASSED
 4. Native-speaker critic review completed for each language (see "MANDATORY: Native-Speaker Critic Review" above) — fixes applied, not just reported
-5. Reading time table:
+5. `id` field check passed for all language files (see "`id` trap" under JSON Rules) — run the assert script and confirm `OK: all files match canonical id` before delivery
+6. Reading time table:
 
 | Language | Adjustment | Minutes |
 |---|---|---|
