@@ -1,5 +1,5 @@
 {
-  "id": "adultery_woman_en_001",
+  "id": "adultery_woman_fil_001",
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "fil",
@@ -35,7 +35,7 @@
       "mood": "tense",
       "image_url": "adultery_woman_temple_dawn.png",
       "title": "Sa Madaling-araw, sa Templo",
-      "narrative": "Nagigising ang templo bago pa magising ang buong lungsod. Nagdaan ang gabi si Jesus sa Bundok ng mga Olibo at maagang nagbalik; umupo siya upang magturo, at nagtipon-tipon ang mga tao sa palibot niya. May nagmamadaling mga yabag at humahalinhinang mga tinig na tumagos sa karamihan. Dinala nila siya at inilagay sa gitna, sa harap ng lahat.",
+      "narrative": "Nagigising ang templo bago pa magising ang buong lungsod. Ginugol ni Jesus ang gabi sa Bundok ng mga Olibo at maagang nagbalik; umupo siya upang magturo, at nagtipon-tipon ang mga tao sa palibot niya. May nagmamadaling mga yabag at tumataas na mga tinig na tumagos sa karamihan. Dinala nila siya at inilagay sa gitna, sa harap ng lahat.",
       "ambient_sound": "crowd_distant",
       "haptic": null,
       "verse_overlay": {
@@ -50,13 +50,13 @@
       "mood": "intense",
       "image_url": "adultery_woman_trap_laid.png",
       "verse_reference": "Juan 8:4-6",
-      "verse_text": "at sinabi kay Jesus, “Guro, ang babaing ito'y nahuli sa aktong pangangalunya. Ayon sa Kautusan ni Moises, dapat batuhin hanggang sa mamatay ang mga katulad niya. Ano naman ang masasabi ninyo?” Itinanong nila ito upang subukin siya, at nang may maiparatang sila laban sa kanya. Ngunit yumuko lamang si Jesus at sumulat sa lupa sa pamamagitan ng daliri.",
+      "verse_text": "at sinabi kay Jesus, “Guro, ang babaing ito'y nahuli sa aktong pangangalunya. Ayon sa Kautusan ni Moises, dapat batuhin hanggang sa mamatay ang mga katulad niya. Ano naman ang masasabi ninyo?” Itinanong nila ito upang subukin siya, at upang may maiparatang sila laban sa kanya. Ngunit yumuko lamang si Jesus at sumulat sa lupa sa pamamagitan ng daliri.",
       "reflection": "Ang tanong ay dinisenyo upang siluhin siya sa alinmang sagot niya. Kung sasabihin ni Jesus na palayain siya, sasalungat siya sa kautusan ni Moises. Kung sasabihin niyang batuhin siya, sasalungat siya sa lahat ng itinuro niya tungkol sa awa. Sa kasaysayan, ang karapatang magpatupad ng parusang kamatayan ay nasa Roma lamang, kaya't sa alinmang sagot ay malalagay sa panganib legal si Jesus. Tinatawag nila siyang Διδάσκαλε (Didáskale), “Guro” — isang titulong may paggalang na dito'y naging maskara, dahil sinasabi ng mismong talata na ginawa nila ito πειράζοντες (peirazontes), sinusubok siya nang may layuning silo siya, hindi upang matuto. Ang kagandahang-asal sa salita at ang pagkapoot sa layunin ay magkatabi sa iisang pangungusap. Siya ang pain; ang tunay na tudlaan ay si Jesus.",
       "revelation_key": "Para kay Jesus itinakda ang bitag. Siya'y hinila lang doon upang gamiting pain.",
       "scripture_connections": [
         {
           "reference": "Levitico 20:10",
-          "text": "“Ang lalaking mangangalunya sa asawa ng iba ay dapat patayin, gayundin ang babae."
+          "text": "“Ang lalaking mangangalunya sa asawa ng iba ay dapat patayin, gayundin ang babae.”"
         }
       ]
     },
@@ -67,7 +67,7 @@
       "image_url": "adultery_woman_alone_center.png",
       "title": "Sa Gitna ng Lahat",
       "subtitle": "Ang nararamdaman kapag ang kasalanan ay naging palabas",
-      "content": "Dinala siya nang mag-isa ng mga tagapagturo ng Kautusan at mga Pariseo. Sa sandaling iyon, siya'y naging isang usapin ng batas, isang pyesa sa larong legal ng mga umaakusa sa kanya. Ang kautusan ni Moises ay nag-uutos ng parehong parusa para sa lalaki at babaing nahuli sa pangangalunya (Deuteronomio 22:22), ngunit siya lamang ang nakatayo sa gitna ng templo. Siya lamang ang kahihiyan ang inilantad sa harap ng lahat.\n\nAlam nila ang kasalanan niya nang tiyak — “nahuli sa aktong pangangalunya” — at ginamit nila ito bilang sandata. Nananahimik siya sa buong kuwento, nakatayo sa gitna, habang nagtatalo ang mga lalaki tungkol sa kapalaran niya sa itaas ng kanyang ulo.",
+      "content": "Dinala siya nang mag-isa ng mga tagapagturo ng Kautusan at mga Pariseo. Sa sandaling iyon, siya'y naging isang usapin ng batas, isang pyesa sa larong legal ng mga umaakusa sa kanya. Ang kautusan ni Moises ay nag-uutos ng parehong parusa para sa lalaki at babaing nahuli sa pangangalunya (Deuteronomio 22:22), ngunit siya lamang ang nakatayo sa gitna ng templo. Siya lamang ang kahihiyang inilantad sa harap ng lahat.\n\nAlam nila ang kasalanan niya nang tiyak — “nahuli sa aktong pangangalunya” — at ginamit nila ito bilang sandata. Nananahimik siya sa buong kuwento, nakatayo sa gitna, habang nagtatalo ang mga lalaki tungkol sa kapalaran niya sa itaas ng kanyang ulo.",
       "revelation_key": "Nawala ang pagkatao niya sa bigat ng pagiging isang usapin ng batas.",
       "verse_overlay": {
         "reference": "Juan 8:3",
@@ -76,7 +76,7 @@
       "scripture_connections": [
         {
           "reference": "Deuteronomio 22:22",
-          "text": "“Kapag ang isang lalaki'y nahuling kasiping ang asawa ng iba, pareho silang dapat patayin. Sa ganyang paraan ninyo aalisin ang ganitong uri ng kasamaan sa Israel."
+          "text": "“Kapag ang isang lalaki'y nahuling kasiping ang asawa ng iba, pareho silang dapat patayin. Sa ganyang paraan ninyo aalisin ang ganitong uri ng kasamaan sa Israel.”"
         }
       ]
     },
@@ -86,12 +86,12 @@
       "mood": "tense",
       "image_url": "adultery_woman_jesus_writing.png",
       "title": "Ang Daliri sa Alabok",
-      "narrative": "Nananahimik muna si Jesus. Ginagamit ng Griego ang κάτω κύψας (kato kypsas) — “yumuko” — ang parehong tindig ng pisikal na pagpapakumbaba na inilarawan ni Juan Bautista bilang hindi niya karapat-dapat gawin sa harap ni Jesus (Marcos 1:7). Dito, si Jesus mismo ang gumagawa nito, kusang-loob, habang nakatayo pa rin ang mga umaakusa. Sumulat siya sa lupa gamit ang kanyang daliri, nang walang sinasabi tungkol sa kanyang isinusulat. Humaba ang katahimikan. Iginigiit ng mga umaakusa ang tanong sa kanya, inuulit ito, lalong pinipilit.",
+      "narrative": "Nananahimik muna si Jesus. Ginagamit ng Griego ang κάτω κύψας (kato kypsas) — “yumuko” — ang parehong tindig ng pisikal na pagpapakumbaba. Ito rin ang tindig na sinabi ni Juan Bautista na hindi niya karapat-dapat gawin sa harap ni Jesus (Marcos 1:7). Dito, si Jesus mismo ang gumagawa nito, kusang-loob, habang nakatayo pa rin ang mga umaakusa. Sumulat siya sa lupa gamit ang kanyang daliri, nang walang sinasabi tungkol sa kanyang isinusulat. Humaba ang katahimikan. Iginigiit ng mga umaakusa ang tanong sa kanya, inuulit ito, lalong pinipilit.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
         "reference": "Juan 8:6",
-        "text": "Itinanong nila ito upang subukin siya, at nang may maiparatang sila laban sa kanya. Ngunit yumuko lamang si Jesus at sumulat sa lupa sa pamamagitan ng daliri."
+        "text": "Itinanong nila ito upang subukin siya, at upang may maiparatang sila laban sa kanya. Ngunit yumuko lamang si Jesus at sumulat sa lupa sa pamamagitan ng daliri."
       },
       "revelation_key": "Sa harap ng bitag, unang sumagot si Jesus sa katahimikan, nakasulat sa alabok."
     },
@@ -102,11 +102,11 @@
       "image_url": "adultery_woman_dust_closeup.png",
       "title": "Ang Isinulat Niya sa Alabok",
       "subtitle": "Isang kilos na makikilala ng tradisyong Judio",
-      "content": "Ang salitang Griego na ginamit dito para sa “sumulat” (κατέγραφεν, kategraphen) ay hindi ang karaniwang salita para sa pagsulat. May mas malakas itong kahulugan: ang pagtatala ng isang paratang, gaya ng pagbibilang ng utang. Naniniwala ang ilang iskolar na ito'y kaugnay ng isang larawan sa Lumang Tipan, kung saan ang paglayo sa Diyos ay inihahambing sa pagiging “isinulat sa alabok” (Jeremias 17:13). Kung totoo ito, hindi lamang basta sumusulat si Jesus: nagtatala siya ng isang paratang. At ang mga umaakusa, na lubos na nakaaalam ng mga Kasulatan, agad na mauunawaan ito.\n\nBinubuksan lamang ng teksto ang pagbasang ito. Ito ang tanging pagkakataon sa mga ebanghelyo na sumulat si Jesus. Higit pa sa pagtataka kung ano ang isinulat niya, may saysay na dahan-dahang pagnilayan ang nangyayari sa mga sandaling iyon: bawat umaakusa, sa katahimikan, ay nahaharap sa sariling budhi.",
+      "content": "Ang salitang Griego na ginamit dito para sa “sumulat” (κατέγραφεν, kategraphen) ay hindi ang karaniwang salita para sa pagsulat. May mas malakas itong kahulugan: ang pagtatala ng isang paratang, gaya ng pagbibilang ng utang. Naniniwala ang ilang iskolar na ito'y kaugnay ng isang larawan sa Lumang Tipan, kung saan ang paglayo sa Diyos ay inihahambing sa pagiging “isinulat sa alabok” (Jeremias 17:13). Kung totoo ito, hindi lamang basta sumusulat si Jesus: nagtatala siya ng isang paratang. At ang mga umaakusa, na lubos na nakaaalam ng mga Kasulatan, agad na mauunawaan ito.\n\nIniiwan ng teksto ang interpretasyong ito nang bukas. Ito ang tanging pagkakataon sa mga ebanghelyo na sumulat si Jesus. Higit pa sa pagtataka kung ano ang isinulat niya, may saysay na dahan-dahang pagnilayan ang nangyayari sa mga sandaling iyon: bawat umaakusa, sa katahimikan, ay nahaharap sa sariling budhi.",
       "revelation_key": "Ang alabok ay naging isang salaming walang makaiiwas tingnan.",
       "verse_overlay": {
         "reference": "Juan 8:6",
-        "text": "Itinanong nila ito upang subukin siya, at nang may maiparatang sila laban sa kanya. Ngunit yumuko lamang si Jesus at sumulat sa lupa sa pamamagitan ng daliri."
+        "text": "Itinanong nila ito upang subukin siya, at upang may maiparatang sila laban sa kanya. Ngunit yumuko lamang si Jesus at sumulat sa lupa sa pamamagitan ng daliri."
       },
       "scripture_connections": [
         {
@@ -136,7 +136,7 @@
       "mood": "grace",
       "image_url": "adultery_woman_stones_dropped.png",
       "title": "Isa-isa",
-      "narrative": "Ang isinulat ni Jesus, at ang kundisyong kararating lamang niyang itinakda, ay naghaharap sa mga umaakusa sa kani-kanilang budhi. Nagsimula silang umalis, sabi ng teksto, magmula sa pinakamatanda — sila na may pinakamataas na kapangyarihan at kaalaman sa Kautusan, marahil ang unang nakaunawa na ang bitag na sarili nilang itinakda ay wala nang lulutasan. Isa-isa silang umatras, sa katahimikan, hanggang sa mawala ang huli.",
+      "narrative": "Ang isinulat ni Jesus, at ang kundisyong kararating lamang niyang itinakda, ay pinaharap ang mga umaakusa sa kani-kanilang budhi. Nagsimula silang umalis, sabi ng teksto, magmula sa pinakamatanda — sila na may pinakamataas na kapangyarihan at kaalaman sa Kautusan, marahil ang unang nakaunawa na ang bitag na sarili nilang itinakda ay wala nang lulutasan. Isa-isa silang umatras, sa katahimikan, hanggang sa mawala ang huli.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
@@ -167,7 +167,7 @@
       "image_url": "adultery_woman_face_jesus.png",
       "title": "Wala Po, Ginoo",
       "subtitle": "Ang una at tanging mga salita niya sa buong kuwento",
-      "content": "Isipin ang eksena. Isipin sandali ang kararanasan niya lang.\n\nMula sa sandaling dinala siya hanggang ngayon, nananahimik siya. Nang hindi niya alam, siya pala'y may isang tagapagtanggol na may kakayahang sumagot para sa kanya. Kaninang-kanina pa lamang siya nakatayo doon, hinihintay ang kamatayan. Ngayon, tinatanong siya ni Jesus: nasaan na ang mga umaakusa sa kanya? Wala na bang humatol sa kanya? Sumasagot siya nang dalawang salita lamang: “Wala po, Ginoo.”\n\nDamang-dama niya ang bigat ng hatol na hindi kailanman dumating. Nadarama niya, sa sandaling iyon, ang buhay na muntik na niyang mawala, ibinabalik sa kanya, buo at ganap.",
+      "content": "Isipin ang eksena. Isipin sandali ang kararanasan niya lang.\n\nMula sa sandaling dinala siya hanggang ngayon, nananahimik siya. Nang hindi niya alam, siya pala'y may isang tagapagtanggol na may kakayahang sumagot para sa kanya. Kanina pa lamang siya nakatayo doon, hinihintay ang kamatayan. Ngayon, tinatanong siya ni Jesus: nasaan na ang mga umaakusa sa kanya? Wala na bang humatol sa kanya? Sumasagot siya nang dalawang salita lamang: “Wala po, Ginoo.”\n\nDamang-dama niya ang bigat ng hatol na hindi kailanman dumating. Nadarama niya, sa sandaling iyon, ang buhay na muntik na niyang mawala, ibinabalik sa kanya, buo at ganap.",
       "revelation_key": "Ang una niyang mga salita ang pintuan patungo sa sasabihin ni Jesus.",
       "verse_overlay": {
         "reference": "Juan 8:10-11",
