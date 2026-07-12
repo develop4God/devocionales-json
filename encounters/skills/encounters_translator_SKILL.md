@@ -87,26 +87,23 @@ download_url  = version_entry["url"]
 display_name  = version_entry["name"]                # e.g. "Reina-Valera 1960"
 ```
 
-**Step 3 — Download & decompress to `bible_database/` if not present:**
+**Step 3 — Download to `bible_database/` if not present (do NOT extract):**
 ```python
 DB_DIR   = "bible_database"
 local_gz = os.path.join(DB_DIR, remote_file)
-local_db = local_gz.replace(".gz", "")              # e.g. "bible_database/RVR1960_es.SQLite3"
 
-if not os.path.exists(local_db):
-    if not os.path.exists(local_gz):
-        print(f"Downloading {remote_file}...")
-        urllib.request.urlretrieve(download_url, local_gz)
-    with gzip.open(local_gz, "rb") as gz_in, open(local_db, "wb") as db_out:
-        shutil.copyfileobj(gz_in, db_out)
+if not os.path.exists(local_gz):
+    print(f"Downloading {remote_file}...")
+    urllib.request.urlretrieve(download_url, local_gz)
 ```
 
-**Step 4 — Pass the decompressed path to VerseResolver:**
+**Step 4 — Pass the `.gz` path directly to VerseResolver:**
+`VerseResolver` accepts a `.gz` path directly and decompresses internally to a temp file — never manually gzip-decompress the SQLite yourself.
 ```python
 from verse_resolver import VerseResolver
 
 # No book_map.json needed — native book names come from the DB's books table
-with VerseResolver(local_db) as resolver:
+with VerseResolver(local_gz) as resolver:
     citation, text, error = resolver.resolve("John 3:16")
 ```
 
@@ -239,15 +236,13 @@ Warnings about cognates (FR/PT/ES) and reading time differences from EN are expe
 translating agent also cannot reliably catch its own register mistakes (this is exactly
 how the HI plural-Jesus error shipped). So after each language file passes validation,
 before delivery, spawn a **fresh subagent (NOT HAIKU model)** (no shared context with the translator) with
-this prompt, substituting the language and file path:
+exactly this prompt, substituting the language, and nothing more:
 
-> You are a native {language} speaker. Read this file line by line, taking your time.
-> Report: Typos / Grammar Errors, and Awkward / Non-native-sounding phrasing. For each
-> issue found, propose the exact diff/fix. Also check it against the per-language
-> register rule in `encounters/skills/encounters_translator_skill.md` § "MANDATORY GATE:
-> Per-Language Register Rules". After completing the validation, for any error you find,
-> search broader in the file to see if there is a repeat pattern to document, and report
-> your findings.
+> you are a native {language} speaker, read this file and tell me if you find: Typos /
+> Grammar Errors, Awkward / Non-native-sounding phrasing take your time line by line,
+> your comments in English. After complete the validation any error you find, search
+> broader in the file to see if you have a repeat pattern to document and inform your
+> findings.
 
 Apply the fixes the critic finds, then re-run `validate_encounters.py` to confirm the
 edits didn't break structure. Do this per language file — do not skip it for languages
