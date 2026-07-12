@@ -1,0 +1,270 @@
+{
+  "id": "adultery_woman_de_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "de",
+  "bible_version": "LU17",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 11,
+  "meta": {
+    "character": "Die Frau, die beim Ehebruch ertappt wurde",
+    "testament": "new",
+    "scripture_reference": "Johannes 8:1-11",
+    "mood_primary": "intense",
+    "accent_color": "#7a2e2e",
+    "emoji": "🪨",
+    "tags": [
+      "Gnade",
+      "öffentliche Schande",
+      "Verurteilung",
+      "Falle",
+      "Barmherzigkeit",
+      "Wiederherstellung"
+    ]
+  },
+  "key_verse": {
+    "reference": "Johannes 8:11",
+    "text": "Sie aber sprach: Niemand, Herr. Jesus aber sprach: So verdamme ich dich auch nicht; geh hin und sündige hinfort nicht mehr.",
+    "bible_version": "LU17"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_temple_dawn.png",
+      "title": "Im Morgengrauen, im Tempel",
+      "narrative": "Der Tempel erwacht, bevor die Stadt es tut. Jesus hat die Nacht auf dem Ölberg verbracht und kehrt früh zurück; er setzt sich, um zu lehren, und die Menschen versammeln sich um ihn. Hastige Schritte und aufsteigende Stimmen durchschneiden die Menge. Sie bringen sie herbei und stellen sie in die Mitte, vor aller Augen.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 8:2-3",
+        "text": "Frühmorgens aber kam Jesus wieder in den Tempel, und alles Volk kam zu ihm, und er setzte sich und lehrte sie. Da brachten die Schriftgelehrten und die Pharisäer eine Frau, beim Ehebruch ergriffen, und stellten sie in die Mitte"
+      },
+      "revelation_key": "Sie bringen sie an den Ort, wo Jesus lehrt, mit böser Absicht."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "intense",
+      "image_url": "adultery_woman_trap_laid.png",
+      "verse_reference": "Johannes 8:4-6",
+      "verse_text": "und sprachen zu ihm: Meister, diese Frau ist auf frischer Tat beim Ehebruch ergriffen worden. Mose hat uns im Gesetz geboten, solche Frauen zu steinigen. Was sagst du? Das sagten sie aber, um ihn zu versuchen, auf dass sie etwas hätten, ihn zu verklagen. Aber Jesus bückte sich nieder und schrieb mit dem Finger auf die Erde.",
+      "reflection": "Die Frage ist so gestellt, dass jede Antwort ihn in eine Falle führt. Sagt Jesus, man solle sie freilassen, widerspricht er dem Gesetz des Mose. Sagt er, man solle sie steinigen, widerspricht er allem, was er über Barmherzigkeit gelehrt hat. Historisch lag die Vollmacht, Hinrichtungen durchzuführen, allein bei Rom, was Jesus mit jeder Antwort in rechtliche Gefahr gebracht hätte. Sie nennen ihn Διδάσκαλε (Didáskale), 'Meister' — ein Titel des Respekts, der hier zur Maske wird, denn derselbe Abschnitt sagt, dass sie dies πειράζοντες (peirazontes) taten, ihn versuchend mit der Absicht, ihn zu fangen, nicht um von ihm zu lernen. Höflichkeit im Wort und Feindseligkeit in der Absicht liegen im selben Satz nebeneinander. Sie ist der Köder; das eigentliche Ziel ist Jesus.",
+      "revelation_key": "Die Falle ist für Jesus gestellt. Sie wurde hereingezerrt, um sie zu ködern.",
+      "scripture_connections": [
+        {
+          "reference": "3. Mose 20:10",
+          "text": "Wenn jemand die Ehe bricht mit der Frau seines Nächsten, so sollen beide des Todes sterben, Ehebrecher und Ehebrecherin, weil er mit der Frau seines Nächsten die Ehe gebrochen hat."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "adultery_woman_alone_center.png",
+      "title": "Mitten unter allen",
+      "subtitle": "Wie es sich anfühlt, wenn Sünde zum Schauspiel wird",
+      "content": "Nur sie wird nach vorn gebracht. In diesem Moment ist sie zu einem Testfall geworden, zu einer Figur im juristischen Spiel ihrer Ankläger. Das Gesetz des Mose forderte dieselbe Strafe für Mann und Frau, die beim Ehebruch ertappt wurden (5. Mose 22:22), doch nur sie steht in der Mitte des Tempels. Nur ihre Schande wird vor aller Augen bloßgelegt.\n\nSie kennen ihre Sünde bis ins Detail — 'auf frischer Tat ertappt' — und benutzen sie als Munition. Im Bericht bleibt sie stumm, steht in der Mitte, während Männer über ihrem Kopf hinweg über ihr Schicksal streiten.",
+      "revelation_key": "Ihre Menschlichkeit verschwindet unter der Last, ein Rechtsfall geworden zu sein.",
+      "verse_overlay": {
+        "reference": "Johannes 8:3",
+        "text": "Da brachten die Schriftgelehrten und die Pharisäer eine Frau, beim Ehebruch ergriffen, und stellten sie in die Mitte"
+      },
+      "scripture_connections": [
+        {
+          "reference": "5. Mose 22:22",
+          "text": "Wenn jemand dabei ergriffen wird, dass er bei einer Frau schläft, die einen Ehemann hat, so sollen sie beide sterben, der Mann und die Frau, bei der er geschlafen hat; so sollst du das Böse aus Israel wegtun."
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_jesus_writing.png",
+      "title": "Der Finger im Staub",
+      "narrative": "Jesus schweigt zunächst. Das griechische κάτω κύψας (kato kypsas) — 'sich niederbücken' — beschreibt dieselbe körperliche Demutshaltung, die Johannes der Täufer als unwürdig für sich vor Jesus bezeichnet (Markus 1:7). Hier ist es Jesus, der sie bereitwillig einnimmt, während die Ankläger stehen bleiben. Er schreibt mit seinem Finger auf die Erde, ohne zu sagen, was er schreibt. Das Schweigen zieht sich hin. Die Ankläger bedrängen ihn, wiederholen die Frage, drängen stärker.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 8:6",
+        "text": "Das sagten sie aber, um ihn zu versuchen, auf dass sie etwas hätten, ihn zu verklagen. Aber Jesus bückte sich nieder und schrieb mit dem Finger auf die Erde."
+      },
+      "revelation_key": "Angesichts der Falle antwortet Jesus zuerst mit Schweigen, geschrieben in den Staub.",
+      "scripture_connections": [
+        {
+          "reference": "Markus 1:7",
+          "text": "Und er predigte und sprach: Nach mir kommt der, der stärker ist als ich; ich bin nicht wert, dass ich mich vor ihm bücke und die Riemen seiner Schuhe löse."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "adultery_woman_dust_closeup.png",
+      "title": "Was er in den Staub schrieb",
+      "subtitle": "Eine Geste, die die jüdische Tradition erkannt hätte",
+      "content": "Das griechische Wort, das hier für 'schrieb' verwendet wird (κατέγραφεν, kategraphen), ist nicht das gewöhnliche Wort für Schreiben. Es trägt einen stärkeren Sinn: eine Anklage festhalten, wie wenn jemand Buch über eine Schuld führt. Manche Gelehrte glauben, dies greife ein alttestamentliches Bild auf, in dem die Abkehr von Gott damit verglichen wird, 'in den Staub geschrieben' zu werden (Jeremia 17:13). Falls dem so ist, schrieb Jesus nicht ohne Grund: er schrieb eine Anklage. Und die Ankläger, die die Schrift gut kannten, hätten es sofort verstanden.\n\nDer Text lässt diese Deutung offen. Es ist das einzige Mal in den Evangelien, dass Jesus schreibt. Über die Frage hinaus, was er schrieb, lohnt es sich, bei dem zu verweilen, was geschah: Jeder Ankläger sieht sich, im Schweigen, seinem eigenen Gewissen gegenüber.",
+      "revelation_key": "Der Staub wird zu einem Spiegel, in den keiner von ihnen zu blicken vermeiden kann.",
+      "verse_overlay": {
+        "reference": "Johannes 8:6",
+        "text": "Das sagten sie aber, um ihn zu versuchen, auf dass sie etwas hätten, ihn zu verklagen. Aber Jesus bückte sich nieder und schrieb mit dem Finger auf die Erde."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Jeremia 17:13",
+          "text": "Denn du, HERR, bist die Hoffnung Israels. Alle, die dich verlassen, müssen zuschanden werden, und die Abtrünnigen müssen auf die Erde geschrieben werden; denn sie verlassen den HERRN, die Quelle des lebendigen Wassers."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_stands_up.png",
+      "title": "Eine unmögliche Bedingung",
+      "narrative": "Jesus richtet sich auf und spricht: \"Wer unter euch ohne Sünde ist, der werfe den ersten Stein auf sie.\" Das griechische Wort für 'ohne Sünde' (ἀναμάρτητος, anamartetos) erscheint im ganzen Neuen Testament nur ein einziges Mal — genau hier. Es verlangt kein allgemein anerkanntes moralisches Leben. Es verlangt völlige Freiheit von jeder Verfehlung. Jesus stellt eine Bedingung, die keiner der Anwesenden erfüllen kann. Dann bückt er sich wieder, in dieselbe Haltung wie zuvor, und schreibt weiter auf die Erde.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 8:7-8",
+        "text": "Als sie ihn nun beharrlich so fragten, richtete er sich auf und sprach zu ihnen: Wer unter euch ohne Sünde ist, der werfe den ersten Stein auf sie. Und er bückte sich wieder und schrieb auf die Erde."
+      },
+      "revelation_key": "Ein einziger Satz, und Jesus bückt sich wieder, zurück zum Staub."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "adultery_woman_stones_dropped.png",
+      "title": "Einer nach dem anderen",
+      "narrative": "Was Jesus schrieb, und die Bedingung, die er soeben gestellt hatte, lassen sie ihrem eigenen Gewissen gegenüberstehen. Sie beginnen zu gehen, sagt der Text, angefangen bei den Ältesten — jenen mit der größten Autorität und Kenntnis des Gesetzes, vielleicht die Ersten, die erkannten, dass die Falle, die sie selbst gestellt hatten, nun keinen Ausweg mehr bot. Einer nach dem anderen ziehen sie sich zurück, im Schweigen, bis der Letzte gegangen ist.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 8:9",
+        "text": "Als sie das hörten, gingen sie hinaus, einer nach dem andern, die Ältesten zuerst; und Jesus blieb allein mit der Frau, die in der Mitte stand."
+      },
+      "revelation_key": "Die Menge, die kam, um zu verurteilen, löst sich vor ihrem eigenen Gewissen auf."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "adultery_woman_alone_with_jesus.png",
+      "title": "Nur die beiden",
+      "narrative": "Der Tempel, der eben noch voller Ankläger war, birgt nun nur noch zwei Menschen: Jesus und sie, stehend, wo man sie zurückgelassen hat, allein im leeren Raum. Es ist der stillste Wendepunkt des Berichts. Der Einzige mit voller Vollmacht, sie zu verurteilen, ist der, der bleibt.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 8:9",
+        "text": "...und Jesus blieb allein mit der Frau, die in der Mitte stand."
+      },
+      "revelation_key": "Alle gingen. Er blieb."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "adultery_woman_face_jesus.png",
+      "title": "Niemand, Herr",
+      "subtitle": "Ihre ersten und einzigen Worte im ganzen Bericht",
+      "content": "Stell dir die Szene vor. Stell dir für einen Moment vor, was sie soeben durchlebt hat.\n\nVon dem Moment an, als man sie brachte, bis jetzt, hat sie geschwiegen. Ohne es zu wissen, hatte sie den einen Fürsprecher, der für sie antworten konnte. Noch vor einem Augenblick stand sie da und erwartete den Tod. Nun fragt Jesus sie: Wo sind ihre Ankläger? Hat niemand sie verurteilt? Sie antwortet mit zwei Worten: 'Niemand, Herr.'\n\nSie konnte das Gewicht des Urteils spüren, das nie kam. Sie konnte, in diesem Augenblick, spüren, wie das Leben, das sie gerade zu verlieren drohte, ihr zurückgegeben wurde, ganz und unversehrt.",
+      "revelation_key": "Ihre ersten Worte sind das Tor zu dem, was Jesus ihr gleich sagen wird.",
+      "verse_overlay": {
+        "reference": "Johannes 8:10-11",
+        "text": "Da richtete Jesus sich auf und sprach zu ihr: Wo sind sie, Frau? Hat dich niemand verdammt? Sie aber sprach: Niemand, Herr."
+      }
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "adultery_woman_no_condemnation.png",
+      "verse_reference": "Johannes 8:11",
+      "verse_text": "Jesus aber sprach: So verdamme ich dich auch nicht; geh hin und sündige hinfort nicht mehr.",
+      "reflection": "Jesus benennt die Sünde direkt — 'sündige nicht mehr' — und erklärt sie im selben Atemzug für frei. Gnade und Wahrheit halten sich, jede in ihrer ganzen Fülle. Es ist dieselbe Spannung, die Johannes vom ersten Kapitel seines Evangeliums an beschreibt (Johannes 1:17).",
+      "revelation_key": "Gnade benennt die Sünde und löst sie im selben Atemzug.",
+      "scripture_connections": [
+        {
+          "reference": "Johannes 1:17",
+          "text": "Denn das Gesetz ist durch Mose gegeben; die Gnade und Wahrheit ist durch Jesus Christus geworden."
+        },
+        {
+          "reference": "Römer 8:1",
+          "text": "So gibt es nun keine Verdammnis für die, die in Christus Jesus sind."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "adultery_woman_law_fulfilled.png",
+      "title": "Die Entscheidung Jesu",
+      "subtitle": "Der Einzige, der berechtigt ist zu richten",
+      "content": "Die Bedingung, die Jesus stellt, erfüllt nur er selbst. Von allen Anwesenden, einschließlich derer, die gegangen sind, ist Jesus der Einzige, der wirklich ohne Sünde ist.\n\nDas bedeutet, Jesus hatte die Vollmacht, den ersten Stein zu werfen. Niemand sonst hatte sie. Und genau er ist es, der ihn nicht wirft.\n\nDas griechische Wort für 'verurteilen' (κατακρίνω, katakrino) meint hier ein förmliches Urteil, einen Spruch mit wirklicher Vollmacht gefällt. Jesus ist der Einzige mit diesem Recht über sie. Und er entscheidet sich, sie für frei zu erklären.",
+      "revelation_key": "Der Einzige mit dem Recht zu verurteilen ist der, der sich entscheidet wiederherzustellen.",
+      "verse_overlay": {
+        "reference": "Johannes 8:7",
+        "text": "Wer unter euch ohne Sünde ist, der werfe den ersten Stein auf sie."
+      }
+    },
+    {
+      "order": 12,
+      "type": "character_moment",
+      "mood": "peace",
+      "image_url": "adultery_woman_walking_away.png",
+      "title": "Geh hin und sündige nicht mehr",
+      "subtitle": "Die Gnade, die vergibt, ist dieselbe Gnade, die sendet",
+      "content": "Jesus gibt ihr, zusammen mit ihrer Freiheit, eine Richtung: 'sündige nicht mehr.' Das griechische Verb, das er hier verwendet, ἁμάρτανε (hamartane), steht in einer Zeitform, die eine fortgesetzte Handlung beschreibt — kein einzelnes, vereinzeltes Straucheln, sondern eine fortwährende Lebensweise. Jesus befreit sie nicht nur von der Vergangenheit; er lädt sie ein, für den Rest ihres Lebens eine andere Richtung einzuschlagen.\n\nDie Gnade, die sie empfängt, bleibt nicht bei der Vergebung stehen. Sie wird zu einer Einladung, auf ein anderes Leben zuzugehen.",
+      "revelation_key": "Die Gnade, die sie befreit, ist dieselbe Gnade, die sie zu einem anderen Leben sendet.",
+      "verse_overlay": {
+        "reference": "Johannes 8:11",
+        "text": "So verdamme ich dich auch nicht; geh hin und sündige hinfort nicht mehr."
+      }
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "adultery_woman_interactive_stone.png",
+      "title": "Deine Begegnung",
+      "subtitle": "Vom Urteil zur Gnade: deine innere Prüfung.",
+      "discovery_questions": [
+        {
+          "category": "Ehrlichkeit",
+          "question": "Die Pharisäer klagten anhand des Gesetzes an, ohne auf ihre eigenen Fehler zu blicken. Wann hast du dich berechtigt gefühlt, jemanden zu richten, weil du dich für besser oder weniger schuldig gehalten hast als diese Person?"
+        },
+        {
+          "category": "Gnade",
+          "question": "Trotz ihrer Fehler befreite Jesus sie und schenkte ihr ein neues Leben, ohne dass sie irgendetwas dafür getan hätte. Dieselbe Freiheit hat Jesus dir geschenkt, als du ihn als deinen Retter angenommen hast. Lebst du frei, ohne die Fesseln der Sünde, in diesem neuen Leben, das Christus dir gegeben hat?"
+        },
+        {
+          "category": "Bestimmung",
+          "question": "Denk an jemanden, dem du heute nur schwer vergeben oder den du nur schwer aufhören kannst zu verurteilen. Wenn Gott dir dieselbe Gnade geschenkt hat, die er ihr schenkte, ohne dass du sie verdient hättest, was hindert dich daran, dieselbe Gnade dieser Person zu schenken?"
+        }
+      ],
+      "prayer": {
+        "title": "Gebet für empfangene Gnade",
+        "content": "Danke, Herr, denn genau wie die Frau in dieser Geschichte habe auch ich deine unverdiente Gnade empfangen. Vergib mir, dass ich mich an die Stelle des Richters über andere gestellt habe, oft hart, ohne die Barmherzigkeit, die du mir gezeigt hast. Hilf mir, jeden Stein loszulassen, Herr, um andere mit Gnade anzusehen und denen zu vergeben, die mir Unrecht getan und an mir gesündigt haben. Hilf mir, ein neues Leben zu führen, gestärkt in dir, deinem Willen gehorsam an jedem Tag meines Lebens. In Jesu Namen, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "adultery_woman_completion.png",
+      "completion_verse": {
+        "reference": "Johannes 8:11",
+        "text": "Sie aber sprach: Niemand, Herr. Jesus aber sprach: So verdamme ich dich auch nicht; geh hin und sündige hinfort nicht mehr.",
+        "bible_version": "LU17"
+      },
+      "reflection_prompt": "Wenn Jesus dich nicht verurteilt, warum solltest du dann fortfahren, dich selbst zu verurteilen oder andere zu verurteilen?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

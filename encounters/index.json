@@ -747,7 +747,13 @@
         "es": "adultery_woman_es_001.json",
         "en": "adultery_woman_en_001.json",
         "pt": "adultery_woman_pt_001.json",
-        "fr": "adultery_woman_fr_001.json"
+        "fr": "adultery_woman_fr_001.json",
+        "de": "adultery_woman_de_001.json",
+        "ja": "adultery_woman_ja_001.json",
+        "zh": "adultery_woman_zh_001.json",
+        "hi": "adultery_woman_hi_001.json",
+        "ar": "adultery_woman_ar_001.json",
+        "fil": "adultery_woman_fil_001.json"
       },
       "titles": {
         "es": "La mujer sorprendida en adulterio",
@@ -789,7 +795,13 @@
         "es": 10,
         "en": 10,
         "pt": 12,
-        "fr": 12
+        "fr": 12,
+        "de": 11,
+        "ja": 13,
+        "zh": 13,
+        "hi": 12,
+        "ar": 11,
+        "fil": 12
       }
     }
   ]
