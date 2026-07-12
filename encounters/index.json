@@ -733,10 +733,10 @@
     },
     {
       "id": "adultery_woman_001",
-      "version": "0.1",
+      "version": "1.0",
       "image_version": "1.0",
       "emoji": "🪨",
-      "status": "coming_soon",
+      "status": "published",
       "intro_image": "adultery_woman_alone_center.png",
       "mood_primary": "intense",
       "accent_color": "#7a2e2e",
@@ -773,8 +773,8 @@
         "pt": "Usaram-na como armadilha para pegá-lo. O dia em que as pedras caíram no chão.",
         "fr": "Ils l'ont utilisée comme piège pour le piéger. Le jour où les pierres sont tombées.",
         "de": "Sie benutzten sie als Falle, um ihn zu fangen. Der Tag, an dem die Steine fielen.",
-        "ja": "彼を捕らえる罠として彼女を利用した。石が落とされた日。",
-        "zh": "他们利用她设下圈套来陷害他。石头落地的这一天。",
+        "ja": "彼を捕らえる罠として彼女を利用した。彼らが石を置いた日。",
+        "zh": "他们利用她设下圈套来陷害他。他们放下石头的那一天。",
         "hi": "उन्होंने उसे जाल के रूप में इस्तेमाल किया ताकि उसे फँसा सकें। वह दिन जब पत्थर गिर गए।",
         "ar": "استخدموها فخاً لإيقاعه. اليوم الذي سقطت فيه الحجارة.",
         "fil": "Ginamit nila siya bilang bitag upang siya'y mahuli. Ang araw na bumagsak ang mga bato."
