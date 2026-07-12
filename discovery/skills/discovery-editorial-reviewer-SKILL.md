@@ -208,6 +208,28 @@ rewrite the sentence.
 
 ---
 
+### 11. Per-language register gate (non-Spanish files) — MANDATORY
+A card can pass Rules 1-10 and still use the wrong grammatical register for its
+language — check for that too before approving. See `discovery-translator-SKILL.md`
+§ "MANDATORY GATE: Per-Language Register Rules" for the rule per language (e.g. Hindi
+requires respectful plural verbs for Jesus, not just plural pronouns — "यीशु आया" is
+wrong, "यीशु आए" is right). Does not apply to quoted verse fields, which follow the
+cited Bible version's own grammar.
+
+---
+
+### 12. Post-fix reverse validation & pattern sweep — MANDATORY
+Whenever a review session (yours or a native-speaker critic's) results in file edits,
+do not report the review done right after applying the fixes. See
+`discovery-translator-SKILL.md` § "MANDATORY GATE: Post-Fix Reverse Validation &
+Pattern Sweep" and run that full procedure: re-read the complete file, verify each edit
+still matches its card's `revelation_key` and scripture reference, sweep the whole file
+for the same error pattern the critic just found, and validate JSON. A grammatically
+correct fix that quietly guts the sentence's meaning is a worse outcome than the
+original error — it looks resolved but isn't.
+
+---
+
 ## CARD-BY-CARD REVIEW PROTOCOL
 
 For each card, check in this order:
@@ -232,6 +254,7 @@ For each card, check in this order:
 - [ ] Greek/Hebrew terms explained inline where they appear (Rule 7)
 - [ ] Language accessible to all readers (Rule 8)
 - [ ] Card adds something new vs. adjacent cards (Rule 6)
+- [ ] Per-language register correct, for non-Spanish files (Rule 11)
 
 ### C. Theological check
 - [ ] Reflections are grounded directly in the biblical text
