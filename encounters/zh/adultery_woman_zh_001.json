@@ -1,0 +1,270 @@
+{
+  "id": "adultery_woman_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "zh",
+  "bible_version": "CUV1919",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 13,
+  "meta": {
+    "character": "行淫时被拿的妇人",
+    "testament": "new",
+    "scripture_reference": "约翰福音 8:1-11",
+    "mood_primary": "intense",
+    "accent_color": "#7a2e2e",
+    "emoji": "🪨",
+    "tags": [
+      "恩典",
+      "公开羞辱",
+      "定罪",
+      "圈套",
+      "怜悯",
+      "恢复"
+    ]
+  },
+  "key_verse": {
+    "reference": "约翰福音 8:11",
+    "text": "她说：「主啊，没有。」耶稣说：「我也不定你的罪，去吧！从此不要再犯罪了。」",
+    "bible_version": "CUV1919"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_temple_dawn.png",
+      "title": "黎明时分，在圣殿里",
+      "narrative": "天还没亮，圣殿里已经有了动静。耶稣在橄榄山上度过了一夜，清早便回来；他坐下教导众人，百姓聚集在他周围。急促的脚步声和渐高的说话声划破了人群。他们把她带来，推到众人中间，站在所有人面前。",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "约翰福音 8:2-3",
+        "text": "清早又回到殿里。众百姓都到他那里去，他就坐下教训他们。文士和法利赛人带着一个行淫时被拿的妇人来，叫她站在当中。"
+      },
+      "revelation_key": "他们把她带到耶稣教导众人的地方，心怀恶意。"
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "intense",
+      "image_url": "adultery_woman_trap_laid.png",
+      "verse_reference": "约翰福音 8:4-6",
+      "verse_text": "就对耶稣说：「夫子，这妇人是正行淫之时被拿的。摩西在律法上吩咐我们，把这样的妇人用石头打死。你说该把她怎么样呢？」他们说这话，乃试探耶稣，要得着告他的把柄。耶稣却弯着腰用指头在地上画字。",
+      "reflection": "这个问题是设计来陷害他的，无论他怎么回答都会落入圈套。若耶稣说释放她，就与摩西的律法相悖；若他说用石头打死她，就与他一直教导的怜悯相悖。从历史来看，执行死刑的权柄只属于罗马，无论耶稣怎么回答，都会让他陷入法律上的危险。他们称他为「夫子」（Διδάσκαλε）——这是一个表示尊敬的称呼，但在这里却成了一副面具，因为同一段经文说，他们这样做是试探（πειράζοντες，peirazontes），意在设陷阱，而非求教。话语中的礼貌与用意中的敌意，就这样并排出现在同一句话里。她是诱饵，真正的目标是耶稣。",
+      "revelation_key": "陷阱是为耶稣设的，她被拖来只是作诱饵。",
+      "scripture_connections": [
+        {
+          "reference": "利未记 20:10",
+          "text": "与邻舍之妻行淫的，奸夫淫妇都必治死。"
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "adultery_woman_alone_center.png",
+      "title": "在众人中间",
+      "subtitle": "当罪变成一场公开示众时，是什么感觉",
+      "content": "文士和法利赛人单单把她带来。在那一刻，她已经沦为一个测试案例，一枚棋子，被用在控告者的法律游戏里。摩西的律法规定，行淫的男人和女人都要受同样的刑罚（申命记22:22），但站在圣殿中间的，只有她一人。被公开揭露的羞辱，也只落在她一人身上。\n\n他们清楚知道她的罪——「正行淫之时被拿」——并把这当作攻击的弹药。整段记载中她始终沉默，站在中间，任由男人们在她头顶争论她的命运。",
+      "revelation_key": "在沦为一桩法律案件的重压下，她的人性消失了。",
+      "verse_overlay": {
+        "reference": "约翰福音 8:3",
+        "text": "文士和法利赛人带着一个行淫时被拿的妇人来，叫她站在当中。"
+      },
+      "scripture_connections": [
+        {
+          "reference": "申命记 22:22",
+          "text": "若遇见人与有丈夫的妇人行淫，就要将奸夫、淫妇一并治死。这样，就把那恶从以色列中除掉。"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_jesus_writing.png",
+      "title": "尘土中的手指",
+      "narrative": "耶稣先是沉默不语。希腊原文用κάτω κύψας（kato kypsas）——「弯下腰」——这正是施洗约翰形容自己不配在耶稣面前采取的、身体谦卑的姿态（马可福音1:7）。此刻，是耶稣甘愿采取了这个姿态，而控告者仍旧站立。他用手指在地上写字，一句话也不说，也没人知道他写的是什么。沉默持续着。控告者步步紧逼，反复追问，加大压力。",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "约翰福音 8:6",
+        "text": "他们说这话，乃试探耶稣，要得着告他的把柄。耶稣却弯着腰用指头在地上画字。"
+      },
+      "revelation_key": "面对陷阱，耶稣先以沉默作答，写在尘土之中。",
+      "scripture_connections": [
+        {
+          "reference": "马可福音 1:7",
+          "text": "他传道说：「有一位在我以后来的，能力比我更大，我就是弯腰给他解鞋带也不配。」"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "adultery_woman_dust_closeup.png",
+      "title": "他在尘土中写了什么",
+      "subtitle": "犹太传统会认出的一个举动",
+      "content": "这里所用的「写」这个希腊词（κατέγραφεν，kategraphen）并不是常见的书写用词，它带着更强的含义：记录一项罪状，就像有人在清点罪债。一些学者认为，这呼应了旧约中的一个意象——离弃神被比作「写在土里」（耶利米书17:13）。若果真如此，耶稣并非单纯地随手书写：他是在写下一项罪状。而那些深谙圣经的控告者，会立刻明白这一点。\n\n经文并未给出确切答案，留下开放的解读空间。这是福音书中唯一一次记载耶稣动笔写字。除了猜测他写了什么，更值得思想的是当时正在发生的事：每一个控告者，都在沉默中面对自己的良心。",
+      "revelation_key": "尘土变成了一面镜子，没有人能避而不看。",
+      "verse_overlay": {
+        "reference": "约翰福音 8:6",
+        "text": "他们说这话，乃试探耶稣，要得着告他的把柄。耶稣却弯着腰用指头在地上画字。"
+      },
+      "scripture_connections": [
+        {
+          "reference": "耶利米书 17:13",
+          "text": "耶和华以色列的盼望啊，凡离弃你的必至蒙羞。耶和华说：「离开我的，他们的名字必写在土里，因为他们离弃我这活水的泉源。」"
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_stands_up.png",
+      "title": "一个不可能达到的条件",
+      "narrative": "耶稣直起腰来，开口说话：「你们中间谁是没有罪的，谁就可以先拿石头打她。」希腊词「没有罪」（ἀναμάρτητος，anamartetos）在整本新约中仅出现这一次——就在这里。它要求的不是一般意义上道德良好的生活，而是完全无可指摘、毫无瑕疵。耶稣所设的条件，在场没有一个人能够达到。随后，他再次弯下腰，回到先前的姿势，继续在地上写字。",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "约翰福音 8:7-8",
+        "text": "他们还是不住的问他，耶稣就直起腰来，对他们说：「你们中间谁是没有罪的，谁就可以先拿石头打她。」于是又弯着腰用指头在地上画字。"
+      },
+      "revelation_key": "一句话说完，耶稣再次弯下腰，回到尘土之中。"
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "adultery_woman_stones_dropped.png",
+      "title": "一个接一个",
+      "narrative": "耶稣所写的，以及他刚刚立下的条件，让他们不得不面对自己的良心。经文说，他们开始离去，从年长的开始——这些人拥有最高的权柄，也最熟悉律法，或许也是最先意识到，自己设下的陷阱如今已无路可退的人。他们一个接一个地退去，在沉默中，直到最后一人离开。",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "约翰福音 8:9",
+        "text": "他们听见这话，就从老到少一个一个的都出去了，只剩下耶稣一人，还有那妇人仍然站在当中。"
+      },
+      "revelation_key": "本要来定罪的群众，在自己的良心面前土崩瓦解。"
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "adultery_woman_alone_with_jesus.png",
+      "title": "只剩他们两人",
+      "narrative": "刚才还挤满控告者的圣殿，如今只剩下两个人：耶稣，还有她，仍站在原地，独自留在空荡的空间里。这是整段记载中最安静的转折点。唯一拥有权柄定她罪的那一位，正是留下来的那一位。",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "约翰福音 8:9",
+        "text": "……只剩下耶稣一人，还有那妇人仍然站在当中。"
+      },
+      "revelation_key": "所有人都离开了，他留了下来。"
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "adultery_woman_face_jesus.png",
+      "title": "主啊，没有",
+      "subtitle": "她在整段记载中唯一开口说的第一句话",
+      "content": "想象一下这个场景。想象她刚刚经历了什么。\n\n从被带来的那一刻起直到现在，她一直沉默不语。她并不知道，那位能为她辩护的唯一辩护人，此刻正站在她身边。片刻之前，她还等待着死亡的降临。如今耶稣问她：她的控告者在哪里？没有人定她的罪吗？她只用两个字回答：「没有。」\n\n她能感受到那从未落下的判决的重量。她能感受到，在那一刻，自己原本就要失去的生命，又完整无缺地被交还给了她。",
+      "revelation_key": "她的第一句话，是通往耶稣接下来要对她说的话的门槛。",
+      "verse_overlay": {
+        "reference": "约翰福音 8:10-11",
+        "text": "耶稣就直起腰来，对她说：「妇人，那些人在那里呢？没有人定你的罪么？」她说：「主啊，没有。」"
+      }
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "adultery_woman_no_condemnation.png",
+      "verse_reference": "约翰福音 8:11",
+      "verse_text": "耶稣说：「我也不定你的罪，去吧！从此不要再犯罪了。」",
+      "reflection": "耶稣直接指出了罪——「不要再犯罪了」——却在同一句话里宣告她自由。恩典与真理彼此维系，各自完整。这正是约翰从他福音书第一章起就描述的那种张力（约翰福音1:17）。",
+      "revelation_key": "恩典说出罪的名字，又在同一口气中将它释放。",
+      "scripture_connections": [
+        {
+          "reference": "约翰福音 1:17",
+          "text": "律法本是借着摩西传的；恩典和真理都是由耶稣基督来的。"
+        },
+        {
+          "reference": "罗马书 8:1",
+          "text": "如今，那些在基督耶稣里的就不定罪了。"
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "adultery_woman_law_fulfilled.png",
+      "title": "耶稣的决定",
+      "subtitle": "唯一有资格审判的那一位",
+      "content": "耶稣所立的条件，只有他自己能够达到。在场所有人，包括已经离去的那些，唯有耶稣是真正没有罪的。\n\n这意味着，耶稣本有权柄扔出第一块石头，没有人拥有这样的权柄。而正是他，选择不扔出去。\n\n这里「定罪」所用的希腊词（κατακρίνω，katakrino）指的是一项正式的裁决，一个带着真实权柄宣布的判决。耶稣是唯一对她拥有这种权柄的人，而他选择宣告她自由。",
+      "revelation_key": "唯一有权定罪的那一位，选择了恢复。",
+      "verse_overlay": {
+        "reference": "约翰福音 8:7",
+        "text": "你们中间谁是没有罪的，谁就可以先拿石头打她。"
+      }
+    },
+    {
+      "order": 12,
+      "type": "character_moment",
+      "mood": "peace",
+      "image_url": "adultery_woman_walking_away.png",
+      "title": "去吧，不要再犯罪了",
+      "subtitle": "赦免的恩典，也是差遣的恩典",
+      "content": "耶稣在赐给她自由的同时，也指明了方向：「不要再犯罪了。」他在这里所用的希腊动词ἁμάρτανε（hamartane），时态描述的是一种持续的行动——不是单一、孤立的一次跌倒，而是一种行走的方式。耶稣不仅仅是把她从过去释放出来，他邀请她走上余生一条不同的道路。\n\n她所领受的恩典，并不止步于赦免，它成了一份邀请，邀她走向另一种生命。",
+      "revelation_key": "释放她的恩典，也是差遣她走向不同生命的恩典。",
+      "verse_overlay": {
+        "reference": "约翰福音 8:11",
+        "text": "我也不定你的罪，去吧！从此不要再犯罪了。"
+      }
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "adultery_woman_interactive_stone.png",
+      "title": "你的相遇",
+      "subtitle": "从定罪到恩典：你内心的省察。",
+      "discovery_questions": [
+        {
+          "category": "诚实",
+          "question": "法利赛人凭着律法控告她，却不曾看自己的过犯。你是否曾经觉得自己有资格评判别人，认为自己比对方更好、罪过更少？"
+        },
+        {
+          "category": "恩典",
+          "question": "尽管她有过犯，耶稣仍释放了她，赐给她新的生命，而她没有做任何事去换取这份恩典。当你接受耶稣作你救主的时候，他也把同样的自由赐给了你。你现在是否活在那份自由中，活在基督赐给你的新生命里，不再被罪捆绑？"
+        },
+        {
+          "category": "目的",
+          "question": "想一想今天有没有一个你难以饶恕、总想批判的人。如果神把同样的恩典赐给了你，而你并不配得，那么是什么拦阻你把同样的恩典给予那个人？"
+        }
+      ],
+      "prayer": {
+        "title": "为所领受的恩典祷告",
+        "content": "谢谢你，主，因为就像这个故事里的妇人一样，我也领受了你不配得的恩典。求你赦免我常常站在评判别人的位置上，态度苛刻，却没有活出你向我所显的怜悯。求你帮助我放下每一块石头，主啊，让我能以恩典看待他人，饶恕那些亏负我、得罪我的人。求你帮助我活出新生命，靠着你刚强，天天遵行你的旨意。奉耶稣的名祷告，阿们。"
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "adultery_woman_completion.png",
+      "completion_verse": {
+        "reference": "约翰福音 8:11",
+        "text": "她说：「主啊，没有。」耶稣说：「我也不定你的罪，去吧！从此不要再犯罪了。」",
+        "bible_version": "CUV1919"
+      },
+      "reflection_prompt": "如果耶稣不定你的罪，你又何必继续定自己的罪，或是继续论断别人？",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

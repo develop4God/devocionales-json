@@ -1,0 +1,270 @@
+{
+  "id": "adultery_woman_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fil",
+  "bible_version": "MBB05",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 12,
+  "meta": {
+    "character": "Ang Babaing Nahuli sa Pangangalunya",
+    "testament": "new",
+    "scripture_reference": "Juan 8:1-11",
+    "mood_primary": "intense",
+    "accent_color": "#7a2e2e",
+    "emoji": "🪨",
+    "tags": [
+      "biyaya",
+      "pampublikong kahihiyan",
+      "paghatol",
+      "patibong",
+      "awa",
+      "pagpapanumbalik"
+    ]
+  },
+  "key_verse": {
+    "reference": "Juan 8:11",
+    "text": "“Wala po, Ginoo,” sagot ng babae. Sinabi ni Jesus, “Hindi rin kita hahatulan. Umuwi ka na, at mula ngayon ay huwag ka nang gumawa ng kasalanan.”",
+    "bible_version": "MBB05"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_temple_dawn.png",
+      "title": "Sa Madaling-araw, sa Templo",
+      "narrative": "Nagigising ang templo bago pa magising ang buong lungsod. Ginugol ni Jesus ang gabi sa Bundok ng mga Olibo at maagang nagbalik; umupo siya upang magturo, at nagtipon-tipon ang mga tao sa palibot niya. May nagmamadaling mga yabag at tumataas na mga tinig na tumagos sa karamihan. Dinala nila siya at inilagay sa gitna, sa harap ng lahat.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 8:2-3",
+        "text": "Kinabukasan, maaga pa'y nagbalik na siya sa Templo. Lumapit sa kanya ang lahat kaya't umupo siya at nagsimula siyang magturo. Dumating noon ang mga tagapagturo ng Kautusan at mga Pariseo na may dalang isang babaing nahuli sa pangangalunya. Iniharap nila ito sa karamihan,"
+      },
+      "revelation_key": "Dinala nila siya sa lugar na kinaroroonan ni Jesus habang nagtuturo, may masamang balak."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "intense",
+      "image_url": "adultery_woman_trap_laid.png",
+      "verse_reference": "Juan 8:4-6",
+      "verse_text": "at sinabi kay Jesus, “Guro, ang babaing ito'y nahuli sa aktong pangangalunya. Ayon sa Kautusan ni Moises, dapat batuhin hanggang sa mamatay ang mga katulad niya. Ano naman ang masasabi ninyo?” Itinanong nila ito upang subukin siya, at upang may maiparatang sila laban sa kanya. Ngunit yumuko lamang si Jesus at sumulat sa lupa sa pamamagitan ng daliri.",
+      "reflection": "Ang tanong ay dinisenyo upang siluhin siya sa alinmang sagot niya. Kung sasabihin ni Jesus na palayain siya, sasalungat siya sa kautusan ni Moises. Kung sasabihin niyang batuhin siya, sasalungat siya sa lahat ng itinuro niya tungkol sa awa. Sa kasaysayan, ang karapatang magpatupad ng parusang kamatayan ay nasa Roma lamang, kaya't sa alinmang sagot ay malalagay sa panganib legal si Jesus. Tinatawag nila siyang Διδάσκαλε (Didáskale), “Guro” — isang titulong may paggalang na dito'y naging maskara, dahil sinasabi ng mismong talata na ginawa nila ito πειράζοντες (peirazontes), sinusubok siya nang may layuning silo siya, hindi upang matuto. Ang kagandahang-asal sa salita at ang pagkapoot sa layunin ay magkatabi sa iisang pangungusap. Siya ang pain; ang tunay na tudlaan ay si Jesus.",
+      "revelation_key": "Para kay Jesus itinakda ang bitag. Siya'y hinila lang doon upang gamiting pain.",
+      "scripture_connections": [
+        {
+          "reference": "Levitico 20:10",
+          "text": "“Ang lalaking mangangalunya sa asawa ng iba ay dapat patayin, gayundin ang babae.”"
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "adultery_woman_alone_center.png",
+      "title": "Sa Gitna ng Lahat",
+      "subtitle": "Ang nararamdaman kapag ang kasalanan ay naging palabas",
+      "content": "Dinala siya nang mag-isa ng mga tagapagturo ng Kautusan at mga Pariseo. Sa sandaling iyon, siya'y naging isang usapin ng batas, isang instrumento sa laban ng mga umaakusa sa kanya. Ang kautusan ni Moises ay nag-uutos ng parehong parusa para sa lalaki at babaing nahuli sa pangangalunya (Deuteronomio 22:22), ngunit siya lamang ang nakatayo sa gitna ng templo. Siya lamang ang kahihiyang inilantad sa harap ng lahat.\n\nAlam nila ang kasalanan niya nang tiyak — “nahuli sa aktong pangangalunya” — at ginamit nila ito bilang sandata. Nananahimik siya sa buong kuwento, nakatayo sa gitna, habang nagtatalo ang mga lalaki tungkol sa kapalaran niya sa itaas ng kanyang ulo.",
+      "revelation_key": "Nawala ang pagkatao niya sa bigat ng pagiging isang usapin ng batas.",
+      "verse_overlay": {
+        "reference": "Juan 8:3",
+        "text": "Dumating noon ang mga tagapagturo ng Kautusan at mga Pariseo na may dalang isang babaing nahuli sa pangangalunya. Iniharap nila ito sa karamihan,"
+      },
+      "scripture_connections": [
+        {
+          "reference": "Deuteronomio 22:22",
+          "text": "“Kapag ang isang lalaki'y nahuling kasiping ang asawa ng iba, pareho silang dapat patayin. Sa ganyang paraan ninyo aalisin ang ganitong uri ng kasamaan sa Israel.”"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_jesus_writing.png",
+      "title": "Ang Daliri sa Alabok",
+      "narrative": "Nananahimik muna si Jesus. Ginagamit ng Griego ang κάτω κύψας (kato kypsas) — “yumuko” — ang parehong tindig ng pisikal na pagpapakumbaba. Ito rin ang tindig na sinabi ni Juan Bautista na hindi niya karapat-dapat gawin sa harap ni Jesus (Marcos 1:7). Dito, si Jesus mismo ang gumagawa nito, kusang-loob, habang nakatayo pa rin ang mga umaakusa. Sumulat siya sa lupa gamit ang kanyang daliri, nang walang sinasabi tungkol sa kanyang isinusulat. Humaba ang katahimikan. Iginigiit ng mga umaakusa ang tanong sa kanya, inuulit ito, lalong pinipilit.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 8:6",
+        "text": "Itinanong nila ito upang subukin siya, at upang may maiparatang sila laban sa kanya. Ngunit yumuko lamang si Jesus at sumulat sa lupa sa pamamagitan ng daliri."
+      },
+      "revelation_key": "Sa harap ng bitag, unang sumagot si Jesus sa katahimikan, nakasulat sa alabok.",
+      "scripture_connections": [
+        {
+          "reference": "Marcos 1:7",
+          "text": "At nangaral siya, sinasabi, \"Darating ang isa pagkatapos ko na makapangyarihan pa kaysa sa akin, na hindi ako karapat-dapat yumuko upang kalagan ang tali ng kanyang sandalyas.\""
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "adultery_woman_dust_closeup.png",
+      "title": "Ang Isinulat Niya sa Alabok",
+      "subtitle": "Isang kilos na makikilala ng tradisyong Judio",
+      "content": "Ang salitang Griego na ginamit dito para sa “sumulat” (κατέγραφεν, kategraphen) ay hindi ang karaniwang salita para sa pagsulat. May mas malakas itong kahulugan: ang pagtatala ng isang paratang, gaya ng pagbibilang ng utang. Naniniwala ang ilang iskolar na ito'y kaugnay ng isang larawan sa Lumang Tipan, kung saan ang paglayo sa Diyos ay inihahambing sa pagiging “isinulat sa alabok” (Jeremias 17:13). Kung totoo ito, hindi lamang basta sumusulat si Jesus: nagtatala siya ng isang paratang. At ang mga umaakusa, na lubos na nakaaalam ng mga Kasulatan, agad na mauunawaan ito.\n\nIniiwan ng teksto ang interpretasyong ito nang bukas. Ito ang tanging pagkakataon sa mga ebanghelyo na sumulat si Jesus. Higit pa sa pagtataka kung ano ang isinulat niya, may saysay na dahan-dahang pagnilayan ang nangyayari sa mga sandaling iyon: bawat umaakusa, sa katahimikan, ay nahaharap sa sariling budhi.",
+      "revelation_key": "Ang alabok ay naging isang salaming walang makaiiwas tingnan.",
+      "verse_overlay": {
+        "reference": "Juan 8:6",
+        "text": "Itinanong nila ito upang subukin siya, at upang may maiparatang sila laban sa kanya. Ngunit yumuko lamang si Jesus at sumulat sa lupa sa pamamagitan ng daliri."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Jeremias 17:13",
+          "text": "Ikaw, Yahweh, ang pag-asa ng Israel; mapapahiya ang lahat ng magtatakwil sa iyo. Maglalaho silang gaya ng pangalang isinulat sa alabok, sapagkat itinakwil ka nila, Yahweh, ang bukal ng tubig na nagbibigay-buhay."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_stands_up.png",
+      "title": "Isang Imposibleng Kundisyon",
+      "narrative": "Tumayong muli si Jesus at nagsalita: “Ang sinuman sa inyo na walang kasalanan ang siyang maunang bumato sa kanya.” Ang salitang Griego para sa “walang kasalanan” (ἀναμάρτητος, anamartetos) ay lumalabas nang isang beses lamang sa buong Bagong Tipan — dito mismo. Hindi ito humihiling ng pangkalahatang katanggap-tanggap na pag-uugali. Hinihiling nito ang ganap na kawalan ng anumang kasalanan. Nagtakda si Jesus ng isang kundisyong walang sinuman sa mga naroroon ang makatutupad. Pagkatapos, yumuko na naman siya, sa parehong tindig gaya ng kanina, at nagpatuloy sa pagsulat sa lupa.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 8:7-8",
+        "text": "Patuloy sila sa pagtatanong kaya't tumayo si Jesus at nagsalita, “Ang sinuman sa inyo na walang kasalanan ang siyang maunang bumato sa kanya.” At muli siyang yumuko at sumulat sa lupa."
+      },
+      "revelation_key": "Isang pangungusap lamang, at yumuko na naman si Jesus, tungo sa alabok."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "adultery_woman_stones_dropped.png",
+      "title": "Isa-isa",
+      "narrative": "Ang isinulat ni Jesus, at ang kundisyong kararating lamang niyang itinakda, ay pinaharap ang mga umaakusa sa kani-kanilang budhi. Nagsimula silang umalis, sabi ng teksto, magmula sa pinakamatanda — sila na may pinakamataas na kapangyarihan at kaalaman sa Kautusan, marahil ang unang nakaunawa na ang bitag na sarili nilang itinakda ay wala nang lulutasan. Isa-isa silang umatras, sa katahimikan, hanggang sa mawala ang huli.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 8:9",
+        "text": "Nang marinig nila iyon, sila'y isa-isang umalis, simula sa pinakamatanda. Iniwan nila ang babaing nakatayo sa harap ni Jesus."
+      },
+      "revelation_key": "Nalusaw ang karamihang dumating upang humatol, sa harap ng sariling budhi."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "adultery_woman_alone_with_jesus.png",
+      "title": "Silang Dalawa Na Lamang",
+      "narrative": "Ang templo, na kaninang punô ng mga umaakusa, ngayo'y may dalawang tao na lamang: si Jesus at siya, nakatayo kung saan siya iniwan, mag-isa sa walang lamang espasyo. Ito ang pinakatahimik na pagbabaling-punto sa buong kuwento. Ang may ganap na kapangyarihang humatol sa kanya ang siyang nanatili.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 8:9",
+        "text": "...Iniwan nila ang babaing nakatayo sa harap ni Jesus."
+      },
+      "revelation_key": "Umalis ang lahat. Nanatili siya."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "adultery_woman_face_jesus.png",
+      "title": "Wala Po, Ginoo",
+      "subtitle": "Ang una at tanging mga salita niya sa buong kuwento",
+      "content": "Isipin ang eksena. Isipin sandali ang kararanasan niya lang.\n\nMula sa sandaling dinala siya hanggang ngayon, nananahimik siya. Nang hindi niya alam, siya pala'y may isang tagapagtanggol na may kakayahang sumagot para sa kanya. Kanina pa lamang siya nakatayo doon, hinihintay ang kamatayan. Ngayon, tinatanong siya ni Jesus: nasaan na ang mga umaakusa sa kanya? Wala na bang humatol sa kanya? Sumasagot siya nang dalawang salita lamang: “Wala po, Ginoo.”\n\nDamang-dama niya ang bigat ng hatol na hindi kailanman dumating. Nadarama niya, sa sandaling iyon, ang buhay na muntik na niyang mawala, ibinabalik sa kanya, buo at ganap.",
+      "revelation_key": "Ang una niyang mga salita ang pintuan patungo sa sasabihin ni Jesus.",
+      "verse_overlay": {
+        "reference": "Juan 8:10-11",
+        "text": "Tumayo si Jesus at tinanong ang babae, “Nasaan sila? Wala na bang humahatol sa iyo?” “Wala po, Ginoo,” sagot ng babae."
+      }
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "adultery_woman_no_condemnation.png",
+      "verse_reference": "Juan 8:11",
+      "verse_text": "Sinabi ni Jesus, “Hindi rin kita hahatulan. Umuwi ka na, at mula ngayon ay huwag ka nang gumawa ng kasalanan.”",
+      "reflection": "Direktang binabanggit ni Jesus ang kasalanan — “huwag ka nang gumawa ng kasalanan” — at sa parehong hininga, ipinapahayag siyang malaya. Nananatiling magkasama ang biyaya at katotohanan, kapwa nasa kanilang ganap na kabuuan. Ito rin ang parehong tensyon na inilalarawan ni Juan mula sa unang kabanata ng kanyang ebanghelyo (Juan 1:17).",
+      "revelation_key": "Binabanggit ng biyaya ang kasalanan at pinapalaya rin ito sa parehong hininga.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 1:17",
+          "text": "Dumating ang Kautusan sa amin sa pamamagitan ni Moises; ngunit sa pamamagitan naman ni Jesu-Cristo ay dumating ang kagandahang-loob at katotohanan."
+        },
+        {
+          "reference": "Mga Taga-Roma 8:1",
+          "text": "Kaya nga, hindi na hahatulang maparusahan ang mga taong nakipag-isa na kay Cristo Jesus."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "adultery_woman_law_fulfilled.png",
+      "title": "Ang Pasya ni Jesus",
+      "subtitle": "Ang tanging karapat-dapat humatol",
+      "content": "Ang kundisyong itinakda ni Jesus ay tanging siya lamang ang nakatutugon. Sa lahat ng naroroon, kasama ang mga umalis, si Jesus lamang ang tunay na walang kasalanan.\n\nIbig sabihin nito, si Jesus ang may karapatang maunang bumato. Walang iba. At siya mismo ang hindi bumato.\n\nAng salitang Griego para sa “hatulan” dito (κατακρίνω, katakrino) ay tumutukoy sa isang pormal na hatol, isang sentensyang ipinapahayag na may tunay na kapangyarihan. Si Jesus lamang ang may ganitong karapatan sa kanya. At pinili niyang ipahayag siyang malaya.",
+      "revelation_key": "Ang tanging may karapatang humatol ay siyang pumili na magpanumbalik.",
+      "verse_overlay": {
+        "reference": "Juan 8:7",
+        "text": "“Ang sinuman sa inyo na walang kasalanan ang siyang maunang bumato sa kanya.”"
+      }
+    },
+    {
+      "order": 12,
+      "type": "character_moment",
+      "mood": "peace",
+      "image_url": "adultery_woman_walking_away.png",
+      "title": "Umuwi Ka, at Huwag Ka Nang Magkasala",
+      "subtitle": "Ang biyayang nagpapatawad ang siya ring biyayang nagpapadala",
+      "content": "Binigyan siya ni Jesus ng direksyon kasabay ng kalayaan niya: “huwag ka nang gumawa ng kasalanan.” Ang pandiwang Griego na ginamit niya rito, ἁμάρτανε (hamartane), ay nasa isang panahunang naglalarawan ng patuloy na kilos — hindi isang bukod-tanging pagkatisod, kundi isang paraan ng paglakad. Hindi lamang pinalaya siya ni Jesus mula sa nakaraan; inaanyayahan niya siya sa ibang direksyon para sa natitirang bahagi ng kanyang buhay.\n\nAng biyayang tinanggap niya ay hindi humihinto sa kapatawaran. Ito'y naging isang paanyaya na lumakad tungo sa ibang buhay.",
+      "revelation_key": "Ang biyayang nagpapalaya sa kanya ang siya ring biyayang nagpapadala sa kanya tungo sa ibang buhay.",
+      "verse_overlay": {
+        "reference": "Juan 8:11",
+        "text": "“Hindi rin kita hahatulan. Umuwi ka na, at mula ngayon ay huwag ka nang gumawa ng kasalanan.”"
+      }
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "adultery_woman_interactive_stone.png",
+      "title": "Ang Iyong Pagtatagpo",
+      "subtitle": "Mula sa paghatol tungo sa biyaya: ang iyong panloob na pagsusuri.",
+      "discovery_questions": [
+        {
+          "category": "Katapatan",
+          "question": "Umakusa ang mga Pariseo batay sa kautusan, nang hindi tinitingnan ang sarili nilang pagkukulang. Kailan mo naramdaman na may karapatan kang humatol sa iba, na pinaniniwalaang mas mabuti o mas kaunti ang kasalanan mo kaysa sa taong iyon?"
+        },
+        {
+          "category": "Biyaya",
+          "question": "Sa kabila ng kanyang mga pagkukulang, pinalaya siya ni Jesus at binigyan ng bagong buhay, nang walang kahit anong ginawa upang ito'y karapat-dapat tanggapin. Ang parehong kalayaang iyon ay ibinigay sa iyo ni Jesus nang tanggapin mo siya bilang Tagapagligtas. Namumuhay ka ba nang malaya, hindi kagapos ng kasalanan, sa bagong buhay na iyon na ibinigay sa iyo ni Cristo?"
+        },
+        {
+          "category": "Layunin",
+          "question": "Isipin ang isang taong mahirap mong patawarin o itigil ang paghatol ngayon. Kung binigyan ka ng Diyos ng parehong biyayang ibinigay niya sa kanya nang hindi mo ito karapat-dapat tanggapin, ano ang pumipigil sa iyong ipagkaloob ang parehong biyayang iyon sa taong iyon?"
+        }
+      ],
+      "prayer": {
+        "title": "Panalangin Para sa Biyayang Tinanggap",
+        "content": "Salamat po, Panginoon, dahil tulad ng babae sa kuwentong ito, tinanggap ko rin ang inyong hindi karapat-dapat na biyaya. Patawarin po ninyo ako sa pagtayo sa lugar ng paghatol sa iba, kadalasa'y may kalupitan, nang wala ang awang ipinakita ninyo sa akin. Tulungan po ninyo akong ibaba ang bawat bato, Panginoon, upang tingnan ang iba nang may biyaya, at patawarin ang mga nagkasala at nagkamali sa akin. Tulungan po ninyo akong mamuhay ng bagong buhay, na pinalalakas sa inyo, sumusunod sa inyong kalooban bawat araw ng aking buhay. Sa pangalan ni Jesus, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "adultery_woman_completion.png",
+      "completion_verse": {
+        "reference": "Juan 8:11",
+        "text": "“Wala po, Ginoo,” sagot ng babae. Sinabi ni Jesus, “Hindi rin kita hahatulan. Umuwi ka na, at mula ngayon ay huwag ka nang gumawa ng kasalanan.”",
+        "bible_version": "MBB05"
+      },
+      "reflection_prompt": "Kung hindi ka hahatulan ni Jesus, bakit ka pa magpapatuloy na hatulan ang sarili mo, o hatulan ang iba?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
