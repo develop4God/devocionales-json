@@ -1,0 +1,270 @@
+{
+  "id": "adultery_woman_en_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "en",
+  "bible_version": "KJV",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "The Woman Caught in Adultery",
+    "testament": "new",
+    "scripture_reference": "John 8:1-11",
+    "mood_primary": "intense",
+    "accent_color": "#7a2e2e",
+    "emoji": "🪨",
+    "tags": [
+      "grace",
+      "public shame",
+      "condemnation",
+      "trap",
+      "mercy",
+      "restoration"
+    ]
+  },
+  "key_verse": {
+    "reference": "John 8:11",
+    "text": "She said, No man, Lord. And Jesus said unto her, Neither do I condemn you: go, and sin no more.",
+    "bible_version": "KJV"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_temple_dawn.png",
+      "title": "At dawn, in the temple",
+      "narrative": "The temple wakes before the city does. Jesus has spent the night on the Mount of Olives and returns early; he sits down to teach, and the people gather around him. Hurried footsteps and rising voices cut through the crowd. They bring her and set her in the middle, in front of everyone.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 8:2-3",
+        "text": "And early in the morning he came again into the temple, and all the people came unto him; and he sat down, and taught them. And the scribes and Pharisees brought unto him a woman taken in adultery; and when they had set her in the midst,"
+      },
+      "revelation_key": "They bring her to the place where Jesus teaches, with ill intent."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "intense",
+      "image_url": "adultery_woman_trap_laid.png",
+      "verse_reference": "John 8:4-6",
+      "verse_text": "They said unto him, Teacher, this woman was taken in adultery, in the very act. Now Moses in the law commanded us, that such should be stoned: but what say you? This they said, testing him, that they might have to accuse him. But Jesus stooped down, and with his finger wrote on the ground, as though he heard them not.",
+      "reflection": "The question is designed to trap him in any answer. If Jesus says to release her, he contradicts the law of Moses. If he says to stone her, he contradicts everything he has taught about mercy. Historically, authority to carry out executions belonged to Rome alone, which would have put Jesus at legal risk with either answer. They call him Διδάσκαλε (Didáskale), 'Teacher' — a title of respect that here becomes a mask, because the same passage says they did this πειράζοντες (peirazontes), testing him with intent to trap him, not to learn from him. Courtesy in the word and hostility in the purpose sit side by side in the same sentence. She is the bait; the real target is Jesus.",
+      "revelation_key": "The trap is set for Jesus. She was dragged in to bait it.",
+      "scripture_connections": [
+        {
+          "reference": "Leviticus 20:10",
+          "text": "And the man that commits adultery with another man's wife, even he that commits adultery with his neighbor's wife, the adulterer and the adulteress shall surely be put to death."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "adultery_woman_alone_center.png",
+      "title": "In the middle of everyone",
+      "subtitle": "What it feels like when sin becomes a spectacle",
+      "content": "The scribes and Pharisees bring her alone. In that moment she has become a test case, a pawn in her accusers' legal game. The law of Moses demanded the same penalty for both the man and the woman caught in adultery (Deuteronomy 22:22), but only she is standing in the middle of the temple. Only her shame is laid bare before everyone.\n\nThey know her sin with precision — 'taken in the very act' — and they use it as ammunition. She remains silent in the account, standing in the middle, while men argue over her fate above her head.",
+      "revelation_key": "Her humanity disappears under the weight of becoming a legal case.",
+      "verse_overlay": {
+        "reference": "John 8:3",
+        "text": "And the scribes and Pharisees brought unto him a woman taken in adultery; and when they had set her in the midst,"
+      },
+      "scripture_connections": [
+        {
+          "reference": "Deuteronomy 22:22",
+          "text": "If a man be found lying with a woman married to a husband, then they shall both of them die, both the man that lay with the woman, and the woman: so shall you put away evil from Israel."
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_jesus_writing.png",
+      "title": "The finger in the dust",
+      "narrative": "Jesus stays silent first. The Greek uses κάτω κύψας (kato kypsas) — 'stooping down' — the same posture of physical humbling that John the Baptist describes as unworthy for him to take before Jesus (Mark 1:7). Here it is Jesus who takes it, willingly, while the accusers remain standing. He writes on the ground with his finger, without saying a word about what he writes. The silence stretches on. The accusers press him, repeat the question, push harder.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 8:6",
+        "text": "This they said, testing him, that they might have to accuse him. But Jesus stooped down, and with his finger wrote on the ground, as though he heard them not."
+      },
+      "revelation_key": "Facing the trap, Jesus answers first with silence, written in the dust.",
+      "scripture_connections": [
+        {
+          "reference": "Mark 1:7",
+          "text": "And preached, saying, There comes one mightier than I after me, the thong of whose sandals I am not worthy to stoop down and unloose."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "adultery_woman_dust_closeup.png",
+      "title": "What he wrote in the dust",
+      "subtitle": "A gesture Jewish tradition would have recognized",
+      "content": "The Greek word used here for 'wrote' (κατέγραφεν, kategraphen) is not the common word for writing. It carries a stronger sense: recording a charge, as when someone keeps a tally of guilt. Some scholars believe this echoes an Old Testament image, where turning away from God is compared to being 'written in the dust' (Jeremiah 17:13). If so, Jesus was not simply writing to write: he was writing a charge. And the accusers, who knew the Scriptures well, would have understood it at once.\n\nThe text leaves this reading open. It is the only time in the gospels that Jesus writes. Beyond wondering what he wrote, it is worth sitting with what was happening: each accuser, in silence, faces his own conscience.",
+      "revelation_key": "The dust becomes a mirror none of them can avoid looking into.",
+      "verse_overlay": {
+        "reference": "John 8:6",
+        "text": "This they said, testing him, that they might have to accuse him. But Jesus stooped down, and with his finger wrote on the ground, as though he heard them not."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Jeremiah 17:13",
+          "text": "O LORD, the hope of Israel, all that forsake you shall be ashamed, and they that depart from me shall be written in the earth, because they have forsaken the LORD, the fountain of living waters."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_stands_up.png",
+      "title": "An impossible condition",
+      "narrative": "Jesus straightens up and speaks: \"He that is without sin among you, let him first cast a stone at her.\" The Greek word for 'without sin' (ἀναμάρτητος, anamartetos) appears only once in the entire New Testament — right here. It does not ask for a generally acceptable moral life. It asks for being completely free of any fault. Jesus sets a condition none of those present can meet. Then he stoops down again, to the same posture as before, and goes on writing on the ground.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 8:7-8",
+        "text": "So when they continued asking him, he lifted himself up, and said unto them, He that is without sin among you, let him first cast a stone at her. And again he stooped down, and wrote on the ground."
+      },
+      "revelation_key": "One sentence, and Jesus stoops down again, to the dust."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "adultery_woman_stones_dropped.png",
+      "title": "One by one",
+      "narrative": "What Jesus wrote, and the condition he had just set, leave them facing their own conscience. They begin to leave, the text says, starting with the oldest — those with the greatest authority and knowledge of the Law, perhaps the first to realize that the trap they themselves had set now had no way out. One by one, they withdraw, in silence, until the last one is gone.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 8:9",
+        "text": "And they who heard it, being convicted by their own conscience, went out one by one, beginning at the eldest, even unto the last: and Jesus was left alone, and the woman standing before him."
+      },
+      "revelation_key": "The crowd that came to condemn dissolves before its own conscience."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "adultery_woman_alone_with_jesus.png",
+      "title": "Just the two of them",
+      "narrative": "The temple, which a moment ago was full of accusers, now holds only two people: Jesus and her, standing where they left her, alone in the empty space. It is the quietest turning point in the account. The one with full authority to condemn her is the one who stays.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 8:9",
+        "text": "...and Jesus was left alone, and the woman standing before him."
+      },
+      "revelation_key": "Everyone left. He stayed."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "adultery_woman_face_jesus.png",
+      "title": "No man, Lord",
+      "subtitle": "Her first and only words in the whole account",
+      "content": "Picture the scene. Imagine for a moment what she has just lived through.\n\nFrom the moment they brought her until now, she has kept silent. Without knowing it, she had the one advocate able to answer for her. A moment ago she was standing there awaiting death. Now Jesus asks her: where are her accusers? Has no one condemned her? She answers with two words: 'No man, Lord.'\n\nShe could feel the weight of the sentence that never came. She could feel, in that instant, the life she was about to lose being handed back to her whole.",
+      "revelation_key": "Her first words are the doorway to what Jesus is about to say to her.",
+      "verse_overlay": {
+        "reference": "John 8:10-11",
+        "text": "When Jesus had lifted himself up, and saw none but the woman, he said unto her, Woman, where are those your accusers? has no man condemned you? She said, No man, Lord."
+      }
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "adultery_woman_no_condemnation.png",
+      "verse_reference": "John 8:11",
+      "verse_text": "And Jesus said unto her, Neither do I condemn you: go, and sin no more.",
+      "reflection": "Jesus names the sin directly — 'sin no more' — and in the same breath declares her free. Grace and truth hold together, each in its fullness. It is the same tension John describes from the first chapter of his gospel (John 1:17).",
+      "revelation_key": "Grace names the sin and releases it in the same breath.",
+      "scripture_connections": [
+        {
+          "reference": "John 1:17",
+          "text": "For the law was given by Moses, but grace and truth came by Jesus Christ."
+        },
+        {
+          "reference": "Romans 8:1",
+          "text": "There is therefore now no condemnation to them who are in Christ Jesus, who walk not after the flesh, but after the Spirit."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "adultery_woman_law_fulfilled.png",
+      "title": "Jesus' decision",
+      "subtitle": "The only one qualified to judge",
+      "content": "The condition Jesus set is one only he meets. Of everyone present, including those who left, Jesus is the only one truly without sin.\n\nThat means Jesus had the authority to throw the first stone. No one else did. And it is precisely he who does not throw it.\n\nThe Greek word for 'condemn' here (κατακρίνω, katakrino) points to a formal verdict, a sentence pronounced with real authority. Jesus is the only one with that right over her. And he chooses to declare her free.",
+      "revelation_key": "The only one with the right to condemn is the one who chooses to restore.",
+      "verse_overlay": {
+        "reference": "John 8:7",
+        "text": "He that is without sin among you, let him first cast a stone at her."
+      }
+    },
+    {
+      "order": 12,
+      "type": "character_moment",
+      "mood": "peace",
+      "image_url": "adultery_woman_walking_away.png",
+      "title": "Go, and sin no more",
+      "subtitle": "The grace that forgives is the same grace that sends",
+      "content": "Jesus gives her a direction along with her freedom: 'sin no more.' The Greek verb he uses here, ἁμάρτανε (hamartane), is in a tense that describes an ongoing action — not a single isolated stumble, but a way of walking. Jesus does not only free her from the past; he invites her into a different direction for the rest of her life.\n\nThe grace she receives does not stop at forgiveness. It becomes an invitation to walk toward another life.",
+      "revelation_key": "The grace that frees her is the same grace that sends her toward a different life.",
+      "verse_overlay": {
+        "reference": "John 8:11",
+        "text": "Neither do I condemn you: go, and sin no more."
+      }
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "adultery_woman_interactive_stone.png",
+      "title": "Your encounter",
+      "subtitle": "From judgment to grace: your inner examination.",
+      "discovery_questions": [
+        {
+          "category": "Honesty",
+          "question": "The Pharisees accused from the law, without looking at their own faults. When have you felt entitled to judge someone, believing yourself better or less guilty than that person?"
+        },
+        {
+          "category": "Grace",
+          "question": "Despite her faults, Jesus freed her and gave her a new life, without her doing anything to earn it. That same freedom Jesus gave you when you accepted him as your Savior. Are you living free, without the grip of sin, in that new life Christ gave you?"
+        },
+        {
+          "category": "Purpose",
+          "question": "Think of someone you find hard to forgive or stop judging today. If God gave you the same grace he gave her without you deserving it, what is stopping you from extending that same grace to that person?"
+        }
+      ],
+      "prayer": {
+        "title": "Prayer for received grace",
+        "content": "Thank you, Lord, because just like the woman in this story, I too have received your undeserved grace. Forgive me for standing in the place of judging others, often harshly, without the mercy you have shown me. Help me let go of every stone, Lord, to look at others with grace, and to forgive those who have wronged me and sinned against me. Help me live a new life, strengthened in you, obeying your will every day of my life. In Jesus' name, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "adultery_woman_completion.png",
+      "completion_verse": {
+        "reference": "John 8:11",
+        "text": "She said, No man, Lord. And Jesus said unto her, Neither do I condemn you: go, and sin no more.",
+        "bible_version": "KJV"
+      },
+      "reflection_prompt": "If Jesus does not condemn you, why would you keep condemning yourself, or condemning others?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

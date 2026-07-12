@@ -744,7 +744,10 @@
       "testament": "new",
       "character": "The Woman Caught in Adultery",
       "files": {
-        "es": "adultery_woman_es_001.json"
+        "es": "adultery_woman_es_001.json",
+        "en": "adultery_woman_en_001.json",
+        "pt": "adultery_woman_pt_001.json",
+        "fr": "adultery_woman_fr_001.json"
       },
       "titles": {
         "es": "La mujer sorprendida en adulterio",
@@ -783,7 +786,10 @@
         "fil": "Juan 8:1-11"
       },
       "estimated_reading_minutes": {
-        "es": 10
+        "es": 10,
+        "en": 10,
+        "pt": 12,
+        "fr": 12
       }
     }
   ]
