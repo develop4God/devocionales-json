@@ -205,20 +205,14 @@
       "type": "theological_depth",
       "mood": "mysterious",
       "image_url": "adultery_woman_law_fulfilled.png",
-      "title": "El único sin pecado elige la restauración",
-      "subtitle": "Lo que la escena revela sobre quién es Jesús",
-      "content": "La respuesta de Jesús tiene precisión legal. Un principio de la ley de Moisés establecía que fueran los propios testigos del pecado quienes lanzaran la primera piedra en una ejecución (Deuteronomio 17:6-7). Jesús invoca ese principio y añade una condición que ninguno puede cumplir: ser también inocente.\n\nHay una ironía central en el relato: de todos los presentes, Jesús es el único calificado, según su propia condición, para arrojar la primera piedra. Es el único sin pecado. Y es precisamente el que elige otro camino.\n\nLa palabra griega para 'condeno' aquí (κατακρίνω, katakrino) implica un veredicto formal, una sentencia pronunciada. Jesús tiene el derecho de pronunciarla y elige declararla libre en su lugar. La persona con más autoridad para juzgar es la misma que ofrece la vía hacia la restauración.",
-      "revelation_key": "El más calificado para juzgar es el más dispuesto a restaurar.",
+      "title": "La decisión de Jesús",
+      "subtitle": "El único que calificaba para juzgar",
+      "content": "La condición que Jesús puso solo él la cumple. De todos los que estaban ahí, incluidos los que se fueron, Jesús es el único verdaderamente sin pecado.\n\nEso significa que Jesús tenía la autoridad para lanzar la primera piedra. Nadie más la tenía. Y es precisamente él quien no la lanza.\n\nLa palabra griega para 'condeno' aquí (κατακρίνω, katakrino) señala un veredicto formal, una sentencia pronunciada con autoridad real. Jesús es el único con ese derecho sobre ella. Y elige declararla libre.",
+      "revelation_key": "El único con derecho a condenar es el que elige restaurar.",
       "verse_overlay": {
         "reference": "Juan 8:7",
         "text": "El que de vosotros esté sin pecado sea el primero en arrojar la piedra contra ella."
-      },
-      "scripture_connections": [
-        {
-          "reference": "Deuteronomio 17:7",
-          "text": " La mano de los testigos caerá primero sobre él para matarlo, y después la mano de todo el pueblo; así quitarás el mal de en medio de ti."
-        }
-      ]
+      }
     },
     {
       "order": 12,
