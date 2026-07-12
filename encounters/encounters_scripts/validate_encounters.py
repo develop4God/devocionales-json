@@ -270,12 +270,16 @@ def validate_index(report: Report, expected_languages: list) -> Optional[dict]:
             else:
                 report.W(f"Encounter {enc_id}: {summary} — encounter is published, translations should be complete")
 
-        # File existence — only for published
-        if status == 'published' and 'files' in enc:
+        # File existence — checked regardless of status: a listed file must exist
+        if 'files' in enc:
             for lang, fname in enc['files'].items():
                 fpath = ENCOUNTERS_DIR / lang / fname
                 if not fpath.exists():
                     report.E(f"Encounter {enc_id}: listed file {lang}/{fname} does not exist")
+
+        # coming_soon reminder — must be flipped to 'published' before shipping
+        if status == 'coming_soon':
+            report.W(f"Encounter {enc_id}: status is 'coming_soon' — flip to 'published' before release")
 
         # Filename convention check
         if 'files' in enc:
@@ -526,8 +530,8 @@ def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
 
 def validate_encounter_files(report: Report, index_data: dict, lint_cache: dict,
                               bible_versions: dict, expected_languages: list) -> None:
-    """Phase B: load and validate every published encounter's files, then
-    cross-validate every non-EN language against the EN base."""
+    """Phase B: load and validate every encounter's files (regardless of
+    status), then cross-validate every non-EN language against the EN base."""
     report.I("=" * 60)
     report.I("PHASE B: Validating encounter files using EN as base")
     report.I("=" * 60)
@@ -536,11 +540,11 @@ def validate_encounter_files(report: Report, index_data: dict, lint_cache: dict,
     published = [e for e in encounters if e.get('status') == 'published']
     coming_soon = [e for e in encounters if e.get('status') == 'coming_soon']
 
-    report.I(f"Published: {len(published)} | Coming soon: {len(coming_soon)} (skipped)")
+    report.I(f"Published: {len(published)} | Coming soon: {len(coming_soon)}")
 
     all_loaded = {}  # {lang: {enc_id: data}}
 
-    for enc in published:
+    for enc in encounters:
         enc_id = enc['id']
         files = enc.get('files', {})
 
@@ -592,8 +596,8 @@ def validate_encounter_files(report: Report, index_data: dict, lint_cache: dict,
                 )
 
     # Verify all index file references exist
-    report.I("Verifying all published index file references exist...")
-    for enc in published:
+    report.I("Verifying all index file references exist...")
+    for enc in encounters:
         enc_id = enc['id']
         for lang, fname in enc.get('files', {}).items():
             fpath = ENCOUNTERS_DIR / lang / fname
