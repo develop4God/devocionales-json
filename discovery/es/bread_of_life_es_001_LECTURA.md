@@ -46,16 +46,22 @@ La multitud atribuye el maná a Moisés. Jesús corrige de inmediato, aclarando 
 *El verbo que Jesús usó con intención*
 
 **Greek:** Ártos (ἄρτος)
-*Pan, el alimento básico y diario de toda persona*
-Jesús dice: 'Yo soy el pan de vida' (Juan 6:35).
 
-Se compara con lo más básico e indispensable que existe — sin lo cual una familia no sobrevivía en el mundo antiguo. Se ofrece como el alimento sin el cual el alma simplemente no vive.
+*Pan, el alimento básico y diario de toda persona*
+
+Jesús usa la palabra ártos en Juan 6:35 cuando dice 'Yo soy el pan de vida'. Se compara con lo más básico e indispensable que existe — sin lo cual una familia no sobrevivía en el mundo antiguo.
+
+Se ofrece como el alimento sin el cual el alma simplemente no vive.
 
 **Greek:** Trṓgōn (τρώγων)
-*Morder, masticar, roer — un verbo físico, distinto de 'comer' en sentido general*
-Jesús dice: 'el que come mi carne y bebe mi sangre, tiene vida eterna' (Juan 6:54).
 
-Es una palabra cruda, casi incómoda. Describe el gesto físico de morder y masticar, no una idea espiritual abstracta. Jesús la escoge a propósito: recibirlo a Él no es un pensamiento de una sola vez, sino un acto que se repite, como comer cada día.
+*Morder, masticar, roer — un verbo físico, distinto de 'comer' en sentido general*
+
+En Juan 6:54, la palabra griega que Jesús usa para 'comer' es trṓgōn (τρώγων), que significa masticar o roer, no comer en sentido general.
+
+Es una palabra cruda, casi incómoda. Describe el gesto físico de morder y masticar, no una idea espiritual abstracta.
+
+Jesús la escoge a propósito. Así deja claro que recibirlo a Él no es un pensamiento de una sola vez, sino un acto que se repite, como comer cada día.
 
 **Reference:** Juan 6:51 — "Yo soy el pan vivo que descendió del cielo; si alguno comiere de este pan, vivirá para siempre; y el pan que yo daré es mi carne, la cual yo daré por la vida del mundo."
 

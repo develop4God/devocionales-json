@@ -62,8 +62,10 @@ def _word_study_block(label, words):
         if strong:
             header += f" [{strong}]"
         out.append(header)
+        out.append("")
         if w.get("meaning"):
             out.append(f"*{w['meaning']}*")
+            out.append("")
         if w.get("revelation"):
             out.append(w["revelation"])
         out.append("")
