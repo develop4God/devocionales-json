@@ -172,9 +172,10 @@ def parse_field_blocks(md_text):
                         break
                     value_lines.append(nxt)
                     i += 1
-                # trim a single trailing blank line (the separator we emit
-                # after every field), keep interior blank lines intact
-                while value_lines and value_lines[-1] == "":
+                # trim exactly one trailing blank line (the separator we
+                # emit after every field), keep interior/real trailing
+                # blank lines from the scalar's own content intact
+                if value_lines and value_lines[-1] == "":
                     value_lines.pop()
                 raw = "\n".join(value_lines)
                 blocks.append((path, "scalar", (raw, type_name)))
