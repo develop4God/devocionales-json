@@ -146,10 +146,10 @@ def json_to_reader_md(data, source_name=""):
             for item in sr:
                 if isinstance(item, dict):
                     out.append(f"**Reference:** {item.get('reference','')} — \"{item.get('text','')}\"")
+                    out.append("")
                 elif isinstance(item, str):
                     out.append(f"**Reference:** {item}")
-            if sr:
-                out.append("")
+                    out.append("")
 
         tl = c.get("timeline")
         if isinstance(tl, list) and tl:
