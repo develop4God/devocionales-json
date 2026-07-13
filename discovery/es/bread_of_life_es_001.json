@@ -2,7 +2,7 @@
   "id": "bread_of_life_001",
   "type": "discovery",
   "date": "2026-07-08",
-  "title": "Yo Soy el Pan de Vida",
+  "title": "Yo soy el pan de vida",
   "subtitle": "Cuando el maná del desierto encuentra su cumplimiento final",
   "language": "es",
   "version": "RVR1960",
@@ -17,9 +17,31 @@
       "order": 1,
       "type": "historical_context",
       "icon": "🌾",
-      "title": "El Maná que Alimentó a una Nación",
+      "title": "El maná que alimentó a una nación",
       "subtitle": "Por qué la multitud pedía una señal como la de Moisés",
-      "content": "Un día después de multiplicar los panes para cinco mil personas, Jesús cruza el mar de Galilea. La multitud lo sigue, no por hambre de verdad, sino por hambre de pan (Juan 6:26). Entonces le exigen una señal: 'Nuestros padres comieron el maná en el desierto, como está escrito: Pan del cielo les dio a comer' (Juan 6:31).\n\n🏜️ EL TRASFONDO QUE TODOS CONOCÍAN:\n\n• Durante cuarenta años, cada mañana, Dios hizo llover pan del cielo sobre Israel (Éxodo 16:4)\n• Nadie sabía qué era; por eso lo llamaron 'maná' — literalmente '¿qué es esto?' (Éxodo 16:15)\n• Era diario, suficiente para ese día, imposible de acumular\n• El salmista lo recordaría siglos después: Dios 'les dio trigo de los cielos' (Salmos 78:24)\n\n📖 LA CORRECCIÓN DE JESÚS:\n\nLa multitud atribuye el maná a Moisés. Jesús corrige de inmediato: 'No os dio Moisés el pan del cielo, mas mi Padre os da el verdadero pan del cielo' (Juan 6:32). Y añade la declaración que cambia todo: 'el pan de Dios es aquel que descendió del cielo y da vida al mundo' (Juan 6:33).\n\nNo está hablando de repetir el milagro. Está diciendo que Él mismo es el cumplimiento de lo que el maná solo anunciaba.",
+      "content": "Un día después de multiplicar los panes para cinco mil personas, Jesús cruza el mar de Galilea. La multitud lo sigue, no por hambre de verdad, sino por hambre de pan (Juan 6:26). Entonces le exigen una señal, recordando el maná que Dios dio a sus padres en el desierto (Juan 6:31).\n\n🏜️ El trasfondo que todos conocían:\n\n• Durante cuarenta años, cada mañana, Dios hizo llover pan del cielo sobre Israel (Éxodo 16:4)\n• Nadie sabía qué era; por eso lo llamaron 'maná', tal como lo explica Moisés (Éxodo 16:15)\n• Era diario, suficiente para ese día, imposible de acumular\n• El salmista lo recordaría siglos después (Salmos 78:24)\n\n📖 La corrección de Jesús:\n\nLa multitud atribuye el maná a Moisés. Jesús corrige de inmediato, aclarando que fue su Padre, no Moisés, quien dio el verdadero pan del cielo (Juan 6:32). Y añade la declaración que cambia todo: que Él mismo es ese pan que da vida al mundo (Juan 6:33).\n\nJesús afirma ser Él mismo el cumplimiento de lo que el maná solo anunciaba.",
+      "scripture_references": [
+        {
+          "reference": "Juan 6:31",
+          "text": "Nuestros padres comieron el maná en el desierto, como está escrito: Pan del cielo les dio a comer."
+        },
+        {
+          "reference": "Éxodo 16:15",
+          "text": "Y viéndolo los hijos de Israel, se dijeron unos a otros: ¿Qué es esto? porque no sabían qué era. Entonces Moisés les dijo: Es el pan que Jehová os da para comer."
+        },
+        {
+          "reference": "Salmos 78:24",
+          "text": "e hizo llover sobre ellos maná para que comiesen, y les dio trigo de los cielos."
+        },
+        {
+          "reference": "Juan 6:32",
+          "text": "Respondióles Jesús: De cierto, de cierto os digo: No os dio Moisés el pan del cielo, mas mi Padre os da el verdadero pan del cielo."
+        },
+        {
+          "reference": "Juan 6:33",
+          "text": "Porque el pan de Dios es aquel que descendió del cielo y da vida al mundo."
+        }
+      ],
       "revelation_key": "El maná fue una sombra de cuarenta años que preparó a Israel — y a nosotros — para reconocer al verdadero Pan cuando llegara."
     },
 
@@ -27,7 +49,7 @@
       "order": 2,
       "type": "greek_exegesis",
       "icon": "📖",
-      "title": "Trṓgōn: Mucho Más que Comer",
+      "title": "Trṓgōn: mucho más que comer",
       "subtitle": "El verbo que escandalizó a la multitud",
       "greek_words": [
         {
@@ -35,26 +57,26 @@
           "transliteration": "ἄρτος",
           "reference": "Juan 6:35",
           "meaning": "Pan, el alimento básico y diario de toda persona",
-          "revelation": "En el mundo antiguo, el pan no era un lujo ocasional; era el sustento diario sin el cual una familia no sobrevivía. Cuando Jesús dice 'Yo soy el ártos de vida', no se compara con un manjar especial, sino con lo más básico e indispensable que existe.\n\nNo se ofrece como postre para los días buenos. Se ofrece como el alimento sin el cual el alma simplemente no vive.",
-          "application": "Jesús no es un lujo espiritual reservado para cuando tengas tiempo. Es el sustento diario sin el cual tu alma se debilita y muere de hambre."
+          "revelation": "En el mundo antiguo, el pan era el sustento diario sin el cual una familia no sobrevivía. Cuando Jesús dice 'Yo soy el ártos de vida', se compara con lo más básico e indispensable que existe.\n\nSe ofrece como el alimento sin el cual el alma simplemente no vive.",
+          "application": "Jesús es el sustento diario sin el cual tu alma se debilita y muere de hambre."
         },
         {
           "word": "Trṓgōn",
           "transliteration": "τρώγων",
           "reference": "Juan 6:54",
           "meaning": "Morder, masticar, roer — un verbo físico y visceral, muy distinto de 'comer' en sentido general",
-          "revelation": "Desde el versículo 51, Juan cambia el verbo griego que usa para 'comer'. Deja el término genérico 'phageîn' y usa 'trṓgein' — un verbo casi crudo, normalmente reservado para animales que mastican su alimento.\n\nJesús eligió deliberadamente una palabra imposible de espiritualizar por completo. No está describiendo un asentimiento mental de una sola vez. Está describiendo una acción física, repetida, íntima: recibirlo a Él una y otra vez, tal como se recibe el alimento cada día.",
-          "application": "Seguir a Jesús no es una decisión que se toma una sola vez y se archiva. Es un acto diario y constante de venir a Él y recibirlo — como comer."
+          "revelation": "Desde el versículo 51, Juan cambia el verbo griego que usa para 'comer'. Deja el término genérico 'phageîn' y usa 'trṓgein' — un verbo casi crudo, normalmente reservado para animales que mastican su alimento.\n\nJesús eligió deliberadamente una palabra imposible de espiritualizar por completo. Describe una acción física, repetida, íntima: recibirlo a Él una y otra vez, tal como se recibe el alimento cada día.",
+          "application": "Seguir a Jesús es un acto diario y constante de venir a Él y recibirlo — como comer."
         }
       ],
-      "revelation_key": "Jesús no ofrece información acerca de sí mismo. Se ofrece a sí mismo, para ser recibido, no solo admirado."
+      "revelation_key": "Jesús se ofrece a sí mismo, para ser recibido, no solo admirado."
     },
 
     {
       "order": 3,
       "type": "prophetic_thread",
       "icon": "🧵",
-      "title": "Del Pan del Cielo a la Mesa del Señor",
+      "title": "Del pan del cielo a la mesa del Señor",
       "subtitle": "Cómo el maná del desierto apunta hacia la Cena del Señor",
       "timeline": [
         {
@@ -65,7 +87,7 @@
         {
           "event": "Deuteronomio 8:3",
           "description": "Dios explica el propósito del maná: 'para hacerte saber que no sólo de pan vivirá el hombre, mas de todo lo que sale de la boca de Jehová'",
-          "revelation": "El maná nunca fue solo comida. Era una lección diaria: la vida verdadera depende de la palabra de Dios, no solo del pan físico."
+          "revelation": "El maná era una lección diaria: la vida verdadera depende, ante todo, de la palabra de Dios."
         },
         {
           "event": "Mateo 4:4",
@@ -85,7 +107,7 @@
         {
           "event": "1 Corintios 11:24",
           "description": "En la última cena, Jesús toma pan y dice: 'esto es mi cuerpo que por vosotros es partido; haced esto en memoria de mí'",
-          "revelation": "El maná caía del cielo cada mañana sin que Israel hiciera nada para merecerlo. El pan de la Cena tampoco se gana: se recibe, en memoria de lo que Cristo ya hizo."
+          "revelation": "El maná caía del cielo cada mañana como puro regalo. El pan de la Cena se recibe igual: en memoria de lo que Cristo ya hizo."
         }
       ],
       "revelation_key": "El maná alimentó a una nación por cuarenta años en el desierto. Cristo, el Pan verdadero, alimenta al alma para la eternidad."
@@ -95,9 +117,35 @@
       "order": 4,
       "type": "theological_depth",
       "icon": "🍞",
-      "title": "Mi Carne es Verdadera Comida",
+      "title": "Mi carne es verdadera comida",
       "subtitle": "El dicho difícil que hizo que muchos se fueran",
-      "content": "Jesús lleva la imagen del pan a un extremo que incomoda incluso a sus propios seguidores: 'Si no coméis la carne del Hijo del Hombre, y bebéis su sangre, no tenéis vida en vosotros' (Juan 6:53). Y añade: 'mi carne es verdadera comida, y mi sangre es verdadera bebida' (v.55).\n\n😳 LA REACCIÓN INMEDIATA:\n\nMuchos de sus propios discípulos dijeron: 'Dura es esta palabra; ¿quién la puede oír?' (Juan 6:60). El texto es claro sobre el costo de esta enseñanza: 'Desde entonces muchos de sus discípulos volvieron atrás, y ya no andaban con él' (Juan 6:66).\n\nJesús no suaviza el lenguaje para retenerlos. No corre detrás de la multitud que se va. Se vuelve a los doce y pregunta: '¿Queréis acaso iros también vosotros?' (v.67).\n\n🗣️ LA RESPUESTA DE PEDRO:\n\n'Señor, ¿a quién iremos? Tú tienes palabras de vida eterna. Y nosotros hemos creído y conocemos que tú eres el Cristo, el Hijo del Dios viviente' (Juan 6:68-69).\n\nPedro no entiende todavía todo lo que Jesús acaba de decir. Pero entiende algo suficiente: no hay ningún otro lugar donde ir. Toda otra fuente de vida, comparada con Cristo, es hambre disfrazada.\n\nEsta 'palabra dura' encontraría su explicación completa en la última cena, cuando Jesús partiera el pan y dijera: 'esto es mi cuerpo' (1 Corintios 11:24). No pedía canibalismo. Pedía una dependencia tan real, tan constante y tan personal de Él, como la que el cuerpo tiene del alimento que lo sostiene cada día.",
+      "content": "Jesús lleva la imagen del pan a un extremo que incomoda incluso a sus propios seguidores, declarando que su carne y su sangre son verdadero alimento (Juan 6:53-55).\n\n😳 La reacción inmediata:\n\nMuchos de sus propios discípulos consideraron dura esta palabra (Juan 6:60). El texto es claro sobre el costo de esta enseñanza: muchos discípulos se apartaron y dejaron de seguirlo (Juan 6:66).\n\nJesús mantiene el mismo lenguaje y deja que la multitud se vaya. Se vuelve a los doce y pregunta si también ellos quieren irse (v.67).\n\n🗣️ La respuesta de Pedro:\n\nPedro responde reconociendo que solo Jesús tiene palabras de vida eterna, y confiesa que Él es el Cristo, el Hijo del Dios viviente (Juan 6:68-69).\n\nPedro todavía está procesando todo lo que Jesús acaba de decir. Pero entiende algo suficiente: solo en Cristo hay palabras de vida eterna. Toda otra fuente, comparada con Él, es hambre disfrazada.\n\nEsta 'palabra dura' encontraría su explicación completa en la última cena, cuando Jesús partiera el pan y lo llamara su cuerpo (1 Corintios 11:24). Pedía una dependencia tan real, tan constante y tan personal de Él, como la que el cuerpo tiene del alimento que lo sostiene cada día — no pedía canibalismo, sino esa entrega diaria.",
+      "scripture_references": [
+        {
+          "reference": "Juan 6:53",
+          "text": "Si no coméis la carne del Hijo del Hombre, y bebéis su sangre, no tenéis vida en vosotros."
+        },
+        {
+          "reference": "Juan 6:55",
+          "text": "Porque mi carne es verdadera comida, y mi sangre es verdadera bebida."
+        },
+        {
+          "reference": "Juan 6:60",
+          "text": "Dura es esta palabra; ¿quién la puede oír?"
+        },
+        {
+          "reference": "Juan 6:66",
+          "text": "Desde entonces muchos de sus discípulos volvieron atrás, y ya no andaban con él."
+        },
+        {
+          "reference": "Juan 6:67",
+          "text": "Dijo entonces Jesús a los doce: ¿Queréis acaso iros también vosotros?"
+        },
+        {
+          "reference": "1 Corintios 11:24",
+          "text": "y habiendo dado gracias, lo partió, y dijo: Tomad, comed; esto es mi cuerpo que por vosotros es partido; haced esto en memoria de mí."
+        }
+      ],
       "scripture_anchor": {
         "reference": "Juan 6:68-69",
         "text": "Señor, ¿a quién iremos? Tú tienes palabras de vida eterna. Y nosotros hemos creído y conocemos que tú eres el Cristo, el Hijo del Dios viviente."
@@ -109,7 +157,7 @@
       "order": 5,
       "type": "discovery_activation",
       "icon": "🙏",
-      "title": "Descubrimiento Personal",
+      "title": "Descubrimiento personal",
       "discovery_questions": [
         {
           "category": "Dependencia",
@@ -125,7 +173,7 @@
         }
       ],
       "prayer": {
-        "title": "Oración al Pan de Vida",
+        "title": "Oración al pan de vida",
         "content": "Jesús, Pan de vida, gracias porque no me ofreces un lujo ocasional, sino el sustento sin el cual mi alma no puede vivir. Reconozco que muchas veces busco llenarme con otras cosas que solo alimentan por un momento y me dejan con más hambre. Hoy vengo a ti, no una vez, sino como quien necesita comer cada día. Enséñame a recibirte con la misma constancia con que mi cuerpo necesita el pan diario. Cuando tus palabras me resulten difíciles de aceptar, dame la honestidad de Pedro: no tengo a dónde más ir, porque tú tienes palabras de vida eterna. Tú eres el Cristo, el Hijo del Dios viviente. En tu nombre, Amén."
       }
     }
