@@ -800,16 +800,28 @@
       "version": "1.0",
       "emoji": "⚰️",
       "files": {
-        "es": "resurrection_and_life_es_001.json"
+        "es": "resurrection_and_life_es_001.json",
+        "en": "resurrection_and_life_en_001.json",
+        "pt": "resurrection_and_life_pt_001.json",
+        "fr": "resurrection_and_life_fr_001.json"
       },
       "titles": {
-        "es": "Yo Soy la Resurrección y la Vida"
+        "es": "Yo Soy la Resurrección y la Vida",
+        "en": "I am the resurrection and the life",
+        "pt": "Eu sou a ressurreição e a vida",
+        "fr": "Je suis la résurrection et la vie"
       },
       "subtitles": {
-        "es": "Cuando Jesús se presenta ante la muerte y la muerte retrocede"
+        "es": "Cuando Jesús se presenta ante la muerte y la muerte retrocede",
+        "en": "When Jesus stands before death and death retreats",
+        "pt": "Quando Jesus se apresenta diante da morte e a morte recua",
+        "fr": "Quand Jésus se présente devant la mort et que la mort recule"
       },
       "estimated_reading_minutes": {
-        "es": 7
+        "es": 7,
+        "en": 7,
+        "pt": 9,
+        "fr": 9
       }
     },
     {
