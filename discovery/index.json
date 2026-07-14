@@ -637,6 +637,59 @@
       }
     },
     {
+      "id": "bread_of_life_001",
+      "version": "1.0",
+      "emoji": "🍞",
+      "files": {
+        "es": "bread_of_life_es_001.json",
+        "en": "bread_of_life_en_001.json",
+        "pt": "bread_of_life_pt_001.json",
+        "fr": "bread_of_life_fr_001.json",
+        "de": "bread_of_life_de_001.json",
+        "ja": "bread_of_life_ja_001.json",
+        "zh": "bread_of_life_zh_001.json",
+        "hi": "bread_of_life_hi_001.json",
+        "ar": "bread_of_life_ar_001.json",
+        "fil": "bread_of_life_fil_001.json"
+      },
+      "titles": {
+        "es": "Yo soy el pan de vida",
+        "en": "I Am the Bread of Life",
+        "pt": "Eu sou o pão da vida",
+        "fr": "Je suis le pain de vie",
+        "de": "Ich bin das Brot des Lebens",
+        "ja": "わたしはいのちのパンです",
+        "zh": "我就是生命的粮",
+        "hi": "जीवन की रोटी मैं हूँ",
+        "ar": "أنا خبز الحياة",
+        "fil": "Ako ang Tinapay na Nagbibigay-Buhay"
+      },
+      "subtitles": {
+        "es": "Cuando el maná del desierto encuentra su cumplimiento final",
+        "en": "When the manna of the desert meets its final fulfillment",
+        "pt": "Quando o maná do deserto encontra seu cumprimento final",
+        "fr": "Quand la manne du désert trouve son accomplissement final",
+        "de": "Wenn das Manna der Wüste seine endgültige Erfüllung findet",
+        "ja": "荒野のマナが、その最終的な成就と出会うとき",
+        "zh": "旷野的吗哪如何在祂身上得到最终的成全",
+        "hi": "जब जंगल का मन्ना अपनी अंतिम पूर्णता से मिलता है",
+        "ar": "حين يبلغ منّ البرية كماله الأخير",
+        "fil": "Nang ang manna sa ilang ay natupad sa wakas"
+      },
+      "estimated_reading_minutes": {
+        "es": 7,
+        "en": 7,
+        "pt": 9,
+        "fr": 9,
+        "de": 9,
+        "ja": 10,
+        "zh": 10,
+        "hi": 9,
+        "ar": 9,
+        "fil": 9
+      }
+    },
+    {
       "id": "i_am_before_abraham_001",
       "version": "1.0",
       "emoji": "⚡",
@@ -740,6 +793,59 @@
         "de": 7,
         "ar": 5,
         "fil": 7
+      }
+    },
+    {
+      "id": "resurrection_and_life_001",
+      "version": "1.0",
+      "emoji": "⚰️",
+      "files": {
+        "es": "resurrection_and_life_es_001.json",
+        "en": "resurrection_and_life_en_001.json",
+        "pt": "resurrection_and_life_pt_001.json",
+        "fr": "resurrection_and_life_fr_001.json",
+        "fil": "resurrection_and_life_fil_001.json",
+        "zh": "resurrection_and_life_zh_001.json",
+        "ja": "resurrection_and_life_ja_001.json",
+        "ar": "resurrection_and_life_ar_001.json",
+        "de": "resurrection_and_life_de_001.json",
+        "hi": "resurrection_and_life_hi_001.json"
+      },
+      "titles": {
+        "es": "Yo Soy la Resurrección y la Vida",
+        "en": "I am the resurrection and the life",
+        "pt": "Eu sou a ressurreição e a vida",
+        "fr": "Je suis la résurrection et la vie",
+        "fil": "Ako ang muling pagkabuhay at ang buhay",
+        "zh": "我是复活，我是生命",
+        "ja": "わたしは、よみがえりです。いのちです",
+        "ar": "أنا هو القيامة والحياة",
+        "de": "Ich bin die Auferstehung und das Leben",
+        "hi": "पुनरुत्थान और जीवन मैं ही हूँ"
+      },
+      "subtitles": {
+        "es": "Cuando Jesús se presenta ante la muerte y la muerte retrocede",
+        "en": "When Jesus stands before death and death retreats",
+        "pt": "Quando Jesus se apresenta diante da morte e a morte recua",
+        "fr": "Quand Jésus se présente devant la mort et que la mort recule",
+        "fil": "Nang harapin ni Jesus ang kamatayan at umatras ito",
+        "zh": "耶稣站在死亡面前，死亡就退去",
+        "ja": "イエスが死の前に立たれ、死が退くとき",
+        "ar": "حين يقف يسوع أمام الموت فيتراجع الموت",
+        "de": "Als Jesus sich dem Tod entgegenstellt und der Tod weicht",
+        "hi": "जब यीशु मृत्यु के सामने खड़े होते हैं और मृत्यु पीछे हट जाती है"
+      },
+      "estimated_reading_minutes": {
+        "es": 7,
+        "en": 7,
+        "pt": 9,
+        "fr": 9,
+        "fil": 8,
+        "zh": 10,
+        "ja": 10,
+        "ar": 8,
+        "de": 9,
+        "hi": 9
       }
     },
     {

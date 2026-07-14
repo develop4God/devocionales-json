@@ -193,6 +193,44 @@ understand this?
 
 ---
 
+### 8.5. No abstract, unanchored phrases
+A sentence can pass every rule above — nothing invented, no negation-built
+argument, no marketing cliché — and still fail because it sounds profound
+but says nothing concrete or verifiable.
+
+**Test:** For every sentence, ask: "if a reader asked 'what does this
+actually mean, concretely?', could I answer without adding new
+information?" If the honest answer only restates the same sentence more
+poetically, or leans on unexplained theological shorthand (tipología,
+sombra, cumplimiento) without unpacking it in plain words, rewrite it to
+name the concrete fact, event, or action it's pointing to.
+
+**Wrong:** "El que un día se llamará a sí mismo Pan de vida primero
+practicó la verdad que después proclamaría." (Sounds elegant, says
+nothing concrete — practiced *what*, *how*?)
+**Right:** "Jesús mismo, antes de decir 'Yo soy el pan de vida', vivió esa
+misma verdad: en el desierto, con hambre real, el diablo lo tentó a
+convertir piedras en pan. Jesús no lo hizo." — names the actual event.
+
+**Wrong:** "cantaba sobre el maná... sin saber que cantaba sobre una
+sombra." ("Sombra" is unexplained typology jargon — a plain reader has no
+idea what it means.)
+**Right:** "cantaba sobre el maná... No sabía que ese pan del desierto
+solo era un anuncio de algo más grande que vendría después: Jesús mismo."
+— unpacks the idea in plain words.
+
+**Wrong:** "Jesús se ofrece a sí mismo, para ser recibido, no solo
+admirado." (Assumes a contrast — admiration vs. reception — the text
+never sets up; nobody in John 6 asked Jesus for admiration.)
+**Right:** "Jesús pide algo concreto: que vengamos a él cada día, no una
+sola vez." — states what the text actually shows Jesus asking for.
+
+**Why this is separate from Rule 8:** Rule 8 catches jargon and long
+sentences. This rule catches sentences that are already short and plain
+in vocabulary, yet still empty — the failure is conceptual, not lexical.
+
+---
+
 ### 9. No em dashes in excess
 Em dashes (—) are allowed but sparingly — one per paragraph maximum. Never
 as a stylistic default. If a sentence needs an em dash to make sense,
@@ -205,6 +243,28 @@ rewrite the sentence.
 - Section headers (emoji + text): same rule. "🔍 Lo que hace único a este
   momento:" — capitalize only the first word after the emoji.
 - Proper nouns always capitalized: Dios, Señor, Espíritu Santo, Jesús.
+
+---
+
+### 11. Per-language register gate (non-Spanish files) — MANDATORY
+A card can pass Rules 1-10 and still use the wrong grammatical register for its
+language — check for that too before approving. See `discovery-translator-SKILL.md`
+§ "MANDATORY GATE: Per-Language Register Rules" for the rule per language (e.g. Hindi
+requires respectful plural verbs for Jesus, not just plural pronouns — "यीशु आया" is
+wrong, "यीशु आए" is right). Does not apply to quoted verse fields, which follow the
+cited Bible version's own grammar.
+
+---
+
+### 12. Post-fix reverse validation & pattern sweep — MANDATORY
+Whenever a review session (yours or a native-speaker critic's) results in file edits,
+do not report the review done right after applying the fixes. See
+`discovery-translator-SKILL.md` § "MANDATORY GATE: Post-Fix Reverse Validation &
+Pattern Sweep" and run that full procedure: re-read the complete file, verify each edit
+still matches its card's `revelation_key` and scripture reference, sweep the whole file
+for the same error pattern the critic just found, and validate JSON. A grammatically
+correct fix that quietly guts the sentence's meaning is a worse outcome than the
+original error — it looks resolved but isn't.
 
 ---
 
@@ -231,7 +291,10 @@ For each card, check in this order:
 - [ ] No unverifiable claims or unreal hyperbole (Rule 5)
 - [ ] Greek/Hebrew terms explained inline where they appear (Rule 7)
 - [ ] Language accessible to all readers (Rule 8)
+- [ ] No abstract, unanchored phrases — every sentence answers "what does
+      this concretely mean?" (Rule 8.5)
 - [ ] Card adds something new vs. adjacent cards (Rule 6)
+- [ ] Per-language register correct, for non-Spanish files (Rule 11)
 
 ### C. Theological check
 - [ ] Reflections are grounded directly in the biblical text
@@ -287,8 +350,16 @@ git commit -m "feat(<lang>): <brief description of what changed>"
 ```
 
 Present the file after each commit using `present_files`. Regenerate the
-companion `.md` reading copy (if one exists for this session) after any
-content change, so Giovanni is always reviewing the current version.
+app-accurate preview after any content change, so Giovanni is always
+reviewing the current version:
+
+```bash
+python3 discovery/discovery_scripts/app_preview.py <filepath>
+```
+
+This renders the JSON as it will actually look in the app, and flags any
+field the app doesn't parse/display (e.g. `timeline`) with a visible
+warning — a stronger check than a plain reading copy.
 
 ---
 

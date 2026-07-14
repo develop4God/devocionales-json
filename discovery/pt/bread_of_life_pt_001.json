@@ -1,0 +1,196 @@
+{
+  "id": "bread_of_life_001",
+  "type": "discovery",
+  "date": "2026-07-08",
+  "title": "Eu sou o pão da vida",
+  "subtitle": "Quando o maná do deserto encontra seu cumprimento final",
+  "language": "pt",
+  "version": "ARC",
+  "estimated_reading_minutes": 9,
+  "key_verse": {
+    "reference": "João 6:35",
+    "text": "E Jesus lhes disse: Eu sou o pão da vida; aquele que vem a mim não terá fome; e quem crê em mim nunca terá sede."
+  },
+
+  "cards": [
+    {
+      "order": 1,
+      "type": "historical_context",
+      "icon": "🌾",
+      "title": "O maná que alimentou uma nação",
+      "subtitle": "Por que a multidão pedia um sinal como o de Moisés",
+      "content": "Um dia depois de multiplicar os pães para cinco mil pessoas, Jesus atravessa o mar da Galileia. A multidão o segue movida pela fome de pão, não pela compreensão do sinal (João 6:26). Então exigem dele um sinal, lembrando o maná que Deus deu a seus pais no deserto (João 6:31).\n\n🏜️ O pano de fundo que todos conheciam:\n\n• Durante quarenta anos, todas as manhãs, Deus fez chover pão do céu sobre Israel (Êxodo 16:4)\n• Ninguém sabia o que era; por isso o chamaram de 'maná', como o próprio Moisés explica (Êxodo 16:15)\n• Era diário, suficiente para aquele dia, impossível de acumular\n• O salmista ainda se lembraria disso séculos depois (Salmos 78:24)\n\n📖 A correção de Jesus:\n\nA multidão atribui o maná a Moisés. Jesus corrige de imediato, deixando claro que foi seu Pai, e não Moisés, quem deu o verdadeiro pão do céu, e afirma que Ele mesmo é esse pão que dá vida ao mundo (João 6:32-33).\n\nEle mesmo é o cumprimento daquilo que o maná apenas anunciava.",
+      "scripture_references": [
+        {
+          "reference": "Êxodo 16:15",
+          "text": "E, vendo-a os filhos de Israel, disseram uns aos outros: Que é isto? Porque não sabiam o que era. Disse-lhes, pois, Moisés: Este é o pão que o SENHOR vos deu para comer."
+        },
+        {
+          "reference": "Salmos 78:24",
+          "text": "e fizesse chover sobre eles o maná para comerem, e lhes tivesse dado do trigo do céu."
+        },
+        {
+          "reference": "João 6:31-33",
+          "text": "Nossos pais comeram o maná no deserto, como está escrito: Deu-lhes a comer o pão do céu. Disse-lhes, pois, Jesus: Na verdade, na verdade vos digo que Moisés não vos deu o pão do céu, mas meu Pai vos dá o verdadeiro pão do céu. Porque o pão de Deus é aquele que desce do céu e dá vida ao mundo."
+        }
+      ],
+      "revelation_key": "O maná foi uma sombra de quarenta anos que preparou Israel — e a nós — para reconhecer o verdadeiro Pão quando ele chegasse."
+    },
+
+    {
+      "order": 2,
+      "type": "greek_exegesis",
+      "icon": "📖",
+      "title": "Trṓgōn: muito mais que comer",
+      "subtitle": "O verbo que Jesus usou com intenção",
+      "content": "Jesus escolhe suas palavras com precisão. Ao dizer 'Eu sou o pão da vida', ele usa no original a palavra grega ἄρτος (ártos), o pão cotidiano, o alimento básico sem o qual ninguém sobrevive.\n\nDepois, no ponto mais intenso de seu discurso, quando diz 'se alguém comer deste pão', ele muda o verbo: já não fala de comer em sentido geral, mas de τρώγων (trṓgōn), mastigar, roer. Essa virada no idioma original revela a profundidade do que ele está pedindo: uma entrega diária, física, repetida — não um momento de admiração distante.",
+      "greek_words": [
+        {
+          "word": "Ártos",
+          "transliteration": "ἄρτος",
+          "meaning": "Pão, o alimento básico e diário de toda pessoa",
+          "revelation": "Jesus usa a palavra ártos em João 6:35 quando diz 'Eu sou o pão da vida'. Ele é comparável ao que há de mais básico e indispensável — sem o qual uma família não sobrevivia no mundo antigo.\n\nEle se oferece como o alimento sem o qual a alma simplesmente não vive.",
+          "application": "Jesus é o sustento diário sem o qual sua alma se enfraquece e morre de fome."
+        },
+        {
+          "word": "Trṓgōn",
+          "transliteration": "τρώγων",
+          "meaning": "Morder, mastigar, roer — um verbo físico, distinto de 'comer' em sentido geral",
+          "revelation": "Em João 6:54, a palavra grega que Jesus usa para 'comer' é trṓgōn (τρώγων), que significa mastigar ou roer, não comer em sentido geral.\n\nÉ uma palavra crua, quase incômoda. Descreve o gesto físico de morder e mastigar, não uma ideia espiritual abstrata.\n\nJesus a escolhe de propósito. Assim deixa claro que recebê-lo não é um pensamento único, mas um ato que se repete, como comer todos os dias.",
+          "application": "Seguir Jesus é um ato diário e constante de vir a ele e recebê-lo — como comer."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "João 6:35",
+          "text": "E Jesus lhes disse: Eu sou o pão da vida; aquele que vem a mim não terá fome; e quem crê em mim nunca terá sede."
+        },
+        {
+          "reference": "João 6:51",
+          "text": "Eu sou o pão vivo que desceu do céu; se alguém comer desse pão, viverá para sempre; e o pão que eu der é a minha carne, que eu darei pela vida do mundo."
+        },
+        {
+          "reference": "João 6:54",
+          "text": "Quem come a minha carne e bebe o meu sangue tem a vida eterna, e eu o ressuscitarei no último Dia."
+        }
+      ],
+      "revelation_key": "Jesus pede algo concreto: que venhamos a ele todos os dias, não apenas uma vez."
+    },
+
+    {
+      "order": 3,
+      "type": "prophetic_thread",
+      "icon": "🧵",
+      "title": "Do pão do céu à mesa do Senhor",
+      "subtitle": "Como o maná do deserto aponta para a Ceia do Senhor",
+      "content": "O povo se queixou no deserto, saudoso da comida do Egito. Deus responde a essa queixa com uma promessa: fará chover pão do céu todos os dias (Êxodo 16:2-4).\n\nEm Deuteronômio 8:3, Deus explica o propósito dessa provisão diária: ensinar que a vida verdadeira depende, acima de tudo, de sua palavra. O próprio Jesus, antes de dizer 'Eu sou o pão da vida', viveu essa mesma verdade: no deserto, com fome real, o diabo o tentou a transformar pedras em pão. Jesus não o fez. Confiou na palavra de Deus em vez de resolver sua própria fome, citando esse mesmo versículo de Deuteronômio (Mateus 4:1-4).\n\nGerações depois de Moisés, o salmista ainda cantava sobre o maná em Salmos 78:24. Não sabia que aquele pão do deserto era apenas o anúncio de algo maior que viria depois: o próprio Jesus. Ele declara em João 6:32-33 que o verdadeiro pão do céu dá vida ao mundo inteiro, não apenas alimento para um dia.\n\nEssa promessa encontra seu cumprimento na última ceia. Em Lucas 22:19, Jesus toma o pão e o chama de seu corpo, entregue por eles na cruz. O maná caía do céu toda manhã como puro presente; o pão da Ceia se recebe da mesma forma: como memória dessa entrega.",
+      "scripture_references": [
+        {
+          "reference": "Êxodo 16:2-4",
+          "text": "E toda a congregação dos filhos de Israel murmurou contra Moisés e contra Arão no deserto. E os filhos de Israel disseram-lhes: Quem dera que nós morrêssemos por mão do SENHOR na terra do Egito, quando estávamos sentados junto às panelas de carne, quando comíamos pão até fartar! Porque nos tendes tirado para este deserto, para matardes de fome a toda esta multidão. Então, disse o SENHOR a Moisés: Eis que vos farei chover pão dos céus, e o povo sairá e colherá cada dia a porção para cada dia, para que eu veja se anda em minha lei ou não."
+        },
+        {
+          "reference": "Deuteronômio 8:3",
+          "text": "E te humilhou, e te deixou ter fome, e te sustentou com o maná, que tu não conheceste, nem teus pais o conheceram, para te dar a entender que o homem não viverá só de pão, mas que de tudo o que sai da boca do SENHOR viverá o homem."
+        },
+        {
+          "reference": "Mateus 4:1-4",
+          "text": "Então, foi conduzido Jesus pelo Espírito ao deserto, para ser tentado pelo diabo. E, tendo jejuado quarenta dias e quarenta noites, depois teve fome; E, chegando-se a ele o tentador, disse: Se tu és o Filho de Deus, manda que estas pedras se tornem em pães. Ele, porém, respondendo, disse: Está escrito: Nem só de pão viverá o homem, mas de toda a palavra que sai da boca de Deus."
+        },
+        {
+          "reference": "Salmos 78:24",
+          "text": "e fizesse chover sobre eles o maná para comerem, e lhes tivesse dado do trigo do céu."
+        },
+        {
+          "reference": "João 6:32-33",
+          "text": "Disse-lhes, pois, Jesus: Na verdade, na verdade vos digo que Moisés não vos deu o pão do céu, mas meu Pai vos dá o verdadeiro pão do céu. Porque o pão de Deus é aquele que desce do céu e dá vida ao mundo."
+        },
+        {
+          "reference": "Lucas 22:19",
+          "text": "E, tomando o pão e havendo dado graças, partiu-o e deu-lho, dizendo: Isto é o meu corpo, que por vós é dado; fazei isso em memória de mim."
+        }
+      ],
+      "revelation_key": "O maná alimentou uma nação por quarenta anos no deserto. Cristo, o Pão verdadeiro, alimenta a alma para a eternidade."
+    },
+
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "icon": "🍞",
+      "title": "Minha carne é verdadeira comida",
+      "subtitle": "A palavra dura que fez muitos partirem",
+      "content": "Jesus leva a imagem do pão a um extremo que incomoda até seus próprios seguidores, declarando que sua carne e seu sangue são verdadeiro alimento (João 6:53-55).\n\n😳 A reação imediata:\n\nMuitos de seus próprios discípulos consideraram dura essa palavra (João 6:60). O texto é claro sobre o custo desse ensino: muitos discípulos se afastaram e deixaram de segui-lo. Jesus mantém a mesma linguagem e deixa a multidão ir embora. Ele se volta para os doze e pergunta se eles também querem ir (João 6:66-67).\n\n🗣️ A resposta de Pedro:\n\nPedro responde com uma pergunta: a quem mais poderiam ir? Ele afirma o que já sabe com certeza: só Jesus tem palavras de vida eterna, e ele é o Cristo, o Filho de Deus (João 6:68-69). Essa certeza sustenta Pedro mesmo diante de um ensino que lhe custa entender.\n\nEssa 'palavra dura' encontraria sua explicação completa na última ceia, quando Jesus partisse o pão e o chamasse de seu corpo (Lucas 22:19). Ele pedia uma dependência tão real, tão constante e tão pessoal dele, quanto a que o corpo tem do alimento que o sustenta todos os dias.",
+      "scripture_references": [
+        {
+          "reference": "João 6:53-55",
+          "text": "Jesus, pois, lhes disse: Na verdade, na verdade vos digo que, se não comerdes a carne do Filho do Homem e não beberdes o seu sangue, não tereis vida em vós mesmos. Quem come a minha carne e bebe o meu sangue tem a vida eterna, e eu o ressuscitarei no último Dia. Porque a minha carne verdadeiramente é comida, e o meu sangue verdadeiramente é bebida."
+        },
+        {
+          "reference": "João 6:60",
+          "text": "Muitos, pois, dos seus discípulos, ouvindo isso, disseram: Duro é este discurso; quem o pode ouvir?"
+        },
+        {
+          "reference": "João 6:66-67",
+          "text": "Desde então, muitos dos seus discípulos tornaram para trás e já não andavam com ele. Então, disse Jesus aos doze: Quereis vós também retirar-vos?"
+        },
+        {
+          "reference": "Lucas 22:19",
+          "text": "E, tomando o pão e havendo dado graças, partiu-o e deu-lho, dizendo: Isto é o meu corpo, que por vós é dado; fazei isso em memória de mim."
+        }
+      ],
+      "scripture_anchor": {
+        "reference": "João 6:68-69",
+        "text": "Respondeu-lhe, pois, Simão Pedro: Senhor, para quem iremos nós? Tu tens as palavras da vida eterna, e nós temos crido e conhecido que tu és o Cristo, o Filho de Deus."
+      },
+      "revelation_key": "Cada vez que participamos da Ceia do Senhor, recebemos o que Cristo entregou por nós: seu corpo e seu sangue, sacrificados na cruz."
+    },
+
+    {
+      "order": 5,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Descoberta pessoal",
+      "discovery_questions": [
+        {
+          "category": "Dependência",
+          "question": "O maná caía do céu; não vinha da terra que Israel pisava. De que você se alimenta espiritualmente: da Palavra de Deus, ou de outras fontes que só parecem sustento?"
+        },
+        {
+          "category": "Constância",
+          "question": "'Τρώγων (trṓgōn)' descreve um ato repetido, não uma decisão única. Sua relação com Jesus é um evento do passado ou uma prática diária de vir a ele?"
+        },
+        {
+          "category": "Decisão",
+          "question": "Como Pedro, onde você busca as respostas para o que mais custa entender na fé: em Cristo, ou em outro lugar?"
+        }
+      ],
+      "prayer": {
+        "title": "Oração ao pão da vida",
+        "content": "Jesus, Pão da vida, obrigado por seres o sustento sem o qual minha alma não pode viver. Reconheço que muitas vezes busco me encher com outras coisas que só alimentam por um momento e me deixam com mais fome. Hoje venho a ti como quem precisa comer todos os dias. Ensina-me a te receber com a mesma constância com que meu corpo precisa do pão diário. Quando tuas palavras me parecerem difíceis de aceitar, dá-me a certeza de Pedro: tu tens palavras de vida eterna. Tu és o Cristo, o Filho de Deus. Em teu nome, Amém."
+      }
+    }
+  ],
+
+  "tags": [
+    "pao_da_vida",
+    "mana",
+    "comunhao",
+    "dependencia",
+    "provisao",
+    "fe",
+    "eucaristia"
+  ],
+
+  "metadata": {
+    "total_word_count": 1260,
+    "greek_words_count": 2,
+    "scripture_references_count": 12,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "Identidade de Cristo",
+      "Tipologia do Antigo Testamento",
+      "A Ceia do Senhor",
+      "Dependência diária em Cristo"
+    ]
+  }
+}

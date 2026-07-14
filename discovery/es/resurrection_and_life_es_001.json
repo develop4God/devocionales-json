@@ -1,0 +1,147 @@
+{
+  "id": "resurrection_and_life_001",
+  "type": "discovery",
+  "date": "2026-07-09",
+  "title": "Yo soy la resurrección y la vida",
+  "subtitle": "Cuando Jesús se presenta ante la muerte y la muerte retrocede",
+  "language": "es",
+  "version": "RVR1960",
+  "estimated_reading_minutes": 7,
+  "key_verse": {
+    "reference": "Juan 11:25-26",
+    "text": "Le dijo Jesús: Yo soy la resurrección y la vida; el que cree en mí, aunque esté muerto, vivirá. Y todo aquel que vive y cree en mí, no morirá eternamente. ¿Crees esto?"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "historical_context",
+      "icon": "⚰️",
+      "title": "Betania: un hogar partido por el duelo",
+      "subtitle": "Por qué Jesús esperó a propósito",
+      "content": "Marta y María envían un mensaje urgente a Jesús, avisándole que Lázaro está enfermo (Juan 11:3). Están seguras de que, al saberlo, Él actuará de inmediato. Jesús responde de una forma que desconcierta: esa enfermedad tiene un propósito mayor, la gloria de Dios (Juan 11:4). Y se queda dos días más donde estaba.\n\n🕯️ El luto judío del siglo I:\n\n• Los cuerpos se sepultaban el mismo día de la muerte, por el clima y por la ley ritual\n• Familiares y vecinos guardaban duelo formal durante siete días, con lamento en voz alta\n• Existía la creencia popular de que el alma permanecía cerca del cuerpo hasta el tercer día, con esperanza de que el alma volviera\n• Al cuarto día, esa esperanza se consideraba oficialmente perdida — la descomposición confirmaba que no había vuelta atrás\n\n📖 La demora intencional:\n\nCuando Jesús finalmente dice a los discípulos que Lázaro ha muerto, añade algo sorprendente: se alegra de no haber estado allí, para que ellos crean (Juan 11:14-15). La tardanza fue una decisión deliberada, calculada para llegar después del cuarto día, el punto en que toda esperanza humana ya se había agotado.\n\nJesús llega después de que la muerte pareciera definitiva, en el momento exacto en que solo Él puede actuar.",
+      "scripture_references": [
+        {
+          "reference": "Juan 11:3-4",
+          "text": "Enviaron, pues, sus hermanas para decirle: Señor, he aquí el que amas está enfermo. Oyéndolo Jesús, dijo: Esta enfermedad no es para muerte, sino para la gloria de Dios, para que el Hijo de Dios sea glorificado por ella."
+        },
+        {
+          "reference": "Juan 11:14-15",
+          "text": "Entonces Jesús les dijo claramente: Lázaro ha muerto; y me alegro por vosotros, de no haber estado allí, para que creáis; mas vamos a él."
+        }
+      ],
+      "revelation_key": "Jesús llega después de que el dolor ya se ha consumado, en el momento en que solo Él puede resolverlo."
+    },
+    {
+      "order": 2,
+      "type": "greek_exegesis",
+      "icon": "📖",
+      "title": "Enebrimḗsato y Edákrysen: dos formas de llorar",
+      "subtitle": "La diferencia entre el dolor de la multitud y el de Jesús",
+      "content": "María llora, y los judíos que la acompañan lloran con ella — un lamento público y ruidoso, como era costumbre en el duelo judío. Jesús ve esa escena y reacciona en dos movimientos distintos, que el texto griego original distingue con precisión: primero se estremece de indignación ante la muerte misma, y luego llora en silencio, a solas con su propio dolor por Lázaro. Dos palabras griegas distintas describen estos dos momentos.",
+      "greek_words": [
+        {
+          "word": "Enebrimḗsato",
+          "transliteration": "ἐνεβριμήσατο",
+          "reference": "Juan 11:33",
+          "meaning": "Se estremeció, se conmovió profundamente — literalmente, un resoplido de indignación visceral",
+          "revelation": "Cuando Jesús ve llorar a María y a los judíos que la acompañaban, el texto dice que 'se estremeció en espíritu y se conmovió' (Juan 11:33). El verbo griego describe algo más cercano a un bufido de indignación que a una simple tristeza.\n\nJesús no está solamente triste por Lázaro. Está indignado contra la muerte misma — contra lo que el pecado le ha hecho a su creación amada. Se enfrenta a la tumba como quien se enfrenta a un enemigo, no solo como quien lamenta una pérdida.",
+          "application": "Cristo no observa tu dolor con distancia serena. Se indigna con la muerte y con todo lo que rompe lo que Él ama, tanto como tú."
+        },
+        {
+          "word": "Edákrysen",
+          "transliteration": "ἐδάκρυσεν",
+          "reference": "Juan 11:35",
+          "meaning": "Derramó lágrimas en silencio — distinto del lamento ruidoso y público",
+          "revelation": "'Jesús lloró' es un versículo breve de solo dos palabras, pero el verbo elegido es preciso. No es 'klaíō', el llanto sonoro y público que usa el texto para describir a María y a los que lamentaban. Es 'edákrysen' — lágrimas silenciosas, personales, íntimas.\n\nJesús, que en un momento resucitará a Lázaro, aun así llora primero. Sabe cómo termina la escena y aun así siente el peso completo de la pérdida en ese instante.",
+          "application": "Jesús ya sabía que Lázaro resucitaría — se lo había dicho a los discípulos antes de llegar. Pudo haber llegado anunciando la buena noticia primero, cambiando completamente la escena.\n\nEn cambio, se detiene a llorar con los que lloran. Aunque tenía el poder y el conocimiento de lo que vendría, con humildad y empatía lloró por el dolor y el sufrimiento ajeno."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "Juan 11:33-35",
+          "text": "Jesús entonces, al verla llorando, y a los judíos que la acompañaban, también llorando, se estremeció en espíritu y se conmovió, y dijo: ¿Dónde le pusisteis? Le dijeron: Señor, ven y ve. Jesús lloró."
+        }
+      ],
+      "revelation_key": "Jesús siente la pérdida por completo, y aun así avanza hacia la tumba con autoridad."
+    },
+    {
+      "order": 3,
+      "type": "prophetic_thread",
+      "icon": "✨",
+      "title": "Yo soy la resurrección",
+      "subtitle": "Cuando Jesús traslada una esperanza futura a su propia persona",
+      "content": "Marta le dice a Jesús que, si Él hubiera estado allí, su hermano no habría muerto (Juan 11:21). Cree en lo que Jesús puede prevenir. Todavía no considera lo que Jesús puede revertir.\n\nJesús le dice que su hermano resucitará. Marta responde con una creencia correcta: sabe que resucitará en el día postrero (Juan 11:23-24). Es una esperanza real, pero guardada para el futuro final, no para ese mismo momento junto a la tumba.\n\nEntonces Jesús se identifica a sí mismo como esa esperanza: 'Yo soy la resurrección y la vida' (Juan 11:25-26). No enseña una doctrina nueva sobre el fin de los tiempos. Se presenta como la Persona en quien esa esperanza ya vive, ahí mismo, ese mismo día.",
+      "scripture_references": [
+        {
+          "reference": "Juan 11:21-26",
+          "text": "Y Marta dijo a Jesús: Señor, si hubieses estado aquí, mi hermano no habría muerto. Mas también sé ahora que todo lo que pidas a Dios, Dios te lo dará. Jesús le dijo: Tu hermano resucitará. Marta le dijo: Yo sé que resucitará en la resurrección, en el día postrero. Le dijo Jesús: Yo soy la resurrección y la vida; el que cree en mí, aunque esté muerto, vivirá. Y todo aquel que vive y cree en mí, no morirá eternamente. ¿Crees esto?"
+        }
+      ],
+      "revelation_key": "Marta esperaba una resurrección lejana, guardada para el último día. Jesús se presentó como esa misma esperanza, de pie frente a ella, ese mismo día."
+    },
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "icon": "🪨",
+      "title": "Quitad la piedra",
+      "subtitle": "La fe que precede a la gloria, no la que la sigue",
+      "content": "Ante la tumba, Jesús da una orden sencilla: quitar la piedra (Juan 11:39). La respuesta de Marta es dolorosamente humana: advierte que el cuerpo ya huele mal, por los cuatro días transcurridos. Ella cree en Jesús, pero su fe todavía calcula lo que es razonable esperar.\n\n👁️ La condición de la gloria:\n\nJesús le recuerda lo que ya le había dicho: si cree, verá la gloria de Dios (Juan 11:40). El orden importa: normalmente alguien ve un milagro y después cree que Dios lo hizo. Jesús le pide a Marta lo contrario — que crea primero, antes de ver nada, para que después pueda ver la gloria de Dios.\n\n🙏 Una oración para la multitud:\n\nAntes de llamar a Lázaro, Jesús ora en voz alta, agradeciendo al Padre por haberlo oído, y explica que lo dice por causa de la multitud, para que crean que el Padre lo envió (Juan 11:41-42). El milagro nunca fue solo para Lázaro, Marta o María. Fue una prueba pública de que el Padre había enviado al Hijo.\n\n📣 La voz que la muerte no pudo ignorar:\n\nJesús clama a gran voz, y el que había muerto sale de la tumba, todavía atado de pies y manos, el rostro envuelto en un sudario (Juan 11:43-44). Jesús añade una última instrucción: que lo desaten y lo dejen ir.\n\nPablo escribe después que el postrer enemigo que será destruido es la muerte (1 Corintios 15:26). Lo que Jesús hizo con Lázaro fue una señal. Apuntaba hacia su propia resurrección, en la que la muerte no solo retrocedería por un tiempo, sino que sería vencida para siempre.",
+      "scripture_references": [
+        {
+          "reference": "Juan 11:39-44",
+          "text": "Dijo Jesús: Quitad la piedra. Marta, la hermana del que había muerto, le dijo: Señor, hiede ya, porque es de cuatro días. Jesús le dijo: ¿No te he dicho que si crees, verás la gloria de Dios? Entonces quitaron la piedra de donde había sido puesto el muerto. Y Jesús, alzando los ojos a lo alto, dijo: Padre, gracias te doy por haberme oído. Yo sabía que siempre me oyes; pero lo dije por causa de la multitud que está alrededor, para que crean que tú me has enviado. Y habiendo dicho esto, clamó a gran voz: ¡Lázaro, ven fuera! Y el que había muerto salió, atadas las manos y los pies con vendas, y su rostro estaba envuelto en un sudario. Jesús les dijo: Desatadle, y dejadle ir."
+        },
+        {
+          "reference": "1 Corintios 15:26",
+          "text": "Y el postrer enemigo que será destruido es la muerte."
+        }
+      ],
+      "revelation_key": "La iglesia todavía tiene una tarea después del milagro: ayudar a quienes Cristo ya llamó a salir de la tumba a quedar libres de las vendas que aún los atan."
+    },
+    {
+      "order": 5,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Descubrimiento personal",
+      "discovery_questions": [
+        {
+          "category": "Espera",
+          "question": "Jesús esperó a propósito hasta que toda esperanza humana se había agotado. ¿Hay algo en tu vida en lo que interpretas el silencio de Dios como ausencia, en lugar de como preparación?"
+        },
+        {
+          "category": "Fe",
+          "question": "Marta creía correctamente en la resurrección futura, pero le costaba creer que Jesús podía actuar en ese mismo momento. ¿Tu fe está guardada para 'algún día', o confías en que Cristo actúa hoy?"
+        },
+        {
+          "category": "Libertad",
+          "question": "Lázaro salió vivo, pero todavía atado — necesitó que otros lo desataran. ¿Hay heridas, hábitos o culpas del pasado de las que Cristo ya te liberó, pero que sigues cargando?"
+        }
+      ],
+      "prayer": {
+        "title": "Oración a la resurrección y la vida",
+        "content": "Jesús, tú eres la resurrección y la vida. Gracias porque así como hiciste con la muerte de Lázaro, no te quedas lejos de mi dolor — te estremeces con lo que me afecta, y aun así avanzas con autoridad. Confieso que muchas veces mi fe espera un milagro para creer, pero quiero creer primero para ver la gloria de Dios. Si hay partes de mí que ya llamaste a salir a la vida, pero que siguen atadas, libérame Señor, hoy decido creer, ser libre de la muerte del pecado y aferrarme a tu vida eterna. Creo esto. En tu nombre, Amén."
+      }
+    }
+  ],
+  "tags": [
+    "resurrección",
+    "vida_eterna",
+    "duelo",
+    "fe",
+    "lázaro",
+    "muerte",
+    "esperanza"
+  ],
+  "metadata": {
+    "total_word_count": 1260,
+    "greek_words_count": 2,
+    "scripture_references_count": 15,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "Identidad de Cristo",
+      "Consuelo en el duelo",
+      "Vida eterna",
+      "Fe más allá de lo visible"
+    ]
+  }
+}
