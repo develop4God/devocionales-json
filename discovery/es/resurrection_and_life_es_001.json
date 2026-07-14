@@ -11,7 +11,6 @@
     "reference": "Juan 11:25-26",
     "text": "Le dijo Jesús: Yo soy la resurrección y la vida; el que cree en mí, aunque esté muerto, vivirá. Y todo aquel que vive y cree en mí, no morirá eternamente. ¿Crees esto?"
   },
-
   "cards": [
     {
       "order": 1,
@@ -32,7 +31,6 @@
       ],
       "revelation_key": "Jesús llega después de que el dolor ya se ha consumado, en el momento donde solo Él puede resolverlo."
     },
-
     {
       "order": 2,
       "type": "greek_exegesis",
@@ -70,19 +68,14 @@
       ],
       "revelation_key": "Jesús siente la pérdida por completo, y aun así avanza hacia la tumba con autoridad."
     },
-
     {
       "order": 3,
       "type": "prophetic_thread",
       "icon": "🧵",
       "title": "Yo Soy la Resurrección",
       "subtitle": "Cuando Jesús traslada una esperanza futura a su propia persona",
-      "content": "Siglos antes de Belén, Job, en medio de su sufrimiento, declara que sabe que su Redentor vive y que un día se levantará sobre el polvo (Job 19:25). Es una esperanza de resurrección que ni él mismo podía explicar del todo, sostenida solo por la certeza de que Dios existe y actúa.\n\nEsa esperanza sigue viva siglos después, pero distante. Marta le dice a Jesús que, si Él hubiera estado allí, su hermano no habría muerto (Juan 11:21). Cree en lo que Jesús puede prevenir. Todavía no considera lo que Jesús puede revertir.\n\nJesús le dice que su hermano resucitará. Marta responde con teología correcta: sabe que resucitará en el día postrero (Juan 11:23-24). Es una esperanza real, pero guardada para el futuro final, no para ese mismo momento junto a la tumba.\n\nEntonces Jesús se identifica a sí mismo como esa esperanza: 'Yo soy la resurrección y la vida' (Juan 11:25-26). No enseña una doctrina nueva sobre el fin de los tiempos. Se presenta como la Persona en quien esa esperanza ya vive, ahí mismo, ese mismo día.\n\nLo que sigue confirma lo que dijo: clama a gran voz, y Lázaro sale de la tumba, todavía atado con las vendas de la muerte (Juan 11:43-44). Es una resurrección real, pero no la definitiva — Lázaro volverá a morir un día.\n\nPablo escribe después que el postrer enemigo que será destruido es la muerte (1 Corintios 15:26). Lo que Jesús hizo con Lázaro fue una señal. Apuntaba hacia su propia resurrección, donde la muerte no solo retrocedería por un tiempo, sino que sería vencida para siempre.",
+      "content": "Marta le dice a Jesús que, si Él hubiera estado allí, su hermano no habría muerto (Juan 11:21). Cree en lo que Jesús puede prevenir. Todavía no considera lo que Jesús puede revertir.\n\nJesús le dice que su hermano resucitará. Marta responde con teología correcta: sabe que resucitará en el día postrero (Juan 11:23-24). Es una esperanza real, pero guardada para el futuro final, no para ese mismo momento junto a la tumba.\n\nEntonces Jesús se identifica a sí mismo como esa esperanza: 'Yo soy la resurrección y la vida' (Juan 11:25-26). No enseña una doctrina nueva sobre el fin de los tiempos. Se presenta como la Persona en quien esa esperanza ya vive, ahí mismo, ese mismo día.\n\nLo que sigue confirma lo que dijo: clama a gran voz, y Lázaro sale de la tumba, todavía atado con las vendas de la muerte (Juan 11:43-44). Es una resurrección real, pero no la definitiva — Lázaro volverá a morir un día.\n\nPablo escribe después que el postrer enemigo que será destruido es la muerte (1 Corintios 15:26). Lo que Jesús hizo con Lázaro fue una señal. Apuntaba hacia su propia resurrección, donde la muerte no solo retrocedería por un tiempo, sino que sería vencida para siempre.",
       "scripture_references": [
-        {
-          "reference": "Job 19:25",
-          "text": "Yo sé que mi Redentor vive, y al fin se levantará sobre el polvo."
-        },
         {
           "reference": "Juan 11:21",
           "text": "Y Marta dijo a Jesús: Señor, si hubieses estado aquí, mi hermano no habría muerto."
@@ -106,7 +99,6 @@
       ],
       "revelation_key": "Marta esperaba una resurrección lejana, guardada para el último día. Jesús se presentó como esa misma esperanza, de pie frente a ella, ese mismo día."
     },
-
     {
       "order": 4,
       "type": "theological_depth",
@@ -134,7 +126,6 @@
       },
       "revelation_key": "La iglesia todavía tiene una tarea después del milagro: ayudar a quienes Cristo ya llamó a salir de la tumba a quedar libres de vendas viejas."
     },
-
     {
       "order": 5,
       "type": "discovery_activation",
@@ -160,7 +151,6 @@
       }
     }
   ],
-
   "tags": [
     "resurrección",
     "vida_eterna",
@@ -170,7 +160,6 @@
     "muerte",
     "esperanza"
   ],
-
   "metadata": {
     "total_word_count": 1260,
     "greek_words_count": 2,
