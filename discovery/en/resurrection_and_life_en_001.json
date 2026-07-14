@@ -1,0 +1,147 @@
+{
+  "id": "resurrection_and_life_001",
+  "type": "discovery",
+  "date": "2026-07-09",
+  "title": "I am the resurrection and the life",
+  "subtitle": "When Jesus stands before death and death retreats",
+  "language": "en",
+  "version": "KJV",
+  "estimated_reading_minutes": 7,
+  "key_verse": {
+    "reference": "John 11:25-26",
+    "text": "Jesus said unto her, I am the resurrection, and the life: he that believes in me, though he were dead, yet shall he live: And whosoever lives and believes in me shall never die. Do you believe this?"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "historical_context",
+      "icon": "⚰️",
+      "title": "Bethany: a home broken by grief",
+      "subtitle": "Why Jesus waited on purpose",
+      "content": "Martha and Mary send an urgent message to Jesus, letting him know that Lazarus is sick (John 11:3). They are certain that once he hears, he will act at once. Jesus responds in a way that unsettles them: this sickness has a greater purpose, the glory of God (John 11:4). And he stays two more days where he was.\n\n🕯️ First-century Jewish mourning:\n\n• Bodies were buried the same day as death, due to climate and ritual law\n• Family and neighbors kept formal mourning for seven days, with loud lament\n• A popular belief held that the soul remained near the body until the third day, in hope that it might return\n• By the fourth day, that hope was considered officially lost — decomposition confirmed there was no turning back\n\n📖 The intentional delay:\n\nWhen Jesus finally tells the disciples that Lazarus has died, he adds something surprising: he is glad he was not there, so that they may believe (John 11:14-15). The delay was a deliberate decision, timed to arrive after the fourth day, the point at which all human hope had already run out.\n\nJesus arrives after death seems final, at the exact moment when only he can act.",
+      "scripture_references": [
+        {
+          "reference": "John 11:3-4",
+          "text": "Therefore his sisters sent unto him, saying, Lord, behold, he whom you love is sick. When Jesus heard that, he said, This sickness is not unto death, but for the glory of God, that the Son of God might be glorified thereby."
+        },
+        {
+          "reference": "John 11:14-15",
+          "text": "Then said Jesus unto them plainly, Lazarus is dead. And I am glad for your sakes that I was not there, to the intent you may believe; nevertheless let us go unto him."
+        }
+      ],
+      "revelation_key": "Jesus arrives after the grief has already run its course, at the moment when only he can resolve it."
+    },
+    {
+      "order": 2,
+      "type": "greek_exegesis",
+      "icon": "📖",
+      "title": "Enebrimḗsato and Edákrysen: two ways of weeping",
+      "subtitle": "The difference between the crowd's grief and Jesus's",
+      "content": "Mary weeps, and the Jews who accompany her weep with her — a public, loud lament, as was customary in Jewish mourning. Jesus sees the scene and responds in two distinct movements, which the original Greek text distinguishes with precision: first he shudders with indignation at death itself, then he weeps in silence, alone with his own grief for Lazarus. Two different Greek words describe these two moments.",
+      "greek_words": [
+        {
+          "word": "Enebrimḗsato",
+          "transliteration": "ἐνεβριμήσατο",
+          "reference": "John 11:33",
+          "meaning": "He shuddered, he was deeply moved — literally, a snort of visceral indignation",
+          "revelation": "When Jesus sees Mary and the Jews who accompanied her weeping, the text says he 'groaned in his spirit, and was troubled' (John 11:33). The Greek verb describes something closer to a snort of indignation than to simple sadness.\n\nJesus is not merely sad for Lazarus. He is indignant against death itself — against what sin has done to his beloved creation. He confronts the tomb as one confronting an enemy, not only as one mourning a loss.",
+          "application": "Christ does not watch your pain from a calm distance. He is indignant at death and at everything that breaks what he loves, just as you are."
+        },
+        {
+          "word": "Edákrysen",
+          "transliteration": "ἐδάκρυσεν",
+          "reference": "John 11:35",
+          "meaning": "He shed silent tears — distinct from loud, public lament",
+          "revelation": "'Jesus wept' is a brief verse of just two words, but the verb chosen is precise. It is not 'klaíō', the loud, public weeping the text uses to describe Mary and those who mourned. It is 'edákrysen' — silent, personal, intimate tears.\n\nJesus, who in a moment will raise Lazarus, still weeps first. He knows how the scene ends, and yet he feels the full weight of the loss in that instant.",
+          "application": "Jesus already knew Lazarus would rise — he had told the disciples so before arriving. He could have arrived announcing the good news first, changing the scene entirely.\n\nInstead, he stops to weep with those who weep. Though he had the power and the knowledge of what was coming, in humility and empathy he wept over another's pain and suffering."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "John 11:33-35",
+          "text": "When Jesus therefore saw her weeping, and the Jews also weeping who came with her, he groaned in his spirit, and was troubled, And said, Where have you laid him? They said unto him, Lord, come and see. Jesus wept."
+        }
+      ],
+      "revelation_key": "Jesus feels the loss fully, and still moves toward the tomb with authority."
+    },
+    {
+      "order": 3,
+      "type": "prophetic_thread",
+      "icon": "✨",
+      "title": "I am the resurrection",
+      "subtitle": "When Jesus places a future hope into his own person",
+      "content": "Martha tells Jesus that if he had been there, her brother would not have died (John 11:21). She believes in what Jesus can prevent. She does not yet consider what Jesus can reverse.\n\nJesus tells her that her brother will rise again. Martha responds with a correct belief: she knows he will rise again on the last day (John 11:23-24). It is a real hope, but reserved for the final future, not for that very moment beside the tomb.\n\nThen Jesus identifies himself as that very hope: 'I am the resurrection and the life' (John 11:25-26). He is not teaching a new doctrine about the end of the age. He presents himself as the Person in whom that hope already lives, right there, that very day.",
+      "scripture_references": [
+        {
+          "reference": "John 11:21-26",
+          "text": "Then said Martha unto Jesus, Lord, if you had been here, my brother would not have died. But I know, that even now, whatsoever you will ask of God, God will give it to you. Jesus said unto her, Your brother shall rise again. Martha said unto him, I know that he shall rise again in the resurrection at the last day. Jesus said unto her, I am the resurrection, and the life: he that believes in me, though he were dead, yet shall he live: And whosoever lives and believes in me shall never die. Do you believe this?"
+        }
+      ],
+      "revelation_key": "Martha expected a distant resurrection, reserved for the last day. Jesus presented himself as that very hope, standing before her, that same day."
+    },
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "icon": "🪨",
+      "title": "Take away the stone",
+      "subtitle": "The faith that precedes glory, not the faith that follows it",
+      "content": "Before the tomb, Jesus gives a simple command: take away the stone (John 11:39). Martha's response is painfully human: she warns that the body already smells, after four days. She believes in Jesus, but her faith still calculates what is reasonable to expect.\n\n👁️ The condition of glory:\n\nJesus reminds her of what he had already told her: if she believes, she will see the glory of God (John 11:40). The order matters: normally someone sees a miracle and then believes God did it. Jesus asks Martha for the opposite — to believe first, before seeing anything, so that afterward she may see the glory of God.\n\n🙏 A prayer for the crowd:\n\nBefore calling Lazarus, Jesus prays aloud, thanking the Father for hearing him, and explains that he says it for the sake of the crowd, so that they may believe the Father sent him (John 11:41-42). The miracle was never only for Lazarus, Martha, or Mary. It was public proof that the Father had sent the Son.\n\n📣 The voice death could not ignore:\n\nJesus cries out with a loud voice, and the one who had died comes out of the tomb, still bound hand and foot, his face wrapped in a cloth (John 11:43-44). Jesus adds one last instruction: loose him, and let him go.\n\nPaul writes later that the last enemy to be destroyed is death (1 Corinthians 15:26). What Jesus did with Lazarus was a sign. It pointed toward his own resurrection, in which death would not merely retreat for a time, but be defeated forever.",
+      "scripture_references": [
+        {
+          "reference": "John 11:39-44",
+          "text": "Jesus said, Take away the stone. Martha, the sister of him that was dead, said unto him, Lord, by this time he stinks: for he has been dead four days. Jesus said unto her, Said I not unto you, that, if you would believe, you should see the glory of God? Then they took away the stone from the place where the dead was laid. And Jesus lifted up his eyes, and said, Father, I thank you that you have heard me. And I knew that you hear me always: but because of the people who stand by I said it, that they may believe that you have sent me. And when he thus had spoken, he cried with a loud voice, Lazarus, come forth. And he that was dead came forth, bound hand and foot with grave clothes: and his face was bound about with a cloth. Jesus said unto them, Loose him, and let him go."
+        },
+        {
+          "reference": "1 Corinthians 15:26",
+          "text": "The last enemy that shall be destroyed is death."
+        }
+      ],
+      "revelation_key": "The church still has a task after the miracle: helping those Christ has already called out of the tomb to be freed from the wrappings that still bind them."
+    },
+    {
+      "order": 5,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Personal discovery",
+      "discovery_questions": [
+        {
+          "category": "Waiting",
+          "question": "Jesus waited on purpose until all human hope had run out. Is there something in your life where you read God's silence as absence, rather than as preparation?"
+        },
+        {
+          "category": "Faith",
+          "question": "Martha believed correctly in a future resurrection, but struggled to believe Jesus could act in that very moment. Is your faith reserved for 'someday,' or do you trust that Christ acts today?"
+        },
+        {
+          "category": "Freedom",
+          "question": "Lazarus came out alive, but still bound — he needed others to loose him. Are there wounds, habits, or guilt from the past that Christ has already freed you from, but that you are still carrying?"
+        }
+      ],
+      "prayer": {
+        "title": "A prayer to the resurrection and the life",
+        "content": "Jesus, you are the resurrection and the life. Thank you that, just as with Lazarus's death, you do not stay distant from my pain — you are stirred by what affects me, and still you move forward with authority. I confess that my faith often waits for a miracle before it believes, but I want to believe first so I can see the glory of God. If there are parts of me that you have already called out into life, but that remain bound, set me free, Lord. Today I choose to believe, to be free from the death of sin, and to hold on to your eternal life. I believe this. In your name, Amen."
+      }
+    }
+  ],
+  "tags": [
+    "resurrection",
+    "eternal_life",
+    "grief",
+    "faith",
+    "lazarus",
+    "death",
+    "hope"
+  ],
+  "metadata": {
+    "total_word_count": 1260,
+    "greek_words_count": 2,
+    "scripture_references_count": 15,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "Identity of Christ",
+      "Comfort in grief",
+      "Eternal life",
+      "Faith beyond what is seen"
+    ]
+  }
+}
