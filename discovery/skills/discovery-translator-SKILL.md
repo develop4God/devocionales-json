@@ -217,8 +217,8 @@ python3 discovery_master_validator.py
 
 `validate_pair.py` checks schema and structure — it cannot catch bad prose. The
 translating agent also cannot reliably catch its own register mistakes. So after each
-language file passes `validate_pair.py`, **before delivery**, spawn one **`discovery-critic`
-subagent** (defined at `~/.claude/agents/discovery-critic.md`) per translated file, in
+language file passes `validate_pair.py`, **before delivery**, spawn one **`critic_reviewer_agent`
+subagent** (defined at `~/.claude/agents/critic_reviewer_agent.md`) per translated file, in
 parallel across the batch. This profile is read-only (cannot edit files) and is
 instructed to disregard project memory/house-style rules, acting as a fresh, naive
 native-speaker reader — do not substitute a general-purpose agent for it, and do not
@@ -229,7 +229,7 @@ Immediately after a translation file is written and `validate_pair.py` passes fo
 do not batch this up and defer it to the end of the whole run.
 
 ### Delegation
-Spawn `discovery-critic`, filling in `[LANGUAGE]` and `[FILE_PATH]` per the profile's
+Spawn `critic_reviewer_agent`, filling in `[LANGUAGE]` and `[FILE_PATH]` per the profile's
 own template. Do not restate or override its base instructions in the delegation
 message beyond the language and file path.
 
