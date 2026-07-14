@@ -74,7 +74,7 @@
           "text": "El que come mi carne y bebe mi sangre, tiene vida eterna; y yo le resucitaré en el día postrero."
         }
       ],
-      "revelation_key": "Jesús se ofrece a sí mismo, para ser recibido, no solo admirado."
+      "revelation_key": "Jesús pide algo concreto: que vengamos a él cada día, no una sola vez."
     },
 
     {
@@ -83,19 +83,19 @@
       "icon": "🧵",
       "title": "Del pan del cielo a la mesa del Señor",
       "subtitle": "Cómo el maná del desierto apunta hacia la Cena del Señor",
-      "content": "Antes de que Israel pidiera nada, Dios ya había decidido alimentar a su pueblo con pan que venía del cielo, según lo promete en Éxodo 16:4.\n\nEn Deuteronomio 8:3, Dios explica el propósito de esa provisión diaria: enseñar que la vida verdadera depende, ante todo, de su palabra. Siglos más tarde, en el desierto de la tentación, Jesús cita ese mismo versículo en Mateo 4:4. El que un día se llamará a sí mismo Pan de vida primero practicó la verdad que después proclamaría.\n\nGeneraciones después de Moisés, el salmista todavía cantaba sobre el maná en Salmos 78:24, sin saber que cantaba sobre una sombra. La sustancia llegaría con Jesús mismo, quien declara en Juan 6:32-33 que el verdadero pan del cielo da vida al mundo entero, no solo alimento para un día.\n\nEsa promesa encuentra su punto final en la última cena. En 1 Corintios 11:24, Jesús toma pan y lo llama su cuerpo, entregado en memoria de lo que Él mismo cumpliría. El maná caía del cielo cada mañana como puro regalo; el pan de la Cena se recibe de la misma manera: como memoria de lo que Cristo ya hizo.",
+      "content": "El pueblo se quejó en el desierto, añorando la comida de Egipto. Dios responde a esa queja con una promesa: hará llover pan del cielo cada día (Éxodo 16:2-4).\n\nEn Deuteronomio 8:3, Dios explica el propósito de esa provisión diaria: enseñar que la vida verdadera depende, ante todo, de su palabra. Jesús mismo, antes de decir 'Yo soy el pan de vida', vivió esa misma verdad: en el desierto, con hambre real, el diablo lo tentó a convertir piedras en pan. Jesús no lo hizo. Confió en la palabra de Dios en vez de resolver su propia hambre, citando ese mismo versículo de Deuteronomio (Mateo 4:1-4).\n\nGeneraciones después de Moisés, el salmista todavía cantaba sobre el maná en Salmos 78:24. No sabía que ese pan del desierto solo era un anuncio de algo más grande que vendría después: Jesús mismo. Él declara en Juan 6:32-33 que el verdadero pan del cielo da vida al mundo entero, no solo alimento para un día.\n\nEsa promesa encuentra su punto final en la última cena. En Lucas 22:19, Jesús toma pan y lo llama su cuerpo, entregado por ellos en la cruz. El maná caía del cielo cada mañana como puro regalo; el pan de la Cena se recibe de la misma manera: como memoria de esa entrega.",
       "scripture_references": [
         {
-          "reference": "Éxodo 16:4",
-          "text": "Y Jehová dijo a Moisés: He aquí yo os haré llover pan del cielo; y el pueblo saldrá, y recogerá diariamente la porción de un día, para que yo lo pruebe si anda en mi ley, o no."
+          "reference": "Éxodo 16:2-4",
+          "text": "Y toda la congregación de los hijos de Israel murmuró contra Moisés y Aarón en el desierto; y les decían los hijos de Israel: Ojalá hubiéramos muerto por mano de Jehová en la tierra de Egipto, cuando nos sentábamos a las ollas de carne, cuando comíamos pan hasta saciarnos; pues nos habéis sacado a este desierto para matar de hambre a toda esta multitud. Y Jehová dijo a Moisés: He aquí yo os haré llover pan del cielo; y el pueblo saldrá, y recogerá diariamente la porción de un día, para que yo lo pruebe si anda en mi ley, o no."
         },
         {
           "reference": "Deuteronomio 8:3",
           "text": "Y te afligió, y te hizo tener hambre, y te sustentó con maná, comida que no habías conocido, ni tus padres la habían conocido, para hacerte saber que no sólo de pan vivirá el hombre, mas de todo lo que sale de la boca de Jehová vivirá el hombre."
         },
         {
-          "reference": "Mateo 4:4",
-          "text": "Él respondió y dijo: Escrito está: No sólo de pan vivirá el hombre, sino de toda palabra que sale de la boca de Dios."
+          "reference": "Mateo 4:1-4",
+          "text": "Entonces Jesús fue llevado por el Espíritu al desierto, para ser tentado por el diablo. Y después de haber ayunado cuarenta días y cuarenta noches, tuvo hambre. Y vino a él el tentador, y le dijo: Si eres Hijo de Dios, di que estas piedras se conviertan en pan. Él respondió y dijo: Escrito está: No sólo de pan vivirá el hombre, sino de toda palabra que sale de la boca de Dios."
         },
         {
           "reference": "Salmos 78:24",
@@ -106,8 +106,8 @@
           "text": "Respondióles Jesús: De cierto, de cierto os digo: No os dio Moisés el pan del cielo, mas mi Padre os da el verdadero pan del cielo. Porque el pan de Dios es aquel que descendió del cielo y da vida al mundo."
         },
         {
-          "reference": "1 Corintios 11:24",
-          "text": "y habiendo dado gracias, lo partió, y dijo: Tomad, comed; esto es mi cuerpo que por vosotros es partido; haced esto en memoria de mí."
+          "reference": "Lucas 22:19",
+          "text": "Y tomó el pan y dio gracias, y lo partió y les dio, diciendo: Esto es mi cuerpo, que por vosotros es dado; haced esto en memoria de mí."
         }
       ],
       "revelation_key": "El maná alimentó a una nación por cuarenta años en el desierto. Cristo, el Pan verdadero, alimenta al alma para la eternidad."
@@ -118,8 +118,8 @@
       "type": "theological_depth",
       "icon": "🍞",
       "title": "Mi carne es verdadera comida",
-      "subtitle": "El dicho difícil que hizo que muchos se fueran",
-      "content": "Jesús lleva la imagen del pan a un extremo que incomoda incluso a sus propios seguidores, declarando que su carne y su sangre son verdadero alimento (Juan 6:53-55).\n\n😳 La reacción inmediata:\n\nMuchos de sus propios discípulos consideraron dura esta palabra (Juan 6:60). El texto es claro sobre el costo de esta enseñanza: muchos discípulos se apartaron y dejaron de seguirlo (Juan 6:66).\n\nJesús mantiene el mismo lenguaje y deja que la multitud se vaya. Se vuelve a los doce y pregunta si también ellos quieren irse (v.67).\n\n🗣️ La respuesta de Pedro:\n\nPedro responde reconociendo que solo Jesús tiene palabras de vida eterna, y confiesa que Él es el Cristo, el Hijo del Dios viviente (Juan 6:68-69).\n\nPedro todavía está procesando todo lo que Jesús acaba de decir. Pero entiende algo suficiente: solo en Cristo hay palabras de vida eterna. Toda otra fuente, comparada con Él, es hambre disfrazada.\n\nEsta 'palabra dura' encontraría su explicación completa en la última cena, cuando Jesús partiera el pan y lo llamara su cuerpo (1 Corintios 11:24). Pedía una dependencia tan real, tan constante y tan personal de Él, como la que el cuerpo tiene del alimento que lo sostiene cada día — no pedía canibalismo, sino esa entrega diaria.",
+      "subtitle": "La palabra dura que hizo que muchos se fueran",
+      "content": "Jesús lleva la imagen del pan a un extremo que incomoda incluso a sus propios seguidores, declarando que su carne y su sangre son verdadero alimento (Juan 6:53-55).\n\n😳 La reacción inmediata:\n\nMuchos de sus propios discípulos consideraron dura esta palabra (Juan 6:60). El texto es claro sobre el costo de esta enseñanza: muchos discípulos se apartaron y dejaron de seguirlo (Juan 6:66).\n\nJesús mantiene el mismo lenguaje y deja que la multitud se vaya. Se vuelve a los doce y pregunta si también ellos quieren irse (Juan 6:67).\n\n🗣️ La respuesta de Pedro:\n\nPedro responde reconociendo que solo Jesús tiene palabras de vida eterna, y confiesa que Él es el Cristo, el Hijo del Dios viviente (Juan 6:68-69).\n\nPedro responde con una pregunta: ¿a quién más podrían ir? Afirma lo que ya sabe con certeza: Jesús tiene palabras de vida eterna, y Él es el Cristo, el Hijo del Dios viviente. Esa certeza sostiene a Pedro incluso frente a una enseñanza que le cuesta entender.\n\nEsta 'palabra dura' encontraría su explicación completa en la última cena, cuando Jesús partiera el pan y lo llamara su cuerpo (Lucas 22:19). Pedía una dependencia tan real, tan constante y tan personal de Él, como la que el cuerpo tiene del alimento que lo sostiene cada día.",
       "scripture_references": [
         {
           "reference": "Juan 6:53",
@@ -142,15 +142,15 @@
           "text": "Dijo entonces Jesús a los doce: ¿Queréis acaso iros también vosotros?"
         },
         {
-          "reference": "1 Corintios 11:24",
-          "text": "y habiendo dado gracias, lo partió, y dijo: Tomad, comed; esto es mi cuerpo que por vosotros es partido; haced esto en memoria de mí."
+          "reference": "Lucas 22:19",
+          "text": "Y tomó el pan y dio gracias, y lo partió y les dio, diciendo: Esto es mi cuerpo, que por vosotros es dado; haced esto en memoria de mí."
         }
       ],
       "scripture_anchor": {
         "reference": "Juan 6:68-69",
         "text": "Señor, ¿a quién iremos? Tú tienes palabras de vida eterna. Y nosotros hemos creído y conocemos que tú eres el Cristo, el Hijo del Dios viviente."
       },
-      "revelation_key": "Cuando la enseñanza de Cristo se vuelve difícil, la pregunta no es si te ofende, sino si conoces algún otro lugar con palabras de vida eterna."
+      "revelation_key": "Cada vez que participamos de la Cena del Señor, recibimos lo que Cristo entregó por nosotros: su cuerpo y su sangre, sacrificados en la cruz."
     },
 
     {

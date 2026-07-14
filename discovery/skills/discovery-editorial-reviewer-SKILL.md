@@ -193,6 +193,44 @@ understand this?
 
 ---
 
+### 8.5. No abstract, unanchored phrases
+A sentence can pass every rule above — nothing invented, no negation-built
+argument, no marketing cliché — and still fail because it sounds profound
+but says nothing concrete or verifiable.
+
+**Test:** For every sentence, ask: "if a reader asked 'what does this
+actually mean, concretely?', could I answer without adding new
+information?" If the honest answer only restates the same sentence more
+poetically, or leans on unexplained theological shorthand (tipología,
+sombra, cumplimiento) without unpacking it in plain words, rewrite it to
+name the concrete fact, event, or action it's pointing to.
+
+**Wrong:** "El que un día se llamará a sí mismo Pan de vida primero
+practicó la verdad que después proclamaría." (Sounds elegant, says
+nothing concrete — practiced *what*, *how*?)
+**Right:** "Jesús mismo, antes de decir 'Yo soy el pan de vida', vivió esa
+misma verdad: en el desierto, con hambre real, el diablo lo tentó a
+convertir piedras en pan. Jesús no lo hizo." — names the actual event.
+
+**Wrong:** "cantaba sobre el maná... sin saber que cantaba sobre una
+sombra." ("Sombra" is unexplained typology jargon — a plain reader has no
+idea what it means.)
+**Right:** "cantaba sobre el maná... No sabía que ese pan del desierto
+solo era un anuncio de algo más grande que vendría después: Jesús mismo."
+— unpacks the idea in plain words.
+
+**Wrong:** "Jesús se ofrece a sí mismo, para ser recibido, no solo
+admirado." (Assumes a contrast — admiration vs. reception — the text
+never sets up; nobody in John 6 asked Jesus for admiration.)
+**Right:** "Jesús pide algo concreto: que vengamos a él cada día, no una
+sola vez." — states what the text actually shows Jesus asking for.
+
+**Why this is separate from Rule 8:** Rule 8 catches jargon and long
+sentences. This rule catches sentences that are already short and plain
+in vocabulary, yet still empty — the failure is conceptual, not lexical.
+
+---
+
 ### 9. No em dashes in excess
 Em dashes (—) are allowed but sparingly — one per paragraph maximum. Never
 as a stylistic default. If a sentence needs an em dash to make sense,
@@ -253,6 +291,8 @@ For each card, check in this order:
 - [ ] No unverifiable claims or unreal hyperbole (Rule 5)
 - [ ] Greek/Hebrew terms explained inline where they appear (Rule 7)
 - [ ] Language accessible to all readers (Rule 8)
+- [ ] No abstract, unanchored phrases — every sentence answers "what does
+      this concretely mean?" (Rule 8.5)
 - [ ] Card adds something new vs. adjacent cards (Rule 6)
 - [ ] Per-language register correct, for non-Spanish files (Rule 11)
 
