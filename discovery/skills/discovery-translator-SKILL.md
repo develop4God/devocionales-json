@@ -153,6 +153,8 @@ Key structure must be identical to the EN file. Run `validate_pair.py` to confir
 
 **Cross-reference ES file** for pastoral tone on the prayer and `identity_statement` — the ES file has the most developed devotional voice for these sections.
 
+**No negation-based contrast:** Never build sentences on negation ("not X, but Y" / "no longer X, but Y") to create rhetorical contrast in `content`, `revelation`, `revelation_key`, `title`, or `subtitle` fields. State what IS true directly. The only exception is a direct or close-paraphrase quotation of the biblical text itself. This applies while drafting, not just on review — check every translated field for this pattern before delivery.
+
 ---
 
 ## MANDATORY GATE: Per-Language Register Rules
@@ -224,46 +226,22 @@ Immediately after a translation file is written and `validate_pair.py` passes fo
 do not batch this up and defer it to the end of the whole run.
 
 ### Delegation prompt template
-> You are a native [LANGUAGE] Christian speaker. Read this file line by line, taking
-> your time. Review the following [LANGUAGE] Bible study translation for errors (DOES
-> NOT APPLY to verses only in the translated content):
+This is the only prompt to use for critic review — do not add severity tiers, register-rule
+references, or any other structure to it.
+
+> You are a native [LANGUAGE] ([regional variant if applicable, e.g. Brazilian for pt])
+> speaker, read this file and tell me if you find: Typos / Grammar Errors, Awkward /
+> Non-native-sounding phrasing. Take your time, line by line. Your comments in English.
+> After you complete the validation of any error you find, search broader in the file to
+> see if you have a repeating pattern to document, and inform, summarizing your findings.
+>
 > File: [FILE_PATH]
->
-> For EACH file, carefully check for:
->
-> **CRITICAL ERRORS (must be fixed):**
-> - Typos and spacing errors
-> - Wrong word meanings that change theological meaning
-> - Untranslated English words or phrases
-> - Incorrect characters or diacritics
-> - Wrong verb conjugations or tenses
-> - Expressions that sound unnatural for a native speaker
-> - Theological terminology errors for this language and culture
-> - Violation of the per-language register rule in
->   `discovery/skills/discovery-translator-SKILL.md` § "MANDATORY GATE: Per-Language
->   Register Rules"
->
-> **MODERATE ISSUES (should be improved):**
-> - Word choices with wrong connotations
-> - Unnatural phrasing that doesn't sound native
-> - Inconsistent terminology across sections
-> - Better synonym choices for clarity
->
-> **MINOR SUGGESTIONS:**
-> - Style improvements
-> - More natural idioms
-> - Better flow
->
-> Provide: file name, list of ALL findings (with text context), severity
-> (CRITICAL/MODERATE/MINOR), and a suggested correction (elaborate diff) for each.
 
 ### Coordinator review
 After all critic reports return:
-1. CRITICAL findings are a checklist. The coordinator must iterate through every item marked CRITICAL, apply each fix one by one, and confirm each one before closing the review. Do not mark a file as reviewed until every CRITICAL item has a fix applied and confirmed.
-2. Review MODERATE findings — review one by one, dismiss or apply the fix, document each one.
-3. Review MINOR suggestions — review one by one, dismiss or apply the fix, document each one.
-4. Re-run `validate_pair.py` on any file that was modified.
-5. Proceed to the reverse-validation gate below before final validation.
+1. Review each finding one by one — dismiss or apply the fix, document each one.
+2. Re-run `validate_pair.py` on any file that was modified.
+3. Proceed to the reverse-validation gate below before final validation.
 
 ---
 

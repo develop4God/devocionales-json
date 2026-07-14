@@ -641,16 +641,28 @@
       "version": "1.0",
       "emoji": "🍞",
       "files": {
-        "es": "bread_of_life_es_001.json"
+        "es": "bread_of_life_es_001.json",
+        "en": "bread_of_life_en_001.json",
+        "pt": "bread_of_life_pt_001.json",
+        "fr": "bread_of_life_fr_001.json"
       },
       "titles": {
-        "es": "Yo soy el pan de vida"
+        "es": "Yo soy el pan de vida",
+        "en": "I Am the Bread of Life",
+        "pt": "Eu sou o pão da vida",
+        "fr": "Je suis le pain de vie"
       },
       "subtitles": {
-        "es": "Cuando el maná del desierto encuentra su cumplimiento final"
+        "es": "Cuando el maná del desierto encuentra su cumplimiento final",
+        "en": "When the manna of the desert meets its final fulfillment",
+        "pt": "Quando o maná do deserto encontra seu cumprimento final",
+        "fr": "Quand la manne du désert trouve son accomplissement final"
       },
       "estimated_reading_minutes": {
-        "es": 7
+        "es": 7,
+        "en": 7,
+        "pt": 9,
+        "fr": 9
       }
     },
     {
