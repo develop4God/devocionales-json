@@ -217,25 +217,21 @@ python3 discovery_master_validator.py
 
 `validate_pair.py` checks schema and structure — it cannot catch bad prose. The
 translating agent also cannot reliably catch its own register mistakes. So after each
-language file passes `validate_pair.py`, **before delivery**, spawn a **fresh subagent
-(NOT HAIKU model)** (no shared context with the translator) — one critic per translated
-file, in parallel across the batch.
+language file passes `validate_pair.py`, **before delivery**, spawn one **`discovery-critic`
+subagent** (defined at `~/.claude/agents/discovery-critic.md`) per translated file, in
+parallel across the batch. This profile is read-only (cannot edit files) and is
+instructed to disregard project memory/house-style rules, acting as a fresh, naive
+native-speaker reader — do not substitute a general-purpose agent for it, and do not
+add severity tiers, register-rule references, or any other structure to its brief.
 
 ### When to spawn
 Immediately after a translation file is written and `validate_pair.py` passes for it —
 do not batch this up and defer it to the end of the whole run.
 
-### Delegation prompt template
-This is the only prompt to use for critic review — do not add severity tiers, register-rule
-references, or any other structure to it.
-
-> You are a native [LANGUAGE] ([regional variant if applicable, e.g. Brazilian for pt])
-> speaker, read this file and tell me if you find: Typos / Grammar Errors, Awkward /
-> Non-native-sounding phrasing. Take your time, line by line. Your comments in English.
-> After you complete the validation of any error you find, search broader in the file to
-> see if you have a repeating pattern to document, and inform, summarizing your findings.
->
-> File: [FILE_PATH]
+### Delegation
+Spawn `discovery-critic`, filling in `[LANGUAGE]` and `[FILE_PATH]` per the profile's
+own template. Do not restate or override its base instructions in the delegation
+message beyond the language and file path.
 
 ### Coordinator review
 After all critic reports return:
