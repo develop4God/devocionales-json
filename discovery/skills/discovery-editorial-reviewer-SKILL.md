@@ -310,8 +310,16 @@ git commit -m "feat(<lang>): <brief description of what changed>"
 ```
 
 Present the file after each commit using `present_files`. Regenerate the
-companion `.md` reading copy (if one exists for this session) after any
-content change, so Giovanni is always reviewing the current version.
+app-accurate preview after any content change, so Giovanni is always
+reviewing the current version:
+
+```bash
+python3 discovery/discovery_scripts/app_preview.py <filepath>
+```
+
+This renders the JSON as it will actually look in the app, and flags any
+field the app doesn't parse/display (e.g. `timeline`) with a visible
+warning — a stronger check than a plain reading copy.
 
 ---
 

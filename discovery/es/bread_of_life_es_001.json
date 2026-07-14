@@ -91,36 +91,31 @@
       "icon": "🧵",
       "title": "Del pan del cielo a la mesa del Señor",
       "subtitle": "Cómo el maná del desierto apunta hacia la Cena del Señor",
-      "timeline": [
+      "content": "Antes de que Israel pidiera nada, Dios ya había decidido alimentar a su pueblo con pan que venía del cielo, según lo promete en Éxodo 16:4.\n\nEn Deuteronomio 8:3, Dios explica el propósito de esa provisión diaria: enseñar que la vida verdadera depende, ante todo, de su palabra. Siglos más tarde, en el desierto de la tentación, Jesús cita ese mismo versículo en Mateo 4:4. El que un día se llamará a sí mismo Pan de vida primero practicó la verdad que después proclamaría.\n\nGeneraciones después de Moisés, el salmista todavía cantaba sobre el maná en Salmos 78:24, sin saber que cantaba sobre una sombra. La sustancia llegaría con Jesús mismo, quien declara en Juan 6:32-33 que el verdadero pan del cielo da vida al mundo entero, no solo alimento para un día.\n\nEsa promesa encuentra su punto final en la última cena. En 1 Corintios 11:24, Jesús toma pan y lo llama su cuerpo, entregado en memoria de lo que Él mismo cumpliría. El maná caía del cielo cada mañana como puro regalo; el pan de la Cena se recibe de la misma manera: como memoria de lo que Cristo ya hizo.",
+      "scripture_references": [
         {
-          "event": "Éxodo 16:4",
-          "description": "Dios promete: 'He aquí yo os haré llover pan del cielo'",
-          "revelation": "Antes de que Israel pidiera nada, Dios ya había decidido alimentar a su pueblo con pan que viene de Él, no de la tierra que pisan."
+          "reference": "Éxodo 16:4",
+          "text": "Y Jehová dijo a Moisés: He aquí yo os haré llover pan del cielo; y el pueblo saldrá, y recogerá diariamente la porción de un día, para que yo lo pruebe si anda en mi ley, o no."
         },
         {
-          "event": "Deuteronomio 8:3",
-          "description": "Dios explica el propósito del maná: 'para hacerte saber que no sólo de pan vivirá el hombre, mas de todo lo que sale de la boca de Jehová'",
-          "revelation": "El maná era una lección diaria: la vida verdadera depende, ante todo, de la palabra de Dios."
+          "reference": "Deuteronomio 8:3",
+          "text": "Y te afligió, y te hizo tener hambre, y te sustentó con maná, comida que no habías conocido, ni tus padres la habían conocido, para hacerte saber que no sólo de pan vivirá el hombre, mas de todo lo que sale de la boca de Jehová vivirá el hombre."
         },
         {
-          "event": "Mateo 4:4",
-          "description": "Jesús, tentado en el desierto, cita exactamente ese versículo",
-          "revelation": "El mismo Jesús que un día se llamará 'el Pan de vida' primero vivió la verdad de que el hombre no vive solo de pan. Practicó antes de proclamar."
+          "reference": "Mateo 4:4",
+          "text": "Él respondió y dijo: Escrito está: No sólo de pan vivirá el hombre, sino de toda palabra que sale de la boca de Dios."
         },
         {
-          "event": "Salmos 78:24",
-          "description": "El salmista recuerda: Dios 'les dio trigo de los cielos'",
-          "revelation": "Generaciones después, Israel seguía cantando sobre el maná — sin saber que cantaban sobre una sombra, no sobre la sustancia final."
+          "reference": "Salmos 78:24",
+          "text": "e hizo llover sobre ellos maná para que comiesen, y les dio trigo de los cielos."
         },
         {
-          "event": "Juan 6:32-33",
-          "description": "Jesús declara: 'el pan de Dios es aquel que descendió del cielo y da vida al mundo'",
-          "revelation": "El maná alimentó cuerpos por un día. Este Pan da vida — vida que no termina."
+          "reference": "Juan 6:32-33",
+          "text": "Respondióles Jesús: De cierto, de cierto os digo: No os dio Moisés el pan del cielo, mas mi Padre os da el verdadero pan del cielo. Porque el pan de Dios es aquel que descendió del cielo y da vida al mundo."
         },
         {
-          "event": "1 Corintios 11:24",
-          "description": "En la última cena, Jesús toma pan y dice: 'esto es mi cuerpo que por vosotros es partido; haced esto en memoria de mí'",
-          "revelation": "El maná caía del cielo cada mañana como puro regalo. El pan de la Cena se recibe igual: en memoria de lo que Cristo ya hizo."
+          "reference": "1 Corintios 11:24",
+          "text": "y habiendo dado gracias, lo partió, y dijo: Tomad, comed; esto es mi cuerpo que por vosotros es partido; haced esto en memoria de mí."
         }
       ],
       "revelation_key": "El maná alimentó a una nación por cuarenta años en el desierto. Cristo, el Pan verdadero, alimenta al alma para la eternidad."
