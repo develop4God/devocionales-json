@@ -1,0 +1,196 @@
+{
+  "id": "bread_of_life_001",
+  "type": "discovery",
+  "date": "2026-07-08",
+  "title": "Je suis le pain de vie",
+  "subtitle": "Quand la manne du désert trouve son accomplissement final",
+  "language": "fr",
+  "version": "LSG1910",
+  "estimated_reading_minutes": 9,
+  "key_verse": {
+    "reference": "Jean 6:35",
+    "text": "Jésus leur dit: Je suis le pain de vie. Celui qui vient à moi n'aura jamais faim, et celui qui croit en moi n'aura jamais soif."
+  },
+
+  "cards": [
+    {
+      "order": 1,
+      "type": "historical_context",
+      "icon": "🌾",
+      "title": "La manne qui a nourri une nation",
+      "subtitle": "Pourquoi la foule réclamait un signe comme celui de Moïse",
+      "content": "Un jour après avoir multiplié les pains pour cinq mille personnes, Jésus traverse la mer de Galilée. La foule le suit, non par faim véritable, mais par faim de pain (Jean 6:26). Elle lui réclame alors un signe, se souvenant de la manne que Dieu donna à leurs pères dans le désert (Jean 6:31).\n\n🏜️ Le contexte que tous connaissaient:\n\n• Pendant quarante ans, chaque matin, Dieu fit pleuvoir du pain venu du ciel sur Israël (Exode 16:4)\n• Personne ne savait ce que c'était; c'est pourquoi on l'appela 'manne', comme Moïse lui-même l'explique (Exode 16:15)\n• C'était quotidien, suffisant pour ce jour-là, impossible à accumuler\n• Le psalmiste s'en souviendrait des siècles plus tard (Psaumes 78:24)\n\n📖 La correction de Jésus:\n\nLa foule attribue la manne à Moïse. Jésus corrige aussitôt, précisant que c'est son Père, et non Moïse, qui a donné le véritable pain du ciel, et affirme qu'il est lui-même ce pain qui donne la vie au monde (Jean 6:32-33).\n\nIl est lui-même l'accomplissement de ce que la manne ne faisait qu'annoncer.",
+      "scripture_references": [
+        {
+          "reference": "Exode 16:15",
+          "text": "Les enfants d'Israël regardèrent et ils se dirent l'un à l'autre: Qu'est-ce que cela? Car ils ne savaient pas ce que c'était. Moïse leur dit: C'est le pain que l'Éternel vous donne pour nourriture."
+        },
+        {
+          "reference": "Psaumes 78:24",
+          "text": "Il fit pleuvoir sur eux la manne pour nourriture, Il leur donna le blé du ciel."
+        },
+        {
+          "reference": "Jean 6:31-33",
+          "text": "Nos pères ont mangé la manne dans le désert, selon ce qui est écrit: Il leur donna le pain du ciel à manger. Jésus leur dit: En vérité, en vérité, je vous le dis, Moïse ne vous a pas donné le pain du ciel, mais mon Père vous donne le vrai pain du ciel; car le pain de Dieu, c'est celui qui descend du ciel et qui donne la vie au monde."
+        }
+      ],
+      "revelation_key": "La manne fut une ombre de quarante ans qui préparait Israël — et nous-mêmes — à reconnaître le véritable Pain lorsqu'il viendrait."
+    },
+
+    {
+      "order": 2,
+      "type": "greek_exegesis",
+      "icon": "📖",
+      "title": "Trṓgōn: bien plus que manger",
+      "subtitle": "Le verbe que Jésus a choisi avec intention",
+      "content": "Jésus choisit ses mots avec précision. En disant 'Je suis le pain de vie', il utilise le mot grec ἄρτος (ártos) dans l'original, qui désigne le pain quotidien, l'aliment de base sans lequel personne ne survit.\n\nPlus loin, au point le plus intense de son discours, quand il dit 'si quelqu'un mange de ce pain', il change de verbe: il ne parle plus de manger au sens général, mais de τρώγων (trṓgōn), mâcher, ronger. Ce changement dans la langue originale révèle la profondeur de ce qu'il demande: un don quotidien, physique, répété — pas un instant d'admiration lointaine.",
+      "greek_words": [
+        {
+          "word": "Ártos",
+          "transliteration": "ἄρτος",
+          "meaning": "Pain, l'aliment de base et quotidien de toute personne",
+          "revelation": "Jésus emploie le mot ártos en Jean 6:35 quand il dit 'Je suis le pain de vie'. Il se compare à ce qu'il y a de plus élémentaire et indispensable — sans quoi une famille ne survivait pas dans le monde antique.\n\nIl s'offre comme la nourriture sans laquelle l'âme ne vit tout simplement pas.",
+          "application": "Jésus est le soutien quotidien sans lequel ton âme s'affaiblit et meurt de faim."
+        },
+        {
+          "word": "Trṓgōn",
+          "transliteration": "τρώγων",
+          "meaning": "Mordre, mâcher, ronger — un verbe physique, distinct de 'manger' au sens général",
+          "revelation": "En Jean 6:54, le mot grec que Jésus emploie pour 'manger' est trṓgōn (τρώγων), qui signifie mâcher ou ronger, non pas manger au sens général.\n\nC'est un mot cru, presque dérangeant. Il décrit le geste physique de mordre et de mâcher, non une idée spirituelle abstraite.\n\nJésus le choisit délibérément. Il précise ainsi que le recevoir n'est pas une pensée ponctuelle, mais un acte qui se répète, comme manger chaque jour.",
+          "application": "Suivre Jésus est un acte quotidien et constant de venir à lui et de le recevoir — comme on mange."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "Jean 6:35",
+          "text": "Jésus leur dit: Je suis le pain de vie. Celui qui vient à moi n'aura jamais faim, et celui qui croit en moi n'aura jamais soif."
+        },
+        {
+          "reference": "Jean 6:51",
+          "text": "Je suis le pain vivant qui est descendu du ciel. Si quelqu'un mange de ce pain, il vivra éternellement; et le pain que je donnerai, c'est ma chair, que je donnerai pour la vie du monde."
+        },
+        {
+          "reference": "Jean 6:54",
+          "text": "Celui qui mange ma chair et qui boit mon sang a la vie éternelle; et je le ressusciterai au dernier jour."
+        }
+      ],
+      "revelation_key": "Jésus demande quelque chose de concret: que nous venions à lui chaque jour, pas une seule fois."
+    },
+
+    {
+      "order": 3,
+      "type": "prophetic_thread",
+      "icon": "🧵",
+      "title": "Du pain du ciel à la table du Seigneur",
+      "subtitle": "Comment la manne du désert annonce la Cène du Seigneur",
+      "content": "Le peuple se plaignit dans le désert, regrettant la nourriture d'Égypte. Dieu répond à cette plainte par une promesse: il fera pleuvoir du pain venu du ciel chaque jour (Exode 16:2-4).\n\nEn Deutéronome 8:3, Dieu explique le but de cette provision quotidienne: enseigner que la vraie vie dépend, avant tout, de sa parole. Jésus lui-même, avant de dire 'Je suis le pain de vie', a vécu cette même vérité: dans le désert, avec une faim réelle, le diable l'a tenté de changer des pierres en pain. Jésus ne l'a pas fait. Il a fait confiance à la parole de Dieu plutôt que de résoudre sa propre faim, citant ce même verset du Deutéronome (Matthieu 4:1-4).\n\nDes générations après Moïse, le psalmiste chantait encore la manne en Psaumes 78:24. Il ne savait pas que ce pain du désert n'était que l'annonce de quelque chose de plus grand à venir: Jésus lui-même. Jésus déclare en Jean 6:32-33 que le véritable pain du ciel donne la vie au monde entier, pas seulement la nourriture d'un jour.\n\nCette promesse trouve son aboutissement dans la dernière Cène. En Luc 22:19, Jésus prend le pain et l'appelle son corps, donné pour eux sur la croix. La manne tombait du ciel chaque matin comme un pur don; le pain de la Cène se reçoit de la même manière: en mémoire de ce don.",
+      "scripture_references": [
+        {
+          "reference": "Exode 16:2-4",
+          "text": "Et toute l'assemblée des enfants d'Israël murmura dans le désert contre Moïse et Aaron. Les enfants d'Israël leur dirent: Que ne sommes-nous morts par la main de l'Éternel dans le pays d'Égypte, quand nous étions assis près des pots de viande, quand nous mangions du pain à satiété? Car vous nous avez menés dans ce désert pour faire mourir de faim toute cette multitude. L'Éternel dit à Moïse: Voici, je ferai pleuvoir pour vous du pain, du haut des cieux. Le peuple sortira, et en ramassera, jour par jour, la quantité nécessaire, afin que je le mette à l'épreuve, et que je voie s'il marchera, ou non, selon ma loi."
+        },
+        {
+          "reference": "Deutéronome 8:3",
+          "text": "Il t'a humilié, il t'a fait souffrir de la faim, et il t'a nourri de la manne, que tu ne connaissais pas et que n'avaient pas connue tes pères, afin de t'apprendre que l'homme ne vit pas de pain seulement, mais que l'homme vit de tout ce qui sort de la bouche de l'Éternel."
+        },
+        {
+          "reference": "Matthieu 4:1-4",
+          "text": "Alors Jésus fut emmené par l'Esprit dans le désert, pour être tenté par le diable. Après avoir jeûné quarante jours et quarante nuits, il eut faim. Le tentateur, s'étant approché, lui dit: Si tu es Fils de Dieu, ordonne que ces pierres deviennent des pains. Jésus répondit: Il est écrit: L'homme ne vivra pas de pain seulement, mais de toute parole qui sort de la bouche de Dieu."
+        },
+        {
+          "reference": "Psaumes 78:24",
+          "text": "Il fit pleuvoir sur eux la manne pour nourriture, Il leur donna le blé du ciel."
+        },
+        {
+          "reference": "Jean 6:32-33",
+          "text": "Jésus leur dit: En vérité, en vérité, je vous le dis, Moïse ne vous a pas donné le pain du ciel, mais mon Père vous donne le vrai pain du ciel; car le pain de Dieu, c'est celui qui descend du ciel et qui donne la vie au monde."
+        },
+        {
+          "reference": "Luc 22:19",
+          "text": "Ensuite il prit du pain; et, après avoir rendu grâces, il le rompit, et le leur donna, en disant: Ceci est mon corps, qui est donné pour vous; faites ceci en mémoire de moi."
+        }
+      ],
+      "revelation_key": "La manne a nourri une nation pendant quarante ans dans le désert. Christ, le Pain véritable, nourrit l'âme pour l'éternité."
+    },
+
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "icon": "🍞",
+      "title": "Ma chair est vraiment une nourriture",
+      "subtitle": "La parole dure qui en fit partir beaucoup",
+      "content": "Jésus pousse l'image du pain jusqu'à un extrême qui dérange même ses propres disciples, en déclarant que sa chair et son sang sont une véritable nourriture (Jean 6:53-55).\n\n😳 La réaction immédiate:\n\nBeaucoup de ses propres disciples trouvèrent cette parole dure (Jean 6:60). Le texte ne cache pas le coût de cet enseignement: plusieurs disciples se retirèrent et cessèrent de le suivre. Jésus maintient le même langage et laisse la foule partir. Il se tourne vers les douze et leur demande s'ils veulent, eux aussi, s'en aller (Jean 6:66-67).\n\n🗣️ La réponse de Pierre:\n\nPierre répond par une question: vers qui d'autre pourraient-ils aller? Il affirme ce qu'il sait déjà avec certitude: Jésus a les paroles de la vie éternelle, et il est le Christ, le Saint de Dieu (Jean 6:68-69). Cette certitude soutient Pierre même face à un enseignement qu'il a du mal à comprendre.\n\nCette 'parole dure' trouva sa pleine explication lors de la dernière Cène, quand Jésus rompit le pain et l'appela son corps (Luc 22:19). Elle exigeait de lui une dépendance aussi réelle, aussi constante et aussi personnelle que celle du corps envers la nourriture qui le soutient chaque jour.",
+      "scripture_references": [
+        {
+          "reference": "Jean 6:53-55",
+          "text": "Jésus leur dit: En vérité, en vérité, je vous le dis, si vous ne mangez la chair du Fils de l'homme, et si vous ne buvez son sang, vous n'avez point la vie en vous-mêmes. Celui qui mange ma chair et qui boit mon sang a la vie éternelle; et je le ressusciterai au dernier jour. Car ma chair est vraiment une nourriture, et mon sang est vraiment un breuvage."
+        },
+        {
+          "reference": "Jean 6:60",
+          "text": "Plusieurs de ses disciples, après l'avoir entendu, dirent: Cette parole est dure; qui peut l'écouter?"
+        },
+        {
+          "reference": "Jean 6:66-67",
+          "text": "Dès ce moment, plusieurs de ses disciples se retirèrent, et ils n'allaient plus avec lui. Jésus donc dit aux douze: Et vous, ne voulez-vous pas aussi vous en aller?"
+        },
+        {
+          "reference": "Luc 22:19",
+          "text": "Ensuite il prit du pain; et, après avoir rendu grâces, il le rompit, et le leur donna, en disant: Ceci est mon corps, qui est donné pour vous; faites ceci en mémoire de moi."
+        }
+      ],
+      "scripture_anchor": {
+        "reference": "Jean 6:68-69",
+        "text": "Simon Pierre lui répondit: Seigneur, à qui irions-nous? Tu as les paroles de la vie éternelle. Et nous avons cru et nous avons connu que tu es le Christ, le Saint de Dieu."
+      },
+      "revelation_key": "Chaque fois que nous participons à la Cène du Seigneur, nous recevons ce que Christ a donné pour nous: son corps et son sang, sacrifiés sur la croix."
+    },
+
+    {
+      "order": 5,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Découverte personnelle",
+      "discovery_questions": [
+        {
+          "category": "Dépendance",
+          "question": "La manne tombait du ciel; elle ne venait pas de la terre qu'Israël foulait. De quoi te nourris-tu spirituellement: de la Parole de Dieu, ou d'autres sources qui semblent seulement nourrir?"
+        },
+        {
+          "category": "Constance",
+          "question": "'τρώγων (trṓgōn)' décrit un acte répété, non une décision unique. Ta relation avec Jésus est-elle un événement du passé ou une pratique quotidienne de venir à lui?"
+        },
+        {
+          "category": "Décision",
+          "question": "Comme Pierre, où cherches-tu les réponses à ce qui te coûte le plus à comprendre dans la foi: en Christ, ou ailleurs?"
+        }
+      ],
+      "prayer": {
+        "title": "Prière au pain de vie",
+        "content": "Jésus, Pain de vie, merci d'être le soutien sans lequel mon âme ne peut vivre. Je reconnais que je cherche souvent à me remplir avec d'autres choses qui ne nourrissent qu'un instant et me laissent encore plus affamé. Aujourd'hui je viens à toi comme celui qui a besoin de manger chaque jour. Apprends-moi à te recevoir avec la même constance que mon corps a besoin du pain quotidien. Quand tes paroles me semblent difficiles à accepter, donne-moi la certitude de Pierre: tu as les paroles de la vie éternelle. Tu es le Christ, le Saint de Dieu. En ton nom, Amen."
+      }
+    }
+  ],
+
+  "tags": [
+    "pain_de_vie",
+    "manne",
+    "communion",
+    "dependance",
+    "provision",
+    "foi",
+    "eucharistie"
+  ],
+
+  "metadata": {
+    "total_word_count": 1241,
+    "greek_words_count": 2,
+    "scripture_references_count": 12,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "Identité du Christ",
+      "Typologie de l'Ancien Testament",
+      "La Cène du Seigneur",
+      "Dépendance quotidienne envers le Christ"
+    ]
+  }
+}

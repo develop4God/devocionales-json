@@ -52,17 +52,21 @@ Single source of truth for EN book name → `book_number` mapping (MySword/TheWo
 
 Reading speeds (`reading_speed.rate` and `reading_speed.unit`) are available per language in the remote index — read them from there, do not hardcode.
 
-For the `version` field in JSON output, use the display `name` from the index — not the code:
-`SK2003` → `"新改訳2003"`, `CUV1919` → `"和合本1919"`, `HIOV` → `"पवित्र बाइबिल (ओ.वी.)"`, etc.
+For the `version` field in JSON output, use the version **code** from the index — not the display name:
+`"SK2003"`, `"CUV1919"`, `"HIOV"`, etc. This matches house style in the published EN/ES/PT/FR files (`"KJV"`, `"RVR1960"`, `"ARC"`, `"LSG1910"`).
 
 > If a version used by this project is **not** listed in the remote index, that SQLite file must already be present locally in `bible_database/`.
 
 ### Pre-Translation: Lookup & Download
-Before translating each language, ensure the required SQLite is available locally:
+Before translating each language, ensure the required SQLite `.gz` is available locally.
+**Never decompress it to a standalone `.SQLite3` file** — `VerseResolver` accepts the
+`.gz` path directly and decompresses to a temp file internally, cleaning it up on
+`close()`/context-exit. Do not add a manual gzip/decompress step; it only produces stray
+`.SQLite3` files that must not be committed.
 
 **Step 1 — Fetch the remote index:**
 ```python
-import urllib.request, json, gzip, shutil, os
+import urllib.request, json, os
 
 INDEX_URL = "https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json"
 with urllib.request.urlopen(INDEX_URL) as resp:
@@ -79,26 +83,23 @@ remote_file   = version_entry["file"]                # e.g. "RVR1960_es.SQLite3.
 download_url  = version_entry["url"]
 ```
 
-**Step 3 — Download & decompress to `bible_database/` if not present:**
+**Step 3 — Download the `.gz` to `bible_database/` if not present:**
 ```python
 DB_DIR   = "bible_database"
 local_gz = os.path.join(DB_DIR, remote_file)
-local_db = local_gz.replace(".gz", "")              # e.g. "bible_database/RVR1960_es.SQLite3"
 
-if not os.path.exists(local_db):
-    if not os.path.exists(local_gz):
-        print(f"Downloading {remote_file}...")
-        urllib.request.urlretrieve(download_url, local_gz)
-    with gzip.open(local_gz, "rb") as gz_in, open(local_db, "wb") as db_out:
-        shutil.copyfileobj(gz_in, db_out)
+if not os.path.exists(local_gz):
+    print(f"Downloading {remote_file}...")
+    urllib.request.urlretrieve(download_url, local_gz)
 ```
 
-**Step 4 — Pass the decompressed path to VerseResolver:**
+**Step 4 — Pass the `.gz` path directly to VerseResolver:**
 ```python
 from verse_resolver import VerseResolver
 
 # No book_map.json needed — native book names come from the DB's books table
-with VerseResolver(local_db) as resolver:
+# VerseResolver handles .gz natively — do not decompress it yourself
+with VerseResolver(local_gz) as resolver:
     citation, text, error = resolver.resolve("John 3:16")
 ```
 
@@ -152,6 +153,8 @@ Key structure must be identical to the EN file. Run `validate_pair.py` to confir
 **Asian and Hindi languages (JA, ZH, HI):** Use respectful/honorific religious register throughout. This is sacred literature.
 
 **Cross-reference ES file** for pastoral tone on the prayer and `identity_statement` — the ES file has the most developed devotional voice for these sections.
+
+**No negation-based contrast:** Never build sentences on negation ("not X, but Y" / "no longer X, but Y") to create rhetorical contrast in `content`, `revelation`, `revelation_key`, `title`, or `subtitle` fields. State what IS true directly. The only exception is a direct or close-paraphrase quotation of the biblical text itself. This applies while drafting, not just on review — check every translated field for this pattern before delivery.
 
 ---
 
@@ -215,55 +218,27 @@ python3 discovery_master_validator.py
 
 `validate_pair.py` checks schema and structure — it cannot catch bad prose. The
 translating agent also cannot reliably catch its own register mistakes. So after each
-language file passes `validate_pair.py`, **before delivery**, spawn a **fresh subagent
-(NOT HAIKU model)** (no shared context with the translator) — one critic per translated
-file, in parallel across the batch.
+language file passes `validate_pair.py`, **before delivery**, spawn one **`critic_reviewer_agent`
+subagent** (defined at `~/.claude/agents/critic_reviewer_agent.md`) per translated file, in
+parallel across the batch. This profile is read-only (cannot edit files) and is
+instructed to disregard project memory/house-style rules, acting as a fresh, naive
+native-speaker reader — do not substitute a general-purpose agent for it, and do not
+add severity tiers, register-rule references, or any other structure to its brief.
 
 ### When to spawn
 Immediately after a translation file is written and `validate_pair.py` passes for it —
 do not batch this up and defer it to the end of the whole run.
 
-### Delegation prompt template
-> You are a native [LANGUAGE] Christian speaker. Read this file line by line, taking
-> your time. Review the following [LANGUAGE] Bible study translation for errors (DOES
-> NOT APPLY to verses only in the translated content):
-> File: [FILE_PATH]
->
-> For EACH file, carefully check for:
->
-> **CRITICAL ERRORS (must be fixed):**
-> - Typos and spacing errors
-> - Wrong word meanings that change theological meaning
-> - Untranslated English words or phrases
-> - Incorrect characters or diacritics
-> - Wrong verb conjugations or tenses
-> - Expressions that sound unnatural for a native speaker
-> - Theological terminology errors for this language and culture
-> - Violation of the per-language register rule in
->   `discovery/skills/discovery-translator-SKILL.md` § "MANDATORY GATE: Per-Language
->   Register Rules"
->
-> **MODERATE ISSUES (should be improved):**
-> - Word choices with wrong connotations
-> - Unnatural phrasing that doesn't sound native
-> - Inconsistent terminology across sections
-> - Better synonym choices for clarity
->
-> **MINOR SUGGESTIONS:**
-> - Style improvements
-> - More natural idioms
-> - Better flow
->
-> Provide: file name, list of ALL findings (with text context), severity
-> (CRITICAL/MODERATE/MINOR), and a suggested correction (elaborate diff) for each.
+### Delegation
+Spawn `critic_reviewer_agent`, filling in `[LANGUAGE]` and `[FILE_PATH]` per the profile's
+own template. Do not restate or override its base instructions in the delegation
+message beyond the language and file path.
 
 ### Coordinator review
 After all critic reports return:
-1. CRITICAL findings are a checklist. The coordinator must iterate through every item marked CRITICAL, apply each fix one by one, and confirm each one before closing the review. Do not mark a file as reviewed until every CRITICAL item has a fix applied and confirmed.
-2. Review MODERATE findings — review one by one, dismiss or apply the fix, document each one.
-3. Review MINOR suggestions — review one by one, dismiss or apply the fix, document each one.
-4. Re-run `validate_pair.py` on any file that was modified.
-5. Proceed to the reverse-validation gate below before final validation.
+1. Review each finding one by one — dismiss or apply the fix, document each one.
+2. Re-run `validate_pair.py` on any file that was modified.
+3. Proceed to the reverse-validation gate below before final validation.
 
 ---
 

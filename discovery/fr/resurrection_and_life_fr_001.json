@@ -1,0 +1,147 @@
+{
+  "id": "resurrection_and_life_001",
+  "type": "discovery",
+  "date": "2026-07-09",
+  "title": "Je suis la résurrection et la vie",
+  "subtitle": "Quand Jésus se présente devant la mort et que la mort recule",
+  "language": "fr",
+  "version": "LSG1910",
+  "estimated_reading_minutes": 9,
+  "key_verse": {
+    "reference": "Jean 11:25-26",
+    "text": "Jésus lui dit: Je suis la résurrection et la vie. Celui qui croit en moi vivra, quand même il serait mort; et quiconque vit et croit en moi ne mourra jamais. Crois-tu cela?"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "historical_context",
+      "icon": "⚰️",
+      "title": "Béthanie : un foyer brisé par le deuil",
+      "subtitle": "Pourquoi Jésus a attendu à dessein",
+      "content": "Marthe et Marie envoient un message urgent à Jésus, pour l'avertir que Lazare est malade (Jean 11:3). Elles sont certaines qu'en l'apprenant, il agira aussitôt. Jésus répond d'une manière qui déconcerte : cette maladie a un dessein plus grand, la gloire de Dieu (Jean 11:4). Et il reste encore deux jours là où il était.\n\n🕯️ Le deuil juif au premier siècle :\n\n• Les corps étaient ensevelis le jour même de la mort, à cause du climat et de la loi rituelle\n• Famille et voisins observaient un deuil formel durant sept jours, avec des lamentations à voix haute\n• Une croyance populaire voulait que l'âme reste proche du corps jusqu'au troisième jour, dans l'espoir qu'elle y revienne\n• Au quatrième jour, cet espoir était considéré comme officiellement perdu — la décomposition confirmait qu'il n'y avait plus de retour possible\n\n📖 Le délai intentionnel :\n\nQuand Jésus dit enfin aux disciples que Lazare est mort, il ajoute quelque chose de surprenant : il se réjouit de ne pas avoir été là, afin qu'ils croient (Jean 11:14-15). Le retard fut une décision délibérée, calculée pour arriver après le quatrième jour, le point où tout espoir humain était déjà épuisé.\n\nJésus arrive après que la mort semble définitive, au moment précis où lui seul peut agir.",
+      "scripture_references": [
+        {
+          "reference": "Jean 11:3-4",
+          "text": "Les sœurs envoyèrent dire à Jésus: Seigneur, voici, celui que tu aimes est malade. Après avoir entendu cela, Jésus dit: Cette maladie n'est point à la mort; mais elle est pour la gloire de Dieu, afin que le Fils de Dieu soit glorifié par elle."
+        },
+        {
+          "reference": "Jean 11:14-15",
+          "text": "Alors Jésus leur dit ouvertement: Lazare est mort. Et, à cause de vous, afin que vous croyiez, je me réjouis de ce que je n'étais pas là. Mais allons vers lui."
+        }
+      ],
+      "revelation_key": "Jésus arrive après que la douleur s'est déjà consommée, au moment où lui seul peut la résoudre."
+    },
+    {
+      "order": 2,
+      "type": "greek_exegesis",
+      "icon": "📖",
+      "title": "Enebrimḗsato et Edákrysen : deux manières de pleurer",
+      "subtitle": "La différence entre la douleur de la foule et celle de Jésus",
+      "content": "Marie pleure, et les Juifs qui l'accompagnent pleurent avec elle — une lamentation publique et bruyante, comme il était coutume dans le deuil juif. Jésus voit cette scène et réagit en deux mouvements distincts, que le texte grec original distingue avec précision : d'abord il frémit d'indignation devant la mort elle-même, puis il pleure en silence, seul avec sa propre douleur pour Lazare. Deux mots grecs différents décrivent ces deux moments.",
+      "greek_words": [
+        {
+          "word": "Enebrimḗsato",
+          "transliteration": "ἐνεβριμήσατο",
+          "reference": "Jean 11:33",
+          "meaning": "Il frémit, il fut profondément ému — littéralement, un souffle d'indignation viscérale",
+          "revelation": "Quand Jésus voit pleurer Marie et les Juifs qui l'accompagnaient, le texte dit qu'il « frémit en son esprit, et fut tout ému » (Jean 11:33). Le verbe grec décrit quelque chose de plus proche d'un souffle d'indignation que d'une simple tristesse.\n\nJésus n'est pas seulement triste pour Lazare. Il est indigné contre la mort elle-même — contre ce que le péché a fait à sa création bien-aimée. Il affronte le tombeau comme on affronte un ennemi, pas seulement comme on pleure une perte.",
+          "application": "Christ n'observe pas ta douleur avec une distance sereine. Il s'indigne contre la mort et contre tout ce qui brise ce qu'il aime, tout comme toi."
+        },
+        {
+          "word": "Edákrysen",
+          "transliteration": "ἐδάκρυσεν",
+          "reference": "Jean 11:35",
+          "meaning": "Il versa des larmes en silence — distinct de la lamentation bruyante et publique",
+          "revelation": "« Jésus pleura » est un verset court de deux mots seulement, mais le verbe choisi est précis. Ce n'est pas « klaíō », le pleur sonore et public que le texte emploie pour décrire Marie et ceux qui se lamentaient. C'est « edákrysen » — des larmes silencieuses, personnelles, intimes.\n\nJésus, qui dans un instant ressuscitera Lazare, pleure d'abord malgré tout. Il sait comment se termine la scène et ressent pourtant tout le poids de la perte à cet instant même.",
+          "application": "Jésus savait déjà que Lazare ressusciterait — il l'avait dit aux disciples avant d'arriver. Il aurait pu arriver en annonçant d'abord la bonne nouvelle, changeant complètement la scène.\n\nAu lieu de cela, il s'arrête pour pleurer avec ceux qui pleurent. Bien qu'il ait eu le pouvoir et la connaissance de ce qui allait venir, avec humilité et empathie il a pleuré sur la douleur et la souffrance d'autrui."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "Jean 11:33-35",
+          "text": "Jésus, la voyant pleurer, elle et les Juifs qui étaient venus avec elle, frémit en son esprit, et fut tout ému. Et il dit: Où l'avez-vous mis? Seigneur, lui répondirent-ils, viens et vois. Jésus pleura."
+        }
+      ],
+      "revelation_key": "Jésus ressent la perte tout entière, et avance malgré tout vers le tombeau avec autorité."
+    },
+    {
+      "order": 3,
+      "type": "prophetic_thread",
+      "icon": "✨",
+      "title": "Je suis la résurrection",
+      "subtitle": "Quand Jésus transpose une espérance future en sa propre personne",
+      "content": "Marthe dit à Jésus que, s'il avait été là, son frère ne serait pas mort (Jean 11:21). Elle croit en ce que Jésus peut prévenir. Elle ne considère pas encore ce que Jésus peut inverser.\n\nJésus lui dit que son frère ressuscitera. Marthe répond par une croyance juste : elle sait qu'il ressuscitera au dernier jour (Jean 11:23-24). C'est une espérance réelle, mais réservée pour la fin ultime, pas pour cet instant même auprès du tombeau.\n\nAlors Jésus s'identifie lui-même à cette espérance : « Je suis la résurrection et la vie » (Jean 11:25-26). Il n'enseigne pas une nouvelle doctrine sur la fin des temps. Il se présente comme la Personne en qui cette espérance vit déjà, là même, ce jour même.",
+      "scripture_references": [
+        {
+          "reference": "Jean 11:21-26",
+          "text": "Marthe dit à Jésus: Seigneur, si tu eusses été ici, mon frère ne serait pas mort. Mais, maintenant même, je sais que tout ce que tu demanderas à Dieu, Dieu te l'accordera. Jésus lui dit: Ton frère ressuscitera. Je sais, lui répondit Marthe, qu'il ressuscitera à la résurrection, au dernier jour. Jésus lui dit: Je suis la résurrection et la vie. Celui qui croit en moi vivra, quand même il serait mort; et quiconque vit et croit en moi ne mourra jamais. Crois-tu cela?"
+        }
+      ],
+      "revelation_key": "Marthe attendait une résurrection lointaine, réservée pour le dernier jour. Jésus s'est présenté comme cette même espérance, debout devant elle, ce jour même."
+    },
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "icon": "🪨",
+      "title": "Ôtez la pierre",
+      "subtitle": "La foi qui précède la gloire, pas celle qui la suit",
+      "content": "Devant le tombeau, Jésus donne un ordre simple : ôter la pierre (Jean 11:39). La réponse de Marthe est douloureusement humaine : elle avertit que le corps sent déjà mauvais, à cause des quatre jours écoulés. Elle croit en Jésus, mais sa foi calcule encore ce qu'il est raisonnable d'attendre.\n\n👁️ La condition de la gloire :\n\nJésus lui rappelle ce qu'il lui avait déjà dit : si elle croit, elle verra la gloire de Dieu (Jean 11:40). L'ordre importe : normalement quelqu'un voit un miracle puis croit que Dieu l'a fait. Jésus demande à Marthe le contraire — croire d'abord, avant de rien voir, afin de pouvoir ensuite voir la gloire de Dieu.\n\n🙏 Une prière pour la foule :\n\nAvant d'appeler Lazare, Jésus prie à voix haute, rendant grâces au Père de l'avoir exaucé, et il explique qu'il le dit à cause de la foule, afin qu'elle croie que le Père l'a envoyé (Jean 11:41-42). Le miracle n'a jamais été seulement pour Lazare, Marthe ou Marie. Ce fut une preuve publique que le Père avait envoyé le Fils.\n\n📣 La voix que la mort n'a pu ignorer :\n\nJésus crie d'une voix forte, et celui qui était mort sort du tombeau, encore lié aux pieds et aux mains, le visage enveloppé d'un linge (Jean 11:43-44). Jésus ajoute une dernière instruction : qu'on le délie et le laisse aller.\n\nPaul écrit ensuite que le dernier ennemi qui sera détruit, c'est la mort (1 Corinthiens 15:26). Ce que Jésus fit pour Lazare fut un signe. Il annonçait sa propre résurrection, où la mort ne reculerait pas seulement pour un temps, mais serait vaincue pour toujours.",
+      "scripture_references": [
+        {
+          "reference": "Jean 11:39-44",
+          "text": "Jésus dit: Otez la pierre. Marthe, la sœur du mort, lui dit: Seigneur, il sent déjà, car il y a quatre jours qu'il est là. Jésus lui dit: Ne t'ai-je pas dit que, si tu crois, tu verras la gloire de Dieu? Ils ôtèrent donc la pierre. Et Jésus leva les yeux en haut, et dit: Père, je te rends grâces de ce que tu m'as exaucé. Pour moi, je savais que tu m'exauces toujours; mais j'ai parlé à cause de la foule qui m'entoure, afin qu'ils croient que c'est toi qui m'as envoyé. Ayant dit cela, il cria d'une voix forte: Lazare, sors! Et le mort sortit, les pieds et les mains liés de bandes, et le visage enveloppé d'un linge. Jésus leur dit: Déliez-le, et laissez-le aller."
+        },
+        {
+          "reference": "1 Corinthiens 15:26",
+          "text": "Le dernier ennemi qui sera détruit, c'est la mort."
+        }
+      ],
+      "revelation_key": "L'église a encore une tâche après le miracle : aider ceux que Christ a déjà appelés à sortir du tombeau, afin qu'ils se libèrent des bandelettes qui les retiennent encore."
+    },
+    {
+      "order": 5,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Découverte personnelle",
+      "discovery_questions": [
+        {
+          "category": "Attente",
+          "question": "Jésus a attendu à dessein jusqu'à ce que tout espoir humain soit épuisé. Y a-t-il quelque chose dans ta vie où tu interprètes le silence de Dieu comme une absence, plutôt que comme une préparation ?"
+        },
+        {
+          "category": "Foi",
+          "question": "Marthe croyait justement en la résurrection future, mais avait du mal à croire que Jésus pouvait agir à cet instant même. Ta foi est-elle réservée pour « un jour », ou fais-tu confiance à Christ pour agir aujourd'hui ?"
+        },
+        {
+          "category": "Liberté",
+          "question": "Lazare est sorti vivant, mais encore lié — il a eu besoin que d'autres le délient. Y a-t-il des blessures, des habitudes ou de la culpabilité du passé dont Christ t'a déjà libéré, mais que tu continues à porter ?"
+        }
+      ],
+      "prayer": {
+        "title": "Prière à la résurrection et la vie",
+        "content": "Jésus, tu es la résurrection et la vie. Merci parce que, comme tu l'as fait face à la mort de Lazare, tu ne restes pas loin de ma douleur — tu frémis de ce qui m'atteint, et tu avances malgré tout avec autorité. Je confesse que souvent ma foi attend un miracle pour croire, mais je veux croire d'abord pour voir la gloire de Dieu. S'il y a en moi des zones que tu as déjà appelées à sortir vers la vie, mais qui restent liées, libère-moi, Seigneur. Aujourd'hui, je décide de croire, d'être libre de la mort du péché et de m'attacher à ta vie éternelle. Je crois cela. En ton nom, Amen."
+      }
+    }
+  ],
+  "tags": [
+    "résurrection",
+    "vie_éternelle",
+    "deuil",
+    "foi",
+    "lazare",
+    "mort",
+    "espérance"
+  ],
+  "metadata": {
+    "total_word_count": 1260,
+    "greek_words_count": 2,
+    "scripture_references_count": 15,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "Identité du Christ",
+      "Consolation dans le deuil",
+      "Vie éternelle",
+      "Foi au-delà du visible"
+    ]
+  }
+}

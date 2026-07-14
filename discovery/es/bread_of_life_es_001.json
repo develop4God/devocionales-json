@@ -1,0 +1,196 @@
+{
+  "id": "bread_of_life_001",
+  "type": "discovery",
+  "date": "2026-07-08",
+  "title": "Yo soy el pan de vida",
+  "subtitle": "Cuando el maná del desierto encuentra su cumplimiento final",
+  "language": "es",
+  "version": "RVR1960",
+  "estimated_reading_minutes": 7,
+  "key_verse": {
+    "reference": "Juan 6:35",
+    "text": "Jesús les dijo: Yo soy el pan de vida; el que a mí viene, nunca tendrá hambre; y el que en mí cree, no tendrá sed jamás."
+  },
+
+  "cards": [
+    {
+      "order": 1,
+      "type": "historical_context",
+      "icon": "🌾",
+      "title": "El maná que alimentó a una nación",
+      "subtitle": "Por qué la multitud pedía una señal como la de Moisés",
+      "content": "Un día después de multiplicar los panes para cinco mil personas, Jesús cruzó el mar de Galilea. La multitud lo siguió, no por hambre de verdad, sino por hambre de pan (Juan 6:26). Entonces le exigieron una señal, recordando el maná que Dios dio a sus padres en el desierto (Juan 6:31).\n\n🏜️ El trasfondo que todos conocían:\n\n• Durante cuarenta años, cada mañana, Dios hizo llover pan del cielo sobre Israel (Éxodo 16:4)\n• Nadie sabía qué era; por eso lo llamaron 'maná', tal como lo explica Moisés (Éxodo 16:15)\n• Era diario, suficiente para ese día, imposible de acumular\n• El salmista lo recordaría siglos después (Salmos 78:24)\n\n📖 La corrección de Jesús:\n\nLa multitud atribuyó el maná a Moisés. Jesús corrigió de inmediato, aclarando que fue su Padre, no Moisés, quien dio el verdadero pan del cielo, y afirmó que Él mismo es ese pan que da vida al mundo (Juan 6:32-33).\n\nÉl mismo es el cumplimiento de lo que el maná solo anunciaba.",
+      "scripture_references": [
+        {
+          "reference": "Éxodo 16:15",
+          "text": "Y viéndolo los hijos de Israel, se dijeron unos a otros: ¿Qué es esto? porque no sabían qué era. Entonces Moisés les dijo: Es el pan que Jehová os da para comer."
+        },
+        {
+          "reference": "Salmos 78:24",
+          "text": "e hizo llover sobre ellos maná para que comiesen, y les dio trigo de los cielos."
+        },
+        {
+          "reference": "Juan 6:31-33",
+          "text": "Nuestros padres comieron el maná en el desierto, como está escrito: Pan del cielo les dio a comer. Respondióles Jesús: De cierto, de cierto os digo: No os dio Moisés el pan del cielo, mas mi Padre os da el verdadero pan del cielo. Porque el pan de Dios es aquel que descendió del cielo y da vida al mundo."
+        }
+      ],
+      "revelation_key": "El maná fue una sombra de cuarenta años que preparó a Israel — y a nosotros — para reconocer al verdadero Pan cuando llegara."
+    },
+
+    {
+      "order": 2,
+      "type": "greek_exegesis",
+      "icon": "📖",
+      "title": "Trṓgōn: mucho más que comer",
+      "subtitle": "El verbo que Jesús usó con intención",
+      "content": "Jesús elige sus palabras con precisión. Al decir 'Yo soy el pan de vida', utiliza en el original la palabra griega ἄρτος (ártos), el pan cotidiano, el alimento básico sin el cual nadie sobrevive.\n\nDespués, en el punto más intenso de su discurso, cuando dice 'si alguno comiere de este pan', cambia el verbo: ya no habla de comer en sentido general, sino de τρώγων (trṓgōn), masticar, roer. Ese giro en el idioma original revela la profundidad de lo que está pidiendo: una entrega diaria, física, repetida — no un momento de admiración lejana.",
+      "greek_words": [
+        {
+          "word": "Ártos",
+          "transliteration": "ἄρτος",
+          "meaning": "Pan, el alimento básico y diario de toda persona",
+          "revelation": "Jesús usa la palabra ártos en Juan 6:35 cuando dice 'Yo soy el pan de vida'. Se compara con lo más básico e indispensable que existe — sin lo cual una familia no sobrevivía en el mundo antiguo.\n\nSe ofrece como el alimento sin el cual el alma simplemente no vive.",
+          "application": "Jesús es el sustento diario sin el cual tu alma se debilita y muere de hambre."
+        },
+        {
+          "word": "Trṓgōn",
+          "transliteration": "τρώγων",
+          "meaning": "Morder, masticar, roer — un verbo físico, distinto de 'comer' en sentido general",
+          "revelation": "En Juan 6:54, la palabra griega que Jesús usa para 'comer' es trṓgōn (τρώγων), que significa masticar o roer, no comer en sentido general.\n\nEs una palabra cruda, casi incómoda. Describe el gesto físico de morder y masticar, no una idea espiritual abstracta.\n\nJesús la escoge a propósito. Así deja claro que recibirlo a Él no es un pensamiento de una sola vez, sino un acto que se repite, como comer cada día.",
+          "application": "Seguir a Jesús es un acto diario y constante de venir a Él y recibirlo — como comer."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "Juan 6:35",
+          "text": "Jesús les dijo: Yo soy el pan de vida; el que a mí viene, nunca tendrá hambre; y el que en mí cree, no tendrá sed jamás."
+        },
+        {
+          "reference": "Juan 6:51",
+          "text": "Yo soy el pan vivo que descendió del cielo; si alguno comiere de este pan, vivirá para siempre; y el pan que yo daré es mi carne, la cual yo daré por la vida del mundo."
+        },
+        {
+          "reference": "Juan 6:54",
+          "text": "El que come mi carne y bebe mi sangre, tiene vida eterna; y yo le resucitaré en el día postrero."
+        }
+      ],
+      "revelation_key": "Jesús pide algo concreto: que vengamos a él cada día, no una sola vez."
+    },
+
+    {
+      "order": 3,
+      "type": "prophetic_thread",
+      "icon": "🧵",
+      "title": "Del pan del cielo a la mesa del Señor",
+      "subtitle": "Cómo el maná del desierto apunta hacia la Cena del Señor",
+      "content": "El pueblo se quejó en el desierto, añorando la comida de Egipto. Dios respondió a esa queja con una promesa: haría llover pan del cielo cada día (Éxodo 16:2-4).\n\nEn Deuteronomio 8:3, Dios explica el propósito de esa provisión diaria: enseñar que la vida verdadera depende, ante todo, de su palabra. Jesús mismo, antes de decir 'Yo soy el pan de vida', vivió esa misma verdad: en el desierto, con hambre real, el diablo lo tentó a convertir piedras en pan. Jesús no lo hizo. Confió en la palabra de Dios en vez de resolver su propia hambre, citando ese mismo versículo de Deuteronomio (Mateo 4:1-4).\n\nGeneraciones después de Moisés, el salmista todavía cantaba sobre el maná en Salmos 78:24. No sabía que ese pan del desierto solo era un anuncio de algo más grande que vendría después: Jesús mismo. Él declara en Juan 6:32-33 que el verdadero pan del cielo da vida al mundo entero, no solo alimento para un día.\n\nEsa promesa encuentra su cumplimiento en la última cena. En Lucas 22:19, Jesús toma pan y lo llama su cuerpo, entregado por ellos en la cruz. El maná caía del cielo cada mañana como puro regalo; el pan de la Cena se recibe de la misma manera: como memoria de esa entrega.",
+      "scripture_references": [
+        {
+          "reference": "Éxodo 16:2-4",
+          "text": "Y toda la congregación de los hijos de Israel murmuró contra Moisés y Aarón en el desierto; y les decían los hijos de Israel: Ojalá hubiéramos muerto por mano de Jehová en la tierra de Egipto, cuando nos sentábamos a las ollas de carne, cuando comíamos pan hasta saciarnos; pues nos habéis sacado a este desierto para matar de hambre a toda esta multitud. Y Jehová dijo a Moisés: He aquí yo os haré llover pan del cielo; y el pueblo saldrá, y recogerá diariamente la porción de un día, para que yo lo pruebe si anda en mi ley, o no."
+        },
+        {
+          "reference": "Deuteronomio 8:3",
+          "text": "Y te afligió, y te hizo tener hambre, y te sustentó con maná, comida que no habías conocido, ni tus padres la habían conocido, para hacerte saber que no sólo de pan vivirá el hombre, mas de todo lo que sale de la boca de Jehová vivirá el hombre."
+        },
+        {
+          "reference": "Mateo 4:1-4",
+          "text": "Entonces Jesús fue llevado por el Espíritu al desierto, para ser tentado por el diablo. Y después de haber ayunado cuarenta días y cuarenta noches, tuvo hambre. Y vino a él el tentador, y le dijo: Si eres Hijo de Dios, di que estas piedras se conviertan en pan. Él respondió y dijo: Escrito está: No sólo de pan vivirá el hombre, sino de toda palabra que sale de la boca de Dios."
+        },
+        {
+          "reference": "Salmos 78:24",
+          "text": "e hizo llover sobre ellos maná para que comiesen, y les dio trigo de los cielos."
+        },
+        {
+          "reference": "Juan 6:32-33",
+          "text": "Respondióles Jesús: De cierto, de cierto os digo: No os dio Moisés el pan del cielo, mas mi Padre os da el verdadero pan del cielo. Porque el pan de Dios es aquel que descendió del cielo y da vida al mundo."
+        },
+        {
+          "reference": "Lucas 22:19",
+          "text": "Y tomó el pan y dio gracias, y lo partió y les dio, diciendo: Esto es mi cuerpo, que por vosotros es dado; haced esto en memoria de mí."
+        }
+      ],
+      "revelation_key": "El maná alimentó a una nación por cuarenta años en el desierto. Cristo, el Pan verdadero, alimenta al alma para la eternidad."
+    },
+
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "icon": "🍞",
+      "title": "Mi carne es verdadera comida",
+      "subtitle": "La palabra dura que hizo que muchos se fueran",
+      "content": "Jesús lleva la imagen del pan a un extremo que incomoda incluso a sus propios seguidores, declarando que su carne y su sangre son verdadero alimento (Juan 6:53-55).\n\n😳 La reacción inmediata:\n\nMuchos de sus propios discípulos consideraron dura esta palabra (Juan 6:60). El texto es claro sobre el costo de esta enseñanza: muchos discípulos se apartaron y dejaron de seguirlo. Jesús mantiene el mismo lenguaje y deja que la multitud se vaya. Se vuelve a los doce y pregunta si también ellos quieren irse (Juan 6:66-67).\n\n🗣️ La respuesta de Pedro:\n\nPedro responde con una pregunta: ¿a quién más podrían ir? Afirma lo que ya sabe con certeza: solo Jesús tiene palabras de vida eterna, y Él es el Cristo, el Hijo del Dios viviente (Juan 6:68-69). Esa certeza sostiene a Pedro incluso frente a una enseñanza que le cuesta entender.\n\nEsta 'palabra dura' encontraría su explicación completa en la última cena, cuando Jesús partiera el pan y lo llamara su cuerpo (Lucas 22:19). Pedía una dependencia tan real, tan constante y tan personal de Él, como la que el cuerpo tiene del alimento que lo sostiene cada día.",
+      "scripture_references": [
+        {
+          "reference": "Juan 6:53-55",
+          "text": "Si no coméis la carne del Hijo del Hombre, y bebéis su sangre, no tenéis vida en vosotros. El que come mi carne y bebe mi sangre, tiene vida eterna; y yo le resucitaré en el día postrero. Porque mi carne es verdadera comida, y mi sangre es verdadera bebida."
+        },
+        {
+          "reference": "Juan 6:60",
+          "text": "Dura es esta palabra; ¿quién la puede oír?"
+        },
+        {
+          "reference": "Juan 6:66-67",
+          "text": "Desde entonces muchos de sus discípulos volvieron atrás, y ya no andaban con él. Dijo entonces Jesús a los doce: ¿Queréis acaso iros también vosotros?"
+        },
+        {
+          "reference": "Lucas 22:19",
+          "text": "Y tomó el pan y dio gracias, y lo partió y les dio, diciendo: Esto es mi cuerpo, que por vosotros es dado; haced esto en memoria de mí."
+        }
+      ],
+      "scripture_anchor": {
+        "reference": "Juan 6:68-69",
+        "text": "Señor, ¿a quién iremos? Tú tienes palabras de vida eterna. Y nosotros hemos creído y conocemos que tú eres el Cristo, el Hijo del Dios viviente."
+      },
+      "revelation_key": "Cada vez que participamos de la Cena del Señor, recibimos lo que Cristo entregó por nosotros: su cuerpo y su sangre, sacrificados en la cruz."
+    },
+
+    {
+      "order": 5,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Descubrimiento personal",
+      "discovery_questions": [
+        {
+          "category": "Dependencia",
+          "question": "El maná caía del cielo; no venía de la tierra que Israel pisaba. ¿De qué te alimentas espiritualmente: de la Palabra de Dios, o de otras fuentes que solo parecen sustento?"
+        },
+        {
+          "category": "Constancia",
+          "question": "'τρώγων (trṓgōn)' describe un acto repetido, no una decisión única. ¿Tu relación con Jesús es un evento del pasado o una práctica diaria de venir a Él?"
+        },
+        {
+          "category": "Decisión",
+          "question": "Como Pedro, ¿dónde buscas tú las respuestas a lo que más te cuesta entender de la fe: en Cristo, o en otro lugar?"
+        }
+      ],
+      "prayer": {
+        "title": "Oración al pan de vida",
+        "content": "Jesús, Pan de vida, gracias por ser el sustento sin el cual mi alma no puede vivir. Reconozco que muchas veces busco llenarme con otras cosas que solo alimentan por un momento y me dejan con más hambre. Hoy vengo a ti como quien necesita comer cada día. Enséñame a recibirte con la misma constancia con que mi cuerpo necesita el pan diario. Cuando tus palabras me resulten difíciles de aceptar, dame la certeza de Pedro: tú tienes palabras de vida eterna. Tú eres el Cristo, el Hijo del Dios viviente. En tu nombre, Amén."
+      }
+    }
+  ],
+
+  "tags": [
+    "pan_de_vida",
+    "maná",
+    "comunión",
+    "dependencia",
+    "provisión",
+    "fe",
+    "eucaristía"
+  ],
+
+  "metadata": {
+    "total_word_count": 1180,
+    "greek_words_count": 2,
+    "scripture_references_count": 12,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "Identidad de Cristo",
+      "Tipología del Antiguo Testamento",
+      "La Cena del Señor",
+      "Dependencia diaria en Cristo"
+    ]
+  }
+}
