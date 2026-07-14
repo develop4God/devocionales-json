@@ -1,0 +1,147 @@
+{
+  "id": "resurrection_and_life_001",
+  "type": "discovery",
+  "date": "2026-07-09",
+  "title": "Ich bin die Auferstehung und das Leben",
+  "subtitle": "Als Jesus sich dem Tod entgegenstellt und der Tod weicht",
+  "language": "de",
+  "version": "LU17",
+  "estimated_reading_minutes": 9,
+  "key_verse": {
+    "reference": "Johannes 11:25-26",
+    "text": "Jesus spricht zu ihr: Ich bin die Auferstehung und das Leben. Wer an mich glaubt, der wird leben, ob er gleich stürbe; und wer da lebt und glaubt an mich, der wird nimmermehr sterben. Glaubst du das?"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "historical_context",
+      "icon": "⚰️",
+      "title": "Betanien: ein Zuhause, gebrochen vor Trauer",
+      "subtitle": "Warum Jesus absichtlich wartete",
+      "content": "Martha und Maria senden eine dringende Nachricht an Jesus: Lazarus ist krank (Johannes 11:3). Sie sind sich sicher, dass er sofort handeln wird, sobald er davon hört. Jesus antwortet auf eine Weise, die sie verunsichert: Diese Krankheit hat einen größeren Zweck: die Verherrlichung Gottes (Johannes 11:4). Und er bleibt noch zwei Tage an dem Ort, wo er war.\n\n🕯️ Jüdische Trauer im ersten Jahrhundert:\n\n• Wegen des Klimas und der rituellen Vorschriften wurden Leichname am selben Tag des Todes bestattet\n• Familie und Nachbarn hielten sieben Tage lang formelle Trauer, mit lautem Klagen\n• Ein verbreiteter Glaube besagte, die Seele bleibe bis zum dritten Tag in der Nähe des Körpers, in der Hoffnung auf eine Rückkehr\n• Am vierten Tag galt diese Hoffnung als endgültig verloren – die Verwesung bestätigte, dass es kein Zurück mehr gab\n\n📖 Die bewusste Verzögerung:\n\nAls Jesus den Jüngern schließlich mitteilt, dass Lazarus gestorben ist, fügt er etwas Überraschendes hinzu: Er ist froh, nicht dort gewesen zu sein, damit sie glauben (Johannes 11:14-15). Die Verzögerung war eine bewusste Entscheidung, zeitlich so bemessen, dass er erst nach dem vierten Tag ankam – dem Punkt, an dem alle menschliche Hoffnung bereits erschöpft war.\n\nJesus kommt an, wenn der Tod bereits endgültig erscheint, genau in dem Moment, in dem nur er handeln kann.",
+      "scripture_references": [
+        {
+          "reference": "Johannes 11:3-4",
+          "text": "Da sandten die Schwestern zu Jesus und ließen ihm sagen: Herr, siehe, der, den du lieb hast, liegt krank. Als Jesus das hörte, sprach er: Diese Krankheit ist nicht zum Tode, sondern zur Verherrlichung Gottes, dass der Sohn Gottes dadurch verherrlicht werde."
+        },
+        {
+          "reference": "Johannes 11:14-15",
+          "text": "Da sagte ihnen Jesus frei heraus: Lazarus ist gestorben; und ich bin froh um euretwillen, dass ich nicht da gewesen bin, auf dass ihr glaubt. Aber lasst uns zu ihm gehen!"
+        }
+      ],
+      "revelation_key": "Jesus kommt an, nachdem die Trauer ihren Lauf bereits genommen hat, in dem Moment, in dem nur er sie auflösen kann."
+    },
+    {
+      "order": 2,
+      "type": "greek_exegesis",
+      "icon": "📖",
+      "title": "Enebrimḗsato und Edákrysen: zwei Arten zu weinen",
+      "subtitle": "Der Unterschied zwischen der Trauer der Menge und der von Jesus",
+      "content": "Maria weint, und die Juden, die sie begleiten, weinen mit ihr – ein öffentliches, lautes Klagen, wie es in der jüdischen Trauer üblich war. Jesus sieht die Szene und reagiert in zwei unterschiedlichen Bewegungen, die der griechische Urtext präzise unterscheidet: Zuerst erschauert er vor Empörung über den Tod selbst, dann weint er still, allein mit seiner eigenen Trauer um Lazarus. Zwei verschiedene griechische Wörter beschreiben diese zwei Momente.",
+      "greek_words": [
+        {
+          "word": "Enebrimḗsato",
+          "transliteration": "ἐνεβριμήσατο",
+          "reference": "Johannes 11:33",
+          "meaning": "Er erschauerte, er war zutiefst bewegt – wörtlich ein Schnauben tiefer Empörung",
+          "revelation": "Als Jesus sieht, wie Maria und die Juden, die sie begleiten, weinen, sagt der Text, er sei „ergrimmt im Geist und erbebte“ (Johannes 11:33). Das griechische Verb beschreibt etwas, das eher einem Schnauben der Empörung gleicht als einfacher Traurigkeit.\n\nJesus ist nicht nur traurig um Lazarus. Er ist empört über den Tod selbst – über das, was die Sünde seiner geliebten Schöpfung angetan hat. Er tritt dem Grab entgegen wie einer, der einem Feind entgegentritt, nicht nur wie einer, der einen Verlust betrauert.",
+          "application": "Christus betrachtet deinen Schmerz nicht aus ruhiger Distanz. Er ist empört über den Tod und über alles, was zerbricht und was er liebt, genauso wie du."
+        },
+        {
+          "word": "Edákrysen",
+          "transliteration": "ἐδάκρυσεν",
+          "reference": "Johannes 11:35",
+          "meaning": "Er vergoss stille Tränen – anders als das laute, öffentliche Klagen",
+          "revelation": "„Und Jesus gingen die Augen über“ ist ein kurzer Vers von nur wenigen Worten, doch das gewählte Verb ist präzise. Es ist nicht „klaíō“, das laute, öffentliche Weinen, mit dem der Text Maria und die Trauernden beschreibt. Es ist „edákrysen“ – stille, persönliche, innige Tränen.\n\nJesus, der gleich darauf Lazarus auferwecken wird, weint dennoch zuerst. Er weiß, wie die Szene endet, und spürt in diesem Augenblick trotzdem das volle Gewicht des Verlustes.",
+          "application": "Jesus wusste bereits, dass Lazarus auferstehen würde – er hatte es den Jüngern vor seiner Ankunft gesagt. Er hätte ankommen und zuerst die gute Nachricht verkünden können, was die ganze Szene verändert hätte.\n\nStattdessen hält er inne, um mit den Weinenden zu weinen. Obwohl er die Macht und das Wissen über das Kommende hatte, weinte er demütig und mitfühlend über den Schmerz eines anderen."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "Johannes 11:33-35",
+          "text": "Als Jesus sah, wie sie weinte und wie auch die Juden weinten, die mit ihr kamen, ergrimmte er im Geist und erbebte und sprach: Wo habt ihr ihn hingelegt? Sie sprachen zu ihm: Herr, komm und sieh! Und Jesus gingen die Augen über."
+        }
+      ],
+      "revelation_key": "Jesus fühlt den Verlust vollständig, und bewegt sich dennoch mit Vollmacht auf das Grab zu."
+    },
+    {
+      "order": 3,
+      "type": "prophetic_thread",
+      "icon": "✨",
+      "title": "Ich bin die Auferstehung",
+      "subtitle": "Als Jesus eine zukünftige Hoffnung in seine eigene Person legt",
+      "content": "Martha sagt Jesus, dass ihr Bruder nicht gestorben wäre, wenn er dort gewesen wäre (Johannes 11:21). Sie glaubt an das, was Jesus verhindern kann. Sie bedenkt noch nicht, was Jesus rückgängig machen kann.\n\nJesus sagt ihr, dass ihr Bruder auferstehen wird. Marthas Antwort zeugt von echtem Glauben: Sie weiß, dass er am Jüngsten Tag auferstehen wird (Johannes 11:23-24). Es ist eine echte Hoffnung, doch für die letzte Zukunft aufbewahrt, nicht für diesen Augenblick am Grab.\n\nDann bezeichnet Jesus sich selbst als eben diese Hoffnung: „Ich bin die Auferstehung und das Leben“ (Johannes 11:25-26). Er lehrt keine neue Lehre über das Ende der Zeit. Er stellt sich als die Person vor, in der diese Hoffnung bereits lebt, genau dort, an ebendiesem Tag.",
+      "scripture_references": [
+        {
+          "reference": "Johannes 11:21-26",
+          "text": "Da sprach Marta zu Jesus: Herr, wärst du hier gewesen, mein Bruder wäre nicht gestorben. Aber auch jetzt weiß ich: Was du bittest von Gott, das wird dir Gott geben. Jesus spricht zu ihr: Dein Bruder wird auferstehen. Marta spricht zu ihm: Ich weiß, dass er auferstehen wird bei der Auferstehung am Jüngsten Tage. Jesus spricht zu ihr: Ich bin die Auferstehung und das Leben. Wer an mich glaubt, der wird leben, ob er gleich stürbe; und wer da lebt und glaubt an mich, der wird nimmermehr sterben. Glaubst du das?"
+        }
+      ],
+      "revelation_key": "Martha erwartete eine ferne Auferstehung, für den letzten Tag aufbewahrt. Jesus stellte sich selbst als eben diese Hoffnung vor, an ihrer Seite stehend, an ebendiesem Tag."
+    },
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "icon": "🪨",
+      "title": "Nehmt den Stein weg",
+      "subtitle": "Der Glaube, der der Herrlichkeit vorausgeht, nicht der Glaube, der ihr folgt",
+      "content": "Vor dem Grab gibt Jesus einen einfachen Befehl: Nehmt den Stein weg (Johannes 11:39). Marthas Antwort ist schmerzlich menschlich: Sie warnt, dass der Leichnam nach vier Tagen bereits riecht. Sie glaubt an Jesus, doch ihr Glaube berechnet noch, was vernünftigerweise zu erwarten ist.\n\n👁️ Die Bedingung der Herrlichkeit:\n\nJesus erinnert sie an das, was er ihr bereits gesagt hatte: Wenn sie glaubt, wird sie die Herrlichkeit Gottes sehen (Johannes 11:40). Die Reihenfolge ist entscheidend: Normalerweise sieht jemand ein Wunder und glaubt dann, dass Gott es getan hat. Jesus bittet Martha um das Gegenteil – zuerst zu glauben, bevor sie irgendetwas sieht, damit sie danach die Herrlichkeit Gottes sehen kann.\n\n🙏 Ein Gebet für die Menge:\n\nBevor er Lazarus ruft, betet Jesus laut, dankt dem Vater dafür, dass er ihn erhört hat, und erklärt, dass er es um der Menge willen sagt, damit sie glauben, dass der Vater ihn gesandt hat (Johannes 11:41-42). Das Wunder war nie nur für Lazarus, Martha oder Maria bestimmt. Es war der öffentliche Beweis, dass der Vater den Sohn gesandt hatte.\n\n📣 Die Stimme, die der Tod nicht ignorieren konnte:\n\nJesus ruft mit lauter Stimme, und der Verstorbene kommt aus dem Grab, noch immer an Händen und Füßen gebunden, das Gesicht mit einem Tuch verhüllt (Johannes 11:43-44). Jesus fügt eine letzte Anweisung hinzu: Löst die Binden und lasst ihn gehen.\n\nPaulus schreibt später, dass der letzte Feind, der vernichtet wird, der Tod ist (1. Korinther 15:26). Was Jesus mit Lazarus tat, war ein Zeichen. Es wies auf seine eigene Auferstehung hin, in der der Tod nicht nur für eine Zeit weichen, sondern für immer besiegt werden würde.",
+      "scripture_references": [
+        {
+          "reference": "Johannes 11:39-44",
+          "text": "Jesus spricht: Hebt den Stein weg! Spricht zu ihm Marta, die Schwester des Verstorbenen: Herr, er stinkt schon; denn er liegt seit vier Tagen. Jesus spricht zu ihr: Habe ich dir nicht gesagt: Wenn du glaubst, wirst du die Herrlichkeit Gottes sehen? Da hoben sie den Stein weg. Jesus aber hob seine Augen auf und sprach: Vater, ich danke dir, dass du mich erhört hast. Ich wusste, dass du mich allezeit hörst; aber um des Volkes willen, das umhersteht, sagte ich's, damit sie glauben, dass du mich gesandt hast. Als er das gesagt hatte, rief er mit lauter Stimme: Lazarus, komm heraus! Und der Verstorbene kam heraus, gebunden mit Grabtüchern an Füßen und Händen, und sein Gesicht war verhüllt mit einem Schweißtuch. Jesus spricht zu ihnen: Löst die Binden und lasst ihn gehen!"
+        },
+        {
+          "reference": "1. Korinther 15:26",
+          "text": "Der letzte Feind, der vernichtet wird, ist der Tod."
+        }
+      ],
+      "revelation_key": "Die Gemeinde hat auch nach dem Wunder noch eine Aufgabe: denen, die Christus bereits aus dem Grab gerufen hat, dabei zu helfen, sich von den Binden zu befreien, die sie noch immer festhalten."
+    },
+    {
+      "order": 5,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Persönliche Entdeckung",
+      "discovery_questions": [
+        {
+          "category": "Warten",
+          "question": "Jesus wartete absichtlich, bis alle menschliche Hoffnung erschöpft war. Gibt es etwas in deinem Leben, bei dem du Gottes Schweigen als Abwesenheit deutest, statt als Vorbereitung?"
+        },
+        {
+          "category": "Glaube",
+          "question": "Martha glaubte zu Recht an eine zukünftige Auferstehung, tat sich aber schwer zu glauben, dass Jesus in ebendiesem Moment handeln könnte. Ist dein Glaube für „irgendwann“ aufbewahrt, oder vertraust du darauf, dass Christus heute handelt?"
+        },
+        {
+          "category": "Freiheit",
+          "question": "Lazarus kam lebendig heraus, aber noch gebunden – er brauchte andere, die ihn lösten. Gibt es Wunden, Gewohnheiten oder Schuld aus der Vergangenheit, von denen Christus dich bereits befreit hat, die du aber immer noch mit dir trägst?"
+        }
+      ],
+      "prayer": {
+        "title": "Ein Gebet an die Auferstehung und das Leben",
+        "content": "Jesus, du bist die Auferstehung und das Leben. Danke, dass du dich, so wie beim Tod des Lazarus, nicht fern von meinem Schmerz hältst – du lässt dich von meinem Schmerz bewegen, und trittst dennoch mit Vollmacht hervor. Ich bekenne, dass mein Glaube oft auf ein Wunder wartet, bevor er glaubt, doch ich möchte zuerst glauben, um die Herrlichkeit Gottes zu sehen. Wenn es Teile von mir gibt, die du bereits ins Leben gerufen hast, die aber noch gebunden sind, mach mich frei, Herr. Heute entscheide ich mich zu glauben, frei zu sein vom Tod der Sünde und mich an dein ewiges Leben zu klammern. Ich glaube das. In deinem Namen, Amen."
+      }
+    }
+  ],
+  "tags": [
+    "auferstehung",
+    "ewiges_leben",
+    "trauer",
+    "glaube",
+    "lazarus",
+    "tod",
+    "hoffnung"
+  ],
+  "metadata": {
+    "total_word_count": 1260,
+    "greek_words_count": 2,
+    "scripture_references_count": 15,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "Identität Christi",
+      "Trost in der Trauer",
+      "Ewiges Leben",
+      "Glaube jenseits des Sichtbaren"
+    ]
+  }
+}
