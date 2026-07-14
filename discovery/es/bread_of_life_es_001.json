@@ -51,6 +51,7 @@
       "icon": "📖",
       "title": "Trṓgōn: mucho más que comer",
       "subtitle": "El verbo que Jesús usó con intención",
+      "content": "Jesús elige sus palabras con precisión. Primero se presenta como ártos, el pan cotidiano, el alimento básico sin el cual nadie sobrevive. Después, en el punto más intenso de su discurso, cambia el verbo: ya no habla de comer en sentido general, sino de trṓgōn, masticar, roer. Ese giro en el idioma original revela la profundidad de lo que está pidiendo: una entrega diaria, física, repetida — no un momento de admiración lejana.",
       "greek_words": [
         {
           "word": "Ártos",
@@ -70,6 +71,10 @@
         }
       ],
       "scripture_references": [
+        {
+          "reference": "Juan 6:35",
+          "text": "Jesús les dijo: Yo soy el pan de vida; el que a mí viene, nunca tendrá hambre; y el que en mí cree, no tendrá sed jamás."
+        },
         {
           "reference": "Juan 6:51",
           "text": "Yo soy el pan vivo que descendió del cielo; si alguno comiere de este pan, vivirá para siempre; y el pan que yo daré es mi carne, la cual yo daré por la vida del mundo."
