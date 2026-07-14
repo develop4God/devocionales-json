@@ -1,0 +1,196 @@
+{
+  "id": "bread_of_life_001",
+  "type": "discovery",
+  "date": "2026-07-08",
+  "title": "Ako ang Tinapay na Nagbibigay-Buhay",
+  "subtitle": "Nang ang manna sa ilang ay natupad sa wakas",
+  "language": "fil",
+  "version": "MBB05",
+  "estimated_reading_minutes": 9,
+  "key_verse": {
+    "reference": "Juan 6:35",
+    "text": "Sinabi ni Jesus, “Ako ang tinapay na nagbibigay-buhay. Ang lumalapit sa akin ay hindi na magugutom kailanman, at ang sumasampalataya sa akin ay hindi na mauuhaw kailanman.”"
+  },
+
+  "cards": [
+    {
+      "order": 1,
+      "type": "historical_context",
+      "icon": "🌾",
+      "title": "Ang manna na nagpakain sa isang bansa",
+      "subtitle": "Bakit humingi ang mga tao ng tanda tulad ng kay Moises",
+      "content": "Isang araw matapos paramihin ang tinapay para sa limang libong tao, tumawid si Jesus sa Dagat ng Galilea. Sumunod sa kanya ang mga tao — hindi dahil naunawaan nila ang tanda, kundi dahil nabusog sila sa tinapay na kinain nila (Juan 6:26). Kaya humingi sila ng tanda, inaalala ang manna na ibinigay ng Diyos sa kanilang mga ninuno sa ilang (Juan 6:31).\n\n🏜️ Ang kapaligirang alam ng lahat:\n\n• Sa loob ng apatnapung taon, tuwing umaga, nagpaulan ang Diyos ng tinapay mula sa langit sa Israel (Exodo 16:4)\n• Walang nakaalam kung ano iyon; kaya tinawag nila itong 'manna,' gaya ng ipinaliwanag mismo ni Moises (Exodo 16:15)\n• Dumarating ito araw-araw, sapat lamang para sa araw na iyon, hindi maaaring itago\n• Aalalahanin pa rin ito ng mang-aawit ng mga Awit maraming siglo pagkaraan (Mga Awit 78:24)\n\n📖 Ang pagwawasto ni Jesus:\n\nIniugnay ng mga tao ang manna kay Moises. Iwinasto agad sila ni Jesus: ang kanyang Ama, hindi si Moises, ang nagbigay ng tunay na tinapay mula sa langit. Ipinahayag ni Jesus na siya mismo ang tinapay na iyon na nagbibigay-buhay sa sanlibutan (Juan 6:32-33).\n\nSiya mismo ang katuparan ng ipinahayag lamang ng manna.",
+      "scripture_references": [
+        {
+          "reference": "Exodo 16:15",
+          "text": "Hindi nila alam kung ano iyon, kaya nagtanungan sila, “Ano ito?” Sinabi ni Moises, “Iyan ang tinapay na bigay sa inyo ni Yahweh."
+        },
+        {
+          "reference": "Mga Awit 78:24",
+          "text": "Bunga nito, ang pagkai'y bumuhos na parang ulan, ang pagkain nilang manna, sa kanila'y ibinigay."
+        },
+        {
+          "reference": "Juan 6:31-33",
+          "text": "Ang aming mga ninuno ay kumain ng manna sa ilang; ayon sa nasusulat, ‘Sila'y binigyan ni Moises ng tinapay na galing sa langit,’” sabi nila. Sumagot si Jesus, “Pakatandaan ninyo: hindi si Moises ang nagbigay sa inyo ng tinapay na galing sa langit. Ang aking Ama ang nagbibigay sa inyo ng tinapay na galing sa langit. Dahil ang tinapay na galing sa Diyos ang bumabâ mula sa langit at nagbibigay-buhay sa sangkatauhan.”"
+        }
+      ],
+      "revelation_key": "Ang manna ay anino ng apatnapung taon na naghanda sa Israel — at sa atin — upang makilala ang tunay na Tinapay nang siya ay dumating."
+    },
+
+    {
+      "order": 2,
+      "type": "greek_exegesis",
+      "icon": "📖",
+      "title": "Trṓgōn: higit pa sa pagkain",
+      "subtitle": "Ang pandiwa na pinili ni Jesus nang may layunin",
+      "content": "Pinipili ni Jesus ang kanyang mga salita nang may katumpakan. Nang sabihin niyang 'Ako ang tinapay na nagbibigay-buhay,' ginagamit niya ang salitang Griego na ἄρτος (ártos) sa orihinal — ang karaniwang tinapay, ang pangunahing pagkain na walang sinuman ang mabubuhay kung wala.\n\nSa kalaunan, sa pinakamatinding bahagi ng kanyang pananalita, nang sabihin niyang 'kung ang sinuman ay kumain ng tinapay na ito,' inilipat niya ang pandiwa: hindi na basta pagkain sa pangkalahatang kahulugan, kundi τρώγων (trṓgōn), ngumunguya, kumakagat. Ang paglipat na iyon sa orihinal na wika ay naghahayag ng lalim ng hinihingi niya: isang araw-araw, pisikal, at paulit-ulit na pagsuko — hindi lamang isang saglit ng malayong paghanga.",
+      "greek_words": [
+        {
+          "word": "Ártos",
+          "transliteration": "ἄρτος",
+          "meaning": "Tinapay, ang pangunahin at araw-araw na pagkain ng bawat tao",
+          "revelation": "Ginagamit ni Jesus ang salitang ártos sa Juan 6:35 nang sabihin niyang 'Ako ang tinapay na nagbibigay-buhay.' Inihahambing niya ang kanyang sarili sa pinakapangunahin at kailangang-kailangan na bagay — na kung wala rito, hindi mabubuhay ang isang pamilya sa sinaunang mundo.\n\nInihahandog niya ang kanyang sarili bilang pagkain na kung wala rito, hindi lamang mabubuhay ang kaluluwa.",
+          "application": "Si Jesus ang araw-araw na ikinabubuhay na kung wala, humihina at nagugutom ang iyong kaluluwa."
+        },
+        {
+          "word": "Trṓgōn",
+          "transliteration": "τρώγων",
+          "meaning": "Kumagat, ngumuya, kumain — isang pisikal na pandiwa, iba sa 'kumain' sa pangkalahatang kahulugan",
+          "revelation": "Sa Juan 6:54, ang salitang Griego na ginamit ni Jesus para sa 'kumain' ay trṓgōn (τρώγων), na nangangahulugang ngumuya o kumagat, hindi kumain sa pangkalahatang kahulugan.\n\nIto ay isang hilaw na salita, halos hindi komportable. Inilalarawan nito ang pisikal na gawain ng pagkagat at pagnguya, hindi isang abstraktong ideyang espiritwal.\n\nSinadya ito ni Jesus. Ginawa niyang malinaw na ang pagtanggap sa kanya ay hindi isang beses lamang na pag-iisip, kundi isang gawaing paulit-ulit, tulad ng pagkain araw-araw.",
+          "application": "Ang pagsunod kay Jesus ay isang araw-araw, patuloy na gawain ng paglapit sa kanya at pagtanggap sa kanya — tulad ng pagkain."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "Juan 6:35",
+          "text": "Sinabi ni Jesus, “Ako ang tinapay na nagbibigay-buhay. Ang lumalapit sa akin ay hindi na magugutom kailanman, at ang sumasampalataya sa akin ay hindi na mauuhaw kailanman.”"
+        },
+        {
+          "reference": "Juan 6:51",
+          "text": "Ako nga ang tinapay na nagbibigay-buhay na bumabâ mula sa langit. Mabubuhay magpakailanman ang sinumang kumain ng tinapay na ito. At ang tinapay ay ang aking katawan na ibibigay ko upang mabuhay ang sangkatauhan.”"
+        },
+        {
+          "reference": "Juan 6:54",
+          "text": "Ang kumakain ng aking laman at umiinom ng aking dugo ay may buhay na walang hanggan at muli ko siyang bubuhayin sa huling araw."
+        }
+      ],
+      "revelation_key": "Humihingi si Jesus ng isang bagay na tiyak: na lumapit tayo sa kanya araw-araw, hindi lamang minsan."
+    },
+
+    {
+      "order": 3,
+      "type": "prophetic_thread",
+      "icon": "🧵",
+      "title": "Mula sa tinapay ng langit hanggang sa Hapag ng Panginoon",
+      "subtitle": "Paano itinuturo ng manna sa ilang ang Hapunan ng Panginoon",
+      "content": "Nagreklamo ang mga tao sa ilang, naghahangad ng pagkain ng Egipto. Sumagot ang Diyos sa reklamong iyon nang may pangako: magpapaulan siya ng tinapay mula sa langit araw-araw (Exodo 16:2-4).\n\nSa Deuteronomio 8:3, ipinaliwanag ng Diyos ang layunin ng araw-araw na paglalaan na iyon: ituro na ang tunay na buhay ay nakasalalay, higit sa lahat, sa kanyang salita. Si Jesus mismo, bago pa man sabihin ang 'Ako ang tinapay na nagbibigay-buhay,' nabuhay sa katotohanang iyon: totoong nagutom siya sa ilang nang tuksuhin siya ng diyablo na gawing tinapay ang mga bato. Tumanggi si Jesus. Nagtiwala siya sa salita ng Diyos sa halip na lutasin ang sariling gutom, sinipi ang mismong talatang iyon mula sa Deuteronomio (Mateo 4:1-4).\n\nMga salinlahi matapos si Moises, inaawit pa rin ng mang-aawit ang tungkol sa manna sa Mga Awit 78:24. Hindi alam ng mang-aawit na ang tinapay ng ilang ay pahayag lamang ng isang bagay na mas dakila pang darating: si Jesus mismo. Ipinahayag ni Jesus sa Juan 6:32-33 na ang tunay na tinapay mula sa langit ay nagbibigay-buhay sa buong sanlibutan, hindi lamang pagkain para sa isang araw.\n\nNatupad ang pangakong iyon sa Huling Hapunan. Sa Lucas 22:19, kinuha ni Jesus ang tinapay at tinawag itong kanyang katawan, ibinigay para sa kanila sa krus. Bumagsak ang manna mula sa langit tuwing umaga bilang isang dalisay na kaloob; ganoon din tinatanggap ang tinapay ng Hapunan: bilang pag-alaala sa kaloob na iyon.",
+      "scripture_references": [
+        {
+          "reference": "Exodo 16:2-4",
+          "text": "Ang mga Israelita'y nagreklamo kina Moises at Aaron. Sinabi nila, “Mabuti pa sana'y pinatay na kami ni Yahweh sa Egipto. Doon, nakakakain kami ng karne at tinapay hanggang gusto namin. Dito naman sa ilang na pinagdalhan ninyo sa amin, mamamatay kami sa gutom.” Sinabi ni Yahweh kay Moises, “Pauulanan ko kayo ng tinapay mula sa langit. Araw-araw, palalabasin mo ng bahay ang mga tao para mamulot ng kakainin nila sa maghapon. Sa pamamagitan nito'y susubukin ko kung susunod sila sa aking mga tagubilin."
+        },
+        {
+          "reference": "Deuteronomio 8:3",
+          "text": "Tinuruan nga kayong magpakumbabá; ginutom niya kayo bago binigyan ng manna, isang pagkaing hindi ninyo kilala ni ng inyong mga ninuno. Ginawa niya ito upang ipaunawa sa inyo na ang tao'y hindi lamang sa tinapay nabubuhay kundi sa bawat salitang nagmumula sa bibig ni Yahweh."
+        },
+        {
+          "reference": "Mateo 4:1-4",
+          "text": "Pagkatapos, si Jesus ay dinala ng Espiritu sa ilang upang tuksuhin ng diyablo. Siya'y nag-ayuno sa loob ng apatnapung araw at apatnapung gabi kaya't siya'y nagutom. Dumating ang diyablo at sinabi sa kanya, “Kung ikaw ang Anak ng Diyos, gawin mo ngang tinapay ang mga batong ito.” Ngunit sumagot si Jesus, “Nasusulat, ‘Ang tao'y hindi lamang sa tinapay nabubuhay, kundi sa bawat salitang nagmumula sa bibig ng Diyos.’”"
+        },
+        {
+          "reference": "Mga Awit 78:24",
+          "text": "Bunga nito, ang pagkai'y bumuhos na parang ulan, ang pagkain nilang manna, sa kanila'y ibinigay."
+        },
+        {
+          "reference": "Juan 6:32-33",
+          "text": "Sumagot si Jesus, “Pakatandaan ninyo: hindi si Moises ang nagbigay sa inyo ng tinapay na galing sa langit. Ang aking Ama ang nagbibigay sa inyo ng tinapay na galing sa langit. Dahil ang tinapay na galing sa Diyos ang bumabâ mula sa langit at nagbibigay-buhay sa sangkatauhan.”"
+        },
+        {
+          "reference": "Lucas 22:19",
+          "text": "Dumampot din siya ng tinapay, at matapos magpasalamat sa Diyos ay kanyang pinaghati-hati iyon at ibinigay sa kanila. Sabi niya, “Ito ang aking katawan na inihahandog para sa inyo. Gawin ninyo ito bilang pag-alaala sa akin.”"
+        }
+      ],
+      "revelation_key": "Pinakain ng manna ang isang bansa sa loob ng apatnapung taon sa ilang. Si Kristo, ang tunay na Tinapay, ay nagpapakain sa kaluluwa magpakailanman."
+    },
+
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "icon": "🍞",
+      "title": "Ang aking laman ay tunay na pagkain",
+      "subtitle": "Ang mabigat na pananalita na nagpaalis ng marami",
+      "content": "Dinala ni Jesus ang larawan ng tinapay sa isang antas na ikinabahala kahit ng kanyang sariling mga tagasunod, ipinahayag na ang kanyang laman at dugo ay tunay na pagkain (Juan 6:53-55).\n\n😳 Ang agarang reaksyon:\n\nItinuring ng marami sa kanyang mga alagad na mabigat ang pananalitang ito (Juan 6:60). Malinaw ang teksto tungkol sa halaga ng turong ito: maraming alagad ang tumalikod at itinigil ang pagsunod sa kanya. Hindi binawi ni Jesus ang kanyang mga salita, at pinabayaan niyang umalis ang mga tao. Bumaling siya sa labindalawa at tinanong kung nais din nilang umalis (Juan 6:66-67).\n\n🗣️ Ang tugon ni Pedro:\n\nSumagot si Pedro nang may tanong: saan pa sila pupunta? Pinatunayan niya ang tiyak na niyang alam: si Jesus ang may mga salita ng buhay na walang hanggan, at siya ang Kristo, ang Anak ng Diyos na buhay (Juan 6:68-69). Ang katiyakang iyon ang nagpapanatag kay Pedro kahit sa harap ng isang turong mahirap niyang maunawaan.\n\nGanap na maipapaliwanag ang 'mabigat na pananalitang' ito sa Huling Hapunan, nang pinaghati-hati ni Jesus ang tinapay at tinawag itong kanyang katawan (Lucas 22:19). Hinihingi niya ang isang pananalig sa kanya na kasing-tunay, kasing-tuloy-tuloy, at kasing-personal ng pananalig ng katawan sa pagkaing sumusustena rito araw-araw.",
+      "scripture_references": [
+        {
+          "reference": "Juan 6:53-55",
+          "text": "Sinabi ni Jesus, “Pakatandaan ninyo: malibang kainin ninyo ang laman ng Anak ng Tao at inumin ang kanyang dugo, hindi kayo magkakaroon ng buhay. Ang kumakain ng aking laman at umiinom ng aking dugo ay may buhay na walang hanggan at muli ko siyang bubuhayin sa huling araw. Sapagkat ang aking laman ay tunay na pagkain, at ang aking dugo ay tunay na inumin."
+        },
+        {
+          "reference": "Juan 6:60",
+          "text": "Narinig ito ng kanyang mga alagad at marami sa kanila ang nagsabi, “Mabigat na pananalita ito; sino ang makakaunawa nito?”"
+        },
+        {
+          "reference": "Juan 6:66-67",
+          "text": "Mula noo'y marami sa kanyang mga alagad ang tumalikod at hindi na sumama sa kanya. Tinanong ni Jesus ang Labindalawa, “Kayo naman, gusto rin ba ninyong umalis?”"
+        },
+        {
+          "reference": "Lucas 22:19",
+          "text": "Dumampot din siya ng tinapay, at matapos magpasalamat sa Diyos ay kanyang pinaghati-hati iyon at ibinigay sa kanila. Sabi niya, “Ito ang aking katawan na inihahandog para sa inyo. Gawin ninyo ito bilang pag-alaala sa akin.”"
+        }
+      ],
+      "scripture_anchor": {
+        "reference": "Juan 6:68-69",
+        "text": "Sumagot si Simon Pedro, “Panginoon, kanino pa po kami pupunta? Nasa inyo ang mga salitang nagbibigay ng buhay na walang hanggan. Naniniwala kami at ngayo'y natitiyak namin na kayo nga ang Banal na mula sa Diyos.”"
+      },
+      "revelation_key": "Tuwing tayo ay nakikibahagi sa Hapunan ng Panginoon, tinatanggap natin ang ibinigay ni Kristo para sa atin: ang kanyang katawan at dugo, inihandog sa krus."
+    },
+
+    {
+      "order": 5,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Personal na pagtuklas",
+      "discovery_questions": [
+        {
+          "category": "Pananalig",
+          "question": "Ang manna ay bumagsak mula sa langit; hindi ito nanggaling sa lupang nilakaran ng Israel. Ano ang pinagkukunan mo ng ikinabubuhay sa espiritwal: ang Salita ng Diyos, o ibang pinagmumulan na parang sapat ngunit hindi naman?"
+        },
+        {
+          "category": "Pagiging Tuloy-tuloy",
+          "question": "Inilalarawan ng 'τρώγων (trṓgōn)' ang isang paulit-ulit na gawain, hindi isang pagpapasyang minsan lamang. Ang iyo bang ugnayan kay Jesus ay isang pangyayaring nakaraan, o isang araw-araw na gawi ng paglapit sa kanya?"
+        },
+        {
+          "category": "Pagpapasya",
+          "question": "Tulad ni Pedro, saan ka humahanap ng sagot sa pinakamahirap unawain na bahagi ng iyong pananampalataya: kay Kristo, o sa ibang lugar?"
+        }
+      ],
+      "prayer": {
+        "title": "Panalangin sa tinapay na nagbibigay-buhay",
+        "content": "Jesus, Tinapay na nagbibigay-buhay, salamat po sa pagiging ikinabubuhay na kung wala, hindi mabubuhay ang aking kaluluwa. Kinikilala ko na kadalasan sinusubukan kong punuin ang aking sarili ng ibang bagay na panandalian lamang nagbibigay-kasiyahan at nag-iiwan sa akin na mas nagugutom kaysa dati. Ngayon lumalapit ako sa inyo bilang isang taong kailangang kumain araw-araw. Turuan ninyo akong lumapit sa inyo nang may parehong araw-araw na katapatan na kailangan ng aking katawan sa kanyang tinapay. Kapag mahirap para sa akin tanggapin ang inyong mga salita, ibigay ninyo sa akin ang katiyakan ni Pedro: kayo ang may mga salita ng buhay na walang hanggan. Kayo ang Kristo, ang Anak ng Diyos na buhay. Sa inyong pangalan, Amen."
+      }
+    }
+  ],
+
+  "tags": [
+    "tinapay_ng_buhay",
+    "manna",
+    "komunyon",
+    "pananalig",
+    "paglalaan",
+    "pananampalataya",
+    "eukaristiya"
+  ],
+
+  "metadata": {
+    "total_word_count": 1065,
+    "greek_words_count": 2,
+    "scripture_references_count": 12,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "Pagkakakilanlan ni Kristo",
+      "Tipolohiya ng Lumang Tipan",
+      "Ang Hapunan ng Panginoon",
+      "Araw-araw na pananalig kay Kristo"
+    ]
+  }
+}

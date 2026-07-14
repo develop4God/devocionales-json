@@ -644,25 +644,49 @@
         "es": "bread_of_life_es_001.json",
         "en": "bread_of_life_en_001.json",
         "pt": "bread_of_life_pt_001.json",
-        "fr": "bread_of_life_fr_001.json"
+        "fr": "bread_of_life_fr_001.json",
+        "de": "bread_of_life_de_001.json",
+        "ja": "bread_of_life_ja_001.json",
+        "zh": "bread_of_life_zh_001.json",
+        "hi": "bread_of_life_hi_001.json",
+        "ar": "bread_of_life_ar_001.json",
+        "fil": "bread_of_life_fil_001.json"
       },
       "titles": {
         "es": "Yo soy el pan de vida",
         "en": "I Am the Bread of Life",
         "pt": "Eu sou o pão da vida",
-        "fr": "Je suis le pain de vie"
+        "fr": "Je suis le pain de vie",
+        "de": "Ich bin das Brot des Lebens",
+        "ja": "わたしはいのちのパンです",
+        "zh": "我就是生命的粮",
+        "hi": "जीवन की रोटी मैं हूँ",
+        "ar": "أنا خبز الحياة",
+        "fil": "Ako ang Tinapay na Nagbibigay-Buhay"
       },
       "subtitles": {
         "es": "Cuando el maná del desierto encuentra su cumplimiento final",
         "en": "When the manna of the desert meets its final fulfillment",
         "pt": "Quando o maná do deserto encontra seu cumprimento final",
-        "fr": "Quand la manne du désert trouve son accomplissement final"
+        "fr": "Quand la manne du désert trouve son accomplissement final",
+        "de": "Wenn das Manna der Wüste seine endgültige Erfüllung findet",
+        "ja": "荒野のマナが、その最終的な成就と出会うとき",
+        "zh": "旷野的吗哪如何在祂身上得到最终的成全",
+        "hi": "जब जंगल का मन्ना अपनी अंतिम पूर्णता से मिलता है",
+        "ar": "حين يبلغ منّ البرية كماله الأخير",
+        "fil": "Nang ang manna sa ilang ay natupad sa wakas"
       },
       "estimated_reading_minutes": {
         "es": 7,
         "en": 7,
         "pt": 9,
-        "fr": 9
+        "fr": 9,
+        "de": 9,
+        "ja": 10,
+        "zh": 10,
+        "hi": 9,
+        "ar": 9,
+        "fil": 9
       }
     },
     {

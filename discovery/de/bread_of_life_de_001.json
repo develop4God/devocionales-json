@@ -1,0 +1,196 @@
+{
+  "id": "bread_of_life_001",
+  "type": "discovery",
+  "date": "2026-07-08",
+  "title": "Ich bin das Brot des Lebens",
+  "subtitle": "Wenn das Manna der Wüste seine endgültige Erfüllung findet",
+  "language": "de",
+  "version": "LU17",
+  "estimated_reading_minutes": 9,
+  "key_verse": {
+    "reference": "Johannes 6:35",
+    "text": "Jesus aber sprach zu ihnen: Ich bin das Brot des Lebens. Wer zu mir kommt, den wird nicht hungern; und wer an mich glaubt, den wird nimmermehr dürsten."
+  },
+
+  "cards": [
+    {
+      "order": 1,
+      "type": "historical_context",
+      "icon": "🌾",
+      "title": "Das Manna, das ein Volk nährte",
+      "subtitle": "Warum die Menge ein Zeichen wie das des Mose forderte",
+      "content": "An dem Tag, nachdem er für fünftausend Menschen Brote vermehrt hatte, überquerte Jesus das Galiläische Meer. Die Menge folgte ihm — nicht weil sie das Zeichen verstanden hatte, sondern weil sie sich an Brot satt gegessen hatte (Johannes 6:26). Deshalb forderten sie ein Zeichen und erinnerten sich an das Manna, das Gott ihren Vätern in der Wüste gegeben hatte (Johannes 6:31).\n\n🏜️ Der Hintergrund, den alle kannten:\n\n• Vierzig Jahre lang ließ Gott jeden Morgen Brot vom Himmel auf Israel regnen (2. Mose 16:4)\n• Niemand wusste, was es war; deshalb nannten sie es 'Manna', wie Mose selbst erklärt (2. Mose 16:15)\n• Es kam täglich, genug für diesen einen Tag, unmöglich aufzubewahren\n• Der Psalmist würde sich Jahrhunderte später daran erinnern (Psalm 78:24)\n\n📖 Die Korrektur Jesu:\n\nDie Menge schrieb das Manna Mose zu. Jesus korrigierte sie sofort: Nicht Mose, sondern sein Vater hatte das wahre Brot vom Himmel gegeben. Jesus erklärte, dass er selbst dieses Brot ist, das der Welt das Leben gibt (Johannes 6:32-33).\n\nEr selbst war die Erfüllung dessen, was das Manna nur ankündigte.",
+      "scripture_references": [
+        {
+          "reference": "2. Mose 16:15",
+          "text": "Und als es die Israeliten sahen, sprachen sie untereinander: Man hu? Denn sie wussten nicht, was es war. Mose aber sprach zu ihnen: Es ist das Brot, das euch der HERR zu essen gegeben hat."
+        },
+        {
+          "reference": "Psalm 78:24",
+          "text": "und ließ Manna auf sie regnen zur Speise und gab ihnen Himmelsbrot."
+        },
+        {
+          "reference": "Johannes 6:31-33",
+          "text": "Unsre Väter haben Manna gegessen in der Wüste, wie geschrieben steht (Psalm 78,24): »Brot vom Himmel gab er ihnen zu essen.« Da sprach Jesus zu ihnen: Wahrlich, wahrlich, ich sage euch: Nicht Mose hat euch das Brot vom Himmel gegeben, sondern mein Vater gibt euch das wahre Brot vom Himmel. Denn dies ist das Brot Gottes, das vom Himmel kommt und gibt der Welt das Leben."
+        }
+      ],
+      "revelation_key": "Das Manna war ein vierzigjähriger Schatten, der Israel — und uns — darauf vorbereitete, das wahre Brot zu erkennen, als es kam."
+    },
+
+    {
+      "order": 2,
+      "type": "greek_exegesis",
+      "icon": "📖",
+      "title": "Trṓgōn: weit mehr als essen",
+      "subtitle": "Das Verb, das Jesus mit Bedacht wählte",
+      "content": "Jesus wählt seine Worte mit Präzision. Wenn er sagt 'Ich bin das Brot des Lebens', verwendet er im Urtext das griechische Wort ἄρτος (ártos) — das alltägliche Brot, die Grundnahrung, ohne die niemand überlebt.\n\nSpäter, am dichtesten Punkt seiner Rede, wenn er sagt 'wenn jemand von diesem Brot isst', wechselt er das Verb: Er spricht nicht mehr vom Essen im allgemeinen Sinn, sondern von τρώγων (trṓgōn), kauen, nagen. Dieser Wechsel im Urtext offenbart die Tiefe dessen, was er verlangt: eine tägliche, körperliche, wiederholte Hingabe — kein Augenblick distanzierter Bewunderung.",
+      "greek_words": [
+        {
+          "word": "Ártos",
+          "transliteration": "ἄρτος",
+          "meaning": "Brot, die grundlegende und tägliche Nahrung jedes Menschen",
+          "revelation": "Jesus verwendet das Wort ártos in Johannes 6:35, wenn er sagt 'Ich bin das Brot des Lebens'. Er vergleicht sich mit dem Grundlegendsten und Unentbehrlichsten, das es gibt — ohne das eine Familie in der antiken Welt nicht überleben konnte.\n\nEr bietet sich selbst als die Nahrung an, ohne die die Seele schlicht nicht lebt.",
+          "application": "Jesus ist die tägliche Nahrung, ohne die deine Seele schwach wird und verhungert."
+        },
+        {
+          "word": "Trṓgōn",
+          "transliteration": "τρώγων",
+          "meaning": "Beißen, kauen, nagen — ein körperliches Verb, verschieden von 'essen' im allgemeinen Sinn",
+          "revelation": "In Johannes 6:54 verwendet Jesus für 'essen' das griechische Wort trṓgōn (τρώγων), was kauen oder nagen bedeutet, nicht essen im allgemeinen Sinn.\n\nEs ist ein rohes, fast unangenehmes Wort. Es beschreibt den körperlichen Akt des Beißens und Kauens, keine abstrakte geistliche Vorstellung.\n\nJesus wählt es bewusst. Er macht deutlich, dass ihn zu empfangen kein einmaliger Gedanke ist, sondern eine Handlung, die sich wiederholt, wie das tägliche Essen.",
+          "application": "Jesus nachzufolgen ist eine tägliche, beständige Handlung, zu ihm zu kommen und ihn zu empfangen — wie das Essen."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "Johannes 6:35",
+          "text": "Jesus aber sprach zu ihnen: Ich bin das Brot des Lebens. Wer zu mir kommt, den wird nicht hungern; und wer an mich glaubt, den wird nimmermehr dürsten."
+        },
+        {
+          "reference": "Johannes 6:51",
+          "text": "Ich bin das lebendige Brot, das vom Himmel gekommen ist. Wer von diesem Brot isst, der wird leben in Ewigkeit. Und das Brot, das ich geben werde, ist mein Fleisch — für das Leben der Welt."
+        },
+        {
+          "reference": "Johannes 6:54",
+          "text": "Wer mein Fleisch isst und mein Blut trinkt, der hat das ewige Leben, und ich werde ihn am Jüngsten Tage auferwecken."
+        }
+      ],
+      "revelation_key": "Jesus verlangt etwas Konkretes: dass wir täglich zu ihm kommen, nicht nur einmal."
+    },
+
+    {
+      "order": 3,
+      "type": "prophetic_thread",
+      "icon": "🧵",
+      "title": "Vom Brot des Himmels zum Tisch des Herrn",
+      "subtitle": "Wie das Manna der Wüste auf das Abendmahl des Herrn hinweist",
+      "content": "Das Volk murrte in der Wüste und sehnte sich nach der Speise Ägyptens. Gott antwortete auf diese Klage mit einer Verheißung: Er würde jeden Tag Brot vom Himmel regnen lassen (2. Mose 16:2-4).\n\nIn 5. Mose 8:3 erklärt Gott den Sinn dieser täglichen Versorgung: zu lehren, dass wahres Leben vor allem von seinem Wort abhängt. Jesus selbst hatte dieselbe Wahrheit bereits gelebt, bevor er sagte: 'Ich bin das Brot des Lebens.' Er war wirklich hungrig in der Wüste, als der Teufel ihn versuchte, Steine in Brot zu verwandeln. Jesus lehnte ab. Er vertraute auf Gottes Wort, statt seinen eigenen Hunger zu stillen, und zitierte genau diesen Vers aus 5. Mose (Matthäus 4:1-4).\n\nGenerationen nach Mose besang der Psalmist noch immer das Manna in Psalm 78:24. Der Psalmist wusste nicht, dass jenes Wüstenbrot nur die Ankündigung von etwas noch Größerem war, das noch kommen sollte: Jesus selbst. Jesus erklärte in Johannes 6:32-33, dass das wahre Brot vom Himmel der ganzen Welt das Leben gibt, nicht nur Nahrung für einen einzigen Tag.\n\nDiese Verheißung fand ihre Erfüllung beim letzten Abendmahl. In Lukas 22:19 nahm Jesus das Brot und nannte es seinen Leib, für sie gegeben am Kreuz. Das Manna fiel jeden Morgen vom Himmel als reines Geschenk; das Brot des Abendmahls wird auf dieselbe Weise empfangen: als Erinnerung an dieses Geschenk.",
+      "scripture_references": [
+        {
+          "reference": "2. Mose 16:2-4",
+          "text": "Und es murrte die ganze Gemeinde der Israeliten wider Mose und Aaron in der Wüste. Und die Israeliten sprachen: Wollte Gott, wir wären in Ägypten gestorben durch des HERRN Hand, als wir bei den Fleischtöpfen saßen und hatten Brot die Fülle zu essen. Denn ihr habt uns dazu herausgeführt in diese Wüste, dass ihr diese ganze Gemeinde an Hunger sterben lasst. Da sprach der HERR zu Mose: Siehe, ich will euch Brot vom Himmel regnen lassen, und das Volk soll hinausgehen und täglich sammeln, was es für den Tag bedarf, dass ich's prüfe, ob es in meinem Gesetz wandle oder nicht."
+        },
+        {
+          "reference": "5. Mose 8:3",
+          "text": "Er demütigte dich und ließ dich hungern und speiste dich mit Manna, das du und deine Väter nie gekannt hatten, auf dass er dir kundtäte, dass der Mensch nicht lebt vom Brot allein, sondern von allem, was aus dem Mund des HERRN geht."
+        },
+        {
+          "reference": "Matthäus 4:1-4",
+          "text": "Da wurde Jesus vom Geist in die Wüste geführt, damit er von dem Teufel versucht würde. Und da er vierzig Tage und vierzig Nächte gefastet hatte, hungerte ihn. Und der Versucher trat herzu und sprach zu ihm: Bist du Gottes Sohn, so sprich, dass diese Steine Brot werden. Er aber antwortete und sprach: Es steht geschrieben (5.Mose 8,3): »Der Mensch lebt nicht vom Brot allein, sondern von einem jeden Wort, das aus dem Mund Gottes geht.«"
+        },
+        {
+          "reference": "Psalm 78:24",
+          "text": "und ließ Manna auf sie regnen zur Speise und gab ihnen Himmelsbrot."
+        },
+        {
+          "reference": "Johannes 6:32-33",
+          "text": "Da sprach Jesus zu ihnen: Wahrlich, wahrlich, ich sage euch: Nicht Mose hat euch das Brot vom Himmel gegeben, sondern mein Vater gibt euch das wahre Brot vom Himmel. Denn dies ist das Brot Gottes, das vom Himmel kommt und gibt der Welt das Leben."
+        },
+        {
+          "reference": "Lukas 22:19",
+          "text": "Und er nahm das Brot, dankte und brach's und gab's ihnen und sprach: Das ist mein Leib, der für euch gegeben wird; das tut zu meinem Gedächtnis."
+        }
+      ],
+      "revelation_key": "Das Manna nährte ein Volk vierzig Jahre lang in der Wüste. Christus, das wahre Brot, nährt die Seele für die Ewigkeit."
+    },
+
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "icon": "🍞",
+      "title": "Mein Fleisch ist wahre Speise",
+      "subtitle": "Die harte Rede, die viele zum Weggehen brachte",
+      "content": "Jesus treibt das Bild vom Brot auf die Spitze, die selbst seine eigenen Nachfolger erschüttert, indem er erklärt, dass sein Fleisch und Blut wahre Speise sind (Johannes 6:53-55).\n\n😳 Die unmittelbare Reaktion:\n\nViele seiner eigenen Jünger hielten diese Rede für hart (Johannes 6:60). Der Text ist eindeutig über den Preis dieser Lehre: Viele Jünger kehrten um und folgten ihm nicht mehr nach. Jesus nimmt seine Worte nicht zurück und lässt die Menge gehen. Er wendet sich an die Zwölf und fragt, ob auch sie gehen wollen (Johannes 6:66-67).\n\n🗣️ Die Antwort des Petrus:\n\nPetrus antwortet mit einer Frage: Wohin sollten sie sonst gehen? Er bekräftigt, was er bereits mit Gewissheit weiß: Jesus hat die Worte des ewigen Lebens (Johannes 6:68-69). Diese Gewissheit hält Petrus fest, selbst angesichts einer Lehre, die er nur schwer versteht.\n\nDiese 'harte Rede' würde beim letzten Abendmahl ihre volle Erklärung finden, als Jesus das Brot brach und es seinen Leib nannte (Lukas 22:19). Er verlangte eine Abhängigkeit von sich, so real, so beständig und so persönlich wie die Abhängigkeit des Körpers von der Nahrung, die ihn jeden Tag erhält.",
+      "scripture_references": [
+        {
+          "reference": "Johannes 6:53-55",
+          "text": "Jesus sprach zu ihnen: Wahrlich, wahrlich, ich sage euch: Wenn ihr nicht esst das Fleisch des Menschensohns und trinkt sein Blut, so habt ihr kein Leben in euch. Wer mein Fleisch isst und mein Blut trinkt, der hat das ewige Leben, und ich werde ihn am Jüngsten Tage auferwecken. Denn mein Fleisch ist die wahre Speise, und mein Blut ist der wahre Trank."
+        },
+        {
+          "reference": "Johannes 6:60",
+          "text": "Viele nun seiner Jünger, die das hörten, sprachen: Das ist eine harte Rede; wer kann sie hören?"
+        },
+        {
+          "reference": "Johannes 6:66-67",
+          "text": "Von da an wandten sich viele seiner Jünger ab und gingen hinfort nicht mehr mit ihm. Da sprach Jesus zu den Zwölfen: Wollt ihr auch weggehen?"
+        },
+        {
+          "reference": "Lukas 22:19",
+          "text": "Und er nahm das Brot, dankte und brach's und gab's ihnen und sprach: Das ist mein Leib, der für euch gegeben wird; das tut zu meinem Gedächtnis."
+        }
+      ],
+      "scripture_anchor": {
+        "reference": "Johannes 6:68-69",
+        "text": "Da antwortete ihm Simon Petrus: Herr, wohin sollen wir gehen? Du hast Worte des ewigen Lebens; und wir haben geglaubt und erkannt: Du bist der Heilige Gottes."
+      },
+      "revelation_key": "Jedes Mal, wenn wir am Abendmahl des Herrn teilnehmen, empfangen wir, was Christus für uns gegeben hat: seinen Leib und sein Blut, geopfert am Kreuz."
+    },
+
+    {
+      "order": 5,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Persönliche Entdeckung",
+      "discovery_questions": [
+        {
+          "category": "Abhängigkeit",
+          "question": "Das Manna fiel vom Himmel; es kam nicht aus dem Boden, auf dem Israel ging. Wovon nährst du dich geistlich: vom Wort Gottes oder von anderen Quellen, die nur wie Nahrung wirken?"
+        },
+        {
+          "category": "Beständigkeit",
+          "question": "'τρώγων (trṓgōn)' beschreibt eine wiederholte Handlung, keine einmalige Entscheidung. Ist deine Beziehung zu Jesus ein Ereignis der Vergangenheit oder eine tägliche Übung, zu ihm zu kommen?"
+        },
+        {
+          "category": "Entscheidung",
+          "question": "Wo suchst du wie Petrus Antworten auf die schwierigsten Teile deines Glaubens: bei Christus oder woanders?"
+        }
+      ],
+      "prayer": {
+        "title": "Gebet an das Brot des Lebens",
+        "content": "Jesus, Brot des Lebens, danke, dass du die Nahrung bist, ohne die meine Seele nicht leben kann. Ich erkenne, dass ich mich so oft mit anderen Dingen zu füllen versuche, die nur für einen Augenblick sättigen und mich hungriger zurücklassen als zuvor. Heute komme ich zu dir wie jemand, der täglich essen muss. Lehre mich, mit derselben täglichen Beständigkeit zu dir zu kommen, mit der mein Körper sein Brot braucht. Wenn deine Worte mir schwer zu ertragen erscheinen, gib mir die Gewissheit des Petrus: Du hast die Worte des ewigen Lebens. Du bist der Heilige Gottes. In deinem Namen, Amen."
+      }
+    }
+  ],
+
+  "tags": [
+    "brot_des_lebens",
+    "manna",
+    "abendmahl",
+    "abhaengigkeit",
+    "versorgung",
+    "glaube",
+    "eucharistie"
+  ],
+
+  "metadata": {
+    "total_word_count": 1016,
+    "greek_words_count": 2,
+    "scripture_references_count": 12,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "Identität Christi",
+      "Alttestamentliche Typologie",
+      "Das Abendmahl des Herrn",
+      "Tägliche Abhängigkeit von Christus"
+    ]
+  }
+}

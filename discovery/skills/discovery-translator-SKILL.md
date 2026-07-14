@@ -52,8 +52,8 @@ Single source of truth for EN book name → `book_number` mapping (MySword/TheWo
 
 Reading speeds (`reading_speed.rate` and `reading_speed.unit`) are available per language in the remote index — read them from there, do not hardcode.
 
-For the `version` field in JSON output, use the display `name` from the index — not the code:
-`SK2003` → `"新改訳2003"`, `CUV1919` → `"和合本1919"`, `HIOV` → `"पवित्र बाइबिल (ओ.वी.)"`, etc.
+For the `version` field in JSON output, use the version **code** from the index — not the display name:
+`"SK2003"`, `"CUV1919"`, `"HIOV"`, etc. This matches house style in the published EN/ES/PT/FR files (`"KJV"`, `"RVR1960"`, `"ARC"`, `"LSG1910"`).
 
 > If a version used by this project is **not** listed in the remote index, that SQLite file must already be present locally in `bible_database/`.
 
