@@ -58,11 +58,15 @@ For the `version` field in JSON output, use the display `name` from the index �
 > If a version used by this project is **not** listed in the remote index, that SQLite file must already be present locally in `bible_database/`.
 
 ### Pre-Translation: Lookup & Download
-Before translating each language, ensure the required SQLite is available locally:
+Before translating each language, ensure the required SQLite `.gz` is available locally.
+**Never decompress it to a standalone `.SQLite3` file** — `VerseResolver` accepts the
+`.gz` path directly and decompresses to a temp file internally, cleaning it up on
+`close()`/context-exit. Do not add a manual gzip/decompress step; it only produces stray
+`.SQLite3` files that must not be committed.
 
 **Step 1 — Fetch the remote index:**
 ```python
-import urllib.request, json, gzip, shutil, os
+import urllib.request, json, os
 
 INDEX_URL = "https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json"
 with urllib.request.urlopen(INDEX_URL) as resp:
@@ -79,26 +83,23 @@ remote_file   = version_entry["file"]                # e.g. "RVR1960_es.SQLite3.
 download_url  = version_entry["url"]
 ```
 
-**Step 3 — Download & decompress to `bible_database/` if not present:**
+**Step 3 — Download the `.gz` to `bible_database/` if not present:**
 ```python
 DB_DIR   = "bible_database"
 local_gz = os.path.join(DB_DIR, remote_file)
-local_db = local_gz.replace(".gz", "")              # e.g. "bible_database/RVR1960_es.SQLite3"
 
-if not os.path.exists(local_db):
-    if not os.path.exists(local_gz):
-        print(f"Downloading {remote_file}...")
-        urllib.request.urlretrieve(download_url, local_gz)
-    with gzip.open(local_gz, "rb") as gz_in, open(local_db, "wb") as db_out:
-        shutil.copyfileobj(gz_in, db_out)
+if not os.path.exists(local_gz):
+    print(f"Downloading {remote_file}...")
+    urllib.request.urlretrieve(download_url, local_gz)
 ```
 
-**Step 4 — Pass the decompressed path to VerseResolver:**
+**Step 4 — Pass the `.gz` path directly to VerseResolver:**
 ```python
 from verse_resolver import VerseResolver
 
 # No book_map.json needed — native book names come from the DB's books table
-with VerseResolver(local_db) as resolver:
+# VerseResolver handles .gz natively — do not decompress it yourself
+with VerseResolver(local_gz) as resolver:
     citation, text, error = resolver.resolve("John 3:16")
 ```
 
