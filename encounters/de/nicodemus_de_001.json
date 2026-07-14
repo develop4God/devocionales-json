@@ -1,0 +1,316 @@
+{
+  "id": "nicodemus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "de",
+  "bible_version": "LU17",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 12,
+  "meta": {
+    "character": "Nikodemus",
+    "testament": "new",
+    "scripture_reference": "Johannes 3:1-21",
+    "mood_primary": "night",
+    "accent_color": "#0d1526",
+    "emoji": "🌙",
+    "tags": [
+      "neue_geburt",
+      "heiliger_geist",
+      "geheimer_glaube",
+      "verwandlung",
+      "gnade"
+    ]
+  },
+  "key_verse": {
+    "reference": "Johannes 3:16",
+    "text": "Denn also hat Gott die Welt geliebt, dass er seinen eingeborenen Sohn gab, auf dass alle, die an ihn glauben, nicht verloren werden, sondern das ewige Leben haben.",
+    "bible_version": "LU17"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "mysterious",
+      "image_url": "nicodemus_night_journey.png",
+      "title": "Ein Lehrer Israels geht bei Nacht",
+      "narrative": "Jerusalem bei Nacht gehört nur wenigen: denen, die den Tempel bewachen, und denen, die regieren. Ein älterer Mann bewegt sich durch eine schmale Gasse. Es ist Nikodemus, einer der führenden Männer unter den Juden, ein angesehenes Mitglied des Sanhedrin — des Hohen Rates der Juden, bestehend aus Priestern, Ältesten und Gesetzeslehrern, zuständig für die religiösen und rechtlichen Entscheidungen des Volkes — ein anerkannter Lehrer des Gesetzes. Heute Nacht sucht Nikodemus einen Lehrer, wie er ihm noch nie begegnet ist.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 3:1-2",
+        "text": "Es war aber ein Mensch unter den Pharisäern mit Namen Nikodemus, ein Oberster der Juden. Der kam zu Jesus bei Nacht und sprach zu ihm: Rabbi, wir wissen, dass du ein Lehrer bist, von Gott gekommen; denn niemand kann die Zeichen tun, die du tust, es sei denn Gott mit ihm."
+      },
+      "revelation_key": "Ein Mann mit Stellung, Bildung und Ansehen entscheidet sich, alles zu riskieren, um bei Nacht genau den Lehrer aufzusuchen, den sein eigener Rat verworfen hatte."
+    },
+    {
+      "order": 2,
+      "type": "character_moment",
+      "mood": "tense",
+      "image_url": "nicodemus_sanhedrin_status.png",
+      "title": "Alles, was er zu verlieren hatte",
+      "subtitle": "Ein etablierter Mann, nicht nur irgendein Suchender",
+      "content": "Der Text nennt ihn ἄρχων (archon) — \"Oberster\" — der Juden (Johannes 3:1), und später nennt Jesus ihn selbst \"den Lehrer Israels\" (V.10). Dasselbe Wort, ἄρχων, bezeichnet auch die Obersten des Sanhedrin, die später über Jesu Tod entscheiden würden.\n\nNikodemus war einer dieser Obersten. 🔑 Zu Jesus bei Nacht zu kommen bedeutete, sich heimlich dem Mann zu nähern, den sein eigener Rat eines Tages verurteilen würde.",
+      "revelation_key": "Derselbe Titel, den Nikodemus im Sanhedrin trug, gehörte dem Gremium, das später Jesu Tod suchen würde; dennoch entschied er sich, sich ihm zu nähern.",
+      "scripture_connections": [
+        {
+          "reference": "Johannes 11:47-53",
+          "text": "Da versammelten die Hohenpriester und die Pharisäer den Hohen Rat und sprachen: Was tun wir? Dieser Mensch tut viele Zeichen. Lassen wir ihn gewähren, dann werden sie alle an ihn glauben, und dann kommen die Römer und nehmen uns Tempel und Volk. Einer aber von ihnen, Kaiphas, der in diesem Jahr Hoherpriester war, sprach zu ihnen: Ihr wisst nichts; ihr bedenkt auch nicht: Es ist besser für euch, ein Mensch sterbe für das Volk, als dass das ganze Volk verderbe. Das sagte er aber nicht von sich aus, sondern weil er in diesem Jahr Hoherpriester war, weissagte er. Denn Jesus sollte sterben für das Volk und nicht für das Volk allein, sondern auch, um die verstreuten Kinder Gottes zusammenzubringen. Von dem Tage an war es für sie beschlossen, dass sie ihn töteten."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "nicodemus_rabbi_greeting.png",
+      "verse_reference": "Johannes 3:2",
+      "verse_text": "Der kam zu Jesus bei Nacht und sprach zu ihm: Rabbi, wir wissen, dass du ein Lehrer bist, von Gott gekommen; denn niemand kann die Zeichen tun, die du tust, es sei denn Gott mit ihm.",
+      "reflection": "Nikodemus eröffnet das Gespräch mit echtem Respekt. Er benutzt den Plural, \"wir wissen\", und spricht damit vielleicht auch für andere seines Standes, die dieselben Zeichen erkannt hatten. Er erkennt Jesus als einen von Gott gesandten Lehrer und gründet diese Schlussfolgerung auf den Beweis vor seinen Augen: die Zeichen. Es ist ein ehrlicher Auftakt, gesprochen von einem Mann, der es gewohnt ist, jedes Wort abzuwägen, bevor er es ausspricht.",
+      "revelation_key": "Nikodemus kommt mit einer vorbereiteten Frage, ohne zu ahnen, dass Jesus sie gleich ganz beiseitelegen wird, um direkt zu dem vorzudringen, was er wirklich hören muss."
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "nicodemus_jesus_response.png",
+      "title": "Jesus antwortet auf das, was Nikodemus wirklich brauchte",
+      "narrative": "Nikodemus hat seine Überlegung kaum zu Ende gebracht, da antwortet Jesus schon. Er geht direkt zu dem Kern dessen, was ein Lehrer Israels hören muss, auch wenn seine Antwort sich völlig von dem Thema entfernt, mit dem Nikodemus begonnen hatte.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 3:3",
+        "text": "Jesus antwortete und sprach zu ihm: Wahrlich, wahrlich, ich sage dir: Wenn jemand nicht von Neuem geboren wird, so kann er das Reich Gottes nicht sehen."
+      },
+      "revelation_key": "Jesus antwortet auf die wahre Not hinter Nikodemus' höflicher Frage."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "nicodemus_anothen_wordplay.png",
+      "title": "Anōthen: ein Wort mit zwei Wegen",
+      "subtitle": "Warum Nikodemus etwas anderes verstand, als Jesus meinte",
+      "content": "Das griechische Wort, das Jesus benutzt, ist ἄνωθεν (anōthen), und es trägt zwei mögliche Bedeutungen zugleich: \"von Neuem\" und \"von oben\". Nikodemus hört nur den ersten Sinn und stellt sich etwas physisch Unmögliches vor: \"Wie kann ein Mensch geboren werden, wenn er alt ist? Kann er wieder in seiner Mutter Leib gehen und geboren werden?\" (Johannes 3:4).\n\nJesus beschreibt eine Geburt, die von oben kommt, von Gott selbst, etwas, das nur der Heilige Geist hervorbringen kann. Dasselbe Wort anōthen erscheint in Jakobus 1:17, wo es \"jede gute Gabe\" beschreibt, die von oben herabkommt, vom Vater des Lichts.",
+      "scripture_connections": [
+        {
+          "reference": "Johannes 3:4",
+          "text": "Nikodemus spricht zu ihm: Wie kann ein Mensch geboren werden, wenn er alt ist? Kann er denn wieder in seiner Mutter Leib gehen und geboren werden?"
+        },
+        {
+          "reference": "Jakobus 1:17",
+          "text": "Alle gute Gabe und alle vollkommene Gabe kommt von oben herab, von dem Vater des Lichts, bei dem keine Veränderung ist noch Wechsel von Licht und Finsternis."
+        }
+      ],
+      "revelation_key": "Die neue Geburt ist ein Leben, das von oben kommt — eine Gabe, die Gott schenkt, keine Leistung, die der Mensch erreicht."
+    },
+    {
+      "order": 6,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "nicodemus_water_and_spirit.png",
+      "verse_reference": "Johannes 3:5",
+      "verse_text": "Jesus antwortete: Wahrlich, wahrlich, ich sage dir: Wenn jemand nicht geboren wird aus Wasser und Geist, so kann er nicht in das Reich Gottes kommen.",
+      "reflection": "Jesus fügt seiner Antwort eine zweite Schicht hinzu: Wasser und Geist. Das griechische Wort ist πνεῦμα (pneuma) — \"Geist\", \"Atem\", \"Wind\" — dasselbe Wort, das er in V.8 wieder verwenden wird, um zu beschreiben, wie sich jeder bewegt, der aus dem Geist geboren ist. Für einen Gesetzeslehrer rief Wasser sofort die Reinigungsriten wach und die Verheißungen der Propheten, wie die Hesekiels: \"Ich will reines Wasser über euch sprengen ... Ich will euch einen neuen Geist geben\" (Hesekiel 36:25-26). In der griechischen Übersetzung, die Nikodemus kannte, verwendet diese Verheißung dasselbe Wort, pneuma, das Jesus soeben ausgesprochen hat. Jahre später würde dasselbe pneuma sichtbar über die Jünger an Pfingsten ausgegossen werden: \"es geschah plötzlich ein Brausen vom Himmel wie von einem gewaltigen Sturm ... und sie wurden alle erfüllt von dem Heiligen Geist\" (Apostelgeschichte 2:2-4). Jesus sagt, dass diese prophetische Verheißung, die Reinigung und der neue Geist, die Israel zugesagt waren, jetzt erfüllt sind, in eben diesem Gespräch, für jeden, der sie empfängt — und eines Tages sichtbar vor allen werden würde.",
+      "scripture_connections": [
+        {
+          "reference": "Der Prophet Hesekiel (Ezechiel) 36:25-26",
+          "text": "und ich will reines Wasser über euch sprengen, dass ihr rein werdet; von all eurer Unreinheit und von allen euren Götzen will ich euch reinigen. Und ich will euch ein neues Herz und einen neuen Geist in euch geben und will das steinerne Herz aus eurem Fleisch wegnehmen und euch ein fleischernes Herz geben."
+        },
+        {
+          "reference": "Die Apostelgeschichte des Lukas 2:2-4",
+          "text": "Und es geschah plötzlich ein Brausen vom Himmel wie von einem gewaltigen Sturm und erfüllte das ganze Haus, in dem sie saßen. Und es erschienen ihnen Zungen, zerteilt und wie von Feuer, und setzten sich auf einen jeden von ihnen, und sie wurden alle erfüllt von dem Heiligen Geist und fingen an zu predigen in andern Sprachen, wie der Geist ihnen zu reden eingab."
+        }
+      ],
+      "revelation_key": "Nikodemus kannte die Verheißung eines neuen Geistes aus den Propheten. Jesus zeigt ihm, dass diese Verheißung ein Gesicht hat, vor ihm steht, und eines Tages sichtbar über alle ausgegossen werden würde."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "nicodemus_wind_and_spirit.png",
+      "verse_reference": "Johannes 3:8",
+      "verse_text": "Der Wind bläst, wo er will, und du hörst sein Sausen wohl; aber du weißt nicht, woher er kommt und wohin er fährt. So ist ein jeder, der aus dem Geist geboren ist.",
+      "reflection": "Jesus benutzt ein einziges griechisches Wort für zwei Wirklichkeiten zugleich: πνεῦμα (pneuma), das sowohl \"Wind\" als auch \"Geist\" bedeutet. Johannes wählt dieses Wort bewusst — er hätte ἄνεμος (anemos) verwenden können, den gewöhnlichen Begriff für \"Wind\", zog aber pneuma vor, damit es zugleich als \"Geist\" mitschwingt. Der Wind wird gespürt, gehört, und bewegt, was er berührt; sein Ursprung und sein Lauf gehören zu einem Geheimnis, das größer ist, als der Mensch erfassen kann — er kann es nur beobachten. So beschreibt Jesus jeden, der aus dem Geist geboren ist: ein wirkliches Leben, mit Wirkungen, die man wahrnimmt, bewegt von einem Willen, der Gott gehört.",
+      "revelation_key": "Derselbe Geist, der die neue Geburt schenkt, bewegt sich wie der Wind — erkennbar an dem, was er wirkt, nach dem Willen Gottes."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "tense",
+      "image_url": "nicodemus_honest_confusion.png",
+      "title": "Wie kann das geschehen?",
+      "subtitle": "Die Demut eines Lehrers, der zugibt, dass er nicht versteht",
+      "content": "Nikodemus antwortet mit einer einzigen Frage: \"Wie mag das zugehen?\" (Johannes 3:9). Es ist eine kurze Frage, ohne Ausflucht, und bemerkenswert ehrlich für einen Mann seines Standes. Jesus antwortet mit einer direkten Feststellung: \"Du bist Israels Lehrer und weißt das nicht?\" (V.10).\n\nEin Lehrer Israels von seinem Rang kannte die Schriften gut, die von einem neuen Geist und einem erneuerten Herzen sprachen. Was Nikodemus fehlt, ist die Bereitschaft, das, was er sein Leben lang als Lehre studiert hatte, als Geschenk anzunehmen. Seine offene, ungeschützte Frage ist selbst schon ein erster Schritt zu dieser Bereitschaft.",
+      "revelation_key": "Die erste Bewegung hin zu wahrem Glauben ist manchmal keine selbstsichere Antwort, sondern eine ehrlich ausgesprochene Frage.",
+      "scripture_connections": [
+        {
+          "reference": "Johannes 3:9-10",
+          "text": "Nikodemus antwortete und sprach zu ihm: Wie mag das zugehen? Jesus antwortete und sprach zu ihm: Du bist Israels Lehrer und weißt das nicht?"
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "nicodemus_bronze_serpent.png",
+      "title": "Wie Mose die Schlange erhöhte",
+      "subtitle": "Ein Bild, das jeder Israelit kannte",
+      "content": "Jesus greift auf eine Szene zurück, die jeder Israelit sofort wiedererkennen würde: In der Wüste, als giftige Schlangen das Volk für seine Auflehnung bissen, befahl Gott Mose, eine eherne Schlange auf eine Stange zu erhöhen. Sie anzuschauen genügte, um zu leben; der Blick des Glaubens war die einzige Antwort, die Gott verlangte. Das Erstaunliche an diesem Heilmittel war, dass gerade das Bild dessen, was den Tod brachte, zum Mittel des Lebens wurde.\n\nJesus greift dasselbe Bild auf und wendet es auf sich selbst an, mit dem griechischen Verb ὑψόω (hypsoō) — \"erhöhen\", \"emporheben\" — einem Wort, das im Johannesevangelium stets eine doppelte Bedeutung trägt: Es beschreibt zugleich den physischen Akt, ans Kreuz erhöht zu werden, und den Akt, verherrlicht und erhöht zu werden. Dasselbe Wort erscheint in Johannes 8:28 und 12:32, immer auf denselben Augenblick verweisend. So wie die Schlange das Bild des Gerichts trug und zum Zeichen des Lebens wurde, würde Jesus an dem Ort größter Schande erhöht werden, um die Quelle des ewigen Lebens für jeden zu werden, der an ihn glaubt.\n\nUnd dann kommt Jesus zu dem Satz, der das ganze Gespräch zusammenfasst — die Verheißung des ewigen Lebens für jeden, der an ihn glaubt (V.16).\n\nDas griechische Wort für \"eingeboren\" ist μονογενής (monogenēs) — einzigartig in seiner Art, unvergleichlich. Es beschreibt etwas Unwiederholbares, ohne Gleichen.",
+      "verse_overlay": {
+        "reference": "Johannes 3:16",
+        "text": "Denn also hat Gott die Welt geliebt, dass er seinen eingeborenen Sohn gab, auf dass alle, die an ihn glauben, nicht verloren werden, sondern das ewige Leben haben."
+      },
+      "scripture_connections": [
+        {
+          "reference": "4. Mose 21:9",
+          "text": "Da machte Mose eine eherne Schlange und richtete sie hoch auf. Und wenn jemanden eine Schlange biss, so sah er die eherne Schlange an und blieb leben."
+        },
+        {
+          "reference": "Johannes 3:14-15",
+          "text": "Und wie Mose in der Wüste die Schlange erhöht hat, so muss der Menschensohn erhöht werden, auf dass alle, die an ihn glauben, das ewige Leben haben."
+        },
+        {
+          "reference": "Das Evangelium nach Johannes 8:28",
+          "text": "Da sprach Jesus zu ihnen: Wenn ihr den Menschensohn erhöhen werdet, dann werdet ihr erkennen, dass ich es bin und nichts von mir aus tue, sondern, wie mich der Vater gelehrt hat, so rede ich."
+        },
+        {
+          "reference": "Das Evangelium nach Johannes 12:32",
+          "text": "Und ich, wenn ich erhöht werde von der Erde, so will ich alle zu mir ziehen."
+        }
+      ],
+      "revelation_key": "Genau der Augenblick, in dem Jesus am Kreuz erhöht wurde, in scheinbar tiefster Schande, war zugleich der Augenblick seiner größten Herrlichkeit — und jeder, der im Glauben zu ihm aufschaut, empfängt Leben."
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "nicodemus_light_and_darkness.png",
+      "verse_reference": "Johannes 3:19-21",
+      "verse_text": "Das ist aber das Gericht, dass das Licht in die Welt gekommen ist, und die Menschen liebten die Finsternis mehr als das Licht, denn ihre Werke waren böse. Wer Böses tut, der hasst das Licht und kommt nicht zu dem Licht, damit seine Werke nicht aufgedeckt werden. Wer aber die Wahrheit tut, der kommt zu dem Licht, damit offenbar wird, dass seine Werke in Gott getan sind.",
+      "reflection": "Jesus schließt das Gespräch mit einem Bild, das genau bei Nikodemus ankommt, einem Mann, der eigens im Schutz der Dunkelheit gekommen war: Das Licht kam in die Welt, und jeder Mensch entscheidet sich, sich ihm zu nähern oder es zu meiden. Johannes lässt diese Nacht im Schweigen, ohne Nikodemus' unmittelbare Reaktion festzuhalten — ein Schweigen, das der weitere Verlauf seiner Geschichte mit Taten beantworten wird.",
+      "revelation_key": "Jesus lässt die Tür offen. Das Licht war schon gekommen; der Schritt darauf zu blieb in Nikodemus' Händen."
+    },
+    {
+      "order": 11,
+      "type": "character_moment",
+      "mood": "tense",
+      "image_url": "nicodemus_sanhedrin_defense.png",
+      "title": "Ein Riss im Mut",
+      "subtitle": "Fast zwei Jahre später, mitten im Sanhedrin",
+      "content": "Nikodemus' Name taucht später wieder auf, als die Hohenpriester und Pharisäer versuchen, Jesus festzunehmen. Mitten in dieser Versammlung erhebt Nikodemus — vom Text erneut identifiziert als \"der bei Nacht zu Jesus gekommen war\" (Johannes 7:50) — einen Einwand: \"Richtet unser Gesetz einen Menschen, ehe man ihn verhört und erkennt, was er tut?\" (V.51).\n\nEs ist keine öffentliche, offene Verteidigung Jesu als Messias. Es ist etwas Kleineres und gerade deshalb Echteres: ein Mann, der es wagt, ein einfaches, faires Verfahren einzufordern, in einem Gremium, in dem sonst niemand das tut. Seine Kollegen antworten mit Verachtung: \"Bist du auch aus Galiläa?\" (V.52). Sie behaupten, dass aus Galiläa nie ein Prophet aufgestanden sei. Der Prophet Jona, der Sohn Amittais, stammte aus Gat-Hefer, einer Stadt in Galiläa (2. Könige 14:25). Gerade die Männer, die Nikodemus der Unwissenheit bezichtigen, reden, ohne ihre eigene Schrift zu kennen. Nikodemus antwortet nicht. Aber er nimmt seine Worte auch nicht zurück.",
+      "revelation_key": "Fast zwei Jahre nach jener Nacht wagt der Glaube, der als eine im Verborgenen gestellte Frage begann, nun, einmal öffentlich seine Stimme zu erheben.",
+      "scripture_connections": [
+        {
+          "reference": "Das Evangelium nach Johannes 7:50-52",
+          "text": "Spricht zu ihnen Nikodemus, der vormals zu ihm gekommen war und der einer von ihnen war: Richtet denn unser Gesetz einen Menschen, ehe man ihn angehört und erkannt hat, was er tut? Sie antworteten und sprachen zu ihm: Bist du auch aus Galiläa? Forsche und sieh: Aus Galiläa steht kein Prophet auf."
+        },
+        {
+          "reference": "2. Könige 14:25",
+          "text": "Er stellte wieder her das Gebiet Israels von dort, wo es nach Hamat geht, bis an das Meer der Araba nach dem Wort des HERRN, des Gottes Israels, das er geredet hatte durch seinen Knecht Jona, den Sohn Amittais, den Propheten, der von Gat-Hefer war."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "nicodemus_crucifixion_day.png",
+      "title": "Bevor Nikodemus eintraf",
+      "narrative": "Jesus stirbt am Kreuz an einem Freitagnachmittag. Sein Leib wird Pilatus übergeben, um vor Beginn des Sabbats begraben zu werden. Seine engsten Jünger haben sich zerstreut und erfüllen damit, was Jesus selbst vorausgesagt hatte. Es ist ein Augenblick tiefen Verlustes — eine unwahrscheinliche Zeit, um sich zu entscheiden, Jesus öffentlich zu nahen.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 19:38",
+        "text": "Danach bat Josef von Arimathäa, der ein Jünger Jesu war, doch heimlich, aus Furcht vor den Juden, den Pilatus, dass er den Leichnam Jesu abnehmen dürfe. Und Pilatus erlaubte es. Da kam er und nahm den Leichnam Jesu ab."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Das Evangelium nach Johannes 19:30-31",
+          "text": "Da nun Jesus den Essig genommen hatte, sprach er: Es ist vollbracht. Und neigte das Haupt und verschied. Weil es aber Rüsttag war und die Leichname nicht am Kreuz bleiben sollten den Sabbat über — denn dieser Sabbat war ein hoher Festtag —, baten die Juden Pilatus, dass ihnen die Beine gebrochen und sie abgenommen würden."
+        },
+        {
+          "reference": "Matthäus 26:56",
+          "text": "Aber das ist alles geschehen, auf dass erfüllt würden die Schriften der Propheten. Da verließen ihn alle Jünger und flohen."
+        }
+      ],
+      "revelation_key": "Im Augenblick des scheinbar größten Verlustes entscheiden sich zwei Männer, die ihren Glauben im Verborgenen bewahrt hatten, öffentlich zu handeln."
+    },
+    {
+      "order": 13,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "nicodemus_daylight_burial.png",
+      "title": "Der Mann der Nacht kommt bei Tag",
+      "narrative": "Zusammen mit Josef von Arimathäa kommt Nikodemus zu dem Leib Jesu — diesmal am helllichten Tag, ohne auf die Dunkelheit zu warten. Er bringt eine außergewöhnliche Menge an Gewürzen mit, etwa hundert Pfund Myrrhe und Aloe — dieselbe Art von Geste, die die Schriften für das Begräbnis eines Königs von Juda vorbehalten haben. Gemeinsam wickeln sie den Leib in Leinentücher mit wohlriechenden Gewürzen, nach jüdischer Begräbnissitte, und legen ihn ins Grab.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 19:39-40",
+        "text": "Es kam aber auch Nikodemus, der vormals in der Nacht zu Jesus gekommen war, und brachte Myrrhe gemischt mit Aloe, etwa hundert Pfund. Da nahmen sie den Leichnam Jesu und banden ihn in Leinentücher mit Spezereien, wie die Juden zu begraben pflegen."
+      },
+      "scripture_connections": [
+        {
+          "reference": "2. Chronik 16:14",
+          "text": "Und man begrub ihn in seinem Grabe, das er sich in der Stadt Davids hatte aushauen lassen. Und sie legten ihn auf sein Lager, das man mit gutem Räucherwerk und allerlei kunstvoll zubereiteter Spezerei gefüllt hatte, und sie machten ihm zu Ehren einen sehr großen Brand."
+        }
+      ],
+      "revelation_key": "Der Text nennt ihn ein letztes Mal \"der vormals in der Nacht zu Jesus gekommen war\" — um die ganze Strecke zu zeigen, die er zurückgelegt hat: vom Schatten ins Licht des Tages."
+    },
+    {
+      "order": 14,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "nicodemus_from_night_to_day.png",
+      "title": "Wer die Wahrheit tut, kommt zum Licht",
+      "subtitle": "Das Gespräch aus Johannes 3 findet seine Antwort in Johannes 19",
+      "content": "Jesus hatte ihm in der Nacht ihrer ersten Begegnung gesagt, dass, wer die Wahrheit tut, zum Licht kommt (Johannes 3:21). Bei Jesu Begräbnis erfüllt Nikodemus genau diese Verheißung: Er kommt ans Licht, öffentlich, mit eigenen Händen, um ein Werk zu tun, das er nicht länger verbergen oder verleugnen kann.\n\nDerselbe Mann, der einst die Dunkelheit brauchte, um seine Fragen zu stellen, braucht jetzt das Licht des Tages, um mit seinem Leben zu beantworten, was er in jener Nacht gehört hatte. Die Frucht dieser neuen Geburt steht für immer festgehalten: hundert Pfund Gewürze, gegeben vor aller Augen.",
+      "scripture_connections": [
+        {
+          "reference": "Johannes 3:21",
+          "text": "Wer aber die Wahrheit tut, der kommt zu dem Licht, damit offenbar wird, dass seine Werke in Gott getan sind."
+        }
+      ],
+      "revelation_key": "Die neue Geburt wird nicht immer angekündigt. Sie wird später erkannt, in einem Leben, das anfängt, Frucht zu bringen."
+    },
+    {
+      "order": 15,
+      "type": "discovery_activation",
+      "image_url": "nicodemus_your_encounter.png",
+      "title": "Deine Begegnung",
+      "subtitle": "Vom Verborgenen ins Licht, wie Nikodemus",
+      "discovery_questions": [
+        {
+          "category": "Ehrlichkeit",
+          "question": "Nikodemus wagte es, \"Wie kann das geschehen?\" zu fragen, selbst als Lehrer Israels. Gibt es eine Frage über deinen Glauben, die du zu stellen vermeidest, aus Angst davor, was andere von dir denken könnten?"
+        },
+        {
+          "category": "Neue Natur",
+          "question": "Wer aus dem Geist geboren ist, empfängt eine Natur, die nicht mehr lebt wie zuvor (1. Johannes 3:9). Wie Nikodemus, der die Schriften auswendig kannte, aber etwas brauchte, das nur Gott geben konnte — welche Anzeichen dieser neuen Natur gibt es in deinem Leben, über das hinaus, was du bereits weißt oder glaubst?"
+        },
+        {
+          "category": "Mut",
+          "question": "Nikodemus bewegte sich davon, Jesus im Verborgenen zu besuchen, hin dazu, ihm am helllichten Tag öffentlich zu dienen. In welchem Bereich deines Lebens lädt Gott dich ein, die Dunkelheit zu verlassen und im Licht zu handeln?"
+        }
+      ],
+      "prayer": {
+        "title": "Nikodemus' Gebet",
+        "content": "Herr Jesus, wie Nikodemus komme ich manchmal mit Fragen zu dir, die ich vor anderen verschweige. Danke, dass du meine ehrlichen Fragen empfängst und sie gebrauchst, um mich zu dem zu führen, was ich wirklich hören muss. Ich erkenne an, dass die neue Geburt ein Geschenk von oben ist: eine neue Natur, die dein Geist in mir hervorbringt. Dein Geist bewegt sich wie der Wind, jenseits meiner Kontrolle, und lebt doch in mir als Siegel und Unterpfand, dass ich dein bin. Heute entscheide ich mich, zu dir aufzuschauen, wie Israel zur Schlange in der Wüste aufschaute, und zu glauben, dass ich in dir ewiges Leben habe. Gib mir den Mut, den du Nikodemus gabst: dass ich eines Tages offen im Licht lebe, was ich heute noch verberge. In deinem Namen, Amen."
+      }
+    },
+    {
+      "order": 16,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "nicodemus_completion.png",
+      "completion_verse": {
+        "reference": "Johannes 3:16",
+        "text": "Denn also hat Gott die Welt geliebt, dass er seinen eingeborenen Sohn gab, auf dass alle, die an ihn glauben, nicht verloren werden, sondern das ewige Leben haben.",
+        "bible_version": "LU17"
+      },
+      "reflection_prompt": "Welche Anzeichen der neuen Natur gibt es heute in deinem Leben? Bist du wirklich von Neuem geboren?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

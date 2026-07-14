@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "zh",
-  "bible_version": "和合本1919",
+  "bible_version": "CUV1919",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 9,
@@ -32,7 +32,7 @@
   "key_verse": {
     "reference": "马可福音 5:34",
     "text": "耶稣对她说：「女儿，你的信救了你，平平安安的回去吧！你的灾病痊愈了。」",
-    "bible_version": "和合本1919"
+    "bible_version": "CUV1919"
   },
   "cards": [
     {
@@ -211,7 +211,7 @@
       "completion_verse": {
         "reference": "马可福音 5:34",
         "text": "耶稣对她说：「女儿，你的信救了你，平平安安的回去吧！你的灾病痊愈了。」",
-        "bible_version": "和合本1919"
+        "bible_version": "CUV1919"
       },
       "reflection_prompt": "她伸出手来，相信仅仅一次触碰就已足够。耶稣称她为女儿，使她得着全然的复原。今天，你需要向祂伸出什么，相信仅仅一次触碰，就能改变一切？",
       "celebration_type": "gentle_light"

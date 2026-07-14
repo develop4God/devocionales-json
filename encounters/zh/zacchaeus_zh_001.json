@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "zh",
-  "bible_version": "和合本1919",
+  "bible_version": "CUV1919",
   "version": "1.0",
   "estimated_reading_minutes": 10,
   "meta": {
@@ -29,7 +29,7 @@
   "key_verse": {
     "reference": "路加福音 19:10",
     "text": "人子来，为要寻找、拯救失丧的人。",
-    "bible_version": "和合本1919"
+    "bible_version": "CUV1919"
   },
   "cards": [
     {
@@ -229,7 +229,7 @@
       "completion_verse": {
         "reference": "路加福音 19:10",
         "text": "人子来，为要寻找、拯救失丧的人。",
-        "bible_version": "和合本1919"
+        "bible_version": "CUV1919"
       },
       "reflection_prompt": "今天，你需要爬上哪一棵树？当主呼唤你的名字时，你又需要放下什么？",
       "celebration_type": "gentle_light"

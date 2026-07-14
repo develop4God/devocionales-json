@@ -1,0 +1,316 @@
+{
+  "id": "nicodemus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "en",
+  "bible_version": "KJV",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 11,
+  "meta": {
+    "character": "Nicodemus",
+    "testament": "new",
+    "scripture_reference": "John 3:1-21",
+    "mood_primary": "night",
+    "accent_color": "#0d1526",
+    "emoji": "🌙",
+    "tags": [
+      "new_birth",
+      "holy_spirit",
+      "secret_faith",
+      "transformation",
+      "grace"
+    ]
+  },
+  "key_verse": {
+    "reference": "John 3:16",
+    "text": "For God so loved the world, that he gave his only begotten Son, that whosoever believes in him should not perish, but have everlasting life.",
+    "bible_version": "KJV"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "mysterious",
+      "image_url": "nicodemus_night_journey.png",
+      "title": "A teacher of Israel walks at night",
+      "narrative": "Jerusalem at night belongs to few: those who guard the temple, and those who govern. An older man moves down a narrow street. He is Nicodemus, one of the leading men among the Jews, a respected member of the Sanhedrin — the supreme council of the Jews, made up of priests, elders, and teachers of the law, responsible for the religious and legal decisions of the people — a recognized teacher of the law. Tonight, Nicodemus is seeking a teacher unlike any he has known.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 3:1-2",
+        "text": "There was a man of the Pharisees, named Nicodemus, a ruler of the Jews: The same came to Jesus by night, and said unto him, Rabbi, we know that you are a teacher come from God: for no man can do these miracles that you do, except God be with him."
+      },
+      "revelation_key": "A man with position, learning, and reputation decides to risk it all to seek by night the very teacher his own council rejected."
+    },
+    {
+      "order": 2,
+      "type": "character_moment",
+      "mood": "tense",
+      "image_url": "nicodemus_sanhedrin_status.png",
+      "title": "Everything he had to lose",
+      "subtitle": "An established man, not just any seeker",
+      "content": "The text calls him ἄρχων (archon) — \"ruler\" — of the Jews (John 3:1), and later Jesus himself calls him \"the teacher of Israel\" (v.10). That same word, ἄρχων, also identifies the rulers of the Sanhedrin who, later on, would decide Jesus's death.\n\nNicodemus was one of those rulers. 🔑 Coming to Jesus at night meant approaching, in private, the man whose own council would eventually condemn him.",
+      "revelation_key": "The same title Nicodemus held in the Sanhedrin belonged to the body that would later seek Jesus's death; even so, he chose to draw near.",
+      "scripture_connections": [
+        {
+          "reference": "John 11:47-53",
+          "text": "Then gathered the chief priests and the Pharisees a council, and said, What do we? for this man does many miracles. If we let him thus alone, all men will believe on him: and the Romans shall come and take away both our place and nation. And one of them, named Caiaphas, being the high priest that same year, said unto them, You know nothing at all, Nor consider that it is expedient for us, that one man should die for the people, and that the whole nation perish not. And this spoke he not of himself: but being high priest that year, he prophesied that Jesus should die for that nation; And not for that nation only, but that also he should gather together in one the children of God that were scattered abroad. Then from that day forth they took counsel together to put him to death."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "nicodemus_rabbi_greeting.png",
+      "verse_reference": "John 3:2",
+      "verse_text": "The same came to Jesus by night, and said unto him, Rabbi, we know that you are a teacher come from God: for no man can do these miracles that you do, except God be with him.",
+      "reflection": "Nicodemus opens the conversation with genuine respect. He uses the plural, \"we know,\" possibly speaking also for others of his own class who recognized the same signs. He recognizes Jesus as a teacher sent by God, grounding that conclusion in the evidence before him: the signs. It is an honest opening, made by a man accustomed to weighing every word before he speaks it.",
+      "revelation_key": "Nicodemus arrives with a prepared question, not knowing Jesus is about to set it aside entirely to go straight to what he truly needs to hear."
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "nicodemus_jesus_response.png",
+      "title": "Jesus answers what Nicodemus needed",
+      "narrative": "Nicodemus has barely finished laying out his reasoning when Jesus answers. He goes straight to the heart of what a teacher of Israel needs to hear, even though his answer departs completely from the subject Nicodemus opened with.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 3:3",
+        "text": "Jesus answered and said unto him, Verily, verily, I say unto you, Except a man be born again, he cannot see the kingdom of God."
+      },
+      "revelation_key": "Jesus answers the real need beneath Nicodemus's courteous question."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "nicodemus_anothen_wordplay.png",
+      "title": "Anōthen: a word with two paths",
+      "subtitle": "Why Nicodemus understood something different from what Jesus meant",
+      "content": "The Greek word Jesus uses is ἄνωθεν (anōthen), and it carries two possible meanings at once: \"again\" and \"from above.\" Nicodemus, hearing only the first sense, imagines something physically impossible: \"How can a man be born when he is old? Can he enter the second time into his mother's womb, and be born?\" (John 3:4).\n\nJesus is describing a birth that comes from above, from God himself, something only the Holy Spirit can produce. The same word anōthen appears in James 1:17 to describe \"every good gift\" that comes down from above, from the Father of lights.",
+      "scripture_connections": [
+        {
+          "reference": "John 3:4",
+          "text": "Nicodemus said unto him, How can a man be born when he is old? can he enter the second time into his mother's womb, and be born?"
+        },
+        {
+          "reference": "James 1:17",
+          "text": "Every good gift and every perfect gift is from above, and comes down from the Father of lights, with whom is no variableness, neither shadow of turning."
+        }
+      ],
+      "revelation_key": "The new birth is a life that arrives from above — a gift God gives, not an achievement man attains."
+    },
+    {
+      "order": 6,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "nicodemus_water_and_spirit.png",
+      "verse_reference": "John 3:5",
+      "verse_text": "Jesus answered, Verily, verily, I say unto you, Except a man be born of water and of the Spirit, he cannot enter into the kingdom of God.",
+      "reflection": "Jesus adds a second layer to his answer: water and Spirit. The Greek word is πνεῦμα (pneuma) — \"spirit,\" \"breath,\" \"wind\" — the same word he will use again in v.8 to describe how everyone born of the Spirit moves. For a teacher of the law, water immediately evoked the rites of purification and the promises of the prophets, like that of Ezekiel: \"I will sprinkle clean water upon you... A new spirit will I put within you\" (Ezekiel 36:25-26). In the Greek translation Nicodemus knew, that promise uses the same word, pneuma, that Jesus has just spoken. Years later, that same pneuma would be poured out visibly on the disciples at Pentecost: \"there came a sound from heaven as of a rushing mighty wind... and they were all filled with the Holy Spirit\" (Acts 2:2-4). Jesus is saying that this prophetic promise, the cleansing and the new Spirit promised to Israel, is fulfilled now, in this very conversation, for anyone who receives it — and one day would become visible before everyone.",
+      "scripture_connections": [
+        {
+          "reference": "Ezekiel 36:25-26",
+          "text": "Then will I sprinkle clean water upon you, and you shall be clean: from all your filthiness, and from all your idols, will I cleanse you. A new heart also will I give you, and a new spirit will I put within you: and I will take away the stony heart out of your flesh, and I will give you a heart of flesh."
+        },
+        {
+          "reference": "Acts 2:2-4",
+          "text": "And suddenly there came a sound from heaven as of a rushing mighty wind, and it filled all the house where they were sitting. And there appeared unto them separated tongues like as of fire, and it sat upon each of them. And they were all filled with the Holy Spirit, and began to speak with other tongues, as the Spirit gave them utterance."
+        }
+      ],
+      "revelation_key": "Nicodemus knew the promise of a new spirit from the prophets. Jesus shows him that promise has a face, stands before him, and one day would be poured out visibly on everyone."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "nicodemus_wind_and_spirit.png",
+      "verse_reference": "John 3:8",
+      "verse_text": "The wind blows where it wills, and you hear the sound thereof, but can not tell from where it came, and where it goes: so is everyone that is born of the Spirit.",
+      "reflection": "Jesus uses a single Greek word for two realities at once: πνεῦμα (pneuma), which means both \"wind\" and \"spirit.\" John chooses this word on purpose — he could have used ἄνεμος (anemos), the common term for \"wind,\" but he preferred pneuma so it would also resonate as \"spirit.\" The wind is felt, heard, and moves what it touches; its origin and its course belong to a mystery greater than man can grasp — he can only observe it. This is how Jesus describes everyone who is born of the Spirit: a real life, with effects that are noticed, moved by a will that belongs to God.",
+      "revelation_key": "The same Spirit who gives the new birth moves like the wind — known by what it does, according to the will of God."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "tense",
+      "image_url": "nicodemus_honest_confusion.png",
+      "title": "How can this be?",
+      "subtitle": "The humility of a teacher who admits he doesn't understand",
+      "content": "Nicodemus answers with a single question: \"How can this be?\" (John 3:9). It is a short question, without evasion, and remarkably honest for a man of his standing. Jesus responds with a direct observation: \"Are you a teacher of Israel, and do not know these things?\" (v.10).\n\nA teacher of Israel of his caliber knew well the Scriptures that spoke of a new spirit and a renewed heart. What Nicodemus lacks is the willingness to receive as a gift what he had studied his whole life as doctrine. His open, undefended question is itself a first step toward that willingness.",
+      "revelation_key": "The first movement toward true faith is sometimes not a confident answer, but an honest question spoken out loud.",
+      "scripture_connections": [
+        {
+          "reference": "John 3:9-10",
+          "text": "Nicodemus answered and said unto him, How can these things be? Jesus answered and said unto him, Are you a Teacher of Israel, and know not these things?"
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "nicodemus_bronze_serpent.png",
+      "title": "As Moses lifted up the serpent",
+      "subtitle": "An image every Israelite knew",
+      "content": "Jesus draws on a scene any Israelite would instantly recognize: in the wilderness, when venomous serpents bit the people for their rebellion, God commanded Moses to lift up a bronze serpent on a pole. Looking at it was enough to live; the look of faith was the only response God asked. The astonishing part of the remedy was that the very image of what brought death became the means of life.\n\nJesus takes that same image and applies it to himself, using the Greek verb ὑψόω (hypsoō) — \"to lift up,\" \"to raise on high\" — a word that in John's gospel always carries a double meaning: it describes at once the physical act of being raised on the cross and the act of being exalted, glorified. The same word appears in John 8:28 and 12:32, always pointing toward that same moment. Just as the serpent carried the image of judgment and became a symbol of life, Jesus would be lifted up in the place of greatest shame to become the source of eternal life for everyone who believes in him.\n\nAnd then Jesus arrives at the sentence that would sum up the whole conversation — the promise of eternal life for everyone who believes in him (v.16).\n\nThe Greek word for \"only begotten\" is μονογενής (monogenēs) — one of a kind, unique in its category. It describes something unrepeatable, without equal.",
+      "verse_overlay": {
+        "reference": "John 3:16",
+        "text": "For God so loved the world, that he gave his only begotten Son, that whosoever believes in him should not perish, but have everlasting life."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Numbers 21:9",
+          "text": "And Moses made a serpent of bronze, and put it upon a pole, and it came to pass, that if a serpent had bitten any man, when he beheld the serpent of bronze, he lived."
+        },
+        {
+          "reference": "John 3:14-15",
+          "text": "And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up: That whosoever believes in him should not perish, but have eternal life."
+        },
+        {
+          "reference": "John 8:28",
+          "text": "Then said Jesus unto them, When you have lifted up the Son of man, then shall you know that I am he, and that I do nothing of myself; but as my Father has taught me, I speak these things."
+        },
+        {
+          "reference": "John 12:32",
+          "text": "And I, if I be lifted up from the earth, will draw all men unto me."
+        }
+      ],
+      "revelation_key": "The very moment Jesus was lifted up on the cross, in what appeared to be the deepest shame, was also the moment of his greatest glory — and everyone who looks to him in faith receives life."
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "nicodemus_light_and_darkness.png",
+      "verse_reference": "John 3:19-21",
+      "verse_text": "And this is the condemnation, that light is come into the world, and men loved darkness rather than light, because their deeds were evil. For everyone that does evil hates the light, neither comes to the light, lest his deeds should be exposed. But he that does truth comes to the light, that his deeds may be made manifest, that they are worked in God.",
+      "reflection": "Jesus closes the conversation with an image that lands directly on Nicodemus, a man who came precisely under cover of darkness: light came into the world, and each person chooses to draw near it or avoid it. John leaves that night in silence, without recording Nicodemus's immediate response — a silence the rest of his story will answer with deeds.",
+      "revelation_key": "Jesus leaves the door open. The light had already come; the step toward it was left in Nicodemus's hands."
+    },
+    {
+      "order": 11,
+      "type": "character_moment",
+      "mood": "tense",
+      "image_url": "nicodemus_sanhedrin_defense.png",
+      "title": "A crack of courage",
+      "subtitle": "Nearly two years later, in the middle of the Sanhedrin",
+      "content": "Nicodemus's name reappears later, when the chief priests and Pharisees seek to arrest Jesus. In the middle of that meeting, Nicodemus — identified once again by the text as \"he that came to Jesus by night\" (John 7:50) — raises an objection: \"Does our law judge any man, before it hears him, and knows what he does?\" (v.51).\n\nIt is not a public, open defense of Jesus as the Messiah. It is something smaller and, for that very reason, more real: a man who dares to ask for a simple fair process, in a body where no one else asks for it. His colleagues respond with contempt: \"Are you also of Galilee?\" (v.52). They claim that out of Galilee no prophet has ever arisen. The prophet Jonah, son of Amittai, was from Gath-hepher, a town in Galilee (2 Kings 14:25). The very men who accuse Nicodemus of ignorance are speaking without knowing their own Scripture. Nicodemus does not answer. But he does not retract either.",
+      "revelation_key": "Nearly two years after that night, the faith that began as a question asked in secret now dares to raise its voice once in public.",
+      "scripture_connections": [
+        {
+          "reference": "John 7:50-52",
+          "text": "Nicodemus said unto them, (he that came to Jesus by night, being one of them,) Does our law judge any man, before it hears him, and knows what he does? They answered and said unto him, Are you also of Galilee? Search, and look: for out of Galilee arises no prophet."
+        },
+        {
+          "reference": "2 Kings 14:25",
+          "text": "He restored the border of Israel from the entering of Hamath unto the sea of the plain, according to the word of the LORD God of Israel, which he spoke by the hand of his servant Jonah, the son of Amittai, the prophet, who was from Gath-hepher."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "nicodemus_crucifixion_day.png",
+      "title": "Before Nicodemus arrived",
+      "narrative": "Jesus dies on the cross on a Friday afternoon. His body is handed over to Pilate to be buried before the Sabbath begins. His closest disciples have scattered, fulfilling what Jesus himself had foretold. It is a moment of deep loss — an unlikely time for anyone to decide to approach Jesus in public.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 19:38",
+        "text": "And after this Joseph of Arimathaea, being a disciple of Jesus, but secretly for fear of the Jews, besought Pilate that he might take away the body of Jesus: and Pilate gave him permission. He came therefore, and took the body of Jesus."
+      },
+      "scripture_connections": [
+        {
+          "reference": "John 19:30-31",
+          "text": "When Jesus therefore had received the vinegar, he said, It is finished: and he bowed his head, and gave up his spirit. The Jews therefore, because it was the preparation, that the bodies should not remain upon the cross on the sabbath day, (for that sabbath day was a high day,) besought Pilate that their legs might be broken, and that they might be taken away."
+        },
+        {
+          "reference": "Matthew 26:56",
+          "text": "But all this was done, that the scriptures of the prophets might be fulfilled. Then all the disciples forsook him, and fled."
+        }
+      ],
+      "revelation_key": "At the moment of greatest apparent loss, two men who had kept their faith in secret decide to act in public."
+    },
+    {
+      "order": 13,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "nicodemus_daylight_burial.png",
+      "title": "The man of the night arrives by day",
+      "narrative": "Alongside Joseph of Arimathea, Nicodemus comes to the body of Jesus — this time in broad daylight, without waiting for darkness. He brings an extraordinary quantity of spices, about a hundred pounds of myrrh and aloes — the same kind of gesture the Scriptures reserved for the burial of a king of Judah. Together they wrap the body with linen cloths and fragrant spices, according to Jewish burial custom, and lay it in the tomb.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 19:39-40",
+        "text": "And there came also Nicodemus, who at the first came to Jesus by night, and brought a mixture of myrrh and aloes, about a hundred pound weight. Then took they the body of Jesus, and wound it in linen cloths with the spices, as the manner of the Jews is to bury."
+      },
+      "scripture_connections": [
+        {
+          "reference": "2 Chronicles 16:14",
+          "text": "And they buried him in his own sepulcher, which he had made for himself in the city of David, and laid him in the bed which was filled with sweet ointments and various kinds of spices prepared by the perfumer's art: and they made a very great fire in honor of him."
+        }
+      ],
+      "revelation_key": "The text identifies him one last time as \"he that at the first came to Jesus by night\" — to show the full distance he has traveled: from the shadow into the light of day."
+    },
+    {
+      "order": 14,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "nicodemus_from_night_to_day.png",
+      "title": "He that does truth comes to the light",
+      "subtitle": "The conversation of John 3 finds its answer in John 19",
+      "content": "Jesus had told him, the night of their first encounter, that whoever does truth comes to the light (John 3:21). At Jesus's burial, Nicodemus fulfills that very promise: he comes to the light, in public, with his own hands, to do a work he can no longer hide or deny.\n\nThe same man who once needed darkness to ask his questions now needs the light of day to answer, with his life, what he heard that night. The fruit of that new birth stands recorded forever: a hundred pounds of spices, given before everyone.",
+      "scripture_connections": [
+        {
+          "reference": "John 3:21",
+          "text": "But he that does truth comes to the light, that his deeds may be made manifest, that they are worked in God."
+        }
+      ],
+      "revelation_key": "The new birth is not always announced. It is recognized afterward, in a life that begins to bear fruit."
+    },
+    {
+      "order": 15,
+      "type": "discovery_activation",
+      "image_url": "nicodemus_your_encounter.png",
+      "title": "Your Encounter",
+      "subtitle": "From secret to light, like Nicodemus",
+      "discovery_questions": [
+        {
+          "category": "Honesty",
+          "question": "Nicodemus dared to ask \"How can this be?\", even as a teacher of Israel. Is there a question about your faith you avoid asking out loud, out of fear of what others might think of you?"
+        },
+        {
+          "category": "New nature",
+          "question": "The one born of the Spirit receives a nature that no longer lives as it did before (1 John 3:9). Like Nicodemus, who knew the Scriptures by heart but needed something only God could give him — what evidence is there in your life of that new nature, beyond what you already know or believe?"
+        },
+        {
+          "category": "Courage",
+          "question": "Nicodemus went from visiting Jesus in secret to serving him in public, in broad daylight. In what area of your life is God inviting you to leave the darkness and act in the light?"
+        }
+      ],
+      "prayer": {
+        "title": "Nicodemus's Prayer",
+        "content": "Lord Jesus, like Nicodemus, I sometimes come to you with questions I keep silent before others. Thank you that you receive my honest questions and use them to lead me to what I truly need to hear. I acknowledge that the new birth is a gift that comes from above: a new nature your Spirit produces in me. Your Spirit moves like the wind, beyond my control, yet lives in me as a seal and guarantee that I am yours. Today I choose to look to you, as Israel looked to the serpent in the wilderness, and to believe that in you I have eternal life. Give me the courage you gave Nicodemus: that what I keep secret today, I may one day live openly, in the light. In your name, Amen."
+      }
+    },
+    {
+      "order": 16,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "nicodemus_completion.png",
+      "completion_verse": {
+        "reference": "John 3:16",
+        "text": "For God so loved the world, that he gave his only begotten Son, that whosoever believes in him should not perish, but have everlasting life.",
+        "bible_version": "KJV"
+      },
+      "reflection_prompt": "What evidence is there today in your life of the new nature? Have you truly been born again?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

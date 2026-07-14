@@ -1,176 +1,201 @@
 #!/usr/bin/env python3
 """
-Verify all image URLs in encounter files
-Extracts image_url values and checks if they're valid (using curl/requests)
+verify_image_urls.py — Verify encounter image_url references resolve to real
+files in the Devocionales-assets GitHub repo (SOT).
+
+image_url in card JSON is a bare filename (e.g. "zacchaeus_in_tree.png").
+The asset host maps it to:
+  https://raw.githubusercontent.com/develop4God/Devocionales-assets/main/images/encounters/<encounter_id>/<filename>
+where <encounter_id> is the encounter's "id" in index.json (== its asset folder name).
+
+Exit codes: 0 = all images resolved, 1 = one or more missing/unreachable.
 """
 
 import json
-import os
 import sys
+import time
+import urllib.error
+import urllib.request
+from concurrent.futures import ThreadPoolExecutor
+from dataclasses import dataclass, field
 from pathlib import Path
-from collections import defaultdict
-import subprocess
-from urllib.parse import urljoin
+from typing import Optional
 
-def extract_image_urls(encounters_dir):
-    """Extract all image_url values from encounter files"""
-    urls = defaultdict(list)
-    files_checked = 0
-    
-    encounters_path = Path(encounters_dir)
-    
-    # Find all language directories
-    for lang_dir in encounters_path.iterdir():
-        if lang_dir.is_dir() and lang_dir.name not in ['archive', 'encounters_scripts', 'discovery', 'discovery', 'encounters_scripts', 'badges', 'bible_database', 'devocionales_scripts']:
-            for json_file in lang_dir.glob('*.json'):
-                files_checked += 1
-                try:
-                    with open(json_file, 'r', encoding='utf-8') as f:
-                        data = json.load(f)
-                    
-                    # Extract from cards if it's an encounter file
-                    if 'cards' in data:
-                        for card in data['cards']:
-                            if 'image_url' in card:
-                                url = card['image_url']
-                                if url:  # Non-empty
-                                    urls[url].append({
-                                        'file': json_file.name,
-                                        'lang': lang_dir.name
-                                    })
-                except json.JSONDecodeError as e:
-                    print(f"❌ Error parsing {json_file}: {e}")
-                except Exception as e:
-                    print(f"❌ Error reading {json_file}: {e}")
-    
-    return urls, files_checked
+ASSETS_REPO_RAW_BASE = (
+    "https://raw.githubusercontent.com/develop4God/Devocionales-assets/main/images/encounters"
+)
+RETRY_ATTEMPTS = 3
+RETRY_BACKOFF_SECONDS = 2
+REQUEST_TIMEOUT_SECONDS = 10
+MAX_CONCURRENT_REQUESTS = 16
 
-def validate_urls(urls):
-    """Validate that all URLs have proper format and extensions"""
-    validation_results = {
-        'total': len(urls),
-        'with_png': 0,
-        'without_png': 0,
-        'empty': 0,
-        'issues': []
+
+@dataclass(frozen=True)
+class ImageReference:
+    encounter_id: str
+    filename: str
+    source_file: str
+
+    @property
+    def url(self) -> str:
+        return f"{ASSETS_REPO_RAW_BASE}/{self.encounter_id}/{self.filename}"
+
+
+@dataclass
+class CheckResult:
+    reference: ImageReference
+    ok: bool
+    status: str
+
+
+class EncounterIndexReader:
+    """Reads index.json to map encounter file -> encounter_id (asset folder name)."""
+
+    def __init__(self, encounters_dir: Path):
+        self._encounters_dir = encounters_dir
+
+    def build_file_to_encounter_id(self) -> dict:
+        index_path = self._encounters_dir / "index.json"
+        data = json.loads(index_path.read_text(encoding="utf-8"))
+
+        file_to_id = {}
+        for encounter in data["encounters"]:
+            encounter_id = encounter["id"]
+            if "intro_image" in encounter:
+                file_to_id[("index.json", encounter["intro_image"])] = encounter_id
+            for lang_file in encounter.get("files", {}).values():
+                file_to_id[lang_file] = encounter_id
+        return file_to_id
+
+
+class ImageReferenceExtractor:
+    """Extracts image_url references from encounter card files, deduplicated
+    per (encounter_id, filename) since the same asset is reused across languages."""
+
+    SKIP_DIRS = {
+        "archive", "encounters_scripts", "discovery", "badges",
+        "bible_database", "devocionales_scripts", "skills", "image_promts",
     }
-    
-    for url, locations in urls.items():
-        if not url:
-            validation_results['empty'] += 1
-        elif url.endswith('.png'):
-            validation_results['with_png'] += 1
-        else:
-            validation_results['without_png'] += 1
-            validation_results['issues'].append({
-                'url': url,
-                'issue': 'Missing .png extension',
-                'locations': locations
-            })
-    
-    return validation_results
 
-def check_url_with_curl(url, base_path=None):
-    """
-    Check if URL exists using curl
-    Returns (status_code, message)
-    """
-    try:
-        # If base_path provided, try to find the file
-        if base_path:
-            file_path = os.path.join(base_path, url)
-            if os.path.exists(file_path):
-                return (200, f"Local file exists: {file_path}")
-            else:
-                return (404, f"Local file not found: {file_path}")
-        
-        # Try curl for local HTTP server or remote URLs
-        result = subprocess.run(
-            ['curl', '-I', '--max-time', '2', url],
-            capture_output=True,
-            timeout=5
-        )
-        
-        if result.returncode == 0:
-            # Extract status code from output
-            for line in result.stdout.decode().split('\n'):
-                if line.startswith('HTTP'):
-                    status = line.split()[1]
-                    return (int(status), f"HTTP {status}")
-            return (200, "OK")
-        else:
-            return (result.returncode, "Connection failed")
-    except subprocess.TimeoutExpired:
-        return (408, "Request timeout")
-    except Exception as e:
-        return (999, str(e))
+    def __init__(self, encounters_dir: Path, file_to_encounter_id: dict):
+        self._encounters_dir = encounters_dir
+        self._file_to_encounter_id = file_to_encounter_id
 
-def main():
+    def extract(self) -> list:
+        seen = {}
+        for lang_dir in sorted(self._encounters_dir.iterdir()):
+            if not lang_dir.is_dir() or lang_dir.name in self.SKIP_DIRS:
+                continue
+            for json_file in sorted(lang_dir.glob("*.json")):
+                encounter_id = self._file_to_encounter_id.get(json_file.name)
+                if encounter_id is None:
+                    continue  # not referenced in index.json; not an encounter card file
+                self._extract_from_file(json_file, encounter_id, seen)
+        return list(seen.values())
+
+    def _extract_from_file(self, json_file: Path, encounter_id: str, seen: dict) -> None:
+        data = json.loads(json_file.read_text(encoding="utf-8"))
+        for card in data.get("cards", []):
+            filename = card.get("image_url")
+            if not filename:
+                continue
+            key = (encounter_id, filename)
+            if key not in seen:
+                seen[key] = ImageReference(
+                    encounter_id=encounter_id,
+                    filename=filename,
+                    source_file=json_file.name,
+                )
+
+
+class GitHubAssetChecker:
+    """Checks whether an image reference resolves on the GitHub assets repo,
+    retrying transient failures before giving up."""
+
+    def __init__(self, attempts: int = RETRY_ATTEMPTS, backoff_seconds: int = RETRY_BACKOFF_SECONDS):
+        self._attempts = attempts
+        self._backoff_seconds = backoff_seconds
+
+    def check(self, reference: ImageReference) -> CheckResult:
+        last_status = "unknown error"
+        for attempt in range(1, self._attempts + 1):
+            ok, status, retryable = self._check_once(reference.url)
+            if ok or not retryable:
+                return CheckResult(reference=reference, ok=ok, status=status)
+            last_status = status
+            if attempt < self._attempts:
+                time.sleep(self._backoff_seconds)
+        return CheckResult(reference=reference, ok=False, status=last_status)
+
+    def _check_once(self, url: str) -> tuple:
+        request = urllib.request.Request(url, method="HEAD")
+        try:
+            with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT_SECONDS) as response:
+                return True, f"HTTP {response.status}", False
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                return False, "HTTP 404 Not Found", False  # not a transient error
+            return False, f"HTTP {e.code}", True
+        except (urllib.error.URLError, TimeoutError) as e:
+            return False, f"Network error: {e}", True
+
+
+class VerificationReport:
+    """Formats and prints the verification results; owns the exit code decision."""
+
+    def __init__(self, results: list, files_checked: int):
+        self._results = results
+        self._files_checked = files_checked
+
+    def print(self) -> None:
+        print("=" * 80)
+        print("IMAGE URL VERIFICATION REPORT (SOT: Devocionales-assets on GitHub)")
+        print("=" * 80)
+        print()
+        print(f"Encounter card files scanned: {self._files_checked}")
+        print(f"Unique images checked: {len(self._results)}")
+        print()
+
+        failures = [r for r in self._results if not r.ok]
+
+        if failures:
+            print(f"MISSING/UNREACHABLE IMAGES ({len(failures)}):")
+            for r in failures:
+                print(f"   - {r.reference.encounter_id}/{r.reference.filename}")
+                print(f"     Referenced in: {r.reference.source_file}")
+                print(f"     Status: {r.status}")
+                print(f"     URL: {r.reference.url}")
+            print()
+        else:
+            print("All images resolved successfully.")
+            print()
+
+        print("=" * 80)
+        print(f"Summary: {len(self._results) - len(failures)}/{len(self._results)} OK, {len(failures)} failed")
+        print("=" * 80)
+
+    def exit_code(self) -> int:
+        return 0 if all(r.ok for r in self._results) else 1
+
+
+def main() -> int:
     encounters_dir = Path(__file__).parent.parent
-    
-    print("=" * 80)
-    print("IMAGE URL VERIFICATION REPORT")
-    print("=" * 80)
-    print()
-    
-    # Extract URLs
-    print("🔍 Extracting image URLs from encounter files...")
-    urls, files_checked = extract_image_urls(encounters_dir)
-    print(f"✓ Checked {files_checked} files")
-    print(f"✓ Found {len(urls)} unique image URLs")
-    print()
-    
-    # Validate URLs
-    print("🔎 Validating URL format and extensions...")
-    validation = validate_urls(urls)
-    
-    print(f"📊 VALIDATION SUMMARY:")
-    print(f"   Total unique URLs: {validation['total']}")
-    print(f"   ✓ With .png extension: {validation['with_png']}")
-    print(f"   ❌ Without .png extension: {validation['without_png']}")
-    print(f"   ⚠️  Empty URLs: {validation['empty']}")
-    print()
-    
-    if validation['issues']:
-        print("⚠️  ISSUES FOUND:")
-        for issue in validation['issues']:
-            print(f"   • {issue['url']}")
-            print(f"     Issue: {issue['issue']}")
-            for loc in issue['locations']:
-                print(f"       - {loc['file']} ({loc['lang']})")
-        print()
-    else:
-        print("✅ All URLs have proper format!")
-        print()
-    
-    # List all unique URLs
-    print("📝 ALL UNIQUE IMAGE URLS:")
-    print()
-    sorted_urls = sorted(urls.keys())
-    for i, url in enumerate(sorted_urls, 1):
-        count = len(urls[url])
-        print(f"   {i:3}. {url}")
-        print(f"        Used in {count} file(s)")
-        for loc in urls[url][:2]:  # Show first 2 locations
-            print(f"        - {loc['file']} ({loc['lang']})")
-        if len(urls[url]) > 2:
-            print(f"        ... and {len(urls[url]) - 2} more")
-    print()
-    
-    # Summary
-    print("=" * 80)
-    print("✅ VERIFICATION COMPLETE")
-    print("=" * 80)
-    print()
-    print(f"Summary:")
-    print(f"  • Total unique URLs: {validation['total']}")
-    print(f"  • With .png extension: {validation['with_png']} / {validation['total']} (100%)")
-    print(f"  • Empty URLs: {validation['empty']}")
-    print(f"  • Issues found: {len(validation['issues'])}")
-    print()
-    
-    # Return exit code
-    return 0 if len(validation['issues']) == 0 and validation['empty'] == 0 else 1
 
-if __name__ == '__main__':
+    index_reader = EncounterIndexReader(encounters_dir)
+    file_to_encounter_id = index_reader.build_file_to_encounter_id()
+
+    extractor = ImageReferenceExtractor(encounters_dir, file_to_encounter_id)
+    references = extractor.extract()
+
+    checker = GitHubAssetChecker()
+    with ThreadPoolExecutor(max_workers=MAX_CONCURRENT_REQUESTS) as pool:
+        results = list(pool.map(checker.check, references))
+
+    files_checked = len({r.reference.source_file for r in results})
+    report = VerificationReport(results, files_checked)
+    report.print()
+    return report.exit_code()
+
+
+if __name__ == "__main__":
     sys.exit(main())

@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "zh",
-  "bible_version": "和合本1919",
+  "bible_version": "CUV1919",
   "version": "6.0",
   "estimated_reading_minutes": 8,
   "meta": {
@@ -29,7 +29,7 @@
   "key_verse": {
     "reference": "约翰福音 4:14",
     "text": "人若喝我所赐的水就永远不渴。我所赐的水要在他里头成为泉源，直涌到永生。」",
-    "bible_version": "和合本1919"
+    "bible_version": "CUV1919"
   },
   "cards": [
     {
@@ -282,7 +282,7 @@
       "completion_verse": {
         "reference": "约翰福音 4:28-29",
         "text": "那妇人就留下水罐子，往城里去，对众人说： 「你们来看！有一个人将我素来所行的一切事都给我说出来了，莫非这就是基督么？」",
-        "bible_version": "和合本1919"
+        "bible_version": "CUV1919"
       },
       "reflection_prompt": "今天，你需要留下的水罐子是什么？谁需要听见你的「你们来看」？",
       "celebration_type": "gentle_light"

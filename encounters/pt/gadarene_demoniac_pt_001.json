@@ -1,0 +1,291 @@
+{
+  "id": "gadarene_demoniac_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "pt",
+  "bible_version": "ARC",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 14,
+  "meta": {
+    "character": "O endemoninhado gadareno",
+    "testament": "new",
+    "scripture_reference": "Marcos 5:1-20",
+    "mood_primary": "falling",
+    "accent_color": "#040810",
+    "emoji": "⛓️",
+    "tags": [
+      "libertação",
+      "possessão",
+      "restauração",
+      "identidade",
+      "missão",
+      "legião",
+      "gadareno",
+      "jesus",
+      "encontro",
+      "cura"
+    ]
+  },
+  "key_verse": {
+    "reference": "Marcos 5:2",
+    "text": "E, saindo ele do barco, lhe saiu logo ao seu encontro, dos sepulcros, um homem com espírito imundo,",
+    "bible_version": "ARC"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "storm",
+      "image_url": "gadarene_arrival.png",
+      "title": "O outro lado do mar",
+      "narrative": "A tempestade cedeu há poucas horas. A água ainda se move com a memória do vento que Jesus mandou calar. O barco toca a terra na região dos gadarenos, do outro lado do mar da Galileia. É território gentio. Nenhum judeu piedoso atravessaria voluntariamente até ali: há túmulos talhados na encosta e, mais acima, uma manada de porcos pasta sem recato. Tudo neste lugar está marcado como impuro. E, no entanto, Jesus desembarca primeiro.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marcos 5:1",
+        "text": "E chegaram à outra margem do mar, à província dos gadarenos."
+      },
+      "revelation_key": "Jesus atravessa deliberadamente para o lugar que todos evitam."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "gadarene_tombs.png",
+      "verse_reference": "Marcos 5:2-5",
+      "verse_text": "E, saindo ele do barco, lhe saiu logo ao seu encontro, dos sepulcros, um homem com espírito imundo, o qual tinha a sua morada nos sepulcros, e nem ainda com cadeias o podia alguém prender. Porque, tendo sido muitas vezes preso com grilhões e cadeias, as cadeias foram por ele feitas em pedaços, e os grilhões, em migalhas, e ninguém o podia amansar. E andava sempre, de dia e de noite, clamando pelos montes e pelos sepulcros e ferindo-se com pedras.",
+      "reflection": "Vivia entre os mortos porque, entre os vivos, já não havia lugar para ele. Lucas acrescenta um detalhe adicional: não vestia roupa. Havia perdido até o mínimo que separa uma pessoa de sua própria dor exposta. As correntes que outros lhe puseram para contê-lo não conseguiam nada; ele as quebrava vez após vez, e aquela força que devia ser sua defesa se tornava sua condenação, deixando-o cada vez mais sozinho. De dia e de noite gritava entre os túmulos, ferindo-se com pedras. O texto só registra o que o tormento o obrigava a fazer.",
+      "revelation_key": "Ninguém podia prendê-lo, mas ninguém também podia se aproximar dele: sua força o deixava mais sozinho, não mais livre.",
+      "scripture_connections": [
+        {
+          "reference": "Lucas 8:27",
+          "text": "E, quando desceu para terra, saiu-lhe ao encontro, vindo da cidade, um homem que, desde muito tempo, estava possesso de demônios e não andava vestido nem habitava em qualquer casa, mas nos sepulcros."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "gadarene_night_torment.png",
+      "title": "Antes que o sol nascesse",
+      "narrative": "Cada vez que esse homem quebrava as correntes, o demônio o empurrava para os desertos. É um detalhe carregado de peso teológico. No contexto do Antigo Testamento, o deserto era o lugar associado ao demoníaco, o território oposto à vida e à comunidade. Esse homem vivia atormentado, arrastado vez após vez para o próprio símbolo da desolação. E sempre, de dia e de noite, a cena se repetia.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 8:29",
+        "text": "Porque tinha ordenado ao espírito imundo que saísse daquele homem; pois já havia muito tempo que o arrebatava. E guardavam-no preso com grilhões e cadeias; mas, quebrando as prisões, era impelido pelo demônio para os desertos."
+      },
+      "revelation_key": "Jesus atravessou o mar rumo ao mesmo território de desolação para onde o demônio o arrastava."
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "gadarene_running_toward.png",
+      "title": "Correu ao seu encontro",
+      "narrative": "O homem que ninguém podia dominar, que quebrava correntes e grilhões como se fossem fios, vê Jesus de longe e corre ao seu encontro. E, ao chegar, se ajoelha. O grito que sai de sua boca é de terror e de súplica ao mesmo tempo: Que tenho eu contigo, Jesus, Filho do Deus Altíssimo? Conjuro-te por Deus que não me atormentes. É o mesmo título — 'Filho de Deus' — que outros espíritos imundos usam ao se encontrarem com Jesus em outras passagens: sabiam exatamente quem tinham diante de si.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marcos 5:6-7",
+        "text": "E, quando viu Jesus ao longe, correu e adorou-o. E, clamando com grande voz, disse: Que tenho eu contigo, Jesus, Filho do Deus Altíssimo? Conjuro-te por Deus que não me atormentes."
+      },
+      "revelation_key": "Os demônios conheciam a verdade sobre Jesus melhor do que muitos líderes religiosos, mas conhecê-lo não os salvou; só a fé que se submete salva.",
+      "scripture_connections": [
+        {
+          "reference": "Marcos 1:24",
+          "text": "Ah! Que temos contigo, Jesus Nazareno? Vieste destruir-nos? Bem sei quem és: o Santo de Deus."
+        },
+        {
+          "reference": "Marcos 3:11",
+          "text": "E os espíritos imundos, vendo-o, prostravam-se diante dele e clamavam, dizendo: Tu és o Filho de Deus."
+        },
+        {
+          "reference": "Tiago 2:19",
+          "text": "Tu crês que há um só Deus? Fazes bem; também os demônios o creem e estremecem."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "gadarene_legion_metaphor.png",
+      "title": "Legião",
+      "subtitle": "Um nome tomado do exército que oprimia Israel",
+      "content": "Quando Jesus pergunta o seu nome, a resposta não é a de um homem: 'Legião é o meu nome, porque somos muitos' (Marcos 5:9). Em grego, *legiṓn* (λεγιών) era o termo técnico de uma unidade militar romana de aproximadamente cinco a seis mil soldados — a maior força de ocupação que Roma podia mobilizar. Todo judeu ou gentio sob o domínio romano na Galileia sabia exatamente o peso dessa palavra. O demônio escolheu o próprio símbolo do poder que subjugava aquele povo e o levou a viver dentro de um único homem. O que oprimia uma nação inteira havia se concentrado, em miniatura, dentro de um só corpo humano. Legião roga para ficar naquela mesma região (Marcos 5:10) e, mais tarde, roga para não ser enviada ao abismo (Lucas 8:31): prefere qualquer corpo a ficar sem nenhum. E, ainda assim, diante de Jesus, aquela legião inteira suplica, não exige.",
+      "revelation_key": "O nome 'Legião' revela tanto o peso da opressão que Jesus veio desarmar quanto o terror do demônio de ficar sem corpo para habitar.",
+      "verse_overlay": {
+        "reference": "Marcos 5:9",
+        "text": "E perguntou-lhe: Qual é o teu nome? E lhe respondeu, dizendo: Legião é o meu nome, porque somos muitos."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Marcos 5:10",
+          "text": "E rogava-lhe muito que os não enviasse para fora daquela província."
+        },
+        {
+          "reference": "Lucas 8:31",
+          "text": "E rogavam-lhe que os não mandasse para o abismo."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "scripture_moment",
+      "mood": "intense",
+      "image_url": "gadarene_pigs_herd.png",
+      "verse_reference": "Marcos 5:10-13",
+      "verse_text": "E rogava-lhe muito que os não enviasse para fora daquela província. E andava ali pastando no monte uma grande manada de porcos. E todos aqueles demônios lhe rogaram, dizendo: Manda-nos para aqueles porcos, para que entremos neles. E Jesus logo lho permitiu. E, saindo aqueles espíritos imundos, entraram nos porcos; e a manada se precipitou por um despenhadeiro no mar (eram quase dois mil) e afogou-se no mar.",
+      "reflection": "Os porcos têm uma importância capital neste relato. A lei de Levítico os declarava impuros (Levítico 11:7); sua presença em tão grande número, dois mil, confirma que este era território gentio, onde essa lei não regia o cotidiano. Legião já havia rogado para ficar na região (Marcos 5:10) e não ser enviada ao abismo (Lucas 8:31); pedir para entrar nos porcos era sua forma de conseguir as duas coisas: continuar com um corpo, continuar naquele lugar. Esse mesmo homem se ferira com pedras (Marcos 5:5): os demônios não apenas ocupam, mas também destroem o que habitam. Ao entrar nos porcos, fizeram com eles o mesmo que faziam com ele havia anos, visível em segundos diante de todo o povo. A manada correu direto para o mar, a própria imagem do abismo que tanto temia, e ali terminou afogada.",
+      "revelation_key": "Os demônios negociaram ficar com corpo e território, e essa mesma negociação os afundou no abismo que tanto temiam.",
+      "scripture_connections": [
+        {
+          "reference": "Levítico 11:7",
+          "text": "Também o porco, porque tem unhas fendidas, e a fenda das unhas se divide em duas, mas não remói; este vos será imundo;"
+        },
+        {
+          "reference": "Marcos 5:10",
+          "text": "E rogava-lhe muito que os não enviasse para fora daquela província."
+        },
+        {
+          "reference": "Lucas 8:31",
+          "text": "E rogavam-lhe que os não mandasse para o abismo."
+        },
+        {
+          "reference": "Mateus 8:31-32",
+          "text": "E os demônios rogaram-lhe, dizendo: Se nos expulsas, permite-nos que entremos naquela manada de porcos. E ele lhes disse: Ide. E, saindo eles, se introduziram na manada dos porcos; e eis que toda aquela manada de porcos se precipitou no mar por um despenhadeiro, e morreram nas águas."
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "gadarene_cliff_fall.png",
+      "title": "O despenhadeiro",
+      "narrative": "Dois mil animais se precipitam pela encosta rumo à água em um só instante, um estrondo que se ouve desde a cidade. Os que cuidavam deles fogem sem olhar para trás e correm para avisar na cidade e nos campos. Saem para ver: o grego usa ἰδεῖν (idein), olhar com atenção, examinar de perto. E o que havia acontecido é τὸ γεγονός (to gegonos), um fato cujos efeitos já eram permanentes, não um simples susto passageiro. Mas, enquanto todos observam o estrondo dos porcos, algo se quebrou em silêncio dentro do homem que, até um instante atrás, gritava entre os túmulos.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Marcos 5:14",
+        "text": "E os que apascentavam os porcos fugiram e o anunciaram na cidade e nos campos; e saíram muitos a ver o que era aquilo que tinha acontecido."
+      },
+      "revelation_key": "O milagre mais silencioso acontece enquanto todos olham para o estrondo."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "gadarene_seated_clothed.png",
+      "title": "Assentado, vestido, em perfeito juízo",
+      "subtitle": "Três palavras que descrevem uma restauração completa",
+      "content": "Quando o povo chega, encontra o homem que antes quebrava correntes agora assentado aos pés de Jesus. O grego original usa três palavras que, juntas, retratam uma reversão total: καθήμενον (kathḗmenon), assentado, na postura de um discípulo que aprende; ἱματισμένον (himatisménon), vestido; σωφρονοῦντα (sōphronoûnta), em perfeito juízo, são — palavra que também aparece unicamente nesta passagem. O fato de estar vestido e são é a prova física e mental de que a legião que o habitava já não estava lá. E o povo, em vez de se alegrar, teve medo.",
+      "revelation_key": "A restauração foi tão completa que o povo temeu mais o milagre do que a possessão.",
+      "verse_overlay": {
+        "reference": "Marcos 5:15",
+        "text": "E foram ter com Jesus, e viram o endemoninhado, o que tivera a legião, assentado, vestido e em perfeito juízo, e temeram."
+      }
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "gadarene_crowd_fear.png",
+      "title": "Medo do que não se pode controlar",
+      "subtitle": "Por que rogaram a Jesus que fosse embora",
+      "content": "Um homem fica completamente são, e a resposta do povo não é celebração, mas súplica para que Jesus se retire. O grego usa aqui παρακαλέω (parakaleō), o mesmo verbo que em outras passagens os enfermos usam para rogar a Jesus que os cure. Aqui o povo o usa ao contrário: roga, não para aproximá-lo, mas para afastá-lo. E não lhe pedem que saia da cidade, mas dos ὅρια (horia), de toda a região, seus limites completos. Antes de Jesus, o povo tinha um perigo conhecido: sabiam onde vivia o homem possesso, o que fazia, e que nenhuma corrente o segurava, mas ao menos sabiam o que esperar dele. O poder de Jesus não se deixa acorrentar nem prever. Preferiam o perigo que já conheciam a um bem tão grande que não podiam governar.",
+      "revelation_key": "Às vezes tememos mais a liberdade que Jesus traz do que o cativeiro que ela substitui.",
+      "verse_overlay": {
+        "reference": "Marcos 5:17",
+        "text": "E começaram a rogar-lhe que saísse do seu território."
+      }
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "grace",
+      "image_url": "gadarene_begging_to_follow.png",
+      "verse_reference": "Marcos 5:18-19",
+      "verse_text": "E, entrando ele no barco, rogava-lhe o que fora endemoninhado que o deixasse estar com ele. Jesus, porém, não lho permitiu, mas disse-lhe: Vai para tua casa, para os teus, e anuncia-lhes quão grandes coisas o Senhor te fez e como teve misericórdia de ti.",
+      "reflection": "O homem pede para ficar. É compreensível: junto a Jesus está a salvo, e o povo que acabara de presenciar sua cura acabara de rejeitá-lo. O próprio Jesus se retira daquela região por causa dessa rejeição (Marcos 5:17), mas não abandona o lugar por completo: envia em seu lugar o homem que pode ficar onde ele já não é bem-vindo. Vai para tua casa, para os teus, diz-lhe. As mesmas pessoas que provavelmente o temiam, o evitavam, talvez o dessem por perdido, seriam agora as primeiras a ouvir de seus próprios lábios o que a misericórdia de Deus havia feito.",
+      "revelation_key": "Onde Jesus já não era bem-vindo, deixou alguém para testemunhar com sua própria libertação e transformação.",
+      "scripture_connections": [
+        {
+          "reference": "Lucas 8:39",
+          "text": "Torna para tua casa e conta quão grandes coisas te fez Deus. E ele foi apregoando por toda a cidade quão grandes coisas Jesus lhe tinha feito."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "gadarene_sent_without_staff.png",
+      "title": "O arauto das dez cidades",
+      "subtitle": "Da voz de Legião à voz de um mensageiro do Rei",
+      "content": "Jesus lhe diz uma palavra simples: ὕπαγε (hýpage), 'vai, retira-te' (Marcos 5:19). O homem obedece, e o texto usa κηρύσσω (kēryssō) para descrever o que faz em seguida: o mesmo verbo que Marcos reserva para a proclamação oficial do evangelho, o anúncio de um arauto com autoridade de reino. Não o faz em uma só cidade: percorre a Decápolis, as dez cidades da região. Horas antes, esse homem falava com a voz de uma legião demoníaca. Agora proclama com a voz de um mensageiro do Rei em dez cidades distintas. O povo, diz o texto, ἐθαύμαζον (ethaúmazon): maravilhava-se, em tempo contínuo, um assombro que se sustentava dia após dia em cada uma dessas cidades.",
+      "revelation_key": "O mesmo homem que antes falava com a voz de uma legião demoníaca agora percorre dez cidades com a voz de um arauto do Rei.",
+      "verse_overlay": {
+        "reference": "Marcos 5:20",
+        "text": "E ele foi e começou a anunciar em Decápolis quão grandes coisas Jesus lhe fizera; e todos se maravilhavam."
+      }
+    },
+    {
+      "order": 12,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "gadarene_decapolis_proclaiming.png",
+      "title": "O terreno que ficou preparado",
+      "subtitle": "O que aconteceu na Decápolis entre Marcos 5 e Marcos 7",
+      "content": "O povo havia rogado (παρακαλέω, parakaleō) que Jesus se fosse dessa região (Marcos 5:17). Capítulos depois, quando Jesus retorna à mesma área, trazem-lhe um homem surdo e gago e lhe rogam — o mesmo verbo, parakaleō — que lhe imponha as mãos (Marcos 7:32). Entre esses dois momentos, Jesus não volta a pisar na Decápolis. A única semente plantada nessas dez cidades é o testemunho de um só homem, caminhando de praça em praça, contando o que Jesus havia feito por ele. Ninguém mais pregou ali. Ninguém mais tentou. Quando Jesus retorna, já não o recebem com medo, mas com fé suficiente para trazer-lhe seus enfermos.",
+      "revelation_key": "O mesmo povo que lhe rogou que fosse embora, graças à semente plantada no testemunho de um homem, agora trazia seus enfermos para que Jesus os curasse.",
+      "scripture_connections": [
+        {
+          "reference": "Marcos 7:32",
+          "text": "E trouxeram-lhe um surdo, que falava dificilmente, e rogaram-lhe que impusesse as mãos sobre ele."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "gadarene_discovery.png",
+      "title": "Seu Encontro",
+      "subtitle": "Nada O impede de chegar a você, e nada te desculpa de contar.",
+      "discovery_questions": [
+        {
+          "category": "Fé",
+          "question": "Jesus atravessou um mar e entrou em território pagão para buscar um homem possuído por uma legião de demônios, a quem as pessoas de sua própria região já não sabiam como ajudar. Você acredita que há algo em você que O impediria de chegar até onde você está?"
+        },
+        {
+          "category": "Submissão",
+          "question": "O homem libertado queria ficar junto a Jesus, mas Jesus não lho permitiu: tinha um propósito diferente para ele. Você já sentiu que Deus fechou uma porta que você acreditava ser o próximo passo certo, e teve que submeter sua vontade para que o propósito dele se cumprisse?"
+        },
+        {
+          "category": "Testemunho",
+          "question": "Esse homem, transformado por Jesus, foi contar o que havia vivido sem que ninguém o ensinasse. Você, que também viu a mão de Deus em sua vida, o que tem feito para testemunhar quão grandes coisas Jesus tem feito por você? A quem você tem levado essa fé e esperança?"
+        }
+      ],
+      "prayer": {
+        "title": "Oração de um homem restaurado",
+        "content": "Senhor, assim como o homem gadareno vivia entre os mortos, eu vivia na morte do mundo e do pecado. Tu não hesitaste em ir atrás dele, e não hesitaste em ir atrás de mim. Contigo recebi uma vida nova, eterna e incorruptível. Hoje, como vi neste encontro, peço que me libertes de todo mal, que nada habite em mim, a não ser Tu. Permite que eu conte a meus amigos, à minha família, aos meus companheiros, a todos os que eu puder alcançar, quão grandes coisas fizeste em minha vida, porque vi tua mão e quero testemunhar levando esperança, amor e vida eterna a outros. Obrigado, Senhor, porque estou restaurado em ti; o milagre já está feito. Agora dá-me forças para semear e preparar o terreno para quando voltares para buscá-los. Em nome de Jesus, amém."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "gadarene_completion.png",
+      "completion_verse": {
+        "reference": "Marcos 5:19",
+        "text": "Jesus, porém, não lho permitiu, mas disse-lhe: Vai para tua casa, para os teus, e anuncia-lhes quão grandes coisas o Senhor te fez e como teve misericórdia de ti.",
+        "bible_version": "ARC"
+      },
+      "reflection_prompt": "Quem você precisa procurar hoje para contar o que a misericórdia de Deus fez em você?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

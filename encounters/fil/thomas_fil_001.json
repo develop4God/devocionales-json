@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "fil",
-  "bible_version": "Magandang Balita Biblia",
+  "bible_version": "MBB05",
   "version": "1.0",
   "estimated_reading_minutes": 14,
   "meta": {
@@ -31,7 +31,7 @@
   "key_verse": {
     "reference": "Juan 20:28",
     "text": "Sumagot si Tomas, “Panginoon ko at Diyos ko!”",
-    "bible_version": "Magandang Balita Biblia"
+    "bible_version": "MBB05"
   },
   "cards": [
     {
@@ -274,7 +274,7 @@
       "completion_verse": {
         "reference": "Juan 20:29",
         "text": "Sinabi sa kanya ni Jesus, “Naniniwala ka na ba dahil nakita mo ako? Mapalad ang mga naniniwala kahit hindi nila ako nakita.”",
-        "bible_version": "Magandang Balita Biblia"
+        "bible_version": "MBB05"
       },
       "reflection_prompt": "Hindi kinailangan ni Tomas na maunawaan ang lahat upang isuko ang sarili kay Jesus. Kailangan lamang niyang maging naroon nang dumating siya. Ngayon sinasabi sa iyo ni Jesus ang parehong bagay: hindi mo kailangan ang lahat ng sagot. Kailangan mo lamang na maging handa na tanggapin siya. Handa ka na ba?",
       "celebration_type": "gentle_light"

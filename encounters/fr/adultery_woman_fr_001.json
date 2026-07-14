@@ -1,0 +1,270 @@
+{
+  "id": "adultery_woman_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fr",
+  "bible_version": "LSG1910",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 12,
+  "meta": {
+    "character": "La Femme Surprise en Adultère",
+    "testament": "new",
+    "scripture_reference": "Jean 8:1-11",
+    "mood_primary": "intense",
+    "accent_color": "#7a2e2e",
+    "emoji": "🪨",
+    "tags": [
+      "grâce",
+      "honte publique",
+      "condamnation",
+      "piège",
+      "miséricorde",
+      "restauration"
+    ]
+  },
+  "key_verse": {
+    "reference": "Jean 8:11",
+    "text": "Elle répondit: Non, Seigneur. Et Jésus lui dit: Je ne te condamne pas non plus: va, et ne pèche plus.",
+    "bible_version": "LSG1910"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_temple_dawn.png",
+      "title": "À l'aube, dans le temple",
+      "narrative": "Le temple s'éveille avant la ville. Jésus a passé la nuit sur le mont des Oliviers et revient tôt; il s'assied pour enseigner, et la foule se rassemble autour de lui. Des pas pressés se font entendre, des voix qui approchent au milieu de la foule. On l'amène et on la place au milieu, devant tous.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 8:2-3",
+        "text": "Mais, dès le matin, il alla de nouveau dans le temple, et tout le peuple vint à lui. S'étant assis, il les enseignait. Alors les scribes et les pharisiens amenèrent une femme surprise en adultère;"
+      },
+      "revelation_key": "On l'amène là où Jésus enseigne, avec de mauvaises intentions."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "intense",
+      "image_url": "adultery_woman_trap_laid.png",
+      "verse_reference": "Jean 8:4-6",
+      "verse_text": "et, la plaçant au milieu du peuple, ils dirent à Jésus: Maître, cette femme a été surprise en flagrant délit d'adultère. Moïse, dans la loi, nous a ordonné de lapider de telles femmes: toi donc, que dis-tu? Ils disaient cela pour l'éprouver, afin de pouvoir l'accuser. Mais Jésus, s'étant baissé, écrivait avec le doigt sur la terre.",
+      "reflection": "La question est conçue pour le piéger, quelle que soit sa réponse. Si Jésus dit de la relâcher, il contredit la loi de Moïse. S'il dit de la lapider, il contredit tout ce qu'il a enseigné sur la miséricorde. Selon le contexte historique de l'époque, l'autorisation des exécutions appartenait exclusivement à Rome, ce qui aurait exposé Jésus à un risque légal quelle que soit sa réponse. Ils l'appellent Διδάσκαλε (Didáskale), 'Maître' — un titre de respect qui devient ici un masque, car le même passage précise qu'ils agissaient πειράζοντες (peirazontes), le mettant à l'épreuve dans l'intention de le faire tomber, non d'apprendre de lui. La courtoisie du mot et l'hostilité du dessein cohabitent dans la même phrase. Elle est l'appât; la véritable proie, c'est Jésus.",
+      "revelation_key": "Le piège est tendu pour Jésus. Elle, on l'a traînée pour le tendre.",
+      "scripture_connections": [
+        {
+          "reference": "Lévitique 20:10",
+          "text": "Si un homme commet un adultère avec une femme mariée, s'il commet un adultère avec la femme de son prochain, l'homme et la femme adultères seront punis de mort."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "adultery_woman_alone_center.png",
+      "title": "Au milieu de tous",
+      "subtitle": "Ce que l'on ressent quand le péché devient un spectacle",
+      "content": "Les scribes et les pharisiens l'amènent seule. En cet instant, elle est devenue une preuve, un cas, une pièce dans un jeu juridique pour ses accusateurs. La loi de Moïse exigeait la même peine pour l'homme et la femme surpris en adultère (Deutéronome 22:22), mais elle seule se tient debout au milieu du temple. Seule sa honte reste exposée devant tous.\n\nIls connaissent son péché avec précision — 'surprise en flagrant délit' — et l'utilisent comme munition. Elle demeure silencieuse dans le récit, debout au milieu, tandis que des hommes discutent de son sort au-dessus de sa tête.",
+      "revelation_key": "Son humanité disparaît sous le poids de devenir un cas juridique.",
+      "verse_overlay": {
+        "reference": "Jean 8:3",
+        "text": "Alors les scribes et les pharisiens amenèrent une femme surprise en adultère;"
+      },
+      "scripture_connections": [
+        {
+          "reference": "Deutéronome 22:22",
+          "text": "Si l'on trouve un homme couché avec une femme mariée, ils mourront tous deux, l'homme qui a couché avec la femme, et la femme aussi. Tu ôteras ainsi le mal du milieu d'Israël."
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_jesus_writing.png",
+      "title": "Le doigt dans la poussière",
+      "narrative": "Jésus garde d'abord le silence. Le grec emploie κάτω κύψας (kato kypsas) — 's'étant baissé' — la même posture d'humiliation physique que Jean-Baptiste décrit comme indigne pour lui devant Jésus (Marc 1:7). Ici, c'est Jésus qui l'adopte, volontairement, tandis que les accusateurs restent debout. Il écrit sur la terre avec le doigt, sans dire un mot sur ce qu'il écrit. Le silence s'allonge. Les accusateurs insistent, répètent la question, pressent.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 8:6",
+        "text": "Ils disaient cela pour l'éprouver, afin de pouvoir l'accuser. Mais Jésus, s'étant baissé, écrivait avec le doigt sur la terre."
+      },
+      "revelation_key": "Face au piège, Jésus répond d'abord par le silence, écrit dans la poussière.",
+      "scripture_connections": [
+        {
+          "reference": "Marc 1:7",
+          "text": "Il prêchait, disant: Il vient après moi celui qui est plus puissant que moi, et je ne suis pas digne de délier, en me baissant, la courroie de ses souliers."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "adultery_woman_dust_closeup.png",
+      "title": "Ce qu'il écrivit dans la poussière",
+      "subtitle": "Un geste que la tradition juive aurait reconnu",
+      "content": "Le mot grec employé ici pour 'écrivait' (κατέγραφεν, kategraphen) n'est pas le mot courant pour écrire. Il porte un sens plus fort: consigner une accusation, comme lorsqu'on tient le compte d'une faute. Certains spécialistes pensent que cela rappelle une image de l'Ancien Testament, où s'éloigner de Dieu est comparé au fait de rester 'inscrit dans la poussière' (Jérémie 17:13). Si c'est le cas, Jésus n'écrivait pas seulement pour écrire: il inscrivait une charge. Et les accusateurs, qui connaissaient bien les Écritures, l'auraient compris immédiatement.\n\nLe texte laisse cette lecture ouverte. C'est la seule fois dans les évangiles où Jésus écrit. Au-delà de ce qu'il a écrit, c'est ce qui se passait alors qui mérite qu'on s'y arrête: chacun des accusateurs, en silence, se retrouve face à sa propre conscience.",
+      "revelation_key": "La poussière devient un miroir qu'aucun d'eux ne peut éviter de regarder.",
+      "verse_overlay": {
+        "reference": "Jean 8:6",
+        "text": "Ils disaient cela pour l'éprouver, afin de pouvoir l'accuser. Mais Jésus, s'étant baissé, écrivait avec le doigt sur la terre."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Jérémie 17:13",
+          "text": "Toi qui es l'espérance d'Israël, ô Éternel! Tous ceux qui t'abandonnent seront confondus. Ceux qui se détournent de moi seront inscrits sur la terre, Car ils abandonnent la source d'eau vive, l'Éternel."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "adultery_woman_stands_up.png",
+      "title": "Une condition impossible",
+      "narrative": "Jésus se redresse et parle: \"Que celui de vous qui est sans péché jette le premier la pierre contre elle.\" Le mot grec pour 'sans péché' (ἀναμάρτητος, anamartetos) n'apparaît qu'une seule fois dans tout le Nouveau Testament — ici seulement. Il ne demande pas une vie moralement acceptable en général. Il demande d'être entièrement libre de toute faute. Jésus pose une condition qu'aucun des présents ne peut remplir. Puis il se baisse de nouveau, dans la même posture qu'avant, et continue d'écrire sur la terre.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 8:7-8",
+        "text": "Comme ils continuaient à l'interroger, il se releva et leur dit: Que celui de vous qui est sans péché jette le premier la pierre contre elle. Et s'étant de nouveau baissé, il écrivait sur la terre."
+      },
+      "revelation_key": "Une seule phrase, et Jésus se baisse de nouveau, vers la poussière."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "adultery_woman_stones_dropped.png",
+      "title": "Un à un",
+      "narrative": "Ce que Jésus a écrit, et la condition qu'il vient de poser, les laissent face à leur propre conscience. Ils commencent à partir, dit le texte, en commençant par les plus âgés — ceux qui détiennent le plus d'autorité et de connaissance de la Loi, peut-être les premiers à réaliser que le piège qu'ils avaient eux-mêmes tendu n'avait plus d'issue. Un à un, ils se retirent, en silence, jusqu'à ce que le dernier soit parti.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 8:9",
+        "text": "Quand ils entendirent cela, accusés par leur conscience, ils se retirèrent un à un, depuis les plus âgés jusqu'aux derniers; et Jésus resta seul avec la femme qui était là au milieu."
+      },
+      "revelation_key": "La foule venue condamner se dissout devant sa propre conscience."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "adultery_woman_alone_with_jesus.png",
+      "title": "Seuls tous les deux",
+      "narrative": "Le temple, qui l'instant d'avant était plein d'accusateurs, n'abrite plus que deux personnes: Jésus et elle, debout là où on l'a laissée, seuls dans l'espace vide. C'est le point de bascule le plus silencieux du récit. Celui qui avait toute l'autorité pour la condamner est celui qui reste.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 8:9",
+        "text": "...et Jésus resta seul avec la femme qui était là au milieu."
+      },
+      "revelation_key": "Tous sont partis. Lui est resté."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "adultery_woman_face_jesus.png",
+      "title": "Non, Seigneur",
+      "subtitle": "Ses premières et seules paroles de tout le récit",
+      "content": "Pense à la scène. Imagine un instant ce qu'elle vient de vivre.\n\nDepuis qu'on l'a amenée jusqu'à cet instant, elle est restée silencieuse. Elle a eu, sans le savoir, le seul avocat capable de répondre pour elle. Un instant plus tôt, elle se tenait debout, attendant la mort. Maintenant Jésus lui demande: où sont ses accusateurs? Aucun ne l'a-t-il condamnée? Elle répond par deux mots: 'Non, Seigneur.'\n\nElle a pu sentir le poids de la sentence qui n'est jamais venue. Elle a pu sentir, en cet instant, que la vie qu'elle était sur le point de perdre lui était rendue tout entière.",
+      "revelation_key": "Ses premières paroles ouvrent la porte à ce que Jésus est sur le point de lui dire.",
+      "verse_overlay": {
+        "reference": "Jean 8:10-11",
+        "text": "Alors s'étant relevé, et ne voyant plus que la femme, Jésus lui dit: Femme, où sont ceux qui t'accusaient? Personne ne t'a-t-il condamnée? Elle répondit: Non, Seigneur. Et Jésus lui dit: Je ne te condamne pas non plus: va, et ne pèche plus."
+      }
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "adultery_woman_no_condemnation.png",
+      "verse_reference": "Jean 8:11",
+      "verse_text": "Et Jésus lui dit: Je ne te condamne pas non plus: va, et ne pèche plus.",
+      "reflection": "Jésus nomme le péché directement — 'ne pèche plus' — et déclare en même temps son absolution. Grâce et vérité se tiennent ensemble, chacune dans sa plénitude. C'est la même tension que Jean décrit dès le premier chapitre de son évangile (Jean 1:17).",
+      "revelation_key": "La grâce nomme le péché et le libère au même instant.",
+      "scripture_connections": [
+        {
+          "reference": "Jean 1:17",
+          "text": "car la loi a été donnée par Moïse, la grâce et la vérité sont venues par Jésus-Christ."
+        },
+        {
+          "reference": "Romains 8:1",
+          "text": "Il n'y a donc maintenant aucune condamnation pour ceux qui sont en Jésus-Christ."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "adultery_woman_law_fulfilled.png",
+      "title": "La décision de Jésus",
+      "subtitle": "Le seul qualifié pour juger",
+      "content": "La condition que Jésus a posée, lui seul la remplit. De tous ceux qui étaient là, y compris ceux qui sont partis, Jésus est le seul véritablement sans péché.\n\nCela signifie que Jésus avait l'autorité de jeter la première pierre. Personne d'autre ne l'avait. Et c'est précisément lui qui ne la jette pas.\n\nLe mot grec pour 'condamne' ici (κατακρίνω, katakrino) désigne un verdict formel, une sentence prononcée avec une autorité réelle. Jésus est le seul à détenir ce droit sur elle. Et il choisit de la déclarer libre.",
+      "revelation_key": "Le seul qui a le droit de condamner est celui qui choisit de restaurer.",
+      "verse_overlay": {
+        "reference": "Jean 8:7",
+        "text": "Que celui de vous qui est sans péché jette le premier la pierre contre elle."
+      }
+    },
+    {
+      "order": 12,
+      "type": "character_moment",
+      "mood": "peace",
+      "image_url": "adultery_woman_walking_away.png",
+      "title": "Va, et ne pèche plus",
+      "subtitle": "La grâce qui pardonne est la même qui envoie",
+      "content": "Jésus lui donne une direction en même temps que sa liberté: 'ne pèche plus.' Le verbe grec employé ici, ἁμάρτανε (hamartane), est à un temps qui décrit une action continue — non un seul faux pas isolé, mais une manière de marcher. Jésus ne la libère pas seulement du passé; il l'invite vers une direction différente pour le reste de sa vie.\n\nLa grâce qu'elle reçoit ne s'arrête pas au pardon. Elle devient une invitation à marcher vers une autre vie.",
+      "revelation_key": "La grâce qui la libère est la même qui l'envoie vers une vie différente.",
+      "verse_overlay": {
+        "reference": "Jean 8:11",
+        "text": "Je ne te condamne pas non plus: va, et ne pèche plus."
+      }
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "adultery_woman_interactive_stone.png",
+      "title": "Ta rencontre",
+      "subtitle": "Du jugement à la grâce: ton examen intérieur.",
+      "discovery_questions": [
+        {
+          "category": "Honnêteté",
+          "question": "Les pharisiens accusaient au nom de la loi, sans regarder leurs propres fautes. Quand t'es-tu senti le droit de juger quelqu'un, te croyant meilleur ou moins coupable que cette personne?"
+        },
+        {
+          "category": "Grâce",
+          "question": "Malgré ses fautes, Jésus l'a libérée et lui a donné une vie nouvelle, sans qu'elle fasse rien pour le mériter. Cette même liberté, Jésus te l'a donnée quand tu l'as accepté comme ton Sauveur. Vis-tu libre, sans le poids du péché, dans cette vie nouvelle que Christ t'a offerte?"
+        },
+        {
+          "category": "But",
+          "question": "Pense à quelqu'un que tu peines aujourd'hui à pardonner ou à cesser de juger. Si Dieu t'a donné la même grâce qu'à elle sans que tu la mérites, qu'est-ce qui t'empêche d'étendre cette même grâce à cette personne?"
+        }
+      ],
+      "prayer": {
+        "title": "Prière de grâce reçue",
+        "content": "Merci, Seigneur, parce que tout comme la femme de cette rencontre, moi aussi j'ai reçu ta grâce imméritée. Pardonne-moi d'avoir été en position de juger les autres, souvent avec dureté, sans avoir la miséricorde que tu as eue envers moi. Aide-moi à lâcher toute pierre, Seigneur, à regarder les autres avec grâce, et à pardonner à ceux qui m'ont offensé et m'ont fait du tort. Aide-moi à vivre une vie nouvelle, fortifié en toi, obéissant à ta volonté tous les jours de ma vie. Au nom de Jésus, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "adultery_woman_completion.png",
+      "completion_verse": {
+        "reference": "Jean 8:11",
+        "text": "Elle répondit: Non, Seigneur. Et Jésus lui dit: Je ne te condamne pas non plus: va, et ne pèche plus.",
+        "bible_version": "LSG1910"
+      },
+      "reflection_prompt": "Si Jésus ne te condamne pas, pourquoi continuerais-tu à te condamner toi-même, ou à condamner les autres?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

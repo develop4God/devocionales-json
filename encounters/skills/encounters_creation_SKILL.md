@@ -34,11 +34,39 @@ Ask only what's missing:
 - **Bible version** — default Spanish: RVR1960; default English: KJV
 - **Tone/mood seed** — optional, e.g. "shame → restoration", "darkness → sight"
 
-If the user provides all of this upfront, skip to step 2.
+If the user provides all of this upfront, skip to step 2 (pre-write checklist), then step 3.
 
 ---
 
-### 2. Draft the encounter IN-CHAT (no file yet)
+### 2. Pre-write checklist — apply WHILE drafting, not after
+
+These are the recurring failures that first drafts have shipped with in the past. Apply them
+as you write each card, not as a post-hoc review pass — the goal is a first draft that doesn't
+need a correction round for these specific issues:
+
+- **No negation-based argument construction.** Never build a sentence on "No fue X. Fue Y." /
+  "No dijo X, sino Y." / "sin epílogo" / "elige no ejercerlo" as a rhetorical contrast device.
+  State what IS true directly. The only exception is direct or close-paraphrase quotation of
+  the biblical text itself (e.g. "Ninguno, Señor" — the character's own words). See the
+  "Affirmation over negation" rule below — this is the single most common defect flagged
+  across review sessions, so catch it while writing, not after.
+- **Never quote a full verse inline in prose.** `narrative`, `content`, and `reflection` fields
+  must reference other passages as a bare parenthetical — e.g. "(Juan 1:17)" — never as an
+  embedded full quotation. The complete verse text belongs only in `verse_overlay` or
+  `scripture_connections`, each with its own `reference` field alongside it.
+- **Distinguish the character's face from every previously published character.** Before
+  writing the `master_character_prompt` (see Image Prompts section), check the age bracket,
+  face shape, eye shape, build, hair treatment, and clothing palette used in every other
+  `*_image_prompts.json` already in the language folder. Pick something that reads as a
+  genuinely different person, not just different adjectives. Avoid defaulting to a young,
+  conventionally beautiful face — but don't overcorrect into harsh or masculine-reading
+  features either; aim for plain, ordinary, clearly adult, clearly the stated gender. State
+  the distinction explicitly when presenting the character prompt so the user can catch
+  overlap or overcorrection before the full card set is generated.
+
+---
+
+### 3. Draft the encounter IN-CHAT (no file yet)
 
 Generate the full JSON structure directly in the chat as a code block.
 Do NOT save a file until the user approves. This is the token-efficient path.
@@ -47,13 +75,13 @@ Use the envelope + card schema below.
 
 ---
 
-### 3. User reviews → iterate in-chat
+### 4. User reviews → iterate in-chat
 
-Make all edits to the in-chat JSON until the user approves. Only then proceed to step 4.
+Make all edits to the in-chat JSON until the user approves. Only then proceed to step 5.
 
 ---
 
-### 4. Save the approved JSON files
+### 5. Save the approved JSON files
 
 Once the user says it's approved, save **two files** to the encounter's language directory
 (e.g. `encounters/es/`):

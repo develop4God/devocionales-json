@@ -1907,42 +1907,6 @@
         "ar": 12,
         "fil": 10
       }
-    },
-    {
-      "id": "bread_of_life_001",
-      "version": "1.0",
-      "emoji": "🍞",
-      "status": "draft",
-      "files": {
-        "es": "bread_of_life_es_001.json"
-      },
-      "titles": {
-        "es": "Yo Soy el Pan de Vida"
-      },
-      "subtitles": {
-        "es": "Cuando el maná del desierto encuentra su cumplimiento final"
-      },
-      "estimated_reading_minutes": {
-        "es": 7
-      }
-    },
-    {
-      "id": "resurrection_and_life_001",
-      "version": "1.0",
-      "emoji": "⚰️",
-      "status": "draft",
-      "files": {
-        "es": "resurrection_and_life_es_001.json"
-      },
-      "titles": {
-        "es": "Yo Soy la Resurrección y la Vida"
-      },
-      "subtitles": {
-        "es": "Cuando Jesús se presenta ante la muerte y la muerte retrocede"
-      },
-      "estimated_reading_minutes": {
-        "es": 7
-      }
     }
   ]
 }

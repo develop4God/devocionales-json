@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "ja",
-  "bible_version": "新改訳2003",
+  "bible_version": "SK2003",
   "version": "2.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 17,
@@ -33,7 +33,7 @@
   "key_verse": {
     "reference": "使徒の働き 9:5-6",
     "text": "彼が、「主よ。あなたはどなたですか」と言うと、お答えがあった。「わたしは、あなたが迫害しているイエスである。立ち上がって、町に入りなさい。そうすれば、あなたのしなければならないことが告げられるはずです。」",
-    "bible_version": "新改訳2003"
+    "bible_version": "SK2003"
   },
   "cards": [
     {
@@ -257,7 +257,7 @@
       "completion_verse": {
         "reference": "使徒の働き 9:15",
         "text": "しかし、主はこう言われた。「行きなさい。あの人はわたしの名を、異邦人、王たち、イスラエルの子孫の前に運ぶ、わたしの選びの器です。",
-        "bible_version": "新改訳2003"
+        "bible_version": "SK2003"
       },
       "reflection_prompt": "神は教会の最大の迫害者を取り、後に続くすべての者への恵みの証とされた。あなたが何者であるか、何をしてきたかは、神の御手の届かないところにはない。神があなたにも同じことをなさることを、あなたは受け入れる覚悟があるだろうか。あなたのすべてを受け取り、ご自身の目的のために用いることを。",
       "celebration_type": "burst"

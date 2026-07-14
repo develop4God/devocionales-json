@@ -1,0 +1,316 @@
+{
+  "id": "nicodemus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fil",
+  "bible_version": "MBB05",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 12,
+  "meta": {
+    "character": "Nicodemo",
+    "testament": "new",
+    "scripture_reference": "Juan 3:1-21",
+    "mood_primary": "night",
+    "accent_color": "#0d1526",
+    "emoji": "🌙",
+    "tags": [
+      "bagong_pagsilang",
+      "espiritu_santo",
+      "lihim_na_pananampalataya",
+      "pagbabago",
+      "biyaya"
+    ]
+  },
+  "key_verse": {
+    "reference": "Juan 3:16",
+    "text": "Sapagkat gayon na lamang ang pag-ibig ng Diyos sa sangkatauhan, kaya't ibinigay niya ang kanyang kaisa-isang Anak, upang ang sinumang sumampalataya sa kanya ay hindi mapahamak, kundi magkaroon ng buhay na walang hanggan.",
+    "bible_version": "MBB05"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "mysterious",
+      "image_url": "nicodemus_night_journey.png",
+      "title": "Isang guro ng Israel, naglalakad sa gabi",
+      "narrative": "Ang Jerusalem sa gabi ay pag-aari lamang ng iilan: ng mga tanod ng templo, at ng mga namumuno. May isang matandang lalaki na naglalakad sa makitid na daan. Siya si Nicodemo, isa sa mga pinuno ng mga Judio, kagalang-galang na kagawad ng Sanedrin — ang kataas-taasang konseho ng mga Judio, binubuo ng mga pari, matatanda, at mga guro ng kautusan, responsable sa mga pang-relihiyon at pambatas na desisyon ng bayan — isang kinikilalang guro ng kautusan. Ngayong gabi, hinahanap ni Nicodemo ang isang gurong kakaiba sa kaninumang nakilala niya.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 3:1-2",
+        "text": "May isang iginagalang na pinuno ng mga Judio. Siya ay si Nicodemo. Kabilang din siya sa grupo ng mga Pariseo. Isang gabi, pumunta siya kay Jesus at sinabi, \"Guro, nalalaman po naming kayo'y isang tagapagturong mula sa Diyos, sapagkat walang makakagawa ng mga himalang ginagawa ninyo kung wala sa inyo ang Diyos.\""
+      },
+      "revelation_key": "Isang lalaking may katayuan, karunungan, at magandang pangalan ang nagpasyang ilagay sa alanganin ang lahat, upang hanapin sa gabi ang mismong guro na tinanggihan ng sarili niyang konseho."
+    },
+    {
+      "order": 2,
+      "type": "character_moment",
+      "mood": "tense",
+      "image_url": "nicodemus_sanhedrin_status.png",
+      "title": "Lahat ng maaaring mawala sa kanya",
+      "subtitle": "Isang lalaking may matatag na katayuan, hindi basta-basta lang na maghahanap",
+      "content": "Tinatawag siya ng teksto na ἄρχων (archon) — \"pinuno\" — ng mga Judio (Juan 3:1), at kalaunan ay tatawagin siya mismo ni Jesus na \"guro ng Israel\" (talata 10). Ang parehong salitang ἄρχων ay ginagamit din para tukuyin ang mga pinuno ng Sanedrin na, sa bandang huli, magpapasya sa kamatayan ni Jesus.\n\nIsa si Nicodemo sa mga pinunong iyon. 🔑 Ang paglapit kay Jesus sa gabi ay nangangahulugang paglapit, nang lihim, sa taong kalaunan ay hahatulan ng sarili niyang konseho.",
+      "revelation_key": "Ang parehong titulong hawak ni Nicodemo sa Sanedrin ay kabilang din sa kapulungang sa bandang huli ay naghangad ng kamatayan ni Jesus; sa kabila nito, pinili niyang lumapit.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 11:47-53",
+          "text": "Kaya't tinipon ng mga punong pari at mga Pariseo ang mga kagawad ng Sanedrin. Kanilang sinabi, \"Ano ang gagawin natin? Gumagawa ng maraming himala ang taong ito. Kung siya'y pababayaan nating magpatuloy sa kanyang mga ginagawa, maniniwala sa kanya ang lahat. Paparito ang mga Romano at wawasakin ang Templo at pahihirapan ang ating bansa.\" Ngunit ang isa sa kanila, si Caifas na siyang pinakapunong pari noon, ay nagsabing, \"Wala kayong alam! Hindi ba ninyo naiisip na mas mabuti sa atin na isang tao lamang ang mamatay alang-alang sa bayan, kaysa mapahamak ang buong bansa?\" Hindi mula sa kanyang sarili ang sinabi niyang ito. Bilang pinakapunong pari nang taon na iyon, ipinahayag niyang dapat mamatay si Jesus alang-alang sa kanilang bansa upang tipunin ang mga nakakalat na mga anak ng Diyos. Mula noon, pinag-isipan na nila kung paano maipapapatay si Jesus."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "nicodemus_rabbi_greeting.png",
+      "verse_reference": "Juan 3:2",
+      "verse_text": "Isang gabi, pumunta siya kay Jesus at sinabi, \"Guro, nalalaman po naming kayo'y isang tagapagturong mula sa Diyos, sapagkat walang makakagawa ng mga himalang ginagawa ninyo kung wala sa inyo ang Diyos.\"",
+      "reflection": "Binuksan ni Nicodemo ang usapan nang may tunay na paggalang. Ginamit niya ang panaklaw na \"kami,\" marahil nagsasalita rin para sa iba sa kanyang uri na kumilala rin sa mga tandang iyon. Kinilala niya si Jesus bilang isang gurong sugo ng Diyos, ibinabatay ang pagpapasyang iyon sa ebidensyang nasa harapan niya: ang mga himala. Ito ay tapat na pambungad, ginawa ng isang lalaking sanay timbangin ang bawat salita bago ito bigkasin.",
+      "revelation_key": "Dumating si Nicodemo na may nahandang tanong, hindi alam na abot-abot na iiwan ito ni Jesus upang tuwiran nang sabihin ang kailangan niyang marinig."
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "nicodemus_jesus_response.png",
+      "title": "Sinasagot ni Jesus ang kailangan ni Nicodemo",
+      "narrative": "Halos hindi pa natatapos ilahad ni Nicodemo ang kanyang pangangatwiran nang sumagot si Jesus. Diretso siyang pumunta sa pinakapuso ng kailangang marinig ng isang guro ng Israel, kahit na ang sagot niya ay lubos na lumihis sa paksang binuksan ni Nicodemo.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 3:3",
+        "text": "Sumagot si Jesus, \"Pakatandaan mo: malibang ipanganak na muli ang isang tao, hindi niya makikita ang paghahari ng Diyos.\""
+      },
+      "revelation_key": "Sinasagot ni Jesus ang tunay na pangangailangan sa likod ng magalang na tanong ni Nicodemo."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "nicodemus_anothen_wordplay.png",
+      "title": "Anōthen: isang salitang may dalawang landas",
+      "subtitle": "Bakit iba ang naunawaan ni Nicodemo sa ibig sabihin ni Jesus",
+      "content": "Ang salitang Griyego na ginamit ni Jesus ay ἄνωθεν (anōthen), at nagdadala ito ng dalawang kahulugan sabay-sabay: \"muli\" at \"mula sa itaas.\" Si Nicodemo, dahil narinig lamang ang unang kahulugan, ay naisip ang isang bagay na hindi maaari sa katawan: \"Paanong maipapanganak pang muli ang isang taong matanda na? Makakapasok pa ba siya sa sinapupunan ng kanyang ina para muling isilang?\" (Juan 3:4).\n\nInilalarawan ni Jesus ang isang pagsilang na nagmumula sa itaas, mula sa Diyos mismo, isang bagay na tanging ang Espiritu Santo lamang ang makakagawa. Lumitaw rin ang parehong salitang anōthen sa Santiago 1:17 upang ilarawan ang \"bawat mabuting kaloob\" na bumababa mula sa itaas, mula sa Ama ng mga ilaw.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 3:4",
+          "text": "\"Paanong maipapanganak pang muli ang isang taong matanda na? Makakapasok pa ba siya sa sinapupunan ng kanyang ina para muling isilang?\" tanong ni Nicodemo."
+        },
+        {
+          "reference": "Santiago 1:17",
+          "text": "Ang lahat ng mabuti at ganap na kaloob ay buhat sa Diyos, mula sa Ama na lumikha ng mga tanglaw sa kalangitan. Hindi siya nagbabago, o nagpapakita ng bahagya mang pagbabago."
+        }
+      ],
+      "revelation_key": "Ang bagong pagsilang ay isang buhay na dumarating mula sa itaas — isang kaloob na ibinibigay ng Diyos, hindi isang tagumpay na kinakamit ng tao."
+    },
+    {
+      "order": 6,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "nicodemus_water_and_spirit.png",
+      "verse_reference": "Juan 3:5",
+      "verse_text": "Sagot naman ni Jesus, \"Pakatandaan mo: malibang ang isang tao ay ipanganak sa pamamagitan ng tubig at ng Espiritu, hindi ito makakapasok sa kaharian ng Diyos.\"",
+      "reflection": "Nagdagdag si Jesus ng ikalawang antas sa kanyang sagot: tubig at Espiritu. Ang salitang Griyego ay πνεῦμα (pneuma) — \"espiritu,\" \"hininga,\" \"hangin\" — ang parehong salitang gagamitin niyang muli sa v.8 upang ilarawan kung paano kumikilos ang bawat isang ipinanganak ng Espiritu. Para sa isang guro ng kautusan, ang tubig ay agad nagpapaalala ng mga ritwal ng paglilinis at ng mga pangako ng mga propeta, tulad ng kay Ezekiel: \"Wiwisikan ko kayo ng tubig na dalisay... Bibigyan ko kayo ng bagong puso at bagong espiritu\" (Ezekiel 36:25-26). Sa saling Griyego na kilala ni Nicodemo, ginagamit ng pangakong ito ang parehong salita, pneuma, na kababanggit lamang ni Jesus. Pagkalipas ng ilang taon, ang parehong pneuma na iyon ay ibubuhos nang makikita sa mga alagad sa Pentecostes: \"may ingay na nagmula sa langit, na tulad ng ugong ng malakas na hangin... at silang lahat ay napuspos ng Espiritu Santo\" (Mga Gawa 2:2-4). Sinasabi ni Jesus na ang pangakong ito ng mga propeta, ang paglilinis at ang bagong Espiritu na ipinangako sa Israel, ay natutupad ngayon, sa mismong usapang ito, para sa sinumang tumatanggap nito — at balang araw ay magiging makikita sa harap ng lahat.",
+      "scripture_connections": [
+        {
+          "reference": "Ezekiel 36:25-26",
+          "text": "Wiwisikan ko kayo ng tubig na dalisay upang kayo'y luminis. Aalisin ko rin ang naging mantsa ninyo dahil sa inyong mga diyus-diyosan. Bibigyan ko kayo ng bagong puso at bagong espiritu. Ang masuwayin ninyong puso ay gagawin kong pusong masunurin."
+        },
+        {
+          "reference": "Mga Gawa 2:2-4",
+          "text": "Walang anu-ano'y may ingay na nagmula sa langit, na tulad ng ugong ng malakas na hangin, at napuno nito ang bahay na kinaroroonan nila. May nakita silang parang mga dilang apoy na dumapo sa bawat isa sa kanila, at silang lahat ay napuspos ng Espiritu Santo at nagsimulang magsalita ng iba't ibang wika, ayon sa ipinagkaloob sa kanila ng Espiritu."
+        }
+      ],
+      "revelation_key": "Alam ni Nicodemo ang pangako ng bagong espiritu mula sa mga propeta. Ipinakikita ni Jesus sa kanya na ang pangakong iyon ay may mukha, nakatayo sa harapan niya, at balang araw ay ibubuhos nang makikita sa lahat."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "nicodemus_wind_and_spirit.png",
+      "verse_reference": "Juan 3:8",
+      "verse_text": "Umiihip ang hangin kung saan nito nais at naririnig mo ang ugong nito, ngunit hindi mo alam kung saan ito nanggagaling at kung saan pupunta. Ganoon din ang bawat ipinanganak ayon sa Espiritu.",
+      "reflection": "Gumamit si Jesus ng iisang salitang Griyego para sa dalawang bagay sabay-sabay: πνεῦμα (pneuma), na nangangahulugang \"hangin\" at \"espiritu.\" Sinadya ito ni Juan — maaari sana niyang gamitin ang ἄνεμος (anemos), ang karaniwang salita para sa \"hangin,\" ngunit pinili niya ang pneuma upang umalingawngaw din ito bilang \"espiritu.\" Ang hangin ay nadarama, naririnig, at ginagalaw ang anumang mahipan nito; ang pinagmulan at ang landas nito ay bahagi ng isang misteryong higit sa maaabot ng tao — mapapansin lamang niya ito. Ganito inilarawan ni Jesus ang bawat ipinanganak ng Espiritu: isang tunay na buhay, na may mga bunga na napapansin, iginagalaw ng isang kalooban na pag-aari ng Diyos.",
+      "revelation_key": "Ang parehong Espiritu na nagbibigay ng bagong pagsilang ay kumikilos tulad ng hangin — nakikilala sa kanyang ginagawa, ayon sa kalooban ng Diyos."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "tense",
+      "image_url": "nicodemus_honest_confusion.png",
+      "title": "Paanong mangyayari ito?",
+      "subtitle": "Ang kababaang-loob ng isang gurong umamin na hindi niya nauunawaan",
+      "content": "Sumagot si Nicodemo ng isang tanong lamang: \"Puwede po bang mangyari iyon?\" (Juan 3:9). Ito ay maikling tanong, walang pagpapaliban, at kapansin-pansing tapat para sa isang lalaking may katayuan niya. Tumugon si Jesus ng isang tuwirang obserbasyon: \"Guro ka pa naman sa Israel, hindi mo nauunawaan ang mga bagay na ito?\" (talata 10).\n\nAlam na alam ng isang guro ng Israel na may kakayahan niya ang mga Kasulatang nagsasalita tungkol sa bagong espiritu at bagong puso. Ang kulang kay Nicodemo ay ang kahandaang tanggapin bilang kaloob ang bagay na pinag-aralan niya buong buhay bilang doktrina. Ang bukas, walang tanggol niyang tanong ay isa nang unang hakbang tungo sa kahandaang iyon.",
+      "revelation_key": "Kung minsan, ang unang galaw tungo sa tunay na pananampalataya ay hindi isang matiwasay na sagot, kundi isang tapat na tanong na binigkas nang malakas.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 3:9-10",
+          "text": "\"Puwede po bang mangyari iyon?\" tanong ni Nicodemo. Sumagot si Jesus, \"Guro ka pa naman sa Israel, hindi mo nauunawaan ang mga bagay na ito?\""
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "nicodemus_bronze_serpent.png",
+      "title": "Gaya ng itinaas ni Moises ang ahas",
+      "subtitle": "Isang larawang kilala ng bawat Israelita",
+      "content": "Gumagamit si Jesus ng isang eksenang agad na makikilala ng sinumang Israelita: sa ilang, nang kagatin ang bayan ng mga makamandag na ahas dahil sa kanilang paghihimagsik, inutusan ng Diyos si Moises na magtaas ng isang tansong ahas sa isang tikin. Ang pagtingin dito ay sapat na upang mabuhay; ang tingin ng pananampalataya ang tanging kinakailangan ng Diyos. Ang kamangha-manghang bahagi ng lunas ay ang mismong larawan ng nagdudulot ng kamatayan ang naging paraan ng buhay.\n\nKinuha ni Jesus ang parehong larawan at inilapat sa kanyang sarili, gamit ang salitang Griyegong pandiwang ὑψόω (hypsoō) — \"itaas,\" \"iangat sa mataas\" — isang salitang laging may dalawang kahulugan sa ebanghelyo ni Juan: inilalarawan nito sabay-sabay ang pisikal na pagkakataas sa krus at ang pagiging dinakila, niluwalhati. Lumilitaw ang parehong salita sa Juan 8:28 at 12:32, palaging tumuturo sa iisang sandaling iyon. Kung paanong ang ahas ay may larawan ng paghatol at naging simbolo ng buhay, si Jesus ay itataas sa pinakamababang kahihiyan upang maging pinagmulan ng buhay na walang hanggan para sa sinumang sumasampalataya sa kanya.\n\nAt saka narating ni Jesus ang pahayag na magbubuod sa buong usapan — ang pangako ng buhay na walang hanggan para sa sinumang sumasampalataya sa kanya (talata 16).\n\nAng salitang Griyego para sa \"kaisa-isa\" ay μονογενής (monogenēs) — natatangi sa kanyang uri, walang kapareho. Naglalarawan ito ng isang bagay na hindi na maaaring mangyari muli, walang kaparis.",
+      "verse_overlay": {
+        "reference": "Juan 3:16",
+        "text": "Sapagkat gayon na lamang ang pag-ibig ng Diyos sa sangkatauhan, kaya't ibinigay niya ang kanyang kaisa-isang Anak, upang ang sinumang sumampalataya sa kanya ay hindi mapahamak, kundi magkaroon ng buhay na walang hanggan."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Mga Bilang 21:9",
+          "text": "Ganoon nga ang ginawa ni Moises. Kaya lahat ng natuklaw ng ahas ay tumitingin sa ahas na tanso at hindi nga namamatay."
+        },
+        {
+          "reference": "Juan 3:14-15",
+          "text": "At kung paanong itinaas ni Moises ang tansong ahas doon sa ilang, gayundin naman, kailangang itaas ang Anak ng Tao, upang ang sinumang sumampalataya sa kanya ay magkaroon ng buhay na walang hanggan."
+        },
+        {
+          "reference": "Juan 8:28",
+          "text": "Kaya't sinabi ni Jesus, \"Kapag naitaas na ninyo ang Anak ng Tao, malalaman ninyong 'Ako'y Ako Nga.' Wala akong ginagawa batay sa sarili kong kapangyarihan. Ang ipinapasabi lamang ng Ama ang siya kong sinasabi.\""
+        },
+        {
+          "reference": "Juan 12:32",
+          "text": "\"At kung ako'y maitaas na, ilalapit ko sa akin ang lahat ng tao.\""
+        }
+      ],
+      "revelation_key": "Ang mismong sandaling itinaas si Jesus sa krus, sa tila pinakamalalim na kahihiyan, ay siya ring sandali ng kanyang pinakadakilang kaluwalhatian — at ang bawat tumitingin sa kanya nang may pananampalataya ay tumatanggap ng buhay."
+    },
+    {
+      "order": 10,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "nicodemus_light_and_darkness.png",
+      "verse_reference": "Juan 3:19-21",
+      "verse_text": "Ganito ang paghatol ng Diyos: naparito sa sanlibutan ang ilaw, ngunit inibig pa ng mga tao ang dilim kaysa liwanag, sapagkat ang kanilang mga gawain ay masasama. Kinasusuklaman ng mga gumagawa ng masama ang ilaw, ni hindi lumalapit dito upang hindi mahayag ang kanilang mga gawa. Ngunit ang namumuhay ayon sa katotohanan ay lumalapit sa ilaw, upang maihayag na ang mga ginagawa niya ay pagsunod sa Diyos.",
+      "reflection": "Isinara ni Jesus ang usapan gamit ang isang larawang diretsong tumatama kay Nicodemo, isang lalaking dumating mismo sa kalinga ng dilim: dumating ang ilaw sa sanlibutan, at bawat tao'y pumipili kung lalapit dito o iiwasan ito. Iniwan ni Juan ang gabing iyon sa katahimikan, hindi naitala ang agarang tugon ni Nicodemo — isang katahimikang sasagutin ng natitirang bahagi ng kanyang kuwento sa pamamagitan ng gawa.",
+      "revelation_key": "Iniwan ni Jesus ang pinto na bukas. Dumating na ang ilaw; ang hakbang tungo rito ay iniwan sa mga kamay ni Nicodemo."
+    },
+    {
+      "order": 11,
+      "type": "character_moment",
+      "mood": "tense",
+      "image_url": "nicodemus_sanhedrin_defense.png",
+      "title": "Isang bitak ng katapangan",
+      "subtitle": "Halos dalawang taon pagkatapos, sa gitna ng Sanedrin",
+      "content": "Muling lumitaw ang pangalan ni Nicodemo nang maglaon, nang hangarin ng mga punong pari at mga Pariseo na dakpin si Jesus. Sa gitna ng pulong na iyon, si Nicodemo — muling kinilala ng teksto bilang \"ang nagsadya kay Jesus noong una\" (Juan 7:50) — ay nagbangon ng isang tutol: \"Hindi ba't labag sa ating Kautusan na hatulan ang isang tao nang di muna nililitis at inaalam kung ano ang kanyang ginawa?\" (talata 51).\n\nHindi ito isang hayag, pampublikong pagtatanggol kay Jesus bilang Mesiyas. Ito ay isang bagay na mas maliit at, sa mismong dahilang iyon, mas totoo: isang lalaking nangahas humingi ng simpleng makatarungang proseso, sa isang kapulungang walang ibang humihiling nito. Sumagot ang kanyang mga kasamahan nang may paghamak: \"Ikaw ba'y taga-Galilea rin?\" (talata 52). Sinasabi nilang walang propetang lumitaw mula sa Galilea. Si propeta Jonas, anak ni Amitai, ay taga-Gat-hefer, isang bayan sa Galilea (2 Mga Hari 14:25). Ang mismong mga taong nag-aakusa kay Nicodemo ng kamangmangan ay nagsasalita nang hindi alam ang sarili nilang Kasulatan. Hindi sumagot si Nicodemo. Ngunit hindi rin siya bumawi.",
+      "revelation_key": "Halos dalawang taon matapos ang gabing iyon, ang pananampalatayang nagsimula bilang isang tanong na itinanong nang lihim ay nangahas na ngayon itaas ang tinig nito minsan sa publiko.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 7:50-52",
+          "text": "Isa sa mga naroon ay si Nicodemo, ang Pariseong nagsadya kay Jesus noong una. At siya'y nagtanong, \"Hindi ba't labag sa ating Kautusan na hatulan ang isang tao nang di muna nililitis at inaalam kung ano ang kanyang ginawa?\" Sumagot sila, \"Ikaw ba'y taga-Galilea rin? Saliksikin mo ang Kasulatan at makikita mong walang propetang magmumula sa Galilea.\""
+        },
+        {
+          "reference": "2 Mga Hari 14:25",
+          "text": "Bilang katuparan ng sinabi ni Yahweh, ang Diyos ng Israel sa pamamagitan ng lingkod niyang si propeta Jonas na anak ni Amitai ng Gat-hefer, nabawi ni Jeroboam ang dating sakop ng Israel mula sa may pasukan ng Hamat sa hilaga hanggang sa Dagat ng Araba sa timog."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "nicodemus_crucifixion_day.png",
+      "title": "Bago dumating si Nicodemo",
+      "narrative": "Namatay si Jesus sa krus isang hapon ng Biyernes. Ibinigay ang kanyang bangkay kay Pilato upang mailibing bago magsimula ang Sabbath. Nagkalat na ang kanyang pinakamalapit na mga alagad, natupad ang mismong sinabi ni Jesus. Ito ay sandali ng matinding pagkawala — isang di-inaasahang panahon para sa sinumang magpasyang lumapit kay Jesus nang hayagan.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 19:38",
+        "text": "Pagkatapos nito, si Jose na taga-Arimatea ay nagsadya kay Pilato upang humingi ng pahintulot na makuha ang bangkay ni Jesus. Si Jose ay isang alagad ni Jesus, ngunit palihim lamang dahil sa takot niya sa mga Judio. Pinahintulutan naman siya ni Pilato, kaya't kinuha niya ang bangkay ni Jesus."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Juan 19:30-31",
+          "text": "Nang masipsip na ni Jesus ang alak, sinabi niya, \"Naganap na!\" Iniyuko niya ang kanyang ulo at nalagot ang kanyang hininga. Noo'y Araw ng Paghahanda, at ayaw ng mga Judio na manatili sa krus ang mga bangkay hanggang sa Araw ng Pamamahinga, dahil natatangi ang Araw na iyon ng Pamamahinga. Kaya't hiniling nila kay Pilato na ipabali ang mga binti ng mga ipinako sa krus at alisin ang mga bangkay."
+        },
+        {
+          "reference": "Mateo 26:56",
+          "text": "\"Ngunit nangyari ang lahat ng ito upang matupad ang sinulat ng mga propeta.\" Tumakas ang mga alagad at iniwan siyang mag-isa."
+        }
+      ],
+      "revelation_key": "Sa sandali ng pinakamalaking tila pagkawala, dalawang lalaking nagtago ng kanilang pananampalataya ay nagpasyang kumilos nang hayagan."
+    },
+    {
+      "order": 13,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "nicodemus_daylight_burial.png",
+      "title": "Ang lalaki ng gabi ay dumarating sa araw",
+      "narrative": "Kasama ni Jose ng Arimatea, lumapit si Nicodemo sa bangkay ni Jesus — sa pagkakataong ito ay sa liwanag ng araw, nang hindi na naghintay ng dilim. Nagdala siya ng napakalaking dami ng pabango, mga tatlumpung kilong mira at aloe — ang uri ng pagkilos na inilaan ng Kasulatan para sa paglilibing ng isang hari ng Juda. Magkasama nilang binalot ang bangkay ng tela at mababangong pabango, ayon sa kaugalian ng paglilibing ng mga Judio, at inilagay ito sa libingan.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 19:39-40",
+        "text": "Kasama rin niya si Nicodemo, ang taong nagsadya kay Jesus isang gabi. May dala siyang pabango, mga tatlumpung kilong pinaghalong mira at aloe. Kinuha nila ang bangkay ni Jesus at nilagyan ng pabango habang binabalot sa isang mamahaling tela, ayon sa kaugalian ng mga Judio."
+      },
+      "scripture_connections": [
+        {
+          "reference": "2 Mga Cronica 16:14",
+          "text": "Inilibing siya sa Lunsod ni David sa isang libingang yungib na ipinasadya niya para sa kanyang sarili. Inilagay siya sa isang kabaong na nilagyan ng lahat ng uri ng pabango. Bilang pagpaparangal sa kanya, gumawa ang mga tao ng napakalaking siga."
+        }
+      ],
+      "revelation_key": "Muling kinilala siya ng teksto sa huling pagkakataon bilang \"ang nagsadya kay Jesus noong una isang gabi\" — upang ipakita ang buong layong natahak niya: mula sa lilim tungo sa liwanag ng araw."
+    },
+    {
+      "order": 14,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "nicodemus_from_night_to_day.png",
+      "title": "Ang namumuhay ayon sa katotohanan ay lumalapit sa ilaw",
+      "subtitle": "Ang usapan sa Juan 3 ay natutugunan sa Juan 19",
+      "content": "Sinabi ni Jesus sa kanya, sa gabing una silang nagtagpo, na ang sinumang namumuhay ayon sa katotohanan ay lumalapit sa ilaw (Juan 3:21). Sa paglilibing kay Jesus, tinupad ni Nicodemo ang mismong pangakong iyon: lumalapit siya sa ilaw, sa publiko, gamit ang sarili niyang mga kamay, upang gawin ang isang gawaing hindi na niya maaaring itago o itanggi.\n\nAng mismong lalaking minsang kinailangan ng dilim upang itanong ang kanyang mga tanong ay kailangan na ngayon ng liwanag ng araw upang sagutin, sa pamamagitan ng kanyang buhay, ang narinig niya sa gabing iyon. Ang bunga ng bagong pagsilang na iyon ay nakatala magpakailanman: isang daang libra ng pabango, ibinigay sa harapan ng lahat.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 3:21",
+          "text": "Ngunit ang namumuhay ayon sa katotohanan ay lumalapit sa ilaw, upang maihayag na ang mga ginagawa niya ay pagsunod sa Diyos."
+        }
+      ],
+      "revelation_key": "Ang bagong pagsilang ay hindi laging ipinahahayag. Nakikilala ito pagkatapos, sa isang buhay na nagsisimulang magbunga."
+    },
+    {
+      "order": 15,
+      "type": "discovery_activation",
+      "image_url": "nicodemus_your_encounter.png",
+      "title": "Ang Iyong Pagtatagpo",
+      "subtitle": "Mula sa lihim tungo sa liwanag, tulad ni Nicodemo",
+      "discovery_questions": [
+        {
+          "category": "Katapatan",
+          "question": "Nangahas si Nicodemo na itanong ang \"Paanong mangyayari ito?\", kahit siya ay guro ng Israel. May tanong ka ba tungkol sa iyong pananampalataya na iniiwasan mong itanong nang malakas, dahil sa takot sa maiisip ng iba tungkol sa iyo?"
+        },
+        {
+          "category": "Bagong kalikasan",
+          "question": "Ang ipinanganak ng Espiritu ay tumatanggap ng isang kalikasang hindi na namumuhay tulad ng dati (1 Juan 3:9). Tulad ni Nicodemo, na alam na alam ang Kasulatan ngunit kailangan ng isang bagay na tanging Diyos lamang ang makakapagbigay — anong ebidensya mayroon sa iyong buhay ng bagong kalikasang iyon, higit pa sa alam mo o pinaniniwalaan mo na?"
+        },
+        {
+          "category": "Katapangan",
+          "question": "Mula sa pagbisita kay Jesus nang lihim, si Nicodemo ay naglingkod sa kanya nang hayagan, sa liwanag ng araw. Sa aling bahagi ng iyong buhay ka inaanyayahan ng Diyos na iwan ang dilim at kumilos sa liwanag?"
+        }
+      ],
+      "prayer": {
+        "title": "Ang Panalangin ni Nicodemo",
+        "content": "Panginoong Jesus, tulad ni Nicodemo, minsan ay lumalapit ako sa iyo dala ang mga tanong na itinatago ko sa iba. Salamat sa pagtanggap mo sa aking taos-pusong mga tanong at ginagamit mo ang mga ito upang akayin ako sa kailangan kong marinig. Kinikilala ko na ang bagong pagsilang ay isang kaloob na nagmumula sa itaas: isang bagong kalikasang likha ng iyong Espiritu sa akin. Ang iyong Espiritu ay kumikilos tulad ng hangin, hindi ko ito makokontrol, ngunit nananahan ito sa akin bilang tatak at katiyakan na ako ay iyo. Ngayon, pinipili kong tumingin sa iyo, tulad ng pagtingin ng Israel sa ahas sa ilang, at maniwalang taglay ko sa iyo ang buhay na walang hanggan. Bigyan mo ako ng katapangang ibinigay mo kay Nicodemo: upang ang itinatago ko ngayon, mabuhay kong hayagan balang-araw, sa liwanag. Sa iyong pangalan, Amen."
+      }
+    },
+    {
+      "order": 16,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "nicodemus_completion.png",
+      "completion_verse": {
+        "reference": "Juan 3:16",
+        "text": "Sapagkat gayon na lamang ang pag-ibig ng Diyos sa sangkatauhan, kaya't ibinigay niya ang kanyang kaisa-isang Anak, upang ang sinumang sumampalataya sa kanya ay hindi mapahamak, kundi magkaroon ng buhay na walang hanggan.",
+        "bible_version": "MBB05"
+      },
+      "reflection_prompt": "Anong ebidensya mayroon ngayon sa iyong buhay ng bagong kalikasan? Tunay ka bang isinilang na muli?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

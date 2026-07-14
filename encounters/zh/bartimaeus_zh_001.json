@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "zh",
-  "bible_version": "和合本1919",
+  "bible_version": "CUV1919",
   "version": "1.0",
   "estimated_reading_minutes": 5,
   "meta": {
@@ -27,7 +27,7 @@
   "key_verse": {
     "reference": "马可福音 10:52",
     "text": "耶稣说：「你去吧！你的信心救了你了。」瞎子立刻看见了，就在路上跟随耶稣。",
-    "bible_version": "和合本1919"
+    "bible_version": "CUV1919"
   },
   "cards": [
     {
@@ -181,7 +181,7 @@
       "completion_verse": {
         "reference": "马可福音 10:52",
         "text": "耶稣说：「你去吧！你的信心救了你了。」瞎子立刻看见了，就在路上跟随耶稣。",
-        "bible_version": "和合本1919"
+        "bible_version": "CUV1919"
       },
       "reflection_prompt": "今天你需要抛掉什么？你需要看见什么？",
       "celebration_type": "gentle_light"
