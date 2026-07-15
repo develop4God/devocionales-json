@@ -69,6 +69,35 @@ def is_verse_continuation_close(text: str, mark_chars: str) -> bool:
     return bool(re.match(r'^[\s.!?,;:]*$', text[idx + 1:]))
 
 
+# Languages whose native typography uses a full-width colon (：) rather
+# than the half-width ASCII ':' — checked in title fields only, since a
+# half-width colon there is a generation/template artifact, not a stylistic
+# choice (body text, greek_words, etc. legitimately mix both e.g. in inline
+# Bible chapter:verse citations).
+_FULLWIDTH_COLON_LANGS = {'ja', 'zh'}
+
+
+_TITLE_LIKE_KEYS = {'title', 'subtitle'}
+
+
+def check_halfwidth_colon_in_title(text: str, path: str, lang: str, ctx: str, report: ReportLike) -> None:
+    """Flag a half-width ':' in a title/subtitle field for ja/zh content.
+
+    Skips colons immediately followed by a digit, since those are Bible
+    chapter:verse references embedded in the title (e.g. "ヨハネ1:1",
+    "诗篇22:16") and must stay half-width — scripture references are
+    half-width everywhere else in the corpus.
+    """
+    if lang not in _FULLWIDTH_COLON_LANGS:
+        return
+    key = path.rsplit('.', 1)[-1].split('[')[0]
+    if key not in _TITLE_LIKE_KEYS:
+        return
+    for i, c in enumerate(text):
+        if c == ':' and not (i + 1 < len(text) and text[i + 1].isdigit()):
+            report.E(f"{ctx}: half-width ':' in title should be full-width '：'")
+
+
 def check_quote_anomalies(text: str, ctx: str, report: ReportLike) -> None:
     """Flag stray/duplicated/unbalanced quote-like punctuation in a text field.
 

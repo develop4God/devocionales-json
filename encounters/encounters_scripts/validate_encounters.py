@@ -49,7 +49,7 @@ from shared_validation.report import Report
 from shared_validation.run_report import RunReport
 from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL
 from shared_validation.text_checks import (
-    iter_strings, check_quote_anomalies, is_cognate,
+    iter_strings, check_quote_anomalies, check_halfwidth_colon_in_title, is_cognate,
 )
 from shared_validation.lint import lint_json_files
 
@@ -303,6 +303,7 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
     # Quote / stray-punctuation anomaly scan across all text fields
     for path, text in iter_strings(data):
         check_quote_anomalies(text, f"{filename}:{path}", report)
+        check_halfwidth_colon_in_title(text, path, lang, f"{filename}:{path}", report)
 
     # Required top-level fields
     required = ['id', 'type', 'schema_version', 'language', 'bible_version',
