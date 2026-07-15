@@ -27,7 +27,7 @@ sys.path.insert(0, str(REPO_ROOT))
 sys.path.insert(0, str(REPO_ROOT / 'discovery' / 'discovery_scripts'))
 
 import validate_discovery as vd
-from shared_validation.text_checks import check_quote_anomalies
+from shared_validation.text_checks import check_quote_anomalies, check_halfwidth_colon_in_title
 from shared_validation.report import Report
 
 
@@ -122,6 +122,96 @@ class TestCheckQuoteAnomalies(unittest.TestCase):
         self.assertTrue(
             any("unbalanced '«'/'»'" in w for w in report.warnings),
             f"Expected an unbalanced-guillemet warning for a non-trailing single mark, got: {report.warnings}",
+        )
+
+
+# ── check_halfwidth_colon_in_title (shared_validation.text_checks) ──────────
+#
+# Added alongside a corpus-wide fix (commit 75c714f) for ja/zh title fields
+# that used a half-width ':' instead of native full-width '：' typography.
+# Wired into both discovery and encounters validators as a hard error.
+
+class TestCheckHalfwidthColonInTitle(unittest.TestCase):
+    def test_halfwidth_colon_in_zh_title_is_an_error(self):
+        report = Report('TEST')
+        check_halfwidth_colon_in_title('杯:神审判的象征', 'title', 'zh', 'ctx', report)
+
+        self.assertTrue(
+            any("half-width ':' in title" in e for e in report.errors),
+            f"Expected a half-width colon error, got: {report.errors}",
+        )
+
+    def test_halfwidth_colon_in_ja_title_is_an_error(self):
+        report = Report('TEST')
+        check_halfwidth_colon_in_title('ベタニア:悲しみに引き裂かれた家', 'title', 'ja', 'ctx', report)
+
+        self.assertTrue(
+            any("half-width ':' in title" in e for e in report.errors),
+            f"Expected a half-width colon error, got: {report.errors}",
+        )
+
+    def test_halfwidth_colon_in_subtitle_is_also_an_error(self):
+        """subtitle is a title-like field too — the original fix only
+        covered 'title' and missed 3 real instances in 'subtitle' until
+        this check was added and run against the live corpus."""
+        report = Report('TEST')
+        check_halfwidth_colon_in_title("最终的启示:你不能被'未出生'", 'subtitle', 'zh', 'ctx', report)
+
+        self.assertTrue(
+            any("half-width ':' in title" in e for e in report.errors),
+            f"Expected a half-width colon error for subtitle, got: {report.errors}",
+        )
+
+    def test_fullwidth_colon_produces_no_finding(self):
+        report = Report('TEST')
+        check_halfwidth_colon_in_title('杯：神审判的象征', 'title', 'zh', 'ctx', report)
+
+        self.assertEqual(report.errors, [])
+
+    def test_non_cjk_language_is_not_checked(self):
+        """A half-width colon is correct/expected in en/es/fr/etc. titles —
+        the check must only fire for ja/zh."""
+        report = Report('TEST')
+        check_halfwidth_colon_in_title('Betania: A house broken by grief', 'title', 'en', 'ctx', report)
+
+        self.assertEqual(report.errors, [])
+
+    def test_non_title_field_is_not_checked(self):
+        """content/revelation_key/etc. legitimately mix half-width colons
+        (e.g. inline Bible chapter:verse citations) — only title-like
+        fields are checked."""
+        report = Report('TEST')
+        check_halfwidth_colon_in_title('正如约翰福音11:25所说:这是应许', 'content', 'zh', 'ctx', report)
+
+        self.assertEqual(report.errors, [])
+
+    def test_colon_followed_by_digit_is_a_scripture_reference_and_exempt(self):
+        """Bible chapter:verse citations embedded in a title (e.g.
+        'ヨハネ1:1の三つのハンマーの打撃') must stay half-width — this is
+        the false-positive the first implementation attempt produced."""
+        report = Report('TEST')
+        check_halfwidth_colon_in_title('ヨハネ1:1の三つのハンマーの打撃', 'title', 'ja', 'ctx', report)
+
+        self.assertEqual(report.errors, [])
+
+    def test_label_colon_and_scripture_colon_both_present_only_flags_label(self):
+        """A title with both patterns should still be flagged once for the
+        genuine label colon, while the digit-adjacent one is skipped."""
+        report = Report('TEST')
+        check_halfwidth_colon_in_title('诗篇22:基督前1000年的预言', 'title', 'zh', 'ctx', report)
+
+        self.assertEqual(len(report.errors), 1, report.errors)
+
+    def test_path_with_card_index_prefix_still_matches_title_key(self):
+        """Real call sites pass dotted/indexed paths like
+        'cards[0].subtitle', not the bare key — the key must be extracted
+        correctly from the full path."""
+        report = Report('TEST')
+        check_halfwidth_colon_in_title('六天之后:预言的背景', 'cards[0].subtitle', 'zh', 'ctx', report)
+
+        self.assertTrue(
+            any("half-width ':' in title" in e for e in report.errors),
+            f"Expected a half-width colon error for a nested path, got: {report.errors}",
         )
 
 
