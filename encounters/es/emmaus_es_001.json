@@ -6,7 +6,7 @@
   "bible_version": "RVR1960",
   "version": "1.0",
   "image_version": "1.0",
-  "estimated_reading_minutes": 11,
+  "estimated_reading_minutes": 12,
   "meta": {
     "character": "Cleofas",
     "testament": "new",
@@ -44,7 +44,7 @@
       "image_url": "cleofas_grief_walking.png",
       "title": "Un hombre que había apostado todo",
       "subtitle": "Cleofas, un seguidor entre muchos",
-      "content": "Cleofas pertenecía a un círculo más amplio de seguidores de Jesús — no uno de los doce, sino alguien que había seguido su enseñanza, quizás visto sus señales, y depositado en él la esperanza de que Israel sería liberado.\n\n🔑 Esa esperanza murió el viernes, en una cruz romana. Cleofas camina ahora hacia Emaús con esa muerte todavía fresca, sin saber que camina también hacia el hombre mismo que cree perdido.",
+      "content": "Cleofas pertenecía a un círculo más amplio de seguidores de Jesús — no uno de los doce, sino alguien que había seguido su enseñanza, quizás visto sus señales, y depositado en él la esperanza de que Israel sería liberado.\n\n🔑 Esa esperanza murió el viernes, en una cruz romana. Cleofas camina ahora hacia Emaús con esa muerte todavía fresca, sin saber que camina también hacia el hombre mismo que cree perdido.\n\nAlgunos estudiosos, entre ellos N.T. Wright, sugieren que su compañero de camino pudo haber sido su propia esposa, María, la misma mujer que Juan menciona junto a la cruz como \"María mujer de Cleofas\" (Juan 19:25). Si esto es así, Cleofas no caminaba solo con su dolor: caminaba con alguien que había perdido lo mismo que él, esa misma tarde en que todo se derrumbó.",
       "revelation_key": "Cleofas no es un discípulo cercano ni un líder — es uno de tantos que amó a Jesús y ahora no sabe qué hacer con ese amor sin respuesta.",
       "verse_overlay": {
         "reference": "Lucas 24:21",
@@ -205,6 +205,20 @@
     },
     {
       "order": 13,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "cleofas_telling_story.png",
+      "title": "Contar en detalle lo vivido",
+      "subtitle": "El mismo verbo, dos veces",
+      "content": "Cuando Cleofas y su compañero llegan donde los once, Lucas usa el verbo griego ἐξηγέομαι (exēgeomai), \"relatar\", \"explicar en detalle\", para describir cómo cuentan lo sucedido (v.35). Es la misma raíz de la que proviene la palabra \"exégesis\".\n\n🔑 Horas antes, en el camino, Jesús les había explicado en detalle las Escrituras. Ahora ellos explican en detalle lo que vieron. Lo que recibieron de él, lo entregan de la misma forma.",
+      "revelation_key": "El mismo verbo que describe cómo Jesús les abrió las Escrituras describe ahora cómo ellos cuentan lo que vieron.",
+      "verse_overlay": {
+        "reference": "Lucas 24:35",
+        "text": "Entonces ellos contaban las cosas que les habían acontecido en el camino, y cómo le habían reconocido al partir el pan."
+      }
+    },
+    {
+      "order": 14,
       "type": "interactive_moment",
       "icon": "🍞",
       "image_url": "cleofas_table_pause.png",
@@ -213,7 +227,7 @@
       "reflection_prompt": "Piensa en un momento cotidiano — una comida, una conversación, un gesto conocido — en el que sentiste que Dios estaba presente sin que lo esperaras. Nómbralo."
     },
     {
-      "order": 14,
+      "order": 15,
       "type": "discovery_activation",
       "image_url": "cleofas_discovery.png",
       "title": "Tu Encuentro",
@@ -229,7 +243,7 @@
       }
     },
     {
-      "order": 15,
+      "order": 16,
       "type": "completion",
       "mood": "peace",
       "image_url": "cleofas_completion.png",
