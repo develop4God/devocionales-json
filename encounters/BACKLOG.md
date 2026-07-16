@@ -19,6 +19,7 @@ Update status as encounters move from idea -> drafting -> review -> published.
 | The Bleeding Woman | Marcos 5:25-34 | Shame, secret faith, touch | published |
 | Nicodemus | Juan 3:1-21 | Fear of exposure, private seeking, new birth | published |
 | The Gadarene Demoniac | Marcos 5:1-20 | Possession/chaos -> peace, unwanted mission | coming_soon |
+| The Woman Caught in Adultery | Juan 8:1-11 | Public shame, weaponized condemnation, "ni yo te condeno" | published |
 
 ---
 
@@ -27,11 +28,6 @@ Update status as encounters move from idea -> drafting -> review -> published.
 Ranked by how much new thematic ground they cover (not already represented above).
 
 ### High priority — fills a real gap
-
-- **The Woman Caught in Adultery** (Juan 8:1-11)
-  Theme: public shame, weaponized condemnation, "ni yo te condeno." Distinct from bleeding
-  woman/Samaritan woman (private shame) — here the shame is staged publicly *by others* as
-  a trap. No encounter yet centers on public accusation reversed by grace.
 
 - **The Emmaus Disciples** (Lucas 24:13-35)
   Theme: grief/confusion after the crucifixion, slow recognition, revelation in the
@@ -72,12 +68,13 @@ Ranked by how much new thematic ground they cover (not already represented above
 
 ## Recommendation
 
-Next up: **The Woman Caught in Adultery** or **The Emmaus Disciples** — both fill a gap
-no current encounter covers (public accusation reversed by grace; recognition through the
-ordinary rather than evidence) and neither overlaps heavily with existing entries.
+Next up: **The Emmaus Disciples** — fills the remaining gap (recognition through the
+ordinary rather than evidence/persistence) and doesn't overlap heavily with existing entries.
 
 ## Decision log
 
 _(Add a line here each time a candidate is picked, dropped, or reprioritized, with the why.)_
 
 - 2026-07-09: Backlog created after publishing gadarene_demoniac_001 (draft).
+- 2026-07-16: Adultery Woman confirmed published (all 11 languages) — removed from
+  candidates, added to "currently in the series" table. Backlog had gone stale.
