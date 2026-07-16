@@ -1,0 +1,245 @@
+{
+  "id": "emmaus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "es",
+  "bible_version": "RVR1960",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 11,
+  "meta": {
+    "character": "Cleofas",
+    "testament": "new",
+    "scripture_reference": "Lucas 24:13-35",
+    "mood_primary": "falling",
+    "accent_color": "#1a140a",
+    "emoji": "🍞",
+    "tags": ["duelo", "reconocimiento", "resurreccion", "lo_cotidiano", "esperanza"]
+  },
+  "key_verse": {
+    "reference": "Lucas 24:31",
+    "text": "Entonces les fueron abiertos los ojos, y le reconocieron; mas él se desapareció de su vista.",
+    "bible_version": "RVR1960"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "cleofas_road_departure.png",
+      "title": "Dos hombres dejan Jerusalén",
+      "narrative": "Es domingo por la tarde, el tercer día. Dos hombres caminan hacia Emaús, una aldea a unos once kilómetros de Jerusalén. Uno de ellos se llama Cleofas. Van dejando atrás la ciudad donde, tres días antes, vieron morir al hombre en quien habían puesto toda su esperanza. Caminan despacio, hablando entre sí de todo lo que ha pasado, sin saber qué hacer con un dolor que no tiene dónde ir.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 24:13-14",
+        "text": "Y he aquí, dos de ellos iban el mismo día a una aldea llamada Emaús, que estaba a sesenta estadios de Jerusalén. E iban hablando entre sí de todas aquellas cosas que habían acontecido."
+      },
+      "revelation_key": "Dos hombres se alejan de Jerusalén cargando una esperanza que creen enterrada."
+    },
+    {
+      "order": 2,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "cleofas_grief_walking.png",
+      "title": "Un hombre que había apostado todo",
+      "subtitle": "Cleofas, un seguidor entre muchos",
+      "content": "Cleofas pertenecía a un círculo más amplio de seguidores de Jesús — no uno de los doce, sino alguien que había seguido su enseñanza, quizás visto sus señales, y depositado en él la esperanza de que Israel sería liberado.\n\n🔑 Esa esperanza murió el viernes, en una cruz romana. Cleofas camina ahora hacia Emaús con esa muerte todavía fresca, sin saber que camina también hacia el hombre mismo que cree perdido.",
+      "revelation_key": "Cleofas no es un discípulo cercano ni un líder — es uno de tantos que amó a Jesús y ahora no sabe qué hacer con ese amor sin respuesta.",
+      "verse_overlay": {
+        "reference": "Lucas 24:21",
+        "text": "Pero nosotros esperábamos que él era el que había de redimir a Israel; y ahora, además de todo esto, hoy es ya el tercer día que esto ha acontecido."
+      }
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "mysterious",
+      "image_url": "cleofas_stranger_joins.png",
+      "title": "Un desconocido se une al camino",
+      "narrative": "Mientras hablan y discuten, otro hombre se acerca por el mismo camino y comienza a caminar junto a ellos. Es un extraño, o eso parece: viste como cualquier viajero, y camina al paso de ambos sin apuro. Les pregunta de qué conversan con tanta tristeza. Cleofas se detiene, sorprendido de que alguien no supiera lo que había ocurrido en Jerusalén esos días.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 24:15-16",
+        "text": "Sucedió que mientras hablaban y discutían entre sí, Jesús mismo se acercó, y iba con ellos. Mas los ojos de ellos estaban velados, para que no le conociesen."
+      },
+      "revelation_key": "El mismo Jesús camina junto a ellos, y el texto explica con toda claridad por qué no lo reconocen: sus ojos están velados."
+    },
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "cleofas_eyes_veiled.png",
+      "title": "Ojos velados, no ausencia",
+      "subtitle": "Por qué no lo reconocieron",
+      "content": "Lucas usa el verbo griego κρατέω (krateó), \"sujetar\", \"retener con fuerza\", para describir el estado de los ojos de estos discípulos (v.16): estaban retenidos, impedidos de ver lo que tenían delante. El texto atribuye el velo a algo fuera de su control, una acción sobre sus ojos, no un fallo de percepción propio.\n\n🔑 Más adelante, en el versículo 29, son ellos quienes retienen con fuerza al desconocido para que se quede. El relato marca así dos momentos: uno en que algo los retiene a ellos, y otro en que son ellos quienes retienen.",
+      "revelation_key": "Sus ojos estaban impedidos de reconocerlo — la ceguera no era falta de fe, era parte de cómo Dios estaba llevando este encuentro.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 20:14-15",
+          "text": "Y cuando había dicho esto, se volvió, y vio a Jesús que estaba allí; mas no sabía que era Jesús. Le dijo Jesús: Mujer, ¿por qué lloras? ¿A quién buscas? Ella, pensando que era el hortelano, le dijo: Señor, si tú lo has llevado, dime dónde lo has puesto, y yo lo llevaré."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "cleofas_explains_grief.png",
+      "verse_reference": "Lucas 24:19-21",
+      "verse_text": "Entonces él les dijo: ¿Qué cosas? Y ellos le dijeron: De Jesús nazareno, que fue varón profeta, poderoso en obra y en palabra delante de Dios y de todo el pueblo; y cómo le entregaron los principales sacerdotes y nuestros gobernantes a sentencia de muerte, y le crucificaron. Pero nosotros esperábamos que él era el que había de redimir a Israel; y ahora, además de todo esto, hoy es ya el tercer día que esto ha acontecido.",
+      "reflection": "Cleofas le cuenta al desconocido la historia completa, sin saber a quién se la cuenta. Hay algo conmovedor en la palabra \"esperábamos\" — tiempo pasado. La esperanza no ha desaparecido del todo; sigue ahí, pero convertida en pasado, algo que ya no se atreven a nombrar en presente.",
+      "revelation_key": "Cleofas resume su propia fe rota delante del único que podía responderla, sin saberlo todavía."
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "cleofas_women_report.png",
+      "title": "Un rumor que no lograron creer",
+      "narrative": "Cleofas menciona también lo otro: esa misma mañana, algunas mujeres del grupo fueron a la tumba y no encontraron el cuerpo. Volvieron diciendo que habían visto ángeles, que les dijeron que Jesús vivía. Algunos de los discípulos fueron a comprobarlo, y hallaron la tumba vacía, tal como las mujeres decían — pero a él no lo vieron.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 24:22-24",
+        "text": "Aunque también nos han asombrado algunas mujeres de entre nosotros, las que antes del día fueron al sepulcro; y como no hallaron su cuerpo, vinieron diciendo que también habían visto visión de ángeles, quienes dijeron que él vive."
+      },
+      "revelation_key": "Cleofas tiene ya toda la evidencia de la resurrección en sus propias palabras, y aun así camina en dirección contraria a Jerusalén."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "cleofas_scriptures_opened.png",
+      "title": "Comenzando desde Moisés",
+      "narrative": "El desconocido responde con una firmeza que no esperaban. Les habla de que era necesario que el Cristo padeciera esas cosas, y entrara en su gloria. Y comenzando desde Moisés, y siguiendo por todos los profetas, les va explicando en todas las Escrituras lo que se refería a él mismo. El camino restante hacia Emaús transcurre así, entre pasajes que ellos habían leído toda la vida y ahora escuchan como si fuera la primera vez.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 24:27",
+        "text": "Y comenzando desde Moisés, y siguiendo por todos los profetas, les declaraba en todas las Escrituras lo que de él decían."
+      },
+      "revelation_key": "Antes de mostrarles quién es, Jesús les muestra dónde ha estado escrito todo el tiempo."
+    },
+    {
+      "order": 8,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "cleofas_burning_heart.png",
+      "title": "El corazón que ardía",
+      "subtitle": "Una señal que reconocieron después",
+      "content": "Más tarde, ya reconocido Jesús, Cleofas y su compañero se preguntan el uno al otro por lo que sintieron en el camino (Lucas 24:32). El verbo griego καίω (kaío), \"arder\", \"quemar\", describe algo físico, no una simple emoción pasajera.\n\n🔑 El reconocimiento no llegó primero por los ojos. Llegó primero por dentro, como calor, mucho antes de que pudieran ponerle nombre a lo que sentían.",
+      "revelation_key": "El corazón reconoció a Jesús antes que los ojos — la evidencia llegó primero como fuego, después como vista.",
+      "verse_overlay": {
+        "reference": "Lucas 24:32",
+        "text": "Y decían el uno al otro: ¿No ardía nuestro corazón en nosotros, mientras nos hablaba en el camino, y cuando nos abría las Escrituras?"
+      },
+      "scripture_connections": [
+        {
+          "reference": "Jeremías 20:9",
+          "text": "Y dije: No me acordaré más de él, ni hablaré más en su nombre; no obstante, había en mi corazón como un fuego ardiente metido en mis huesos; traté de sufrirlo, y no pude."
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "cleofas_urge_him_stay.png",
+      "title": "Le obligaron a quedarse",
+      "narrative": "Llegan a Emaús al caer la tarde. El desconocido hace ademán de seguir su camino, como quien no quiere imponerse. Pero ellos le urgen, diciendo: quédate con nosotros, porque se hace tarde y el día ya ha declinado. Él entra a quedarse con ellos, una costumbre pequeña de hospitalidad, sin que ellos sepan todavía a quién han invitado a su mesa.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 24:28-29",
+        "text": "Llegaron a la aldea adonde iban; y él hizo como que iba más lejos. Mas ellos le obligaron a quedarse, diciendo: Quédate con nosotros, porque se hace tarde, y el día ya ha declinado. Entró, pues, a quedarse con ellos."
+      },
+      "revelation_key": "Una costumbre simple de hospitalidad abre la puerta al momento que ellos no sabían que estaban esperando."
+    },
+    {
+      "order": 10,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "cleofas_bread_breaking.png",
+      "title": "Al partir el pan",
+      "narrative": "Se sientan a la mesa. El huésped toma el pan, lo bendice, lo parte, y se lo da. Es un gesto ordinario, repetido cientos de veces en cualquier casa judía. Pero en ese instante preciso, algo se abre. Cleofas ve las manos, el gesto, la forma exacta en que ese hombre parte el pan — y lo reconoce. Es él. Y en el mismo momento en que lo reconoce, el hombre desaparece de su vista.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 24:30-31",
+        "text": "Y aconteció que, estando sentado con ellos a la mesa, tomó el pan y lo bendijo, lo partió, y les dio. Entonces les fueron abiertos los ojos, y le reconocieron; mas él se desapareció de su vista."
+      },
+      "revelation_key": "El reconocimiento llega en el gesto más ordinario de la mesa — partir el pan — no en una señal espectacular."
+    },
+    {
+      "order": 11,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "cleofas_recognition_moment.png",
+      "title": "Lo que reconoció Cleofas",
+      "subtitle": "El mismo gesto de la última cena",
+      "content": "Lucas ya había descrito antes esa misma secuencia de verbos, tomar, bendecir, partir, dar, la noche de la última cena y también al alimentar a los cinco mil. 🔑 Cleofas reconoce a Jesús por la forma en que sus manos parten el pan, un gesto que ya había visto antes y que llevaba grabado sin saberlo.\n\nEs el mismo Jesús que caminó con ellos todo el camino, ahora reconocido en lo más cotidiano de una mesa compartida.",
+      "revelation_key": "Cleofas reconoce a Jesús no por señal nueva alguna, sino por un gesto familiar que ya llevaba grabado en la memoria.",
+      "scripture_connections": [
+        {
+          "reference": "Lucas 22:19",
+          "text": "Y tomó el pan y dio gracias, y lo partió y les dio, diciendo: Esto es mi cuerpo, que por vosotros es dado; haced esto en memoria de mí."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "cinematic_scene",
+      "mood": "peace",
+      "image_url": "cleofas_return_jerusalem.png",
+      "title": "De vuelta a Jerusalén, la misma noche",
+      "narrative": "Cleofas y su compañero se levantan en esa misma hora, aunque la noche ya ha caído y el camino de regreso es el mismo que recorrieron con el corazón caído esa tarde. Ahora corren, no caminan. Vuelven a Jerusalén a contar lo que han visto, y encuentran a los once reunidos, diciendo ya: ha resucitado el Señor, y ha aparecido a Simón.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 24:33-34",
+        "text": "Y levantándose en la misma hora, volvieron a Jerusalén, y hallaron a los once reunidos, y a los que estaban con ellos, que decían: Ha resucitado el Señor verdaderamente, y ha aparecido a Simón."
+      },
+      "revelation_key": "El mismo camino que recorrieron huyendo de la esperanza ahora lo recorren corriendo hacia ella."
+    },
+    {
+      "order": 13,
+      "type": "interactive_moment",
+      "icon": "🍞",
+      "image_url": "cleofas_table_pause.png",
+      "title": "Tu propia mesa",
+      "subtitle": "¿Dónde has reconocido a Jesús después, en lo ordinario?",
+      "reflection_prompt": "Piensa en un momento cotidiano — una comida, una conversación, un gesto conocido — en el que sentiste que Dios estaba presente sin que lo esperaras. Nómbralo."
+    },
+    {
+      "order": 14,
+      "type": "discovery_activation",
+      "image_url": "cleofas_discovery.png",
+      "title": "Tu Encuentro",
+      "subtitle": "Jesús camina contigo incluso cuando no lo reconoces todavía.",
+      "discovery_questions": [
+        { "category": "Honesty", "question": "¿Hay algo en tu vida que sientes que Dios abandonó, cuando en realidad camina contigo sin que lo hayas notado?" },
+        { "category": "Faith", "question": "¿Qué 'gesto familiar' de Dios en tu vida diaria podría ser la señal que has estado pasando por alto?" },
+        { "category": "Purpose", "question": "Si reconocieras hoy que Jesús ha estado caminando contigo, ¿hacia dónde correrías a contarlo?" }
+      ],
+      "prayer": {
+        "title": "Oración de los ojos abiertos",
+        "content": "Señor, tantas veces caminas junto a mí y no te reconozco. Abre mis ojos como abriste los de Cleofas, no con una señal extraordinaria, sino en lo más común de mis días. Enséñame a reconocerte en el pan compartido, en la conversación honesta, en el camino que recorro sin saber que no estoy solo. Amén."
+      }
+    },
+    {
+      "order": 15,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "cleofas_completion.png",
+      "completion_verse": {
+        "reference": "Lucas 24:31",
+        "text": "Entonces les fueron abiertos los ojos, y le reconocieron; mas él se desapareció de su vista.",
+        "bible_version": "RVR1960"
+      },
+      "reflection_prompt": "¿Qué necesitas que Dios te abra los ojos para ver hoy, en lo ordinario de tu propia vida?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
