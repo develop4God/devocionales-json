@@ -79,7 +79,7 @@ CARD_REQUIRED_KEYS = {
     'theological_depth':  ['order', 'type', 'image_url', 'title', 'content', 'revelation_key'],
     'interactive_moment': ['order', 'type', 'image_url', 'title', 'reflection_prompt'],
     'discovery_activation': ['order', 'type', 'image_url', 'title', 'discovery_questions', 'prayer'],
-    'completion':         ['order', 'type', 'image_url', 'completion_verse', 'reflection_prompt', 'celebration_type'],
+    'completion':         ['order', 'type', 'image_url', 'completion_verse', 'celebration_type'],
 }
 
 # English Bible book name pattern (for non-EN reference checks)
