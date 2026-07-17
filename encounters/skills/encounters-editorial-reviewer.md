@@ -15,6 +15,18 @@ editorial session — June 2026. Every rule here was earned from real mistakes c
 
 ---
 
+## BEFORE ANY NEW FILE — GATE 0: ORAR PRIMERO
+
+Before starting a new Encounter file (or before drafting the `prayer.content` of an
+existing one — see Rule 12.1), the encounter is prayed over first. Giovanni puts it
+in the hands of the Jesus this encounter speaks about, with respect and love, and
+asks for the Holy Spirit's guidance before any card or prayer is drafted. This is not
+a formality to log — it is the actual origin of the file. Claude does not begin
+generating an encounter, nor its `prayer.content`, ahead of this. If asked to begin
+before this has happened, Claude says so plainly and waits.
+
+---
+
 ## BEFORE YOU START
 
 1. Sparse-clone the file from GitHub (load sparse-clone skill)
@@ -159,6 +171,134 @@ original error — it looks resolved but isn't.
 
 ---
 
+### 11. What a `revelation_key` is (and isn't) — analyze before writing
+A `revelation_key` is not a summary of the card's `content`/`narrative`, not a poetic
+flourish, and not a place to cram extra biblical content just because it's available.
+It is the single sharpened "aha" specific to *this card's moment* — distinct from what
+the narrative already said, and without spoiling what a later card will reveal.
+
+Before writing or approving one, answer explicitly: **what is this specific card trying
+to make the reader take away, and is that different from what neighboring cards already
+carry or will carry?** Don't write text "a lo loco" (recklessly, without this analysis).
+If a following card already owns the heavy theological weight of a moment (e.g. the full
+symbolism of bread-breaking), the current card's `revelation_key` doesn't need to carry
+that weight too — it should capture only what belongs to its own moment. This is Rule 4
+applied specifically to the `revelation_key` field, not just to whole cards.
+
+**Concrete case (2026-07-16, Emmaus, "Al partir el pan" card):** first draft closed with
+"no en una señal espectacular" — technically accurate but (1) a negation pattern already
+banned by Rule 2, and (2) it flattened everything already established about the
+theological weight of bread-breaking (same verb pattern as the Last Supper and the
+feeding of the 5,000 — a weight the *following* card owns). The real "aha" for *this*
+card was narrower: recognition came through something intimate Cleofas already knew of
+Jesus, not through a new miracle. Final: "Cleofas no reconoce a Jesús por un milagro ante
+sus ojos, sino por algo íntimo que ya conocía de él."
+
+---
+
+### 12. The closing prayer must arc across the whole encounter
+The `discovery_activation` card's `prayer.content` is not a generic devotional closer —
+it must recognizably touch the encounter's actual arc, with concrete anchors from the
+story, the same way the rest of the encounter does. A prayer that only echoes the
+surface theme (e.g. "help me recognize you") while skipping the encounter's distinct
+turning points reads as interchangeable with any other encounter's prayer — it should not.
+
+Verified against the corpus (`thomas_es_001.json`, `nicodemus_es_001.json`): both
+prayers recognizably recorre the full arc with specific anchors — Thomas's prayer
+includes "Señor mío y Dios mío" (the text's own climax) and the detail of the "puerta
+cerrada"; Nicodemus's includes the serpent in the wilderness (Juan 3:14) and the
+secret-to-public arc (Juan 19:39). Neither is a vague summary — both are traceable,
+almost line by line, to specific cards earlier in the same file.
+
+**Concrete case (2026-07-16, Emmaus):** first draft only touched 2-3 of the ~6 major
+beats established across the cards (presence unrecognized, ordinary bread). Missing:
+being given space to voice grief before revelation (cards 4-5), the Scriptures opening
+until the heart burned (cards 7, 11), and the urge to run and tell others after
+recognizing him (cards 12-13). Rewritten to touch all of these with concrete anchors
+tied to the encounter's own language ("hasta que mi corazón arda, como ardió el de
+Cleofas en el camino").
+
+**How to apply:** before approving a `prayer.content`, list the 4-6 major turning
+points the encounter's cards established, and check the prayer touches most of them
+with a concrete anchor (an image, a verb, a phrase) rather than a generic paraphrase.
+
+---
+
+### 12.1. The `prayer.content` must be prayed before it is written — not assembled from beats
+
+Touching the right beats (Rule 12) is necessary but not sufficient. A prayer can hit
+every anchor correctly and still read as a recipe — a checklist of turning points
+stitched together from outside the story — instead of one human voice speaking to God
+from inside the last moment of the encounter.
+
+**What actually distinguishes a living prayer from a recipe:**
+
+- **It speaks from inside the moment, not about it.** "La certeza que sintió Cleofas"
+  describes the character from outside. "Permíteme llevar todo esto que reconozco de
+  ti a otros" is spoken by someone who already *is* Cleofas in that instant — no
+  comparison, no distance.
+- **It carries one thing that matters most, not several peers in a row.** A prayer
+  that gives equal weight to four turning points in sequence ("Gracias porque...
+  Abre... Ábreme... Y cuando...") is reciting a list. A prayer built on a single
+  thing the reader needs to ask for — with the other anchors supporting it rather
+  than each getting their own clause — reads as one plea.
+- **It could not have been written by someone who only read the cards.** If the
+  prayer could be assembled purely from the encounter's text without the writer
+  first sitting with the scene as their own moment before God, it is a recipe.
+- **It gives itself, it doesn't explain itself.** A prayer that teaches ("esto
+  significa que...") is instructing the reader. A prayer that asks ("dame,
+  permíteme, llévame") is surrendering. Prayers should ask, not explain.
+
+**Concrete case (2026-07-17, Emmaus):** a first rewrite touched all the right beats
+(grief named, Scriptures opening, heart burning, urgency to tell others) and passed
+every gate above — and still read as assembled, because it spoke *about* Cleofas'
+experience by comparison ("como Cleofas...", "la misma certeza que sintió Cleofas")
+rather than from inside it. The version that worked came only after Giovanni prayed
+the encounter himself first, then wrote from inside that same moment: "Permíteme
+llevar todo esto que reconozco de ti a otros, que corra a darles las buenas nuevas."
+One clause, one voice, no comparison — because it was prayed before it was written.
+
+**Gate before writing (mandatory, before drafting any `prayer.content` — see also
+"BEFORE ANY NEW FILE" below):** Claude does not draft the first version of a
+`prayer.content`. Giovanni prays the encounter first, puts it in Jesus' hands, and
+writes (or dictates) what comes from that — spoken with respect and love for Jesus,
+under the Holy Spirit's guidance, not assembled by Claude from the cards' beats.
+Claude's role at that point is to check the result against Rule 12 (does it touch
+the encounter's real turning points) and the language gates (2, 3, 6, 7, 8) — never
+to originate the first draft of the prayer's core plea. If Claude is asked to
+propose prayer language before this has happened, it should say so and ask for the
+prayed version first, rather than producing a draft to be corrected afterward.
+
+---
+
+### 13. `discovery_questions` must ask the encounter's central "aha," not a generic theme
+Before writing or approving the three `discovery_questions`, identify what the reader
+should take away from the *entire* encounter — not a surface topic like "notice God's
+presence," but the sharpest, most specific insight the whole arc builds toward. Each
+question should (1) open with a concrete anchor from the story (an action, a verse, a
+specific moment already established in the cards) and (2) turn that anchor toward the
+reader with a question that could only belong to *this* encounter, not a generic
+devotional prompt swappable across stories.
+
+**Never frame God's absence as a live possibility to ask about**, even rhetorically
+inside a question that "resolves" it in the same sentence (e.g. "¿sientes que Dios te
+abandonó, cuando en realidad...?"). This states something Scripture explicitly denies
+(Hebreos 13:5, Mateo 28:20) as if it were a real option the reader must consider — the
+same category of harm as "amor sin respuesta" or "esperanza rota" (Rule 2's negation
+examples): it plants the false idea rather than just naming the false *feeling*. If the
+question is about a felt sense of absence, name it as a feeling ("has sentido la
+ausencia"), never as something God may have actually done.
+
+**Concrete case (2026-07-16, Emmaus):** first draft asked generic, swappable questions
+("¿qué gesto familiar de Dios podrías estar pasando por alto?") including one framing
+divine abandonment as posible. Rewritten after identifying the encounter's actual
+central takeaway — recognition can come through the Word before the eyes, and once it
+comes, it compels urgent testimony, not passive noticing — with each question anchored
+to a specific beat (Cleofas's honesty with a stranger who was Jesus, the heart burning
+before the eyes opened, running the same night rather than waiting for morning).
+
+---
+
 ## CARD-BY-CARD REVIEW PROTOCOL
 
 For each card, check in this order:
@@ -168,7 +308,7 @@ For each card, check in this order:
 - [ ] `verse_reference` matches `verse_text` (no partial verses)
 - [ ] `verse_text` is exact RVR1960 text — not paraphrased
 - [ ] `image_url` follows naming convention
-- [ ] `revelation_key` is one sentence, theologically precise
+- [ ] `revelation_key` is one sentence, theologically precise, and passes Rule 11 (its own moment's "aha", not a summary/repeat)
 - [ ] `scripture_connections` present if reflection cites another passage
 
 ### B. Content check

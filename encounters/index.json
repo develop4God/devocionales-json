@@ -274,7 +274,7 @@
         "fr": "Luc 19:1-10",
         "ja": "ルカ19:1-10",
         "zh": "路加福音19:1-10",
-        "hi": "लूका रचित सुसमाचार 19:1-10",
+        "hi": "लूका 19:1-10",
         "de": "Lukas 19:1-10",
         "fil": "Lucas 19:1-10",
         "ar": "لوقا 19:1-10"
@@ -801,6 +801,79 @@
         "zh": 13,
         "hi": 12,
         "ar": 11,
+        "fil": 12
+      }
+    },
+    {
+      "id": "emmaus_001",
+      "version": "1.0",
+      "image_version": "1.0",
+      "emoji": "🍞",
+      "status": "published",
+      "intro_image": "cleofas_eyes_veiled.png",
+      "mood_primary": "falling",
+      "accent_color": "#1a140a",
+      "has_interactive": false,
+      "testament": "new",
+      "character": "Cleofas",
+      "files": {
+        "es": "emmaus_es_001.json",
+        "en": "emmaus_en_001.json",
+        "fr": "emmaus_fr_001.json",
+        "pt": "emmaus_pt_001.json",
+        "ja": "emmaus_ja_001.json",
+        "zh": "emmaus_zh_001.json",
+        "de": "emmaus_de_001.json",
+        "ar": "emmaus_ar_001.json",
+        "hi": "emmaus_hi_001.json",
+        "fil": "emmaus_fil_001.json"
+      },
+      "titles": {
+        "es": "El camino a Emaús",
+        "en": "The Road to Emmaus",
+        "fr": "Le chemin d'Emmaüs",
+        "pt": "O caminho para Emaús",
+        "ja": "エマオへの道",
+        "zh": "以马忤斯之路",
+        "de": "Der Weg nach Emmaus",
+        "ar": "الطريق إلى عِمْوَاس",
+        "hi": "इम्माऊस का मार्ग",
+        "fil": "Ang Daan Patungong Emaus"
+      },
+      "subtitles": {
+        "es": "Caminó junto a ellos, sin ser reconocido.",
+        "en": "He walked beside them, unrecognized.",
+        "fr": "Il marcha à leurs côtés, sans être reconnu.",
+        "ja": "彼は彼らと共に歩まれたが、気づかれなかった。",
+        "zh": "他与他们同行，却未被认出。",
+        "de": "Er ging an ihrer Seite, unerkannt.",
+        "ar": "مشى إلى جانبهما، دون أن يُعرَف.",
+        "hi": "वह उनके साथ चला, बिना पहचाना गया।",
+        "fil": "Naglakad siya sa tabi nila, nang hindi nakikilala.",
+        "pt": "Caminhou ao lado deles, sem ser reconhecido."
+      },
+      "scripture_reference": {
+        "es": "Lucas 24:13-35",
+        "en": "Luke 24:13-35",
+        "fr": "Luc 24:13-35",
+        "pt": "Lucas 24:13-35",
+        "ja": "ルカ24:13-35",
+        "zh": "路加福音 24:13-35",
+        "de": "Lukas 24:13-35",
+        "ar": "لوقا 24:13-35",
+        "hi": "लूका 24:13-35",
+        "fil": "Lucas 24:13-35"
+      },
+      "estimated_reading_minutes": {
+        "es": 12,
+        "fr": 13,
+        "en": 10,
+        "pt": 13,
+        "ja": 13,
+        "zh": 13,
+        "de": 11,
+        "ar": 12,
+        "hi": 12,
         "fil": 12
       }
     }

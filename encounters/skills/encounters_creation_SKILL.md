@@ -26,6 +26,27 @@ full file generation before the content is approved.
 
 ## Workflow
 
+### 0. GATE 0 — Orar primero (mandatory, before anything else)
+
+Before drafting a single card of a new Encounter, the encounter is prayed over first.
+Giovanni puts it in the hands of the Jesus this encounter speaks about, with respect
+and love, and asks for the Holy Spirit's guidance before any input-gathering or
+drafting begins. This is not a formality to log — it is the actual origin of the
+file. Claude does not begin gathering inputs, drafting cards, or writing the
+`prayer.content` ahead of this. If asked to start a new encounter before this has
+happened, Claude says so plainly and waits — it does not proceed to step 1 in the
+meantime.
+
+This applies with special weight to the `prayer.content` field specifically (see the
+companion `encounters-editorial-reviewer` skill § Rule 12.1): a prayer can touch
+every right beat and still read as assembled from outside the story rather than
+lived from inside it. Claude does not originate the first draft of a `prayer.content`
+— Giovanni prays the encounter, writes from inside that same moment, and Claude's
+role is to check the result against the language and beat gates afterward, not to
+propose the plea itself.
+
+---
+
 ### 1. Gather inputs (if not already in context)
 Ask only what's missing:
 - **Character** — who is the encounter about?
@@ -190,6 +211,14 @@ All cards share these base fields:
 
 > **Note:** `image_prompt` is NOT stored in the card JSON. Image prompts are managed separately (see Image Prompts section).
 
+### What a `revelation_key` is (and isn't)
+
+A `revelation_key` is not a summary of the card's `content`/`narrative`, not a poetic flourish, and not a place to cram extra biblical content just because it's available. It is the single sharpened "aha" specific to *this card's moment* — distinct from what the narrative already said, and without spoiling what a later card will reveal.
+
+Before writing one, answer explicitly: **what is this specific card trying to make the reader take away, and is that different from what neighboring cards already carry or will carry?** Don't write text "a lo loco" (recklessly, without this analysis) — if a card already has heavy theological weight assigned to it (e.g. a following card that unpacks the full symbolism), the current card's `revelation_key` doesn't need to carry that weight too; it should capture only what belongs to its own moment.
+
+**Concrete case (2026-07-16, Emmaus, "Al partir el pan" card):** first draft closed with "no en una señal espectacular" — technically accurate but (1) a negation pattern already banned above, and (2) it flattened everything already established about the theological weight of bread-breaking (same verb pattern as the Last Supper and the feeding of the 5,000 — see the following card, which owns that weight). The real "aha" for *this specific card* was narrower: recognition came through something intimate Cleofas already knew of Jesus, not through a new miracle. Final: "Cleofas no reconoce a Jesús por un milagro ante sus ojos, sino por algo íntimo que ya conocía de él."
+
 ---
 
 #### `cinematic_scene`
@@ -309,8 +338,18 @@ Application card — 3 reflection questions + closing prayer. Always near the en
 }
 ```
 
+**This is a pillar of every encounter, not an afterthought — write it with the same care as the cards themselves.**
+
+Before drafting `discovery_questions` or `prayer.content`, identify what the reader should take away from the *entire* encounter — not a surface topic like "notice God's presence," but the sharpest, most specific insight the whole arc builds toward. Then:
+
+- Each of the 3 `discovery_questions` must (1) open with a concrete anchor from the story (an action, a verse, a specific moment already established in the cards) and (2) turn that anchor toward the reader with a question that could only belong to *this* encounter — never a generic devotional prompt swappable across stories.
+- **Never frame God's absence as a live possibility to ask about**, even rhetorically inside a question that "resolves" it in the same sentence (e.g. "¿sientes que Dios te abandonó, cuando en realidad...?"). This states something Scripture explicitly denies (Hebreos 13:5, Mateo 28:20) as if it were a real option the reader must consider. If the question is about a felt sense of absence, name it as a feeling ("has sentido la ausencia"), never as something God may have actually done.
+- `prayer.content` must recognizably arc across the whole encounter with concrete anchors from the story (image, verb, phrase) — not a generic paraphrase of the surface theme. Verified pattern in the corpus: `thomas_es_001.json`'s prayer includes "Señor mío y Dios mío" (the text's own climax) and the "puerta cerrada" detail; `nicodemus_es_001.json`'s includes the serpent in the wilderness (Juan 3:14) and the secret-to-public arc (Juan 19:39). Both are traceable, almost line by line, to specific cards earlier in the same file — that's the bar.
+
+**Concrete case (2026-07-16, Emmaus):** first draft asked generic, swappable questions, including one framing divine abandonment as possible. Rewritten after identifying the encounter's actual central takeaway — recognition can come through the Word before the eyes, and once it comes, it compels urgent testimony, not passive noticing — with each question anchored to a specific beat (Cleofas's honesty with a stranger who was Jesus, the heart burning before the eyes opened, running the same night rather than waiting for morning).
+
 #### `completion`
-Final card. Repeats the key verse + one reflection prompt.
+Final card. Repeats the key verse.
 ```json
 {
   "order": 15,
@@ -322,7 +361,6 @@ Final card. Repeats the key verse + one reflection prompt.
     "text": "Full verse",
     "bible_version": "RVR1960"
   },
-  "reflection_prompt": "One question.",
   "celebration_type": "gentle_light | burst | ripple | etc."
 }
 ```
@@ -473,6 +511,36 @@ Character may appear small or from behind. Still opens with character descriptio
 "image_prompt": "Extreme close-up looking down into a stone well. Dark water far below. A single drop has just fallen — one perfect ripple expanding outward from the center. Rough ancient stone surrounds the water. No people. Pure metaphor. Painterly warm 2D illustration, deep indigo water, silver ripple light, black stone, Mediterranean palette."
 ```
 
+**Close-up face-to-face encounter shot (character + Jesus sharing depth of field):**
+
+When the character is close enough to Jesus (or another key figure) that both share the frame in a
+close-up portrait — not a wide/medium shot — use this three-part structure. It consistently
+outperforms single-note emotional portraits:
+
+1. **Anchored gaze** — the character's eyes are fixed on a specific point (Jesus, the stranger, the
+   other figure), not "distant" or "downward" or "upward" in isolation. Give the eyes an external
+   target within the scene.
+2. **Second figure sharing depth of field** — Jesus (or the companion) appears soft-focus/out-of-focus
+   in the same frame, not absent from close-ups entirely. This forces a two-plane composition (sharp
+   subject + blurred figure behind/beside) that reads as cinematic rather than flat portraiture.
+3. **Two-layer emotional instruction, not one** — describe a contradiction or tension in the
+   expression (e.g. "eyes open and attentive but looking without truly seeing"), not a single
+   emotional note (e.g. just "exhaustion" or just "recognition"). The ambiguity produces more
+   nuanced expressions than a flat single-emotion prompt.
+
+Reserve this structure for close-up portraits where Jesus or another key figure is physically near
+the character in the scene — not for solitary emotional beats where the character is alone in frame.
+
+**Example (Emmaus, card 4 — "eyes veiled"):**
+```
+"image_prompt": "Close-up portrait of a man in his mid-forties, square weathered face, deep-set brown
+eyes fixed on a nearby stranger with a puzzled, searching expression, full graying beard, faded
+olive-green tunic. His eyes are open and attentive but something in his gaze suggests he is looking
+without truly seeing. Soft out-of-focus figure of a man in a simple tunic walking just beside him,
+face never visible. Painterly warm 2D illustration, Mediterranean palette, dim dusty light,
+cinematic, no text."
+```
+
 ---
 
 ## Editorial Rules (non-negotiable)
@@ -482,6 +550,7 @@ Character may appear small or from behind. Still opens with character descriptio
 | Build on affirmation, not negation | See detailed rule below |
 | No excess of em dashes | Use sparingly — one per paragraph at most |
 | No inflated drama or marketing cliches | Avoid "unprecedented", "extraordinary", "awe-inspiring", "that changes everything", "like never before", "words cannot describe", "something shifted" as filler |
+| No casual/colloquial register | Avoid phrases like "sin rodeos", "menciona también lo otro", or any filler that reads as spoken slang — it breaks the devotional/narrative tone even when the underlying claim is accurate |
 | No theological jargon without explanation | If using a term, unpack it in plain language |
 | Pastoral tone always | God loves, transforms, and uses people in their imperfection |
 | Scripture: complete verses | Never truncate. Use exact RVR1960 text including correct capitalization in the verse formats |

@@ -17,13 +17,11 @@ import time
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
-from typing import Optional
 
-ASSETS_REPO_RAW_BASE = (
-    "https://raw.githubusercontent.com/develop4God/Devocionales-assets/main/images/encounters"
-)
+from asset_urls import EncounterIndexReader, ImageReference as _BaseImageReference
+
 RETRY_ATTEMPTS = 3
 RETRY_BACKOFF_SECONDS = 2
 REQUEST_TIMEOUT_SECONDS = 10
@@ -31,14 +29,12 @@ MAX_CONCURRENT_REQUESTS = 16
 
 
 @dataclass(frozen=True)
-class ImageReference:
-    encounter_id: str
-    filename: str
-    source_file: str
+class ImageReference(_BaseImageReference):
+    source_file: str = ""
 
     @property
     def url(self) -> str:
-        return f"{ASSETS_REPO_RAW_BASE}/{self.encounter_id}/{self.filename}"
+        return _BaseImageReference.url(self)
 
 
 @dataclass
@@ -46,26 +42,6 @@ class CheckResult:
     reference: ImageReference
     ok: bool
     status: str
-
-
-class EncounterIndexReader:
-    """Reads index.json to map encounter file -> encounter_id (asset folder name)."""
-
-    def __init__(self, encounters_dir: Path):
-        self._encounters_dir = encounters_dir
-
-    def build_file_to_encounter_id(self) -> dict:
-        index_path = self._encounters_dir / "index.json"
-        data = json.loads(index_path.read_text(encoding="utf-8"))
-
-        file_to_id = {}
-        for encounter in data["encounters"]:
-            encounter_id = encounter["id"]
-            if "intro_image" in encounter:
-                file_to_id[("index.json", encounter["intro_image"])] = encounter_id
-            for lang_file in encounter.get("files", {}).values():
-                file_to_id[lang_file] = encounter_id
-        return file_to_id
 
 
 class ImageReferenceExtractor:

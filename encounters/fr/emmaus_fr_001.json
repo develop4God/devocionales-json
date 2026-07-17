@@ -1,0 +1,276 @@
+{
+  "id": "emmaus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fr",
+  "bible_version": "LSG1910",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 13,
+  "meta": {
+    "character": "Cléopas",
+    "testament": "new",
+    "scripture_reference": "Luc 24:13-35",
+    "mood_primary": "falling",
+    "accent_color": "#1a140a",
+    "emoji": "🍞",
+    "tags": [
+      "deuil",
+      "reconnaissance",
+      "résurrection",
+      "quotidien",
+      "espérance"
+    ]
+  },
+  "key_verse": {
+    "reference": "Luc 24:31",
+    "text": "Alors leurs yeux s'ouvrirent, et ils le reconnurent; mais il disparut de devant eux.",
+    "bible_version": "LSG1910"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "cleofas_road_departure.png",
+      "title": "Deux disciples quittent Jérusalem",
+      "narrative": "C'est dimanche après-midi, le troisième jour. Deux disciples marchent vers Emmaüs, un village à une soixantaine de stades de Jérusalem. L'un d'eux s'appelle Cléopas. Ils laissent derrière eux la ville où, trois jours plus tôt, ils ont vu mourir l'homme en qui ils avaient placé toute leur espérance. Ils marchent lentement, se parlant de tout ce qui s'est passé, sans savoir que faire d'une douleur qui n'a nulle part où aller.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luc 24:13-14",
+        "text": "Et voici, ce même jour, deux disciples allaient à un village nommé Emmaüs, éloigné de Jérusalem de soixante stades; et ils s'entretenaient de tout ce qui s'était passé."
+      },
+      "revelation_key": "Deux disciples s'éloignent de Jérusalem, portant une espérance qu'ils croient enterrée."
+    },
+    {
+      "order": 2,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "cleofas_grief_walking.png",
+      "title": "Un homme avec l'espérance de tant d'autres",
+      "subtitle": "Cléopas, un disciple parmi tant d'autres",
+      "content": "Cléopas appartenait à un cercle plus large de disciples de Jésus — non pas l'un des douze, mais quelqu'un qui avait suivi son enseignement, peut-être vu ses signes, et placé en lui l'espérance qu'Israël serait délivré.\n\nCette espérance est morte le vendredi, sur une croix romaine. Cléopas marche maintenant vers Emmaüs avec cette mort encore fraîche, aux côtés d'un autre disciple qui portait la même douleur, sans savoir qu'ils marchent aussi vers l'homme même qu'ils croient perdu.",
+      "revelation_key": "Cléopas n'est ni un disciple proche ni un chef — c'est l'un de tant d'autres qui a aimé Jésus et qui ne sait pas encore que l'histoire n'est pas terminée.",
+      "verse_overlay": {
+        "reference": "Luc 24:21",
+        "text": "Nous espérions que ce serait lui qui délivrerait Israël; mais avec tout cela, voici le troisième jour que ces choses se sont passées."
+      }
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "mysterious",
+      "image_url": "cleofas_stranger_joins.png",
+      "title": "Un inconnu se joint au chemin",
+      "narrative": "Pendant qu'ils parlent et discutent, un autre homme s'approche par le même chemin et se met à marcher à leurs côtés. C'est un étranger, ou du moins il en a l'air : il est vêtu comme n'importe quel voyageur, et marche au rythme des deux autres sans se presser. Il leur demande de quoi ils s'entretiennent avec tant de tristesse. Cléopas s'arrête, surpris que quelqu'un ignore ce qui s'est passé à Jérusalem ces jours-ci.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luc 24:15-17",
+        "text": "Pendant qu'ils parlaient et discutaient, Jésus s'approcha, et fit route avec eux. Mais leurs yeux étaient empêchés de le reconnaître. Il leur dit: De quoi vous entretenez-vous en marchant, pour que vous soyez tout tristes?"
+      },
+      "revelation_key": "Jésus lui-même marche à leurs côtés et remarque leur tristesse, et le texte explique très clairement pourquoi ils ne le reconnaissent pas : leurs yeux sont empêchés de le voir."
+    },
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "cleofas_eyes_veiled.png",
+      "title": "Présent, mais non reconnu",
+      "subtitle": "Pourquoi ils ne l'ont pas reconnu",
+      "content": "Luc emploie le verbe grec κρατέω (krateó), \"retenir\", \"saisir avec force\", pour décrire l'état des yeux de ces disciples (Luc 24:16) : ils étaient retenus, empêchés de voir ce qu'ils avaient devant eux. Le texte attribue ce voile à quelque chose hors de leur contrôle, une action sur leurs yeux, non un échec de leur propre perception.\n\nMarc raconte ce même épisode avec un détail supplémentaire : il dit que Jésus est apparu à ces deux disciples \"sous une autre forme\" (Marc 16:12), utilisant l'expression grecque ἑτέρᾳ μορφῇ (hetera morphé). Ce n'est pas le seul cas : Marie de Magdala, debout devant Jésus ressuscité près du tombeau, ne le reconnaît pas non plus et pense qu'il est le jardinier (Jean 20:14-15). Dans plus d'une apparition après la résurrection, ceux qui ont Jésus devant eux ne le reconnaissent pas aussitôt — la reconnaissance vient après, par une parole ou un geste, non par la seule vue.",
+      "revelation_key": "Jésus a attendu pour se révéler parce qu'il voulait d'abord écouter leur douleur et leur ouvrir les Écritures — la reconnaissance viendrait ensuite.",
+      "scripture_connections": [
+        {
+          "reference": "Marc 16:12",
+          "text": "Après cela, il apparut, sous une autre forme, à deux d'entre eux qui étaient en chemin pour aller à la campagne."
+        },
+        {
+          "reference": "Jean 20:14-15",
+          "text": "En disant cela, elle se retourna, et elle vit Jésus debout; mais elle ne savait pas que c'était Jésus. Jésus lui dit: Femme, pourquoi pleures-tu? Qui cherches-tu? Elle, pensant que c'était le jardinier, lui dit: Seigneur, si c'est toi qui l'as emporté, dis-moi où tu l'as mis, et je le prendrai."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "cleofas_explains_grief.png",
+      "verse_reference": "Luc 24:19-21",
+      "verse_text": "Quoi? leur dit-il. Et ils lui répondirent: Ce qui est arrivé au sujet de Jésus de Nazareth, qui était un prophète puissant en œuvres et en paroles devant Dieu et devant tout le peuple, et comment les principaux sacrificateurs et nos magistrats l'ont livré pour le faire condamner à mort et l'ont crucifié. Nous espérions que ce serait lui qui délivrerait Israël; mais avec tout cela, voici le troisième jour que ces choses se sont passées.",
+      "reflection": "Cléopas raconte à l'inconnu toute l'histoire, sans savoir à qui il la raconte. Il y a quelque chose de bouleversant dans le mot \"espérions\" — au passé. L'espérance n'a pas complètement disparu; elle est encore là, mais devenue passée, quelque chose qu'ils n'osent plus nommer au présent.",
+      "revelation_key": "Jésus questionne et écoute avant de parler — il leur laisse l'espace pour raconter, avec leurs propres mots, ce qu'ils ressentaient et croyaient."
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "cleofas_women_report.png",
+      "title": "Une rumeur qu'ils n'ont pas su croire",
+      "narrative": "Cléopas ajoute autre chose, avec le même trouble qu'il a ressenti en l'apprenant : ce matin même, quelques femmes du groupe sont allées au tombeau et n'ont pas trouvé le corps. Elles sont revenues en disant qu'elles avaient vu des anges, qui leur avaient dit que Jésus vivait. La nouvelle les a laissés stupéfaits, ne sachant qu'en faire. Certains disciples sont allés vérifier, et ont trouvé le tombeau vide, exactement comme les femmes le disaient — mais lui, ils ne l'ont pas vu.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luc 24:22-24",
+        "text": "Il est vrai que quelques femmes d'entre nous nous ont fort étonnés; s'étant rendues de grand matin au sépulcre et n'ayant pas trouvé son corps, elles sont venues dire que des anges leur sont apparus et ont annoncé qu'il est vivant."
+      },
+      "revelation_key": "Cléopas détient déjà toute la preuve de la résurrection dans ses propres mots, et pourtant il marche en direction opposée à Jérusalem."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "cleofas_scriptures_opened.png",
+      "title": "En commençant par Moïse",
+      "narrative": "L'inconnu répond avec une fermeté qu'ils n'attendaient pas — il venait de leur dire à tous deux qu'ils étaient lents à croire ce que les prophètes avaient déjà annoncé. Et commençant par Moïse, et poursuivant par tous les prophètes, il leur explique dans toutes les Écritures ce qui se rapportait à Jésus lui-même : la promesse ancienne d'une descendance qui vaincrait le mal, le Serviteur qui souffre pour d'autres, le juste qui est transpercé. Le reste du chemin vers Emmaüs se déroule ainsi, entre des passages qu'ils avaient lus toute leur vie et qu'ils entendent maintenant comme pour la première fois.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luc 24:27",
+        "text": "Et, commençant par Moïse et par tous les prophètes, il leur expliqua dans toutes les Écritures ce qui le concernait."
+      },
+      "revelation_key": "Avant de leur montrer qui il est, Jésus leur montre où cela a été écrit depuis toujours."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "cleofas_urge_him_stay.png",
+      "title": "Ils le pressèrent de rester",
+      "narrative": "Ils arrivent à Emmaüs à la tombée du soir. L'inconnu fait mine de poursuivre sa route, comme quelqu'un qui ne veut pas s'imposer. Mais ils le pressent, en disant : reste avec nous, car le soir approche et le jour est déjà sur son déclin. Il entre pour rester avec eux : accueillir le voyageur et lui donner à manger n'était pas une simple courtoisie, mais un devoir sacré de l'hôte, sans qu'ils sachent encore qui ils avaient invité à leur table.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luc 24:28-29",
+        "text": "Lorsqu'ils furent près du village où ils allaient, il parut vouloir aller plus loin. Mais ils le pressèrent, en disant: Reste avec nous, car le soir approche, le jour est sur son déclin. Et il entra, pour rester avec eux."
+      },
+      "revelation_key": "En l'accueillant à leur table comme un hôte d'honneur, sans le savoir, ils ont donné à Dieu lui-même la bienvenue qu'il méritait."
+    },
+    {
+      "order": 9,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "cleofas_bread_breaking.png",
+      "title": "En rompant le pain",
+      "narrative": "Ils s'assoient à table. L'hôte prend le pain, rend grâces, le rompt, et le leur donne. Quelque chose dans ce geste paraît étrangement familier à Cléopas. Et à cet instant précis, il le reconnaît : c'est Jésus. Au moment même où il le reconnaît, il disparaît de devant eux.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luc 24:30-31",
+        "text": "Pendant qu'il était à table avec eux, il prit le pain; et, après avoir rendu grâces, il le rompit, et le leur donna. Alors leurs yeux s'ouvrirent, et ils le reconnurent; mais il disparut de devant eux."
+      },
+      "revelation_key": "Cléopas ne reconnaît pas Jésus par un miracle sous ses yeux, mais par quelque chose d'intime qu'il connaissait déjà de lui."
+    },
+    {
+      "order": 10,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "cleofas_recognition_moment.png",
+      "title": "Ce que Cléopas a reconnu",
+      "subtitle": "Le même geste de la dernière cène",
+      "content": "Luc avait déjà décrit cette même séquence de verbes — prendre, bénir, rompre, donner — la nuit de la dernière cène, ainsi que lors du repas des cinq mille. À cet instant, Dieu ouvre les yeux de Cléopas, et ce qu'il voit est un geste qu'il connaissait déjà : la même manière dont ces mains rompaient le pain.\n\nC'est le même Jésus qui a marché avec eux tout le chemin, désormais reconnu dans ce qu'il y a de plus quotidien : une table partagée.",
+      "revelation_key": "Dieu choisit d'ouvrir les yeux de Cléopas juste devant un geste qu'il portait déjà gravé dans sa mémoire.",
+      "scripture_connections": [
+        {
+          "reference": "Luc 9:16",
+          "text": "Jésus prit les cinq pains et les deux poissons, et, levant les yeux vers le ciel, il les bénit. Puis, il les rompit, et les donna aux disciples, afin qu'ils les distribuassent à la foule."
+        },
+        {
+          "reference": "Luc 22:19",
+          "text": "Ensuite il prit du pain; et, après avoir rendu grâces, il le rompit, et le leur donna, en disant: Ceci est mon corps, qui est donné pour vous; faites ceci en mémoire de moi."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "cleofas_burning_heart.png",
+      "title": "Le cœur qui brûlait",
+      "subtitle": "Un signe qu'ils ont reconnu après coup",
+      "content": "Plus tard, Jésus déjà reconnu, Cléopas et son compagnon se demandent l'un à l'autre ce qu'ils ont ressenti en chemin (Luc 24:32). Le verbe grec καίω (kaío), \"brûler\", \"consumer\", décrit une conviction si intense qu'elle se ressent comme un feu : un feu qui brûlait sans s'éteindre, non une étincelle passagère. C'est la même image qu'emploie Jérémie pour décrire une parole de Dieu si forte qu'il ne pouvait la contenir, comme un feu enfermé dans ses os (Jérémie 20:9), et aussi sa force capable de briser la pierre (Jérémie 23:29).\n\nLuc avait déjà décrit leur visage par un autre mot grec, σκυθρωποί (skythrōpoí), \"au visage sombre\" (Luc 24:17). Le même chemin qui a commencé le visage abattu s'achève le cœur embrasé.\n\nLa reconnaissance n'est pas venue d'abord par les yeux. Elle est venue d'abord de l'intérieur, comme une certitude brûlante, bien avant qu'ils puissent mettre un nom sur ce qu'ils ressentaient.",
+      "revelation_key": "Le cœur a reconnu Jésus avant les yeux — la preuve est venue d'abord comme un feu, ensuite comme une vue.",
+      "verse_overlay": {
+        "reference": "Luc 24:32",
+        "text": "Et ils se dirent l'un à l'autre: Notre cœur ne brûlait-il pas au-dedans de nous, lorsqu'il nous parlait en chemin et nous expliquait les Écritures?"
+      },
+      "scripture_connections": [
+        {
+          "reference": "Jérémie 20:9",
+          "text": "Si je dis: Je ne ferai plus mention de lui, Je ne parlerai plus en son nom, Il y a dans mon cœur comme un feu dévorant Qui est renfermé dans mes os. Je m'efforce de le contenir, et je ne le puis."
+        },
+        {
+          "reference": "Jérémie 23:29",
+          "text": "Ma parole n'est-elle pas comme un feu, dit l'Éternel, Et comme un marteau qui brise le roc?"
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "cinematic_scene",
+      "mood": "peace",
+      "image_url": "cleofas_return_jerusalem.png",
+      "title": "De retour à Jérusalem, la même nuit",
+      "narrative": "Cléopas et son compagnon se lèvent à cette heure même, bien que la nuit soit déjà tombée et que le chemin du retour soit celui-là même qu'ils ont parcouru avec tristesse cet après-midi. Maintenant ils courent, ils ne marchent plus. Ils retournent à Jérusalem raconter ce qu'ils ont vu, et trouvent les onze qui disent déjà : le Seigneur est réellement ressuscité, et il est apparu à Simon (Pierre).",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luc 24:33-34",
+        "text": "Se levant à l'heure même, ils retournèrent à Jérusalem, et ils trouvèrent les onze, et ceux qui étaient avec eux, assemblés et disant: Le Seigneur est réellement ressuscité, et il est apparu à Simon."
+      },
+      "revelation_key": "Cléopas arrive pour raconter ce qu'il a vu, et découvre que Dieu s'était déjà révélé aussi à Jérusalem."
+    },
+    {
+      "order": 13,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "cleofas_telling_story.png",
+      "title": "Raconter en détail ce qu'ils ont vécu",
+      "subtitle": "D'auditeurs à narrateurs",
+      "content": "Lorsque Cléopas et son compagnon arrivent devant les onze, Luc emploie le verbe grec ἐξηγέομαι (exēgeomai), \"raconter\", \"expliquer en détail\", pour décrire comment ils rapportent ce qui s'est passé (Luc 24:35).\n\nQuelques heures plus tôt, sur le chemin, Jésus leur avait interprété les Écritures. Maintenant, ce sont eux qui racontent en détail ce qu'ils ont vu. Ce qu'ils ont reçu de lui comme enseignement, ils le transmettent aux autres comme témoignage.",
+      "revelation_key": "Cléopas passe d'auditeur de l'interprétation de Jésus à narrateur de son propre témoignage.",
+      "verse_overlay": {
+        "reference": "Luc 24:35",
+        "text": "Et ils racontèrent ce qui leur était arrivé en chemin, et comment ils l'avaient reconnu au moment où il rompit le pain."
+      }
+    },
+    {
+      "order": 14,
+      "type": "discovery_activation",
+      "image_url": "cleofas_discovery.png",
+      "title": "Ta Rencontre",
+      "subtitle": "Jésus marche avec toi même quand tu ne le reconnais pas encore.",
+      "discovery_questions": [
+        {
+          "category": "Honnêteté",
+          "question": "Cléopas n'a caché ni sa douleur ni fait semblant d'avoir la foi — il a tout dit à l'inconnu, sans savoir qu'il parlait à Jésus lui-même. Que dirais-tu aujourd'hui à Jésus si tu savais qu'il marche juste à tes côtés en ce moment?"
+        },
+        {
+          "category": "Foi",
+          "question": "Le cœur de Cléopas a brûlé avant que ses yeux ne voient quoi que ce soit — la certitude est venue d'abord par la Parole. Quand as-tu ressenti cela pour la dernière fois avec la Parole de Dieu, et qu'est-ce qui t'empêche de la chercher ainsi maintenant?"
+        },
+        {
+          "category": "Vocation",
+          "question": "À l'instant où Cléopas a reconnu Jésus, il n'a pas attendu le matin — il s'est levé cette nuit même pour le raconter. Toi qui as vu Jésus dans ta vie, vers qui cours-tu témoigner avec urgence?"
+        }
+      ],
+      "prayer": {
+        "title": "Prière des yeux ouverts",
+        "content": "Seigneur Jésus, aujourd'hui je marche sans te voir, mais je sais que tu ne m'as pas laissé seul — tu marches à mes côtés même si mes yeux ne te reconnaissent pas encore. Allume en moi ce feu que seule ta Parole peut embraser : la même certitude ardente que Cléopas a ressentie avant que ses yeux ne voient rien. Et tout ce que je reconnais aujourd'hui de toi, permets-moi de le porter aux autres — que je coure leur annoncer la bonne nouvelle, dès aujourd'hui, tant que le feu brûle encore. Au nom de Jésus, Amen."
+      }
+    },
+    {
+      "order": 15,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "cleofas_completion.png",
+      "completion_verse": {
+        "reference": "Luc 24:33-34",
+        "text": "Se levant à l'heure même, ils retournèrent à Jérusalem, et ils trouvèrent les onze, et ceux qui étaient avec eux, assemblés et disant: Le Seigneur est réellement ressuscité, et il est apparu à Simon.",
+        "bible_version": "LSG1910"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
