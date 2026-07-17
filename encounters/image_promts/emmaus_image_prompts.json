@@ -2,10 +2,10 @@
     "encounter_id": "emmaus_es_001",
     "character": "Cleopas",
     "master_character_prompt": "A man in his mid-forties, sturdy medium build with a slight stoop from years of walking trade roads, square weathered face, deep-set tired brown eyes, a full graying beard kept short and practical, thinning dark hair beneath a plain head-wrap, sun-darkened leathery skin. Wearing a faded olive-green wool tunic, patched at one shoulder, a wide undyed cloth belt, and worn leather sandals. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting. Character reference sheet, full body and face close-up.",
-    "companion_character_prompt": "A woman in her early forties, medium build, square practical face, tired steady eyes, sun-weathered olive skin, dark hair streaked with gray and fully covered by a plain undyed head-scarf, wearing a simple faded blue-gray wool tunic, modest and worn, leather sandals. Present alongside Cleopas in select cards as his traveling companion. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting.",
+    "companion_character_prompt": "A man in his late thirties, lean wiry build, narrow angular face, dark alert eyes, short black beard, sun-weathered olive skin, dark hair mostly hidden beneath a plain undyed cloth head-wrap tied at the back, wearing a simple faded blue-gray wool tunic, modest and worn, leather sandals. Present alongside Cleopas in every card as his traveling companion, always with the same undyed head-wrap and blue-gray tunic. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting.",
     "intro_image": {
         "filename": "emmaus_intro.png",
-        "prompt": "Wide atmospheric shot of a dusty road stretching toward a small hillside village at dusk, long amber light low on the horizon, olive trees casting long shadows across the path. Two travelers walk together in the far distance, small against the landscape, seen from behind: a man in a faded olive-green tunic with a slight stoop, and a woman in a faded blue-gray tunic with a covered head, walking close together, heads bowed in conversation. The road behind them fades into haze toward a city on a distant hill. Painterly warm 2D illustration, Mediterranean palette, ochre and dusk-amber tones, cinematic lighting, no text."
+        "prompt": "Wide atmospheric shot of a dusty road stretching toward a small hillside village at dusk, long amber light low on the horizon, olive trees casting long shadows across the path. Two travelers walk together in the far distance, small against the landscape, seen from behind: a man in a faded olive-green tunic with a slight stoop, and a man in his late thirties, lean wiry build, narrow angular face, short black beard, undyed cloth head-wrap, faded blue-gray tunic, walking close together, heads bowed in conversation. The road behind them fades into haze toward a city on a distant hill. Painterly warm 2D illustration, Mediterranean palette, ochre and dusk-amber tones, cinematic lighting, no text."
     },
     "card_prompts": [
         {
@@ -13,7 +13,7 @@
             "image_url": "cleofas_road_departure.png",
             "mood": "falling",
             "shot_type": "wide departure",
-            "prompt": "Wide shot from behind of two travelers walking away down a dusty road, a walled city receding into the haze behind them under a pale afternoon sky. A man in his mid-forties, sturdy medium build, faded olive-green tunic, plain head-wrap, walks with a slight stoop beside a woman in her early forties, medium build, faded blue-gray tunic, covered head, both moving slowly, shoulders low. The road ahead stretches toward distant hills. Painterly warm 2D illustration, Mediterranean palette, muted ochre and pale dust tones, low flat afternoon light, cinematic, no text."
+            "prompt": "Wide shot from behind of two travelers walking away down a dusty road, a walled city receding into the haze behind them under a pale afternoon sky. A man in his mid-forties, sturdy medium build, faded olive-green tunic, plain head-wrap, walks with a slight stoop beside a man in his late thirties, lean wiry build, narrow angular face, short black beard, undyed cloth head-wrap, faded blue-gray tunic, both moving slowly, shoulders low. The road ahead stretches toward distant hills. Painterly warm 2D illustration, Mediterranean palette, muted ochre and pale dust tones, low flat afternoon light, cinematic, no text."
         },
         {
             "order": 2,
@@ -27,7 +27,7 @@
             "image_url": "cleofas_stranger_joins.png",
             "mood": "mysterious",
             "shot_type": "medium two-figure",
-            "prompt": "Medium shot on a dusty road at golden-hour light. A man in his mid-forties, sturdy build, faded olive-green tunic, plain head-wrap, walks alongside a woman in her early forties, faded blue-gray tunic, covered head, both mid-conversation, faces turned toward each other. A third figure approaches from behind on the same road: a man in a simple first-century tunic, seen from behind, face never visible, a subtle warm glow of glory around his form, closing the distance at an easy walking pace. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, warm late-afternoon light, cinematic, no text."
+            "prompt": "Medium shot on a dusty road at golden-hour light. A man in his mid-forties, sturdy build, faded olive-green tunic, plain head-wrap, walks alongside a man in his late thirties, lean wiry build, narrow angular face, short black beard, undyed cloth head-wrap, faded blue-gray tunic, both mid-conversation, faces turned toward each other. A third figure approaches from behind on the same road: a man in a simple first-century tunic, seen from behind, face never visible, a subtle warm glow of glory around his form, closing the distance at an easy walking pace. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, warm late-afternoon light, cinematic, no text."
         },
         {
             "order": 4,
@@ -41,7 +41,7 @@
             "image_url": "cleofas_explains_grief.png",
             "mood": "tense",
             "shot_type": "medium two-figure",
-            "prompt": "Medium shot on a dusty road. A man in his mid-forties, sturdy build, faded olive-green tunic, gestures with one open hand while speaking, brow furrowed in remembered grief, walking beside a man in a simple first-century tunic, seen from behind, face never visible, a subtle warm glow of glory around his form, listening with head slightly tilted. A woman in her early forties, faded blue-gray tunic, covered head, walks just behind them, listening quietly. Painterly warm 2D illustration, Mediterranean palette, ochre tones, overcast tense light, cinematic, no text."
+            "prompt": "Medium shot on a dusty road. A man in his mid-forties, sturdy build, faded olive-green tunic, gestures with one open hand while speaking, brow furrowed in remembered grief, walking beside a man in a simple first-century tunic, seen from behind, face never visible, a subtle warm glow of glory around his form, listening with head slightly tilted. A man in his late thirties, lean wiry build, narrow angular face, short black beard, undyed cloth head-wrap, faded blue-gray tunic, walks just behind them, listening quietly. Painterly warm 2D illustration, Mediterranean palette, ochre tones, overcast tense light, cinematic, no text."
         },
         {
             "order": 6,
@@ -55,7 +55,7 @@
             "image_url": "cleofas_scriptures_opened.png",
             "mood": "awe",
             "shot_type": "medium two-figure",
-            "prompt": "Medium shot on the road at softening afternoon light. A man in a simple first-century tunic walks slightly ahead, seen from behind, face never visible, a subtle warm glow of glory around his form, one hand gesturing as though unfolding something unseen in the air. A man in his mid-forties, sturdy build, faded olive-green tunic, and a woman in her early forties, faded blue-gray tunic, covered head, walk close behind, faces turned upward toward him, expressions shifting from confusion to quiet wonder. Painterly warm 2D illustration, Mediterranean palette, warm amber tones, cinematic golden light, no text."
+            "prompt": "Medium shot on the road at softening afternoon light. A man in a simple first-century tunic walks slightly ahead, seen from behind, face never visible, a subtle warm glow of glory around his form, one hand gesturing as though unfolding something unseen in the air. A man in his mid-forties, sturdy build, faded olive-green tunic, and a man in his late thirties, lean wiry build, narrow angular face, short black beard, undyed cloth head-wrap, faded blue-gray tunic, walk close behind, faces turned upward toward him, expressions shifting from confusion to quiet wonder. Painterly warm 2D illustration, Mediterranean palette, warm amber tones, cinematic golden light, no text."
         },
         {
             "order": 8,
@@ -69,7 +69,7 @@
             "image_url": "cleofas_urge_him_stay.png",
             "mood": "grace",
             "shot_type": "medium two-figure",
-            "prompt": "Medium shot at a village doorway at dusk, warm lamplight spilling from within. A man in his mid-forties, sturdy build, faded olive-green tunic, reaches out with one hand in welcome toward a man in a simple first-century tunic who has paused as if to continue on, seen from behind, face never visible, a subtle warm glow of glory around his form. A woman in her early forties, faded blue-gray tunic, covered head, stands in the doorway behind, gesturing him inside. Painterly warm 2D illustration, Mediterranean palette, warm dusk and lamp-gold tones, inviting cinematic light, no text."
+            "prompt": "Medium shot at a village doorway at dusk, warm lamplight spilling from within. A man in his mid-forties, sturdy build, faded olive-green tunic, reaches out with one hand in welcome toward a man in a simple first-century tunic who has paused as if to continue on, seen from behind, face never visible, a subtle warm glow of glory around his form. A man in his late thirties, lean wiry build, narrow angular face, short black beard, undyed cloth head-wrap, faded blue-gray tunic, stands in the doorway behind, gesturing him inside. Painterly warm 2D illustration, Mediterranean palette, warm dusk and lamp-gold tones, inviting cinematic light, no text."
         },
         {
             "order": 10,
@@ -90,7 +90,7 @@
             "image_url": "cleofas_return_jerusalem.png",
             "mood": "peace",
             "shot_type": "action/movement",
-            "prompt": "Wide shot at night, a man in his mid-forties, sturdy build, faded olive-green tunic, and a woman in her early forties, faded blue-gray tunic, covered head, run together along a moonlit road toward a distant walled city glowing faintly with torchlight on the horizon. Their pace is urgent, cloaks catching the wind, in sharp contrast to the slow weary walk of the opening scene. Painterly warm 2D illustration, Mediterranean palette, deep indigo night tones with warm torchlight glow ahead, cinematic movement, no text."
+            "prompt": "Wide shot at night, a man in his mid-forties, sturdy build, faded olive-green tunic, and a man in his late thirties, lean wiry build, narrow angular face, short black beard, undyed cloth head-wrap, faded blue-gray tunic, run together along a moonlit road toward a distant walled city glowing faintly with torchlight on the horizon. Their pace is urgent, cloaks catching the wind, in sharp contrast to the slow weary walk of the opening scene. Painterly warm 2D illustration, Mediterranean palette, deep indigo night tones with warm torchlight glow ahead, cinematic movement, no text."
         },
         {
             "order": 13,
