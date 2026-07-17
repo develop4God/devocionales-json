@@ -1,0 +1,276 @@
+{
+  "id": "emmaus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "en",
+  "bible_version": "KJV",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "Cleopas",
+    "testament": "new",
+    "scripture_reference": "Luke 24:13-35",
+    "mood_primary": "falling",
+    "accent_color": "#1a140a",
+    "emoji": "🍞",
+    "tags": [
+      "grief",
+      "recognition",
+      "resurrection",
+      "the_everyday",
+      "hope"
+    ]
+  },
+  "key_verse": {
+    "reference": "Luke 24:31",
+    "text": "And their eyes were opened, and they knew him; and he vanished out of their sight.",
+    "bible_version": "KJV"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "cleofas_road_departure.png",
+      "title": "Two disciples leave Jerusalem",
+      "narrative": "It is Sunday afternoon, the third day. Two disciples are walking toward Emmaus, a village about seven miles from Jerusalem. One of them is named Cleopas. They are leaving behind the city where, three days earlier, they watched the man they had staked all their hope on die. They walk slowly, talking to each other about everything that has happened, not knowing what to do with a grief that has nowhere to go.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luke 24:13-14",
+        "text": "And, behold, two of them went that same day to a village called Emmaus, which was from Jerusalem about threescore furlongs. And they talked together of all these things which had happened."
+      },
+      "revelation_key": "Two disciples walk away from Jerusalem, carrying a hope they believe is buried."
+    },
+    {
+      "order": 2,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "cleofas_grief_walking.png",
+      "title": "A man with the same hope as so many others",
+      "subtitle": "Cleopas, one follower among many",
+      "content": "Cleopas belonged to a wider circle of Jesus's followers — not one of the twelve, but someone who had heard his teaching, perhaps seen his signs, and placed in him the hope that Israel would be set free.\n\nThat hope died on Friday, on a Roman cross. Cleopas now walks toward Emmaus with that death still fresh, alongside another disciple carrying the same grief, not knowing they are also walking toward the very man they believe is lost.",
+      "revelation_key": "Cleopas is neither a close disciple nor a leader — he is one of many who loved Jesus and does not yet know the story isn't over.",
+      "verse_overlay": {
+        "reference": "Luke 24:21",
+        "text": "But we hoped that it was he who should have redeemed Israel: and besides all this, today is the third day since these things were done."
+      }
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "mysterious",
+      "image_url": "cleofas_stranger_joins.png",
+      "title": "A stranger joins the road",
+      "narrative": "While they talk and reason together, another man comes up along the same road and begins walking beside them. He is a stranger, or so it seems: dressed like any traveler, keeping pace with both of them, unhurried. He asks what they are discussing so sadly. Cleopas stops, surprised that anyone wouldn't know what had happened in Jerusalem these past days.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luke 24:15-17",
+        "text": "And it came to pass, that, while they discussed together and reasoned, Jesus himself drew near, and went with them. But their eyes were held that they should not know him. And he said unto them, What manner of words are these that you have one to another, as you walk, and are sad?"
+      },
+      "revelation_key": "Jesus himself walks beside them and notices their sadness, and the text explains plainly why they do not recognize him: their eyes are held."
+    },
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "cleofas_eyes_veiled.png",
+      "title": "Present, but not recognized",
+      "subtitle": "Why they did not recognize him",
+      "content": "Luke uses the Greek verb κρατέω (krateó), \"to hold fast,\" \"to restrain by force,\" to describe the state of these disciples' eyes (Luke 24:16): they were held back, prevented from seeing what stood right in front of them. The text credits the veil to something outside their control, an action upon their eyes, not a failure of their own perception.\n\nMark tells this same episode with one added detail: he says Jesus appeared to these two disciples \"in another form\" (Mark 16:12), using the Greek phrase ἑτέρᾳ μορφῇ (hetera morphé). It is not the only such case: Mary Magdalene, standing before the risen Jesus by the tomb, also fails to recognize him and takes him for the gardener (John 20:14-15). In more than one resurrection appearance, those who have Jesus right in front of them do not recognize him at once — recognition comes later, with a word or a gesture, not with sight alone.",
+      "revelation_key": "Jesus waited to reveal himself because he wanted first to hear their grief and open the Scriptures to them — recognition would come after.",
+      "scripture_connections": [
+        {
+          "reference": "Mark 16:12",
+          "text": "After that he appeared in another form unto two of them, as they walked, and went into the country."
+        },
+        {
+          "reference": "John 20:14-15",
+          "text": "And when she had thus spoke, she turned back, and saw Jesus standing, and knew not that it was Jesus. Jesus said unto her, Woman, why do you weep? whom do you seek? She, supposing him to be the gardener, said unto him, Sir, if you have borne him away, tell me where you have laid him, and I will take him away."
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "cleofas_explains_grief.png",
+      "verse_reference": "Luke 24:19-21",
+      "verse_text": "And he said unto them, What things? And they said unto him, Concerning Jesus of Nazareth, who was a prophet mighty in deed and word before God and all the people: And how the chief priests and our rulers delivered him to be condemned to death, and have crucified him. But we hoped that it was he who should have redeemed Israel: and besides all this, today is the third day since these things were done.",
+      "reflection": "Cleopas tells the stranger the whole story, not knowing who he is telling it to. There is something moving about the word \"hoped\" — past tense. The hope hasn't vanished entirely; it's still there, but turned into something past, something they no longer dare to name in the present.",
+      "revelation_key": "Jesus asks and listens before he speaks — he gives them room to tell, in their own words, what they felt and believed."
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "cleofas_women_report.png",
+      "title": "A rumor they couldn't bring themselves to believe",
+      "narrative": "Cleopas adds something more, with the same bewilderment he felt hearing it: that very morning, some women from the group went to the tomb and found the body missing. They came back saying they had seen angels, who told them Jesus was alive. The news left them stunned, unsure what to do with it. Some disciples went to check, and found the tomb empty just as the women had said — but him they did not see.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luke 24:22-24",
+        "text": "Yea, and certain women also of our company made us astonished, who were early at the sepulcher; And when they found not his body, they came, saying, that they had also seen a vision of angels, who said that he was alive. And certain of them who were with us went to the sepulcher, and found it even so as the women had said: but him they saw not."
+      },
+      "revelation_key": "Cleopas already has all the evidence of the resurrection in his own words, and still he walks in the opposite direction from Jerusalem."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "cleofas_scriptures_opened.png",
+      "title": "Beginning at Moses",
+      "narrative": "The stranger answers with a firmness they weren't expecting — he had already told the two of them they were slow of heart to believe what the prophets had already announced. And beginning at Moses, and going on through all the prophets, he opens up to them in all the Scriptures the things concerning himself: the ancient promise of a seed who would crush evil, the Servant who suffers for others, the righteous one who is pierced. The rest of the road to Emmaus passes this way, through passages they had read their whole lives and now hear as if for the first time.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luke 24:27",
+        "text": "And beginning at Moses and all the prophets, he expounded unto them in all the scriptures the things concerning himself."
+      },
+      "revelation_key": "Before showing them who he is, Jesus shows them where it has been written all along."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "cleofas_urge_him_stay.png",
+      "title": "They urged him to stay",
+      "narrative": "They reach Emmaus as evening falls. The stranger makes as though he would go further, like someone unwilling to impose. But they urge him, saying: stay with us, for it is toward evening and the day is far spent. He goes in to stay with them: receiving the traveler and feeding him was not mere courtesy, but a sacred duty of the host, without them yet knowing whom they had invited to their table.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luke 24:28-29",
+        "text": "And they drew near unto the village, where they were going: and he made as though he would have gone further. But they constrained him, saying, Abide with us: for it is toward evening, and the day is far spent. And he went in to tarry with them."
+      },
+      "revelation_key": "In welcoming him to their table as an honored guest, without knowing it, they gave God himself the welcome he deserved."
+    },
+    {
+      "order": 9,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "cleofas_bread_breaking.png",
+      "title": "In the breaking of the bread",
+      "narrative": "They sit down to eat. The guest takes the bread, blesses it, breaks it, and gives it to them. Something in that gesture strikes Cleopas as strangely familiar. And in that exact instant, he recognizes him: it is Jesus. In the same moment he recognizes him, Jesus vanishes from their sight.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luke 24:30-31",
+        "text": "And it came to pass, as he sat to eat with them, he took bread, and blessed it, and broke it, and gave to them. And their eyes were opened, and they knew him; and he vanished out of their sight."
+      },
+      "revelation_key": "Cleopas does not recognize Jesus by a miracle before his eyes, but by something intimate he already knew about him."
+    },
+    {
+      "order": 10,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "cleofas_recognition_moment.png",
+      "title": "What Cleopas recognized",
+      "subtitle": "The same gesture from the last supper",
+      "content": "Luke had already described this same sequence of verbs — take, bless, break, give — on the night of the last supper, and also when feeding the five thousand. In that instant, God opens Cleopas's eyes, and what he sees is a gesture he already knew: the same way those hands broke bread.\n\nIt is the same Jesus who walked with them the whole way, now recognized in the most everyday moment of a shared table.",
+      "revelation_key": "God chooses to open Cleopas's eyes right in front of a gesture already etched in his memory.",
+      "scripture_connections": [
+        {
+          "reference": "Luke 9:16",
+          "text": "Then he took the five loaves and the two fishes, and looking up to heaven, he blessed, and broke, and gave to the disciples to set before the multitude."
+        },
+        {
+          "reference": "Luke 22:19",
+          "text": "And he took bread, and gave thanks, and broke it, and gave unto them, saying, This is my body which is given for you: this do in remembrance of me."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "cleofas_burning_heart.png",
+      "title": "The heart that burned",
+      "subtitle": "A sign they recognized only afterward",
+      "content": "Later, once Jesus is recognized, Cleopas and his companion ask each other about what they felt on the road (Luke 24:32). The Greek verb καίω (kaío), \"to burn,\" \"to be on fire,\" describes a conviction so intense it feels like fire: a fire that burned without going out, not a passing spark. It is the same image Jeremiah uses to describe a word from God so strong he could not contain it, like a fire shut up in his bones (Jeremiah 20:9), and also its power to break rock in pieces (Jeremiah 23:29).\n\nLuke had already described their faces with another Greek word, σκυθρωποί (skythrōpoí), \"of a sad countenance\" (Luke 24:17). The same road that began with downcast faces ends with a burning heart.\n\nRecognition did not come first through the eyes. It came first from within, like a burning certainty, long before they could put a name to what they felt.",
+      "revelation_key": "The heart recognized Jesus before the eyes did — the evidence came first as fire, then as sight.",
+      "verse_overlay": {
+        "reference": "Luke 24:32",
+        "text": "And they said one to another, Did not our hearts burn within us, while he talked with us by the way, and while he opened to us the scriptures?"
+      },
+      "scripture_connections": [
+        {
+          "reference": "Jeremiah 20:9",
+          "text": "Then I said, I will not make mention of him, nor speak any more in his name. But his word was in my heart as a burning fire shut up in my bones, and I was weary from holding it back, and I could not."
+        },
+        {
+          "reference": "Jeremiah 23:29",
+          "text": "Is not my word like a fire? says the LORD; and like a hammer that breaks the rock in pieces?"
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "cinematic_scene",
+      "mood": "peace",
+      "image_url": "cleofas_return_jerusalem.png",
+      "title": "Back to Jerusalem, that same night",
+      "narrative": "Cleopas and his companion rise up that same hour, even though night has already fallen and the road back is the same one they walked in sorrow that afternoon. Now they run, they don't walk. They return to Jerusalem to tell what they have seen, and find the eleven already saying: the Lord has risen, and has appeared to Simon (Peter).",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luke 24:33-34",
+        "text": "And they rose up the same hour, and returned to Jerusalem, and found the eleven gathered together, and them that were with them, Saying, The Lord is risen indeed, and has appeared to Simon."
+      },
+      "revelation_key": "Cleopas arrives to tell what he saw, and discovers God had already revealed himself in Jerusalem too."
+    },
+    {
+      "order": 13,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "cleofas_telling_story.png",
+      "title": "Telling the whole story in detail",
+      "subtitle": "From listeners to narrators",
+      "content": "When Cleopas and his companion arrive before the eleven, Luke uses the Greek verb ἐξηγέομαι (exēgeomai), \"to narrate,\" \"to explain in detail,\" to describe how they tell what happened (Luke 24:35).\n\nHours earlier, on the road, Jesus had interpreted the Scriptures for them. Now they narrate in detail what they saw. What they received from him as teaching, they hand on to others as testimony.",
+      "revelation_key": "Cleopas moves from hearing Jesus's interpretation to becoming himself a narrator of his testimony.",
+      "verse_overlay": {
+        "reference": "Luke 24:35",
+        "text": "And they told what things were done in the way, and how he was known to them in the breaking of bread."
+      }
+    },
+    {
+      "order": 14,
+      "type": "discovery_activation",
+      "image_url": "cleofas_discovery.png",
+      "title": "Your Encounter",
+      "subtitle": "Jesus walks with you even when you don't recognize him yet.",
+      "discovery_questions": [
+        {
+          "category": "Honesty",
+          "question": "Cleopas did not hide his grief or pretend to have faith — he told the stranger everything, not knowing he was speaking to Jesus himself. What would you tell Jesus today if you knew he was walking right beside you at this very moment?"
+        },
+        {
+          "category": "Faith",
+          "question": "Cleopas's heart burned before his eyes saw anything — the certainty came first through the Word. When was the last time God's Word made you feel that, and what is keeping you from seeking it that way now?"
+        },
+        {
+          "category": "Purpose",
+          "question": "The instant Cleopas recognized Jesus, he didn't wait for morning — he got up that same night to tell it. You who have seen Jesus in your own life, who are you running to tell with that same urgency?"
+        }
+      ],
+      "prayer": {
+        "title": "Prayer of the opened eyes",
+        "content": "Lord Jesus, today I walk without seeing you, but I know you haven't left me alone — you walk beside me even though my eyes don't recognize you yet. Light in me that fire only your Word can kindle: the same burning certainty Cleopas felt before his eyes saw anything. And everything I recognize of you today, let me carry to others — let me run to give them the good news, today, while the fire still burns. In Jesus's name, Amen."
+      }
+    },
+    {
+      "order": 15,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "cleofas_completion.png",
+      "completion_verse": {
+        "reference": "Luke 24:33-34",
+        "text": "And they rose up the same hour, and returned to Jerusalem, and found the eleven gathered together, and them that were with them, Saying, The Lord is risen indeed, and has appeared to Simon.",
+        "bible_version": "KJV"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
