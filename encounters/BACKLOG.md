@@ -30,6 +30,16 @@ Ranked by how much new thematic ground they cover (not already represented above
 
 ### High priority — fills a real gap
 
+- **The Widow of Nain** (Lucas 7:11-17)
+  Theme: unprompted compassion ("se compadió de ella"), a public resurrection miracle
+  interrupting a funeral procession. Promoted from medium priority: every other encounter
+  in the series is triggered by someone's own faith, persistence, or request — this is the
+  only story where Jesus acts purely out of compassion, unasked, for a bystander's grief
+  rather than the sufferer's own plea. Also the most visually dramatic miracle not yet
+  used (bigger than Bartimaeus's healing or the Bleeding Woman's touch), and a female
+  protagonist, which helps balance a series currently skewed toward male-centered
+  encounters (8 of 12 published).
+
 - **The Man Born Blind** (Juan 9:1-41)
   Theme: escalating testimony under interrogation, being cast out by religious authority
   for telling the truth ("una cosa sé: yo era ciego, y ahora veo"), faith deepening
@@ -52,10 +62,13 @@ Ranked by how much new thematic ground they cover (not already represented above
 
 ### Medium priority — solid, some thematic overlap
 
-- **The Widow of Nain** (Lucas 7:11-17)
-  Theme: grief, compassion ("se compadió de ella"), resurrection of a son. Compassion as
-  the driver (not faith or persistence) is new; slight overlap with Mary Magdalene (grief)
-  and gadarene_demoniac (resurrection-adjacent restoration).
+- **The Paralytic Lowered Through the Roof** (Marcos 2:1-12)
+  Theme: intercession — friends carrying someone who can't move himself, tearing open a
+  roof to reach Jesus. Jesus forgives sins before healing, provoking the religious
+  authorities. Distinct from Bartimaeus (solo persistence) and the Bleeding Woman (secret,
+  desperate self-initiated touch) since the paralytic himself never asks — his friends
+  act on his behalf. Male-centered, and a more incremental thematic delta than Widow of
+  Nain, so held here rather than promoted.
 
 - **The Prodigal Son** (Lucas 15:11-32)
   Theme: repentance, the father's running welcome, restoration of sonship. It's a parable,
@@ -79,9 +92,10 @@ Ranked by how much new thematic ground they cover (not already represented above
 
 ## Recommendation
 
-Next up: **The Man Born Blind** (Juan 9) — fills the remaining gap (testimony under
-institutional persecution, faith deepening through cost rather than resolving into
-comfort) and doesn't overlap heavily with existing entries.
+Next up: **The Widow of Nain** (Lucas 7:11-17) — biggest unused miracle in the source
+material, driven by unprompted compassion rather than anyone's faith or persistence (a
+genuinely new trigger for the series), and a female protagonist that helps balance a
+lineup currently skewed toward male-centered encounters.
 
 ## Decision log
 
@@ -94,3 +108,9 @@ _(Add a line here each time a candidate is picked, dropped, or reprioritized, wi
   candidates, added to "currently in the series" table. Added The Man Born Blind (Juan 9)
   and The Sinful Woman Anointing Jesus' Feet (Lucas 7:36-50) as new high-priority
   candidates to keep the pipeline stocked.
+- 2026-07-17: Promoted Widow of Nain (Lucas 7:11-17) from medium to high priority and made
+  it the top recommendation — user asked for a bigger/more impressive miracle plus better
+  gender balance (series was 8 male-centered vs 4 female-centered of 12 published). Added
+  The Paralytic (Marcos 2:1-12) as a medium-priority alternative (intercession angle) that
+  was considered but not promoted, since it's still male-centered and a smaller thematic
+  delta than the widow's unprompted-compassion resurrection.
