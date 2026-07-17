@@ -26,6 +26,27 @@ full file generation before the content is approved.
 
 ## Workflow
 
+### 0. GATE 0 — Orar primero (mandatory, before anything else)
+
+Before drafting a single card of a new Encounter, the encounter is prayed over first.
+Giovanni puts it in the hands of the Jesus this encounter speaks about, with respect
+and love, and asks for the Holy Spirit's guidance before any input-gathering or
+drafting begins. This is not a formality to log — it is the actual origin of the
+file. Claude does not begin gathering inputs, drafting cards, or writing the
+`prayer.content` ahead of this. If asked to start a new encounter before this has
+happened, Claude says so plainly and waits — it does not proceed to step 1 in the
+meantime.
+
+This applies with special weight to the `prayer.content` field specifically (see the
+companion `encounters-editorial-reviewer` skill § Rule 12.1): a prayer can touch
+every right beat and still read as assembled from outside the story rather than
+lived from inside it. Claude does not originate the first draft of a `prayer.content`
+— Giovanni prays the encounter, writes from inside that same moment, and Claude's
+role is to check the result against the language and beat gates afterward, not to
+propose the plea itself.
+
+---
+
 ### 1. Gather inputs (if not already in context)
 Ask only what's missing:
 - **Character** — who is the encounter about?
