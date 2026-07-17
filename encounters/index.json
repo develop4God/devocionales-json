@@ -803,6 +803,34 @@
         "ar": 11,
         "fil": 12
       }
+    },
+    {
+      "id": "emmaus_001",
+      "version": "1.0",
+      "image_version": "1.0",
+      "emoji": "🍞",
+      "status": "coming_soon",
+      "intro_image": "emmaus_intro.png",
+      "mood_primary": "falling",
+      "accent_color": "#1a140a",
+      "has_interactive": true,
+      "testament": "new",
+      "character": "Cleofas",
+      "files": {
+        "es": "emmaus_es_001.json"
+      },
+      "titles": {
+        "es": "El camino a Emaús"
+      },
+      "subtitles": {
+        "es": "Caminó junto a ellos, sin ser reconocido."
+      },
+      "scripture_reference": {
+        "es": "Lucas 24:13-35"
+      },
+      "estimated_reading_minutes": {
+        "es": 12
+      }
     }
   ]
 }
