@@ -27,15 +27,15 @@
       "type": "cinematic_scene",
       "mood": "falling",
       "image_url": "cleofas_road_departure.png",
-      "title": "Dos hombres dejan Jerusalén",
-      "narrative": "Es domingo por la tarde, el tercer día. Dos hombres caminan hacia Emaús, una aldea a unos once kilómetros de Jerusalén. Uno de ellos se llama Cleofas. Van dejando atrás la ciudad donde, tres días antes, vieron morir al hombre en quien habían puesto toda su esperanza. Caminan despacio, hablando entre sí de todo lo que ha pasado, sin saber qué hacer con un dolor que no tiene dónde ir.",
+      "title": "Dos discípulos dejan Jerusalén",
+      "narrative": "Es domingo por la tarde, el tercer día. Dos discípulos caminan hacia Emaús, una aldea a unos once kilómetros de Jerusalén. Uno de ellos se llama Cleofas. Van dejando atrás la ciudad donde, tres días antes, vieron morir al hombre en quien habían puesto toda su esperanza. Caminan despacio, hablando entre sí de todo lo que ha pasado, sin saber qué hacer con un dolor que no tiene dónde ir.",
       "ambient_sound": "wind",
       "haptic": null,
       "verse_overlay": {
         "reference": "Lucas 24:13-14",
         "text": "Y he aquí, dos de ellos iban el mismo día a una aldea llamada Emaús, que estaba a sesenta estadios de Jerusalén. E iban hablando entre sí de todas aquellas cosas que habían acontecido."
       },
-      "revelation_key": "Dos hombres se alejan de Jerusalén cargando una esperanza que creen enterrada."
+      "revelation_key": "Dos discípulos se alejan de Jerusalén cargando una esperanza que creen enterrada."
     },
     {
       "order": 2,
@@ -61,10 +61,10 @@
       "ambient_sound": "wind",
       "haptic": null,
       "verse_overlay": {
-        "reference": "Lucas 24:15-16",
-        "text": "Sucedió que mientras hablaban y discutían entre sí, Jesús mismo se acercó, y iba con ellos. Mas los ojos de ellos estaban velados, para que no le conociesen."
+        "reference": "Lucas 24:15-17",
+        "text": "Sucedió que mientras hablaban y discutían entre sí, Jesús mismo se acercó, y caminaba con ellos. Mas los ojos de ellos estaban velados, para que no le conociesen. Y les dijo: ¿Qué pláticas son estas que tenéis entre vosotros mientras camináis, y por qué estáis tristes?"
       },
-      "revelation_key": "El mismo Jesús camina junto a ellos, y el texto explica con toda claridad por qué no lo reconocen: sus ojos están velados."
+      "revelation_key": "El mismo Jesús camina junto a ellos y nota su tristeza, y el texto explica con toda claridad por qué no lo reconocen: sus ojos están velados."
     },
     {
       "order": 4,
@@ -73,9 +73,13 @@
       "image_url": "cleofas_eyes_veiled.png",
       "title": "Ojos velados, no ausencia",
       "subtitle": "Por qué no lo reconocieron",
-      "content": "Lucas usa el verbo griego κρατέω (krateó), \"sujetar\", \"retener con fuerza\", para describir el estado de los ojos de estos discípulos (Lucas 24:16): estaban retenidos, impedidos de ver lo que tenían delante. El texto atribuye el velo a algo fuera de su control, una acción sobre sus ojos, no un fallo de percepción propio.\n\nMás adelante, en el versículo 29, son ellos quienes retienen con fuerza al desconocido para que se quede. El relato marca así dos momentos: uno en que algo los retiene a ellos, y otro en que son ellos quienes retienen.",
+      "content": "Lucas usa el verbo griego κρατέω (krateó), \"sujetar\", \"retener con fuerza\", para describir el estado de los ojos de estos discípulos (Lucas 24:16): estaban retenidos, impedidos de ver lo que tenían delante. El texto atribuye el velo a algo fuera de su control, una acción sobre sus ojos, no un fallo de percepción propio.\n\nMarcos narra este mismo episodio con un detalle adicional: dice que Jesús se apareció a estos dos discípulos \"en otra forma\" (Marcos 16:12), usando la expresión griega ἑτέρᾳ μορφῇ (hetera morphé). No es el único caso: María Magdalena, de pie frente a Jesús resucitado junto al sepulcro, tampoco lo reconoce y piensa que es el hortelano (Juan 20:14-15). En más de una aparición tras la resurrección, quienes tienen a Jesús delante no lo reconocen de inmediato — el reconocimiento llega después, con una palabra o un gesto, no con la sola vista.",
       "revelation_key": "Sus ojos estaban impedidos de reconocerlo — la ceguera no era falta de fe, era parte de cómo Dios estaba llevando este encuentro.",
       "scripture_connections": [
+        {
+          "reference": "Marcos 16:12",
+          "text": "Pero después apareció en otra forma a dos de ellos que iban de camino, yendo al campo."
+        },
         {
           "reference": "Juan 20:14-15",
           "text": "Y cuando había dicho esto, se volvió, y vio a Jesús que estaba allí; mas no sabía que era Jesús. Le dijo Jesús: Mujer, ¿por qué lloras? ¿A quién buscas? Ella, pensando que era el hortelano, le dijo: Señor, si tú lo has llevado, dime dónde lo has puesto, y yo lo llevaré."
