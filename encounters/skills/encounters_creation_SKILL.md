@@ -349,7 +349,7 @@ Before drafting `discovery_questions` or `prayer.content`, identify what the rea
 **Concrete case (2026-07-16, Emmaus):** first draft asked generic, swappable questions, including one framing divine abandonment as possible. Rewritten after identifying the encounter's actual central takeaway — recognition can come through the Word before the eyes, and once it comes, it compels urgent testimony, not passive noticing — with each question anchored to a specific beat (Cleofas's honesty with a stranger who was Jesus, the heart burning before the eyes opened, running the same night rather than waiting for morning).
 
 #### `completion`
-Final card. Repeats the key verse + one reflection prompt.
+Final card. Repeats the key verse.
 ```json
 {
   "order": 15,
@@ -361,7 +361,6 @@ Final card. Repeats the key verse + one reflection prompt.
     "text": "Full verse",
     "bible_version": "RVR1960"
   },
-  "reflection_prompt": "One question.",
   "celebration_type": "gentle_light | burst | ripple | etc."
 }
 ```
