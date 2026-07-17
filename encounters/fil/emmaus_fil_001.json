@@ -34,7 +34,7 @@
       "mood": "falling",
       "image_url": "cleofas_road_departure.png",
       "title": "Umalis ang dalawang alagad sa Jerusalem",
-      "narrative": "Hapon na ng Linggo, ang ikatlong araw. May dalawang alagad na naglalakad papuntang Emaus, isang nayong may labing-isang kilometro ang layo mula sa Jerusalem. Ang isa sa kanila ay si Cleopas. Iniiwan nila ang lungsod na kung saan, tatlong araw na ang nakalilipas, saksi sila sa pagkamatay ng taong inasahan nila ang buong pag-asa. Dahan-dahan silang naglalakad, pinag-uusapan ang lahat ng nangyari, hindi alam kung ano ang gagawin sa isang dalamhating na parang walang mapupuntahan.",
+      "narrative": "Hapon na ng Linggo, ang ikatlong araw. May dalawang alagad na naglalakad papuntang Emaus, isang nayong may labing-isang kilometro ang layo mula sa Jerusalem. Ang isa sa kanila ay si Cleopas. Iniiwan nila ang lungsod na kung saan, tatlong araw na ang nakalilipas, saksi sila sa pagkamatay ng taong inasahan nila ang buong pag-asa. Dahan-dahan silang naglalakad, pinag-uusapan ang lahat ng nangyari, hindi alam kung ano ang gagawin sa isang dalamhati na parang walang mapupuntahan.",
       "ambient_sound": "wind",
       "haptic": null,
       "verse_overlay": {
@@ -79,7 +79,7 @@
       "image_url": "cleofas_eyes_veiled.png",
       "title": "Naroroon, ngunit hindi nakilala",
       "subtitle": "Bakit hindi nila siya nakilala",
-      "content": "Ginamit ni Lucas ang salitang Griyego κρατέω (krateó), ibig sabihi'y \"panatilihing nakahawak,\" \"pigilin nang husto,\" para ilarawan ang kalagayan ng mga mata ng mga alagad na ito (Lucas 24:16): sila'y pinigilan, hindi pinayagang makita ang tunay na nasa harapan nila. Ibinibigay ng teksto ang dahilan ng pagkakatakip na iyon sa bagay na labas sa kanilang kontrol, isang bagay na ginawa sa kanilang mga mata, hindi kapalpakan ng sarili nilang pananaw.\n\nInilarawan din ni Marcos ang parehong pangyayari na may isang idinagdag na detalye: sinabi niyang nagpakita si Jesus sa dalawang alagad na ito \"sa ibang anyo\" (Marcos 16:12), gamit ang parirala sa Griyego ἑτέρᾳ μορφῇ (hetera morphé). Hindi lang iyan ang tanging pagkakataon: si Maria Magdalena, na nakatayo sa harap ng muling nabuhay na si Jesus malapit sa libingan, ay hindi rin siya nakilala at inakalang siya ang hardinero (Juan 20:14-15). Sa mahigit sa isang pagpapakita matapos ang muling pagkabuhay, ang mga taong mismong kaharap si Jesus ay hindi agad nakikilala siya — dumarating ang pagkilala nang maglaon, sa isang salita o kilos, hindi lang sa pagtingin.",
+      "content": "Ginamit ni Lucas ang salitang Griyego κρατέω (krateó), ibig sabihin ay \"panatilihing nakahawak,\" \"pigilin nang husto,\" para ilarawan ang kalagayan ng mga mata ng mga alagad na ito (Lucas 24:16): sila'y pinigilan, hindi pinayagang makita ang tunay na nasa harapan nila. Ibinibigay ng teksto ang dahilan ng pagkakatakip na iyon sa bagay na wala sa kanilang kontrol, isang bagay na ginawa sa kanilang mga mata, hindi kapalpakan ng sarili nilang pananaw.\n\nInilarawan din ni Marcos ang parehong pangyayari na may isang idinagdag na detalye: sinabi niyang nagpakita si Jesus sa dalawang alagad na ito \"sa ibang anyo\" (Marcos 16:12), gamit ang parirala sa Griyego ἑτέρᾳ μορφῇ (hetera morphé). Hindi lang iyan ang tanging pagkakataon: si Maria Magdalena, na nakatayo sa harap ng muling nabuhay na si Jesus malapit sa libingan, ay hindi rin siya nakilala at inakalang siya ang hardinero (Juan 20:14-15). Sa mahigit sa isang pagpapakita matapos ang muling pagkabuhay, ang mga taong mismong kaharap si Jesus ay hindi agad nakikilala siya — dumarating ang pagkilala nang maglaon, sa isang salita o kilos, hindi lang sa pagtingin.",
       "revelation_key": "Naghintay si Jesus bago ihayag ang sarili niya dahil gusto muna niyang marinig ang kanilang dalamhati at buksan sa kanila ang mga Kasulatan — darating lamang ang pagkilala pagkatapos.",
       "scripture_connections": [
         {
@@ -123,7 +123,7 @@
       "mood": "awe",
       "image_url": "cleofas_scriptures_opened.png",
       "title": "Nagsimula kay Moises",
-      "narrative": "Sumagot ang di-kilala nang may katatagang hindi nila inasahan — sinabi na niya sa kanilang dalawa na mabagal silang maniwala sa mga inihayag na ng mga propeta. At sinimulan sa mga sinulat ni Moises, hanggang sa lahat ng mga propeta, ipinaliwanag niya sa kanila sa buong Kasulatan ang mga bagay na tungkol sa kanyang sarili: ang lumang pangako ng isang binhing dudurog sa kasamaan, ang Lingkod na nagdurusa para sa iba, ang matuwid na sasaksakin. Doon inabot ang natitirang bahagi ng lakad patungong Emaus, sa mga talata na binasa nila sa buong buhay nila at ngayon ay narinig na parang bago lang.",
+      "narrative": "Sumagot ang di-kilala nang may katatagang hindi nila inasahan — sinabi na niya sa kanilang dalawa na mabagal silang maniwala sa mga inihayag na ng mga propeta. At sinimulan sa mga sinulat ni Moises, hanggang sa lahat ng mga propeta, ipinaliwanag niya sa kanila sa buong Kasulatan ang mga bagay na tungkol sa kanyang sarili: ang lumang pangako ng isang binhing dudurog sa kasamaan, ang Lingkod na nagdurusa para sa iba, ang matuwid na tinusok. Doon inabot ang natitirang bahagi ng lakad patungong Emaus, sa mga talata na binasa nila sa buong buhay nila at ngayon ay narinig na parang bago lang.",
       "ambient_sound": "wind",
       "haptic": null,
       "verse_overlay": {
@@ -257,7 +257,7 @@
       ],
       "prayer": {
         "title": "Panalangin ng mga natanggap na paningin",
-        "content": "Panginoong Jesus, ngayo'y naglalakad ako nang hindi ka nakikita, ngunit alam kong hindi mo ako iniwang mag-isa — lumalakad ka sa aking tabi kahit hindi ka pa nakikilala ng aking mga mata. Alabin mo sa akin ang apoy na tanging ang iyong Salita lang ang makapagpapaningas: ang parehong naglalagablab na katiyakan na naramdaman ni Cleopas bago pa man nakakita ang kanyang mga mata. At lahat ng nakikilala ko sa iyo ngayon, tulungan mo akong dalhin sa iba — hayaan mong tumakbo ako para ibalita ang mabuting balita, ngayon, habang nag-aalab pa ang apoy. Sa pangalan ni Jesus, Amen."
+        "content": "Panginoong Jesus, ngayo'y naglalakad ako nang hindi ka nakikita, ngunit alam kong hindi mo ako iniwang mag-isa — lumalakad ka sa aking tabi kahit hindi ka pa nakikilala ng aking mga mata. Paningasin mo sa akin ang apoy na tanging ang iyong Salita lang ang makapagpapaningas: ang parehong naglalagablab na katiyakan na naramdaman ni Cleopas bago pa man nakakita ang kanyang mga mata. At lahat ng nakikilala ko sa iyo ngayon, tulungan mo akong dalhin sa iba — hayaan mong tumakbo ako para ibalita ang mabuting balita, ngayon, habang nag-aalab pa ang apoy. Sa pangalan ni Jesus, Amen."
       }
     },
     {
