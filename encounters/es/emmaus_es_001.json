@@ -14,7 +14,13 @@
     "mood_primary": "falling",
     "accent_color": "#1a140a",
     "emoji": "🍞",
-    "tags": ["duelo", "reconocimiento", "resurreccion", "lo_cotidiano", "esperanza"]
+    "tags": [
+      "duelo",
+      "reconocimiento",
+      "resurreccion",
+      "lo_cotidiano",
+      "esperanza"
+    ]
   },
   "key_verse": {
     "reference": "Lucas 24:31",
@@ -236,13 +242,22 @@
       "title": "Tu Encuentro",
       "subtitle": "Jesús camina contigo incluso cuando no lo reconoces todavía.",
       "discovery_questions": [
-        { "category": "Honesty", "question": "Cleofas no escondió su dolor ni fingió tener fe — se lo dijo todo al desconocido, sin saber que le hablaba a Jesús mismo. ¿Qué le dirías hoy a Jesús si supieras que camina justo a tu lado en este momento?" },
-        { "category": "Faith", "question": "El corazón de Cleofas ardió antes de que sus ojos vieran algo — la certeza llegó primero por la Palabra. ¿Cuándo fue la última vez que la Palabra de Dios te hizo sentir eso, y qué te está impidiendo buscarla así ahora?" },
-        { "category": "Purpose", "question": "En el instante en que Cleofas reconoció a Jesús, no esperó a la mañana — se levantó esa misma noche a contarlo. Tú que has visto a Jesús en tu vida, ¿a quién corres a testificar con urgencia?" }
+        {
+          "category": "Honesty",
+          "question": "Cleofas no escondió su dolor ni fingió tener fe — se lo dijo todo al desconocido, sin saber que le hablaba a Jesús mismo. ¿Qué le dirías hoy a Jesús si supieras que camina justo a tu lado en este momento?"
+        },
+        {
+          "category": "Faith",
+          "question": "El corazón de Cleofas ardió antes de que sus ojos vieran algo — la certeza llegó primero por la Palabra. ¿Cuándo fue la última vez que la Palabra de Dios te hizo sentir eso, y qué te está impidiendo buscarla así ahora?"
+        },
+        {
+          "category": "Purpose",
+          "question": "En el instante en que Cleofas reconoció a Jesús, no esperó a la mañana — se levantó esa misma noche a contarlo. Tú que has visto a Jesús en tu vida, ¿a quién corres a testificar con urgencia?"
+        }
       ],
       "prayer": {
         "title": "Oración de los ojos abiertos",
-        "content": "Señor Jesús, como Cleofas, a veces camino triste, sin saber que Tú vas junto a mí. Gracias porque, antes de revelarte, me das espacio para nombrar mi tristeza tal como es. Abre las Escrituras delante de mí hasta que mi corazón arda, como ardió el de Cleofas en el camino. Ábreme los ojos en lo más común de mis días: en el pan compartido, en la conversación honesta, en el gesto conocido. Y cuando te reconozca, dame las mismas ganas de levantarme y correr a contarlo. En el nombre de Jesús, Amén."
+        "content": "Señor Jesús, hoy camino sin verte, pero sé que no me has dejado solo — vas junto a mí aunque mis ojos todavía no te reconozcan. Activa en mí ese fuego que solo tu Palabra enciende: la misma certeza ardiente que sintió Cleofas antes de que sus ojos vieran nada. Y todo lo que hoy reconozco de ti, permíteme llevarlo a otros — que corra a darles las buenas nuevas, hoy mismo, mientras el fuego sigue ardiendo. En el nombre de Jesús, Amén."
       }
     },
     {
