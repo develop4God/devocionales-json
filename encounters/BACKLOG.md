@@ -88,9 +88,9 @@ comfort) and doesn't overlap heavily with existing entries.
 _(Add a line here each time a candidate is picked, dropped, or reprioritized, with the why.)_
 
 - 2026-07-09: Backlog created after publishing gadarene_demoniac_001 (draft).
-- 2026-07-16: Adultery Woman confirmed published (all 11 languages) — removed from
+- 2026-07-16: Adultery Woman confirmed published (all 10 languages) — removed from
   candidates, added to "currently in the series" table. Backlog had gone stale.
-- 2026-07-17: Emmaus Disciples confirmed published (all 11 languages) — removed from
+- 2026-07-17: Emmaus Disciples confirmed published (all 10 languages) — removed from
   candidates, added to "currently in the series" table. Added The Man Born Blind (Juan 9)
   and The Sinful Woman Anointing Jesus' Feet (Lucas 7:36-50) as new high-priority
   candidates to keep the pipeline stocked.
