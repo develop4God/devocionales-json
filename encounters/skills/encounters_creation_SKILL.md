@@ -512,6 +512,7 @@ cinematic, no text."
 | Build on affirmation, not negation | See detailed rule below |
 | No excess of em dashes | Use sparingly — one per paragraph at most |
 | No inflated drama or marketing cliches | Avoid "unprecedented", "extraordinary", "awe-inspiring", "that changes everything", "like never before", "words cannot describe", "something shifted" as filler |
+| No casual/colloquial register | Avoid phrases like "sin rodeos", "menciona también lo otro", or any filler that reads as spoken slang — it breaks the devotional/narrative tone even when the underlying claim is accurate |
 | No theological jargon without explanation | If using a term, unpack it in plain language |
 | Pastoral tone always | God loves, transforms, and uses people in their imperfection |
 | Scripture: complete verses | Never truncate. Use exact RVR1960 text including correct capitalization in the verse formats |
