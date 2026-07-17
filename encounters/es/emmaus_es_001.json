@@ -231,31 +231,22 @@
     },
     {
       "order": 14,
-      "type": "interactive_moment",
-      "icon": "🍞",
-      "image_url": "cleofas_table_pause.png",
-      "title": "Tu propia mesa",
-      "subtitle": "¿Dónde has reconocido a Jesús después, en lo ordinario?",
-      "reflection_prompt": "Piensa en un momento cotidiano — una comida, una conversación, un gesto conocido — en el que sentiste que Dios estaba presente sin que lo esperaras. Nómbralo."
-    },
-    {
-      "order": 15,
       "type": "discovery_activation",
       "image_url": "cleofas_discovery.png",
       "title": "Tu Encuentro",
       "subtitle": "Jesús camina contigo incluso cuando no lo reconoces todavía.",
       "discovery_questions": [
-        { "category": "Honesty", "question": "¿Hay algo en tu vida que sientes que Dios abandonó, cuando en realidad camina contigo sin que lo hayas notado?" },
-        { "category": "Faith", "question": "¿Qué 'gesto familiar' de Dios en tu vida diaria podría ser la señal que has estado pasando por alto?" },
-        { "category": "Purpose", "question": "Si reconocieras hoy que Jesús ha estado caminando contigo, ¿hacia dónde correrías a contarlo?" }
+        { "category": "Honesty", "question": "Cleofas no escondió su dolor ni fingió tener fe — se lo dijo todo al desconocido, sin saber que le hablaba a Jesús mismo. ¿Qué le dirías hoy a Jesús si supieras que camina justo a tu lado en este momento?" },
+        { "category": "Faith", "question": "El corazón de Cleofas ardió antes de que sus ojos vieran algo — la certeza llegó primero por la Palabra. ¿Cuándo fue la última vez que la Palabra de Dios te hizo sentir eso, y qué te está impidiendo buscarla así ahora?" },
+        { "category": "Purpose", "question": "En el instante en que Cleofas reconoció a Jesús, no esperó a la mañana — se levantó esa misma noche a contarlo. Tú que has visto a Jesús en tu vida, ¿a quién corres a testificar con urgencia?" }
       ],
       "prayer": {
         "title": "Oración de los ojos abiertos",
-        "content": "Señor, tantas veces caminas junto a mí y no te reconozco. Abre mis ojos como abriste los de Cleofas, no con una señal extraordinaria, sino en lo más común de mis días. Enséñame a reconocerte en el pan compartido, en la conversación honesta, en el camino que recorro sin saber que no estoy solo. Amén."
+        "content": "Señor Jesús, como Cleofas, a veces camino triste, sin saber que Tú vas junto a mí. Gracias porque, antes de revelarte, me das espacio para nombrar mi tristeza tal como es. Abre las Escrituras delante de mí hasta que mi corazón arda, como ardió el de Cleofas en el camino. Ábreme los ojos en lo más común de mis días: en el pan compartido, en la conversación honesta, en el gesto conocido. Y cuando te reconozca, dame las mismas ganas de levantarme y correr a contarlo. En el nombre de Jesús, Amén."
       }
     },
     {
-      "order": 16,
+      "order": 15,
       "type": "completion",
       "mood": "peace",
       "image_url": "cleofas_completion.png",

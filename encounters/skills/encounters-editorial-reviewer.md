@@ -184,6 +184,62 @@ sus ojos, sino por algo íntimo que ya conocía de él."
 
 ---
 
+### 12. The closing prayer must arc across the whole encounter
+The `discovery_activation` card's `prayer.content` is not a generic devotional closer —
+it must recognizably touch the encounter's actual arc, with concrete anchors from the
+story, the same way the rest of the encounter does. A prayer that only echoes the
+surface theme (e.g. "help me recognize you") while skipping the encounter's distinct
+turning points reads as interchangeable with any other encounter's prayer — it should not.
+
+Verified against the corpus (`thomas_es_001.json`, `nicodemus_es_001.json`): both
+prayers recognizably recorre the full arc with specific anchors — Thomas's prayer
+includes "Señor mío y Dios mío" (the text's own climax) and the detail of the "puerta
+cerrada"; Nicodemus's includes the serpent in the wilderness (Juan 3:14) and the
+secret-to-public arc (Juan 19:39). Neither is a vague summary — both are traceable,
+almost line by line, to specific cards earlier in the same file.
+
+**Concrete case (2026-07-16, Emmaus):** first draft only touched 2-3 of the ~6 major
+beats established across the cards (presence unrecognized, ordinary bread). Missing:
+being given space to voice grief before revelation (cards 4-5), the Scriptures opening
+until the heart burned (cards 7, 11), and the urge to run and tell others after
+recognizing him (cards 12-13). Rewritten to touch all of these with concrete anchors
+tied to the encounter's own language ("hasta que mi corazón arda, como ardió el de
+Cleofas en el camino").
+
+**How to apply:** before approving a `prayer.content`, list the 4-6 major turning
+points the encounter's cards established, and check the prayer touches most of them
+with a concrete anchor (an image, a verb, a phrase) rather than a generic paraphrase.
+
+---
+
+### 13. `discovery_questions` must ask the encounter's central "aha," not a generic theme
+Before writing or approving the three `discovery_questions`, identify what the reader
+should take away from the *entire* encounter — not a surface topic like "notice God's
+presence," but the sharpest, most specific insight the whole arc builds toward. Each
+question should (1) open with a concrete anchor from the story (an action, a verse, a
+specific moment already established in the cards) and (2) turn that anchor toward the
+reader with a question that could only belong to *this* encounter, not a generic
+devotional prompt swappable across stories.
+
+**Never frame God's absence as a live possibility to ask about**, even rhetorically
+inside a question that "resolves" it in the same sentence (e.g. "¿sientes que Dios te
+abandonó, cuando en realidad...?"). This states something Scripture explicitly denies
+(Hebreos 13:5, Mateo 28:20) as if it were a real option the reader must consider — the
+same category of harm as "amor sin respuesta" or "esperanza rota" (Rule 2's negation
+examples): it plants the false idea rather than just naming the false *feeling*. If the
+question is about a felt sense of absence, name it as a feeling ("has sentido la
+ausencia"), never as something God may have actually done.
+
+**Concrete case (2026-07-16, Emmaus):** first draft asked generic, swappable questions
+("¿qué gesto familiar de Dios podrías estar pasando por alto?") including one framing
+divine abandonment as posible. Rewritten after identifying the encounter's actual
+central takeaway — recognition can come through the Word before the eyes, and once it
+comes, it compels urgent testimony, not passive noticing — with each question anchored
+to a specific beat (Cleofas's honesty with a stranger who was Jesus, the heart burning
+before the eyes opened, running the same night rather than waiting for morning).
+
+---
+
 ## CARD-BY-CARD REVIEW PROTOCOL
 
 For each card, check in this order:

@@ -317,6 +317,16 @@ Application card — 3 reflection questions + closing prayer. Always near the en
 }
 ```
 
+**This is a pillar of every encounter, not an afterthought — write it with the same care as the cards themselves.**
+
+Before drafting `discovery_questions` or `prayer.content`, identify what the reader should take away from the *entire* encounter — not a surface topic like "notice God's presence," but the sharpest, most specific insight the whole arc builds toward. Then:
+
+- Each of the 3 `discovery_questions` must (1) open with a concrete anchor from the story (an action, a verse, a specific moment already established in the cards) and (2) turn that anchor toward the reader with a question that could only belong to *this* encounter — never a generic devotional prompt swappable across stories.
+- **Never frame God's absence as a live possibility to ask about**, even rhetorically inside a question that "resolves" it in the same sentence (e.g. "¿sientes que Dios te abandonó, cuando en realidad...?"). This states something Scripture explicitly denies (Hebreos 13:5, Mateo 28:20) as if it were a real option the reader must consider. If the question is about a felt sense of absence, name it as a feeling ("has sentido la ausencia"), never as something God may have actually done.
+- `prayer.content` must recognizably arc across the whole encounter with concrete anchors from the story (image, verb, phrase) — not a generic paraphrase of the surface theme. Verified pattern in the corpus: `thomas_es_001.json`'s prayer includes "Señor mío y Dios mío" (the text's own climax) and the "puerta cerrada" detail; `nicodemus_es_001.json`'s includes the serpent in the wilderness (Juan 3:14) and the secret-to-public arc (Juan 19:39). Both are traceable, almost line by line, to specific cards earlier in the same file — that's the bar.
+
+**Concrete case (2026-07-16, Emmaus):** first draft asked generic, swappable questions, including one framing divine abandonment as possible. Rewritten after identifying the encounter's actual central takeaway — recognition can come through the Word before the eyes, and once it comes, it compels urgent testimony, not passive noticing — with each question anchored to a specific beat (Cleofas's honesty with a stranger who was Jesus, the heart burning before the eyes opened, running the same night rather than waiting for morning).
+
 #### `completion`
 Final card. Repeats the key verse + one reflection prompt.
 ```json
