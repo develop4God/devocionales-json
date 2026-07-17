@@ -131,8 +131,8 @@
       "type": "cinematic_scene",
       "mood": "grace",
       "image_url": "cleofas_urge_him_stay.png",
-      "title": "Le obligaron a quedarse",
-      "narrative": "Llegan a Emaús al caer la tarde. El desconocido hace ademán de seguir su camino, como quien no quiere imponerse. Pero ellos le urgen, diciendo: quédate con nosotros, porque se hace tarde y el día ya ha declinado. Él entra a quedarse con ellos, una costumbre pequeña de hospitalidad, sin que ellos sepan todavía a quién han invitado a su mesa.",
+      "title": "Le insistieron para que se quedara",
+      "narrative": "Llegan a Emaús al caer la tarde. El desconocido hace ademán de seguir su camino, como quien no quiere imponerse. Pero ellos le urgen, diciendo: quédate con nosotros, porque se hace tarde y el día ya ha declinado. Él entra a quedarse con ellos, honrando una tradición de hospitalidad muy arraigada en su cultura, sin que ellos sepan todavía a quién han invitado a su mesa.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
