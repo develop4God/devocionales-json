@@ -473,6 +473,36 @@ Character may appear small or from behind. Still opens with character descriptio
 "image_prompt": "Extreme close-up looking down into a stone well. Dark water far below. A single drop has just fallen — one perfect ripple expanding outward from the center. Rough ancient stone surrounds the water. No people. Pure metaphor. Painterly warm 2D illustration, deep indigo water, silver ripple light, black stone, Mediterranean palette."
 ```
 
+**Close-up face-to-face encounter shot (character + Jesus sharing depth of field):**
+
+When the character is close enough to Jesus (or another key figure) that both share the frame in a
+close-up portrait — not a wide/medium shot — use this three-part structure. It consistently
+outperforms single-note emotional portraits:
+
+1. **Anchored gaze** — the character's eyes are fixed on a specific point (Jesus, the stranger, the
+   other figure), not "distant" or "downward" or "upward" in isolation. Give the eyes an external
+   target within the scene.
+2. **Second figure sharing depth of field** — Jesus (or the companion) appears soft-focus/out-of-focus
+   in the same frame, not absent from close-ups entirely. This forces a two-plane composition (sharp
+   subject + blurred figure behind/beside) that reads as cinematic rather than flat portraiture.
+3. **Two-layer emotional instruction, not one** — describe a contradiction or tension in the
+   expression (e.g. "eyes open and attentive but looking without truly seeing"), not a single
+   emotional note (e.g. just "exhaustion" or just "recognition"). The ambiguity produces more
+   nuanced expressions than a flat single-emotion prompt.
+
+Reserve this structure for close-up portraits where Jesus or another key figure is physically near
+the character in the scene — not for solitary emotional beats where the character is alone in frame.
+
+**Example (Emmaus, card 4 — "eyes veiled"):**
+```
+"image_prompt": "Close-up portrait of a man in his mid-forties, square weathered face, deep-set brown
+eyes fixed on a nearby stranger with a puzzled, searching expression, full graying beard, faded
+olive-green tunic. His eyes are open and attentive but something in his gaze suggests he is looking
+without truly seeing. Soft out-of-focus figure of a man in a simple tunic walking just beside him,
+face never visible. Painterly warm 2D illustration, Mediterranean palette, dim dusty light,
+cinematic, no text."
+```
+
 ---
 
 ## Editorial Rules (non-negotiable)
