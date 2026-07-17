@@ -133,7 +133,7 @@
       "image_url": "cleofas_burning_heart.png",
       "title": "El corazón que ardía",
       "subtitle": "Una señal que reconocieron después",
-      "content": "Más tarde, ya reconocido Jesús, Cleofas y su compañero se preguntan el uno al otro por lo que sintieron en el camino (Lucas 24:32). El verbo griego καίω (kaío), \"arder\", \"quemar\", describe una convicción tan intensa que se siente como fuego. Es la misma imagen que usa Jeremías para describir una palabra de Dios tan fuerte que no podía contenerla, como fuego encendido en sus huesos (Jeremías 20:9).\n\nEl reconocimiento no llegó primero por los ojos. Llegó primero por dentro, como una certeza ardiente, mucho antes de que pudieran ponerle nombre a lo que sentían.",
+      "content": "Más tarde, ya reconocido Jesús, Cleofas y su compañero se preguntan el uno al otro por lo que sintieron en el camino (Lucas 24:32). El verbo griego καίω (kaío), \"arder\", \"quemar\", describe una convicción tan intensa que se siente como fuego — en tiempo imperfecto, un fuego que ardía sin apagarse, no una chispa pasajera. Es la misma imagen que usa Jeremías para describir una palabra de Dios tan fuerte que no podía contenerla, como fuego encendido en sus huesos (Jeremías 20:9), y también su fuerza capaz de quebrantar la piedra (Jeremías 23:29).\n\nLucas ya había descrito su rostro con otra palabra griega, σκυθρωποί (skythrōpoí), \"de semblante sombrío\" (Lucas 24:17). El mismo camino que comenzó con el rostro abatido termina con el corazón encendido.\n\nEl reconocimiento no llegó primero por los ojos. Llegó primero por dentro, como una certeza ardiente, mucho antes de que pudieran ponerle nombre a lo que sentían.",
       "revelation_key": "El corazón reconoció a Jesús antes que los ojos — la evidencia llegó primero como fuego, después como vista.",
       "verse_overlay": {
         "reference": "Lucas 24:32",
@@ -143,6 +143,10 @@
         {
           "reference": "Jeremías 20:9",
           "text": "Y dije: No me acordaré más de él, ni hablaré más en su nombre; no obstante, había en mi corazón como un fuego ardiente metido en mis huesos; traté de sufrirlo, y no pude."
+        },
+        {
+          "reference": "Jeremías 23:29",
+          "text": "¿No es mi palabra como fuego, dice Jehová, y como martillo que quebranta la piedra?"
         }
       ]
     },
