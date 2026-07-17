@@ -138,7 +138,7 @@
       "mood": "grace",
       "image_url": "cleofas_urge_him_stay.png",
       "title": "Le insistieron para que se quedara",
-      "narrative": "Llegan a Emaús al caer la tarde. El desconocido hace ademán de seguir su camino, como quien no quiere imponerse. Pero ellos le urgen, diciendo: quédate con nosotros, porque se hace tarde y el día ya ha declinado. Él entra a quedarse con ellos, honrando una tradición de hospitalidad muy arraigada en su cultura, sin que ellos sepan todavía a quién han invitado a su mesa.",
+      "narrative": "Llegan a Emaús al caer la tarde. El desconocido hace ademán de seguir su camino, como quien no quiere imponerse. Pero ellos le urgen, diciendo: quédate con nosotros, porque se hace tarde y el día ya ha declinado. Él entra a quedarse con ellos: recibir al viajero y darle de comer no era una simple cortesía, sino una obligación sagrada del anfitrión, sin que ellos sepan todavía a quién han invitado a su mesa.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
@@ -228,7 +228,7 @@
       "image_url": "cleofas_telling_story.png",
       "title": "Contar en detalle lo vivido",
       "subtitle": "De oyentes a narradores",
-      "content": "Cuando Cleofas y su compañero llegan donde los once, Lucas usa el verbo griego ἐξηγέομαι (exēgeomai), \"relatar\", \"explicar en detalle\", para describir cómo cuentan lo sucedido (Lucas 24:35).\n\nHoras antes, en el camino, Jesús les había interpretado las Escrituras. Ahora ellos narran en detalle lo que vieron. Lo que recibieron de él como enseñanza, lo entregan a otros como testimonio.",
+      "content": "Cuando Cleofas y su compañero llegan ante los once, Lucas usa el verbo griego ἐξηγέομαι (exēgeomai), \"relatar\", \"explicar en detalle\", para describir cómo cuentan lo sucedido (Lucas 24:35).\n\nHoras antes, en el camino, Jesús les había interpretado las Escrituras. Ahora ellos narran en detalle lo que vieron. Lo que recibieron de él como enseñanza, lo entregan a otros como testimonio.",
       "revelation_key": "Cleofas pasa de escuchar la interpretación de Jesús a convertirse él mismo en narrador de su testimonio.",
       "verse_overlay": {
         "reference": "Lucas 24:35",
