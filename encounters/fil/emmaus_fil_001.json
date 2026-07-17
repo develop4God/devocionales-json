@@ -1,0 +1,276 @@
+{
+  "id": "emmaus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fil",
+  "bible_version": "MBB05",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 12,
+  "meta": {
+    "character": "Cleopas",
+    "testament": "new",
+    "scripture_reference": "Lucas 24:13-35",
+    "mood_primary": "falling",
+    "accent_color": "#1a140a",
+    "emoji": "🍞",
+    "tags": [
+      "pagdadalamhati",
+      "pagkilala",
+      "muling_pagkabuhay",
+      "pang-araw-araw",
+      "pag-asa"
+    ]
+  },
+  "key_verse": {
+    "reference": "Lucas 24:31",
+    "text": "Noon nabuksan ang kanilang mga mata at nakilala nila si Jesus, subalit siya'y biglang nawala sa kanilang paningin.",
+    "bible_version": "MBB05"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "cleofas_road_departure.png",
+      "title": "Umalis ang dalawang alagad sa Jerusalem",
+      "narrative": "Hapon na ng Linggo, ang ikatlong araw. May dalawang alagad na naglalakad papuntang Emaus, isang nayong may labing-isang kilometro ang layo mula sa Jerusalem. Ang isa sa kanila ay si Cleopas. Iniiwan nila ang lungsod na kung saan, tatlong araw na ang nakalilipas, saksi sila sa pagkamatay ng taong inasahan nila ang buong pag-asa. Dahan-dahan silang naglalakad, pinag-uusapan ang lahat ng nangyari, hindi alam kung ano ang gagawin sa isang dalamhating na parang walang mapupuntahan.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 24:13-14",
+        "text": "Nang araw ding iyon, may dalawang alagad na naglalakad papuntang Emaus, isang nayong may labing-isang kilometro ang layo mula sa Jerusalem. Pinag-uusapan nila ang mga pangyayari."
+      },
+      "revelation_key": "Lumakad palayo sa Jerusalem ang dalawang alagad, dala-dala ang pag-asang akala nila'y nabaon na."
+    },
+    {
+      "order": 2,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "cleofas_grief_walking.png",
+      "title": "Isang taong may kaparehong pag-asa ng marami pa",
+      "subtitle": "Si Cleopas, isa sa mga tagasunod",
+      "content": "Bahagi si Cleopas ng mas malawak na bilog ng mga tagasunod ni Jesus — hindi kabilang sa labindalawa, kundi isang taong nakarinig ng kanyang turo, marahil nakakita ng kanyang mga tanda, at inilagak sa kanya ang pag-asang mapalaya sana ang Israel.\n\nNamatay ang pag-asang iyon nitong Biyernes, sa isang krus na Romano. Naglalakad na ngayon si Cleopas papuntang Emaus, sariwa pa ang kamatayang iyon, kasama ang isa pang alagad na may kaparehong dalamhati, hindi alam na papalapit din pala sila sa mismong taong akala nila'y nawala na.",
+      "revelation_key": "Hindi malapit na alagad o pinuno si Cleopas — isa lamang siya sa marami na nagmahal kay Jesus at hindi pa alam na hindi pa tapos ang kuwento.",
+      "verse_overlay": {
+        "reference": "Lucas 24:21",
+        "text": "Siya pa naman ang inaasahan naming magpapalaya sa Israel. Hindi lamang iyan. Ikatlong araw na ngayon mula nang mangyari ito."
+      }
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "mysterious",
+      "image_url": "cleofas_stranger_joins.png",
+      "title": "May sumamang di-kilalang lalaki sa daan",
+      "narrative": "Habang nag-uusap at nagsasalitaan sila, may isa pang lalaking lumapit sa parehong daan at nagsimulang lumakad kasama nila. Isang di-kilala, o kung tutuusin ay ganoon ang pagkakakilala nila sa kanya: nakadamit tulad ng sinumang manlalakbay, kasabay sila sa hakbang, hindi nagmamadali. Tinanong niya kung bakit malungkot na naman ang pinag-uusapan nila. Huminto si Cleopas, gulat na wari mayroon pang di-nakakaalam sa nangyari sa Jerusalem nitong nagdaang mga araw.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 24:15-17",
+        "text": "Habang sila'y nag-uusap, lumapit si Jesus at nakisabay sa kanila, ngunit siya'y hindi nila nakilala na para bang natatakpan ang kanilang mga mata. Tinanong sila ni Jesus, \"Ano ba ang pinag-uusapan ninyo?\""
+      },
+      "revelation_key": "Si Jesus mismo ang lumalakad sa tabi nila at napapansin ang kanilang lungkot, at malinaw na ipinaliwanag ng teksto kung bakit hindi nila siya nakilala: natatakpan ang kanilang mga mata."
+    },
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "cleofas_eyes_veiled.png",
+      "title": "Naroroon, ngunit hindi nakilala",
+      "subtitle": "Bakit hindi nila siya nakilala",
+      "content": "Ginamit ni Lucas ang salitang Griyego κρατέω (krateó), ibig sabihi'y \"panatilihing nakahawak,\" \"pigilin nang husto,\" para ilarawan ang kalagayan ng mga mata ng mga alagad na ito (Lucas 24:16): sila'y pinigilan, hindi pinayagang makita ang tunay na nasa harapan nila. Ibinibigay ng teksto ang dahilan ng pagkakatakip na iyon sa bagay na labas sa kanilang kontrol, isang bagay na ginawa sa kanilang mga mata, hindi kapalpakan ng sarili nilang pananaw.\n\nInilarawan din ni Marcos ang parehong pangyayari na may isang idinagdag na detalye: sinabi niyang nagpakita si Jesus sa dalawang alagad na ito \"sa ibang anyo\" (Marcos 16:12), gamit ang parirala sa Griyego ἑτέρᾳ μορφῇ (hetera morphé). Hindi lang iyan ang tanging pagkakataon: si Maria Magdalena, na nakatayo sa harap ng muling nabuhay na si Jesus malapit sa libingan, ay hindi rin siya nakilala at inakalang siya ang hardinero (Juan 20:14-15). Sa mahigit sa isang pagpapakita matapos ang muling pagkabuhay, ang mga taong mismong kaharap si Jesus ay hindi agad nakikilala siya — dumarating ang pagkilala nang maglaon, sa isang salita o kilos, hindi lang sa pagtingin.",
+      "revelation_key": "Naghintay si Jesus bago ihayag ang sarili niya dahil gusto muna niyang marinig ang kanilang dalamhati at buksan sa kanila ang mga Kasulatan — darating lamang ang pagkilala pagkatapos.",
+      "scripture_connections": [
+        {
+          "reference": "Marcos 16:12",
+          "text": "Pagkatapos, nagpakita rin si Jesus sa dalawang alagad na naglalakad papuntang bukid, subalit iba ang kanyang anyo noon."
+        },
+        {
+          "reference": "Juan 20:14-15",
+          "text": "Pagkasabi nito'y napalingon siya at nakita niya si Jesus na nakatayo roon, ngunit hindi niya nakilalang si Jesus iyon. Tinanong siya ni Jesus, \"Babae, bakit ka umiiyak? Sino ang hinahanap mo?\" Akala ni Maria, ang kausap niya'y ang hardinero kaya't sinabi niya, \"Ginoo, kung kayo po ang kumuha sa kanya, pakituro nga po ninyo sa akin kung saan ninyo siya dinala at kukunin ko.\""
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "cleofas_explains_grief.png",
+      "verse_reference": "Lucas 24:19-21",
+      "verse_text": "\"Anong pangyayari?\" tanong niya. Sumagot sila, \"Tungkol kay Jesus na taga-Nazaret, isang propetang makapangyarihan sa salita at gawa maging sa harap ng Diyos at ng mga tao. Isinakdal siya ng aming mga punong pari at mga pinuno ng bayan upang mahatulang mamatay, at siya'y ipinako sa krus. Siya pa naman ang inaasahan naming magpapalaya sa Israel. Hindi lamang iyan. Ikatlong araw na ngayon mula nang mangyari ito.\"",
+      "reflection": "Sinabi ni Cleopas sa di-kilala ang buong kuwento, hindi alam kung sino ang kausap niya. May kahulugan ang paggamit ng salitang \"inaasahan\" sa nakaraang panahon. Hindi lubusang nawala ang pag-asa; nariyan pa rin, pero naging isang bagay na nakaraan na, isang bagay na hindi na nila matawag pa sa kasalukuyan.",
+      "revelation_key": "Nagtanong at nakinig muna si Jesus bago siya nagsalita — binigyan niya sila ng puwang para sabihin, sa sarili nilang mga salita, ang kanilang nadama at pinaniwalaan."
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "cleofas_women_report.png",
+      "title": "Isang balitang hindi nila kayang paniwalaan",
+      "narrative": "May idinagdag pa si Cleopas, may kaparehong pagkalito na naramdaman niya nang marinig ito: kaninang umaga, may mga babae sa kanilang grupo na pumunta sa libingan at natagpuang wala na ang bangkay. Bumalik sila at nagsabing nakakita sila ng mga anghel, na nagsabing buhay si Jesus. Naiwan silang natitigilan sa balitang iyon, hindi alam kung ano ang gagawin dito. May ilang alagad na pumunta para tingnan, at natagpuan nilang wala nga ang bangkay tulad ng sinabi ng mga babae — ngunit siya'y hindi nila nakita.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 24:22-24",
+        "text": "Nabigla kami sa ibinalita ng ilan sa mga babaing kasamahan namin. Maagang-maaga raw silang nagpunta sa libingan at hindi nila natagpuan ang kanyang bangkay. Nagbalik sila at ang sabi'y nakakita raw sila ng isang pangitain, mga anghel na nagsabing si Jesus ay buháy. Pumunta rin sa libingan ang ilan sa mga kasama namin at ganoon nga ang natagpuan nila, ngunit hindi nila nakita si Jesus."
+      },
+      "revelation_key": "Nasa mismong mga salita ni Cleopas ang lahat ng ebidensya ng muling pagkabuhay, at gayon pa man, patuloy pa rin siyang naglalakad palayo sa Jerusalem."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "cleofas_scriptures_opened.png",
+      "title": "Nagsimula kay Moises",
+      "narrative": "Sumagot ang di-kilala nang may katatagang hindi nila inasahan — sinabi na niya sa kanilang dalawa na mabagal silang maniwala sa mga inihayag na ng mga propeta. At sinimulan sa mga sinulat ni Moises, hanggang sa lahat ng mga propeta, ipinaliwanag niya sa kanila sa buong Kasulatan ang mga bagay na tungkol sa kanyang sarili: ang lumang pangako ng isang binhing dudurog sa kasamaan, ang Lingkod na nagdurusa para sa iba, ang matuwid na sasaksakin. Doon inabot ang natitirang bahagi ng lakad patungong Emaus, sa mga talata na binasa nila sa buong buhay nila at ngayon ay narinig na parang bago lang.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 24:27",
+        "text": "At patuloy na ipinaliwanag sa kanila ni Jesus ang lahat ng sinasabi sa Kasulatan tungkol sa kanyang sarili, simula sa mga aklat ni Moises hanggang sa mga sinulat ng mga propeta."
+      },
+      "revelation_key": "Bago ipakita sa kanila kung sino siya, ipinakita muna ni Jesus sa kanila kung saan ito nasusulat mula pa noon."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "cleofas_urge_him_stay.png",
+      "title": "Pinilit nilang tumuloy siya",
+      "narrative": "Naabot nila ang Emaus habang lumalapit ang gabi. Nagpakita ang di-kilala na parang magpapatuloy pa siya sa paglalakad, tulad ng isang ayaw makagambala. Pero pinilit nila siya, na sinasabi: tumuloy ka muna rito sa amin, sapagkat malapit na ang gabi, dumidilim na. Sumama siya sa kanila para tumuloy: ang pagtanggap sa manlalakbay at pagpapakain sa kanya ay hindi basta-basta kagandahang-loob lamang, kundi isang banal na tungkulin ng may-bahay, kahit hindi pa nila alam kung sino ang inanyayahan nila sa kanilang hapag.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 24:28-29",
+        "text": "Malapit na sila sa nayong kanilang pupuntahan at si Jesus ay parang magpapatuloy pa sa paglakad, ngunit siya'y pinigil nila. \"Tumuloy ka muna rito sa amin. Malapit na ang gabi, dumidilim na,\" sabi nila. Kaya't sumama nga siya sa kanila."
+      },
+      "revelation_key": "Sa pagtanggap sa kanya sa kanilang hapag bilang isang marangal na panauhin, hindi nila alam na ibinigay nila kay Diyos mismo ang pagtanggap na karapat-dapat sa kanya."
+    },
+    {
+      "order": 9,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "cleofas_bread_breaking.png",
+      "title": "Sa paghati ng tinapay",
+      "narrative": "Umupo sila para kumain. Ang panauhin ay dumampot ng tinapay, nagpasalamat sa Diyos, hinati ito, at ibinigay sa kanila. May kung anong bagay sa kilos na iyon na nakaramdam si Cleopas na kakaibang pamilyar. At sa mismong sandaling iyon, nakilala niya siya: si Jesus ito. Sa parehong sandali na nakilala niya siya, biglang nawala si Jesus sa kanilang paningin.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 24:30-31",
+        "text": "Nang siya'y kasalo na nila sa pagkain, dumampot siya ng tinapay at nagpasalamat sa Diyos; pagkatapos, pinagpira-piraso iyon at ibinigay sa kanila. Noon nabuksan ang kanilang mga mata at nakilala nila si Jesus, subalit siya'y biglang nawala sa kanilang paningin."
+      },
+      "revelation_key": "Hindi nakilala ni Cleopas si Jesus sa pamamagitan ng isang himalang nakita niya, kundi sa isang bagay na matalik na dati na niyang alam tungkol sa kanya."
+    },
+    {
+      "order": 10,
+      "type": "character_moment",
+      "mood": "awe",
+      "image_url": "cleofas_recognition_moment.png",
+      "title": "Ano ang nakilala ni Cleopas",
+      "subtitle": "Ang parehong kilos noong huling hapunan",
+      "content": "Inilarawan na ni Lucas ang parehong sunod-sunod na kilos — dampot, pasalamat, hati, bigay — noong gabi ng huling hapunan, at gayundin noong pagpapakain sa limang libo. Sa sandaling iyon, binuksan ng Diyos ang mga mata ni Cleopas, at ang nakita niya ay isang kilos na matagal na niyang alam: ang parehong paraan ng paghati ng mga kamay na iyon sa tinapay.\n\nSiya rin ang si Jesus na naglakad kasama nila sa buong daan, ngayon nakilala sa pinakapang-araw-araw na sandali ng isang pinagsaluhang hapag.",
+      "revelation_key": "Pinili ng Diyos na buksan ang mga mata ni Cleopas mismo sa harap ng isang kilos na nakasulat na sa kanyang alaala.",
+      "scripture_connections": [
+        {
+          "reference": "Lucas 9:16",
+          "text": "Kinuha ni Jesus ang limang tinapay at dalawang isda, tumingin sa langit at nagpasalamat sa Diyos. Pinaghati-hati niya ang mga tinapay at isda at ibinigay sa kanyang mga alagad upang ipamahagi sa mga tao."
+        },
+        {
+          "reference": "Lucas 22:19",
+          "text": "Dumampot din siya ng tinapay, at matapos magpasalamat sa Diyos ay kanyang pinaghati-hati iyon at ibinigay sa kanila. Sabi niya, \"Ito ang aking katawan na inihahandog para sa inyo. Gawin ninyo ito bilang pag-alaala sa akin.\""
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "cleofas_burning_heart.png",
+      "title": "Ang pusong nag-alab",
+      "subtitle": "Isang tandang nakilala lamang pagkatapos",
+      "content": "Nang maglaon, matapos makilala si Jesus, nagtanungan si Cleopas at ang kasama niya tungkol sa nadama nila sa daan (Lucas 24:32). Ang salitang Griyego καίω (kaío), \"mag-alab,\" \"maging sunog,\" ay naglalarawan ng isang paniniwalang matindi na parang apoy: isang apoy na nag-alab nang hindi namatay, hindi isang biglaang kislap. Ito ang parehong larawang ginamit ni Jeremias para ilarawan ang isang salita mula sa Diyos na sobrang lakas na hindi niya mapigilan, tulad ng apoy na nakakulong sa kanyang mga buto (Jeremias 20:9), at gayundin ang kapangyarihan nitong dumurog sa bato.\n\nInilarawan na rin ni Lucas ang mga mukha nila gamit ang isa pang salitang Griyego, σκυθρωποί (skythrōpoí), \"nalulumbay ang mukha\" (Lucas 24:17). Ang parehong daan na nagsimula sa mga nakayukong mukha ay nagtatapos sa isang pusong nag-aalab.\n\nHindi una dumating ang pagkilala sa pamamagitan ng mga mata. Una itong dumating mula sa loob, tulad ng isang naglalagablab na katiyakan, matagal bago sila nakahanap ng pangalan sa nadarama nila.",
+      "revelation_key": "Nakilala ng puso si Jesus bago pa man siya nakilala ng mga mata — dumating ang ebidensya una bilang apoy, saka bilang paningin.",
+      "verse_overlay": {
+        "reference": "Lucas 24:32",
+        "text": "Nasabi nila sa isa't isa, \"Kaya pala nag-uumapaw ang ating pakiramdam habang tayo'y kinakausap niya sa daan at ipinapaliwanag ang mga Kasulatan!\""
+      },
+      "scripture_connections": [
+        {
+          "reference": "Jeremias 20:9",
+          "text": "Ngunit kung sabihin kong, \"Kalilimutan ko na si Yahweh at hindi na ako magsasalita para sa kanyang pangalan,\" para namang apoy na naglalagablab sa aking kalooban ang iyong mga salita, apoy na nakakulong sa aking mga buto. Sinikap kong tiisin ito, ngunit hindi ko na kayang pigilin pa."
+        },
+        {
+          "reference": "Jeremias 23:29",
+          "text": "Parang apoy ang aking salita at katulad ng martilyo na dumudurog sa malaking bato."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "cinematic_scene",
+      "mood": "peace",
+      "image_url": "cleofas_return_jerusalem.png",
+      "title": "Pabalik sa Jerusalem, sa gabi ring iyon",
+      "narrative": "Tumindig si Cleopas at ang kasama niya sa mismong oras na iyon, kahit gabi na at ang daan pabalik ay iyon ding daang nilakad nila na may dalamhati kanina. Ngayon sila'y tumatakbo, hindi na naglalakad. Bumalik sila sa Jerusalem para sabihin ang kanilang nakita, at natagpuan ang labing-isa na nagsasabing nabuhay na muli ang Panginoon, at nagpakita kay Simon (Pedro).",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 24:33-34",
+        "text": "Agad silang tumayo at nagbalik sa Jerusalem. Naratnan nilang nagkakatipon doon ang labing-isa at ang ibang kasamahan nila. Sinabi ng mga ito sa dalawa, \"Totoo nga palang muling nabuhay ang Panginoon! Nagpakita siya kay Simon!\""
+      },
+      "revelation_key": "Dumating si Cleopas para sabihin ang nakita niya, at natuklasang nagpahayag na rin ang Diyos ng kanyang sarili sa Jerusalem."
+    },
+    {
+      "order": 13,
+      "type": "theological_depth",
+      "mood": "peace",
+      "image_url": "cleofas_telling_story.png",
+      "title": "Isinalaysay ang buong kuwento nang detalyado",
+      "subtitle": "Mula sa mga tagapakinig tungo sa mga tagapagsalaysay",
+      "content": "Nang dumating si Cleopas at ang kasama niya sa harap ng labing-isa, ginamit ni Lucas ang salitang Griyego ἐξηγέομαι (exēgeomai), \"isalaysay,\" \"ipaliwanag nang detalyado,\" para ilarawan kung paano nila sinabi ang nangyari (Lucas 24:35).\n\nMga oras bago pa nito, sa daan, ipinaliwanag ni Jesus ang mga Kasulatan sa kanila. Ngayon, isinasalaysay nila nang detalyado ang kanilang nakita. Ang natanggap nila mula sa kanya bilang turo, ipinasa nila sa iba bilang patotoo.",
+      "revelation_key": "Lumipat si Cleopas mula sa pakikinig sa paliwanag ni Jesus tungo sa pagiging tagapagsalaysay ng kanyang patotoo.",
+      "verse_overlay": {
+        "reference": "Lucas 24:35",
+        "text": "At isinalaysay naman ng dalawa ang nangyari sa daan at kung paano nila nakilala si Jesus nang paghati-hatiin nito ang tinapay."
+      }
+    },
+    {
+      "order": 14,
+      "type": "discovery_activation",
+      "image_url": "cleofas_discovery.png",
+      "title": "Ang Iyong Pagtatagpo",
+      "subtitle": "Lumalakad si Jesus kasama mo kahit hindi mo pa siya nakikilala.",
+      "discovery_questions": [
+        {
+          "category": "Katapatan",
+          "question": "Hindi itinago ni Cleopas ang kanyang dalamhati o nagpanggap na may pananampalataya — sinabi niya ang lahat sa di-kilala, hindi alam na kausap niya si Jesus mismo. Ano ang sasabihin mo kay Jesus ngayon kung alam mong lumalakad siya sa tabi mo ngayong sandaling ito?"
+        },
+        {
+          "category": "Pananampalataya",
+          "question": "Nag-alab ang puso ni Cleopas bago pa man nakakita ang kanyang mga mata — ang katiyakan ay dumating muna sa pamamagitan ng Salita. Kailan huling ipinaramdam sa iyo iyon ng Salita ng Diyos, at ano ang pumipigil sa iyo para hanapin muli ito sa ganoong paraan?"
+        },
+        {
+          "category": "Layunin",
+          "question": "Sa mismong sandaling nakilala ni Cleopas si Jesus, hindi na siya naghintay ng umaga — tumindig siya sa gabi ring iyon para sabihin ito. Ikaw na nakita si Jesus sa sarili mong buhay, sino ang tinatakbuhan mo ngayon para sabihin iyon nang may kaparehong pagmamadali?"
+        }
+      ],
+      "prayer": {
+        "title": "Panalangin ng mga natanggap na paningin",
+        "content": "Panginoong Jesus, ngayo'y naglalakad ako nang hindi ka nakikita, ngunit alam kong hindi mo ako iniwang mag-isa — lumalakad ka sa aking tabi kahit hindi ka pa nakikilala ng aking mga mata. Alabin mo sa akin ang apoy na tanging ang iyong Salita lang ang makapagpapaningas: ang parehong naglalagablab na katiyakan na naramdaman ni Cleopas bago pa man nakakita ang kanyang mga mata. At lahat ng nakikilala ko sa iyo ngayon, tulungan mo akong dalhin sa iba — hayaan mong tumakbo ako para ibalita ang mabuting balita, ngayon, habang nag-aalab pa ang apoy. Sa pangalan ni Jesus, Amen."
+      }
+    },
+    {
+      "order": 15,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "cleofas_completion.png",
+      "completion_verse": {
+        "reference": "Lucas 24:33-34",
+        "text": "Agad silang tumayo at nagbalik sa Jerusalem. Naratnan nilang nagkakatipon doon ang labing-isa at ang ibang kasamahan nila. Sinabi ng mga ito sa dalawa, \"Totoo nga palang muling nabuhay ang Panginoon! Nagpakita siya kay Simon!\"",
+        "bible_version": "MBB05"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
