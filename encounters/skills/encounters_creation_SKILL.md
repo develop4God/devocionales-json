@@ -190,6 +190,14 @@ All cards share these base fields:
 
 > **Note:** `image_prompt` is NOT stored in the card JSON. Image prompts are managed separately (see Image Prompts section).
 
+### What a `revelation_key` is (and isn't)
+
+A `revelation_key` is not a summary of the card's `content`/`narrative`, not a poetic flourish, and not a place to cram extra biblical content just because it's available. It is the single sharpened "aha" specific to *this card's moment* — distinct from what the narrative already said, and without spoiling what a later card will reveal.
+
+Before writing one, answer explicitly: **what is this specific card trying to make the reader take away, and is that different from what neighboring cards already carry or will carry?** Don't write text "a lo loco" (recklessly, without this analysis) — if a card already has heavy theological weight assigned to it (e.g. a following card that unpacks the full symbolism), the current card's `revelation_key` doesn't need to carry that weight too; it should capture only what belongs to its own moment.
+
+**Concrete case (2026-07-16, Emmaus, "Al partir el pan" card):** first draft closed with "no en una señal espectacular" — technically accurate but (1) a negation pattern already banned above, and (2) it flattened everything already established about the theological weight of bread-breaking (same verb pattern as the Last Supper and the feeding of the 5,000 — see the following card, which owns that weight). The real "aha" for *this specific card* was narrower: recognition came through something intimate Cleofas already knew of Jesus, not through a new miracle. Final: "Cleofas no reconoce a Jesús por un milagro ante sus ojos, sino por algo íntimo que ya conocía de él."
+
 ---
 
 #### `cinematic_scene`

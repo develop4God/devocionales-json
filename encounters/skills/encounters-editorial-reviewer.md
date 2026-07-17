@@ -159,6 +159,31 @@ original error — it looks resolved but isn't.
 
 ---
 
+### 11. What a `revelation_key` is (and isn't) — analyze before writing
+A `revelation_key` is not a summary of the card's `content`/`narrative`, not a poetic
+flourish, and not a place to cram extra biblical content just because it's available.
+It is the single sharpened "aha" specific to *this card's moment* — distinct from what
+the narrative already said, and without spoiling what a later card will reveal.
+
+Before writing or approving one, answer explicitly: **what is this specific card trying
+to make the reader take away, and is that different from what neighboring cards already
+carry or will carry?** Don't write text "a lo loco" (recklessly, without this analysis).
+If a following card already owns the heavy theological weight of a moment (e.g. the full
+symbolism of bread-breaking), the current card's `revelation_key` doesn't need to carry
+that weight too — it should capture only what belongs to its own moment. This is Rule 4
+applied specifically to the `revelation_key` field, not just to whole cards.
+
+**Concrete case (2026-07-16, Emmaus, "Al partir el pan" card):** first draft closed with
+"no en una señal espectacular" — technically accurate but (1) a negation pattern already
+banned by Rule 2, and (2) it flattened everything already established about the
+theological weight of bread-breaking (same verb pattern as the Last Supper and the
+feeding of the 5,000 — a weight the *following* card owns). The real "aha" for *this*
+card was narrower: recognition came through something intimate Cleofas already knew of
+Jesus, not through a new miracle. Final: "Cleofas no reconoce a Jesús por un milagro ante
+sus ojos, sino por algo íntimo que ya conocía de él."
+
+---
+
 ## CARD-BY-CARD REVIEW PROTOCOL
 
 For each card, check in this order:
@@ -168,7 +193,7 @@ For each card, check in this order:
 - [ ] `verse_reference` matches `verse_text` (no partial verses)
 - [ ] `verse_text` is exact RVR1960 text — not paraphrased
 - [ ] `image_url` follows naming convention
-- [ ] `revelation_key` is one sentence, theologically precise
+- [ ] `revelation_key` is one sentence, theologically precise, and passes Rule 11 (its own moment's "aha", not a summary/repeat)
 - [ ] `scripture_connections` present if reflection cites another passage
 
 ### B. Content check

@@ -139,7 +139,7 @@
         "reference": "Lucas 24:28-29",
         "text": "Llegaron a la aldea adonde iban; y él hizo como que iba más lejos. Mas ellos le obligaron a quedarse, diciendo: Quédate con nosotros, porque se hace tarde, y el día ya ha declinado. Entró, pues, a quedarse con ellos."
       },
-      "revelation_key": "Una costumbre simple de hospitalidad abre la puerta al momento que ellos no sabían que estaban esperando."
+      "revelation_key": "Al recibirlo en su mesa como huésped de honor, sin saberlo, le dieron a Dios mismo la bienvenida que Él merecía."
     },
     {
       "order": 9,
@@ -147,14 +147,14 @@
       "mood": "awe",
       "image_url": "cleofas_bread_breaking.png",
       "title": "Al partir el pan",
-      "narrative": "Se sientan a la mesa. El huésped toma el pan, lo bendice, lo parte, y se lo da. Es un gesto ordinario, repetido cientos de veces en cualquier casa judía. Pero en ese instante preciso, algo se abre. Cleofas ve las manos, el gesto, la forma exacta en que ese hombre parte el pan — y lo reconoce. Es él. Y en el mismo momento en que lo reconoce, el hombre desaparece de su vista.",
+      "narrative": "Se sientan a la mesa. El huésped toma el pan, lo bendice, lo parte, y se lo da. Algo en ese gesto le resulta a Cleofas extrañamente familiar. Y en ese instante preciso, lo reconoce: es Jesús. En el mismo momento en que lo reconoce, él desaparece de su vista.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
         "reference": "Lucas 24:30-31",
         "text": "Y aconteció que, estando sentado con ellos a la mesa, tomó el pan y lo bendijo, lo partió, y les dio. Entonces les fueron abiertos los ojos, y le reconocieron; mas él se desapareció de su vista."
       },
-      "revelation_key": "El reconocimiento llega en el gesto más ordinario de la mesa — partir el pan — no en una señal espectacular."
+      "revelation_key": "Cleofas no reconoce a Jesús por un milagro ante sus ojos, sino por algo íntimo que ya conocía de él."
     },
     {
       "order": 10,
@@ -166,6 +166,10 @@
       "content": "Lucas ya había descrito antes esa misma secuencia de verbos, tomar, bendecir, partir, dar, la noche de la última cena y también al alimentar a los cinco mil. Cleofas reconoce a Jesús por la forma en que sus manos parten el pan, un gesto que ya había visto antes y que llevaba grabado sin saberlo.\n\nEs el mismo Jesús que caminó con ellos todo el camino, ahora reconocido en lo más cotidiano de una mesa compartida.",
       "revelation_key": "Cleofas reconoce a Jesús no por señal nueva alguna, sino por un gesto familiar que ya llevaba grabado en la memoria.",
       "scripture_connections": [
+        {
+          "reference": "Lucas 9:16",
+          "text": "Y tomando los cinco panes y los dos pescados, levantando los ojos al cielo, los bendijo, y los partió, y dio a sus discípulos para que los pusiesen delante de la gente."
+        },
         {
           "reference": "Lucas 22:19",
           "text": "Y tomó el pan y dio gracias, y lo partió y les dio, diciendo: Esto es mi cuerpo, que por vosotros es dado; haced esto en memoria de mí."
