@@ -813,7 +813,7 @@
       "intro_image": "cleofas_eyes_veiled.png",
       "mood_primary": "falling",
       "accent_color": "#1a140a",
-      "has_interactive": true,
+      "has_interactive": false,
       "testament": "new",
       "character": "Cleofas",
       "files": {
