@@ -184,6 +184,8 @@ body { font-family: -apple-system, Roboto, Arial, sans-serif; background:#1a1a1a
            background:#ffe8e8; border:1px solid #e05555; color:#a02020; font-weight:600; }
 .unrendered { max-width:480px; margin:16px auto 0; padding:14px 20px; border-radius:12px;
               background:#fff3cd; border:1px solid #d0a000; color:#7a5c00; font-weight:600; }
+.pending { max-width:480px; margin:8px auto 0; padding:10px 20px; border-radius:12px;
+           background:#e8f0ff; border:1px solid #5580d0; color:#1a3a7a; font-weight:600; font-size:14px; }
 """
 
 
@@ -322,15 +324,23 @@ def render_card(card):
         if v not in (None, "", [], {}) and k not in ("order", "type")
     }
     orphaned = []
+    pending = []
     for jkey in populated_json_keys:
         dart_field = JSON_TO_DART_FIELD.get(jkey, jkey)
-        if dart_field not in rendered_dart_fields and dart_field not in DEFERRED_FIELDS:
+        if dart_field in DEFERRED_FIELDS:
+            pending.append(jkey)
+        elif dart_field not in rendered_dart_fields:
             orphaned.append(jkey)
     if orphaned:
         body.append(
             '<div class="unrendered">⚠ NOT RENDERED IN APP for type '
             f'"{escape(ctype)}" -- fields present in JSON with no renderer in the '
             f'Dart contract: {", ".join(sorted(orphaned))}</div>'
+        )
+    if pending:
+        body.append(
+            '<div class="pending">⏳ PENDING (deferred, not yet wired in app): '
+            f'{", ".join(sorted(pending))}</div>'
         )
 
     body.append("</div></div>")
