@@ -15,6 +15,18 @@ editorial session — June 2026. Every rule here was earned from real mistakes c
 
 ---
 
+## BEFORE ANY NEW FILE — GATE 0: ORAR PRIMERO
+
+Before starting a new Encounter file (or before drafting the `prayer.content` of an
+existing one — see Rule 12.1), the encounter is prayed over first. Giovanni puts it
+in the hands of the Jesus this encounter speaks about, with respect and love, and
+asks for the Holy Spirit's guidance before any card or prayer is drafted. This is not
+a formality to log — it is the actual origin of the file. Claude does not begin
+generating an encounter, nor its `prayer.content`, ahead of this. If asked to begin
+before this has happened, Claude says so plainly and waits.
+
+---
+
 ## BEFORE YOU START
 
 1. Sparse-clone the file from GitHub (load sparse-clone skill)
@@ -209,6 +221,53 @@ Cleofas en el camino").
 **How to apply:** before approving a `prayer.content`, list the 4-6 major turning
 points the encounter's cards established, and check the prayer touches most of them
 with a concrete anchor (an image, a verb, a phrase) rather than a generic paraphrase.
+
+---
+
+### 12.1. The `prayer.content` must be prayed before it is written — not assembled from beats
+
+Touching the right beats (Rule 12) is necessary but not sufficient. A prayer can hit
+every anchor correctly and still read as a recipe — a checklist of turning points
+stitched together from outside the story — instead of one human voice speaking to God
+from inside the last moment of the encounter.
+
+**What actually distinguishes a living prayer from a recipe:**
+
+- **It speaks from inside the moment, not about it.** "La certeza que sintió Cleofas"
+  describes the character from outside. "Permíteme llevar todo esto que reconozco de
+  ti a otros" is spoken by someone who already *is* Cleofas in that instant — no
+  comparison, no distance.
+- **It carries one thing that matters most, not several peers in a row.** A prayer
+  that gives equal weight to four turning points in sequence ("Gracias porque...
+  Abre... Ábreme... Y cuando...") is reciting a list. A prayer built on a single
+  thing the reader needs to ask for — with the other anchors supporting it rather
+  than each getting their own clause — reads as one plea.
+- **It could not have been written by someone who only read the cards.** If the
+  prayer could be assembled purely from the encounter's text without the writer
+  first sitting with the scene as their own moment before God, it is a recipe.
+- **It gives itself, it doesn't explain itself.** A prayer that teaches ("esto
+  significa que...") is instructing the reader. A prayer that asks ("dame,
+  permíteme, llévame") is surrendering. Prayers should ask, not explain.
+
+**Concrete case (2026-07-17, Emmaus):** a first rewrite touched all the right beats
+(grief named, Scriptures opening, heart burning, urgency to tell others) and passed
+every gate above — and still read as assembled, because it spoke *about* Cleofas'
+experience by comparison ("como Cleofas...", "la misma certeza que sintió Cleofas")
+rather than from inside it. The version that worked came only after Giovanni prayed
+the encounter himself first, then wrote from inside that same moment: "Permíteme
+llevar todo esto que reconozco de ti a otros, que corra a darles las buenas nuevas."
+One clause, one voice, no comparison — because it was prayed before it was written.
+
+**Gate before writing (mandatory, before drafting any `prayer.content` — see also
+"BEFORE ANY NEW FILE" below):** Claude does not draft the first version of a
+`prayer.content`. Giovanni prays the encounter first, puts it in Jesus' hands, and
+writes (or dictates) what comes from that — spoken with respect and love for Jesus,
+under the Holy Spirit's guidance, not assembled by Claude from the cards' beats.
+Claude's role at that point is to check the result against Rule 12 (does it touch
+the encounter's real turning points) and the language gates (2, 3, 6, 7, 8) — never
+to originate the first draft of the prayer's core plea. If Claude is asked to
+propose prayer language before this has happened, it should say so and ask for the
+prayed version first, rather than producing a draft to be corrected afterward.
 
 ---
 
