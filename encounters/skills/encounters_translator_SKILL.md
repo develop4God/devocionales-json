@@ -5,16 +5,31 @@ You are a professional biblical translator and theologian with expertise in narr
 ---
 
 ## What You Receive
-- `{encounter_id}_en_001.json` — EN master (translation base)
+- `{encounter_id}_es_001.json` — ES original (source for EN, PT, FR)
+- `{encounter_id}_en_001.json` — EN file (source for JA, ZH, DE, AR, HI, FIL — once it exists)
 - `encounters/index.json` — source of truth for languages needed
 - Remote index — source of truth for versions, codes, and download URLs: `https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json`
 - `validate_encounters.py` — validator (run after all languages); resolves `bible_version` codes live from the remote SOT on every run (retries on transient network failure, falls back to a self-refreshing local cache only if unreachable) and reports which source was used
 - `encounters_master_validator.py` — orchestrator (run at end)
 
+### Source language by target
+
+Encounters are authored natively in Spanish (see `encounters_creation_SKILL.md`), so ES
+is the true original — not EN. Use the closer-language source for each target:
+
+| Target language | Translate from |
+|---|---|
+| EN, PT, FR | **ES** (Romance/cognate-adjacent — translating from the true original avoids drift through an intermediate EN paraphrase) |
+| JA, ZH, DE, AR, HI, FIL | **EN** (existing pipeline, unchanged) |
+
+If the EN file does not exist yet for an encounter, translate it from ES first (per the
+table above) before starting any JA/ZH/DE/AR/HI/FIL work that depends on it.
+
 ---
 
 ## What You Produce
-For each language listed under `files` in `index.json` for this encounter (excluding `en`):
+For each language listed under `files` in `index.json` for this encounter (excluding the
+one you're translating from):
 - One translated JSON file: `{encounter_id}_{lang}_001.json`
 - Validation log showing ✅ ALL ENCOUNTERS PASSED or resolved warnings
 - Updated `encounters/index.json` entry
@@ -158,17 +173,33 @@ print('OK: all files match canonical id', canon_id)
 - `verse_overlay.text` and `verse_overlay.reference`
 - `completion_verse.text`, `completion_verse.reference`
 - `scripture_connections[].text` and `scripture_connections[].reference`
-- `discovery_questions[].category` and `discovery_questions[].question`
+- `discovery_questions[].category` and `discovery_questions[].question`. **Trap:** the
+  source file itself can ship this field untranslated (e.g. `"Honesty"`/`"Faith"`/
+  `"Purpose"` left in English inside an ES source) — a critic sampling prose paragraphs
+  won't catch it, since it's a short label field, not a sentence. Before delivery, check
+  every `category` value in the *source* file against the target language too, not just
+  against what you produced — if the source itself is wrong, fix the source's category
+  values to match the pattern used by other published encounters (e.g. `zacchaeus`:
+  `"Ser visto"` / `"Être vu"` / `"Being seen"`), not just your own output.
 - `prayer.title` and `prayer.content`
 - `meta.scripture_reference` → translate book name only
-- `meta.tags` → natural target language slugs
+- `meta.tags` → natural target language slugs, **with full target-language accentuation**.
+  **Trap:** it's easy to mechanically carry over the source language's own spelling
+  (including any missing diacritics) instead of writing the tag correctly in the target
+  language — this shipped once in both PT and FR for the same encounter (`ressurreicao`/
+  `esperanca` instead of `ressurreição`/`espera​nça`; `resurrection`/`esperance` instead of
+  `résurrection`/`espérance`), caught only when a second critic pass happened to compare
+  tags against a sibling published encounter's tags. A critic sampling narrative prose
+  will not catch this, since tags aren't prose — check `meta.tags` explicitly, one word
+  at a time, against correct target-language spelling.
 - `meta.character` → translate the character description (e.g. `The Gadarene demoniac` →
   `El endemoniado gadareno`). This field is easy to miss because it sits in `meta`
   alongside untranslated UI fields — it shipped untranslated in DE/HI/JA once, caught
   only on a second critic pass. Always check it explicitly.
 
 ### Never add or remove JSON keys.
-Structure must be identical to the EN file.
+Structure must be identical to the source file (ES for EN/PT/FR targets, EN for
+JA/ZH/DE/AR/HI/FIL targets).
 
 ---
 
