@@ -19,11 +19,20 @@ Usage:
 """
 import argparse
 import ast
+import base64
 import json
 import re
 import sys
+import urllib.error
+import urllib.request
 import webbrowser
 from pathlib import Path
+
+from asset_urls import EncounterIndexReader, ImageReference
+
+IMAGE_EXT = "avif"
+IMAGE_MIME = "image/avif"
+REQUEST_TIMEOUT_SECONDS = 10
 
 # JSON key -> Dart field name, so this script's field checks can be compared
 # against kEncounterCardRenderedFields (which uses Dart camelCase names).
@@ -138,6 +147,7 @@ body { font-family: -apple-system, Roboto, Arial, sans-serif; background:#1a1a1a
 .card { max-width:480px; margin:0 auto 32px; border-radius:28px; overflow:hidden;
         box-shadow:0 8px 30px rgba(0,0,0,0.4); }
 .header { height:160px; display:flex; align-items:center; justify-content:center;
+          background-size:cover; background-position:center;
           background:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8)); }
 .header .icon-badge { background:rgba(255,255,255,0.1); border-radius:50%; padding:16px; font-size:48px; }
 .body { padding:24px 24px 32px; }
@@ -189,14 +199,52 @@ body { font-family: -apple-system, Roboto, Arial, sans-serif; background:#1a1a1a
 """
 
 
-def header_html(card):
+class AssetImageFetcher:
+    """Downloads encounter images from the Devocionales-assets repo and hands
+    back a data: URI, so the preview HTML stays a single self-contained file
+    and nothing is left on disk once it's deleted. Caches per-process so a
+    single preview run never fetches the same image twice."""
+
+    def __init__(self, encounter_id: str, ext: str = IMAGE_EXT, mime: str = IMAGE_MIME):
+        self._encounter_id = encounter_id
+        self._ext = ext
+        self._mime = mime
+        self._cache = {}
+
+    def data_uri(self, filename: str):
+        if filename in self._cache:
+            return self._cache[filename]
+        ref = ImageReference(encounter_id=self._encounter_id, filename=filename)
+        url = ref.url(ext=self._ext)
+        try:
+            with urllib.request.urlopen(url, timeout=REQUEST_TIMEOUT_SECONDS) as response:
+                raw = response.read()
+        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as e:
+            print(f"WARNING: could not fetch {url}: {e}", file=sys.stderr)
+            self._cache[filename] = None
+            return None
+        encoded = base64.b64encode(raw).decode("ascii")
+        uri = f"data:{self._mime};base64,{encoded}"
+        self._cache[filename] = uri
+        return uri
+
+
+def header_html(card, image_fetcher=None):
     mood_color = MOOD_COLORS.get(card.get("mood"), DEFAULT_MOOD_COLOR)
     icon = card.get("icon")
     icon_html = f'<div class="icon-badge">{escape(icon)}</div>' if icon else ""
+    filename = card.get("image_url")
     image_note = ""
-    if card.get("image_url"):
-        image_note = f'<!-- image_url: {escape(card["image_url"])} (not fetched in this preview) -->'
-    return f'<div class="header" style="background:{mood_color}">{icon_html}{image_note}</div>'
+    style = f"background:{mood_color}"
+    if filename:
+        uri = image_fetcher.data_uri(filename) if image_fetcher else None
+        if uri:
+            style = (
+                f"background:{mood_color} url('{uri}') center/cover no-repeat"
+            )
+        else:
+            image_note = f'<!-- image_url: {escape(filename)} (not fetched in this preview) -->'
+    return f'<div class="header" style="{style}">{icon_html}{image_note}</div>'
 
 
 def verse_overlay_html(vo):
@@ -230,9 +278,9 @@ def connections_html(items):
     return "\n".join(out)
 
 
-def render_card(card):
+def render_card(card, image_fetcher=None):
     ctype = card.get("type", "unknown")
-    body = ['<div class="card">', header_html(card), '<div class="body">']
+    body = ['<div class="card">', header_html(card, image_fetcher), '<div class="body">']
 
     if ctype == "cinematic_scene":
         if card.get("title"):
@@ -347,7 +395,7 @@ def render_card(card):
     return "\n".join(body)
 
 
-def build_html(data, drift_warnings):
+def build_html(data, drift_warnings, image_fetcher=None):
     title = data.get("title") or data.get("id") or "Encounter Preview"
     parts = [f"<!doctype html><html><head><meta charset='utf-8'>"
              f"<title>{escape(title)}</title><style>{CSS}</style></head><body>"]
@@ -355,7 +403,7 @@ def build_html(data, drift_warnings):
         parts.append(f'<div class="warning">⚠ {escape(w)}</div>')
     for card in data.get("cards", []):
         if isinstance(card, dict):
-            parts.append(render_card(card))
+            parts.append(render_card(card, image_fetcher))
     parts.append("</body></html>")
     return "\n".join(parts)
 
@@ -367,6 +415,7 @@ def main():
     ap.add_argument("--dart-repo", default=None,
                      help="Path to a local devocional_nuevo checkout (default: ../../devocional_nuevo)")
     ap.add_argument("--no-open", action="store_true", help="Don't auto-open the result in a browser")
+    ap.add_argument("--no-images", action="store_true", help="Don't fetch real images from the assets repo")
     args = ap.parse_args()
 
     json_path = Path(args.json_file)
@@ -379,7 +428,17 @@ def main():
     for w in warnings:
         print(f"WARNING: {w}", file=sys.stderr)
 
-    html = build_html(data, warnings)
+    image_fetcher = None
+    if not args.no_images:
+        encounters_dir = Path(__file__).resolve().parent.parent
+        index_reader = EncounterIndexReader(encounters_dir)
+        encounter_id = index_reader.encounter_id_for(json_path.name)
+        if encounter_id:
+            image_fetcher = AssetImageFetcher(encounter_id)
+        else:
+            print(f"WARNING: {json_path.name} not found in index.json -- skipping image fetch", file=sys.stderr)
+
+    html = build_html(data, warnings, image_fetcher)
     out_path = Path(args.out) if args.out else json_path.with_suffix(".preview.html")
     out_path.write_text(html, encoding="utf-8")
     print(f"Wrote {out_path}")
