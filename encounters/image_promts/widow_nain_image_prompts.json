@@ -1,7 +1,7 @@
 {
   "encounter_id": "widow_nain_es_001",
   "character": "The Widow of Nain",
-  "master_character_prompt": "A woman in her early sixties, stout and heavyset build with thick strong arms and a wide frame, weathered by years of manual work, a long oval face with deep creases at the forehead and around downturned eyes, dark brown eyes reddened from days of crying, a straight sun-worn nose, gray hair mostly covered by a plain undyed linen head-covering with a few loose gray strands visible at the temple, sun-darkened leathery skin with age spots on the hands, wearing a simple faded charcoal-gray wool tunic with a dark mourning shawl draped over her shoulders, no jewelry, calloused bare feet dusty from walking. Her posture is upright but hollowed, shoulders drawn in as if carrying something invisible. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting. Character reference sheet, full body and face close-up.",
+  "master_character_prompt": "A woman in her early sixties, stout and heavyset build with thick strong arms and a wide frame, weathered by years of manual work. She has a sharp, high-cheekboned face with an angular jawline, a prominent aquiline sun-worn nose, and deep-set, sharp and alert dark eyes, reddened from days of crying. Gray hair is mostly covered by a plain undyed linen head-covering with a few loose gray strands visible at the temple. Sun-darkened leathery skin with age spots on the hands. She wears a simple faded charcoal-gray wool tunic with a dark mourning shawl draped over her shoulders, no jewelry, and calloused bare feet dusty from walking. Her posture is upright but hollowed. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting. A two-panel character study showing a full-length view on the left and an oversized close-up portrait focusing on her facial features on the right. Plain, clean, solid ochre background. No text, no labels.",
   "card_prompts": [
     {
       "order": 1,
@@ -22,7 +22,7 @@
       "image_url": "widow_nain_portrait_grief.png",
       "mood": "falling",
       "shot_type": "close-up portrait",
-      "prompt": "Close-up portrait of a woman in her early sixties, long oval face with deep creases, dark brown eyes reddened from crying, downturned gaze fixed on nothing, straight sun-worn nose, gray hair mostly covered by a plain linen head-covering with loose strands at the temple, sun-darkened leathery skin. A dark mourning shawl is pulled close around her shoulders. Blurred mourners crowd softly out of focus behind her. Painterly warm 2D illustration, Mediterranean palette, deep amber shadow, low directional light, cinematic, no text."
+      "prompt": "Close-up portrait of a woman in her early sixties, sharp high-cheekboned face with an angular jawline, deep-set dark eyes reddened from crying, gaze fixed on nothing, prominent aquiline sun-worn nose, gray hair mostly covered by a plain linen head-covering with loose strands at the temple, sun-darkened leathery skin. A dark mourning shawl is pulled close around her shoulders. Blurred mourners crowd softly out of focus behind her. Painterly warm 2D illustration, Mediterranean palette, deep amber shadow, low directional light, cinematic, no text."
     },
     {
       "order": 4,
@@ -36,7 +36,7 @@
       "image_url": "widow_nain_jesus_sees_her.png",
       "mood": "awe",
       "shot_type": "close-up portrait",
-      "prompt": "Close-up portrait of a woman in her early sixties, long oval face with deep creases, dark brown reddened eyes fixed on a nearby figure with a startled, uncertain expression, gray hair under a plain linen head-covering, dark mourning shawl over a charcoal-gray tunic. Her eyes are wide, caught mid-tear, something shifting in her expression between grief and disbelief. Soft out-of-focus figure of a man in a simple tunic standing just before her, face never visible, a faint warm glow around his form. Painterly warm 2D illustration, Mediterranean palette, warm dawn light, cinematic, no text."
+      "prompt": "Close-up portrait of a woman in her early sixties, sharp high-cheekboned face with an angular jawline, deep-set dark eyes reddened from crying fixed on a nearby figure with a startled, uncertain expression, prominent aquiline sun-worn nose, gray hair under a plain linen head-covering, dark mourning shawl over a charcoal-gray tunic. Her eyes are wide, caught mid-tear, something shifting in her expression between grief and disbelief. Soft out-of-focus figure of a man in a simple first-century tunic standing just before her, face never visible, a subtle warm glow of glory around his form. Painterly warm 2D illustration, Mediterranean palette, warm dawn light, cinematic, no text."
     },
     {
       "order": 6,
@@ -99,7 +99,7 @@
       "image_url": "widow_nain_final_portrait.png",
       "mood": "peace",
       "shot_type": "close-up portrait",
-      "prompt": "Close-up portrait of a woman in her early sixties, long oval face with deep creases now softened, dark brown eyes still faintly red but calm, gray hair under a plain linen head-covering, sun-darkened leathery skin, a faint, unguarded almost-smile. Warm late light falls across her face. Painterly warm 2D illustration, Mediterranean palette, soft warm gold tones, gentle cinematic light, no text."
+      "prompt": "Close-up portrait of a woman in her early sixties, sharp high-cheekboned face with an angular jawline now softened, deep-set dark eyes still faintly red but calm, prominent aquiline sun-worn nose, gray hair under a plain linen head-covering, sun-darkened leathery skin, a faint, unguarded almost-smile. Warm late light falls across her face. Painterly warm 2D illustration, Mediterranean palette, soft warm gold tones, gentle cinematic light, no text."
     },
     {
       "order": 15,
