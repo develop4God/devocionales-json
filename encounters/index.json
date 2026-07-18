@@ -887,7 +887,7 @@
       "intro_image_prompt": "Close-up portrait of a woman in her early sixties, sharp high-cheekboned face with an angular jawline, deep-set dark eyes reddened from crying, gaze fixed on nothing, prominent aquiline sun-worn nose, gray hair mostly covered by a plain linen head-covering with loose strands at the temple, sun-darkened leathery skin. A dark mourning shawl is pulled close around her shoulders. Blurred mourners crowd softly out of focus behind her. Painterly warm 2D illustration, Mediterranean palette, deep amber shadow, low directional light, cinematic, no text.",
       "mood_primary": "grief",
       "accent_color": "#4a3728",
-      "has_interactive": true,
+      "has_interactive": false,
       "testament": "new",
       "character": "La Viuda de Naín",
       "files": {
