@@ -1,0 +1,248 @@
+{
+  "id": "widow_nain_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "es",
+  "bible_version": "RVR1960",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 11,
+  "meta": {
+    "character": "La Viuda de Naín",
+    "testament": "new",
+    "scripture_reference": "Lucas 7:11-17",
+    "mood_primary": "grief",
+    "accent_color": "#4a3728",
+    "emoji": "🕊️",
+    "tags": ["compasión", "duelo", "resurrección", "viudez", "misericordia no pedida"]
+  },
+  "key_verse": {
+    "reference": "Lucas 7:13",
+    "text": "Y cuando el Señor la vio, se compadeció de ella, y le dijo: No llores.",
+    "bible_version": "RVR1960"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "widow_nain_procession_departure.png",
+      "title": "Una aldea al pie del monte",
+      "narrative": "Naín es una aldea pequeña, apretada contra la ladera del monte Moré. Tiene una sola puerta principal, y por ella pasa todo: los mercaderes que entran, los pastores que salen con sus rebaños, y también, cuando llega el momento, los difuntos que la aldea entera acompaña hasta la tumba. Ese día, algo se acerca a esa puerta desde dos direcciones a la vez.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "Una aldea pequeña con una sola puerta está a punto de ver dos caminos cruzarse en el mismo umbral."
+    },
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "widow_nain_bier_procession.png",
+      "title": "Un féretro abierto sale de la ciudad",
+      "narrative": "Por la puerta de Naín sale una procesión larga, casi toda la aldea caminando detrás de un féretro abierto, como era la costumbre. Al frente, entre los que lloran más fuerte, camina una mujer. No es la única que llora, pero es la que más ha perdido: primero un esposo, ahora el único hijo que le quedaba.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 7:12",
+        "text": "Cuando llegó cerca de la puerta de la ciudad, he aquí que llevaban a enterrar a un difunto, hijo único de su madre, la cual era viuda; y había con ella mucha gente de la ciudad."
+      },
+      "revelation_key": "La multitud entera acompaña a una mujer que camina hacia el único destino que le queda: enterrar a su hijo único."
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "widow_nain_portrait_grief.png",
+      "title": "Sin nombre, sin voz en la puerta",
+      "subtitle": "Lo que un hijo significaba en Naín",
+      "content": "El texto no le da nombre. La conocemos solo por lo que ha perdido. Su hijo era ya un hombre crecido, no un niño — Jesús lo llamará después *neaniskos*, joven adulto. En Naín, como en cualquier aldea de la época, la puerta de la ciudad era donde los ancianos resolvían las herencias, los contratos, las disputas de propiedad. Un hijo así era, entre muchas cosas, la voz legal de su madre en ese lugar.\n\nCon su hijo en ese féretro, la viuda pierde también esa voz. Se queda sin sostén y sin quien la represente. La multitud que la acompaña puede llorar con ella. No puede devolverle nada de eso.",
+      "revelation_key": "Esta mujer no solo pierde a su hijo — pierde su lugar legal y económico en la aldea entera, y nadie en la procesión puede dárselo de vuelta.",
+      "verse_overlay": {
+        "reference": "Lucas 7:12",
+        "text": "Llevaban a enterrar a un difunto, hijo único de su madre, la cual era viuda."
+      }
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "widow_nain_two_crowds_meet.png",
+      "title": "Dos multitudes en el mismo umbral",
+      "narrative": "Desde el otro lado del camino sube Jesús, con sus discípulos y una multitud igual de grande. Las dos procesiones llegan a la puerta casi al mismo tiempo: una que entra buscando algo, la otra que sale sin nada. Por un instante, ambas se detienen, cara a cara, sin que nadie sepa todavía lo que está a punto de pasar.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 7:11",
+        "text": "Aconteció después, que él iba a la ciudad llamada Naín, e iban con él muchos de sus discípulos, y una gran multitud."
+      },
+      "revelation_key": "En la puerta de Naín se cruzan la multitud que sigue a la Vida y la multitud que entierra una muerte."
+    },
+    {
+      "order": 5,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "widow_nain_jesus_sees_her.png",
+      "verse_reference": "Lucas 7:13",
+      "verse_text": "Y cuando el Señor la vio, se compadeció de ella, y le dijo: No llores.",
+      "reflection": "Antes de que ella diga una palabra, antes de que alguien le pida algo, Jesús la ve y se compadece. El verbo que usa Lucas describe un movimiento en las entrañas, un dolor físico ante el dolor ajeno.\n\nEs notable hacia dónde se dirige primero esa compasión: no al féretro, sino a la madre que camina detrás de él. Ve primero a la persona que sigue respirando.",
+      "revelation_key": "La compasión de Jesús se mueve por lo que ve, no por lo que le piden — nadie en esa multitud le ha suplicado nada.",
+      "scripture_connections": []
+    },
+    {
+      "order": 6,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "widow_nain_only_son.png",
+      "title": "Un hijo único, como Él",
+      "subtitle": "monogenēs — la misma palabra",
+      "content": "Lucas describe al hijo con la palabra griega *monogenēs*: único, sin igual. Es la misma palabra que Juan usará para describir a Jesús como el Hijo unigénito del Padre (Juan 1:18; 3:16).\n\nCuando Jesús le habla, lo llama *neaniskos* — joven, un hombre ya crecido, no un niño. Era la única voz de esa casa, y esa voz acababa de callarse para siempre.\n\n🔑 No es una coincidencia menor: el Hijo único del Padre se detiene ante el hijo único de una viuda.",
+      "revelation_key": "El mismo término que describe al Hijo único del Padre describe también al hijo que Jesús está a punto de devolverle a esta mujer.",
+      "verse_overlay": {
+        "reference": "Lucas 7:14",
+        "text": "Y acercándose, tocó el féretro; y los que lo llevaban se detuvieron. Y dijo: Joven, a ti te digo, levántate."
+      },
+      "scripture_connections": [
+        { "reference": "Juan 3:16", "text": "Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna." }
+      ]
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "widow_nain_touching_bier.png",
+      "title": "Toca lo que la ley prohibía",
+      "narrative": "Jesús se acerca y toca el féretro abierto. Para cualquier maestro de la Ley, tocar un cadáver traía impureza ceremonial durante siete días. Los que lo cargan se detienen, sorprendidos de que alguien haga lo que ningún rabino haría en público. Jesús lo toca de todos modos, como quien tiene autoridad sobre lo que la ley solo podía nombrar.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 7:14",
+        "text": "Y acercándose, tocó el féretro; y los que lo llevaban se detuvieron."
+      },
+      "revelation_key": "Jesús toca la muerte misma, y la muerte retrocede ante él en vez de contaminarlo."
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "widow_nain_son_rises.png",
+      "title": "El que iba mudo empieza a hablar",
+      "narrative": "La multitud entera se queda en silencio, mirando. Jesús no ora en voz alta, no invoca ceremonias: solo habla, directo, como quien tiene autoridad sobre lo que escucha. Y el joven que iba camino a la tumba se incorpora, y comienza a hablar.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 7:15",
+        "text": "Entonces se incorporó el que había muerto, y comenzó a hablar."
+      },
+      "revelation_key": "No hubo ritual ni fórmula — solo una palabra de Jesús, y la muerte cedió el paso."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "widow_nain_reunion_embrace.png",
+      "title": "Se lo entregó a su madre",
+      "subtitle": "El gesto final del milagro",
+      "content": "Lucas no termina el relato con el joven de pie. Termina con Jesús entregándolo a su madre — la misma frase que usa el Antiguo Testamento cuando Elías devuelve a la viuda de Sarepta su hijo resucitado.\n\nEl gesto importa tanto como el milagro: Jesús no se queda con la gloria del momento. Pone al hijo de vuelta en los brazos de la única persona a quien pertenecía.",
+      "revelation_key": "El milagro no termina en el joven de pie — termina en el instante en que Jesús se lo devuelve a su madre.",
+      "verse_overlay": {
+        "reference": "Lucas 7:15",
+        "text": "Y lo dio a su madre."
+      },
+      "scripture_connections": [
+        { "reference": "1 Reyes 17:23", "text": "Y tomando Elías al niño, lo trajo de la cámara a la casa, y lo dio a su madre, y le dijo Elías: Mira, tu hijo vive." }
+      ]
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "widow_nain_elijah_echo.png",
+      "title": "Sin deuda de hospitalidad",
+      "subtitle": "Lo que Elías debía, Jesús no debía",
+      "content": "Elías había resucitado antes al hijo de la viuda de Sarepta (1 Reyes 17), y Eliseo haría lo mismo con el hijo de la sunamita (2 Reyes 4). Ambos profetas habían recibido antes la hospitalidad de esas mujeres — les debían algo.\n\n🔑 Jesús no tenía ninguna deuda con la viuda de Naín. Nunca la había visto antes de ese día. No hay indicio en el texto de que ella lo hubiera hospedado, ni de que lo conociera. Actuó sin que nadie se lo pidiera y sin que nadie se lo debiera.",
+      "revelation_key": "A diferencia de Elías y Eliseo, Jesús no le debía nada a esta mujer — su compasión no respondía a una deuda, solo a lo que vio.",
+      "verse_overlay": null,
+      "scripture_connections": [
+        { "reference": "1 Reyes 17:9", "text": "Levántate, vete a Sarepta de Sidón, y mora allí; he aquí yo he dado orden allí a una mujer viuda que te sustente." },
+        { "reference": "2 Reyes 4:8", "text": "Aconteció también que un día pasaba Eliseo por Sunem; y había allí una mujer importante, que le invitaba insistentemente a que comiese; y cuando él pasaba por allí, venía a la casa de ella a comer." }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "widow_nain_crowd_wonder.png",
+      "title": "El temor y la palabra que corrió",
+      "subtitle": "Un gran profeta se ha levantado",
+      "content": "El asombro de la multitud se traduce en una frase concreta: «Un gran profeta se ha levantado entre nosotros» — el mismo lenguaje que usaban para hablar de Elías y Eliseo.\n\nLa gente reconoció el patrón antes de entender del todo lo que estaban viendo. Vieron algo que ya conocían por las Escrituras, y aun así, era más grande que lo que esperaban.",
+      "revelation_key": "La multitud reconoce el eco de Elías y Eliseo en lo que ve, sin saber todavía cuánto más grande es Aquel que tienen delante.",
+      "verse_overlay": {
+        "reference": "Lucas 7:16",
+        "text": "Y todos tuvieron miedo, y glorificaban a Dios, diciendo: Un gran profeta se ha levantado entre nosotros; y: Dios ha visitado a su pueblo."
+      }
+    },
+    {
+      "order": 12,
+      "type": "interactive_moment",
+      "icon": "🤍",
+      "image_url": "widow_nain_interactive_pause.png",
+      "title": "Antes de pedir",
+      "subtitle": "Un momento para nombrar tu propia procesión",
+      "reflection_prompt": "Piensa en algo que hoy cargas sin fuerzas ni siquiera para pedir ayuda. No tienes que formular la petición perfecta — solo nómbralo delante de Dios."
+    },
+    {
+      "order": 13,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "widow_nain_walking_home.png",
+      "verse_reference": "Lucas 7:17",
+      "verse_text": "Y esta fama de él se extendió por toda Judea, y por toda la región de alrededor.",
+      "reflection": "La noticia se extiende más allá de Naín, más allá del pequeño círculo de una viuda y su hijo. Lo que empezó como la compasión de Jesús por una sola mujer termina alcanzando toda una región.\n\nLa historia de esta mujer, que no tiene nombre en el texto, se convirtió en la manera en que muchos supieron por primera vez quién era Jesús.",
+      "revelation_key": "La compasión que nadie pidió terminó anunciando a Jesús en toda una región — el dolor de una mujer sin nombre se volvió testimonio para muchos.",
+      "scripture_connections": []
+    },
+    {
+      "order": 14,
+      "type": "character_moment",
+      "mood": "peace",
+      "image_url": "widow_nain_final_portrait.png",
+      "title": "Una mujer sin nombre en el relato",
+      "subtitle": "La viuda, después",
+      "content": "El texto no vuelve a mencionar a la viuda de Naín. No sabemos su nombre, ni qué fue de ella después. Lo único que el relato conserva es este momento: una mujer que caminaba sin nada que ofrecer, ni fe que declarar, ni súplica que gritar, y que fue vista de todos modos.\n\nSu historia no depende de lo que ella hizo. Depende por completo de lo que Jesús vio.",
+      "revelation_key": "La viuda de Naín no hizo nada para merecer este milagro — su historia entera descansa en lo que Jesús decidió ver.",
+      "verse_overlay": {
+        "reference": "Lucas 7:13",
+        "text": "Y cuando el Señor la vio, se compadeció de ella."
+      }
+    },
+    {
+      "order": 15,
+      "type": "discovery_activation",
+      "image_url": "widow_nain_discovery.png",
+      "title": "Tu Encuentro",
+      "subtitle": "La compasión de Dios no espera a que se la pidan.",
+      "discovery_questions": [
+        { "category": "Honestidad", "question": "La viuda de Naín no le pidió nada a Jesús — ni siquiera tenía fuerzas para eso. ¿Hay algo que cargas hoy que ni siquiera has sabido cómo poner en palabras delante de Dios?" },
+        { "category": "Fe", "question": "Jesús tocó el féretro, algo que la ley prohibía, porque la compasión pesó más que la norma. ¿Dónde necesitas creer que el amor de Dios por ti no se detiene ante lo que parece imposible de tocar?" },
+        { "category": "Propósito", "question": "Lo que Jesús hizo por una mujer sin nombre terminó siendo noticia en toda una región. ¿Qué historia de compasión recibida en tu vida podría convertirse hoy en testimonio para alguien más?" }
+      ],
+      "prayer": {
+        "title": "Oración de la compasión no pedida",
+        "content": "Señor, tú me viste antes de que yo supiera pedirte algo. Como a la viuda de Naín, te acercas a mi procesión sin que yo te lo haya suplicado, y tocas lo que la ley y el miedo dicen que no debe tocarse. Gracias porque tu compasión no espera mi fe perfecta ni mis palabras correctas — se mueve por lo que ves en mí. Devuélveme, como a ella, lo que hoy parece perdido. Amén."
+      }
+    },
+    {
+      "order": 16,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "widow_nain_completion.png",
+      "completion_verse": {
+        "reference": "Lucas 7:13",
+        "text": "Y cuando el Señor la vio, se compadeció de ella, y le dijo: No llores.",
+        "bible_version": "RVR1960"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

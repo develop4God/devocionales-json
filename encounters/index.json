@@ -876,6 +876,35 @@
         "hi": 12,
         "fil": 12
       }
+    },
+    {
+      "id": "widow_nain_001",
+      "version": "1.0",
+      "image_version": "1.0",
+      "emoji": "🕊️",
+      "status": "coming_soon",
+      "intro_image": "widow_nain_portrait_grief.png",
+      "intro_image_prompt": "Close-up portrait of a woman in her early sixties, long oval face with deep creases, dark brown eyes reddened from crying, downturned gaze fixed on nothing, straight sun-worn nose, gray hair mostly covered by a plain linen head-covering with loose strands at the temple, sun-darkened leathery skin. A dark mourning shawl is pulled close around her shoulders. Blurred mourners crowd softly out of focus behind her. Painterly warm 2D illustration, Mediterranean palette, deep amber shadow, low directional light, cinematic, no text.",
+      "mood_primary": "grief",
+      "accent_color": "#4a3728",
+      "has_interactive": true,
+      "testament": "new",
+      "character": "La Viuda de Naín",
+      "files": {
+        "es": "widow_nain_es_001.json"
+      },
+      "titles": {
+        "es": "La puerta de Naín"
+      },
+      "subtitles": {
+        "es": "Ella no le pidió nada. Él la vio de todos modos."
+      },
+      "scripture_reference": {
+        "es": "Lucas 7:11-17"
+      },
+      "estimated_reading_minutes": {
+        "es": 11
+      }
     }
   ]
 }
