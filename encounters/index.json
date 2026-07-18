@@ -884,26 +884,40 @@
       "emoji": "🕊️",
       "status": "coming_soon",
       "intro_image": "widow_nain_portrait_grief.png",
-      "intro_image_prompt": "Close-up portrait of a woman in her early sixties, sharp high-cheekboned face with an angular jawline, deep-set dark eyes reddened from crying, gaze fixed on nothing, prominent aquiline sun-worn nose, gray hair mostly covered by a plain linen head-covering with loose strands at the temple, sun-darkened leathery skin. A dark mourning shawl is pulled close around her shoulders. Blurred mourners crowd softly out of focus behind her. Painterly warm 2D illustration, Mediterranean palette, deep amber shadow, low directional light, cinematic, no text.",
       "mood_primary": "grief",
       "accent_color": "#4a3728",
       "has_interactive": false,
       "testament": "new",
       "character": "La Viuda de Naín",
       "files": {
-        "es": "widow_nain_es_001.json"
+        "es": "widow_nain_es_001.json",
+        "en": "widow_nain_en_001.json",
+        "pt": "widow_nain_pt_001.json",
+        "fr": "widow_nain_fr_001.json"
       },
       "titles": {
-        "es": "La puerta de Naín"
+        "es": "El encuentro de la viuda de Naín",
+        "en": "The Encounter of the Widow of Nain",
+        "pt": "O Encontro da Viúva de Naim",
+        "fr": "La Rencontre de la Veuve de Naïn"
       },
       "subtitles": {
-        "es": "Ella no le pidió nada. Él la vio de todos modos."
+        "es": "Compasión antes que la palabra",
+        "en": "Compassion Before a Word",
+        "pt": "Compaixão antes da palavra",
+        "fr": "La compassion avant la parole"
       },
       "scripture_reference": {
-        "es": "Lucas 7:11-17"
+        "es": "Lucas 7:11-17",
+        "en": "Luke 7:11-17",
+        "pt": "S. Lucas 7:11-17",
+        "fr": "Luc 7:11-17"
       },
       "estimated_reading_minutes": {
-        "es": 11
+        "es": 11,
+        "en": 8,
+        "pt": 10,
+        "fr": 10
       }
     }
   ]
