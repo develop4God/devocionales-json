@@ -56,7 +56,7 @@
       "image_url": "widow_nain_portrait_grief.png",
       "title": "Sin nombre, sin voz en la puerta",
       "subtitle": "Lo que un hijo significaba en Naín",
-      "content": "El texto no le da nombre. La conocemos solo por lo que ha perdido. Su hijo era ya un hombre crecido, no un niño — Jesús lo llamará después *neaniskos*, joven adulto. En Naín, como en cualquier aldea de la época, la puerta de la ciudad era donde los ancianos resolvían las herencias, los contratos, las disputas de propiedad. Un hijo así era, entre muchas cosas, la voz legal de su madre en ese lugar.\n\nCon su hijo en ese féretro, la viuda pierde también esa voz. Se queda sin sostén y sin quien la represente. La multitud que la acompaña puede llorar con ella. No puede devolverle nada de eso.",
+      "content": "El texto no le da nombre. La conocemos solo por lo que ha perdido. Su hijo era ya un hombre crecido, no un niño — Jesús lo llamará después νεανίσκε (neaniske), joven adulto. En Naín, como en cualquier aldea de la época, la puerta de la ciudad era donde los ancianos resolvían las herencias, los contratos, las disputas de propiedad. Un hijo así era, entre muchas cosas, la voz legal de su madre en ese lugar.\n\nCon su hijo en ese féretro, la viuda pierde también esa voz. Se queda sin sostén y sin quien la represente. La multitud que la acompaña puede llorar con ella. No puede devolverle nada de eso.",
       "revelation_key": "Esta mujer no solo pierde a su hijo — pierde su lugar legal y económico en la aldea entera, y nadie en la procesión puede dárselo de vuelta.",
       "verse_overlay": {
         "reference": "Lucas 7:12",
@@ -85,7 +85,7 @@
       "image_url": "widow_nain_jesus_sees_her.png",
       "verse_reference": "Lucas 7:13",
       "verse_text": "Y cuando el Señor la vio, se compadeció de ella, y le dijo: No llores.",
-      "reflection": "Antes de que ella diga una palabra, antes de que alguien le pida algo, Jesús la ve y se compadece. El verbo que usa Lucas describe un movimiento en las entrañas, un dolor físico ante el dolor ajeno.\n\nEs notable hacia dónde se dirige primero esa compasión: no al féretro, sino a la madre que camina detrás de él. Ve primero a la persona que sigue respirando.",
+      "reflection": "Jesús la ve y se compadece. Lucas usa el verbo griego σπλαγχνίζομαι (splanchnizomai) — literalmente, sentir algo en las entrañas. Jesús siente ese dolor en el cuerpo, no solo en la mente.\n\nEs notable hacia dónde se dirige primero esa compasión: no al féretro, sino a la madre que camina detrás de él. Ve primero a la persona que sigue respirando.",
       "revelation_key": "La compasión de Jesús se mueve por lo que ve, no por lo que le piden — nadie en esa multitud le ha suplicado nada.",
       "scripture_connections": []
     },
@@ -96,7 +96,7 @@
       "image_url": "widow_nain_only_son.png",
       "title": "Un hijo único, como Él",
       "subtitle": "monogenēs — la misma palabra",
-      "content": "Lucas describe al hijo con la palabra griega *monogenēs*: único, sin igual. Es la misma palabra que Juan usará para describir a Jesús como el Hijo unigénito del Padre (Juan 1:18; 3:16).\n\nCuando Jesús le habla, lo llama *neaniskos* — joven, un hombre ya crecido, no un niño. Era la única voz de esa casa, y esa voz acababa de callarse para siempre.\n\n🔑 No es una coincidencia menor: el Hijo único del Padre se detiene ante el hijo único de una viuda.",
+      "content": "Lucas describe al hijo con la palabra griega μονογενής (monogenēs): único, sin igual. Es la misma palabra que Juan usará para describir a Jesús como el Hijo unigénito del Padre (Juan 1:18; 3:16).\n\nCuando Jesús le habla, lo llama νεανίσκε (neaniske) — joven, un hombre ya crecido, no un niño. Era la única voz de esa casa, y esa voz acababa de callarse para siempre.\n\nNo es una coincidencia menor: el Hijo único del Padre se detiene ante el hijo único de una viuda.",
       "revelation_key": "El mismo término que describe al Hijo único del Padre describe también al hijo que Jesús está a punto de devolverle a esta mujer.",
       "verse_overlay": {
         "reference": "Lucas 7:14",
@@ -126,7 +126,7 @@
       "type": "cinematic_scene",
       "mood": "grace",
       "image_url": "widow_nain_son_rises.png",
-      "title": "El que iba mudo empieza a hablar",
+      "title": "El que iba camino a la tumba empieza a hablar",
       "narrative": "La multitud entera se queda en silencio, mirando. Jesús no ora en voz alta, no invoca ceremonias: solo habla, directo, como quien tiene autoridad sobre lo que escucha. Y el joven que iba camino a la tumba se incorpora, y comienza a hablar.",
       "ambient_sound": "silence",
       "haptic": null,
@@ -160,7 +160,7 @@
       "image_url": "widow_nain_elijah_echo.png",
       "title": "Sin deuda de hospitalidad",
       "subtitle": "Lo que Elías debía, Jesús no debía",
-      "content": "Elías había resucitado antes al hijo de la viuda de Sarepta (1 Reyes 17), y Eliseo haría lo mismo con el hijo de la sunamita (2 Reyes 4). Ambos profetas habían recibido antes la hospitalidad de esas mujeres — les debían algo.\n\n🔑 Jesús no tenía ninguna deuda con la viuda de Naín. Nunca la había visto antes de ese día. No hay indicio en el texto de que ella lo hubiera hospedado, ni de que lo conociera. Actuó sin que nadie se lo pidiera y sin que nadie se lo debiera.",
+      "content": "Elías había resucitado antes al hijo de la viuda de Sarepta (1 Reyes 17), y Eliseo haría lo mismo con el hijo de la sunamita (2 Reyes 4). Ambos profetas habían recibido antes la hospitalidad de esas mujeres — les debían algo.\n\nJesús no tenía ninguna deuda con la viuda de Naín. Nunca la había visto antes de ese día. No hay indicio en el texto de que ella lo hubiera hospedado, ni de que lo conociera. Actuó sin que nadie se lo pidiera y sin que nadie se lo debiera.",
       "revelation_key": "A diferencia de Elías y Eliseo, Jesús no le debía nada a esta mujer — su compasión no respondía a una deuda, solo a lo que vio.",
       "verse_overlay": null,
       "scripture_connections": [
