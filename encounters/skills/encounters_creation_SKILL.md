@@ -501,6 +501,9 @@ Character may appear small or from behind. Still opens with character descriptio
 - Describe him as "a man in a simple first-century tunic, seen from behind, face never visible, a subtle warm glow of glory around his form"
 - No halos. No full-body supernatural glow. No face. No eyes. No frontal view. Ever.
 
+**Preferred over stating the glow directly: show it through how the physical world reacts to him.**
+Naming "a subtle warm glow of glory" in every prompt is the acceptable baseline, but the strongest instances in the corpus (Emmaus, `cleofas_road_stranger_joins.png` through `cleofas_bread_breaking.png`) skip stating the glow outright and instead describe one small physical anomaly the reader has to notice — dust that settles instantly behind his steps instead of drifting, a shadow that stays short regardless of the sun's angle, a breeze that moves every garment on the road except his tunic, a lamp flame leaning toward him with no draft to explain it, torn bread catching a light brighter than the one lamp in the room. Reserve this technique for cards where Jesus is a physical presence in the scene (not distant/silhouetted in a crowd); pick one anomaly tied to something already in the shot (dust, shadow, cloth, flame, food) rather than inventing an unrelated one. Still never state "glow" or "glory" when using this technique — the physical detail carries it.
+
 **Example (from Woman at the Well, card 2):**
 ```
 "image_prompt": "A Samaritan woman — dark olive skin, dark pulled-back hair with loose strands, worn dusty terracotta tunic, clay water jar on her shoulder — approaches in the far background, slowing her step. In the foreground a man in a simple first-century tunic sits on the stone well's edge, head slightly bowed, tired from travel, not looking up. The tension is in the space between them. Painterly warm 2D, Mediterranean palette, warm dust tones, deep shadow under the well's edge, cinematic."

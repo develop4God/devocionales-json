@@ -29,14 +29,14 @@
       "image_url": "widow_nain_two_crowds_meet.png",
       "mood": "tense",
       "shot_type": "wide establishing",
-      "prompt": "Wide shot at a village gate, two crowds converging from opposite directions and meeting at the threshold. On one side, mourners in muted dust-colored garments surround an open bier. On the other, a large crowd follows a man in a simple first-century tunic, seen from behind, face never visible, a subtle warm glow of glory around his form, walking at their center. The two groups pause, facing each other across the narrow gate. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic golden-hour light, no text."
+      "prompt": "Wide shot at a village gate, two crowds converging from opposite directions and meeting at the threshold. On one side, mourners in muted dust-colored garments surround an open bier, their sandals kicking up dry dust that hangs and drifts in the golden light. On the other, a large crowd follows a man in a simple first-century tunic, seen from behind, face never visible, walking at their center; the dust his own steps stir settles instantly behind him, leaving the ground undisturbed. The two groups pause, facing each other across the narrow gate. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic golden-hour light, no text."
     },
     {
       "order": 5,
       "image_url": "widow_nain_jesus_sees_her.png",
       "mood": "awe",
       "shot_type": "close-up portrait",
-      "prompt": "Close-up portrait of a woman in her early sixties, sharp high-cheekboned face with an angular jawline, deep-set dark eyes reddened from crying fixed on a nearby figure with a startled, uncertain expression, prominent aquiline sun-worn nose, gray hair under a plain linen head-covering, dark mourning shawl over a charcoal-gray tunic. Her eyes are wide, caught mid-tear, something shifting in her expression between grief and disbelief. Soft out-of-focus figure of a man in a simple first-century tunic standing just before her, face never visible, a subtle warm glow of glory around his form. Painterly warm 2D illustration, Mediterranean palette, warm dawn light, cinematic, no text."
+      "prompt": "Close-up portrait of a woman in her early sixties, sharp high-cheekboned face with an angular jawline, deep-set dark eyes fixed on a nearby figure, prominent aquiline sun-worn nose, gray hair under a plain linen head-covering, dark mourning shawl over a charcoal-gray tunic. Her eyes are still wet with tears and locked onto him, but something in them has already stopped grieving and started questioning, caught between the sob she hasn't finished and a stillness that wasn't there a moment ago. Soft out-of-focus figure of a man in a simple first-century tunic standing just before her, face never visible. Painterly warm 2D illustration, Mediterranean palette, warm dawn light, cinematic, no text."
     },
     {
       "order": 6,
@@ -50,21 +50,21 @@
       "image_url": "widow_nain_touching_bier.png",
       "mood": "intense",
       "shot_type": "action/movement",
-      "prompt": "Medium shot, ground-level angle. A man in a simple first-century tunic reaches out and places a hand on the edge of an open wooden bier, seen from behind, face never visible, a subtle warm glow of glory emanating from his form. The men carrying the bier freeze mid-step, expressions of shock visible on their faces, shoulders tense under the wooden poles. In the background a woman in her early sixties, gray hair under a linen head-covering, dark mourning shawl, watches with a hand half-raised to her mouth. Painterly warm 2D illustration, Mediterranean palette, ochre tones, sharp cinematic light, no text."
+      "prompt": "Medium shot, ground-level angle. A man in a simple first-century tunic reaches out and places a hand on the edge of an open wooden bier, seen from behind, face never visible. The weathered wood under his palm, dull and sun-bleached everywhere else, catches a faint warmth where his hand rests, like old grain remembering daylight. The men carrying the bier freeze mid-step, expressions of shock visible on their faces, shoulders tense under the wooden poles. In the background a woman in her early sixties, gray hair under a linen head-covering, dark mourning shawl, watches with a hand half-raised to her mouth. Painterly warm 2D illustration, Mediterranean palette, ochre tones, sharp cinematic light, no text."
     },
     {
       "order": 8,
       "image_url": "widow_nain_son_rises.png",
       "mood": "grace",
       "shot_type": "medium two-figure",
-      "prompt": "Medium shot, a young adult man sitting upright on an open wooden bier, pale linen wrappings falling loose from his shoulders, mouth slightly open as if speaking for the first time, eyes open and alert. Beside him a man in a simple first-century tunic stands close, seen from behind, face never visible, a subtle warm glow of glory around his form, one hand still resting near the bier's edge. Silent onlookers blurred in the background, frozen in place. Painterly warm 2D illustration, Mediterranean palette, warm golden light breaking through, cinematic, no text."
+      "prompt": "Medium shot, a young adult man sitting upright on an open wooden bier, pale linen wrappings falling loose from his shoulders, mouth slightly open as if speaking for the first time, eyes open and alert, color returning to his face faster than the pale morning light could explain. Beside him a man in a simple first-century tunic stands close, seen from behind, face never visible, one hand still resting near the bier's edge. Silent onlookers blurred in the background, frozen in place. Painterly warm 2D illustration, Mediterranean palette, warm golden light breaking through, cinematic, no text."
     },
     {
       "order": 9,
       "image_url": "widow_nain_reunion_embrace.png",
       "mood": "grace",
       "shot_type": "medium two-figure",
-      "prompt": "Medium shot, a woman in her early sixties, stout and heavyset build, gray hair under a plain linen head-covering, dark mourning shawl slipping from one shoulder, reaches both arms toward a young adult man now standing and steadying himself, her face caught mid-transformation from grief to disbelief to joy. A man in a simple first-century tunic steps back slightly, seen from behind, face never visible, a subtle warm glow around his form, having just placed the son's hand into hers. Painterly warm 2D illustration, Mediterranean palette, warm amber light, cinematic, no text."
+      "prompt": "Medium shot, a woman in her early sixties, stout and heavyset build, gray hair under a plain linen head-covering, dark mourning shawl slipping from one shoulder, reaches both arms toward a young adult man now standing and steadying himself, her face caught mid-transformation from grief to disbelief to joy. A man in a simple first-century tunic steps back slightly, seen from behind, face never visible, having just placed the son's hand into hers; the dark mourning shawl at her shoulder, heavy and lightless a moment before, catches the amber afternoon light for the first time all day. Painterly warm 2D illustration, Mediterranean palette, warm amber light, cinematic, no text."
     },
     {
       "order": 10,
