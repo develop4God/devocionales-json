@@ -46,6 +46,17 @@ BOOKS_SOT_URL = (
 # Devanagari digit → ASCII digit (for Hindi references)
 _DEVA = str.maketrans("०१२३४५६७८९", "0123456789")
 
+# HIOV_hi.SQLite3's `books.long_name` stores the Gospels in liturgical long
+# form (e.g. "लूका रचित सुसमाचार" = "the Gospel composed by Luke") instead of
+# the short form real Hindi Bibles use in citations. Scoped to this DB only —
+# see issue #83.
+_HIOV_LONG_TO_SHORT = {
+    "मत्ती रचित सुसमाचार":  "मत्ती",
+    "मरकुस रचित सुसमाचार": "मरकुस",
+    "लूका रचित सुसमाचार":  "लूका",
+    "यूहन्ना रचित सुसमाचार": "यूहन्ना",
+}
+
 # Module-level cache — fetched once per Python process
 _books_sot_cache: dict | None = None
 
@@ -178,6 +189,7 @@ class VerseResolver:
     ) -> None:
         self.books_sot   = load_books_sot(books_sot_path)
         self._temp_path  = None
+        self._db_name    = os.path.basename(sqlite_path)
 
         if sqlite_path.endswith(".gz"):
             fd, self._temp_path = tempfile.mkstemp(suffix=".SQLite3")
@@ -222,7 +234,10 @@ class VerseResolver:
             )
             row = self.cursor.fetchone()
             if row and row[0]:
-                return row[0]
+                long_name = row[0]
+                if self._db_name.startswith("HIOV_") and long_name in _HIOV_LONG_TO_SHORT:
+                    return _HIOV_LONG_TO_SHORT[long_name]
+                return long_name
         except sqlite3.OperationalError:
             pass  # `books` table absent in some minimal DB builds
         return fallback

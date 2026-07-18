@@ -169,6 +169,10 @@ print('OK: all files match canonical id', canon_id)
 - `title`, `subtitle`, `narrative`, `content`, `reflection`, `revelation_key`, `reflection_prompt`
 - `key_verse.text` → primary Bible version text
 - `key_verse.reference` → translate book name (e.g. `Mark` → `Marcos`, `マルコ`, `मरकुस`)
+  **Trap (HI/HIOV):** the HIOV database's `books.long_name` stores the Gospels in
+  liturgical long form (e.g. `लूका रचित सुसमाचार`, "the Gospel composed by Luke");
+  `VerseResolver` already normalizes this to short form (`लूका`), but never hand-type
+  the long form into a reference field if copying from the raw DB or an older resolve.
 - `verse_text` and `verse_reference` in `scripture_moment` cards
 - `verse_overlay.text` and `verse_overlay.reference`
 - `completion_verse.text`, `completion_verse.reference`
