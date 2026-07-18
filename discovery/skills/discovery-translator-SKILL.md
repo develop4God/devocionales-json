@@ -128,7 +128,10 @@ Use the **primary version only** for all verse text in translations.
 - All text content fields: `title`, `subtitle`, `content`, `revelation_key`, `identity_statement`
 - All `meaning` and `revelation` fields inside word blocks
 - All `key_verse.text` and `scripture_connections[].text` → use primary Bible version
-- All `key_verse.reference` and `scripture_connections[].reference` → translate book names
+- All `key_verse.reference` and `scripture_connections[].reference` → translate book names.
+  **Trap (HI/HIOV):** the HIOV database's `books.long_name` stores the Gospels in
+  liturgical long form (e.g. `लूका रचित सुसमाचार`); `VerseResolver` already normalizes
+  this to short form (`लूका`), so never hand-type the long form into a reference field.
 - All `discovery_questions[].category` and `discovery_questions[].question`
 - All `action_steps[].title` and `action_steps[].description`
 - `prayer.title` and `prayer.content`
