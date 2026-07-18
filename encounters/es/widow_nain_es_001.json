@@ -6,7 +6,7 @@
   "bible_version": "RVR1960",
   "version": "1.0",
   "image_version": "1.0",
-  "estimated_reading_minutes": 11,
+  "estimated_reading_minutes": 10,
   "meta": {
     "character": "La Viuda de Naín",
     "testament": "new",
@@ -184,18 +184,9 @@
     },
     {
       "order": 12,
-      "type": "interactive_moment",
-      "icon": "🤍",
-      "image_url": "widow_nain_interactive_pause.png",
-      "title": "Antes de pedir",
-      "subtitle": "Un momento para nombrar tu propia procesión",
-      "reflection_prompt": "Piensa en algo que hoy cargas sin fuerzas ni siquiera para pedir ayuda. No tienes que formular la petición perfecta — solo nómbralo delante de Dios."
-    },
-    {
-      "order": 13,
       "type": "scripture_moment",
       "mood": "peace",
-      "image_url": "widow_nain_walking_home.png",
+      "image_url": "widow_nain_fame_spreads.png",
       "verse_reference": "Lucas 7:17",
       "verse_text": "Y esta fama de él se extendió por toda Judea, y por toda la región de alrededor.",
       "reflection": "La noticia se extiende más allá de Naín, más allá del pequeño círculo de una viuda y su hijo. Lo que empezó como la compasión de Jesús por una sola mujer termina alcanzando toda una región.\n\nLa historia de esta mujer, que no tiene nombre en el texto, se convirtió en la manera en que muchos supieron por primera vez quién era Jesús.",
@@ -203,10 +194,10 @@
       "scripture_connections": []
     },
     {
-      "order": 14,
+      "order": 13,
       "type": "character_moment",
       "mood": "peace",
-      "image_url": "widow_nain_final_portrait.png",
+      "image_url": "widow_nain_walking_home.png",
       "title": "Una mujer sin nombre en el relato",
       "subtitle": "La viuda, después",
       "content": "El texto no vuelve a mencionar a la viuda de Naín. No sabemos su nombre, ni qué fue de ella después. Lo único que el relato conserva es este momento: una mujer que caminaba sin nada que ofrecer, ni fe que declarar, ni súplica que gritar, y que fue vista de todos modos.\n\nSu historia no depende de lo que ella hizo. Depende por completo de lo que Jesús vio.",
@@ -217,7 +208,7 @@
       }
     },
     {
-      "order": 15,
+      "order": 14,
       "type": "discovery_activation",
       "image_url": "widow_nain_discovery.png",
       "title": "Tu Encuentro",
@@ -233,7 +224,7 @@
       }
     },
     {
-      "order": 16,
+      "order": 15,
       "type": "completion",
       "mood": "peace",
       "image_url": "widow_nain_completion.png",

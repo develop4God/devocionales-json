@@ -50,7 +50,7 @@
       "image_url": "widow_nain_touching_bier.png",
       "mood": "intense",
       "shot_type": "action/movement",
-      "prompt": "Medium shot, ground-level angle. A man in a simple first-century tunic reaches out and places a hand on the edge of an open wooden bier, seen from behind, face never visible, a subtle warm glow of glory emanating from his form. Four distinct pallbearers freeze mid-step, each visibly different from the others: an older gray-bearded man at the front corner, a younger clean-shaven man opposite him, a stocky middle-aged man with a short dark beard at the rear, and a lean man with a weathered face and no beard at the last corner — different heights, builds, and skin tones, each with his own shocked expression, shoulders tense under the wooden poles. In the background a woman in her early sixties, gray hair under a linen head-covering, dark mourning shawl, watches with a hand half-raised to her mouth. Painterly warm 2D illustration, Mediterranean palette, ochre tones, sharp cinematic light, no text."
+      "prompt": "Medium shot, ground-level angle. A man in a simple first-century tunic reaches out and places a hand on the edge of an open wooden bier, seen from behind, face never visible, a subtle warm glow of glory emanating from his form. The men carrying the bier freeze mid-step, expressions of shock visible on their faces, shoulders tense under the wooden poles. In the background a woman in her early sixties, gray hair under a linen head-covering, dark mourning shawl, watches with a hand half-raised to her mouth. Painterly warm 2D illustration, Mediterranean palette, ochre tones, sharp cinematic light, no text."
     },
     {
       "order": 8,
@@ -82,10 +82,10 @@
     },
     {
       "order": 12,
-      "image_url": "widow_nain_interactive_pause.png",
+      "image_url": "widow_nain_fame_spreads.png",
       "mood": "peace",
-      "shot_type": "object/still life",
-      "prompt": "Close-up of two open empty hands resting upward on a lap, palms catching soft warm light, a single loose gray thread from a mourning shawl draped across the fingers. No face visible. Pure metaphor shot for quiet reflection. Painterly warm 2D illustration, Mediterranean palette, warm muted tones, soft diffused cinematic light, no text."
+      "shot_type": "wide departure",
+      "prompt": "Wide, gentle shot of a village gate at golden dusk, warm light spilling through the archway, the road beyond softly illuminated and empty, inviting. No people in frame. Painterly warm 2D illustration, Mediterranean palette, warm gold and amber tones, gentle radiant cinematic light, no text."
     },
     {
       "order": 13,
@@ -96,24 +96,17 @@
     },
     {
       "order": 14,
-      "image_url": "widow_nain_final_portrait.png",
+      "image_url": "widow_nain_discovery.png",
       "mood": "peace",
-      "shot_type": "close-up portrait",
-      "prompt": "Close-up portrait of a woman in her early sixties, sharp high-cheekboned face with an angular jawline now softened, deep-set dark eyes still faintly red but calm, prominent aquiline sun-worn nose, gray hair under a plain linen head-covering, sun-darkened leathery skin, a faint, unguarded almost-smile. Warm late light falls across her face. Painterly warm 2D illustration, Mediterranean palette, soft warm gold tones, gentle cinematic light, no text."
+      "shot_type": "object/still life",
+      "prompt": "Close-up of two open empty hands resting upward on a lap, palms catching soft warm light, a single loose gray thread from a mourning shawl draped across the fingers. No face visible. Pure metaphor shot for quiet reflection and prayer. Painterly warm 2D illustration, Mediterranean palette, warm muted tones, soft diffused cinematic light, no text."
     },
     {
       "order": 15,
-      "image_url": "widow_nain_discovery.png",
-      "mood": "peace",
-      "shot_type": "wide establishing",
-      "prompt": "Wide, softly lit shot of an empty village road at dusk, warm light glowing from windows in the distance, a single set of footprints in the dust leading toward the light. No people in frame. Symbolic invitation shot. Painterly warm 2D illustration, Mediterranean palette, warm dusk tones, gentle cinematic glow, no text."
-    },
-    {
-      "order": 16,
       "image_url": "widow_nain_completion.png",
       "mood": "peace",
-      "shot_type": "wide departure",
-      "prompt": "Wide, gentle shot of a village gate at golden dusk, warm light spilling through the archway, the road beyond softly illuminated and empty, inviting. No people in frame. Painterly warm 2D illustration, Mediterranean palette, warm gold and amber tones, gentle radiant cinematic light, no text."
+      "shot_type": "close-up portrait",
+      "prompt": "Close-up portrait of a woman in her early sixties, sharp high-cheekboned face with an angular jawline now softened, deep-set dark eyes still faintly red but calm, prominent aquiline sun-worn nose, gray hair under a plain linen head-covering, sun-darkened leathery skin, a faint, unguarded almost-smile. Warm late light falls across her face. Painterly warm 2D illustration, Mediterranean palette, soft warm gold tones, gentle cinematic light, no text."
     }
   ]
 }
