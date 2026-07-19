@@ -106,3 +106,7 @@ _(Add a line here each time a candidate is picked, dropped, or reprioritized, wi
 - 2026-07-18: Widow of Nain confirmed published (all 10 languages) — removed from
   candidates, added to "currently in the series" table. Recommendation now points to
   The Man Born Blind or The Sinful Woman Anointing Jesus' Feet as next candidates.
+- 2026-07-19: The Man Born Blind (Juan 9:1-41) picked as next encounter, prayed over
+  first (Gate 0). Spanish draft `man_born_blind_es_001` + image prompts created on
+  branch for review. Status: drafting — prayer.content pending (Giovanni writes it
+  from prayer per Rule 12.1), index.json entry pending until content approval.
