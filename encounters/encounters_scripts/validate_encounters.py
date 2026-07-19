@@ -58,6 +58,7 @@ from verify_image_urls import (
     EncounterIndexReader as ImageIndexReader,
     ImageReferenceExtractor,
     GitHubAssetChecker,
+    ImageFormatValidator,
     MAX_CONCURRENT_REQUESTS,
 )
 from concurrent.futures import ThreadPoolExecutor
@@ -648,6 +649,33 @@ def validate_image_urls(report: Report) -> None:
 
     if not failures:
         report.I(f"✓ All {len(results)} image references resolved")
+
+    # Format validation: a resolved URL can still be the wrong file type
+    # (e.g. JPEG bytes uploaded with a .png extension) — GitHub's Content-Type
+    # header follows the extension, not the actual bytes, so existence
+    # checks above can't catch this. Only checked for images that resolved.
+    validator = ImageFormatValidator()
+    resolved = [r for r in results if r.ok]
+
+    def check_format(result):
+        format_ok, format_status = validator.validate(result.reference)
+        result.format_ok = format_ok
+        result.format_status = format_status
+        return result
+
+    with ThreadPoolExecutor(max_workers=MAX_CONCURRENT_REQUESTS) as pool:
+        format_results = list(pool.map(check_format, resolved))
+
+    format_failures = [r for r in format_results if r.format_ok is False]
+    for r in format_failures:
+        report.W(
+            f"{r.reference.encounter_id}/{r.reference.filename} "
+            f"(referenced in {r.reference.source_file}): {r.format_status} "
+            f"— {r.reference.url}"
+        )
+
+    if not format_failures:
+        report.I(f"✓ All {len(format_results)} resolved images match their declared format")
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
