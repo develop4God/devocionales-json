@@ -1,0 +1,222 @@
+{
+  "id": "widow_nain_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fil",
+  "bible_version": "MBB05",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "Ang Biyuda ng Nain",
+    "testament": "new",
+    "scripture_reference": "Lucas 7:11-17",
+    "mood_primary": "grief",
+    "accent_color": "#4a3728",
+    "emoji": "🕊️",
+    "tags": ["habag", "kalungkutan", "muling-pagkabuhay", "pagkabiyuda", "biyayang hindi hiningi"]
+  },
+  "key_verse": {
+    "reference": "Lucas 7:13",
+    "text": "Nahabag ang Panginoon nang kanyang makita ang ina ng namatay kaya't sinabi niya rito, \"Huwag ka nang umiyak.\"",
+    "bible_version": "MBB05"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "widow_nain_procession_departure.png",
+      "title": "Isang bayan sa paanan ng bundok",
+      "narrative": "Ang Nain ay isang maliit na bayan, nakatirik sa gilid ng Bundok Moreh. Iisa lamang ang pangunahing pintuan nito, at dito dumaraan ang lahat: mga mangangalakal na pumapasok, mga pastol na lumalabas kasama ang kanilang mga tupa, at, kapag dumating ang sandaling iyon, ang mga patay na inililibing ng buong bayan. Sa araw na iyon, may dalawang bagay na lumalapit sa pintuang ito mula sa magkaibang direksyon.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "Isang maliit na bayan na may iisang pintuan ang malapit nang makasaksi ng dalawang landas na magtatagpo sa iisang pasukan."
+    },
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "widow_nain_bier_procession.png",
+      "title": "Isang bukas na kabaong ang lumalabas sa bayan",
+      "narrative": "Sa pintuan ng Nain, lumalabas ang isang mahabang prusisyon — isang malaking karamihan mula sa bayan na naglalakad sa likod ng isang bukas na kabaong, ayon sa kaugalian. Sa unahan, kabilang sa mga umiiyak nang pinakamalakas, may isang babaeng naglalakad. Hindi lamang siya ang umiiyak, kundi siya ang may pinakamalaking nawala: una ang kanyang asawa, at ngayon ang kaisa-isang anak na natitira sa kanya.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 7:12",
+        "text": "Nang malapit na siya sa pintuan ng bayan, nasalubong nila ang libing ng kaisa-isang anak na lalaki ng isang biyuda. Napakaraming nakikipaglibing."
+      },
+      "revelation_key": "Kasama ang karamihan, naglalakad ang isang babaeng patungo sa tanging destinasyong naiwan sa kanya: ilibing ang kanyang kaisa-isang anak."
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "widow_nain_portrait_grief.png",
+      "title": "Isang ina na nawalan ng tinig sa bayan",
+      "subtitle": "Ang ibig sabihin ng isang anak sa Nain",
+      "content": "Kilala lamang natin siya sa kanyang nawala. Ang kanyang anak ay lalaki na siyang ganap, hindi na isang bata — tatawagin siya mamaya ni Jesus na νεανίσκος (neaniskos), isang binata. Sa Nain, gaya ng anumang bayan noong panahong iyon, ang pintuan ng bayan ang lugar kung saan pinagpapasyahan ng mga nakatatanda ang mga usapin ng pamana, kasunduan, at alitan hinggil sa lupa. Ang isang anak na tulad nito ay, sa maraming paraan, ang legal na tinig ng kanyang ina sa lugar na iyon.\n\nKasama ang kanyang anak sa kabaong, nawala rin sa biyuda ang tinig na iyon. Ang karamihang naglalakad kasama niya ay maaaring makiramay, ngunit siya lamang ang nakapagbibigay sa kanya ng tinig na iyon.",
+      "revelation_key": "Hindi lamang nawalan ng anak ang babaeng ito — nawalan din siya ng kanyang legal at pang-ekonomiyang katayuan sa Nain.",
+      "verse_overlay": {
+        "reference": "Lucas 7:12",
+        "text": "Nasalubong nila ang libing ng kaisa-isang anak na lalaki ng isang biyuda."
+      }
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "widow_nain_two_crowds_meet.png",
+      "title": "Dalawang karamihan sa iisang pasukan",
+      "narrative": "Mula sa kabilang panig ng daan, dumarating si Jesus, kasama ang kanyang mga alagad at isang karamihang kasinlaki rin. Halos sabay na umabot ang dalawang prusisyon sa pintuan: ang isa'y papasok, naghahanap ng isang bagay; ang isa'y palabas, walang naiiwan. Sa isang saglit, humihinto ang dalawa, nagharap, at wala pang nakakaalam kung ano ang malapit nang mangyari.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 7:11",
+        "text": "Pagkatapos nito, nagpunta naman si Jesus sa isang bayang tinatawag na Nain. Sumama sa kanya ang mga alagad at ang napakaraming tao."
+      },
+      "revelation_key": "Sa pintuan ng Nain, nagtatagpo ang karamihang sumusunod sa Buhay at ang karamihang naglilibing ng kamatayan."
+    },
+    {
+      "order": 5,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "widow_nain_jesus_sees_her.png",
+      "verse_reference": "Lucas 7:13",
+      "verse_text": "Nahabag ang Panginoon nang kanyang makita ang ina ng namatay kaya't sinabi niya rito, \"Huwag ka nang umiyak.\"",
+      "reflection": "Nakita siya ni Jesus, at siya'y nahabag. Ginagamit ni Lucas ang salitang Griyego na σπλαγχνίζομαι (splanchnizomai) — literal, ang maramdaman ang isang bagay sa kaloob-looban. Naramdaman ni Jesus ang kalungkutang ito sa kanyang buong katawan, hindi lamang sa isip.\n\nKapansin-pansin kung saan unang tumungo ang habag na iyon: hindi sa kabaong, kundi sa inang naglalakad sa likuran nito. Nakita niya, muna, ang isang buháy pa.",
+      "revelation_key": "Ang habag ni Jesus ay tumutungo sa kanyang nakikita, hindi sa kanyang hinihiling — walang sinuman sa karamihang iyon ang humingi sa kanya ng anuman.",
+      "scripture_connections": []
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "widow_nain_touching_bier.png",
+      "title": "Hinipo niya ang ipinagbabawal ng kautusan",
+      "narrative": "Lumapit si Jesus at hinipo ang bukas na kabaong. Sa ilalim ng Kautusan (Mga Bilang 19:11), ang paghipo sa isang bangkay ay nagdudulot ng ritwal na karumihan sa loob ng pitong araw — isang tuntuning saklaw sa bawat Israelita. Nagulat ang mga lalaking may pasan, dahil may nangahas gumawa nang hayagan ng bawal ng Kautusan. Hinawakan pa rin ito ni Jesus, gaya ng isang taong may kapangyarihan sa kung ano lamang ang kayang pangalanan ng kautusan.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Mga Bilang 19:11",
+        "text": "Sinumang makahawak sa patay ay ituturing na marumi sa loob ng pitong araw."
+      },
+      "revelation_key": "Hinipo ni Jesus ang kamatayan mismo, at umatras ang kamatayan sa harap niya sa halip na madungisan siya."
+    },
+    {
+      "order": 7,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "widow_nain_only_son.png",
+      "title": "Isang kaisa-isang anak, tulad Niya",
+      "subtitle": "monogenēs — ang iisang salita",
+      "content": "Inilalarawan ni Lucas ang anak sa salitang Griyego na μονογενής (monogenēs): kaisa-isa, walang katulad. Ito rin ang salitang gagamitin ni Juan upang ilarawan si Jesus bilang ang bugtong na Anak ng Ama (Juan 1:18; 3:16).\n\nNang kausapin siya ni Jesus, tinawag niya siyang νεανίσκος (neaniskos) — binata, lalaki na siyang ganap, hindi bata. Siya ang tanging tinig ng sambahayang iyon, at ang tinig na iyon ay tuluyan nang natahimik.\n\nHindi ito isang simpleng pagkakataon: humihinto ang kaisa-isang Anak ng Ama sa harap ng kaisa-isang anak ng isang biyuda.",
+      "revelation_key": "Ang parehong katagang naglalarawan sa kaisa-isang Anak ng Ama ay siya ring naglalarawan sa anak na malapit nang ibalik ni Jesus sa babaeng ito.",
+      "scripture_connections": [
+        { "reference": "Juan 1:18", "text": "Kailanma't wala pang taong nakakita sa Diyos, ngunit siya ay ipinakilala ng kaisa-isang Diyos na lubos na minamahal ng Ama." },
+        { "reference": "Juan 3:16", "text": "Sapagkat gayon na lamang ang pag-ibig ng Diyos sa sangkatauhan, kaya't ibinigay niya ang kanyang kaisa-isang Anak, upang ang sinumang sumampalataya sa kanya ay hindi mapahamak, kundi magkaroon ng buhay na walang hanggan." }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "widow_nain_son_rises.png",
+      "title": "Ang patungo sa libingan ay nagsimulang magsalita",
+      "narrative": "Natahimik ang karamihan, nakatingin. Nagsalita lamang si Jesus, tuwiran, gaya ng isang may kapangyarihan sa kanyang kinakausap. At ang binatang patungo na sana sa libingan ay bumangon at naupo, at nagsimulang magsalita.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 7:14-15",
+        "text": "Nilapitan niya at hinipo ang kinalalagyan ng bangkay at tumigil naman ang mga may pasan nito. Sinabi niya, \"Binata, makinig ka sa akin, bumangon ka!\" Naupo ang binata at nagsalita."
+      },
+      "revelation_key": "Isang salita lamang mula kay Jesus ang kinailangan, at umatras ang kamatayan."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "widow_nain_reunion_embrace.png",
+      "title": "Ibinalik niya siya sa kanyang ina",
+      "subtitle": "Ang huling kilos ng himala",
+      "content": "Tinapos ni Lucas ang salaysay sa kilos ni Jesus na ibinigay ang binata sa kanyang ina — iisang kilos ring ginamit ng Lumang Tipan nang ibalik ni Elias ang anak ng biyuda ng Zarepat, buháy mula sa kamatayan (1 Mga Hari 17:23).\n\nKasinghalaga ng himala ang kilos na ito: inilagay ni Jesus ang anak pabalik sa mga bisig ng tanging taong may karapatan dito.",
+      "revelation_key": "Ibinalik ng himala sa binata ang kanyang buhay; ibinalik ng huling kilos sa ina ang kanyang anak.",
+      "verse_overlay": {
+        "reference": "Lucas 7:15",
+        "text": "Naupo ang binata at nagsalita; at siya'y ibinigay ni Jesus sa kanyang ina."
+      },
+      "scripture_connections": [
+        { "reference": "1 Mga Hari 17:23", "text": "Inakay ni Elias ang bata, at ibinalik sa kanyang ina saka sinabing, \"Narito ang anak mo, buháy na siya.\"" }
+      ]
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "widow_nain_elijah_echo.png",
+      "title": "Ang habag na kumilos nang una",
+      "subtitle": "Kumilos sina Elias at Eliseo mula sa utang-na-loob, si Jesus mula sa kanyang nakita",
+      "content": "Ibinalik na noon ni Elias ang anak ng biyuda ng Zarepat (1 Mga Hari 17), at gagawin din mamaya ni Eliseo ang gayon para sa anak ng babaeng taga-Sunem (2 Mga Hari 4). Parehong tumanggap muna ang mga propetang ito ng mabuting pagtanggap mula sa mga babaeng ito, at parehong kumilos lamang matapos sila makiusap, sa loob mismo ng kanilang mga tahanan.\n\nNakita ni Jesus ang biyuda ng Nain sa araw na iyon, sa gitna ng lansangan, sa harap ng buong karamihang naglalakad kasama niya. Ito lamang ang itinatala ng teksto: nakita niya siya, at siya'y nahabag. Iyon lamang ang dahilang ibinigay ng salaysay.",
+      "revelation_key": "Kumilos sina Elias at Eliseo mula sa utang-na-loob sa mga babaeng tumanggap sa kanila; ang habag ni Jesus ay ipinanganak lamang mula sa kanyang nakita.",
+      "verse_overlay": null,
+      "scripture_connections": [
+        { "reference": "1 Mga Hari 17:9", "text": "\"Umalis ka rito. Pumunta ka sa Sarepta, sa lupain ng Sidon. May inutusan akong isang biyuda na magpapakain sa iyo roon.\"" },
+        { "reference": "2 Mga Hari 4:8", "text": "Minsan, si Eliseo'y pumunta sa Sunem. May isang mayamang babae roon at siya'y inanyayahang kumain sa kanila. Mula noon, doon siya kumakain tuwing pupunta sa lugar na iyon." }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "widow_nain_crowd_wonder.png",
+      "title": "Ang takot at ang salitang kumalat",
+      "subtitle": "Isang dakilang propeta ang lumitaw sa gitna natin",
+      "content": "Ang pagkamangha ng karamihan ay nahulog sa isang tiyak na parirala: \"Dumating sa kalagitnaan natin ang isang dakilang propeta\" — ang parehong wikang ginamit nila noong tinutukoy nila sina Elias at Eliseo.\n\nNakilala ng mga tao ang huwaran bago pa nila lubos na naunawaan ang kanilang nasaksihan. Nakita nila ang isang bagay na kilala na nila mula sa Kasulatan, at gayunpaman higit pa ito sa kanilang inaasahan.",
+      "revelation_key": "Nakilala ng karamihan ang huwaran nina Elias at Eliseo sa kanilang nasaksihan, ngunit hindi pa nila lubos na nauunawaan kung gaano kadakila ang Isang nasa harap nila.",
+      "verse_overlay": {
+        "reference": "Lucas 7:16",
+        "text": "Natakot ang lahat at sila'y nagpuri sa Diyos. Sabi nila, \"Dumating sa kalagitnaan natin ang isang dakilang propeta! Dinalaw ng Diyos ang kanyang bayan!\""
+      }
+    },
+    {
+      "order": 12,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "widow_nain_fame_spreads.png",
+      "verse_reference": "Lucas 7:17",
+      "verse_text": "At kumalat sa buong Judea at sa palibot na lupain ang balitang ito tungkol sa ginawa ni Jesus.",
+      "reflection": "Naglakbay ang balita palabas ng Nain, palabas ng maliit na bilog ng isang biyuda at ng kanyang anak. Ang nagsimula bilang habag ni Jesus para sa isang babae ay umabot sa isang buong rehiyon.\n\nAng kuwentong iyon ang naging dahilan kung bakit maraming tao ang unang nakakilala kung sino si Jesus.",
+      "revelation_key": "Ang patotoo ng mga taga-Nain ang nagpakilala kay Jesus sa buong rehiyon.",
+      "scripture_connections": []
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "widow_nain_discovery.png",
+      "title": "Ang Iyong Pagtatagpo",
+      "subtitle": "Hindi naghihintay ng paghingi ang habag ng Diyos.",
+      "discovery_questions": [
+        { "category": "Katapatan", "question": "Tulad ng biyuda ng Nain, may mga sandali na tayo'y natatabunan ng kalungkutan at pagkawala. Ngunit kaya ni Jesus ang himalang iyon nang hindi natin hinihingi. Ano ang mababago sa iyo kung maniniwala kang gumagawa na si Jesus, kahit hindi mo pa siya hinihiling?" },
+        { "category": "Pananampalataya", "question": "Sa biyuda ng Nain, ibinalik ni Jesus ang eksaktong bagay na kanyang isinuko na bilang nawala. May bagay ka bang isinuko na bilang nawala, na maibabalik sa iyo ni Jesus ngayon?" },
+        { "category": "Layunin", "question": "Tumanggap ang biyuda ng Nain nang hindi kinita, at nang hindi hinahangad, naging dahilan siya kung bakit marami ang nakakilala kay Jesus. Anong kuwento ng biyayang tinanggap mo sa iyong buhay ang maaaring maging dahilan ngayon kung bakit may makakilala kay Jesus?" }
+      ],
+      "prayer": {
+        "title": "Panalangin ng biyayang hindi hiningi",
+        "content": "Panginoong Jesus, salamat po dahil ngayon ay maaari kong parangalan Ka at pasalamatan Ka sa lahat ng iyong ginawa sa aking buhay. Tulad ng biyuda ng Nain, may mga sandaling ang sakit, pagkawala, at pagsubok na kinakaharap ko ay tila walang solusyon. Ngunit ngayon nakita kong kahit ang kamatayan ay walang kapangyarihan kapag Ikaw ang sumasalubong sa amin at, sa iyong biyayang hindi karapat-dapat, kumikilos. Ngayon pinipili kong maniwala na gaano man kahirap ang aking kalagayan, alam Mo ito, nakikita Mo ito, at ang lahat ng bagay ay nagtutulungang para sa aking ikabubuti. Nagtitiwala ako na matutupad ang layunin nito sa aking buhay, at darating ang sandali ng kagalakan, pagsasauli, at patotoo. Tulungan Mo akong dalhin ang patotoong iyon, maging sa nangyari na o sa hinihintay ko pa, upang magbahagi ng buhay at pag-asa gaya ng natanggap ng binata sa bayan ng Nain. Sa pangalan ni Jesus, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "widow_nain_completion.png",
+      "completion_verse": {
+        "reference": "Lucas 7:13",
+        "text": "Nahabag ang Panginoon nang kanyang makita ang ina ng namatay kaya't sinabi niya rito, \"Huwag ka nang umiyak.\"",
+        "bible_version": "MBB05"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
