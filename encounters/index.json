@@ -949,6 +949,35 @@
         "ja": 11,
         "zh": 11
       }
+    },
+    {
+      "id": "man_born_blind_001",
+      "version": "1.0",
+      "image_version": "1.0",
+      "emoji": "🌅",
+      "status": "coming_soon",
+      "intro_image": "man_born_blind_intro.png",
+      "intro_image_prompt": "Wide atmospheric shot of a narrow Jerusalem street at first light, honey-colored stone walls rising on both sides, a shaft of early morning sun cutting through the shadow. Seated small against a wall in the middle ground, a young man in his mid-twenties, stocky build, round full face, warm brown skin, straight dark hair to his jawline, wearing a patched undyed sand-colored beggar's tunic, his face lifted toward the light with closed eyes, a worn clay alms bowl at his feet. Sparse blurred figures pass without looking at him. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text.",
+      "mood_primary": "dawn",
+      "accent_color": "#2b1a08",
+      "has_interactive": false,
+      "testament": "new",
+      "character": "El hombre que nació ciego",
+      "files": {
+        "es": "man_born_blind_es_001.json"
+      },
+      "titles": {
+        "es": "Una cosa sé"
+      },
+      "subtitles": {
+        "es": "Yo era ciego, y ahora veo: el testimonio que resistió todos los interrogatorios."
+      },
+      "scripture_reference": {
+        "es": "Juan 9:1-41"
+      },
+      "estimated_reading_minutes": {
+        "es": 11
+      }
     }
   ]
 }
