@@ -306,7 +306,7 @@ Exegetical insight — Greek/Hebrew word studies, cultural context, cross-refere
   "image_url": "filename.png",
   "title": "string",
   "subtitle": "string",
-  "content": "Prose with emoji markers for key insights. Greek/Hebrew in transliteration.",
+  "content": "Prose with emoji markers for key insights. Greek/Hebrew word given in the original script, glossed inline with its Latin-alphabet transliteration in parentheses (e.g. μονογενής (monogenēs)) — the transliteration is always Latin, never respelled phonetically into the encounter's own language/script.",
   "revelation_key": "One sentence.",
   "verse_overlay": {
     "reference": "Book ch:v",
