@@ -1,0 +1,222 @@
+{
+  "id": "widow_nain_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "pt",
+  "bible_version": "ARC",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "A Viúva de Naim",
+    "testament": "new",
+    "scripture_reference": "S. Lucas 7:11-17",
+    "mood_primary": "grief",
+    "accent_color": "#4a3728",
+    "emoji": "🕊️",
+    "tags": ["compaixão", "luto", "ressurreição", "viuvez", "misericórdia não pedida"]
+  },
+  "key_verse": {
+    "reference": "S. Lucas 7:13",
+    "text": "E, vendo-a, o Senhor moveu-se de íntima compaixão por ela e disse-lhe: Não chores.",
+    "bible_version": "ARC"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "widow_nain_procession_departure.png",
+      "title": "Uma aldeia ao pé do monte",
+      "narrative": "Naim é uma aldeia pequena, situada na encosta do monte Moré. Tem apenas uma porta principal, e por ela passa tudo: os mercadores que entram, os pastores que saem com os seus rebanhos, e também, quando chega a hora, os defuntos que toda a aldeia acompanha até o túmulo. Naquele dia, algo se aproxima dessa porta em duas direções ao mesmo tempo.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "Uma aldeia pequena com uma só porta está prestes a ver dois caminhos se cruzarem no mesmo umbral."
+    },
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "widow_nain_bier_procession.png",
+      "title": "Um esquife aberto sai da cidade",
+      "narrative": "Pela porta de Naim sai uma procissão longa, com muita gente da cidade caminhando atrás de um esquife aberto, como era costume. À frente, entre os que choram mais alto, caminha uma mulher. Não é a única que chora, mas é a que mais perdeu: primeiro um marido, agora o único filho que lhe restava.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "S. Lucas 7:12",
+        "text": "E, quando chegou perto da porta da cidade, eis que levavam um defunto, filho único de sua mãe, que era viúva; e com ela ia uma grande multidão da cidade."
+      },
+      "revelation_key": "A multidão acompanha uma mulher que caminha rumo ao único destino que lhe resta: sepultar o seu filho único."
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "widow_nain_portrait_grief.png",
+      "title": "Uma mãe perde a sua voz na aldeia",
+      "subtitle": "O que um filho significava em Naim",
+      "content": "Nós a conhecemos apenas pelo que perdeu. O seu filho já era um homem crescido, não uma criança — Jesus o chamará depois de νεανίσκος (neaniskos). Em Naim, como em qualquer aldeia da época, a porta da cidade era onde os anciãos resolviam heranças, contratos, disputas de propriedade. Um filho assim era, entre muitas coisas, a voz legal de sua mãe naquele lugar.\n\nCom o filho naquele esquife, a viúva perde também essa voz. A multidão que a acompanha pode chorar com ela, mas essa voz legal só ele podia dar-lhe.",
+      "revelation_key": "Esta mulher não perde apenas o filho — perde o seu lugar legal e econômico em Naim.",
+      "verse_overlay": {
+        "reference": "S. Lucas 7:12",
+        "text": "Levavam um defunto, filho único de sua mãe, que era viúva."
+      }
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "widow_nain_two_crowds_meet.png",
+      "title": "Duas multidões no mesmo umbral",
+      "narrative": "Do outro lado do caminho sobe Jesus, com os seus discípulos e uma multidão igualmente grande. As duas procissões chegam à porta quase ao mesmo tempo: uma que entra buscando algo, a outra que sai sem nada. Por um instante, ambas se detêm, face a face, sem que ninguém saiba ainda o que está prestes a acontecer.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "S. Lucas 7:11",
+        "text": "E aconteceu, pouco depois, ir ele à cidade chamada Naim, e com ele iam muitos dos seus discípulos e uma grande multidão."
+      },
+      "revelation_key": "Na porta de Naim se cruzam a multidão que segue a Vida e a multidão que sepulta uma morte."
+    },
+    {
+      "order": 5,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "widow_nain_jesus_sees_her.png",
+      "verse_reference": "S. Lucas 7:13",
+      "verse_text": "E, vendo-a, o Senhor moveu-se de íntima compaixão por ela e disse-lhe: Não chores.",
+      "reflection": "Jesus a vê e se compadece dela. Lucas usa o verbo grego σπλαγχνίζομαι (splanchnizomai) — literalmente, sentir algo nas entranhas. Jesus sente essa dor no corpo, não apenas na mente.\n\nÉ notável para onde essa compaixão se dirige primeiro: não para o esquife, mas para a mãe que caminha atrás dele. Ele vê primeiro a pessoa que ainda respira.",
+      "revelation_key": "A compaixão de Jesus se move pelo que ele vê, não pelo que lhe pedem — ninguém naquela multidão lhe suplicou nada.",
+      "scripture_connections": []
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "widow_nain_touching_bier.png",
+      "title": "Toca no que a lei proibia",
+      "narrative": "Jesus se aproxima e toca o esquife aberto. Segundo a Lei (Números 19:11), tocar um cadáver trazia impureza cerimonial durante sete dias — uma regra que se aplicava a qualquer israelita. Os que o carregam param, surpresos de que alguém faça em público o que a Lei advertia evitar. Jesus o toca mesmo assim, como quem tem autoridade sobre aquilo que a lei só podia nomear.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Números 19:11",
+        "text": "Aquele que tocar a algum morto, cadáver de algum homem, imundo será sete dias."
+      },
+      "revelation_key": "Jesus toca a própria morte, e a morte recua diante dele em vez de contaminá-lo."
+    },
+    {
+      "order": 7,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "widow_nain_only_son.png",
+      "title": "Um filho único, como Ele",
+      "subtitle": "monogenēs — a mesma palavra",
+      "content": "Lucas descreve o filho com a palavra grega μονογενής (monogenēs): único, sem igual. É a mesma palavra que João usará para descrever Jesus como o Filho unigênito do Pai (João 1:18; 3:16).\n\nQuando Jesus lhe fala, chama-o de νεανίσκος (neaniskos) — jovem, um homem já crescido, não uma criança. Era a única voz daquela casa, e essa voz acabara de se calar para sempre.\n\nNão é uma coincidência menor: o Filho único do Pai se detém diante do filho único de uma viúva.",
+      "revelation_key": "O mesmo termo que descreve o Filho único do Pai descreve também o filho que Jesus está prestes a devolver a esta mulher.",
+      "scripture_connections": [
+        { "reference": "S. João 1:18", "text": "Deus nunca foi visto por alguém. O Filho unigênito, que está no seio do Pai, este o fez conhecer." },
+        { "reference": "S. João 3:16", "text": "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna." }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "widow_nain_son_rises.png",
+      "title": "Aquele que ia a caminho do túmulo começa a falar",
+      "narrative": "A multidão fica em silêncio, olhando. Jesus simplesmente fala, direto, como quem tem autoridade sobre aquilo que escuta. E o jovem que ia a caminho do túmulo se levanta, e começa a falar.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "S. Lucas 7:14-15",
+        "text": "Jovem, eu te digo: Levanta-te. E o defunto assentou-se e começou a falar."
+      },
+      "revelation_key": "Uma ordem de Jesus bastou, e a morte recuou."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "widow_nain_reunion_embrace.png",
+      "title": "Entregou-o à sua mãe",
+      "subtitle": "O gesto final do milagre",
+      "content": "Lucas encerra o relato com Jesus entregando-o à sua mãe — a mesma frase que o Antigo Testamento usa quando Elias devolve à viúva de Sarepta o seu filho ressuscitado (1 Reis 17:23).\n\nO gesto importa tanto quanto o milagre: Jesus coloca o filho de volta nos braços da única pessoa a quem ele pertencia.",
+      "revelation_key": "O milagre devolve a vida ao jovem; o gesto final devolve o filho à mãe.",
+      "verse_overlay": {
+        "reference": "S. Lucas 7:15",
+        "text": "E entregou-o à sua mãe."
+      },
+      "scripture_connections": [
+        { "reference": "1 Reis 17:23", "text": "E Elias tomou o menino, e o trouxe do quarto à casa, e o deu a sua mãe; e disse Elias: Vês aí, teu filho vive." }
+      ]
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "widow_nain_elijah_echo.png",
+      "title": "A compaixão que agiu primeiro",
+      "subtitle": "Elias e Eliseu agiram por gratidão, Jesus pelo que viu",
+      "content": "Elias já havia ressuscitado antes o filho da viúva de Sarepta (1 Reis 17), e Eliseu faria o mesmo com o filho da sunamita (2 Reis 4). Ambos os profetas tinham recebido antes a hospitalidade dessas mulheres, e ambos agiram depois que elas lhes suplicaram, em particular, dentro das suas próprias casas.\n\nÀ viúva de Naim, Jesus a vê naquele dia, em plena rua, diante de toda a multidão que a acompanha. O texto registra apenas isto: ele a viu, e se compadeceu. Esse olhar é o único motivo que o relato oferece.",
+      "revelation_key": "Elias e Eliseu agiram por gratidão a mulheres que os haviam hospedado; a compaixão de Jesus nasce apenas do que ele vê.",
+      "verse_overlay": null,
+      "scripture_connections": [
+        { "reference": "1 Reis 17:9", "text": "Levanta-te, e vai a Sarepta, que é de Sidom, e habita ali; eis que eu ordenei ali a uma mulher viúva que te sustente." },
+        { "reference": "2 Reis 4:8", "text": "Sucedeu também um dia que, indo Eliseu a Suném, havia ali uma mulher rica, a qual o reteve a comer pão; e sucedeu que todas as vezes que passava, ali se dirigia a comer pão." }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "widow_nain_crowd_wonder.png",
+      "title": "O temor e a palavra que correu",
+      "subtitle": "Um grande profeta se levantou",
+      "content": "O espanto da multidão se traduz numa frase concreta: «Um grande profeta se levantou entre nós» — a mesma linguagem que usavam para falar de Elias e Eliseu.\n\nAs pessoas reconheceram o padrão antes de entender por completo o que estavam vendo. Viram algo que já conheciam pelas Escrituras, e ainda assim, era maior do que esperavam.",
+      "revelation_key": "A multidão reconhece o eco de Elias e Eliseu no que vê, sem saber ainda quão maior é Aquele que têm diante de si.",
+      "verse_overlay": {
+        "reference": "S. Lucas 7:16",
+        "text": "E de todos se apoderou o temor, e glorificavam a Deus, dizendo: Um grande profeta se levantou entre nós, e Deus visitou o seu povo."
+      }
+    },
+    {
+      "order": 12,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "widow_nain_fame_spreads.png",
+      "verse_reference": "S. Lucas 7:17",
+      "verse_text": "E correu dele esta fama por toda a Judeia e por toda a terra circunvizinha.",
+      "reflection": "A notícia se espalha para além de Naim, para além do pequeno círculo de uma viúva e o seu filho. O que começou como a compaixão de Jesus por uma única mulher termina alcançando toda uma região.\n\nEssa história se tornou a maneira como muitos souberam pela primeira vez quem era Jesus.",
+      "revelation_key": "O testemunho das pessoas de Naim deu a conhecer Jesus por toda a região.",
+      "scripture_connections": []
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "widow_nain_discovery.png",
+      "title": "O Seu Encontro",
+      "subtitle": "A compaixão de Deus não espera que lhe peçam.",
+      "discovery_questions": [
+        { "category": "Sinceridade", "question": "Como a viúva de Naim, há momentos em que a dor e a perda nos ultrapassam. Mas Jesus pode fazer esse milagre sem que nós lho peçamos. O que mudaria em você se acreditasse que Jesus já está agindo, mesmo sem que você tenha pedido?" },
+        { "category": "Fé", "question": "À viúva de Naim, Jesus devolveu exatamente aquilo que ela já dava por perdido. Há algo na sua vida que você já deu por perdido, e que Jesus pode devolver-lhe hoje?" },
+        { "category": "Propósito", "question": "A viúva de Naim recebeu sem merecer, e sem buscá-lo tornou-se a razão pela qual muitos conheceram Jesus. Que história de graça recebida na sua vida poderia tornar-se hoje a razão pela qual mais alguém conheça Jesus?" }
+      ],
+      "prayer": {
+        "title": "Oração da misericórdia imerecida",
+        "content": "Senhor Jesus, obrigado porque hoje posso te honrar e te agradecer por tudo o que você fez na minha vida. Como a viúva de Naim, há ocasiões em que a dor, a perda e as lutas que atravesso parecem não ter solução. Mas hoje vi que nem a morte tem poder quando você nos encontra e, na sua misericórdia imerecida, age. Hoje decido crer que, por mais difícil que seja a minha situação, você a conhece, você a vê, e tudo coopera para o meu bem. Confio que tudo cumprirá o seu propósito na minha vida e que chegará o momento da alegria, da restituição e do testemunho. Ajude-me a levar esse testemunho, seja do que já aconteceu ou do que ainda espero, para partilhar vida e esperança como a que aquele jovem recebeu na cidade de Naim. Em nome de Jesus, amém."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "widow_nain_completion.png",
+      "completion_verse": {
+        "reference": "S. Lucas 7:13",
+        "text": "E, vendo-a, o Senhor moveu-se de íntima compaixão por ela e disse-lhe: Não chores.",
+        "bible_version": "ARC"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "id": "widow_nain_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "es",
+  "bible_version": "RVR1960",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "La Viuda de Naín",
+    "testament": "new",
+    "scripture_reference": "Lucas 7:11-17",
+    "mood_primary": "grief",
+    "accent_color": "#4a3728",
+    "emoji": "🕊️",
+    "tags": ["compasión", "duelo", "resurrección", "viudez", "misericordia no pedida"]
+  },
+  "key_verse": {
+    "reference": "Lucas 7:13",
+    "text": "Y cuando el Señor la vio, se compadeció de ella, y le dijo: No llores.",
+    "bible_version": "RVR1960"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "widow_nain_procession_departure.png",
+      "title": "Una aldea al pie del monte",
+      "narrative": "Naín es una aldea pequeña, asentada en la ladera del monte Moré. Tiene una sola puerta principal, y por ella pasa todo: los mercaderes que entran, los pastores que salen con sus rebaños, y también, cuando llega el momento, los difuntos que la aldea entera acompaña hasta la tumba. Ese día, algo se acerca a esa puerta desde dos direcciones a la vez.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "Una aldea pequeña con una sola puerta está a punto de ver dos caminos cruzarse en el mismo umbral."
+    },
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "widow_nain_bier_procession.png",
+      "title": "Un féretro abierto sale de la ciudad",
+      "narrative": "Por la puerta de Naín sale una procesión larga, con mucha gente de la ciudad caminando detrás de un féretro abierto, como era la costumbre. Al frente, entre los que lloran más fuerte, camina una mujer. No es la única que llora, pero es la que más ha perdido: primero un esposo, ahora el único hijo que le quedaba.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 7:12",
+        "text": "Cuando llegó cerca de la puerta de la ciudad, he aquí que llevaban a enterrar a un difunto, hijo único de su madre, la cual era viuda; y había con ella mucha gente de la ciudad."
+      },
+      "revelation_key": "La multitud acompaña a una mujer que camina hacia el único destino que le queda: enterrar a su hijo único."
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "widow_nain_portrait_grief.png",
+      "title": "Una madre pierde su voz en la aldea",
+      "subtitle": "Lo que un hijo significaba en Naín",
+      "content": "La conocemos solo por lo que ha perdido. Su hijo era ya un hombre crecido, no un niño — Jesús lo llamará después νεανίσκος (neaniskos), joven adulto. En Naín, como en cualquier aldea de la época, la puerta de la ciudad era donde los ancianos resolvían las herencias, los contratos, las disputas de propiedad. Un hijo así era, entre muchas cosas, la voz legal de su madre en ese lugar.\n\nCon su hijo en ese féretro, la viuda pierde también esa voz. La multitud que la acompaña puede llorar con ella, pero esa voz legal solo él podía dársela.",
+      "revelation_key": "Esta mujer no solo pierde a su hijo — pierde su lugar legal y económico en Naín.",
+      "verse_overlay": {
+        "reference": "Lucas 7:12",
+        "text": "Llevaban a enterrar a un difunto, hijo único de su madre, la cual era viuda."
+      }
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "widow_nain_two_crowds_meet.png",
+      "title": "Dos multitudes en el mismo umbral",
+      "narrative": "Desde el otro lado del camino sube Jesús, con sus discípulos y una multitud igual de grande. Las dos procesiones llegan a la puerta casi al mismo tiempo: una que entra buscando algo, la otra que sale sin nada. Por un instante, ambas se detienen, cara a cara, sin que nadie sepa todavía lo que está a punto de pasar.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 7:11",
+        "text": "Aconteció después, que él iba a la ciudad llamada Naín, e iban con él muchos de sus discípulos, y una gran multitud."
+      },
+      "revelation_key": "En la puerta de Naín se cruzan la multitud que sigue a la Vida y la multitud que entierra una muerte."
+    },
+    {
+      "order": 5,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "widow_nain_jesus_sees_her.png",
+      "verse_reference": "Lucas 7:13",
+      "verse_text": "Y cuando el Señor la vio, se compadeció de ella, y le dijo: No llores.",
+      "reflection": "Jesús la ve y se compadece. Lucas usa el verbo griego σπλαγχνίζομαι (splanchnizomai) — literalmente, sentir algo en las entrañas. Jesús siente ese dolor en el cuerpo, no solo en la mente.\n\nEs notable hacia dónde se dirige primero esa compasión: no al féretro, sino a la madre que camina detrás de él. Ve primero a la persona que sigue respirando.",
+      "revelation_key": "La compasión de Jesús se mueve por lo que ve, no por lo que le piden — nadie en esa multitud le ha suplicado nada.",
+      "scripture_connections": []
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "widow_nain_touching_bier.png",
+      "title": "Toca lo que la ley prohibía",
+      "narrative": "Jesús se acerca y toca el féretro abierto. Según la Ley (Números 19:11), tocar un cadáver traía impureza ceremonial durante siete días — una regla que aplicaba a cualquier israelita. Los que lo cargan se detienen, sorprendidos de que alguien haga en público lo que la Ley advertía evitar. Jesús lo toca de todos modos, como quien tiene autoridad sobre lo que la ley solo podía nombrar.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Números 19:11",
+        "text": "El que tocare cadáver de cualquier persona será inmundo siete días."
+      },
+      "revelation_key": "Jesús toca la muerte misma, y la muerte retrocede ante él en vez de contaminarlo."
+    },
+    {
+      "order": 7,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "widow_nain_only_son.png",
+      "title": "Un hijo único, como Él",
+      "subtitle": "monogenēs — la misma palabra",
+      "content": "Lucas describe al hijo con la palabra griega μονογενής (monogenēs): único, sin igual. Es la misma palabra que Juan usará para describir a Jesús como el Hijo unigénito del Padre (Juan 1:18; 3:16).\n\nCuando Jesús le habla, lo llama νεανίσκος (neaniskos) — joven, un hombre ya crecido, no un niño. Era la única voz de esa casa, y esa voz acababa de callarse para siempre.\n\nNo es una coincidencia menor: el Hijo único del Padre se detiene ante el hijo único de una viuda.",
+      "revelation_key": "El mismo término que describe al Hijo único del Padre describe también al hijo que Jesús está a punto de devolverle a esta mujer.",
+      "scripture_connections": [
+        { "reference": "Juan 1:18", "text": "A Dios nadie le vio jamás; el unigénito Hijo, que está en el seno del Padre, él le ha dado a conocer." },
+        { "reference": "Juan 3:16", "text": "Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna." }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "widow_nain_son_rises.png",
+      "title": "El que iba camino a la tumba empieza a hablar",
+      "narrative": "La multitud se queda en silencio, mirando. Jesús simplemente habla, directo, como quien tiene autoridad sobre lo que escucha. Y el joven que iba camino a la tumba se incorpora, y comienza a hablar.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lucas 7:14-15",
+        "text": "Y dijo: Joven, a ti te digo, levántate. Entonces se incorporó el que había muerto, y comenzó a hablar."
+      },
+      "revelation_key": "Una orden de Jesús bastó, y la muerte retrocedió."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "widow_nain_reunion_embrace.png",
+      "title": "Se lo entregó a su madre",
+      "subtitle": "El gesto final del milagro",
+      "content": "Lucas cierra el relato con Jesús entregándolo a su madre — la misma frase que usa el Antiguo Testamento cuando Elías devuelve a la viuda de Sarepta su hijo resucitado (1 Reyes 17:23).\n\nEl gesto importa tanto como el milagro: Jesús pone al hijo de vuelta en los brazos de la única persona a quien pertenecía.",
+      "revelation_key": "El milagro le devuelve la vida al joven; el gesto final le devuelve el hijo a la madre.",
+      "verse_overlay": {
+        "reference": "Lucas 7:15",
+        "text": "Y lo dio a su madre."
+      },
+      "scripture_connections": [
+        { "reference": "1 Reyes 17:23", "text": "Tomando luego Elías al niño, lo trajo del aposento a la casa, y lo dio a su madre, y le dijo Elías: Mira, tu hijo vive." }
+      ]
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "widow_nain_elijah_echo.png",
+      "title": "La compasión que actuó primero",
+      "subtitle": "Elías y Eliseo actuaron por gratitud, Jesús por lo que vio",
+      "content": "Elías había resucitado antes al hijo de la viuda de Sarepta (1 Reyes 17), y Eliseo haría lo mismo con el hijo de la sunamita (2 Reyes 4). Ambos profetas habían recibido antes la hospitalidad de esas mujeres, y ambos actuaron después de que ellas se lo suplicaran, en privado, dentro de sus propias casas.\n\nA la viuda de Naín, Jesús la ve ese día, en plena calle, delante de toda la multitud que la acompaña. El texto registra solo esto: la vio, y se compadeció. Esa mirada es el único motivo que el relato ofrece.",
+      "revelation_key": "Elías y Eliseo actuaron por gratitud hacia mujeres que los habían hospedado; la compasión de Jesús nace solo de lo que ve.",
+      "verse_overlay": null,
+      "scripture_connections": [
+        { "reference": "1 Reyes 17:9", "text": "Levántate, vete a Sarepta de Sidón, y mora allí; he aquí yo he dado orden allí a una mujer viuda que te sustente." },
+        { "reference": "2 Reyes 4:8", "text": "Aconteció también que un día pasaba Eliseo por Sunem; y había allí una mujer importante, que le invitaba insistentemente a que comiese; y cuando él pasaba por allí, venía a la casa de ella a comer." }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "widow_nain_crowd_wonder.png",
+      "title": "El temor y la palabra que corrió",
+      "subtitle": "Un gran profeta se ha levantado",
+      "content": "El asombro de la multitud se traduce en una frase concreta: «Un gran profeta se ha levantado entre nosotros» — el mismo lenguaje que usaban para hablar de Elías y Eliseo.\n\nLa gente reconoció el patrón antes de entender del todo lo que estaban viendo. Vieron algo que ya conocían por las Escrituras, y aun así, era más grande que lo que esperaban.",
+      "revelation_key": "La multitud reconoce el eco de Elías y Eliseo en lo que ve, sin saber todavía cuánto más grande es Aquel que tienen delante.",
+      "verse_overlay": {
+        "reference": "Lucas 7:16",
+        "text": "Y todos tuvieron miedo, y glorificaban a Dios, diciendo: Un gran profeta se ha levantado entre nosotros; y: Dios ha visitado a su pueblo."
+      }
+    },
+    {
+      "order": 12,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "widow_nain_fame_spreads.png",
+      "verse_reference": "Lucas 7:17",
+      "verse_text": "Y esta fama de él se extendió por toda Judea, y por toda la región de alrededor.",
+      "reflection": "La noticia se extiende más allá de Naín, más allá del pequeño círculo de una viuda y su hijo. Lo que empezó como la compasión de Jesús por una sola mujer termina alcanzando toda una región.\n\nEsa historia se convirtió en la manera en que muchos supieron por primera vez quién era Jesús.",
+      "revelation_key": "El testimonio de las personas de Naín dio a conocer a Jesús en toda la región.",
+      "scripture_connections": []
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "widow_nain_discovery.png",
+      "title": "Tu Encuentro",
+      "subtitle": "La compasión de Dios no espera a que se la pidan.",
+      "discovery_questions": [
+        { "category": "Honestidad", "question": "Como la viuda de Naín, hay momentos en que el dolor y la pérdida nos sobrepasan. Pero Jesús puede hacer ese milagro sin que se lo pidamos. ¿Qué cambiaría en ti si creyeras que Jesús ya está actuando, aunque no se lo hayas pedido?" },
+        { "category": "Fe", "question": "A la viuda de Naín, Jesús le devolvió exactamente lo que ella ya daba por perdido. ¿Hay algo en tu vida que ya diste por perdido, y que Jesús puede devolverte hoy?" },
+        { "category": "Propósito", "question": "La viuda de Naín recibió sin merecer, y sin buscarlo se convirtió en la razón por la que muchos conocieron a Jesús. ¿Qué historia de gracia recibida en tu vida podría convertirse hoy en la razón por la que alguien más conozca a Jesús?" }
+      ],
+      "prayer": {
+        "title": "Oración de la misericordia inmerecida",
+        "content": "Señor Jesús, gracias porque hoy puedo honrarte y agradecerte por todo lo que has hecho en mi vida. Como la viuda de Naín, hay ocasiones en que el dolor, la pérdida y las luchas que atravieso parecen no tener solución. Pero hoy he visto que ni la muerte tiene poder cuando tú nos encuentras y, en tu misericordia inmerecida, actúas. Hoy decido creer que por más difícil que sea mi situación, tú la conoces, tú la ves, y todo obra para mi bien. Confío en que todo cumplirá su propósito en mi vida y que llegará el momento de la alegría, de la restitución y del testimonio. Ayúdame a llevar ese testimonio, ya sea de lo que ya ha ocurrido o de lo que aún espero, para compartir vida y esperanza como la que recibió ese joven en la ciudad de Naín. En el nombre de Jesús, amén."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "widow_nain_completion.png",
+      "completion_verse": {
+        "reference": "Lucas 7:13",
+        "text": "Y cuando el Señor la vio, se compadeció de ella, y le dijo: No llores.",
+        "bible_version": "RVR1960"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

@@ -306,7 +306,7 @@ Exegetical insight — Greek/Hebrew word studies, cultural context, cross-refere
   "image_url": "filename.png",
   "title": "string",
   "subtitle": "string",
-  "content": "Prose with emoji markers for key insights. Greek/Hebrew in transliteration.",
+  "content": "Prose with emoji markers for key insights. Greek/Hebrew word given in the original script, glossed inline with its Latin-alphabet transliteration in parentheses (e.g. μονογενής (monogenēs)) — the transliteration is always Latin, never respelled phonetically into the encounter's own language/script.",
   "revelation_key": "One sentence.",
   "verse_overlay": {
     "reference": "Book ch:v",
@@ -500,6 +500,9 @@ Character may appear small or from behind. Still opens with character descriptio
 - Never the visual center — the story belongs to the biblical character
 - Describe him as "a man in a simple first-century tunic, seen from behind, face never visible, a subtle warm glow of glory around his form"
 - No halos. No full-body supernatural glow. No face. No eyes. No frontal view. Ever.
+
+**Preferred over stating the glow directly: show it through how the physical world reacts to him.**
+Naming "a subtle warm glow of glory" in every prompt is the acceptable baseline, but the strongest instances in the corpus (Emmaus, `cleofas_road_stranger_joins.png` through `cleofas_bread_breaking.png`) skip stating the glow outright and instead describe one small physical anomaly the reader has to notice — dust that settles instantly behind his steps instead of drifting, a shadow that stays short regardless of the sun's angle, a breeze that moves every garment on the road except his tunic, a lamp flame leaning toward him with no draft to explain it, torn bread catching a light brighter than the one lamp in the room. Reserve this technique for cards where Jesus is a physical presence in the scene (not distant/silhouetted in a crowd); pick one anomaly tied to something already in the shot (dust, shadow, cloth, flame, food) rather than inventing an unrelated one. Still never state "glow" or "glory" when using this technique — the physical detail carries it.
 
 **Example (from Woman at the Well, card 2):**
 ```

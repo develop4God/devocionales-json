@@ -332,7 +332,10 @@ Every card has at minimum:
 ```
 
 Optional card fields — add when the content earns them:
-- `greek_words[]` → `{word, transliteration, meaning, revelation}`
+- `greek_words[]` → `{word, transliteration, meaning, revelation}`. `word` is the
+  original Greek/Hebrew script; `transliteration` is always Latin-alphabet (e.g.
+  `monogenēs`, not a phonetic respelling into the study's own language/script) —
+  translators must leave both fields unchanged (see discovery-translator-SKILL.md).
 - `scripture_references[]` → `{reference, text}` (RVR1960)
 - `identity_statement` → string (who the reader IS in Christ)
 - `comfort_promise` → string
