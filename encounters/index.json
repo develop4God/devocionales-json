@@ -876,6 +876,79 @@
         "hi": 12,
         "fil": 12
       }
+    },
+    {
+      "id": "widow_nain_001",
+      "version": "1.0",
+      "image_version": "1.0",
+      "emoji": "🕊️",
+      "status": "published",
+      "intro_image": "widow_nain_portrait_grief.png",
+      "mood_primary": "grief",
+      "accent_color": "#4a3728",
+      "has_interactive": false,
+      "testament": "new",
+      "character": "La Viuda de Naín",
+      "files": {
+        "es": "widow_nain_es_001.json",
+        "en": "widow_nain_en_001.json",
+        "pt": "widow_nain_pt_001.json",
+        "fr": "widow_nain_fr_001.json",
+        "de": "widow_nain_de_001.json",
+        "ar": "widow_nain_ar_001.json",
+        "fil": "widow_nain_fil_001.json",
+        "hi": "widow_nain_hi_001.json",
+        "ja": "widow_nain_ja_001.json",
+        "zh": "widow_nain_zh_001.json"
+      },
+      "titles": {
+        "es": "El encuentro de la viuda de Naín",
+        "en": "The Encounter of the Widow of Nain",
+        "pt": "O Encontro da Viúva de Naim",
+        "fr": "La Rencontre de la Veuve de Naïn",
+        "de": "Die Begegnung mit der Witwe von Nain",
+        "ar": "لِقَاءُ أَرْمَلَةِ نَايِينَ",
+        "fil": "Ang Pagtatagpo sa Biyuda ng Nain",
+        "hi": "नाईन की विधवा से भेंट",
+        "ja": "ナインのやもめとの出会い",
+        "zh": "拿因城寡妇的相遇"
+      },
+      "subtitles": {
+        "es": "Compasión antes que la palabra",
+        "en": "Compassion Before a Word",
+        "pt": "Compaixão antes da palavra",
+        "fr": "La compassion avant la parole",
+        "de": "Mitgefühl vor dem Wort",
+        "ar": "رَحْمَةٌ قَبْلَ الْكَلِمَةِ",
+        "fil": "Habag Bago ang Salita",
+        "hi": "शब्द से पहले करुणा",
+        "ja": "言葉より先にあった憐れみ",
+        "zh": "怜悯先于言语"
+      },
+      "scripture_reference": {
+        "es": "Lucas 7:11-17",
+        "en": "Luke 7:11-17",
+        "pt": "S. Lucas 7:11-17",
+        "fr": "Luc 7:11-17",
+        "de": "Lukas 7:11-17",
+        "ar": "إِنْجِيلُ لُوقَا 7:11-17",
+        "fil": "Lucas 7:11-17",
+        "hi": "लूका 7:11-17",
+        "ja": "ルカの福音書 7:11-17",
+        "zh": "路加福音 7:11-17"
+      },
+      "estimated_reading_minutes": {
+        "es": 11,
+        "en": 8,
+        "pt": 10,
+        "fr": 10,
+        "de": 9,
+        "ar": 9,
+        "fil": 10,
+        "hi": 10,
+        "ja": 11,
+        "zh": 11
+      }
     }
   ]
 }

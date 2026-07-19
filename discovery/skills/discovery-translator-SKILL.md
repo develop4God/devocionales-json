@@ -116,8 +116,10 @@ Use the **primary version only** for all verse text in translations.
 
 ### Always keep identical (do NOT translate):
 - `id`, `type`, `date`, `order`, `icon`
-- `greek_words[].word` and `greek_words[].transliteration`
-- `hebrew_words[].word` and `hebrew_words[].transliteration`
+- `greek_words[].word` and `greek_words[].transliteration` — `transliteration` is
+  always Latin-alphabet (e.g. `monogenēs`); never respell it phonetically into
+  the target language's own script, even for AR/ZH/HI/JA
+- `hebrew_words[].word` and `hebrew_words[].transliteration` (same rule)
 - The term `Māmônā` wherever it appears in content
 - Emoji characters including `👁️✅` and `👁️❌`
 

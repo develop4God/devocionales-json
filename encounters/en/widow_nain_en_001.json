@@ -1,0 +1,222 @@
+{
+  "id": "widow_nain_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "en",
+  "bible_version": "KJV",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 8,
+  "meta": {
+    "character": "The Widow of Nain",
+    "testament": "new",
+    "scripture_reference": "Luke 7:11-17",
+    "mood_primary": "grief",
+    "accent_color": "#4a3728",
+    "emoji": "🕊️",
+    "tags": ["compassion", "grief", "resurrection", "widowhood", "unasked mercy"]
+  },
+  "key_verse": {
+    "reference": "Luke 7:13",
+    "text": "And when the Lord saw her, he had compassion on her, and said unto her, Weep not.",
+    "bible_version": "KJV"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "widow_nain_procession_departure.png",
+      "title": "A village at the foot of the mountain",
+      "narrative": "Nain is a small village, settled on the slope of Mount Moreh. It has a single main gate, and everything passes through it: merchants coming in, shepherds going out with their flocks, and also, when the moment comes, the dead whom the whole village walks out to bury. That day, something approaches this gate from two directions at once.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "A small village with a single gate is about to see two roads cross on the same threshold."
+    },
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "widow_nain_bier_procession.png",
+      "title": "An open bier leaves the city",
+      "narrative": "Through the gate of Nain comes a long procession, a great crowd from the city walking behind an open bier, as was the custom. At the front, among those who weep the loudest, walks a woman. She is not the only one weeping, but she is the one who has lost the most: first a husband, now the only son she had left.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luke 7:12",
+        "text": "Now when he came near to the gate of the city, behold, there was a dead man carried out, the only son of his mother, and she was a widow: and many people of the city were with her."
+      },
+      "revelation_key": "The crowd walks with a woman heading toward the only destination left to her: burying her only son."
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "widow_nain_portrait_grief.png",
+      "title": "A mother loses her voice in the village",
+      "subtitle": "What a son meant in Nain",
+      "content": "We know her only by what she has lost. Her son was already a grown man, not a boy — Jesus will later call him νεανίσκος (neaniskos), a young man. In Nain, as in any village of that time, the city gate was where the elders settled inheritances, contracts, disputes over property. A son like this was, among many things, his mother's legal voice in that place.\n\nWith her son on that bier, the widow loses that voice too. The crowd walking with her can weep with her, but only he could give her that legal voice.",
+      "revelation_key": "This woman doesn't just lose her son — she loses her legal and economic standing in Nain.",
+      "verse_overlay": {
+        "reference": "Luke 7:12",
+        "text": "There was a dead man carried out, the only son of his mother, and she was a widow."
+      }
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "widow_nain_two_crowds_meet.png",
+      "title": "Two crowds at the same threshold",
+      "narrative": "From the other side of the road comes Jesus, with his disciples and a crowd just as large. The two processions reach the gate almost at the same moment: one entering in search of something, the other leaving with nothing. For an instant, both stop, face to face, and no one yet knows what is about to happen.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luke 7:11",
+        "text": "And it came to pass the next day that he went into a city called Nain; and many of his disciples went with him, and many people."
+      },
+      "revelation_key": "At the gate of Nain, the crowd following Life meets the crowd burying a death."
+    },
+    {
+      "order": 5,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "widow_nain_jesus_sees_her.png",
+      "verse_reference": "Luke 7:13",
+      "verse_text": "And when the Lord saw her, he had compassion on her, and said unto her, Weep not.",
+      "reflection": "Jesus sees her and is moved with compassion. Luke uses the Greek verb σπλαγχνίζομαι (splanchnizomai) — literally, to feel something in the gut. Jesus feels this grief in his body, not only in his mind.\n\nIt's worth noticing where that compassion turns first: not to the bier, but to the mother walking behind it. He sees, first, the one who is still breathing.",
+      "revelation_key": "Jesus's compassion moves toward what he sees, not what he's asked for — no one in that crowd has begged him for anything.",
+      "scripture_connections": []
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "widow_nain_touching_bier.png",
+      "title": "He touches what the law forbade",
+      "narrative": "Jesus steps forward and touches the open bier. Under the Law (Numbers 19:11), touching a corpse brought ceremonial impurity for seven days — a rule that applied to any Israelite. The men carrying it stop, startled that anyone would do in public what the Law warned against. Jesus touches it anyway, like one who holds authority over what the law could only name.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Numbers 19:11",
+        "text": "He that touches the dead body of any man shall be unclean seven days."
+      },
+      "revelation_key": "Jesus touches death itself, and death draws back before him instead of contaminating him."
+    },
+    {
+      "order": 7,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "widow_nain_only_son.png",
+      "title": "An only son, like Him",
+      "subtitle": "monogenēs — the same word",
+      "content": "Luke describes the son with the Greek word μονογενής (monogenēs): only, without equal. It's the same word John will use to describe Jesus as the only begotten Son of the Father (John 1:18; 3:16).\n\nWhen Jesus speaks to him, he calls him νεανίσκος (neaniskos) — young man, already grown, not a boy. He was the only voice of that household, and that voice had just gone silent for good.\n\nIt's no small coincidence: the Father's only Son stops before the only son of a widow.",
+      "revelation_key": "The same term that describes the Father's only Son also describes the son Jesus is about to give back to this woman.",
+      "scripture_connections": [
+        { "reference": "John 1:18", "text": "No man has seen God at any time; the only begotten Son, who is in the bosom of the Father, he has declared him." },
+        { "reference": "John 3:16", "text": "For God so loved the world, that he gave his only begotten Son, that whosoever believes in him should not perish, but have everlasting life." }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "widow_nain_son_rises.png",
+      "title": "The one bound for the grave begins to speak",
+      "narrative": "The crowd falls silent, watching. Jesus simply speaks, directly, like one who holds authority over what he addresses. And the young man who was bound for the grave sits up, and begins to speak.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luke 7:14-15",
+        "text": "And he said, Young man, I say unto you, Arise. And he that was dead sat up, and began to speak."
+      },
+      "revelation_key": "One command from Jesus was enough, and death drew back."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "widow_nain_reunion_embrace.png",
+      "title": "He gave him back to his mother",
+      "subtitle": "The final gesture of the miracle",
+      "content": "Luke closes the account with Jesus giving him back to his mother — the same phrase the Old Testament uses when Elijah returns the widow of Zarephath's son to her, raised from death (1 Kings 17:23).\n\nThe gesture matters as much as the miracle: Jesus places the son back in the arms of the only person he belonged to.",
+      "revelation_key": "The miracle gives the young man back his life; the final gesture gives the mother back her son.",
+      "verse_overlay": {
+        "reference": "Luke 7:15",
+        "text": "And he delivered him to his mother."
+      },
+      "scripture_connections": [
+        { "reference": "1 Kings 17:23", "text": "And Elijah took the child, and brought him down out of the chamber into the house, and delivered him unto his mother: and Elijah said, See, your son lives." }
+      ]
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "widow_nain_elijah_echo.png",
+      "title": "The compassion that acted first",
+      "subtitle": "Elijah and Elisha acted out of gratitude, Jesus out of what he saw",
+      "content": "Elijah had earlier raised the son of the widow of Zarephath (1 Kings 17), and Elisha would later do the same for the son of the Shunammite woman (2 Kings 4). Both prophets had first received the hospitality of these women, and both acted only after they were begged, in private, inside their own homes.\n\nJesus sees the widow of Nain that day, out in the open street, in front of the whole crowd walking with her. The text records only this: he saw her, and he had compassion. That look is the only reason the account gives.",
+      "revelation_key": "Elijah and Elisha acted out of gratitude toward women who had welcomed them; Jesus's compassion is born only of what he sees.",
+      "verse_overlay": null,
+      "scripture_connections": [
+        { "reference": "1 Kings 17:9", "text": "Arise, get you to Zarephath, which belongs to Sidon, and dwell there: behold, I have commanded a widow woman there to sustain you." },
+        { "reference": "2 Kings 4:8", "text": "And it fell on a day, that Elisha passed to Shunem, where there was a wealthy woman; and she urged him to eat some food. And so it was, that as often as he passed by, he turned in there to eat some food." }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "widow_nain_crowd_wonder.png",
+      "title": "The fear and the word that spread",
+      "subtitle": "A great prophet has risen among us",
+      "content": "The crowd's amazement finds its way into a specific phrase: \"A great prophet has risen up among us\" — the same language they used to speak of Elijah and Elisha.\n\nThe people recognized the pattern before they fully understood what they were seeing. They saw something they already knew from the Scriptures, and yet it was greater than they expected.",
+      "revelation_key": "The crowd recognizes the echo of Elijah and Elisha in what they see, without yet knowing how much greater the One before them truly is.",
+      "verse_overlay": {
+        "reference": "Luke 7:16",
+        "text": "And there came a fear on all: and they glorified God, saying, A great prophet is risen up among us; and, God has visited his people."
+      }
+    },
+    {
+      "order": 12,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "widow_nain_fame_spreads.png",
+      "verse_reference": "Luke 7:17",
+      "verse_text": "And this report of him went forth throughout all Judea, and throughout all the region round about.",
+      "reflection": "The news travels beyond Nain, beyond the small circle of a widow and her son. What began as Jesus's compassion for one woman ends up reaching an entire region.\n\nThat story became the reason many people first came to know who Jesus was.",
+      "revelation_key": "The testimony of the people of Nain made Jesus known throughout the region.",
+      "scripture_connections": []
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "widow_nain_discovery.png",
+      "title": "Your Encounter",
+      "subtitle": "God's compassion doesn't wait to be asked.",
+      "discovery_questions": [
+        { "category": "Honesty", "question": "Like the widow of Nain, there are moments when grief and loss overwhelm us. But Jesus can do that miracle without us asking. What would change in you if you believed Jesus is already at work, even though you haven't asked him to be?" },
+        { "category": "Faith", "question": "To the widow of Nain, Jesus gave back exactly what she had already given up for lost. Is there something in your life you've already given up for lost, that Jesus can give back to you today?" },
+        { "category": "Purpose", "question": "The widow of Nain received without earning it, and without seeking it, became the reason many came to know Jesus. What story of grace received in your life could become, today, the reason someone else comes to know Jesus?" }
+      ],
+      "prayer": {
+        "title": "Prayer of undeserved mercy",
+        "content": "Lord Jesus, thank you that today I can honor you and thank you for all you have done in my life. Like the widow of Nain, there are times when the pain, loss, and struggles I face seem to have no solution. But today I have seen that not even death holds power when you meet us and, in your undeserved mercy, act. Today I choose to believe that no matter how hard my situation is, you know it, you see it, and all things work together for my good. I trust that everything will fulfill its purpose in my life, and that the moment of joy, restoration, and testimony will come. Help me carry that testimony, whether of what has already happened or of what I still wait for, to share life and hope like the young man in the city of Nain received. In Jesus's name, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "widow_nain_completion.png",
+      "completion_verse": {
+        "reference": "Luke 7:13",
+        "text": "And when the Lord saw her, he had compassion on her, and said unto her, Weep not.",
+        "bible_version": "KJV"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

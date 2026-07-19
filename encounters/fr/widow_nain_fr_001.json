@@ -1,0 +1,222 @@
+{
+  "id": "widow_nain_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fr",
+  "bible_version": "LSG1910",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "La Veuve de Naïn",
+    "testament": "new",
+    "scripture_reference": "Luc 7:11-17",
+    "mood_primary": "grief",
+    "accent_color": "#4a3728",
+    "emoji": "🕊️",
+    "tags": ["compassion", "deuil", "résurrection", "veuvage", "miséricorde non demandée"]
+  },
+  "key_verse": {
+    "reference": "Luc 7:13",
+    "text": "Le Seigneur, l’ayant vue, fut ému de compassion pour elle, et lui dit: Ne pleure pas!",
+    "bible_version": "LSG1910"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "widow_nain_procession_departure.png",
+      "title": "Un village au pied de la montagne",
+      "narrative": "Naïn est un petit village, niché sur le flanc du mont Moré. Il n'a qu'une seule porte principale, et tout y passe : les marchands qui entrent, les bergers qui sortent avec leurs troupeaux, et aussi, quand vient l'heure, les défunts que le village tout entier accompagne jusqu'à la tombe. Ce jour-là, quelque chose approche de cette porte depuis deux directions à la fois.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "Un petit village avec une seule porte est sur le point de voir deux chemins se croiser sur le même seuil."
+    },
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "widow_nain_bier_procession.png",
+      "title": "Un cercueil ouvert sort de la ville",
+      "narrative": "Par la porte de Naïn sort une longue procession, avec beaucoup de gens de la ville marchant derrière un cercueil ouvert, selon la coutume. En tête, parmi ceux qui pleurent le plus fort, marche une femme. Elle n'est pas la seule à pleurer, mais c'est elle qui a le plus perdu : d'abord un mari, maintenant le seul fils qui lui restait.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luc 7:12",
+        "text": "Lorsqu’il fut près de la porte de la ville, voici, on portait en terre un mort, fils unique de sa mère, qui était veuve; et il y avait avec elle beaucoup de gens de la ville."
+      },
+      "revelation_key": "La foule accompagne une femme qui marche vers la seule destination qui lui reste : enterrer son fils unique."
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "widow_nain_portrait_grief.png",
+      "title": "Une mère perd sa voix dans le village",
+      "subtitle": "Ce qu'un fils représentait à Naïn",
+      "content": "Nous ne la connaissons que par ce qu'elle a perdu. Son fils était déjà un homme, pas un enfant — Jésus l'appellera plus tard νεανίσκος (neaniskos), jeune adulte. À Naïn, comme dans tout village de l'époque, la porte de la ville était le lieu où les anciens réglaient les héritages, les contrats, les litiges de propriété. Un fils comme lui était, entre autres choses, la voix légale de sa mère en ce lieu.\n\nAvec son fils dans ce cercueil, la veuve perd aussi cette voix. La foule qui l'accompagne peut pleurer avec elle, mais cette voix légale, lui seul pouvait la lui donner.",
+      "revelation_key": "Cette femme ne perd pas seulement son fils — elle perd sa place légale et économique à Naïn.",
+      "verse_overlay": {
+        "reference": "Luc 7:12",
+        "text": "On portait en terre un mort, fils unique de sa mère, qui était veuve."
+      }
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "widow_nain_two_crowds_meet.png",
+      "title": "Deux foules sur le même seuil",
+      "narrative": "De l'autre côté du chemin monte Jésus, avec ses disciples et une foule tout aussi grande. Les deux processions arrivent à la porte presque au même moment : l'une qui entre en cherchant quelque chose, l'autre qui sort sans rien. Pendant un instant, elles s'arrêtent toutes deux, face à face, sans que personne ne sache encore ce qui est sur le point de se passer.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luc 7:11",
+        "text": "Le jour suivant, Jésus alla dans une ville appelée Naïn; ses disciples et une grande foule faisaient route avec lui."
+      },
+      "revelation_key": "À la porte de Naïn se croisent la foule qui suit la Vie et la foule qui enterre une mort."
+    },
+    {
+      "order": 5,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "widow_nain_jesus_sees_her.png",
+      "verse_reference": "Luc 7:13",
+      "verse_text": "Le Seigneur, l’ayant vue, fut ému de compassion pour elle, et lui dit: Ne pleure pas!",
+      "reflection": "Jésus la voit et est ému de compassion. Luc emploie le verbe grec σπλαγχνίζομαι (splanchnizomai) — littéralement, ressentir quelque chose au plus profond des entrailles. Jésus porte cette douleur dans le corps, pas seulement dans l'esprit.\n\nIl est frappant de voir vers qui se tourne d'abord cette compassion : non vers le cercueil, mais vers la mère qui marche derrière lui. Il voit d'abord la personne qui respire encore.",
+      "revelation_key": "La compassion de Jésus se met en mouvement par ce qu'il voit, non par ce qu'on lui demande — personne dans cette foule ne l'a supplié de rien.",
+      "scripture_connections": []
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "widow_nain_touching_bier.png",
+      "title": "Il touche ce que la loi interdisait",
+      "narrative": "Jésus s'approche et touche le cercueil ouvert. Selon la Loi (Nombres 19:11), toucher un cadavre rendait impur pendant sept jours — une règle qui s'appliquait à tout Israélite. Ceux qui le portent s'arrêtent, surpris que quelqu'un fasse en public ce que la Loi interdisait. Jésus le touche malgré tout, comme celui qui a autorité sur ce que la loi ne pouvait que nommer.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Nombres 19:11",
+        "text": "Celui qui touchera un mort, un corps humain quelconque, sera impur pendant sept jours."
+      },
+      "revelation_key": "Jésus touche la mort elle-même, et la mort recule devant lui au lieu de le souiller."
+    },
+    {
+      "order": 7,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "widow_nain_only_son.png",
+      "title": "Un fils unique, comme Lui",
+      "subtitle": "monogenēs — le même mot",
+      "content": "Luc décrit le fils avec le mot grec μονογενής (monogenēs) : unique, sans égal. C'est le même mot que Jean emploiera pour décrire Jésus comme le Fils unique du Père (Jean 1:18; 3:16).\n\nQuand Jésus lui parle, il l'appelle νεανίσκος (neaniskos) — jeune homme, un adulte déjà formé, pas un enfant. Il était la seule voix de cette maison, et cette voix venait de se taire pour toujours.\n\nCe n'est pas une coïncidence mineure : le Fils unique du Père s'arrête devant le fils unique d'une veuve.",
+      "revelation_key": "Le même terme qui décrit le Fils unique du Père décrit aussi le fils que Jésus est sur le point de rendre à cette femme.",
+      "scripture_connections": [
+        { "reference": "Jean 1:18", "text": "Personne n’a jamais vu Dieu; le Fils unique, qui est dans le sein du Père, est celui qui l’a fait connaître." },
+        { "reference": "Jean 3:16", "text": "Car Dieu a tant aimé le monde qu’il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu’il ait la vie éternelle." }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "widow_nain_son_rises.png",
+      "title": "Celui qui allait vers la tombe se met à parler",
+      "narrative": "La foule reste silencieuse, à regarder. Jésus parle simplement, directement, comme celui qui a autorité sur ceux qui l'écoutent. Et le jeune homme qui allait vers la tombe se redresse, et commence à parler.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Luc 7:14-15",
+        "text": "Il dit: Jeune homme, je te le dis, lève-toi! Et le mort s’assit, et se mit à parler."
+      },
+      "revelation_key": "Un ordre de Jésus a suffi, et la mort a reculé."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "widow_nain_reunion_embrace.png",
+      "title": "Il le rendit à sa mère",
+      "subtitle": "Le geste final du miracle",
+      "content": "Luc conclut le récit par Jésus qui le rend à sa mère — la même expression qu'emploie l'Ancien Testament quand Élie rend à la veuve de Sarepta son fils ressuscité (1 Rois 17:23).\n\nLe geste compte autant que le miracle : Jésus remet le fils dans les bras de la seule personne à qui il appartenait.",
+      "revelation_key": "Le miracle rend la vie au jeune homme; le geste final rend le fils à sa mère.",
+      "verse_overlay": {
+        "reference": "Luc 7:15",
+        "text": "Jésus le rendit à sa mère."
+      },
+      "scripture_connections": [
+        { "reference": "1 Rois 17:23", "text": "Élie prit l’enfant, le descendit de la chambre haute dans la maison, et le donna à sa mère. Et Élie dit: Vois, ton fils est vivant." }
+      ]
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "widow_nain_elijah_echo.png",
+      "title": "La compassion qui a agi la première",
+      "subtitle": "Élie et Élisée ont agi par gratitude, Jésus par ce qu'il a vu",
+      "content": "Élie avait auparavant ressuscité le fils de la veuve de Sarepta (1 Rois 17), et Élisée ferait de même avec le fils de la Sunamite (2 Rois 4). Les deux prophètes avaient reçu au préalable l'hospitalité de ces femmes, et tous deux ont agi après qu'elles les eurent suppliés, en privé, à l'intérieur de leurs propres maisons.\n\nLa veuve de Naïn, Jésus la voit ce jour-là, en pleine rue, devant toute la foule qui l'accompagne. Le texte ne rapporte que ceci : il la vit, et fut ému de compassion. Ce regard est la seule raison que le récit offre.",
+      "revelation_key": "Élie et Élisée ont agi par gratitude envers des femmes qui les avaient hébergés; la compassion de Jésus naît seulement de ce qu'il voit.",
+      "verse_overlay": null,
+      "scripture_connections": [
+        { "reference": "1 Rois 17:9", "text": "Lève-toi, va à Sarepta, qui appartient à Sidon, et demeure là. Voici, j’y ai ordonné à une femme veuve de te nourrir." },
+        { "reference": "2 Rois 4:8", "text": "Un jour Élisée passait par Sunem. Il y avait là une femme de distinction, qui le pressa d’accepter à manger. Et toutes les fois qu’il passait, il se rendait chez elle pour manger." }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "widow_nain_crowd_wonder.png",
+      "title": "La crainte et la parole qui se répandit",
+      "subtitle": "Un grand prophète a paru parmi nous",
+      "content": "L'émerveillement de la foule se traduit en une phrase concrète : « Un grand prophète a paru parmi nous » — le même langage qu'on employait pour parler d'Élie et d'Élisée.\n\nLes gens ont reconnu le schéma avant de comprendre tout à fait ce qu'ils voyaient. Ils ont vu quelque chose qu'ils connaissaient déjà par les Écritures, et pourtant, c'était plus grand que ce qu'ils attendaient.",
+      "revelation_key": "La foule reconnaît l'écho d'Élie et d'Élisée dans ce qu'elle voit, sans savoir encore à quel point Celui qui se tient devant elle est plus grand.",
+      "verse_overlay": {
+        "reference": "Luc 7:16",
+        "text": "Tous furent saisis de crainte, et ils glorifiaient Dieu, disant: Un grand prophète a paru parmi nous, et Dieu a visité son peuple."
+      }
+    },
+    {
+      "order": 12,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "widow_nain_fame_spreads.png",
+      "verse_reference": "Luc 7:17",
+      "verse_text": "Cette parole sur Jésus se répandit dans toute la Judée et dans tout le pays d’alentour.",
+      "reflection": "La nouvelle se répand au-delà de Naïn, au-delà du petit cercle d'une veuve et de son fils. Ce qui a commencé comme la compassion de Jésus pour une seule femme finit par toucher toute une région.\n\nCette histoire est devenue la manière dont beaucoup ont su pour la première fois qui était Jésus.",
+      "revelation_key": "Le témoignage des habitants de Naïn a fait connaître Jésus dans toute la région.",
+      "scripture_connections": []
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "widow_nain_discovery.png",
+      "title": "Ta Rencontre",
+      "subtitle": "La compassion de Dieu n'attend pas qu'on la lui demande.",
+      "discovery_questions": [
+        { "category": "Honnêteté", "question": "Comme la veuve de Naïn, il y a des moments où la douleur et la perte nous submergent. Mais Jésus peut accomplir ce miracle sans que nous le lui demandions. Qu'est-ce qui changerait en toi si tu croyais que Jésus est déjà à l'œuvre, même sans que tu le lui aies demandé ?" },
+        { "category": "Foi", "question": "À la veuve de Naïn, Jésus a rendu exactement ce qu'elle considérait déjà comme perdu. Y a-t-il quelque chose dans ta vie que tu as déjà tenu pour perdu, et que Jésus peut te rendre aujourd'hui ?" },
+        { "category": "Dessein", "question": "La veuve de Naïn a reçu sans mériter, et sans le chercher elle est devenue la raison pour laquelle beaucoup ont connu Jésus. Quelle histoire de grâce reçue dans ta vie pourrait devenir aujourd'hui la raison pour laquelle quelqu'un d'autre connaisse Jésus ?" }
+      ],
+      "prayer": {
+        "title": "Prière de la miséricorde imméritée",
+        "content": "Seigneur Jésus, merci parce qu'aujourd'hui je peux t'honorer et te remercier pour tout ce que tu as fait dans ma vie. Comme la veuve de Naïn, il y a des moments où la douleur, la perte et les luttes que je traverse semblent n'avoir aucune solution. Mais aujourd'hui j'ai vu que même la mort n'a aucun pouvoir quand tu nous rencontres et que, dans ta miséricorde imméritée, tu agis. Aujourd'hui je décide de croire que, aussi difficile que soit ma situation, tu la connais, tu la vois, et tout concourt à mon bien. Je fais confiance que tout accomplira son dessein dans ma vie et que viendra le moment de la joie, de la restauration et du témoignage. Aide-moi à porter ce témoignage, que ce soit de ce qui s'est déjà accompli ou de ce que j'attends encore, pour partager la vie et l'espérance comme celles que ce jeune homme a reçues dans la ville de Naïn. Au nom de Jésus, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "widow_nain_completion.png",
+      "completion_verse": {
+        "reference": "Luc 7:13",
+        "text": "Le Seigneur, l’ayant vue, fut ému de compassion pour elle, et lui dit: Ne pleure pas!",
+        "bible_version": "LSG1910"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

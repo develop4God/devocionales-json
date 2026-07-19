@@ -1,0 +1,222 @@
+{
+  "id": "widow_nain_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "zh",
+  "bible_version": "CUV1919",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 11,
+  "meta": {
+    "character": "拿因城的寡妇",
+    "testament": "new",
+    "scripture_reference": "路加福音 7:11-17",
+    "mood_primary": "grief",
+    "accent_color": "#4a3728",
+    "emoji": "🕊️",
+    "tags": ["怜悯", "哀恸", "复活", "寡妇", "未曾求告的恩典"]
+  },
+  "key_verse": {
+    "reference": "路加福音 7:13",
+    "text": "主看见那寡妇，就怜悯她，对她说：「不要哭！」",
+    "bible_version": "CUV1919"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "widow_nain_procession_departure.png",
+      "title": "山脚下的一座村庄",
+      "narrative": "拿因是一座小村庄，坐落在摩利山的山坡上。村里只有一座城门，凡事都要经过这里：商人进城，牧人赶着羊群出城，到了该来的时刻，全村人也要从这里走出去，送别死者。就在那一天，有两队人，从两个方向，同时朝这座城门走来。",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "一座只有一道城门的小村庄，即将见证两条路在同一个门槛上交汇。"
+    },
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "widow_nain_bier_procession.png",
+      "title": "一具敞开的棺架走出城门",
+      "narrative": "拿因的城门口，走出一长列送殡的队伍，城里的一大群人跟在一具按照当地习俗敞开的棺架后面。走在最前头、哭得最伤心的人当中，有一个妇人。她不是唯一哭泣的人，却是失去最多的那一个：先失去了丈夫，如今又失去了她仅剩的独子。",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "路加福音 7:12",
+        "text": "将近城门，有一个死人被抬出来。这人是他母亲独生的儿子，他母亲又是寡妇，有城里的许多人同着寡妇送殡。"
+      },
+      "revelation_key": "众人陪着一个妇人走向她唯一剩下的去处：埋葬她的独子。"
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "widow_nain_portrait_grief.png",
+      "title": "一位母亲，在村中失去了自己的声音",
+      "subtitle": "一个儿子在拿因意味着什么",
+      "content": "我们认识她，只因她失去的一切。她的儿子已经是个成年人，不是孩童——耶稣后来会称他为νεανίσκος（neaniskos），意思是青年人。在拿因，正如那个时代任何一座村庄一样，城门口正是长老们处理继承、契约、产业纠纷的地方。像这样的儿子，在诸多身份之外，也是他母亲在那地方的法律代言人。\n\n随着儿子躺在棺架上，这寡妇也失去了那个声音。同行的众人可以陪她一同哭泣，却唯有他，才能为她发出那法律上的声音。",
+      "revelation_key": "这位妇人失去的不只是儿子——她在拿因的法律与经济地位，也随之失去了。",
+      "verse_overlay": {
+        "reference": "路加福音 7:12",
+        "text": "有一个死人被抬出来。这人是他母亲独生的儿子，他母亲又是寡妇。"
+      }
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "widow_nain_two_crowds_meet.png",
+      "title": "同一门槛上的两群人",
+      "narrative": "从大路的另一边，耶稣走来，身后跟着门徒，还有同样庞大的一群人。两支队伍几乎在同一时刻抵达城门：一支正要进城寻找什么，另一支正要出城，却已一无所有。就在那一瞬间，两队人马面对面停下脚步，还没有人知道即将发生什么事。",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "路加福音 7:11",
+        "text": "过了不多时，耶稣往一座城去，这城名叫拿因。他的门徒和极多的人与他同行。"
+      },
+      "revelation_key": "在拿因的城门口，跟随生命的人群，遇见了正在埋葬死亡的人群。"
+    },
+    {
+      "order": 5,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "widow_nain_jesus_sees_her.png",
+      "verse_reference": "路加福音 7:13",
+      "verse_text": "主看见那寡妇，就怜悯她，对她说：「不要哭！」",
+      "reflection": "耶稣看见她，就动了怜悯的心。路加用了希腊文动词σπλαγχνίζομαι（splanchnizomai）——字面意思，是在腹中感受到什么。耶稣对这哀恸的感受，不只在祂的心思里，更在祂的身体里。\n\n值得留意的是，那怜悯首先转向何处：不是棺架，而是走在棺架后面的那位母亲。祂首先看见的，是那仍在呼吸的人。",
+      "revelation_key": "耶稣的怜悯，朝着祂所看见的而去，不是朝着祂被求告的而去——那群人当中，没有一个人向祂求过什么。",
+      "scripture_connections": []
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "widow_nain_touching_bier.png",
+      "title": "祂触碰了律法所禁止的",
+      "narrative": "耶稣上前，伸手摸了那敞开的棺架。按照律法（民数记19:11），触碰尸体的人，要不洁净七天——这条规矩，适用于任何一个以色列人。抬棺架的人愣住了，惊讶竟有人敢在众目睽睽之下，做出律法所警戒之事。耶稣却仍然伸手触碰，仿佛祂本就掌管着律法唯一能命名的东西。",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "民数记 19:11",
+        "text": "摸了人死尸的，就必七天不洁净。"
+      },
+      "revelation_key": "耶稣触碰了死亡本身，死亡却在祂面前退去，而不是玷污了祂。"
+    },
+    {
+      "order": 7,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "widow_nain_only_son.png",
+      "title": "一个独生子，如同祂一样",
+      "subtitle": "μονογενής（monogenēs）——同一个词",
+      "content": "路加用希腊文μονογενής（monogenēs）来描述这个儿子：独一无二，无可比拟。这正是约翰后来用来描述耶稣是父独生子的同一个词（约翰福音1:18；3:16）。\n\n当耶稣对这年轻人说话时，祂称他为νεανίσκος（neaniskos）——已经成年的青年，不是孩童。他曾是那一家唯一的声音，而那声音刚刚永远沉寂了。\n\n这绝非小小的巧合：父的独生子，在一个寡妇的独子面前停下了脚步。",
+      "revelation_key": "描述父独生子的那个词，同样也描述了耶稣即将归还给这位妇人的儿子。",
+      "scripture_connections": [
+        { "reference": "约翰福音 1:18", "text": "从来没有人看见神，只有在父怀里的独生子将他表明出来。" },
+        { "reference": "约翰福音 3:16", "text": "神爱世人，甚至将他的独生子赐给他们，叫一切信他的，不至灭亡，反得永生。" }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "widow_nain_son_rises.png",
+      "title": "那本要奔向坟墓的人，开始说话了",
+      "narrative": "众人静默地看着。耶稣只是开口说话，直截了当，仿佛祂本就掌管着祂所说话的对象。那本要奔向坟墓的青年人，坐了起来，开始说话。",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "路加福音 7:14-15",
+        "text": "耶稣说：「少年人，我吩咐你，起来！」那死人就坐起，并且说话。"
+      },
+      "revelation_key": "耶稣一句吩咐已经足够，死亡便退去了。"
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "widow_nain_reunion_embrace.png",
+      "title": "祂把他交还给了他的母亲",
+      "subtitle": "神迹最后的举动",
+      "content": "路加以耶稣把他交还给母亲这一幕，作为整段记载的结尾——这正是旧约中以利亚把撒勒法寡妇的儿子从死里复活、归还给她时所用的同一句话（列王纪上17:23）。\n\n这个举动，与神迹本身同样重要：耶稣把儿子重新放回那唯一属于他的人怀中。",
+      "revelation_key": "神迹把生命还给了这青年人；而这最后的举动，把儿子还给了母亲。",
+      "verse_overlay": {
+        "reference": "路加福音 7:15",
+        "text": "耶稣便把他交给他母亲。"
+      },
+      "scripture_connections": [
+        { "reference": "列王纪上 17:23", "text": "以利亚将孩子从楼上抱下来，进屋子交给他母亲说：「看哪！你的儿子活了。」" }
+      ]
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "widow_nain_elijah_echo.png",
+      "title": "先行动的怜悯",
+      "subtitle": "以利亚和以利沙因感恩而行动，耶稣却因祂所看见的而行动",
+      "content": "以利亚曾使撒勒法寡妇的儿子复活（列王纪上17），以利沙后来也为书念妇人的儿子行了同样的事（列王纪下4）。这两位先知，都曾先领受过这些妇人的款待，也都是在被恳求之后，私下在她们自己家中，才采取行动。\n\n耶稣在那一天看见拿因的寡妇，是在露天的街道上，在陪她同行的整群人面前。经文只记下了这一点：祂看见了她，就动了怜悯的心。那一眼，是这段记载给出的唯一原因。",
+      "revelation_key": "以利亚和以利沙的行动，出于对曾接待他们的妇人的感恩；耶稣的怜悯，却单单出于祂所看见的。",
+      "verse_overlay": null,
+      "scripture_connections": [
+        { "reference": "列王纪上 17:9", "text": "「你起身往西顿的撒勒法去，住在那里，我已吩咐那里的一个寡妇供养你。」" },
+        { "reference": "列王纪下 4:8", "text": "一日，以利沙走到书念，在那里有一个大户的妇人强留他吃饭。此后，以利沙每从那里经过，就进去吃饭。" }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "widow_nain_crowd_wonder.png",
+      "title": "众人的惧怕与传开的话语",
+      "subtitle": "有大先知在我们中间兴起来了",
+      "content": "众人的惊奇，化作了一句特定的话：「有大先知在我们中间兴起来了」——正是他们从前形容以利亚和以利沙时所用的话语。\n\n百姓在完全明白自己所目睹的是什么之前，先认出了那熟悉的模式。他们看见了圣经中早已认识的事，却发现眼前所见，远超他们的预料。",
+      "revelation_key": "众人在眼前所见之事中，认出了以利亚与以利沙的回响，却还不知道站在他们面前的这一位，究竟何等伟大。",
+      "verse_overlay": {
+        "reference": "路加福音 7:16",
+        "text": "众人都惊奇，归荣耀与神，说：「有大先知在我们中间兴起来了！」又说：「神眷顾了他的百姓！」"
+      }
+    },
+    {
+      "order": 12,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "widow_nain_fame_spreads.png",
+      "verse_reference": "路加福音 7:17",
+      "verse_text": "他这事的风声就传遍了犹太和周围地方。",
+      "reflection": "这消息传得比拿因更远，超出了一位寡妇和她儿子的小圈子。原本只是耶稣对一个妇人的怜悯，最终却传遍了整个地区。\n\n那个故事，成了许多人最初认识耶稣是谁的原因。",
+      "revelation_key": "拿因百姓的见证，使耶稣的名声传遍了那整个地区。",
+      "scripture_connections": []
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "widow_nain_discovery.png",
+      "title": "你的相遇",
+      "subtitle": "神的怜悯，不等人求告才行动。",
+      "discovery_questions": [
+        { "category": "诚实", "question": "像拿因的寡妇一样，有些时刻，哀恸与失丧会把我们完全淹没。但耶稣可以不等我们求告，就成就那神迹。如果你相信耶稣已经在动工，即使你还没有求告祂，你里面会有什么改变？" },
+        { "category": "信心", "question": "对拿因的寡妇，耶稣归还了她原本已经彻底放弃的东西。在你的生命中，是否也有某件事，是你早已放弃指望，而耶稣今天能够归还给你的？" },
+        { "category": "使命", "question": "拿因的寡妇没有争取、没有寻求，却白白领受了恩典，并因此成了许多人认识耶稣的原因。在你的生命中，有哪个恩典的故事，今天也能成为别人认识耶稣的原因？" }
+      ],
+      "prayer": {
+        "title": "白白领受之恩的祷告",
+        "content": "主耶稣，感谢你，今天我可以尊崇你，为你在我生命中所做的一切向你献上感恩。像拿因的寡妇一样，有些时候，我所面对的痛苦、失丧和挣扎，似乎无法解决。但今天我看见，当你与我们相遇，并以你不配得的怜悯行动时，就连死亡也没有权柄。今天我选择相信，无论我的处境多么艰难，你都知道、你都看见，且万事都互相效力，叫我得益处。我相信一切都会在我生命中成就它的目的，喜乐、复原与见证的时刻终将来临。求你帮助我承担那见证，无论是已经成就的，还是我仍在等候的，好将生命与盼望分享出去，正如拿因城那位青年人所领受的一样。奉耶稣的名祷告，阿们。"
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "widow_nain_completion.png",
+      "completion_verse": {
+        "reference": "路加福音 7:13",
+        "text": "主看见那寡妇，就怜悯她，对她说：「不要哭！」",
+        "bible_version": "CUV1919"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

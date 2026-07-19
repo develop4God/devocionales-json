@@ -168,7 +168,16 @@ If a Greek or Hebrew word appears, explain it in the same sentence or the
 next one. Never assume the reader knows the term.
 
 **Format:** word in original characters + transliteration + plain-language
-meaning, together, every time.
+meaning, together, every time. The transliteration is always Latin-alphabet,
+regardless of the study's own language/script (Arabic, Chinese, Hindi, Japanese
+included) — never a phonetic respelling into that language's own script. This
+shipped wrong once across every non-Latin-script encounter translation for the
+same term simultaneously (each translator independently "finished the job" by
+respelling the Greek transliteration into the target script), and a critic
+review reading fluently in that script did not catch it because the respelling
+looked plausible in isolation — only a diff against a sibling published file's
+convention caught it. Check any inline Greek/Hebrew gloss against a sibling
+file before approving, not just for presence of a transliteration.
 
 > "κτήματα (ktémata) — bienes inmuebles, propiedades que dan estatus y
 > seguridad social."

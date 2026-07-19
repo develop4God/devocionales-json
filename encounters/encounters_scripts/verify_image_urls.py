@@ -8,7 +8,12 @@ The asset host maps it to:
   https://raw.githubusercontent.com/develop4God/Devocionales-assets/main/images/encounters/<encounter_id>/<filename>
 where <encounter_id> is the encounter's "id" in index.json (== its asset folder name).
 
-Exit codes: 0 = all images resolved, 1 = one or more missing/unreachable.
+Each image is uploaded in two formats (PNG + AVIF) with the same stem, so for
+every image_url reference this script cross-checks BOTH extensions — the one
+declared in the JSON and its AVIF counterpart — even though only the declared
+one is what the app actually requests.
+
+Exit codes: 0 = all images resolved in both formats, 1 = one or more missing/unreachable.
 """
 
 import json
@@ -17,7 +22,7 @@ import time
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 
 from asset_urls import EncounterIndexReader, ImageReference as _BaseImageReference
@@ -26,15 +31,17 @@ RETRY_ATTEMPTS = 3
 RETRY_BACKOFF_SECONDS = 2
 REQUEST_TIMEOUT_SECONDS = 10
 MAX_CONCURRENT_REQUESTS = 16
+CROSS_CHECK_EXTENSIONS = ("png", "avif")
 
 
 @dataclass(frozen=True)
 class ImageReference(_BaseImageReference):
     source_file: str = ""
+    ext: str = ""  # which of CROSS_CHECK_EXTENSIONS this reference checks
 
     @property
     def url(self) -> str:
-        return _BaseImageReference.url(self)
+        return _BaseImageReference.url(self, ext=self.ext)
 
 
 @dataclass
@@ -46,7 +53,9 @@ class CheckResult:
 
 class ImageReferenceExtractor:
     """Extracts image_url references from encounter card files, deduplicated
-    per (encounter_id, filename) since the same asset is reused across languages."""
+    per (encounter_id, filename) since the same asset is reused across languages.
+    Each unique image_url expands into one ImageReference per cross-check
+    extension (PNG + AVIF), since both are uploaded for every image."""
 
     SKIP_DIRS = {
         "archive", "encounters_scripts", "discovery", "badges",
@@ -67,7 +76,11 @@ class ImageReferenceExtractor:
                 if encounter_id is None:
                     continue  # not referenced in index.json; not an encounter card file
                 self._extract_from_file(json_file, encounter_id, seen)
-        return list(seen.values())
+        references = []
+        for base in seen.values():
+            for ext in CROSS_CHECK_EXTENSIONS:
+                references.append(replace(base, ext=ext))
+        return references
 
     def _extract_from_file(self, json_file: Path, encounter_id: str, seen: dict) -> None:
         data = json.loads(json_file.read_text(encoding="utf-8"))
@@ -124,30 +137,33 @@ class VerificationReport:
         self._files_checked = files_checked
 
     def print(self) -> None:
+        unique_images = len({(r.reference.encounter_id, r.reference.filename) for r in self._results})
+
         print("=" * 80)
         print("IMAGE URL VERIFICATION REPORT (SOT: Devocionales-assets on GitHub)")
         print("=" * 80)
         print()
         print(f"Encounter card files scanned: {self._files_checked}")
-        print(f"Unique images checked: {len(self._results)}")
+        print(f"Unique images checked: {unique_images} (x{len(CROSS_CHECK_EXTENSIONS)} formats "
+              f"{'/'.join(CROSS_CHECK_EXTENSIONS)} = {len(self._results)} checks)")
         print()
 
         failures = [r for r in self._results if not r.ok]
 
         if failures:
-            print(f"MISSING/UNREACHABLE IMAGES ({len(failures)}):")
+            print(f"MISSING/UNREACHABLE FILES ({len(failures)}):")
             for r in failures:
-                print(f"   - {r.reference.encounter_id}/{r.reference.filename}")
+                print(f"   - {r.reference.encounter_id}/{r.reference.filename} [{r.reference.ext.upper()}]")
                 print(f"     Referenced in: {r.reference.source_file}")
                 print(f"     Status: {r.status}")
                 print(f"     URL: {r.reference.url}")
             print()
         else:
-            print("All images resolved successfully.")
+            print(f"All images resolved successfully in both formats ({'/'.join(CROSS_CHECK_EXTENSIONS)}).")
             print()
 
         print("=" * 80)
-        print(f"Summary: {len(self._results) - len(failures)}/{len(self._results)} OK, {len(failures)} failed")
+        print(f"Summary: {len(self._results) - len(failures)}/{len(self._results)} checks OK, {len(failures)} failed")
         print("=" * 80)
 
     def exit_code(self) -> int:

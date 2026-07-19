@@ -201,6 +201,27 @@ print('OK: all files match canonical id', canon_id)
   alongside untranslated UI fields — it shipped untranslated in DE/HI/JA once, caught
   only on a second critic pass. Always check it explicitly.
 
+### Greek/Hebrew inline terms: always Latin transliteration, never target-script phonetics.
+When the source glosses a Greek or Hebrew word inline (e.g. `μονογενής (monogenēs)`,
+`σπλαγχνίζομαι (splanchnizomai)`, `νεανίσκος (neaniskos)`), the parenthetical is a
+**transliteration of the Greek/Hebrew word**, not a translation of its meaning — and that
+transliteration is **always rendered in the Latin alphabet**, regardless of the target
+language or script. This holds even for AR/ZH/HI/JA, where it's tempting to "finish the
+job" by respelling the transliteration phonetically into the target script (e.g. Arabic
+`مُونُوغِينِيسْ`, Chinese `摩诺根斯`, Hindi `मोनोगेनेस`, Japanese `モノゲネース`) — that is
+wrong. Check any sibling published file with an inline Greek/Hebrew term (e.g.
+`nicodemus_*_001.json`'s ὑψόω/μονογενής) in the target language before delivery: the
+parenthetical must match Latin letters like `(hypsoō)`, `(monogenēs)`, never a
+script-native respelling. This shipped wrong across AR, ZH, HI, and JA simultaneously for
+the same encounter (all four non-Latin-script targets independently made the same
+mistake, while EN/ES/PT/FR/DE/FIL — which either share the Latin alphabet or whose
+translator correctly left the gloss in Latin — did not), and went undetected through
+critic review because a critic reading fluently in the target script sees a
+plausible-looking phonetic gloss and has no reason to flag it as wrong; only a direct
+diff against a sibling file's convention catches it. Grep the delivered file for the
+Greek/Hebrew term and confirm the parenthetical is Latin ASCII before marking any
+non-Latin-script language complete.
+
 ### Never add or remove JSON keys.
 Structure must be identical to the source file (ES for EN/PT/FR targets, EN for
 JA/ZH/DE/AR/HI/FIL targets).
