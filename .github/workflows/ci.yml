@@ -18,6 +18,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: 🚀 Check .gitignore covers __pycache__
+        run: python3 shared_validation/check_gitignore_pycache.py
+
       - name: 🚀 Run unit tests
         run: python3 -m unittest discover -s tests -v
 
