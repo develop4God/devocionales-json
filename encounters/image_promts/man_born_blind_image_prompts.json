@@ -1,10 +1,10 @@
 {
   "encounter_id": "man_born_blind_es_001",
   "character": "The Man Born Blind",
-  "master_character_prompt": "A young man in his mid-twenties, stocky broad-shouldered build of medium height, a round full face with soft gentle features, warm brown skin, thick straight dark hair falling loosely to his jawline, a sparse patchy young beard on chin and jaw, and wide amber-brown eyes with an unguarded, astonished quality, like someone seeing the world for the first time. He wears a patched, undyed sand-colored wool beggar's tunic, frayed at the hem, with a simple rope belt, and dusty bare feet. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting. A two-panel character study showing a full-length view on the left and an oversized close-up portrait focusing on his facial features on the right. Plain, clean, solid ochre background. No text, no labels.",
+  "master_character_prompt": "A man in his mid-forties, average height, a lean frame slightly stooped from decades of sitting still at the roadside. A broad face with deep creases etched at the corners of the mouth and eyes from years of silent waiting, sun-darkened olive-brown skin, black hair streaked with gray and cropped short, a close-cropped dark beard flecked with gray at the jaw. Wide amber-brown eyes, unusually open and alert, carry the raw, unguarded astonishment of someone truly seeing for the first time — a striking contrast to the stillness worn into the rest of his face. He wears a patched, undyed sand-colored wool beggar's tunic, frayed at the hem, with a simple rope belt, and dusty bare feet. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting. A two-panel character study showing a full-length view on the left and an oversized close-up portrait focusing on his facial features on the right. Plain, clean, solid ochre background. No text, no labels.",
   "intro_image": {
     "filename": "man_born_blind_intro.png",
-    "prompt": "Wide atmospheric shot of a narrow Jerusalem street at first light, honey-colored stone walls rising on both sides, a shaft of early morning sun cutting through the shadow. Seated small against a wall in the middle ground, a young man in his mid-twenties, stocky build, round full face, warm brown skin, straight dark hair to his jawline, wearing a patched undyed sand-colored beggar's tunic, his face lifted toward the light with closed eyes, a worn clay alms bowl at his feet. Sparse blurred figures pass without looking at him. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    "prompt": "Wide atmospheric shot of a narrow Jerusalem street at first light, honey-colored stone walls rising on both sides, a shaft of early morning sun cutting through the shadow. Seated small against a wall in the middle ground, a man in his mid-forties, lean stooped frame, broad weathered face deeply creased at the mouth and eyes, sun-darkened olive-brown skin, gray-streaked hair cropped short, close-cropped graying beard, wearing a patched undyed sand-colored beggar's tunic, his face lifted toward the light with closed eyes, a worn clay alms bowl at his feet. Sparse blurred figures pass without looking at him. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
   },
   "card_prompts": [
     {
@@ -12,14 +12,14 @@
       "image_url": "man_born_blind_temple_gate.png",
       "mood": "tense",
       "shot_type": "wide establishing",
-      "prompt": "Wide establishing shot of a stone gateway in a Jerusalem street on a bright morning. A young man in his mid-twenties, stocky broad-shouldered build, round full face, warm brown skin, straight dark hair to his jawline, sparse young beard, patched undyed sand-colored beggar's tunic, sits against the wall beside the gate, one hand extended, his unseeing eyes directed at nothing, face tilted toward the sun. In the middle distance a small group of men has stopped; one of them, a man in a simple first-century tunic seen from behind, face never visible, stands turned toward the beggar while the others gesture in discussion among themselves. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+      "prompt": "Wide establishing shot of a stone gateway in a Jerusalem street on a bright morning. A man in his mid-forties, lean stooped frame, broad weathered face deeply creased at the mouth and eyes, sun-darkened olive-brown skin, gray-streaked hair cropped short, close-cropped graying beard, patched undyed sand-colored beggar's tunic, sits against the wall beside the gate, one hand extended, his unseeing eyes directed at nothing, face tilted toward the sun. In the middle distance a small group of men has stopped; one of them, a man in a simple first-century tunic seen from behind, face never visible, stands turned toward the beggar while the others gesture in discussion among themselves. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
     },
     {
       "order": 2,
       "image_url": "man_born_blind_light_of_world.png",
       "mood": "mysterious",
       "shot_type": "close-up portrait",
-      "prompt": "Close-up portrait of a young man in his mid-twenties, round full face with soft features, warm brown skin, straight dark hair to his jawline, sparse patchy young beard, eyes closed, his face crossed by a single warm shaft of morning light while the stone wall behind him stays in deep shadow. His expression holds quiet listening and a lifetime of patience. The edge of a patched sand-colored tunic visible at his shoulders. Painterly warm 2D illustration, Mediterranean palette, deep shadow and one warm light shaft, cinematic, no text."
+      "prompt": "Close-up portrait of a man in his mid-forties, broad weathered face deeply creased at the mouth and eyes, sun-darkened olive-brown skin, gray-streaked hair cropped short, close-cropped graying beard, eyes closed, his face crossed by a single warm shaft of morning light while the stone wall behind him stays in deep shadow. His expression holds quiet listening and a lifetime of patience. The edge of a patched sand-colored tunic visible at his shoulders. Painterly warm 2D illustration, Mediterranean palette, deep shadow and one warm light shaft, cinematic, no text."
     },
     {
       "order": 3,
@@ -33,7 +33,7 @@
       "image_url": "man_born_blind_siloam_washing.png",
       "mood": "awe",
       "shot_type": "action/movement",
-      "prompt": "A young man in his mid-twenties, stocky build, round full face, warm brown skin, straight dark hair to his jawline, patched undyed sand-colored beggar's tunic, kneels at the stone edge of the pool of Siloam, bent low over the water. Water streams from his face and hands, traces of wet clay washing away, and his wide amber-brown eyes are open for the first time, fixed in astonishment on the moving water between his hands. Ripples of light spread across the pool. Stone steps and walls frame the scene. Painterly warm 2D illustration, Mediterranean palette, luminous water reflections, cinematic lighting, no text."
+      "prompt": "A man in his mid-forties, lean stooped frame, broad weathered face deeply creased at the mouth and eyes, sun-darkened olive-brown skin, gray-streaked hair cropped short, close-cropped graying beard, patched undyed sand-colored beggar's tunic, kneels at the stone edge of the pool of Siloam, bent low over the water. Water streams from his face and hands, traces of wet clay washing away, and his wide amber-brown eyes are open for the first time, fixed in astonishment on the moving water between his hands. Ripples of light spread across the pool. Stone steps and walls frame the scene. Painterly warm 2D illustration, Mediterranean palette, luminous water reflections, cinematic lighting, no text."
     },
     {
       "order": 5,
@@ -47,49 +47,49 @@
       "image_url": "man_born_blind_neighbors_debate.png",
       "mood": "tense",
       "shot_type": "medium two-figure",
-      "prompt": "Medium shot in a narrow residential street. At the center, a young man in his mid-twenties, stocky build, round full face, warm brown skin, straight dark hair to his jawline, sparse young beard, patched sand-colored beggar's tunic, stands calm with wide amber-brown eyes open and alive, taking in the faces around him. Around him, several neighbors in earth-toned garments gesture and argue with each other, some pointing at him, some doubtful. The visual tension: everyone discusses him while he alone stands still, seeing them clearly. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic, no text."
+      "prompt": "Medium shot in a narrow residential street. At the center, a man in his mid-forties, lean stooped frame, broad weathered face deeply creased at the mouth and eyes, sun-darkened olive-brown skin, gray-streaked hair cropped short, close-cropped graying beard, patched sand-colored beggar's tunic, stands calm with wide amber-brown eyes open and alive, taking in the faces around him. Around him, several neighbors in earth-toned garments gesture and argue with each other, some pointing at him, some doubtful. The visual tension: everyone discusses him while he alone stands still, seeing them clearly. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic, no text."
     },
     {
       "order": 7,
       "image_url": "man_born_blind_first_interrogation.png",
       "mood": "tense",
       "shot_type": "wide establishing",
-      "prompt": "Wide interior shot of a columned stone hall. A row of seated Pharisees in fine dark robes with blue-corded tassels, some leaning toward each other in sharp disagreement, hands raised mid-argument. Standing alone before them in the open floor, a young man in his mid-twenties, stocky build, round full face, warm brown skin, straight dark hair to his jawline, patched undyed sand-colored beggar's tunic, bare feet on the stone floor, his posture simple and upright. Strong directional light from a high window falls on him rather than on the seated row. Painterly warm 2D illustration, Mediterranean palette, ochre and deep shadow, cinematic, no text."
+      "prompt": "Wide interior shot of a columned stone hall. A row of seated Pharisees in fine dark robes with blue-corded tassels, some leaning toward each other in sharp disagreement, hands raised mid-argument. Standing alone before them in the open floor, a man in his mid-forties, lean stooped frame, broad weathered face deeply creased at the mouth and eyes, sun-darkened olive-brown skin, gray-streaked hair cropped short, close-cropped graying beard, patched undyed sand-colored beggar's tunic, bare feet on the stone floor, his posture simple and upright. Strong directional light from a high window falls on him rather than on the seated row. Painterly warm 2D illustration, Mediterranean palette, ochre and deep shadow, cinematic, no text."
     },
     {
       "order": 8,
       "image_url": "man_born_blind_parents_fear.png",
       "mood": "falling",
       "shot_type": "medium two-figure",
-      "prompt": "Medium shot in the same columned hall. An elderly couple in plain worn garments, heads bowed, the mother's hand gripping the father's arm, step back toward the shadowed edge of the frame. Across an empty stretch of stone floor stands their son, a young man in his mid-twenties, stocky build, round full face, warm brown skin, straight dark hair to his jawline, patched sand-colored tunic, alone in the light, watching them go. The empty space between parents and son carries the weight of the scene. Painterly warm 2D illustration, Mediterranean palette, muted ochre and cold shadow, cinematic, no text."
+      "prompt": "Medium shot in the same columned hall. An elderly couple in plain worn garments, heads bowed, the mother's hand gripping the father's arm, step back toward the shadowed edge of the frame. Across an empty stretch of stone floor stands their son, a man in his mid-forties, lean stooped frame, broad weathered face deeply creased at the mouth and eyes, sun-darkened olive-brown skin, gray-streaked hair cropped short, close-cropped graying beard, patched sand-colored tunic, alone in the light, watching them go. The empty space between parents and son carries the weight of the scene. Painterly warm 2D illustration, Mediterranean palette, muted ochre and cold shadow, cinematic, no text."
     },
     {
       "order": 9,
       "image_url": "man_born_blind_one_thing_i_know.png",
       "mood": "intense",
       "shot_type": "close-up portrait",
-      "prompt": "Close-up portrait of a young man in his mid-twenties, round full face with soft features, warm brown skin, straight dark hair to his jawline, sparse patchy young beard, wide amber-brown eyes fixed steadily on unseen interrogators just beyond the frame. His jaw is set and his gaze holds steady courage with a faint trace of fear held down beneath it, the expression of an ordinary man refusing to take back the truth. Warm torchlight from one side, deep shadow on the other. Edge of a patched sand-colored tunic at his shoulders. Painterly warm 2D illustration, Mediterranean palette, high contrast warm light, cinematic, no text."
+      "prompt": "Close-up portrait of a man in his mid-forties, broad weathered face deeply creased at the mouth and eyes, sun-darkened olive-brown skin, gray-streaked hair cropped short, close-cropped graying beard, wide amber-brown eyes fixed steadily on unseen interrogators just beyond the frame. His jaw is set and his gaze holds steady courage with a faint trace of fear held down beneath it, the expression of an ordinary man refusing to take back the truth. Warm torchlight from one side, deep shadow on the other. Edge of a patched sand-colored tunic at his shoulders. Painterly warm 2D illustration, Mediterranean palette, high contrast warm light, cinematic, no text."
     },
     {
       "order": 10,
       "image_url": "man_born_blind_cast_out.png",
       "mood": "falling",
       "shot_type": "wide departure",
-      "prompt": "Wide shot at dusk. Heavy wooden doors of a stone assembly hall stand closed at the top of a few steps. Alone at the bottom of the steps, seen from behind, a young man in his mid-twenties, stocky build, straight dark hair to his jawline, patched undyed sand-colored beggar's tunic, stands in the empty street, his shoulders straight despite everything. Cold blue-gray dusk fills the street while a last band of warm light lies on the horizon ahead of him. Painterly warm 2D illustration, Mediterranean palette, cold dusk tones against distant warm light, cinematic, no text."
+      "prompt": "Wide shot at dusk. Heavy wooden doors of a stone assembly hall stand closed at the top of a few steps. Alone at the bottom of the steps, seen from behind, a man in his mid-forties, lean stooped frame, gray-streaked hair cropped short, patched undyed sand-colored beggar's tunic, stands in the empty street, his shoulders straight despite everything. Cold blue-gray dusk fills the street while a last band of warm light lies on the horizon ahead of him. Painterly warm 2D illustration, Mediterranean palette, cold dusk tones against distant warm light, cinematic, no text."
     },
     {
       "order": 11,
       "image_url": "man_born_blind_found_by_jesus.png",
       "mood": "grace",
       "shot_type": "close-up portrait",
-      "prompt": "Close-up portrait of a young man in his mid-twenties, round full face, warm brown skin, straight dark hair to his jawline, sparse young beard, wide amber-brown eyes fixed on the man standing before him with an expression layered between exhaustion from the long day and a dawning, incredulous recognition. Sharing the frame in soft focus, seen over-the-shoulder from behind, a man in a simple first-century tunic, face never visible. Though the street around them lies in cold dusk, the light where the two stand falls warm, as if the hour had turned back toward evening gold. Painterly warm 2D illustration, Mediterranean palette, two-plane depth of field, cinematic, no text."
+      "prompt": "Close-up portrait of a man in his mid-forties, broad weathered face deeply creased at the mouth and eyes, sun-darkened olive-brown skin, gray-streaked hair cropped short, close-cropped graying beard, wide amber-brown eyes fixed on the man standing before him with an expression layered between exhaustion from the long day and a dawning, incredulous recognition. Sharing the frame in soft focus, seen over-the-shoulder from behind, a man in a simple first-century tunic, face never visible. Though the street around them lies in cold dusk, the light where the two stand falls warm, as if the hour had turned back toward evening gold. Painterly warm 2D illustration, Mediterranean palette, two-plane depth of field, cinematic, no text."
     },
     {
       "order": 12,
       "image_url": "man_born_blind_worship.png",
       "mood": "awe",
       "shot_type": "action/movement",
-      "prompt": "A young man in his mid-twenties, stocky build, round full face, warm brown skin, straight dark hair falling forward, patched sand-colored beggar's tunic, kneels low on the paving stones, forehead bowed toward the ground, hands resting open on the stone in worship. Before him, only the lower folds of a simple first-century tunic and dusty feet, the figure rising out of frame, face never visible. An evening breeze lifts the hems and cloaks of distant onlookers at the street's edge, while the tunic before the kneeling man hangs perfectly still. Painterly warm 2D illustration, Mediterranean palette, warm low golden light, cinematic, no text."
+      "prompt": "A man in his mid-forties, lean stooped frame, broad weathered face, sun-darkened olive-brown skin, gray-streaked hair falling forward, patched sand-colored beggar's tunic, kneels low on the paving stones, forehead bowed toward the ground, hands resting open on the stone in worship. Before him, only the lower folds of a simple first-century tunic and dusty feet, the figure rising out of frame, face never visible. An evening breeze lifts the hems and cloaks of distant onlookers at the street's edge, while the tunic before the kneeling man hangs perfectly still. Painterly warm 2D illustration, Mediterranean palette, warm low golden light, cinematic, no text."
     },
     {
       "order": 13,
@@ -103,7 +103,7 @@
       "image_url": "man_born_blind_completion.png",
       "mood": "peace",
       "shot_type": "wide departure",
-      "prompt": "Wide shot of a Jerusalem city gate at sunrise, golden light flooding through the arch. Walking out through the gate away from the viewer, seen from behind, a young man in his mid-twenties, stocky build, straight dark hair to his jawline, patched undyed sand-colored tunic, his stride unhurried and upright, head lifted toward the light ahead. The long morning shadows of the arch stretch behind him. Painterly warm 2D illustration, Mediterranean palette, radiant golden ochre tones, cinematic lighting, no text."
+      "prompt": "Wide shot of a Jerusalem city gate at sunrise, golden light flooding through the arch. Walking out through the gate away from the viewer, seen from behind, a man in his mid-forties, lean stooped frame, gray-streaked hair cropped short, patched undyed sand-colored tunic, his stride unhurried and upright, head lifted toward the light ahead. The long morning shadows of the arch stretch behind him. Painterly warm 2D illustration, Mediterranean palette, radiant golden ochre tones, cinematic lighting, no text."
     }
   ]
 }
