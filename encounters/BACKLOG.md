@@ -21,6 +21,7 @@ Update status as encounters move from idea -> drafting -> review -> published.
 | The Gadarene Demoniac | Marcos 5:1-20 | Possession/chaos -> peace, unwanted mission | coming_soon |
 | The Woman Caught in Adultery | Juan 8:1-11 | Public shame, weaponized condemnation, "ni yo te condeno" | published |
 | The Emmaus Disciples | Lucas 24:13-35 | Grief/confusion -> slow recognition in the ordinary | published |
+| The Widow of Nain | Lucas 7:11-17 | Unprompted compassion, public resurrection miracle | published |
 
 ---
 
@@ -29,16 +30,6 @@ Update status as encounters move from idea -> drafting -> review -> published.
 Ranked by how much new thematic ground they cover (not already represented above).
 
 ### High priority — fills a real gap
-
-- **The Widow of Nain** (Lucas 7:11-17)
-  Theme: unprompted compassion ("se compadió de ella"), a public resurrection miracle
-  interrupting a funeral procession. Promoted from medium priority: every other encounter
-  in the series is triggered by someone's own faith, persistence, or request — this is the
-  only story where Jesus acts purely out of compassion, unasked, for a bystander's grief
-  rather than the sufferer's own plea. Also the most visually dramatic miracle not yet
-  used (bigger than Bartimaeus's healing or the Bleeding Woman's touch), and a female
-  protagonist, which helps balance a series currently skewed toward male-centered
-  encounters (8 of 12 published).
 
 - **The Man Born Blind** (Juan 9:1-41)
   Theme: escalating testimony under interrogation, being cast out by religious authority
@@ -67,8 +58,7 @@ Ranked by how much new thematic ground they cover (not already represented above
   roof to reach Jesus. Jesus forgives sins before healing, provoking the religious
   authorities. Distinct from Bartimaeus (solo persistence) and the Bleeding Woman (secret,
   desperate self-initiated touch) since the paralytic himself never asks — his friends
-  act on his behalf. Male-centered, and a more incremental thematic delta than Widow of
-  Nain, so held here rather than promoted.
+  act on his behalf. Male-centered.
 
 - **The Prodigal Son** (Lucas 15:11-32)
   Theme: repentance, the father's running welcome, restoration of sonship. It's a parable,
@@ -92,10 +82,9 @@ Ranked by how much new thematic ground they cover (not already represented above
 
 ## Recommendation
 
-Next up: **The Widow of Nain** (Lucas 7:11-17) — biggest unused miracle in the source
-material, driven by unprompted compassion rather than anyone's faith or persistence (a
-genuinely new trigger for the series), and a female protagonist that helps balance a
-lineup currently skewed toward male-centered encounters.
+Next up: **The Man Born Blind** (Juan 9:1-41) or **The Sinful Woman Anointing Jesus' Feet**
+(Lucas 7:36-50) — both high priority, fill distinct gaps (institutional persecution for
+faith; public devotion met with contempt after forgiveness) not yet covered in the series.
 
 ## Decision log
 
@@ -114,3 +103,6 @@ _(Add a line here each time a candidate is picked, dropped, or reprioritized, wi
   The Paralytic (Marcos 2:1-12) as a medium-priority alternative (intercession angle) that
   was considered but not promoted, since it's still male-centered and a smaller thematic
   delta than the widow's unprompted-compassion resurrection.
+- 2026-07-18: Widow of Nain confirmed published (all 10 languages) — removed from
+  candidates, added to "currently in the series" table. Recommendation now points to
+  The Man Born Blind or The Sinful Woman Anointing Jesus' Feet as next candidates.
