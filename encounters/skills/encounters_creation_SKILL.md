@@ -283,7 +283,7 @@ Psychological/emotional deep-dive into the biblical character.
   "image_url": "filename.png",
   "title": "string",
   "subtitle": "string",
-  "content": "Prose. May include emphasis markers like 🔑 or ⚠️ for key phrases.",
+  "content": "Prose.",
   "revelation_key": "One sentence.",
   "verse_overlay": {
     "reference": "Book ch:v",
