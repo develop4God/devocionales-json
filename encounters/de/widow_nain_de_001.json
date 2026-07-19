@@ -1,0 +1,222 @@
+{
+  "id": "widow_nain_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "de",
+  "bible_version": "LU17",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 9,
+  "meta": {
+    "character": "Die Witwe von Nain",
+    "testament": "new",
+    "scripture_reference": "Lukas 7:11-17",
+    "mood_primary": "grief",
+    "accent_color": "#4a3728",
+    "emoji": "🕊️",
+    "tags": ["mitgefühl", "trauer", "auferstehung", "witwenschaft", "unverdiente gnade"]
+  },
+  "key_verse": {
+    "reference": "Lukas 7:13",
+    "text": "Und da sie der Herr sah, jammerte sie ihn, und er sprach zu ihr: Weine nicht!",
+    "bible_version": "LU17"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "widow_nain_procession_departure.png",
+      "title": "Ein Dorf am Fuß des Berges",
+      "narrative": "Nain ist ein kleines Dorf am Hang des Berges Moreh. Es hat nur ein einziges Stadttor, und alles zieht dort hindurch: Händler, die hereinkommen, Hirten, die mit ihren Herden hinausziehen, und auch, wenn die Stunde kommt, die Toten, die das ganze Dorf gemeinsam zu Grabe trägt. An diesem Tag nähert sich diesem Tor etwas aus zwei Richtungen zugleich.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": null,
+      "revelation_key": "Ein kleines Dorf mit nur einem Tor steht kurz davor zu erleben, wie zwei Wege auf derselben Schwelle aufeinandertreffen."
+    },
+    {
+      "order": 2,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "widow_nain_bier_procession.png",
+      "title": "Eine offene Bahre verlässt die Stadt",
+      "narrative": "Durch das Tor von Nain zieht ein langer Trauerzug, eine große Menge aus der Stadt, die, wie es Brauch ist, hinter einer offenen Bahre hergeht. Vorne, unter denen, die am lautesten weinen, geht eine Frau. Sie ist nicht die Einzige, die weint, aber sie ist diejenige, die am meisten verloren hat: zuerst einen Ehemann, jetzt den einzigen Sohn, der ihr geblieben war.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lukas 7:12",
+        "text": "Als er aber nahe an das Stadttor kam, siehe, da trug man einen Toten heraus, der der einzige Sohn seiner Mutter war, und sie war eine Witwe; und eine große Menge aus der Stadt ging mit ihr."
+      },
+      "revelation_key": "Die Menge begleitet eine Frau, die dem einzigen Ziel entgegengeht, das ihr geblieben ist: ihren einzigen Sohn zu begraben."
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "widow_nain_portrait_grief.png",
+      "title": "Eine Mutter verstummt im Dorf",
+      "subtitle": "Was ein Sohn in Nain bedeutete",
+      "content": "Wir kennen sie nur durch das, was sie verloren hat. Ihr Sohn war bereits ein erwachsener Mann, kein Junge mehr — Jesus wird ihn später νεανίσκος (neaniskos) nennen, einen jungen Mann. In Nain, wie in jedem Dorf jener Zeit, war das Stadttor der Ort, an dem die Ältesten Erbschaften, Verträge und Besitzstreitigkeiten regelten. Ein Sohn wie dieser war unter anderem die rechtliche Stimme seiner Mutter an diesem Ort.\n\nMit ihrem Sohn auf jener Bahre verliert die Witwe auch diese Stimme. Die Menge, die mit ihr geht, kann mit ihr weinen, aber nur er konnte ihr diese rechtliche Stimme geben.",
+      "revelation_key": "Diese Frau verliert nicht nur ihren Sohn — sie verliert ihre rechtliche und wirtschaftliche Stellung in Nain.",
+      "verse_overlay": {
+        "reference": "Lukas 7:12",
+        "text": "Da trug man einen Toten heraus, der der einzige Sohn seiner Mutter war, und sie war eine Witwe."
+      }
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "widow_nain_two_crowds_meet.png",
+      "title": "Zwei Menschenmengen an derselben Schwelle",
+      "narrative": "Von der anderen Seite des Weges kommt Jesus mit seinen Jüngern und einer ebenso großen Menge. Die beiden Züge erreichen das Tor fast im selben Augenblick: der eine zieht hinein auf der Suche nach etwas, der andere zieht hinaus, ohne etwas mitzunehmen. Für einen Moment stehen beide still, einander gegenüber, und noch weiß niemand, was gleich geschehen wird.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lukas 7:11",
+        "text": "Und es begab sich danach, dass er in eine Stadt mit Namen Nain ging; und seine Jünger gingen mit ihm und eine große Menge."
+      },
+      "revelation_key": "Am Tor von Nain trifft die Menge, die dem Leben folgt, auf die Menge, die einen Tod begräbt."
+    },
+    {
+      "order": 5,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "widow_nain_jesus_sees_her.png",
+      "verse_reference": "Lukas 7:13",
+      "verse_text": "Und da sie der Herr sah, jammerte sie ihn, und er sprach zu ihr: Weine nicht!",
+      "reflection": "Jesus sieht sie, und es ergreift ihn Mitgefühl. Lukas verwendet das griechische Verb σπλαγχνίζομαι (splanchnizomai) — wörtlich: etwas im Innersten fühlen. Jesus empfindet diesen Schmerz nicht nur im Geist, sondern im Leib.\n\nEs lohnt sich, genau hinzusehen, wohin sich dieses Mitgefühl zuerst wendet: nicht zur Bahre, sondern zur Mutter, die dahinter geht. Er sieht zuerst die, die noch atmet.",
+      "revelation_key": "Jesu Mitgefühl richtet sich auf das, was er sieht, nicht auf das, worum er gebeten wurde — niemand in jener Menge hat ihn um irgendetwas angefleht.",
+      "scripture_connections": []
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "widow_nain_touching_bier.png",
+      "title": "Er berührt, was das Gesetz verbot",
+      "narrative": "Jesus tritt vor und berührt die offene Bahre. Nach dem Gesetz (4. Mose 19,11) machte die Berührung eines Leichnams sieben Tage lang zeremoniell unrein — eine Vorschrift, die für jeden Israeliten galt. Die Träger halten inne, erschrocken darüber, dass jemand öffentlich tut, wovor das Gesetz warnte. Jesus berührt sie trotzdem, wie einer, der Vollmacht besitzt über das, was das Gesetz nur benennen konnte.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "4. Mose 19:11",
+        "text": "Wer irgendeinen toten Menschen anrührt, der wird sieben Tage unrein sein."
+      },
+      "revelation_key": "Jesus berührt den Tod selbst, und der Tod weicht vor ihm zurück, statt ihn zu verunreinigen."
+    },
+    {
+      "order": 7,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "widow_nain_only_son.png",
+      "title": "Ein einziger Sohn, wie Er",
+      "subtitle": "monogenēs — dasselbe Wort",
+      "content": "Lukas beschreibt den Sohn mit dem griechischen Wort μονογενής (monogenēs): einzig, ohnegleichen. Es ist dasselbe Wort, das Johannes verwenden wird, um Jesus als den eingeborenen Sohn des Vaters zu beschreiben (Johannes 1,18; 3,16).\n\nAls Jesus zu ihm spricht, nennt er ihn νεανίσκος (neaniskos) — junger Mann, bereits erwachsen, kein Kind mehr. Er war die einzige Stimme jenes Hauses gewesen, und diese Stimme war eben für immer verstummt.\n\nEs ist kein Zufall: Der einzige Sohn des Vaters bleibt vor dem einzigen Sohn einer Witwe stehen.",
+      "revelation_key": "Derselbe Begriff, der den einzigen Sohn des Vaters beschreibt, beschreibt auch den Sohn, den Jesus dieser Frau gleich zurückgeben wird.",
+      "scripture_connections": [
+        { "reference": "Johannes 1:18", "text": "Niemand hat Gott je gesehen; der Eingeborene, der Gott ist und in des Vaters Schoß ist, der hat es verkündigt." },
+        { "reference": "Johannes 3:16", "text": "Denn also hat Gott die Welt geliebt, dass er seinen eingeborenen Sohn gab, auf dass alle, die an ihn glauben, nicht verloren werden, sondern das ewige Leben haben." }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "widow_nain_son_rises.png",
+      "title": "Der zum Grab Bestimmte beginnt zu sprechen",
+      "narrative": "Die Menge verstummt und schaut zu. Jesus spricht einfach, unmittelbar, wie einer, der Vollmacht hat über das, was er anspricht. Und der junge Mann, der zum Grab bestimmt war, richtet sich auf und beginnt zu sprechen.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Lukas 7:14-15",
+        "text": "Jüngling, ich sage dir, steh auf! Und der Tote richtete sich auf und fing an zu reden."
+      },
+      "revelation_key": "Ein Befehl von Jesus genügte, und der Tod wich zurück."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "widow_nain_reunion_embrace.png",
+      "title": "Er gab ihn seiner Mutter zurück",
+      "subtitle": "Die letzte Geste des Wunders",
+      "content": "Lukas beschließt den Bericht damit, dass Jesus ihn seiner Mutter zurückgibt — dieselbe Wendung, die das Alte Testament gebraucht, als Elia der Witwe von Zarpath ihren Sohn zurückgibt, auferweckt vom Tod (1. Könige 17,23).\n\nDie Geste zählt ebenso viel wie das Wunder: Jesus legt den Sohn zurück in die Arme der Einzigen, der er gehörte.",
+      "revelation_key": "Das Wunder gibt dem jungen Mann sein Leben zurück; die letzte Geste gibt der Mutter ihren Sohn zurück.",
+      "verse_overlay": {
+        "reference": "Lukas 7:15",
+        "text": "Und der Tote richtete sich auf und fing an zu reden, und Jesus gab ihn seiner Mutter."
+      },
+      "scripture_connections": [
+        { "reference": "1. Könige 17:23", "text": "Und Elia nahm das Kind und brachte es hinab vom Obergemach ins Haus und gab es seiner Mutter und sprach: Siehe, dein Sohn lebt!" }
+      ]
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "widow_nain_elijah_echo.png",
+      "title": "Das Mitgefühl, das zuerst handelte",
+      "subtitle": "Elia und Elisa handelten aus Dankbarkeit, Jesus aus dem, was er sah",
+      "content": "Elia hatte zuvor den Sohn der Witwe von Zarpath auferweckt (1. Könige 17), und Elisa würde später dasselbe für den Sohn der Schunemiterin tun (2. Könige 4). Beide Propheten hatten zuerst die Gastfreundschaft dieser Frauen empfangen, und beide handelten erst, nachdem sie im Verborgenen, in ihren eigenen Häusern, darum gebeten worden waren.\n\nJesus sieht die Witwe von Nain an jenem Tag mitten auf der offenen Straße, vor der ganzen Menge, die mit ihr geht. Der Text hält nur dies fest: Er sah sie, und es ergriff ihn Mitgefühl. Dieser Blick ist der einzige Grund, den der Bericht nennt.",
+      "revelation_key": "Elia und Elisa handelten aus Dankbarkeit gegenüber Frauen, die sie aufgenommen hatten; Jesu Mitgefühl entsteht allein aus dem, was er sieht.",
+      "verse_overlay": null,
+      "scripture_connections": [
+        { "reference": "1. Könige 17:9", "text": "Mach dich auf und geh nach Sarepta, das zu Sidon gehört, und bleibe dort; denn ich habe dort einer Witwe geboten, dass sie dich versorge." },
+        { "reference": "2. Könige 4:8", "text": "Und es begab sich eines Tages, dass Elisa nach Schunem ging. Dort war eine reiche Frau; die nötigte ihn, dass er bei ihr aß. Und sooft er dort durchkam, kehrte er bei ihr ein und aß bei ihr." }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "widow_nain_crowd_wonder.png",
+      "title": "Die Furcht und das Wort, das sich verbreitete",
+      "subtitle": "Ein großer Prophet ist unter uns aufgestanden",
+      "content": "Das Staunen der Menge findet seinen Ausdruck in einem bestimmten Satz: \"Ein großer Prophet ist unter uns aufgestanden\" — dieselben Worte, mit denen man einst von Elia und Elisa sprach.\n\nDie Menschen erkannten das Muster, bevor sie ganz verstanden, was sie sahen. Sie sahen etwas, das sie schon aus der Schrift kannten, und doch war es größer, als sie erwartet hatten.",
+      "revelation_key": "Die Menge erkennt in dem, was sie sieht, den Widerhall von Elia und Elisa, ohne zu ahnen, wie viel größer der ist, der vor ihr steht.",
+      "verse_overlay": {
+        "reference": "Lukas 7:16",
+        "text": "Und Furcht ergriff sie alle, und sie priesen Gott und sprachen: Es ist ein großer Prophet unter uns aufgestanden, und: Gott hat sein Volk besucht."
+      }
+    },
+    {
+      "order": 12,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "widow_nain_fame_spreads.png",
+      "verse_reference": "Lukas 7:17",
+      "verse_text": "Und diese Kunde von ihm erscholl im ganzen jüdischen Land und in allen umliegenden Ländern.",
+      "reflection": "Die Nachricht reicht über Nain hinaus, über den kleinen Kreis einer Witwe und ihres Sohnes hinaus. Was als Jesu Mitgefühl für eine einzige Frau begann, erreicht am Ende eine ganze Region.\n\nDiese Geschichte wurde für viele Menschen der Grund, Jesus zum ersten Mal kennenzulernen.",
+      "revelation_key": "Das Zeugnis der Menschen von Nain machte Jesus in der ganzen Region bekannt.",
+      "scripture_connections": []
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "widow_nain_discovery.png",
+      "title": "Deine Begegnung",
+      "subtitle": "Gottes Mitgefühl wartet nicht darauf, gebeten zu werden.",
+      "discovery_questions": [
+        { "category": "Ehrlichkeit", "question": "Wie bei der Witwe von Nain gibt es Momente, in denen Trauer und Verlust uns überwältigen. Aber Jesus kann dieses Wunder tun, ohne dass wir ihn darum bitten. Was würde sich in dir verändern, wenn du glaubtest, dass Jesus bereits handelt, auch ohne dass du ihn darum gebeten hast?" },
+        { "category": "Glaube", "question": "Der Witwe von Nain gab Jesus genau das zurück, was sie bereits verloren geglaubt hatte. Gibt es etwas in deinem Leben, das du bereits verloren geglaubt hast und das Jesus dir heute zurückgeben kann?" },
+        { "category": "Bestimmung", "question": "Die Witwe von Nain empfing, ohne es verdient und ohne es gesucht zu haben, und wurde so zum Grund, warum viele Jesus kennenlernten. Welche Geschichte empfangener Gnade aus deinem Leben könnte heute der Grund werden, warum jemand anderes Jesus kennenlernt?" }
+      ],
+      "prayer": {
+        "title": "Gebet der unverdienten Gnade",
+        "content": "Herr Jesus, danke, dass ich dich heute ehren und für alles preisen kann, was du in meinem Leben getan hast. Wie bei der Witwe von Nain gibt es Zeiten, in denen der Schmerz, der Verlust und die Kämpfe, denen ich begegne, keine Lösung zu haben scheinen. Aber heute habe ich gesehen, dass nicht einmal der Tod Macht hat, wenn du uns begegnest und in deiner unverdienten Gnade handelst. Heute entscheide ich mich zu glauben, dass du meine Lage kennst und siehst, so schwer sie auch ist, und dass alle Dinge zu meinem Besten zusammenwirken. Ich vertraue darauf, dass sich alles in meinem Leben erfüllen wird und dass der Moment der Freude, der Wiederherstellung und des Zeugnisses kommen wird. Hilf mir, dieses Zeugnis zu tragen, ob von dem, was bereits geschehen ist, oder von dem, worauf ich noch warte, um Leben und Hoffnung weiterzugeben, so wie es der junge Mann in der Stadt Nain empfangen hat. In Jesu Namen, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "widow_nain_completion.png",
+      "completion_verse": {
+        "reference": "Lukas 7:13",
+        "text": "Und da sie der Herr sah, jammerte sie ihn, und er sprach zu ihr: Weine nicht!",
+        "bible_version": "LU17"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
