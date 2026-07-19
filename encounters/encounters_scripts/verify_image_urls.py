@@ -13,9 +13,15 @@ every image_url reference this script cross-checks BOTH extensions — the one
 declared in the JSON and its AVIF counterpart — even though only the declared
 one is what the app actually requests.
 
+With --validate-format, each resolved URL is also range-fetched (first 32
+bytes) and its magic-number signature is checked against the extension it
+was requested under, catching a file that exists but isn't a real PNG/AVIF
+(e.g. an HTML error page saved with the wrong extension, or a swapped file).
+
 Exit codes: 0 = all images resolved in both formats, 1 = one or more missing/unreachable.
 """
 
+import argparse
 import json
 import sys
 import time
@@ -32,6 +38,7 @@ RETRY_BACKOFF_SECONDS = 2
 REQUEST_TIMEOUT_SECONDS = 10
 MAX_CONCURRENT_REQUESTS = 16
 CROSS_CHECK_EXTENSIONS = ("png", "avif")
+MAGIC_BYTES_FETCH_SIZE = 32
 
 
 @dataclass(frozen=True)
@@ -49,6 +56,8 @@ class CheckResult:
     reference: ImageReference
     ok: bool
     status: str
+    format_ok: bool = None
+    format_status: str = ""
 
 
 class ImageReferenceExtractor:
@@ -129,6 +138,42 @@ class GitHubAssetChecker:
             return False, f"Network error: {e}", True
 
 
+class ImageFormatValidator:
+    """Range-fetches the first bytes of a resolved image URL and checks its
+    magic-number signature matches the extension it was requested under.
+    One check method per format, dispatched by extension (open/closed: add a
+    format by adding a method + registering it in CHECKERS)."""
+
+    def _is_png(self, header: bytes) -> bool:
+        return header.startswith(b"\x89PNG\r\n\x1a\n")
+
+    def _is_avif(self, header: bytes) -> bool:
+        # ISOBMFF box: 4-byte size, b"ftyp", then a major brand of avif/avis.
+        return header[4:8] == b"ftyp" and header[8:12] in (b"avif", b"avis")
+
+    CHECKERS = {"png": _is_png, "avif": _is_avif}
+
+    def validate(self, reference: ImageReference) -> tuple:
+        checker = self.CHECKERS.get(reference.ext)
+        if checker is None:
+            return None, f"No format checker registered for .{reference.ext}"
+
+        request = urllib.request.Request(
+            reference.url,
+            headers={"Range": f"bytes=0-{MAGIC_BYTES_FETCH_SIZE - 1}"},
+            method="GET",
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT_SECONDS) as response:
+                header = response.read(MAGIC_BYTES_FETCH_SIZE)
+        except (urllib.error.URLError, TimeoutError) as e:
+            return False, f"Format check network error: {e}"
+
+        if checker(self, header):
+            return True, f"Valid {reference.ext.upper()} signature"
+        return False, f"Bytes at {reference.url} do not match {reference.ext.upper()} signature"
+
+
 class VerificationReport:
     """Formats and prints the verification results; owns the exit code decision."""
 
@@ -149,6 +194,7 @@ class VerificationReport:
         print()
 
         failures = [r for r in self._results if not r.ok]
+        format_failures = [r for r in self._results if r.ok and r.format_ok is False]
 
         if failures:
             print(f"MISSING/UNREACHABLE FILES ({len(failures)}):")
@@ -162,15 +208,44 @@ class VerificationReport:
             print(f"All images resolved successfully in both formats ({'/'.join(CROSS_CHECK_EXTENSIONS)}).")
             print()
 
+        if format_failures:
+            print(f"FORMAT MISMATCHES ({len(format_failures)}):")
+            for r in format_failures:
+                print(f"   - {r.reference.encounter_id}/{r.reference.filename} [{r.reference.ext.upper()}]")
+                print(f"     Referenced in: {r.reference.source_file}")
+                print(f"     Status: {r.format_status}")
+                print(f"     URL: {r.reference.url}")
+            print()
+
         print("=" * 80)
-        print(f"Summary: {len(self._results) - len(failures)}/{len(self._results)} checks OK, {len(failures)} failed")
+        total_failed = len({(r.reference.encounter_id, r.reference.filename, r.reference.ext)
+                             for r in failures + format_failures})
+        print(f"Summary: {len(self._results) - total_failed}/{len(self._results)} checks OK, "
+              f"{total_failed} failed")
         print("=" * 80)
 
     def exit_code(self) -> int:
-        return 0 if all(r.ok for r in self._results) else 1
+        if not all(r.ok for r in self._results):
+            return 1
+        if any(r.format_ok is False for r in self._results):
+            return 1
+        return 0
+
+
+def parse_args(argv=None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--validate-format",
+        action="store_true",
+        help="Also range-fetch each resolved image's first bytes and verify "
+             "its magic-number signature matches its extension (slower: one "
+             "extra network request per successfully-resolved image).",
+    )
+    return parser.parse_args(argv)
 
 
 def main() -> int:
+    args = parse_args()
     encounters_dir = Path(__file__).parent.parent
 
     index_reader = EncounterIndexReader(encounters_dir)
@@ -182,6 +257,20 @@ def main() -> int:
     checker = GitHubAssetChecker()
     with ThreadPoolExecutor(max_workers=MAX_CONCURRENT_REQUESTS) as pool:
         results = list(pool.map(checker.check, references))
+
+    if args.validate_format:
+        validator = ImageFormatValidator()
+
+        def add_format_check(result: CheckResult) -> CheckResult:
+            if not result.ok:
+                return result
+            format_ok, format_status = validator.validate(result.reference)
+            result.format_ok = format_ok
+            result.format_status = format_status
+            return result
+
+        with ThreadPoolExecutor(max_workers=MAX_CONCURRENT_REQUESTS) as pool:
+            results = list(pool.map(add_format_check, results))
 
     files_checked = len({r.reference.source_file for r in results})
     report = VerificationReport(results, files_checked)
