@@ -63,20 +63,20 @@
       "ambient_sound": "water",
       "haptic": null,
       "verse_overlay": {
-        "reference": "Juan 9:7",
-        "text": "y le dijo: Ve a lavarte en el estanque de Siloé (que traducido es, Enviado). Fue entonces, y se lavó, y regresó viendo."
+        "reference": "Juan 9:6-7",
+        "text": "Dicho esto, escupió en tierra, e hizo lodo con la saliva, y untó con el lodo los ojos del ciego, y le dijo: Ve a lavarte en el estanque de Siloé (que traducido es, Enviado). Fue entonces, y se lavó, y regresó viendo."
       },
       "revelation_key": "Su obediencia empieza ciego y termina viendo: el orden mismo del milagro enseña que la fe camina primero."
     },
     {
       "order": 4,
       "type": "character_moment",
-      "mood": "falling",
+      "mood": "mysterious",
       "image_url": "man_born_blind_beggar_identity.png",
       "title": "El que se sentaba y mendigaba",
-      "subtitle": "Una identidad hecha de carencia",
-      "content": "Su mundo entero está hecho de sonidos, de olores, de texturas: las monedas que caen, el calor del mediodía, las voces que pasan de largo. Y Jerusalén lo conoce a él por una sola cosa: es \"el que se sentaba y mendigaba\". Así lo identifican sus propios vecinos. Su lugar en el mundo es un rincón junto al camino, y su nombre público es su carencia.",
-      "revelation_key": "Su nombre público era su carencia: la ciudad solo sabía decir quién era señalando lo que le faltaba.",
+      "subtitle": "Los vecinos dudan",
+      "content": "Sus vecinos lo ven pasar y se detienen. Es la misma cara que veían sentada, pidiendo, cada día, en el mismo rincón junto al camino. Mendigar era lo único que un ciego de nacimiento podía hacer para vivir: sin ese lugar y esa condición, no tenía cómo sostenerse. Ahora camina distinto, mira a los ojos a quien se cruza con él, y ya no tiene ese lugar que ocupó toda su vida. Discuten entre ellos si es el mismo hombre.",
+      "revelation_key": "Ver le costó lo único que tenía para vivir; lo que está a punto de ganar vale más que lo que acaba de perder.",
       "verse_overlay": {
         "reference": "Juan 9:8",
         "text": "Entonces los vecinos, y los que antes le habían visto que era ciego, decían: ¿No es éste el que se sentaba y mendigaba?"
