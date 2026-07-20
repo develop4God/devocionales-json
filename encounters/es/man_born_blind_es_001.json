@@ -55,20 +55,6 @@
     },
     {
       "order": 3,
-      "type": "character_moment",
-      "mood": "falling",
-      "image_url": "man_born_blind_beggar_identity.png",
-      "title": "El que se sentaba y mendigaba",
-      "subtitle": "Una identidad hecha de carencia",
-      "content": "Su mundo entero está hecho de sonidos, de olores, de texturas: las monedas que caen, el calor del mediodía, las voces que pasan de largo. Y Jerusalén lo conoce a él por una sola cosa: es \"el que se sentaba y mendigaba\". Así lo identifican sus propios vecinos. Su lugar en el mundo es un rincón junto al camino, y su nombre público es su carencia.",
-      "revelation_key": "Su nombre público era su carencia: la ciudad solo sabía decir quién era señalando lo que le faltaba.",
-      "verse_overlay": {
-        "reference": "Juan 9:8",
-        "text": "Entonces los vecinos, y los que antes le habían visto que era ciego, decían: ¿No es éste el que se sentaba y mendigaba?"
-      }
-    },
-    {
-      "order": 4,
       "type": "cinematic_scene",
       "mood": "awe",
       "image_url": "man_born_blind_siloam_washing.png",
@@ -81,6 +67,20 @@
         "text": "y le dijo: Ve a lavarte en el estanque de Siloé (que traducido es, Enviado). Fue entonces, y se lavó, y regresó viendo."
       },
       "revelation_key": "Obedece todavía ciego: camina a oscuras con lodo en los ojos, y la vista lo espera al final de la obediencia."
+    },
+    {
+      "order": 4,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "man_born_blind_beggar_identity.png",
+      "title": "El que se sentaba y mendigaba",
+      "subtitle": "Una identidad hecha de carencia",
+      "content": "Su mundo entero está hecho de sonidos, de olores, de texturas: las monedas que caen, el calor del mediodía, las voces que pasan de largo. Y Jerusalén lo conoce a él por una sola cosa: es \"el que se sentaba y mendigaba\". Así lo identifican sus propios vecinos. Su lugar en el mundo es un rincón junto al camino, y su nombre público es su carencia.",
+      "revelation_key": "Su nombre público era su carencia: la ciudad solo sabía decir quién era señalando lo que le faltaba.",
+      "verse_overlay": {
+        "reference": "Juan 9:8",
+        "text": "Entonces los vecinos, y los que antes le habían visto que era ciego, decían: ¿No es éste el que se sentaba y mendigaba?"
+      }
     },
     {
       "order": 5,
