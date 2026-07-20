@@ -28,23 +28,23 @@
       "mood": "tense",
       "image_url": "man_born_blind_temple_gate.png",
       "title": "El hombre junto al camino",
-      "narrative": "Jerusalén, día de reposo. Un hombre está sentado donde su ciudad lo conoce: el que se sentaba y mendigaba. Siente en la piel un sol que jamás ha visto. Nació ciego. Toda su vida cabe en esa frase. Unos pasos se detienen cerca, y unas voces empiezan a discutir sobre él como si fuera un caso a resolver: ¿quién pecó, éste o sus padres? Para ellos su ceguera es un enigma teológico. Para Jesús, que se ha detenido a mirarlo, es el lugar donde Dios está a punto de obrar.",
+      "narrative": "Jerusalén, día de reposo. Un hombre está sentado donde su ciudad lo conoce: el que se sentaba y mendigaba. Siente en la piel un sol que jamás ha visto. Nació ciego: toda su vida cabe en esas dos palabras. Unos pasos se detienen cerca. Sus discípulos le preguntan a Jesús: ¿quién pecó, éste o sus padres, para que naciera ciego? Para ellos, su ceguera necesita una causa. Para Jesús, que se ha detenido a mirarlo, es el lugar donde Dios está a punto de obrar.",
       "ambient_sound": "crowd_distant",
       "haptic": null,
       "verse_overlay": {
-        "reference": "Juan 9:3",
-        "text": "Respondió Jesús: No es que pecó éste, ni sus padres, sino para que las obras de Dios se manifiesten en él."
+        "reference": "Juan 9:1-2",
+        "text": "Al pasar Jesús, vio a un hombre ciego de nacimiento. Y le preguntaron sus discípulos, diciendo: Rabí, ¿quién pecó, éste o sus padres, para que haya nacido ciego?"
       },
-      "revelation_key": "Donde los discípulos ven un caso que discutir, Jesús ve un hombre en quien las obras de Dios van a manifestarse."
+      "revelation_key": "Los discípulos buscan de quién es la culpa. Jesús se detiene a mirar al hombre."
     },
     {
       "order": 2,
       "type": "scripture_moment",
       "mood": "mysterious",
       "image_url": "man_born_blind_light_of_world.png",
-      "verse_reference": "Juan 9:1-5",
-      "verse_text": "Al pasar Jesús, vio a un hombre ciego de nacimiento. Y le preguntaron sus discípulos, diciendo: Rabí, ¿quién pecó, éste o sus padres, para que haya nacido ciego? Respondió Jesús: No es que pecó éste, ni sus padres, sino para que las obras de Dios se manifiesten en él. Me es necesario hacer las obras del que me envió, entre tanto que el día dura; la noche viene, cuando nadie puede trabajar. Entre tanto que estoy en el mundo, luz soy del mundo.",
-      "reflection": "La pregunta de los discípulos busca un culpable en el pasado. La respuesta de Jesús mira hacia adelante: este sufrimiento va a ser el escenario de las obras de Dios. Jesús desarma la teología que hacía de su ceguera un castigo: su condición va a ser escenario de las obras de Dios. Y entonces, de pie frente a alguien que jamás ha visto un amanecer, pronuncia: luz soy del mundo. Lo que sigue va a demostrar que habla de mucho más que ojos.",
+      "verse_reference": "Juan 9:3-5",
+      "verse_text": "Respondió Jesús: No es que pecó éste, ni sus padres, sino para que las obras de Dios se manifiesten en él. Me es necesario hacer las obras del que me envió, entre tanto que el día dura; la noche viene, cuando nadie puede trabajar. Entre tanto que estoy en el mundo, luz soy del mundo.",
+      "reflection": "La pregunta de los discípulos busca un culpable en el pasado. La respuesta de Jesús mira hacia adelante: su condición va a ser escenario de las obras de Dios. No es un castigo, dice Jesús. Y entonces, de pie frente a alguien que jamás ha visto un amanecer, pronuncia: luz soy del mundo (Juan 8:12). Lo que sigue va a demostrar que habla de mucho más que de ojos: habla de visión.",
       "revelation_key": "De pie frente a alguien que jamás ha visto la luz, Jesús declara \"luz soy del mundo\", y la declaración apunta a mucho más que sus ojos.",
       "scripture_connections": [
         {
