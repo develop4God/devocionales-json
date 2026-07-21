@@ -2,7 +2,7 @@
   "encounters": [
     {
       "id": "peter_water_001",
-      "version": "2.0",
+      "version": "2.1",
       "image_version": "1.0",
       "emoji": "🌊",
       "status": "published",
@@ -75,7 +75,7 @@
     },
     {
       "id": "bartimaeus_001",
-      "version": "1.5",
+      "version": "1.6",
       "image_version": "1.0",
       "emoji": "👁️",
       "status": "published",
@@ -221,7 +221,7 @@
     },
     {
       "id": "zacchaeus_001",
-      "version": "2.1",
+      "version": "2.2",
       "image_version": "1.0",
       "emoji": "🌳",
       "status": "published",
@@ -441,7 +441,7 @@
     },
     {
       "id": "thomas_001",
-      "version": "1.5",
+      "version": "1.6",
       "image_version": "1.0",
       "emoji": "🤚",
       "status": "published",
@@ -879,7 +879,7 @@
     },
     {
       "id": "widow_nain_001",
-      "version": "1.1",
+      "version": "1.2",
       "image_version": "1.0",
       "emoji": "🕊️",
       "status": "published",

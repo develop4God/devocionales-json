@@ -70,6 +70,16 @@
       "target_verse_end": 38,
       "native_reference": "Juan 7:37-38",
       "verified": "MBB05's verse 37 alone ends mid-sentence ('...lumapit sa akin,') and only completes the thought ('...ay uminom.') in verse 38 — a genuine sentence-boundary split not present in KJV, where verse 37 alone is a complete sentence ('If any man thirst, let him come unto me, and drink'). Confirmed against woman_well_fil_001.json cards[3].scripture_connections[2]."
+    },
+    {
+      "en_reference": "Luke 19:9",
+      "bible_version": "CUV1919",
+      "lang": "zh",
+      "target_chapter": 19,
+      "target_verse_start": 9,
+      "target_verse_end": 10,
+      "native_reference": "路加福音 19:9-10",
+      "verified": "CUV1919's verse 9 alone ends mid-quote ('...因为他也是亚伯拉罕的子孙。', with the direct-speech 「 never closed) and only closes the quotation ('...失丧的人。」') in verse 10 — a genuine sentence-boundary split not present in KJV, where verse 9 alone is a complete sentence ('This day is salvation come to this house'). Confirmed against zacchaeus_zh_001.json cards[6]/cards[10] verse_overlay."
     }
   ]
 }
