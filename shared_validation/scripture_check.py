@@ -30,6 +30,7 @@ English.
 import json
 import os
 import re
+import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
@@ -163,8 +164,15 @@ def _walk(obj, path: str, pairs: list) -> None:
 
 def _normalize(text: str) -> str:
     """Strip punctuation-adjacent whitespace, collapse internal whitespace,
-    and unify smart/straight quotes, so formatting differences (not content
-    differences) never affect the token-overlap ratio."""
+    unify smart/straight quotes, and apply Unicode NFC normalization —
+    two visually-identical Arabic words can encode the same combining
+    diacritics (fatha/shadda) in a different codepoint order, which
+    compares as unequal without this (found via nicodemus_ar_001.json:
+    stored 'لأَنَّهُ' vs. resolved 'لأَنَّهُ' rendered identically but
+    NFC-normalized to different byte sequences pre-fix) — so formatting
+    differences, not content differences, never affect the token-overlap
+    ratio."""
+    text = unicodedata.normalize("NFC", text)
     text = text.translate(_SMART_QUOTES)
     text = _WHITESPACE_RE.sub(" ", text).strip()
     return text

@@ -148,6 +148,21 @@ class TestJaccardSimilarity(unittest.TestCase):
     def test_whitespace_collapsed(self):
         self.assertEqual(jaccard_similarity("hello   world", "hello world"), 1.0)
 
+    def test_arabic_combining_diacritic_order_normalized(self):
+        """Real bug found via nicodemus_ar_001.json: the same Arabic word
+        can encode its combining fatha/shadda diacritics in a different
+        codepoint order while rendering identically — comparing raw
+        strings/tokens treats them as different words. NFC normalization
+        must make them compare equal. (Constructed directly via unicodedata
+        rather than literal source text, since editors/terminals often
+        silently re-normalize pasted Arabic to a single canonical form.)"""
+        import unicodedata
+        base = "لأنَّهُ"    # ل أ ن ّ َ ه ُ — shadda before fatha
+        variant = unicodedata.normalize("NFD", base)            # decompose, likely reorders combining marks
+        # Only meaningful if the two forms actually differ before normalization.
+        self.assertNotEqual(base, variant)
+        self.assertEqual(jaccard_similarity(base, variant), 1.0)
+
 
 # ── validate_pair ────────────────────────────────────────────────────────────
 
