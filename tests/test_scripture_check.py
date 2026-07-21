@@ -287,6 +287,33 @@ class TestIsIntentionalTruncation(unittest.TestCase):
         resolved = "In the beginning God created the heaven and the earth."
         self.assertFalse(_is_intentional_truncation(stored, resolved))
 
+    def test_cjk_short_truncation_below_latin_floor_still_counts(self):
+        """Real bug found via road_to_emmaus_ja_001.json: a CJK character
+        carries far more meaning than a Latin one, so the 20-character
+        Latin length floor wrongly rejected this genuine, verified-correct
+        16-character truncation of Hebrews 4:12."""
+        stored = "神のことばは生きていて、力があり"
+        resolved = (
+            "神のことばは生きていて、力があり、両刃の剣よりも鋭く、たましいと霊、"
+            "関節と骨髄の分かれ目さえも刺し通し、心のいろいろな考えやはかりごとを判別することができます。"
+        )
+        self.assertTrue(_is_intentional_truncation(stored, resolved))
+
+    def test_cjk_fullwidth_slash_line_break_marker_stripped(self):
+        """Real bug found via road_to_emmaus_ja_001.json: SK2003 uses '／'
+        as a poetic line-break marker mid-verse (Jeremiah 20:9) — a
+        legitimate truncation can start or end adjacent to one of these
+        without the excerpt itself containing it, so the marker must be
+        stripped before the substring check, not treated as a literal
+        character the stored text has to match."""
+        stored = "主のみことばは私の心のうちで、骨の中に閉じ込められて燃えさかる火のようになり"
+        resolved = (
+            "私は、「主のことばを宣べ伝えまい。／もう主の名で語るまい」と思いましたが、"
+            "主のみことばは私の心のうちで、骨の中に閉じ込められて／燃えさかる火のようになり、"
+            "私はうちにしまっておくのに／疲れて耐えられません。"
+        )
+        self.assertTrue(_is_intentional_truncation(stored, resolved))
+
 
 # ── validate_pair ────────────────────────────────────────────────────────────
 

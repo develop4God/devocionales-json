@@ -231,14 +231,21 @@ def _tokenize(text: str) -> set[str]:
     return set(normalized.lower().split())
 
 
-_PUNCT_AND_ELLIPSIS_RE = re.compile(r"\.\.\.|[.,;:!?\"'‘’“”()]")
+_PUNCT_AND_ELLIPSIS_RE = re.compile(r"\.\.\.|[.,;:!?\"'‘’“”()／]")
 
 # Below this length, a substring match is too likely to be a coincidental
 # common phrase (e.g. "and he said") rather than a genuine truncated
 # quote — an absolute floor, not a ratio, since real truncations in this
 # corpus are legitimately short relative to their source verse (as low as
 # ~30% of the full verse's length; a length-RATIO floor rejects those).
+# CJK text gets a much lower floor (see _MIN_TRUNCATION_LENGTH_CJK) — a
+# CJK character carries far more meaning than a Latin one, so a 20-char
+# Latin floor is wildly miscalibrated for it (found via road_to_emmaus_
+# ja_001.json: "神のことばは生きていて、力があり", 16 chars, a real,
+# verified-correct truncation of Hebrews 4:12 that the Latin floor
+# rejected outright).
 _MIN_TRUNCATION_LENGTH = 20
+_MIN_TRUNCATION_LENGTH_CJK = 8
 
 
 def _is_intentional_truncation(stored: str, resolved: str) -> bool:
@@ -254,13 +261,20 @@ def _is_intentional_truncation(stored: str, resolved: str) -> bool:
     exists to catch, e.g. "stretched out" vs. the DB's "stretched forth")
     never does, regardless of how much text overlaps.
 
-    Deliberately does NOT use a length-ratio floor (see
+    Strips '／' (a fullwidth slash some Japanese Bible editions use as a
+    poetic line-break marker mid-verse, e.g. SK2003) along with ordinary
+    punctuation before comparing — a legitimate truncation can start or
+    end adjacent to one of these markers in the source text even though
+    the quoted excerpt itself never includes it.
+
+    Deliberately does NOT use a length-RATIO floor (see
     _MIN_TRUNCATION_LENGTH) — only an absolute character-count minimum,
     to avoid rejecting genuinely short but legitimate truncations while
     still blocking trivial short-phrase coincidences."""
     s = _PUNCT_AND_ELLIPSIS_RE.sub("", stored.lower())
     s = _WHITESPACE_RE.sub(" ", s).strip()
-    if len(s) < _MIN_TRUNCATION_LENGTH:
+    min_length = _MIN_TRUNCATION_LENGTH_CJK if _CJK_RE.search(s) else _MIN_TRUNCATION_LENGTH
+    if len(s) < min_length:
         return False
     r = _PUNCT_AND_ELLIPSIS_RE.sub("", resolved.lower())
     r = _WHITESPACE_RE.sub(" ", r).strip()
