@@ -231,7 +231,7 @@ def _tokenize(text: str) -> set[str]:
     return set(normalized.lower().split())
 
 
-_PUNCT_AND_ELLIPSIS_RE = re.compile(r"\.\.\.|[.,;:!?\"'‘’“”()／]")
+_PUNCT_AND_ELLIPSIS_RE = re.compile(r"\.\.\.|[.,;:!?\"'‘’“”()／…]")
 
 # Below this length, a substring match is too likely to be a coincidental
 # common phrase (e.g. "and he said") rather than a genuine truncated
@@ -243,8 +243,11 @@ _PUNCT_AND_ELLIPSIS_RE = re.compile(r"\.\.\.|[.,;:!?\"'‘’“”()／]")
 # Latin floor is wildly miscalibrated for it (found via road_to_emmaus_
 # ja_001.json: "神のことばは生きていて、力があり", 16 chars, a real,
 # verified-correct truncation of Hebrews 4:12 that the Latin floor
-# rejected outright).
-_MIN_TRUNCATION_LENGTH = 20
+# rejected outright). Lowered from 20 to 19 after widow_nain_es_001.json:
+# "Y lo dio a su madre" (Lucas 7:15) — a real, verified-correct
+# truncation that is exactly 19 chars post-punctuation-strip, one under
+# the original floor.
+_MIN_TRUNCATION_LENGTH = 19
 _MIN_TRUNCATION_LENGTH_CJK = 8
 
 
