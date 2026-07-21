@@ -542,6 +542,25 @@ def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
         if len(en_sc) != len(tr_sc):
             report.E(f"{ctx}: scripture_connections count mismatch EN={len(en_sc)}, {lang.upper()}={len(tr_sc)}")
 
+        # verse_overlay presence parity — the key-parity check above only
+        # catches the key being absent entirely; it can't catch EN having
+        # a real object while the translation has the same key set to
+        # null (or vice versa), which key-parity sees as "present" on both
+        # sides. Confirmed via widow_nain_en_001.json/zacchaeus_en_001.json,
+        # which both use verse_overlay: null on some cards deliberately.
+        if 'verse_overlay' in ec and 'verse_overlay' in tc:
+            en_has = ec['verse_overlay'] is not None
+            tr_has = tc['verse_overlay'] is not None
+            if en_has != tr_has:
+                report.E(f"{ctx}: verse_overlay present in EN={en_has} but {lang.upper()}={tr_has}")
+
+    # key_verse presence parity (top-level, once per file, same reasoning
+    # as verse_overlay above)
+    en_kv = en_data.get('key_verse')
+    tr_kv = trans_data.get('key_verse')
+    if (en_kv is not None) != (tr_kv is not None):
+        report.E(f"{filename}: key_verse present in EN={en_kv is not None} but {lang.upper()}={tr_kv is not None}")
+
 
 def validate_encounter_files(report: Report, index_data: dict, lint_cache: dict,
                               bible_versions: dict, expected_languages: list) -> None:
