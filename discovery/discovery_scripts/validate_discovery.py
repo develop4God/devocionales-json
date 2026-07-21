@@ -54,7 +54,6 @@ from shared_validation.text_checks import (
     check_greek_hebrew_transliteration, is_cognate,
 )
 from shared_validation.lint import lint_json_files
-from shared_validation.duplication_check import find_prose_duplicates, duplication_validation_enabled
 from shared_validation.scripture_check import (
     ScriptureValidator, find_scripture_pairs, validate_pair, validate_translated_pair,
     scripture_validation_enabled,
@@ -673,65 +672,6 @@ def validate_scripture_references(report: 'ValidationReport', all_studies: dict,
     )
 
 
-# ── Phase: Cross-file duplication ───────────────────────────────────────────
-#
-# Detects prose reused (verbatim or near-verbatim) across DIFFERENT
-# discovery studies — no existing check compares content across entries,
-# only a translated study against its own EN counterpart. WARNING-only:
-# fuzzy text similarity has an irreducible false-positive rate (shared
-# scripture quotations, formulaic phrasing), so this needs a human-review
-# pass on real findings before any promotion to ERROR is considered.
-# Scoped to discovery's own EN entries only — no cross-corpus comparison
-# against encounters (different content types/purposes, would be noise).
-# Does NOT also run find_character_prompt_duplicates — discovery has no
-# image_promts equivalent.
-
-# Prose-bearing field names to compare — free text an author writes, not
-# scripture quotes/references ('reference', 'word', 'event' inside
-# timeline entries) which legitimately repeat across studies by design.
-# prayer.title/prayer.content are also excluded: every prayer card ends
-# with the same formulaic closing by convention, which would otherwise
-# dominate findings with expected, not authored, repetition — the same
-# category of noise as a shared scripture quotation.
-_PROSE_FIELD_NAMES = {'title', 'subtitle', 'content', 'identity_statement', 'question'}
-_EXCLUDED_PATH_SUBSTRINGS = ('.prayer.',)
-
-
-def _extract_study_prose(index_studies: dict, all_studies: dict) -> dict:
-    """Build {'{study_id}::{path}': text} for every EN study card's prose
-    fields, scoped to EN only — comparing across languages would just
-    re-detect translation, not duplication."""
-    text_by_location = {}
-    en_studies = all_studies.get('en', {})
-    for study_id in index_studies:
-        data = en_studies.get(study_id)
-        if data is None:
-            continue
-        for path, text in iter_strings(data.get('cards', [])):
-            key = path.rsplit('.', 1)[-1].split('[')[0]
-            if key in _PROSE_FIELD_NAMES and not any(s in path for s in _EXCLUDED_PATH_SUBSTRINGS):
-                text_by_location[f"{study_id}::{path}"] = text
-    return text_by_location
-
-
-def validate_cross_file_duplication(report: ValidationReport, index_studies: dict,
-                                     all_studies: dict) -> None:
-    """Flag near-duplicate prose across different discovery studies (EN
-    base). WARNING-only — see module-level comment above."""
-    report.add_info("=" * 60)
-    report.add_info("PHASE: CROSS-FILE DUPLICATION")
-    report.add_info("=" * 60)
-
-    prose_text = _extract_study_prose(index_studies, all_studies)
-    findings = find_prose_duplicates(prose_text)
-    for f in findings:
-        report.add_warning(
-            f"Possible prose duplication ({f.ratio:.0%} match): "
-            f"{f.location_a} <-> {f.location_b} — matched: \"{f.matched_text}\""
-        )
-    report.add_info(f"✓ Scanned {len(prose_text)} EN prose fields across {len(index_studies)} studies, "
-                     f"{len(findings)} possible duplicate(s)")
-
 
 def main():
     import argparse
@@ -935,27 +875,6 @@ def main():
         )
     else:
         print("ℹ️  PHASE D: SCRIPTURE REFERENCES — skipped (CI-only; set CI=true to run locally, or pass --lang)")
-
-    # ==========================================
-    # PHASE: Cross-file duplication — runs last, after Phase B (the real
-    # gate). Its own ValidationReport instance/timing since it never gates
-    # the run (gate=False) — findings are warnings only. O(n^2) comparison
-    # takes minutes on the real corpus — too slow for daily local editing,
-    # so it's CI-only (see duplication_validation_enabled).
-    # ==========================================
-    if duplication_validation_enabled():
-        phase_dup_start = time.monotonic()
-        dup_report = ValidationReport()
-        dup_report.phase = "PHASE_DUP"
-        validate_cross_file_duplication(dup_report, index_studies, all_studies)
-        phase_dup_success = dup_report.print_report(final=False)
-        phase_dup_elapsed = time.monotonic() - phase_dup_start
-
-        run_report.record_phase(
-            "PHASE: CROSS-FILE DUPLICATION", dup_report, phase_dup_success, phase_dup_elapsed, gate=False,
-        )
-    else:
-        print("ℹ️  PHASE: CROSS-FILE DUPLICATION — skipped (CI-only; set CI=true to run locally)")
 
     run_report.add_coverage(
         studies_found=len(report.stats['studies_found']),

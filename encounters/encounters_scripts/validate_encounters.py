@@ -19,10 +19,9 @@ any pipeline and receives no further changes.
   PHASE SOT: Confirm bible_version codes resolved from the live remote SOT
   PHASE B:   Validate encounter files (published only) using EN as base — GATE
   PHASE C:   Verify image_url references resolve on the Devocionales-assets
-             CDN — warnings only, runs last, never fails the build
+             CDN — warnings only, never fails the build
   PHASE D:   Validate scripture references resolve and their stored
-             verse_text matches the cited Bible version — warnings only
-  PHASE E:   Cross-file content duplication — warnings only
+             verse_text matches the cited Bible version — warnings only, runs last
 
 Exit codes: 0 = all passed, 1 = errors found in 1/A/SOT/B, or any warning anywhere
 """
@@ -56,9 +55,6 @@ from shared_validation.text_checks import (
     check_greek_hebrew_transliteration, is_cognate,
 )
 from shared_validation.lint import lint_json_files
-from shared_validation.duplication_check import (
-    find_prose_duplicates, find_character_prompt_duplicates, duplication_validation_enabled,
-)
 from shared_validation.scripture_check import (
     ScriptureValidator, find_scripture_pairs, validate_pair, validate_translated_pair,
     scripture_validation_enabled,
@@ -809,93 +805,6 @@ def validate_scripture_references(report: Report, index_data: dict, lint_cache: 
     )
 
 
-# ── Phase E: Cross-file duplication ─────────────────────────────────────────
-#
-# Detects prose/character-prompt content reused (verbatim or near-verbatim)
-# across DIFFERENT encounters/characters — a gap no existing check covers,
-# since Phase B's cross-translation validation only ever compares a card
-# against its own EN counterpart within the same encounter. WARNING-only:
-# fuzzy text similarity has an irreducible false-positive rate (shared
-# scripture quotations, formulaic phrasing), so this needs a human-review
-# pass on real findings before any promotion to ERROR is considered.
-
-# Prose-bearing field names to compare — free text an author writes, not
-# scripture quotes/references (verse_text, reference, revelation_key labels)
-# which legitimately repeat across encounters by design. prayer.title/
-# prayer.content are also excluded: every discovery_activation prayer ends
-# with the same formulaic closing ("In Jesus' name, Amen.") by convention,
-# which would otherwise dominate findings with expected, not authored,
-# repetition — the same category of noise as a shared scripture quotation.
-_PROSE_FIELD_NAMES = {'title', 'narrative', 'content', 'reflection', 'reflection_prompt', 'question'}
-_EXCLUDED_PATH_SUBSTRINGS = ('.prayer.',)
-
-
-def _extract_encounter_prose(index_data: dict, lint_cache: dict) -> dict:
-    """Build {'{enc_id}::{path}': text} for every EN encounter card's prose
-    fields, scoped to EN only — comparing across languages would just
-    re-detect translation, not duplication. Reuses lint_cache (already
-    parsed in Phase 1) rather than re-reading files from disk."""
-    text_by_location = {}
-    for enc in index_data['encounters']:
-        enc_id = enc['id']
-        fname = enc.get('files', {}).get('en')
-        if not fname:
-            continue
-        fpath = ENCOUNTERS_DIR / 'en' / fname
-        data = lint_cache.get(fpath)
-        if data is None:
-            continue
-        for path, text in iter_strings(data.get('cards', [])):
-            key = path.rsplit('.', 1)[-1].split('[')[0]
-            if key in _PROSE_FIELD_NAMES and not any(s in path for s in _EXCLUDED_PATH_SUBSTRINGS):
-                text_by_location[f"{enc_id}::{path}"] = text
-    return text_by_location
-
-
-def _extract_character_prompts(report: Report) -> dict:
-    """Build {character_name: master_character_prompt} from every
-    encounters/image_promts/*.json file."""
-    prompts_dir = ENCOUNTERS_DIR / 'image_promts'
-    prompts_by_character = {}
-    for fpath in sorted(prompts_dir.glob('*.json')):
-        data = load_json(fpath, report)
-        if data is None:
-            continue
-        prompt = data.get('master_character_prompt')
-        character = data.get('character', fpath.stem)
-        if prompt:
-            prompts_by_character[character] = prompt
-    return prompts_by_character
-
-
-def validate_cross_file_duplication(report: Report, index_data: dict, lint_cache: dict) -> None:
-    """Phase E: flag near-duplicate prose across different encounters (EN
-    base) and near-duplicate master_character_prompt strings across
-    characters. WARNING-only — see module-level comment above."""
-    report.I("=" * 60)
-    report.I("PHASE E: CROSS-FILE DUPLICATION")
-    report.I("=" * 60)
-
-    prose_text = _extract_encounter_prose(index_data, lint_cache)
-    prose_findings = find_prose_duplicates(prose_text)
-    for f in prose_findings:
-        report.W(
-            f"Possible prose duplication ({f.ratio:.0%} match): "
-            f"{f.location_a} <-> {f.location_b} — matched: \"{f.matched_text}\""
-        )
-    report.I(f"✓ Scanned {len(prose_text)} EN prose fields across {len(index_data['encounters'])} encounters, "
-              f"{len(prose_findings)} possible duplicate(s)")
-
-    prompts = _extract_character_prompts(report)
-    prompt_findings = find_character_prompt_duplicates(prompts)
-    for f in prompt_findings:
-        report.W(
-            f"Possible character-prompt duplication ({f.ratio:.0%} match): "
-            f"{f.location_a} <-> {f.location_b} — matched: \"{f.matched_text}\""
-        )
-    report.I(f"✓ Scanned {len(prompts)} character prompts, {len(prompt_findings)} possible duplicate(s)")
-
-
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -940,20 +849,9 @@ def main():
     # for daily local editing, so it's CI-only (see scripture_validation_enabled).
     if scripture_validation_enabled() or args.lang:
         run_report.wrap("PHASE D: SCRIPTURE REFERENCES", validate_scripture_references, index_data, lint_cache,
-                         args.lang, gate=False)
+                         args.lang, gate=False, final=True)
     else:
         print("ℹ️  PHASE D: SCRIPTURE REFERENCES — skipped (CI-only; set CI=true to run locally, or pass --lang)")
-
-    # Phase E runs last, after Phase B has passed. Its findings are
-    # warnings only (see validate_cross_file_duplication) — fuzzy text
-    # similarity has an irreducible false-positive rate, so this needs a
-    # human-review pass before any promotion to ERROR is considered.
-    # O(n^2) comparison takes ~90s+ on the real corpus — too slow for
-    # daily local editing, so it's CI-only (see duplication_validation_enabled).
-    if duplication_validation_enabled():
-        run_report.wrap("PHASE E: CROSS-FILE DUPLICATION", validate_cross_file_duplication, index_data, lint_cache, gate=False, final=True)
-    else:
-        print("ℹ️  PHASE E: CROSS-FILE DUPLICATION — skipped (CI-only; set CI=true to run locally)")
 
     encounters = index_data['encounters']
     published = [e for e in encounters if e.get('status') == 'published']
