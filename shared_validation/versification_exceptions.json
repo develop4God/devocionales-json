@@ -60,6 +60,16 @@
       "target_verse_end": 17,
       "native_reference": "Psalm 18:17",
       "verified": "LU17 shifts Psalm 18 by one verse starting partway through the chapter; confirmed text at 18:17 ('Er streckte seine Hand aus von der Höhe und fasste mich und zog mich aus großen Wassern') matches KJV Psalm 18:16 verbatim (God reaches down and draws the psalmist out of many waters)."
+    },
+    {
+      "en_reference": "John 7:37",
+      "bible_version": "MBB05",
+      "lang": "fil",
+      "target_chapter": 7,
+      "target_verse_start": 37,
+      "target_verse_end": 38,
+      "native_reference": "Juan 7:37-38",
+      "verified": "MBB05's verse 37 alone ends mid-sentence ('...lumapit sa akin,') and only completes the thought ('...ay uminom.') in verse 38 — a genuine sentence-boundary split not present in KJV, where verse 37 alone is a complete sentence ('If any man thirst, let him come unto me, and drink'). Confirmed against woman_well_fil_001.json cards[3].scripture_connections[2]."
     }
   ]
 }
