@@ -21,10 +21,31 @@ sentence boundaries worth splitting on for this purpose) compares whole
 strings directly.
 """
 
+import os
 import re
 from dataclasses import dataclass
 from difflib import SequenceMatcher
 from typing import Dict, List
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CI GATING
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# find_prose_duplicates is O(n^2) in sentence-chunk count — on the real
+# corpus this takes ~90-440s depending on corpus size, appropriate for a
+# CI gate but far too slow for a fast per-file local-editing feedback loop.
+# Callers should skip this phase locally and only run it where CI=true is
+# set, which GitHub Actions (and most other CI providers) already set
+# automatically with no workflow-file changes needed. Same policy and
+# env-var contract as shared_validation.scripture_check.scripture_validation_enabled
+# — kept as a separate function (not a shared import) since the two
+# modules are otherwise independent by design.
+
+def duplication_validation_enabled() -> bool:
+    """True only when running in CI (CI env var set, as GitHub Actions and
+    most CI providers do automatically). Callers use this to skip Phase E
+    during local/daily-work validator runs."""
+    return os.environ.get("CI", "").lower() in ("1", "true", "yes")
 
 
 @dataclass

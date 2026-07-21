@@ -54,7 +54,7 @@ from shared_validation.text_checks import (
     check_greek_hebrew_transliteration, is_cognate,
 )
 from shared_validation.lint import lint_json_files
-from shared_validation.duplication_check import find_prose_duplicates
+from shared_validation.duplication_check import find_prose_duplicates, duplication_validation_enabled
 from shared_validation.scripture_check import (
     ScriptureValidator, find_scripture_pairs, validate_pair, validate_translated_pair,
     scripture_validation_enabled,
@@ -926,18 +926,23 @@ def main():
     # ==========================================
     # PHASE: Cross-file duplication — runs last, after Phase B (the real
     # gate). Its own ValidationReport instance/timing since it never gates
-    # the run (gate=False) — findings are warnings only.
+    # the run (gate=False) — findings are warnings only. O(n^2) comparison
+    # takes minutes on the real corpus — too slow for daily local editing,
+    # so it's CI-only (see duplication_validation_enabled).
     # ==========================================
-    phase_dup_start = time.monotonic()
-    dup_report = ValidationReport()
-    dup_report.phase = "PHASE_DUP"
-    validate_cross_file_duplication(dup_report, index_studies, all_studies)
-    phase_dup_success = dup_report.print_report(final=False)
-    phase_dup_elapsed = time.monotonic() - phase_dup_start
+    if duplication_validation_enabled():
+        phase_dup_start = time.monotonic()
+        dup_report = ValidationReport()
+        dup_report.phase = "PHASE_DUP"
+        validate_cross_file_duplication(dup_report, index_studies, all_studies)
+        phase_dup_success = dup_report.print_report(final=False)
+        phase_dup_elapsed = time.monotonic() - phase_dup_start
 
-    run_report.record_phase(
-        "PHASE: CROSS-FILE DUPLICATION", dup_report, phase_dup_success, phase_dup_elapsed, gate=False,
-    )
+        run_report.record_phase(
+            "PHASE: CROSS-FILE DUPLICATION", dup_report, phase_dup_success, phase_dup_elapsed, gate=False,
+        )
+    else:
+        print("ℹ️  PHASE: CROSS-FILE DUPLICATION — skipped (CI-only; set CI=true to run locally)")
 
     run_report.add_coverage(
         studies_found=len(report.stats['studies_found']),

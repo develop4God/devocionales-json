@@ -57,7 +57,7 @@ from shared_validation.text_checks import (
 )
 from shared_validation.lint import lint_json_files
 from shared_validation.duplication_check import (
-    find_prose_duplicates, find_character_prompt_duplicates,
+    find_prose_duplicates, find_character_prompt_duplicates, duplication_validation_enabled,
 )
 from shared_validation.scripture_check import (
     ScriptureValidator, find_scripture_pairs, validate_pair, validate_translated_pair,
@@ -914,7 +914,12 @@ def main():
     # warnings only (see validate_cross_file_duplication) — fuzzy text
     # similarity has an irreducible false-positive rate, so this needs a
     # human-review pass before any promotion to ERROR is considered.
-    run_report.wrap("PHASE E: CROSS-FILE DUPLICATION", validate_cross_file_duplication, index_data, lint_cache, gate=False, final=True)
+    # O(n^2) comparison takes ~90s+ on the real corpus — too slow for
+    # daily local editing, so it's CI-only (see duplication_validation_enabled).
+    if duplication_validation_enabled():
+        run_report.wrap("PHASE E: CROSS-FILE DUPLICATION", validate_cross_file_duplication, index_data, lint_cache, gate=False, final=True)
+    else:
+        print("ℹ️  PHASE E: CROSS-FILE DUPLICATION — skipped (CI-only; set CI=true to run locally)")
 
     encounters = index_data['encounters']
     published = [e for e in encounters if e.get('status') == 'published']
