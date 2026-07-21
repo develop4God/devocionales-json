@@ -20,8 +20,11 @@ any pipeline and receives no further changes.
   PHASE B:   Validate encounter files (published only) using EN as base — GATE
   PHASE C:   Verify image_url references resolve on the Devocionales-assets
              CDN — warnings only, runs last, never fails the build
+  PHASE D:   Validate scripture references resolve and their stored
+             verse_text matches the cited Bible version — warnings only
+  PHASE E:   Cross-file content duplication — warnings only
 
-Exit codes: 0 = all passed (Phase C warnings do not affect this), 1 = errors found in 1/A/SOT/B
+Exit codes: 0 = all passed, 1 = errors found in 1/A/SOT/B, or any warning anywhere
 """
 
 import re
@@ -53,6 +56,12 @@ from shared_validation.text_checks import (
     check_greek_hebrew_transliteration, is_cognate,
 )
 from shared_validation.lint import lint_json_files
+from shared_validation.duplication_check import (
+    find_prose_duplicates, find_character_prompt_duplicates,
+)
+from shared_validation.scripture_check import (
+    ScriptureValidator, find_scripture_pairs, validate_pair, validate_translated_pair,
+)
 
 from verify_image_urls import (
     EncounterIndexReader as ImageIndexReader,
@@ -68,6 +77,7 @@ from concurrent.futures import ThreadPoolExecutor
 SCRIPTS_DIR = Path(__file__).parent
 ENCOUNTERS_DIR = SCRIPTS_DIR.parent
 INDEX_PATH = ENCOUNTERS_DIR / 'index.json'
+BIBLE_DATABASE_DIR = ENCOUNTERS_DIR.parent / 'bible_database'
 
 SCHEMA_VERSION = 'encounters_v1'
 VALID_STATUSES = {'published', 'coming_soon'}
@@ -678,6 +688,186 @@ def validate_image_urls(report: Report) -> None:
         report.I(f"✓ All {len(format_results)} resolved images match their declared format")
 
 
+# ── Phase D: Scripture references ───────────────────────────────────────────
+#
+# Verifies every {reference, verse_text} pair actually resolves against the
+# Bible version cited for that file, and that the stored verse_text matches
+# the resolved text closely enough (fuzzy match — see shared_validation.
+# scripture_check). WARNING-only for this initial rollout: resolution
+# failures have no legitimate false-positive case in principle but haven't
+# been hand-reviewed against the full corpus yet, and text-mismatch is
+# inherently fuzzy — see the issue's Rollout section. Runs after Phase B
+# (the real gate) so scripture findings never block the release while the
+# threshold is being tuned.
+
+def validate_scripture_references(report: Report, index_data: dict, lint_cache: dict) -> None:
+    """Phase D: resolve every scripture reference found in every loaded
+    encounter file and fuzzy-match its stored verse_text against the
+    resolved text. Reuses lint_cache (already parsed in Phase 1) rather
+    than re-reading files from disk.
+
+    EN files resolve directly (validate_pair). Non-EN files never parse
+    their own native-language reference string — cards align 1:1 by
+    position with the EN file (guaranteed by Phase B's parity gate), so
+    each translated reference is validated against its EN sibling's
+    reference via validate_translated_pair (see shared_validation.
+    scripture_check module docstring for why)."""
+    report.I("=" * 60)
+    report.I("PHASE D: SCRIPTURE REFERENCES")
+    report.I("=" * 60)
+
+    pairs_checked = 0
+    resolution_failures = 0
+    text_mismatches = 0
+
+    with ScriptureValidator(BIBLE_DATABASE_DIR) as validator:
+        for enc in index_data['encounters']:
+            files = enc.get('files', {})
+            en_fname = files.get('en')
+            en_data = lint_cache.get(ENCOUNTERS_DIR / 'en' / en_fname) if en_fname else None
+            en_pairs = find_scripture_pairs(en_data) if en_data else None
+
+            for lang, fname in files.items():
+                fpath = ENCOUNTERS_DIR / lang / fname
+                data = lint_cache.get(fpath)
+                if data is None:
+                    continue
+
+                bible_version = data.get('bible_version')
+                if not bible_version:
+                    continue
+
+                resolver = validator.get_resolver(bible_version, lang)
+                if resolver is None:
+                    report.W(f"{fname}: no local Bible DB found for bible_version '{bible_version}' (lang '{lang}') — skipping scripture checks")
+                    continue
+
+                if lang == 'en':
+                    for ref in find_scripture_pairs(data):
+                        pairs_checked += 1
+                        finding = validate_pair(ref, resolver)
+                        if finding is None:
+                            continue
+                        if finding.kind == "resolution_failed":
+                            resolution_failures += 1
+                        else:
+                            text_mismatches += 1
+                        report.W(f"{fname}: {finding.message}")
+                    continue
+
+                if en_pairs is None:
+                    report.W(f"{fname}: no EN sibling file found — skipping scripture checks")
+                    continue
+
+                native_pairs = find_scripture_pairs(data)
+                if len(native_pairs) != len(en_pairs):
+                    report.W(f"{fname}: scripture pair count ({len(native_pairs)}) doesn't match EN sibling ({len(en_pairs)}) — skipping scripture checks (cards likely out of sync, see Phase B)")
+                    continue
+
+                for en_ref, native_ref in zip(en_pairs, native_pairs):
+                    pairs_checked += 1
+                    finding = validate_translated_pair(en_ref, native_ref, resolver)
+                    if finding is None:
+                        continue
+                    if finding.kind == "resolution_failed":
+                        resolution_failures += 1
+                    else:
+                        text_mismatches += 1
+                    report.W(f"{fname}: {finding.message}")
+
+    report.I(
+        f"✓ Checked {pairs_checked} scripture reference(s): "
+        f"{resolution_failures} resolution failure(s), {text_mismatches} text mismatch(es)"
+    )
+
+
+# ── Phase E: Cross-file duplication ─────────────────────────────────────────
+#
+# Detects prose/character-prompt content reused (verbatim or near-verbatim)
+# across DIFFERENT encounters/characters — a gap no existing check covers,
+# since Phase B's cross-translation validation only ever compares a card
+# against its own EN counterpart within the same encounter. WARNING-only:
+# fuzzy text similarity has an irreducible false-positive rate (shared
+# scripture quotations, formulaic phrasing), so this needs a human-review
+# pass on real findings before any promotion to ERROR is considered.
+
+# Prose-bearing field names to compare — free text an author writes, not
+# scripture quotes/references (verse_text, reference, revelation_key labels)
+# which legitimately repeat across encounters by design. prayer.title/
+# prayer.content are also excluded: every discovery_activation prayer ends
+# with the same formulaic closing ("In Jesus' name, Amen.") by convention,
+# which would otherwise dominate findings with expected, not authored,
+# repetition — the same category of noise as a shared scripture quotation.
+_PROSE_FIELD_NAMES = {'title', 'narrative', 'content', 'reflection', 'reflection_prompt', 'question'}
+_EXCLUDED_PATH_SUBSTRINGS = ('.prayer.',)
+
+
+def _extract_encounter_prose(index_data: dict, lint_cache: dict) -> dict:
+    """Build {'{enc_id}::{path}': text} for every EN encounter card's prose
+    fields, scoped to EN only — comparing across languages would just
+    re-detect translation, not duplication. Reuses lint_cache (already
+    parsed in Phase 1) rather than re-reading files from disk."""
+    text_by_location = {}
+    for enc in index_data['encounters']:
+        enc_id = enc['id']
+        fname = enc.get('files', {}).get('en')
+        if not fname:
+            continue
+        fpath = ENCOUNTERS_DIR / 'en' / fname
+        data = lint_cache.get(fpath)
+        if data is None:
+            continue
+        for path, text in iter_strings(data.get('cards', [])):
+            key = path.rsplit('.', 1)[-1].split('[')[0]
+            if key in _PROSE_FIELD_NAMES and not any(s in path for s in _EXCLUDED_PATH_SUBSTRINGS):
+                text_by_location[f"{enc_id}::{path}"] = text
+    return text_by_location
+
+
+def _extract_character_prompts(report: Report) -> dict:
+    """Build {character_name: master_character_prompt} from every
+    encounters/image_promts/*.json file."""
+    prompts_dir = ENCOUNTERS_DIR / 'image_promts'
+    prompts_by_character = {}
+    for fpath in sorted(prompts_dir.glob('*.json')):
+        data = load_json(fpath, report)
+        if data is None:
+            continue
+        prompt = data.get('master_character_prompt')
+        character = data.get('character', fpath.stem)
+        if prompt:
+            prompts_by_character[character] = prompt
+    return prompts_by_character
+
+
+def validate_cross_file_duplication(report: Report, index_data: dict, lint_cache: dict) -> None:
+    """Phase E: flag near-duplicate prose across different encounters (EN
+    base) and near-duplicate master_character_prompt strings across
+    characters. WARNING-only — see module-level comment above."""
+    report.I("=" * 60)
+    report.I("PHASE E: CROSS-FILE DUPLICATION")
+    report.I("=" * 60)
+
+    prose_text = _extract_encounter_prose(index_data, lint_cache)
+    prose_findings = find_prose_duplicates(prose_text)
+    for f in prose_findings:
+        report.W(
+            f"Possible prose duplication ({f.ratio:.0%} match): "
+            f"{f.location_a} <-> {f.location_b} — matched: \"{f.matched_text}\""
+        )
+    report.I(f"✓ Scanned {len(prose_text)} EN prose fields across {len(index_data['encounters'])} encounters, "
+              f"{len(prose_findings)} possible duplicate(s)")
+
+    prompts = _extract_character_prompts(report)
+    prompt_findings = find_character_prompt_duplicates(prompts)
+    for f in prompt_findings:
+        report.W(
+            f"Possible character-prompt duplication ({f.ratio:.0%} match): "
+            f"{f.location_a} <-> {f.location_b} — matched: \"{f.matched_text}\""
+        )
+    report.I(f"✓ Scanned {len(prompts)} character prompts, {len(prompt_findings)} possible duplicate(s)")
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -702,11 +892,23 @@ def main():
     run_report.wrap("PHASE B: ENCOUNTER FILES", validate_encounter_files, index_data, lint_cache,
                      bible_versions, expected_languages)
 
-    # Phase C runs last, after the real gate (Phase B) has passed. Its
-    # findings are warnings only (see validate_image_urls); gate=False means
-    # an unreachable image doesn't stop later phases from running, but any
+    # Phase C runs after the real gate (Phase B) has passed. Its findings
+    # are warnings only (see validate_image_urls); gate=False means an
+    # unreachable image doesn't stop later phases from running, but any
     # warning it produces still fails the overall run via print_summary().
-    run_report.wrap("PHASE C: IMAGE URLS", validate_image_urls, gate=False, final=True)
+    run_report.wrap("PHASE C: IMAGE URLS", validate_image_urls, gate=False)
+
+    # Phase D runs after Phase B has passed. Its findings are warnings only
+    # (see validate_scripture_references) — resolution failures and fuzzy
+    # text-mismatch both need a human-review pass over real corpus findings
+    # before either is considered for promotion to ERROR.
+    run_report.wrap("PHASE D: SCRIPTURE REFERENCES", validate_scripture_references, index_data, lint_cache, gate=False)
+
+    # Phase E runs last, after Phase B has passed. Its findings are
+    # warnings only (see validate_cross_file_duplication) — fuzzy text
+    # similarity has an irreducible false-positive rate, so this needs a
+    # human-review pass before any promotion to ERROR is considered.
+    run_report.wrap("PHASE E: CROSS-FILE DUPLICATION", validate_cross_file_duplication, index_data, lint_cache, gate=False, final=True)
 
     encounters = index_data['encounters']
     published = [e for e in encounters if e.get('status') == 'published']

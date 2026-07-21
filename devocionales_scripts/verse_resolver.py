@@ -146,8 +146,8 @@ def fetch_text(
         (book_number, chapter, v_start, v_end),
     )
     rows = cursor.fetchall()
-    if not rows:
-        return None
+    if not rows or any(r[0] is None for r in rows):
+        return None  # missing row, or a NULL text cell (real gap in some DBs) — same as "not found"
     combined = " ".join(r[0] for r in rows)
     combined = re.sub(r"<[^>]+>", "", combined)            # strip XML tags
     combined = re.sub(r"[\u2460-\u24FF]", "", combined)    # strip Unicode ref markers

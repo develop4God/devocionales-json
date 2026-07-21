@@ -54,6 +54,10 @@ from shared_validation.text_checks import (
     check_greek_hebrew_transliteration, is_cognate,
 )
 from shared_validation.lint import lint_json_files
+from shared_validation.duplication_check import find_prose_duplicates
+from shared_validation.scripture_check import (
+    ScriptureValidator, find_scripture_pairs, validate_pair, validate_translated_pair,
+)
 
 class ValidationReport:
     def __init__(self):
@@ -567,6 +571,160 @@ def validate_index_json(discovery_dir: Path, report: ValidationReport,
     return index_data
 
 
+# ── Phase: Scripture references ─────────────────────────────────────────────
+#
+# Verifies every {reference, verse_text}-shaped pair actually resolves
+# against the Bible version cited for that file, and that the stored text
+# matches the resolved text closely enough (fuzzy match — see
+# shared_validation.scripture_check). WARNING-only for this initial
+# rollout — see the issue's Rollout section. Runs after Phase B (the real
+# gate) so scripture findings never block the release while the fuzzy-match
+# threshold is being tuned. Shares shared_validation.scripture_check with
+# encounters' equivalent phase — no corpus-specific duplication of the
+# validation logic itself.
+
+def validate_scripture_references(report: 'ValidationReport', all_studies: dict,
+                                    bible_database_dir: Path) -> None:
+    """Resolve every scripture reference found in every loaded study file
+    and fuzzy-match its stored verse text against the resolved text.
+
+    EN studies resolve directly (validate_pair). Non-EN studies never
+    parse their own native-language reference string — cards align 1:1 by
+    position with the EN study (guaranteed by Phase B's parity check), so
+    each translated reference is validated against its EN sibling's
+    reference via validate_translated_pair (see shared_validation.
+    scripture_check module docstring for why)."""
+    report.add_info("=" * 60)
+    report.add_info("PHASE: SCRIPTURE REFERENCES")
+    report.add_info("=" * 60)
+
+    pairs_checked = 0
+    resolution_failures = 0
+    text_mismatches = 0
+    warned_versions = set()
+    en_studies = all_studies.get('en', {})
+
+    with ScriptureValidator(bible_database_dir) as validator:
+        for lang, lang_studies in all_studies.items():
+            for study_id, data in lang_studies.items():
+                bible_version = data.get('version')
+                if not bible_version:
+                    continue
+
+                resolver = validator.get_resolver(bible_version, lang)
+                if resolver is None:
+                    if (lang, bible_version) not in warned_versions:
+                        report.add_warning(
+                            f"No local Bible DB found for bible_version '{bible_version}' "
+                            f"(lang '{lang}', study '{study_id}') — skipping scripture checks for this version"
+                        )
+                        warned_versions.add((lang, bible_version))
+                    continue
+
+                if lang == 'en':
+                    for ref in find_scripture_pairs(data):
+                        pairs_checked += 1
+                        finding = validate_pair(ref, resolver)
+                        if finding is None:
+                            continue
+                        if finding.kind == "resolution_failed":
+                            resolution_failures += 1
+                        else:
+                            text_mismatches += 1
+                        report.add_warning(f"{study_id}: {finding.message}")
+                    continue
+
+                en_data = en_studies.get(study_id)
+                if en_data is None:
+                    report.add_warning(f"{study_id} ({lang}): no EN sibling study found — skipping scripture checks")
+                    continue
+
+                en_pairs = find_scripture_pairs(en_data)
+                native_pairs = find_scripture_pairs(data)
+                if len(native_pairs) != len(en_pairs):
+                    report.add_warning(
+                        f"{study_id} ({lang}): scripture pair count ({len(native_pairs)}) doesn't match "
+                        f"EN sibling ({len(en_pairs)}) — skipping scripture checks (cards likely out of sync, see Phase B)"
+                    )
+                    continue
+
+                for en_ref, native_ref in zip(en_pairs, native_pairs):
+                    pairs_checked += 1
+                    finding = validate_translated_pair(en_ref, native_ref, resolver)
+                    if finding is None:
+                        continue
+                    if finding.kind == "resolution_failed":
+                        resolution_failures += 1
+                    else:
+                        text_mismatches += 1
+                    report.add_warning(f"{study_id}: {finding.message}")
+
+    report.add_info(
+        f"✓ Checked {pairs_checked} scripture reference(s): "
+        f"{resolution_failures} resolution failure(s), {text_mismatches} text mismatch(es)"
+    )
+
+
+# ── Phase: Cross-file duplication ───────────────────────────────────────────
+#
+# Detects prose reused (verbatim or near-verbatim) across DIFFERENT
+# discovery studies — no existing check compares content across entries,
+# only a translated study against its own EN counterpart. WARNING-only:
+# fuzzy text similarity has an irreducible false-positive rate (shared
+# scripture quotations, formulaic phrasing), so this needs a human-review
+# pass on real findings before any promotion to ERROR is considered.
+# Scoped to discovery's own EN entries only — no cross-corpus comparison
+# against encounters (different content types/purposes, would be noise).
+# Does NOT also run find_character_prompt_duplicates — discovery has no
+# image_promts equivalent.
+
+# Prose-bearing field names to compare — free text an author writes, not
+# scripture quotes/references ('reference', 'word', 'event' inside
+# timeline entries) which legitimately repeat across studies by design.
+# prayer.title/prayer.content are also excluded: every prayer card ends
+# with the same formulaic closing by convention, which would otherwise
+# dominate findings with expected, not authored, repetition — the same
+# category of noise as a shared scripture quotation.
+_PROSE_FIELD_NAMES = {'title', 'subtitle', 'content', 'identity_statement', 'question'}
+_EXCLUDED_PATH_SUBSTRINGS = ('.prayer.',)
+
+
+def _extract_study_prose(index_studies: dict, all_studies: dict) -> dict:
+    """Build {'{study_id}::{path}': text} for every EN study card's prose
+    fields, scoped to EN only — comparing across languages would just
+    re-detect translation, not duplication."""
+    text_by_location = {}
+    en_studies = all_studies.get('en', {})
+    for study_id in index_studies:
+        data = en_studies.get(study_id)
+        if data is None:
+            continue
+        for path, text in iter_strings(data.get('cards', [])):
+            key = path.rsplit('.', 1)[-1].split('[')[0]
+            if key in _PROSE_FIELD_NAMES and not any(s in path for s in _EXCLUDED_PATH_SUBSTRINGS):
+                text_by_location[f"{study_id}::{path}"] = text
+    return text_by_location
+
+
+def validate_cross_file_duplication(report: ValidationReport, index_studies: dict,
+                                     all_studies: dict) -> None:
+    """Flag near-duplicate prose across different discovery studies (EN
+    base). WARNING-only — see module-level comment above."""
+    report.add_info("=" * 60)
+    report.add_info("PHASE: CROSS-FILE DUPLICATION")
+    report.add_info("=" * 60)
+
+    prose_text = _extract_study_prose(index_studies, all_studies)
+    findings = find_prose_duplicates(prose_text)
+    for f in findings:
+        report.add_warning(
+            f"Possible prose duplication ({f.ratio:.0%} match): "
+            f"{f.location_a} <-> {f.location_b} — matched: \"{f.matched_text}\""
+        )
+    report.add_info(f"✓ Scanned {len(prose_text)} EN prose fields across {len(index_studies)} studies, "
+                     f"{len(findings)} possible duplicate(s)")
+
+
 def main():
     # Get discovery directory
     script_dir = Path(__file__).parent
@@ -741,6 +899,38 @@ def main():
 
     run_report.record_phase(
         "PHASE B: TRANSLATION FILES", report, phase_b_success, phase_b_elapsed, gate=True,
+    )
+
+    # ==========================================
+    # PHASE: Scripture references — runs after Phase B (the real gate).
+    # Its own ValidationReport instance/timing since it never gates the run
+    # (gate=False) — findings are warnings only.
+    # ==========================================
+    phase_scripture_start = time.monotonic()
+    scripture_report = ValidationReport()
+    scripture_report.phase = "PHASE_SCRIPTURE"
+    validate_scripture_references(scripture_report, all_studies, discovery_dir.parent / 'bible_database')
+    phase_scripture_success = scripture_report.print_report(final=False)
+    phase_scripture_elapsed = time.monotonic() - phase_scripture_start
+
+    run_report.record_phase(
+        "PHASE D: SCRIPTURE REFERENCES", scripture_report, phase_scripture_success, phase_scripture_elapsed, gate=False,
+    )
+
+    # ==========================================
+    # PHASE: Cross-file duplication — runs last, after Phase B (the real
+    # gate). Its own ValidationReport instance/timing since it never gates
+    # the run (gate=False) — findings are warnings only.
+    # ==========================================
+    phase_dup_start = time.monotonic()
+    dup_report = ValidationReport()
+    dup_report.phase = "PHASE_DUP"
+    validate_cross_file_duplication(dup_report, index_studies, all_studies)
+    phase_dup_success = dup_report.print_report(final=False)
+    phase_dup_elapsed = time.monotonic() - phase_dup_start
+
+    run_report.record_phase(
+        "PHASE: CROSS-FILE DUPLICATION", dup_report, phase_dup_success, phase_dup_elapsed, gate=False,
     )
 
     run_report.add_coverage(

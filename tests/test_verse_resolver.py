@@ -199,6 +199,58 @@ class TestNativeBookNameFallbacks(VerseResolverTestCase):
             Path(path).unlink(missing_ok=True)
 
 
+class TestNullVerseText(VerseResolverTestCase):
+    """A verse row with NULL text (a real data gap seen in some Bible DBs,
+    e.g. Leviticus 24:16 in one non-EN corpus DB) must resolve as
+    "verse not found" like a missing row, not crash fetch_text's
+    " ".join() on a None item."""
+
+    def test_null_text_cell_treated_as_not_found(self):
+        with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
+            path = f.name
+        try:
+            conn = sqlite3.connect(path)
+            conn.execute("CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)")
+            conn.execute("CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)")
+            conn.execute("INSERT INTO books VALUES (10, 'Genesis')")
+            conn.execute("INSERT INTO verses VALUES (10, 24, 16, NULL)")
+            conn.commit()
+            conn.close()
+
+            with VerseResolver(path) as r:
+                cita, texto, error = r.resolve("Genesis 24:16")
+            self.assertIsNone(cita)
+            self.assertIsNone(texto)
+            self.assertIsNotNone(error)
+            self.assertIn("verse not found", error)
+        finally:
+            Path(path).unlink(missing_ok=True)
+
+    def test_null_text_among_multiple_verses_treated_as_not_found(self):
+        """A multi-verse range (e.g. 'Genesis 24:15-16') where only one row
+        is NULL must still fail cleanly, not silently drop the NULL row and
+        return a partial/wrong combined text."""
+        with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
+            path = f.name
+        try:
+            conn = sqlite3.connect(path)
+            conn.execute("CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)")
+            conn.execute("CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)")
+            conn.execute("INSERT INTO books VALUES (10, 'Genesis')")
+            conn.execute("INSERT INTO verses VALUES (10, 24, 15, 'verse fifteen text')")
+            conn.execute("INSERT INTO verses VALUES (10, 24, 16, NULL)")
+            conn.commit()
+            conn.close()
+
+            with VerseResolver(path) as r:
+                cita, texto, error = r.resolve("Genesis 24:15-16")
+            self.assertIsNone(cita)
+            self.assertIsNone(texto)
+            self.assertIsNotNone(error)
+        finally:
+            Path(path).unlink(missing_ok=True)
+
+
 class TestHIOVMappingTableIntegrity(unittest.TestCase):
     """Guards the mapping data itself against silent drift/typos."""
 
