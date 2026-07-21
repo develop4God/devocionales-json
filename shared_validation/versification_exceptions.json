@@ -40,6 +40,26 @@
       "target_verse_end": 23,
       "native_reference": "Maleachi 3:23",
       "verified": "LU17 confirmed text at chapter 3 verse 23 matches KJV Malachi 4:5 (sending Elijah before the day of the LORD); cross-checked against jordan_convergence_de_001.json's own stored 'Der Prophet Maleachi 3:23' reference."
+    },
+    {
+      "en_reference": "Psalm 18:16",
+      "bible_version": "LSG1910",
+      "lang": "fr",
+      "target_chapter": 18,
+      "target_verse_start": 17,
+      "target_verse_end": 17,
+      "native_reference": "Psaume 18:17",
+      "verified": "LSG1910 shifts Psalm 18 by one verse starting partway through the chapter; confirmed text at 18:17 ('Il étendit sa main d'en haut, il me saisit, Il me retira des grandes eaux') matches KJV Psalm 18:16 verbatim (God reaches down and draws the psalmist out of many waters)."
+    },
+    {
+      "en_reference": "Psalm 18:16",
+      "bible_version": "LU17",
+      "lang": "de",
+      "target_chapter": 18,
+      "target_verse_start": 17,
+      "target_verse_end": 17,
+      "native_reference": "Psalm 18:17",
+      "verified": "LU17 shifts Psalm 18 by one verse starting partway through the chapter; confirmed text at 18:17 ('Er streckte seine Hand aus von der Höhe und fasste mich und zog mich aus großen Wassern') matches KJV Psalm 18:16 verbatim (God reaches down and draws the psalmist out of many waters)."
     }
   ]
 }

@@ -443,5 +443,52 @@ class TestValidateTranslatedPairVersificationException(unittest.TestCase):
         self.assertEqual(finding.kind, "resolution_failed")
 
 
+class TestValidateTranslatedPairVersificationExceptionVerseExistsAtBothAddresses(unittest.TestCase):
+    """Real bug found via peter_water_001's Psalm 18:16 scripture_connections
+    in fr/de: unlike Jonah 1:17 (which doesn't exist at all in LSG1910/LU17,
+    a true lookup miss), LSG1910 and LU17 both HAVE a Psalm 18:16 — it's
+    just different content, because the verse-shift happens mid-chapter.
+    The old exception logic only consulted VERSIFICATION_EXCEPTIONS when
+    the primary lookup returned None, so it silently compared against the
+    wrong (but existing) verse instead of ever finding the registered
+    exception. Exceptions must be checked BEFORE the primary lookup runs,
+    not only as a fallback when it fails."""
+
+    def setUp(self):
+        import verse_resolver
+        verse_resolver._books_sot_cache = {"Psalm": 490}
+
+        with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
+            self.db_path = f.name
+        _make_bible_db(
+            self.db_path,
+            books=[(490, "Psaume")],
+            verses=[
+                # Mirrors LSG1910's real shape: verse 16 exists but holds
+                # DIFFERENT content than KJV's 18:16 — the matching text
+                # actually lives one verse later, at 18:17.
+                (490, 18, 16, "Unrelated verse 16 content — not what KJV 18:16 says."),
+                (490, 18, 17, "Il étendit la main d'en haut, il me saisit, il me retira des grandes eaux."),
+            ],
+        )
+        self.resolver = VerseResolver(self.db_path)
+
+    def tearDown(self):
+        import verse_resolver
+        verse_resolver._books_sot_cache = None
+        self.resolver.close()
+        Path(self.db_path).unlink(missing_ok=True)
+
+    def test_exception_used_even_though_primary_address_resolves_to_something(self):
+        en_ref = ScriptureRef(reference="Psalm 18:16", verse_text="unused", path="key_verse.reference")
+        native_ref = ScriptureRef(
+            reference="Psaume 18:17",
+            verse_text="Il étendit la main d'en haut, il me saisit, il me retira des grandes eaux.",
+            path="key_verse.reference",
+        )
+        finding = validate_translated_pair(en_ref, native_ref, self.resolver, bible_version="LSG1910")
+        self.assertIsNone(finding)
+
+
 if __name__ == '__main__':
     unittest.main()

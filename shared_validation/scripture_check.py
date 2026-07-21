@@ -262,12 +262,21 @@ def validate_translated_pair(
     English. This never parses `native_ref.reference` itself; it's treated
     as a citation label only, not a lookup key.
 
-    If the direct EN-address lookup misses, and `bible_version` is given,
-    retries against VERSIFICATION_EXCEPTIONS (see versification_exceptions.json)
-    before reporting a resolution failure — covers known cases where a
-    target edition splits chapters/verses differently at this exact verse
-    (e.g. KJV Jonah 1:17 == LSG1910 Jonas 2:1). Every entry there was
-    hand-verified against its DB; this never guesses a shift.
+    If `bible_version` has a registered VERSIFICATION_EXCEPTIONS entry for
+    this en_reference, that entry's target chapter/verse is used from the
+    start rather than the EN-parsed address — covers both cases where a
+    target edition splits chapters/verses differently at this exact verse:
+    the EN address doesn't exist at all in the target (e.g. KJV Jonah 1:17
+    == LSG1910 Jonas 2:1, since LSG1910's chapter 1 ends at verse 16), and
+    the subtler case where the EN address DOES exist in the target but
+    holds different content because the shift happens mid-chapter (e.g.
+    KJV Psalm 18:16 == LSG1910/LU17 Psalm 18:17 — both editions have a
+    verse 16, just not the same one, so a plain "did the lookup fail"
+    check would silently compare against the wrong verse instead of
+    catching the mismatch). Every entry there was hand-verified against
+    its DB; this never guesses a shift. Falls back to the EN-parsed
+    address when no exception is registered, or reports a resolution
+    failure if that address doesn't exist either.
     """
     parsed = parse_en_ref(en_ref.reference)
     if parsed is None:
@@ -286,15 +295,13 @@ def validate_translated_pair(
             message=f"'{native_ref.path}': EN sibling book '{book_en}' unknown in bible_books.json SOT",
         )
 
-    texto = fetch_text(native_resolver.cursor, book_number, chapter, v_start, v_end)
+    exception = _find_versification_exception(en_ref.reference, bible_version) if bible_version else None
+    if exception is not None:
+        chapter, v_start, v_end = (
+            exception["target_chapter"], exception["target_verse_start"], exception["target_verse_end"],
+        )
 
-    if texto is None and bible_version is not None:
-        exception = _find_versification_exception(en_ref.reference, bible_version)
-        if exception is not None:
-            texto = fetch_text(
-                native_resolver.cursor, book_number,
-                exception["target_chapter"], exception["target_verse_start"], exception["target_verse_end"],
-            )
+    texto = fetch_text(native_resolver.cursor, book_number, chapter, v_start, v_end)
 
     if texto is None:
         return Finding(
