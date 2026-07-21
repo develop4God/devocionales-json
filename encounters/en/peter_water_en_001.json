@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "en",
   "bible_version": "KJV",
-  "version": "1.1",
+  "version": "1.2",
   "estimated_reading_minutes": 5,
   "meta": {
     "character": "Peter",
@@ -85,7 +85,7 @@
       "haptic": "gentle_pulse",
       "verse_overlay": {
         "reference": "Matthew 14:29",
-        "text": "And he came down out of the boat, and walked upon the waters to come to Jesus."
+        "text": "And when Peter came down out of the ship, he walked on the water, to go to Jesus."
       },
       "revelation_key": "Peter is the only human in history besides Jesus to walk on water. Because he was the only one who asked."
     },
