@@ -1751,7 +1751,7 @@
     },
     {
       "id": "gold_silver_ashes_001",
-      "version": "1.0",
+      "version": "1.1",
       "emoji": "🔥",
       "files": {
         "es": "gold_silver_ashes_es_001.json",
@@ -1804,7 +1804,7 @@
     },
     {
       "id": "zechariah_14_return_001",
-      "version": "1.0",
+      "version": "1.1",
       "emoji": "⛰️",
       "files": {
         "es": "zechariah_14_return_es_001.json",
@@ -1910,7 +1910,7 @@
     },
     {
       "id": "jordan_convergence_001",
-      "version": "1.0",
+      "version": "1.1",
       "emoji": "🌊",
       "files": {
         "es": "jordan_convergence_es_001.json",
