@@ -57,6 +57,7 @@ from shared_validation.lint import lint_json_files
 from shared_validation.duplication_check import find_prose_duplicates
 from shared_validation.scripture_check import (
     ScriptureValidator, find_scripture_pairs, validate_pair, validate_translated_pair,
+    scripture_validation_enabled,
 )
 
 class ValidationReport:
@@ -650,7 +651,7 @@ def validate_scripture_references(report: 'ValidationReport', all_studies: dict,
 
                 for en_ref, native_ref in zip(en_pairs, native_pairs):
                     pairs_checked += 1
-                    finding = validate_translated_pair(en_ref, native_ref, resolver)
+                    finding = validate_translated_pair(en_ref, native_ref, resolver, bible_version)
                     if finding is None:
                         continue
                     if finding.kind == "resolution_failed":
@@ -904,18 +905,23 @@ def main():
     # ==========================================
     # PHASE: Scripture references — runs after Phase B (the real gate).
     # Its own ValidationReport instance/timing since it never gates the run
-    # (gate=False) — findings are warnings only.
+    # (gate=False) — findings are warnings only. Scans the ENTIRE corpus
+    # (2000+ references across 10 languages) every run — too slow for
+    # daily local editing, so it's CI-only (see scripture_validation_enabled).
     # ==========================================
-    phase_scripture_start = time.monotonic()
-    scripture_report = ValidationReport()
-    scripture_report.phase = "PHASE_SCRIPTURE"
-    validate_scripture_references(scripture_report, all_studies, discovery_dir.parent / 'bible_database')
-    phase_scripture_success = scripture_report.print_report(final=False)
-    phase_scripture_elapsed = time.monotonic() - phase_scripture_start
+    if scripture_validation_enabled():
+        phase_scripture_start = time.monotonic()
+        scripture_report = ValidationReport()
+        scripture_report.phase = "PHASE_SCRIPTURE"
+        validate_scripture_references(scripture_report, all_studies, discovery_dir.parent / 'bible_database')
+        phase_scripture_success = scripture_report.print_report(final=False)
+        phase_scripture_elapsed = time.monotonic() - phase_scripture_start
 
-    run_report.record_phase(
-        "PHASE D: SCRIPTURE REFERENCES", scripture_report, phase_scripture_success, phase_scripture_elapsed, gate=False,
-    )
+        run_report.record_phase(
+            "PHASE D: SCRIPTURE REFERENCES", scripture_report, phase_scripture_success, phase_scripture_elapsed, gate=False,
+        )
+    else:
+        print("ℹ️  PHASE D: SCRIPTURE REFERENCES — skipped (CI-only; set CI=true to run locally)")
 
     # ==========================================
     # PHASE: Cross-file duplication — runs last, after Phase B (the real

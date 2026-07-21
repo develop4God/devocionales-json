@@ -27,12 +27,59 @@ error-prone problem than reusing the citation the corpus already has in
 English.
 """
 
+import json
+import os
 import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
 
 from devocionales_scripts.verse_resolver import VerseResolver, fetch_text, parse_en_ref
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CI GATING
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Phase D scans every scripture reference in the ENTIRE corpus (2000+ pairs
+# across 10 languages) on every run — a full-corpus audit appropriate for a
+# CI gate, not a fast per-file feedback loop for daily content editing.
+# Callers should skip this phase locally and only run it where CI=true is
+# set, which GitHub Actions (and most other CI providers) already set
+# automatically with no workflow-file changes needed.
+
+def scripture_validation_enabled() -> bool:
+    """True only when running in CI (CI env var set, as GitHub Actions and
+    most CI providers do automatically). Callers use this to skip Phase D
+    during local/daily-work validator runs."""
+    return os.environ.get("CI", "").lower() in ("1", "true", "yes")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# VERSIFICATION EXCEPTIONS
+# ─────────────────────────────────────────────────────────────────────────────
+
+_VERSIFICATION_EXCEPTIONS_PATH = Path(__file__).parent / "versification_exceptions.json"
+_versification_exceptions_cache: Optional[dict] = None
+
+
+def _load_versification_exceptions() -> dict:
+    """Load and cache versification_exceptions.json: a small, hand-verified
+    list of known cross-edition chapter/verse shifts (see that file's own
+    _comment for what belongs in it and what doesn't). Loaded once per
+    process; callers never mutate the returned dict."""
+    global _versification_exceptions_cache
+    if _versification_exceptions_cache is None:
+        with open(_VERSIFICATION_EXCEPTIONS_PATH, encoding="utf-8") as f:
+            data = json.load(f)
+        _versification_exceptions_cache = {
+            (e["en_reference"], e["bible_version"]): e for e in data["exceptions"]
+        }
+    return _versification_exceptions_cache
+
+
+def _find_versification_exception(en_reference: str, bible_version: str) -> Optional[dict]:
+    return _load_versification_exceptions().get((en_reference, bible_version))
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CONFIG
@@ -179,6 +226,7 @@ def validate_pair(ref: ScriptureRef, resolver: VerseResolver) -> Optional[Findin
 
 def validate_translated_pair(
     en_ref: ScriptureRef, native_ref: ScriptureRef, native_resolver: VerseResolver,
+    bible_version: Optional[str] = None,
 ) -> Optional[Finding]:
     """Validate a translated card's stored verse_text against its EN
     sibling card's reference — the corpus guarantees cards align 1:1 by
@@ -192,6 +240,13 @@ def validate_translated_pair(
     `native_resolver`'s own DB — i.e. the target language's Bible, not
     English. This never parses `native_ref.reference` itself; it's treated
     as a citation label only, not a lookup key.
+
+    If the direct EN-address lookup misses, and `bible_version` is given,
+    retries against VERSIFICATION_EXCEPTIONS (see versification_exceptions.json)
+    before reporting a resolution failure — covers known cases where a
+    target edition splits chapters/verses differently at this exact verse
+    (e.g. KJV Jonah 1:17 == LSG1910 Jonas 2:1). Every entry there was
+    hand-verified against its DB; this never guesses a shift.
     """
     parsed = parse_en_ref(en_ref.reference)
     if parsed is None:
@@ -211,6 +266,15 @@ def validate_translated_pair(
         )
 
     texto = fetch_text(native_resolver.cursor, book_number, chapter, v_start, v_end)
+
+    if texto is None and bible_version is not None:
+        exception = _find_versification_exception(en_ref.reference, bible_version)
+        if exception is not None:
+            texto = fetch_text(
+                native_resolver.cursor, book_number,
+                exception["target_chapter"], exception["target_verse_start"], exception["target_verse_end"],
+            )
+
     if texto is None:
         return Finding(
             kind="resolution_failed",

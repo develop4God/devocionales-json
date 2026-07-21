@@ -355,5 +355,65 @@ class TestValidateTranslatedPairNullText(ValidateTranslatedPairTestCase):
             Path(null_db_path).unlink(missing_ok=True)
 
 
+class TestValidateTranslatedPairVersificationException(unittest.TestCase):
+    """versification_exceptions.json's real Jonah 1:17/LSG1910 entry (a
+    hand-verified cross-edition chapter split — LSG1910 numbers the
+    fish-swallows-Jonah verse as 2:1, not 1:17) must let validate_translated_pair
+    find the verse when bible_version is passed, and must NOT find it
+    (falls through to a normal resolution_failed) when bible_version is
+    omitted — the exception lookup is opt-in per call, not automatic."""
+
+    def setUp(self):
+        import verse_resolver
+        verse_resolver._books_sot_cache = {"Jonah": 390}
+
+        with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
+            self.db_path = f.name
+        _make_bible_db(
+            self.db_path,
+            books=[(390, "Jonas")],
+            verses=[
+                # Mirrors LSG1910's real shape: nothing at 1:17, the verse
+                # lives at 2:1 instead.
+                (390, 2, 1, "L'Éternel fit venir un grand poisson pour engloutir Jonas."),
+            ],
+        )
+        self.resolver = VerseResolver(self.db_path)
+
+    def tearDown(self):
+        import verse_resolver
+        verse_resolver._books_sot_cache = None
+        self.resolver.close()
+        Path(self.db_path).unlink(missing_ok=True)
+
+    def test_exception_found_when_bible_version_passed(self):
+        en_ref = ScriptureRef(reference="Jonah 1:17", verse_text="unused", path="key_verse.reference")
+        native_ref = ScriptureRef(
+            reference="Jonas 2:1",
+            verse_text="L'Éternel fit venir un grand poisson pour engloutir Jonas.",
+            path="key_verse.reference",
+        )
+        finding = validate_translated_pair(en_ref, native_ref, self.resolver, bible_version="LSG1910")
+        self.assertIsNone(finding)
+
+    def test_exception_not_applied_when_bible_version_omitted(self):
+        en_ref = ScriptureRef(reference="Jonah 1:17", verse_text="unused", path="key_verse.reference")
+        native_ref = ScriptureRef(reference="Jonas 2:1", verse_text="anything", path="key_verse.reference")
+        finding = validate_translated_pair(en_ref, native_ref, self.resolver)
+        self.assertIsNotNone(finding)
+        self.assertEqual(finding.kind, "resolution_failed")
+        self.assertIn("verse not found", finding.message)
+
+    def test_exception_not_applied_for_different_bible_version(self):
+        """Only the exact (en_reference, bible_version) pair recorded in
+        versification_exceptions.json qualifies — an unrelated version
+        code must not accidentally match."""
+        en_ref = ScriptureRef(reference="Jonah 1:17", verse_text="unused", path="key_verse.reference")
+        native_ref = ScriptureRef(reference="Jonas 2:1", verse_text="anything", path="key_verse.reference")
+        finding = validate_translated_pair(en_ref, native_ref, self.resolver, bible_version="NOT_A_REAL_VERSION")
+        self.assertIsNotNone(finding)
+        self.assertEqual(finding.kind, "resolution_failed")
+
+
 if __name__ == '__main__':
     unittest.main()

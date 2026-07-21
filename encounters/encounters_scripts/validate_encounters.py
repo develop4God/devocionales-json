@@ -61,6 +61,7 @@ from shared_validation.duplication_check import (
 )
 from shared_validation.scripture_check import (
     ScriptureValidator, find_scripture_pairs, validate_pair, validate_translated_pair,
+    scripture_validation_enabled,
 )
 
 from verify_image_urls import (
@@ -766,7 +767,7 @@ def validate_scripture_references(report: Report, index_data: dict, lint_cache: 
 
                 for en_ref, native_ref in zip(en_pairs, native_pairs):
                     pairs_checked += 1
-                    finding = validate_translated_pair(en_ref, native_ref, resolver)
+                    finding = validate_translated_pair(en_ref, native_ref, resolver, bible_version)
                     if finding is None:
                         continue
                     if finding.kind == "resolution_failed":
@@ -901,8 +902,13 @@ def main():
     # Phase D runs after Phase B has passed. Its findings are warnings only
     # (see validate_scripture_references) — resolution failures and fuzzy
     # text-mismatch both need a human-review pass over real corpus findings
-    # before either is considered for promotion to ERROR.
-    run_report.wrap("PHASE D: SCRIPTURE REFERENCES", validate_scripture_references, index_data, lint_cache, gate=False)
+    # before either is considered for promotion to ERROR. Scans the ENTIRE
+    # corpus (2000+ references across 10 languages) every run — too slow
+    # for daily local editing, so it's CI-only (see scripture_validation_enabled).
+    if scripture_validation_enabled():
+        run_report.wrap("PHASE D: SCRIPTURE REFERENCES", validate_scripture_references, index_data, lint_cache, gate=False)
+    else:
+        print("ℹ️  PHASE D: SCRIPTURE REFERENCES — skipped (CI-only; set CI=true to run locally)")
 
     # Phase E runs last, after Phase B has passed. Its findings are
     # warnings only (see validate_cross_file_duplication) — fuzzy text

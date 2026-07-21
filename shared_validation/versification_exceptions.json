@@ -1,33 +1,45 @@
 {
-  "_comment": "Known cross-edition versification shifts: an EN (KJV/NIV) chapter:verse address that legitimately lands at a DIFFERENT chapter:verse in another language's Bible edition, because that edition splits chapters/verses differently at this point. Each entry means: when validate_translated_pair() can't find the EN-resolved address in the target DB, treat that specific (book, en_reference, target bible_version) combination as an acknowledged exception rather than a fresh warning — the corpus's own stored native reference for this verse has already been verified correct by a human. Add an entry ONLY after confirming the shift directly against the target DB (see shared_validation/scripture_check.py's versification_exceptions module docstring) — never to silence an unrelated or unverified failure.",
+  "_comment": "Known cross-edition versification shifts: an EN (KJV/NIV) chapter:verse address that legitimately lands at a DIFFERENT chapter:verse in another language's Bible edition, because that edition splits chapters/verses differently at this point. Each entry means: when validate_translated_pair() can't find the EN-resolved address in the target DB, it retries at (target_chapter, target_verse_start-target_verse_end) instead before reporting a warning. target_* fields are the actual lookup key; native_reference/verified are human-readable documentation only, not used by the code. Add an entry ONLY after confirming the shift directly against the target DB — never to silence an unrelated or unverified failure.",
   "exceptions": [
     {
       "en_reference": "Jonah 1:17",
       "bible_version": "LSG1910",
       "lang": "fr",
+      "target_chapter": 2,
+      "target_verse_start": 1,
+      "target_verse_end": 1,
       "native_reference": "Jonas 2:1",
-      "verified": "LSG1910 chapter 1 ends at verse 16; the fish-swallows-Jonah verse is chapter 2 verse 1 in this edition."
+      "verified": "LSG1910 chapter 1 ends at verse 16; confirmed text at chapter 2 verse 1 matches KJV Jonah 1:17 verbatim (great fish swallows Jonah)."
     },
     {
       "en_reference": "Jonah 1:17",
-      "bible_version": "SCH2000",
+      "bible_version": "LU17",
       "lang": "de",
+      "target_chapter": 2,
+      "target_verse_start": 1,
+      "target_verse_end": 1,
       "native_reference": "Jona 2:1",
-      "verified": "Same chapter split as LSG1910 — German editions also number this verse as chapter 2 verse 1."
+      "verified": "LU17 confirmed text at chapter 2 verse 1 matches KJV Jonah 1:17 verbatim (great fish swallows Jonah); text cross-checked against saulo_de_001.json's own stored 'Jona 2:1' reference."
     },
     {
       "en_reference": "Joel 2:28",
       "bible_version": "LU17",
       "lang": "de",
+      "target_chapter": 3,
+      "target_verse_start": 1,
+      "target_verse_end": 1,
       "native_reference": "Joel 3:1",
-      "verified": "LU17 confirmed text at chapter 3 verse 1 matches KJV Joel 2:28 (Spirit poured out on all flesh)."
+      "verified": "LU17 confirmed text at chapter 3 verse 1 matches KJV Joel 2:28 (Spirit poured out on all flesh); cross-checked against ascension_victory_de_001.json's own stored 'Joel 3:1' reference."
     },
     {
       "en_reference": "Malachi 4:5",
       "bible_version": "LU17",
       "lang": "de",
+      "target_chapter": 3,
+      "target_verse_start": 23,
+      "target_verse_end": 23,
       "native_reference": "Maleachi 3:23",
-      "verified": "LU17 confirmed text at chapter 3 verse 23 matches KJV Malachi 4:5 (sending Elijah before the day of the LORD)."
+      "verified": "LU17 confirmed text at chapter 3 verse 23 matches KJV Malachi 4:5 (sending Elijah before the day of the LORD); cross-checked against jordan_convergence_de_001.json's own stored 'Der Prophet Maleachi 3:23' reference."
     }
   ]
 }
