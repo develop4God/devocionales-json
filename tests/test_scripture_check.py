@@ -118,6 +118,49 @@ class TestFindScripturePairs(unittest.TestCase):
         data = {'cards': [{'type': 'cinematic_scene', 'title': 'x', 'narrative': 'y'}]}
         self.assertEqual(find_scripture_pairs(data), [])
 
+    def test_pair_order_independent_of_dict_key_insertion_order(self):
+        """Real bug found via woman_well_pt_001/zacchaeus_pt_001: an EN file
+        and its translated sibling can legitimately write a card's fields in
+        different order (e.g. verse_overlay before scripture_connections in
+        one, after in the other) — valid JSON, same content, just different
+        key order. validate_scripture_references zips the EN file's pairs
+        against the translated sibling's pairs BY POSITION, so if
+        find_scripture_pairs returned pairs in raw dict-walk order, this
+        field-order difference would silently pair each translated entry
+        with the WRONG EN reference. The two pair lists below must come out
+        in the same order despite the reversed key order."""
+        overlay_first = {
+            'cards': [{
+                'verse_overlay': {'reference': 'John 4:13-14', 'text': 'overlay text'},
+                'scripture_connections': [{'reference': 'John 4:15', 'text': 'sc0 text'}],
+            }]
+        }
+        connections_first = {
+            'cards': [{
+                'scripture_connections': [{'reference': 'S. João 4:15', 'text': 'sc0 texto'}],
+                'verse_overlay': {'reference': 'S. João 4:13-14', 'text': 'overlay texto'},
+            }]
+        }
+        pairs_a = find_scripture_pairs(overlay_first)
+        pairs_b = find_scripture_pairs(connections_first)
+        self.assertEqual([p.path for p in pairs_a], [p.path for p in pairs_b])
+
+    def test_pair_order_is_natural_not_lexicographic_for_card_index(self):
+        """A plain string sort would put 'cards[10]' before 'cards[2]' —
+        pair order must follow numeric card position instead, since
+        encounters can have more than 9 cards."""
+        data = {
+            'cards': [
+                {'verse_reference': f'Ref {i}', 'verse_text': f'Text {i}'}
+                for i in range(11)
+            ]
+        }
+        pairs = find_scripture_pairs(data)
+        self.assertEqual(
+            [p.path for p in pairs],
+            [f'cards[{i}].verse_reference' for i in range(11)],
+        )
+
     def test_empty_reference_or_text_is_not_a_pair(self):
         data = {'key_verse': {'reference': '', 'text': ''}}
         self.assertEqual(find_scripture_pairs(data), [])

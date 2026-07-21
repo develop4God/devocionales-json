@@ -135,10 +135,46 @@ def find_scripture_pairs(data: dict) -> list[ScriptureRef]:
     Mirrors the recursive-walk pattern of discovery's _check_key_parity
     (validate_discovery.py) for style consistency across shared_validation.
     Pure extraction only — no resolving, no I/O.
+
+    Returned in path-sorted order rather than raw walk order: callers
+    that zip an EN file's pairs against a translated sibling's pairs by
+    position (validate_scripture_references) rely on both lists lining
+    up card-for-card, field-for-field. Raw dict-iteration order reflects
+    each JSON file's own key insertion order, which can legitimately
+    differ between sibling files (e.g. EN's card writes verse_overlay
+    before scripture_connections, the translated version writes them in
+    the opposite order) — found via woman_well_pt_001/zacchaeus_pt_001
+    reporting bizarre high-mismatch findings that turned out to be real
+    pairs compared against the wrong sibling entry, not translation bugs.
+    Sorting by path (which encodes card index and field name, e.g.
+    "cards[3].verse_overlay.reference") is stable across any key
+    ordering, since card position and field identity — not insertion
+    order — are what the corpus actually guarantees to align. Uses a
+    natural-sort key (splitting out bracketed integers) rather than
+    plain lexicographic order, since a plain string sort would put
+    "cards[10]" before "cards[2]".
     """
     pairs: list[ScriptureRef] = []
     _walk(data, "", pairs)
+    pairs.sort(key=lambda ref: _natural_sort_key(ref.path))
     return pairs
+
+
+_PATH_INT_RE = re.compile(r"\d+")
+
+
+def _natural_sort_key(path: str) -> tuple:
+    """Splits a path string into a tuple alternating text chunks and
+    integers (as int, not str) at each bracketed index, so 'cards[10]'
+    sorts after 'cards[9]' instead of before 'cards[2]'."""
+    parts = _PATH_INT_RE.split(path)
+    numbers = _PATH_INT_RE.findall(path)
+    result = []
+    for part, num in zip(parts, numbers + [None]):
+        result.append(part)
+        if num is not None:
+            result.append(int(num))
+    return tuple(result)
 
 
 def _walk(obj, path: str, pairs: list) -> None:
