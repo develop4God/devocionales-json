@@ -2,6 +2,16 @@
   "_comment": "Known cross-edition versification shifts: an EN (KJV/NIV) chapter:verse address that legitimately lands at a DIFFERENT chapter:verse in another language's Bible edition, because that edition splits chapters/verses differently at this point. Each entry means: when validate_translated_pair() can't find the EN-resolved address in the target DB, it retries at (target_chapter, target_verse_start-target_verse_end) instead before reporting a warning. target_* fields are the actual lookup key; native_reference/verified are human-readable documentation only, not used by the code. Add an entry ONLY after confirming the shift directly against the target DB — never to silence an unrelated or unverified failure.",
   "exceptions": [
     {
+      "en_reference": "Leviticus 24:16",
+      "bible_version": "JCB",
+      "lang": "ja",
+      "target_chapter": 24,
+      "target_verse_start": 15,
+      "target_verse_end": 15,
+      "native_reference": "レビ記 24:15",
+      "verified": "JCB merges KJV's verses 15-16 into a single verse 15 (dynamic-equivalence translation); confirmed verse 15 text covers both 'curses his God shall bear his sin' and 'blasphemes the name of the LORD...shall surely be put to death' — chapter has only 23 verses total vs KJV's 23 (13-14 and 15-16 each merged into one)."
+    },
+    {
       "en_reference": "Jonah 1:17",
       "bible_version": "LSG1910",
       "lang": "fr",
