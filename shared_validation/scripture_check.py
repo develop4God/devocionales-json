@@ -178,8 +178,21 @@ def _normalize(text: str) -> str:
     return text
 
 
+# CJK Unified Ideographs (+ Ext-A) and Hiragana/Katakana — scripts written
+# without whitespace between words, where a whitespace .split() collapses
+# an entire verse into one token and always compares as 0% overlap
+# regardless of content (found via peter_water_zh_001.json / _ja_001.json:
+# stored and resolved text were the same verse, differing only by quote
+# marks, yet scored 0%). Any text containing one of these characters is
+# tokenized by individual character instead of by whitespace-split word.
+_CJK_RE = re.compile(r"[぀-ヿ㐀-䶿一-鿿]")
+
+
 def _tokenize(text: str) -> set[str]:
-    return set(_normalize(text).lower().split())
+    normalized = _normalize(text)
+    if _CJK_RE.search(normalized):
+        return set(normalized.replace(" ", ""))
+    return set(normalized.lower().split())
 
 
 def jaccard_similarity(a: str, b: str) -> float:

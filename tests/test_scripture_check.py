@@ -163,6 +163,19 @@ class TestJaccardSimilarity(unittest.TestCase):
         self.assertNotEqual(base, variant)
         self.assertEqual(jaccard_similarity(base, variant), 1.0)
 
+    def test_cjk_text_compared_by_character_not_whitespace_token(self):
+        """Real bug found via peter_water_zh_001.json: CJK text has no
+        spaces, so whitespace .split() collapses an entire verse into one
+        token and any two non-identical verses score 0% regardless of how
+        similar their content actually is. Character-level comparison must
+        recognize these as near-identical (they differ only by quote marks)."""
+        stored = "耶稣赶紧伸手拉住他，说：你这小信的人哪，为什么疑惑呢？"
+        resolved = "耶稣赶紧伸手拉住他，说：「你这小信的人哪，为什么疑惑呢？」"
+        self.assertGreaterEqual(jaccard_similarity(stored, resolved), FUZZY_MATCH_THRESHOLD)
+
+    def test_cjk_completely_different_text_is_low(self):
+        self.assertLess(jaccard_similarity("耶稣爱你", "上帝创造天地"), FUZZY_MATCH_THRESHOLD)
+
 
 # ── validate_pair ────────────────────────────────────────────────────────────
 
