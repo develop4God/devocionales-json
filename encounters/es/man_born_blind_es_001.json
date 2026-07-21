@@ -89,12 +89,20 @@
       "image_url": "man_born_blind_clay_hands.png",
       "title": "Barro del Creador, estanque del Enviado",
       "subtitle": "Dos palabras que firman el milagro",
-      "content": "🏺 El texto griego llama al barro πηλός (pēlos), la misma palabra que la Biblia griega usa para el barro del alfarero. Jesús toma polvo de la tierra y lo aplica sobre unos ojos que nunca funcionaron. El gesto evoca el origen del hombre: el Creador que formó a Adán del polvo (Génesis 2:7) está formando lo que a estos ojos les faltó desde el vientre. Es obra de creación, y por eso mismo va a escandalizar: amasar barro era trabajo prohibido en el día de reposo según la tradición de los fariseos.\n\n💧 Y hay una segunda firma. Juan se detiene a traducir el nombre del estanque: Siloé significa ἀπεσταλμένος (apestalmenos), \"Enviado\". A lo largo de este evangelio, Jesús se presenta como el Enviado del Padre (Juan 9:4). El Enviado lo envía a lavarse en el estanque llamado Enviado: hasta la geografía del milagro predica quién es el que lo hizo.",
+      "content": "El texto griego llama al barro πηλός (pēlos), la misma palabra que la Biblia griega usa para el barro del alfarero. Jesús toma polvo de la tierra y lo aplica sobre unos ojos que nunca funcionaron. El gesto evoca el origen del hombre: el Creador que formó a Adán del polvo (Génesis 2:7) está formando lo que a estos ojos les faltó desde el vientre. Es obra de creación, y por eso mismo va a escandalizar: amasar barro era trabajo prohibido en el día de reposo según la tradición de los fariseos.\n\nY hay una segunda firma. Juan se detiene a traducir el nombre del estanque: Siloé significa ἀπεσταλμένος (apestalmenos), \"Enviado\". A lo largo de este evangelio, Jesús se presenta como el Enviado del Padre (Juan 3:17). El Enviado lo envía a lavarse en el estanque llamado Enviado: hasta la geografía del milagro predica quién es el que lo hizo.",
       "revelation_key": "El milagro lleva doble firma: barro de alfarero que evoca al Creador formando del polvo, y un estanque cuyo propio nombre, Enviado, señala a quien lo envió.",
+      "verse_overlay": {
+        "reference": "Juan 9:7",
+        "text": "y le dijo: Ve a lavarte en el estanque de Siloé (que traducido es, Enviado). Fue entonces, y se lavó, y regresó viendo."
+      },
       "scripture_connections": [
         {
           "reference": "Génesis 2:7",
           "text": "Entonces Jehová Dios formó al hombre del polvo de la tierra, y sopló en su nariz aliento de vida, y fue el hombre un ser viviente."
+        },
+        {
+          "reference": "Juan 3:17",
+          "text": "Porque no envió Dios a su Hijo al mundo para condenar al mundo, sino para que el mundo sea salvo por él."
         }
       ]
     },
@@ -103,15 +111,15 @@
       "type": "cinematic_scene",
       "mood": "tense",
       "image_url": "man_born_blind_neighbors_debate.png",
-      "title": "¿Es él, o se le parece?",
-      "narrative": "El hombre vuelve a su barrio viendo, y su barrio deja de reconocerlo. Unos dicen: él es. Otros: se le parece. Discuten sobre él en su presencia, como han hecho toda su vida. Entonces habla él: Yo soy. Y cuenta su historia por primera vez, con la precisión de quien repite hechos: aquel hombre que se llama Jesús hizo lodo, me untó los ojos, me dijo ve a Siloé y lávate; fui, me lavé, y recibí la vista. Le preguntan dónde está ese Jesús. Su respuesta es honesta: no sé. Todo lo que sabe de Jesús le llegó por el oído y por el barro en los ojos: su testimonio nace antes de ver su rostro.",
+      "title": "Yo soy",
+      "narrative": "Ante la duda de su barrio, él mismo responde: Yo soy — en griego, ἐγώ εἰμι (egō eimi), las mismas dos palabras que Jesús usa a lo largo de este evangelio para hablar de sí mismo, aunque aquí solo significan \"soy el hombre que ustedes conocían\". Y cuenta su historia por primera vez, con la precisión de quien repite hechos: aquel hombre que se llama Jesús hizo lodo, me untó los ojos, me dijo ve a Siloé y lávate; fui, me lavé, y recibí la vista. Le preguntan dónde está ese Jesús. Su respuesta es honesta: no sé. Todo lo que sabe de Jesús le llegó por el oído y por el barro en los ojos: su testimonio nace antes de ver su rostro.",
       "ambient_sound": "crowd_distant",
       "haptic": null,
       "verse_overlay": {
-        "reference": "Juan 9:11",
-        "text": "Respondió él y dijo: Aquel hombre que se llama Jesús hizo lodo, me untó los ojos, y me dijo: Ve al Siloé, y lávate; y fui, y me lavé, y recibí la vista."
+        "reference": "Juan 9:9-12",
+        "text": "Unos decían: Él es; y otros: A él se parece. Él decía: Yo soy. Y le dijeron: ¿Cómo te fueron abiertos los ojos? Respondió él y dijo: Aquel hombre que se llama Jesús hizo lodo, me untó los ojos, y me dijo: Ve al Siloé, y lávate; y fui, y me lavé, y recibí la vista. Entonces le dijeron: ¿Dónde está él? Él dijo: No sé."
       },
-      "revelation_key": "Su primer testimonio nace antes de ver el rostro de Jesús: lo conoce por lo que oyó y sintió, no por haberlo visto todavía."
+      "revelation_key": "Dice \"yo soy\" con las mismas palabras que Jesús usa para sí mismo, sin saberlo: su identidad apenas comienza a formarse alrededor de Aquel a quien todavía no ha visto."
     },
     {
       "order": 7,
