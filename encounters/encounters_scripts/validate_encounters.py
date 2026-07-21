@@ -701,7 +701,8 @@ def validate_image_urls(report: Report) -> None:
 # (the real gate) so scripture findings never block the release while the
 # threshold is being tuned.
 
-def validate_scripture_references(report: Report, index_data: dict, lint_cache: dict) -> None:
+def validate_scripture_references(report: Report, index_data: dict, lint_cache: dict,
+                                   only_lang: Optional[str] = None) -> None:
     """Phase D: resolve every scripture reference found in every loaded
     encounter file and fuzzy-match its stored verse_text against the
     resolved text. Reuses lint_cache (already parsed in Phase 1) rather
@@ -712,9 +713,14 @@ def validate_scripture_references(report: Report, index_data: dict, lint_cache: 
     position with the EN file (guaranteed by Phase B's parity gate), so
     each translated reference is validated against its EN sibling's
     reference via validate_translated_pair (see shared_validation.
-    scripture_check module docstring for why)."""
+    scripture_check module docstring for why).
+
+    only_lang restricts the scan to a single language's files (still
+    resolves the EN sibling for non-EN languages, since validation needs
+    it) — for fast local iteration on one language's findings without
+    scanning the full 10-language corpus."""
     report.I("=" * 60)
-    report.I("PHASE D: SCRIPTURE REFERENCES")
+    report.I("PHASE D: SCRIPTURE REFERENCES" + (f" ({only_lang})" if only_lang else ""))
     report.I("=" * 60)
 
     pairs_checked = 0
@@ -729,6 +735,8 @@ def validate_scripture_references(report: Report, index_data: dict, lint_cache: 
             en_pairs = find_scripture_pairs(en_data) if en_data else None
 
             for lang, fname in files.items():
+                if only_lang and lang != only_lang:
+                    continue
                 fpath = ENCOUNTERS_DIR / lang / fname
                 data = lint_cache.get(fpath)
                 if data is None:
@@ -872,6 +880,12 @@ def validate_cross_file_duplication(report: Report, index_data: dict, lint_cache
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--lang", help="Restrict PHASE D (scripture references) to one language "
+                                        "and run it locally without needing CI=true")
+    args = parser.parse_args()
+
     print("🔍 Starting Encounters Validation...")
     print(f"📁 Encounters directory: {ENCOUNTERS_DIR}")
     print()
@@ -905,10 +919,11 @@ def main():
     # before either is considered for promotion to ERROR. Scans the ENTIRE
     # corpus (2000+ references across 10 languages) every run — too slow
     # for daily local editing, so it's CI-only (see scripture_validation_enabled).
-    if scripture_validation_enabled():
-        run_report.wrap("PHASE D: SCRIPTURE REFERENCES", validate_scripture_references, index_data, lint_cache, gate=False)
+    if scripture_validation_enabled() or args.lang:
+        run_report.wrap("PHASE D: SCRIPTURE REFERENCES", validate_scripture_references, index_data, lint_cache,
+                         args.lang, gate=False)
     else:
-        print("ℹ️  PHASE D: SCRIPTURE REFERENCES — skipped (CI-only; set CI=true to run locally)")
+        print("ℹ️  PHASE D: SCRIPTURE REFERENCES — skipped (CI-only; set CI=true to run locally, or pass --lang)")
 
     # Phase E runs last, after Phase B has passed. Its findings are
     # warnings only (see validate_cross_file_duplication) — fuzzy text

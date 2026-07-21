@@ -585,7 +585,7 @@ def validate_index_json(discovery_dir: Path, report: ValidationReport,
 # validation logic itself.
 
 def validate_scripture_references(report: 'ValidationReport', all_studies: dict,
-                                    bible_database_dir: Path) -> None:
+                                    bible_database_dir: Path, only_lang: Optional[str] = None) -> None:
     """Resolve every scripture reference found in every loaded study file
     and fuzzy-match its stored verse text against the resolved text.
 
@@ -594,9 +594,14 @@ def validate_scripture_references(report: 'ValidationReport', all_studies: dict,
     position with the EN study (guaranteed by Phase B's parity check), so
     each translated reference is validated against its EN sibling's
     reference via validate_translated_pair (see shared_validation.
-    scripture_check module docstring for why)."""
+    scripture_check module docstring for why).
+
+    only_lang restricts the scan to a single language's studies (EN is
+    still loaded as the sibling source for non-EN languages) — for fast
+    local iteration on one language's findings without scanning the full
+    10-language corpus."""
     report.add_info("=" * 60)
-    report.add_info("PHASE: SCRIPTURE REFERENCES")
+    report.add_info("PHASE: SCRIPTURE REFERENCES" + (f" ({only_lang})" if only_lang else ""))
     report.add_info("=" * 60)
 
     pairs_checked = 0
@@ -607,6 +612,8 @@ def validate_scripture_references(report: 'ValidationReport', all_studies: dict,
 
     with ScriptureValidator(bible_database_dir) as validator:
         for lang, lang_studies in all_studies.items():
+            if only_lang and lang != only_lang:
+                continue
             for study_id, data in lang_studies.items():
                 bible_version = data.get('version')
                 if not bible_version:
@@ -727,6 +734,12 @@ def validate_cross_file_duplication(report: ValidationReport, index_studies: dic
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--lang", help="Restrict PHASE D (scripture references) to one language "
+                                        "and run it locally without needing CI=true")
+    args = parser.parse_args()
+
     # Get discovery directory
     script_dir = Path(__file__).parent
     discovery_dir = script_dir.parent
@@ -909,11 +922,11 @@ def main():
     # (2000+ references across 10 languages) every run — too slow for
     # daily local editing, so it's CI-only (see scripture_validation_enabled).
     # ==========================================
-    if scripture_validation_enabled():
+    if scripture_validation_enabled() or args.lang:
         phase_scripture_start = time.monotonic()
         scripture_report = ValidationReport()
         scripture_report.phase = "PHASE_SCRIPTURE"
-        validate_scripture_references(scripture_report, all_studies, discovery_dir.parent / 'bible_database')
+        validate_scripture_references(scripture_report, all_studies, discovery_dir.parent / 'bible_database', only_lang=args.lang)
         phase_scripture_success = scripture_report.print_report(final=False)
         phase_scripture_elapsed = time.monotonic() - phase_scripture_start
 
@@ -921,7 +934,7 @@ def main():
             "PHASE D: SCRIPTURE REFERENCES", scripture_report, phase_scripture_success, phase_scripture_elapsed, gate=False,
         )
     else:
-        print("ℹ️  PHASE D: SCRIPTURE REFERENCES — skipped (CI-only; set CI=true to run locally)")
+        print("ℹ️  PHASE D: SCRIPTURE REFERENCES — skipped (CI-only; set CI=true to run locally, or pass --lang)")
 
     # ==========================================
     # PHASE: Cross-file duplication — runs last, after Phase B (the real
