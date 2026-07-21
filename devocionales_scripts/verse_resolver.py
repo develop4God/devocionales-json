@@ -149,7 +149,16 @@ def fetch_text(
     if not rows or any(r[0] is None for r in rows):
         return None  # missing row, or a NULL text cell (real gap in some DBs) — same as "not found"
     combined = " ".join(r[0] for r in rows)
-    combined = re.sub(r"<[^>]+>", "", combined)            # strip XML tags
+    # <f>...</f> (footnote-marker number, e.g. "<f>[3]</f>") and <n>...</n>
+    # (translator's note, e.g. "<n>\u3014\u6CE8\uFF1A\u6216\u4F5C...\u3015</n>") wrap editorial
+    # apparatus, not verse text \u2014 must drop the whole element including its
+    # content (some CUV1919/zh rows contain 1000+ of these). Every other
+    # tag (<pb/>, <J>...</J> direct-speech, <i>...</i> supplied words) wraps
+    # real verse text, so only its markup is stripped by the generic pass
+    # below, not its content.
+    combined = re.sub(r"<f>.*?</f>", "", combined)
+    combined = re.sub(r"<n>.*?</n>", "", combined)
+    combined = re.sub(r"<[^>]+>", "", combined)            # strip remaining XML tags
     combined = re.sub(r"[\u2460-\u24FF]", "", combined)    # strip Unicode ref markers
     combined = re.sub(r"\s+", " ", combined).strip()
     return combined
