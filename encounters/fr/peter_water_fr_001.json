@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "fr",
   "bible_version": "LSG1910",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 6,
   "meta": {
     "character": "Pierre",
@@ -101,10 +101,10 @@
       "scripture_connections": [
         {
           "reference": "Ésaïe 41:13",
-          "text": "Car je suis l'Éternel, ton Dieu, qui te soutiens par ta main droite, et qui te dis : Ne crains point, je viens à ton secours."
+          "text": "Car je suis l'Éternel, ton Dieu, Qui fortifie ta droite, Qui te dis : Ne crains rien, Je viens à ton secours."
         },
         {
-          "reference": "Psaume 18:16",
+          "reference": "Psaume 18:17",
           "text": "Il étendit la main d'en haut, il me saisit, il me retira des grandes eaux."
         }
       ]
