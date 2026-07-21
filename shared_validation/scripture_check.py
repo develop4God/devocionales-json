@@ -273,13 +273,21 @@ def _is_intentional_truncation(stored: str, resolved: str) -> bool:
     Deliberately does NOT use a length-RATIO floor (see
     _MIN_TRUNCATION_LENGTH) — only an absolute character-count minimum,
     to avoid rejecting genuinely short but legitimate truncations while
-    still blocking trivial short-phrase coincidences."""
-    s = _PUNCT_AND_ELLIPSIS_RE.sub("", stored.lower())
+    still blocking trivial short-phrase coincidences.
+
+    Applies _normalize()'s NFC step before comparing — two visually
+    identical Arabic strings can encode the same combining diacritics in
+    a different codepoint order (see _normalize()'s docstring), which
+    makes a real substring fail a byte-level `in` check even though it's
+    a genuine truncation (found via zacchaeus_ar_001.json cards[6]/[10]:
+    'اليوم تم الخلاص لهذا البيت' as a verified-correct truncated opening
+    of Luke 19:9, rejected outright before this normalization)."""
+    s = _PUNCT_AND_ELLIPSIS_RE.sub("", _normalize(stored).lower())
     s = _WHITESPACE_RE.sub(" ", s).strip()
     min_length = _MIN_TRUNCATION_LENGTH_CJK if _CJK_RE.search(s) else _MIN_TRUNCATION_LENGTH
     if len(s) < min_length:
         return False
-    r = _PUNCT_AND_ELLIPSIS_RE.sub("", resolved.lower())
+    r = _PUNCT_AND_ELLIPSIS_RE.sub("", _normalize(resolved).lower())
     r = _WHITESPACE_RE.sub(" ", r).strip()
     return s in r
 
