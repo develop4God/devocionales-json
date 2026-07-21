@@ -812,6 +812,10 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--lang", help="Restrict PHASE D (scripture references) to one language "
                                         "and run it locally without needing CI=true")
+    parser.add_argument("--scripture-only", action="store_true",
+                         help="Run only PHASE D (scripture references), skipping PHASE SOT/B/C. "
+                              "Still runs PHASE 1/A first since PHASE D depends on their output. "
+                              "Implies scripture validation runs regardless of CI env var.")
     args = parser.parse_args()
 
     print("🔍 Starting Encounters Validation...")
@@ -826,21 +830,28 @@ def main():
     lint_cache = run_report.wrap("PHASE 1: LINT", validate_lint)
     index_data = run_report.wrap("PHASE A: INDEX", validate_index, expected_languages)
 
+    if args.scripture_only:
+        # PHASE 1/A only ran to build lint_cache/index_data, which PHASE D
+        # depends on — their own findings aren't what this mode reports on,
+        # so drop them before they contaminate PHASE D's exit code.
+        run_report.phases.clear()
+
     if index_data is None:
         print("\n❌ PHASE A FAILED - Stopping validation")
         run_report.print_summary()
         run_report.write_github_summary()
         sys.exit(1)
 
-    run_report.wrap("PHASE SOT: BIBLE VERSIONS SOURCE", validate_sot_source, bible_versions, used_remote_sot, last_fetch_error)
-    run_report.wrap("PHASE B: ENCOUNTER FILES", validate_encounter_files, index_data, lint_cache,
-                     bible_versions, expected_languages)
+    if not args.scripture_only:
+        run_report.wrap("PHASE SOT: BIBLE VERSIONS SOURCE", validate_sot_source, bible_versions, used_remote_sot, last_fetch_error)
+        run_report.wrap("PHASE B: ENCOUNTER FILES", validate_encounter_files, index_data, lint_cache,
+                         bible_versions, expected_languages)
 
-    # Phase C runs after the real gate (Phase B) has passed. Its findings
-    # are warnings only (see validate_image_urls); gate=False means an
-    # unreachable image doesn't stop later phases from running, but any
-    # warning it produces still fails the overall run via print_summary().
-    run_report.wrap("PHASE C: IMAGE URLS", validate_image_urls, gate=False)
+        # Phase C runs after the real gate (Phase B) has passed. Its findings
+        # are warnings only (see validate_image_urls); gate=False means an
+        # unreachable image doesn't stop later phases from running, but any
+        # warning it produces still fails the overall run via print_summary().
+        run_report.wrap("PHASE C: IMAGE URLS", validate_image_urls, gate=False)
 
     # Phase D runs after Phase B has passed. Its findings are warnings only
     # (see validate_scripture_references) — resolution failures and fuzzy
@@ -848,7 +859,7 @@ def main():
     # before either is considered for promotion to ERROR. Scans the ENTIRE
     # corpus (2000+ references across 10 languages) every run — too slow
     # for daily local editing, so it's CI-only (see scripture_validation_enabled).
-    if scripture_validation_enabled() or args.lang:
+    if scripture_validation_enabled() or args.lang or args.scripture_only:
         run_report.wrap("PHASE D: SCRIPTURE REFERENCES", validate_scripture_references, index_data, lint_cache,
                          args.lang, gate=False, final=True)
     else:

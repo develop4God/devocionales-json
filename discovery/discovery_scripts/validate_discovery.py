@@ -678,6 +678,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--lang", help="Restrict PHASE D (scripture references) to one language "
                                         "and run it locally without needing CI=true")
+    parser.add_argument("--scripture-only", action="store_true",
+                         help="Only PHASE D (scripture references) counts toward the exit code "
+                              "and summary; PHASE A/B still run internally since PHASE D depends "
+                              "on their output, but their findings are not recorded/gating. "
+                              "Implies scripture validation runs regardless of CI env var.")
     args = parser.parse_args()
 
     # Get discovery directory
@@ -721,9 +726,10 @@ def main():
     phase_a_success = report.print_report(final=False)
     phase_a_elapsed = time.monotonic() - phase_a_start
 
-    run_report.record_phase(
-        "PHASE A: LINT + SOT + INDEX", report, phase_a_success, phase_a_elapsed, gate=True,
-    )
+    if not args.scripture_only:
+        run_report.record_phase(
+            "PHASE A: LINT + SOT + INDEX", report, phase_a_success, phase_a_elapsed, gate=True,
+        )
 
     if not phase_a_success or index_data is None:
         print("\n❌ PHASE A FAILED - Stopping validation")
@@ -851,9 +857,10 @@ def main():
     phase_b_success = report.print_report(final=False)
     phase_b_elapsed = time.monotonic() - phase_b_start
 
-    run_report.record_phase(
-        "PHASE B: TRANSLATION FILES", report, phase_b_success, phase_b_elapsed, gate=True,
-    )
+    if not args.scripture_only:
+        run_report.record_phase(
+            "PHASE B: TRANSLATION FILES", report, phase_b_success, phase_b_elapsed, gate=True,
+        )
 
     # ==========================================
     # PHASE: Scripture references — runs after Phase B (the real gate).
@@ -862,7 +869,7 @@ def main():
     # (2000+ references across 10 languages) every run — too slow for
     # daily local editing, so it's CI-only (see scripture_validation_enabled).
     # ==========================================
-    if scripture_validation_enabled() or args.lang:
+    if scripture_validation_enabled() or args.lang or args.scripture_only:
         phase_scripture_start = time.monotonic()
         scripture_report = ValidationReport()
         scripture_report.phase = "PHASE_SCRIPTURE"
