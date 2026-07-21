@@ -2,7 +2,7 @@
   "encounters": [
     {
       "id": "peter_water_001",
-      "version": "1.6",
+      "version": "1.7",
       "image_version": "1.0",
       "emoji": "🌊",
       "status": "published",
@@ -221,7 +221,7 @@
     },
     {
       "id": "zacchaeus_001",
-      "version": "1.5",
+      "version": "1.6",
       "image_version": "1.0",
       "emoji": "🌳",
       "status": "published",
