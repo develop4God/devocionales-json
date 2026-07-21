@@ -231,6 +231,42 @@ def _tokenize(text: str) -> set[str]:
     return set(normalized.lower().split())
 
 
+_PUNCT_AND_ELLIPSIS_RE = re.compile(r"\.\.\.|[.,;:!?\"'‘’“”()]")
+
+# Below this length, a substring match is too likely to be a coincidental
+# common phrase (e.g. "and he said") rather than a genuine truncated
+# quote — an absolute floor, not a ratio, since real truncations in this
+# corpus are legitimately short relative to their source verse (as low as
+# ~30% of the full verse's length; a length-RATIO floor rejects those).
+_MIN_TRUNCATION_LENGTH = 20
+
+
+def _is_intentional_truncation(stored: str, resolved: str) -> bool:
+    """True if `stored` is a verbatim (post-normalization) excerpt of
+    `resolved` — a prefix, suffix, or middle slice — rather than a
+    reworded/paraphrased version of it. This corpus deliberately quotes
+    partial verses for narrative pacing (e.g. a card stops a quote right
+    before its payoff line, delivering that line in prose instead), which
+    legitimately scores low on jaccard_similarity despite being a correct
+    quote. A truncation never changes any word it does include — it only
+    omits words — so it always survives as an exact contiguous substring
+    of the real verse; a paraphrase (the actual bug class this module
+    exists to catch, e.g. "stretched out" vs. the DB's "stretched forth")
+    never does, regardless of how much text overlaps.
+
+    Deliberately does NOT use a length-ratio floor (see
+    _MIN_TRUNCATION_LENGTH) — only an absolute character-count minimum,
+    to avoid rejecting genuinely short but legitimate truncations while
+    still blocking trivial short-phrase coincidences."""
+    s = _PUNCT_AND_ELLIPSIS_RE.sub("", stored.lower())
+    s = _WHITESPACE_RE.sub(" ", s).strip()
+    if len(s) < _MIN_TRUNCATION_LENGTH:
+        return False
+    r = _PUNCT_AND_ELLIPSIS_RE.sub("", resolved.lower())
+    r = _WHITESPACE_RE.sub(" ", r).strip()
+    return s in r
+
+
 def jaccard_similarity(a: str, b: str) -> float:
     """Token-overlap ratio of two strings' whitespace-split token sets.
     1.0 = identical token sets, 0.0 = no overlap. Two empty strings are
@@ -354,9 +390,11 @@ def validate_translated_pair(
 
 def _compare_text(ref: ScriptureRef, resolved_text: str) -> Optional[Finding]:
     """Shared fuzzy-match step for both validate_pair() and
-    validate_translated_pair() — same threshold, same Finding shape."""
+    validate_translated_pair() — same threshold, same Finding shape.
+    A low jaccard score is only reported if the stored text also fails
+    the truncation check — see _is_intentional_truncation()."""
     similarity = jaccard_similarity(ref.verse_text, resolved_text)
-    if similarity < FUZZY_MATCH_THRESHOLD:
+    if similarity < FUZZY_MATCH_THRESHOLD and not _is_intentional_truncation(ref.verse_text, resolved_text):
         return Finding(
             kind="text_mismatch",
             ref=ref,

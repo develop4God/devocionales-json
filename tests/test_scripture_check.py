@@ -23,7 +23,7 @@ sys.path.insert(0, str(REPO_ROOT / 'devocionales_scripts'))
 from verse_resolver import VerseResolver  # noqa: E402
 from shared_validation.scripture_check import (  # noqa: E402
     ScriptureRef, find_scripture_pairs, validate_pair, validate_translated_pair,
-    jaccard_similarity, FUZZY_MATCH_THRESHOLD,
+    jaccard_similarity, FUZZY_MATCH_THRESHOLD, _is_intentional_truncation,
 )
 
 
@@ -218,6 +218,74 @@ class TestJaccardSimilarity(unittest.TestCase):
 
     def test_cjk_completely_different_text_is_low(self):
         self.assertLess(jaccard_similarity("耶稣爱你", "上帝创造天地"), FUZZY_MATCH_THRESHOLD)
+
+
+# ── _is_intentional_truncation ───────────────────────────────────────────────
+
+class TestIsIntentionalTruncation(unittest.TestCase):
+    """Real cases pulled directly from the corpus during manual Phase D
+    triage: this corpus deliberately quotes partial verses for narrative
+    pacing (a card stops a quote right before its payoff line, delivering
+    that line in prose instead a beat later) — these score low on
+    jaccard_similarity despite being correct, verbatim excerpts. The
+    distinguishing test is exact substring containment after
+    normalization: a truncation only ever OMITS words from the real verse,
+    it never CHANGES any word it does include — so it always survives as
+    a contiguous substring. A paraphrase (the actual bug class this module
+    exists to catch) changes wording, so it never does, regardless of how
+    much text otherwise overlaps."""
+
+    def test_prefix_truncation_zacchaeus(self):
+        stored = "This day is salvation come to this house."
+        resolved = "And Jesus said unto him, This day is salvation come to this house, since he also is a son of Abraham."
+        self.assertTrue(_is_intentional_truncation(stored, resolved))
+
+    def test_suffix_truncation_widow_nain(self):
+        stored = "And he delivered him to his mother."
+        resolved = "And he that was dead sat up, and began to speak. And he delivered him to his mother."
+        self.assertTrue(_is_intentional_truncation(stored, resolved))
+
+    def test_middle_slice_truncation_adultery_woman(self):
+        """Stored text carries a leading literal '...' marking a mid-sentence
+        start — the ellipsis itself must be stripped before the substring
+        check, not treated as literal characters to match against."""
+        stored = "...and Jesus was left alone, and the woman standing before him."
+        resolved = (
+            "And they who heard it, being convicted by their own conscience, went out "
+            "one by one, beginning at the eldest, even unto the last: and Jesus was left "
+            "alone, and the woman standing before him."
+        )
+        self.assertTrue(_is_intentional_truncation(stored, resolved))
+
+    def test_paraphrase_is_not_truncation(self):
+        """The real KJV/King-James-2000 paraphrase bug fixed in
+        peter_water_en_001.json: 'stretched out' vs. the DB's 'stretched
+        forth', 'saying to him' vs. 'and said unto him' — this changes
+        wording, so it must NOT be classified as truncation even though
+        most of the sentence structure overlaps."""
+        stored = (
+            "And immediately Jesus stretched out His hand and caught him, "
+            "saying to him, 'O you of little faith, why did you doubt?'"
+        )
+        resolved = (
+            "And immediately Jesus stretched forth his hand, and caught him, "
+            "and said unto him, O you of little faith, why did you doubt?"
+        )
+        self.assertFalse(_is_intentional_truncation(stored, resolved))
+
+    def test_short_coincidental_phrase_below_length_floor_is_not_truncation(self):
+        """A short, generic phrase can coincidentally appear inside an
+        unrelated verse — the absolute length floor (not a length ratio,
+        since real truncations can be legitimately short relative to their
+        source) blocks this from false-passing as truncation."""
+        stored = "and he said"
+        resolved = "Then Peter answered and he said unto them, Repent, and be baptized every one of you."
+        self.assertFalse(_is_intentional_truncation(stored, resolved))
+
+    def test_unrelated_text_is_not_truncation(self):
+        stored = "For God so loved the world"
+        resolved = "In the beginning God created the heaven and the earth."
+        self.assertFalse(_is_intentional_truncation(stored, resolved))
 
 
 # ── validate_pair ────────────────────────────────────────────────────────────
