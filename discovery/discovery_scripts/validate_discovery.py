@@ -884,6 +884,7 @@ def main():
         sot_live=used_remote_sot,
     )
     run_report.print_summary()
+    run_report.write_github_summary()
 
     return run_report.exit_code
 

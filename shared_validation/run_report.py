@@ -15,6 +15,7 @@ untyped **kwargs bag (which would just relocate the same drift risk behind
 a differently-shaped hardcoded call).
 """
 
+import os
 import subprocess
 import sys
 import time
@@ -130,6 +131,7 @@ class RunReport:
             # it must not be silently skipped just because the run is
             # aborting.
             self.print_summary()
+            self.write_github_summary()
             sys.exit(1)
 
         return result
@@ -152,6 +154,7 @@ class RunReport:
         if gate and not passed:
             print(f"\n❌ {name} FAILED - Stopping validation")
             self.print_summary()
+            self.write_github_summary()
             sys.exit(1)
 
     def _status_icon(self, phase: _PhaseResult) -> str:
@@ -218,3 +221,59 @@ class RunReport:
             print(f"❌ RUN FAILED — {total_errors} errors, {total_warnings} warnings, exit code {exit_code}     (total: {total_elapsed:.1f}s)")
         print('='*80)
         self.exit_code = 0 if overall_passed else 1
+
+    def write_github_summary(self) -> None:
+        """Append a Markdown summary to $GITHUB_STEP_SUMMARY, if set (i.e.
+        running as a GitHub Actions step). No-op locally. Renders as its own
+        panel in the Actions UI, so warnings/errors don't have to be found
+        by scrolling the raw console log.
+
+        Scripture-reference findings get their own collapsible section
+        since that phase is currently WARNING-only (see validate_discovery.
+        py / validate_encounters.py Phase D docstrings) and would otherwise
+        be lost among every other phase's warnings.
+        """
+        summary_path = os.environ.get('GITHUB_STEP_SUMMARY')
+        if not summary_path:
+            return
+
+        total_warnings = sum(len(p.report.warnings) for p in self.phases)
+        total_errors = sum(len(p.report.errors) for p in self.phases)
+        overall_passed = all(p.passed for p in self.phases) and total_warnings == 0
+
+        lines = []
+        lines.append(f"## {self.title}")
+        status = "✅ PASSED" if overall_passed else "❌ FAILED"
+        lines.append(f"{status} — {total_errors} errors, {total_warnings} warnings\n")
+
+        lines.append("| Phase | Status | Time |")
+        lines.append("|---|---|---|")
+        for phase in self.phases:
+            icon = self._status_icon(phase)
+            lines.append(f"| {phase.name} | {icon} | {phase.elapsed:.1f}s |")
+
+        scripture_phases = [p for p in self.phases if 'SCRIPTURE' in p.name.upper()]
+        for phase in scripture_phases:
+            if not phase.report.warnings and not phase.report.errors:
+                continue
+            count = len(phase.report.warnings) + len(phase.report.errors)
+            lines.append(f"\n<details>\n<summary>⚠️ {phase.name} — {count} finding(s)</summary>\n")
+            for msg in phase.report.errors:
+                lines.append(f"- {msg}")
+            for msg in phase.report.warnings:
+                lines.append(f"- {msg}")
+            lines.append("\n</details>")
+
+        other_findings = [
+            (phase, msg)
+            for phase in self.phases if phase not in scripture_phases
+            for msg in (phase.report.errors + phase.report.warnings)
+        ]
+        if other_findings:
+            lines.append(f"\n<details>\n<summary>Other findings — {len(other_findings)}</summary>\n")
+            for phase, msg in other_findings:
+                lines.append(f"- [{phase.name}] {msg}")
+            lines.append("\n</details>")
+
+        with open(summary_path, 'a', encoding='utf-8') as f:
+            f.write("\n".join(lines) + "\n")

@@ -829,6 +829,7 @@ def main():
     if index_data is None:
         print("\n❌ PHASE A FAILED - Stopping validation")
         run_report.print_summary()
+        run_report.write_github_summary()
         sys.exit(1)
 
     run_report.wrap("PHASE SOT: BIBLE VERSIONS SOURCE", validate_sot_source, bible_versions, used_remote_sot, last_fetch_error)
@@ -866,6 +867,7 @@ def main():
         sot_live=used_remote_sot,
     )
     run_report.print_summary()
+    run_report.write_github_summary()
 
     sys.exit(run_report.exit_code)
 
