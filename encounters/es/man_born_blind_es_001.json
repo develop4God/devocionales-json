@@ -163,7 +163,7 @@
       "image_url": "man_born_blind_one_thing_i_know.png",
       "title": "Una cosa sé",
       "subtitle": "El testimonio que ningún experto pudo desmontar",
-      "content": "Los fariseos lo llaman por segunda vez. Ahora la orden es directa: da gloria a Dios; nosotros sabemos que ese hombre (Jesús) es pecador. Le piden retractarse, firmar en contra de Él. Los que exigen son los maestros de Israel; el que responde es el mendigo al que ellos mismos consideran nacido del todo en pecado. \"Si es pecador, no lo sé; una cosa sé, que habiendo yo sido ciego, ahora veo.\" Se planta sobre el único terreno que domina por completo: lo que Jesús hizo en él. Contra un argumento se puede argumentar; contra un hombre que antes era ciego y ahora ve, solo queda la evidencia. Cuando insisten en repetir el interrogatorio, el mendigo pasa a la ofensiva con una ironía valiente: ¿queréis también vosotros haceros sus discípulos? El que empezó respondiendo preguntas termina haciéndolas.",
+      "content": "Los fariseos lo llaman por segunda vez. Ahora la orden es directa: da gloria a Dios; nosotros sabemos que ese hombre (Jesús) es pecador. Le piden retractarse, hablar en contra de Él. Los que exigen son los maestros de Israel; el que responde es el mendigo al que ellos mismos consideran nacido del todo en pecado. \"Si es pecador, no lo sé; una cosa sé, que habiendo yo sido ciego, ahora veo.\" Se planta sobre el único terreno que domina por completo: lo que Jesús hizo en él. Contra un argumento se puede argumentar; contra un hombre que antes era ciego y ahora ve, solo queda la evidencia. Cuando insisten en repetir el interrogatorio, el mendigo pasa a la ofensiva con una ironía valiente: ¿queréis también vosotros haceros sus discípulos? El que empezó respondiendo preguntas termina haciéndolas.",
       "revelation_key": "Frente a los maestros se planta en el único terreno que domina por completo: contra un hombre que era ciego y ahora ve, el argumento se agota.",
       "verse_overlay": {
         "reference": "Juan 9:25",
@@ -200,14 +200,24 @@
       "mood": "grace",
       "image_url": "man_born_blind_found_by_jesus.png",
       "title": "Jesús oyó que le habían expulsado",
-      "narrative": "La noticia de la expulsión llega a los oídos de Jesús. Entonces el evangelio dice una palabra enorme: hallándole. Hallar supone haber buscado. Lo encuentra fuera: fuera de la sinagoga, fuera de su comunidad, fuera del mundo que conocía. Y le hace la pregunta hacia la que toda su historia venía caminando: ¿crees tú en el Hijo de Dios? El hombre responde con la misma honestidad de siempre: ¿quién es, Señor, para que crea en él? La respuesta de Jesús le entrega, en una sola frase, el regalo que faltaba: pues le has visto, y el que habla contigo, él es. Por primera vez en su vida, sus ojos nuevos están mirando el rostro de aquel de quien tanto habló sin conocerlo. Muchos profetas y reyes desearon ver este rostro y no lo vieron (Lucas 10:23-24); él, que ni siquiera lo buscaba, lo tiene de pie frente a él.",
+      "narrative": "La noticia de la expulsión llega a los oídos de Jesús. Entonces el evangelio dice una palabra enorme: εὑρών (heurōn), \"habiéndolo hallado\". Hallar supone haber buscado. Lo encuentra fuera: fuera de la sinagoga, fuera de su comunidad, fuera del mundo que conocía.\n\nY le hace la pregunta hacia la que toda su historia venía caminando: ¿crees tú en el Hijo de Dios? El hombre responde con la misma honestidad de siempre: ¿quién es, Señor, para que crea en él? La respuesta de Jesús le entrega, en una sola frase, el regalo que faltaba: pues le has visto, y el que habla contigo, él es.\n\nPor primera vez en su vida, sus ojos nuevos están mirando el rostro de aquel de quien tanto habló sin conocerlo. Muchos profetas y reyes desearon ver este rostro y no lo vieron (Lucas 10:23-24); a él, que fue hallado sin buscar, el Hijo de Dios mismo le encuentra. En este evangelio, Jesús rara vez declara quién es con tanta claridad; antes lo hizo junto a un pozo, con la mujer samaritana (Juan 4:25-26), y ahora se presenta igual de claro ante este hombre, mendigo de nacimiento y expulsado de la sinagoga por el milagro que había recibido.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
-        "reference": "Juan 9:35",
-        "text": "Oyó Jesús que le habían expulsado; y hallándole, le dijo: ¿Crees tú en el Hijo de Dios?"
+        "reference": "Juan 9:35-37",
+        "text": "Oyó Jesús que le habían expulsado; y hallándole, le dijo: ¿Crees tú en el Hijo de Dios? Respondió él, y dijo: ¿Quién es, Señor, para que crea en él? Le dijo Jesús: Pues le has visto, y el que habla contigo, él es."
       },
-      "revelation_key": "Pocas veces en este evangelio Jesús revela con tanta claridad quién es; a este hombre expulsado por confesarlo, y antes a la samaritana del pozo (Juan 4:25-26), les entrega esa misma respuesta directa."
+      "revelation_key": "El mismo Jesús a quien había defendido sin conocer su rostro, ahora lo busca, lo halla y se lo revela con sus propias palabras: \"el que habla contigo, él es\" — la misma declaración que antes hizo junto a un pozo, a una mujer samaritana.",
+      "scripture_connections": [
+        {
+          "reference": "Lucas 10:23-24",
+          "text": "Y volviéndose a los discípulos, les dijo aparte: Bienaventurados los ojos que ven lo que vosotros veis; porque os digo que muchos profetas y reyes desearon ver lo que vosotros veis, y no lo vieron; y oír lo que oís, y no lo oyeron."
+        },
+        {
+          "reference": "Juan 4:25-26",
+          "text": "Le dijo la mujer: Sé que ha de venir el Mesías, llamado el Cristo; cuando él venga nos declarará todas las cosas. Jesús le dijo: Yo soy, el que habla contigo."
+        }
+      ]
     },
     {
       "order": 12,
