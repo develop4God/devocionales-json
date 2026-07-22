@@ -62,7 +62,7 @@ JSON_TO_DART_FIELD = {
 # Mirrors kEncounterCardRenderedFields in encounter_card_contract.dart as of
 # the last time this script was synced with the Dart source.
 RENDERED_FIELDS_BY_TYPE = {
-    "cinematic_scene": {"mood", "imageUrl", "title", "narrative", "verseOverlay", "revelationKey"},
+    "cinematic_scene": {"mood", "imageUrl", "title", "narrative", "verseOverlay", "scriptureConnections", "revelationKey"},
     "scripture_moment": {"mood", "imageUrl", "title", "subtitle", "verseReference", "verseText",
                           "reflection", "scriptureConnections", "revelationKey"},
     "character_moment": {"mood", "imageUrl", "icon", "title", "subtitle", "content",
@@ -157,9 +157,9 @@ body { font-family: -apple-system, Roboto, Arial, sans-serif; background:#1a1a1a
 .subtitle { color:rgba(255,193,7,0.8); font-size:12px; font-weight:800; letter-spacing:1px;
             text-transform:uppercase; margin-top:8px; }
 .subtitle.center { text-align:center; }
-.narrative, .content { color:rgba(255,255,255,0.8); font-size:16px; line-height:1.7; margin-top:20px; }
+.narrative, .content { color:rgba(255,255,255,0.8); font-size:16px; line-height:1.7; margin-top:20px; white-space:pre-line; }
 .content.strong { color:rgba(255,255,255,0.85); }
-.reflection { color:rgba(255,255,255,0.75); font-size:15px; line-height:1.7; margin-top:24px; text-align:center; }
+.reflection { color:rgba(255,255,255,0.75); font-size:15px; line-height:1.7; margin-top:24px; text-align:center; white-space:pre-line; }
 .verse-badge { display:inline-block; margin-top:16px; padding:6px 12px; border-radius:20px;
                background:rgba(255,193,7,0.15); border:1px solid rgba(255,193,7,0.4);
                color:#ffc107; font-size:11px; font-weight:900; letter-spacing:1.5px; }
@@ -289,6 +289,7 @@ def render_card(card, image_fetcher=None):
             body.append(f'<div class="narrative">{escape(card["narrative"])}</div>')
         if card.get("verse_overlay"):
             body.append(verse_overlay_html(card["verse_overlay"]))
+        body.append(connections_html(card.get("scripture_connections")))
         if card.get("revelation_key"):
             body.append(revelation_html(card["revelation_key"]))
 
