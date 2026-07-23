@@ -1,0 +1,280 @@
+{
+  "id": "man_born_blind_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "pt",
+  "bible_version": "ARC",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 12,
+  "meta": {
+    "character": "O homem que nasceu cego",
+    "testament": "new",
+    "scripture_reference": "S. João 9:1-41",
+    "mood_primary": "dawn",
+    "accent_color": "#2b1a08",
+    "emoji": "🌅",
+    "tags": ["testemunho", "perseguição", "vista", "luz", "coragem", "exclusão", "adoração", "fé"]
+  },
+  "key_verse": {
+    "reference": "S. João 9:25",
+    "text": "Respondeu ele, pois, e disse: Se é pecador, não sei; uma coisa sei, e é que, havendo eu sido cego, agora vejo.",
+    "bible_version": "ARC"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "man_born_blind_temple_gate.png",
+      "title": "O homem à beira do caminho",
+      "narrative": "Jerusalém, dia de sábado. Um homem está sentado onde toda a cidade o conhece: no mesmo lugar onde sempre se sentava para mendigar. Sente na pele um sol que jamais viu. Nasceu cego: toda a sua vida cabe nessas duas palavras. Alguém se aproxima e detém-se junto a ele. Os discípulos perguntam a Jesus: quem pecou, este homem ou seus pais, para que ele nascesse cego? Para eles, sua cegueira precisa de uma causa. Para Jesus, que parou para olhá-lo, essa cegueira é o lugar onde Deus está prestes a agir.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "S. João 9:1-2",
+        "text": "E, passando Jesus, viu um homem cego de nascença. E os seus discípulos lhe perguntaram, dizendo: Rabi, quem pecou, este ou seus pais, para que nascesse cego?"
+      },
+      "revelation_key": "Os discípulos buscam de quem é a culpa. Jesus se detém para olhar o homem."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "man_born_blind_light_of_world.png",
+      "verse_reference": "S. João 9:3-5",
+      "verse_text": "Jesus respondeu: Nem ele pecou, nem seus pais; mas foi assim para que se manifestem nele as obras de Deus. Convém que eu faça as obras daquele que me enviou, enquanto é dia; a noite vem, quando ninguém pode trabalhar. Enquanto estou no mundo, sou a luz do mundo.",
+      "reflection": "A pergunta dos discípulos busca um culpado no passado. A resposta de Jesus olha para frente: sua condição vai ser palco das obras de Deus. Não é castigo, diz Jesus. E então, de pé diante de alguém que jamais viu um amanhecer, ele declara: sou a luz do mundo (João 8:12). O que vem a seguir vai mostrar que ele fala de muito mais do que olhos: fala de visão.",
+      "revelation_key": "Jesus se declara luz do mundo diante de olhos que ainda não conseguem vê-lo — a fé começa a se formar antes da visão.",
+      "scripture_connections": [
+        {
+          "reference": "S. João 8:12",
+          "text": "Falou-lhes, pois, Jesus outra vez, dizendo: Eu sou a luz do mundo; quem me segue não andará em trevas, mas terá a luz da vida."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "man_born_blind_siloam_washing.png",
+      "title": "Caminho a Siloé, ainda cego",
+      "narrative": "Ele escuta alguém cuspir no chão. Depois, dedos que espalham lodo fresco sobre suas pálpebras fechadas. E uma ordem: vai lavar-te no tanque de Siloé. O homem se levanta e caminha às escuras até Siloé, com lodo nos olhos, confiando apenas na palavra daquele desconhecido. Inclina-se sobre a água, lava-se.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "S. João 9:6-7",
+        "text": "Tendo dito isso, cuspiu na terra, e, com a saliva, fez lodo, e untou com o lodo os olhos do cego. E disse-lhe: Vai, lava-te no tanque de Siloé (que significa o Enviado). Foi, pois, e lavou-se, e voltou vendo."
+      },
+      "revelation_key": "Sua obediência começa cega e termina vendo: a própria ordem do milagre ensina que a fé caminha primeiro."
+    },
+    {
+      "order": 4,
+      "type": "character_moment",
+      "mood": "mysterious",
+      "image_url": "man_born_blind_beggar_identity.png",
+      "title": "O que se sentava e mendigava",
+      "subtitle": "Os vizinhos duvidam",
+      "content": "Seus vizinhos o veem passar e param. É o mesmo rosto que viam sentado, pedindo, todos os dias, no mesmo lugar à beira do caminho. Mendigar era a única coisa que um cego de nascença podia fazer para viver: sem aquele lugar, ele não tinha como se sustentar. Agora caminha diferente, olha nos olhos de quem cruza com ele, e já não tem mais aquele lugar que ocupou a vida inteira. Discutem entre si se é o mesmo homem.",
+      "revelation_key": "Ver lhe custou a única coisa que tinha para viver; o que está prestes a ganhar vale mais do que o que acabou de perder.",
+      "verse_overlay": {
+        "reference": "S. João 9:8",
+        "text": "Então, os vizinhos e aqueles que dantes tinham visto que era cego diziam: Não é este aquele que estava assentado e mendigava?"
+      }
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "man_born_blind_clay_hands.png",
+      "title": "Lodo do Criador, tanque do Enviado",
+      "subtitle": "Duas palavras que assinam o milagre",
+      "content": "O texto grego chama o lodo de πηλός (pēlos), a mesma palavra que a Bíblia grega usa para o barro do oleiro. Jesus toma pó da terra e o aplica sobre olhos que nunca funcionaram. O gesto evoca a origem do homem: o Criador que formou Adão do pó (Gênesis 2:7) está formando o que faltava a esses olhos desde o ventre. É obra de criação, e por isso mesmo vai escandalizar: amassar lodo era trabalho proibido no dia de sábado segundo a tradição dos fariseus.\n\nE há uma segunda assinatura. João interrompe a narrativa para traduzir o nome do tanque: Siloé significa ἀπεσταλμένος (apestalmenos), \"Enviado\". Ao longo deste evangelho, Jesus se apresenta como o Enviado do Pai (João 3:17). O Enviado o manda lavar-se no tanque chamado Enviado: até a geografia do milagre prega quem é aquele que o fez.",
+      "revelation_key": "Jesus escolhe o dia em que amassar lodo é proibido para fazer, com as mãos, a mesma obra que um dia fez apenas com falar.",
+      "verse_overlay": {
+        "reference": "S. João 9:7",
+        "text": "E disse-lhe: Vai, lava-te no tanque de Siloé (que significa o Enviado). Foi, pois, e lavou-se, e voltou vendo."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Gênesis 2:7",
+          "text": "E formou o SENHOR Deus o homem do pó da terra e soprou em seus narizes o fôlego da vida; e o homem foi feito alma vivente."
+        },
+        {
+          "reference": "S. João 3:17",
+          "text": "Porque Deus enviou o seu Filho ao mundo não para que condenasse o mundo, mas para que o mundo fosse salvo por ele."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "man_born_blind_neighbors_debate.png",
+      "title": "Sou eu",
+      "narrative": "Diante da dúvida de sua vizinhança, ele mesmo responde: Sou eu — em grego, ἐγώ εἰμι (egō eimi), as mesmas duas palavras que Jesus usa ao longo deste evangelho para falar de si mesmo, embora aqui elas signifiquem apenas \"sou o homem que vocês conheciam\". E conta sua história pela primeira vez, com a precisão de quem repete os fatos: aquele homem chamado Jesus fez lodo, untou meus olhos, disse-me vai a Siloé e lava-te; fui, lavei-me, e recebi a vista. Perguntam-lhe onde está esse Jesus. Sua resposta é honesta: não sei. Tudo o que sabe de Jesus lhe chegou pelo ouvido e pelo lodo nos olhos: seu testemunho nasce antes de ver o rosto dele.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "S. João 9:9-12",
+        "text": "Uns diziam: É este. E outros: Parece-se com ele. Ele dizia: Sou eu. Diziam-lhe, pois: Como se te abriram os olhos? Ele respondeu e disse-lhes: O homem chamado Jesus fez lodo, e untou-me os olhos, e disse-me: Vai ao tanque de Siloé e lava-te. Então, fui, e lavei-me, e vi. Disseram-lhe, pois: Onde está ele? Respondeu: Não sei."
+      },
+      "revelation_key": "Diz \"sou eu\" com as mesmas palavras que Jesus usa para si mesmo, sem sabê-lo: sua identidade apenas começa a se formar ao redor daquele a quem ainda não viu."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "man_born_blind_first_interrogation.png",
+      "verse_reference": "S. João 9:16-17",
+      "verse_text": "Então, alguns dos fariseus diziam: Este homem não é de Deus, pois não guarda o sábado. Diziam outros: Como pode um homem pecador fazer tais sinais? E havia dissensão entre eles. Tornaram, pois, a dizer ao cego: Tu que dizes daquele que te abriu os olhos? E ele respondeu: Que é profeta.",
+      "reflection": "Os vizinhos levam o homem diante dos fariseus, os líderes religiosos de Jerusalém, porque Jesus o curou no dia de sábado (Êxodo 20:8-11), o dia que a lei mandava guardar sem trabalhar. Alguns fariseus concluem que Jesus não pode vir de Deus: quebrou essa regra. Outros fazem a pergunta que a regra não responde: como pode um pecador devolver a vista a um cego de nascença? Não conseguem chegar a um acordo, e perguntam ao próprio homem o que ele pensa de Jesus. Antes o havia chamado apenas de \"aquele homem\"; agora responde com uma palavra maior: é profeta. Os profetas haviam anunciado que o próprio Deus abriria os olhos dos cegos quando viesse salvar seu povo (Isaías 35:5); sem saber, os fariseus têm esse sinal sentado diante deles, respondendo suas perguntas.",
+      "revelation_key": "Cada pergunta hostil amplia sua confissão: de \"aquele homem\" a \"profeta\".",
+      "scripture_connections": [
+        {
+          "reference": "Isaías 35:5",
+          "text": "Então, os olhos dos cegos serão abertos, e os ouvidos dos surdos se abrirão."
+        },
+        {
+          "reference": "Êxodo 20:8-11",
+          "text": "Lembra-te do dia do sábado, para o santificar. Seis dias trabalharás e farás toda a tua obra, mas o sétimo dia é o sábado do SENHOR, teu Deus; não farás nenhuma obra, nem tu, nem o teu filho, nem a tua filha, nem o teu servo, nem a tua serva, nem o teu animal, nem o teu estrangeiro que está dentro das tuas portas. Porque em seis dias fez o SENHOR os céus e a terra, o mar e tudo que neles há e ao sétimo dia descansou; portanto, abençoou o SENHOR o dia do sábado e o santificou."
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "man_born_blind_parents_fear.png",
+      "title": "Idade tem, perguntai a ele",
+      "narrative": "Os fariseus buscam desfazer o milagre por outro caminho: talvez esse homem nunca tenha sido cego. Chamam seus pais. Eles confirmam o inegável: é nosso filho, e nasceu cego. Quanto ao resto, se afastam: idade tem, perguntai a ele; ele falará por si mesmo. É que as autoridades judaicas já haviam combinado expulsar da sinagoga qualquer um que confessasse Jesus como o Cristo, e os pais tinham medo: o preço já estava definido. Seu filho fica sozinho diante dos mesmos fariseus que acabaram de emudecer seus pais.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "S. João 9:22",
+        "text": "Seus pais disseram isso, porque temiam os judeus, porquanto já os judeus tinham resolvido que, se alguém confessasse ser ele o Cristo, fosse expulso da sinagoga."
+      },
+      "revelation_key": "O preço de confessar Jesus já estava definido de antemão, e o medo de pagá-lo emudece os pais diante do próprio filho."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "man_born_blind_one_thing_i_know.png",
+      "title": "Uma coisa sei",
+      "subtitle": "O testemunho que nenhum especialista pôde derrubar",
+      "content": "Os fariseus o chamam pela segunda vez. Agora a ordem é direta: dá glória a Deus; nós sabemos que esse homem (Jesus) é pecador. Pedem-lhe que se retrate, que fale contra ele. Os que exigem são os mestres de Israel; quem responde é o mendigo que eles mesmos consideram nascido inteiramente em pecado. Ele não discute teologia: responde que não sabe se Jesus é pecador, mas que uma coisa sabe com certeza — que era cego e agora vê (João 9:25). Planta-se sobre o único terreno que domina por completo: o que Jesus fez nele. Contra um argumento se pode argumentar; contra um homem que antes era cego e agora vê, só resta a evidência. Quando insistem em repetir o interrogatório, o mendigo revida com uma ironia corajosa: quereis vós também tornar-vos discípulos dele? Quem começou respondendo perguntas termina fazendo-as.",
+      "revelation_key": "O mendigo entra respondendo perguntas de seus juízes; sai fazendo uma a eles.",
+      "verse_overlay": {
+        "reference": "S. João 9:25",
+        "text": "Respondeu ele, pois, e disse: Se é pecador, não sei; uma coisa sei, e é que, havendo eu sido cego, agora vejo."
+      }
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "falling",
+      "image_url": "man_born_blind_cast_out.png",
+      "title": "Expulso",
+      "subtitle": "O primeiro crente que pagou o preço",
+      "content": "A palavra que João usa para a ameaça é ἀποσυνάγωγος (aposynagōgos): \"fora da sinagoga\". Aparece somente neste evangelho (João 9:22; 12:42; 16:2), e descreve um dos castigos mais duros daquele mundo: perder a sinagoga significava perder o lugar de adoração, a comunidade, os negócios e a honra da família. Era ficar fora de quase tudo que sustentava a vida de um judeu.\n\nQuando o homem se recusa a se retratar, os fariseus proferem sentença sobre sua pessoa: tu nasceste todo em pecado, e nos ensinas a nós? Devolvem a ele a mesma ideia da qual Jesus já o havia livrado: que sua cegueira era um castigo. E o expulsam. Esse mendigo é o primeiro expulso por causa de Jesus que este evangelho registra: paga esse preço antes dos apóstolos, no mesmo dia em que recebeu a vista. Jesus anunciaria depois a seus discípulos que esse mesmo preço os esperava.",
+      "revelation_key": "Os mesmos que não conseguiram derrubar o milagre, encerram com a acusação da qual Jesus já o havia livrado: que nasceu em pecado.",
+      "scripture_connections": [
+        {
+          "reference": "S. João 9:22",
+          "text": "Seus pais disseram isso, porque temiam os judeus, porquanto já os judeus tinham resolvido que, se alguém confessasse ser ele o Cristo, fosse expulso da sinagoga."
+        },
+        {
+          "reference": "S. João 12:42",
+          "text": "Apesar de tudo, até muitos dos principais creram nele; mas não o confessavam por causa dos fariseus, para não serem expulsos da sinagoga."
+        },
+        {
+          "reference": "S. João 16:2",
+          "text": "Expulsar-vos-ão das sinagogas; vem mesmo a hora em que qualquer que vos matar cuidará fazer um serviço a Deus."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "man_born_blind_found_by_jesus.png",
+      "title": "Jesus ouviu que o tinham expulsado",
+      "narrative": "A notícia da expulsão chega aos ouvidos de Jesus. Então o evangelho diz uma palavra enorme: εὑρών (heurōn), \"tendo-o encontrado\". Encontrar supõe ter procurado. Ele o encontra fora: fora da sinagoga, fora de sua comunidade, fora do mundo que conhecia.\n\nE faz a ele a pergunta para a qual toda a sua história vinha caminhando: crês tu no Filho de Deus? O homem responde com a mesma honestidade de sempre: quem é ele, Senhor, para que eu creia nele? A resposta de Jesus entrega, numa só frase, o presente que faltava: tu já o tens visto, e é aquele que fala contigo.\n\nPela primeira vez em sua vida, seus olhos novos estão olhando o rosto daquele de quem tanto falou sem conhecê-lo. Muitos profetas e reis desejaram ver esse rosto e não o viram (Lucas 10:23-24); a ele, que foi encontrado sem procurar, o próprio Filho de Deus veio ao encontro. Neste evangelho, Jesus raramente declara quem é com tanta clareza; antes o fez junto a um poço, com a mulher samaritana (João 4:25-26), e agora se apresenta igualmente claro diante desse homem, mendigo de nascença e expulso da sinagoga por causa do milagre que havia recebido.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "S. João 9:35-37",
+        "text": "Jesus ouviu que o tinham expulsado e, encontrando-o, disse-lhe: Crês tu no Filho de Deus? Ele respondeu e disse: Quem é ele, Senhor, para que nele creia? E Jesus lhe disse: Tu já o tens visto, e é aquele que fala contigo."
+      },
+      "revelation_key": "Defendeu Jesus diante dos fariseus sem jamais ter visto o rosto dele; agora, finalmente, o tem diante de si — a fé chegou antes da visão.",
+      "scripture_connections": [
+        {
+          "reference": "S. Lucas 10:23-24",
+          "text": "E, voltando-se para os discípulos, disse-lhes em particular: Bem-aventurados os olhos que veem o que vós vedes, pois vos digo que muitos profetas e reis desejaram ver o que vós vedes e não o viram; e ouvir o que ouvis e não o ouviram."
+        },
+        {
+          "reference": "S. João 4:25-26",
+          "text": "A mulher disse-lhe: Eu sei que o Messias (que se chama o Cristo) vem; quando ele vier, nos anunciará tudo. Jesus disse-lhe: Eu o sou, eu que falo contigo."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "man_born_blind_worship.png",
+      "title": "Creio, Senhor; e o adorou",
+      "subtitle": "A confissão termina prostrada",
+      "content": "A resposta do homem cabe em duas palavras e um gesto: Creio, Senhor; e o adorou. O verbo grego é προσεκύνησεν (prosekynēsen): prostrar-se em terra, render adoração. É o verbo que este evangelho reserva para a adoração devida a Deus (João 4:23-24, os \"verdadeiros adoradores\" do Pai). O homem o dirige a Jesus, e Jesus o recebe. Aquele que começou chamando-o apenas de \"aquele homem\" termina prostrado a seus pés.\n\nAlguns fariseus que estavam com ele presenciam a cena. Jesus então pronuncia o veredito de toda a cena: para juízo vim a este mundo, para que os que não veem, vejam, e os que veem, sejam cegos. Alguns fariseus perguntam se acaso eles também são cegos, e a resposta de Jesus é solene: porque dizeis \"vemos\", vosso pecado permanece. A história se encerra com duas posturas diante da mesma luz: o mendigo, que reconheceu sua cegueira e agora vê e adora; e os especialistas que, seguros de sua visão, ficam nas trevas. Ver começa por reconhecer a própria cegueira.",
+      "revelation_key": "O mendigo dirige a Jesus o mesmo verbo que este evangelho reserva para adorar a Deus — e Jesus o recebe sem corrigi-lo.",
+      "verse_overlay": {
+        "reference": "S. João 9:39",
+        "text": "E disse-lhe Jesus: Eu vim a este mundo para juízo, a fim de que os que não veem vejam e os que veem sejam cegos."
+      },
+      "scripture_connections": [
+        {
+          "reference": "S. João 4:23-24",
+          "text": "Mas a hora vem, e agora é, em que os verdadeiros adoradores adorarão o Pai em espírito e em verdade, porque o Pai procura a tais que assim o adorem. Deus é Espírito, e importa que os que o adoram o adorem em espírito e em verdade."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "man_born_blind_your_encounter.png",
+      "title": "Seu Encontro",
+      "subtitle": "Um testemunho de primeira mão resiste a qualquer interrogatório.",
+      "discovery_questions": [
+        {
+          "category": "Testemunho",
+          "question": "Encurralado pelos especialistas, o homem se firmou sobre uma única certeza: \"uma coisa sei, e é que, havendo eu sido cego, agora vejo\". Qual é a \"uma coisa\" que você sabe de primeira mão que Jesus fez em sua vida, aquela que nenhuma discussão ou zombaria pode tirar de você?"
+        },
+        {
+          "category": "Coragem",
+          "question": "Seus pais conheciam a verdade e se calaram por medo de perder a sinagoga; seu filho a disse e a perdeu. Em que lugar da sua vida (família, trabalho, amizades) dizer o que Jesus fez por você tem um custo real, e que passo concreto você daria para dizê-lo com coragem?"
+        },
+        {
+          "category": "Fé",
+          "question": "Jesus ouviu que o haviam expulsado, o procurou e o encontrou fora, e ali o homem passou de defender Jesus a adorá-lo. Se hoje você está \"fora\" de algum lugar por causa da sua fé ou da sua história, o que significaria deixar que Jesus o encontre exatamente ali e responder a ele como ele: \"Creio, Senhor\"?"
+        }
+      ],
+      "prayer": {
+        "title": "Uma coisa sei",
+        "content": "Senhor Jesus, tu me viste antes de eu saber o teu nome. Obrigado por tirar de mim a culpa que carreguei por tanto tempo e por fazer da minha história o lugar onde tuas obras se manifestam. Ajuda-me a ter uma fé como a do homem que nasceu cego, que não duvidou, mas fez o que lhe indicaste e se encheu da tua graça e misericórdia. Fortalece minha coragem para contar a outros as maravilhas do teu favor em minha vida, e se confessar-te me deixar de fora ou distante de algo deste mundo, sai a me buscar como o buscaste, até que eu possa olhar-te de frente e te dizer, prostrado: Creio, Senhor. Obrigado porque me deste a vista e agora posso ver-te e amar-te. Em nome de Jesus, amém."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "man_born_blind_completion.png",
+      "completion_verse": {
+        "reference": "S. João 9:25",
+        "text": "Respondeu ele, pois, e disse: Se é pecador, não sei; uma coisa sei, e é que, havendo eu sido cego, agora vejo.",
+        "bible_version": "ARC"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
