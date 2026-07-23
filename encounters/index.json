@@ -964,19 +964,34 @@
       "testament": "new",
       "character": "El hombre que nació ciego",
       "files": {
-        "es": "man_born_blind_es_001.json"
+        "es": "man_born_blind_es_001.json",
+        "en": "man_born_blind_en_001.json",
+        "fr": "man_born_blind_fr_001.json",
+        "pt": "man_born_blind_pt_001.json"
       },
       "titles": {
-        "es": "Una cosa sé"
+        "es": "Una cosa sé",
+        "en": "One thing I know",
+        "fr": "Je sais une chose",
+        "pt": "Uma coisa sei"
       },
       "subtitles": {
-        "es": "El testimonio que resistió todos los interrogatorios."
+        "es": "El testimonio que resistió todos los interrogatorios.",
+        "en": "A testimony that withstood every interrogation.",
+        "fr": "Un témoignage qui a résisté à tous les interrogatoires.",
+        "pt": "Um testemunho que resistiu a todos os interrogatórios."
       },
       "scripture_reference": {
-        "es": "Juan 9:1-41"
+        "es": "Juan 9:1-41",
+        "en": "John 9:1-41",
+        "fr": "Jean 9:1-41",
+        "pt": "S. João 9:1-41"
       },
       "estimated_reading_minutes": {
-        "es": 11
+        "es": 11,
+        "en": 10,
+        "fr": 12,
+        "pt": 12
       }
     }
   ]
