@@ -31,7 +31,7 @@ PHASE 1: FIRST                                               ✅ PASS  (<ELAPSED
 PHASE 2: FAILS                                               ❌ FAIL  (<ELAPSED>s)
 ────────────────────────────────────────────────────────────────────────────────
 
-ℹ️  INFO (1)     ⚠️  WARNINGS (0)     ❌ ERRORS (2)
+⚠️  WARNINGS (0)     ❌ ERRORS (2)
 
   [PHASE 2: FAILS] ❌ ERROR: a required field was missing
   [PHASE 2: FAILS] ❌ ERROR: a second, unrelated error

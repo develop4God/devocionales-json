@@ -199,13 +199,10 @@ class RunReport:
             print(f"{phase.name:<60} {icon}  ({phase.elapsed:.1f}s)")
         print('─'*80)
 
-        total_info = sum(len(p.report.info) for p in self.phases)
         total_warnings = sum(len(p.report.warnings) for p in self.phases)
         total_errors = sum(len(p.report.errors) for p in self.phases)
         if total_warnings or total_errors:
-            print(f"\nℹ️  INFO ({total_info})     ⚠️  WARNINGS ({total_warnings})     ❌ ERRORS ({total_errors})")
-        else:
-            print(f"\nℹ️  INFO ({total_info})     — no warnings or errors")
+            print(f"\n⚠️  WARNINGS ({total_warnings})     ❌ ERRORS ({total_errors})")
 
         if total_warnings or total_errors:
             print()

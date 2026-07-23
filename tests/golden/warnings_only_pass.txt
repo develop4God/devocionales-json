@@ -34,7 +34,7 @@ PHASE 1: GATE                                                ✅ PASS  (<ELAPSED
 PHASE 2: WARNS                                               ⚠️  WARN  (<ELAPSED>s)
 ────────────────────────────────────────────────────────────────────────────────
 
-ℹ️  INFO (2)     ⚠️  WARNINGS (1)     ❌ ERRORS (0)
+⚠️  WARNINGS (1)     ❌ ERRORS (0)
 
   [PHASE 2: WARNS] ⚠️  WARNING: one item could not be reached, but this is non-fatal
 
