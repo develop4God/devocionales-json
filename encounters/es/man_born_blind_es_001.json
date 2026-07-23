@@ -226,12 +226,18 @@
       "image_url": "man_born_blind_worship.png",
       "title": "Creo, Señor; y le adoró",
       "subtitle": "La confesión termina postrada",
-      "content": "La respuesta del hombre cabe en dos palabras y un gesto: Creo, Señor; y le adoró. El verbo griego es προσεκύνησεν (prosekynēsen): postrarse en tierra, rendir adoración. Es el verbo que este evangelio reserva para la adoración debida a Dios (Juan 4:23-24, los \"verdaderos adoradores\" del Padre). El hombre lo dirige a Jesús, y Jesús lo recibe. La confesión que empezó llamándole \"aquel hombre\" termina postrada a sus pies.\n\nEntonces Jesús pronuncia el veredicto de toda la escena: para juicio ha venido, para que los que no ven, vean, y los que ven, sean cegados. Unos fariseos preguntan si acaso ellos también son ciegos, y la respuesta de Jesús es solemne: porque dicen \"vemos\", su pecado permanece. La historia cierra con dos posturas ante la misma luz: el mendigo, que reconoció su ceguera y ahora ve y adora; y los expertos que, seguros de su vista, quedan a oscuras. Ver empieza por reconocer la propia ceguera.",
-      "revelation_key": "La confesión que empezó en \"aquel hombre\" termina postrada: su adoración muestra quién ve de verdad, mientras los que dicen \"vemos\" quedan ciegos.",
+      "content": "La respuesta del hombre cabe en dos palabras y un gesto: Creo, Señor; y le adoró. El verbo griego es προσεκύνησεν (prosekynēsen): postrarse en tierra, rendir adoración. Es el verbo que este evangelio reserva para la adoración debida a Dios (Juan 4:23-24, los \"verdaderos adoradores\" del Padre). El hombre lo dirige a Jesús, y Jesús lo recibe. Aquel que empezó llamándole apenas \"aquel hombre\", termina postrado a sus pies.\n\nUnos fariseos que estaban con él alcanzan a oír la escena. Jesús pronuncia entonces el veredicto de toda la escena: para juicio ha venido, para que los que no ven, vean, y los que ven, sean cegados. Unos fariseos preguntan si acaso ellos también son ciegos, y la respuesta de Jesús es solemne: porque dicen \"vemos\", su pecado permanece. La historia cierra con dos posturas ante la misma luz: el mendigo, que reconoció su ceguera y ahora ve y adora; y los expertos que, seguros de su vista, quedan a oscuras. Ver empieza por reconocer la propia ceguera.",
+      "revelation_key": "El mendigo dirige a Jesús el mismo verbo que este evangelio reserva para adorar a Dios — y Jesús lo recibe sin corregirlo.",
       "verse_overlay": {
         "reference": "Juan 9:39",
         "text": "Dijo Jesús: Para juicio he venido yo a este mundo; para que los que no ven, vean, y los que ven, sean cegados."
-      }
+      },
+      "scripture_connections": [
+        {
+          "reference": "Juan 4:23-24",
+          "text": "Mas la hora viene, y ahora es, cuando los verdaderos adoradores adorarán al Padre en espíritu y en verdad; porque también el Padre tales adoradores busca que le adoren. Dios es Espíritu; y los que le adoran, en espíritu y en verdad es necesario que adoren."
+        }
+      ]
     },
     {
       "order": 13,
@@ -246,7 +252,7 @@
         },
         {
           "category": "Valentía",
-          "question": "Sus padres conocían la verdad y la callaron por miedo a perder la sinagoga; su hijo la dijo y la perdió. ¿En qué lugar de tu vida (familia, trabajo, amistades) decir lo que Jesús ha hecho por ti tiene un costo real, y qué paso concreto darías esta semana para decirlo de todos modos?"
+          "question": "Sus padres conocían la verdad y la callaron por miedo a perder la sinagoga; su hijo la dijo y la perdió. ¿En qué lugar de tu vida (familia, trabajo, amistades) decir lo que Jesús ha hecho por ti tiene un costo real, y qué paso concreto darías para decirlo con valentía?"
         },
         {
           "category": "Fe",
@@ -255,7 +261,7 @@
       ],
       "prayer": {
         "title": "Una cosa sé",
-        "content": "Señor Jesús, tú me viste antes de que yo supiera tu nombre. Gracias por quitarme la culpa que cargué tanto tiempo y hacer de mi historia el lugar donde tus obras se muestran. Enséñame a obedecerte todavía a oscuras, como en aquel camino a Siloé, dando cada paso con tu palabra como único equipaje. Y cuando me pregunten por ti, cuando decir la verdad me cueste caro, sostenme en la única cosa que sé: yo estaba ciego, y tú me hiciste ver. Si confesarte me deja fuera, sal a buscarme como lo buscaste a él, hasta que pueda mirarte de frente y decirte, postrado: Creo, Señor. Amén."
+        "content": "Señor Jesús, tú me viste antes de que yo supiera tu nombre. Gracias por quitarme la culpa que cargué tanto tiempo y hacer de mi historia el lugar donde tus obras se muestran. Ayúdame a que mi fe sea como la del hombre que nació ciego, que no dudó, sino que hizo lo que tú le indicaste y se llenó de tu gracia y misericordia. Fortalece mi valentía para decir a otros las maravillas de tu favor en mi vida, y si confesarte me deja fuera o lejos de algo de este mundo, sal a buscarme como lo buscaste a él, hasta que pueda mirarte de frente y decirte, postrado: Creo, Señor. Gracias porque me diste la vista y ahora puedo verte y amarte. En el nombre de Jesús, amén."
       }
     },
     {
