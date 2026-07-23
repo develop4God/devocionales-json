@@ -11,6 +11,7 @@ check.
 """
 
 import io
+import os
 import re
 from contextlib import redirect_stdout
 from pathlib import Path
@@ -35,13 +36,26 @@ def normalize(output: str) -> str:
 
 def capture(fn, *args, **kwargs) -> str:
     """Run fn (which prints to stdout, and may call sys.exit) and return its
-    normalized stdout output, regardless of whether it exits or returns."""
+    normalized stdout output, regardless of whether it exits or returns.
+
+    Also hides GITHUB_STEP_SUMMARY for the duration of the call. RunReport
+    writes to that file as a side effect of a gate failure (see
+    RunReport.wrap/record_phase), and under real CI it's always set — so
+    without this, these tests' synthetic fixture data (e.g. "a required
+    field was missing") would leak into the real job's GitHub Actions
+    summary panel alongside the actual validator results.
+    """
     buf = io.StringIO()
-    with redirect_stdout(buf):
-        try:
-            fn(*args, **kwargs)
-        except SystemExit:
-            pass
+    old_summary = os.environ.pop('GITHUB_STEP_SUMMARY', None)
+    try:
+        with redirect_stdout(buf):
+            try:
+                fn(*args, **kwargs)
+            except SystemExit:
+                pass
+    finally:
+        if old_summary is not None:
+            os.environ['GITHUB_STEP_SUMMARY'] = old_summary
     return normalize(buf.getvalue())
 
 
