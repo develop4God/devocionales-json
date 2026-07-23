@@ -56,7 +56,6 @@ from shared_validation.text_checks import (
 from shared_validation.lint import lint_json_files
 from shared_validation.scripture_check import (
     ScriptureValidator, find_scripture_pairs, validate_pair, validate_translated_pair,
-    scripture_validation_enabled,
 )
 
 class ValidationReport:
@@ -870,22 +869,20 @@ def main():
     # PHASE: Scripture references — runs after Phase B (the real gate).
     # Its own ValidationReport instance/timing since it never gates the run
     # (gate=False) — findings are warnings only. Scans the ENTIRE corpus
-    # (2000+ references across 10 languages) every run — too slow for
-    # daily local editing, so it's CI-only (see scripture_validation_enabled).
+    # (2000+ references across 10 languages) every run — confirmed fast
+    # (~1s locally against the SQLite bible_database) so it always runs,
+    # local or CI, not just when CI=true.
     # ==========================================
-    if scripture_validation_enabled() or args.lang or args.scripture_only:
-        phase_scripture_start = time.monotonic()
-        scripture_report = ValidationReport()
-        scripture_report.phase = "PHASE_SCRIPTURE"
-        validate_scripture_references(scripture_report, all_studies, discovery_dir.parent / 'bible_database', only_lang=args.lang)
-        phase_scripture_success = scripture_report.print_report(final=False)
-        phase_scripture_elapsed = time.monotonic() - phase_scripture_start
+    phase_scripture_start = time.monotonic()
+    scripture_report = ValidationReport()
+    scripture_report.phase = "PHASE_SCRIPTURE"
+    validate_scripture_references(scripture_report, all_studies, discovery_dir.parent / 'bible_database', only_lang=args.lang)
+    phase_scripture_success = scripture_report.print_report(final=False)
+    phase_scripture_elapsed = time.monotonic() - phase_scripture_start
 
-        run_report.record_phase(
-            "PHASE D: SCRIPTURE REFERENCES", scripture_report, phase_scripture_success, phase_scripture_elapsed, gate=False,
-        )
-    else:
-        print("ℹ️  PHASE D: SCRIPTURE REFERENCES — skipped (CI-only; set CI=true to run locally, or pass --lang)")
+    run_report.record_phase(
+        "PHASE D: SCRIPTURE REFERENCES", scripture_report, phase_scripture_success, phase_scripture_elapsed, gate=False,
+    )
 
     run_report.add_coverage(
         studies_found=len(report.stats['studies_found']),
