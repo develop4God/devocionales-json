@@ -54,6 +54,10 @@ from shared_validation.text_checks import (
     check_greek_hebrew_transliteration, is_cognate,
 )
 from shared_validation.lint import lint_json_files
+from shared_validation.scripture_check import (
+    ScriptureValidator, find_scripture_pairs, validate_pair, validate_translated_pair,
+    scripture_validation_enabled,
+)
 
 class ValidationReport:
     def __init__(self):
@@ -567,7 +571,120 @@ def validate_index_json(discovery_dir: Path, report: ValidationReport,
     return index_data
 
 
+# ── Phase: Scripture references ─────────────────────────────────────────────
+#
+# Verifies every {reference, verse_text}-shaped pair actually resolves
+# against the Bible version cited for that file, and that the stored text
+# matches the resolved text closely enough (fuzzy match — see
+# shared_validation.scripture_check). WARNING-only for this initial
+# rollout — see the issue's Rollout section. Runs after Phase B (the real
+# gate) so scripture findings never block the release while the fuzzy-match
+# threshold is being tuned. Shares shared_validation.scripture_check with
+# encounters' equivalent phase — no corpus-specific duplication of the
+# validation logic itself.
+
+def validate_scripture_references(report: 'ValidationReport', all_studies: dict,
+                                    bible_database_dir: Path, only_lang: Optional[str] = None) -> None:
+    """Resolve every scripture reference found in every loaded study file
+    and fuzzy-match its stored verse text against the resolved text.
+
+    EN studies resolve directly (validate_pair). Non-EN studies never
+    parse their own native-language reference string — cards align 1:1 by
+    position with the EN study (guaranteed by Phase B's parity check), so
+    each translated reference is validated against its EN sibling's
+    reference via validate_translated_pair (see shared_validation.
+    scripture_check module docstring for why).
+
+    only_lang restricts the scan to a single language's studies (EN is
+    still loaded as the sibling source for non-EN languages) — for fast
+    local iteration on one language's findings without scanning the full
+    10-language corpus."""
+    report.add_info("=" * 60)
+    report.add_info("PHASE: SCRIPTURE REFERENCES" + (f" ({only_lang})" if only_lang else ""))
+    report.add_info("=" * 60)
+
+    pairs_checked = 0
+    resolution_failures = 0
+    text_mismatches = 0
+    warned_versions = set()
+    en_studies = all_studies.get('en', {})
+
+    with ScriptureValidator(bible_database_dir) as validator:
+        for lang, lang_studies in all_studies.items():
+            if only_lang and lang != only_lang:
+                continue
+            for study_id, data in lang_studies.items():
+                bible_version = data.get('version')
+                if not bible_version:
+                    continue
+
+                resolver = validator.get_resolver(bible_version, lang)
+                if resolver is None:
+                    if (lang, bible_version) not in warned_versions:
+                        report.add_warning(
+                            f"No local Bible DB found for bible_version '{bible_version}' "
+                            f"(lang '{lang}', study '{study_id}') — skipping scripture checks for this version"
+                        )
+                        warned_versions.add((lang, bible_version))
+                    continue
+
+                if lang == 'en':
+                    for ref in find_scripture_pairs(data):
+                        pairs_checked += 1
+                        finding = validate_pair(ref, resolver)
+                        if finding is None:
+                            continue
+                        if finding.kind == "resolution_failed":
+                            resolution_failures += 1
+                        else:
+                            text_mismatches += 1
+                        report.add_warning(f"{study_id}: {finding.message}")
+                    continue
+
+                en_data = en_studies.get(study_id)
+                if en_data is None:
+                    report.add_warning(f"{study_id} ({lang}): no EN sibling study found — skipping scripture checks")
+                    continue
+
+                en_pairs = find_scripture_pairs(en_data)
+                native_pairs = find_scripture_pairs(data)
+                if len(native_pairs) != len(en_pairs):
+                    report.add_warning(
+                        f"{study_id} ({lang}): scripture pair count ({len(native_pairs)}) doesn't match "
+                        f"EN sibling ({len(en_pairs)}) — skipping scripture checks (cards likely out of sync, see Phase B)"
+                    )
+                    continue
+
+                for en_ref, native_ref in zip(en_pairs, native_pairs):
+                    pairs_checked += 1
+                    finding = validate_translated_pair(en_ref, native_ref, resolver, bible_version)
+                    if finding is None:
+                        continue
+                    if finding.kind == "resolution_failed":
+                        resolution_failures += 1
+                    else:
+                        text_mismatches += 1
+                    report.add_warning(f"{study_id}: {finding.message}")
+
+    report.add_info(
+        f"✓ Checked {pairs_checked} scripture reference(s): "
+        f"{resolution_failures} resolution failure(s), {text_mismatches} text mismatch(es)"
+    )
+
+
+
 def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--lang", help="Restrict PHASE D (scripture references) to one language "
+                                        "and run it locally without needing CI=true")
+    parser.add_argument("--scripture-only", action="store_true",
+                         help="Only PHASE D (scripture references) counts toward the exit code "
+                              "and summary; PHASE A/B still run internally since PHASE D depends "
+                              "on their output, but their findings are not recorded/gating. "
+                              "Implies scripture validation runs regardless of CI env var.")
+    args = parser.parse_args()
+
     # Get discovery directory
     script_dir = Path(__file__).parent
     discovery_dir = script_dir.parent
@@ -609,9 +726,10 @@ def main():
     phase_a_success = report.print_report(final=False)
     phase_a_elapsed = time.monotonic() - phase_a_start
 
-    run_report.record_phase(
-        "PHASE A: LINT + SOT + INDEX", report, phase_a_success, phase_a_elapsed, gate=True,
-    )
+    if not args.scripture_only:
+        run_report.record_phase(
+            "PHASE A: LINT + SOT + INDEX", report, phase_a_success, phase_a_elapsed, gate=True,
+        )
 
     if not phase_a_success or index_data is None:
         print("\n❌ PHASE A FAILED - Stopping validation")
@@ -739,9 +857,31 @@ def main():
     phase_b_success = report.print_report(final=False)
     phase_b_elapsed = time.monotonic() - phase_b_start
 
-    run_report.record_phase(
-        "PHASE B: TRANSLATION FILES", report, phase_b_success, phase_b_elapsed, gate=True,
-    )
+    if not args.scripture_only:
+        run_report.record_phase(
+            "PHASE B: TRANSLATION FILES", report, phase_b_success, phase_b_elapsed, gate=True,
+        )
+
+    # ==========================================
+    # PHASE: Scripture references — runs after Phase B (the real gate).
+    # Its own ValidationReport instance/timing since it never gates the run
+    # (gate=False) — findings are warnings only. Scans the ENTIRE corpus
+    # (2000+ references across 10 languages) every run — too slow for
+    # daily local editing, so it's CI-only (see scripture_validation_enabled).
+    # ==========================================
+    if scripture_validation_enabled() or args.lang or args.scripture_only:
+        phase_scripture_start = time.monotonic()
+        scripture_report = ValidationReport()
+        scripture_report.phase = "PHASE_SCRIPTURE"
+        validate_scripture_references(scripture_report, all_studies, discovery_dir.parent / 'bible_database', only_lang=args.lang)
+        phase_scripture_success = scripture_report.print_report(final=False)
+        phase_scripture_elapsed = time.monotonic() - phase_scripture_start
+
+        run_report.record_phase(
+            "PHASE D: SCRIPTURE REFERENCES", scripture_report, phase_scripture_success, phase_scripture_elapsed, gate=False,
+        )
+    else:
+        print("ℹ️  PHASE D: SCRIPTURE REFERENCES — skipped (CI-only; set CI=true to run locally, or pass --lang)")
 
     run_report.add_coverage(
         studies_found=len(report.stats['studies_found']),
@@ -751,6 +891,7 @@ def main():
         sot_live=used_remote_sot,
     )
     run_report.print_summary()
+    run_report.write_github_summary()
 
     return run_report.exit_code
 

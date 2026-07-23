@@ -221,6 +221,15 @@ Before writing one, answer explicitly: **what is this specific card trying to ma
 
 ---
 
+> **`scripture_connections` renderer support (verified against the Dart source, 2026-07-21):**
+> only `scripture_moment`, `character_moment`, `theological_depth`, and `cinematic_scene` have
+> `_ScriptureConnectionsSection` wired into their widget — these four are safe to use the field on.
+> No other card type renders it; adding `scripture_connections` to `interactive_moment`,
+> `discovery_activation`, or `completion` produces silently dropped content (present in JSON,
+> invisible in the app). `cinematic_scene` support was added 2026-07-21 (previously missing —
+> see the 4 already-published encounters that had this exact silent-drop bug: `nicodemus`,
+> `adultery_woman`, `bleeding_woman`, `gadarene_demoniac`, across all 10 languages, now fixed).
+
 #### `cinematic_scene`
 Opens or transitions a narrative beat. Immersive, present-tense prose.
 ```json
@@ -237,11 +246,17 @@ Opens or transitions a narrative beat. Immersive, present-tense prose.
     "reference": "Book ch:v",
     "text": "Full verse text in same Bible version and language"
   },
-  "revelation_key": "One sentence."
+  "revelation_key": "One sentence.",
+  "scripture_connections": [
+    { "reference": "Book ch:v", "text": "Full verse text in same Bible version and language" }
+  ]
 }
 ```
 > **`verse_overlay`** is optional but common — use it when the scene has a verse anchor.
 > **`haptic`** is optional — omit or set to `null`.
+> **`scripture_connections`** is optional — use it when the `narrative` cites or contrasts another
+> passage by reference (same rule as `scripture_moment` below). Requires a recent-enough app build;
+> see the renderer-support note above.
 
 #### `scripture_moment`
 Presents a passage + reflection. Verse must be complete — no truncation.
@@ -283,7 +298,7 @@ Psychological/emotional deep-dive into the biblical character.
   "image_url": "filename.png",
   "title": "string",
   "subtitle": "string",
-  "content": "Prose. May include emphasis markers like 🔑 or ⚠️ for key phrases.",
+  "content": "Prose.",
   "revelation_key": "One sentence.",
   "verse_overlay": {
     "reference": "Book ch:v",

@@ -26,7 +26,7 @@
   },
   "key_verse": {
     "reference": "Marc 10:52",
-    "text": "Jésus lui dit: Va, ta foi t'a sauvé. Aussitôt il recouvra la vue, et suivit Jésus dans le chemin.",
+    "text": "Et Jésus lui dit: Va, ta foi t'a sauvé.",
     "bible_version": "LSG1910"
   },
   "cards": [
@@ -47,7 +47,7 @@
       "mood": "tense",
       "image_url": "bartimaeus_crowd_passing.png",
       "verse_reference": "Marc 10:46-47",
-      "verse_text": "Ils arrivèrent à Jéricho. Comme Jésus sortait de Jéricho avec ses disciples et une grande foule, le fils de Timée, Bartimée, un aveugle qui mendiait, était assis au bord du chemin. Quand il apprit que c'était Jésus de Nazareth, il se mit à crier: Jésus, Fils de David, aie pitié de moi!",
+      "verse_text": "Ils arrivèrent à Jéricho. Et, lorsque Jésus en sortit, avec ses disciples et une assez grande foule, le fils de Timée, Bartimée, mendiant aveugle, était assis au bord du chemin. Il entendit que c'était Jésus de Nazareth, et il se mit à crier; Fils de David, Jésus aie pitié de moi!",
       "reflection": "Remarquez les détails que Marc inclut.\n\nCe n'est pas 'un aveugle'. C'est Bartimée, fils de Timée. Marc lui donne un nom. Marc lui donne un père. Marc le voit.\n\nEt remarquez ce que Bartimée fait à l'instant où il entend le nom de Jésus. Il n'attend pas. Il n'envoie pas de messager. Il ne prie pas en silence.\n\nIl crie.",
       "revelation_key": "Bartimée ne pouvait pas voir Jésus. Mais il l'a reconnu avant beaucoup de ceux qui le pouvaient."
     },
@@ -72,7 +72,7 @@
       "haptic": "gentle_pulse",
       "verse_overlay": {
         "reference": "Marc 10:49",
-        "text": "Jésus s'arrêta, et dit: Appelez-le. Ils appelèrent l'aveugle, et lui dirent: Aie confiance, lève-toi, il t'appelle."
+        "text": "Jésus s'arrêta, et dit: Appelez-le. Ils appelèrent l'aveugle, en lui disant: Prends courage, lève-toi, il t'appelle."
       },
       "revelation_key": "Le cri d'un mendiant aveugle arrêta le Fils de Dieu sur son chemin. C'est ainsi que fonctionne la prière honnête."
     },
@@ -101,7 +101,7 @@
       "mood": "intimate",
       "image_url": "bartimaeus_desperate_plea.png",
       "verse_reference": "Marc 10:51",
-      "verse_text": "Jésus lui dit: Que veux-tu que je te fasse? L'aveugle lui répondit: Rabboni, que je recouvre la vue.",
+      "verse_text": "Jésus, prenant la parole, lui dit: Que veux-tu que je te fasse? Rabbouni, lui répondit l'aveugle, que je recouvre la vue.",
       "reflection": "C'est la même question que Jésus venait de poser à Jacques et Jean en Marc 10:36.\n\nIls demandèrent du pouvoir. Une position. S'asseoir à sa droite et à sa gauche.\n\nBartimée demanda à voir.\n\nJésus pose la même question à tous. La différence réside dans ce que chaque cœur répond.\n\nEt remarquez comment il appelle Jésus : Rabboni — Mon Maître. Pas seulement Maître. Mon. Personnel. Intime. L'aveugle qui ne l'avait jamais vu l'appela sien avant de pouvoir le regarder dans les yeux.",
       "revelation_key": "Ce que nous demandons à Jésus révèle à quel point nous le connaissons."
     },
@@ -116,7 +116,7 @@
       "haptic": "light_pulse",
       "verse_overlay": {
         "reference": "Marc 10:52",
-        "text": "Aussitôt il recouvra la vue, et suivit Jésus dans le chemin."
+        "text": "Et Jésus lui dit: Va, ta foi t'a sauvé."
       },
       "revelation_key": "La première chose que ses yeux virent, ce fut Jésus. Et il choisit de le suivre."
     },
@@ -180,7 +180,7 @@
       "image_url": "bartimaeus_face_restored.png",
       "completion_verse": {
         "reference": "Marc 10:52",
-        "text": "Jésus lui dit: Va, ta foi t'a sauvé. Aussitôt il recouvra la vue, et suivit Jésus dans le chemin.",
+        "text": "Et Jésus lui dit: Va, ta foi t'a sauvé.",
         "bible_version": "LSG1910"
       },
       "celebration_type": "gentle_light"

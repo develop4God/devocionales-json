@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "es",
   "bible_version": "RVR1960",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 5,
   "meta": {
     "character": "Pedro",
@@ -101,7 +101,7 @@
       "scripture_connections": [
         {
           "reference": "Isaías 41:13",
-          "text": "Porque yo soy el Señor tu Dios, que te sostiene de tu mano derecha, y te dice: No temas, yo te ayudaré."
+          "text": "Porque yo Jehová soy tu Dios, quien te sostiene de tu mano derecha, y te dice: No temas, yo te ayudo."
         },
         {
           "reference": "Salmo 18:16",

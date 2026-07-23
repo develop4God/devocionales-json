@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "en",
   "bible_version": "KJV",
-  "version": "1.0",
+  "version": "1.1",
   "image_version": "1.0",
   "estimated_reading_minutes": 12,
   "meta": {
@@ -72,7 +72,7 @@
       "scripture_connections": [
         {
           "reference": "John 11:8",
-          "text": "His disciples say unto him, Master, the Jews of late sought to stone thee; and goest thou thither again?"
+          "text": "His disciples said unto him, Teacher, the Jews have just sought to stone you; and go you there again?"
         }
       ]
     },
@@ -92,7 +92,7 @@
         },
         {
           "reference": "John 14:4",
-          "text": "And whither I go ye know, and the way ye know."
+          "text": "And where I go you know, and the way you know."
         }
       ]
     },

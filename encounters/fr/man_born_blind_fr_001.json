@@ -1,0 +1,280 @@
+{
+  "id": "man_born_blind_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fr",
+  "bible_version": "LSG1910",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 12,
+  "meta": {
+    "character": "L'homme né aveugle",
+    "testament": "new",
+    "scripture_reference": "Jean 9:1-41",
+    "mood_primary": "dawn",
+    "accent_color": "#2b1a08",
+    "emoji": "🌅",
+    "tags": ["témoignage", "persécution", "vue", "lumière", "courage", "exclusion", "adoration", "foi"]
+  },
+  "key_verse": {
+    "reference": "Jean 9:25",
+    "text": "Il répondit: S'il est un pécheur, je ne sais; je sais une chose, c'est que j'étais aveugle et que maintenant je vois.",
+    "bible_version": "LSG1910"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "man_born_blind_temple_gate.png",
+      "title": "L'homme au bord du chemin",
+      "narrative": "Jérusalem, jour de sabbat. Un homme est assis là où sa ville le connaît : à la même place où il s'asseyait pour mendier. Il sent sur sa peau un soleil qu'il n'a jamais vu. Il est né aveugle : toute sa vie tient dans ces trois mots. Des pas s'arrêtent près de lui. Les disciples demandent à Jésus : qui a péché, cet homme ou ses parents, pour qu'il soit né aveugle ? Pour eux, sa cécité doit avoir une cause. Pour Jésus, qui s'est arrêté pour le regarder, elle est le lieu où Dieu est sur le point d'agir.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 9:1-2",
+        "text": "Jésus vit, en passant, un homme aveugle de naissance. Ses disciples lui firent cette question: Rabbi, qui a péché, cet homme ou ses parents, pour qu'il soit né aveugle?"
+      },
+      "revelation_key": "Les disciples cherchent un coupable. Jésus s'arrête pour regarder l'homme."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "man_born_blind_light_of_world.png",
+      "verse_reference": "Jean 9:3-5",
+      "verse_text": "Jésus répondit: Ce n'est pas que lui ou ses parents aient péché; mais c'est afin que les œuvres de Dieu soient manifestées en lui. Il faut que je fasse, tandis qu'il est jour, les œuvres de celui qui m'a envoyé; la nuit vient, où personne ne peut travailler. Pendant que je suis dans le monde, je suis la lumière du monde.",
+      "reflection": "La question des disciples cherche un coupable dans le passé. La réponse de Jésus regarde vers l'avant : sa condition va devenir la scène des œuvres de Dieu. Ce n'est pas une punition, dit Jésus. Et alors, debout devant quelqu'un qui n'a jamais vu une aube, il déclare : je suis la lumière du monde (Jean 8:12). Ce qui suit va démontrer qu'il parle de bien plus que des yeux : il parle de vision.",
+      "revelation_key": "Jésus se déclare lumière du monde devant des yeux qui ne peuvent pas encore le voir — la foi commence à se former avant la vue.",
+      "scripture_connections": [
+        {
+          "reference": "Jean 8:12",
+          "text": "Jésus leur parla de nouveau, et dit: Je suis la lumière du monde; celui qui me suit ne marchera pas dans les ténèbres, mais il aura la lumière de la vie."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "man_born_blind_siloam_washing.png",
+      "title": "Chemin de Siloé, encore aveugle",
+      "narrative": "Il entend quelqu'un cracher par terre. Puis des doigts qui étalent une boue fraîche sur ses paupières closes. Et un ordre : va te laver au réservoir de Siloé. L'homme se lève et marche dans le noir jusqu'à Siloé avec cette boue sur les yeux, confiant seulement en la parole de cet inconnu. Il se penche sur l'eau, il se lave.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 9:6-7",
+        "text": "Après avoir dit cela, il cracha à terre, et fit de la boue avec sa salive. Puis il appliqua cette boue sur les yeux de l'aveugle, et lui dit: Va, et lave-toi au réservoir de Siloé (nom qui signifie envoyé). Il y alla, se lava, et s'en retourna voyant clair."
+      },
+      "revelation_key": "Son obéissance commence aveugle et finit voyante : l'ordre même du miracle enseigne que la foi marche la première."
+    },
+    {
+      "order": 4,
+      "type": "character_moment",
+      "mood": "mysterious",
+      "image_url": "man_born_blind_beggar_identity.png",
+      "title": "Celui qui se tenait assis et mendiait",
+      "subtitle": "Les voisins doutent",
+      "content": "Ses voisins le voient passer et s'arrêtent. C'est le même visage qu'ils voyaient assis, mendiant, chaque jour, au même endroit près du chemin. Mendier était la seule chose qu'un aveugle de naissance pouvait faire pour vivre : sans cette place et cette condition, il n'avait aucun moyen de subsister. Maintenant il marche autrement, il regarde dans les yeux ceux qu'il croise, et il n'a plus cette place qu'il a occupée toute sa vie. Ils discutent entre eux pour savoir si c'est bien le même homme.",
+      "revelation_key": "Voir lui a coûté la seule chose qu'il avait pour vivre ; ce qu'il est sur le point de gagner vaut plus que ce qu'il vient de perdre.",
+      "verse_overlay": {
+        "reference": "Jean 9:8",
+        "text": "Ses voisins et ceux qui auparavant l'avaient connu comme un mendiant disaient: N'est-ce pas là celui qui se tenait assis et qui mendiait?"
+      }
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "man_born_blind_clay_hands.png",
+      "title": "Boue du Créateur, réservoir de l'Envoyé",
+      "subtitle": "Deux mots qui signent le miracle",
+      "content": "Le texte grec appelle cette boue πηλός (pēlos), le même mot que la Bible grecque emploie pour la glaise du potier. Jésus prend de la poussière de la terre et l'applique sur des yeux qui n'ont jamais fonctionné. Le geste évoque l'origine de l'homme : le Créateur qui forma Adam de la poussière (Genèse 2:7) est en train de former ce qui a manqué à ces yeux depuis le ventre de sa mère. C'est une œuvre de création, et c'est justement pour cela qu'elle va scandaliser : pétrir de la boue était un travail interdit le jour du sabbat selon la tradition des pharisiens.\n\nEt il y a une seconde signature. Jean s'arrête pour traduire le nom du réservoir : Siloé signifie ἀπεσταλμένος (apestalmenos), \"Envoyé\". Tout au long de cet évangile, Jésus se présente comme l'Envoyé du Père (Jean 3:17). L'Envoyé l'envoie se laver au réservoir appelé Envoyé : même la géographie du miracle proclame qui l'a accompli.",
+      "revelation_key": "Jésus choisit le jour où pétrir de la boue est interdit pour accomplir, de ses mains, la même œuvre qu'il avait accomplie un jour par sa seule parole.",
+      "verse_overlay": {
+        "reference": "Jean 9:7",
+        "text": "et lui dit: Va, et lave-toi au réservoir de Siloé (nom qui signifie envoyé). Il y alla, se lava, et s'en retourna voyant clair."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Genèse 2:7",
+          "text": "L'Éternel Dieu forma l'homme de la poussière de la terre, il souffla dans ses narines un souffle de vie et l'homme devint un être vivant."
+        },
+        {
+          "reference": "Jean 3:17",
+          "text": "Dieu, en effet, n'a pas envoyé son Fils dans le monde pour qu'il juge le monde, mais pour que le monde soit sauvé par lui."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "man_born_blind_neighbors_debate.png",
+      "title": "C'est moi",
+      "narrative": "Face au doute de son quartier, il répond lui-même : C'est moi — en grec, ἐγώ εἰμι (egō eimi), les deux mêmes mots que Jésus emploie tout au long de cet évangile pour parler de lui-même, bien qu'ici ils signifient seulement \"je suis l'homme que vous connaissiez\". Et il raconte son histoire pour la première fois, avec la précision de celui qui répète des faits : cet homme qu'on appelle Jésus a fait de la boue, m'a oint les yeux, m'a dit va à Siloé et lave-toi ; j'y suis allé, je me suis lavé, et j'ai recouvré la vue. On lui demande où se trouve ce Jésus. Sa réponse est honnête : je ne sais pas. Tout ce qu'il sait de Jésus lui est venu par l'ouïe et par la boue sur ses yeux : son témoignage naît avant qu'il ait vu son visage.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 9:9-12",
+        "text": "Les uns disaient: C'est lui. D'autres disaient: Non, mais il lui ressemble. Et lui-même disait: C'est moi. Ils lui dirent donc: Comment tes yeux ont-ils été ouverts? Il répondit: L'homme qu'on appelle Jésus a fait de la boue, a oint mes yeux, et m'a dit: Va au réservoir de Siloé, et lave-toi. J'y suis allé, je me suis lavé, et j'ai recouvré la vue. Ils lui dirent: Où est cet homme? Il répondit: Je ne sais."
+      },
+      "revelation_key": "Il dit \"c'est moi\" avec les mêmes mots que Jésus emploie pour lui-même, sans le savoir : son identité commence à peine à se former autour de Celui qu'il n'a pas encore vu."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "man_born_blind_first_interrogation.png",
+      "verse_reference": "Jean 9:16-17",
+      "verse_text": "Sur quoi quelques-uns des pharisiens dirent: Cet homme ne vient pas de Dieu, car il n'observe pas le sabbat. D'autres dirent: Comment un homme pécheur peut-il faire de tels miracles? Et il y eut division parmi eux. Ils dirent encore à l'aveugle: Toi, que dis-tu de lui, sur ce qu'il t'a ouvert les yeux? Il répondit: C'est un prophète.",
+      "reflection": "Les voisins amènent l'homme devant les pharisiens, les chefs religieux de Jérusalem, parce que Jésus l'a guéri un jour de sabbat (Exode 20:8-11), le jour où la loi ordonnait de garder sans travailler. Certains pharisiens en concluent que Jésus ne peut pas venir de Dieu : il a enfreint cette règle. D'autres posent la question à laquelle la règle ne répond pas : comment un pécheur peut-il rendre la vue à un aveugle de naissance ? Ils ne parviennent pas à s'accorder, et demandent à l'homme lui-même ce qu'il pense de Jésus. Il l'avait d'abord appelé simplement \"cet homme\" ; maintenant il répond avec un mot plus grand : c'est un prophète. Les prophètes avaient annoncé que Dieu lui-même ouvrirait les yeux des aveugles quand il viendrait sauver son peuple (Ésaïe 35:5) ; sans le savoir, les pharisiens ont ce signe assis devant eux, répondant à leurs questions.",
+      "revelation_key": "Chaque question hostile agrandit sa confession : de \"cet homme\" à \"prophète\".",
+      "scripture_connections": [
+        {
+          "reference": "Ésaïe 35:5",
+          "text": "Alors s'ouvriront les yeux des aveugles, S'ouvriront les oreilles des sourds;"
+        },
+        {
+          "reference": "Exode 20:8-11",
+          "text": "Souviens-toi du jour du repos, pour le sanctifier. Tu travailleras six jours, et tu feras tout ton ouvrage. Mais le septième jour est le jour du repos de l'Éternel, ton Dieu: tu ne feras aucun ouvrage, ni toi, ni ton fils, ni ta fille, ni ton serviteur, ni ta servante, ni ton bétail, ni l'étranger qui est dans tes portes."
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "man_born_blind_parents_fear.png",
+      "title": "Il a l'âge, interrogez-le",
+      "narrative": "Les pharisiens cherchent à défaire le miracle par un autre chemin : peut-être cet homme n'a-t-il jamais été aveugle. Ils appellent ses parents. Ceux-ci confirment l'évidence : c'est notre fils, et il est né aveugle. Pour tout le reste, ils se dérobent : il a l'âge, interrogez-le ; il parlera lui-même de ce qui le concerne. C'est que les chefs juifs avaient déjà convenu d'exclure de la synagogue quiconque confesserait Jésus comme le Messie, et les parents avaient peur : le prix était déjà fixé. Leur fils se retrouve seul devant les mêmes pharisiens qui viennent de réduire ses parents au silence.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 9:22",
+        "text": "Ses parents dirent cela parce qu'ils craignaient les Juifs; car les Juifs étaient déjà convenus que, si quelqu'un reconnaissait Jésus pour le Christ, il serait exclu de la synagogue."
+      },
+      "revelation_key": "Le prix de confesser Jésus était déjà fixé d'avance, et la peur de le payer réduit les parents au silence devant leur propre fils."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "man_born_blind_one_thing_i_know.png",
+      "title": "Je sais une chose",
+      "subtitle": "Le témoignage qu'aucun expert ne put démonter",
+      "content": "Les pharisiens le convoquent une seconde fois. Cette fois l'ordre est direct : rends gloire à Dieu ; nous savons que cet homme (Jésus) est un pécheur. Ils lui demandent de se rétracter, de parler contre lui. Ceux qui exigent sont les maîtres d'Israël ; celui qui répond est le mendiant qu'ils considèrent eux-mêmes comme né tout entier dans le péché. Il ne discute pas leur théologie : il répond qu'il ignore si Jésus est un pécheur, mais qu'il sait une chose avec certitude — qu'il était aveugle et que maintenant il voit (Jean 9:25). Il se tient sur le seul terrain qu'il maîtrise entièrement : ce que Jésus a fait en lui. Contre un argument, on peut argumenter ; contre un homme qui était aveugle et voit maintenant, il ne reste que l'évidence. Quand ils insistent pour répéter l'interrogatoire, le mendiant passe à l'offensive avec une ironie courageuse : voulez-vous, vous aussi, devenir ses disciples ? Celui qui a commencé par répondre à des questions finit par en poser une.",
+      "revelation_key": "Le mendiant entre en répondant aux questions de ses juges ; il sort en leur en posant une.",
+      "verse_overlay": {
+        "reference": "Jean 9:25",
+        "text": "Il répondit: S'il est un pécheur, je ne sais; je sais une chose, c'est que j'étais aveugle et que maintenant je vois."
+      }
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "falling",
+      "image_url": "man_born_blind_cast_out.png",
+      "title": "Exclu",
+      "subtitle": "Le premier croyant qui paya le prix",
+      "content": "Le mot que Jean emploie pour la menace est ἀποσυνάγωγος (aposynagōgos) : \"hors de la synagogue\". Il n'apparaît que dans cet évangile (Jean 9:22 ; 12:42 ; 16:2), et décrit l'une des punitions les plus dures de ce monde-là : perdre la synagogue signifiait perdre le lieu de culte, la communauté, les affaires et l'honneur de la famille. C'était se retrouver privé de presque tout ce qui soutenait la vie d'un Juif.\n\nQuand l'homme refuse de se rétracter, les pharisiens prononcent leur sentence sur sa personne : tu es né tout entier dans le péché, et tu nous enseignes ? Ils lui renvoient l'idée même dont Jésus l'avait déjà délivré : que sa cécité était une punition. Et ils l'excluent. Ce mendiant est le premier exclu à cause de Jésus que rapporte cet évangile : il paie ce prix avant les apôtres, le jour même où il a reçu la vue. Jésus annoncerait plus tard à ses disciples que ce même prix les attendait eux aussi.",
+      "revelation_key": "Ceux-là mêmes qui n'ont pas pu démonter le miracle referment le dossier avec l'accusation dont Jésus l'avait déjà délivré : qu'il était né dans le péché.",
+      "scripture_connections": [
+        {
+          "reference": "Jean 9:22",
+          "text": "Ses parents dirent cela parce qu'ils craignaient les Juifs; car les Juifs étaient déjà convenus que, si quelqu'un reconnaissait Jésus pour le Christ, il serait exclu de la synagogue."
+        },
+        {
+          "reference": "Jean 12:42",
+          "text": "Cependant, même parmi les chefs, plusieurs crurent en lui; mais, à cause des pharisiens, ils n'en faisaient pas l'aveu, dans la crainte d'être exclus de la synagogue."
+        },
+        {
+          "reference": "Jean 16:2",
+          "text": "Ils vous excluront des synagogues; et même l'heure vient où quiconque vous fera mourir croira rendre un culte à Dieu."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "man_born_blind_found_by_jesus.png",
+      "title": "Jésus apprit qu'ils l'avaient chassé",
+      "narrative": "La nouvelle de son exclusion parvient aux oreilles de Jésus. L'évangile emploie alors un mot immense : εὑρών (heurōn), \"l'ayant trouvé\". Trouver suppose avoir cherché. Il le trouve dehors : hors de la synagogue, hors de sa communauté, hors du monde qu'il connaissait.\n\nEt il lui pose la question vers laquelle toute son histoire s'acheminait : crois-tu au Fils de Dieu ? L'homme répond avec la même honnêteté que toujours : et qui est-il, Seigneur, afin que je croie en lui ? La réponse de Jésus lui remet, en une seule phrase, le cadeau qui manquait : tu l'as vu, et celui qui te parle, c'est lui.\n\nPour la première fois de sa vie, ses yeux neufs regardent le visage de celui dont il avait tant parlé sans le connaître. Beaucoup de prophètes et de rois désirèrent voir ce visage et ne le virent pas (Luc 10:23-24) ; il a été trouvé sans avoir cherché : le Fils de Dieu lui-même est venu à sa rencontre. Dans cet évangile, Jésus déclare rarement qui il est avec autant de clarté ; il l'avait fait auparavant près d'un puits, avec la femme samaritaine (Jean 4:25-26), et il se présente maintenant tout aussi ouvertement devant cet homme, mendiant de naissance et exclu de la synagogue à cause du miracle qu'il avait reçu.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 9:35-37",
+        "text": "Jésus apprit qu'ils l'avaient chassé; et, l'ayant rencontré, il lui dit: Crois-tu au Fils de Dieu? Il répondit: Et qui est-il, Seigneur, afin que je croie en lui? Tu l'as vu, lui dit Jésus, et celui qui te parle, c'est lui."
+      },
+      "revelation_key": "Il a défendu Jésus devant les pharisiens sans jamais avoir vu son visage ; maintenant, enfin, il l'a devant lui — la foi est arrivée avant la vue.",
+      "scripture_connections": [
+        {
+          "reference": "Luc 10:23-24",
+          "text": "Et, se tournant vers les disciples, il leur dit en particulier: Heureux les yeux qui voient ce que vous voyez! Car je vous dis que beaucoup de prophètes et de rois ont désiré voir ce que vous voyez, et ne l'ont pas vu, entendre ce que vous entendez, et ne l'ont pas entendu."
+        },
+        {
+          "reference": "Jean 4:25-26",
+          "text": "La femme lui dit: Je sais que le Messie doit venir (celui qu'on appelle Christ); quand il sera venu, il nous annoncera toutes choses. Jésus lui dit: Je le suis, moi qui te parle."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "man_born_blind_worship.png",
+      "title": "Je crois, Seigneur ; et il l'adora",
+      "subtitle": "La confession s'achève prosternée",
+      "content": "La réponse de l'homme tient en deux mots et un geste : Je crois, Seigneur ; et il l'adora. Le verbe grec est προσεκύνησεν (prosekynēsen) : se prosterner à terre, rendre l'adoration. C'est le verbe que cet évangile réserve à l'adoration due à Dieu (Jean 4:23-24, les \"vrais adorateurs\" du Père). L'homme l'adresse à Jésus, et Jésus le reçoit. Celui qui avait commencé par l'appeler simplement \"cet homme\" finit prosterné à ses pieds.\n\nDes pharisiens présents entendent toute la scène. Jésus prononce alors le verdict de tout ce récit : je suis venu dans ce monde pour un jugement, pour que ceux qui ne voient point voient, et que ceux qui voient deviennent aveugles. Les pharisiens demandent s'ils sont, eux aussi, aveugles, et la réponse de Jésus est solennelle : parce qu'ils disent \"nous voyons\", leur péché demeure. L'histoire se referme sur deux postures devant la même lumière : le mendiant, qui a reconnu sa cécité et voit maintenant et adore ; et les experts qui, sûrs de leur vue, restent dans l'obscurité. Voir commence par reconnaître sa propre cécité.",
+      "revelation_key": "Le mendiant adresse à Jésus le même verbe que cet évangile réserve à l'adoration de Dieu — et Jésus le reçoit sans le reprendre.",
+      "verse_overlay": {
+        "reference": "Jean 9:39",
+        "text": "Puis Jésus dit: Je suis venu dans ce monde pour un jugement, pour que ceux qui ne voient point voient, et que ceux qui voient deviennent aveugles."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Jean 4:23-24",
+          "text": "Mais l'heure vient, et elle est déjà venue, où les vrais adorateurs adoreront le Père en esprit et en vérité; car ce sont là les adorateurs que le Père demande. Dieu est Esprit, et il faut que ceux qui l'adorent l'adorent en esprit et en vérité."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "man_born_blind_your_encounter.png",
+      "title": "Ta rencontre",
+      "subtitle": "Un témoignage de première main résiste à tout interrogatoire.",
+      "discovery_questions": [
+        {
+          "category": "Témoignage",
+          "question": "Acculé par les experts, l'homme n'a eu qu'une seule certitude : \"je sais une chose, c'est que j'étais aveugle et que maintenant je vois\". Quelle est cette \"seule chose\" que tu sais de première main, ce que Jésus a fait dans ta vie, que ni discussion ni moquerie ne peut t'enlever ?"
+        },
+        {
+          "category": "Courage",
+          "question": "Ses parents connaissaient la vérité et l'ont tue par peur de perdre la synagogue ; leur fils l'a dite et l'a perdue. Dans quel domaine de ta vie (famille, travail, amitiés) dire ce que Jésus a fait pour toi a-t-il un coût réel, et quel pas concret ferais-tu pour le dire avec courage ?"
+        },
+        {
+          "category": "Foi",
+          "question": "Jésus a appris qu'on l'avait chassé, l'a cherché et l'a trouvé dehors, et là, l'homme est passé de défendre Jésus à l'adorer. Si aujourd'hui tu es \"dehors\" à cause de ta foi ou de ton histoire, que signifierait laisser Jésus te trouver précisément là, et lui répondre comme lui : \"Je crois, Seigneur\" ?"
+        }
+      ],
+      "prayer": {
+        "title": "Je sais une chose",
+        "content": "Seigneur Jésus, tu m'as vu avant que je connaisse ton nom. Merci d'avoir enlevé la culpabilité que j'ai portée si longtemps et d'avoir fait de mon histoire le lieu où tes œuvres se révèlent. Aide-moi à avoir une foi comme celle de l'homme né aveugle, qui n'a pas douté, mais qui a fait ce que tu lui as demandé et s'est laissé remplir de ta grâce et de ta miséricorde. Fortifie mon courage pour dire aux autres les merveilles de ta faveur dans ma vie, et si te confesser me laisse dehors ou loin de quelque chose de ce monde, viens me chercher comme tu l'as cherché, jusqu'à ce que je puisse te regarder en face et te dire, prosterné : Je crois, Seigneur. Merci de m'avoir donné la vue : je peux maintenant te voir et t'aimer. Au nom de Jésus, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "man_born_blind_completion.png",
+      "completion_verse": {
+        "reference": "Jean 9:25",
+        "text": "Il répondit: S'il est un pécheur, je ne sais; je sais une chose, c'est que j'étais aveugle et que maintenant je vois.",
+        "bible_version": "LSG1910"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

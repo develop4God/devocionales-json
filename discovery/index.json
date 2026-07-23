@@ -2,7 +2,7 @@
   "studies": [
     {
       "id": "mammon_anxiety_freedom_001",
-      "version": "1.1",
+      "version": "1.4",
       "emoji": "⛓️",
       "files": {
         "es": "mammon_anxiety_freedom_es_001.json",
@@ -108,7 +108,7 @@
     },
     {
       "id": "morning_star_001",
-      "version": "1.3",
+      "version": "1.6",
       "emoji": "🌟",
       "files": {
         "es": "morning_star_es_001.json",
@@ -161,7 +161,7 @@
     },
     {
       "id": "hammer_of_god_001",
-      "version": "1.0",
+      "version": "1.2",
       "emoji": "🔨",
       "files": {
         "es": "hammer_of_god_es_001.json",
@@ -214,7 +214,7 @@
     },
     {
       "id": "balaam_humble_vision_001",
-      "version": "1.1",
+      "version": "1.3",
       "emoji": "🫏",
       "files": {
         "es": "balaam_humble_vision_es_001.json",
@@ -267,7 +267,7 @@
     },
     {
       "id": "logos_creation_001",
-      "version": "1.1",
+      "version": "1.3",
       "emoji": "📖",
       "files": {
         "es": "logos_creation_es_001.json",
@@ -320,7 +320,7 @@
     },
     {
       "id": "lamb_of_god_001",
-      "version": "1.1",
+      "version": "1.3",
       "emoji": "🐑",
       "files": {
         "es": "lamb_of_god_es_001.json",
@@ -373,7 +373,7 @@
     },
     {
       "id": "natanael_fig_tree_001",
-      "version": "1.1",
+      "version": "1.3",
       "emoji": "🌳",
       "files": {
         "es": "natanael_fig_tree_es_001.json",
@@ -426,7 +426,7 @@
     },
     {
       "id": "cana_wedding_001",
-      "version": "1.2",
+      "version": "1.4",
       "emoji": "👰‍♀️",
       "files": {
         "es": "cana_wedding_es_001.json",
@@ -479,7 +479,7 @@
     },
     {
       "id": "born_again_001",
-      "version": "1.1",
+      "version": "1.2",
       "emoji": "🍃",
       "files": {
         "es": "born_again_es_001.json",
@@ -532,7 +532,7 @@
     },
     {
       "id": "temple_cleansing_001",
-      "version": "1.1",
+      "version": "1.3",
       "emoji": "🔥",
       "files": {
         "es": "temple_cleansing_es_001.json",
@@ -585,7 +585,7 @@
     },
     {
       "id": "woman_at_well_001",
-      "version": "1.1",
+      "version": "1.3",
       "emoji": "⛲",
       "files": {
         "es": "woman_at_well_es_001.json",
@@ -691,7 +691,7 @@
     },
     {
       "id": "i_am_before_abraham_001",
-      "version": "1.0",
+      "version": "1.2",
       "emoji": "⚡",
       "files": {
         "es": "i_am_before_abraham_es_001.json",
@@ -744,7 +744,7 @@
     },
     {
       "id": "good_shepherd_001",
-      "version": "1.0",
+      "version": "1.2",
       "emoji": "🐑",
       "files": {
         "es": "good_shepherd_es_001.json",
@@ -850,7 +850,7 @@
     },
     {
       "id": "jesus_troubled_himself_001",
-      "version": "1.0",
+      "version": "1.2",
       "emoji": "😢",
       "files": {
         "es": "jesus_troubled_himself_es_001.json",
@@ -903,7 +903,7 @@
     },
     {
       "id": "passed_from_death_001",
-      "version": "1.2",
+      "version": "1.4",
       "emoji": "🔄",
       "files": {
         "es": "passed_from_death_es_001.json",
@@ -956,7 +956,7 @@
     },
     {
       "id": "transfiguration_001",
-      "version": "1.0",
+      "version": "1.1",
       "emoji": "⛰️",
       "files": {
         "es": "transfiguration_es_001.json",
@@ -1009,7 +1009,7 @@
     },
     {
       "id": "buried_talent_001",
-      "version": "1.1",
+      "version": "1.4",
       "emoji": "💰",
       "files": {
         "es": "buried_talent_es_001.json",
@@ -1062,7 +1062,7 @@
     },
     {
       "id": "triumphal_entry_001",
-      "version": "1.0",
+      "version": "1.3",
       "emoji": "🌴",
       "files": {
         "es": "triumphal_entry_es_001.json",
@@ -1115,7 +1115,7 @@
     },
     {
       "id": "gethsemane_agony_001",
-      "version": "1.2",
+      "version": "1.4",
       "emoji": "🫒",
       "files": {
         "es": "gethsemane_agony_es_001.json",
@@ -1168,7 +1168,7 @@
     },
     {
       "id": "new_covenant_cup_001",
-      "version": "1.2",
+      "version": "1.4",
       "emoji": "🍷",
       "files": {
         "es": "new_covenant_cup_es_001.json",
@@ -1221,7 +1221,7 @@
     },
     {
       "id": "cup_of_wrath_001",
-      "version": "1.3",
+      "version": "1.5",
       "emoji": "😱",
       "files": {
         "es": "cup_of_wrath_es_001.json",
@@ -1274,7 +1274,7 @@
     },
     {
       "id": "veil_torn_001",
-      "version": "1.3",
+      "version": "1.6",
       "emoji": "🏛️",
       "files": {
         "es": "veil_torn_es_001.json",
@@ -1327,7 +1327,7 @@
     },
     {
       "id": "saints_resurrected_001",
-      "version": "1.2",
+      "version": "1.4",
       "emoji": "⚰️",
       "files": {
         "es": "saints_resurrected_es_001.json",
@@ -1380,7 +1380,7 @@
     },
     {
       "id": "breath_new_adam_001",
-      "version": "1.0",
+      "version": "1.2",
       "emoji": "☁️",
       "files": {
         "es": "breath_new_adam_es_001.json",
@@ -1433,7 +1433,7 @@
     },
     {
       "id": "road_to_emmaus_001",
-      "version": "1.2",
+      "version": "1.5",
       "emoji": "🚶",
       "files": {
         "es": "road_to_emmaus_es_001.json",
@@ -1486,7 +1486,7 @@
     },
     {
       "id": "restoration_by_fire_001",
-      "version": "1.0",
+      "version": "1.3",
       "emoji": "🔥",
       "files": {
         "es": "restoration_by_fire_es_001.json",
@@ -1539,7 +1539,7 @@
     },
     {
       "id": "great_commission_001",
-      "version": "1.0",
+      "version": "1.3",
       "emoji": "🌍",
       "files": {
         "es": "great_commission_es_001.json",
@@ -1592,7 +1592,7 @@
     },
     {
       "id": "ascension_victory_001",
-      "version": "1.0",
+      "version": "1.2",
       "emoji": "☁️",
       "files": {
         "es": "ascension_victory_es_001.json",
@@ -1645,7 +1645,7 @@
     },
     {
       "id": "pentecost_power_001",
-      "version": "1.0",
+      "version": "1.2",
       "emoji": "🔥",
       "files": {
         "es": "pentecost_power_es_001.json",
@@ -1698,7 +1698,7 @@
     },
     {
       "id": "damascus_road_001",
-      "version": "1.0",
+      "version": "1.2",
       "emoji": "⚡",
       "files": {
         "es": "damascus_road_es_001.json",
@@ -1751,7 +1751,7 @@
     },
     {
       "id": "gold_silver_ashes_001",
-      "version": "1.0",
+      "version": "1.3",
       "emoji": "🔥",
       "files": {
         "es": "gold_silver_ashes_es_001.json",
@@ -1804,7 +1804,7 @@
     },
     {
       "id": "zechariah_14_return_001",
-      "version": "1.0",
+      "version": "1.3",
       "emoji": "⛰️",
       "files": {
         "es": "zechariah_14_return_es_001.json",
@@ -1857,7 +1857,7 @@
     },
     {
       "id": "full_hands_king_001",
-      "version": "1.0",
+      "version": "1.2",
       "emoji": "👑",
       "files": {
         "es": "full_hands_king_es_001.json",
@@ -1910,7 +1910,7 @@
     },
     {
       "id": "jordan_convergence_001",
-      "version": "1.0",
+      "version": "1.1",
       "emoji": "🌊",
       "files": {
         "es": "jordan_convergence_es_001.json",
@@ -1963,7 +1963,7 @@
     },
     {
       "id": "union_with_christ_001",
-      "version": "1.0",
+      "version": "1.2",
       "emoji": "🏠",
       "files": {
         "es": "union_with_christ_es_001.json",
