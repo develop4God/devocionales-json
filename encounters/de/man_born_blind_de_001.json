@@ -1,0 +1,280 @@
+{
+  "id": "man_born_blind_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "de",
+  "bible_version": "LU17",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 11,
+  "meta": {
+    "character": "Der Mann, der blind geboren wurde",
+    "testament": "new",
+    "scripture_reference": "Johannes 9,1-41",
+    "mood_primary": "dawn",
+    "accent_color": "#2b1a08",
+    "emoji": "🌅",
+    "tags": ["zeugnis", "verfolgung", "sehkraft", "licht", "mut", "ausgrenzung", "anbetung", "glaube"]
+  },
+  "key_verse": {
+    "reference": "Johannes 9,25",
+    "text": "Er antwortete: Ist er ein Sünder? Das weiß ich nicht; eins aber weiß ich: dass ich blind war und bin nun sehend.",
+    "bible_version": "LU17"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "man_born_blind_temple_gate.png",
+      "title": "Der Mann am Wegrand",
+      "narrative": "Jerusalem, am Sabbat. Ein Mann sitzt dort, wo seine Stadt ihn kennt: an derselben Stelle, an der er immer saß und bettelte. Er spürt die Sonne auf seiner Haut, obwohl er sie nie gesehen hat. Blind geboren — sein ganzes Leben passt in diese drei Worte. Schritte bleiben in seiner Nähe stehen. Seine Jünger fragen Jesus: Wer hat gesündigt, dieser Mann oder seine Eltern, dass er blind geboren wurde? Für sie braucht seine Blindheit eine Ursache. Für Jesus, der stehen geblieben ist, um ihn anzusehen, ist sie der Ort, an dem Gott im Begriff ist zu handeln.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 9,1-2",
+        "text": "Und Jesus ging vorüber und sah einen Menschen, der blind geboren war. Und seine Jünger fragten ihn und sprachen: Rabbi, wer hat gesündigt, dieser oder seine Eltern, dass er blind geboren ist?"
+      },
+      "revelation_key": "Die Jünger suchen einen Schuldigen. Jesus bleibt stehen, um den Mann selbst anzusehen."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "man_born_blind_light_of_world.png",
+      "verse_reference": "Johannes 9,3-5",
+      "verse_text": "Jesus antwortete: Es hat weder dieser gesündigt noch seine Eltern, sondern es sollen die Werke Gottes offenbar werden an ihm. Wir müssen die Werke dessen wirken, der mich gesandt hat, solange es Tag ist; es kommt die Nacht, da niemand wirken kann. Solange ich in der Welt bin, bin ich das Licht der Welt.",
+      "reflection": "Die Frage der Jünger sucht in der Vergangenheit nach einem Schuldigen. Jesu Antwort blickt nach vorn: Der Zustand dieses Mannes wird zur Bühne für Gottes Werke. Es ist keine Strafe, sagt Jesus. Und dann, vor jemandem stehend, der noch nie einen Sonnenaufgang gesehen hat, erklärt er: Ich bin das Licht der Welt (Johannes 8,12). Was folgt, wird zeigen, dass er von weit mehr spricht als von Augen — er spricht vom Sehen selbst.",
+      "revelation_key": "Jesus nennt sich das Licht der Welt vor Augen, die ihn noch nicht sehen können — der Glaube beginnt sich zu formen, bevor das Sehen einsetzt.",
+      "scripture_connections": [
+        {
+          "reference": "Johannes 8,12",
+          "text": "Da redete Jesus abermals zu ihnen und sprach: Ich bin das Licht der Welt. Wer mir nachfolgt, der wird nicht wandeln in der Finsternis, sondern wird das Licht des Lebens haben."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "man_born_blind_siloam_washing.png",
+      "title": "Auf dem Weg nach Siloah, noch immer blind",
+      "narrative": "Er hört, wie jemand auf die Erde spuckt. Dann streichen Finger frischen Brei über seine geschlossenen Lider. Und ein Befehl: Geh und wasche dich im Teich Siloah. Der Mann steht auf und geht mit Schlamm auf den Augen im Dunkeln den ganzen Weg nach Siloah, einzig auf das Wort dieses Fremden vertrauend. Er beugt sich über das Wasser und wäscht sich.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 9,6-7",
+        "text": "Als er das gesagt hatte, spuckte er auf die Erde, machte daraus einen Brei und strich den Brei auf die Augen des Blinden und sprach zu ihm: Geh zu dem Teich Siloah — das heißt übersetzt: gesandt — und wasche dich! Da ging er hin und wusch sich und kam sehend wieder."
+      },
+      "revelation_key": "Sein Gehorsam beginnt blind und endet sehend: Schon die Reihenfolge des Wunders lehrt, dass der Glaube zuerst geht."
+    },
+    {
+      "order": 4,
+      "type": "character_moment",
+      "mood": "mysterious",
+      "image_url": "man_born_blind_beggar_identity.png",
+      "title": "Der, der dasaß und bettelte",
+      "subtitle": "Die Nachbarn zweifeln",
+      "content": "Seine Nachbarn sehen ihn vorübergehen und bleiben stehen. Es ist dasselbe Gesicht, das sie tagtäglich an derselben Stelle am Wegrand sitzen und betteln sahen. Betteln war das Einzige, was ein von Geburt an Blinder tun konnte, um zu überleben: ohne diesen Ort und diesen Zustand hatte er keine Möglichkeit, sich zu versorgen. Jetzt geht er anders, sieht den Leuten, an denen er vorbeikommt, in die Augen, und er hat nicht mehr den Platz, der sein ganzes Leben bestimmt hatte. Sie streiten untereinander, ob er wirklich derselbe Mann ist.",
+      "revelation_key": "Das Sehen hat ihn das Einzige gekostet, wovon er lebte; was er gerade zu gewinnen im Begriff ist, ist mehr wert als das, was er soeben verloren hat.",
+      "verse_overlay": {
+        "reference": "Johannes 9,8",
+        "text": "Die Nachbarn nun und die, die ihn zuvor als Bettler gesehen hatten, sprachen: Ist das nicht der Mann, der dasaß und bettelte?"
+      }
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "man_born_blind_clay_hands.png",
+      "title": "Erde des Schöpfers, Teich des Gesandten",
+      "subtitle": "Zwei Worte, die das Wunder besiegeln",
+      "content": "Der griechische Text nennt den Brei πηλός (pēlos), dasselbe Wort, das die griechische Bibel für den Ton des Töpfers verwendet. Jesus nimmt Staub von der Erde und legt ihn auf Augen, die noch nie funktioniert haben. Die Geste erinnert an den Ursprung des Menschen: Der Schöpfer, der Adam aus Staub formte (1. Mose 2,7), formt hier, was diesen Augen seit dem Mutterleib gefehlt hat. Es ist ein Schöpfungsakt, und gerade deshalb wird er Anstoß erregen: Brei kneten war nach der Überlieferung der Pharisäer am Sabbat verbotene Arbeit.\n\nUnd es gibt eine zweite Unterschrift. Johannes hält inne, um den Namen des Teichs zu übersetzen: Siloah bedeutet ἀπεσταλμένος (apestalmenos), \"Gesandt\". Im Verlauf dieses Evangeliums stellt sich Jesus als der vom Vater Gesandte vor (Johannes 3,17). Der Gesandte schickt ihn zu einem Teich, der selbst \"Gesandt\" heißt: Selbst die Geographie des Wunders verkündet, wer es getan hat.",
+      "revelation_key": "Jesus wählt den Tag, an dem Brei kneten verboten ist, um mit den Händen dasselbe Werk zu tun, das er einst mit einem einzigen Wort tat.",
+      "verse_overlay": {
+        "reference": "Johannes 9,7",
+        "text": "und sprach zu ihm: Geh zu dem Teich Siloah — das heißt übersetzt: gesandt — und wasche dich! Da ging er hin und wusch sich und kam sehend wieder."
+      },
+      "scripture_connections": [
+        {
+          "reference": "1. Mose 2,7",
+          "text": "Da machte Gott der HERR den Menschen aus Staub von der Erde und blies ihm den Odem des Lebens in seine Nase. Und so ward der Mensch ein lebendiges Wesen."
+        },
+        {
+          "reference": "Johannes 3,17",
+          "text": "Denn Gott hat seinen Sohn nicht in die Welt gesandt, dass er die Welt richte, sondern dass die Welt durch ihn gerettet werde."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "man_born_blind_neighbors_debate.png",
+      "title": "Ich bin's",
+      "narrative": "Angesichts der Zweifel seiner Nachbarschaft antwortet er selbst: Ich bin's — im Griechischen ἐγώ εἰμι (egō eimi), dieselben zwei Worte, die Jesus im Verlauf dieses Evangeliums für sich selbst gebraucht, obwohl sie hier nur bedeuten: \"Ich bin der Mann, den ihr kanntet.\" Und er erzählt seine Geschichte zum ersten Mal, mit der Genauigkeit dessen, der Tatsachen wiederholt: Der Mensch, der Jesus heißt, machte einen Brei, strich ihn auf meine Augen, sagte mir, ich solle nach Siloah gehen und mich waschen; ich ging, wusch mich, und wurde sehend. Man fragt ihn, wo dieser Jesus sei. Seine Antwort ist ehrlich: Ich weiß es nicht. Alles, was er von Jesus weiß, erreichte ihn durch das Gehör und durch den Brei auf seinen Augen: Sein Zeugnis entsteht, bevor er dessen Gesicht sieht.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 9,9-12",
+        "text": "Einige sprachen: Er ist's; andere: Nein, aber er ist ihm ähnlich. Er selbst aber sprach: Ich bin's. Da fragten sie ihn: Wie sind deine Augen aufgetan worden? Er antwortete: Der Mensch, der Jesus heißt, machte einen Brei und strich ihn auf meine Augen und sprach: Geh zum Teich Siloah und wasche dich! Ich ging hin und wusch mich und wurde sehend. Da fragten sie ihn: Wo ist er? Er sprach: Ich weiß es nicht."
+      },
+      "revelation_key": "Er sagt \"Ich bin's\" mit denselben Worten, die Jesus für sich selbst gebraucht, ohne es zu wissen: Seine Identität beginnt sich gerade erst um denjenigen zu formen, den er noch nicht gesehen hat."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "man_born_blind_first_interrogation.png",
+      "verse_reference": "Johannes 9,16-17",
+      "verse_text": "Da sprachen einige der Pharisäer: Dieser Mensch ist nicht von Gott, weil er den Sabbat nicht hält. Andere aber sprachen: Wie kann ein sündiger Mensch solche Zeichen tun? Und es entstand Zwietracht unter ihnen. Da sprachen sie wieder zu dem Blinden: Was sagst du von ihm, dass er deine Augen aufgetan hat? Er aber sprach: Er ist ein Prophet.",
+      "reflection": "Die Nachbarn bringen den Mann vor die Pharisäer, die religiösen Führer Jerusalems, weil Jesus ihn am Sabbat geheilt hat (2. Mose 20,8-11), dem Tag, den das Gesetz ohne Arbeit zu halten gebot. Einige Pharisäer schließen daraus, Jesus könne nicht von Gott kommen: Er hat diese Regel gebrochen. Andere stellen die Frage, die die Regel nicht beantworten kann: Wie kann ein Sünder einem von Geburt an Blinden das Augenlicht schenken? Sie werden sich nicht einig und fragen den Mann selbst, was er von Jesus denke. Zuvor hatte er ihn nur \"den Mann\" genannt; jetzt antwortet er mit einem größeren Wort: Er ist ein Prophet. Die Propheten hatten angekündigt, dass Gott selbst die Augen der Blinden öffnen würde, wenn er käme, um sein Volk zu retten (Jesaja 35,5); ohne es zu wissen, haben die Pharisäer genau dieses Zeichen vor sich sitzen, wie es auf ihre Fragen antwortet.",
+      "revelation_key": "Jede feindselige Frage lässt sein Bekenntnis wachsen: von \"der Mann\" zu \"ein Prophet\".",
+      "scripture_connections": [
+        {
+          "reference": "Jesaja 35,5",
+          "text": "Dann werden die Augen der Blinden aufgetan und die Ohren der Tauben geöffnet werden."
+        },
+        {
+          "reference": "2. Mose 20,8-11",
+          "text": "Gedenke des Sabbattages, dass du ihn heiligst. Sechs Tage sollst du arbeiten und alle deine Werke tun. Aber am siebenten Tage ist der Sabbat des HERRN, deines Gottes. Da sollst du keine Arbeit tun, auch nicht dein Sohn, deine Tochter, dein Knecht, deine Magd, dein Vieh, auch nicht dein Fremdling, der in deiner Stadt lebt. Denn in sechs Tagen hat der HERR Himmel und Erde gemacht und das Meer und alles, was darinnen ist, und ruhte am siebenten Tage. Darum segnete der HERR den Sabbattag und heiligte ihn."
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "man_born_blind_parents_fear.png",
+      "title": "Er ist alt genug, fragt ihn selbst",
+      "narrative": "Die Pharisäer versuchen, das Wunder auf einem anderen Weg zunichtezumachen: Vielleicht war dieser Mann nie blind. Sie rufen seine Eltern herbei. Diese bestätigen, was sich nicht leugnen lässt: Er ist unser Sohn, und er wurde blind geboren. Bei allem Übrigen ziehen sie sich zurück: Er ist alt genug, fragt ihn selbst; er wird für sich selbst sprechen. Die jüdischen Führer hatten nämlich bereits vereinbart, jeden aus der Synagoge auszustoßen, der Jesus als den Messias bekennen würde, und die Eltern hatten Angst: Der Preis stand bereits fest. Ihr Sohn bleibt allein vor denselben Pharisäern zurück, die eben noch seine Eltern zum Schweigen gebracht haben.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 9,22",
+        "text": "Das sagten seine Eltern, denn sie fürchteten sich vor den Juden. Denn die Juden hatten sich schon geeinigt: Wenn jemand ihn als den Christus bekennt, der soll aus der Synagoge ausgestoßen werden."
+      },
+      "revelation_key": "Der Preis dafür, sich zu Jesus zu bekennen, stand schon vorher fest, und die Angst, ihn zu zahlen, bringt die Eltern vor ihrem eigenen Sohn zum Schweigen."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "man_born_blind_one_thing_i_know.png",
+      "title": "Eins weiß ich",
+      "subtitle": "Das Zeugnis, das kein Experte widerlegen konnte",
+      "content": "Die Pharisäer rufen ihn ein zweites Mal herbei. Nun lautet der Befehl unverblümt: Gib Gott die Ehre; wir wissen, dass dieser Mensch (Jesus) ein Sünder ist. Sie verlangen von ihm, seine Aussage zu widerrufen, sich gegen Jesus zu stellen. Die Fordernden sind die Lehrer Israels; der Antwortende ist der Bettler, den sie selbst für ganz und gar in Sünde geboren halten. Er streitet nicht über Theologie: Er antwortet, er wisse nicht, ob Jesus ein Sünder sei, aber eins wisse er mit Gewissheit — dass er blind war und nun sehend ist (Johannes 9,25). Er stellt sich auf den einzigen Boden, den er vollständig beherrscht: das, was Jesus an ihm getan hat. Gegen ein Argument lässt sich argumentieren; gegen einen Mann, der blind war und jetzt sieht, bleibt nur der Beweis. Als sie darauf bestehen, das Verhör zu wiederholen, geht der Bettler mit mutiger Ironie zum Gegenangriff über: Wollt auch ihr seine Jünger werden? Der, der antwortend begann, endet fragend.",
+      "revelation_key": "Der Bettler beginnt damit, die Fragen seiner Richter zu beantworten; er endet damit, ihnen selbst eine zu stellen.",
+      "verse_overlay": {
+        "reference": "Johannes 9,25",
+        "text": "Er antwortete: Ist er ein Sünder? Das weiß ich nicht; eins aber weiß ich: dass ich blind war und bin nun sehend."
+      }
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "falling",
+      "image_url": "man_born_blind_cast_out.png",
+      "title": "Ausgestoßen",
+      "subtitle": "Der erste Gläubige, der den Preis zahlte",
+      "content": "Das Wort, das Johannes für diese Drohung verwendet, ist ἀποσυνάγωγος (aposynagōgos): \"aus der Synagoge ausgestoßen\". Es kommt ausschließlich in diesem Evangelium vor (Johannes 9,22; 12,42; 16,2) und beschreibt eine der härtesten Strafen jener Welt: Die Synagoge zu verlieren bedeutete, den Ort der Anbetung, die Gemeinschaft, den Lebensunterhalt und die Ehre der Familie zu verlieren. Es hieß, von fast allem abgeschnitten zu sein, was ein jüdisches Leben trug.\n\nAls der Mann sich weigert zu widerrufen, sprechen die Pharisäer das Urteil über seine ganze Person: Du bist ganz in Sünde geboren, und du willst uns belehren? Sie geben ihm genau die Vorstellung zurück, von der Jesus ihn bereits befreit hatte: dass seine Blindheit eine Strafe gewesen sei. Und sie stoßen ihn aus. Dieser Bettler ist der erste Ausgestoßene um Jesu willen, den dieses Evangelium bezeugt: Er zahlt diesen Preis noch vor den Aposteln, am selben Tag, an dem er sein Augenlicht erhielt. Jesus sollte seinen Jüngern später ankündigen, dass genau derselbe Preis auch sie erwartete.",
+      "revelation_key": "Dieselben, die das Wunder nicht widerlegen konnten, schließen mit der Anschuldigung, von der Jesus ihn bereits befreit hatte: dass er in Sünde geboren sei.",
+      "scripture_connections": [
+        {
+          "reference": "Johannes 9,22",
+          "text": "Das sagten seine Eltern, denn sie fürchteten sich vor den Juden. Denn die Juden hatten sich schon geeinigt: Wenn jemand ihn als den Christus bekennt, der soll aus der Synagoge ausgestoßen werden."
+        },
+        {
+          "reference": "Johannes 12,42",
+          "text": "Doch auch von den Oberen glaubten viele an ihn; aber um der Pharisäer willen bekannten sie es nicht, um nicht aus der Synagoge ausgestoßen zu werden."
+        },
+        {
+          "reference": "Johannes 16,2",
+          "text": "Sie werden euch aus der Synagoge ausstoßen. Es kommt aber die Zeit, dass, wer euch tötet, meinen wird, er tue Gott einen Dienst."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "man_born_blind_found_by_jesus.png",
+      "title": "Jesus hörte, dass sie ihn ausgestoßen hatten",
+      "narrative": "Die Nachricht von der Ausstoßung erreicht Jesu Ohren. Dann verwendet das Evangelium ein gewaltiges Wort: εὑρών (heurōn), \"nachdem er ihn gefunden hatte\". Finden setzt voraus, dass man gesucht hat. Er findet ihn draußen: außerhalb der Synagoge, außerhalb seiner Gemeinschaft, außerhalb der Welt, die er kannte.\n\nUnd er stellt ihm die Frage, auf die seine ganze Geschichte zugegangen war: Glaubst du an den Menschensohn? Der Mann antwortet mit derselben Ehrlichkeit wie immer: Herr, wer ist's, auf dass ich an ihn glaube? Jesu Antwort schenkt ihm in einem einzigen Satz das, was ihm noch fehlte: Du hast ihn ja gesehen, und der mit dir redet, der ist's.\n\nZum ersten Mal in seinem Leben blicken seine neuen Augen in das Gesicht dessen, von dem er so viel gesprochen hatte, ohne ihn zu kennen. Viele Propheten und Könige wollten dieses Gesicht sehen und haben es nicht gesehen (Lukas 10,23-24); der Sohn Gottes selbst fand ihn, der gar nicht gesucht hatte. In diesem Evangelium erklärt Jesus nur selten so unverhüllt, wer er ist; zuvor tat er es an einem Brunnen, mit der samaritanischen Frau (Johannes 4,25-26), und nun spricht er ebenso klar zu diesem Mann, einem von Geburt an Bettler, der wegen des Wunders, das er empfangen hatte, aus der Synagoge ausgestoßen worden war.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 9,35-37",
+        "text": "Jesus hörte, dass sie ihn ausgestoßen hatten. Und als er ihn fand, fragte er: Glaubst du an den Menschensohn? Er antwortete und sprach: Herr, wer ist's, auf dass ich an ihn glaube? Jesus sprach zu ihm: Du hast ihn ja gesehen, und der mit dir redet, der ist's."
+      },
+      "revelation_key": "Er hat Jesus vor den Pharisäern verteidigt, ohne dessen Gesicht je gesehen zu haben; jetzt endlich steht er vor ihm — der Glaube kam vor dem Sehen.",
+      "scripture_connections": [
+        {
+          "reference": "Lukas 10,23-24",
+          "text": "Und er wandte sich zu seinen Jüngern und sprach zu ihnen allein: Selig sind die Augen, die sehen, was ihr seht. Denn ich sage euch: Viele Propheten und Könige wollten sehen, was ihr seht, und haben's nicht gesehen, und hören, was ihr hört, und haben's nicht gehört."
+        },
+        {
+          "reference": "Johannes 4,25-26",
+          "text": "Spricht die Frau zu ihm: Ich weiß, dass der Messias kommt, der da Christus heißt. Wenn dieser kommt, wird er uns alles verkündigen. Jesus spricht zu ihr: Ich bin's, der mit dir redet."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "man_born_blind_worship.png",
+      "title": "Herr, ich glaube; und betete ihn an",
+      "subtitle": "Das Bekenntnis endet auf den Knien",
+      "content": "Die Antwort des Mannes passt in drei Worte und eine Geste: Herr, ich glaube; und betete ihn an. Das griechische Verb ist προσεκύνησεν (prosekynēsen): sich zu Boden werfen, Anbetung erweisen. Es ist das Verb, das dieses Evangelium für die Anbetung reserviert, die Gott gebührt (Johannes 4,23-24, die \"wahren Anbeter\" des Vaters). Der Mann richtet es an Jesus, und Jesus nimmt es an. Wer anfangs nur \"der Mann\" genannt wurde, endet zu seinen Füßen niedergeworfen.\n\nEinige Pharisäer, die dabeistehen, hören diesen Wortwechsel mit. Jesus spricht daraufhin das Urteil über die ganze Szene: Zum Gericht bin ich in diese Welt gekommen, damit die, die nicht sehen, sehend werden, und die sehen, blind werden. Einige Pharisäer fragen, ob sie etwa auch blind seien, und Jesu Antwort ist ernst: Weil sie sagen \"wir sehen\", bleibt ihre Sünde. Die Geschichte schließt mit zwei Haltungen vor demselben Licht: der Bettler, der seine Blindheit erkannt hat und nun sieht und anbetet; und die Experten, die sich ihres Sehvermögens sicher sind und im Dunkeln bleiben. Sehen beginnt damit, die eigene Blindheit zu erkennen.",
+      "revelation_key": "Der Bettler richtet an Jesus genau das Verb, das dieses Evangelium für die Anbetung Gottes reserviert — und Jesus nimmt es an, ohne ihn zu korrigieren.",
+      "verse_overlay": {
+        "reference": "Johannes 9,39",
+        "text": "Und Jesus sprach: Ich bin zum Gericht in diese Welt gekommen, auf dass die da nicht sehen, sehend werden, und die da sehen, blind werden."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Johannes 4,23-24",
+          "text": "Aber es kommt die Stunde und ist schon jetzt, dass die wahren Anbeter den Vater anbeten werden im Geist und in der Wahrheit; denn auch der Vater will solche Anbeter haben. Gott ist Geist, und die ihn anbeten, die müssen ihn im Geist und in der Wahrheit anbeten."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "man_born_blind_your_encounter.png",
+      "title": "Deine Begegnung",
+      "subtitle": "Ein Zeugnis aus erster Hand hält jedem Verhör stand.",
+      "discovery_questions": [
+        {
+          "category": "Zeugnis",
+          "question": "In die Enge getrieben von den Experten, stellte sich der Mann auf eine einzige Gewissheit: \"eins aber weiß ich: dass ich blind war und bin nun sehend\". Was ist das \"Eine\", das du aus erster Hand darüber weißt, was Jesus in deinem Leben getan hat — jenes, das dir keine Diskussion und kein Spott nehmen kann?"
+        },
+        {
+          "category": "Mut",
+          "question": "Seine Eltern kannten die Wahrheit und schwiegen aus Angst, die Synagoge zu verlieren; ihr Sohn sprach sie aus und verlor sie. An welcher Stelle in deinem Leben (Familie, Arbeit, Freundschaften) hat es einen echten Preis, zu sagen, was Jesus für dich getan hat, und welchen konkreten Schritt würdest du gehen, um es mutig auszusprechen?"
+        },
+        {
+          "category": "Glaube",
+          "question": "Jesus hörte, dass man ihn ausgestoßen hatte, suchte ihn und fand ihn draußen, und dort wurde aus dem, der Jesus verteidigte, einer, der ihn anbetete. Wenn du heute wegen deines Glaubens oder deiner Geschichte irgendwo \"draußen\" stehst, was würde es bedeuten, Jesus dich genau dort finden zu lassen und ihm zu antworten wie er: \"Herr, ich glaube\"?"
+        }
+      ],
+      "prayer": {
+        "title": "Eins weiß ich",
+        "content": "Herr Jesus, du hast mich gesehen, bevor ich deinen Namen kannte. Danke, dass du mir die Schuld genommen hast, die ich so lange trug, und aus meiner Geschichte den Ort gemacht hast, an dem sich deine Werke zeigen. Hilf mir, dass mein Glaube wie der Glaube des Mannes ist, der blind geboren wurde, der nicht zweifelte, sondern tat, was du ihm sagtest, und sich mit deiner Gnade und Barmherzigkeit erfüllen ließ. Stärke meinen Mut, anderen von den Wundern deiner Gnade in meinem Leben zu erzählen, und wenn mich das Bekenntnis zu dir irgendwo aus dieser Welt hinausdrängt oder mich entfernt, dann komm und suche mich, wie du ihn gesucht hast, bis ich dir von Angesicht zu Angesicht begegnen und niedergeworfen sagen kann: Herr, ich glaube. Danke, dass du mir das Augenlicht geschenkt hast, sodass ich dich nun sehen und lieben kann. In Jesu Namen, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "man_born_blind_completion.png",
+      "completion_verse": {
+        "reference": "Johannes 9,25",
+        "text": "Er antwortete: Ist er ein Sünder? Das weiß ich nicht; eins aber weiß ich: dass ich blind war und bin nun sehend.",
+        "bible_version": "LU17"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
