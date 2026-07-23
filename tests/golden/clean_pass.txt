@@ -3,18 +3,12 @@
 PHASE 1: FIRST VALIDATION REPORT
 ================================================================================
 
-ℹ️  INFORMATION (1):
-  ℹ️  INFO: phase completed with no issues
-
 ✅ PHASE PASSED - Proceeding to next phase
 ================================================================================
 
 ================================================================================
 PHASE 2: SECOND VALIDATION REPORT
 ================================================================================
-
-ℹ️  INFORMATION (1):
-  ℹ️  INFO: phase completed with no issues
 
 ✅ PHASE PASSED - Proceeding to next phase
 ================================================================================
@@ -34,8 +28,8 @@ PHASE 1: FIRST                                               ✅ PASS  (<ELAPSED
 PHASE 2: SECOND                                              ✅ PASS  (<ELAPSED>s)
 ────────────────────────────────────────────────────────────────────────────────
 
-ℹ️  INFO (2)     ⚠️  WARNINGS (0)     ❌ ERRORS (0)
+ℹ️  INFO (2)     — no warnings or errors
 
 ================================================================================
-✅ RUN PASSED — 0 errors, 0 warnings, exit code 0     (total: <ELAPSED>s)
+✅ RUN PASSED     (total: <ELAPSED>s)
 ================================================================================

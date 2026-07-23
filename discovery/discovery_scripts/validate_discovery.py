@@ -110,7 +110,11 @@ class ValidationReport:
             if self.stats['pending_translations']:
                 print(f"  Studies with pending translations: {len(self.stats['pending_translations'])}")
 
-        if self.info:
+        # On a fully clean pass, RunReport's rollup already covers what ran
+        # and how it went — the full per-message INFO dump here is only
+        # worth the noise when there's a warning/error to give context for.
+        clean = not self.errors and not self.warnings
+        if self.info and not clean:
             print(f"\nℹ️  INFORMATION ({len(self.info)}):")
             for msg in self.info:
                 print(f"  {msg}")

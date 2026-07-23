@@ -3,9 +3,6 @@
 PHASE 1: GATE VALIDATION REPORT
 ================================================================================
 
-ℹ️  INFORMATION (1):
-  ℹ️  INFO: phase completed with no issues
-
 ✅ PHASE PASSED - Proceeding to next phase
 ================================================================================
 
