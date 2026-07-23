@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "pt",
   "bible_version": "ARC",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 5,
   "meta": {
     "character": "Pedro",
@@ -25,7 +25,7 @@
   },
   "key_verse": {
     "reference": "Mateus 14:31",
-    "text": "E logo Jesus estendeu a mão, e o tomou, dizendo: Homem de pouca fé, por que duvidaste?",
+    "text": "E logo Jesus, estendendo a mão, segurou-o e disse-lhe: Homem de pequena fé, por que duvidaste?",
     "bible_version": "ARC"
   },
   "cards": [
@@ -70,7 +70,7 @@
       "ambient_sound": "storm_fading",
       "verse_overlay": {
         "reference": "Mateus 14:27",
-        "text": "Mas logo Jesus lhes falou, dizendo: Tende bom ânimo, sou eu; não temais."
+        "text": "Jesus, porém, lhes falou logo, dizendo: Tende bom ânimo, sou eu; não temais."
       },
       "revelation_key": "Jesus vem até nós no meio das nossas piores tempestades. Não depois."
     },
@@ -101,11 +101,11 @@
       "scripture_connections": [
         {
           "reference": "Isaías 41:13",
-          "text": "Porque eu sou o Senhor teu Deus, que te seguro pela tua mão direita; e te digo: Não temas, eu te ajudo."
+          "text": "Porque eu, o SENHOR, teu Deus, te tomo pela tua mão direita e te digo: não temas, que eu te ajudo."
         },
         {
           "reference": "Salmo 18:16",
-          "text": "Estendeu a mão desde o alto, tomou-me, tirou-me das muitas águas."
+          "text": "Enviou desde o alto e me tomou; tirou-me das muitas águas."
         }
       ]
     },
@@ -120,7 +120,7 @@
       "haptic": "rescue_pulse",
       "verse_overlay": {
         "reference": "Mateus 14:31",
-        "text": "E logo Jesus estendeu a mão, e o tomou."
+        "text": "E logo Jesus, estendendo a mão, segurou-o."
       },
       "revelation_key": "Jesus nos segura antes de nos corrigir. Graça antes da repreensão. Sempre."
     },

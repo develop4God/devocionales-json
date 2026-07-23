@@ -19,9 +19,11 @@ any pipeline and receives no further changes.
   PHASE SOT: Confirm bible_version codes resolved from the live remote SOT
   PHASE B:   Validate encounter files (published only) using EN as base — GATE
   PHASE C:   Verify image_url references resolve on the Devocionales-assets
-             CDN — warnings only, runs last, never fails the build
+             CDN — warnings only, never fails the build
+  PHASE D:   Validate scripture references resolve and their stored
+             verse_text matches the cited Bible version — warnings only, runs last
 
-Exit codes: 0 = all passed (Phase C warnings do not affect this), 1 = errors found in 1/A/SOT/B
+Exit codes: 0 = all passed, 1 = errors found in 1/A/SOT/B, or any warning anywhere
 """
 
 import re
@@ -53,11 +55,16 @@ from shared_validation.text_checks import (
     check_greek_hebrew_transliteration, is_cognate,
 )
 from shared_validation.lint import lint_json_files
+from shared_validation.scripture_check import (
+    ScriptureValidator, find_scripture_pairs, validate_pair, validate_translated_pair,
+    scripture_validation_enabled,
+)
 
 from verify_image_urls import (
     EncounterIndexReader as ImageIndexReader,
     ImageReferenceExtractor,
     GitHubAssetChecker,
+    ImageFormatValidator,
     MAX_CONCURRENT_REQUESTS,
 )
 from concurrent.futures import ThreadPoolExecutor
@@ -67,6 +74,7 @@ from concurrent.futures import ThreadPoolExecutor
 SCRIPTS_DIR = Path(__file__).parent
 ENCOUNTERS_DIR = SCRIPTS_DIR.parent
 INDEX_PATH = ENCOUNTERS_DIR / 'index.json'
+BIBLE_DATABASE_DIR = ENCOUNTERS_DIR.parent / 'bible_database'
 
 SCHEMA_VERSION = 'encounters_v1'
 VALID_STATUSES = {'published', 'coming_soon'}
@@ -530,6 +538,25 @@ def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
         if len(en_sc) != len(tr_sc):
             report.E(f"{ctx}: scripture_connections count mismatch EN={len(en_sc)}, {lang.upper()}={len(tr_sc)}")
 
+        # verse_overlay presence parity — the key-parity check above only
+        # catches the key being absent entirely; it can't catch EN having
+        # a real object while the translation has the same key set to
+        # null (or vice versa), which key-parity sees as "present" on both
+        # sides. Confirmed via widow_nain_en_001.json/zacchaeus_en_001.json,
+        # which both use verse_overlay: null on some cards deliberately.
+        if 'verse_overlay' in ec and 'verse_overlay' in tc:
+            en_has = ec['verse_overlay'] is not None
+            tr_has = tc['verse_overlay'] is not None
+            if en_has != tr_has:
+                report.E(f"{ctx}: verse_overlay present in EN={en_has} but {lang.upper()}={tr_has}")
+
+    # key_verse presence parity (top-level, once per file, same reasoning
+    # as verse_overlay above)
+    en_kv = en_data.get('key_verse')
+    tr_kv = trans_data.get('key_verse')
+    if (en_kv is not None) != (tr_kv is not None):
+        report.E(f"{filename}: key_verse present in EN={en_kv is not None} but {lang.upper()}={tr_kv is not None}")
+
 
 def validate_encounter_files(report: Report, index_data: dict, lint_cache: dict,
                               bible_versions: dict, expected_languages: list) -> None:
@@ -649,10 +676,148 @@ def validate_image_urls(report: Report) -> None:
     if not failures:
         report.I(f"✓ All {len(results)} image references resolved")
 
+    # Format validation: a resolved URL can still be the wrong file type
+    # (e.g. JPEG bytes uploaded with a .png extension) — GitHub's Content-Type
+    # header follows the extension, not the actual bytes, so existence
+    # checks above can't catch this. Only checked for images that resolved.
+    validator = ImageFormatValidator()
+    resolved = [r for r in results if r.ok]
+
+    def check_format(result):
+        format_ok, format_status = validator.validate(result.reference)
+        result.format_ok = format_ok
+        result.format_status = format_status
+        return result
+
+    with ThreadPoolExecutor(max_workers=MAX_CONCURRENT_REQUESTS) as pool:
+        format_results = list(pool.map(check_format, resolved))
+
+    format_failures = [r for r in format_results if r.format_ok is False]
+    for r in format_failures:
+        report.W(
+            f"{r.reference.encounter_id}/{r.reference.filename} "
+            f"(referenced in {r.reference.source_file}): {r.format_status} "
+            f"— {r.reference.url}"
+        )
+
+    if not format_failures:
+        report.I(f"✓ All {len(format_results)} resolved images match their declared format")
+
+
+# ── Phase D: Scripture references ───────────────────────────────────────────
+#
+# Verifies every {reference, verse_text} pair actually resolves against the
+# Bible version cited for that file, and that the stored verse_text matches
+# the resolved text closely enough (fuzzy match — see shared_validation.
+# scripture_check). WARNING-only for this initial rollout: resolution
+# failures have no legitimate false-positive case in principle but haven't
+# been hand-reviewed against the full corpus yet, and text-mismatch is
+# inherently fuzzy — see the issue's Rollout section. Runs after Phase B
+# (the real gate) so scripture findings never block the release while the
+# threshold is being tuned.
+
+def validate_scripture_references(report: Report, index_data: dict, lint_cache: dict,
+                                   only_lang: Optional[str] = None) -> None:
+    """Phase D: resolve every scripture reference found in every loaded
+    encounter file and fuzzy-match its stored verse_text against the
+    resolved text. Reuses lint_cache (already parsed in Phase 1) rather
+    than re-reading files from disk.
+
+    EN files resolve directly (validate_pair). Non-EN files never parse
+    their own native-language reference string — cards align 1:1 by
+    position with the EN file (guaranteed by Phase B's parity gate), so
+    each translated reference is validated against its EN sibling's
+    reference via validate_translated_pair (see shared_validation.
+    scripture_check module docstring for why).
+
+    only_lang restricts the scan to a single language's files (still
+    resolves the EN sibling for non-EN languages, since validation needs
+    it) — for fast local iteration on one language's findings without
+    scanning the full 10-language corpus."""
+    report.I("=" * 60)
+    report.I("PHASE D: SCRIPTURE REFERENCES" + (f" ({only_lang})" if only_lang else ""))
+    report.I("=" * 60)
+
+    pairs_checked = 0
+    resolution_failures = 0
+    text_mismatches = 0
+
+    with ScriptureValidator(BIBLE_DATABASE_DIR) as validator:
+        for enc in index_data['encounters']:
+            files = enc.get('files', {})
+            en_fname = files.get('en')
+            en_data = lint_cache.get(ENCOUNTERS_DIR / 'en' / en_fname) if en_fname else None
+            en_pairs = find_scripture_pairs(en_data) if en_data else None
+
+            for lang, fname in files.items():
+                if only_lang and lang != only_lang:
+                    continue
+                fpath = ENCOUNTERS_DIR / lang / fname
+                data = lint_cache.get(fpath)
+                if data is None:
+                    continue
+
+                bible_version = data.get('bible_version')
+                if not bible_version:
+                    continue
+
+                resolver = validator.get_resolver(bible_version, lang)
+                if resolver is None:
+                    report.W(f"{fname}: no local Bible DB found for bible_version '{bible_version}' (lang '{lang}') — skipping scripture checks")
+                    continue
+
+                if lang == 'en':
+                    for ref in find_scripture_pairs(data):
+                        pairs_checked += 1
+                        finding = validate_pair(ref, resolver)
+                        if finding is None:
+                            continue
+                        if finding.kind == "resolution_failed":
+                            resolution_failures += 1
+                        else:
+                            text_mismatches += 1
+                        report.W(f"{fname}: {finding.message}")
+                    continue
+
+                if en_pairs is None:
+                    report.W(f"{fname}: no EN sibling file found — skipping scripture checks")
+                    continue
+
+                native_pairs = find_scripture_pairs(data)
+                if len(native_pairs) != len(en_pairs):
+                    report.W(f"{fname}: scripture pair count ({len(native_pairs)}) doesn't match EN sibling ({len(en_pairs)}) — skipping scripture checks (cards likely out of sync, see Phase B)")
+                    continue
+
+                for en_ref, native_ref in zip(en_pairs, native_pairs):
+                    pairs_checked += 1
+                    finding = validate_translated_pair(en_ref, native_ref, resolver, bible_version)
+                    if finding is None:
+                        continue
+                    if finding.kind == "resolution_failed":
+                        resolution_failures += 1
+                    else:
+                        text_mismatches += 1
+                    report.W(f"{fname}: {finding.message}")
+
+    report.I(
+        f"✓ Checked {pairs_checked} scripture reference(s): "
+        f"{resolution_failures} resolution failure(s), {text_mismatches} text mismatch(es)"
+    )
+
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--lang", help="Restrict PHASE D (scripture references) to one language "
+                                        "and run it locally without needing CI=true")
+    parser.add_argument("--scripture-only", action="store_true",
+                         help="Run only PHASE D (scripture references), skipping PHASE SOT/B/C. "
+                              "Still runs PHASE 1/A first since PHASE D depends on their output. "
+                              "Implies scripture validation runs regardless of CI env var.")
+    args = parser.parse_args()
+
     print("🔍 Starting Encounters Validation...")
     print(f"📁 Encounters directory: {ENCOUNTERS_DIR}")
     print()
@@ -665,20 +830,40 @@ def main():
     lint_cache = run_report.wrap("PHASE 1: LINT", validate_lint)
     index_data = run_report.wrap("PHASE A: INDEX", validate_index, expected_languages)
 
+    if args.scripture_only:
+        # PHASE 1/A only ran to build lint_cache/index_data, which PHASE D
+        # depends on — their own findings aren't what this mode reports on,
+        # so drop them before they contaminate PHASE D's exit code.
+        run_report.phases.clear()
+
     if index_data is None:
         print("\n❌ PHASE A FAILED - Stopping validation")
         run_report.print_summary()
+        run_report.write_github_summary()
         sys.exit(1)
 
-    run_report.wrap("PHASE SOT: BIBLE VERSIONS SOURCE", validate_sot_source, bible_versions, used_remote_sot, last_fetch_error)
-    run_report.wrap("PHASE B: ENCOUNTER FILES", validate_encounter_files, index_data, lint_cache,
-                     bible_versions, expected_languages)
+    if not args.scripture_only:
+        run_report.wrap("PHASE SOT: BIBLE VERSIONS SOURCE", validate_sot_source, bible_versions, used_remote_sot, last_fetch_error)
+        run_report.wrap("PHASE B: ENCOUNTER FILES", validate_encounter_files, index_data, lint_cache,
+                         bible_versions, expected_languages)
 
-    # Phase C runs last, after the real gate (Phase B) has passed. Its
-    # findings are warnings only (see validate_image_urls); gate=False means
-    # an unreachable image doesn't stop later phases from running, but any
-    # warning it produces still fails the overall run via print_summary().
-    run_report.wrap("PHASE C: IMAGE URLS", validate_image_urls, gate=False, final=True)
+        # Phase C runs after the real gate (Phase B) has passed. Its findings
+        # are warnings only (see validate_image_urls); gate=False means an
+        # unreachable image doesn't stop later phases from running, but any
+        # warning it produces still fails the overall run via print_summary().
+        run_report.wrap("PHASE C: IMAGE URLS", validate_image_urls, gate=False)
+
+    # Phase D runs after Phase B has passed. Its findings are warnings only
+    # (see validate_scripture_references) — resolution failures and fuzzy
+    # text-mismatch both need a human-review pass over real corpus findings
+    # before either is considered for promotion to ERROR. Scans the ENTIRE
+    # corpus (2000+ references across 10 languages) every run — too slow
+    # for daily local editing, so it's CI-only (see scripture_validation_enabled).
+    if scripture_validation_enabled() or args.lang or args.scripture_only:
+        run_report.wrap("PHASE D: SCRIPTURE REFERENCES", validate_scripture_references, index_data, lint_cache,
+                         args.lang, gate=False, final=True)
+    else:
+        print("ℹ️  PHASE D: SCRIPTURE REFERENCES — skipped (CI-only; set CI=true to run locally, or pass --lang)")
 
     encounters = index_data['encounters']
     published = [e for e in encounters if e.get('status') == 'published']
@@ -693,6 +878,7 @@ def main():
         sot_live=used_remote_sot,
     )
     run_report.print_summary()
+    run_report.write_github_summary()
 
     sys.exit(run_report.exit_code)
 

@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "pt",
   "bible_version": "ARC",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 7,
   "meta": {
     "character": "Bartimeu",
@@ -26,7 +26,7 @@
   },
   "key_verse": {
     "reference": "Marcos 10:52",
-    "text": "E Jesus lhe disse: Vai, a tua fé te salvou. E imediatamente recobrou a vista, e seguia Jesus no caminho.",
+    "text": "E Jesus lhe disse: Vai, a tua fé te salvou. E logo viu, e seguiu a Jesus pelo caminho.",
     "bible_version": "ARC"
   },
   "cards": [
@@ -47,7 +47,7 @@
       "mood": "tense",
       "image_url": "bartimaeus_crowd_passing.png",
       "verse_reference": "Marcos 10:46-47",
-      "verse_text": "Depois foram a Jericó; e saindo ele de Jericó com os seus discípulos e uma grande multidão, Bartimeu, o cego, filho de Timeu, estava assentado junto ao caminho mendigando. E ouvindo que era Jesus Nazareno, começou a clamar, e a dizer: Jesus, filho de Davi, tem misericórdia de mim.",
+      "verse_text": "Depois, foram para Jericó. E, saindo ele de Jericó com seus discípulos e uma grande multidão, Bartimeu, o cego, filho de Timeu, estava assentado junto ao caminho, mendigando. E, ouvindo que era Jesus de Nazaré, começou a clamar e a dizer: Jesus, Filho de Davi, tem misericórdia de mim!",
       "reflection": "Observe os detalhes que Marcos inclui.\n\nNão é 'um cego'. É Bartimeu, filho de Timeu. Marcos lhe dá um nome. Marcos lhe dá um pai. Marcos o vê.\n\nE note o que Bartimeu faz no instante em que ouve o nome de Jesus. Ele não espera. Não manda um mensageiro. Não reza em silêncio.\n\nGrita.",
       "revelation_key": "Bartimeu não podia ver Jesus. Mas o reconheceu antes de muitos que podiam."
     },
@@ -91,7 +91,7 @@
         },
         {
           "reference": "2 Coríntios 5:7",
-          "text": "Porque andamos por fé, e não por vista."
+          "text": "(Porque andamos por fé e não por vista.)."
         }
       ]
     },
@@ -101,7 +101,7 @@
       "mood": "intimate",
       "image_url": "bartimaeus_desperate_plea.png",
       "verse_reference": "Marcos 10:51",
-      "verse_text": "E Jesus, respondendo, disse-lhe: Que queres que te faça? E o cego disse-lhe: Mestre, que eu receba a vista.",
+      "verse_text": "E Jesus, falando, disse-lhe: Que queres que te faça? E o cego lhe disse: Mestre, que eu tenha vista.",
       "reflection": "Esta é a mesma pergunta que Jesus acabou de fazer a Tiago e João em Marcos 10:36.\n\nEles pediram poder. Posição. Sentar à direita e à esquerda.\n\nBartimeu pediu para ver.\n\nJesus faz a mesma pergunta a todos. A diferença está no que cada coração responde.\n\nE note como ele chama Jesus: Rabboni — Meu Mestre. Não apenas Mestre. Meu. Pessoal. Íntimo. O cego que nunca o havia visto o chamou de seu antes de poder olhá-lo nos olhos.",
       "revelation_key": "O que pedimos a Jesus revela o quanto O conhecemos."
     },
@@ -116,7 +116,7 @@
       "haptic": "light_pulse",
       "verse_overlay": {
         "reference": "Marcos 10:52",
-        "text": "E imediatamente recobrou a vista, e seguia Jesus no caminho."
+        "text": "E logo viu, e seguiu a Jesus pelo caminho."
       },
       "revelation_key": "A primeira coisa que os seus olhos viram foi Jesus. E ele escolheu segui-Lo."
     },
@@ -141,7 +141,7 @@
       "scripture_connections": [
         {
           "reference": "João 9:39",
-          "text": "E Jesus disse: Para julgamento vim eu a este mundo; para que os que não vêem vejam, e os que vêem sejam cegados."
+          "text": "E disse-lhe Jesus: Eu vim a este mundo para juízo, a fim de que os que não veem vejam e os que veem sejam cegos."
         },
         {
           "reference": "1 Coríntios 1:27",
@@ -180,7 +180,7 @@
       "image_url": "bartimaeus_face_restored.png",
       "completion_verse": {
         "reference": "Marcos 10:52",
-        "text": "E Jesus lhe disse: Vai, a tua fé te salvou. E imediatamente recobrou a vista, e seguia Jesus no caminho.",
+        "text": "E Jesus lhe disse: Vai, a tua fé te salvou. E logo viu, e seguiu a Jesus pelo caminho.",
         "bible_version": "ARC"
       },
       "celebration_type": "gentle_light"

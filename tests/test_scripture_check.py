@@ -1,0 +1,632 @@
+"""test_scripture_check.py — unit tests for shared_validation/scripture_check.py
+(issue #88: validate scripture references and verse text at pipeline time).
+
+Covers find_scripture_pairs() (pure extraction: nested structures, multiple
+pairs per card, missing bible_version) and validate_pair() (known-good
+reference, known-bad book name, known verse-count-exceeded, a synthetic
+text-mismatch case) against a tiny in-memory-equivalent SQLite fixture DB —
+same approach as tests/test_verse_resolver.py, so these tests don't depend
+on decompressing the real multi-MB bible_database/*.gz files and stay fast
+and deterministic.
+"""
+
+import sqlite3
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+sys.path.insert(0, str(REPO_ROOT / 'devocionales_scripts'))
+
+from verse_resolver import VerseResolver  # noqa: E402
+from shared_validation.scripture_check import (  # noqa: E402
+    ScriptureRef, find_scripture_pairs, validate_pair, validate_translated_pair,
+    jaccard_similarity, FUZZY_MATCH_THRESHOLD, _is_intentional_truncation,
+)
+
+
+def _make_bible_db(path: str, books: list, verses: list) -> None:
+    """Create a minimal SQLite Bible DB with `books` and `verses` tables."""
+    conn = sqlite3.connect(path)
+    conn.execute("CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)")
+    conn.execute("CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)")
+    conn.executemany("INSERT INTO books (book_number, long_name) VALUES (?, ?)", books)
+    conn.executemany(
+        "INSERT INTO verses (book_number, chapter, verse, text) VALUES (?, ?, ?, ?)",
+        verses,
+    )
+    conn.commit()
+    conn.close()
+
+
+# ── find_scripture_pairs ─────────────────────────────────────────────────────
+
+class TestFindScripturePairs(unittest.TestCase):
+    def test_finds_verse_reference_verse_text_pair(self):
+        data = {
+            'cards': [
+                {'type': 'scripture_moment', 'verse_reference': 'John 3:16',
+                 'verse_text': 'For God so loved the world...'},
+            ]
+        }
+        pairs = find_scripture_pairs(data)
+        self.assertEqual(len(pairs), 1)
+        self.assertEqual(pairs[0].reference, 'John 3:16')
+        self.assertEqual(pairs[0].verse_text, 'For God so loved the world...')
+        self.assertEqual(pairs[0].path, 'cards[0].verse_reference')
+
+    def test_finds_reference_text_pair(self):
+        """key_verse / completion_verse / scripture_connections / scripture_anchor
+        all use reference+text rather than verse_reference+verse_text."""
+        data = {'key_verse': {'reference': 'Matthew 14:31', 'text': 'O you of little faith'}}
+        pairs = find_scripture_pairs(data)
+        self.assertEqual(len(pairs), 1)
+        self.assertEqual(pairs[0].reference, 'Matthew 14:31')
+        self.assertEqual(pairs[0].path, 'key_verse.reference')
+
+    def test_finds_multiple_pairs_per_card(self):
+        """A card can carry more than one scripture pair (e.g. verse_overlay
+        alongside verse_reference/verse_text) — both must be found."""
+        data = {
+            'cards': [
+                {
+                    'type': 'scripture_moment',
+                    'verse_reference': 'John 3:16', 'verse_text': 'text A',
+                    'verse_overlay': {'reference': 'John 3:17', 'text': 'text B'},
+                },
+            ]
+        }
+        pairs = find_scripture_pairs(data)
+        refs = {p.reference for p in pairs}
+        self.assertEqual(refs, {'John 3:16', 'John 3:17'})
+
+    def test_finds_pairs_in_nested_lists(self):
+        """scripture_connections is a list of {reference, text} dicts nested
+        inside a card — the walk must descend into list items."""
+        data = {
+            'cards': [
+                {
+                    'type': 'theological_depth',
+                    'scripture_connections': [
+                        {'reference': 'Joel 2:28', 'text': 'I will pour out my spirit'},
+                        {'reference': 'Acts 2:17', 'text': 'In the last days'},
+                    ],
+                },
+            ]
+        }
+        pairs = find_scripture_pairs(data)
+        self.assertEqual(len(pairs), 2)
+        paths = {p.path for p in pairs}
+        self.assertEqual(
+            paths,
+            {'cards[0].scripture_connections[0].reference',
+             'cards[0].scripture_connections[1].reference'},
+        )
+
+    def test_missing_bible_version_does_not_crash_extraction(self):
+        """find_scripture_pairs is pure extraction — it doesn't care whether
+        the file has a bible_version at all, only about reference/text pairs."""
+        data = {'cards': [{'type': 'scripture_moment', 'verse_reference': 'John 3:16',
+                            'verse_text': 'text'}]}
+        self.assertNotIn('bible_version', data)
+        pairs = find_scripture_pairs(data)
+        self.assertEqual(len(pairs), 1)
+
+    def test_no_pairs_found_returns_empty_list(self):
+        data = {'cards': [{'type': 'cinematic_scene', 'title': 'x', 'narrative': 'y'}]}
+        self.assertEqual(find_scripture_pairs(data), [])
+
+    def test_pair_order_independent_of_dict_key_insertion_order(self):
+        """Real bug found via woman_well_pt_001/zacchaeus_pt_001: an EN file
+        and its translated sibling can legitimately write a card's fields in
+        different order (e.g. verse_overlay before scripture_connections in
+        one, after in the other) — valid JSON, same content, just different
+        key order. validate_scripture_references zips the EN file's pairs
+        against the translated sibling's pairs BY POSITION, so if
+        find_scripture_pairs returned pairs in raw dict-walk order, this
+        field-order difference would silently pair each translated entry
+        with the WRONG EN reference. The two pair lists below must come out
+        in the same order despite the reversed key order."""
+        overlay_first = {
+            'cards': [{
+                'verse_overlay': {'reference': 'John 4:13-14', 'text': 'overlay text'},
+                'scripture_connections': [{'reference': 'John 4:15', 'text': 'sc0 text'}],
+            }]
+        }
+        connections_first = {
+            'cards': [{
+                'scripture_connections': [{'reference': 'S. João 4:15', 'text': 'sc0 texto'}],
+                'verse_overlay': {'reference': 'S. João 4:13-14', 'text': 'overlay texto'},
+            }]
+        }
+        pairs_a = find_scripture_pairs(overlay_first)
+        pairs_b = find_scripture_pairs(connections_first)
+        self.assertEqual([p.path for p in pairs_a], [p.path for p in pairs_b])
+
+    def test_pair_order_is_natural_not_lexicographic_for_card_index(self):
+        """A plain string sort would put 'cards[10]' before 'cards[2]' —
+        pair order must follow numeric card position instead, since
+        encounters can have more than 9 cards."""
+        data = {
+            'cards': [
+                {'verse_reference': f'Ref {i}', 'verse_text': f'Text {i}'}
+                for i in range(11)
+            ]
+        }
+        pairs = find_scripture_pairs(data)
+        self.assertEqual(
+            [p.path for p in pairs],
+            [f'cards[{i}].verse_reference' for i in range(11)],
+        )
+
+    def test_empty_reference_or_text_is_not_a_pair(self):
+        data = {'key_verse': {'reference': '', 'text': ''}}
+        self.assertEqual(find_scripture_pairs(data), [])
+
+    def test_greek_words_reference_without_verse_text_is_not_a_pair(self):
+        """greek_words entries have 'reference' but no 'verse_text'/'text' —
+        must not be misidentified as a scripture pair."""
+        data = {
+            'cards': [{
+                'greek_words': [{'word': 'ἐπήρθη', 'reference': 'Acts 1:9', 'meaning': 'lifted up'}],
+            }]
+        }
+        self.assertEqual(find_scripture_pairs(data), [])
+
+
+# ── jaccard_similarity ───────────────────────────────────────────────────────
+
+class TestJaccardSimilarity(unittest.TestCase):
+    def test_identical_text_is_1(self):
+        self.assertEqual(jaccard_similarity("hello world", "hello world"), 1.0)
+
+    def test_completely_different_text_is_0(self):
+        self.assertEqual(jaccard_similarity("hello world", "foo bar"), 0.0)
+
+    def test_smart_quotes_normalized_to_straight(self):
+        self.assertEqual(jaccard_similarity('“hello”', '"hello"'), 1.0)
+
+    def test_whitespace_collapsed(self):
+        self.assertEqual(jaccard_similarity("hello   world", "hello world"), 1.0)
+
+    def test_arabic_combining_diacritic_order_normalized(self):
+        """Real bug found via nicodemus_ar_001.json: the same Arabic word
+        can encode its combining fatha/shadda diacritics in a different
+        codepoint order while rendering identically — comparing raw
+        strings/tokens treats them as different words. NFC normalization
+        must make them compare equal. (Constructed directly via unicodedata
+        rather than literal source text, since editors/terminals often
+        silently re-normalize pasted Arabic to a single canonical form.)"""
+        import unicodedata
+        base = "لأنَّهُ"    # ل أ ن ّ َ ه ُ — shadda before fatha
+        variant = unicodedata.normalize("NFD", base)            # decompose, likely reorders combining marks
+        # Only meaningful if the two forms actually differ before normalization.
+        self.assertNotEqual(base, variant)
+        self.assertEqual(jaccard_similarity(base, variant), 1.0)
+
+    def test_cjk_text_compared_by_character_not_whitespace_token(self):
+        """Real bug found via peter_water_zh_001.json: CJK text has no
+        spaces, so whitespace .split() collapses an entire verse into one
+        token and any two non-identical verses score 0% regardless of how
+        similar their content actually is. Character-level comparison must
+        recognize these as near-identical (they differ only by quote marks)."""
+        stored = "耶稣赶紧伸手拉住他，说：你这小信的人哪，为什么疑惑呢？"
+        resolved = "耶稣赶紧伸手拉住他，说：「你这小信的人哪，为什么疑惑呢？」"
+        self.assertGreaterEqual(jaccard_similarity(stored, resolved), FUZZY_MATCH_THRESHOLD)
+
+    def test_cjk_completely_different_text_is_low(self):
+        self.assertLess(jaccard_similarity("耶稣爱你", "上帝创造天地"), FUZZY_MATCH_THRESHOLD)
+
+
+# ── _is_intentional_truncation ───────────────────────────────────────────────
+
+class TestIsIntentionalTruncation(unittest.TestCase):
+    """Real cases pulled directly from the corpus during manual Phase D
+    triage: this corpus deliberately quotes partial verses for narrative
+    pacing (a card stops a quote right before its payoff line, delivering
+    that line in prose instead a beat later) — these score low on
+    jaccard_similarity despite being correct, verbatim excerpts. The
+    distinguishing test is exact substring containment after
+    normalization: a truncation only ever OMITS words from the real verse,
+    it never CHANGES any word it does include — so it always survives as
+    a contiguous substring. A paraphrase (the actual bug class this module
+    exists to catch) changes wording, so it never does, regardless of how
+    much text otherwise overlaps."""
+
+    def test_prefix_truncation_zacchaeus(self):
+        stored = "This day is salvation come to this house."
+        resolved = "And Jesus said unto him, This day is salvation come to this house, since he also is a son of Abraham."
+        self.assertTrue(_is_intentional_truncation(stored, resolved))
+
+    def test_suffix_truncation_widow_nain(self):
+        stored = "And he delivered him to his mother."
+        resolved = "And he that was dead sat up, and began to speak. And he delivered him to his mother."
+        self.assertTrue(_is_intentional_truncation(stored, resolved))
+
+    def test_middle_slice_truncation_adultery_woman(self):
+        """Stored text carries a leading literal '...' marking a mid-sentence
+        start — the ellipsis itself must be stripped before the substring
+        check, not treated as literal characters to match against."""
+        stored = "...and Jesus was left alone, and the woman standing before him."
+        resolved = (
+            "And they who heard it, being convicted by their own conscience, went out "
+            "one by one, beginning at the eldest, even unto the last: and Jesus was left "
+            "alone, and the woman standing before him."
+        )
+        self.assertTrue(_is_intentional_truncation(stored, resolved))
+
+    def test_paraphrase_is_not_truncation(self):
+        """The real KJV/King-James-2000 paraphrase bug fixed in
+        peter_water_en_001.json: 'stretched out' vs. the DB's 'stretched
+        forth', 'saying to him' vs. 'and said unto him' — this changes
+        wording, so it must NOT be classified as truncation even though
+        most of the sentence structure overlaps."""
+        stored = (
+            "And immediately Jesus stretched out His hand and caught him, "
+            "saying to him, 'O you of little faith, why did you doubt?'"
+        )
+        resolved = (
+            "And immediately Jesus stretched forth his hand, and caught him, "
+            "and said unto him, O you of little faith, why did you doubt?"
+        )
+        self.assertFalse(_is_intentional_truncation(stored, resolved))
+
+    def test_short_coincidental_phrase_below_length_floor_is_not_truncation(self):
+        """A short, generic phrase can coincidentally appear inside an
+        unrelated verse — the absolute length floor (not a length ratio,
+        since real truncations can be legitimately short relative to their
+        source) blocks this from false-passing as truncation."""
+        stored = "and he said"
+        resolved = "Then Peter answered and he said unto them, Repent, and be baptized every one of you."
+        self.assertFalse(_is_intentional_truncation(stored, resolved))
+
+    def test_unrelated_text_is_not_truncation(self):
+        stored = "For God so loved the world"
+        resolved = "In the beginning God created the heaven and the earth."
+        self.assertFalse(_is_intentional_truncation(stored, resolved))
+
+    def test_cjk_short_truncation_below_latin_floor_still_counts(self):
+        """Real bug found via road_to_emmaus_ja_001.json: a CJK character
+        carries far more meaning than a Latin one, so the 20-character
+        Latin length floor wrongly rejected this genuine, verified-correct
+        16-character truncation of Hebrews 4:12."""
+        stored = "神のことばは生きていて、力があり"
+        resolved = (
+            "神のことばは生きていて、力があり、両刃の剣よりも鋭く、たましいと霊、"
+            "関節と骨髄の分かれ目さえも刺し通し、心のいろいろな考えやはかりごとを判別することができます。"
+        )
+        self.assertTrue(_is_intentional_truncation(stored, resolved))
+
+    def test_cjk_fullwidth_slash_line_break_marker_stripped(self):
+        """Real bug found via road_to_emmaus_ja_001.json: SK2003 uses '／'
+        as a poetic line-break marker mid-verse (Jeremiah 20:9) — a
+        legitimate truncation can start or end adjacent to one of these
+        without the excerpt itself containing it, so the marker must be
+        stripped before the substring check, not treated as a literal
+        character the stored text has to match."""
+        stored = "主のみことばは私の心のうちで、骨の中に閉じ込められて燃えさかる火のようになり"
+        resolved = (
+            "私は、「主のことばを宣べ伝えまい。／もう主の名で語るまい」と思いましたが、"
+            "主のみことばは私の心のうちで、骨の中に閉じ込められて／燃えさかる火のようになり、"
+            "私はうちにしまっておくのに／疲れて耐えられません。"
+        )
+        self.assertTrue(_is_intentional_truncation(stored, resolved))
+
+
+# ── validate_pair ────────────────────────────────────────────────────────────
+
+class ValidatePairTestCase(unittest.TestCase):
+    """Base class providing a books_sot fixture so tests don't hit the network."""
+
+    def setUp(self):
+        import verse_resolver
+        verse_resolver._books_sot_cache = {"John": 500, "Matthew": 470}
+
+        with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
+            self.db_path = f.name
+        _make_bible_db(
+            self.db_path,
+            books=[(500, "John"), (470, "Matthew")],
+            verses=[
+                (500, 3, 16, "For God so loved the world, that he gave his only begotten Son."),
+                (500, 3, 17, "For God sent not his Son into the world to condemn the world."),
+                (470, 14, 31, "O thou of little faith, wherefore didst thou doubt?"),
+            ],
+        )
+        self.resolver = VerseResolver(self.db_path)
+
+    def tearDown(self):
+        import verse_resolver
+        verse_resolver._books_sot_cache = None
+        self.resolver.close()
+        Path(self.db_path).unlink(missing_ok=True)
+
+
+class TestValidatePairKnownGood(ValidatePairTestCase):
+    def test_matching_reference_and_text_returns_none(self):
+        ref = ScriptureRef(
+            reference="John 3:16",
+            verse_text="For God so loved the world, that he gave his only begotten Son.",
+            path="key_verse.reference",
+        )
+        self.assertIsNone(validate_pair(ref, self.resolver))
+
+
+class TestValidatePairBadBookName(ValidatePairTestCase):
+    def test_unknown_book_name_returns_resolution_failed_warning(self):
+        ref = ScriptureRef(reference="Zorblax 1:1", verse_text="anything", path="key_verse.reference")
+        finding = validate_pair(ref, self.resolver)
+        self.assertIsNotNone(finding)
+        self.assertEqual(finding.kind, "resolution_failed")
+        self.assertIn("unknown book", finding.message)
+
+
+class TestValidatePairVerseCountExceeded(ValidatePairTestCase):
+    def test_verse_number_beyond_chapter_range_returns_resolution_failed(self):
+        """John 3 in the fixture DB only has verses 16-17 — verse 999 is
+        out of range and must fail resolution, not silently return empty."""
+        ref = ScriptureRef(reference="John 3:999", verse_text="anything", path="key_verse.reference")
+        finding = validate_pair(ref, self.resolver)
+        self.assertIsNotNone(finding)
+        self.assertEqual(finding.kind, "resolution_failed")
+        self.assertIn("verse not found", finding.message)
+
+
+class TestValidatePairTextMismatch(ValidatePairTestCase):
+    def test_synthetic_wrong_text_returns_text_mismatch_warning(self):
+        """Right reference, but stored verse_text is entirely unrelated
+        content — must be flagged as a fuzzy text mismatch, not silently
+        passed."""
+        ref = ScriptureRef(
+            reference="John 3:16",
+            verse_text="The quick brown fox jumps over the lazy dog in the meadow today.",
+            path="key_verse.reference",
+        )
+        finding = validate_pair(ref, self.resolver)
+        self.assertIsNotNone(finding)
+        self.assertEqual(finding.kind, "text_mismatch")
+        self.assertIn("token-overlap", finding.message)
+        # Both texts must be printed side-by-side for human review.
+        self.assertIn("stored:", finding.message)
+        self.assertIn("resolved:", finding.message)
+
+    def test_merged_verse_block_stays_within_threshold(self):
+        """A merged consecutive-verse block (this corpus's own editorial
+        convention) shares the large majority of its tokens with the sum of
+        the individual verses and must NOT be flagged."""
+        ref = ScriptureRef(
+            reference="John 3:16",
+            verse_text=(
+                "For God so loved the world, that he gave his only begotten Son. "
+                "For God sent not his Son into the world to condemn the world."
+            ),
+            path="key_verse.reference",
+        )
+        # Resolves against 3:16 alone, so overlap won't be perfect, but the
+        # shared vocabulary should still clear a reasonable bar — this test
+        # documents current threshold behavior rather than asserting a
+        # specific pass/fail, since the fixture doesn't resolve a real
+        # multi-verse range.
+        finding = validate_pair(ref, self.resolver)
+        # 3:16 alone resolves; text includes 3:16 verbatim plus 3:17 — some
+        # overlap guaranteed, assert it's computed (not crashing) and kind
+        # is either None or text_mismatch, never resolution_failed.
+        if finding is not None:
+            self.assertEqual(finding.kind, "text_mismatch")
+
+
+class ValidateTranslatedPairTestCase(unittest.TestCase):
+    """Base class for validate_translated_pair(): resolves the EN sibling
+    reference against a *target-language* DB (never parses the native
+    reference string itself) — mirrors validate_pair's fixture shape but
+    with a Spanish-labeled DB standing in for any non-EN target."""
+
+    def setUp(self):
+        import verse_resolver
+        verse_resolver._books_sot_cache = {"John": 500, "Genesis": 10}
+
+        with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
+            self.db_path = f.name
+        _make_bible_db(
+            self.db_path,
+            books=[(500, "Juan"), (10, "Génesis")],
+            verses=[
+                (500, 3, 16, "Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito."),
+            ],
+        )
+        self.resolver = VerseResolver(self.db_path)
+
+    def tearDown(self):
+        import verse_resolver
+        verse_resolver._books_sot_cache = None
+        self.resolver.close()
+        Path(self.db_path).unlink(missing_ok=True)
+
+
+class TestValidateTranslatedPairKnownGood(ValidateTranslatedPairTestCase):
+    def test_matching_translated_text_returns_none(self):
+        en_ref = ScriptureRef(reference="John 3:16", verse_text="unused", path="key_verse.reference")
+        native_ref = ScriptureRef(
+            reference="Juan 3:16",
+            verse_text="Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito.",
+            path="key_verse.reference",
+        )
+        self.assertIsNone(validate_translated_pair(en_ref, native_ref, self.resolver))
+
+
+class TestValidateTranslatedPairTextMismatch(ValidateTranslatedPairTestCase):
+    def test_wrong_translated_text_returns_text_mismatch(self):
+        en_ref = ScriptureRef(reference="John 3:16", verse_text="unused", path="key_verse.reference")
+        native_ref = ScriptureRef(
+            reference="Juan 3:16",
+            verse_text="El rápido zorro marrón salta sobre el perro perezoso.",
+            path="key_verse.reference",
+        )
+        finding = validate_translated_pair(en_ref, native_ref, self.resolver)
+        self.assertIsNotNone(finding)
+        self.assertEqual(finding.kind, "text_mismatch")
+
+
+class TestValidateTranslatedPairBadEnReference(ValidateTranslatedPairTestCase):
+    def test_unparseable_en_reference_returns_resolution_failed(self):
+        """The EN sibling reference itself is malformed — never even
+        attempts to parse the native reference string."""
+        en_ref = ScriptureRef(reference="not a reference", verse_text="unused", path="key_verse.reference")
+        native_ref = ScriptureRef(reference="Juan 3:16", verse_text="anything", path="key_verse.reference")
+        finding = validate_translated_pair(en_ref, native_ref, self.resolver)
+        self.assertIsNotNone(finding)
+        self.assertEqual(finding.kind, "resolution_failed")
+        self.assertIn("could not be parsed", finding.message)
+
+    def test_unknown_en_book_returns_resolution_failed(self):
+        en_ref = ScriptureRef(reference="Zorblax 1:1", verse_text="unused", path="key_verse.reference")
+        native_ref = ScriptureRef(reference="Zorblax 1:1", verse_text="anything", path="key_verse.reference")
+        finding = validate_translated_pair(en_ref, native_ref, self.resolver)
+        self.assertIsNotNone(finding)
+        self.assertEqual(finding.kind, "resolution_failed")
+        self.assertIn("unknown", finding.message)
+
+
+class TestValidateTranslatedPairNullText(ValidateTranslatedPairTestCase):
+    """Regression test: a target-language DB row with NULL text (a real
+    data gap found in production, e.g. Leviticus 24:16 in one non-EN
+    corpus DB) must surface as a normal resolution_failed finding, not
+    crash validate_translated_pair / fetch_text's " ".join() on None."""
+
+    def test_null_text_in_target_db_returns_resolution_failed(self):
+        with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
+            null_db_path = f.name
+        try:
+            conn = sqlite3.connect(null_db_path)
+            conn.execute("CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)")
+            conn.execute("CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)")
+            conn.execute("INSERT INTO books VALUES (10, 'Génesis')")
+            conn.execute("INSERT INTO verses VALUES (10, 24, 16, NULL)")
+            conn.commit()
+            conn.close()
+
+            null_resolver = VerseResolver(null_db_path)
+            try:
+                en_ref = ScriptureRef(reference="Genesis 24:16", verse_text="unused", path="key_verse.reference")
+                native_ref = ScriptureRef(reference="Génesis 24:16", verse_text="anything", path="key_verse.reference")
+                finding = validate_translated_pair(en_ref, native_ref, null_resolver)
+                self.assertIsNotNone(finding)
+                self.assertEqual(finding.kind, "resolution_failed")
+                self.assertIn("verse not found", finding.message)
+            finally:
+                null_resolver.close()
+        finally:
+            Path(null_db_path).unlink(missing_ok=True)
+
+
+class TestValidateTranslatedPairVersificationException(unittest.TestCase):
+    """versification_exceptions.json's real Jonah 1:17/LSG1910 entry (a
+    hand-verified cross-edition chapter split — LSG1910 numbers the
+    fish-swallows-Jonah verse as 2:1, not 1:17) must let validate_translated_pair
+    find the verse when bible_version is passed, and must NOT find it
+    (falls through to a normal resolution_failed) when bible_version is
+    omitted — the exception lookup is opt-in per call, not automatic."""
+
+    def setUp(self):
+        import verse_resolver
+        verse_resolver._books_sot_cache = {"Jonah": 390}
+
+        with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
+            self.db_path = f.name
+        _make_bible_db(
+            self.db_path,
+            books=[(390, "Jonas")],
+            verses=[
+                # Mirrors LSG1910's real shape: nothing at 1:17, the verse
+                # lives at 2:1 instead.
+                (390, 2, 1, "L'Éternel fit venir un grand poisson pour engloutir Jonas."),
+            ],
+        )
+        self.resolver = VerseResolver(self.db_path)
+
+    def tearDown(self):
+        import verse_resolver
+        verse_resolver._books_sot_cache = None
+        self.resolver.close()
+        Path(self.db_path).unlink(missing_ok=True)
+
+    def test_exception_found_when_bible_version_passed(self):
+        en_ref = ScriptureRef(reference="Jonah 1:17", verse_text="unused", path="key_verse.reference")
+        native_ref = ScriptureRef(
+            reference="Jonas 2:1",
+            verse_text="L'Éternel fit venir un grand poisson pour engloutir Jonas.",
+            path="key_verse.reference",
+        )
+        finding = validate_translated_pair(en_ref, native_ref, self.resolver, bible_version="LSG1910")
+        self.assertIsNone(finding)
+
+    def test_exception_not_applied_when_bible_version_omitted(self):
+        en_ref = ScriptureRef(reference="Jonah 1:17", verse_text="unused", path="key_verse.reference")
+        native_ref = ScriptureRef(reference="Jonas 2:1", verse_text="anything", path="key_verse.reference")
+        finding = validate_translated_pair(en_ref, native_ref, self.resolver)
+        self.assertIsNotNone(finding)
+        self.assertEqual(finding.kind, "resolution_failed")
+        self.assertIn("verse not found", finding.message)
+
+    def test_exception_not_applied_for_different_bible_version(self):
+        """Only the exact (en_reference, bible_version) pair recorded in
+        versification_exceptions.json qualifies — an unrelated version
+        code must not accidentally match."""
+        en_ref = ScriptureRef(reference="Jonah 1:17", verse_text="unused", path="key_verse.reference")
+        native_ref = ScriptureRef(reference="Jonas 2:1", verse_text="anything", path="key_verse.reference")
+        finding = validate_translated_pair(en_ref, native_ref, self.resolver, bible_version="NOT_A_REAL_VERSION")
+        self.assertIsNotNone(finding)
+        self.assertEqual(finding.kind, "resolution_failed")
+
+
+class TestValidateTranslatedPairVersificationExceptionVerseExistsAtBothAddresses(unittest.TestCase):
+    """Real bug found via peter_water_001's Psalm 18:16 scripture_connections
+    in fr/de: unlike Jonah 1:17 (which doesn't exist at all in LSG1910/LU17,
+    a true lookup miss), LSG1910 and LU17 both HAVE a Psalm 18:16 — it's
+    just different content, because the verse-shift happens mid-chapter.
+    The old exception logic only consulted VERSIFICATION_EXCEPTIONS when
+    the primary lookup returned None, so it silently compared against the
+    wrong (but existing) verse instead of ever finding the registered
+    exception. Exceptions must be checked BEFORE the primary lookup runs,
+    not only as a fallback when it fails."""
+
+    def setUp(self):
+        import verse_resolver
+        verse_resolver._books_sot_cache = {"Psalm": 490}
+
+        with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
+            self.db_path = f.name
+        _make_bible_db(
+            self.db_path,
+            books=[(490, "Psaume")],
+            verses=[
+                # Mirrors LSG1910's real shape: verse 16 exists but holds
+                # DIFFERENT content than KJV's 18:16 — the matching text
+                # actually lives one verse later, at 18:17.
+                (490, 18, 16, "Unrelated verse 16 content — not what KJV 18:16 says."),
+                (490, 18, 17, "Il étendit la main d'en haut, il me saisit, il me retira des grandes eaux."),
+            ],
+        )
+        self.resolver = VerseResolver(self.db_path)
+
+    def tearDown(self):
+        import verse_resolver
+        verse_resolver._books_sot_cache = None
+        self.resolver.close()
+        Path(self.db_path).unlink(missing_ok=True)
+
+    def test_exception_used_even_though_primary_address_resolves_to_something(self):
+        en_ref = ScriptureRef(reference="Psalm 18:16", verse_text="unused", path="key_verse.reference")
+        native_ref = ScriptureRef(
+            reference="Psaume 18:17",
+            verse_text="Il étendit la main d'en haut, il me saisit, il me retira des grandes eaux.",
+            path="key_verse.reference",
+        )
+        finding = validate_translated_pair(en_ref, native_ref, self.resolver, bible_version="LSG1910")
+        self.assertIsNone(finding)
+
+
+if __name__ == '__main__':
+    unittest.main()

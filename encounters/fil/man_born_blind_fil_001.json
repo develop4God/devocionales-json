@@ -1,0 +1,280 @@
+{
+  "id": "man_born_blind_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fil",
+  "bible_version": "MBB05",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 12,
+  "meta": {
+    "character": "Ang lalaking ipinanganak na bulag",
+    "testament": "new",
+    "scripture_reference": "Juan 9:1-41",
+    "mood_primary": "dawn",
+    "accent_color": "#2b1a08",
+    "emoji": "🌅",
+    "tags": ["patotoo", "pag-uusig", "paningin", "liwanag", "katapangan", "pagtitiwalag", "pagsamba", "pananampalataya"]
+  },
+  "key_verse": {
+    "reference": "Juan 9:25",
+    "text": "Sumagot siya, “Hindi ko po alam kung siya'y masamang tao, o hindi. Isang bagay po ang alam ko; ako'y dating bulag, subalit ngayo'y nakakakita na.”",
+    "bible_version": "MBB05"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "man_born_blind_temple_gate.png",
+      "title": "Ang lalaki sa tabi ng daan",
+      "narrative": "Jerusalem, araw ng Sabbath. Nakaupo ang isang lalaki sa lugar na kilala siya ng buong lungsod: sa mismong lugar kung saan siya laging naupo at namalimos. Naramdaman niya ang init ng araw sa kanyang balat, kahit hindi pa niya ito nakita kailanman. Ipinanganak siyang bulag: kasya sa dalawang salitang iyon ang buong buhay niya. May narinig siyang yapak na humihinto sa malapit. Tinanong ng mga alagad kay Jesus: sino ang nagkasala, siya ba o ang kanyang mga magulang, kaya't ipinanganak siyang bulag? Para sa kanila, kailangan ng dahilan ang pagkabulag niya. Para kay Jesus, na huminto upang tumingin sa kanya, ito ang lugar kung saan ipapakita ni Diyos ang kanyang gawa.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 9:1-2",
+        "text": "Sa paglalakad ni Jesus, nakita niya ang isang lalaking ipinanganak na bulag. Tinanong siya ng kanyang mga alagad, “Guro, sino po ang nagkasala at ipinanganak na bulag ang lalaking ito, siya ba o ang kanyang mga magulang?”"
+      },
+      "revelation_key": "Naghahanap ang mga alagad kung sino ang may kasalanan. Huminto naman si Jesus upang tumingin sa mismong lalaki."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "man_born_blind_light_of_world.png",
+      "verse_reference": "Juan 9:3-5",
+      "verse_text": "Sumagot si Jesus, “Ipinanganak siyang bulag, hindi dahil sa nagkasala siya, o ang kanyang mga magulang, kundi upang mahayag ang kapangyarihan ng Diyos sa pamamagitan niya. Kailangang gawin natin ang mga ipinapagawa ng nagsugo sa akin habang umaga pa; malapit na ang gabi, at wala nang makakagawa pagsapit niyon. Habang ako'y nasa sanlibutan, ako ang ilaw ng sanlibutan.”",
+      "reflection": "Ang tanong ng mga alagad ay naghahanap ng may kasalanan sa nakaraan. Ang sagot ni Jesus ay tumitingin sa hinaharap: ang kalagayan ng lalaking ito ay magiging tagpuan ng mga gawa ng Diyos. Hindi ito parusa, sabi ni Jesus. At pagkatapos, habang nakatayo siya sa harap ng isang taong hindi pa kailanman nakakita ng sikat ng araw, sinabi niya: ako ang ilaw ng sanlibutan (Juan 8:12). Ang susunod na mangyayari ay magpapakita na hindi lang tungkol sa mata ang sinasabi niya: tungkol ito sa paningin.",
+      "revelation_key": "Ipinahayag ni Jesus na siya ang ilaw ng sanlibutan sa harap ng mga matang hindi pa niya makita — nagsisimula nang mabuo ang pananampalataya bago pa dumating ang paningin.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 8:12",
+          "text": "Muling nagsalita si Jesus sa mga Pariseo. Sinabi niya, “Ako ang ilaw ng sanlibutan. Ang sumusunod sa akin ay magkakaroon ng ilaw sa kanyang buhay at di na lalakad sa kadiliman.”"
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "man_born_blind_siloam_washing.png",
+      "title": "Patungong Siloe, bulag pa rin",
+      "narrative": "Naririnig niyang may dumura sa lupa. Pagkatapos, ipinahid ang sariwang putik sa kanyang nakapikit na mga talukap-mata. At isang utos: pumunta ka at maghilamos sa deposito ng tubig sa Siloe. Bumangon ang lalaki at naglakad sa kadiliman patungong Siloe, may putik sa kanyang mga mata, ang tanging tiwala niya'y sa salita ng estranghero. Yumuko siya sa tubig at naghilamos.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 9:6-7",
+        "text": "Pagkasabi nito, dumura si Jesus sa lupa at gumawa ng putik. Pagkatapos, ipinahid niya ito sa mata ng bulag. Sinabi ni Jesus sa bulag, “Pumunta ka sa deposito ng tubig sa Siloe at maghilamos ka roon.” Ang kahulugan ng salitang Siloe ay Sinugo. Ganoon nga ang ginawa ng bulag, at nang magbalik siya ay nakakakita na."
+      },
+      "revelation_key": "Nagsimula siyang bulag at natapos na nakakakita ang kanyang pagsunod: ipinapakita mismo ng ayos ng himala na ang pananampalataya ang unang lumalakad."
+    },
+    {
+      "order": 4,
+      "type": "character_moment",
+      "mood": "mysterious",
+      "image_url": "man_born_blind_beggar_identity.png",
+      "title": "Ang dating pulubing bulag",
+      "subtitle": "Nag-aalinlangan ang mga kapitbahay",
+      "content": "Nakita siya ng mga kapitbahay na dumadaan at huminto sila. Iisang mukha rin iyon na dati nilang nakikitang nakaupo, namamalimos, araw-araw, sa mismong lugar sa tabi ng daan. Ang pamamalimos ang tanging paraan ng isang taong ipinanganak na bulag upang mabuhay: kung wala ang lugar at kalagayang iyon, wala siyang paraan para mabuhay. Ngayon, naglalakad na siya nang iba, tumitingin sa mata ng bawat isang nadaraanan niya, at wala na ang lugar na siyang naghari sa buo niyang buhay. Nagtatalu-talo sila kung ito nga ba ang kaparehong lalaki.",
+      "revelation_key": "Ipinagpalit ng pagkakita ang tanging paraan niya para mabuhay; ang kanyang natamo ay may higit pang halaga kaysa sa kanyang nawala.",
+      "verse_overlay": {
+        "reference": "Juan 9:8",
+        "text": "Nagsalita ang mga kapitbahay niya at ang mga nakakita sa kanya noong siya'y namamalimos pa, “Hindi ba iyan ang pulubing bulag?”"
+      }
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "man_born_blind_clay_hands.png",
+      "title": "Putik ng Manlilikha, deposito ng Sinugo",
+      "subtitle": "Dalawang salitang lumagda sa himala",
+      "content": "Tinatawag ng tekstong Griyego ang putik na πηλός (pēlos), ang mismong salitang ginagamit ng Bibliyang Griyego para sa putik ng magpapalayok. Kumuha si Jesus ng alabok mula sa lupa at ipinahid ito sa mga matang hindi pa kailanman kumilos. Ang kilos na ito ay nagpapaalala ng pinagmulan ng tao: ang Manlilikha na humubog kay Adan mula sa alabok (Genesis 2:7) ang siya ring humuhubog ngayon ng bagay na kulang sa mga matang ito mula pa sa sinapupunan. Isa itong gawa ng paglikha, kaya't ito rin ang magiging dahilan ng iskandalo: ang paggawa ng putik ay ipinagbabawal na gawain sa Araw ng Pamamahinga ayon sa tradisyon ng mga Pariseo.\n\nMay ikalawang lagda pa. Huminto si Juan upang isalin ang pangalan ng deposito ng tubig: ang ibig sabihin ng Siloe ay ἀπεσταλμένος (apestalmenos), \"Sinugo.\" Sa buong ebanghelyong ito, si Jesus ay ipinapakilala bilang ang Sinugo ng Ama (Juan 3:17). Sinusugo siya ng Sinugo upang maghilamos sa deposito ng tubig na tinatawag na Sinugo: kahit ang heograpiya ng himala ay nagpapahayag kung sino ang gumawa nito.",
+      "revelation_key": "Pinili ni Jesus ang araw na ipinagbabawal ang paggawa ng putik upang gawin, sa pamamagitan ng kanyang mga kamay, ang mismong gawaing minsan niyang ginawa sa pamamagitan lang ng salita.",
+      "verse_overlay": {
+        "reference": "Juan 9:7",
+        "text": "Sinabi ni Jesus sa bulag, “Pumunta ka sa deposito ng tubig sa Siloe at maghilamos ka roon.” Ang kahulugan ng salitang Siloe ay Sinugo. Ganoon nga ang ginawa ng bulag, at nang magbalik siya ay nakakakita na."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Genesis 2:7",
+          "text": "Pagkatapos, ginawa ng PANGINOONG Yahweh ang tao mula sa alabok, hiningahan niya sa ilong, at nagkaroon ito ng buhay."
+        },
+        {
+          "reference": "Juan 3:17",
+          "text": "Isinugo ng Diyos ang kanyang Anak, hindi upang hatulang maparusahan ang mga tao, kundi upang iligtas ang mga ito sa pamamagitan niya."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "man_born_blind_neighbors_debate.png",
+      "title": "Ako nga iyon",
+      "narrative": "Sa harap ng pag-aalinlangan ng kanyang kapitbahayan, siya mismo ang sumagot: Ako nga iyon — sa Griyego, ἐγώ εἰμι (egō eimi), ang mismong dalawang salitang ginagamit ni Jesus sa buong ebanghelyong ito upang ilarawan ang kanyang sarili, kahit dito ay ang ibig lang sabihin nito ay \"ako ang lalaking kilala ninyo.\" At isinalaysay niya ang kanyang kuwento sa unang pagkakataon, may katumpakan ng isang taong umuulit ng mga pangyayari: ang lalaking tinatawag na Jesus ay gumawa ng putik, ipinahid iyon sa aking mata, sinabi sa akin na pumunta sa Siloe at maghilamos; pumunta ako, naghilamos ako, at nakakita na ako. Tinanong nila kung nasaan si Jesus ngayon. Tapat ang kanyang sagot: hindi ko alam. Ang lahat ng alam niya tungkol kay Jesus ay dumating sa pamamagitan ng pandinig at ng putik sa kanyang mga mata: ang kanyang patotoo ay ipinanganak bago pa niya nakita ang mukha nito.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 9:9-12",
+        "text": "Sumagot ang ilan, “Iyan nga!” Sabi naman ng iba, “Hindi! Kamukha lang.” Kaya't nagsalita ang dating bulag, “Ako nga po iyon.” “Paano kang nakakita?” tanong nila. Sumagot siya, “Ang lalaking tinatawag na Jesus ay gumawa ng putik at ipinahid iyon sa aking mata. Pagkatapos, sinabi niya sa akin, ‘Pumunta ka sa Siloe at maghilamos.’ Pumunta nga ako doon at naghilamos, at nakakita na ako!” “Nasaan siya?” tanong nila sa kanya. “Hindi ko alam,” sagot niya."
+      },
+      "revelation_key": "Sinabi niyang \"ako nga iyon\" gamit ang mismong mga salitang ginagamit ni Jesus para sa kanyang sarili, kahit hindi niya ito alam: nagsisimula pa lang mabuo ang kanyang pagkakakilanlan sa paligid ng Isang hindi pa niya nakita."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "man_born_blind_first_interrogation.png",
+      "verse_reference": "Juan 9:16-17",
+      "verse_text": "Ang sabi ng ilang Pariseo, “Hindi maaaring mula sa Diyos ang taong iyon, sapagkat hindi niya ipinapangilin ang Araw ng Pamamahinga.” Ngunit sinabi naman ng iba, “Paanong makakagawa ng ganitong mga himala ang isang makasalanan?” At hindi sila magkaisa. Kaya't tinanong nilang muli ang dating bulag, “At ikaw, ano naman ang masasabi mo tungkol sa kanya, dahil pinagaling niya ang iyong mga mata?” “Isa siyang propeta!” sagot niya.",
+      "reflection": "Dinala ng mga kapitbahay ang lalaki sa harap ng mga Pariseo, ang mga pinuno ng relihiyon sa Jerusalem, dahil pinagaling siya ni Jesus sa Araw ng Pamamahinga (Exodo 20:8-11), ang araw na iniutos ng kautusan na ipagdiwang sa pamamagitan ng hindi paggawa. May mga Pariseong nagpasyang si Jesus ay hindi maaaring mula sa Diyos: nilabag niya ang tuntuning iyon. Ang iba naman ay nagtanong ng tanong na hindi masasagot ng tuntunin: paanong makakapagbigay-paningin sa isang ipinanganak na bulag ang isang makasalanan? Hindi sila nagkasundo, kaya't tinanong nila ang lalaki mismo kung ano ang tingin niya kay Jesus. Dati, tinawag niya itong \"ang lalaki\" lamang; ngayon, sumagot siya ng mas malaking salita: propeta siya. Ipinahayag ng mga propeta na si Diyos mismo ang magbibigay-paningin sa mga bulag pagdating niya upang iligtas ang kanyang bayan (Isaias 35:5); hindi nila alam, nasa harap na ng mga Pariseo ang mismong tandang iyon, sumasagot sa kanilang mga tanong.",
+      "revelation_key": "Bawat mapanghusgang tanong ay lumalaki nang lumalaki ang kanyang pagpapahayag: mula sa \"ang lalaki\" hanggang sa \"propeta.\"",
+      "scripture_connections": [
+        {
+          "reference": "Isaias 35:5",
+          "text": "Ang mga bulag ay makakakita, at makakarinig ang mga bingi."
+        },
+        {
+          "reference": "Exodo 20:8-11",
+          "text": "“Lagi mong tandaan at ilaan para sa akin ang Araw ng Pamamahinga. Anim na araw kang magtatrabaho, at tapusin mo ang dapat gawin. Subalit ang ikapitong araw ay para kay Yahweh na iyong Diyos; ito ay Araw ng Pamamahinga. Sa araw na ito'y huwag magtrabaho ang sinuman sa inyo; kayo, ang inyong mga anak, mga aliping lalaki o babae, ang inyong mga alagang hayop, ni ang mga dayuhang nakikipamayan sa inyo. Anim na araw kong nilikha ang langit, ang lupa, ang mga dagat at ang lahat ng nasa mga ito. Ngunit namahinga ako sa ikapitong araw. Kaya't ito'y aking pinagpala at inilaan para sa akin."
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "man_born_blind_parents_fear.png",
+      "title": "May-edad na siya, tanungin ninyo siya",
+      "narrative": "Naghanap ang mga Pariseo ng ibang paraan upang buwagin ang himala: baka hindi naman talaga bulag ang lalaking ito. Tinawag nila ang kanyang mga magulang. Kinumpirma nila ang hindi na maikakaila: anak namin siya, at ipinanganak siyang bulag. Sa iba pang tanong, umatras sila: may-edad na siya, tanungin ninyo siya; magsasalita siya para sa kanyang sarili. Dahil ang mga pinuno ng mga Judio ay pinagkaisahan nang mas maaga na itiwalag sa sinagoga ang sinumang magpahayag na si Jesus ang Mesiyas, at natakot ang mga magulang: naitakda na ang presyo. Naiwang mag-isa ang anak sa harap ng mismong mga Pariseong nagpatahimik lang sa kanyang mga magulang.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 9:22",
+        "text": "Ganoon ang sabi ng kanyang mga magulang dahil takot sila sa mga Judio. Alam nilang pinagkaisahan ng mga Judio na itiwalag sa sinagoga ang sinumang magpahayag na si Jesus ang Cristo."
+      },
+      "revelation_key": "Naitakda na ang presyo ng pagpapahayag kay Jesus, at ang takot na bayaran ito ang nagpatahimik sa mga magulang sa harap mismo ng kanilang anak."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "man_born_blind_one_thing_i_know.png",
+      "title": "Isang bagay ang alam ko",
+      "subtitle": "Ang patotoong walang eksperto ang nakabuwag",
+      "content": "Tinawag siya ng mga Pariseo sa ikalawang pagkakataon. Ngayon, tuwiran na ang utos: purihin mo si Diyos; alam naming ang taong iyon (si Jesus) ay makasalanan. Hiniling nilang bawiin niya ang sinabi, magsalita laban kay Jesus. Ang mga humihiling ay ang mga guro ng Israel; ang sumasagot ay ang pulubing itinuturing nilang ipinanganak sa kasalanan. Hindi niya ipinagtatalo ang teolohiya: sumagot siyang hindi niya alam kung makasalanan si Jesus, ngunit isang bagay ang tiyak niyang alam — na siya'y dating bulag ngunit ngayo'y nakakakita na (Juan 9:25). Itinatayo niya ang sarili sa tanging lupang lubos niyang kilala: ang ginawa ni Jesus sa kanya. Ang isang argumento ay masasagot ng argumento; ngunit sa harap ng isang taong dating bulag at ngayo'y nakakakita na, ebidensya na lamang ang natitira. Nang pumilit silang ulitin ang pagtatanong, sinalubong sila ng pulubi nang may matapang na pagbibiro: gusto rin ba ninyong maging mga alagad niya? Ang nagsimulang sumasagot sa mga tanong ay natapos na siyang nagtatanong.",
+      "revelation_key": "Pumasok ang pulubi na sumasagot sa mga tanong ng kanyang mga humahatol; lumabas siyang siya na mismo ang nagtatanong sa kanila.",
+      "verse_overlay": {
+        "reference": "Juan 9:25",
+        "text": "Sumagot siya, “Hindi ko po alam kung siya'y masamang tao, o hindi. Isang bagay po ang alam ko; ako'y dating bulag, subalit ngayo'y nakakakita na.”"
+      }
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "falling",
+      "image_url": "man_born_blind_cast_out.png",
+      "title": "Itiniwalag",
+      "subtitle": "Ang unang mananampalatayang nagbayad ng presyo",
+      "content": "Ang salitang ginamit ni Juan para sa banta ay ἀποσυνάγωγος (aposynagōgos): \"labas sa sinagoga.\" Lumilitaw lamang ito sa ebanghelyong ito (Juan 9:22; 12:42; 16:2), at inilalarawan nito ang isa sa pinakamabigat na parusa sa mundong iyon: ang mawalan ng sinagoga ay nangangahulugang mawalan ng lugar ng pagsamba, ng komunidad, ng kabuhayan, at ng karangalan ng pamilya. Parang nawala ang halos lahat ng bagay na nagtataguyod ng buhay ng isang Judio.\n\nNang tumangging bawiin ng lalaki ang kanyang sinabi, nagpasya ang mga Pariseo laban sa kanya: ipinanganak ka nang lubos sa kasalanan, at tuturuan mo pa kami? Ibinalik nila sa kanya ang mismong ideyang inalis na ni Jesus: na ang kanyang pagkabulag ay parusa. At itiniwalag nila siya. Ang pulubing ito ang unang naitalang itiniwalag alang-alang kay Jesus sa buong ebanghelyong ito: nagbayad siya ng presyong iyon bago pa man ang mga apostol, sa mismong araw na natanggap niya ang kanyang paningin. Babalaan din ni Jesus ang kanyang mga alagad na sasapitin din nila ang mismong presyo.",
+      "revelation_key": "Ang mismong hindi nakabuwag sa himala ay nagtapos sa pagbato ng akusasyong inalis na ni Jesus mula sa kanya: na siya'y ipinanganak sa kasalanan.",
+      "scripture_connections": [
+        {
+          "reference": "Juan 9:22",
+          "text": "Ganoon ang sabi ng kanyang mga magulang dahil takot sila sa mga Judio. Alam nilang pinagkaisahan ng mga Judio na itiwalag sa sinagoga ang sinumang magpahayag na si Jesus ang Cristo."
+        },
+        {
+          "reference": "Juan 12:42",
+          "text": "Gayunman, marami ring pinuno ng mga Judio ang nanalig sa kanya. Subalit hindi nila maipahayag ito dahil sa takot sa mga Pariseo, na baka sila'y itiwalag sa sinagoga."
+        },
+        {
+          "reference": "Juan 16:2",
+          "text": "Ititiwalag nila kayo sa mga sinagoga. Darating ang panahon na ang sinumang pumatay sa inyo ay mag-aakalang naglilingkod siya sa Diyos."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "man_born_blind_found_by_jesus.png",
+      "title": "Nabalitaan ni Jesus na itiniwalag siya",
+      "narrative": "Umabot kay Jesus ang balita ng pagkakatiwalag. At ginamit ng ebanghelyo ang isang napakalaking salita: εὑρών (heurōn), \"nang matagpuan niya siya.\" Ang paghahanap ay nangangahulugang naghanap muna. Natagpuan niya siya sa labas: labas sa sinagoga, labas sa kanyang komunidad, labas sa mundong laging kilala niya.\n\nAt tinanong siya ni Jesus ng tanong na siyang buong daan ng kanyang kuwento: sumasampalataya ka ba sa Anak ng Diyos? Sumagot ang lalaki sa parehong katapatan tulad ng dati: sino po ba siya, Ginoo, upang ako'y manalig sa kanya? Ibinigay sa kanya ng sagot ni Jesus, sa isang pangungusap lamang, ang kaloob na kulang: siya'y nakita mo na, siya ang kausap mo ngayon.\n\nSa unang pagkakataon sa kanyang buhay, ang mga bagong mata niya ay nakatingin sa mukha ng Isang laging pinag-uusapan niya kahit hindi pa niya ito kilala. Marami sa mga propeta at hari ang naghangad na makita ang mukhang ito ngunit hindi nakita (Lucas 10:23-24); sa kanya, na hindi man lang naghanap, dumating mismo ang Anak ng Diyos at natagpuan siya. Bihira sa ebanghelyong ito na gaano kalinaw ipahayag ni Jesus kung sino siya; minsan lamang niya itong ginawa, sa may balon, kasama ang babaeng Samaritana (Juan 4:25-26), at ngayon ay kasing-linaw din niyang ipinahayag ito sa lalaking ito, pulubi mula pagkasilang at itiniwalag sa sinagoga dahil sa himalang natanggap niya.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 9:35-37",
+        "text": "Nabalitaan ni Jesus na ang lalaking pinagaling niya ay itiniwalag ng mga Pariseo. Kaya't nang matagpuan niya ito ay kanyang tinanong, “Sumasampalataya ka ba sa Anak ng Tao?” Sumagot ang lalaki, “Sino po ba siya, Ginoo? Sabihin ninyo sa akin upang ako'y manalig sa kanya.” “Siya'y nakita mo na. Siya ang kausap mo ngayon,” wika ni Jesus."
+      },
+      "revelation_key": "Ipinagtanggol niya si Jesus sa harap ng mga Pariseo nang hindi pa niya nakikita ang mukha nito; ngayon, sa wakas, narito na siya sa kanyang harapan — dumating ang pananampalataya bago pa dumating ang paningin.",
+      "scripture_connections": [
+        {
+          "reference": "Lucas 10:23-24",
+          "text": "Humarap si Jesus sa mga alagad at sinabi nang walang ibang nakakarinig, “Mapalad kayo sapagkat nakita ninyo ang mga nakikita ninyo ngayon. Sinasabi ko sa inyo, maraming propeta at matutuwid na tao ang naghangad na makita ang inyong nasasaksihan at marinig ang inyong napapakinggan, subalit hindi nila ito nakita ni narinig.”"
+        },
+        {
+          "reference": "Juan 4:25-26",
+          "text": "Sinabi ng babae, “Nalalaman ko pong darating ang Mesiyas, ang tinatawag na Cristo. Pagdating niya, siya ang magpapahayag sa amin ng lahat ng bagay.” “Ako na kausap mo ngayon ang iyong tinutukoy,” sabi ni Jesus."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "man_born_blind_worship.png",
+      "title": "Sumasampalataya ako, Panginoon; at sumamba siya",
+      "subtitle": "Nagtatapos ang pagpapahayag sa pagluhod",
+      "content": "Kasya sa dalawang salita at isang kilos ang sagot ng lalaki: Sumasampalataya ako, Panginoon; at sumamba siya. Ang pandiwang Griyego ay προσεκύνησεν (prosekynēsen): yumuko sa lupa, magbigay-galang na pagsamba. Ito ang pandiwang inilalaan ng ebanghelyong ito para sa pagsambang para lamang sa Diyos (Juan 4:23-24, ang \"tunay na sumasamba\" sa Ama). Itinuon ito ng lalaki kay Jesus, at tinanggap ito ni Jesus. Ang Isang nagsimulang tinawag lamang niyang \"ang lalaki\" ay natapos na siyang yumuyuko sa kanyang paanan.\n\nNarinig ng ilang Pariseong naroon ang buong pangyayari. Ipinahayag ni Jesus pagkatapos ang hatol sa buong tagpo: dumating ako sa mundong ito upang humatol, upang makakita ang mga hindi nakakakita, at mabulag naman ang mga nakakakita. Nagtanong ang ilang Pariseo kung sila rin ba'y bulag, at ang sagot ni Jesus ay taimtim: dahil sinasabi nilang \"nakakakita kami,\" nananatili ang kanilang kasalanan. Nagtatapos ang kuwento sa dalawang panig sa harap ng mismong iisang liwanag: ang pulubi, na kumilala sa sarili niyang pagkabulag at ngayo'y nakakakita at sumasamba na; at ang mga eksperto na, dahil sigurado sa sarili nilang paningin, ay naiwan sa kadiliman. Ang pagkakita ay nagsisimula sa pagkilala ng sariling pagkabulag.",
+      "revelation_key": "Itinuon ng pulubi kay Jesus ang mismong pandiwang inilalaan ng ebanghelyong ito para sa pagsamba sa Diyos — at tinanggap ito ni Jesus nang hindi niya ito itinama.",
+      "verse_overlay": {
+        "reference": "Juan 9:39",
+        "text": "Sinabi pa ni Jesus, “Naparito ako sa mundong ito upang humatol, at nang sa gayo'y makakita ang mga bulag at mabulag naman ang mga nakakakita.”"
+      },
+      "scripture_connections": [
+        {
+          "reference": "Juan 4:23-24",
+          "text": "Subalit dumarating na ang panahon at ngayon na nga, na ang mga tunay na sumasamba sa Ama ay sasamba sa kanya sa espiritu at sa katotohanan. Sapagkat ganyan ang uri ng pagsambang kinalulugdan ng Ama. Ang Diyos ay Espiritu kaya dapat siyang sambahin sa espiritu at sa katotohanan.”"
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "man_born_blind_your_encounter.png",
+      "title": "Ang iyong pagtatagpo",
+      "subtitle": "Ang isang patotoong personal na naranasan ay hindi kayang buwagin ng kahit anong pagtatanong.",
+      "discovery_questions": [
+        {
+          "category": "Patotoo",
+          "question": "Napaligiran ng mga eksperto, itinuon ng lalaki ang sarili sa tanging katiyakang alam niya: \"isang bagay po ang alam ko; ako'y dating bulag, subalit ngayo'y nakakakita na.\" Ano ang \"isang bagay\" na alam mong personal na ginawa ni Jesus sa iyong buhay, iyong hindi mababawi ng kahit anong argumento o pangungutya?"
+        },
+        {
+          "category": "Katapangan",
+          "question": "Alam ng kanyang mga magulang ang katotohanan at ikinubli ito dahil sa takot na mawala sa sinagoga; sinabi ito ng kanilang anak at itiniwalag siya. Sa aling bahagi ng iyong buhay (pamilya, trabaho, mga kaibigan) may tunay na kapalit ang pagsabi ng ginawa ni Jesus para sa iyo, at anong tiyak na hakbang ang gagawin mo upang sabihin ito nang may katapangan?"
+        },
+        {
+          "category": "Pananampalataya",
+          "question": "Nabalitaan ni Jesus na itiniwalag ang lalaki, hinanap niya ito at natagpuan sa labas, at doon lumipat ang lalaki mula sa pagtatanggol kay Jesus tungo sa pagsamba sa kanya. Kung ikaw ngayon ay \"nasa labas\" ng isang lugar dahil sa iyong pananampalataya o kasaysayan, ano kaya ang mangyayari kung hahayaan mong hanapin ka ni Jesus mismo doon at sasagutin mo siya tulad ng lalaki: \"Sumasampalataya ako, Panginoon\"?"
+        }
+      ],
+      "prayer": {
+        "title": "Isang bagay ang alam ko",
+        "content": "Panginoong Jesus, nakita mo ako bago ko pa alam ang iyong pangalan. Salamat sa pag-alis mo sa kasalanang matagal kong pinasan at sa paggawa mo sa aking kuwento na siyang lugar kung saan ipinapakita ang iyong mga gawa. Tulungan mo akong magkaroon ng pananampalatayang tulad ng sa lalaking ipinanganak na bulag, na hindi nag-alinlangan, kundi ginawa ang sinabi mo at napuspos ng iyong biyaya at habag. Palakasin mo ang aking katapangan upang sabihin sa iba ang mga kahanga-hangang bagay na ginawa mo sa aking buhay, at kung ang pagpapahayag sa iyo ay ilalayo o ilalabas ako sa anuman sa mundong ito, hanapin mo ako gaya ng paghanap mo sa kanya, hanggang sa mamasdan kita nang harapan at masabi, nakaluhod: Sumasampalataya ako, Panginoon. Salamat dahil binigyan mo ako ng paningin at ngayo'y nakikita at iniibig kita. Sa pangalan ni Jesus, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "man_born_blind_completion.png",
+      "completion_verse": {
+        "reference": "Juan 9:25",
+        "text": "Sumagot siya, “Hindi ko po alam kung siya'y masamang tao, o hindi. Isang bagay po ang alam ko; ako'y dating bulag, subalit ngayo'y nakakakita na.”",
+        "bible_version": "MBB05"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

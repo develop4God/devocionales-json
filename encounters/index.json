@@ -2,7 +2,7 @@
   "encounters": [
     {
       "id": "peter_water_001",
-      "version": "1.3",
+      "version": "2.1",
       "image_version": "1.0",
       "emoji": "🌊",
       "status": "published",
@@ -75,7 +75,7 @@
     },
     {
       "id": "bartimaeus_001",
-      "version": "1.1",
+      "version": "1.6",
       "image_version": "1.0",
       "emoji": "👁️",
       "status": "published",
@@ -148,7 +148,7 @@
     },
     {
       "id": "woman_well_001",
-      "version": "1.2",
+      "version": "1.3",
       "image_version": "1.0",
       "emoji": "⛲",
       "status": "published",
@@ -221,7 +221,7 @@
     },
     {
       "id": "zacchaeus_001",
-      "version": "1.5",
+      "version": "2.2",
       "image_version": "1.0",
       "emoji": "🌳",
       "status": "published",
@@ -294,7 +294,7 @@
     },
     {
       "id": "mary_garden_001",
-      "version": "1.0",
+      "version": "1.1",
       "image_version": "1.0",
       "emoji": "🌸",
       "status": "published",
@@ -441,7 +441,7 @@
     },
     {
       "id": "thomas_001",
-      "version": "1.0",
+      "version": "1.6",
       "image_version": "1.0",
       "emoji": "🤚",
       "status": "published",
@@ -514,7 +514,7 @@
     },
     {
       "id": "bleeding_woman_001",
-      "version": "1.0",
+      "version": "1.1",
       "image_version": "1.0",
       "emoji": "🩸",
       "status": "published",
@@ -660,7 +660,7 @@
     },
     {
       "id": "gadarene_demoniac_001",
-      "version": "1.0",
+      "version": "1.1",
       "image_version": "1.0",
       "emoji": "⛓️",
       "status": "published",
@@ -733,7 +733,7 @@
     },
     {
       "id": "adultery_woman_001",
-      "version": "1.1",
+      "version": "1.4",
       "image_version": "1.0",
       "emoji": "🪨",
       "status": "published",
@@ -879,7 +879,7 @@
     },
     {
       "id": "widow_nain_001",
-      "version": "1.0",
+      "version": "1.2",
       "image_version": "1.0",
       "emoji": "🕊️",
       "status": "published",
@@ -948,6 +948,80 @@
         "hi": 10,
         "ja": 11,
         "zh": 11
+      }
+    },
+    {
+      "id": "man_born_blind_001",
+      "version": "1.0",
+      "image_version": "1.0",
+      "emoji": "🌅",
+      "status": "published",
+      "intro_image": "man_born_blind_first_interrogation",
+      "intro_image_prompt": "Wide atmospheric shot of a narrow Jerusalem street at first light, honey-colored stone walls rising on both sides, a single shaft of early morning sun cutting through the shadow below. Seated small against the wall in the middle ground, a man in his mid-forties, lean and stooped, broad deeply lined face, sun-cracked olive skin, close-cropped gray-streaked hair and beard, patched sand-colored tunic, face lifted toward the light with his eyes closed, a worn clay alms bowl resting at his feet. A few blurred figures pass without looking at him. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text.",
+      "mood_primary": "dawn",
+      "accent_color": "#2b1a08",
+      "has_interactive": false,
+      "testament": "new",
+      "character": "El hombre que nació ciego",
+      "files": {
+        "es": "man_born_blind_es_001.json",
+        "en": "man_born_blind_en_001.json",
+        "fr": "man_born_blind_fr_001.json",
+        "pt": "man_born_blind_pt_001.json",
+        "ar": "man_born_blind_ar_001.json",
+        "de": "man_born_blind_de_001.json",
+        "fil": "man_born_blind_fil_001.json",
+        "hi": "man_born_blind_hi_001.json",
+        "ja": "man_born_blind_ja_001.json",
+        "zh": "man_born_blind_zh_001.json"
+      },
+      "titles": {
+        "es": "Una cosa sé",
+        "en": "One thing I know",
+        "fr": "Je sais une chose",
+        "pt": "Uma coisa sei",
+        "ar": "شيئاً واحداً أعلمه",
+        "de": "Eins weiß ich",
+        "fil": "Isang bagay ang alam ko",
+        "hi": "एक बात मैं जानता हूँ",
+        "ja": "ただ一つのことだけ知っています",
+        "zh": "有一件事我知道"
+      },
+      "subtitles": {
+        "es": "El testimonio que resistió todos los interrogatorios.",
+        "en": "A testimony that withstood every interrogation.",
+        "fr": "Un témoignage qui a résisté à tous les interrogatoires.",
+        "pt": "Um testemunho que resistiu a todos os interrogatórios.",
+        "ar": "الشهادة التي صمدت أمام كل استجواب.",
+        "de": "Das Zeugnis, das jedem Verhör standhielt.",
+        "fil": "Ang patotoong nakatiis sa bawat pagtatanong.",
+        "hi": "वह गवाही जो हर पूछताछ में अडिग रही।",
+        "ja": "あらゆる尋問に耐え抜いた証し。",
+        "zh": "经受住了每一次盘问的见证。"
+      },
+      "scripture_reference": {
+        "es": "Juan 9:1-41",
+        "en": "John 9:1-41",
+        "fr": "Jean 9:1-41",
+        "pt": "S. João 9:1-41",
+        "ar": "إِنْجِيلُ يُوحَنَّا 9:1-41",
+        "de": "Johannes 9,1-41",
+        "fil": "Juan 9:1-41",
+        "hi": "यूहन्ना 9:1-41",
+        "ja": "ヨハネの福音書 9:1-41",
+        "zh": "约翰福音 9:1-41"
+      },
+      "estimated_reading_minutes": {
+        "es": 11,
+        "en": 10,
+        "fr": 12,
+        "pt": 12,
+        "ar": 13,
+        "de": 11,
+        "fil": 13,
+        "hi": 12,
+        "ja": 13,
+        "zh": 13
       }
     }
   ]

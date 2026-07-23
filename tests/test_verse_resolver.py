@@ -199,6 +199,135 @@ class TestNativeBookNameFallbacks(VerseResolverTestCase):
             Path(path).unlink(missing_ok=True)
 
 
+class TestNullVerseText(VerseResolverTestCase):
+    """A verse row with NULL text (a real data gap seen in some Bible DBs,
+    e.g. Leviticus 24:16 in one non-EN corpus DB) must resolve as
+    "verse not found" like a missing row, not crash fetch_text's
+    " ".join() on a None item."""
+
+    def test_null_text_cell_treated_as_not_found(self):
+        with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
+            path = f.name
+        try:
+            conn = sqlite3.connect(path)
+            conn.execute("CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)")
+            conn.execute("CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)")
+            conn.execute("INSERT INTO books VALUES (10, 'Genesis')")
+            conn.execute("INSERT INTO verses VALUES (10, 24, 16, NULL)")
+            conn.commit()
+            conn.close()
+
+            with VerseResolver(path) as r:
+                cita, texto, error = r.resolve("Genesis 24:16")
+            self.assertIsNone(cita)
+            self.assertIsNone(texto)
+            self.assertIsNotNone(error)
+            self.assertIn("verse not found", error)
+        finally:
+            Path(path).unlink(missing_ok=True)
+
+    def test_null_text_among_multiple_verses_treated_as_not_found(self):
+        """A multi-verse range (e.g. 'Genesis 24:15-16') where only one row
+        is NULL must still fail cleanly, not silently drop the NULL row and
+        return a partial/wrong combined text."""
+        with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
+            path = f.name
+        try:
+            conn = sqlite3.connect(path)
+            conn.execute("CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)")
+            conn.execute("CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)")
+            conn.execute("INSERT INTO books VALUES (10, 'Genesis')")
+            conn.execute("INSERT INTO verses VALUES (10, 24, 15, 'verse fifteen text')")
+            conn.execute("INSERT INTO verses VALUES (10, 24, 16, NULL)")
+            conn.commit()
+            conn.close()
+
+            with VerseResolver(path) as r:
+                cita, texto, error = r.resolve("Genesis 24:15-16")
+            self.assertIsNone(cita)
+            self.assertIsNone(texto)
+            self.assertIsNotNone(error)
+        finally:
+            Path(path).unlink(missing_ok=True)
+
+
+class TestFootnoteAndNoteElementsStripped(VerseResolverTestCase):
+    """Real data gap found in CUV1919 (Chinese): footnote-marker numbers
+    and translator's notes are stored inline as <f>[N]</f> and
+    <n>...</n> elements (e.g. '<pb/>起初神创<f>[1]</f>造天地。'). The
+    generic tag-stripper only removes the markup, leaving the bracketed
+    number/note text behind — which then tanks Jaccard token-overlap to
+    ~0% against a clean corpus reference even when the underlying verse
+    matches. fetch_text must drop these two elements INCLUDING their
+    content, while still keeping other tags' content (<pb/>, <J> direct
+    speech, <i> supplied words) since those wrap real verse text."""
+
+    def test_footnote_marker_element_and_content_removed(self):
+        with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
+            path = f.name
+        try:
+            conn = sqlite3.connect(path)
+            conn.execute("CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)")
+            conn.execute("CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)")
+            conn.execute("INSERT INTO books VALUES (10, 'Genesis')")
+            conn.execute("INSERT INTO verses VALUES (10, 1, 1, '<pb/>起初神创<f>[1]</f>造天地。')")
+            conn.commit()
+            conn.close()
+
+            with VerseResolver(path) as r:
+                _, texto, error = r.resolve("Genesis 1:1")
+            self.assertIsNone(error)
+            self.assertEqual(texto, "起初神创造天地。")
+            self.assertNotIn("[1]", texto)
+        finally:
+            Path(path).unlink(missing_ok=True)
+
+    def test_translator_note_element_and_content_removed(self):
+        with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
+            path = f.name
+        try:
+            conn = sqlite3.connect(path)
+            conn.execute("CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)")
+            conn.execute("CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)")
+            conn.execute("INSERT INTO books VALUES (10, 'Genesis')")
+            conn.execute(
+                "INSERT INTO verses VALUES (10, 4, 1, "
+                "'夏娃就怀孕，生了该隐<n>〔注：就是『得』的意思〕</n>，便说：「耶和华使我得了一个男子。」')"
+            )
+            conn.commit()
+            conn.close()
+
+            with VerseResolver(path) as r:
+                _, texto, error = r.resolve("Genesis 4:1")
+            self.assertIsNone(error)
+            self.assertNotIn("注", texto)
+            self.assertNotIn("〔", texto)
+
+        finally:
+            Path(path).unlink(missing_ok=True)
+
+    def test_other_tags_keep_their_content(self):
+        """<J> (direct speech) and <i> (supplied words) wrap real verse
+        text — only their markup should be stripped, never their content."""
+        with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
+            path = f.name
+        try:
+            conn = sqlite3.connect(path)
+            conn.execute("CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)")
+            conn.execute("CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)")
+            conn.execute("INSERT INTO books VALUES (10, 'Genesis')")
+            conn.execute("INSERT INTO verses VALUES (10, 1, 3, '神说：<J>「要有光。」</J>就有了<f>[3]</f>光。')")
+            conn.commit()
+            conn.close()
+
+            with VerseResolver(path) as r:
+                _, texto, error = r.resolve("Genesis 1:3")
+            self.assertIsNone(error)
+            self.assertEqual(texto, "神说：「要有光。」就有了光。")
+        finally:
+            Path(path).unlink(missing_ok=True)
+
+
 class TestHIOVMappingTableIntegrity(unittest.TestCase):
     """Guards the mapping data itself against silent drift/typos."""
 

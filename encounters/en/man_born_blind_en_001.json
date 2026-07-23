@@ -1,0 +1,280 @@
+{
+  "id": "man_born_blind_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "en",
+  "bible_version": "KJV",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "The man born blind",
+    "testament": "new",
+    "scripture_reference": "John 9:1-41",
+    "mood_primary": "dawn",
+    "accent_color": "#2b1a08",
+    "emoji": "🌅",
+    "tags": ["testimony", "persecution", "sight", "light", "courage", "exclusion", "worship", "faith"]
+  },
+  "key_verse": {
+    "reference": "John 9:25",
+    "text": "He answered and said, Whether he be a sinner or not, I know not: one thing I know, that, though I was blind, now I see.",
+    "bible_version": "KJV"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "man_born_blind_temple_gate.png",
+      "title": "The man beside the road",
+      "narrative": "Jerusalem, the Sabbath. A man sits where his city has always known him: the same spot where he used to sit and beg. He feels the sun on his skin, though he has never seen it. He was born blind — his whole life fits inside those three words. Footsteps stop nearby. His disciples ask Jesus: who sinned, this man or his parents, that he was born blind? For them, his blindness needs a cause. For Jesus, who has stopped to look at him, it is the place where God is about to act.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 9:1-2",
+        "text": "And as Jesus passed by, he saw a man who was blind from his birth. And his disciples asked him, saying, Teacher, who did sin, this man, or his parents, that he was born blind?"
+      },
+      "revelation_key": "The disciples look for someone to blame. Jesus stops to look at the man himself."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "mysterious",
+      "image_url": "man_born_blind_light_of_world.png",
+      "verse_reference": "John 9:3-5",
+      "verse_text": "Jesus answered, Neither has this man sinned, nor his parents: but that the works of God should be made manifest in him. I must work the works of him that sent me, while it is day: the night comes, when no man can work. As long as I am in the world, I am the light of the world.",
+      "reflection": "The disciples' question searches the past for someone at fault. Jesus's answer looks forward: this man's condition is about to become the stage for God's works. It is not punishment, Jesus says. And then, standing before someone who has never seen a sunrise, he declares: I am the light of the world (John 8:12). What follows will show that he is speaking of far more than eyes — he is speaking of sight itself.",
+      "revelation_key": "Jesus declares himself the light of the world before eyes that still cannot see him — faith begins to form before sight does.",
+      "scripture_connections": [
+        {
+          "reference": "John 8:12",
+          "text": "Then spoke Jesus again unto them, saying, I am the light of the world: he that follows me shall not walk in darkness, but shall have the light of life."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "man_born_blind_siloam_washing.png",
+      "title": "Toward Siloam, still blind",
+      "narrative": "He hears someone spit on the ground. Then fingers smear fresh clay over his closed eyelids. And a command: go and wash in the pool of Siloam. The man rises and walks in darkness all the way to Siloam with mud on his eyes, trusting only the word of a stranger. He bends over the water, and washes.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 9:6-7",
+        "text": "When he had thus spoken, he spat on the ground, and made clay of the spittle, and he anointed the eyes of the blind man with the clay, And said unto him, Go, wash in the pool of Siloam, (which is by interpretation, Sent.) He went his way therefore, and washed, and came seeing."
+      },
+      "revelation_key": "His obedience begins blind and ends seeing: the very order of the miracle teaches that faith walks first."
+    },
+    {
+      "order": 4,
+      "type": "character_moment",
+      "mood": "mysterious",
+      "image_url": "man_born_blind_beggar_identity.png",
+      "title": "The one who used to sit and beg",
+      "subtitle": "The neighbors doubt",
+      "content": "His neighbors see him pass by and stop. It's the same face — the one they used to see sitting there, begging every day, in the same spot beside the road. Begging was the only thing a man born blind could do to survive: without that place and that condition, he had no way to support himself. Now he walks differently, looks people in the eye as he passes them, and no longer has the place that had defined his whole life. They argue among themselves over whether he's really the same man.",
+      "revelation_key": "Seeing cost him the only thing he had to live on; what he's about to gain is worth more than what he just lost.",
+      "verse_overlay": {
+        "reference": "John 9:8",
+        "text": "The neighbors therefore, and they who before had seen him that he was blind, said, Is not this he that sat and begged?"
+      }
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "man_born_blind_clay_hands.png",
+      "title": "Clay of the Creator, pool of the Sent One",
+      "subtitle": "Two words that sign the miracle",
+      "content": "The Greek text calls the clay πηλός (pēlos), the same word the Greek Bible uses for the potter's clay. Jesus takes dust from the ground and applies it to eyes that have never worked. The gesture recalls the origin of man: the Creator who formed Adam from the dust (Genesis 2:7) is now forming what these eyes had lacked since the womb. It is an act of creation, and for that very reason it will be seen as scandalous: kneading clay was forbidden work on the Sabbath according to the tradition of the Pharisees.\n\nAnd there is a second signature. John pauses to translate the name of the pool: Siloam means ἀπεσταλμένος (apestalmenos), \"Sent.\" Throughout this gospel, Jesus presents himself as the One Sent by the Father (John 3:17). The Sent One sends him to wash in the pool called Sent: even the geography of the miracle proclaims who did it.",
+      "revelation_key": "Jesus chooses the day when kneading clay is forbidden, to do with his hands the same work he once did with a single word.",
+      "verse_overlay": {
+        "reference": "John 9:7",
+        "text": "And said unto him, Go, wash in the pool of Siloam, (which is by interpretation, Sent.) He went his way therefore, and washed, and came seeing."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Genesis 2:7",
+          "text": "And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul."
+        },
+        {
+          "reference": "John 3:17",
+          "text": "For God sent not his Son into the world to condemn the world; but that the world through him might be saved."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "man_born_blind_neighbors_debate.png",
+      "title": "I am he",
+      "narrative": "Facing his neighborhood's doubt, he answers for himself: I am he — in Greek, ἐγώ εἰμι (egō eimi), the same two words Jesus uses throughout this gospel to speak of himself, though here they simply mean \"I am the man you knew.\" And he tells his story for the first time, with the precision of someone repeating facts: the man they call Jesus made clay, anointed my eyes, told me to go to Siloam and wash; I went, I washed, and I received my sight. They ask him where that Jesus is. His answer is honest: I don't know. Everything he knows of Jesus reached him through his ears and through clay on his eyes: his testimony is born before he ever sees Jesus's face.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 9:9-12",
+        "text": "Some said, This is he: others said, He is like him: but he said, I am he. Therefore said they unto him, How were your eyes opened? He answered and said, A man that is called Jesus made clay, and anointed my eyes, and said unto me, Go to the pool of Siloam, and wash: and I went and washed, and I received sight. Then said they unto him, Where is he? He said, I know not."
+      },
+      "revelation_key": "He says \"I am he\" with the same words Jesus uses of himself, without even knowing it: his identity is only beginning to take shape around the One he has not yet seen."
+    },
+    {
+      "order": 7,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "man_born_blind_first_interrogation.png",
+      "verse_reference": "John 9:16-17",
+      "verse_text": "Therefore said some of the Pharisees, This man is not of God, because he keeps not the sabbath day. Others said, How can a man that is a sinner do such miracles? And there was a division among them. They said unto the blind man again, What say you of him, that he has opened your eyes? He said, He is a prophet.",
+      "reflection": "The neighbors bring the man before the Pharisees, the religious leaders of Jerusalem, because Jesus healed him on the Sabbath (Exodus 20:8-11), the day the law commanded them to keep by not working. Some Pharisees conclude that Jesus cannot come from God: he broke that rule. Others ask the question the rule cannot answer: how can a sinner give sight to a man born blind? They cannot agree among themselves, so they ask the man himself what he thinks of Jesus. Before, he had called him only \"the man\"; now he answers with a bigger word: he is a prophet. The prophets had announced that God himself would open the eyes of the blind when he came to save his people (Isaiah 35:5); without realizing it, the Pharisees have that very sign sitting in front of them, answering their questions.",
+      "revelation_key": "Every hostile question makes his confession grow: from \"the man\" to \"a prophet.\"",
+      "scripture_connections": [
+        {
+          "reference": "Isaiah 35:5",
+          "text": "Then the eyes of the blind shall be opened, and the ears of the deaf shall be unstopped."
+        },
+        {
+          "reference": "Exodus 20:8-11",
+          "text": "Remember the sabbath day, to keep it holy. Six days shall you labor, and do all your work: But the seventh day is the sabbath of the LORD your God: in it you shall not do any work, you, nor your son, nor your daughter, your manservant, nor your maidservant, nor your cattle, nor your stranger that is within your gates: For in six days the LORD made heaven and earth, the sea, and all that is in them, and rested the seventh day: therefore the LORD blessed the sabbath day, and hallowed it."
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "man_born_blind_parents_fear.png",
+      "title": "He is of age, ask him",
+      "narrative": "The Pharisees try to undo the miracle another way: maybe this man was never blind at all. They call his parents in. They confirm what cannot be denied: this is our son, and he was born blind. On everything else, they hold back: he is of age, ask him; he will speak for himself. The Jewish leaders had already agreed to expel from the synagogue anyone who confessed Jesus as the Messiah, and the parents were afraid: the price was already set. Their son is left alone before the very Pharisees who have just silenced his parents.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 9:22",
+        "text": "These words spoke his parents, because they feared the Jews: for the Jews had agreed already, that if any man did confess that he was Christ, he should be put out of the synagogue."
+      },
+      "revelation_key": "The price of confessing Jesus had already been set, and fear of paying it silences the parents in front of their own son."
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "man_born_blind_one_thing_i_know.png",
+      "title": "One thing I know",
+      "subtitle": "The testimony no expert could dismantle",
+      "content": "The Pharisees summon him a second time. Now the order is direct: give God the glory; we know that this man (Jesus) is a sinner. They demand that he recant, that he speak against Jesus. Those making the demand are the teachers of Israel; the one answering is the beggar they themselves consider born entirely in sin. He does not argue theology: he answers that he doesn't know whether Jesus is a sinner, but one thing he knows for certain — that he was blind and now he sees (John 9:25). He plants himself on the only ground he fully controls: what Jesus did in him. An argument can be countered; against a man who was blind and now sees, only the evidence remains. When they insist on repeating the interrogation, the beggar counters with a bold irony: will you also become his disciples? The one who began by answering questions ends by asking one of his own.",
+      "revelation_key": "The beggar enters answering his judges' questions; he leaves asking them one of his own.",
+      "verse_overlay": {
+        "reference": "John 9:25",
+        "text": "He answered and said, Whether he be a sinner or not, I know not: one thing I know, that, though I was blind, now I see."
+      }
+    },
+    {
+      "order": 10,
+      "type": "theological_depth",
+      "mood": "falling",
+      "image_url": "man_born_blind_cast_out.png",
+      "title": "Cast out",
+      "subtitle": "The first believer who paid the price",
+      "content": "The word John uses for the threat is ἀποσυνάγωγος (aposynagōgos): \"out of the synagogue.\" It appears only in this gospel (John 9:22; 12:42; 16:2), and describes one of the harshest punishments of that world: being cast out of the synagogue meant losing your place of worship, your community, your livelihood, and your family's honor. It meant being cut off from almost everything that held up a Jewish life.\n\nWhen the man refuses to recant, the Pharisees pass sentence on his very person: you were born entirely in sin, and you teach us? They hand him back the very idea Jesus had already freed him from: that his blindness was a punishment. And they cast him out. This beggar is the first person recorded in this gospel to be expelled for Jesus's sake: he pays that price before the apostles do, the very same day he received his sight. Jesus would later warn his disciples that this same price awaited them too.",
+      "revelation_key": "The very ones who could not dismantle the miracle close by hurling the accusation Jesus had already freed him from: that he was born in sin.",
+      "scripture_connections": [
+        {
+          "reference": "John 9:22",
+          "text": "These words spoke his parents, because they feared the Jews: for the Jews had agreed already, that if any man did confess that he was Christ, he should be put out of the synagogue."
+        },
+        {
+          "reference": "John 12:42",
+          "text": "Nevertheless among the chief rulers also many believed on him; but because of the Pharisees they did not confess him, lest they should be put out of the synagogue:"
+        },
+        {
+          "reference": "John 16:2",
+          "text": "They shall put you out of the synagogues: yea, the time comes, that whosoever kills you will think that he does God service."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "type": "cinematic_scene",
+      "mood": "grace",
+      "image_url": "man_born_blind_found_by_jesus.png",
+      "title": "Jesus heard that they had cast him out",
+      "narrative": "News of the expulsion reaches Jesus's ears. Then the gospel uses one enormous word: εὑρών (heurōn), \"having found him.\" To find implies having searched. He finds him outside: outside the synagogue, outside his community, outside the world he had always known.\n\nAnd he asks the question his whole story had been walking toward: do you believe on the Son of God? The man answers with the same honesty as always: who is he, Lord, that I might believe on him? Jesus's answer hands him, in a single sentence, the gift that had been missing: you have both seen him, and it is he that talks with you.\n\nFor the first time in his life, his new eyes are looking at the face of the one he had spoken so much about without ever knowing him. Many prophets and kings desired to see this face and did not see it (Luke 10:23-24); to him — who was not even searching — the Son of God himself came and found him. In this gospel, Jesus rarely declares who he is this plainly; he once did it beside a well, with the Samaritan woman (John 4:25-26), and now he speaks just as plainly to this man, a beggar from birth and cast out of the synagogue for the miracle he had received.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 9:35-37",
+        "text": "Jesus heard that they had cast him out; and when he had found him, he said unto him, Do you believe on the Son of God? He answered and said, Who is he, Lord, that I might believe on him? And Jesus said unto him, You have both seen him, and it is he that talks with you."
+      },
+      "revelation_key": "He defended Jesus before the Pharisees without ever having seen his face; now, at last, Jesus stands before him — faith arrived before sight did.",
+      "scripture_connections": [
+        {
+          "reference": "Luke 10:23-24",
+          "text": "And he turned to his disciples, and said privately, Blessed are the eyes which see the things that you see: For I tell you, that many prophets and kings have desired to see those things which you see, and have not seen them; and to hear those things which you hear, and have not heard them."
+        },
+        {
+          "reference": "John 4:25-26",
+          "text": "The woman said unto him, I know that Messiah comes, who is called Christ: when he comes, he will tell us all things. Jesus said unto her, I that speak unto you am he."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "theological_depth",
+      "mood": "awe",
+      "image_url": "man_born_blind_worship.png",
+      "title": "Lord, I believe; and he worshiped him",
+      "subtitle": "The confession ends on its knees",
+      "content": "The man's answer fits into three words and a gesture: Lord, I believe; and he worshiped him. The Greek verb is προσεκύνησεν (prosekynēsen): to bow to the ground, to render worship. It is the verb this gospel reserves for the worship owed to God (John 4:23-24, the \"true worshipers\" of the Father). The man directs it at Jesus, and Jesus receives it. The one who began by calling him merely \"the man\" ends bowed at his feet.\n\nSome Pharisees standing nearby catch this exchange. Jesus then pronounces the verdict over the whole scene: for judgment I have come into this world, that those who do not see may see, and those who see may become blind. Some Pharisees ask whether they too are blind, and Jesus's answer is solemn: because they say \"we see,\" their sin remains. The story closes with two postures before the same light: the beggar, who recognized his blindness and now sees and worships; and the experts who, sure of their own sight, are left in the dark. Seeing begins with recognizing your own blindness.",
+      "revelation_key": "The beggar directs at Jesus the very verb this gospel reserves for worshiping God — and Jesus receives it without correcting him.",
+      "verse_overlay": {
+        "reference": "John 9:39",
+        "text": "And Jesus said, For judgment I am come into this world, that they who see not might see; and that they who see might be made blind."
+      },
+      "scripture_connections": [
+        {
+          "reference": "John 4:23-24",
+          "text": "But the hour comes, and now is, when the true worshipers shall worship the Father in spirit and in truth: for the Father seeks such to worship him. God is a Spirit: and they that worship him must worship him in spirit and in truth."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "type": "discovery_activation",
+      "image_url": "man_born_blind_your_encounter.png",
+      "title": "Your encounter",
+      "subtitle": "A firsthand testimony can withstand any interrogation.",
+      "discovery_questions": [
+        {
+          "category": "Testimony",
+          "question": "Cornered by the experts, the man planted himself on a single certainty: \"one thing I know, that, though I was blind, now I see.\" What is the \"one thing\" you know firsthand that Jesus has done in your life — the one no argument or mockery can take from you?"
+        },
+        {
+          "category": "Courage",
+          "question": "His parents knew the truth and stayed silent out of fear of being cast out of the synagogue; their son spoke it and was cast out. Where in your life (family, work, friendships) does saying what Jesus has done for you carry a real cost, and what concrete step would you take to say it with courage?"
+        },
+        {
+          "category": "Faith",
+          "question": "Jesus heard that the man had been cast out, went looking for him, and found him outside — and there the man moved from defending Jesus to worshiping him. If you are \"outside\" some place today because of your faith or your story, what would it mean to let Jesus find you right there and to answer him as the man did: \"Lord, I believe\"?"
+        }
+      ],
+      "prayer": {
+        "title": "One thing I know",
+        "content": "Lord Jesus, you saw me before I ever knew your name. Thank you for lifting the guilt I carried for so long and making my story the place where your works are shown. Help my faith be like the faith of the man born blind, who did not doubt, but did what you told him to do and was filled with your grace and mercy. Strengthen my courage to tell others of the wonders of your favor in my life, and if confessing you leaves me outside or far from something in this world, come find me the way you came and found him, until I can look you in the face and say, on my knees: Lord, I believe. Thank you for giving me sight, so that now I can see you and love you. In Jesus's name, amen."
+      }
+    },
+    {
+      "order": 14,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "man_born_blind_completion.png",
+      "completion_verse": {
+        "reference": "John 9:25",
+        "text": "He answered and said, Whether he be a sinner or not, I know not: one thing I know, that, though I was blind, now I see.",
+        "bible_version": "KJV"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

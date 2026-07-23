@@ -18,6 +18,7 @@ still gate correctly.
 """
 
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -31,9 +32,17 @@ DISCOVERY_MASTER = REPO_ROOT / 'discovery' / 'discovery_scripts' / 'discovery_ma
 
 
 def _run(script_path: Path, timeout: int = 120) -> subprocess.CompletedProcess:
+    """Always runs with CI unset, regardless of this test process's own
+    environment — this is a fast pass/fail smoke test of the validators'
+    core gate logic (Phase 1/A/SOT/B), not a re-run of the CI-only
+    full-corpus scripture/duplication audit (Phase D/see
+    shared_validation.scripture_check.scripture_validation_enabled), which
+    takes minutes and would blow this test's timeout on every run."""
+    env = os.environ.copy()
+    env.pop('CI', None)
     return subprocess.run(
         [sys.executable, str(script_path)],
-        capture_output=True, text=True, timeout=timeout,
+        capture_output=True, text=True, timeout=timeout, env=env,
     )
 
 
@@ -81,11 +90,18 @@ class TestPromotedValidatorsGateOnFailure(unittest.TestCase):
     def _make_encounters_fixture(self) -> Path:
         """Copy encounters/ + encounters_scripts/ (needed because the
         validator locates its content directory relative to its own
-        __file__, not cwd) plus shared_validation/ (its dependency) into an
-        isolated temp tree, then corrupt the copy's index.json."""
+        __file__, not cwd) plus shared_validation/ and devocionales_scripts/
+        (its import-time dependencies — shared_validation.scripture_check
+        imports devocionales_scripts.verse_resolver at module load, so its
+        absence crashes the subprocess before Phase A ever runs, not a
+        real "broken index.json" failure) into an isolated temp tree, then
+        corrupt the copy's index.json. Does NOT copy bible_database/ (many
+        GB of compressed SQLite) — Phase A's gate rejects the broken index
+        before Phase D would ever need it."""
         fixture_root = self.tmpdir / 'encounters_fixture'
         shutil.copytree(REPO_ROOT / 'encounters', fixture_root / 'encounters')
         shutil.copytree(REPO_ROOT / 'shared_validation', fixture_root / 'shared_validation')
+        shutil.copytree(REPO_ROOT / 'devocionales_scripts', fixture_root / 'devocionales_scripts')
 
         index_path = fixture_root / 'encounters' / 'index.json'
         data = json.loads(index_path.read_text(encoding='utf-8'))
@@ -95,9 +111,12 @@ class TestPromotedValidatorsGateOnFailure(unittest.TestCase):
         return fixture_root / 'encounters' / 'encounters_scripts' / 'validate_encounters.py'
 
     def _make_discovery_fixture(self) -> Path:
+        """See _make_encounters_fixture's docstring for why
+        devocionales_scripts/ must be copied too."""
         fixture_root = self.tmpdir / 'discovery_fixture'
         shutil.copytree(REPO_ROOT / 'discovery', fixture_root / 'discovery')
         shutil.copytree(REPO_ROOT / 'shared_validation', fixture_root / 'shared_validation')
+        shutil.copytree(REPO_ROOT / 'devocionales_scripts', fixture_root / 'devocionales_scripts')
 
         index_path = fixture_root / 'discovery' / 'index.json'
         data = json.loads(index_path.read_text(encoding='utf-8'))

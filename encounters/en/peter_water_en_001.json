@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "en",
   "bible_version": "KJV",
-  "version": "1.0",
+  "version": "1.2",
   "estimated_reading_minutes": 5,
   "meta": {
     "character": "Peter",
@@ -25,7 +25,7 @@
   },
   "key_verse": {
     "reference": "Matthew 14:31",
-    "text": "And immediately Jesus stretched out His hand and caught him, saying to him, 'O you of little faith, why did you doubt?'",
+    "text": "And immediately Jesus stretched forth his hand, and caught him, and said unto him, O you of little faith, why did you doubt?",
     "bible_version": "KJV"
   },
   "cards": [
@@ -85,7 +85,7 @@
       "haptic": "gentle_pulse",
       "verse_overlay": {
         "reference": "Matthew 14:29",
-        "text": "And he came down out of the boat, and walked upon the waters to come to Jesus."
+        "text": "And when Peter came down out of the ship, he walked on the water, to go to Jesus."
       },
       "revelation_key": "Peter is the only human in history besides Jesus to walk on water. Because he was the only one who asked."
     },
@@ -101,11 +101,11 @@
       "scripture_connections": [
         {
           "reference": "Isaiah 41:13",
-          "text": "For I am the Lord your God who takes hold of your right hand and says to you, Do not fear; I will help you."
+          "text": "For I the LORD your God will hold your right hand, saying unto you, Fear not; I will help you."
         },
         {
           "reference": "Psalm 18:16",
-          "text": "He reached down from on high and took hold of me; he drew me out of deep waters."
+          "text": "He sent from above, he took me, he drew me out of many waters."
         }
       ]
     },
