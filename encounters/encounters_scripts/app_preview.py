@@ -196,6 +196,8 @@ body { font-family: -apple-system, Roboto, Arial, sans-serif; background:#1a1a1a
               background:#fff3cd; border:1px solid #d0a000; color:#7a5c00; font-weight:600; }
 .pending { max-width:480px; margin:8px auto 0; padding:10px 20px; border-radius:12px;
            background:#e8f0ff; border:1px solid #5580d0; color:#1a3a7a; font-weight:600; font-size:14px; }
+.card-number { max-width:480px; margin:0 auto; color:#ffc107; font-size:13px;
+               font-weight:700; font-family:monospace; }
 """
 
 
@@ -280,7 +282,11 @@ def connections_html(items):
 
 def render_card(card, image_fetcher=None):
     ctype = card.get("type", "unknown")
-    body = ['<div class="card">', header_html(card, image_fetcher), '<div class="body">']
+    order = card.get("order")
+    body = []
+    if order is not None:
+        body.append(f'<div class="card-number">CARD {escape(order)} · {escape(ctype)}</div>')
+    body += ['<div class="card">', header_html(card, image_fetcher), '<div class="body">']
 
     if ctype == "cinematic_scene":
         if card.get("title"):
