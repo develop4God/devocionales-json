@@ -30,6 +30,9 @@ jobs:
       - name: 🚀 Validate Encounters
         run: python3 encounters/encounters_scripts/encounters_master_validator.py
 
+      - name: 🔗 Validate README links
+        run: python3 devocionales_scripts/generate_stats.py --check-links
+
   validate-scripture:
     name: 🚀 Scripture Validation
     runs-on: ubuntu-latest
