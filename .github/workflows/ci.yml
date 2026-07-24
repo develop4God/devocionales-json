@@ -9,6 +9,8 @@ jobs:
   validate:
     name: 🚀 Tests + Validators
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: 🚀 Checkout
         uses: actions/checkout@v5
@@ -32,6 +34,21 @@ jobs:
 
       - name: 🔗 Validate README links
         run: python3 devocionales_scripts/generate_stats.py --check-links
+
+      - name: 📊 Auto-update README stats
+        if: success() && github.event_name == 'push'
+        run: |
+          python3 devocionales_scripts/generate_stats.py
+
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action [bot]"
+          git add README.md
+          if ! git diff --cached --quiet; then
+            git commit -m "📊 Update README stats [skip ci]"
+            git push
+          else
+            echo "ℹ️ Stats unchanged — skipping commit"
+          fi
 
   validate-scripture:
     name: 🚀 Scripture Validation
