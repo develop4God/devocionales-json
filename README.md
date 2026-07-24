@@ -13,7 +13,7 @@
 
 ## 🇺🇸 English
 
-Generated biblical content consumed by the [devocional_nuevo](../devocional_nuevo) app.
+Generated biblical content consumed by the [devocional_nuevo](https://github.com/develop4God/devocional_nuevo) app.
 
 **📚 Content & Study**
 - **Daily or On-Demand Devotionals**: Updated spiritual content in multiple Bible versions
@@ -129,7 +129,7 @@ For the full license text, see the [LICENSE](./LICENSE) file or visit:
 
 ## 🇪🇸 Español
 
-Contenido bíblico generado que consume la app [devocional_nuevo](../devocional_nuevo).
+Contenido bíblico generado que consume la app [devocional_nuevo](https://github.com/develop4God/devocional_nuevo).
 
 **📚 Contenido y Estudio**
 - **Devocionales Diarios o Bajo Demanda**: Contenido espiritual actualizado en múltiples versiones de la Biblia
