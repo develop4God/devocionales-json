@@ -199,10 +199,10 @@ class RunReport:
             print(f"{phase.name:<60} {icon}  ({phase.elapsed:.1f}s)")
         print('─'*80)
 
-        total_info = sum(len(p.report.info) for p in self.phases)
         total_warnings = sum(len(p.report.warnings) for p in self.phases)
         total_errors = sum(len(p.report.errors) for p in self.phases)
-        print(f"\nℹ️  INFO ({total_info})     ⚠️  WARNINGS ({total_warnings})     ❌ ERRORS ({total_errors})")
+        if total_warnings or total_errors:
+            print(f"\n⚠️  WARNINGS ({total_warnings})     ❌ ERRORS ({total_errors})")
 
         if total_warnings or total_errors:
             print()
@@ -215,7 +215,7 @@ class RunReport:
         overall_passed = all(p.passed for p in self.phases) and total_warnings == 0
         print(f"\n{'='*80}")
         if overall_passed:
-            print(f"✅ RUN PASSED — {total_errors} errors, {total_warnings} warnings, exit code 0     (total: {total_elapsed:.1f}s)")
+            print(f"✅ RUN PASSED     (total: {total_elapsed:.1f}s)")
         else:
             exit_code = 1
             print(f"❌ RUN FAILED — {total_errors} errors, {total_warnings} warnings, exit code {exit_code}     (total: {total_elapsed:.1f}s)")
@@ -243,8 +243,10 @@ class RunReport:
 
         lines = []
         lines.append(f"## {self.title}")
-        status = "✅ PASSED" if overall_passed else "❌ FAILED"
-        lines.append(f"{status} — {total_errors} errors, {total_warnings} warnings\n")
+        if overall_passed:
+            lines.append("✅ PASSED\n")
+        else:
+            lines.append(f"❌ FAILED — {total_errors} errors, {total_warnings} warnings\n")
 
         lines.append("| Phase | Status | Time |")
         lines.append("|---|---|---|")

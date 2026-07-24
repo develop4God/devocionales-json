@@ -20,6 +20,7 @@ Regenerate golden files after a deliberate output-format change:
   REGENERATE_GOLDEN=1 python3 -m unittest discover tests
 """
 
+import os
 import sys
 import unittest
 from pathlib import Path
@@ -28,6 +29,25 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from shared_validation.run_report import RunReport
 
 from tests.golden_utils import capture, assert_matches_golden
+
+_saved_step_summary = None
+
+
+def setUpModule():
+    """Hide GITHUB_STEP_SUMMARY for this whole module. Several tests here
+    call run_scenario() directly (not through golden_utils.capture) just to
+    assert on the exit code, and RunReport.wrap() writes to that file as a
+    side effect of a gate failure. Under real CI it's always set, so
+    without this these tests' synthetic fixture data (e.g. "a required
+    field was missing") leaks into the real job's GitHub Actions summary
+    panel alongside the actual validator results."""
+    global _saved_step_summary
+    _saved_step_summary = os.environ.pop('GITHUB_STEP_SUMMARY', None)
+
+
+def tearDownModule():
+    if _saved_step_summary is not None:
+        os.environ['GITHUB_STEP_SUMMARY'] = _saved_step_summary
 
 
 def _phase_ok(report):

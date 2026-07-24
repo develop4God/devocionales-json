@@ -857,13 +857,11 @@ def main():
     # (see validate_scripture_references) — resolution failures and fuzzy
     # text-mismatch both need a human-review pass over real corpus findings
     # before either is considered for promotion to ERROR. Scans the ENTIRE
-    # corpus (2000+ references across 10 languages) every run — too slow
-    # for daily local editing, so it's CI-only (see scripture_validation_enabled).
-    if scripture_validation_enabled() or args.lang or args.scripture_only:
-        run_report.wrap("PHASE D: SCRIPTURE REFERENCES", validate_scripture_references, index_data, lint_cache,
-                         args.lang, gate=False, final=True)
-    else:
-        print("ℹ️  PHASE D: SCRIPTURE REFERENCES — skipped (CI-only; set CI=true to run locally, or pass --lang)")
+    # corpus (2000+ references across 10 languages) every run — confirmed
+    # fast (~1s locally against the SQLite bible_database) so it always
+    # runs, local or CI, not just when CI=true.
+    run_report.wrap("PHASE D: SCRIPTURE REFERENCES", validate_scripture_references, index_data, lint_cache,
+                     args.lang, gate=False, final=True)
 
     encounters = index_data['encounters']
     published = [e for e in encounters if e.get('status') == 'published']

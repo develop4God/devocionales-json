@@ -3,9 +3,6 @@
 PHASE 1: GATE VALIDATION REPORT
 ================================================================================
 
-ℹ️  INFORMATION (1):
-  ℹ️  INFO: phase completed with no issues
-
 ✅ PHASE PASSED - Proceeding to next phase
 ================================================================================
 
@@ -37,7 +34,7 @@ PHASE 1: GATE                                                ✅ PASS  (<ELAPSED
 PHASE 2: WARNS                                               ⚠️  WARN  (<ELAPSED>s)
 ────────────────────────────────────────────────────────────────────────────────
 
-ℹ️  INFO (2)     ⚠️  WARNINGS (1)     ❌ ERRORS (0)
+⚠️  WARNINGS (1)     ❌ ERRORS (0)
 
   [PHASE 2: WARNS] ⚠️  WARNING: one item could not be reached, but this is non-fatal
 
