@@ -314,9 +314,33 @@ class Finding:
     """One validation result for a ScriptureRef. kind distinguishes the two
     failure modes the issue calls out — both WARNING-only in this initial
     rollout (see module docstring / issue Rollout section)."""
-    kind: str  # "resolution_failed" | "text_mismatch"
+    kind: str  # "resolution_failed" | "text_mismatch" | "footnote_artifact"
     ref: ScriptureRef
     message: str
+
+
+# Raw source-DB footnote apparatus that fetch_text() strips when building
+# the resolved comparison text (see devocionales_scripts/verse_resolver.py):
+# circled-letter/number reference markers (U+2460-24FF, e.g. "ⓜ", "ⓓ") and
+# trailing bracketed footnote numbers (e.g. " [11]"). If either survives in
+# a file's own stored verse_text, that text was copied from the DB without
+# the same cleaning pass — a real content bug, not translation variance —
+# so it's flagged directly rather than left to surface only as a lower
+# fuzzy-match score against the (correctly cleaned) resolved text.
+_FOOTNOTE_MARKER_RE = re.compile(r"[①-⓿]")
+_FOOTNOTE_BRACKET_RE = re.compile(r"\[\d+\]")
+
+
+def _find_footnote_artifact(text: str) -> Optional[str]:
+    """Return the first leaked footnote-marker substring found in `text`,
+    or None if it's clean."""
+    m = _FOOTNOTE_MARKER_RE.search(text)
+    if m:
+        return m.group(0)
+    m = _FOOTNOTE_BRACKET_RE.search(text)
+    if m:
+        return m.group(0)
+    return None
 
 
 def validate_pair(ref: ScriptureRef, resolver: VerseResolver) -> Optional[Finding]:
@@ -417,7 +441,25 @@ def _compare_text(ref: ScriptureRef, resolved_text: str) -> Optional[Finding]:
     """Shared fuzzy-match step for both validate_pair() and
     validate_translated_pair() — same threshold, same Finding shape.
     A low jaccard score is only reported if the stored text also fails
-    the truncation check — see _is_intentional_truncation()."""
+    the truncation check — see _is_intentional_truncation().
+
+    Checked before the fuzzy step: a leaked footnote artifact is reported
+    on its own, exact terms — it would often still pass the jaccard
+    threshold (one stray token barely moves the ratio), so waiting for the
+    fuzzy check to catch it isn't reliable."""
+    artifact = _find_footnote_artifact(ref.verse_text)
+    if artifact is not None:
+        return Finding(
+            kind="footnote_artifact",
+            ref=ref,
+            message=(
+                f"'{ref.path}': stored verse_text contains a leaked footnote "
+                f"artifact ({artifact!r}) — the source DB's <f>...</f> apparatus "
+                f"wasn't stripped before this text was saved.\n"
+                f"      stored: {ref.verse_text}"
+            ),
+        )
+
     similarity = jaccard_similarity(ref.verse_text, resolved_text)
     if similarity < FUZZY_MATCH_THRESHOLD and not _is_intentional_truncation(ref.verse_text, resolved_text):
         return Finding(
