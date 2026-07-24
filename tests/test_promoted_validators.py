@@ -37,9 +37,18 @@ def _run(script_path: Path, timeout: int = 120) -> subprocess.CompletedProcess:
     core gate logic (Phase 1/A/SOT/B), not a re-run of the CI-only
     full-corpus scripture/duplication audit (Phase D/see
     shared_validation.scripture_check.scripture_validation_enabled), which
-    takes minutes and would blow this test's timeout on every run."""
+    takes minutes and would blow this test's timeout on every run.
+
+    Also strips GITHUB_STEP_SUMMARY — RunReport writes to that file on a
+    gate failure (see RunReport.wrap/record_phase), and the deliberately
+    broken fixtures below are designed to gate-fail. Left inherited from
+    the real CI environment, their synthetic error text (e.g. "missing
+    required 'studies' array" from a temp-dir fixture) would leak into the
+    real job's GitHub Actions summary panel alongside the actual validator
+    results."""
     env = os.environ.copy()
     env.pop('CI', None)
+    env.pop('GITHUB_STEP_SUMMARY', None)
     return subprocess.run(
         [sys.executable, str(script_path)],
         capture_output=True, text=True, timeout=timeout, env=env,

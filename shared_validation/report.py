@@ -32,7 +32,11 @@ class Report:
         print(f"\n{'='*80}")
         print(f"{self.phase} VALIDATION REPORT")
         print('='*80)
-        if self.info:
+        # On a fully clean pass, RunReport's rollup already covers what ran
+        # and how it went — the full per-message INFO dump here is only
+        # worth the noise when there's a warning/error to give context for.
+        clean = not self.errors and not self.warnings
+        if self.info and not clean:
             print(f"\nℹ️  INFORMATION ({len(self.info)}):")
             for m in self.info: print(f"  {m}")
         if self.warnings:
