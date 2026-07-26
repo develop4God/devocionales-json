@@ -170,10 +170,9 @@
       "type": "character_moment",
       "mood": "grace",
       "image_url": "peter_restoration_feed_sheep.png",
-      "title": "Apacienta",
+      "title": "Cuidar de lo que Jesús ama",
       "subtitle": "El perdón que viene con un trabajo",
-      "content": "Jesús no se detiene en 'te perdono'. Cada una de las tres respuestas de Pedro recibe la misma clase de encargo: apacienta mis corderos, pastorea mis ovejas, apacienta mis ovejas. La restauración de Pedro no termina en que se sienta bien otra vez; termina en que Jesús vuelve a confiarle algo. El hombre que negó conocer a Jesús recibe la tarea de cuidar a los que Jesús ama.",
-      "revelation_key": "Jesús no solo perdona a Pedro: le entrega de nuevo el cuidado de su propio rebaño.",
+      "content": "En el griego original, las tres tareas dadas por Jesús a Pedro no repiten la misma palabra. La primera y la última usan βόσκω (bosko): alimentar, nutrir, dar de comer al rebaño. La del medio usa un verbo distinto, ποιμαίνω (poimaino): pastorear por completo — guiar, proteger y gobernar el rebaño, no solo alimentarlo. Jesús, que acaba de darles de comer con sus propias manos junto al fuego (Juan 21:12-13), ahora encarga a Pedro alimentar y gobernar a su propio rebaño. El hombre que negó conocerlo recibe la tarea de sostener a los que Jesús ama.",
       "scripture_connections": [
         { "reference": "1 Pedro 5:2-3", "text": "Apacentad la grey de Dios que está entre vosotros, cuidando de ella, no por fuerza, sino voluntariamente; no por ganancia deshonesta, sino con ánimo pronto; no como teniendo señorío sobre los que están a vuestro cuidado, sino siendo ejemplos de la grey." }
       ]
