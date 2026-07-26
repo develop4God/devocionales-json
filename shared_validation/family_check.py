@@ -14,10 +14,6 @@ file disagrees with the rest.
 
 This module holds only the checks that are identical in shape for any content type:
     - Filename ↔ language field consistency
-    - Cross-file "untranslated leak": a field expected to differ per language that is
-      byte-identical across 2+ files
-    - Cross-file "drift": a field expected to match across every language where one or
-      more files disagree with what the rest agree on
     - Cross-file structural key parity
     - The load/orchestrate/report shell
 
@@ -91,58 +87,7 @@ def check_filename_language_match(lang: str, path: Path, data: dict, report: Rep
         report.err(f"{lang}: language field is '{field_lang}', expected '{lang}' (filename: {path.name})")
 
 
-# ── Cross-file: fields that must differ per language ─────────────────────────
-
-def extract_path(card: dict, path: str) -> list[str]:
-    """
-    Pull string value(s) out of a card by dotted path, with `[]` meaning "for every
-    item in this list." E.g.:
-      "title"                       -> [card["title"]]
-      "prayer.content"              -> [card["prayer"]["content"]]
-      "scripture_connections[].text" -> [sc["text"] for sc in card["scripture_connections"]]
-    Returns [] if any segment is missing — caller treats that as "nothing to check
-    here," consistent with how flat card-field lookups already skip absent fields.
-    """
-    current = [card]
-    for segment in path.split("."):
-        list_marker = segment.endswith("[]")
-        key = segment[:-2] if list_marker else segment
-        next_current = []
-        for item in current:
-            if not isinstance(item, dict) or key not in item:
-                continue
-            val = item[key]
-            if list_marker:
-                if isinstance(val, list):
-                    next_current.extend(v for v in val if isinstance(v, dict))
-            else:
-                next_current.append(val)
-        current = next_current
-        if not current:
-            return []
-    return [v for v in current if isinstance(v, str)]
-
-
-def check_untranslated_leak(field_label: str, values_by_lang: dict[str, str],
-                             report: Reporter, shared_words: set[str] = frozenset()):
-    """Flag if 2+ languages share byte-identical text for a field that should be translated."""
-    seen: dict[str, list[str]] = {}
-    for lang, val in values_by_lang.items():
-        if not isinstance(val, str) or not val.strip():
-            continue
-        key = val.strip()
-        seen.setdefault(key, []).append(lang)
-    for val, langs in seen.items():
-        if len(langs) < 2:
-            continue
-        if val in shared_words:
-            continue
-        report.warn(f"{field_label}: identical across {', '.join(sorted(langs))} — "
-                    f"{'one or more of these' if len(langs) > 2 else 'one of these'} may not "
-                    f"have been translated: {val[:60]!r}")
-
-
-# ── Cross-file: fields that must match across every language ─────────────────
+# ── Cross-file: structural fields that must match across every language ──────
 
 def check_drift(field_label: str, values_by_lang: dict[str, object], report: Reporter):
     """Flag if one or more languages disagree with what the majority agree on."""
@@ -176,17 +121,35 @@ def flatten_keys(d, prefix=""):
             yield from flatten_keys(v, path)
 
 
-def check_key_parity(loaded: dict[str, dict], report: Reporter):
-    all_keys: dict[str, set] = {lang: set(flatten_keys(data)) for lang, data in loaded.items()}
+def _report_missing_keys(scope: str, all_keys: dict[str, set], report: Reporter):
+    """Strict: every key must be present in every file. Any key not in the full
+    intersection is reported for every file missing it, no matter how few files
+    have it — a key present in only 1 of 10 files is exactly the typo/drift case
+    this check exists to catch (e.g. 'discovery_completion' vs 'discovery_complete')."""
     union = set().union(*all_keys.values()) if all_keys else set()
     for lang, keys in all_keys.items():
         missing = union - keys
         for key in sorted(missing):
-            # Only flag if at least half the family has this key — otherwise it's
-            # likely a legitimate optional/content-specific field, not a real gap.
             present_in = sum(1 for k in all_keys.values() if key in k)
-            if present_in >= max(2, len(all_keys) // 2):
-                report.err(f"{lang}: missing key '{key}' present in {present_in}/{len(all_keys)} sibling files")
+            report.err(f"{scope}{lang}: missing key '{key}' present in {present_in}/{len(all_keys)} sibling files")
+
+
+def check_key_parity(loaded: dict[str, dict], report: Reporter):
+    """Cross-file key parity at the document level, plus per-card key parity
+    (position-matched by card index) since flatten_keys stops at list boundaries
+    and would otherwise never look inside `cards[]`."""
+    all_keys: dict[str, set] = {lang: set(flatten_keys(data)) for lang, data in loaded.items()}
+    _report_missing_keys("", all_keys, report)
+
+    max_cards = max((len(d.get("cards", [])) for d in loaded.values()), default=0)
+    for i in range(max_cards):
+        card_keys: dict[str, set] = {}
+        for lang, data in loaded.items():
+            cards = data.get("cards", [])
+            if i < len(cards):
+                card_keys[lang] = set(flatten_keys(cards[i]))
+        if len(card_keys) >= 2:
+            _report_missing_keys(f"card[{i+1}] ", card_keys, report)
 
 
 # ── Orchestration shell ───────────────────────────────────────────────────────
@@ -196,13 +159,8 @@ def run(
     label: str,
     content_id: str,
     family: dict[str, Path],
-    must_differ_top_level: tuple[str, ...],
-    must_differ_card_fields: tuple[str, ...],
     check_structural_completeness: Callable[[str, dict, Reporter], None],
-    shared_words: set[str] = frozenset(),
     drift_top_level_fields: tuple[str, ...] = ("id", "type"),
-    must_differ_nested_paths: tuple[str, ...] = (),
-    must_differ_top_level_paths: tuple[str, ...] = (),
 ) -> int:
     """
     Run the full cross-file family validation and print a report. Returns the exit
@@ -211,15 +169,6 @@ def run(
     `family`: {lang: file_path}, already resolved by the caller from its own index.json.
     `check_structural_completeness(lang, data, report)`: caller-supplied per-file
     completeness check (required fields, card structure) — content-type-specific.
-    `must_differ_card_fields` only reaches flat scalar keys directly on a card dict.
-    For anything nested deeper or inside a list of objects, use dotted paths (see
-    extract_path()) in one of:
-      `must_differ_nested_paths` — per-card, e.g. "prayer.content",
-        "scripture_connections[].text". Checked once per card, position-matched
-        across languages when a path yields multiple items (e.g. several
-        scripture_connections).
-      `must_differ_top_level_paths` — document-level, not per-card, e.g.
-        "key_verse.text", "key_verse.reference".
     """
     report = Reporter()
 
@@ -251,52 +200,7 @@ def run(
     print(f"\n{CYN}── cross-file key parity{RST}")
     check_key_parity(loaded, report)
 
-    print(f"\n{CYN}── cross-file: fields that must differ per language{RST}")
-    for field in must_differ_top_level:
-        check_untranslated_leak(
-            f"top-level '{field}'", {l: d.get(field) for l, d in loaded.items()},
-            report, shared_words,
-        )
     max_cards = max((len(d.get("cards", [])) for d in loaded.values()), default=0)
-    for i in range(max_cards):
-        for field in must_differ_card_fields:
-            values = {}
-            for lang, data in loaded.items():
-                cards = data.get("cards", [])
-                if i < len(cards) and field in cards[i]:
-                    values[lang] = cards[i].get(field)
-            if values:
-                check_untranslated_leak(f"card[{i+1}] '{field}'", values, report, shared_words)
-
-        for path in must_differ_nested_paths:
-            # Each language's card may yield 0, 1, or several string values at this
-            # path (e.g. multiple scripture_connections items) — compare position by
-            # position across languages, since item N in one language corresponds to
-            # item N in another (same source card, same order).
-            per_lang_values: dict[str, list[str]] = {}
-            for lang, data in loaded.items():
-                cards = data.get("cards", [])
-                if i < len(cards):
-                    per_lang_values[lang] = extract_path(cards[i], path)
-            max_items = max((len(v) for v in per_lang_values.values()), default=0)
-            for j in range(max_items):
-                values = {
-                    lang: vals[j] for lang, vals in per_lang_values.items() if j < len(vals)
-                }
-                if values:
-                    label_suffix = f"[{j+1}]" if max_items > 1 else ""
-                    check_untranslated_leak(
-                        f"card[{i+1}] '{path}'{label_suffix}", values, report, shared_words,
-                    )
-
-    for path in must_differ_top_level_paths:
-        values = {}
-        for lang, data in loaded.items():
-            extracted = extract_path(data, path)
-            if extracted:
-                values[lang] = extracted[0]
-        if values:
-            check_untranslated_leak(f"top-level '{path}'", values, report, shared_words)
 
     print(f"\n{CYN}── cross-file: fields that must match across all languages{RST}")
     for field in drift_top_level_fields:

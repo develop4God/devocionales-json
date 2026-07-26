@@ -10,10 +10,10 @@ matches an EN that was already wrong. This script instead loads every language f
 for one encounter and cross-checks the whole set against each other, with no single
 file treated as ground truth.
 
-Thin wrapper: content-agnostic cross-file logic (untranslated-leak detection, drift
-detection, filename↔language consistency, key parity) lives in
-shared_validation/family_check.py. This file supplies Encounters-specific structural
-completeness checks and field lists only.
+Thin wrapper: content-agnostic cross-file logic (structural drift detection,
+filename↔language consistency, key parity) lives in shared_validation/family_check.py.
+This file supplies Encounters-specific structural completeness checks and field lists
+only.
 
 Usage:
     python3 validate_family.py <encounter_id>
@@ -40,35 +40,9 @@ from shared_validation.family_check import run, nonempty, Reporter
 ENCOUNTERS_DIR = Path(__file__).parent.parent
 INDEX_PATH = ENCOUNTERS_DIR / "index.json"
 
-_MUST_DIFFER_TOP_LEVEL = ()  # encounters have no top-level title/subtitle; cards carry these
-_MUST_DIFFER_CARD_FIELDS = ("title", "subtitle", "narrative", "content", "reflection",
-                             "revelation_key", "reflection_prompt")
-# Per-card, nested one or more levels deep or inside a list of objects — flat
-# card-field lookup can't reach these, see shared_validation.family_check.extract_path.
-# Not every card type has every one of these (verse_overlay/completion_verse/prayer
-# are card-type-specific) — extract_path returns [] when absent, safe to list all.
-_MUST_DIFFER_NESTED_PATHS = (
-    "verse_overlay.text",
-    "verse_overlay.reference",
-    "completion_verse.text",
-    "completion_verse.reference",
-    "scripture_connections[].text",
-    "scripture_connections[].reference",
-    "discovery_questions[].category",
-    "discovery_questions[].question",
-    "prayer.title",
-    "prayer.content",
-)
-# scripture_moment cards carry verse_text/verse_reference directly on the card, not
-# nested — these already work via _MUST_DIFFER_CARD_FIELDS, listed here for clarity
-# since the skill groups them with the other "always translate" scripture fields.
-_MUST_DIFFER_CARD_FIELDS = _MUST_DIFFER_CARD_FIELDS + ("verse_text", "verse_reference")
-# Document-level (not per-card)
-_MUST_DIFFER_TOP_LEVEL_PATHS = (
-    "key_verse.text",
-    "key_verse.reference",
-    "meta.character",
-)
+# Card fields that must be non-empty when present.
+_NONEMPTY_CARD_FIELDS = ("title", "subtitle", "narrative", "content", "reflection",
+                          "revelation_key", "reflection_prompt", "verse_text", "verse_reference")
 
 
 def resolve_family(encounter_id: str) -> dict[str, Path]:
@@ -120,7 +94,7 @@ def check_required_fields(lang: str, data: dict, report: Reporter):
         ctype = card.get("type", "unknown")
         card_ctx = f"{ctx} card[{card.get('order', '?')}] ({ctype})"
 
-        for field in _MUST_DIFFER_CARD_FIELDS:
+        for field in _NONEMPTY_CARD_FIELDS:
             if field in card and not nonempty(card.get(field)):
                 report.err(f"{card_ctx}: field '{field}' is empty")
 
@@ -175,10 +149,6 @@ def main():
         label="ENCOUNTERS FAMILY VALIDATOR",
         content_id=args.encounter_id,
         family=family,
-        must_differ_top_level=_MUST_DIFFER_TOP_LEVEL,
-        must_differ_card_fields=_MUST_DIFFER_CARD_FIELDS,
-        must_differ_nested_paths=_MUST_DIFFER_NESTED_PATHS,
-        must_differ_top_level_paths=_MUST_DIFFER_TOP_LEVEL_PATHS,
         check_structural_completeness=check_required_fields,
         drift_top_level_fields=("id", "type", "schema_version"),
     )
