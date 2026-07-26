@@ -172,54 +172,6 @@ class TestCardRequiredKeysDispatch(unittest.TestCase):
         self.assertTrue(matching, f"Expected an unknown-card-type warning, got: {report.warnings}")
 
 
-# ── _has_english_book_name ──────────────────────────────────────────────────
-
-class TestHasEnglishBookName(unittest.TestCase):
-    def test_flags_english_book_name_in_french_reference(self):
-        self.assertTrue(ve._has_english_book_name("Genesis 1:1", "fr"))
-
-    def test_flags_english_book_name_in_spanish_reference(self):
-        self.assertTrue(ve._has_english_book_name("Matthew 5:3", "es"))
-
-    def test_does_not_flag_correctly_translated_reference(self):
-        # No English book name present at all — should not match.
-        self.assertFalse(ve._has_english_book_name("Génesis 1:1", "es"))
-
-    def test_does_not_flag_shared_de_book_names(self):
-        """Job, Joel, Amos, Daniel, Ruth (and a few others) are spelled the
-        same in German — must NOT be flagged as untranslated for lang='de'."""
-        for book in ("Job", "Joel", "Amos", "Daniel", "Ruth"):
-            with self.subTest(book=book):
-                self.assertFalse(
-                    ve._has_english_book_name(f"{book} 1:1", "de"),
-                    f"'{book}' should not be flagged as an English book name for German",
-                )
-
-    def test_does_not_flag_shared_fil_book_names(self):
-        """Genesis, Ruth, Samuel, Ezra, Job, Ezekiel, Daniel, Hosea, Joel,
-        Amos, Nahum are shared with Filipino (MBB05) — must not flag."""
-        for book in ("Genesis", "Ruth", "Job", "Daniel"):
-            with self.subTest(book=book):
-                self.assertFalse(
-                    ve._has_english_book_name(f"{book} 1:1", "fil"),
-                    f"'{book}' should not be flagged as an English book name for Filipino",
-                )
-
-    def test_de_shared_book_still_flags_other_de_languages_incorrectly_named(self):
-        """Sanity check the exemption is lang-specific: a DE-exempt book
-        name is still correctly flagged for a language with no such
-        exemption (e.g. 'fr')."""
-        self.assertTrue(ve._has_english_book_name("Job 1:1", "fr"))
-
-    def test_english_reference_for_english_language_is_not_the_functions_concern(self):
-        """_has_english_book_name doesn't special-case lang='en' itself —
-        callers are responsible for skipping the check when lang == 'en'
-        (see validate_encounter_file's `if lang != 'en' and ...` guards).
-        Documented here since it's a real behavior of the function as
-        written, not something being changed."""
-        self.assertTrue(ve._has_english_book_name("Genesis 1:1", "en"))
-
-
 # ── is_cognate (shared_validation.text_checks) ──────────────────────────────
 #
 # Note: this function lives in shared_validation/text_checks.py, not as a

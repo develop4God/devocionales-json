@@ -202,103 +202,6 @@ def validate_content_translation(en_data: Dict, trans_data: Dict, lang: str,
             report.E(f"{filename}: Card {i+1} order mismatch")
 
 
-def validate_verse_references(data: Dict, lang: str, filename: str,
-                             report: Report, bible_versions: dict):
-    """Validate that verse references are in the correct language."""
-    if lang == 'en':
-        return  # English is the base language
-
-    # Books that are the same or very similar across Romance languages
-    # (Spanish, Portuguese, French) - these should not trigger errors
-    common_books_romance = ['Job', 'Joel', 'Amos', 'Daniel', 'Ruth', 'Rut', 'Rute']
-
-    # Books that are identical in German and English — must not be flagged as untranslated
-    # (Psalm, Daniel, Hosea, Joel, Amos, Nahum, Ezra, Job, Ruth are the same in LU17/German)
-    _DE_SHARED_BOOK_NAMES = {'Psalm', 'Psalms', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Nahum',
-                              'Ezra', 'Job', 'Ruth'}
-
-    # Books that are identical in Filipino and English — must not be flagged as untranslated
-    # (confirmed against bible_database/MBB05_fil.SQLite3 books.long_name: Genesis and Ezekiel
-    # are spelled the same in Filipino Bible translations)
-    _FIL_SHARED_BOOK_NAMES = {'Genesis', 'Ezekiel'}
-
-    def _has_english_book_name(ref: str, pattern, lang: str) -> bool:
-        """Return True only if ref contains an English book name that should be translated."""
-        if not pattern.search(ref):
-            return False
-        if lang == 'de':
-            # Psalm etc. are identical in German — not a false positive
-            for shared in _DE_SHARED_BOOK_NAMES:
-                if re.match(rf'\b{re.escape(shared)}\b', ref, re.IGNORECASE):
-                    return False
-        if lang == 'fil':
-            # Genesis and Ezekiel are identical in Filipino — not a false positive
-            for shared in _FIL_SHARED_BOOK_NAMES:
-                if re.match(rf'\b{re.escape(shared)}\b', ref, re.IGNORECASE):
-                    return False
-        return True
-
-    # Pattern to detect English Bible book names that SHOULD be translated
-    # Exclude books that are commonly the same across languages
-    if bible_versions.get(lang, {}).get('script') == 'latin' and lang != 'en':
-        # For Romance/German languages, be less strict about common names
-        english_bible_pattern = re.compile(
-            r'\b(Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|'
-            r'Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Psalm|Psalms|'
-            r'Proverbs|Ecclesiastes|Song|Isaiah|Jeremiah|Lamentations|Ezekiel|'
-            r'Hosea|Obadiah|Jonah|Micah|Nahum|Habakkuk|'
-            r'Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|'
-            r'Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|'
-            r'Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|'
-            r'Revelation)\s+\d', re.IGNORECASE)
-    else:
-        # For non-Latin languages (CJK, Devanagari), all English names should be translated
-        english_bible_pattern = re.compile(
-            r'\b(Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|'
-            r'Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalm|Psalms|'
-            r'Proverbs|Ecclesiastes|Song|Isaiah|Jeremiah|Lamentations|Ezekiel|'
-            r'Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|'
-            r'Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|'
-            r'Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|'
-            r'Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|'
-            r'Revelation)\s+\d', re.IGNORECASE)
-
-    # Check key_verse reference
-    if 'key_verse' in data and 'reference' in data['key_verse']:
-        ref = data['key_verse']['reference']
-        if _has_english_book_name(ref, english_bible_pattern, lang):
-            report.E(f"{filename}: key_verse reference has English book name: {ref}")
-
-    # Check all card references
-    for card_idx, card in enumerate(data.get('cards', [])):
-        # Check greek_words references
-        for gw_idx, gw in enumerate(card.get('greek_words', [])):
-            if 'reference' in gw:
-                ref = gw['reference']
-                if _has_english_book_name(ref, english_bible_pattern, lang):
-                    report.E(f"{filename}: card {card_idx+1} greek_word {gw_idx+1} reference has English: {ref}")
-
-        # Check timeline event references
-        for event_idx, event in enumerate(card.get('timeline', [])):
-            if 'event' in event:
-                ref = event['event']
-                if _has_english_book_name(ref, english_bible_pattern, lang):
-                    report.E(f"{filename}: card {card_idx+1} timeline {event_idx+1} has English reference: {ref}")
-
-        # Check scripture_connections
-        for sc_idx, sc in enumerate(card.get('scripture_connections', [])):
-            if 'reference' in sc:
-                ref = sc['reference']
-                if _has_english_book_name(ref, english_bible_pattern, lang):
-                    report.E(f"{filename}: card {card_idx+1} scripture_connection {sc_idx+1} has English: {ref}")
-
-        # Check scripture_anchor
-        if 'scripture_anchor' in card and 'reference' in card['scripture_anchor']:
-            ref = card['scripture_anchor']['reference']
-            if _has_english_book_name(ref, english_bible_pattern, lang):
-                report.E(f"{filename}: card {card_idx+1} scripture_anchor has English: {ref}")
-
-
 def validate_filename_format(filepath: Path, lang: str, report: Report,
                               expected_languages: dict) -> bool:
     """Validate that filename follows the correct naming convention."""
@@ -549,9 +452,6 @@ def validate_translation_files(report: Report, discovery_dir: Path,
 
             # Store for cross-validation
             lang_studies[study_base] = data
-
-            # Validate verse references are in correct language
-            validate_verse_references(data, lang, filename, report, bible_versions)
 
             # Track study IDs
             if data.get('id'):

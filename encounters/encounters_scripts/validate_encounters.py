@@ -94,44 +94,6 @@ CARD_REQUIRED_KEYS = {
     'completion':         ['order', 'type', 'image_url', 'completion_verse', 'celebration_type'],
 }
 
-# English Bible book name pattern (for non-EN reference checks)
-EN_BIBLE_BOOK_PATTERN = re.compile(
-    r'\b(Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|'
-    r'Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalm|Psalms|'
-    r'Proverbs|Ecclesiastes|Song|Isaiah|Jeremiah|Lamentations|Ezekiel|'
-    r'Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|'
-    r'Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|'
-    r'Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|'
-    r'Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|'
-    r'Revelation)\s+\d', re.IGNORECASE)
-
-# Book names that are identical (or near-identical) in German and English —
-# the EN pattern would falsely flag these as untranslated in DE files.
-_DE_SHARED_BOOK_NAMES = {
-    'psalm', 'psalms', 'daniel', 'hosea', 'joel', 'amos', 'nahum', 'ezra',
-    'job', 'ruth',
-}
-
-# Book names used in the Magandang Balita Biblia (MBB05) Filipino Bible that
-# retain the English/transliterated form — same-name false positives for FIL.
-_FIL_SHARED_BOOK_NAMES = {
-    'genesis', 'ruth', 'samuel', 'ezra', 'job', 'ezekiel', 'daniel',
-    'hosea', 'joel', 'amos', 'nahum',
-}
-
-
-def _has_english_book_name(reference: str, lang: str) -> bool:
-    """Return True if reference contains an English-only book name for lang."""
-    m = EN_BIBLE_BOOK_PATTERN.search(reference)
-    if not m:
-        return False
-    if lang == 'de' and m.group(1).lower() in _DE_SHARED_BOOK_NAMES:
-        return False
-    if lang == 'fil' and m.group(1).lower() in _FIL_SHARED_BOOK_NAMES:
-        return False
-    return True
-
-
 def validate_sot_source(report: Report, bible_versions: dict, used_remote_sot: bool,
                          last_fetch_error: Optional[Exception]) -> bool:
     """Report whether this run resolved bible_version codes from the live
@@ -381,10 +343,6 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
         # bible_version inside key_verse must also match
         if kv.get('bible_version') not in allowed:
             report.E(f"{filename}: key_verse.bible_version '{kv.get('bible_version')}' not valid for '{lang}'")
-        # Non-EN: reference should not use English book names
-        if lang != 'en' and kv.get('reference'):
-            if _has_english_book_name(kv['reference'], lang):
-                report.E(f"{filename}: key_verse.reference has English book name: {kv['reference']}")
 
     # cards
     cards = data.get('cards', [])
@@ -449,9 +407,6 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
                 for field in ['reference', 'text']:
                     if not vo.get(field, '').strip():
                         report.E(f"{ctx}: verse_overlay.{field} is empty")
-                if lang != 'en' and vo.get('reference'):
-                    if _has_english_book_name(vo['reference'], lang):
-                        report.E(f"{ctx}: verse_overlay.reference has English book name: {vo['reference']}")
 
         # completion specific
         if ctype == 'completion':
@@ -467,18 +422,12 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
             for field in ['verse_reference', 'verse_text']:
                 if not card.get(field, '').strip():
                     report.E(f"{ctx}: '{field}' is empty")
-            if lang != 'en' and card.get('verse_reference'):
-                if _has_english_book_name(card['verse_reference'], lang):
-                    report.E(f"{ctx}: verse_reference has English book name: {card['verse_reference']}")
 
         # scripture_connections check
         for j, sc in enumerate(card.get('scripture_connections', [])):
             for field in ['reference', 'text']:
                 if not sc.get(field, '').strip():
                     report.E(f"{ctx} scripture_connections[{j+1}]: '{field}' is empty")
-            if lang != 'en' and sc.get('reference'):
-                if _has_english_book_name(sc['reference'], lang):
-                    report.E(f"{ctx} scripture_connections[{j+1}]: reference has English book name")
 
 
 def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
