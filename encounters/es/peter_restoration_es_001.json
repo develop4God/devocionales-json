@@ -28,7 +28,7 @@
       "mood": "falling",
       "image_url": "peter_restoration_night_boat.png",
       "title": "Una noche sin nada",
-      "narrative": "El lago de Tiberias está oscuro y quieto. Jesús ha resucitado y ya se les ha aparecido dos veces; les dijo que lo verían en Galilea, y aquí están, pero nadie sabe qué hacer mientras tanto. Pedro dice: voy a pescar. Los demás lo siguen. Con él van Tomás, Natanael, los hijos de Zebedeo y otros dos discípulos. Toda la noche echan la red y toda la noche la sacan vacía. No hay una palabra sobre lo que pasó en Jerusalén. Solo el agua quieta, el peso de una red que no trae nada, y las manos de un pescador que una vez caminó sobre esta misma agua.",
+      "narrative": "El lago de Tiberias está oscuro y quieto — el mismo lago donde, tiempo atrás, Jesús alimentó a una multitud de cinco mil con cinco panes y dos peces (Juan 6:1). Jesús ha resucitado y ya se les ha aparecido dos veces; les dijo que lo verían en Galilea, y aquí están, pero nadie sabe qué hacer mientras tanto. Pedro dice: voy a pescar. Los demás lo siguen. Con él van Tomás, Natanael, los hijos de Zebedeo y otros dos discípulos. Toda la noche echan la red y toda la noche la sacan vacía. No hay una palabra sobre lo que pasó en Jerusalén. Solo el agua quieta, el peso de una red que no trae nada, y las manos de un pescador que una vez caminó sobre esta misma agua.",
       "ambient_sound": "water",
       "haptic": null,
       "verse_overlay": {
@@ -44,10 +44,10 @@
       "image_url": "peter_restoration_stranger_shore.png",
       "verse_reference": "Juan 21:4-6",
       "verse_text": "Cuando ya iba amaneciendo, se presentó Jesús en la playa; mas los discípulos no sabían que era Jesús. Y les dijo: Hijitos, ¿tenéis algo de comer? Le respondieron: No. Él les dijo: Echad la red a la derecha de la barca, y hallaréis. Entonces la echaron, y ya no la podían sacar, por la multitud de peces.",
-      "reflection": "Un desconocido en la orilla da una instrucción sencilla, casi absurda para pescadores que llevan toda la noche sin nada: echar la red al otro lado de la misma barca. La obedecen, sin saber todavía a quién obedecen. La red se llena tanto que no pueden subirla. Es la misma escena que marcó el llamado de Pedro tres años antes (Lucas 5:4-7), y el discípulo amado es quien primero conecta ambos momentos: 'Es el Señor.'",
-      "revelation_key": "La misma señal que llamó a Pedro la primera vez es la que lo hace reconocer a Jesús ahora, antes de verlo con claridad.",
+      "reflection": "Un desconocido en la orilla da una instrucción sencilla, difícil de creer para pescadores que llevan toda la noche sin nada: echar la red al otro lado de la misma barca. La obedecen, sin saber todavía a quién obedecen y ahí ocurre el milagro; la red se llena tanto que no pueden subirla. Es la misma escena que marcó el llamado de Pedro al principio (Lucas 5:4-7), y el discípulo amado es quien primero conecta ambos momentos: 'Es el Señor.'",
+      "revelation_key": "Obedecen antes de saber a quién obedecen.",
       "scripture_connections": [
-        { "reference": "Lucas 5:6-7", "text": "Y habiéndolo hecho, encerraron gran cantidad de peces, y su red se rompía. Entonces hicieron señas a los compañeros que estaban en la otra barca, para que viniesen a ayudarles; y vinieron, y llenaron ambas barcas, de tal manera que se hundían." }
+        { "reference": "Lucas 5:4-7", "text": "Cuando terminó de hablar, dijo a Simón: Boga mar adentro, y echad vuestras redes para pescar. Respondiendo Simón, le dijo: Maestro, toda la noche hemos estado trabajando, y nada hemos pescado; mas en tu palabra echaré la red. Y habiéndolo hecho, encerraron gran cantidad de peces, y su red se rompía. Entonces hicieron señas a los compañeros que estaban en la otra barca, para que viniesen a ayudarles; y vinieron, y llenaron ambas barcas, de tal manera que se hundían." }
       ]
     },
     {
@@ -57,8 +57,11 @@
       "image_url": "peter_restoration_jumps_water.png",
       "title": "Se lanzó al agua",
       "subtitle": "Sin esperar a la barca",
-      "content": "Pedro se ciñe la ropa y se echa al mar antes de que la barca llegue a tierra. Es la segunda vez que este hombre entra al agua para llegar más rápido a Jesús. La primera vez caminó sobre ella con los ojos puestos en él, hasta que el viento lo distrajo y empezó a hundirse (Mateo 14:29-30). Esta vez no camina: nada. No hay milagro en este cruce, solo la urgencia de un hombre que necesita llegar antes que los demás.",
-      "revelation_key": "Pedro no espera el bote ni un milagro para llegar a Jesús; solo se lanza.",
+      "content": "Pedro se ciñe la ropa y se echa al mar antes de que la barca llegue a tierra. Trabajaba por costumbre con poca ropa, pero se cubre antes de acercarse a Jesús, un gesto de respeto en medio de la prisa. Es la segunda vez que este hombre entra al agua para llegar más rápido a Jesús. La primera vez caminó sobre ella con los ojos puestos en él, hasta que el viento lo distrajo y empezó a hundirse (Mateo 14:29-30). Esta vez nada con todas sus fuerzas, movido por la urgencia de llegar antes que los demás.",
+      "revelation_key": "Juan reconoce primero a Jesús; Pedro actúa de inmediato.",
+      "scripture_connections": [
+        { "reference": "Mateo 14:29-30", "text": "Y él dijo: Ven. Y descendiendo Pedro de la barca, andaba sobre las aguas para ir a Jesús. Pero al ver el fuerte viento, tuvo miedo; y comenzando a hundirse, dio voces, diciendo: ¡Señor, sálvame!" }
+      ],
       "verse_overlay": {
         "reference": "Juan 21:7",
         "text": "Entonces aquel discípulo a quien Jesús amaba dijo a Pedro: ¡Es el Señor! Simón Pedro, cuando oyó que era el Señor, se ciñó la ropa (pues se había despojado de ella), y se echó al mar."
@@ -69,28 +72,35 @@
       "type": "cinematic_scene",
       "mood": "mysterious",
       "image_url": "peter_restoration_charcoal_fire.png",
-      "title": "El mismo fuego",
-      "narrative": "En la orilla arde un fuego de brasas. Sobre él, pescado y pan, ya preparados antes de que la red se llenara. Pedro conoce ese olor. Es el mismo que lo envolvía en el patio del sumo sacerdote, la noche en que se calentaba junto a otro fuego de brasas y negó tres veces conocer a este hombre. El humo que ahora huele a desayuno es el mismo humo bajo el que lo negó. Nadie le pregunta nada todavía. Solo hay un fuego, y comida, y la orilla en silencio.",
+      "title": "Ya preparado",
+      "narrative": "En la orilla arde un fuego de brasas. Sobre él, pescado y pan, ya preparados cuando ellos llegan a tierra. En el texto griego original, la palabra usada es κειμένην (keiménēn), que significa 'ya puesto, dispuesto de antemano'. Jesús ya tiene la comida lista, y aun así pide que traigan también de los peces que acaban de pescar.",
+      "verse_overlay": {
+        "reference": "Juan 21:9-10",
+        "text": "Al descender a tierra, vieron brasas puestas, y un pez encima de ellas, y pan. Jesús les dijo: Traed de los peces que acabáis de pescar."
+      },
       "ambient_sound": "fire",
       "haptic": null,
-      "revelation_key": "El mismo olor a brasas que rodeó la negación de Pedro es el que ahora prepara su restauración.",
-      "scripture_connections": [
-        { "reference": "Juan 18:18", "text": "Y estaban en pie los siervos y los alguaciles que habían encendido un fuego; porque hacía frío, y se calentaban; y estaba también con ellos Pedro en pie, calentándose." }
-      ]
+      "revelation_key": "Jesús ya tenía comida lista; pide la pesca de ellos para que también tengan parte en lo que van a comer juntos."
     },
     {
       "order": 5,
       "type": "theological_depth",
       "mood": "mysterious",
       "image_url": "peter_restoration_anthrakia.png",
-      "title": "Ἀνθρακιά: la brasa que recuerda",
+      "title": "La brasa que recuerda",
       "subtitle": "Una palabra que solo aparece dos veces",
-      "content": "🔥 La palabra griega para 'fuego de brasas', ἀνθρακιά (anthrakia), aparece en todo el Nuevo Testamento solamente dos veces — y las dos están en el evangelio de Juan. La primera es Juan 18:18, el patio donde Pedro negó a Jesús calentándose junto a las brasas. La segunda es Juan 21:9, esta orilla. Juan no repite la palabra por accidente: quiere que el lector sienta lo que Pedro sintió, el mismo olor devolviéndolo al peor momento de su vida, justo antes de que ese momento sea sanado.",
-      "revelation_key": "Juan usa la misma palabra exacta para unir dos fuegos: uno donde Pedro cayó, otro donde Jesús lo levanta.",
+      "content": "La palabra griega para 'fuego de brasas', ἀνθρακιά (anthrakia), aparece en todo el Nuevo Testamento solamente dos veces — y las dos están en el evangelio de Juan. La primera es Juan 18:18, el patio donde Pedro negó a Jesús calentándose junto a las brasas. La segunda es Juan 21:9, esta orilla. Es razonable pensar que la misma escena le devolvió a Pedro el recuerdo de la noche cuando negó a Jesús.",
+      "revelation_key": "El mismo fuego que fue testigo de la caída de Pedro es ahora testigo de su regreso a esta orilla.",
       "verse_overlay": {
         "reference": "Juan 21:9",
         "text": "Al descender a tierra, vieron ascuas puestas, y un pez encima de ellas, y pan."
-      }
+      },
+      "scripture_connections": [
+        {
+          "reference": "Juan 18:18",
+          "text": "Y estaban en pie los siervos y los alguaciles que habían encendido un fuego; porque hacía frío, y se calentaban; y estaba también con ellos Pedro en pie, calentándose."
+        }
+      ]
     },
     {
       "order": 6,
@@ -98,9 +108,23 @@
       "mood": "tense",
       "image_url": "peter_restoration_breakfast.png",
       "title": "Ninguno se atrevía",
-      "narrative": "Comen en silencio. Jesús reparte el pan y el pescado con sus propias manos. Los discípulos lo miran de reojo, seguros de que es él, pero nadie pregunta '¿quién eres?'. Hay una reverencia nueva, distinta a la familiaridad de antes. Pedro come también, pero algo en él está en tensión: la última vez que estuvo cerca de Jesús después de fallarle, no pudo sostenerle la mirada (Lucas 22:61-62). Ahora comparte su pan.",
+      "narrative": "Comen en silencio. Jesús reparte el pan y el pescado con sus propias manos — el mismo verbo griego, λαμβάνω (lambano), que usó para repartir los panes a la multitud junto a este mismo lago (Juan 6:11). Hay una reverencia nueva, distinta a la familiaridad de antes. Pedro come también, pero algo en él está en tensión: la última vez que estuvo cerca de Jesús después de fallarle, no pudo sostenerle la mirada (Lucas 22:61-62). Ahora comparte su pan.",
       "ambient_sound": "silence",
       "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 21:12-13",
+        "text": "Les dijo Jesús: Venid, comed. Y ninguno de los discípulos se atrevía a preguntarle: ¿Tú, quién eres? sabiendo que era el Señor. Vino, pues, Jesús, y tomó el pan y les dio, y asimismo del pescado."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Lucas 22:61-62",
+          "text": "Entonces, vuelto el Señor, miró a Pedro; y Pedro se acordó de la palabra del Señor, que le había dicho: Antes que el gallo cante, me negarás tres veces. Y Pedro, saliendo fuera, lloró amargamente."
+        },
+        {
+          "reference": "Juan 6:11",
+          "text": "Y tomó Jesús aquellos panes, y habiendo dado gracias, los repartió entre los discípulos, y los discípulos entre los que estaban recostados; asimismo de los peces, cuanto querían."
+        }
+      ],
       "revelation_key": "Jesús restaura el cuerpo de Pedro con pan antes de tocar lo que todavía le pesa por dentro."
     },
     {
@@ -109,14 +133,20 @@
       "mood": "intense",
       "image_url": "peter_restoration_three_questions.png",
       "title": "Tres veces",
-      "narrative": "Terminada la comida, Jesús se dirige a Pedro por su nombre completo, el mismo que usó al llamarlo la primera vez: Simón, hijo de Jonás. Le pregunta si lo ama, más que estos. Pedro responde que sí. Jesús pregunta otra vez. Pedro responde otra vez. A la tercera pregunta, algo cambia en la forma en que Jesús la hace, y Pedro se entristece. Tres preguntas, en la misma orilla donde tres veces había dicho que no lo conocía.",
+      "narrative": "Terminada la comida, Jesús se dirige a Pedro por su nombre de antes: Simón, hijo de Jonás — no \"Pedro\", el nombre nuevo que él mismo le había dado (Juan 1:42). Esa misma noche que lo negó, Pedro había asegurado que nunca lo abandonaría, aunque todos los demás lo hicieran (Mateo 26:33). Jesús le pregunta: \"Simón, ¿me amas?\" Pedro responde que sí. Jesús le pregunta por segunda vez, y luego por tercera vez: \"Simón, ¿me amas?\" A la tercera vez, Pedro se entristece. Tres preguntas, en la misma orilla donde tres veces había dicho que no lo conocía.",
       "ambient_sound": "water",
       "haptic": null,
       "verse_overlay": {
         "reference": "Juan 21:15",
         "text": "Cuando hubieron comido, Jesús dijo a Simón Pedro: Simón, hijo de Jonás, ¿me amas más que éstos? Le respondió: Sí, Señor; tú sabes que te amo. Él le dijo: Apacienta mis corderos."
       },
-      "revelation_key": "Tres preguntas responden, una por una, a las tres veces que Pedro dijo que no lo conocía."
+      "scripture_connections": [
+        {
+          "reference": "Mateo 26:33",
+          "text": "Respondiendo Pedro, le dijo: Aunque todos se escandalicen de ti, yo nunca me escandalizaré."
+        }
+      ],
+      "revelation_key": "Jesús vuelve a llamarlo Simón para reconstruirlo desde cero, esta vez sobre la gracia y no sobre la confianza que Pedro tenía en sí mismo."
     },
     {
       "order": 8,
@@ -143,7 +173,10 @@
       "title": "Apacienta",
       "subtitle": "El perdón que viene con un trabajo",
       "content": "Jesús no se detiene en 'te perdono'. Cada una de las tres respuestas de Pedro recibe la misma clase de encargo: apacienta mis corderos, pastorea mis ovejas, apacienta mis ovejas. La restauración de Pedro no termina en que se sienta bien otra vez; termina en que Jesús vuelve a confiarle algo. El hombre que negó conocer a Jesús recibe la tarea de cuidar a los que Jesús ama.",
-      "revelation_key": "Jesús no solo perdona a Pedro: le entrega de nuevo el cuidado de su propio rebaño."
+      "revelation_key": "Jesús no solo perdona a Pedro: le entrega de nuevo el cuidado de su propio rebaño.",
+      "scripture_connections": [
+        { "reference": "1 Pedro 5:2-3", "text": "Apacentad la grey de Dios que está entre vosotros, cuidando de ella, no por fuerza, sino voluntariamente; no por ganancia deshonesta, sino con ánimo pronto; no como teniendo señorío sobre los que están a vuestro cuidado, sino siendo ejemplos de la grey." }
+      ]
     },
     {
       "order": 10,
