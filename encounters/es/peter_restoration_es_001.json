@@ -44,10 +44,10 @@
       "image_url": "peter_restoration_stranger_shore.png",
       "verse_reference": "Juan 21:4-6",
       "verse_text": "Cuando ya iba amaneciendo, se presentó Jesús en la playa; mas los discípulos no sabían que era Jesús. Y les dijo: Hijitos, ¿tenéis algo de comer? Le respondieron: No. Él les dijo: Echad la red a la derecha de la barca, y hallaréis. Entonces la echaron, y ya no la podían sacar, por la multitud de peces.",
-      "reflection": "Un desconocido en la orilla da una instrucción sencilla, casi absurda para pescadores que llevan toda la noche sin nada: echar la red al otro lado de la misma barca. La obedecen, sin saber todavía a quién obedecen. La red se llena tanto que no pueden subirla. Es la misma escena que marcó el llamado de Pedro tres años antes (Lucas 5:4-7), y el discípulo amado es quien primero conecta ambos momentos: 'Es el Señor.'",
-      "revelation_key": "La misma señal que llamó a Pedro la primera vez es la que lo hace reconocer a Jesús ahora, antes de verlo con claridad.",
+      "reflection": "Un desconocido en la orilla da una instrucción sencilla, difícil de creer para pescadores que llevan toda la noche sin nada: echar la red al otro lado de la misma barca. La obedecen, sin saber todavía a quién obedecen y ahí ocurre el milagro; la red se llena tanto que no pueden subirla. Es la misma escena que marcó el llamado de Pedro al principio (Lucas 5:4-7), y el discípulo amado es quien primero conecta ambos momentos: 'Es el Señor.'",
+      "revelation_key": "Obedecen antes de saber a quién obedecen.",
       "scripture_connections": [
-        { "reference": "Lucas 5:6-7", "text": "Y habiéndolo hecho, encerraron gran cantidad de peces, y su red se rompía. Entonces hicieron señas a los compañeros que estaban en la otra barca, para que viniesen a ayudarles; y vinieron, y llenaron ambas barcas, de tal manera que se hundían." }
+        { "reference": "Lucas 5:4-7", "text": "Cuando terminó de hablar, dijo a Simón: Boga mar adentro, y echad vuestras redes para pescar. Respondiendo Simón, le dijo: Maestro, toda la noche hemos estado trabajando, y nada hemos pescado; mas en tu palabra echaré la red. Y habiéndolo hecho, encerraron gran cantidad de peces, y su red se rompía. Entonces hicieron señas a los compañeros que estaban en la otra barca, para que viniesen a ayudarles; y vinieron, y llenaron ambas barcas, de tal manera que se hundían." }
       ]
     },
     {
@@ -57,8 +57,11 @@
       "image_url": "peter_restoration_jumps_water.png",
       "title": "Se lanzó al agua",
       "subtitle": "Sin esperar a la barca",
-      "content": "Pedro se ciñe la ropa y se echa al mar antes de que la barca llegue a tierra. Es la segunda vez que este hombre entra al agua para llegar más rápido a Jesús. La primera vez caminó sobre ella con los ojos puestos en él, hasta que el viento lo distrajo y empezó a hundirse (Mateo 14:29-30). Esta vez no camina: nada. No hay milagro en este cruce, solo la urgencia de un hombre que necesita llegar antes que los demás.",
-      "revelation_key": "Pedro no espera el bote ni un milagro para llegar a Jesús; solo se lanza.",
+      "content": "Pedro se ciñe la ropa y se echa al mar antes de que la barca llegue a tierra. Trabajaba por costumbre con poca ropa, pero se cubre antes de acercarse a Jesús, un gesto de respeto en medio de la prisa. Es la segunda vez que este hombre entra al agua para llegar más rápido a Jesús. La primera vez caminó sobre ella con los ojos puestos en él, hasta que el viento lo distrajo y empezó a hundirse (Mateo 14:29-30). Esta vez nada con todas sus fuerzas, movido por la urgencia de llegar antes que los demás.",
+      "revelation_key": "Juan reconoce primero a Jesús; Pedro actúa de inmediato.",
+      "scripture_connections": [
+        { "reference": "Mateo 14:29-30", "text": "Y él dijo: Ven. Y descendiendo Pedro de la barca, andaba sobre las aguas para ir a Jesús. Pero al ver el fuerte viento, tuvo miedo; y comenzando a hundirse, dio voces, diciendo: ¡Señor, sálvame!" }
+      ],
       "verse_overlay": {
         "reference": "Juan 21:7",
         "text": "Entonces aquel discípulo a quien Jesús amaba dijo a Pedro: ¡Es el Señor! Simón Pedro, cuando oyó que era el Señor, se ciñó la ropa (pues se había despojado de ella), y se echó al mar."
@@ -69,14 +72,15 @@
       "type": "cinematic_scene",
       "mood": "mysterious",
       "image_url": "peter_restoration_charcoal_fire.png",
-      "title": "El mismo fuego",
-      "narrative": "En la orilla arde un fuego de brasas. Sobre él, pescado y pan, ya preparados antes de que la red se llenara. Pedro conoce ese olor. Es el mismo que lo envolvía en el patio del sumo sacerdote, la noche en que se calentaba junto a otro fuego de brasas y negó tres veces conocer a este hombre. El humo que ahora huele a desayuno es el mismo humo bajo el que lo negó. Nadie le pregunta nada todavía. Solo hay un fuego, y comida, y la orilla en silencio.",
+      "title": "Ya preparado",
+      "narrative": "En la orilla arde un fuego de brasas. Sobre él, pescado y pan, ya preparados cuando ellos llegan a tierra. En el texto griego original, la palabra usada es κειμένην (keiménēn), que significa 'ya puesto, dispuesto de antemano'. Jesús ya tiene la comida lista, y aun así pide que traigan también de los peces que acaban de pescar.",
+      "verse_overlay": {
+        "reference": "Juan 21:9-10",
+        "text": "Al descender a tierra, vieron brasas puestas, y un pez encima de ellas, y pan. Jesús les dijo: Traed de los peces que acabáis de pescar."
+      },
       "ambient_sound": "fire",
       "haptic": null,
-      "revelation_key": "El mismo olor a brasas que rodeó la negación de Pedro es el que ahora prepara su restauración.",
-      "scripture_connections": [
-        { "reference": "Juan 18:18", "text": "Y estaban en pie los siervos y los alguaciles que habían encendido un fuego; porque hacía frío, y se calentaban; y estaba también con ellos Pedro en pie, calentándose." }
-      ]
+      "revelation_key": "Jesús ya tenía comida lista; pide la pesca de ellos para que también tengan parte en lo que van a comer juntos."
     },
     {
       "order": 5,
@@ -90,7 +94,13 @@
       "verse_overlay": {
         "reference": "Juan 21:9",
         "text": "Al descender a tierra, vieron ascuas puestas, y un pez encima de ellas, y pan."
-      }
+      },
+      "scripture_connections": [
+        {
+          "reference": "Juan 18:18",
+          "text": "Y estaban en pie los siervos y los alguaciles que habían encendido un fuego; porque hacía frío, y se calentaban; y estaba también con ellos Pedro en pie, calentándose."
+        }
+      ]
     },
     {
       "order": 6,
@@ -143,7 +153,10 @@
       "title": "Apacienta",
       "subtitle": "El perdón que viene con un trabajo",
       "content": "Jesús no se detiene en 'te perdono'. Cada una de las tres respuestas de Pedro recibe la misma clase de encargo: apacienta mis corderos, pastorea mis ovejas, apacienta mis ovejas. La restauración de Pedro no termina en que se sienta bien otra vez; termina en que Jesús vuelve a confiarle algo. El hombre que negó conocer a Jesús recibe la tarea de cuidar a los que Jesús ama.",
-      "revelation_key": "Jesús no solo perdona a Pedro: le entrega de nuevo el cuidado de su propio rebaño."
+      "revelation_key": "Jesús no solo perdona a Pedro: le entrega de nuevo el cuidado de su propio rebaño.",
+      "scripture_connections": [
+        { "reference": "1 Pedro 5:2-3", "text": "Apacentad la grey de Dios que está entre vosotros, cuidando de ella, no por fuerza, sino voluntariamente; no por ganancia deshonesta, sino con ánimo pronto; no como teniendo señorío sobre los que están a vuestro cuidado, sino siendo ejemplos de la grey." }
+      ]
     },
     {
       "order": 10,
