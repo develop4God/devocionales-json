@@ -115,31 +115,12 @@ python3 discovery_master_validator.py
 
 ---
 
-## Native-Speaker Critic Review — Discovery-Specific Mechanics
+## Native-Speaker Critic Review
 
-See core skill for the full mandatory critic-review process (prompt wording,
-verify-before-apply gate, cross-language pattern sweep, post-fix reverse validation).
-Discovery-specific mechanics:
-
-### When to spawn
-Immediately after a translation file is written and `validate_pair.py` passes for it —
-do not batch this up and defer it to the end of the whole run.
-
-### Delegation
-Spawn `critic_reviewer_agent` (defined at `~/.claude/agents/critic_reviewer_agent.md`),
-filling in `[LANGUAGE]` and `[FILE_PATH]` per the profile's own template, in parallel
-across the batch. This profile is read-only (cannot edit files) and is instructed to
-disregard project memory/house-style rules, acting as a fresh, naive native-speaker
-reader — do not substitute a general-purpose agent for it, and do not add severity tiers,
-register-rule references, or any other structure to its brief. Do not restate or override
-its base instructions in the delegation message beyond the language and file path.
-
-### Coordinator review
-After all critic reports return:
-1. Review each finding one by one (apply core skill's verify-before-apply gate) —
-   dismiss or apply the fix, document each one.
-2. Re-run `validate_pair.py` on any file that was modified.
-3. Proceed to the core skill's post-fix reverse-validation gate before final validation.
+Not this skill's concern — `translator_agent` (which loads this skill) does not spawn
+critics or run critic review; see core skill §5. The full two-round critic process,
+spawning, and triage is owned by `~/.claude/skills/translate-batch/SKILL.md`, run by
+the orchestrating conversation.
 
 ---
 

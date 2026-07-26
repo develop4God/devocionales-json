@@ -64,10 +64,12 @@ Store in both the JSON file and `index.json`.
 
 ## 5. Critic review pipeline
 
-Owned entirely by `translation_orchestrator_agent` / `~/.claude/skills/translate-batch/SKILL.md`
-(each phase runs its own two independent critic rounds — verify-before-apply, pattern
+Owned entirely by whoever is running `~/.claude/skills/translate-batch/SKILL.md` (the
+orchestrating conversation — this must run in a context with a real Agent tool, not a
+spawned subagent, since it delegates to `translator_agent` and `critic_reviewer_agent`).
+Each phase runs its own two independent critic rounds — verify-before-apply, pattern
 sweep, post-fix reverse validation — gated on user confirmation before the next phase
-starts). `translator_agent` does not run this — it translates,
+starts. `translator_agent` does not run this — it translates,
 runs its content-specific validator + `post_translate_checks.py`, and delivers; critic
 review happens after, in a separate subagent the orchestrator spawns. If you are
 `translator_agent` reading this, your job is done once delivery's mechanical checks
