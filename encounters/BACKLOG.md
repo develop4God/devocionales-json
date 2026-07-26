@@ -22,6 +22,7 @@ Update status as encounters move from idea -> drafting -> review -> published.
 | The Woman Caught in Adultery | Juan 8:1-11 | Public shame, weaponized condemnation, "ni yo te condeno" | published |
 | The Emmaus Disciples | Lucas 24:13-35 | Grief/confusion -> slow recognition in the ordinary | published |
 | The Widow of Nain | Lucas 7:11-17 | Unprompted compassion, public resurrection miracle | published |
+| The Man Born Blind | Juan 9:1-41 | Escalating testimony under interrogation, cast out for telling the truth | published |
 
 ---
 
@@ -31,25 +32,10 @@ Ranked by how much new thematic ground they cover (not already represented above
 
 ### High priority — fills a real gap
 
-- **The Man Born Blind** (Juan 9:1-41)
-  Theme: escalating testimony under interrogation, being cast out by religious authority
-  for telling the truth ("una cosa sé: yo era ciego, y ahora veo"), faith deepening
-  through persecution rather than resolving it. Distinct from Bartimaeus (the healing
-  itself, physical restoration) — here the drama is entirely post-healing: what it costs
-  to keep testifying when the powerful demand you recant. No current encounter covers
-  institutional/social persecution for faith.
-
 - **Peter's Restoration at the Shore** (Juan 21:1-19)
   Theme: guilt after failure, restored calling ("¿me amas?"), three questions answering
   three denials. Strong complement to peter_water_001 (fear/faith) with a different arc
   (failure/restoration). Only risk: two Peter encounters back-to-back in the series.
-
-- **The Sinful Woman Anointing Jesus' Feet** (Lucas 7:36-50)
-  Theme: extravagant, publicly-mocked love as response to forgiveness already received
-  ("a quien se le perdona poco, ama poco"), contempt from a religious host (Simon the
-  Pharisee) turned into a teaching moment. Distinct from the Bleeding Woman (secret,
-  desperate touch) and the Adultery Woman (accused, defended) — this woman initiates an
-  open act of devotion and is shamed for it in real time, not rescued from an accusation.
 
 ### Medium priority — solid, some thematic overlap
 
@@ -82,9 +68,8 @@ Ranked by how much new thematic ground they cover (not already represented above
 
 ## Recommendation
 
-Next up: **The Man Born Blind** (Juan 9:1-41) or **The Sinful Woman Anointing Jesus' Feet**
-(Lucas 7:36-50) — both high priority, fill distinct gaps (institutional persecution for
-faith; public devotion met with contempt after forgiveness) not yet covered in the series.
+Next up: **Peter's Restoration at the Shore** (Juan 21:1-19) — remaining high-priority
+candidate, with the caveat of two Peter encounters in the series.
 
 ## Decision log
 
@@ -111,3 +96,11 @@ _(Add a line here each time a candidate is picked, dropped, or reprioritized, wi
   branch for review. Status: drafting — prayer.content holds a base draft only;
   Giovanni will replace it with the version written from prayer (Rule 12.1).
   index.json entry pending until content approval.
+- 2026-07-25: The Man Born Blind (Juan 9:1-41) confirmed published (all 10 languages,
+  index.json status=published) — removed from candidates, added to "currently in the
+  series" table. This entry had gone stale (still listed as candidate/drafting).
+  Recommendation now points to The Sinful Woman Anointing Jesus' Feet (Lucas 7:36-50)
+  or Peter's Restoration at the Shore (Juan 21:1-19) as next candidates.
+- 2026-07-25: Dropped The Sinful Woman Anointing Jesus' Feet (Lucas 7:36-50) from
+  candidates per user request. Recommendation now points solely to Peter's Restoration
+  at the Shore (Juan 21:1-19).
