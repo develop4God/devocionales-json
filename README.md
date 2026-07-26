@@ -61,6 +61,7 @@ devocionales-json/
 ├── discovery/
 ├── encounters/
 ├── shared_validation/
+├── skills/
 └── tests/
 ```
 <!-- /README-STATS:directory-structure -->
