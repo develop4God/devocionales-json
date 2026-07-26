@@ -1,0 +1,8 @@
+{
+  "language": "ja",
+  "forbidden_patterns": [],
+  "notes": [
+    "See ja.md for the keigo (honorific verb form) gate — requires knowing who the subject is, not mechanically checkable.",
+    "Greek/Hebrew transliteration is checked by shared_validation/text_checks.py::check_greek_hebrew_transliteration (already wired into validate_encounters.py / validate_discovery.py), not by this file."
+  ]
+}

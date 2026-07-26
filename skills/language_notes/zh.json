@@ -1,0 +1,18 @@
+{
+  "language": "zh",
+  "forbidden_patterns": [
+    {
+      "pattern": "您",
+      "reason": "Never used for God/Jesus in this content — no legitimate use case (no quoted-scripture exception, no homograph). Every hit is a violation.",
+      "replacement": "你"
+    },
+    {
+      "pattern": "[們說愛國沒來時後見會這歲]",
+      "reason": "Traditional-Chinese-only character found in a Simplified-Chinese delivery — output must be Simplified unless Traditional/zh-Hant was explicitly requested.",
+      "replacement": null
+    }
+  ],
+  "notes": [
+    "Greek/Hebrew transliteration is checked by shared_validation/text_checks.py::check_greek_hebrew_transliteration (already wired into validate_encounters.py / validate_discovery.py), not by this file."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "language": "ar",
+  "forbidden_patterns": [],
+  "notes": [
+    "Greek/Hebrew transliteration is checked by shared_validation/text_checks.py::check_greek_hebrew_transliteration (already wired into validate_encounters.py / validate_discovery.py), not by this file."
+  ]
+}

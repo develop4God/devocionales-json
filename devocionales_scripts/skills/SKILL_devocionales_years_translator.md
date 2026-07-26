@@ -47,8 +47,6 @@ Single source of truth for EN book name → `book_number` mapping (MySword/TheWo
 | Chinese | `zh` | `CUV1919` | `CNVS` |
 | Hindi | `hi` | `HIOV` | `HERV` |
 
-Reading speeds (`reading_speed.rate` and `reading_speed.unit`) are available per language in the remote index — read them from there, do not hardcode.
-
 For the `version` field in JSON output, use the display `name` from the index — not the code:
 `SK2003` → `"新改訳2003"`, `CUV1919` → `"和合本1919"`, `HIOV` → `"पवित्र बाइबिल (ओ.वी.)"`, `HERV` → `"पवित्र बाइबिल"`, `JCB` → `"リビングバイブル"`, `CNVS` → `"新译本"`.
 
