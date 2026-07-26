@@ -17,6 +17,13 @@ This file only covers what's specific to Encounters.
 - Remote index — source of truth for versions, codes, and download URLs (see core skill)
 - `validate_encounters.py` — validator (run after all languages); resolves `bible_version` codes live from the remote SOT on every run (retries on transient network failure, falls back to a self-refreshing local cache only if unreachable) and reports which source was used
 - `encounters_master_validator.py` — orchestrator (run at end)
+- `validate_family.py {encounter_id}` — cross-checks **all** language files of one
+  encounter against each other (not a pairwise EN-baseline check). Catches an
+  untranslated leak (2+ languages sharing byte-identical text), drift (one file
+  disagreeing with what every sibling agrees on), and filename↔language field
+  mismatches — things `validate_encounters.py`'s EN-baseline comparison cannot see,
+  since an error already in EN would pass every pairwise check against a bad
+  baseline. Run this after each new language is added, not just `validate_encounters.py`.
 
 ### Source language by target
 
@@ -142,9 +149,14 @@ JA/ZH/DE/AR/HI/FIL targets).
 ---
 
 ## Validation
-Run after all languages are complete. Zero errors required before delivery.
+Run after each new language, and again after all languages are complete. Zero errors
+required before delivery.
 
 ```bash
+# Cross-file family check — run after EACH new language is added (cheap, re-checks
+# the whole family every time, catches issues a single-language run can't see):
+python3 encounters/encounters_scripts/validate_family.py {encounter_id}
+
 # Run encounters validator
 python3 encounters/encounters_scripts/validate_encounters.py
 
