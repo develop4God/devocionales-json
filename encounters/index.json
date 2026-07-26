@@ -1031,7 +1031,6 @@
       "emoji": "🔥",
       "status": "coming_soon",
       "intro_image": "peter_restoration_intro.png",
-      "intro_image_prompt": "A man in his mid-thirties, sturdy fisherman's build, strong square weathered face, curly dark brown hair, full dark beard, olive Mediterranean skin, deep brown eyes, torn beige linen tunic and dark blue worn wool cloak, stands alone at the edge of a dark lake just before dawn, back turned to the viewer, looking out over still black water. Faint gray light on the horizon. Wide atmospheric shot, the world before the story begins. No text. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting.",
       "mood_primary": "grace",
       "accent_color": "#3a2a1e",
       "has_interactive": false,
@@ -1044,7 +1043,7 @@
         "es": "Junto al fuego"
       },
       "subtitles": {
-        "es": "El mismo fuego que vio su negación ahora prepara su restauración."
+        "es": "El mismo fuego que vio su negación, ahora prepara su restauración."
       },
       "scripture_reference": {
         "es": "Juan 21:1-19"
