@@ -1,0 +1,109 @@
+{
+  "encounter_id": "peter_restoration_001",
+  "character": "Peter",
+  "master_character_prompt": "A man in his mid-thirties, sturdy fisherman's build with broad shoulders and thick forearms, weathered by years of sun and salt air. He has a strong, square weathered face, curly dark brown hair cut close, a full dark beard, olive Mediterranean skin, and deep brown eyes with a steady, searching intensity. He wears a torn beige linen tunic, worn and salt-stained, with a dark blue worn wool cloak over one shoulder, and calloused bare feet. Painterly warm 2D illustration style, soft brushstrokes, sacred atmosphere, Mediterranean palette, ochre and sandstone tones, cinematic lighting, highly detailed. A two-panel character study showing a full-length view on the left and an oversized close-up portrait focusing on his facial features on the right. Plain, clean, solid ochre background. No text, no labels.",
+  "intro_image": {
+    "filename": "peter_restoration_intro.png",
+    "prompt": "A man in his mid-thirties, sturdy fisherman's build, strong square weathered face, curly dark brown hair, full dark beard, olive Mediterranean skin, deep brown eyes, torn beige linen tunic and dark blue worn wool cloak, stands alone at the edge of a dark lake just before dawn, back turned to the viewer, looking out over still black water. Faint gray light on the horizon. Wide atmospheric shot, the world before the story begins. No text. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting."
+  },
+  "card_prompts": [
+    {
+      "order": 1,
+      "image_url": "peter_restoration_night_boat.png",
+      "mood": "falling",
+      "shot_type": "wide establishing",
+      "prompt": "A man in his mid-thirties, sturdy fisherman's build with broad shoulders, strong square weathered face, curly dark brown hair, full dark beard, olive Mediterranean skin, deep brown eyes, torn beige linen tunic and dark blue worn wool cloak, stands in a small wooden fishing boat on a dark lake at night, pulling an empty net over the side, shoulders low with exhaustion. Several other silhouetted figures work nets in the same boat. Black water, faint starlight, no shoreline visible. Painterly warm 2D illustration, Mediterranean palette, deep indigo and charcoal tones, cinematic lighting, no text."
+    },
+    {
+      "order": 2,
+      "image_url": "peter_restoration_stranger_shore.png",
+      "mood": "tense",
+      "shot_type": "medium two-figure",
+      "prompt": "A man in his mid-thirties, sturdy fisherman's build, strong square weathered face, curly dark brown hair, full dark beard, olive Mediterranean skin, deep brown eyes, torn beige linen tunic and dark blue worn wool cloak, leans over the side of a fishing boat straining to pull an overloaded net, net bulging with fish just breaking the water's surface. In the distance on the shore, a man with long wavy shoulder-length hair in a simple first-century tunic stands watching, face never visible, a subtle warm glow of glory around his form, the pale light of early dawn behind him. Painterly warm 2D illustration, Mediterranean palette, soft gray-gold dawn light, cinematic, no text."
+    },
+    {
+      "order": 3,
+      "image_url": "peter_restoration_jumps_water.png",
+      "mood": "storm",
+      "shot_type": "action/movement",
+      "prompt": "A man in his mid-thirties, sturdy fisherman's build, strong square weathered face, curly dark brown hair, full dark beard, olive Mediterranean skin, deep brown eyes, has just cinched his dark blue worn wool cloak around himself and is leaping over the side of a fishing boat into dark water, mid-motion, torn beige linen tunic soaked, arms driving forward, spray around him. The shoreline and a distant small fire are visible ahead in the low morning light. Painterly warm 2D illustration, Mediterranean palette, urgent motion blur, cinematic lighting, no text."
+    },
+    {
+      "order": 4,
+      "image_url": "peter_restoration_charcoal_fire.png",
+      "mood": "mysterious",
+      "shot_type": "object/still life",
+      "prompt": "Close view of a small charcoal fire glowing on a sandy lakeshore at dawn, fish and flatbread resting on the embers, thin smoke curling upward into pale gray morning light. Wet footprints lead toward the fire from the water's edge. No people visible. Pure metaphor, mysterious and quiet mood. Painterly warm 2D illustration, Mediterranean palette, ember orange and ash gray tones, cinematic lighting, no text."
+    },
+    {
+      "order": 5,
+      "image_url": "peter_restoration_anthrakia.png",
+      "mood": "mysterious",
+      "shot_type": "close-up portrait",
+      "prompt": "Close-up portrait of a man in his mid-thirties, strong square weathered face, curly dark brown hair, full dark beard, olive Mediterranean skin, deep brown eyes, torn beige linen tunic and dark blue worn wool cloak still damp from the water, crouches near a charcoal fire, staring into the glowing coals with a troubled, searching expression, the firelight lighting one side of his face and casting the other in shadow. Painterly warm 2D illustration, Mediterranean palette, deep ember-orange glow, cinematic lighting, no text."
+    },
+    {
+      "order": 6,
+      "image_url": "peter_restoration_breakfast.png",
+      "mood": "tense",
+      "shot_type": "medium two-figure",
+      "prompt": "A man in his mid-thirties, sturdy fisherman's build, strong square weathered face, curly dark brown hair, full dark beard, olive Mediterranean skin, deep brown eyes, torn beige linen tunic and dark blue worn wool cloak, sits cross-legged on the sand among several other silent figures, eyes lowered toward a piece of bread in his hands, not looking up. In the foreground, soft out-of-focus, a man with long wavy shoulder-length hair in a simple first-century tunic kneels by the fire distributing bread and fish, face never visible, a subtle warm glow of glory around his form. Painterly warm 2D illustration, Mediterranean palette, warm firelight and pale dawn tones, cinematic, no text."
+    },
+    {
+      "order": 7,
+      "image_url": "peter_restoration_three_questions.png",
+      "mood": "intense",
+      "shot_type": "close-up portrait",
+      "prompt": "Close-up portrait of a man in his mid-thirties, strong square weathered face, curly dark brown hair, full dark beard, olive Mediterranean skin, deep brown eyes fixed intently on a nearby figure, torn beige linen tunic and dark blue worn wool cloak. His eyes are open and searching, caught between hope and grief. Soft out-of-focus figure of a man with long wavy shoulder-length hair in a simple tunic seated close beside him, face never visible, a subtle warm glow of glory around his form. Painterly warm 2D illustration, Mediterranean palette, low morning light, cinematic, no text."
+    },
+    {
+      "order": 8,
+      "image_url": "peter_restoration_agape_phileo.png",
+      "mood": "grace",
+      "shot_type": "close-up portrait",
+      "prompt": "Close-up portrait of a man in his mid-thirties, strong square weathered face, curly dark brown hair, full dark beard, olive Mediterranean skin, deep brown eyes glistening, torn beige linen tunic and dark blue worn wool cloak. His gaze is fixed downward and inward, eyes open but distant, as if hearing his own answer differently than he expected. Warm golden morning light on his face. No other figures in frame. Painterly warm 2D illustration, Mediterranean palette, soft golden light, cinematic, no text."
+    },
+    {
+      "order": 9,
+      "image_url": "peter_restoration_feed_sheep.png",
+      "mood": "grace",
+      "shot_type": "medium two-figure",
+      "prompt": "A man in his mid-thirties, sturdy fisherman's build, strong square weathered face, curly dark brown hair, full dark beard, olive Mediterranean skin, deep brown eyes fixed forward, torn beige linen tunic and dark blue worn wool cloak, kneels on the sand facing a man with long wavy shoulder-length hair in a simple first-century tunic who gestures outward toward distant grazing sheep on a hillside, face of the second man never visible, a subtle warm glow of glory around his form. Painterly warm 2D illustration, Mediterranean palette, warm morning light, cinematic, no text."
+    },
+    {
+      "order": 10,
+      "image_url": "peter_restoration_prophecy.png",
+      "mood": "intense",
+      "shot_type": "close-up portrait",
+      "prompt": "Close-up portrait of a man in his mid-thirties, strong square weathered face, curly dark brown hair, full dark beard, olive Mediterranean skin, deep brown eyes wide and solemn, hands open at his sides, torn beige linen tunic and dark blue worn wool cloak stirred slightly by wind. His expression holds both resolve and quiet fear, listening to something unseen. Overcast sky behind him, wind moving loose strands of his hair. Painterly warm 2D illustration, Mediterranean palette, muted gray-gold tones, cinematic, no text."
+    },
+    {
+      "order": 11,
+      "image_url": "peter_restoration_follow_me.png",
+      "mood": "peace",
+      "shot_type": "wide departure",
+      "prompt": "A man in his mid-thirties, sturdy fisherman's build, strong square weathered face, curly dark brown hair, full dark beard, olive Mediterranean skin, deep brown eyes calm and resolved, torn beige linen tunic and dark blue worn wool cloak, walks along the sandy lakeshore following a man with long wavy shoulder-length hair in a simple first-century tunic a few paces ahead, face never visible, a subtle warm glow of glory around his form. Morning sun rising fully over the water behind them, long shadows on the sand. Painterly warm 2D illustration, Mediterranean palette, warm golden sunrise tones, cinematic, no text."
+    },
+    {
+      "order": 12,
+      "image_url": "peter_restoration_interactive.png",
+      "mood": "grace",
+      "shot_type": "object/still life",
+      "prompt": "Close view of glowing charcoal embers on open sand at the water's edge, first light breaking on the horizon behind them, a single set of wet footprints leading away from the fire toward the sunrise. No people visible. Quiet, reflective mood. Painterly warm 2D illustration, Mediterranean palette, ember orange fading into dawn gold, cinematic lighting, no text."
+    },
+    {
+      "order": 13,
+      "image_url": "peter_restoration_discovery.png",
+      "mood": "grace",
+      "shot_type": "wide departure",
+      "prompt": "A man in his mid-thirties, sturdy fisherman's build, strong square weathered face, curly dark brown hair, full dark beard, olive Mediterranean skin, deep brown eyes at peace, torn beige linen tunic and dark blue worn wool cloak, stands facing the open lake under full morning light, arms relaxed at his sides, small fishing boat and dying fire behind him. Wide, open composition suggesting a life beginning again. Painterly warm 2D illustration, Mediterranean palette, bright warm morning tones, cinematic, no text."
+    },
+    {
+      "order": 14,
+      "image_url": "peter_restoration_completion.png",
+      "mood": "peace",
+      "shot_type": "wide establishing",
+      "prompt": "Wide shot of a calm lake at full sunrise, gentle gold light spread across the water's surface, a small fishing boat resting empty on the shore beside a fire burned down to soft embers. No people visible. Serene, resolved mood. Painterly warm 2D illustration, Mediterranean palette, radiant gold and soft blue tones, cinematic lighting, no text."
+    }
+  ]
+}
