@@ -28,7 +28,7 @@
       "mood": "falling",
       "image_url": "peter_restoration_night_boat.png",
       "title": "Una noche sin nada",
-      "narrative": "El lago de Tiberias está oscuro y quieto. Jesús ha resucitado y ya se les ha aparecido dos veces; les dijo que lo verían en Galilea, y aquí están, pero nadie sabe qué hacer mientras tanto. Pedro dice: voy a pescar. Los demás lo siguen. Con él van Tomás, Natanael, los hijos de Zebedeo y otros dos discípulos. Toda la noche echan la red y toda la noche la sacan vacía. No hay una palabra sobre lo que pasó en Jerusalén. Solo el agua quieta, el peso de una red que no trae nada, y las manos de un pescador que una vez caminó sobre esta misma agua.",
+      "narrative": "El lago de Tiberias está oscuro y quieto — el mismo lago donde, tiempo atrás, Jesús alimentó a una multitud de cinco mil con cinco panes y dos peces (Juan 6:1). Jesús ha resucitado y ya se les ha aparecido dos veces; les dijo que lo verían en Galilea, y aquí están, pero nadie sabe qué hacer mientras tanto. Pedro dice: voy a pescar. Los demás lo siguen. Con él van Tomás, Natanael, los hijos de Zebedeo y otros dos discípulos. Toda la noche echan la red y toda la noche la sacan vacía. No hay una palabra sobre lo que pasó en Jerusalén. Solo el agua quieta, el peso de una red que no trae nada, y las manos de un pescador que una vez caminó sobre esta misma agua.",
       "ambient_sound": "water",
       "haptic": null,
       "verse_overlay": {
@@ -87,10 +87,10 @@
       "type": "theological_depth",
       "mood": "mysterious",
       "image_url": "peter_restoration_anthrakia.png",
-      "title": "Ἀνθρακιά: la brasa que recuerda",
+      "title": "La brasa que recuerda",
       "subtitle": "Una palabra que solo aparece dos veces",
-      "content": "🔥 La palabra griega para 'fuego de brasas', ἀνθρακιά (anthrakia), aparece en todo el Nuevo Testamento solamente dos veces — y las dos están en el evangelio de Juan. La primera es Juan 18:18, el patio donde Pedro negó a Jesús calentándose junto a las brasas. La segunda es Juan 21:9, esta orilla. Juan no repite la palabra por accidente: quiere que el lector sienta lo que Pedro sintió, el mismo olor devolviéndolo al peor momento de su vida, justo antes de que ese momento sea sanado.",
-      "revelation_key": "Juan usa la misma palabra exacta para unir dos fuegos: uno donde Pedro cayó, otro donde Jesús lo levanta.",
+      "content": "La palabra griega para 'fuego de brasas', ἀνθρακιά (anthrakia), aparece en todo el Nuevo Testamento solamente dos veces — y las dos están en el evangelio de Juan. La primera es Juan 18:18, el patio donde Pedro negó a Jesús calentándose junto a las brasas. La segunda es Juan 21:9, esta orilla. Es razonable pensar que la misma escena le devolvió a Pedro el recuerdo de la noche cuando negó a Jesús.",
+      "revelation_key": "El mismo fuego que fue testigo de la caída de Pedro es ahora testigo de su regreso a esta orilla.",
       "verse_overlay": {
         "reference": "Juan 21:9",
         "text": "Al descender a tierra, vieron ascuas puestas, y un pez encima de ellas, y pan."
@@ -108,9 +108,23 @@
       "mood": "tense",
       "image_url": "peter_restoration_breakfast.png",
       "title": "Ninguno se atrevía",
-      "narrative": "Comen en silencio. Jesús reparte el pan y el pescado con sus propias manos. Los discípulos lo miran de reojo, seguros de que es él, pero nadie pregunta '¿quién eres?'. Hay una reverencia nueva, distinta a la familiaridad de antes. Pedro come también, pero algo en él está en tensión: la última vez que estuvo cerca de Jesús después de fallarle, no pudo sostenerle la mirada (Lucas 22:61-62). Ahora comparte su pan.",
+      "narrative": "Comen en silencio. Jesús reparte el pan y el pescado con sus propias manos — el mismo verbo griego, λαμβάνω (lambano), que usó para repartir los panes a la multitud junto a este mismo lago (Juan 6:11). Hay una reverencia nueva, distinta a la familiaridad de antes. Pedro come también, pero algo en él está en tensión: la última vez que estuvo cerca de Jesús después de fallarle, no pudo sostenerle la mirada (Lucas 22:61-62). Ahora comparte su pan.",
       "ambient_sound": "silence",
       "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 21:12-13",
+        "text": "Les dijo Jesús: Venid, comed. Y ninguno de los discípulos se atrevía a preguntarle: ¿Tú, quién eres? sabiendo que era el Señor. Vino, pues, Jesús, y tomó el pan y les dio, y asimismo del pescado."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Lucas 22:61-62",
+          "text": "Entonces, vuelto el Señor, miró a Pedro; y Pedro se acordó de la palabra del Señor, que le había dicho: Antes que el gallo cante, me negarás tres veces. Y Pedro, saliendo fuera, lloró amargamente."
+        },
+        {
+          "reference": "Juan 6:11",
+          "text": "Y tomó Jesús aquellos panes, y habiendo dado gracias, los repartió entre los discípulos, y los discípulos entre los que estaban recostados; asimismo de los peces, cuanto querían."
+        }
+      ],
       "revelation_key": "Jesús restaura el cuerpo de Pedro con pan antes de tocar lo que todavía le pesa por dentro."
     },
     {
@@ -119,14 +133,20 @@
       "mood": "intense",
       "image_url": "peter_restoration_three_questions.png",
       "title": "Tres veces",
-      "narrative": "Terminada la comida, Jesús se dirige a Pedro por su nombre completo, el mismo que usó al llamarlo la primera vez: Simón, hijo de Jonás. Le pregunta si lo ama, más que estos. Pedro responde que sí. Jesús pregunta otra vez. Pedro responde otra vez. A la tercera pregunta, algo cambia en la forma en que Jesús la hace, y Pedro se entristece. Tres preguntas, en la misma orilla donde tres veces había dicho que no lo conocía.",
+      "narrative": "Terminada la comida, Jesús se dirige a Pedro por su nombre de antes: Simón, hijo de Jonás — no \"Pedro\", el nombre nuevo que él mismo le había dado (Juan 1:42). Esa misma noche que lo negó, Pedro había asegurado que nunca lo abandonaría, aunque todos los demás lo hicieran (Mateo 26:33). Jesús le pregunta: \"Simón, ¿me amas?\" Pedro responde que sí. Jesús le pregunta por segunda vez, y luego por tercera vez: \"Simón, ¿me amas?\" A la tercera vez, Pedro se entristece. Tres preguntas, en la misma orilla donde tres veces había dicho que no lo conocía.",
       "ambient_sound": "water",
       "haptic": null,
       "verse_overlay": {
         "reference": "Juan 21:15",
         "text": "Cuando hubieron comido, Jesús dijo a Simón Pedro: Simón, hijo de Jonás, ¿me amas más que éstos? Le respondió: Sí, Señor; tú sabes que te amo. Él le dijo: Apacienta mis corderos."
       },
-      "revelation_key": "Tres preguntas responden, una por una, a las tres veces que Pedro dijo que no lo conocía."
+      "scripture_connections": [
+        {
+          "reference": "Mateo 26:33",
+          "text": "Respondiendo Pedro, le dijo: Aunque todos se escandalicen de ti, yo nunca me escandalizaré."
+        }
+      ],
+      "revelation_key": "Jesús vuelve a llamarlo Simón para reconstruirlo desde cero, esta vez sobre la gracia y no sobre la confianza que Pedro tenía en sí mismo."
     },
     {
       "order": 8,
