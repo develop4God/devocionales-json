@@ -22,11 +22,14 @@ any pipeline and receives no further changes.
              CDN — warnings only, never fails the build
   PHASE D:   Validate scripture references resolve and their stored
              verse_text matches the cited Bible version — warnings only, runs last
+  PHASE E:   Cross-file family validation — all languages vs. all languages,
+             no single language treated as baseline (unlike Phase B) — GATE
 
-Exit codes: 0 = all passed, 1 = errors found in 1/A/SOT/B, or any warning anywhere
+Exit codes: 0 = all passed, 1 = errors found in 1/A/SOT/B/E, or any warning anywhere
 """
 
 import re
+import subprocess
 import sys
 from pathlib import Path
 from typing import Optional
@@ -805,6 +808,41 @@ def validate_scripture_references(report: Report, index_data: dict, lint_cache: 
     )
 
 
+# ── Phase: Cross-file family validation (all languages vs. all languages) ────
+#
+# validate_family.py checks each encounter's full set of language files
+# against each other (key parity, structural drift) — no single language
+# treated as baseline, unlike Phase B's EN-vs-translation model. Runs once
+# per encounter id via subprocess since validate_family.py is its own CLI
+# entry point with its own Reporter; findings are folded into this phase's
+# Report as errors so it gates the run like Phase A/B, not warning-only like
+# Phase D.
+
+def validate_family_all(report: Report, index_data: dict) -> None:
+    report.I("=" * 60)
+    report.I("PHASE E: CROSS-FILE FAMILY VALIDATION (all languages vs. all languages)")
+    report.I("=" * 60)
+
+    script = Path(__file__).parent / "validate_family.py"
+    encounters = index_data['encounters']
+    failed = []
+    for enc in encounters:
+        result = subprocess.run(
+            [sys.executable, str(script), enc['id']],
+            capture_output=True, text=True,
+        )
+        if result.returncode != 0:
+            failed.append(enc['id'])
+            for line in result.stdout.splitlines():
+                if "❌" in line and "FAILED —" not in line:
+                    clean = re.sub(r'\x1b\[[0-9;]*m', '', line).strip().lstrip("❌ ")
+                    report.E(f"{enc['id']}: {clean}")
+
+    report.I(
+        f"✓ Checked {len(encounters)} encounter(s) — {len(failed)} failed cross-file validation"
+    )
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -862,6 +900,9 @@ def main():
     # runs, local or CI, not just when CI=true.
     run_report.wrap("PHASE D: SCRIPTURE REFERENCES", validate_scripture_references, index_data, lint_cache,
                      args.lang, gate=False, final=True)
+
+    if not args.scripture_only:
+        run_report.wrap("PHASE E: CROSS-FILE FAMILY VALIDATION", validate_family_all, index_data)
 
     encounters = index_data['encounters']
     published = [e for e in encounters if e.get('status') == 'published']

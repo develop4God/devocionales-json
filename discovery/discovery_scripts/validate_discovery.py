@@ -21,10 +21,13 @@ any pipeline and receives no further changes.
 
 PHASE A: Validate index.json (format, structure, data integrity)
 PHASE B: Validate translation files using index.json as source of truth
+PHASE D: Scripture references (warning-only)
+PHASE E: Cross-file family validation — all languages vs. all languages
 """
 
 import json
 import re
+import subprocess
 import sys
 import time
 from pathlib import Path
@@ -675,6 +678,41 @@ def validate_scripture_references(report: 'ValidationReport', all_studies: dict,
     )
 
 
+# ── Phase: Cross-file family validation (all languages vs. all languages) ────
+#
+# validate_family.py checks each study's full set of language files against
+# each other (key parity, structural drift) — no single language treated as
+# baseline, unlike Phase B's EN-vs-translation model. Runs once per study id
+# via subprocess since validate_family.py is its own CLI entry point with its
+# own Reporter; findings are folded into a ValidationReport here as ERRORs so
+# this phase gates the run like Phase A/B, not a warning-only phase like D.
+
+def validate_family_all(report: 'ValidationReport', discovery_dir: Path,
+                         index_studies: dict) -> None:
+    report.add_info("=" * 60)
+    report.add_info("PHASE E: CROSS-FILE FAMILY VALIDATION (all languages vs. all languages)")
+    report.add_info("=" * 60)
+
+    script = discovery_dir / "discovery_scripts" / "validate_family.py"
+    failed_studies = []
+    for study_id in index_studies:
+        result = subprocess.run(
+            [sys.executable, str(script), study_id],
+            capture_output=True, text=True,
+        )
+        if result.returncode != 0:
+            failed_studies.append(study_id)
+            for line in result.stdout.splitlines():
+                if "❌" in line and "FAILED —" not in line:
+                    clean = re.sub(r'\x1b\[[0-9;]*m', '', line).strip().lstrip("❌ ")
+                    report.add_error(f"{study_id}: {clean}")
+
+    report.add_info(
+        f"✓ Checked {len(index_studies)} stud{'y' if len(index_studies) == 1 else 'ies'} — "
+        f"{len(failed_studies)} failed cross-file validation"
+    )
+
+
 
 def main():
     import argparse
@@ -883,6 +921,24 @@ def main():
     run_report.record_phase(
         "PHASE D: SCRIPTURE REFERENCES", scripture_report, phase_scripture_success, phase_scripture_elapsed, gate=False,
     )
+
+    # ==========================================
+    # PHASE E: Cross-file family validation — all languages vs. all languages,
+    # no single language treated as baseline (unlike Phase B). Gated: a family
+    # with a structural mismatch (missing key, card-count/order/type drift)
+    # fails the run, same as Phase A/B.
+    # ==========================================
+    phase_e_start = time.monotonic()
+    family_report = ValidationReport()
+    family_report.phase = "PHASE_E"
+    validate_family_all(family_report, discovery_dir, index_studies)
+    phase_e_success = family_report.print_report(final=False)
+    phase_e_elapsed = time.monotonic() - phase_e_start
+
+    if not args.scripture_only:
+        run_report.record_phase(
+            "PHASE E: CROSS-FILE FAMILY VALIDATION", family_report, phase_e_success, phase_e_elapsed, gate=True,
+        )
 
     run_report.add_coverage(
         studies_found=len(report.stats['studies_found']),

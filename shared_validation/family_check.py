@@ -123,15 +123,19 @@ def flatten_keys(d, prefix=""):
 
 def _report_missing_keys(scope: str, all_keys: dict[str, set], report: Reporter):
     """Strict: every key must be present in every file. Any key not in the full
-    intersection is reported for every file missing it, no matter how few files
-    have it — a key present in only 1 of 10 files is exactly the typo/drift case
-    this check exists to catch (e.g. 'discovery_completion' vs 'discovery_complete')."""
+    intersection is reported once, showing the actual split — which files have it,
+    which don't — rather than one line per missing side (which reads as N separate
+    problems when it's really one key out of sync, e.g. one file has a stray/typo'd
+    key the rest don't)."""
     union = set().union(*all_keys.values()) if all_keys else set()
-    for lang, keys in all_keys.items():
-        missing = union - keys
-        for key in sorted(missing):
-            present_in = sum(1 for k in all_keys.values() if key in k)
-            report.err(f"{scope}{lang}: missing key '{key}' present in {present_in}/{len(all_keys)} sibling files")
+    all_langs = set(all_keys)
+    for key in sorted(union):
+        has_it = sorted(lang for lang, keys in all_keys.items() if key in keys)
+        if len(has_it) == len(all_langs):
+            continue
+        missing_it = sorted(all_langs - set(has_it))
+        report.err(f"{scope}key '{key}': present in {', '.join(has_it)} — "
+                   f"missing in {', '.join(missing_it)}")
 
 
 def check_key_parity(loaded: dict[str, dict], report: Reporter):
