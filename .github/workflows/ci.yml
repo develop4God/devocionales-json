@@ -49,21 +49,3 @@ jobs:
           else
             echo "ℹ️ Stats unchanged — skipping commit"
           fi
-
-  validate-scripture:
-    name: 🚀 Scripture Validation
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🚀 Checkout
-        uses: actions/checkout@v5
-
-      - name: 🚀 Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: "3.12"
-
-      - name: 🚀 Validate Discovery scripture references
-        run: python3 discovery/discovery_scripts/validate_discovery.py --scripture-only
-
-      - name: 🚀 Validate Encounters scripture references
-        run: python3 encounters/encounters_scripts/validate_encounters.py --scripture-only

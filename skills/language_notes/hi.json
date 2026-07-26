@@ -1,0 +1,9 @@
+{
+  "language": "hi",
+  "forbidden_patterns": [],
+  "notes": [
+    "See hi.md for the ergative-verb exception and respectful-plural gate — not mechanically checkable, requires grammatical judgment.",
+    "HIOV database book-name shortening (long liturgical form -> short form) is handled inside VerseResolver, not a delivered-file check.",
+    "Greek/Hebrew transliteration is checked by shared_validation/text_checks.py::check_greek_hebrew_transliteration (already wired into validate_encounters.py / validate_discovery.py), not by this file."
+  ]
+}

@@ -100,9 +100,9 @@ def check_halfwidth_colon_in_title(text: str, path: str, lang: str, ctx: str, re
 
 # Greek/Hebrew inline word-study glosses. Skip the `word` field itself
 # (holds the original-script term by design) and `transliteration` (checked
-# separately by validate_pair.py's word-block validation) — this check is
-# for inline prose glosses like "μονογενής (monogenēs)" in content/reflection/
-# narrative/question/etc.
+# separately by validate_family.py's word-block validation, for Discovery) — this
+# check is for inline prose glosses like "μονογενής (monogenēs)" in
+# content/reflection/narrative/question/etc.
 _GREEK_RE = re.compile(r'[Ͱ-Ͽἀ-῿]')
 _HEBREW_RE = re.compile(r'[֐-׿]')
 _NATIVE_RUN_RE = re.compile(

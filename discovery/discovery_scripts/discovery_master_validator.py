@@ -7,11 +7,16 @@ content type.
 Exit codes: 0 = all passed, 1 = errors found
 """
 
+import argparse
 import subprocess
 import sys
 from pathlib import Path
 
 SCRIPTS_DIR = Path(__file__).parent
+
+argparse.ArgumentParser(
+    description="Run the full discovery validation suite (currently: validate_discovery.py).",
+).parse_args()
 
 
 def run(script, args=None, label=''):
