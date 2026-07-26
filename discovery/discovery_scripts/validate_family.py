@@ -36,6 +36,23 @@ _SHARED_WORDS = {
 
 _MUST_DIFFER_TOP_LEVEL = ("title", "subtitle")
 _MUST_DIFFER_CARD_FIELDS = ("title", "subtitle", "content", "revelation_key", "identity_statement")
+# Per-card, nested one or more levels deep or inside a list of objects — flat
+# card-field lookup can't reach these, see shared_validation.family_check.extract_path.
+_MUST_DIFFER_NESTED_PATHS = (
+    "scripture_connections[].text",
+    "scripture_connections[].reference",
+    "discovery_questions[].category",
+    "discovery_questions[].question",
+    "action_steps[].title",
+    "action_steps[].description",
+    "prayer.title",
+    "prayer.content",
+)
+# Document-level (not per-card)
+_MUST_DIFFER_TOP_LEVEL_PATHS = (
+    "key_verse.text",
+    "key_verse.reference",
+)
 
 
 def resolve_family(study_id: str) -> dict[str, Path]:
@@ -127,6 +144,8 @@ def main():
         family=family,
         must_differ_top_level=_MUST_DIFFER_TOP_LEVEL,
         must_differ_card_fields=_MUST_DIFFER_CARD_FIELDS,
+        must_differ_nested_paths=_MUST_DIFFER_NESTED_PATHS,
+        must_differ_top_level_paths=_MUST_DIFFER_TOP_LEVEL_PATHS,
         check_structural_completeness=check_required_fields,
         shared_words=_SHARED_WORDS,
     )

@@ -43,6 +43,32 @@ INDEX_PATH = ENCOUNTERS_DIR / "index.json"
 _MUST_DIFFER_TOP_LEVEL = ()  # encounters have no top-level title/subtitle; cards carry these
 _MUST_DIFFER_CARD_FIELDS = ("title", "subtitle", "narrative", "content", "reflection",
                              "revelation_key", "reflection_prompt")
+# Per-card, nested one or more levels deep or inside a list of objects — flat
+# card-field lookup can't reach these, see shared_validation.family_check.extract_path.
+# Not every card type has every one of these (verse_overlay/completion_verse/prayer
+# are card-type-specific) — extract_path returns [] when absent, safe to list all.
+_MUST_DIFFER_NESTED_PATHS = (
+    "verse_overlay.text",
+    "verse_overlay.reference",
+    "completion_verse.text",
+    "completion_verse.reference",
+    "scripture_connections[].text",
+    "scripture_connections[].reference",
+    "discovery_questions[].category",
+    "discovery_questions[].question",
+    "prayer.title",
+    "prayer.content",
+)
+# scripture_moment cards carry verse_text/verse_reference directly on the card, not
+# nested — these already work via _MUST_DIFFER_CARD_FIELDS, listed here for clarity
+# since the skill groups them with the other "always translate" scripture fields.
+_MUST_DIFFER_CARD_FIELDS = _MUST_DIFFER_CARD_FIELDS + ("verse_text", "verse_reference")
+# Document-level (not per-card)
+_MUST_DIFFER_TOP_LEVEL_PATHS = (
+    "key_verse.text",
+    "key_verse.reference",
+    "meta.character",
+)
 
 
 def resolve_family(encounter_id: str) -> dict[str, Path]:
@@ -151,6 +177,8 @@ def main():
         family=family,
         must_differ_top_level=_MUST_DIFFER_TOP_LEVEL,
         must_differ_card_fields=_MUST_DIFFER_CARD_FIELDS,
+        must_differ_nested_paths=_MUST_DIFFER_NESTED_PATHS,
+        must_differ_top_level_paths=_MUST_DIFFER_TOP_LEVEL_PATHS,
         check_structural_completeness=check_required_fields,
         drift_top_level_fields=("id", "type", "schema_version"),
     )

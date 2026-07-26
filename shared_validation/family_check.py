@@ -93,6 +93,36 @@ def check_filename_language_match(lang: str, path: Path, data: dict, report: Rep
 
 # ── Cross-file: fields that must differ per language ─────────────────────────
 
+def extract_path(card: dict, path: str) -> list[str]:
+    """
+    Pull string value(s) out of a card by dotted path, with `[]` meaning "for every
+    item in this list." E.g.:
+      "title"                       -> [card["title"]]
+      "prayer.content"              -> [card["prayer"]["content"]]
+      "scripture_connections[].text" -> [sc["text"] for sc in card["scripture_connections"]]
+    Returns [] if any segment is missing — caller treats that as "nothing to check
+    here," consistent with how flat card-field lookups already skip absent fields.
+    """
+    current = [card]
+    for segment in path.split("."):
+        list_marker = segment.endswith("[]")
+        key = segment[:-2] if list_marker else segment
+        next_current = []
+        for item in current:
+            if not isinstance(item, dict) or key not in item:
+                continue
+            val = item[key]
+            if list_marker:
+                if isinstance(val, list):
+                    next_current.extend(v for v in val if isinstance(v, dict))
+            else:
+                next_current.append(val)
+        current = next_current
+        if not current:
+            return []
+    return [v for v in current if isinstance(v, str)]
+
+
 def check_untranslated_leak(field_label: str, values_by_lang: dict[str, str],
                              report: Reporter, shared_words: set[str] = frozenset()):
     """Flag if 2+ languages share byte-identical text for a field that should be translated."""
@@ -171,6 +201,8 @@ def run(
     check_structural_completeness: Callable[[str, dict, Reporter], None],
     shared_words: set[str] = frozenset(),
     drift_top_level_fields: tuple[str, ...] = ("id", "type"),
+    must_differ_nested_paths: tuple[str, ...] = (),
+    must_differ_top_level_paths: tuple[str, ...] = (),
 ) -> int:
     """
     Run the full cross-file family validation and print a report. Returns the exit
@@ -179,6 +211,15 @@ def run(
     `family`: {lang: file_path}, already resolved by the caller from its own index.json.
     `check_structural_completeness(lang, data, report)`: caller-supplied per-file
     completeness check (required fields, card structure) — content-type-specific.
+    `must_differ_card_fields` only reaches flat scalar keys directly on a card dict.
+    For anything nested deeper or inside a list of objects, use dotted paths (see
+    extract_path()) in one of:
+      `must_differ_nested_paths` — per-card, e.g. "prayer.content",
+        "scripture_connections[].text". Checked once per card, position-matched
+        across languages when a path yields multiple items (e.g. several
+        scripture_connections).
+      `must_differ_top_level_paths` — document-level, not per-card, e.g.
+        "key_verse.text", "key_verse.reference".
     """
     report = Reporter()
 
@@ -226,6 +267,36 @@ def run(
                     values[lang] = cards[i].get(field)
             if values:
                 check_untranslated_leak(f"card[{i+1}] '{field}'", values, report, shared_words)
+
+        for path in must_differ_nested_paths:
+            # Each language's card may yield 0, 1, or several string values at this
+            # path (e.g. multiple scripture_connections items) — compare position by
+            # position across languages, since item N in one language corresponds to
+            # item N in another (same source card, same order).
+            per_lang_values: dict[str, list[str]] = {}
+            for lang, data in loaded.items():
+                cards = data.get("cards", [])
+                if i < len(cards):
+                    per_lang_values[lang] = extract_path(cards[i], path)
+            max_items = max((len(v) for v in per_lang_values.values()), default=0)
+            for j in range(max_items):
+                values = {
+                    lang: vals[j] for lang, vals in per_lang_values.items() if j < len(vals)
+                }
+                if values:
+                    label_suffix = f"[{j+1}]" if max_items > 1 else ""
+                    check_untranslated_leak(
+                        f"card[{i+1}] '{path}'{label_suffix}", values, report, shared_words,
+                    )
+
+    for path in must_differ_top_level_paths:
+        values = {}
+        for lang, data in loaded.items():
+            extracted = extract_path(data, path)
+            if extracted:
+                values[lang] = extracted[0]
+        if values:
+            check_untranslated_leak(f"top-level '{path}'", values, report, shared_words)
 
     print(f"\n{CYN}── cross-file: fields that must match across all languages{RST}")
     for field in drift_top_level_fields:
