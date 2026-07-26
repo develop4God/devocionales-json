@@ -281,7 +281,10 @@ def main():
     loaded = load_all(family)
     if len(loaded) < 2:
         print(f"{RED}Fewer than 2 files loaded — cannot cross-validate.{RST}")
-        sys.exit(1 if errors else 0)
+        print(f"{RED}This is a real failure, not a pass: cross-file checks never ran.{RST}")
+        print(f"{RED}(If this is mid-batch with only some languages translated so far,{RST}")
+        print(f"{RED} that's expected — but the caller must not treat this as 'validated.'){RST}")
+        sys.exit(1)
 
     print(f"  Languages loaded:        {', '.join(sorted(loaded))}")
     print(f"{'='*70}")
