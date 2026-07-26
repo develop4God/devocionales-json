@@ -16,6 +16,8 @@ This module holds only the checks that are identical in shape for any content ty
     - Filename ↔ language field consistency
     - Cross-file structural key parity
     - The load/orchestrate/report shell
+    - run_family_validation_all: the master-validator-facing PHASE E runner that
+      loops validate_family.py over every id in a content type's index.json
 
 Per-content-type structural completeness (which fields/blocks are required, what
 "must differ per language" means for that content's cards) is NOT here — each content
@@ -26,6 +28,7 @@ own must-differ field lists, then calls into this module's `run()`.
 
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 from typing import Callable, Optional
@@ -232,3 +235,39 @@ def run(
     print(f"{'='*70}\n")
 
     return 0 if report.errors == 0 else 1
+
+
+# ── Master-validator PHASE E runner ───────────────────────────────────────────
+
+def run_family_validation_all(report, validate_family_script: Path, ids: list[str],
+                                singular: str, plural: str) -> None:
+    """Run validate_family.py once per id (subprocess) and fold ❌ findings into
+    the caller's phase report as errors. Shared by both discovery_master_validator
+    (via validate_discovery.py) and encounters_master_validator (via
+    validate_encounters.py) — identical shape, only the id source and report
+    object type differ, and both report objects already support the same
+    duck-typed `.E()` / `.I()` shape (see each script's ValidationReport/Report).
+
+    `ids`: the id strings to pass to validate_family.py, one per subprocess call.
+    `singular`/`plural`: nouns for the "Checked N <noun>" summary line, e.g.
+    ("study", "studies") or ("encounter", "encounters").
+    """
+    report.I("=" * 60)
+    report.I("PHASE E: CROSS-FILE FAMILY VALIDATION (all languages vs. all languages)")
+    report.I("=" * 60)
+
+    failed = []
+    for item_id in ids:
+        result = subprocess.run(
+            [sys.executable, str(validate_family_script), item_id],
+            capture_output=True, text=True,
+        )
+        if result.returncode != 0:
+            failed.append(item_id)
+            for line in result.stdout.splitlines():
+                if "❌" in line and "FAILED —" not in line:
+                    clean = re.sub(r'\x1b\[[0-9;]*m', '', line).strip().lstrip("❌ ")
+                    report.E(f"{item_id}: {clean}")
+
+    noun = singular if len(ids) == 1 else plural
+    report.I(f"✓ Checked {len(ids)} {noun} — {len(failed)} failed cross-file validation")

@@ -32,48 +32,6 @@ jobs:
       - name: 🚀 Validate Encounters
         run: python3 encounters/encounters_scripts/encounters_master_validator.py
 
-      - name: 🚀 Validate Discovery cross-file family consistency
-        run: |
-          python3 -c "
-          import json, subprocess, sys
-          studies = json.load(open('discovery/index.json'))['studies']
-          failed = []
-          for s in studies:
-              r = subprocess.run(
-                  ['python3', 'discovery/discovery_scripts/validate_family.py', s['id']],
-                  capture_output=True, text=True,
-              )
-              if r.returncode != 0:
-                  failed.append(s['id'])
-                  print(r.stdout)
-                  print(r.stderr, file=sys.stderr)
-          if failed:
-              print(f'FAILED: {len(failed)}/{len(studies)} studies — {failed}')
-              sys.exit(1)
-          print(f'OK: all {len(studies)} studies passed cross-file validation')
-          "
-
-      - name: 🚀 Validate Encounters cross-file family consistency
-        run: |
-          python3 -c "
-          import json, subprocess, sys
-          encounters = json.load(open('encounters/index.json'))['encounters']
-          failed = []
-          for e in encounters:
-              r = subprocess.run(
-                  ['python3', 'encounters/encounters_scripts/validate_family.py', e['id']],
-                  capture_output=True, text=True,
-              )
-              if r.returncode != 0:
-                  failed.append(e['id'])
-                  print(r.stdout)
-                  print(r.stderr, file=sys.stderr)
-          if failed:
-              print(f'FAILED: {len(failed)}/{len(encounters)} encounters — {failed}')
-              sys.exit(1)
-          print(f'OK: all {len(encounters)} encounters passed cross-file validation')
-          "
-
       - name: 🔗 Validate README links
         run: python3 devocionales_scripts/generate_stats.py --check-links
 

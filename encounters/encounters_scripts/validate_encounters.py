@@ -29,7 +29,6 @@ Exit codes: 0 = all passed, 1 = errors found in 1/A/SOT/B/E, or any warning anyw
 """
 
 import re
-import subprocess
 import sys
 from pathlib import Path
 from typing import Optional
@@ -52,6 +51,7 @@ def _find_repo_root(start: Path) -> Path:
 sys.path.insert(0, str(_find_repo_root(Path(__file__).resolve().parent)))
 from shared_validation.report import Report
 from shared_validation.run_report import RunReport
+from shared_validation.family_check import run_family_validation_all
 from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL
 from shared_validation.text_checks import (
     iter_strings, check_quote_anomalies, check_halfwidth_colon_in_title,
@@ -808,41 +808,6 @@ def validate_scripture_references(report: Report, index_data: dict, lint_cache: 
     )
 
 
-# ── Phase: Cross-file family validation (all languages vs. all languages) ────
-#
-# validate_family.py checks each encounter's full set of language files
-# against each other (key parity, structural drift) — no single language
-# treated as baseline, unlike Phase B's EN-vs-translation model. Runs once
-# per encounter id via subprocess since validate_family.py is its own CLI
-# entry point with its own Reporter; findings are folded into this phase's
-# Report as errors so it gates the run like Phase A/B, not warning-only like
-# Phase D.
-
-def validate_family_all(report: Report, index_data: dict) -> None:
-    report.I("=" * 60)
-    report.I("PHASE E: CROSS-FILE FAMILY VALIDATION (all languages vs. all languages)")
-    report.I("=" * 60)
-
-    script = Path(__file__).parent / "validate_family.py"
-    encounters = index_data['encounters']
-    failed = []
-    for enc in encounters:
-        result = subprocess.run(
-            [sys.executable, str(script), enc['id']],
-            capture_output=True, text=True,
-        )
-        if result.returncode != 0:
-            failed.append(enc['id'])
-            for line in result.stdout.splitlines():
-                if "❌" in line and "FAILED —" not in line:
-                    clean = re.sub(r'\x1b\[[0-9;]*m', '', line).strip().lstrip("❌ ")
-                    report.E(f"{enc['id']}: {clean}")
-
-    report.I(
-        f"✓ Checked {len(encounters)} encounter(s) — {len(failed)} failed cross-file validation"
-    )
-
-
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -902,7 +867,12 @@ def main():
                      args.lang, gate=False, final=True)
 
     if not args.scripture_only:
-        run_report.wrap("PHASE E: CROSS-FILE FAMILY VALIDATION", validate_family_all, index_data)
+        run_report.wrap(
+            "PHASE E: CROSS-FILE FAMILY VALIDATION", run_family_validation_all,
+            Path(__file__).parent / "validate_family.py",
+            [enc['id'] for enc in index_data['encounters']],
+            "encounter", "encounters",
+        )
 
     encounters = index_data['encounters']
     published = [e for e in encounters if e.get('status') == 'published']
