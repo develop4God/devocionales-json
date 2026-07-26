@@ -15,8 +15,11 @@ This file only covers what's specific to Discovery.
 - `{study_id}_en_001.json` — English master file (translation base)
 - `index.json` — source of truth for which languages this study needs
 - Remote index — source of truth for versions, codes, and download URLs (see core skill)
-- `validate_pair.py` — pair validator (run after each language)
-- `discovery_master_validator.py` — full suite validator, including per-study structure checks (run at end)
+- `validate_pair.py` — pair validator (run after each language); usage:
+  `python3 validate_pair.py {study_id}_en_001.json {study_id}_{lang}_001.json`
+- `discovery_master_validator.py` — full suite validator (run at end); this is a thin
+  wrapper that runs `validate_discovery.py` — they are the same check, always invoke
+  the wrapper, not the underlying script directly
 
 ---
 
@@ -130,7 +133,9 @@ After all languages are validated, update the study entry in `index.json`:
 - `subtitles` → pull `subtitle` directly from each translation file
 - `estimated_reading_minutes` → must match exactly what is in each translation file
 - Append entry to end of `studies` array — do not reorder existing entries
-- Run `validate_discovery.py` after updating to confirm no regressions
+- Run `discovery_master_validator.py` after updating to confirm no regressions (this
+  wraps `validate_discovery.py` — same check, run through the standard entry point used
+  everywhere else in this pipeline)
 
 ---
 

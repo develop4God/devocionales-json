@@ -42,15 +42,15 @@ keep a local copy of it:
 
 ## 3. Per-language notes — load only the target language's file(s)
 
-**ES/PT/FR/EN/DE:** no additional gate beyond this core file. Cognates (`Courage`,
-`Grâce`) are valid translations, not errors.
+Don't assume from this list which languages have notes — it goes stale as notes get
+added. Before translating, always check
+`skills/language_notes/` for a `{lang}.json` and/or `{lang}.md` matching **your target
+language only** (not every language has both, or either) and load whichever exist. Do
+not read notes for languages you are not translating into.
 
-**Every other target language:** before translating, load
-`skills/language_notes/{lang}.json` (mechanically-checkable rules — forbidden
-patterns, run by a validator script) and `skills/language_notes/{lang}.md` (judgment
-rules the LLM must apply while writing) for the language you were invoked with — nothing
-else. Do not read notes for languages you are not translating into; they don't apply and
-only add irrelevant context.
+Cognates (`Courage`, `Grâce` in FR, etc.) are valid translations across Romance
+languages, not errors — this applies regardless of whether that language also has a
+`language_notes/` file for something else.
 
 ---
 
