@@ -15,8 +15,16 @@ This file only covers what's specific to Discovery.
 - `{study_id}_en_001.json` — English master file (translation base)
 - `index.json` — source of truth for which languages this study needs
 - Remote index — source of truth for versions, codes, and download URLs (see core skill)
-- `validate_pair.py` — pair validator (run after each language); usage:
-  `python3 validate_pair.py {study_id}_en_001.json {study_id}_{lang}_001.json`
+- `validate_family.py` — cross-checks **all** language files of one study against each
+  other (not a pairwise EN-vs-one-language tool). Usage:
+  `python3 validate_family.py {study_id}` (the bare study id from `index.json`, not a
+  file path — it resolves every language file for that study from `index.json`'s
+  `files` map itself). Catches per-file structural completeness AND cross-file issues
+  no pairwise check can see: an untranslated leak (2+ languages sharing byte-identical
+  text), drift (one file disagreeing with what every sibling agrees on), and
+  filename↔language field mismatches. Run after each new language is added — it
+  re-validates the whole family every time, which is cheap and catches a defect
+  introduced in one file that quietly breaks a sibling comparison.
 - `discovery_master_validator.py` — full suite validator (run at end); this is a thin
   wrapper that runs `validate_discovery.py` — they are the same check, always invoke
   the wrapper, not the underlying script directly
@@ -60,7 +68,8 @@ For each language listed under `files` in `index.json` for this study (excluding
 - `metadata.themes` → translate all theme strings
 
 ### Never add or remove JSON keys.
-Key structure must be identical to the EN file. Run `validate_pair.py` to confirm.
+Key structure must be identical across the whole family. Run `validate_family.py` to
+confirm.
 
 ---
 
@@ -107,8 +116,9 @@ Store the value in both the JSON file and `index.json`.
 Run in this order. Fix all errors before proceeding to the next language.
 
 ```bash
-# After each language file is created:
-python3 validate_pair.py {study_id}_en_001.json {study_id}_{lang}_001.json
+# After each language file is created (re-validates the WHOLE family, not just this
+# one file — cheap, and catches cross-file issues a pairwise check would miss):
+python3 validate_family.py {study_id}
 
 # After all languages are done:
 python3 discovery_master_validator.py
@@ -142,7 +152,7 @@ After all languages are validated, update the study entry in `index.json`:
 ## Delivery
 1. All translated JSON files
 2. Updated `index.json`
-3. Validation log (✅ PERFECT for each pair)
+3. Validation log (✅ PERFECT from `validate_family.py`)
 4. Native-speaker critic review completed for each language (see core skill) — fixes applied, not just reported
 5. Reading time table:
 
