@@ -33,8 +33,10 @@ keep a local copy of it:
 
 - [ ] Parenthetical after a Greek/Hebrew word (e.g. `μονογενής (monogenēs)`) is always
       **Latin-alphabet transliteration** — in every target language, including AR/ZH/HI/JA.
-      Never respell it phonetically into the target script. Per-target verification is a
-      mechanical check — see `language_notes/{lang}.json`'s `required_ascii_transliteration`.
+      Never respell it phonetically into the target script. Already checked mechanically
+      by `shared_validation/text_checks.py::check_greek_hebrew_transliteration`, wired
+      into both master validators — no separate action needed here beyond writing it
+      correctly.
 
 ---
 
@@ -60,50 +62,15 @@ Store in both the JSON file and `index.json`.
 
 ---
 
-## 5. Critic review pipeline (run per language file, in this order)
+## 5. Critic review pipeline
 
-1. [ ] File passes its content-specific validator.
-2. [ ] Get a fresh, independent critic read with this exact prompt, `{language}`
-       substituted, nothing else changed — **how** depends on who is running this step:
-       - **Orchestrating conversation** (has the Agent tool): spawn `critic_reviewer_agent`
-         as a real subagent — no shared context with the translator, not Haiku.
-       - **`translator_agent` itself** (no Agent/Task tool in this environment — do not
-         attempt to invoke one): run the same prompt via `claude -p "..."` through your
-         Bash tool instead. Treat its output exactly as a spawned critic's report. This
-         internal pass does NOT replace the orchestrating conversation's own later
-         `critic_reviewer_agent` spawn (Phase 2 of the orchestration flow) — both are
-         required, they catch different things because they run at different points
-         with different context.
-       > you are a native {language} speaker, read this file and tell me if you find:
-       > Typos / Grammar Errors, Awkward / Non-native-sounding phrasing take your time
-       > line by line, your comments in English. After complete the validation any error
-       > you find, search broader in the file to see if you have a repeat pattern to
-       > document and inform your findings.
-3. [ ] Verify every claim before applying anything (critics hallucinate confidently):
-   - String/typo claim → grep the exact quoted string; no match = discard, don't downgrade.
-   - Count claim → verify with a script over string *values* only (not raw file — JSON
-     indentation whitespace inflates naive counts).
-   - Grammar-rule claim → confirm against a real reference, especially if it would *add*
-     something (comma/word/article).
-4. [ ] Apply only survived findings. Note why rejected ones were rejected (false /
-       stylistic / rule-cited-wrong) so it isn't re-litigated later.
-5. [ ] Pattern sweep — for every confirmed finding that's a *category* (calque,
-       agent/patient inversion, mixed metaphor, category-mismatch verb), not a one-off:
-   - Grep the same shape elsewhere in this file.
-   - Check whether the same source sentence was mistranslated the same way in other
-     already-delivered language files for this content — fix there too.
-   - If it recurs across more than one encounter/study, add it as a named trap to the
-     relevant content skill.
-6. [ ] After applying fixes, before reporting done:
-   - Re-read the full changed file, not just diffed lines.
-   - For every edit, check it still says the same thing — anchor against the card's
-     Bible reference and `revelation_key`/`identity_statement`. Grammatically fixed but
-     now vague/tautological/disconnected = regression, not done.
-   - Re-scan whole file for the same error pattern the critic flagged.
-   - Re-run the validator.
-   - Repeat 5-6 until a full pass finds nothing new.
-7. [ ] Don't skip step 2 because an internal/self-critic already ran — they catch
-       different things. "No findings" ≠ "file is clean," critics sample.
+Owned entirely by `translation_orchestrator_agent` / `~/.claude/skills/translate-batch/SKILL.md`
+(Phases 3-4: two independent critic rounds, verify-before-apply, pattern sweep,
+post-fix reverse validation). `translator_agent` does not run this — it translates,
+runs its content-specific validator + `post_translate_checks.py`, and delivers; critic
+review happens after, in a separate subagent the orchestrator spawns. If you are
+`translator_agent` reading this, your job is done once delivery's mechanical checks
+pass — do not attempt any part of this section yourself.
 
 ---
 
