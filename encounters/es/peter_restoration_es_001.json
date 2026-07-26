@@ -28,14 +28,14 @@
       "mood": "falling",
       "image_url": "peter_restoration_night_boat.png",
       "title": "Una noche sin nada",
-      "narrative": "El lago de Tiberias está oscuro y quieto. Pedro ha vuelto a las redes, al oficio que conocía antes de que todo cambiara. Con él van Tomás, Natanael, los hijos de Zebedeo y otros dos discípulos. Toda la noche echan la red y toda la noche la sacan vacía. No hay una palabra sobre lo que pasó en Jerusalén. Solo el agua negra, el peso de una red que no trae nada, y las manos de un pescador que una vez caminó sobre esta misma agua.",
+      "narrative": "El lago de Tiberias está oscuro y quieto. Jesús ha resucitado y ya se les ha aparecido dos veces; les dijo que lo verían en Galilea, y aquí están, pero nadie sabe qué hacer mientras tanto. Pedro dice: voy a pescar. Los demás lo siguen. Con él van Tomás, Natanael, los hijos de Zebedeo y otros dos discípulos. Toda la noche echan la red y toda la noche la sacan vacía. No hay una palabra sobre lo que pasó en Jerusalén. Solo el agua quieta, el peso de una red que no trae nada, y las manos de un pescador que una vez caminó sobre esta misma agua.",
       "ambient_sound": "water",
       "haptic": null,
       "verse_overlay": {
         "reference": "Juan 21:3",
         "text": "Simón Pedro les dijo: Voy a pescar. Ellos le dijeron: Vamos nosotros también contigo. Fueron, y entraron en una barca; y aquella noche no pescaron nada."
       },
-      "revelation_key": "Pedro vuelve a lo que sabía hacer antes de conocer a Jesús, pero esa noche tampoco eso le rinde."
+      "revelation_key": "Pedro vuelve a lo que sabía hacer antes de conocer a Jesús, y esa noche la red sale vacía."
     },
     {
       "order": 2,
