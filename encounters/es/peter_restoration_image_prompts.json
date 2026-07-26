@@ -86,20 +86,13 @@
     },
     {
       "order": 12,
-      "image_url": "peter_restoration_interactive.png",
-      "mood": "grace",
-      "shot_type": "object/still life",
-      "prompt": "Close view of glowing charcoal embers on open sand at the water's edge, first light breaking on the horizon behind them, a single set of wet footprints leading away from the fire toward the sunrise. No people visible. Quiet, reflective mood. Painterly warm 2D illustration, Mediterranean palette, ember orange fading into dawn gold, cinematic lighting, no text."
-    },
-    {
-      "order": 13,
       "image_url": "peter_restoration_discovery.png",
       "mood": "grace",
       "shot_type": "wide departure",
       "prompt": "A man in his mid-thirties, sturdy fisherman's build, strong square weathered face, curly dark brown hair, full dark beard, olive Mediterranean skin, deep brown eyes at peace, torn beige linen tunic and dark blue worn wool cloak, stands facing the open lake under full morning light, arms relaxed at his sides, small fishing boat and dying fire behind him. Wide, open composition suggesting a life beginning again. Painterly warm 2D illustration, Mediterranean palette, bright warm morning tones, cinematic, no text."
     },
     {
-      "order": 14,
+      "order": 13,
       "image_url": "peter_restoration_completion.png",
       "mood": "peace",
       "shot_type": "wide establishing",

@@ -175,15 +175,6 @@
     },
     {
       "order": 12,
-      "type": "interactive_moment",
-      "icon": "🔥",
-      "image_url": "peter_restoration_interactive.png",
-      "title": "Tu propio fuego de brasas",
-      "subtitle": "Un lugar que te recuerda una caída",
-      "reflection_prompt": "¿Hay un lugar, un olor o un momento que te devuelve a algo de lo que te avergüenzas? Nómbralo antes de seguir."
-    },
-    {
-      "order": 13,
       "type": "discovery_activation",
       "image_url": "peter_restoration_discovery.png",
       "title": "Tu Encuentro",
@@ -199,7 +190,7 @@
       }
     },
     {
-      "order": 14,
+      "order": 13,
       "type": "completion",
       "mood": "peace",
       "image_url": "peter_restoration_completion.png",
