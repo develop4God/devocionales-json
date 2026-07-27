@@ -54,7 +54,7 @@ from shared_validation.text_checks import (
     iter_strings, check_quote_anomalies, check_halfwidth_colon_in_title,
     check_no_latin_leak, is_cognate,
 )
-from shared_validation.greek_hebrew_gloss import check_greek_hebrew_transliteration
+from shared_validation.greek_hebrew_gloss import check_greek_hebrew_transliteration, check_bare_transliteration_reuse
 from shared_validation.lint import lint_json_files
 from shared_validation.scripture_check import (
     ScriptureValidator, find_scripture_pairs, validate_pair, validate_translated_pair,
@@ -89,6 +89,7 @@ def validate_structure(data: Dict, lang: str, filename: str, report: Report,
         check_quote_anomalies(text, f"{filename}:{path}", report)
         check_halfwidth_colon_in_title(text, path, lang, f"{filename}:{path}", report)
         check_greek_hebrew_transliteration(text, path, lang, f"{filename}:{path}", report)
+        check_bare_transliteration_reuse(text, path, f"{filename}:{path}", report)
         check_no_latin_leak(text, path, lang, f"{filename}:{path}", report)
 
     # Check required fields

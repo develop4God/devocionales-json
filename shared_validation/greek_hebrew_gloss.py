@@ -210,3 +210,30 @@ def check_greek_hebrew_transliteration(text: str, path: str, lang: str, ctx: str
             report.E(f"{ctx}: gloss '{word}, ({inner})' — parenthetical repeats original script instead of giving a Latin transliteration")
         elif not _LATIN_TRANSLIT_RE.match(stripped):
             report.E(f"{ctx}: gloss '{word}, ({inner})' — parenthetical is not Latin-alphabet (looks like a phonetic respelling into the target script)")
+
+
+def check_bare_transliteration_reuse(text: str, path: str, ctx: str, report: ReportLike) -> None:
+    """HARD GATE: a transliteration introduced by one well-formed gloss in
+    this field must never appear again later in the same field as bare
+    Latin text with no accompanying native-script word — see
+    gloss_format.json "Bare reuse without a gloss: introducing 'θεός,
+    (theos)' once and later writing bare 'theos' with no gloss". No
+    exception for any language: every occurrence gets its own
+    '<word>, (<translit>)' gloss, full stop — a lone Latin loanword
+    reading as unremarkable in English/German/etc. prose doesn't matter.
+
+    find_greek_hebrew_glosses only looks for native-script characters, so
+    it can't see this case (a bare Latin word has no native-script word to
+    anchor on). Simple approach: collect each well-formed gloss's
+    transliteration and end position, then \\b-search the text AFTER that
+    point for the same word reappearing bare.
+    """
+    key = path.rsplit('.', 1)[-1].split('[')[0]
+    if key in _SKIP_KEYS:
+        return
+    for _, end, _, inner, well_formed in find_greek_hebrew_glosses(text):
+        if not (well_formed and inner):
+            continue
+        m = re.search(rf'\b{re.escape(inner)}\b', text[end:])
+        if m:
+            report.E(f"{ctx}: '{inner}' reused as bare Latin text later in this field with no accompanying native-script gloss (every occurrence needs its own '<word>, ({inner})', see gloss_format.json 'Bare reuse without a gloss')")
