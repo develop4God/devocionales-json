@@ -117,6 +117,38 @@ _STRONG_PREFIX_RE = re.compile(r'^(Strong\s+)?[GH]?\d+\s*[:\-]?\s*', re.IGNORECA
 _SKIP_KEYS = {'word'}
 
 
+def find_greek_hebrew_glosses(text: str) -> list:
+    """Find every `<Greek/Hebrew run> (<parenthetical>)` gloss span in text.
+
+    Returns a list of (start, end, run, inner) tuples: start/end are the
+    character offsets of the whole span (native-script run + its trailing
+    parenthetical, if any) in `text`; run is the matched native-script text;
+    inner is the raw parenthetical content, or None if the run has no
+    trailing `(...)` (Strong's-prefix stripping, if wanted, is caller policy).
+
+    Shared span-finder for the inline-gloss convention "original script
+    (Latin transliteration)", e.g. "μονογενής (monogenēs)" — consumed by
+    check_greek_hebrew_transliteration (validates what's inside the parens)
+    and check_no_latin_leak (treats each span as a known-good exception
+    before flagging stray Latin elsewhere in the field).
+    """
+    spans = []
+    for m in _NATIVE_RUN_RE.finditer(text):
+        run = m.group(0).strip()
+        if not run:
+            continue
+        window = text[m.end():m.end() + 60]
+        lstripped_len = len(window) - len(window.lstrip())
+        rest = window[lstripped_len:]
+        pm = _PAREN_RE.match(rest) if rest.startswith('(') else None
+        if not pm:
+            spans.append((m.start(), m.end(), run, None))
+            continue
+        paren_end = m.end() + lstripped_len + pm.end()
+        spans.append((m.start(), paren_end, run, pm.group(1).strip()))
+    return spans
+
+
 def check_greek_hebrew_transliteration(text: str, path: str, ctx: str, report: ReportLike) -> None:
     """Flag inline Greek/Hebrew glosses whose parenthetical isn't Latin.
 
@@ -133,23 +165,16 @@ def check_greek_hebrew_transliteration(text: str, path: str, ctx: str, report: R
         return
     if not (_GREEK_RE.search(text) or _HEBREW_RE.search(text)):
         return
-    for m in _NATIVE_RUN_RE.finditer(text):
-        run = m.group(0).strip()
-        if not run:
+    for start, end, run, inner in find_greek_hebrew_glosses(text):
+        if inner is None:
             continue
-        rest = text[m.end():m.end() + 60].lstrip()
-        if not rest.startswith('('):
+        stripped = _STRONG_PREFIX_RE.sub('', inner).strip()
+        if not stripped:
             continue
-        pm = _PAREN_RE.match(rest)
-        if not pm:
-            continue
-        inner = _STRONG_PREFIX_RE.sub('', pm.group(1).strip()).strip()
-        if not inner:
-            continue
-        if _GREEK_RE.search(inner) or _HEBREW_RE.search(inner):
-            report.E(f"{ctx}: gloss '{run} ({pm.group(1).strip()})' — parenthetical repeats original script instead of giving a Latin transliteration")
-        elif not _LATIN_TRANSLIT_RE.match(inner):
-            report.E(f"{ctx}: gloss '{run} ({pm.group(1).strip()})' — parenthetical is not Latin-alphabet (looks like a phonetic respelling into the target script)")
+        if _GREEK_RE.search(stripped) or _HEBREW_RE.search(stripped):
+            report.E(f"{ctx}: gloss '{run} ({inner})' — parenthetical repeats original script instead of giving a Latin transliteration")
+        elif not _LATIN_TRANSLIT_RE.match(stripped):
+            report.E(f"{ctx}: gloss '{run} ({inner})' — parenthetical is not Latin-alphabet (looks like a phonetic respelling into the target script)")
 
 
 def check_quote_anomalies(text: str, ctx: str, report: ReportLike) -> None:
