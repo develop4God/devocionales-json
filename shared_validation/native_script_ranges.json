@@ -1,0 +1,9 @@
+{
+  "_comment": "Unicode block ranges for each language's own native script, keyed by language code. Used by check_greek_hebrew_transliteration's phonetic-respelling detector: when validating a file whose language is e.g. 'hi', only the Devanagari range is checked for phonetic-respelling content inside a Greek/Hebrew gloss's transliteration slot — there is no reason to also test for Arabic or Katakana while reviewing a Hindi file. Latin-script languages (de, en, es, fil, fr, pt, ...) are intentionally absent: their own language already IS Latin script, so this specific bug class (native-script phonetic respelling standing in for the Latin transliteration) cannot occur for them by construction — omit them rather than mapping them to an empty range.",
+  "ranges": {
+    "ar": ["؀-ۿ"],
+    "hi": ["ऀ-ॿ"],
+    "ja": ["぀-ヿ", "一-鿿"],
+    "zh": ["一-鿿"]
+  }
+}

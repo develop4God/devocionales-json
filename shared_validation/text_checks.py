@@ -128,9 +128,69 @@ _NATIVE_TWO_WORD_RE = re.compile(
 # from "native word with no gloss trailing it at all" vs. "native word with
 # a malformed gloss attempt trailing it".
 _STRICT_GLOSS_TAIL_RE = re.compile(r', \(([^()]*)\)')
+# A malformed gloss attempt whose transliteration slot was filled with a
+# phonetic respelling in a non-Latin script instead of Latin — e.g.
+# "κατέγραφεν, कतेग्राफेन)" (Devanagari, ASCII comma), "παρακαλέω،
+# باراكاليو)" (Arabic script + Arabic comma), "κράσπεδον（クラスペドン）"
+# (Katakana, full-width parens, no comma at all — the systemic ja
+# convention). Distinct from a plain missing-gloss case: this pattern has
+# non-Latin-script content sitting immediately after the word (optionally
+# preceded by a comma/native-comma, optionally wrapped in ASCII or
+# full-width parens), which is specifically diagnostic of the phonetic-
+# respelling bug (see gloss_format.json "Phonetic respelling into the
+# target script instead of Latin"), not just "no gloss was attempted at
+# all". Matched separately so check_greek_hebrew_transliteration can name
+# the real problem instead of the generic "not followed by the required
+# gloss" message.
+#
+# The specific script range checked is per-language (see
+# native_script_ranges.json / _phonetic_respelling_re_for_lang below) —
+# a Hindi file is only tested against Devanagari, a Japanese file only
+# against Katakana/Han, etc. There is no reason to test a German file
+# against Devanagari, or a Hindi file against Katakana: each language can
+# only phonetically misspell into its OWN native script, never another
+# language's. Latin-script languages (de, en, es, fil, fr, pt, ...) have
+# no range at all and skip this check entirely — the bug can't occur when
+# the target language's own script already IS Latin.
+_NATIVE_SCRIPT_RANGES_PATH = Path(__file__).parent / "native_script_ranges.json"
+_native_script_ranges_cache = None
+_phonetic_respelling_re_cache: dict = {}
+
+
+def _load_native_script_ranges() -> dict:
+    global _native_script_ranges_cache
+    if _native_script_ranges_cache is None:
+        with open(_NATIVE_SCRIPT_RANGES_PATH, encoding="utf-8") as f:
+            _native_script_ranges_cache = json.load(f)["ranges"]
+    return _native_script_ranges_cache
+
+
+def _phonetic_respelling_re_for_lang(lang: str):
+    """Return the compiled phonetic-respelling-tail regex for `lang`'s own
+    native script, or None if `lang` is Latin-script (nothing to check —
+    see module comment above). Cached per language since the ranges file
+    never changes at runtime."""
+    if lang in _phonetic_respelling_re_cache:
+        return _phonetic_respelling_re_cache[lang]
+    ranges = _load_native_script_ranges().get(lang)
+    if not ranges:
+        _phonetic_respelling_re_cache[lang] = None
+        return None
+    script_class = ''.join(ranges)
+    pattern = re.compile(
+        rf'(?:[,،、]\s*[(（]?|[(（])([{script_class}][{script_class}・\s]*)[)）]?'
+    )
+    _phonetic_respelling_re_cache[lang] = pattern
+    return pattern
 # Extended-Latin transliteration charset: ASCII + Latin-1/Extended-A/B +
 # combining diacritics used for scholarly romanization (ā, ṓ, ḥ, ʿ, etc.)
-_LATIN_TRANSLIT_RE = re.compile(r"^[A-Za-zÀ-ɏḀ-ỿ\s\-'’.:0-9]+$")
+# The specific diacritic set this corpus's transliteration convention
+# actually uses (see gloss_format.json "transliteration_charset" — derived
+# empirically from every well-formed gloss in the corpus, not the full SBL
+# academic Hebrew table). A Latin letter outside this set is either a typo,
+# an accidental other-language character, or a not-yet-adopted style —
+# either way, worth flagging rather than silently accepting any Latin script.
+_LATIN_TRANSLIT_RE = re.compile(r"^[A-Za-zÁÉÍÓÚÝáéíóúýĀāĒēĪīŌōŪūḖḗṒṓ\s\-'’.:0-9]+$")
 _STRONG_PREFIX_RE = re.compile(r'^(Strong\s+)?[GH]?\d+\s*[:\-]?\s*', re.IGNORECASE)
 _SKIP_KEYS = {'word'}
 # How far past the end of a native word we look for a malformed gloss
@@ -198,7 +258,7 @@ def find_greek_hebrew_glosses(text: str) -> list:
     return spans
 
 
-def check_greek_hebrew_transliteration(text: str, path: str, ctx: str, report: ReportLike) -> None:
+def check_greek_hebrew_transliteration(text: str, path: str, lang: str, ctx: str, report: ReportLike) -> None:
     """HARD GATE: every Greek/Hebrew word or two-word phrase must be
     immediately followed by ", (<Latin transliteration>)" — nothing else is
     accepted.
@@ -209,14 +269,25 @@ def check_greek_hebrew_transliteration(text: str, path: str, ctx: str, report: R
     variant, no full-width punctuation, no comma-inside-one-parenthetical,
     no bare reuse without a gloss, no 3+-word/sentence pairing. Every
     occurrence gets its own gloss.
+
+    `lang` selects which native-script range (if any) is checked for the
+    phonetic-respelling sub-case — see native_script_ranges.json /
+    _phonetic_respelling_re_for_lang. Latin-script languages skip that
+    sub-check entirely (nothing to check: their own language is already
+    Latin script, so a Devanagari/Katakana/etc. respelling can't occur).
     """
     key = path.rsplit('.', 1)[-1].split('[')[0]
     if key in _SKIP_KEYS:
         return
     if not (_GREEK_RE.search(text) or _HEBREW_RE.search(text)):
         return
+    phonetic_re = _phonetic_respelling_re_for_lang(lang)
     for start, end, word, inner, well_formed in find_greek_hebrew_glosses(text):
         if not well_formed:
+            phonetic_match = phonetic_re.match(text, end) if phonetic_re else None
+            if phonetic_match:
+                report.E(f"{ctx}: '{word}' gloss uses a phonetic respelling in a non-Latin script ('{phonetic_match.group(1)}') instead of the required Latin transliteration (required format: '{word}, (translit)', see gloss_format.json)")
+                continue
             lookahead = text[end:end + _MALFORMED_LOOKAHEAD]
             report.E(f"{ctx}: '{word}' is not followed by the required ', (transliteration)' gloss (required format: '{word}, (translit)', see gloss_format.json) — found: '{word}{lookahead}'")
             continue

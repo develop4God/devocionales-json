@@ -87,7 +87,7 @@ def validate_structure(data: Dict, lang: str, filename: str, report: Report,
     for path, text in iter_strings(data):
         check_quote_anomalies(text, f"{filename}:{path}", report)
         check_halfwidth_colon_in_title(text, path, lang, f"{filename}:{path}", report)
-        check_greek_hebrew_transliteration(text, path, f"{filename}:{path}", report)
+        check_greek_hebrew_transliteration(text, path, lang, f"{filename}:{path}", report)
         check_no_latin_leak(text, path, lang, f"{filename}:{path}", report)
 
     # Check required fields

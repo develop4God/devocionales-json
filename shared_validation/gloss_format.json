@@ -18,5 +18,11 @@
     "Comma-joined single parenthetical: （θεός，theos）",
     "Bare reuse without a gloss: introducing 'θεός, (theos)' once and later writing bare 'theos' with no gloss",
     "Three-or-more-word phrase or full-sentence original/transliteration pairing instead of a 1-or-2-word gloss"
-  ]
+  ],
+  "transliteration_charset": {
+    "_comment": "The specific Latin-alphabet characters this corpus's transliteration convention actually uses, derived empirically from every well-formed gloss already in the encounters corpus (2026-07-27 scan, 70 samples). NOT the full SBL academic Hebrew table (no ḥ/ṭ/ṣ/ś/š/ʾ/ʿ, no breves ă/ĕ/ŏ, no circumflexes â/î/ô) — this corpus uses a simplified scholarly style: macrons for Greek long vowels (η→ē, ω→ō) and acute-accented vowels for stress, including macron+acute combined forms for a stressed long vowel. A character outside this set (e.g. a Vietnamese/Turkish/Polish Latin letter, or a strict-academic Hebrew emphatic mark not yet used anywhere) is very likely either a mistake or a style the corpus hasn't adopted yet — treat as a flag to review, not a silent pass. Extend this list only after confirming a new mark is intentionally being introduced as house style, the same way this list itself was derived (empirical scan + explicit decision), not by loosening the regex ad hoc.",
+    "ascii": "A-Za-z (plain Latin letters, digits 0-9, and punctuation: space hyphen apostrophe period colon)",
+    "diacritics_in_use": ["ā", "ē", "ī", "ō", "ū", "á", "é", "í", "ó", "ú", "ý", "ḗ", "ṓ"],
+    "not_yet_used_full_sbl_academic_marks": ["â", "î", "ô", "ă", "ĕ", "ŏ", "ḥ", "ṭ", "ṣ", "ś", "š", "ʾ", "ʿ"]
+  }
 }

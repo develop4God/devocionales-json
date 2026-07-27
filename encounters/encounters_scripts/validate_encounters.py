@@ -278,7 +278,7 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
     for path, text in iter_strings(data):
         check_quote_anomalies(text, f"{filename}:{path}", report)
         check_halfwidth_colon_in_title(text, path, lang, f"{filename}:{path}", report)
-        check_greek_hebrew_transliteration(text, path, f"{filename}:{path}", report)
+        check_greek_hebrew_transliteration(text, path, lang, f"{filename}:{path}", report)
         check_no_latin_leak(text, path, lang, f"{filename}:{path}", report)
 
     # Required top-level fields
