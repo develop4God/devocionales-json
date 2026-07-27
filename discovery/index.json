@@ -691,7 +691,7 @@
     },
     {
       "id": "i_am_before_abraham_001",
-      "version": "1.3",
+      "version": "1.4",
       "emoji": "⚡",
       "files": {
         "es": "i_am_before_abraham_es_001.json",
@@ -1751,7 +1751,7 @@
     },
     {
       "id": "gold_silver_ashes_001",
-      "version": "1.4",
+      "version": "1.5",
       "emoji": "🔥",
       "files": {
         "es": "gold_silver_ashes_es_001.json",
