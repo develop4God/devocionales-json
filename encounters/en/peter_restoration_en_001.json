@@ -28,7 +28,7 @@
       "mood": "falling",
       "image_url": "peter_restoration_night_boat.png",
       "title": "A night with nothing to show",
-      "narrative": "The Sea of Tiberias is dark and still — the same lake where, not long ago, Jesus fed a crowd of five thousand with five loaves and two fish (John 6:1). Jesus has risen and already appeared to them twice; he told them they would see him in Galilee, and here they are, but no one knows what to do while they wait. Peter says: I'm going fishing. The others follow him. Thomas goes, and Nathanael, the sons of Zebedee, and two other disciples. All night they cast the net, and all night they pull it up empty. No word is spoken about what happened in Jerusalem. Only the still water, the weight of a net that brings back nothing, and the hands of a fisherman who once walked on this very water.",
+      "narrative": "The Sea of Tiberias is dark and still — the same lake where, not long ago, Jesus fed a crowd of five thousand with five loaves and two fish (John 6:1). Jesus has risen and already appeared to them twice; he told them they would see him in Galilee, and here they are, but no one knows what to do while they wait. Peter says: I'm going fishing. The others follow him. With him go Thomas, Nathanael, the sons of Zebedee, and two other disciples. All night they cast the net, and all night they pull it up empty. No word is spoken about what happened in Jerusalem. Only the still water, the weight of a net that brings back nothing, and the hands of a fisherman who once walked on this very water.",
       "ambient_sound": "water",
       "haptic": null,
       "verse_overlay": {
@@ -57,8 +57,8 @@
       "image_url": "peter_restoration_jumps_water.png",
       "title": "He threw himself into the water",
       "subtitle": "He couldn't wait for the boat",
-      "content": "Peter ties his coat around him and throws himself into the sea before the boat can reach land. He worked with little clothing out of habit, but covers himself before drawing near to Jesus — a gesture of respect in the middle of his hurry. This is the second time this man has entered the water to get to Jesus faster. The first time, he walked on it with his eyes fixed on him, until the wind distracted him and he began to sink (Matthew 14:29-30). This time he swims with everything he has, driven by the urgency of getting there before the others.",
-      "revelation_key": "John is first to recognize Jesus; Peter is first to act.",
+      "content": "Peter ties his coat around him and throws himself into the sea before the boat can reach land. He works with little clothing out of habit, but covers himself before drawing near to Jesus — a gesture of respect in the middle of his hurry. This is the second time this man has entered the water to get to Jesus faster. The first time, he walked on it with his eyes fixed on him, until the wind distracted him and he began to sink (Matthew 14:29-30). This time he swims with everything he has, driven by the urgency of getting there before the others.",
+      "revelation_key": "John is first to recognize Jesus; Peter acts immediately.",
       "scripture_connections": [
         { "reference": "Matthew 14:29-30", "text": "And he said, Come. And when Peter came down out of the ship, he walked on the water, to go to Jesus. But when he saw the wind boisterous, he was afraid; and beginning to sink, he cried, saying, Lord, save me." }
       ],
@@ -89,7 +89,7 @@
       "image_url": "peter_restoration_anthrakia.png",
       "title": "The fire that remembers",
       "subtitle": "A word that appears only twice",
-      "content": "The Greek word for 'fire of coals,' ἀνθρακιά (anthrakia), appears in the entire New Testament only twice — and both times in the Gospel of John. The first is John 18:18, the courtyard where Peter denied Jesus while warming himself by the coals. The second is John 21:9, this shore. It is reasonable to think that this same scene brought back to Peter the memory of the night he denied Jesus.",
+      "content": "The Greek word for 'fire of coals,' ἀνθρακιά (anthrakia), appears in the entire New Testament only twice — and both times in the Gospel of John. The first is John 18:18, the courtyard where Peter denied Jesus while warming himself by the coals. The second is John 21:9, this shore. It is reasonable to think that this same scene brings back to Peter the memory of the night he denied Jesus.",
       "revelation_key": "The same fire that witnessed Peter's fall now witnesses his return to this shore.",
       "verse_overlay": {
         "reference": "John 21:9",
@@ -188,7 +188,7 @@
       "mood": "intense",
       "image_url": "peter_restoration_prophecy.png",
       "title": "When you are old",
-      "narrative": "Jesus tells him about something Peter could not have anticipated. He speaks of when Peter is old: arms stretched out, bound by another, carried where he will not want to go — the image of a crucifixion. John explains afterward that these words pointed to the kind of death by which Peter would glorify God. Jesus restores Peter and, in the same conversation, shows him the full cost of what he is about to receive.",
+      "narrative": "Jesus tells him about something Peter cannot anticipate. He speaks of when Peter is old: arms stretched out, bound by another, carried where he will not want to go — the image of a crucifixion. John explains afterward that these words point to the kind of death by which Peter would glorify God. Jesus restores Peter and, in the same conversation, shows him the full cost of what he is about to receive.",
       "ambient_sound": "wind",
       "haptic": null,
       "verse_overlay": {

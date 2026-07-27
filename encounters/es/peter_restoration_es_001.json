@@ -18,7 +18,7 @@
   },
   "key_verse": {
     "reference": "Juan 21:17",
-    "text": "Le dijo la tercera vez: Simón, hijo de Jonás, ¿me amas? Se entristeció Pedro de que le dijese la tercera vez: ¿Me amas? y le dijo: Señor, tú sabes todas las cosas; tú sabes que te amo. Jesús le dijo: Apacienta mis ovejas.",
+    "text": "Le dijo la tercera vez: Simón, hijo de Jonás, ¿me amas? Pedro se entristeció de que le dijese la tercera vez: ¿Me amas? y le respondió: Señor, tú lo sabes todo; tú sabes que te amo. Jesús le dijo: Apacienta mis ovejas.",
     "bible_version": "RVR1960"
   },
   "cards": [
@@ -57,7 +57,7 @@
       "image_url": "peter_restoration_jumps_water.png",
       "title": "Se lanzó al agua",
       "subtitle": "Sin esperar a la barca",
-      "content": "Pedro se ciñe la ropa y se echa al mar antes de que la barca llegue a tierra. Trabajaba por costumbre con poca ropa, pero se cubre antes de acercarse a Jesús, un gesto de respeto en medio de la prisa. Es la segunda vez que este hombre entra al agua para llegar más rápido a Jesús. La primera vez caminó sobre ella con los ojos puestos en él, hasta que el viento lo distrajo y empezó a hundirse (Mateo 14:29-30). Esta vez nada con todas sus fuerzas, movido por la urgencia de llegar antes que los demás.",
+      "content": "Pedro se ciñe la ropa y se echa al mar antes de que la barca llegue a tierra. Trabaja por costumbre con poca ropa, pero se cubre antes de acercarse a Jesús, un gesto de respeto en medio de la prisa. Es la segunda vez que este hombre entra al agua para llegar más rápido a Jesús. La primera vez caminó sobre ella con los ojos puestos en él, hasta que el viento lo distrajo y empezó a hundirse (Mateo 14:29-30). Esta vez nada con todas sus fuerzas, movido por la urgencia de llegar antes que los demás.",
       "revelation_key": "Juan reconoce primero a Jesús; Pedro actúa de inmediato.",
       "scripture_connections": [
         { "reference": "Mateo 14:29-30", "text": "Y él dijo: Ven. Y descendiendo Pedro de la barca, andaba sobre las aguas para ir a Jesús. Pero al ver el fuerte viento, tuvo miedo; y comenzando a hundirse, dio voces, diciendo: ¡Señor, sálvame!" }
@@ -89,7 +89,7 @@
       "image_url": "peter_restoration_anthrakia.png",
       "title": "La brasa que recuerda",
       "subtitle": "Una palabra que solo aparece dos veces",
-      "content": "La palabra griega para 'fuego de brasas', ἀνθρακιά (anthrakia), aparece en todo el Nuevo Testamento solamente dos veces — y las dos están en el evangelio de Juan. La primera es Juan 18:18, el patio donde Pedro negó a Jesús calentándose junto a las brasas. La segunda es Juan 21:9, esta orilla. Es razonable pensar que la misma escena le devolvió a Pedro el recuerdo de la noche cuando negó a Jesús.",
+      "content": "La palabra griega para 'fuego de brasas', ἀνθρακιά (anthrakia), aparece en todo el Nuevo Testamento solamente dos veces — y las dos están en el evangelio de Juan. La primera es Juan 18:18, el patio donde Pedro negó a Jesús calentándose junto a las brasas. La segunda es Juan 21:9, esta orilla. Es razonable pensar que la misma escena le devuelve a Pedro el recuerdo de la noche cuando negó a Jesús.",
       "revelation_key": "El mismo fuego que fue testigo de la caída de Pedro es ahora testigo de su regreso a esta orilla.",
       "verse_overlay": {
         "reference": "Juan 21:9",
@@ -188,7 +188,7 @@
       "mood": "intense",
       "image_url": "peter_restoration_prophecy.png",
       "title": "Cuando seas viejo",
-      "narrative": "Jesús le habla de algo que Pedro no podía anticipar. Le habla de cuando sea viejo: brazos extendidos, atado por otro, llevado adonde él no querrá ir, la imagen de una crucifixión. Juan explica después que estas palabras señalaban la clase de muerte con la que Pedro glorificaría a Dios. Jesús restaura a Pedro y, en la misma conversación, le muestra el costo completo de lo que está por recibir.",
+      "narrative": "Jesús le habla de algo que Pedro no puede anticipar. Le habla de cuando sea viejo: brazos extendidos, atado por otro, llevado adonde él no querrá ir, la imagen de una crucifixión. Juan explica después que estas palabras señalan la clase de muerte con la que Pedro glorificaría a Dios. Jesús restaura a Pedro y, en la misma conversación, le muestra el costo completo de lo que está por recibir.",
       "ambient_sound": "wind",
       "haptic": null,
       "verse_overlay": {
@@ -233,7 +233,7 @@
       "image_url": "peter_restoration_completion.png",
       "completion_verse": {
         "reference": "Juan 21:17",
-        "text": "Le dijo la tercera vez: Simón, hijo de Jonás, ¿me amas? Se entristeció Pedro de que le dijese la tercera vez: ¿Me amas? y le dijo: Señor, tú sabes todas las cosas; tú sabes que te amo. Jesús le dijo: Apacienta mis ovejas.",
+        "text": "Le dijo la tercera vez: Simón, hijo de Jonás, ¿me amas? Pedro se entristeció de que le dijese la tercera vez: ¿Me amas? y le respondió: Señor, tú lo sabes todo; tú sabes que te amo. Jesús le dijo: Apacienta mis ovejas.",
         "bible_version": "RVR1960"
       },
       "celebration_type": "gentle_light"

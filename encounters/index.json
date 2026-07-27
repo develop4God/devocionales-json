@@ -1037,19 +1037,34 @@
       "testament": "new",
       "character": "Pedro",
       "files": {
-        "es": "peter_restoration_es_001.json"
+        "es": "peter_restoration_es_001.json",
+        "pt": "peter_restoration_pt_001.json",
+        "fr": "peter_restoration_fr_001.json",
+        "en": "peter_restoration_en_001.json"
       },
       "titles": {
-        "es": "Junto al fuego"
+        "es": "Junto al fuego",
+        "pt": "Junto ao fogo",
+        "fr": "Près du feu",
+        "en": "By the Fire"
       },
       "subtitles": {
-        "es": "El mismo fuego que vio su negación, ahora prepara su restauración."
+        "es": "El mismo fuego que vio su negación, ahora prepara su restauración.",
+        "pt": "O mesmo fogo que viu sua negação, agora prepara sua restauração.",
+        "fr": "Le même feu qui a vu son reniement prépare maintenant sa restauration.",
+        "en": "The same fire that saw his denial now prepares his restoration."
       },
       "scripture_reference": {
-        "es": "Juan 21:1-19"
+        "es": "Juan 21:1-19",
+        "pt": "João 21:1-19",
+        "fr": "Jean 21:1-19",
+        "en": "John 21:1-19"
       },
       "estimated_reading_minutes": {
-        "es": 10
+        "es": 10,
+        "pt": 11,
+        "fr": 11,
+        "en": 10
       }
     }
   ]
