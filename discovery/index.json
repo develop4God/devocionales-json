@@ -1486,7 +1486,7 @@
     },
     {
       "id": "restoration_by_fire_001",
-      "version": "1.4",
+      "version": "1.5",
       "emoji": "🔥",
       "files": {
         "es": "restoration_by_fire_es_001.json",
