@@ -83,11 +83,11 @@ def _phonetic_respelling_re_for_lang(lang: str):
     never changes at runtime."""
     if lang in _phonetic_respelling_re_cache:
         return _phonetic_respelling_re_cache[lang]
-    ranges = _load_native_script_ranges().get(lang)
-    if not ranges:
+    entry = _load_native_script_ranges().get(lang)
+    if not entry:
         _phonetic_respelling_re_cache[lang] = None
         return None
-    script_class = ''.join(ranges)
+    script_class = ''.join(entry["blocks"])
     pattern = re.compile(
         rf'(?:[,،、]\s*[(（]?|[(（])([{script_class}][{script_class}・ ]*)[)）]'
     )
@@ -248,28 +248,19 @@ def check_bare_transliteration_reuse(text: str, path: str, ctx: str, report: Rep
             break
 
 
-# Languages in native_script_ranges.json whose own native script is
-# written right-to-left. Reuses that file's per-language Unicode block
-# data rather than hardcoding a second copy of the Arabic range here —
-# same source of truth _phonetic_respelling_re_for_lang draws from.
-# hi/ja/zh are also in that file but are LTR scripts, so gluing them to a
-# Greek/Hebrew gloss with no space doesn't produce the bidi/visual-order
-# bug this check exists for; only list a code here once its script is
-# confirmed RTL.
-_RTL_LANGUAGES = {"ar"}
-
-
 def _rtl_script_re_for_lang(lang: str):
     """Return the compiled character-class regex for `lang`'s own native
-    script, or None if `lang` isn't a known RTL language (see
-    _RTL_LANGUAGES above). Reuses native_script_ranges.json — same file
-    and loader _phonetic_respelling_re_for_lang uses."""
-    if lang not in _RTL_LANGUAGES:
+    script, or None if `lang` isn't a known language, or its script isn't
+    marked "rtl" in native_script_ranges.json's `direction` field. No
+    hardcoded language list here — RTL-ness is data in that file (same
+    file and loader _phonetic_respelling_re_for_lang uses), not a second
+    copy of it in Python. hi/ja/zh are also in that file but marked
+    "ltr", since gluing them to a Greek/Hebrew gloss with no space
+    doesn't produce the bidi/visual-order bug this check exists for."""
+    entry = _load_native_script_ranges().get(lang)
+    if not entry or entry.get("direction") != "rtl":
         return None
-    ranges = _load_native_script_ranges().get(lang)
-    if not ranges:
-        return None
-    return re.compile(f"[{''.join(ranges)}]")
+    return re.compile(f"[{''.join(entry['blocks'])}]")
 
 
 def check_script_boundary_spacing(text: str, path: str, lang: str, ctx: str, report: ReportLike) -> None:

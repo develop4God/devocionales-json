@@ -1,9 +1,9 @@
 {
-  "_comment": "Unicode block ranges for each language's own native script, keyed by language code. Used by check_greek_hebrew_transliteration's phonetic-respelling detector: when validating a file whose language is e.g. 'hi', only the Devanagari range is checked for phonetic-respelling content inside a Greek/Hebrew gloss's transliteration slot — there is no reason to also test for Arabic or Katakana while reviewing a Hindi file. Latin-script languages (de, en, es, fil, fr, pt, ...) are intentionally absent: their own language already IS Latin script, so this specific bug class (native-script phonetic respelling standing in for the Latin transliteration) cannot occur for them by construction — omit them rather than mapping them to an empty range.",
+  "_comment": "Unicode block ranges and writing direction for each language's own native script, keyed by language code. `ranges` is used by check_greek_hebrew_transliteration's phonetic-respelling detector: when validating a file whose language is e.g. 'hi', only the Devanagari range is checked for phonetic-respelling content inside a Greek/Hebrew gloss's transliteration slot — there is no reason to also test for Arabic or Katakana while reviewing a Hindi file. `direction` is used by check_script_boundary_spacing to flag native script glued directly (no space) onto a Greek/Hebrew gloss — only meaningful for 'rtl' languages, since that's what produces a bidi/visual-order bug; 'ltr' entries exist here only for the ranges data. Latin-script languages (de, en, es, fil, fr, pt, ...) are intentionally absent: their own language already IS Latin script, so neither bug class (native-script phonetic respelling, or native-script glued to a gloss) can occur for them by construction — omit them rather than mapping them to an empty range.",
   "ranges": {
-    "ar": ["؀-ۿ"],
-    "hi": ["ऀ-ॿ"],
-    "ja": ["぀-ヿ", "一-鿿"],
-    "zh": ["一-鿿"]
+    "ar": {"direction": "rtl", "blocks": ["؀-ۿ"]},
+    "hi": {"direction": "ltr", "blocks": ["ऀ-ॿ"]},
+    "ja": {"direction": "ltr", "blocks": ["぀-ヿ", "一-鿿"]},
+    "zh": {"direction": "ltr", "blocks": ["一-鿿"]}
   }
 }
