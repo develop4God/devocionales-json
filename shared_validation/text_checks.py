@@ -178,7 +178,7 @@ def _phonetic_respelling_re_for_lang(lang: str):
         return None
     script_class = ''.join(ranges)
     pattern = re.compile(
-        rf'(?:[,،、]\s*[(（]?|[(（])([{script_class}][{script_class}・\s]*)[)）]?'
+        rf'(?:[,،、]\s*[(（]?|[(（])([{script_class}][{script_class}・ ]*)[)）]'
     )
     _phonetic_respelling_re_cache[lang] = pattern
     return pattern
