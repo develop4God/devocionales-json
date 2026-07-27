@@ -1,44 +1,7 @@
 {
   "language": "ar",
-  "forbidden_patterns": [
-    {
-      "pattern": "يَارَبُّ",
-      "reason": "Vocative particle يا fused to the following noun with no space — likely an NAV source-text transcription artifact. The particle must always be a separate word.",
-      "replacement": "يَا رَبُّ"
-    },
-    {
-      "pattern": "يَاسَيِّدُ",
-      "reason": "Vocative particle يا fused to the following noun with no space — likely an NAV source-text transcription artifact. The particle must always be a separate word.",
-      "replacement": "يَا سَيِّدُ"
-    },
-    {
-      "pattern": "يَاسِمْعَانُ",
-      "reason": "Vocative particle يا fused to the following noun with no space — likely an NAV source-text transcription artifact. The particle must always be a separate word.",
-      "replacement": "يَا سِمْعَانُ"
-    },
-    {
-      "pattern": "يَافِتْيَانُ",
-      "reason": "Vocative particle يا fused to the following noun with no space — likely an NAV source-text transcription artifact. The particle must always be a separate word.",
-      "replacement": "يَا فِتْيَانُ"
-    },
-    {
-      "pattern": "يَامُعَلِّمُ",
-      "reason": "Vocative particle يا fused to the following noun with no space — likely an NAV source-text transcription artifact. The particle must always be a separate word.",
-      "replacement": "يَا مُعَلِّمُ"
-    },
-    {
-      "pattern": "يَامَرْيَمُ",
-      "reason": "Vocative particle يا fused to the following noun with no space — likely an NAV source-text transcription artifact. The particle must always be a separate word.",
-      "replacement": "يَا مَرْيَمُ"
-    },
-    {
-      "pattern": "يَايَسُوعُ",
-      "reason": "Vocative particle يا fused to the following noun with no space — likely an NAV source-text transcription artifact. The particle must always be a separate word.",
-      "replacement": "يَا يَسُوعُ"
-    }
-  ],
+  "forbidden_patterns": [],
   "notes": [
-    "Greek/Hebrew transliteration is checked by shared_validation/text_checks.py::check_greek_hebrew_transliteration (already wired into validate_encounters.py / validate_discovery.py), not by this file.",
-    "The vocative particle يا must always be a separate word from the noun/name it introduces (يَا رَبُّ, not يَارَبُّ). Found fused across 8 pre-existing AR files (2026-07-26) and fixed; even inconsistent within single files before the fix. forbidden_patterns above catches the specific fused forms found so far — extend this list if a new fused يا+noun combination appears in future translations."
+    "Greek/Hebrew transliteration is checked by shared_validation/text_checks.py::check_greek_hebrew_transliteration (already wired into validate_encounters.py / validate_discovery.py), not by this file."
   ]
 }
