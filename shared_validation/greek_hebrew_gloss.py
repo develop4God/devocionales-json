@@ -248,41 +248,57 @@ def check_bare_transliteration_reuse(text: str, path: str, ctx: str, report: Rep
             break
 
 
-# RTL script (Arabic prose) that this corpus writes native-language prose
-# in. Arabic script glued directly (zero whitespace) onto a Greek/Hebrew
-# gloss word is a script-boundary bug: e.g. an Arabic prefix particle
-# written directly onto a following Greek gloss with no separating space
-# (بِـσῴζω instead of بِـ σῴζω). This is invisible in a monospace terminal
-# diff and easy to introduce with a mechanical find/replace that doesn't
-# account for RTL grammatical attachment.
-#
-# Deliberately narrow to Greek/Hebrew (the _GREEK_RE / _HEBREW_RE ranges
-# used for glosses elsewhere in this module), NOT general Latin — Arabic
-# prose legitimately sits with zero space against ASCII punctuation
-# (سؤال!, نعم.) and Latin loanwords are sometimes intentionally unspaced.
-# Flagging any Arabic-adjacent-to-Latin pair is far too broad and fires on
-# normal prose; the actual bug class is specifically Arabic glued to a
-# Greek/Hebrew gloss term.
-_RTL_SCRIPT_RE = re.compile(r'[؀-ۿݐ-ݿ]')  # Arabic block + Arabic Supplement
+# Languages in native_script_ranges.json whose own native script is
+# written right-to-left. Reuses that file's per-language Unicode block
+# data rather than hardcoding a second copy of the Arabic range here —
+# same source of truth _phonetic_respelling_re_for_lang draws from.
+# hi/ja/zh are also in that file but are LTR scripts, so gluing them to a
+# Greek/Hebrew gloss with no space doesn't produce the bidi/visual-order
+# bug this check exists for; only list a code here once its script is
+# confirmed RTL.
+_RTL_LANGUAGES = {"ar"}
 
 
-def check_script_boundary_spacing(text: str, path: str, ctx: str, report: ReportLike) -> None:
-    """HARD GATE: Arabic script must never sit directly adjacent to a
-    Greek/Hebrew gloss character with no whitespace between them. Catches
-    glued-prefix bugs like 'بِـσῴζω' (should be 'بِـ σῴζω') that format-only
-    checks on the gloss itself can't see, since the gloss span is
-    well-formed — the bug is in what touches it from the RTL side.
+def _rtl_script_re_for_lang(lang: str):
+    """Return the compiled character-class regex for `lang`'s own native
+    script, or None if `lang` isn't a known RTL language (see
+    _RTL_LANGUAGES above). Reuses native_script_ranges.json — same file
+    and loader _phonetic_respelling_re_for_lang uses."""
+    if lang not in _RTL_LANGUAGES:
+        return None
+    ranges = _load_native_script_ranges().get(lang)
+    if not ranges:
+        return None
+    return re.compile(f"[{''.join(ranges)}]")
+
+
+def check_script_boundary_spacing(text: str, path: str, lang: str, ctx: str, report: ReportLike) -> None:
+    """HARD GATE: an RTL language's own native script must never sit
+    directly adjacent to a Greek/Hebrew gloss character with no
+    whitespace between them. Catches glued-prefix bugs like 'بِـσῴζω'
+    (should be 'بِـ σῴζω') that format-only checks on the gloss itself
+    can't see, since the gloss span is well-formed — the bug is in what
+    touches it from the RTL side.
+
+    Deliberately narrow to Greek/Hebrew (the _GREEK_RE / _HEBREW_RE
+    ranges used for glosses elsewhere in this module), NOT general Latin
+    — RTL prose legitimately sits with zero space against ASCII
+    punctuation (سؤال!, نعم.) and Latin loanwords are sometimes
+    intentionally unspaced. Flagging any RTL-adjacent-to-Latin pair is
+    far too broad and fires on normal prose; the actual bug class is
+    specifically RTL script glued to a Greek/Hebrew gloss term.
     """
     key = path.rsplit('.', 1)[-1].split('[')[0]
     if key in _SKIP_KEYS:
         return
-    if not _RTL_SCRIPT_RE.search(text):
+    rtl_re = _rtl_script_re_for_lang(lang)
+    if rtl_re is None or not rtl_re.search(text):
         return
     foreign_re = re.compile(f'{_GREEK_RE.pattern}|{_HEBREW_RE.pattern}')
     for i in range(len(text) - 1):
         a, b = text[i], text[i + 1]
-        rtl_then_foreign = _RTL_SCRIPT_RE.match(a) and foreign_re.match(b)
-        foreign_then_rtl = foreign_re.match(a) and _RTL_SCRIPT_RE.match(b)
+        rtl_then_foreign = rtl_re.match(a) and foreign_re.match(b)
+        foreign_then_rtl = foreign_re.match(a) and rtl_re.match(b)
         if rtl_then_foreign or foreign_then_rtl:
             snippet = text[max(0, i - 10):i + 12]
-            report.E(f"{ctx}: Arabic script glued directly to a Greek/Hebrew gloss with no space — '{snippet}' (RTL/LTR script-boundary bug, insert a space)")
+            report.E(f"{ctx}: {lang} native script glued directly to a Greek/Hebrew gloss with no space — '{snippet}' (RTL/LTR script-boundary bug, insert a space)")
