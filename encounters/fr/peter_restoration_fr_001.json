@@ -14,7 +14,15 @@
     "mood_primary": "grace",
     "accent_color": "#3a2a1e",
     "emoji": "🔥",
-    "tags": ["restauration", "pardon", "vocation", "pierre", "jesus", "grâce", "mission"]
+    "tags": [
+      "restauration",
+      "pardon",
+      "vocation",
+      "pierre",
+      "jesus",
+      "grâce",
+      "mission"
+    ]
   },
   "key_verse": {
     "reference": "Jean 21:17",
@@ -47,7 +55,10 @@
       "reflection": "Un inconnu sur le rivage donne une instruction simple, difficile à croire pour des pêcheurs qui n'ont rien pris de toute la nuit : jeter le filet de l'autre côté de la même barque. Ils obéissent, sans savoir encore à qui ils obéissent, et c'est alors que le miracle se produit ; le filet se remplit tant qu'ils ne peuvent plus le hisser. C'est la même scène qui avait marqué l'appel de Pierre au tout début (Luc 5:4-7), et c'est le disciple bien-aimé qui, le premier, relie les deux moments : « C'est le Seigneur. »",
       "revelation_key": "Ils obéissent avant de savoir à qui ils obéissent.",
       "scripture_connections": [
-        { "reference": "Luc 5:4-7", "text": "Lorsqu'il eut cessé de parler, il dit à Simon: Avance en pleine eau, et jetez vos filets pour pêcher. Simon lui répondit: Maître, nous avons travaillé toute la nuit sans rien prendre; mais, sur ta parole, je jetterai le filet. L'ayant jeté, ils prirent une grande quantité de poissons, et leur filet se rompait. Ils firent signe à leurs compagnons qui étaient dans l'autre barque de venir les aider. Ils vinrent et ils remplirent les deux barques, au point qu'elles enfonçaient." }
+        {
+          "reference": "Luc 5:4-7",
+          "text": "Lorsqu'il eut cessé de parler, il dit à Simon: Avance en pleine eau, et jetez vos filets pour pêcher. Simon lui répondit: Maître, nous avons travaillé toute la nuit sans rien prendre; mais, sur ta parole, je jetterai le filet. L'ayant jeté, ils prirent une grande quantité de poissons, et leur filet se rompait. Ils firent signe à leurs compagnons qui étaient dans l'autre barque de venir les aider. Ils vinrent et ils remplirent les deux barques, au point qu'elles enfonçaient."
+        }
       ]
     },
     {
@@ -60,7 +71,10 @@
       "content": "Pierre remet son vêtement et se jette à la mer avant même que la barque n'atteigne la terre. Il travaille par habitude presque dévêtu, mais il se couvre avant d'approcher Jésus, un geste de respect au cœur même de l'urgence. C'est la deuxième fois que cet homme entre dans l'eau pour rejoindre Jésus plus vite. La première fois, il avait marché sur elle, les yeux fixés sur lui, jusqu'à ce que le vent le distraie et qu'il commence à s'enfoncer (Matthieu 14:29-30). Cette fois, il nage de toutes ses forces, poussé par l'urgence d'arriver avant les autres.",
       "revelation_key": "Jean reconnaît Jésus le premier ; Pierre agit aussitôt.",
       "scripture_connections": [
-        { "reference": "Matthieu 14:29-30", "text": "Et il dit: Viens! Pierre sortit de la barque, et marcha sur les eaux, pour aller vers Jésus. Mais, voyant que le vent était fort, il eut peur; et, comme il commençait à enfoncer, il s'écria: Seigneur, sauve-moi!" }
+        {
+          "reference": "Matthieu 14:29-30",
+          "text": "Et il dit: Viens! Pierre sortit de la barque, et marcha sur les eaux, pour aller vers Jésus. Mais, voyant que le vent était fort, il eut peur; et, comme il commençait à enfoncer, il s'écria: Seigneur, sauve-moi!"
+        }
       ],
       "verse_overlay": {
         "reference": "Jean 21:7",
@@ -73,7 +87,7 @@
       "mood": "mysterious",
       "image_url": "peter_restoration_charcoal_fire.png",
       "title": "Déjà préparé",
-      "narrative": "Sur le rivage brûle un feu de braises. Dessus, du poisson et du pain, déjà prêts quand ils touchent terre. Dans le texte grec original, le mot employé est κειμένην (keiménēn), qui signifie « déjà posé, disposé à l'avance ». Jésus a déjà préparé le repas, et pourtant il leur demande d'apporter aussi des poissons qu'ils viennent de pêcher.",
+      "narrative": "Sur le rivage brûle un feu de braises. Dessus, du poisson et du pain, déjà prêts quand ils touchent terre. Dans le texte grec original, le mot employé est κειμένην, (keiménēn), qui signifie « déjà posé, disposé à l'avance ». Jésus a déjà préparé le repas, et pourtant il leur demande d'apporter aussi des poissons qu'ils viennent de pêcher.",
       "verse_overlay": {
         "reference": "Jean 21:9-10",
         "text": "Lorsqu'ils furent descendus à terre, ils virent là des charbons allumés, du poisson dessus, et du pain. Jésus leur dit: Apportez des poissons que vous venez de prendre."
@@ -89,7 +103,7 @@
       "image_url": "peter_restoration_anthrakia.png",
       "title": "La braise qui se souvient",
       "subtitle": "Un mot qui n'apparaît que deux fois",
-      "content": "Le mot grec pour « feu de braises », ἀνθρακιά (anthrakia), n'apparaît dans tout le Nouveau Testament que deux fois — et les deux fois se trouvent dans l'évangile de Jean. La première est Jean 18:18, la cour où Pierre a renié Jésus en se chauffant près des braises. La seconde est Jean 21:9, ce rivage. Il est raisonnable de penser que cette même scène ramène à Pierre le souvenir de la nuit où il a renié Jésus.",
+      "content": "Le mot grec pour « feu de braises », ἀνθρακιά, (anthrakia), n'apparaît dans tout le Nouveau Testament que deux fois — et les deux fois se trouvent dans l'évangile de Jean. La première est Jean 18:18, la cour où Pierre a renié Jésus en se chauffant près des braises. La seconde est Jean 21:9, ce rivage. Il est raisonnable de penser que cette même scène ramène à Pierre le souvenir de la nuit où il a renié Jésus.",
       "revelation_key": "Le même feu qui a été témoin de la chute de Pierre est maintenant témoin de son retour sur ce rivage.",
       "verse_overlay": {
         "reference": "Jean 21:9",
@@ -108,7 +122,7 @@
       "mood": "tense",
       "image_url": "peter_restoration_breakfast.png",
       "title": "Aucun n'osait",
-      "narrative": "Ils mangent en silence. Jésus partage le pain et le poisson de ses propres mains — le même verbe grec, λαμβάνω (lambano), qu'il avait employé pour prendre les pains avant de les distribuer à la foule près de ce même lac (Jean 6:11). Il y a une révérence nouvelle, différente de la familiarité d'autrefois. Pierre mange aussi, mais quelque chose en lui reste en tension : la dernière fois qu'il s'était trouvé près de Jésus après l'avoir trahi, il n'avait pas pu soutenir son regard (Luc 22:61-62). Maintenant il partage son pain.",
+      "narrative": "Ils mangent en silence. Jésus partage le pain et le poisson de ses propres mains — le même verbe grec, λαμβάνω, (lambano), qu'il avait employé pour prendre les pains avant de les distribuer à la foule près de ce même lac (Jean 6:11). Il y a une révérence nouvelle, différente de la familiarité d'autrefois. Pierre mange aussi, mais quelque chose en lui reste en tension : la dernière fois qu'il s'était trouvé près de Jésus après l'avoir trahi, il n'avait pas pu soutenir son regard (Luc 22:61-62). Maintenant il partage son pain.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
@@ -155,14 +169,17 @@
       "image_url": "peter_restoration_agape_phileo.png",
       "title": "Deux mots pour aimer",
       "subtitle": "L'amour promis et l'amour réel",
-      "content": "En grec, plusieurs mots existent pour « aimer ». Quand Jésus demande deux fois à Simon s'il l'aime, il emploie le mot ἀγαπᾷς (agapas) : l'amour absolu, sacrificiel, celui-là même que Pierre avait promis cette même nuit. Pierre répond les trois fois : « Oui, Seigneur, tu sais que je t'aime », mais avec φιλῶ (philō), l'amour d'amitié et de loyauté — un amour réel, bien que différent de celui que Jésus demandait.\n\nÀ la troisième fois, Jésus change sa propre question et emploie φιλεῖς (phileis), le mot même que Pierre a utilisé depuis le début : il lui demande exactement l'amour que Pierre possède vraiment, acceptant ainsi Pierre tel qu'il est.",
+      "content": "En grec, plusieurs mots existent pour « aimer ». Quand Jésus demande deux fois à Simon s'il l'aime, il emploie le mot ἀγαπᾷς, (agapas) : l'amour absolu, sacrificiel, celui-là même que Pierre avait promis cette même nuit. Pierre répond les trois fois : « Oui, Seigneur, tu sais que je t'aime », mais avec φιλῶ, (philō), l'amour d'amitié et de loyauté — un amour réel, bien que différent de celui que Jésus demandait.\n\nÀ la troisième fois, Jésus change sa propre question et emploie φιλεῖς, (phileis), le mot même que Pierre a utilisé depuis le début : il lui demande exactement l'amour que Pierre possède vraiment, acceptant ainsi Pierre tel qu'il est.",
       "revelation_key": "La restauration n'attend pas que l'amour de Pierre atteigne l'idéal promis : elle agit avec l'amour réel qu'il possède déjà.",
       "verse_overlay": {
         "reference": "Jean 21:17",
         "text": "Il lui dit pour la troisième fois: Simon, fils de Jonas, m'aimes-tu? Pierre fut attristé de ce qu'il lui avait dit pour la troisième fois: M'aimes-tu? Et il lui répondit: Seigneur, tu sais toutes choses, tu sais que je t'aime. Jésus lui dit: Pais mes brebis."
       },
       "scripture_connections": [
-        { "reference": "Marc 14:29", "text": "Pierre lui dit: Quand tous seraient scandalisés, je ne serai pas scandalisé." }
+        {
+          "reference": "Marc 14:29",
+          "text": "Pierre lui dit: Quand tous seraient scandalisés, je ne serai pas scandalisé."
+        }
       ]
     },
     {
@@ -172,14 +189,17 @@
       "image_url": "peter_restoration_feed_sheep.png",
       "title": "Prendre soin de ce que Jésus aime",
       "subtitle": "Le pardon qui vient avec une tâche",
-      "content": "Dans le texte grec original, les trois tâches confiées par Jésus à Pierre ne répètent pas le même mot. La première et la dernière emploient βόσκω (bosko) : nourrir, donner à manger au troupeau. Celle du milieu emploie un verbe différent, ποιμαίνω (poimaino) : faire paître pleinement — guider, protéger et gouverner le troupeau, pas seulement le nourrir. Jésus, qui vient de leur donner à manger de ses propres mains près du feu (Jean 21:12-13), confie maintenant à Pierre la charge de nourrir et gouverner son propre troupeau. L'homme qui a nié le connaître reçoit la tâche de soutenir ceux que Jésus aime.",
+      "content": "Dans le texte grec original, les trois tâches confiées par Jésus à Pierre ne répètent pas le même mot. La première et la dernière emploient βόσκω, (bosko) : nourrir, donner à manger au troupeau. Celle du milieu emploie un verbe différent, ποιμαίνω, (poimaino) : faire paître pleinement — guider, protéger et gouverner le troupeau, pas seulement le nourrir. Jésus, qui vient de leur donner à manger de ses propres mains près du feu (Jean 21:12-13), confie maintenant à Pierre la charge de nourrir et gouverner son propre troupeau. L'homme qui a nié le connaître reçoit la tâche de soutenir ceux que Jésus aime.",
       "revelation_key": "Le pardon de Pierre ne s'arrête pas à se sentir absous : il vient avec une tâche réelle à accomplir.",
       "verse_overlay": {
         "reference": "Jean 21:16",
         "text": "Il lui dit une seconde fois: Simon, fils de Jonas, m'aimes-tu? Pierre lui répondit: Oui, Seigneur, tu sais que je t'aime. Jésus lui dit: Pais mes brebis."
       },
       "scripture_connections": [
-        { "reference": "1 Pierre 5:2-3", "text": "Paissez le troupeau de Dieu qui est sous votre garde, non par contrainte, mais volontairement, selon Dieu; non pour un gain sordide, mais avec dévouement; non comme dominant sur ceux qui vous sont échus en partage, mais en étant les modèles du troupeau." }
+        {
+          "reference": "1 Pierre 5:2-3",
+          "text": "Paissez le troupeau de Dieu qui est sous votre garde, non par contrainte, mais volontairement, selon Dieu; non pour un gain sordide, mais avec dévouement; non comme dominant sur ceux qui vous sont échus en partage, mais en étant les modèles du troupeau."
+        }
       ]
     },
     {
@@ -207,7 +227,10 @@
       "reflection": "Le même ordre par lequel tout avait commencé près de ce lac (Matthieu 4:19) referme maintenant le cercle. Pierre sait désormais ce qu'il en coûte de promettre puis de faillir, et ce que peut lui coûter de vraiment le suivre. Jésus ne lui demande pas une nouvelle promesse plus grande ; il lui demande la même chose que toujours : suis-moi. Cette fois, Pierre le suit en connaissant le prix.",
       "revelation_key": "Le même appel du commencement revient à la fin, cette fois avec le prix déjà connu et accepté.",
       "scripture_connections": [
-        { "reference": "Matthieu 4:19", "text": "Il leur dit: Suivez-moi, et je vous ferai pêcheurs d'hommes." }
+        {
+          "reference": "Matthieu 4:19",
+          "text": "Il leur dit: Suivez-moi, et je vous ferai pêcheurs d'hommes."
+        }
       ]
     },
     {
@@ -217,9 +240,18 @@
       "title": "Ta Rencontre",
       "subtitle": "Jésus ne se contente pas de pardonner ce que tu as raté ; il te confie à nouveau quelque chose.",
       "discovery_questions": [
-        { "category": "Honnêteté", "question": "Tout comme Pierre n'a pas pu tenir ses paroles envers Jésus et lui a fait défaut, sens-tu que tu as échoué ou que tu es tombé ? Souviens-toi que, même si les braises te rappellent cette chute, Jésus est là pour te restaurer avec un dessein." },
-        { "category": "Amour en action", "question": "Jésus attendait de Pierre, comme il l'attend de toi, un amour ἀγαπᾷς (agapas) : sacrificiel, d'un don total. Pierre a été honnête dans sa réponse, mais dans ses actes, il s'est livré tout entier à Jésus jusqu'à la mort. Toi, quel amour portes-tu à Jésus-Christ : davantage dans tes actes que dans tes paroles ?" },
-        { "category": "Ta tâche", "question": "Tout comme l'homme qui avait nié connaître Jésus fut rétabli et reçut la charge de prendre soin de ceux que Jésus aime, quelle tâche sens-tu que tu ne mérites plus à cause de ce que tu as raté, et que Dieu veut malgré tout te confier ? Souviens-toi que Jésus est là pour te rétablir toi aussi, et pour que tu serves avec amour." }
+        {
+          "category": "Honnêteté",
+          "question": "Tout comme Pierre n'a pas pu tenir ses paroles envers Jésus et lui a fait défaut, sens-tu que tu as échoué ou que tu es tombé ? Souviens-toi que, même si les braises te rappellent cette chute, Jésus est là pour te restaurer avec un dessein."
+        },
+        {
+          "category": "Amour en action",
+          "question": "Jésus attendait de Pierre, comme il l'attend de toi, un amour ἀγαπᾷς, (agapas) : sacrificiel, d'un don total. Pierre a été honnête dans sa réponse, mais dans ses actes, il s'est livré tout entier à Jésus jusqu'à la mort. Toi, quel amour portes-tu à Jésus-Christ : davantage dans tes actes que dans tes paroles ?"
+        },
+        {
+          "category": "Ta tâche",
+          "question": "Tout comme l'homme qui avait nié connaître Jésus fut rétabli et reçut la charge de prendre soin de ceux que Jésus aime, quelle tâche sens-tu que tu ne mérites plus à cause de ce que tu as raté, et que Dieu veut malgré tout te confier ? Souviens-toi que Jésus est là pour te rétablir toi aussi, et pour que tu serves avec amour."
+        }
       ],
       "prayer": {
         "title": "Près du feu",

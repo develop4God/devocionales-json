@@ -14,7 +14,13 @@
     "mood_primary": "grief",
     "accent_color": "#4a3728",
     "emoji": "🕊️",
-    "tags": ["compassion", "grief", "resurrection", "widowhood", "unasked mercy"]
+    "tags": [
+      "compassion",
+      "grief",
+      "resurrection",
+      "widowhood",
+      "unasked mercy"
+    ]
   },
   "key_verse": {
     "reference": "Luke 7:13",
@@ -56,7 +62,7 @@
       "image_url": "widow_nain_portrait_grief.png",
       "title": "A mother loses her voice in the village",
       "subtitle": "What a son meant in Nain",
-      "content": "We know her only by what she has lost. Her son was already a grown man, not a boy — Jesus will later call him νεανίσκος (neaniskos), a young man. In Nain, as in any village of that time, the city gate was where the elders settled inheritances, contracts, disputes over property. A son like this was, among many things, his mother's legal voice in that place.\n\nWith her son on that bier, the widow loses that voice too. The crowd walking with her can weep with her, but only he could give her that legal voice.",
+      "content": "We know her only by what she has lost. Her son was already a grown man, not a boy — Jesus will later call him νεανίσκος, (neaniskos), a young man. In Nain, as in any village of that time, the city gate was where the elders settled inheritances, contracts, disputes over property. A son like this was, among many things, his mother's legal voice in that place.\n\nWith her son on that bier, the widow loses that voice too. The crowd walking with her can weep with her, but only he could give her that legal voice.",
       "revelation_key": "This woman doesn't just lose her son — she loses her legal and economic standing in Nain.",
       "verse_overlay": {
         "reference": "Luke 7:12",
@@ -85,7 +91,7 @@
       "image_url": "widow_nain_jesus_sees_her.png",
       "verse_reference": "Luke 7:13",
       "verse_text": "And when the Lord saw her, he had compassion on her, and said unto her, Weep not.",
-      "reflection": "Jesus sees her and is moved with compassion. Luke uses the Greek verb σπλαγχνίζομαι (splanchnizomai) — literally, to feel something in the gut. Jesus feels this grief in his body, not only in his mind.\n\nIt's worth noticing where that compassion turns first: not to the bier, but to the mother walking behind it. He sees, first, the one who is still breathing.",
+      "reflection": "Jesus sees her and is moved with compassion. Luke uses the Greek verb σπλαγχνίζομαι, (splanchnizomai) — literally, to feel something in the gut. Jesus feels this grief in his body, not only in his mind.\n\nIt's worth noticing where that compassion turns first: not to the bier, but to the mother walking behind it. He sees, first, the one who is still breathing.",
       "revelation_key": "Jesus's compassion moves toward what he sees, not what he's asked for — no one in that crowd has begged him for anything.",
       "scripture_connections": []
     },
@@ -111,11 +117,17 @@
       "image_url": "widow_nain_only_son.png",
       "title": "An only son, like Him",
       "subtitle": "monogenēs — the same word",
-      "content": "Luke describes the son with the Greek word μονογενής (monogenēs): only, without equal. It's the same word John will use to describe Jesus as the only begotten Son of the Father (John 1:18; 3:16).\n\nWhen Jesus speaks to him, he calls him νεανίσκος (neaniskos) — young man, already grown, not a boy. He was the only voice of that household, and that voice had just gone silent for good.\n\nIt's no small coincidence: the Father's only Son stops before the only son of a widow.",
+      "content": "Luke describes the son with the Greek word μονογενής, (monogenēs): only, without equal. It's the same word John will use to describe Jesus as the only begotten Son of the Father (John 1:18; 3:16).\n\nWhen Jesus speaks to him, he calls him νεανίσκος, (neaniskos) — young man, already grown, not a boy. He was the only voice of that household, and that voice had just gone silent for good.\n\nIt's no small coincidence: the Father's only Son stops before the only son of a widow.",
       "revelation_key": "The same term that describes the Father's only Son also describes the son Jesus is about to give back to this woman.",
       "scripture_connections": [
-        { "reference": "John 1:18", "text": "No man has seen God at any time; the only begotten Son, who is in the bosom of the Father, he has declared him." },
-        { "reference": "John 3:16", "text": "For God so loved the world, that he gave his only begotten Son, that whosoever believes in him should not perish, but have everlasting life." }
+        {
+          "reference": "John 1:18",
+          "text": "No man has seen God at any time; the only begotten Son, who is in the bosom of the Father, he has declared him."
+        },
+        {
+          "reference": "John 3:16",
+          "text": "For God so loved the world, that he gave his only begotten Son, that whosoever believes in him should not perish, but have everlasting life."
+        }
       ]
     },
     {
@@ -147,7 +159,10 @@
         "text": "And he delivered him to his mother."
       },
       "scripture_connections": [
-        { "reference": "1 Kings 17:23", "text": "And Elijah took the child, and brought him down out of the chamber into the house, and delivered him unto his mother: and Elijah said, See, your son lives." }
+        {
+          "reference": "1 Kings 17:23",
+          "text": "And Elijah took the child, and brought him down out of the chamber into the house, and delivered him unto his mother: and Elijah said, See, your son lives."
+        }
       ]
     },
     {
@@ -161,8 +176,14 @@
       "revelation_key": "Elijah and Elisha acted out of gratitude toward women who had welcomed them; Jesus's compassion is born only of what he sees.",
       "verse_overlay": null,
       "scripture_connections": [
-        { "reference": "1 Kings 17:9", "text": "Arise, get you to Zarephath, which belongs to Sidon, and dwell there: behold, I have commanded a widow woman there to sustain you." },
-        { "reference": "2 Kings 4:8", "text": "And it fell on a day, that Elisha passed to Shunem, where there was a wealthy woman; and she urged him to eat some food. And so it was, that as often as he passed by, he turned in there to eat some food." }
+        {
+          "reference": "1 Kings 17:9",
+          "text": "Arise, get you to Zarephath, which belongs to Sidon, and dwell there: behold, I have commanded a widow woman there to sustain you."
+        },
+        {
+          "reference": "2 Kings 4:8",
+          "text": "And it fell on a day, that Elisha passed to Shunem, where there was a wealthy woman; and she urged him to eat some food. And so it was, that as often as he passed by, he turned in there to eat some food."
+        }
       ]
     },
     {
@@ -197,9 +218,18 @@
       "title": "Your Encounter",
       "subtitle": "God's compassion doesn't wait to be asked.",
       "discovery_questions": [
-        { "category": "Honesty", "question": "Like the widow of Nain, there are moments when grief and loss overwhelm us. But Jesus can do that miracle without us asking. What would change in you if you believed Jesus is already at work, even though you haven't asked him to be?" },
-        { "category": "Faith", "question": "To the widow of Nain, Jesus gave back exactly what she had already given up for lost. Is there something in your life you've already given up for lost, that Jesus can give back to you today?" },
-        { "category": "Purpose", "question": "The widow of Nain received without earning it, and without seeking it, became the reason many came to know Jesus. What story of grace received in your life could become, today, the reason someone else comes to know Jesus?" }
+        {
+          "category": "Honesty",
+          "question": "Like the widow of Nain, there are moments when grief and loss overwhelm us. But Jesus can do that miracle without us asking. What would change in you if you believed Jesus is already at work, even though you haven't asked him to be?"
+        },
+        {
+          "category": "Faith",
+          "question": "To the widow of Nain, Jesus gave back exactly what she had already given up for lost. Is there something in your life you've already given up for lost, that Jesus can give back to you today?"
+        },
+        {
+          "category": "Purpose",
+          "question": "The widow of Nain received without earning it, and without seeking it, became the reason many came to know Jesus. What story of grace received in your life could become, today, the reason someone else comes to know Jesus?"
+        }
       ],
       "prayer": {
         "title": "Prayer of undeserved mercy",

@@ -14,7 +14,13 @@
     "mood_primary": "grief",
     "accent_color": "#4a3728",
     "emoji": "🕊️",
-    "tags": ["mitgefühl", "trauer", "auferstehung", "witwenschaft", "unverdiente gnade"]
+    "tags": [
+      "mitgefühl",
+      "trauer",
+      "auferstehung",
+      "witwenschaft",
+      "unverdiente gnade"
+    ]
   },
   "key_verse": {
     "reference": "Lukas 7:13",
@@ -56,7 +62,7 @@
       "image_url": "widow_nain_portrait_grief.png",
       "title": "Eine Mutter verstummt im Dorf",
       "subtitle": "Was ein Sohn in Nain bedeutete",
-      "content": "Wir kennen sie nur durch das, was sie verloren hat. Ihr Sohn war bereits ein erwachsener Mann, kein Junge mehr — Jesus wird ihn später νεανίσκος (neaniskos) nennen, einen jungen Mann. In Nain, wie in jedem Dorf jener Zeit, war das Stadttor der Ort, an dem die Ältesten Erbschaften, Verträge und Besitzstreitigkeiten regelten. Ein Sohn wie dieser war unter anderem die rechtliche Stimme seiner Mutter an diesem Ort.\n\nMit ihrem Sohn auf jener Bahre verliert die Witwe auch diese Stimme. Die Menge, die mit ihr geht, kann mit ihr weinen, aber nur er konnte ihr diese rechtliche Stimme geben.",
+      "content": "Wir kennen sie nur durch das, was sie verloren hat. Ihr Sohn war bereits ein erwachsener Mann, kein Junge mehr — Jesus wird ihn später νεανίσκος, (neaniskos) nennen, einen jungen Mann. In Nain, wie in jedem Dorf jener Zeit, war das Stadttor der Ort, an dem die Ältesten Erbschaften, Verträge und Besitzstreitigkeiten regelten. Ein Sohn wie dieser war unter anderem die rechtliche Stimme seiner Mutter an diesem Ort.\n\nMit ihrem Sohn auf jener Bahre verliert die Witwe auch diese Stimme. Die Menge, die mit ihr geht, kann mit ihr weinen, aber nur er konnte ihr diese rechtliche Stimme geben.",
       "revelation_key": "Diese Frau verliert nicht nur ihren Sohn — sie verliert ihre rechtliche und wirtschaftliche Stellung in Nain.",
       "verse_overlay": {
         "reference": "Lukas 7:12",
@@ -85,7 +91,7 @@
       "image_url": "widow_nain_jesus_sees_her.png",
       "verse_reference": "Lukas 7:13",
       "verse_text": "Und da sie der Herr sah, jammerte sie ihn, und er sprach zu ihr: Weine nicht!",
-      "reflection": "Jesus sieht sie, und es ergreift ihn Mitgefühl. Lukas verwendet das griechische Verb σπλαγχνίζομαι (splanchnizomai) — wörtlich: etwas im Innersten fühlen. Jesus empfindet diesen Schmerz nicht nur im Geist, sondern im Leib.\n\nEs lohnt sich, genau hinzusehen, wohin sich dieses Mitgefühl zuerst wendet: nicht zur Bahre, sondern zur Mutter, die dahinter geht. Er sieht zuerst die, die noch atmet.",
+      "reflection": "Jesus sieht sie, und es ergreift ihn Mitgefühl. Lukas verwendet das griechische Verb σπλαγχνίζομαι, (splanchnizomai) — wörtlich: etwas im Innersten fühlen. Jesus empfindet diesen Schmerz nicht nur im Geist, sondern im Leib.\n\nEs lohnt sich, genau hinzusehen, wohin sich dieses Mitgefühl zuerst wendet: nicht zur Bahre, sondern zur Mutter, die dahinter geht. Er sieht zuerst die, die noch atmet.",
       "revelation_key": "Jesu Mitgefühl richtet sich auf das, was er sieht, nicht auf das, worum er gebeten wurde — niemand in jener Menge hat ihn um irgendetwas angefleht.",
       "scripture_connections": []
     },
@@ -111,11 +117,17 @@
       "image_url": "widow_nain_only_son.png",
       "title": "Ein einziger Sohn, wie Er",
       "subtitle": "monogenēs — dasselbe Wort",
-      "content": "Lukas beschreibt den Sohn mit dem griechischen Wort μονογενής (monogenēs): einzig, ohnegleichen. Es ist dasselbe Wort, das Johannes verwenden wird, um Jesus als den eingeborenen Sohn des Vaters zu beschreiben (Johannes 1,18; 3,16).\n\nAls Jesus zu ihm spricht, nennt er ihn νεανίσκος (neaniskos) — junger Mann, bereits erwachsen, kein Kind mehr. Er war die einzige Stimme jenes Hauses gewesen, und diese Stimme war eben für immer verstummt.\n\nEs ist kein Zufall: Der einzige Sohn des Vaters bleibt vor dem einzigen Sohn einer Witwe stehen.",
+      "content": "Lukas beschreibt den Sohn mit dem griechischen Wort μονογενής, (monogenēs): einzig, ohnegleichen. Es ist dasselbe Wort, das Johannes verwenden wird, um Jesus als den eingeborenen Sohn des Vaters zu beschreiben (Johannes 1,18; 3,16).\n\nAls Jesus zu ihm spricht, nennt er ihn νεανίσκος, (neaniskos) — junger Mann, bereits erwachsen, kein Kind mehr. Er war die einzige Stimme jenes Hauses gewesen, und diese Stimme war eben für immer verstummt.\n\nEs ist kein Zufall: Der einzige Sohn des Vaters bleibt vor dem einzigen Sohn einer Witwe stehen.",
       "revelation_key": "Derselbe Begriff, der den einzigen Sohn des Vaters beschreibt, beschreibt auch den Sohn, den Jesus dieser Frau gleich zurückgeben wird.",
       "scripture_connections": [
-        { "reference": "Johannes 1:18", "text": "Niemand hat Gott je gesehen; der Eingeborene, der Gott ist und in des Vaters Schoß ist, der hat es verkündigt." },
-        { "reference": "Johannes 3:16", "text": "Denn also hat Gott die Welt geliebt, dass er seinen eingeborenen Sohn gab, auf dass alle, die an ihn glauben, nicht verloren werden, sondern das ewige Leben haben." }
+        {
+          "reference": "Johannes 1:18",
+          "text": "Niemand hat Gott je gesehen; der Eingeborene, der Gott ist und in des Vaters Schoß ist, der hat es verkündigt."
+        },
+        {
+          "reference": "Johannes 3:16",
+          "text": "Denn also hat Gott die Welt geliebt, dass er seinen eingeborenen Sohn gab, auf dass alle, die an ihn glauben, nicht verloren werden, sondern das ewige Leben haben."
+        }
       ]
     },
     {
@@ -147,7 +159,10 @@
         "text": "Und der Tote richtete sich auf und fing an zu reden, und Jesus gab ihn seiner Mutter."
       },
       "scripture_connections": [
-        { "reference": "1. Könige 17:23", "text": "Und Elia nahm das Kind und brachte es hinab vom Obergemach ins Haus und gab es seiner Mutter und sprach: Siehe, dein Sohn lebt!" }
+        {
+          "reference": "1. Könige 17:23",
+          "text": "Und Elia nahm das Kind und brachte es hinab vom Obergemach ins Haus und gab es seiner Mutter und sprach: Siehe, dein Sohn lebt!"
+        }
       ]
     },
     {
@@ -161,8 +176,14 @@
       "revelation_key": "Elia und Elisa handelten aus Dankbarkeit gegenüber Frauen, die sie aufgenommen hatten; Jesu Mitgefühl entsteht allein aus dem, was er sieht.",
       "verse_overlay": null,
       "scripture_connections": [
-        { "reference": "1. Könige 17:9", "text": "Mach dich auf und geh nach Sarepta, das zu Sidon gehört, und bleibe dort; denn ich habe dort einer Witwe geboten, dass sie dich versorge." },
-        { "reference": "2. Könige 4:8", "text": "Und es begab sich eines Tages, dass Elisa nach Schunem ging. Dort war eine reiche Frau; die nötigte ihn, dass er bei ihr aß. Und sooft er dort durchkam, kehrte er bei ihr ein und aß bei ihr." }
+        {
+          "reference": "1. Könige 17:9",
+          "text": "Mach dich auf und geh nach Sarepta, das zu Sidon gehört, und bleibe dort; denn ich habe dort einer Witwe geboten, dass sie dich versorge."
+        },
+        {
+          "reference": "2. Könige 4:8",
+          "text": "Und es begab sich eines Tages, dass Elisa nach Schunem ging. Dort war eine reiche Frau; die nötigte ihn, dass er bei ihr aß. Und sooft er dort durchkam, kehrte er bei ihr ein und aß bei ihr."
+        }
       ]
     },
     {
@@ -197,9 +218,18 @@
       "title": "Deine Begegnung",
       "subtitle": "Gottes Mitgefühl wartet nicht darauf, gebeten zu werden.",
       "discovery_questions": [
-        { "category": "Ehrlichkeit", "question": "Wie bei der Witwe von Nain gibt es Momente, in denen Trauer und Verlust uns überwältigen. Aber Jesus kann dieses Wunder tun, ohne dass wir ihn darum bitten. Was würde sich in dir verändern, wenn du glaubtest, dass Jesus bereits handelt, auch ohne dass du ihn darum gebeten hast?" },
-        { "category": "Glaube", "question": "Der Witwe von Nain gab Jesus genau das zurück, was sie bereits verloren geglaubt hatte. Gibt es etwas in deinem Leben, das du bereits verloren geglaubt hast und das Jesus dir heute zurückgeben kann?" },
-        { "category": "Bestimmung", "question": "Die Witwe von Nain empfing, ohne es verdient und ohne es gesucht zu haben, und wurde so zum Grund, warum viele Jesus kennenlernten. Welche Geschichte empfangener Gnade aus deinem Leben könnte heute der Grund werden, warum jemand anderes Jesus kennenlernt?" }
+        {
+          "category": "Ehrlichkeit",
+          "question": "Wie bei der Witwe von Nain gibt es Momente, in denen Trauer und Verlust uns überwältigen. Aber Jesus kann dieses Wunder tun, ohne dass wir ihn darum bitten. Was würde sich in dir verändern, wenn du glaubtest, dass Jesus bereits handelt, auch ohne dass du ihn darum gebeten hast?"
+        },
+        {
+          "category": "Glaube",
+          "question": "Der Witwe von Nain gab Jesus genau das zurück, was sie bereits verloren geglaubt hatte. Gibt es etwas in deinem Leben, das du bereits verloren geglaubt hast und das Jesus dir heute zurückgeben kann?"
+        },
+        {
+          "category": "Bestimmung",
+          "question": "Die Witwe von Nain empfing, ohne es verdient und ohne es gesucht zu haben, und wurde so zum Grund, warum viele Jesus kennenlernten. Welche Geschichte empfangener Gnade aus deinem Leben könnte heute der Grund werden, warum jemand anderes Jesus kennenlernt?"
+        }
       ],
       "prayer": {
         "title": "Gebet der unverdienten Gnade",
