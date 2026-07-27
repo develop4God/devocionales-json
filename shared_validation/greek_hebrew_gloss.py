@@ -64,7 +64,9 @@ _STRICT_GLOSS_TAIL_RE = re.compile(r', \(([^()]*)\)')
 # no range at all and skip this check entirely — the bug can't occur when
 # the target language's own script already IS Latin.
 _NATIVE_SCRIPT_RANGES_PATH = Path(__file__).parent / "native_script_ranges.json"
+_GLOSS_FORMAT_PATH = Path(__file__).parent / "gloss_format.json"
 _native_script_ranges_cache = None
+_gloss_format_cache = None
 _phonetic_respelling_re_cache: dict = {}
 
 
@@ -74,6 +76,14 @@ def _load_native_script_ranges() -> dict:
         with open(_NATIVE_SCRIPT_RANGES_PATH, encoding="utf-8") as f:
             _native_script_ranges_cache = json.load(f)["ranges"]
     return _native_script_ranges_cache
+
+
+def _load_gloss_format() -> dict:
+    global _gloss_format_cache
+    if _gloss_format_cache is None:
+        with open(_GLOSS_FORMAT_PATH, encoding="utf-8") as f:
+            _gloss_format_cache = json.load(f)
+    return _gloss_format_cache
 
 
 def _phonetic_respelling_re_for_lang(lang: str):
@@ -103,6 +113,31 @@ def _phonetic_respelling_re_for_lang(lang: str):
 # either way, worth flagging rather than silently accepting any Latin script.
 _LATIN_TRANSLIT_RE = re.compile(r"^[A-Za-zÁÉÍÓÚÝáéíóúýĀāĒēĪīŌōŪūḖḗṒṓ\s\-'’.:0-9]+$")
 _STRONG_PREFIX_RE = re.compile(r'^(Strong\s+)?[GH]?\d+\s*[:\-]?\s*', re.IGNORECASE)
+# How far to look around a Strong's-code citation for the word it's
+# citing — generous enough to span "(كلمة — G1234)" or "G1234: كلمة"
+# but not so wide it crosses into unrelated prose.
+_STRONG_CODE_WINDOW = 30
+_strong_code_re_cache = None
+
+
+def _strong_code_re():
+    """A citation-code as it appears inline in prose: "G4642", "H5782",
+    "Strong G40", "Strong H3419". Always cites a real Hebrew or Greek word
+    — used as the anchor for check_strong_code_native_script, since
+    find_greek_hebrew_glosses can't anchor on a language's own script
+    faking the word phonetically (see that function's docstring).
+
+    The shape (single uppercase letter + 2-5 digits, optional "Strong "
+    prefix) is read from gloss_format.json's "strong_code_prefixes" rather
+    than hardcoded here. Deliberately not restricted to a specific letter
+    set (e.g. just G/H) even though those are the only two seen in the
+    corpus today — see that spec entry for why a broad letter-agnostic
+    pattern is preferred over an enumerated list.
+    """
+    global _strong_code_re_cache
+    if _strong_code_re_cache is None:
+        _strong_code_re_cache = re.compile(r'(?:Strong\s+)?([A-Z])\d{2,5}')
+    return _strong_code_re_cache
 _SKIP_KEYS = {'word'}
 # How far past the end of a native word we look for a malformed gloss
 # attempt, so the error message can show what's actually there instead of
@@ -293,3 +328,59 @@ def check_script_boundary_spacing(text: str, path: str, lang: str, ctx: str, rep
         if rtl_then_foreign or foreign_then_rtl:
             snippet = text[max(0, i - 10):i + 12]
             report.E(f"{ctx}: {lang} native script glued directly to a Greek/Hebrew gloss with no space — '{snippet}' (RTL/LTR script-boundary bug, insert a space)")
+
+
+def _native_script_re_for_lang(lang: str):
+    """Return the compiled character-class regex for `lang`'s own native
+    script, or None if `lang` isn't in native_script_ranges.json (i.e. its
+    own script is already Latin — nothing to check). Unlike
+    _rtl_script_re_for_lang, this ignores `direction`: it's used to detect
+    the language's own script standing in for a missing gloss, which can
+    happen regardless of writing direction."""
+    entry = _load_native_script_ranges().get(lang)
+    if not entry:
+        return None
+    return re.compile(f"[{''.join(entry['blocks'])}]")
+
+
+def check_strong_code_native_script(text: str, path: str, lang: str, ctx: str, report: ReportLike) -> None:
+    """HARD GATE: a Strong's-code citation (G1234, H5678, "Strong G40", ...)
+    always cites a real Hebrew or Greek word. If the text around it contains
+    the file's own native script (Arabic, Devanagari, ...) but no genuine
+    Hebrew/Greek character, the citation is dangling — the actual word was
+    replaced by a phonetic respelling into the target script, or dropped
+    entirely, and the Strong code is the only surviving evidence a gloss
+    was ever meant to be here.
+
+    This closes a real gap in find_greek_hebrew_glosses: that function (and
+    everything built on it — check_greek_hebrew_transliteration's phonetic-
+    respelling detector, check_bare_transliteration_reuse) only fires once
+    it finds an actual Hebrew/Greek Unicode character to anchor on. A
+    string like Arabic 'سْكليروس (G4642)' has no such character anywhere —
+    سْكليروس is Arabic letters arranged to sound like Greek σκληρός, not
+    σκληρός itself — so the whole detection pipeline stays silent even
+    though this is the same "phonetic respelling instead of Latin
+    transliteration" bug gloss_format.json already documents for AR/HI/JA/ZH
+    (see its 'violations_not_accepted'). The Strong code is what makes this
+    case detectable at all: a citation with nothing genuine nearby is
+    itself the signal, independent of which script filled the gap.
+
+    Latin-script languages (de, en, es, fil, fr, pt, ...) have no entry in
+    native_script_ranges.json and skip this check entirely — a Strong code
+    embedded in Latin-script prose is unremarkable (the language's own
+    script can't be mistaken for the missing word).
+    """
+    key = path.rsplit('.', 1)[-1].split('[')[0]
+    if key in _SKIP_KEYS:
+        return
+    native_re = _native_script_re_for_lang(lang)
+    if native_re is None:
+        return
+    foreign_re = re.compile(f'{_GREEK_RE.pattern}|{_HEBREW_RE.pattern}')
+    for m in _strong_code_re().finditer(text):
+        start = max(0, m.start() - _STRONG_CODE_WINDOW)
+        end = min(len(text), m.end() + _STRONG_CODE_WINDOW)
+        window = text[start:end]
+        if native_re.search(window) and not foreign_re.search(window):
+            snippet = text[start:end].replace('\n', ' ')
+            report.E(f"{ctx}: Strong code '{m.group(0)}' has no real Hebrew/Greek word nearby — only {lang} native script, which is likely a phonetic respelling standing in for the missing gloss (found: '...{snippet}...', see gloss_format.json 'Phonetic respelling into the target script instead of Latin')")

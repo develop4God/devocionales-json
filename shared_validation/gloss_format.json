@@ -24,5 +24,9 @@
     "ascii": "A-Za-z (plain Latin letters, digits 0-9, and punctuation: space hyphen apostrophe period colon)",
     "diacritics_in_use": ["ā", "ē", "ī", "ō", "ū", "á", "é", "í", "ó", "ú", "ý", "ḗ", "ṓ"],
     "not_yet_used_full_sbl_academic_marks": ["â", "î", "ô", "ă", "ĕ", "ŏ", "ḥ", "ṭ", "ṣ", "ś", "š", "ʾ", "ʿ"]
+  },
+  "strong_code_prefixes": {
+    "_comment": "Pattern for a citation-code prefix this corpus cites inline next to a Greek/Hebrew word (e.g. 'G4642', 'H5782', 'Strong G40'). Empirically only 'G' (Greek/NT) and 'H' (Hebrew/OT) appear in the corpus today (2026-07-27 scan, discovery+encounters), matching the Strong's Concordance standard — but the letter itself isn't hardcoded to G/H: any single uppercase Latin letter immediately followed by 2-5 digits is treated as a citation-code, so a not-yet-seen prefix (e.g. a different numbering system, or Strong's own less-common 'S' form used by some tools) is still caught by check_strong_code_native_script without a code or data change. This is deliberately broad rather than an enumerated letter list — the risk of a real citation-code being missed because its letter isn't in a hardcoded set is worse than the near-zero risk of a random capital+digits token appearing coincidentally next to native script in this corpus's prose style.",
+    "pattern": "single uppercase Latin letter (A-Z) followed by 2-5 digits, optionally preceded by the word 'Strong '"
   }
 }
