@@ -46,7 +46,7 @@ Generated biblical content consumed by the [devocional_nuevo](https://github.com
 <!-- /README-STATS:discovery -->
 
 <!-- README-STATS:encounters -->
-**Encounters** — 14 encounters × 10 languages (ar, de, en, es, fil, fr, hi, ja, pt, zh) — 140 files.
+**Encounters** — 15 encounters × 10 languages (ar, de, en, es, fil, fr, hi, ja, pt, zh) — 150 files.
 <!-- /README-STATS:encounters -->
 
 ### 🏗️ Directory structure

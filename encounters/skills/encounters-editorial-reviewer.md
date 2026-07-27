@@ -274,11 +274,27 @@ prayed version first, rather than producing a draft to be corrected afterward.
 ### 13. `discovery_questions` must ask the encounter's central "aha," not a generic theme
 Before writing or approving the three `discovery_questions`, identify what the reader
 should take away from the *entire* encounter — not a surface topic like "notice God's
-presence," but the sharpest, most specific insight the whole arc builds toward. Each
-question should (1) open with a concrete anchor from the story (an action, a verse, a
+presence," but the sharpest, most specific insight the whole arc builds toward.
+
+**Required first step — feeling-mapping pass:** walk every narrative/character/theological
+card and table `feeling felt at this beat → the exact line in that card that transmits it`
+(the feeling is emotional — shame, urgency, relief, fear, surprise — not a theological
+label; the line must already exist in the text, not be paraphrased into something new).
+Present the table before selecting or drafting anything, then pick ~3 feelings with an
+arc (entry wound → grace/turning point → forward-looking resolution). If a proposed
+question set didn't go through this pass, ask for it before reviewing the wording —
+wordsmithing a single question repeatedly does not fix a thin or wrong underlying
+selection.
+
+Each question should (1) open with a concrete anchor from the story (an action, a verse, a
 specific moment already established in the cards) and (2) turn that anchor toward the
 reader with a question that could only belong to *this* encounter, not a generic
-devotional prompt swappable across stories.
+devotional prompt swappable across stories. Prefer direct second-person confrontation
+("Así como [personaje], ¿tú...?") over hedged hypotheticals ("¿Qué cambiaría si...?");
+state grounded facts as confident narration rather than leaning on a quoted citation as a
+crutch. Category labels should name the encounter's own feeling/symbol ("Tu fuego",
+"Amor en acción") rather than a generic virtue word reused verbatim across encounters,
+when the story supports it.
 
 **Never frame God's absence as a live possibility to ask about**, even rhetorically
 inside a question that "resolves" it in the same sentence (e.g. "¿sientes que Dios te

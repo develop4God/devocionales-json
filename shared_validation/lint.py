@@ -51,9 +51,15 @@ def lint_json_files(directory: Path, report: ReportLike, exclude_dir_part: str,
     EXCLUDED_DIR_PARTS = {'.venv', '.claude', '.git', 'node_modules'}
 
     cache: dict = {}
+    # Exclusions must only match directories *within* the scanned tree, not
+    # ancestors of it — checking f.parts directly misfires when the repo
+    # checkout itself sits under a path containing one of these names (e.g.
+    # a worktree at .../.claude/worktrees/<branch>/), silently excluding
+    # every file in the corpus.
     json_files = sorted(f for f in directory.rglob('*.json')
-                         if f.is_file() and exclude_dir_part not in f.parts
-                         and EXCLUDED_DIR_PARTS.isdisjoint(f.parts))
+                         if f.is_file()
+                         and exclude_dir_part not in f.relative_to(directory).parts
+                         and EXCLUDED_DIR_PARTS.isdisjoint(f.relative_to(directory).parts))
     checked = 0
     for fpath in json_files:
         raw = fpath.read_text(encoding='utf-8')
