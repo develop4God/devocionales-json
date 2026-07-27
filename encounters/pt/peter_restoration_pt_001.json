@@ -1,0 +1,242 @@
+{
+  "id": "peter_restoration_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "pt",
+  "bible_version": "ARC",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 11,
+  "meta": {
+    "character": "Pedro",
+    "testament": "new",
+    "scripture_reference": "João 21:1-19",
+    "mood_primary": "grace",
+    "accent_color": "#3a2a1e",
+    "emoji": "🔥",
+    "tags": ["restauração", "perdão", "vocação", "pedro", "jesus", "graça", "missão"]
+  },
+  "key_verse": {
+    "reference": "João 21:17",
+    "text": "Disse-lhe terceira vez: Simão, filho de Jonas, amas-me? Simão entristeceu-se por lhe ter dito terceira vez: Amas-me? E disse-lhe: Senhor, tu sabes tudo; tu sabes que eu te amo. Jesus disse-lhe: Apascenta as minhas ovelhas.",
+    "bible_version": "ARC"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "peter_restoration_night_boat.png",
+      "title": "Uma noite sem nada",
+      "narrative": "O lago de Tiberíades está escuro e quieto — o mesmo lago onde, tempo atrás, Jesus alimentou uma multidão de cinco mil com cinco pães e dois peixes (João 6:1). Jesus ressuscitou e já se apresentou a eles duas vezes; disse-lhes que o veriam na Galileia, e aqui estão, mas ninguém sabe o que fazer enquanto isso. Pedro diz: vou pescar. Os outros o seguem. Com ele vão Tomé, Natanael, os filhos de Zebedeu e mais dois discípulos. A noite inteira lançam a rede, e a noite inteira a recolhem vazia. Nenhuma palavra sobre o que aconteceu em Jerusalém. Só a água quieta, o peso de uma rede que não traz nada, e as mãos de um pescador que uma vez andou sobre essa mesma água.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "João 21:3",
+        "text": "Disse-lhes Simão Pedro: Vou pescar. Disseram-lhe eles: Também nós vamos contigo. Foram, e subiram logo para o barco, e naquela noite nada apanharam."
+      },
+      "revelation_key": "Pedro volta ao que sabia fazer antes de conhecer Jesus, e naquela noite a rede sai vazia."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "peter_restoration_stranger_shore.png",
+      "verse_reference": "João 21:4-6",
+      "verse_text": "E, sendo já manhã, Jesus se apresentou na praia, mas os discípulos não conheceram que era Jesus. Disse-lhes, pois, Jesus: Filhos, tendes alguma coisa de comer? Responderam-lhe: Não. E ele lhes disse: Lançai a rede à direita do barco e achareis. Lançaram-na, pois, e já não a podiam tirar, pela multidão dos peixes.",
+      "reflection": "Um desconhecido na praia dá uma instrução simples, difícil de aceitar para pescadores que passaram a noite inteira sem nada: lançar a rede do outro lado do mesmo barco. Eles obedecem, ainda sem saber a quem estão obedecendo, e é ali que o milagre acontece; a rede enche tanto que não conseguem recolhê-la. É a mesma cena que marcou o chamado de Pedro no início (Lucas 5:4-7), e o discípulo amado é quem primeiro liga os dois momentos: 'É o Senhor.'",
+      "revelation_key": "Eles obedecem antes de saber a quem estão obedecendo.",
+      "scripture_connections": [
+        { "reference": "Lucas 5:4-7", "text": "E, como acabou de falar, disse a Simão: Faze-te ao largo, e lançai as vossas redes para pescar. E, respondendo Simão, disse-lhe: Mestre, havendo trabalhado toda a noite, nada apanhamos; mas, à tua palavra, lançarei a rede. E, fazendo assim, encerraram uma grande quantidade de peixes, e rompia-se-lhes a rede. E fizeram sinal aos companheiros que estavam no outro barco, para que os fossem ajudar; e foram, e encheram ambos os barcos, de maneira tal que quase iam a pique." }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "storm",
+      "image_url": "peter_restoration_jumps_water.png",
+      "title": "Lançou-se ao mar",
+      "subtitle": "Sem esperar pelo barco",
+      "content": "Pedro se cinge com a túnica e se lança ao mar antes de o barco chegar à terra. Trabalha por hábito com pouca roupa, mas se cobre antes de se aproximar de Jesus, um gesto de respeito em meio à pressa. É a segunda vez que esse homem entra na água para chegar mais rápido a Jesus. Da primeira vez, andou sobre ela com os olhos fixos nele, até que o vento o distraiu e começou a afundar (Mateus 14:29-30). Desta vez nada com todas as forças, movido pela urgência de chegar antes dos outros.",
+      "revelation_key": "João reconhece Jesus primeiro; Pedro age imediatamente.",
+      "scripture_connections": [
+        { "reference": "Mateus 14:29-30", "text": "E ele disse: Vem. E Pedro, descendo do barco, andou sobre as águas para ir ter com Jesus. Mas, sentindo o vento forte, teve medo; e, começando a ir para o fundo, clamou, dizendo: Senhor, salva-me." }
+      ],
+      "verse_overlay": {
+        "reference": "João 21:7",
+        "text": "Então, aquele discípulo a quem Jesus amava disse a Pedro: É o Senhor. E, quando Simão Pedro ouviu que era o Senhor, cingiu-se com a túnica (porque estava nu) e lançou-se ao mar."
+      }
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "mysterious",
+      "image_url": "peter_restoration_charcoal_fire.png",
+      "title": "Já preparado",
+      "narrative": "Na praia arde um fogo de brasas. Sobre ele, peixe e pão, já preparados quando eles chegam à terra. No texto grego original, a palavra usada é κειμένην (keiménēn), que significa 'já posto, disposto de antemão'. Jesus já tem a comida pronta, e ainda assim pede que tragam também dos peixes que acabaram de pescar.",
+      "verse_overlay": {
+        "reference": "João 21:9-10",
+        "text": "Logo que saltaram em terra, viram ali brasas, e um peixe posto em cima, e pão. Disse-lhes Jesus: Trazei dos peixes que agora apanhastes."
+      },
+      "ambient_sound": "fire",
+      "haptic": null,
+      "revelation_key": "Jesus já tinha comida pronta; pede a pesca deles para que também tenham parte no que vão comer juntos."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "peter_restoration_anthrakia.png",
+      "title": "A brasa que lembra",
+      "subtitle": "Uma palavra que só aparece duas vezes",
+      "content": "A palavra grega para 'fogo de brasas', ἀνθρακιά (anthrakia), aparece em todo o Novo Testamento somente duas vezes — e as duas estão no evangelho de João. A primeira é João 18:18, o pátio onde Pedro negou Jesus se aquentando junto às brasas. A segunda é João 21:9, esta praia. É razoável pensar que a mesma cena traz de volta a Pedro a lembrança da noite em que negou Jesus.",
+      "revelation_key": "O mesmo fogo que testemunhou a queda de Pedro agora testemunha o seu retorno a esta praia.",
+      "verse_overlay": {
+        "reference": "João 21:9",
+        "text": "Logo que saltaram em terra, viram ali brasas, e um peixe posto em cima, e pão."
+      },
+      "scripture_connections": [
+        {
+          "reference": "João 18:18",
+          "text": "Ora, estavam ali os servos e os criados, que tinham feito brasas, e se aquentavam, porque fazia frio; e com eles estava Pedro, aquentando-se também."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "peter_restoration_breakfast.png",
+      "title": "Nenhum se atrevia",
+      "narrative": "Comem em silêncio. Jesus reparte o pão e o peixe com as próprias mãos — o mesmo verbo grego, λαμβάνω (lambano), que usou para tomar os pães antes de reparti-los à multidão junto a este mesmo lago (João 6:11). Há uma reverência nova, diferente da familiaridade de antes. Pedro também come, mas algo nele está em tensão: da última vez que esteve perto de Jesus depois de falhar com ele, não conseguiu sustentar o seu olhar (Lucas 22:61-62). Agora divide o pão com ele.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "João 21:12-13",
+        "text": "Disse-lhes Jesus: Vinde, jantai. E nenhum dos discípulos ousava perguntar-lhe: Quem és tu? Porque sabiam que era o Senhor. Chegou, pois, Jesus, e tomou o pão, e deu-lho, e, semelhantemente, o peixe."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Lucas 22:61-62",
+          "text": "E, virando-se o Senhor, olhou para Pedro, e Pedro lembrou-se da palavra do Senhor, como lhe tinha dito: Antes que o galo cante hoje, me negarás três vezes. E, saindo Pedro para fora, chorou amargamente."
+        },
+        {
+          "reference": "João 6:11",
+          "text": "E Jesus tomou os pães e, havendo dado graças, repartiu-os pelos discípulos, e os discípulos, pelos que estavam assentados; e igualmente também os peixes, quanto eles queriam."
+        }
+      ],
+      "revelation_key": "Jesus restaura o corpo de Pedro com pão antes de tocar no que ainda pesa por dentro dele."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "peter_restoration_three_questions.png",
+      "title": "Três vezes",
+      "narrative": "Terminada a refeição, Jesus se dirige a Pedro pelo seu nome de antes: Simão, filho de Jonas — não \"Pedro\", o nome novo que ele mesmo lhe havia dado (João 1:42). Naquela mesma noite em que o negou, Pedro havia garantido que nunca o abandonaria, mesmo que todos os outros o fizessem (Mateus 26:33). Jesus lhe pergunta: \"Simão, tu me amas?\" Pedro responde que sim. Jesus pergunta pela segunda vez, e depois pela terceira vez: \"Simão, tu me amas?\" Na terceira vez, Pedro se entristece. Três perguntas, na mesma praia onde três vezes havia dito que não o conhecia.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "João 21:15",
+        "text": "E, depois de terem jantado, disse Jesus a Simão Pedro: Simão, filho de Jonas, amas-me mais do que estes? E ele respondeu: Sim, Senhor; tu sabes que te amo. Disse-lhe: Apascenta os meus cordeiros."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Mateus 26:33",
+          "text": "Mas Pedro, respondendo, disse-lhe: Ainda que todos se escandalizem em ti, eu nunca me escandalizarei."
+        }
+      ],
+      "revelation_key": "Jesus volta a chamá-lo de Simão para reconstruí-lo desde o início, desta vez sobre a graça, e não sobre a confiança que Pedro tinha em si mesmo."
+    },
+    {
+      "order": 8,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "peter_restoration_agape_phileo.png",
+      "title": "Duas palavras para amar",
+      "subtitle": "O amor prometido e o amor real",
+      "content": "Em grego existem várias palavras para 'amar'. Quando Jesus pergunta a Simão duas vezes se o ama, usa a palavra ἀγαπᾷς (agapas): o amor absoluto, sacrificial, o mesmo que Pedro havia prometido naquela mesma noite. Pedro responde as três vezes: 'Sim, Senhor; tu sabes que te amo', mas com φιλῶ (philō), amor de amizade e lealdade — um amor real, ainda que diferente do que Jesus perguntou.\n\nNa terceira vez, Jesus muda a própria pergunta e usa φιλεῖς (phileis), a mesma palavra que Pedro vem usando desde o início: pergunta exatamente pelo amor que Pedro verdadeiramente tem, aceitando-o assim.",
+      "revelation_key": "A restauração não espera que o amor de Pedro alcance o ideal prometido: ela opera com o amor real que ele de fato tem.",
+      "verse_overlay": {
+        "reference": "João 21:17",
+        "text": "Disse-lhe terceira vez: Simão, filho de Jonas, amas-me? Simão entristeceu-se por lhe ter dito terceira vez: Amas-me? E disse-lhe: Senhor, tu sabes tudo; tu sabes que eu te amo. Jesus disse-lhe: Apascenta as minhas ovelhas."
+      },
+      "scripture_connections": [
+        { "reference": "Marcos 14:29", "text": "E disse-lhe Pedro: Ainda que todos se escandalizem, nunca, porém, eu." }
+      ]
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "peter_restoration_feed_sheep.png",
+      "title": "Cuidar do que Jesus ama",
+      "subtitle": "O perdão que vem com um trabalho",
+      "content": "No grego original, as três tarefas dadas por Jesus a Pedro não repetem a mesma palavra. A primeira e a última usam βόσκω (bosko): alimentar, nutrir, dar de comer ao rebanho. A do meio usa um verbo diferente, ποιμαίνω (poimaino): pastorear por completo — guiar, proteger e governar o rebanho, não só alimentá-lo. Jesus, que acabou de dar de comer a eles com as próprias mãos junto ao fogo (João 21:12-13), agora encarrega Pedro de alimentar e governar o próprio rebanho dele. O homem que negou conhecê-lo recebe a tarefa de sustentar aqueles que Jesus ama.",
+      "revelation_key": "O perdão de Pedro não termina em sentir-se absolvido: vem com uma tarefa real a cumprir.",
+      "verse_overlay": {
+        "reference": "João 21:16",
+        "text": "Tornou a dizer-lhe segunda vez: Simão, filho de Jonas, amas-me? Disse-lhe: Sim, Senhor; tu sabes que te amo. Disse-lhe: Apascenta as minhas ovelhas."
+      },
+      "scripture_connections": [
+        { "reference": "1 Pedro 5:2-3", "text": "apascentai o rebanho de Deus que está entre vós, tendo cuidado dele, não por força, mas voluntariamente; nem por torpe ganância, mas de ânimo pronto; nem como tendo domínio sobre a herança de Deus, mas servindo de exemplo ao rebanho." }
+      ]
+    },
+    {
+      "order": 10,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "peter_restoration_prophecy.png",
+      "title": "Quando fores velho",
+      "narrative": "Jesus lhe fala de algo que Pedro não pode antecipar. Fala de quando ele for velho: braços estendidos, amarrado por outro, levado para onde não vai querer ir, a imagem de uma crucificação. João explica depois que essas palavras indicam o tipo de morte com que Pedro glorificaria a Deus. Jesus restaura Pedro e, na mesma conversa, mostra a ele o custo completo do que está prestes a receber.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "João 21:18",
+        "text": "Na verdade, na verdade te digo que, quando eras mais moço, te cingias a ti mesmo e andavas por onde querias: mas, quando já fores velho, estenderás as mãos, e outro te cingirá e te levará para onde tu não queiras."
+      },
+      "revelation_key": "O amor que Pedro não conseguiu prometer com palavras, ele entregará no fim com a própria vida."
+    },
+    {
+      "order": 11,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "peter_restoration_follow_me.png",
+      "verse_reference": "João 21:19",
+      "verse_text": "E disse isso significando com que morte havia ele de glorificar a Deus. E, dito isso, disse-lhe: Segue-me.",
+      "reflection": "A mesma ordem com que tudo começou junto a este lago (Mateus 4:19) fecha agora o círculo. Pedro já sabe o que custa prometer e depois falhar, e o que pode custar seguir de verdade. Jesus não lhe pede uma promessa nova e maior; pede-lhe o mesmo de sempre: segue-me. Desta vez Pedro o segue já sabendo o preço.",
+      "revelation_key": "O mesmo chamado do início volta no final, agora com o custo já conhecido e aceito.",
+      "scripture_connections": [
+        { "reference": "Mateus 4:19", "text": "E disse-lhes: Vinde após mim, e eu vos farei pescadores de homens." }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "discovery_activation",
+      "image_url": "peter_restoration_discovery.png",
+      "title": "Seu Encontro",
+      "subtitle": "Jesus não só perdoa aquilo em que você falhou; ele volta a confiar algo a você.",
+      "discovery_questions": [
+        { "category": "Honestidade", "question": "Assim como Pedro não conseguiu cumprir suas palavras a Jesus e falhou com ele, você sente que falhou ou caiu? Lembre-se de que, mesmo que as brasas tragam de volta essa queda, Jesus está ali para restaurá-lo com um propósito." },
+        { "category": "Amor em ação", "question": "Jesus esperava de Pedro, assim como espera de você, um amor ἀγαπᾷς (agapas): sacrificial, de entrega total. Pedro foi honesto em sua resposta, mas em seus atos entregou a si mesmo a Jesus até a morte. E você, que amor tem por Jesus Cristo: mais em suas ações do que em suas palavras?" },
+        { "category": "Sua tarefa", "question": "Assim como o homem que negou conhecer Jesus foi restabelecido e recebeu a tarefa de cuidar dos que Jesus ama, que tarefa você sente que já não merece por causa daquilo em que falhou, e que Deus quer confiar a você mesmo assim? Lembre-se de que Jesus está ali para restabelecê-lo também, e para que você sirva com amor." }
+      ],
+      "prayer": {
+        "title": "Junto ao fogo",
+        "content": "Senhor, assim como Pedro, cometi erros que sinto que me afastam de ti; falhei quando disse 'estarei contigo mesmo que todos os outros te falhem', e caí.\n\nMas hoje entendo que, assim como restauraste Pedro, devolvendo-o ao momento e ao início, tu podes fazer o mesmo comigo: que a tua misericórdia e a tua graça são infinitas, e que podes me confiar as tarefas que tiveres para que eu as cumpra com amor. Perdoa-me e permite que eu te ame como tu esperas, tanto a ti quanto ao meu próximo; que minhas ações reflitam o que queres que eu faça por ti, e que eu leve a outros esta mesma certeza e testemunho: que a tua graça e a tua misericórdia não mudaram desde aquele dia à beira do lago de Tiberíades até hoje. Em nome de Jesus, amém."
+      }
+    },
+    {
+      "order": 13,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "peter_restoration_completion.png",
+      "completion_verse": {
+        "reference": "João 21:17",
+        "text": "Disse-lhe terceira vez: Simão, filho de Jonas, amas-me? Simão entristeceu-se por lhe ter dito terceira vez: Amas-me? E disse-lhe: Senhor, tu sabes tudo; tu sabes que eu te amo. Jesus disse-lhe: Apascenta as minhas ovelhas.",
+        "bible_version": "ARC"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "id": "peter_restoration_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "de",
+  "bible_version": "LU17",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 11,
+  "meta": {
+    "character": "Petrus",
+    "testament": "new",
+    "scripture_reference": "Johannes 21:1-19",
+    "mood_primary": "grace",
+    "accent_color": "#3a2a1e",
+    "emoji": "🔥",
+    "tags": ["wiederherstellung", "vergebung", "berufung", "petrus", "jesus", "gnade", "auftrag"]
+  },
+  "key_verse": {
+    "reference": "Johannes 21:17",
+    "text": "Spricht er zum dritten Mal zu ihm: Simon, Sohn des Johannes, hast du mich lieb? Petrus wurde traurig, weil er zum dritten Mal zu ihm sagte: Hast du mich lieb?, und sprach zu ihm: Herr, du weißt alle Dinge, du weißt, dass ich dich lieb habe. Spricht Jesus zu ihm: Weide meine Schafe!",
+    "bible_version": "LU17"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "peter_restoration_night_boat.png",
+      "title": "Eine Nacht ohne Ertrag",
+      "narrative": "Der See von Tiberias liegt dunkel und still da — derselbe See, an dem Jesus nicht lange zuvor fünftausend Menschen mit fünf Broten und zwei Fischen sättigte (Johannes 6,1). Jesus ist auferstanden und ihnen bereits zweimal erschienen; er hat ihnen gesagt, dass sie ihn in Galiläa sehen werden, und hier sind sie nun, doch niemand weiß, was zu tun ist, während sie warten. Petrus sagt: Ich gehe fischen. Die anderen folgen ihm. Mit ihm gehen Thomas, Nathanael, die Söhne des Zebedäus und zwei weitere Jünger. Die ganze Nacht werfen sie das Netz aus, und die ganze Nacht ziehen sie es leer wieder ein. Kein Wort fällt über das, was in Jerusalem geschah. Nur das stille Wasser, das Gewicht eines Netzes, das nichts zurückbringt, und die Hände eines Fischers, der einst genau auf diesem Wasser gegangen ist.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 21:3",
+        "text": "Spricht Simon Petrus zu ihnen: Ich gehe fischen. Sie sprechen zu ihm: Wir kommen mit dir. Sie gingen hinaus und stiegen in das Boot, und in dieser Nacht fingen sie nichts."
+      },
+      "revelation_key": "Petrus kehrt zu dem zurück, was er konnte, bevor er Jesus kannte, und in jener Nacht bleibt das Netz leer."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "peter_restoration_stranger_shore.png",
+      "verse_reference": "Johannes 21:4-6",
+      "verse_text": "Als es aber schon Morgen war, stand Jesus am Ufer, aber die Jünger wussten nicht, dass es Jesus war. Spricht Jesus zu ihnen: Kinder, habt ihr nichts zu essen? Sie antworteten ihm: Nein. Er aber sprach zu ihnen: Werft das Netz aus zur Rechten des Bootes, so werdet ihr finden. Da warfen sie es aus und konnten's nicht mehr ziehen wegen der Menge der Fische.",
+      "reflection": "Ein Fremder am Ufer gibt eine einfache Anweisung, die für Fischer, die die ganze Nacht ohne Erfolg verbracht haben, schwer zu glauben ist: das Netz auf der anderen Seite desselben Bootes auswerfen. Sie gehorchen, noch bevor sie wissen, wem sie gehorchen, und genau dann geschieht das Wunder; das Netz füllt sich so voll, dass sie es nicht mehr einholen können. Es ist dieselbe Szene, die einst Petrus' Berufung geprägt hatte (Lukas 5,4-7), und der Jünger, den Jesus liebte, ist der Erste, der beide Momente miteinander verbindet: „Es ist der Herr.“",
+      "revelation_key": "Sie gehorchen, bevor sie wissen, wem sie gehorchen.",
+      "scripture_connections": [
+        { "reference": "Lukas 5:4-7", "text": "Und als er aufgehört hatte zu reden, sprach er zu Simon: Fahre hinaus, wo es tief ist, und werft eure Netze zum Fang aus! Und Simon antwortete und sprach: Meister, wir haben die ganze Nacht gearbeitet und nichts gefangen; aber auf dein Wort hin will ich die Netze auswerfen. Und als sie das taten, fingen sie eine große Menge Fische und ihre Netze begannen zu reißen. Und sie winkten ihren Gefährten, die im andern Boot waren, sie sollten kommen und ihnen ziehen helfen. Und sie kamen und füllten beide Boote voll, sodass sie fast sanken." }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "storm",
+      "image_url": "peter_restoration_jumps_water.png",
+      "title": "Er warf sich ins Wasser",
+      "subtitle": "Er konnte nicht auf das Boot warten",
+      "content": "Petrus bindet sich sein Obergewand um und wirft sich ins Meer, noch bevor das Boot das Land erreichen kann. Aus Gewohnheit arbeitet er kaum bekleidet, doch bedeckt er sich, bevor er sich Jesus nähert — eine Geste des Respekts mitten in seiner Eile. Es ist das zweite Mal, dass dieser Mann ins Wasser steigt, um schneller zu Jesus zu gelangen. Das erste Mal ging er darauf, den Blick fest auf ihn gerichtet, bis ihn der Wind ablenkte und er zu sinken begann (Matthäus 14,29-30). Diesmal schwimmt er mit aller Kraft, getrieben von der Dringlichkeit, vor den anderen dort anzukommen.",
+      "revelation_key": "Johannes erkennt Jesus als Erster; Petrus handelt sofort.",
+      "scripture_connections": [
+        { "reference": "Matthäus 14:29-30", "text": "Und er sprach: Komm her! Und Petrus stieg aus dem Boot und ging auf dem Wasser und kam auf Jesus zu. Als er aber den starken Wind sah, erschrak er und begann zu sinken und schrie: Herr, rette mich!" }
+      ],
+      "verse_overlay": {
+        "reference": "Johannes 21:7",
+        "text": "Da spricht der Jünger, den Jesus lieb hatte, zu Petrus: Es ist der Herr! Als Simon Petrus hörte: »Es ist der Herr«, da gürtete er sich das Obergewand um, denn er war nackt, und warf sich in den See."
+      }
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "mysterious",
+      "image_url": "peter_restoration_charcoal_fire.png",
+      "title": "Schon bereit",
+      "narrative": "Am Ufer brennt ein Kohlenfeuer. Darauf liegen Fisch und Brot, schon zubereitet, bevor sie an Land kommen. Im griechischen Urtext steht das Wort κειμένην (keimenēn), was so viel bedeutet wie „bereits ausgelegt, im Voraus bereitet“. Jesus hat die Mahlzeit längst fertig, und dennoch bittet er sie, etwas von dem Fisch zu bringen, den sie gerade gefangen haben.",
+      "verse_overlay": {
+        "reference": "Johannes 21:9-10",
+        "text": "Als sie nun an Land stiegen, sahen sie ein Kohlenfeuer am Boden und Fisch darauf und Brot. Spricht Jesus zu ihnen: Bringt von den Fischen, die ihr jetzt gefangen habt!"
+      },
+      "ambient_sound": "fire",
+      "haptic": null,
+      "revelation_key": "Jesus hat das Mahl schon bereitet; er bittet um ihren Fang, damit auch sie einen Anteil an dem haben, was sie gemeinsam essen werden."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "peter_restoration_anthrakia.png",
+      "title": "Das Feuer, das sich erinnert",
+      "subtitle": "Ein Wort, das nur zweimal vorkommt",
+      "content": "Das griechische Wort für „Kohlenfeuer“, ἀνθρακιά (anthrakia), erscheint im gesamten Neuen Testament nur zweimal — und beide Male im Johannesevangelium. Das erste Mal in Johannes 18,18, im Hof, wo Petrus Jesus verleugnete, während er sich an den Kohlen wärmte. Das zweite Mal in Johannes 21,9, an diesem Ufer. Es ist naheliegend anzunehmen, dass genau diese Szene in Petrus die Erinnerung an die Nacht wachruft, in der er Jesus verleugnete.",
+      "revelation_key": "Dasselbe Feuer, das Petrus' Fall bezeugte, ist nun Zeuge seiner Rückkehr an dieses Ufer.",
+      "verse_overlay": {
+        "reference": "Johannes 21:9",
+        "text": "Als sie nun an Land stiegen, sahen sie ein Kohlenfeuer am Boden und Fisch darauf und Brot."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Johannes 18:18",
+          "text": "Es standen da aber die Knechte und Diener und hatten ein Kohlenfeuer gemacht, denn es war kalt, und sie wärmten sich. Aber auch Petrus stand bei ihnen und wärmte sich."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "peter_restoration_breakfast.png",
+      "title": "Keiner von ihnen wagte es",
+      "narrative": "Sie essen schweigend. Jesus verteilt das Brot und den Fisch mit eigenen Händen — dasselbe griechische Verb, λαμβάνω (lambano), mit dem er einst die Brote nahm, bevor er sie an die Menge an diesem selben See verteilte (Johannes 6,11). Eine neue Ehrfurcht liegt über ihnen, anders als die frühere Vertrautheit. Auch Petrus isst, doch etwas in ihm ist angespannt: Das letzte Mal, als er Jesus nach seinem Versagen nahestand, konnte er seinem Blick nicht standhalten (Lukas 22,61-62). Jetzt teilt er sein Brot mit ihm.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 21:12-13",
+        "text": "Spricht Jesus zu ihnen: Kommt und haltet das Mahl! Niemand aber unter den Jüngern wagte, ihn zu fragen: Wer bist du? Denn sie wussten: Es ist der Herr. Da kommt Jesus und nimmt das Brot und gibt's ihnen, desgleichen auch den Fisch."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Lukas 22:61-62",
+          "text": "Und der Herr wandte sich und sah Petrus an. Und Petrus gedachte an des Herrn Wort, wie er zu ihm gesagt hatte: Ehe heute der Hahn kräht, wirst du mich dreimal verleugnen. Und Petrus ging hinaus und weinte bitterlich."
+        },
+        {
+          "reference": "Johannes 6:11",
+          "text": "Jesus aber nahm die Brote, dankte und gab sie denen, die sich gelagert hatten; desgleichen auch von den Fischen, so viel sie wollten."
+        }
+      ],
+      "revelation_key": "Jesus stärkt zuerst Petrus' Körper mit Brot, bevor er berührt, was in ihm noch immer schwer wiegt."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "peter_restoration_three_questions.png",
+      "title": "Dreimal",
+      "narrative": "Als die Mahlzeit vorüber ist, spricht Jesus Petrus mit seinem alten Namen an: Simon, Sohn des Johannes — nicht „Petrus“, der neue Name, den Jesus ihm selbst gegeben hatte (Johannes 1,42). In derselben Nacht, in der er ihn verleugnete, hatte Petrus noch beteuert, er würde ihn niemals verlassen, selbst wenn alle anderen es täten (Matthäus 26,33). Jesus fragt ihn: „Simon, hast du mich lieb?“ Petrus antwortet mit Ja. Jesus fragt ihn ein zweites Mal, und dann ein drittes: „Simon, hast du mich lieb?“ Beim dritten Mal wird Petrus traurig. Drei Fragen, an demselben Ufer, an dem er dreimal gesagt hatte, er kenne ihn nicht.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 21:15",
+        "text": "Da sie nun das Mahl gehalten hatten, spricht Jesus zu Simon Petrus: Simon, Sohn des Johannes, liebst du mich mehr, als mich diese lieb haben? Er spricht zu ihm: Ja, Herr, du weißt, dass ich dich lieb habe. Spricht Jesus zu ihm: Weide meine Lämmer!"
+      },
+      "scripture_connections": [
+        {
+          "reference": "Matthäus 26:33",
+          "text": "Petrus aber antwortete und sprach zu ihm: Wenn sich auch alle an dir ärgern, so will ich doch mich niemals ärgern."
+        }
+      ],
+      "revelation_key": "Jesus nennt ihn wieder Simon, um ihn von Grund auf neu aufzubauen, diesmal auf Gnade, nicht auf das Selbstvertrauen, das Petrus einst in sich selbst hatte."
+    },
+    {
+      "order": 8,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "peter_restoration_agape_phileo.png",
+      "title": "Zwei Worte für Liebe",
+      "subtitle": "Die Liebe, die versprochen wurde, und die Liebe, die wirklich da war",
+      "content": "Im Griechischen gibt es mehrere Worte für „Liebe“. Als Jesus Simon zweimal fragt, ob er ihn liebt, verwendet er das Wort ἀγαπᾷς (agapas): die absolute, hingebungsvolle Liebe, dieselbe Liebe, die Petrus in jener Nacht versprochen hatte. Petrus antwortet alle drei Male: „Ja, Herr, du weißt, dass ich dich lieb habe“, doch mit φιλῶ (philō), der Liebe der Freundschaft und Treue — eine echte Liebe, wenn auch anders als die, um die Jesus bat.\n\nBeim dritten Mal ändert Jesus selbst seine Frage und gebraucht φιλεῖς (phileis), dasselbe Wort, das Petrus von Anfang an verwendet hat: Er fragt ihn genau nach der Liebe, die Petrus wirklich hat, und nimmt sie an, so wie sie ist.",
+      "revelation_key": "Die Wiederherstellung wartet nicht darauf, dass Petrus' Liebe das versprochene Ideal erreicht: sie arbeitet mit der echten Liebe, die er tatsächlich hat.",
+      "verse_overlay": {
+        "reference": "Johannes 21:17",
+        "text": "Spricht er zum dritten Mal zu ihm: Simon, Sohn des Johannes, hast du mich lieb? Petrus wurde traurig, weil er zum dritten Mal zu ihm sagte: Hast du mich lieb?, und sprach zu ihm: Herr, du weißt alle Dinge, du weißt, dass ich dich lieb habe. Spricht Jesus zu ihm: Weide meine Schafe!"
+      },
+      "scripture_connections": [
+        { "reference": "Markus 14:29", "text": "Petrus aber sagte zu ihm: Wenn auch alle Ärgernis nehmen, so doch ich nicht!" }
+      ]
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "peter_restoration_feed_sheep.png",
+      "title": "Für das sorgen, was Jesus liebt",
+      "subtitle": "Die Vergebung, die mit einem Auftrag kommt",
+      "content": "Im griechischen Urtext wiederholen die drei Aufträge, die Jesus Petrus gibt, nicht dasselbe Wort. Der erste und der letzte verwenden βόσκω (bosko): füttern, nähren, der Herde Nahrung geben. In der Mitte steht ein anderes Verb, ποιμαίνω (poimaino): vollständig hirten — führen, schützen und leiten, nicht nur füttern. Jesus, der sie soeben mit eigenen Händen am Feuer gespeist hat (Johannes 21,12-13), vertraut Petrus nun an, seine eigene Herde zu füttern und zu leiten. Der Mann, der geleugnet hatte, ihn zu kennen, erhält den Auftrag, für die zu sorgen, die Jesus liebt.",
+      "revelation_key": "Petrus' Vergebung endet nicht damit, sich losgesprochen zu fühlen: sie kommt mit einem echten Auftrag, den es zu erfüllen gilt.",
+      "verse_overlay": {
+        "reference": "Johannes 21:16",
+        "text": "Spricht er zum zweiten Mal zu ihm: Simon, Sohn des Johannes, hast du mich lieb? Er spricht zu ihm: Ja, Herr, du weißt, dass ich dich lieb habe. Spricht Jesus zu ihm: Weide meine Schafe!"
+      },
+      "scripture_connections": [
+        { "reference": "1. Petrus 5:2-3", "text": "Weidet die Herde Gottes, die euch anbefohlen ist, und achtet auf sie, nicht gezwungen, sondern freiwillig, wie es Gott gefällt, nicht um schändlichen Gewinns willen, sondern von Herzensgrund, nicht als solche, die über die Gemeinden herrschen, sondern als Vorbilder der Herde." }
+      ]
+    },
+    {
+      "order": 10,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "peter_restoration_prophecy.png",
+      "title": "Wenn du alt bist",
+      "narrative": "Jesus spricht zu ihm von etwas, das Petrus nicht ahnen kann. Er spricht davon, wenn Petrus alt sein wird: die Arme ausgestreckt, von einem anderen gebunden, dorthin getragen, wohin er nicht will — das Bild einer Kreuzigung. Johannes erklärt danach, dass diese Worte auf die Art des Todes hinweisen, durch den Petrus Gott verherrlichen würde. Jesus stellt Petrus wieder her und zeigt ihm im selben Gespräch den vollen Preis dessen, was ihn erwartet.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 21:18",
+        "text": "Wahrlich, wahrlich, ich sage dir: Als du jünger warst, gürtetest du dich selbst und gingst, wo du hinwolltest; wenn du aber alt bist, wirst du deine Hände ausstrecken und ein anderer wird dich gürten und führen, wo du nicht hinwillst."
+      },
+      "revelation_key": "Die Liebe, die Petrus mit Worten nicht versprechen konnte, wird er am Ende mit seinem eigenen Leben geben."
+    },
+    {
+      "order": 11,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "peter_restoration_follow_me.png",
+      "verse_reference": "Johannes 21:19",
+      "verse_text": "Das sagte er aber, um anzuzeigen, mit welchem Tod er Gott preisen würde. Und als er das gesagt hatte, spricht er zu ihm: Folge mir nach!",
+      "reflection": "Derselbe Ruf, mit dem alles an diesem See begann (Matthäus 4,19), schließt nun den Kreis. Petrus weiß bereits, was es kostet, zu versprechen und dann zu versagen, und was es kosten mag, wirklich nachzufolgen. Jesus verlangt von ihm kein größeres neues Versprechen; er bittet ihn um dasselbe wie immer: Folge mir nach. Diesmal folgt Petrus im vollen Wissen um den Preis.",
+      "revelation_key": "Derselbe Ruf vom Anfang kehrt am Ende zurück, nun mit einem Preis, der bereits bekannt und angenommen ist.",
+      "scripture_connections": [
+        { "reference": "Matthäus 4:19", "text": "Und er sprach zu ihnen: Kommt, folgt mir nach! Ich will euch zu Menschenfischern machen." }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "discovery_activation",
+      "image_url": "peter_restoration_discovery.png",
+      "title": "Deine Begegnung",
+      "subtitle": "Jesus vergibt dir nicht nur dein Versagen; er vertraut dir erneut etwas an.",
+      "discovery_questions": [
+        { "category": "Ehrlichkeit", "question": "So wie Petrus sein Wort gegenüber Jesus nicht halten konnte und ihn enttäuschte, spürst du, dass du versagt hast oder gefallen bist? Denk daran: Auch wenn die Kohlen jene Erinnerung an den Fall wachrufen, ist Jesus genau dort, um dich mit einem Zweck wiederherzustellen."
+        },
+        { "category": "Liebe in der Tat", "question": "Jesus erwartete von Petrus, so wie er es auch von dir erwartet, eine Liebe im Sinne von ἀγαπᾷς (agapas): hingebungsvoll, ganz gegeben. Petrus war ehrlich in seiner Antwort, aber in seinem Handeln gab er sich Jesus hin, bis in den Tod. Welche Liebe hast du für Jesus Christus: mehr in deinen Taten oder in deinen Worten?" },
+        { "category": "Dein Auftrag", "question": "So wie der Mann, der geleugnet hatte, Jesus zu kennen, wiederhergestellt und mit dem Auftrag betraut wurde, für die zu sorgen, die Jesus liebt: Welchen Auftrag, glaubst du, verdienst du wegen deines Versagens nicht mehr, den Gott dir aber trotzdem anvertrauen möchte? Denk daran: Auch dich will Jesus genau dort wiederherstellen — damit du mit Liebe dienen kannst." }
+      ],
+      "prayer": {
+        "title": "Am Feuer",
+        "content": "Herr, wie Petrus habe auch ich Fehler gemacht, die mich fern von dir fühlen lassen; ich bin gescheitert, nachdem ich gesagt hatte „Ich bleibe bei dir, auch wenn alle anderen dich im Stich lassen“, und ich bin gefallen.\n\nAber heute verstehe ich: So wie du Petrus wiederhergestellt und ihn zu jenem Moment und an den Anfang zurückgeführt hast, kannst du dasselbe mit mir tun, denn deine Barmherzigkeit und deine Gnade sind unendlich, und du kannst mir die Aufgaben geben, die du für mich hast, damit ich sie mit Liebe erfülle. Vergib mir und lass mich dich und die Menschen um mich her lieben, wie du es erwartest; lass meine Taten widerspiegeln, was du von mir willst, und lass mich anderen dieselbe Gewissheit und dasselbe Zeugnis weitergeben: dass sich deine Gnade und deine Barmherzigkeit seit jenem Tag am Ufer des Sees von Tiberias bis heute nicht verändert haben. Im Namen Jesu, Amen."
+      }
+    },
+    {
+      "order": 13,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "peter_restoration_completion.png",
+      "completion_verse": {
+        "reference": "Johannes 21:17",
+        "text": "Spricht er zum dritten Mal zu ihm: Simon, Sohn des Johannes, hast du mich lieb? Petrus wurde traurig, weil er zum dritten Mal zu ihm sagte: Hast du mich lieb?, und sprach zu ihm: Herr, du weißt alle Dinge, du weißt, dass ich dich lieb habe. Spricht Jesus zu ihm: Weide meine Schafe!",
+        "bible_version": "LU17"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
