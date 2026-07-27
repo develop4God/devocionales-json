@@ -108,7 +108,7 @@
       "mood": "tense",
       "image_url": "peter_restoration_breakfast.png",
       "title": "Ninguno se atrevía",
-      "narrative": "Comen en silencio. Jesús reparte el pan y el pescado con sus propias manos — el mismo verbo griego, λαμβάνω (lambano), que usó para repartir los panes a la multitud junto a este mismo lago (Juan 6:11). Hay una reverencia nueva, distinta a la familiaridad de antes. Pedro come también, pero algo en él está en tensión: la última vez que estuvo cerca de Jesús después de fallarle, no pudo sostenerle la mirada (Lucas 22:61-62). Ahora comparte su pan.",
+      "narrative": "Comen en silencio. Jesús reparte el pan y el pescado con sus propias manos — el mismo verbo griego, λαμβάνω (lambano), que usó para tomar los panes antes de repartirlos a la multitud junto a este mismo lago (Juan 6:11). Hay una reverencia nueva, distinta a la familiaridad de antes. Pedro come también, pero algo en él está en tensión: la última vez que estuvo cerca de Jesús después de fallarle, no pudo sostenerle la mirada (Lucas 22:61-62). Ahora comparte su pan.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
@@ -218,7 +218,7 @@
       "subtitle": "Jesús no solo perdona lo que fallaste; te vuelve a confiar algo.",
       "discovery_questions": [
         { "category": "Honestidad", "question": "Así como Pedro no pudo cumplir sus palabras a Jesús y le falló, ¿sientes que has fallado o caído? Recuerda que, aunque las brasas te recuerden esa caída, Jesús está ahí para restaurarte con un propósito." },
-        { "category": "Amor en acción", "question": "Jesús esperaba de Pedro, así como espera de ti, un amor ἀγαπᾷς (ágape): sacrificial, de entrega total. Pedro fue honesto en su respuesta, pero en sus actos se entregó a sí mismo a Jesús hasta la muerte. ¿Tú, qué amor le tienes a Jesucristo: más en tus acciones que en tus palabras?" },
+        { "category": "Amor en acción", "question": "Jesús esperaba de Pedro, así como espera de ti, un amor ἀγαπᾷς (agapas): sacrificial, de entrega total. Pedro fue honesto en su respuesta, pero en sus actos se entregó a sí mismo a Jesús hasta la muerte. ¿Tú, qué amor le tienes a Jesucristo: más en tus acciones que en tus palabras?" },
         { "category": "Tu tarea", "question": "Así como el hombre que negó conocer a Jesús fue restablecido y recibió la tarea de cuidar a los que Jesús ama, ¿qué tarea sientes que ya no mereces por lo que fallaste, y que Dios quiere confiarte de todas formas? Recuerda que Jesús está ahí para restablecerte también, y que sirvas con amor." }
       ],
       "prayer": {
