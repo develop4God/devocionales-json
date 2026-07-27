@@ -1,0 +1,20 @@
+{
+  "_comment": "Single canonical format for inline Greek/Hebrew word-study glosses across the whole corpus (discovery + encounters, every language). Enforced by check_greek_hebrew_transliteration / find_greek_hebrew_glosses in shared_validation/text_checks.py. This file is the spec; the Python code reads it rather than hardcoding the rule, so the format can be corrected in one place without touching validator logic.",
+  "rule": "<original Greek or Hebrew word/phrase><one ASCII space>(<Latin transliteration>)",
+  "example": "μονογενής (monogenēs)",
+  "explanation": [
+    "Original script first, exactly one space, then an opening ASCII parenthesis '(' — never a full-width '（'.",
+    "The parenthetical contains ONLY the Latin-alphabet transliteration — never the original script repeated, never a phonetic respelling into the target language's own script (e.g. Chinese 索索, Japanese カタカナ, Arabic script, Devanagari). This has shipped wrong before in AR/HI/JA/ZH — always Latin letters only.",
+    "Exactly one space before '(' — not zero, not more than one. Justification: standard prose punctuation practice (a space always precedes a parenthetical aside following a word) and the SBL Handbook of Style's governing principle that whatever convention is chosen must be applied with total consistency throughout the work — see https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/2/96/files/2016/06/the-sbl-handbook-of-stylesblhs-2f93p03.pdf.",
+    "No comma-joined variant — the original script and its transliteration are never combined inside a single shared parenthetical (e.g. '（原文，音译）' is wrong); the transliteration gets its own trailing parenthetical immediately after the original-script word.",
+    "On reuse: once a word has been introduced with a full gloss earlier in the same field, later mentions in that same field may use the bare Latin transliteration alone (no repeated gloss, no parens) — e.g. introduce 'ἄνωθεν (anōthen)' once, then 'anōthen' bare afterward in that field. Confirmed as the corpus's own established convention across EN/ES/ZH sources — not a leak, not re-flagged.",
+    "Full-sentence quotations may pair a full original-script sentence with its full transliterated sentence as two consecutive sentences (not the word-gloss format) — e.g. 'Κύριός μου καὶ ὁ Θεός μου. Kyrios mou kai ho Theos mou.' This is a distinct, accepted convention for quoting a full clause, not a word-level gloss."
+  ],
+  "violations_not_accepted": [
+    "No space before the parenthesis: μονογενής(monogenēs)",
+    "Full-width parenthesis: μονογενής（monogenēs）",
+    "Original script repeated inside the parenthetical instead of a transliteration: μονογενής (μονογενής)",
+    "Phonetic respelling into the target script instead of Latin: μονογενής (莫诺格内斯)",
+    "Comma-joined single parenthetical: （μονογενής，monogenēs）"
+  ]
+}

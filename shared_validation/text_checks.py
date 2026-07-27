@@ -104,7 +104,9 @@ def check_halfwidth_colon_in_title(text: str, path: str, lang: str, ctx: str, re
 # (holds the original-script term by design) and `transliteration` (checked
 # separately by validate_family.py's word-block validation, for Discovery) — this
 # check is for inline prose glosses like "μονογενής (monogenēs)" in
-# content/reflection/narrative/question/etc.
+# content/reflection/narrative/question/etc. The canonical format is
+# specified in gloss_format.json (single source of truth, not hardcoded
+# here) — read that file for the full rule and rationale.
 _GREEK_RE = re.compile(r'[Ͱ-Ͽἀ-῿]')
 _HEBREW_RE = re.compile(r'[֐-׿]')
 _NATIVE_RUN_RE = re.compile(
@@ -123,28 +125,38 @@ _SKIP_KEYS = {'word'}
 def find_greek_hebrew_glosses(text: str) -> list:
     """Find every `<Greek/Hebrew run> (<parenthetical>)` gloss span in text.
 
-    Returns a list of (start, end, run, inner, fullwidth) tuples: start/end
-    are the character offsets of the whole span (native-script run + its
-    trailing parenthetical, if any) in `text`; run is the matched
-    native-script text; inner is the raw parenthetical content, or None if
-    the run has no trailing `(...)`/`（...）` (Strong's-prefix stripping, if
-    wanted, is caller policy); fullwidth is True if the parenthetical used
-    full-width （） instead of the required ASCII () — a corpus convention
-    violation, not an accepted alternate style.
+    Returns a list of (start, end, run, inner, fullwidth, space_count)
+    tuples: start/end are the character offsets of the whole span
+    (native-script run + its trailing parenthetical, if any) in `text`; run
+    is the matched native-script text; inner is the raw parenthetical
+    content, or None if the run has no trailing `(...)`/`（...）`
+    (Strong's-prefix stripping, if wanted, is caller policy); fullwidth is
+    True if the parenthetical used full-width （） instead of the required
+    ASCII () — a corpus convention violation, not an accepted alternate
+    style; space_count is the number of whitespace characters between the
+    run and the opening paren (the canonical format requires exactly 1 —
+    see gloss_format.json), or 0 when inner is None.
 
     Shared span-finder for the inline-gloss convention "original script
     (Latin transliteration)", e.g. "μονογενής (monogenēs)" — consumed by
-    check_greek_hebrew_transliteration (validates what's inside the parens,
-    including flagging fullwidth as wrong) and check_no_latin_leak (treats
-    each span as a known-good exception before flagging stray Latin
-    elsewhere in the field, regardless of paren style).
+    check_greek_hebrew_transliteration (validates what's inside the parens
+    and the spacing/paren-style around them) and check_no_latin_leak
+    (treats each span as a known-good exception before flagging stray
+    Latin elsewhere in the field, regardless of paren style).
     """
     spans = []
     for m in _NATIVE_RUN_RE.finditer(text):
-        run = m.group(0).strip()
+        raw_run = m.group(0)
+        run = raw_run.strip()
         if not run:
             continue
-        window = text[m.end():m.end() + 60]
+        # _NATIVE_RUN_RE's trailing \s* can itself swallow whitespace after
+        # the run, so m.end() may already sit past some/all of the spacing —
+        # count from the end of the *stripped* run, not from m.end(), or a
+        # legitimate single space gets miscounted as zero.
+        trailing_ws_in_match = len(raw_run) - len(raw_run.rstrip())
+        run_end = m.end() - trailing_ws_in_match
+        window = text[run_end:run_end + 60]
         lstripped_len = len(window) - len(window.lstrip())
         rest = window[lstripped_len:]
         if rest.startswith('('):
@@ -154,10 +166,10 @@ def find_greek_hebrew_glosses(text: str) -> list:
         else:
             pm, fullwidth = None, False
         if not pm:
-            spans.append((m.start(), m.end(), run, None, False))
+            spans.append((m.start(), m.end(), run, None, False, 0))
             continue
-        paren_end = m.end() + lstripped_len + pm.end()
-        spans.append((m.start(), paren_end, run, pm.group(1).strip(), fullwidth))
+        paren_end = run_end + lstripped_len + pm.end()
+        spans.append((m.start(), paren_end, run, pm.group(1).strip(), fullwidth, lstripped_len))
     return spans
 
 
@@ -177,11 +189,15 @@ def check_greek_hebrew_transliteration(text: str, path: str, ctx: str, report: R
         return
     if not (_GREEK_RE.search(text) or _HEBREW_RE.search(text)):
         return
-    for start, end, run, inner, fullwidth in find_greek_hebrew_glosses(text):
+    for start, end, run, inner, fullwidth, space_count in find_greek_hebrew_glosses(text):
         if inner is None:
             continue
         if fullwidth:
             report.E(f"{ctx}: gloss '{run}（{inner}）' — uses full-width （） instead of required ASCII () around the transliteration")
+            continue
+        if space_count != 1:
+            got = "no space" if space_count == 0 else f"{space_count} spaces"
+            report.E(f"{ctx}: gloss '{run}{' ' * space_count}({inner})' — {got} before '(' (required format is exactly one space: '{run} ({inner})', see gloss_format.json)")
             continue
         stripped = _STRONG_PREFIX_RE.sub('', inner).strip()
         if not stripped:
@@ -238,7 +254,7 @@ def check_no_latin_leak(text: str, path: str, lang: str, ctx: str, report: Repor
     gloss_spans = find_greek_hebrew_glosses(text)
 
     def in_gloss(pos: int) -> bool:
-        return any(start <= pos < end for start, end, _, _, _ in gloss_spans)
+        return any(start <= pos < end for start, end, _, _, _, _ in gloss_spans)
 
     if rules.get('letters'):
         for m in _LATIN_LETTER_RE.finditer(text):
