@@ -226,14 +226,23 @@ def check_bare_transliteration_reuse(text: str, path: str, ctx: str, report: Rep
     it can't see this case (a bare Latin word has no native-script word to
     anchor on). Simple approach: collect each well-formed gloss's
     transliteration and end position, then \\b-search the text AFTER that
-    point for the same word reappearing bare.
+    point for the same word reappearing bare — but a match that falls
+    inside another well-formed gloss's own parenthetical (i.e. the word
+    was re-glossed again, correctly, later in the field) is not bare reuse
+    and must be excluded, or every correctly-repeated gloss of the same
+    word would falsely trip this check on its own transliteration text.
     """
     key = path.rsplit('.', 1)[-1].split('[')[0]
     if key in _SKIP_KEYS:
         return
-    for _, end, _, inner, well_formed in find_greek_hebrew_glosses(text):
+    glosses = find_greek_hebrew_glosses(text)
+    wellformed_spans = [(s, e) for s, e, _, i2, wf in glosses if wf and i2]
+    for _, end, _, inner, well_formed in glosses:
         if not (well_formed and inner):
             continue
-        m = re.search(rf'\b{re.escape(inner)}\b', text[end:])
-        if m:
+        for m in re.finditer(rf'\b{re.escape(inner)}\b', text[end:]):
+            m_start, m_end = end + m.start(), end + m.end()
+            if any(s <= m_start and m_end <= e for s, e in wellformed_spans):
+                continue
             report.E(f"{ctx}: '{inner}' reused as bare Latin text later in this field with no accompanying native-script gloss (every occurrence needs its own '<word>, ({inner})', see gloss_format.json 'Bare reuse without a gloss')")
+            break
