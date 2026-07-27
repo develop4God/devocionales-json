@@ -9,7 +9,7 @@ otherwise require an LLM critic pass to notice.
 
 Greek/Hebrew Latin-transliteration checking is NOT duplicated here — it already
 exists, correctly implemented and wired into both master validators, at
-shared_validation/text_checks.py::check_greek_hebrew_transliteration (run via
+shared_validation/greek_hebrew_gloss.py::check_greek_hebrew_transliteration (run via
 validate_encounters.py / validate_discovery.py / validate_family.py). Run those for
 that check; this script only covers what they don't.
 

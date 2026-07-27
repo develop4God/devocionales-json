@@ -52,8 +52,9 @@ from shared_validation.family_check import run_family_validation_all
 from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL
 from shared_validation.text_checks import (
     iter_strings, check_quote_anomalies, check_halfwidth_colon_in_title,
-    check_greek_hebrew_transliteration, check_no_latin_leak, is_cognate,
+    check_no_latin_leak, is_cognate,
 )
+from shared_validation.greek_hebrew_gloss import check_greek_hebrew_transliteration
 from shared_validation.lint import lint_json_files
 from shared_validation.scripture_check import (
     ScriptureValidator, find_scripture_pairs, validate_pair, validate_translated_pair,
