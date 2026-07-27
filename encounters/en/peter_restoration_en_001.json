@@ -1,0 +1,242 @@
+{
+  "id": "peter_restoration_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "en",
+  "bible_version": "KJV",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 10,
+  "meta": {
+    "character": "Peter",
+    "testament": "new",
+    "scripture_reference": "John 21:1-19",
+    "mood_primary": "grace",
+    "accent_color": "#3a2a1e",
+    "emoji": "🔥",
+    "tags": ["restoration", "forgiveness", "calling", "peter", "jesus", "grace", "mission"]
+  },
+  "key_verse": {
+    "reference": "John 21:17",
+    "text": "He said unto him the third time, Simon, son of Jonas, do you love me? Peter was grieved because he said unto him the third time, Do you love me? And he said unto him, Lord, you know all things; you know that I love you. Jesus said unto him, Feed my sheep.",
+    "bible_version": "KJV"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "peter_restoration_night_boat.png",
+      "title": "A night with nothing to show",
+      "narrative": "The Sea of Tiberias is dark and still — the same lake where, not long ago, Jesus fed a crowd of five thousand with five loaves and two fish (John 6:1). Jesus has risen and already appeared to them twice; he told them they would see him in Galilee, and here they are, but no one knows what to do while they wait. Peter says: I'm going fishing. The others follow him. Thomas goes, and Nathanael, the sons of Zebedee, and two other disciples. All night they cast the net, and all night they pull it up empty. No word is spoken about what happened in Jerusalem. Only the still water, the weight of a net that brings back nothing, and the hands of a fisherman who once walked on this very water.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 21:3",
+        "text": "Simon Peter said unto them, I am going fishing. They said unto him, We also will go with you. They went forth, and entered into a ship immediately; and that night they caught nothing."
+      },
+      "revelation_key": "Peter goes back to what he knew how to do before he knew Jesus, and that night the net comes up empty."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "tense",
+      "image_url": "peter_restoration_stranger_shore.png",
+      "verse_reference": "John 21:4-6",
+      "verse_text": "But when the morning was now come, Jesus stood on the shore: but the disciples knew not that it was Jesus. Then Jesus said unto them, Children, have you any fish? They answered him, No. And he said unto them, Cast the net on the right side of the ship, and you shall find. They cast therefore, and now they were not able to draw it for the multitude of fish.",
+      "reflection": "A stranger on the shore gives a simple instruction, hard to believe for fishermen who have spent all night with nothing: cast the net on the other side of the same boat. They obey, not yet knowing whom they are obeying, and that is when the miracle happens; the net fills so full they cannot haul it in. It is the same scene that marked Peter's call at the very beginning (Luke 5:4-7), and the beloved disciple is the first to connect both moments: 'It is the Lord.'",
+      "revelation_key": "They obey before they know whom they are obeying.",
+      "scripture_connections": [
+        { "reference": "Luke 5:4-7", "text": "Now when he had ceased speaking, he said unto Simon, Launch out into the deep, and let down your nets for a catch. And Simon answering said unto him, Teacher, we have toiled all the night, and have taken nothing: nevertheless at your word I will let down the net. And when they had done this, they enclosed a great multitude of fish: and their net broke. And they beckoned unto their partners, who were in the other ship, that they should come and help them. And they came, and filled both the ships, so that they began to sink." }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "storm",
+      "image_url": "peter_restoration_jumps_water.png",
+      "title": "He threw himself into the water",
+      "subtitle": "He couldn't wait for the boat",
+      "content": "Peter ties his coat around him and throws himself into the sea before the boat can reach land. He worked with little clothing out of habit, but covers himself before drawing near to Jesus — a gesture of respect in the middle of his hurry. This is the second time this man has entered the water to get to Jesus faster. The first time, he walked on it with his eyes fixed on him, until the wind distracted him and he began to sink (Matthew 14:29-30). This time he swims with everything he has, driven by the urgency of getting there before the others.",
+      "revelation_key": "John is first to recognize Jesus; Peter is first to act.",
+      "scripture_connections": [
+        { "reference": "Matthew 14:29-30", "text": "And he said, Come. And when Peter came down out of the ship, he walked on the water, to go to Jesus. But when he saw the wind boisterous, he was afraid; and beginning to sink, he cried, saying, Lord, save me." }
+      ],
+      "verse_overlay": {
+        "reference": "John 21:7",
+        "text": "Therefore that disciple whom Jesus loved said unto Peter, It is the Lord. Now when Simon Peter heard that it was the Lord, he girded his fisher's coat unto him, (for he was naked,) and did cast himself into the sea."
+      }
+    },
+    {
+      "order": 4,
+      "type": "cinematic_scene",
+      "mood": "mysterious",
+      "image_url": "peter_restoration_charcoal_fire.png",
+      "title": "Already prepared",
+      "narrative": "On the shore, a fire of coals is burning. On it, fish and bread, already prepared before they arrive at land. In the original Greek text, the word used is κειμένην (keimenēn), meaning 'already laid out, prepared beforehand.' Jesus already has the meal ready, and still he asks them to bring some of the fish they have just caught.",
+      "verse_overlay": {
+        "reference": "John 21:9-10",
+        "text": "As soon then as they were come to land, they saw a fire of coals there, and fish laid thereon, and bread. Jesus said unto them, Bring of the fish which you have now caught."
+      },
+      "ambient_sound": "fire",
+      "haptic": null,
+      "revelation_key": "Jesus already had the meal ready; he asks for their catch so they too can have a part in what they will eat together."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "peter_restoration_anthrakia.png",
+      "title": "The fire that remembers",
+      "subtitle": "A word that appears only twice",
+      "content": "The Greek word for 'fire of coals,' ἀνθρακιά (anthrakia), appears in the entire New Testament only twice — and both times in the Gospel of John. The first is John 18:18, the courtyard where Peter denied Jesus while warming himself by the coals. The second is John 21:9, this shore. It is reasonable to think that this same scene brought back to Peter the memory of the night he denied Jesus.",
+      "revelation_key": "The same fire that witnessed Peter's fall now witnesses his return to this shore.",
+      "verse_overlay": {
+        "reference": "John 21:9",
+        "text": "As soon then as they were come to land, they saw a fire of coals there, and fish laid thereon, and bread."
+      },
+      "scripture_connections": [
+        {
+          "reference": "John 18:18",
+          "text": "And the servants and officers stood there, who had made a fire of coals; for it was cold: and they warmed themselves: and Peter stood with them, and warmed himself."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "peter_restoration_breakfast.png",
+      "title": "None of them dared",
+      "narrative": "They eat in silence. Jesus distributes the bread and the fish with his own hands — the same Greek verb, λαμβάνω (lambano), that he used to distribute the loaves to the crowd beside this very lake (John 6:11). There is a new reverence, different from the familiarity of before. Peter eats too, but something in him is tense: the last time he stood near Jesus after failing him, he could not hold his gaze (Luke 22:61-62). Now he shares his bread.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 21:12-13",
+        "text": "Jesus said unto them, Come and dine. And none of the disciples dared ask him, Who are you? knowing that it was the Lord. Jesus then came, and took bread, and gave to them, and fish likewise."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Luke 22:61-62",
+          "text": "And the Lord turned, and looked upon Peter. And Peter remembered the word of the Lord, how he had said unto him, Before the cock crows, you shall deny me three times. And Peter went out, and wept bitterly."
+        },
+        {
+          "reference": "John 6:11",
+          "text": "And Jesus took the loaves; and when he had given thanks, he distributed to the disciples, and the disciples to them that were sat down; and likewise of the fishes as much as they would."
+        }
+      ],
+      "revelation_key": "Jesus restores Peter's body with bread before he touches what still weighs on him inside."
+    },
+    {
+      "order": 7,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "peter_restoration_three_questions.png",
+      "title": "Three times",
+      "narrative": "When the meal is over, Jesus addresses Peter by his old name: Simon, son of Jonas — not \"Peter,\" the new name Jesus himself had given him (John 1:42). That same night he denied him, Peter had insisted he would never abandon him, even if everyone else did (Matthew 26:33). Jesus asks him: \"Simon, do you love me?\" Peter answers yes. Jesus asks him a second time, and then a third: \"Simon, do you love me?\" By the third time, Peter is grieved. Three questions, on the same shore where three times he had said he did not know him.",
+      "ambient_sound": "water",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 21:15",
+        "text": "So when they had dined, Jesus said to Simon Peter, Simon, son of Jonas, do you love me more than these? He said unto him, Yea, Lord; you know that I love you. He said unto him, Feed my lambs."
+      },
+      "scripture_connections": [
+        {
+          "reference": "Matthew 26:33",
+          "text": "Peter answered and said unto him, Though all men shall be offended because of you, yet will I never be offended."
+        }
+      ],
+      "revelation_key": "Jesus calls him Simon again to rebuild him from the ground up, this time on grace, not on the confidence Peter once had in himself."
+    },
+    {
+      "order": 8,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "peter_restoration_agape_phileo.png",
+      "title": "Two words for love",
+      "subtitle": "The love that was promised and the love that was real",
+      "content": "In Greek there are several words for 'love.' When Jesus asks Simon twice if he loves him, he uses the word ἀγαπᾷς (agapas): absolute, sacrificial love, the same love Peter had promised that very night. Peter answers all three times, 'Yes, Lord; you know that I love you,' but with φιλῶ (philō), the love of friendship and loyalty — a real love, though different from the one Jesus asked for.\n\nBy the third time, Jesus changes his own question and uses φιλεῖς (phileis), the same word Peter has used from the start: he asks him about exactly the love Peter truly has, and accepts it as it is.",
+      "revelation_key": "Restoration doesn't wait for Peter's love to reach the promised ideal: it works with the real love he actually has.",
+      "verse_overlay": {
+        "reference": "John 21:17",
+        "text": "He said unto him the third time, Simon, son of Jonas, do you love me? Peter was grieved because he said unto him the third time, Do you love me? And he said unto him, Lord, you know all things; you know that I love you. Jesus said unto him, Feed my sheep."
+      },
+      "scripture_connections": [
+        { "reference": "Mark 14:29", "text": "But Peter said unto him, Although all shall be offended, yet will not I." }
+      ]
+    },
+    {
+      "order": 9,
+      "type": "character_moment",
+      "mood": "grace",
+      "image_url": "peter_restoration_feed_sheep.png",
+      "title": "Caring for what Jesus loves",
+      "subtitle": "The forgiveness that comes with a job",
+      "content": "In the original Greek, the three tasks Jesus gives Peter do not repeat the same word. The first and the last use βόσκω (bosko): to feed, to nourish, to give the flock food. The middle one uses a different verb, ποιμαίνω (poimaino): to shepherd fully — to guide, protect, and govern the flock, not just feed it. Jesus, who has just fed them with his own hands beside the fire (John 21:12-13), now entrusts Peter with feeding and governing his own flock. The man who denied knowing him receives the task of caring for the ones Jesus loves.",
+      "revelation_key": "Peter's forgiveness doesn't end with feeling absolved: it comes with a real task to carry out.",
+      "verse_overlay": {
+        "reference": "John 21:16",
+        "text": "He said to him again the second time, Simon, son of Jonas, do you love me? He said unto him, Yea, Lord; you know that I love you. He said unto him, Feed my sheep."
+      },
+      "scripture_connections": [
+        { "reference": "1 Peter 5:2-3", "text": "Feed the flock of God which is among you, taking the oversight thereof, not by constraint, but willingly; not for dishonest gain, but of a ready mind; Neither as being lords over God's heritage, but being examples to the flock." }
+      ]
+    },
+    {
+      "order": 10,
+      "type": "cinematic_scene",
+      "mood": "intense",
+      "image_url": "peter_restoration_prophecy.png",
+      "title": "When you are old",
+      "narrative": "Jesus tells him about something Peter could not have anticipated. He speaks of when Peter is old: arms stretched out, bound by another, carried where he will not want to go — the image of a crucifixion. John explains afterward that these words pointed to the kind of death by which Peter would glorify God. Jesus restores Peter and, in the same conversation, shows him the full cost of what he is about to receive.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 21:18",
+        "text": "Verily, verily, I say unto you, When you were young, you dressed yourself, and walked where you would: but when you shall be old, you shall stretch forth your hands, and another shall dress you, and carry you where you would not."
+      },
+      "revelation_key": "The love Peter could not promise in words, he will give in the end with his own life."
+    },
+    {
+      "order": 11,
+      "type": "scripture_moment",
+      "mood": "peace",
+      "image_url": "peter_restoration_follow_me.png",
+      "verse_reference": "John 21:19",
+      "verse_text": "This spoke he, signifying by what death he should glorify God. And when he had spoken this, he said unto him, Follow me.",
+      "reflection": "The same command with which it all began beside this lake (Matthew 4:19) now closes the circle. Peter already knows what it costs to promise and then fail, and what it may cost to follow for real. Jesus doesn't ask him for a bigger new promise; he asks him the same thing as always: follow me. This time Peter follows knowing the price.",
+      "revelation_key": "The same call from the beginning returns at the end, now with the cost already known and accepted.",
+      "scripture_connections": [
+        { "reference": "Matthew 4:19", "text": "And he said unto them, Follow me, and I will make you fishers of men." }
+      ]
+    },
+    {
+      "order": 12,
+      "type": "discovery_activation",
+      "image_url": "peter_restoration_discovery.png",
+      "title": "Your Encounter",
+      "subtitle": "Jesus doesn't just forgive what you failed at; he trusts you with something again.",
+      "discovery_questions": [
+        { "category": "Honesty", "question": "Just as Peter could not keep his word to Jesus and failed him, do you feel you have failed or fallen? Remember that even if the coals bring back that memory of falling, Jesus is right there to restore you with a purpose." },
+        { "category": "Love in action", "question": "Jesus expected of Peter, just as he expects of you, an ἀγαπᾷς (agape) love: sacrificial, fully given. Peter was honest in his answer, but in his actions he gave himself to Jesus even unto death. What love do you have for Jesus Christ: more in your actions, or in your words?" },
+        { "category": "Your task", "question": "Just as the man who denied knowing Jesus was restored and given the task of caring for the ones Jesus loves, what task do you feel you no longer deserve because of your failure, and that God wants to entrust to you anyway? Remember that Jesus is right there to restore you too — so you can serve with love." }
+      ],
+      "prayer": {
+        "title": "By the fire",
+        "content": "Lord, like Peter, I have made mistakes that make me feel far from you; I have failed after saying 'I will stay with you even if everyone else fails you,' and I have fallen.\n\nBut today I understand that, just as you restored Peter, bringing him back to that moment and to the beginning, you can do the same with me: that your mercy and your grace are infinite, and that you can give me the tasks you have for me to carry out with love. Forgive me and let me love you as you expect, both you and those around me; let my actions reflect what you want me to do for you, and let me carry to others this same certainty and testimony: that your grace and your mercy have not changed from that day on the shore of the Sea of Tiberias until today. In the name of Jesus, amen."
+      }
+    },
+    {
+      "order": 13,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "peter_restoration_completion.png",
+      "completion_verse": {
+        "reference": "John 21:17",
+        "text": "He said unto him the third time, Simon, son of Jonas, do you love me? Peter was grieved because he said unto him the third time, Do you love me? And he said unto him, Lord, you know all things; you know that I love you. Jesus said unto him, Feed my sheep.",
+        "bible_version": "KJV"
+      },
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
