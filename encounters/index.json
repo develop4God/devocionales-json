@@ -1040,31 +1040,61 @@
         "es": "peter_restoration_es_001.json",
         "pt": "peter_restoration_pt_001.json",
         "fr": "peter_restoration_fr_001.json",
-        "en": "peter_restoration_en_001.json"
+        "en": "peter_restoration_en_001.json",
+        "ja": "peter_restoration_ja_001.json",
+        "zh": "peter_restoration_zh_001.json",
+        "de": "peter_restoration_de_001.json",
+        "ar": "peter_restoration_ar_001.json",
+        "hi": "peter_restoration_hi_001.json",
+        "fil": "peter_restoration_fil_001.json"
       },
       "titles": {
         "es": "Junto al fuego",
         "pt": "Junto ao fogo",
         "fr": "Près du feu",
-        "en": "By the Fire"
+        "en": "By the Fire",
+        "ja": "炭火のそばで",
+        "zh": "在炭火旁",
+        "de": "Am Feuer",
+        "ar": "بجانب النار",
+        "hi": "आग के पास",
+        "fil": "Sa tabi ng apoy"
       },
       "subtitles": {
         "es": "El mismo fuego que vio su negación, ahora prepara su restauración.",
         "pt": "O mesmo fogo que viu sua negação, agora prepara sua restauração.",
         "fr": "Le même feu qui a vu son reniement prépare maintenant sa restauration.",
-        "en": "The same fire that saw his denial now prepares his restoration."
+        "en": "The same fire that saw his denial now prepares his restoration.",
+        "ja": "イエスはあなたが失敗したことを赦すだけではない。もう一度、あなたに委ねてくださる。",
+        "zh": "耶稣不只是赦免你所失败的地方，他还要再次将一件事交托给你。",
+        "de": "Jesus vergibt dir nicht nur dein Versagen; er vertraut dir erneut etwas an.",
+        "ar": "يسوع لا يكتفي بمغفرة ما أخفقت فيه؛ إنه يأتمنك على أمر من جديد.",
+        "hi": "यीशु सिर्फ वह माफ नहीं करते जिसमें तुम असफल हुए; वे तुम्हें फिर से किसी बात का भरोसा भी देते हैं।",
+        "fil": "Hindi lamang pinapatawad ni Jesus ang iyong kabiguan; muli ka niyang pinagkakatiwalaan ng isang bagay."
       },
       "scripture_reference": {
         "es": "Juan 21:1-19",
         "pt": "João 21:1-19",
         "fr": "Jean 21:1-19",
-        "en": "John 21:1-19"
+        "en": "John 21:1-19",
+        "ja": "ヨハネ 21:1-19",
+        "zh": "约翰福音 21:1-19",
+        "de": "Johannes 21:1-19",
+        "ar": "يوحنا 21:1-19",
+        "hi": "यूहन्ना 21:1-19",
+        "fil": "Juan 21:1-19"
       },
       "estimated_reading_minutes": {
         "es": 10,
         "pt": 11,
         "fr": 11,
-        "en": 10
+        "en": 10,
+        "ja": 13,
+        "zh": 13,
+        "de": 11,
+        "ar": 10,
+        "hi": 12,
+        "fil": 10
       }
     }
   ]

@@ -108,7 +108,7 @@
       "mood": "tense",
       "image_url": "peter_restoration_breakfast.png",
       "title": "Nenhum se atrevia",
-      "narrative": "Comem em silêncio. Jesus reparte o pão e o peixe com as próprias mãos — o mesmo verbo grego, λαμβάνω (lambano), que usou para repartir os pães à multidão junto a este mesmo lago (João 6:11). Há uma reverência nova, diferente da familiaridade de antes. Pedro também come, mas algo nele está em tensão: da última vez que esteve perto de Jesus depois de falhar com ele, não conseguiu sustentar o seu olhar (Lucas 22:61-62). Agora divide o pão com ele.",
+      "narrative": "Comem em silêncio. Jesus reparte o pão e o peixe com as próprias mãos — o mesmo verbo grego, λαμβάνω (lambano), que usou para tomar os pães antes de reparti-los à multidão junto a este mesmo lago (João 6:11). Há uma reverência nova, diferente da familiaridade de antes. Pedro também come, mas algo nele está em tensão: da última vez que esteve perto de Jesus depois de falhar com ele, não conseguiu sustentar o seu olhar (Lucas 22:61-62). Agora divide o pão com ele.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
@@ -218,7 +218,7 @@
       "subtitle": "Jesus não só perdoa aquilo em que você falhou; ele volta a confiar algo a você.",
       "discovery_questions": [
         { "category": "Honestidade", "question": "Assim como Pedro não conseguiu cumprir suas palavras a Jesus e falhou com ele, você sente que falhou ou caiu? Lembre-se de que, mesmo que as brasas tragam de volta essa queda, Jesus está ali para restaurá-lo com um propósito." },
-        { "category": "Amor em ação", "question": "Jesus esperava de Pedro, assim como espera de você, um amor ἀγαπᾷς (ágape): sacrificial, de entrega total. Pedro foi honesto em sua resposta, mas em seus atos entregou a si mesmo a Jesus até a morte. E você, que amor tem por Jesus Cristo: mais em suas ações do que em suas palavras?" },
+        { "category": "Amor em ação", "question": "Jesus esperava de Pedro, assim como espera de você, um amor ἀγαπᾷς (agapas): sacrificial, de entrega total. Pedro foi honesto em sua resposta, mas em seus atos entregou a si mesmo a Jesus até a morte. E você, que amor tem por Jesus Cristo: mais em suas ações do que em suas palavras?" },
         { "category": "Sua tarefa", "question": "Assim como o homem que negou conhecer Jesus foi restabelecido e recebeu a tarefa de cuidar dos que Jesus ama, que tarefa você sente que já não merece por causa daquilo em que falhou, e que Deus quer confiar a você mesmo assim? Lembre-se de que Jesus está ali para restabelecê-lo também, e para que você sirva com amor." }
       ],
       "prayer": {
