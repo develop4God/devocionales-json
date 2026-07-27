@@ -1,20 +1,22 @@
 {
-  "_comment": "Single canonical format for inline Greek/Hebrew word-study glosses across the whole corpus (discovery + encounters, every language). Enforced by check_greek_hebrew_transliteration / find_greek_hebrew_glosses in shared_validation/text_checks.py. This file is the spec; the Python code reads it rather than hardcoding the rule, so the format can be corrected in one place without touching validator logic.",
-  "rule": "<original Greek or Hebrew word/phrase><one ASCII space>(<Latin transliteration>)",
-  "example": "μονογενής (monogenēs)",
+  "_comment": "HARD GATE — canonical format for every inline Greek/Hebrew gloss in the corpus (discovery + encounters, every language). Enforced by check_greek_hebrew_transliteration / find_greek_hebrew_glosses in shared_validation/text_checks.py. This file is the spec; the Python code reads it rather than hardcoding the rule, so the format can be corrected in one place without touching validator logic. STRICT: exactly two accepted forms, no other conventions, no exceptions.",
+  "rule": "<original Greek or Hebrew word>,<one ASCII space>(<Latin transliteration>)  OR  <word> <word>,<one ASCII space>(<Latin transliteration>)",
+  "example": "θεός, (theos)  —  or, for a genuine two-word grammatical phrase  —  τὸ γεγονός, (to gegonos)",
   "explanation": [
-    "Original script first, exactly one space, then an opening ASCII parenthesis '(' — never a full-width '（'.",
-    "The parenthetical contains ONLY the Latin-alphabet transliteration — never the original script repeated, never a phonetic respelling into the target language's own script (e.g. Chinese 索索, Japanese カタカナ, Arabic script, Devanagari). This has shipped wrong before in AR/HI/JA/ZH — always Latin letters only.",
-    "Exactly one space before '(' — not zero, not more than one. Justification: standard prose punctuation practice (a space always precedes a parenthetical aside following a word) and the SBL Handbook of Style's governing principle that whatever convention is chosen must be applied with total consistency throughout the work — see https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/2/96/files/2016/06/the-sbl-handbook-of-stylesblhs-2f93p03.pdf.",
-    "No comma-joined variant — the original script and its transliteration are never combined inside a single shared parenthetical (e.g. '（原文，音译）' is wrong); the transliteration gets its own trailing parenthetical immediately after the original-script word.",
-    "On reuse: once a word has been introduced with a full gloss earlier in the same field, later mentions in that same field may use the bare Latin transliteration alone (no repeated gloss, no parens) — e.g. introduce 'ἄνωθεν (anōthen)' once, then 'anōthen' bare afterward in that field. Confirmed as the corpus's own established convention across EN/ES/ZH sources — not a leak, not re-flagged.",
-    "Full-sentence quotations may pair a full original-script sentence with its full transliterated sentence as two consecutive sentences (not the word-gloss format) — e.g. 'Κύριός μου καὶ ὁ Θεός μου. Kyrios mou kai ho Theos mou.' This is a distinct, accepted convention for quoting a full clause, not a word-level gloss."
+    "Two accepted forms only: a single native-script word, or a genuine two-word native-script phrase (e.g. article + participle, adverb + participle, construct pair) — never three or more words, never a full sentence.",
+    "In both forms: the native-script word(s) first, then an ASCII comma ',' immediately after the last word (no space before the comma), then exactly one ASCII space, then an opening ASCII parenthesis '(' — never a full-width '（' or '，'.",
+    "The parenthetical contains ONLY the Latin-alphabet transliteration of the exact same word(s) — never the original script repeated, never a phonetic respelling into the target language's own script (e.g. Chinese 索索, Japanese カタカナ, Arabic script, Devanagari). This has shipped wrong before in AR/HI/JA/ZH — always Latin letters only.",
+    "No other form is accepted. No bare reuse of a transliteration without its gloss, no matter how recently the word was introduced in the same field. No full-sentence original/transliteration pairing. Every occurrence of every native-script word or two-word phrase must carry its own gloss, every time."
   ],
   "violations_not_accepted": [
-    "No space before the parenthesis: μονογενής(monogenēs)",
-    "Full-width parenthesis: μονογενής（monogenēs）",
-    "Original script repeated inside the parenthetical instead of a transliteration: μονογενής (μονογενής)",
-    "Phonetic respelling into the target script instead of Latin: μονογενής (莫诺格内斯)",
-    "Comma-joined single parenthetical: （μονογενής，monogenēs）"
+    "Missing comma: θεός (theos)",
+    "No space before the parenthesis: θεός,(theos)",
+    "Full-width parenthesis: θεός，（theos）",
+    "Full-width comma: θεός，(theos)",
+    "Original script repeated inside the parenthetical instead of a transliteration: θεός, (θεός)",
+    "Phonetic respelling into the target script instead of Latin: θεός, (泰奥斯)",
+    "Comma-joined single parenthetical: （θεός，theos）",
+    "Bare reuse without a gloss: introducing 'θεός, (theos)' once and later writing bare 'theos' with no gloss",
+    "Three-or-more-word phrase or full-sentence original/transliteration pairing instead of a 1-or-2-word gloss"
   ]
 }

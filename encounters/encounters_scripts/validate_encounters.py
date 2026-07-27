@@ -55,7 +55,7 @@ from shared_validation.family_check import run_family_validation_all
 from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL
 from shared_validation.text_checks import (
     iter_strings, check_quote_anomalies, check_halfwidth_colon_in_title,
-    check_greek_hebrew_transliteration, is_cognate,
+    check_greek_hebrew_transliteration, check_no_latin_leak, is_cognate,
 )
 from shared_validation.lint import lint_json_files
 from shared_validation.scripture_check import (
@@ -279,6 +279,7 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
         check_quote_anomalies(text, f"{filename}:{path}", report)
         check_halfwidth_colon_in_title(text, path, lang, f"{filename}:{path}", report)
         check_greek_hebrew_transliteration(text, path, f"{filename}:{path}", report)
+        check_no_latin_leak(text, path, lang, f"{filename}:{path}", report)
 
     # Required top-level fields
     required = ['id', 'type', 'schema_version', 'language', 'bible_version',
