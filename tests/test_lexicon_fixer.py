@@ -12,8 +12,11 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from shared_validation.lexicon_fixer import _fix_file_text  # noqa: E402
-from shared_validation.lexicon_source import LexiconEntry  # noqa: E402
+from shared_validation.lexicon_fixer import (  # noqa: E402
+    _fix_file_text,
+    triage_bare_latin_glosses,
+)
+from shared_validation.lexicon_source import LexiconEntry, StrongsLexiconSource  # noqa: E402
 
 
 class _FakeLexicon:
@@ -51,27 +54,44 @@ class TestFixFileTextCitationParens(unittest.TestCase):
 
     def test_fullwidth_paren_citation_fully_consumed(self):
         raw = "prefix ἀσθενής, (asthenēs)（Strong G772） suffix"
-        new_text, changes = _fix_file_text(
-            raw, _FakeLexicon(ASTHENES), lang="ja"
-        )
-        self.assertEqual(
-            new_text, "prefix ἀσθενής, (asthenḗs) (G772) suffix"
-        )
+        new_text, changes = _fix_file_text(raw, _FakeLexicon(ASTHENES), lang="ja")
+        self.assertEqual(new_text, "prefix ἀσθενής, (asthenḗs) (G772) suffix")
         self.assertNotIn("）", new_text)
         self.assertEqual(len(changes), 1)
 
     def test_ascii_paren_citation_fully_consumed(self):
         raw = "prefix ἀσθενής, (asthenēs) (Strong G772) suffix"
         new_text, _ = _fix_file_text(raw, _FakeLexicon(ASTHENES), lang="en")
-        self.assertEqual(
-            new_text, "prefix ἀσθενής, (asthenḗs) (G772) suffix"
-        )
+        self.assertEqual(new_text, "prefix ἀσθενής, (asthenḗs) (G772) suffix")
 
     def test_already_canonical_is_left_untouched(self):
         raw = "prefix ἀσθενής, (asthenḗs) (G772) suffix"
         new_text, changes = _fix_file_text(raw, _FakeLexicon(ASTHENES), lang="en")
         self.assertEqual(new_text, raw)
         self.assertEqual(changes, [])
+
+
+class TestTriageBareLatinGlosses(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.lexicon = StrongsLexiconSource()
+
+    def test_reports_unique_transliteration_with_canonical_replacement(self):
+        findings = triage_bare_latin_glosses(
+            "The love (agapē) of God.", self.lexicon, "en"
+        )
+        self.assertTrue(
+            any("ἀγάπη, (agápē) (G26)" in finding for finding in findings),
+            findings,
+        )
+
+    def test_ignores_existing_canonical_gloss(self):
+        findings = triage_bare_latin_glosses("ἀγάπη, (agápē) (G26)", self.lexicon, "en")
+        self.assertEqual(findings, [])
+
+    def test_reports_ambiguous_transliteration_for_review(self):
+        findings = triage_bare_latin_glosses("was (ēn)", self.lexicon, "en")
+        self.assertTrue(any("REVIEW" in finding for finding in findings), findings)
 
 
 if __name__ == "__main__":
