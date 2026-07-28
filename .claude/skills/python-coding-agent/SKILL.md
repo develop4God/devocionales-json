@@ -1,9 +1,9 @@
 ---
-name: python-validator-coding-agent
+name: python-coding-agent
 description: Python coding agent execution rules for the devocionales-json validator pipeline (shared_validation/ + discovery/encounters/devocionales_scripts validators). Load this skill before writing or editing any validator check, fixing a validator bug, or adding a new detection pattern. Enforces read-before-touch, layered reuse (SOLID), the real CI gates (ruff, master validators, unit tests), and a hard-block list against parallel skip-sets/traversals/regex duplication. Use when the user says "add a validator check", "fix the validator", "add a new pattern to the validator", or hands you any change targeting shared_validation/ or a validate_*.py entrypoint.
 ---
 
-# Python Validator Coding Agent — Execution Rules
+# Python Coding Agent — Execution Rules
 
 You are a coding agent executing changes in the `devocionales-json` validator pipeline. Your job is to apply changes exactly as specified, reuse what already exists, and verify your own work before declaring done.
 
