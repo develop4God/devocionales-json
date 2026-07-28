@@ -76,15 +76,27 @@ Every new validator behavior is built from the **same four layers** that already
 
 Run these in order after every change, before reporting done.
 
-### Gate 1 — Lint (ruff)
+### Gate 1 — Format (ruff format) — the `dart format` equivalent
+```bash
+source .venv/bin/activate && ruff format <changed files>
+```
+Run this **first**, before lint. The repo was normalized to `ruff format`'s Black-compatible style in a one-time repo-wide reformat (2026-07-27) — the codebase had no prior consistent quote convention (187 single vs 164 double-quoted string literals in `shared_validation/` alone before that commit). Every file you touch should come out of this step already formatted; do not hand-format or second-guess its output. Zero tolerance, same as `dart format` — unformatted code is not done.
+
+### Gate 2 — Fix (ruff check --fix) — the `dart fix --apply` equivalent
+```bash
+source .venv/bin/activate && ruff check --fix <changed files>
+```
+Auto-fixes real lint violations (unused imports, etc.) in place. Run it, then re-run plain `ruff check <changed files>` (no `--fix`) to confirm what's left.
+
+### Gate 3 — Lint (ruff check)
 ```bash
 source .venv/bin/activate && ruff check <changed files>
 ```
-Target: **no new issues introduced by your change.** Ruff is installed in `.venv` and runs clean against this codebase's actual style today — it is not wired into CI (`.github/workflows/ci.yml` has no lint step) and there is no `ruff.toml`/`pyproject.toml` config, so it runs with defaults. Treat it as a real but informational check: fix anything it flags in a line you touched; do not chase pre-existing issues outside your diff.
+Target: **no new issues introduced by your change.** Ruff is installed in `.venv` and is not wired into CI (`.github/workflows/ci.yml` has no lint step) and there is no `ruff.toml`/`pyproject.toml` config, so both `format` and `check` run with defaults. Treat it as a real but informational check: fix anything it flags in a line you touched (Gate 2 should have already caught the auto-fixable ones); do not chase pre-existing issues outside your diff.
 
 **Do not run `flake8`.** It's present in the venv but has no project config, defaults to a 79-character line limit this codebase's style never followed (long descriptive comments/f-strings are the norm throughout `shared_validation/`), and floods every file with hundreds of pre-existing "issues" that are not real problems. It is not part of CI. Using it as a gate produces noise that looks like your change broke something when it didn't.
 
-### Gate 2 — Run the real entrypoints (matches CI exactly)
+### Gate 4 — Run the real entrypoints (matches CI exactly)
 ```bash
 source .venv/bin/activate && python3 discovery/discovery_scripts/discovery_master_validator.py
 source .venv/bin/activate && python3 encounters/encounters_scripts/encounters_master_validator.py
@@ -93,7 +105,7 @@ These are the actual CI gate (`.github/workflows/ci.yml`) — not the inner `val
 - No new errors/warnings appear that aren't attributable to your intended change.
 - If your change is a new detection pattern, confirm the count of new findings is a number you have actually reviewed line-by-line for false positives — not just eyeballed the total.
 
-### Gate 3 — Unit tests
+### Gate 5 — Unit tests
 ```bash
 source .venv/bin/activate && python3 -m unittest discover -s tests -v
 ```
@@ -101,26 +113,28 @@ This is CI's other real gate. `tests/test_promoted_validators.py` smoke-tests th
 
 **Baseline note:** `test_discovery_master_validator_passes` currently fails whenever the content corpus has known, tracked, in-progress errors (e.g. mid-way through a multi-session gloss-format cleanup) — it asserts a fully clean validator run, not just "no regression." A pre-existing failure here is not necessarily caused by your change. Confirm by checking whether the specific errors printed in the failure output match files/studies you did not touch — if they do, it's baseline content debt, not something you broke; note it in your report rather than treating it as a blocker you must fix.
 
-### Gate 4 — False-positive review (detection checks only)
+### Gate 6 — False-positive review (detection checks only)
 If the task added or changed a check that flags content (not a pure refactor):
 1. Run the validator and extract every new finding your check produces, in full.
 2. Read a representative sample across different files/languages — not just the first few.
 3. For each finding, confirm it's a real instance of the bug, not an artifact of the regex being too broad.
-4. If you find even one false positive, narrow the signal and re-run from Gate 2. Do not ship a check with a known false positive and a comment saying "close enough."
+4. If you find even one false positive, narrow the signal and re-run from Gate 4. Do not ship a check with a known false positive and a comment saying "close enough."
 
-### Gate 5 — Add unit tests for the function you touched
+### Gate 7 — Add unit tests for the function you touched
 
 **A new or changed check function ships with a unit test, in the same PR. No exceptions.**
 
-`tests/test_promoted_validators.py` and `tests/test_run_report.py` only cover structural/gating behavior — they do not exercise individual check functions. `tests/test_business_rules_discovery.py` and `tests/test_business_rules_encounters.py` are the established, named home for exactly this: their own docstrings state they exist to add "new coverage for pre-existing, currently-untested logic." As of this skill's writing, `shared_validation/greek_hebrew_gloss.py` has **zero** test coverage for any of its check functions (`check_greek_hebrew_transliteration`, `check_bare_transliteration_reuse`, `check_strong_code_native_script`, `check_word_study_bare_transliteration`, etc.) — do not treat that absence as precedent that new checks don't need tests. It means the module has a coverage gap, not that the gap is acceptable to widen.
+`tests/test_promoted_validators.py` and `tests/test_run_report.py` only cover structural/gating behavior — they do not exercise individual check functions. `tests/test_business_rules_discovery.py`, `tests/test_business_rules_encounters.py`, and `tests/test_business_rules_shared_validation.py` are the established, named home for exactly this: their own docstrings state they exist to add "new coverage for pre-existing, currently-untested logic." `shared_validation/greek_hebrew_gloss.py`'s older checks (`check_greek_hebrew_transliteration`, `check_bare_transliteration_reuse`, `check_strong_code_native_script`) still have **zero** test coverage as of this skill's writing — do not treat that absence as precedent that new checks don't need tests. It means the module still has a coverage gap for its older functions, not that the gap is acceptable to widen with new ones.
 
 **Where a new test goes:**
-- If the check lives in `shared_validation/` and is shared by both pipelines, add it to whichever of `test_business_rules_discovery.py` / `test_business_rules_encounters.py` already imports that module, or create a new `tests/test_business_rules_shared_validation.py` if neither does and the check has no pipeline-specific behavior to hang the test off of. Ask the user which they prefer if it's genuinely ambiguous — don't silently create a third test file when a second one might be the intended convention.
-- Follow the established pattern exactly: `from shared_validation.report import Report`, construct `report = Report('TEST')`, call the check function directly with real inputs, assert against `report.errors` / `report.warnings` — not via subprocess, not via the master validators. See `test_business_rules_discovery.py`'s `TestCheckQuoteAnomalies` class for the shape.
+- `shared_validation/` logic shared by both pipelines → `tests/test_business_rules_shared_validation.py` (created 2026-07-27, starting with `check_word_study_bare_transliteration`'s coverage — follow its pattern for anything else in `greek_hebrew_gloss.py`, `text_checks.py`, etc.).
+- Pipeline-specific logic → the matching `test_business_rules_discovery.py` / `test_business_rules_encounters.py`.
+- If genuinely ambiguous which file fits, ask — don't silently create a fourth test file.
+- Follow the established pattern exactly: `from shared_validation.report import Report`, construct `report = Report('TEST')`, call the check function directly with real inputs, assert against `report.errors` / `report.warnings` — not via subprocess, not via the master validators. See `test_business_rules_shared_validation.py`'s `TestCheckWordStudyBareTransliteration` class for the shape.
 
 **Minimum coverage for a new check function:**
 - At least one test proving it correctly flags a real positive case (a string you know should trigger it).
-- At least one test proving it does NOT flag a known adjacent-but-different case (the false positive you specifically ruled out in Gate 4's manual review — turn that manual verification into a permanent regression test, don't let it live only in your one-time terminal output).
+- At least one test proving it does NOT flag a known adjacent-but-different case (the false positive you specifically ruled out in Gate 6's manual review — turn that manual verification into a permanent regression test, don't let it live only in your one-time terminal output).
 - If the check has a skip-key exemption (via `_SKIP_KEYS` or similar), a test proving the skip actually skips.
 
 ---
@@ -132,6 +146,8 @@ If the task added or changed a check that flags content (not a pure refactor):
 [File] — what was changed (1 line per file)
 
 🔬 Quality Gates
+- ruff format: ✅ applied / ❌ [issue]
+- ruff check --fix: ✅ applied / ❌ [issue]
 - ruff check: ✅ no new issues / ❌ [issue]
 - discovery_master_validator.py: ✅ ran clean relative to baseline / ❌ [unexpected diff]
 - encounters_master_validator.py: ✅ ran clean relative to baseline / ❌ [unexpected diff]
