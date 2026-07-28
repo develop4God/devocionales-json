@@ -14,7 +14,13 @@
     "mood_primary": "grief",
     "accent_color": "#4a3728",
     "emoji": "🕊️",
-    "tags": ["compaixão", "luto", "ressurreição", "viuvez", "misericórdia não pedida"]
+    "tags": [
+      "compaixão",
+      "luto",
+      "ressurreição",
+      "viuvez",
+      "misericórdia não pedida"
+    ]
   },
   "key_verse": {
     "reference": "S. Lucas 7:13",
@@ -56,7 +62,7 @@
       "image_url": "widow_nain_portrait_grief.png",
       "title": "Uma mãe perde a sua voz na aldeia",
       "subtitle": "O que um filho significava em Naim",
-      "content": "Nós a conhecemos apenas pelo que perdeu. O seu filho já era um homem crescido, não uma criança — Jesus o chamará depois de νεανίσκος (neaniskos). Em Naim, como em qualquer aldeia da época, a porta da cidade era onde os anciãos resolviam heranças, contratos, disputas de propriedade. Um filho assim era, entre muitas coisas, a voz legal de sua mãe naquele lugar.\n\nCom o filho naquele esquife, a viúva perde também essa voz. A multidão que a acompanha pode chorar com ela, mas essa voz legal só ele podia dar-lhe.",
+      "content": "Nós a conhecemos apenas pelo que perdeu. O seu filho já era um homem crescido, não uma criança — Jesus o chamará depois de νεανίσκος, (neanískos) (G3495). Em Naim, como em qualquer aldeia da época, a porta da cidade era onde os anciãos resolviam heranças, contratos, disputas de propriedade. Um filho assim era, entre muitas coisas, a voz legal de sua mãe naquele lugar.\n\nCom o filho naquele esquife, a viúva perde também essa voz. A multidão que a acompanha pode chorar com ela, mas essa voz legal só ele podia dar-lhe.",
       "revelation_key": "Esta mulher não perde apenas o filho — perde o seu lugar legal e econômico em Naim.",
       "verse_overlay": {
         "reference": "S. Lucas 7:12",
@@ -85,7 +91,7 @@
       "image_url": "widow_nain_jesus_sees_her.png",
       "verse_reference": "S. Lucas 7:13",
       "verse_text": "E, vendo-a, o Senhor moveu-se de íntima compaixão por ela e disse-lhe: Não chores.",
-      "reflection": "Jesus a vê e se compadece dela. Lucas usa o verbo grego σπλαγχνίζομαι (splanchnizomai) — literalmente, sentir algo nas entranhas. Jesus sente essa dor no corpo, não apenas na mente.\n\nÉ notável para onde essa compaixão se dirige primeiro: não para o esquife, mas para a mãe que caminha atrás dele. Ele vê primeiro a pessoa que ainda respira.",
+      "reflection": "Jesus a vê e se compadece dela. Lucas usa o verbo grego σπλαγχνίζομαι, (splanchnízomai) (G4697) — literalmente, sentir algo nas entranhas. Jesus sente essa dor no corpo, não apenas na mente.\n\nÉ notável para onde essa compaixão se dirige primeiro: não para o esquife, mas para a mãe que caminha atrás dele. Ele vê primeiro a pessoa que ainda respira.",
       "revelation_key": "A compaixão de Jesus se move pelo que ele vê, não pelo que lhe pedem — ninguém naquela multidão lhe suplicou nada.",
       "scripture_connections": []
     },
@@ -111,11 +117,17 @@
       "image_url": "widow_nain_only_son.png",
       "title": "Um filho único, como Ele",
       "subtitle": "monogenēs — a mesma palavra",
-      "content": "Lucas descreve o filho com a palavra grega μονογενής (monogenēs): único, sem igual. É a mesma palavra que João usará para descrever Jesus como o Filho unigênito do Pai (João 1:18; 3:16).\n\nQuando Jesus lhe fala, chama-o de νεανίσκος (neaniskos) — jovem, um homem já crescido, não uma criança. Era a única voz daquela casa, e essa voz acabara de se calar para sempre.\n\nNão é uma coincidência menor: o Filho único do Pai se detém diante do filho único de uma viúva.",
+      "content": "Lucas descreve o filho com a palavra grega μονογενής, (monogenḗs) (G3439): único, sem igual. É a mesma palavra que João usará para descrever Jesus como o Filho unigênito do Pai (João 1:18; 3:16).\n\nQuando Jesus lhe fala, chama-o de νεανίσκος, (neanískos) (G3495) — jovem, um homem já crescido, não uma criança. Era a única voz daquela casa, e essa voz acabara de se calar para sempre.\n\nNão é uma coincidência menor: o Filho único do Pai se detém diante do filho único de uma viúva.",
       "revelation_key": "O mesmo termo que descreve o Filho único do Pai descreve também o filho que Jesus está prestes a devolver a esta mulher.",
       "scripture_connections": [
-        { "reference": "S. João 1:18", "text": "Deus nunca foi visto por alguém. O Filho unigênito, que está no seio do Pai, este o fez conhecer." },
-        { "reference": "S. João 3:16", "text": "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna." }
+        {
+          "reference": "S. João 1:18",
+          "text": "Deus nunca foi visto por alguém. O Filho unigênito, que está no seio do Pai, este o fez conhecer."
+        },
+        {
+          "reference": "S. João 3:16",
+          "text": "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna."
+        }
       ]
     },
     {
@@ -147,7 +159,10 @@
         "text": "E entregou-o à sua mãe."
       },
       "scripture_connections": [
-        { "reference": "1 Reis 17:23", "text": "E Elias tomou o menino, e o trouxe do quarto à casa, e o deu a sua mãe; e disse Elias: Vês aí, teu filho vive." }
+        {
+          "reference": "1 Reis 17:23",
+          "text": "E Elias tomou o menino, e o trouxe do quarto à casa, e o deu a sua mãe; e disse Elias: Vês aí, teu filho vive."
+        }
       ]
     },
     {
@@ -161,8 +176,14 @@
       "revelation_key": "Elias e Eliseu agiram por gratidão a mulheres que os haviam hospedado; a compaixão de Jesus nasce apenas do que ele vê.",
       "verse_overlay": null,
       "scripture_connections": [
-        { "reference": "1 Reis 17:9", "text": "Levanta-te, e vai a Sarepta, que é de Sidom, e habita ali; eis que eu ordenei ali a uma mulher viúva que te sustente." },
-        { "reference": "2 Reis 4:8", "text": "Sucedeu também um dia que, indo Eliseu a Suném, havia ali uma mulher rica, a qual o reteve a comer pão; e sucedeu que todas as vezes que passava, ali se dirigia a comer pão." }
+        {
+          "reference": "1 Reis 17:9",
+          "text": "Levanta-te, e vai a Sarepta, que é de Sidom, e habita ali; eis que eu ordenei ali a uma mulher viúva que te sustente."
+        },
+        {
+          "reference": "2 Reis 4:8",
+          "text": "Sucedeu também um dia que, indo Eliseu a Suném, havia ali uma mulher rica, a qual o reteve a comer pão; e sucedeu que todas as vezes que passava, ali se dirigia a comer pão."
+        }
       ]
     },
     {
@@ -197,9 +218,18 @@
       "title": "O Seu Encontro",
       "subtitle": "A compaixão de Deus não espera que lhe peçam.",
       "discovery_questions": [
-        { "category": "Sinceridade", "question": "Como a viúva de Naim, há momentos em que a dor e a perda nos ultrapassam. Mas Jesus pode fazer esse milagre sem que nós lho peçamos. O que mudaria em você se acreditasse que Jesus já está agindo, mesmo sem que você tenha pedido?" },
-        { "category": "Fé", "question": "À viúva de Naim, Jesus devolveu exatamente aquilo que ela já dava por perdido. Há algo na sua vida que você já deu por perdido, e que Jesus pode devolver-lhe hoje?" },
-        { "category": "Propósito", "question": "A viúva de Naim recebeu sem merecer, e sem buscá-lo tornou-se a razão pela qual muitos conheceram Jesus. Que história de graça recebida na sua vida poderia tornar-se hoje a razão pela qual mais alguém conheça Jesus?" }
+        {
+          "category": "Sinceridade",
+          "question": "Como a viúva de Naim, há momentos em que a dor e a perda nos ultrapassam. Mas Jesus pode fazer esse milagre sem que nós lho peçamos. O que mudaria em você se acreditasse que Jesus já está agindo, mesmo sem que você tenha pedido?"
+        },
+        {
+          "category": "Fé",
+          "question": "À viúva de Naim, Jesus devolveu exatamente aquilo que ela já dava por perdido. Há algo na sua vida que você já deu por perdido, e que Jesus pode devolver-lhe hoje?"
+        },
+        {
+          "category": "Propósito",
+          "question": "A viúva de Naim recebeu sem merecer, e sem buscá-lo tornou-se a razão pela qual muitos conheceram Jesus. Que história de graça recebida na sua vida poderia tornar-se hoje a razão pela qual mais alguém conheça Jesus?"
+        }
       ],
       "prayer": {
         "title": "Oração da misericórdia imerecida",

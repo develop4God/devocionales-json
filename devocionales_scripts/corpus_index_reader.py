@@ -31,6 +31,7 @@ EXPECTED_YEARS = {"2025", "2026"}
 @dataclass(frozen=True)
 class CorpusCombo:
     """One declared (lang, version, year) -> filename entry from index.json."""
+
     lang: str
     version: str
     year: str
@@ -62,11 +63,15 @@ class CorpusIndexReader:
 
         sv = self._data.get("schema_version")
         if sv != EXPECTED_SCHEMA_VERSION:
-            report.E(f"index.json: schema_version expected {EXPECTED_SCHEMA_VERSION}, got {sv!r}")
+            report.E(
+                f"index.json: schema_version expected {EXPECTED_SCHEMA_VERSION}, got {sv!r}"
+            )
         else:
             report.I(f"✓ index.json schema_version = {sv}")
 
-        self._validate_iso_date(self._data.get("updated_at"), "index.json: updated_at", report)
+        self._validate_iso_date(
+            self._data.get("updated_at"), "index.json: updated_at", report
+        )
 
         if not isinstance(self._data.get("files"), dict):
             report.E("index.json: 'files' key missing or not an object")
@@ -93,33 +98,45 @@ class CorpusIndexReader:
 
         for lang, versions in files_section.items():
             if not isinstance(versions, dict):
-                report.E(f"index.json: files.{lang} expected object, got {type(versions).__name__}")
+                report.E(
+                    f"index.json: files.{lang} expected object, got {type(versions).__name__}"
+                )
                 continue
 
             for version, payload in versions.items():
                 if not isinstance(payload, dict):
-                    report.E(f"index.json: files.{lang}.{version} expected object, got {type(payload).__name__}")
+                    report.E(
+                        f"index.json: files.{lang}.{version} expected object, got {type(payload).__name__}"
+                    )
                     continue
 
                 files_map = payload.get("files", {})
                 if not isinstance(files_map, dict):
-                    report.E(f"index.json: files.{lang}.{version}.files missing or not an object")
+                    report.E(
+                        f"index.json: files.{lang}.{version}.files missing or not an object"
+                    )
                     continue
 
                 declared_years = set(files_map.keys())
                 missing_years = EXPECTED_YEARS - declared_years
                 if missing_years:
-                    report.E(f"index.json: files.{lang}.{version} missing year(s) {sorted(missing_years)}")
+                    report.E(
+                        f"index.json: files.{lang}.{version} missing year(s) {sorted(missing_years)}"
+                    )
                 extra_years = declared_years - EXPECTED_YEARS
                 if extra_years:
-                    report.E(f"index.json: files.{lang}.{version} unexpected year(s) {sorted(extra_years)}")
+                    report.E(
+                        f"index.json: files.{lang}.{version} unexpected year(s) {sorted(extra_years)}"
+                    )
 
                 for year, filename in files_map.items():
                     upd_date = payload.get(year)
                     self._validate_iso_date(
                         upd_date, f"index.json: files.{lang}.{version}.{year}", report
                     )
-                    yield CorpusCombo(lang=lang, version=version, year=str(year), filename=filename)
+                    yield CorpusCombo(
+                        lang=lang, version=version, year=str(year), filename=filename
+                    )
 
     def declared_filenames(self) -> set:
         """All filenames declared anywhere in index.json — used by the

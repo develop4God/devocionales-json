@@ -14,7 +14,16 @@
     "mood_primary": "dawn",
     "accent_color": "#2b1a08",
     "emoji": "🌅",
-    "tags": ["testemunho", "perseguição", "vista", "luz", "coragem", "exclusão", "adoração", "fé"]
+    "tags": [
+      "testemunho",
+      "perseguição",
+      "vista",
+      "luz",
+      "coragem",
+      "exclusão",
+      "adoração",
+      "fé"
+    ]
   },
   "key_verse": {
     "reference": "S. João 9:25",
@@ -89,7 +98,7 @@
       "image_url": "man_born_blind_clay_hands.png",
       "title": "Lodo do Criador, tanque do Enviado",
       "subtitle": "Duas palavras que assinam o milagre",
-      "content": "O texto grego chama o lodo de πηλός (pēlos), a mesma palavra que a Bíblia grega usa para o barro do oleiro. Jesus toma pó da terra e o aplica sobre olhos que nunca viram luz. O gesto evoca a origem do homem: o Criador que formou Adão do pó (Gênesis 2:7) está formando o que faltava a esses olhos desde o ventre. É obra de criação, e por isso mesmo vai escandalizar: amassar lodo era trabalho proibido no dia de sábado segundo a tradição dos fariseus.\n\nE há uma segunda assinatura. João interrompe a narrativa para traduzir o nome do tanque: Siloé significa ἀπεσταλμένος (apestalmenos), \"Enviado\". Ao longo deste evangelho, Jesus se apresenta como o Enviado do Pai (João 3:17). O Enviado o manda lavar-se no tanque chamado Enviado: até a geografia do milagre prega quem é aquele que o fez.",
+      "content": "O texto grego chama o lodo de πηλός, (pēlós) (G4081), a mesma palavra que a Bíblia grega usa para o barro do oleiro. Jesus toma pó da terra e o aplica sobre olhos que nunca viram luz. O gesto evoca a origem do homem: o Criador que formou Adão do pó (Gênesis 2:7) está formando o que faltava a esses olhos desde o ventre. É obra de criação, e por isso mesmo vai escandalizar: amassar lodo era trabalho proibido no dia de sábado segundo a tradição dos fariseus.\n\nE há uma segunda assinatura. João interrompe a narrativa para traduzir o nome do tanque: Siloé significa ἀπεσταλμένος, (apestalmenos), \"Enviado\". Ao longo deste evangelho, Jesus se apresenta como o Enviado do Pai (João 3:17). O Enviado o manda lavar-se no tanque chamado Enviado: até a geografia do milagre prega quem é aquele que o fez.",
       "revelation_key": "Jesus escolhe o dia em que amassar lodo é proibido para fazer, com as mãos, a mesma obra que um dia fez apenas com falar.",
       "verse_overlay": {
         "reference": "S. João 9:7",
@@ -112,7 +121,7 @@
       "mood": "tense",
       "image_url": "man_born_blind_neighbors_debate.png",
       "title": "Sou eu",
-      "narrative": "Diante da dúvida de sua vizinhança, ele mesmo responde: Sou eu — em grego, ἐγώ εἰμι (egō eimi), as mesmas duas palavras que Jesus usa ao longo deste evangelho para falar de si mesmo, embora aqui elas signifiquem apenas \"sou o homem que vocês conheciam\". E conta sua história pela primeira vez, com a precisão de quem repete os fatos: aquele homem chamado Jesus fez lodo, untou meus olhos, disse-me vai a Siloé e lava-te; fui, lavei-me, e recebi a vista. Perguntam-lhe onde está esse Jesus. Sua resposta é honesta: não sei. Tudo o que sabe de Jesus lhe chegou pelo ouvido e pelo lodo nos olhos: seu testemunho nasce antes de ver o rosto dele.",
+      "narrative": "Diante da dúvida de sua vizinhança, ele mesmo responde: Sou eu — em grego, ἐγώ εἰμι, (egō eimi), as mesmas duas palavras que Jesus usa ao longo deste evangelho para falar de si mesmo, embora aqui elas signifiquem apenas \"sou o homem que vocês conheciam\". E conta sua história pela primeira vez, com a precisão de quem repete os fatos: aquele homem chamado Jesus fez lodo, untou meus olhos, disse-me vai a Siloé e lava-te; fui, lavei-me, e recebi a vista. Perguntam-lhe onde está esse Jesus. Sua resposta é honesta: não sei. Tudo o que sabe de Jesus lhe chegou pelo ouvido e pelo lodo nos olhos: seu testemunho nasce antes de ver o rosto dele.",
       "ambient_sound": "crowd_distant",
       "haptic": null,
       "verse_overlay": {
@@ -177,7 +186,7 @@
       "image_url": "man_born_blind_cast_out.png",
       "title": "Expulso",
       "subtitle": "O primeiro crente que pagou o preço",
-      "content": "A palavra que João usa para a ameaça é ἀποσυνάγωγος (aposynagōgos): \"fora da sinagoga\". Aparece somente neste evangelho (João 9:22; 12:42; 16:2), e descreve um dos castigos mais duros daquele mundo: perder a sinagoga significava perder o lugar de adoração, a comunidade, os negócios e a honra da família. Era ficar fora de quase tudo que sustentava a vida de um judeu.\n\nQuando o homem se recusa a se retratar, os fariseus proferem sentença sobre sua pessoa: tu nasceste todo em pecado, e nos ensinas a nós? Devolvem a ele a mesma ideia da qual Jesus já o havia livrado: que sua cegueira era um castigo. E o expulsam. Esse mendigo é o primeiro expulso por causa de Jesus que este evangelho registra: paga esse preço antes dos apóstolos, no mesmo dia em que recebeu a vista. Jesus anunciaria depois a seus discípulos que esse mesmo preço os esperava.",
+      "content": "A palavra que João usa para a ameaça é ἀποσυνάγωγος, (aposynágōgos) (G656): \"fora da sinagoga\". Aparece somente neste evangelho (João 9:22; 12:42; 16:2), e descreve um dos castigos mais duros daquele mundo: perder a sinagoga significava perder o lugar de adoração, a comunidade, os negócios e a honra da família. Era ficar fora de quase tudo que sustentava a vida de um judeu.\n\nQuando o homem se recusa a se retratar, os fariseus proferem sentença sobre sua pessoa: tu nasceste todo em pecado, e nos ensinas a nós? Devolvem a ele a mesma ideia da qual Jesus já o havia livrado: que sua cegueira era um castigo. E o expulsam. Esse mendigo é o primeiro expulso por causa de Jesus que este evangelho registra: paga esse preço antes dos apóstolos, no mesmo dia em que recebeu a vista. Jesus anunciaria depois a seus discípulos que esse mesmo preço os esperava.",
       "revelation_key": "Os mesmos que não conseguiram derrubar o milagre, encerram com a acusação da qual Jesus já o havia livrado: que nasceu em pecado.",
       "scripture_connections": [
         {
@@ -200,7 +209,7 @@
       "mood": "grace",
       "image_url": "man_born_blind_found_by_jesus.png",
       "title": "Jesus ouviu que o tinham expulsado",
-      "narrative": "A notícia da expulsão chega aos ouvidos de Jesus. Então o evangelho diz uma palavra enorme: εὑρών (heurōn), \"tendo-o encontrado\". Encontrar supõe ter procurado. Ele o encontra fora: fora da sinagoga, fora de sua comunidade, fora do mundo que conhecia.\n\nE faz a ele a pergunta para a qual toda a sua história vinha caminhando: crês tu no Filho de Deus? O homem responde com a mesma honestidade de sempre: quem é ele, Senhor, para que eu creia nele? A resposta de Jesus entrega, numa só frase, o presente que faltava: tu já o tens visto, e é aquele que fala contigo.\n\nPela primeira vez em sua vida, seus olhos novos estão olhando o rosto daquele de quem tanto falou sem conhecê-lo. Muitos profetas e reis desejaram ver esse rosto e não o viram (Lucas 10:23-24); a ele, que foi encontrado sem procurar, o próprio Filho de Deus veio ao encontro. Neste evangelho, Jesus raramente declara quem é com tanta clareza; antes o fez junto a um poço, com a mulher samaritana (João 4:25-26), e agora se apresenta igualmente claro diante desse homem, mendigo de nascença e expulso da sinagoga por causa do milagre que havia recebido.",
+      "narrative": "A notícia da expulsão chega aos ouvidos de Jesus. Então o evangelho diz uma palavra enorme: εὑρών, (heurōn), \"tendo-o encontrado\". Encontrar supõe ter procurado. Ele o encontra fora: fora da sinagoga, fora de sua comunidade, fora do mundo que conhecia.\n\nE faz a ele a pergunta para a qual toda a sua história vinha caminhando: crês tu no Filho de Deus? O homem responde com a mesma honestidade de sempre: quem é ele, Senhor, para que eu creia nele? A resposta de Jesus entrega, numa só frase, o presente que faltava: tu já o tens visto, e é aquele que fala contigo.\n\nPela primeira vez em sua vida, seus olhos novos estão olhando o rosto daquele de quem tanto falou sem conhecê-lo. Muitos profetas e reis desejaram ver esse rosto e não o viram (Lucas 10:23-24); a ele, que foi encontrado sem procurar, o próprio Filho de Deus veio ao encontro. Neste evangelho, Jesus raramente declara quem é com tanta clareza; antes o fez junto a um poço, com a mulher samaritana (João 4:25-26), e agora se apresenta igualmente claro diante desse homem, mendigo de nascença e expulso da sinagoga por causa do milagre que havia recebido.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
@@ -226,7 +235,7 @@
       "image_url": "man_born_blind_worship.png",
       "title": "Creio, Senhor; e o adorou",
       "subtitle": "A confissão termina prostrada",
-      "content": "A resposta do homem cabe em duas palavras e um gesto: Creio, Senhor; e o adorou. O verbo grego é προσεκύνησεν (prosekynēsen): prostrar-se em terra, render adoração. É o verbo que este evangelho reserva para a adoração devida a Deus (João 4:23-24, os \"verdadeiros adoradores\" do Pai). O homem o dirige a Jesus, e Jesus o recebe. Aquele a quem Jesus antes chamava apenas de \"aquele homem\" termina prostrado a seus pés.\n\nAlguns fariseus que estavam com ele presenciam a cena. Jesus então pronuncia o veredito de toda a cena: para juízo vim a este mundo, para que os que não veem, vejam, e os que veem, sejam cegos. Alguns fariseus perguntam se acaso eles também são cegos, e a resposta de Jesus é solene: porque dizeis \"vemos\", vosso pecado permanece. A história se encerra com duas posturas diante da mesma luz: o mendigo, que reconheceu sua cegueira e agora vê e adora; e os especialistas que, seguros de sua visão, ficam nas trevas. Ver começa por reconhecer a própria cegueira.",
+      "content": "A resposta do homem cabe em duas palavras e um gesto: Creio, Senhor; e o adorou. O verbo grego é προσεκύνησεν, (prosekynēsen): prostrar-se em terra, render adoração. É o verbo que este evangelho reserva para a adoração devida a Deus (João 4:23-24, os \"verdadeiros adoradores\" do Pai). O homem o dirige a Jesus, e Jesus o recebe. Aquele a quem Jesus antes chamava apenas de \"aquele homem\" termina prostrado a seus pés.\n\nAlguns fariseus que estavam com ele presenciam a cena. Jesus então pronuncia o veredito de toda a cena: para juízo vim a este mundo, para que os que não veem, vejam, e os que veem, sejam cegos. Alguns fariseus perguntam se acaso eles também são cegos, e a resposta de Jesus é solene: porque dizeis \"vemos\", vosso pecado permanece. A história se encerra com duas posturas diante da mesma luz: o mendigo, que reconheceu sua cegueira e agora vê e adora; e os especialistas que, seguros de sua visão, ficam nas trevas. Ver começa por reconhecer a própria cegueira.",
       "revelation_key": "O mendigo dirige a Jesus o mesmo verbo que este evangelho reserva para adorar a Deus — e Jesus o recebe sem corrigi-lo.",
       "verse_overlay": {
         "reference": "S. João 9:39",

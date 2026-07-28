@@ -14,7 +14,13 @@
     "mood_primary": "grief",
     "accent_color": "#4a3728",
     "emoji": "🕊️",
-    "tags": ["habag", "kalungkutan", "muling-pagkabuhay", "pagkabiyuda", "biyayang hindi hiningi"]
+    "tags": [
+      "habag",
+      "kalungkutan",
+      "muling-pagkabuhay",
+      "pagkabiyuda",
+      "biyayang hindi hiningi"
+    ]
   },
   "key_verse": {
     "reference": "Lucas 7:13",
@@ -56,7 +62,7 @@
       "image_url": "widow_nain_portrait_grief.png",
       "title": "Isang ina na nawalan ng tinig sa bayan",
       "subtitle": "Ang ibig sabihin ng isang anak sa Nain",
-      "content": "Kilala lamang natin siya sa kanyang nawala. Ang kanyang anak ay lalaki na siyang ganap, hindi na isang bata — tatawagin siya mamaya ni Jesus na νεανίσκος (neaniskos), isang binata. Sa Nain, gaya ng anumang bayan noong panahong iyon, ang pintuan ng bayan ang lugar kung saan pinagpapasyahan ng mga nakatatanda ang mga usapin ng pamana, kasunduan, at alitan hinggil sa lupa. Ang isang anak na tulad nito ay, sa maraming paraan, ang legal na tinig ng kanyang ina sa lugar na iyon.\n\nKasama ang kanyang anak sa kabaong, nawala rin sa biyuda ang tinig na iyon. Ang karamihang naglalakad kasama niya ay maaaring makiramay, ngunit siya lamang ang nakapagbibigay sa kanya ng tinig na iyon.",
+      "content": "Kilala lamang natin siya sa kanyang nawala. Ang kanyang anak ay lalaki na siyang ganap, hindi na isang bata — tatawagin siya mamaya ni Jesus na νεανίσκος, (neanískos) (G3495), isang binata. Sa Nain, gaya ng anumang bayan noong panahong iyon, ang pintuan ng bayan ang lugar kung saan pinagpapasyahan ng mga nakatatanda ang mga usapin ng pamana, kasunduan, at alitan hinggil sa lupa. Ang isang anak na tulad nito ay, sa maraming paraan, ang legal na tinig ng kanyang ina sa lugar na iyon.\n\nKasama ang kanyang anak sa kabaong, nawala rin sa biyuda ang tinig na iyon. Ang karamihang naglalakad kasama niya ay maaaring makiramay, ngunit siya lamang ang nakapagbibigay sa kanya ng tinig na iyon.",
       "revelation_key": "Hindi lamang nawalan ng anak ang babaeng ito — nawalan din siya ng kanyang legal at pang-ekonomiyang katayuan sa Nain.",
       "verse_overlay": {
         "reference": "Lucas 7:12",
@@ -85,7 +91,7 @@
       "image_url": "widow_nain_jesus_sees_her.png",
       "verse_reference": "Lucas 7:13",
       "verse_text": "Nahabag ang Panginoon nang kanyang makita ang ina ng namatay kaya't sinabi niya rito, \"Huwag ka nang umiyak.\"",
-      "reflection": "Nakita siya ni Jesus, at siya'y nahabag. Ginagamit ni Lucas ang salitang Griyego na σπλαγχνίζομαι (splanchnizomai) — literal, ang maramdaman ang isang bagay sa kaloob-looban. Naramdaman ni Jesus ang kalungkutang ito sa kanyang buong katawan, hindi lamang sa isip.\n\nKapansin-pansin kung saan unang tumungo ang habag na iyon: hindi sa kabaong, kundi sa inang naglalakad sa likuran nito. Nakita niya, muna, ang isang buháy pa.",
+      "reflection": "Nakita siya ni Jesus, at siya'y nahabag. Ginagamit ni Lucas ang salitang Griyego na σπλαγχνίζομαι, (splanchnízomai) (G4697) — literal, ang maramdaman ang isang bagay sa kaloob-looban. Naramdaman ni Jesus ang kalungkutang ito sa kanyang buong katawan, hindi lamang sa isip.\n\nKapansin-pansin kung saan unang tumungo ang habag na iyon: hindi sa kabaong, kundi sa inang naglalakad sa likuran nito. Nakita niya, muna, ang isang buháy pa.",
       "revelation_key": "Ang habag ni Jesus ay tumutungo sa kanyang nakikita, hindi sa kanyang hinihiling — walang sinuman sa karamihang iyon ang humingi sa kanya ng anuman.",
       "scripture_connections": []
     },
@@ -111,11 +117,17 @@
       "image_url": "widow_nain_only_son.png",
       "title": "Isang kaisa-isang anak, tulad Niya",
       "subtitle": "monogenēs — ang iisang salita",
-      "content": "Inilalarawan ni Lucas ang anak sa salitang Griyego na μονογενής (monogenēs): kaisa-isa, walang katulad. Ito rin ang salitang gagamitin ni Juan upang ilarawan si Jesus bilang ang bugtong na Anak ng Ama (Juan 1:18; 3:16).\n\nNang kausapin siya ni Jesus, tinawag niya siyang νεανίσκος (neaniskos) — binata, lalaki na siyang ganap, hindi bata. Siya ang tanging tinig ng sambahayang iyon, at ang tinig na iyon ay tuluyan nang natahimik.\n\nHindi ito isang simpleng pagkakataon: humihinto ang kaisa-isang Anak ng Ama sa harap ng kaisa-isang anak ng isang biyuda.",
+      "content": "Inilalarawan ni Lucas ang anak sa salitang Griyego na μονογενής, (monogenḗs) (G3439): kaisa-isa, walang katulad. Ito rin ang salitang gagamitin ni Juan upang ilarawan si Jesus bilang ang bugtong na Anak ng Ama (Juan 1:18; 3:16).\n\nNang kausapin siya ni Jesus, tinawag niya siyang νεανίσκος, (neanískos) (G3495) — binata, lalaki na siyang ganap, hindi bata. Siya ang tanging tinig ng sambahayang iyon, at ang tinig na iyon ay tuluyan nang natahimik.\n\nHindi ito isang simpleng pagkakataon: humihinto ang kaisa-isang Anak ng Ama sa harap ng kaisa-isang anak ng isang biyuda.",
       "revelation_key": "Ang parehong katagang naglalarawan sa kaisa-isang Anak ng Ama ay siya ring naglalarawan sa anak na malapit nang ibalik ni Jesus sa babaeng ito.",
       "scripture_connections": [
-        { "reference": "Juan 1:18", "text": "Kailanma't wala pang taong nakakita sa Diyos, ngunit siya ay ipinakilala ng kaisa-isang Diyos na lubos na minamahal ng Ama." },
-        { "reference": "Juan 3:16", "text": "Sapagkat gayon na lamang ang pag-ibig ng Diyos sa sangkatauhan, kaya't ibinigay niya ang kanyang kaisa-isang Anak, upang ang sinumang sumampalataya sa kanya ay hindi mapahamak, kundi magkaroon ng buhay na walang hanggan." }
+        {
+          "reference": "Juan 1:18",
+          "text": "Kailanma't wala pang taong nakakita sa Diyos, ngunit siya ay ipinakilala ng kaisa-isang Diyos na lubos na minamahal ng Ama."
+        },
+        {
+          "reference": "Juan 3:16",
+          "text": "Sapagkat gayon na lamang ang pag-ibig ng Diyos sa sangkatauhan, kaya't ibinigay niya ang kanyang kaisa-isang Anak, upang ang sinumang sumampalataya sa kanya ay hindi mapahamak, kundi magkaroon ng buhay na walang hanggan."
+        }
       ]
     },
     {
@@ -147,7 +159,10 @@
         "text": "Naupo ang binata at nagsalita; at siya'y ibinigay ni Jesus sa kanyang ina."
       },
       "scripture_connections": [
-        { "reference": "1 Mga Hari 17:23", "text": "Inakay ni Elias ang bata, at ibinalik sa kanyang ina saka sinabing, \"Narito ang anak mo, buháy na siya.\"" }
+        {
+          "reference": "1 Mga Hari 17:23",
+          "text": "Inakay ni Elias ang bata, at ibinalik sa kanyang ina saka sinabing, \"Narito ang anak mo, buháy na siya.\""
+        }
       ]
     },
     {
@@ -161,8 +176,14 @@
       "revelation_key": "Kumilos sina Elias at Eliseo mula sa utang-na-loob sa mga babaeng tumanggap sa kanila; ang habag ni Jesus ay ipinanganak lamang mula sa kanyang nakita.",
       "verse_overlay": null,
       "scripture_connections": [
-        { "reference": "1 Mga Hari 17:9", "text": "\"Umalis ka rito. Pumunta ka sa Sarepta, sa lupain ng Sidon. May inutusan akong isang biyuda na magpapakain sa iyo roon.\"" },
-        { "reference": "2 Mga Hari 4:8", "text": "Minsan, si Eliseo'y pumunta sa Sunem. May isang mayamang babae roon at siya'y inanyayahang kumain sa kanila. Mula noon, doon siya kumakain tuwing pupunta sa lugar na iyon." }
+        {
+          "reference": "1 Mga Hari 17:9",
+          "text": "\"Umalis ka rito. Pumunta ka sa Sarepta, sa lupain ng Sidon. May inutusan akong isang biyuda na magpapakain sa iyo roon.\""
+        },
+        {
+          "reference": "2 Mga Hari 4:8",
+          "text": "Minsan, si Eliseo'y pumunta sa Sunem. May isang mayamang babae roon at siya'y inanyayahang kumain sa kanila. Mula noon, doon siya kumakain tuwing pupunta sa lugar na iyon."
+        }
       ]
     },
     {
@@ -197,9 +218,18 @@
       "title": "Ang Iyong Pagtatagpo",
       "subtitle": "Hindi naghihintay ng paghingi ang habag ng Diyos.",
       "discovery_questions": [
-        { "category": "Katapatan", "question": "Tulad ng biyuda ng Nain, may mga sandali na tayo'y natatabunan ng kalungkutan at pagkawala. Ngunit kaya ni Jesus ang himalang iyon nang hindi natin hinihingi. Ano ang mababago sa iyo kung maniniwala kang gumagawa na si Jesus, kahit hindi mo pa siya hinihiling?" },
-        { "category": "Pananampalataya", "question": "Sa biyuda ng Nain, ibinalik ni Jesus ang eksaktong bagay na kanyang isinuko na bilang nawala. May bagay ka bang isinuko na bilang nawala, na maibabalik sa iyo ni Jesus ngayon?" },
-        { "category": "Layunin", "question": "Tumanggap ang biyuda ng Nain nang hindi kinita, at nang hindi hinahangad, naging dahilan siya kung bakit marami ang nakakilala kay Jesus. Anong kuwento ng biyayang tinanggap mo sa iyong buhay ang maaaring maging dahilan ngayon kung bakit may makakilala kay Jesus?" }
+        {
+          "category": "Katapatan",
+          "question": "Tulad ng biyuda ng Nain, may mga sandali na tayo'y natatabunan ng kalungkutan at pagkawala. Ngunit kaya ni Jesus ang himalang iyon nang hindi natin hinihingi. Ano ang mababago sa iyo kung maniniwala kang gumagawa na si Jesus, kahit hindi mo pa siya hinihiling?"
+        },
+        {
+          "category": "Pananampalataya",
+          "question": "Sa biyuda ng Nain, ibinalik ni Jesus ang eksaktong bagay na kanyang isinuko na bilang nawala. May bagay ka bang isinuko na bilang nawala, na maibabalik sa iyo ni Jesus ngayon?"
+        },
+        {
+          "category": "Layunin",
+          "question": "Tumanggap ang biyuda ng Nain nang hindi kinita, at nang hindi hinahangad, naging dahilan siya kung bakit marami ang nakakilala kay Jesus. Anong kuwento ng biyayang tinanggap mo sa iyong buhay ang maaaring maging dahilan ngayon kung bakit may makakilala kay Jesus?"
+        }
       ],
       "prayer": {
         "title": "Panalangin ng biyayang hindi hiningi",

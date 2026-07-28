@@ -80,9 +80,13 @@ class CorpusCalendarChecker:
                 elif missing or extra:
                     detail = []
                     if missing:
-                        detail.append(f"missing {len(missing)} date(s), e.g. {sorted(missing)[:3]}")
+                        detail.append(
+                            f"missing {len(missing)} date(s), e.g. {sorted(missing)[:3]}"
+                        )
                     if extra:
-                        detail.append(f"{len(extra)} unexpected date(s), e.g. {sorted(extra)[:3]}")
+                        detail.append(
+                            f"{len(extra)} unexpected date(s), e.g. {sorted(extra)[:3]}"
+                        )
                     report.E(
                         f"{combo.filename}: same start/end as reference but "
                         f"{'; '.join(detail)} — day-by-day coverage does not match "

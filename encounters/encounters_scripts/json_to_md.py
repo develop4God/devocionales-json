@@ -24,6 +24,7 @@ Usage:
     python3 json_to_md.py read-dir <dir> [output_dir]
         Runs `read` on every .json file in a directory.
 """
+
 import json
 import sys
 from pathlib import Path
@@ -67,15 +68,13 @@ def encode_scalar(value):
     # marker to the decoder (headings only ever introduce list/object
     # fields in this format, never scalar text).
     return "\n".join(
-        f"\\{line}" if line.startswith("#") else line
-        for line in text.split("\n")
+        f"\\{line}" if line.startswith("#") else line for line in text.split("\n")
     )
 
 
 def decode_scalar_text(text):
     return "\n".join(
-        line[1:] if line.startswith("\\#") else line
-        for line in text.split("\n")
+        line[1:] if line.startswith("\\#") else line for line in text.split("\n")
     )
 
 
@@ -145,7 +144,7 @@ def json_to_md(data, source_name=""):
 
 def parse_field_line(line):
     """Parse '<!-- field:path type=str -->' into (path, type_name|None)."""
-    inner = line[len(FIELD_START):-len(FIELD_END)]
+    inner = line[len(FIELD_START) : -len(FIELD_END)]
     if " type=" in inner:
         path, type_name = inner.rsplit(" type=", 1)
         return path, type_name
@@ -276,14 +275,18 @@ def json_to_reader_md(data, source_name=""):
     if meta.get("scripture_reference"):
         header_bits.append(f"**Referencia:** {meta['scripture_reference']}")
     if data.get("estimated_reading_minutes"):
-        header_bits.append(f"**Tiempo estimado de lectura:** {data['estimated_reading_minutes']} min")
+        header_bits.append(
+            f"**Tiempo estimado de lectura:** {data['estimated_reading_minutes']} min"
+        )
     if header_bits:
         out.append("  \n".join(header_bits))
         out.append("")
 
     kv = data.get("key_verse")
     if isinstance(kv, dict) and kv.get("text"):
-        out.extend(_quote_block(kv["text"], kv.get("reference", ""), kv.get("bible_version")))
+        out.extend(
+            _quote_block(kv["text"], kv.get("reference", ""), kv.get("bible_version"))
+        )
         out.append("")
 
     out.append("---")
@@ -319,7 +322,9 @@ def json_to_reader_md(data, source_name=""):
         if isinstance(sc, list):
             for item in sc:
                 if isinstance(item, dict):
-                    out.append(f"**Conexión:** {item.get('reference','')} — \"{item.get('text','')}\"")
+                    out.append(
+                        f'**Conexión:** {item.get("reference", "")} — "{item.get("text", "")}"'
+                    )
             if sc:
                 out.append("")
 
@@ -328,7 +333,7 @@ def json_to_reader_md(data, source_name=""):
             out.append("**Preguntas para reflexionar:**")
             for q in dq:
                 if isinstance(q, dict):
-                    out.append(f"- ({q.get('category','')}) {q.get('question','')}")
+                    out.append(f"- ({q.get('category', '')}) {q.get('question', '')}")
             out.append("")
 
         prayer = c.get("prayer")
@@ -341,7 +346,11 @@ def json_to_reader_md(data, source_name=""):
 
         cv = c.get("completion_verse")
         if isinstance(cv, dict) and cv.get("text"):
-            out.extend(_quote_block(cv["text"], cv.get("reference", ""), cv.get("bible_version")))
+            out.extend(
+                _quote_block(
+                    cv["text"], cv.get("reference", ""), cv.get("bible_version")
+                )
+            )
             out.append("")
 
         if c.get("reflection_prompt"):
@@ -355,11 +364,26 @@ def json_to_reader_md(data, source_name=""):
         # Catch-all: any scalar field not already rendered above, so no
         # data is ever silently omitted from the reader view.
         _rendered = {
-            "order", "type", "mood", "image_url", "title", "subtitle",
-            "narrative", "reflection", "content", "verse_reference",
-            "verse_text", "verse_overlay", "scripture_connections",
-            "discovery_questions", "prayer", "completion_verse",
-            "reflection_prompt", "revelation_key", "ambient_sound", "haptic",
+            "order",
+            "type",
+            "mood",
+            "image_url",
+            "title",
+            "subtitle",
+            "narrative",
+            "reflection",
+            "content",
+            "verse_reference",
+            "verse_text",
+            "verse_overlay",
+            "scripture_connections",
+            "discovery_questions",
+            "prayer",
+            "completion_verse",
+            "reflection_prompt",
+            "revelation_key",
+            "ambient_sound",
+            "haptic",
         }
         for key, value in c.items():
             if key in _rendered or value in (None, "", [], {}):
@@ -378,7 +402,11 @@ def read_file(src_path, dst_path=None):
     src_path = Path(src_path)
     data = json.loads(src_path.read_text(encoding="utf-8"))
     md = json_to_reader_md(data, source_name=src_path.stem)
-    dst_path = Path(dst_path) if dst_path else src_path.with_name(src_path.stem + "_LECTURA.md")
+    dst_path = (
+        Path(dst_path)
+        if dst_path
+        else src_path.with_name(src_path.stem + "_LECTURA.md")
+    )
     dst_path.write_text(md, encoding="utf-8")
     return dst_path
 
@@ -397,7 +425,9 @@ def decode_file(src_path, dst_path=None):
     md = src_path.read_text(encoding="utf-8")
     data = md_to_json(md)
     dst_path = Path(dst_path) if dst_path else src_path.with_suffix(".json")
-    dst_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    dst_path.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
     return dst_path
 
 
@@ -405,14 +435,20 @@ def diff_json(original, rebuilt, path="root"):
     """Return a list of human-readable mismatch descriptions."""
     problems = []
 
-    if type(original) != type(rebuilt):
+    if type(original) is not type(rebuilt):
         # int/float/bool distinctions from decode_scalar are the only
         # expected wrinkle; treat numeric equality as acceptable.
-        if isinstance(original, (int, float)) and isinstance(rebuilt, (int, float)) \
-                and not isinstance(original, bool) and not isinstance(rebuilt, bool) \
-                and original == rebuilt:
+        if (
+            isinstance(original, (int, float))
+            and isinstance(rebuilt, (int, float))
+            and not isinstance(original, bool)
+            and not isinstance(rebuilt, bool)
+            and original == rebuilt
+        ):
             return problems
-        problems.append(f"{path}: type mismatch {type(original).__name__} vs {type(rebuilt).__name__}")
+        problems.append(
+            f"{path}: type mismatch {type(original).__name__} vs {type(rebuilt).__name__}"
+        )
         return problems
 
     if isinstance(original, dict):

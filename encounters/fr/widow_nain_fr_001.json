@@ -14,7 +14,13 @@
     "mood_primary": "grief",
     "accent_color": "#4a3728",
     "emoji": "🕊️",
-    "tags": ["compassion", "deuil", "résurrection", "veuvage", "miséricorde non demandée"]
+    "tags": [
+      "compassion",
+      "deuil",
+      "résurrection",
+      "veuvage",
+      "miséricorde non demandée"
+    ]
   },
   "key_verse": {
     "reference": "Luc 7:13",
@@ -56,7 +62,7 @@
       "image_url": "widow_nain_portrait_grief.png",
       "title": "Une mère perd sa voix dans le village",
       "subtitle": "Ce qu'un fils représentait à Naïn",
-      "content": "Nous ne la connaissons que par ce qu'elle a perdu. Son fils était déjà un homme, pas un enfant — Jésus l'appellera plus tard νεανίσκος (neaniskos), jeune adulte. À Naïn, comme dans tout village de l'époque, la porte de la ville était le lieu où les anciens réglaient les héritages, les contrats, les litiges de propriété. Un fils comme lui était, entre autres choses, la voix légale de sa mère en ce lieu.\n\nAvec son fils dans ce cercueil, la veuve perd aussi cette voix. La foule qui l'accompagne peut pleurer avec elle, mais cette voix légale, lui seul pouvait la lui donner.",
+      "content": "Nous ne la connaissons que par ce qu'elle a perdu. Son fils était déjà un homme, pas un enfant — Jésus l'appellera plus tard νεανίσκος, (neanískos) (G3495), jeune adulte. À Naïn, comme dans tout village de l'époque, la porte de la ville était le lieu où les anciens réglaient les héritages, les contrats, les litiges de propriété. Un fils comme lui était, entre autres choses, la voix légale de sa mère en ce lieu.\n\nAvec son fils dans ce cercueil, la veuve perd aussi cette voix. La foule qui l'accompagne peut pleurer avec elle, mais cette voix légale, lui seul pouvait la lui donner.",
       "revelation_key": "Cette femme ne perd pas seulement son fils — elle perd sa place légale et économique à Naïn.",
       "verse_overlay": {
         "reference": "Luc 7:12",
@@ -85,7 +91,7 @@
       "image_url": "widow_nain_jesus_sees_her.png",
       "verse_reference": "Luc 7:13",
       "verse_text": "Le Seigneur, l’ayant vue, fut ému de compassion pour elle, et lui dit: Ne pleure pas!",
-      "reflection": "Jésus la voit et est ému de compassion. Luc emploie le verbe grec σπλαγχνίζομαι (splanchnizomai) — littéralement, ressentir quelque chose au plus profond des entrailles. Jésus porte cette douleur dans le corps, pas seulement dans l'esprit.\n\nIl est frappant de voir vers qui se tourne d'abord cette compassion : non vers le cercueil, mais vers la mère qui marche derrière lui. Il voit d'abord la personne qui respire encore.",
+      "reflection": "Jésus la voit et est ému de compassion. Luc emploie le verbe grec σπλαγχνίζομαι, (splanchnízomai) (G4697) — littéralement, ressentir quelque chose au plus profond des entrailles. Jésus porte cette douleur dans le corps, pas seulement dans l'esprit.\n\nIl est frappant de voir vers qui se tourne d'abord cette compassion : non vers le cercueil, mais vers la mère qui marche derrière lui. Il voit d'abord la personne qui respire encore.",
       "revelation_key": "La compassion de Jésus se met en mouvement par ce qu'il voit, non par ce qu'on lui demande — personne dans cette foule ne l'a supplié de rien.",
       "scripture_connections": []
     },
@@ -111,11 +117,17 @@
       "image_url": "widow_nain_only_son.png",
       "title": "Un fils unique, comme Lui",
       "subtitle": "monogenēs — le même mot",
-      "content": "Luc décrit le fils avec le mot grec μονογενής (monogenēs) : unique, sans égal. C'est le même mot que Jean emploiera pour décrire Jésus comme le Fils unique du Père (Jean 1:18; 3:16).\n\nQuand Jésus lui parle, il l'appelle νεανίσκος (neaniskos) — jeune homme, un adulte déjà formé, pas un enfant. Il était la seule voix de cette maison, et cette voix venait de se taire pour toujours.\n\nCe n'est pas une coïncidence mineure : le Fils unique du Père s'arrête devant le fils unique d'une veuve.",
+      "content": "Luc décrit le fils avec le mot grec μονογενής, (monogenḗs) (G3439) : unique, sans égal. C'est le même mot que Jean emploiera pour décrire Jésus comme le Fils unique du Père (Jean 1:18; 3:16).\n\nQuand Jésus lui parle, il l'appelle νεανίσκος, (neanískos) (G3495) — jeune homme, un adulte déjà formé, pas un enfant. Il était la seule voix de cette maison, et cette voix venait de se taire pour toujours.\n\nCe n'est pas une coïncidence mineure : le Fils unique du Père s'arrête devant le fils unique d'une veuve.",
       "revelation_key": "Le même terme qui décrit le Fils unique du Père décrit aussi le fils que Jésus est sur le point de rendre à cette femme.",
       "scripture_connections": [
-        { "reference": "Jean 1:18", "text": "Personne n’a jamais vu Dieu; le Fils unique, qui est dans le sein du Père, est celui qui l’a fait connaître." },
-        { "reference": "Jean 3:16", "text": "Car Dieu a tant aimé le monde qu’il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu’il ait la vie éternelle." }
+        {
+          "reference": "Jean 1:18",
+          "text": "Personne n’a jamais vu Dieu; le Fils unique, qui est dans le sein du Père, est celui qui l’a fait connaître."
+        },
+        {
+          "reference": "Jean 3:16",
+          "text": "Car Dieu a tant aimé le monde qu’il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu’il ait la vie éternelle."
+        }
       ]
     },
     {
@@ -147,7 +159,10 @@
         "text": "Jésus le rendit à sa mère."
       },
       "scripture_connections": [
-        { "reference": "1 Rois 17:23", "text": "Élie prit l’enfant, le descendit de la chambre haute dans la maison, et le donna à sa mère. Et Élie dit: Vois, ton fils est vivant." }
+        {
+          "reference": "1 Rois 17:23",
+          "text": "Élie prit l’enfant, le descendit de la chambre haute dans la maison, et le donna à sa mère. Et Élie dit: Vois, ton fils est vivant."
+        }
       ]
     },
     {
@@ -161,8 +176,14 @@
       "revelation_key": "Élie et Élisée ont agi par gratitude envers des femmes qui les avaient hébergés; la compassion de Jésus naît seulement de ce qu'il voit.",
       "verse_overlay": null,
       "scripture_connections": [
-        { "reference": "1 Rois 17:9", "text": "Lève-toi, va à Sarepta, qui appartient à Sidon, et demeure là. Voici, j’y ai ordonné à une femme veuve de te nourrir." },
-        { "reference": "2 Rois 4:8", "text": "Un jour Élisée passait par Sunem. Il y avait là une femme de distinction, qui le pressa d’accepter à manger. Et toutes les fois qu’il passait, il se rendait chez elle pour manger." }
+        {
+          "reference": "1 Rois 17:9",
+          "text": "Lève-toi, va à Sarepta, qui appartient à Sidon, et demeure là. Voici, j’y ai ordonné à une femme veuve de te nourrir."
+        },
+        {
+          "reference": "2 Rois 4:8",
+          "text": "Un jour Élisée passait par Sunem. Il y avait là une femme de distinction, qui le pressa d’accepter à manger. Et toutes les fois qu’il passait, il se rendait chez elle pour manger."
+        }
       ]
     },
     {
@@ -197,9 +218,18 @@
       "title": "Ta Rencontre",
       "subtitle": "La compassion de Dieu n'attend pas qu'on la lui demande.",
       "discovery_questions": [
-        { "category": "Honnêteté", "question": "Comme la veuve de Naïn, il y a des moments où la douleur et la perte nous submergent. Mais Jésus peut accomplir ce miracle sans que nous le lui demandions. Qu'est-ce qui changerait en toi si tu croyais que Jésus est déjà à l'œuvre, même sans que tu le lui aies demandé ?" },
-        { "category": "Foi", "question": "À la veuve de Naïn, Jésus a rendu exactement ce qu'elle considérait déjà comme perdu. Y a-t-il quelque chose dans ta vie que tu as déjà tenu pour perdu, et que Jésus peut te rendre aujourd'hui ?" },
-        { "category": "Dessein", "question": "La veuve de Naïn a reçu sans mériter, et sans le chercher elle est devenue la raison pour laquelle beaucoup ont connu Jésus. Quelle histoire de grâce reçue dans ta vie pourrait devenir aujourd'hui la raison pour laquelle quelqu'un d'autre connaisse Jésus ?" }
+        {
+          "category": "Honnêteté",
+          "question": "Comme la veuve de Naïn, il y a des moments où la douleur et la perte nous submergent. Mais Jésus peut accomplir ce miracle sans que nous le lui demandions. Qu'est-ce qui changerait en toi si tu croyais que Jésus est déjà à l'œuvre, même sans que tu le lui aies demandé ?"
+        },
+        {
+          "category": "Foi",
+          "question": "À la veuve de Naïn, Jésus a rendu exactement ce qu'elle considérait déjà comme perdu. Y a-t-il quelque chose dans ta vie que tu as déjà tenu pour perdu, et que Jésus peut te rendre aujourd'hui ?"
+        },
+        {
+          "category": "Dessein",
+          "question": "La veuve de Naïn a reçu sans mériter, et sans le chercher elle est devenue la raison pour laquelle beaucoup ont connu Jésus. Quelle histoire de grâce reçue dans ta vie pourrait devenir aujourd'hui la raison pour laquelle quelqu'un d'autre connaisse Jésus ?"
+        }
       ],
       "prayer": {
         "title": "Prière de la miséricorde imméritée",

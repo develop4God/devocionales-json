@@ -11,9 +11,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
-ASSETS_REPO_RAW_BASE = (
-    "https://raw.githubusercontent.com/develop4God/Devocionales-assets/main/images/encounters"
-)
+ASSETS_REPO_RAW_BASE = "https://raw.githubusercontent.com/develop4God/Devocionales-assets/main/images/encounters"
 
 
 @dataclass(frozen=True)

@@ -14,7 +14,15 @@
     "mood_primary": "grace",
     "accent_color": "#3a2a1e",
     "emoji": "🔥",
-    "tags": ["restoration", "forgiveness", "calling", "peter", "jesus", "grace", "mission"]
+    "tags": [
+      "restoration",
+      "forgiveness",
+      "calling",
+      "peter",
+      "jesus",
+      "grace",
+      "mission"
+    ]
   },
   "key_verse": {
     "reference": "John 21:17",
@@ -47,7 +55,10 @@
       "reflection": "A stranger on the shore gives a simple instruction, hard to believe for fishermen who have spent all night with nothing: cast the net on the other side of the same boat. They obey, not yet knowing whom they are obeying, and that is when the miracle happens; the net fills so full they cannot haul it in. It is the same scene that marked Peter's call at the very beginning (Luke 5:4-7), and the beloved disciple is the first to connect both moments: 'It is the Lord.'",
       "revelation_key": "They obey before they know whom they are obeying.",
       "scripture_connections": [
-        { "reference": "Luke 5:4-7", "text": "Now when he had ceased speaking, he said unto Simon, Launch out into the deep, and let down your nets for a catch. And Simon answering said unto him, Teacher, we have toiled all the night, and have taken nothing: nevertheless at your word I will let down the net. And when they had done this, they enclosed a great multitude of fish: and their net broke. And they beckoned unto their partners, who were in the other ship, that they should come and help them. And they came, and filled both the ships, so that they began to sink." }
+        {
+          "reference": "Luke 5:4-7",
+          "text": "Now when he had ceased speaking, he said unto Simon, Launch out into the deep, and let down your nets for a catch. And Simon answering said unto him, Teacher, we have toiled all the night, and have taken nothing: nevertheless at your word I will let down the net. And when they had done this, they enclosed a great multitude of fish: and their net broke. And they beckoned unto their partners, who were in the other ship, that they should come and help them. And they came, and filled both the ships, so that they began to sink."
+        }
       ]
     },
     {
@@ -60,7 +71,10 @@
       "content": "Peter ties his coat around him and throws himself into the sea before the boat can reach land. He works with little clothing out of habit, but covers himself before drawing near to Jesus — a gesture of respect in the middle of his hurry. This is the second time this man has entered the water to get to Jesus faster. The first time, he walked on it with his eyes fixed on him, until the wind distracted him and he began to sink (Matthew 14:29-30). This time he swims with everything he has, driven by the urgency of getting there before the others.",
       "revelation_key": "John is first to recognize Jesus; Peter acts immediately.",
       "scripture_connections": [
-        { "reference": "Matthew 14:29-30", "text": "And he said, Come. And when Peter came down out of the ship, he walked on the water, to go to Jesus. But when he saw the wind boisterous, he was afraid; and beginning to sink, he cried, saying, Lord, save me." }
+        {
+          "reference": "Matthew 14:29-30",
+          "text": "And he said, Come. And when Peter came down out of the ship, he walked on the water, to go to Jesus. But when he saw the wind boisterous, he was afraid; and beginning to sink, he cried, saying, Lord, save me."
+        }
       ],
       "verse_overlay": {
         "reference": "John 21:7",
@@ -73,7 +87,7 @@
       "mood": "mysterious",
       "image_url": "peter_restoration_charcoal_fire.png",
       "title": "Already prepared",
-      "narrative": "On the shore, a fire of coals is burning. On it, fish and bread, already prepared before they arrive at land. In the original Greek text, the word used is κειμένην (keimenēn), meaning 'already laid out, prepared beforehand.' Jesus already has the meal ready, and still he asks them to bring some of the fish they have just caught.",
+      "narrative": "On the shore, a fire of coals is burning. On it, fish and bread, already prepared before they arrive at land. In the original Greek text, the word used is κειμένην, (keimenēn), meaning 'already laid out, prepared beforehand.' Jesus already has the meal ready, and still he asks them to bring some of the fish they have just caught.",
       "verse_overlay": {
         "reference": "John 21:9-10",
         "text": "As soon then as they were come to land, they saw a fire of coals there, and fish laid thereon, and bread. Jesus said unto them, Bring of the fish which you have now caught."
@@ -89,7 +103,7 @@
       "image_url": "peter_restoration_anthrakia.png",
       "title": "The fire that remembers",
       "subtitle": "A word that appears only twice",
-      "content": "The Greek word for 'fire of coals,' ἀνθρακιά (anthrakia), appears in the entire New Testament only twice — and both times in the Gospel of John. The first is John 18:18, the courtyard where Peter denied Jesus while warming himself by the coals. The second is John 21:9, this shore. It is reasonable to think that this same scene brings back to Peter the memory of the night he denied Jesus.",
+      "content": "The Greek word for 'fire of coals,' ἀνθρακιά, (anthrakiá) (G439), appears in the entire New Testament only twice — and both times in the Gospel of John. The first is John 18:18, the courtyard where Peter denied Jesus while warming himself by the coals. The second is John 21:9, this shore. It is reasonable to think that this same scene brings back to Peter the memory of the night he denied Jesus.",
       "revelation_key": "The same fire that witnessed Peter's fall now witnesses his return to this shore.",
       "verse_overlay": {
         "reference": "John 21:9",
@@ -108,7 +122,7 @@
       "mood": "tense",
       "image_url": "peter_restoration_breakfast.png",
       "title": "None of them dared",
-      "narrative": "They eat in silence. Jesus distributes the bread and the fish with his own hands — the same Greek verb, λαμβάνω (lambano), that he used to take the loaves before distributing them to the crowd beside this very lake (John 6:11). There is a new reverence, different from the familiarity of before. Peter eats too, but something in him is tense: the last time he stood near Jesus after failing him, he could not hold his gaze (Luke 22:61-62). Now he shares his bread.",
+      "narrative": "They eat in silence. Jesus distributes the bread and the fish with his own hands — the same Greek verb, λαμβάνω, (lambánō) (G2983), that he used to take the loaves before distributing them to the crowd beside this very lake (John 6:11). There is a new reverence, different from the familiarity of before. Peter eats too, but something in him is tense: the last time he stood near Jesus after failing him, he could not hold his gaze (Luke 22:61-62). Now he shares his bread.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
@@ -155,14 +169,17 @@
       "image_url": "peter_restoration_agape_phileo.png",
       "title": "Two words for love",
       "subtitle": "The love that was promised and the love that was real",
-      "content": "In Greek there are several words for 'love.' When Jesus asks Simon twice if he loves him, he uses the word ἀγαπᾷς (agapas): absolute, sacrificial love, the same love Peter had promised that very night. Peter answers all three times, 'Yes, Lord; you know that I love you,' but with φιλῶ (philō), the love of friendship and loyalty — a real love, though different from the one Jesus asked for.\n\nBy the third time, Jesus changes his own question and uses φιλεῖς (phileis), the same word Peter has used from the start: he asks him about exactly the love Peter truly has, and accepts it as it is.",
+      "content": "In Greek there are several words for 'love.' When Jesus asks Simon twice if he loves him, he uses the word ἀγαπᾷς, (agapas): absolute, sacrificial love, the same love Peter had promised that very night. Peter answers all three times, 'Yes, Lord; you know that I love you,' but with φιλῶ, (philō), the love of friendship and loyalty — a real love, though different from the one Jesus asked for.\n\nBy the third time, Jesus changes his own question and uses φιλεῖς, (phileis), the same word Peter has used from the start: he asks him about exactly the love Peter truly has, and accepts it as it is.",
       "revelation_key": "Restoration doesn't wait for Peter's love to reach the promised ideal: it works with the real love he actually has.",
       "verse_overlay": {
         "reference": "John 21:17",
         "text": "He said unto him the third time, Simon, son of Jonas, do you love me? Peter was grieved because he said unto him the third time, Do you love me? And he said unto him, Lord, you know all things; you know that I love you. Jesus said unto him, Feed my sheep."
       },
       "scripture_connections": [
-        { "reference": "Mark 14:29", "text": "But Peter said unto him, Although all shall be offended, yet will not I." }
+        {
+          "reference": "Mark 14:29",
+          "text": "But Peter said unto him, Although all shall be offended, yet will not I."
+        }
       ]
     },
     {
@@ -172,14 +189,17 @@
       "image_url": "peter_restoration_feed_sheep.png",
       "title": "Caring for what Jesus loves",
       "subtitle": "The forgiveness that comes with a job",
-      "content": "In the original Greek, the three tasks Jesus gives Peter do not repeat the same word. The first and the last use βόσκω (bosko): to feed, to nourish, to give the flock food. The middle one uses a different verb, ποιμαίνω (poimaino): to shepherd fully — to guide, protect, and govern the flock, not just feed it. Jesus, who has just fed them with his own hands beside the fire (John 21:12-13), now entrusts Peter with feeding and governing his own flock. The man who denied knowing him receives the task of caring for the ones Jesus loves.",
+      "content": "In the original Greek, the three tasks Jesus gives Peter do not repeat the same word. The first and the last use βόσκω, (bóskō) (G1006): to feed, to nourish, to give the flock food. The middle one uses a different verb, ποιμαίνω, (poimaínō) (G4165): to shepherd fully — to guide, protect, and govern the flock, not just feed it. Jesus, who has just fed them with his own hands beside the fire (John 21:12-13), now entrusts Peter with feeding and governing his own flock. The man who denied knowing him receives the task of caring for the ones Jesus loves.",
       "revelation_key": "Peter's forgiveness doesn't end with feeling absolved: it comes with a real task to carry out.",
       "verse_overlay": {
         "reference": "John 21:16",
         "text": "He said to him again the second time, Simon, son of Jonas, do you love me? He said unto him, Yea, Lord; you know that I love you. He said unto him, Feed my sheep."
       },
       "scripture_connections": [
-        { "reference": "1 Peter 5:2-3", "text": "Feed the flock of God which is among you, taking the oversight thereof, not by constraint, but willingly; not for dishonest gain, but of a ready mind; Neither as being lords over God's heritage, but being examples to the flock." }
+        {
+          "reference": "1 Peter 5:2-3",
+          "text": "Feed the flock of God which is among you, taking the oversight thereof, not by constraint, but willingly; not for dishonest gain, but of a ready mind; Neither as being lords over God's heritage, but being examples to the flock."
+        }
       ]
     },
     {
@@ -207,7 +227,10 @@
       "reflection": "The same command with which it all began beside this lake (Matthew 4:19) now closes the circle. Peter already knows what it costs to promise and then fail, and what it may cost to follow for real. Jesus doesn't ask him for a bigger new promise; he asks him the same thing as always: follow me. This time Peter follows knowing the price.",
       "revelation_key": "The same call from the beginning returns at the end, now with the cost already known and accepted.",
       "scripture_connections": [
-        { "reference": "Matthew 4:19", "text": "And he said unto them, Follow me, and I will make you fishers of men." }
+        {
+          "reference": "Matthew 4:19",
+          "text": "And he said unto them, Follow me, and I will make you fishers of men."
+        }
       ]
     },
     {
@@ -217,9 +240,18 @@
       "title": "Your Encounter",
       "subtitle": "Jesus doesn't just forgive what you failed at; he trusts you with something again.",
       "discovery_questions": [
-        { "category": "Honesty", "question": "Just as Peter could not keep his word to Jesus and failed him, do you feel you have failed or fallen? Remember that even if the coals bring back that memory of falling, Jesus is right there to restore you with a purpose." },
-        { "category": "Love in action", "question": "Jesus expected of Peter, just as he expects of you, an ἀγαπᾷς (agapas) love: sacrificial, fully given. Peter was honest in his answer, but in his actions he gave himself to Jesus even unto death. What love do you have for Jesus Christ: more in your actions, or in your words?" },
-        { "category": "Your task", "question": "Just as the man who denied knowing Jesus was restored and given the task of caring for the ones Jesus loves, what task do you feel you no longer deserve because of your failure, and that God wants to entrust to you anyway? Remember that Jesus is right there to restore you too — so you can serve with love." }
+        {
+          "category": "Honesty",
+          "question": "Just as Peter could not keep his word to Jesus and failed him, do you feel you have failed or fallen? Remember that even if the coals bring back that memory of falling, Jesus is right there to restore you with a purpose."
+        },
+        {
+          "category": "Love in action",
+          "question": "Jesus expected of Peter, just as he expects of you, an ἀγαπᾷς, (agapas) love: sacrificial, fully given. Peter was honest in his answer, but in his actions he gave himself to Jesus even unto death. What love do you have for Jesus Christ: more in your actions, or in your words?"
+        },
+        {
+          "category": "Your task",
+          "question": "Just as the man who denied knowing Jesus was restored and given the task of caring for the ones Jesus loves, what task do you feel you no longer deserve because of your failure, and that God wants to entrust to you anyway? Remember that Jesus is right there to restore you too — so you can serve with love."
+        }
       ],
       "prayer": {
         "title": "By the fire",

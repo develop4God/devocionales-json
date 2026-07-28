@@ -15,8 +15,9 @@ from pathlib import Path
 from .report import ReportLike
 
 
-def lint_json_files(directory: Path, report: ReportLike, exclude_dir_part: str,
-                     severity: str = 'error') -> dict:
+def lint_json_files(
+    directory: Path, report: ReportLike, exclude_dir_part: str, severity: str = "error"
+) -> dict:
     """Check that all JSON files under `directory` use indent=2 formatting
     and end with a trailing newline.
 
@@ -44,11 +45,11 @@ def lint_json_files(directory: Path, report: ReportLike, exclude_dir_part: str,
     successfully-parsed file (an empty dict entry is never created for
     invalid JSON).
     """
-    if severity not in ('error', 'warning'):
+    if severity not in ("error", "warning"):
         raise ValueError(f"severity must be 'error' or 'warning', got {severity!r}")
-    findings_fn = report.E if severity == 'error' else report.W
+    findings_fn = report.E if severity == "error" else report.W
 
-    EXCLUDED_DIR_PARTS = {'.venv', '.claude', '.git', 'node_modules'}
+    EXCLUDED_DIR_PARTS = {".venv", ".claude", ".git", "node_modules"}
 
     cache: dict = {}
     # Exclusions must only match directories *within* the scanned tree, not
@@ -56,30 +57,37 @@ def lint_json_files(directory: Path, report: ReportLike, exclude_dir_part: str,
     # checkout itself sits under a path containing one of these names (e.g.
     # a worktree at .../.claude/worktrees/<branch>/), silently excluding
     # every file in the corpus.
-    json_files = sorted(f for f in directory.rglob('*.json')
-                         if f.is_file()
-                         and exclude_dir_part not in f.relative_to(directory).parts
-                         and EXCLUDED_DIR_PARTS.isdisjoint(f.relative_to(directory).parts))
+    json_files = sorted(
+        f
+        for f in directory.rglob("*.json")
+        if f.is_file()
+        and exclude_dir_part not in f.relative_to(directory).parts
+        and EXCLUDED_DIR_PARTS.isdisjoint(f.relative_to(directory).parts)
+    )
     checked = 0
     for fpath in json_files:
-        raw = fpath.read_text(encoding='utf-8')
+        raw = fpath.read_text(encoding="utf-8")
         try:
             data = json.loads(raw)
         except json.JSONDecodeError:
-            if severity == 'error':
+            if severity == "error":
                 report.E(f"{fpath.name}: invalid JSON")
             continue
         rel = fpath.relative_to(directory)
         for line_no, line in enumerate(raw.splitlines(), 1):
-            stripped = line.lstrip(' ')
+            stripped = line.lstrip(" ")
             indent = len(line) - len(stripped)
             if indent > 0 and indent % 2 != 0:
-                findings_fn(f"{rel}:{line_no}: odd indentation ({indent} spaces), expected multiples of 2")
+                findings_fn(
+                    f"{rel}:{line_no}: odd indentation ({indent} spaces), expected multiples of 2"
+                )
                 break
-            if '\t' in line:
-                findings_fn(f"{rel}:{line_no}: contains tab character, use 2-space indent")
+            if "\t" in line:
+                findings_fn(
+                    f"{rel}:{line_no}: contains tab character, use 2-space indent"
+                )
                 break
-        if not raw.endswith('\n'):
+        if not raw.endswith("\n"):
             report.W(f"{rel}: missing trailing newline")
         cache[fpath] = data
         checked += 1
