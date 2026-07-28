@@ -33,11 +33,8 @@ sys.path.insert(
 )
 from json_md_converter import (  # noqa: E402
     is_scalar,
-    json_to_md,
-    md_to_json,
     encode_file,
     decode_file,
-    diff_json,
     verify_file,
 )
 

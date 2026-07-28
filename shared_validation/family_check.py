@@ -31,7 +31,7 @@ import re
 import subprocess
 import sys
 from pathlib import Path
-from typing import Callable, Optional
+from typing import Callable
 
 from .greek_hebrew_gloss import find_greek_hebrew_glosses
 from .text_checks import iter_strings
@@ -330,7 +330,7 @@ def run(
         check_drift(f"card[{i + 1}].type", type_values, report)
 
     print(f"\n{'=' * 70}")
-    print(f"  SUMMARY")
+    print("  SUMMARY")
     print(f"{'=' * 70}")
     if report.errors == 0 and report.warnings == 0:
         print(

@@ -10,8 +10,6 @@ thing: does this file's content match what the index — and the Bible
 version SOT — say it should be.
 """
 
-from typing import Optional
-
 from shared_validation.report import ReportLike
 
 from corpus_index_reader import CorpusCombo

@@ -19,7 +19,6 @@ Usage:
 """
 
 import argparse
-import ast
 import base64
 import json
 import re

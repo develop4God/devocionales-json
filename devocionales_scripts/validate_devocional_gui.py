@@ -11,7 +11,11 @@ Usage:
   CLI mode  : python validate_devocional_gui.py --file path.json --lang de --version LU17
 """
 
-import json, re, sys, argparse, tkinter as tk
+import json
+import re
+import sys
+import argparse
+import tkinter as tk
 from tkinter import filedialog, ttk, scrolledtext
 from pathlib import Path
 from datetime import date, timedelta
@@ -151,7 +155,7 @@ def _find_consecutive_dup(text: str):
 
 
 def _check_prayer_ending(oracion: str) -> bool:
-    import unicodedata, re
+    import unicodedata
 
     tail = oracion.strip()[-60:].lower()  # lowercase for case-insensitive match
     # check raw form for CJK/Indic Amen variants
@@ -195,7 +199,7 @@ def check_content_quality(entry: dict, lang: str = "") -> list:
     if len(re.findall(r"\bAm[eé]n\b", o[-120:], re.IGNORECASE)) >= 2:
         issues.append("double_amen: duplicate Amen in closing")
     if o and not _check_prayer_ending(o):
-        issues.append(f"prayer_ending: oracion does not end with Amen variant")
+        issues.append("prayer_ending: oracion does not end with Amen variant")
     dup = _find_consecutive_dup(r)
     if dup:
         issues.append(f"dup_words_reflexion: {dup}")
@@ -505,7 +509,7 @@ def validate(filepath, lang_override, version_override):
 
     if label_totals:
         info(
-            f"Allowed labels (correct): "
+            "Allowed labels (correct): "
             + ", ".join(f"{k}×{v}" for k, v in sorted(label_totals.items()))
         )
 

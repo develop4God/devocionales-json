@@ -73,7 +73,6 @@ from shared_validation.scripture_check import (
     find_scripture_pairs,
     validate_pair,
     validate_translated_pair,
-    scripture_validation_enabled,
 )
 
 from verify_image_urls import (

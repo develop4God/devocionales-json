@@ -138,7 +138,7 @@ h2.section { font-size:20px; font-weight:900; margin-top:32px; }
 
 
 def render_card(card):
-    out = [f'<div class="card">']
+    out = ['<div class="card">']
     if card.get("icon"):
         out.append(f'<div class="icon">{escape(card["icon"])}</div>')
     if card.get("title"):

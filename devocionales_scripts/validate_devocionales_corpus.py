@@ -57,7 +57,7 @@ _REPO_ROOT = _find_repo_root(Path(__file__).resolve().parent)
 sys.path.insert(0, str(_REPO_ROOT))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from shared_validation.report import Report, ReportLike
+from shared_validation.report import ReportLike
 from shared_validation.run_report import RunReport
 from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL
 from shared_validation.lint import lint_json_files

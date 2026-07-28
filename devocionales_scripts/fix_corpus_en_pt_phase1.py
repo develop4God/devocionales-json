@@ -6,7 +6,9 @@ Produces patched files in-place with a dry-run report first.
 Preserves original file indentation (2 or 4 spaces).
 """
 
-import argparse, json, re, sys
+import argparse
+import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).parent.resolve()

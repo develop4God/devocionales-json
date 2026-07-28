@@ -19,7 +19,7 @@ reference, its own comparison unit (dates vs. key-sets), and its own
 reporting shape.
 """
 
-from typing import Dict, Optional, Tuple
+from typing import Optional, Tuple
 
 from shared_validation.report import ReportLike
 

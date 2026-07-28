@@ -27,8 +27,7 @@ import json
 import re
 import sys
 from pathlib import Path
-from typing import Dict, List, Tuple, Set, Optional
-from collections import Counter
+from typing import Dict, Optional
 
 
 def _find_repo_root(start: Path) -> Path:
@@ -55,7 +54,6 @@ from shared_validation.text_checks import (
     check_quote_anomalies,
     check_halfwidth_colon_in_title,
     check_no_latin_leak,
-    is_cognate,
 )
 from shared_validation.greek_hebrew_gloss import (
     check_greek_hebrew_transliteration,
@@ -476,7 +474,7 @@ def validate_index_json(
                 f"  - {pending['id']}: PENDING {', '.join(pending['missing_languages'])}"
             )
 
-    report.I(f"✓ index.json structure validation complete")
+    report.I("✓ index.json structure validation complete")
 
     return index_data
 

@@ -12,7 +12,7 @@ Example incorrect format: "リビングバイブル-20250801"
 import json
 import re
 import os
-from typing import Dict, List, Tuple
+from typing import Dict, Tuple
 from collections import defaultdict
 import sys
 
@@ -322,7 +322,7 @@ class DevotionalIDFixer:
         elif dry_run:
             print(f"  📊 Would fix {fixed_count} entries")
         else:
-            print(f"  ℹ️  No changes needed")
+            print("  ℹ️  No changes needed")
 
         if error_count > 0:
             print(f"  ⚠️  {error_count} errors encountered")
@@ -377,7 +377,7 @@ class DevotionalIDFixer:
                 print(f"     - {id_val}: {count} times")
                 self.stats["duplicates"][filepath].append((id_val, count))
         else:
-            print(f"  ✅ No duplicates found")
+            print("  ✅ No duplicates found")
 
         if invalid_count > 0:
             print(f"  ⚠️  {invalid_count} potentially invalid IDs")
