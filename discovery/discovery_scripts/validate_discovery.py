@@ -48,6 +48,9 @@ sys.path.insert(0, str(_find_repo_root(Path(__file__).resolve().parent)))
 from shared_validation.report import Report  # noqa: E402
 from shared_validation.run_report import RunReport  # noqa: E402
 from shared_validation.family_check import run_family_validation_all  # noqa: E402
+from shared_validation.greek_family_pattern_check import (  # noqa: E402
+    run_for_type as run_greek_family_pattern_check,
+)
 from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL  # noqa: E402
 from shared_validation.text_checks import (  # noqa: E402
     iter_strings,
@@ -625,6 +628,21 @@ def validate_translation_files(
 # validation logic itself.
 
 
+def validate_greek_family_patterns(report: Report) -> None:
+    """Cross-file Greek/Hebrew gloss consistency, independent of Phase E's
+    family_check.run_family_validation_all — checks that the same inline
+    word-study gloss (native script + transliteration) appears identically
+    across every language of a family, catching cases where a translation
+    drifted to a different word/spelling at the same gloss position.
+    Prints its own per-family report; only the total error count is folded
+    into this phase's Report."""
+    total_errors = run_greek_family_pattern_check("discovery")
+    if total_errors:
+        report.E(
+            f"{total_errors} cross-file Greek/Hebrew gloss error(s) — see output above"
+        )
+
+
 def validate_scripture_references(
     report: Report,
     all_studies: dict,
@@ -846,6 +864,16 @@ def main():
             list(index_studies),
             "study",
             "studies",
+        )
+
+    # PHASE F: Cross-file Greek/Hebrew gloss pattern consistency — independent
+    # of Phase E's family_check (which only compares schema/structure, not
+    # gloss content). Gated: a family with a genuine cross-language gloss
+    # mismatch fails the run.
+    if not args.scripture_only:
+        run_report.wrap(
+            "PHASE F: GREEK/HEBREW GLOSS PATTERN CONSISTENCY",
+            validate_greek_family_patterns,
         )
 
     run_report.add_coverage(

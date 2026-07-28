@@ -76,6 +76,40 @@ class TestCheckGreekHebrewConsistency(unittest.TestCase):
         check_greek_hebrew_consistency(loaded, report)
         self.assertEqual(report.errors, 0)
 
+    def test_multiple_cards_same_field_shape_all_checked(self):
+        """cards[0].content and cards[1].content both normalize to the same
+        field path ('cards[].content'). A prior bug overwrote rather than
+        accumulated occurrences per (field, lang), so only the LAST card's
+        glosses ever got checked — a mismatch in an EARLIER card silently
+        passed as long as the last card agreed everywhere. Here 'fr' drifts
+        only in card 0 ('logos' instead of 'theos'); card 1 agrees across
+        every language. The buggy overwrite version would see only card 1's
+        occurrences for every language (0 errors); the fix must accumulate
+        both cards and still catch card 0's drift (1 error)."""
+        loaded = {
+            "en": {
+                "cards": [
+                    {"content": "θεός, (theos) is good"},
+                    {"content": "λόγος, (logos) is good"},
+                ]
+            },
+            "es": {
+                "cards": [
+                    {"content": "θεός, (theos) is good"},
+                    {"content": "λόγος, (logos) is good"},
+                ]
+            },
+            "fr": {
+                "cards": [
+                    {"content": "λόγος, (logos) is good"},
+                    {"content": "λόγος, (logos) is good"},
+                ]
+            },
+        }
+        report = Reporter()
+        check_greek_hebrew_consistency(loaded, report)
+        self.assertEqual(report.errors, 1)
+
 
 # ── family/type resolution against the real corpus index.json files ─────────
 

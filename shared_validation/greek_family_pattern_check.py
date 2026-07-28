@@ -68,7 +68,14 @@ from shared_validation.text_checks import iter_strings  # noqa: E402
 
 def _build_gloss_index(loaded: dict[str, dict]) -> dict[str, dict[str, list]]:
     """{field_path: {lang: [(word, inner, well_formed), ...]}} for every
-    Greek/Hebrew gloss occurrence found in every loaded language file."""
+    Greek/Hebrew gloss occurrence found in every loaded language file.
+
+    Multiple cards share the same normalized field path (e.g.
+    cards[1].content and cards[5].content both become 'cards[].content'),
+    so occurrences must be EXTENDED across every matching path for a given
+    (field, lang), in path order — not overwritten each time a later card's
+    matches are found, which would silently discard every earlier card's
+    glosses for that field shape and leave only the last card's checked."""
     by_field: dict[str, dict[str, list]] = {}
     for lang, data in loaded.items():
         for path, text in iter_strings(data):
@@ -77,7 +84,7 @@ def _build_gloss_index(loaded: dict[str, dict]) -> dict[str, dict[str, list]]:
                 continue
             field = re.sub(r"\[\d+\]", "[]", path)
             occurrences = [(word, inner, wf) for _, _, word, inner, wf in spans]
-            by_field.setdefault(field, {})[lang] = occurrences
+            by_field.setdefault(field, {}).setdefault(lang, []).extend(occurrences)
     return by_field
 
 
