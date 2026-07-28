@@ -49,7 +49,6 @@ Exit code: 0 if no cross-file Greek/Hebrew gloss errors found, 1 otherwise.
 """
 
 import argparse
-import json
 import re
 import sys
 from collections import Counter
@@ -59,11 +58,9 @@ REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 from shared_validation.family_check import Reporter, load_all, check_drift  # noqa: E402
+from shared_validation.family_resolver import RESOLVERS, ID_LISTERS  # noqa: E402
 from shared_validation.greek_hebrew_gloss import find_greek_hebrew_glosses  # noqa: E402
 from shared_validation.text_checks import iter_strings  # noqa: E402
-
-DISCOVERY_DIR = REPO_ROOT / "discovery"
-ENCOUNTERS_DIR = REPO_ROOT / "encounters"
 
 
 # ── Detection primitive ───────────────────────────────────────────────────────
@@ -140,58 +137,13 @@ def check_greek_hebrew_consistency(loaded: dict[str, dict], report: Reporter) ->
             _triage_occurrence(field, i, per_lang, report)
 
 
-# ── Family resolution (mirrors validate_family.py's resolve_family) ──────────
-
-
-def _resolve_discovery_family(study_id: str) -> dict[str, Path]:
-    index = json.loads((DISCOVERY_DIR / "index.json").read_text(encoding="utf-8"))
-    study = next((s for s in index["studies"] if s["id"] == study_id), None)
-    if study is None:
-        return {}
-    return {
-        lang: DISCOVERY_DIR / lang / fname
-        for lang, fname in study.get("files", {}).items()
-    }
-
-
-def _resolve_encounters_family(encounter_id: str) -> dict[str, Path]:
-    index = json.loads((ENCOUNTERS_DIR / "index.json").read_text(encoding="utf-8"))
-    enc = next((e for e in index["encounters"] if e["id"] == encounter_id), None)
-    if enc is None:
-        return {}
-    return {
-        lang: ENCOUNTERS_DIR / lang / fname
-        for lang, fname in enc.get("files", {}).items()
-    }
-
-
-def _all_discovery_ids() -> list[str]:
-    index = json.loads((DISCOVERY_DIR / "index.json").read_text(encoding="utf-8"))
-    return [s["id"] for s in index["studies"]]
-
-
-def _all_encounters_ids() -> list[str]:
-    index = json.loads((ENCOUNTERS_DIR / "index.json").read_text(encoding="utf-8"))
-    return [e["id"] for e in index["encounters"]]
-
-
-_RESOLVERS = {
-    "discovery": _resolve_discovery_family,
-    "encounters": _resolve_encounters_family,
-}
-_ID_LISTERS = {
-    "discovery": _all_discovery_ids,
-    "encounters": _all_encounters_ids,
-}
-
-
 # ── Runner ────────────────────────────────────────────────────────────────────
 
 
 def run_for_family(content_type: str, content_id: str) -> int:
     """Run the Greek/Hebrew cross-file check for one content item. Returns the
     error count."""
-    family = _RESOLVERS[content_type](content_id)
+    family = RESOLVERS[content_type](content_id)
     if not family:
         print(f"No {content_type} item with id '{content_id}' found in index.json")
         return 1
@@ -215,7 +167,7 @@ def run_for_type(content_type: str) -> int:
     """Run the check for every id of one content type. Returns the total error
     count across all ids."""
     total_errors = 0
-    for content_id in _ID_LISTERS[content_type]():
+    for content_id in ID_LISTERS[content_type]():
         total_errors += run_for_family(content_type, content_id)
     return total_errors
 
@@ -223,7 +175,7 @@ def run_for_type(content_type: str) -> int:
 def run_all() -> int:
     """Run the check across the whole corpus (both content types)."""
     total_errors = 0
-    for content_type in _RESOLVERS:
+    for content_type in RESOLVERS:
         total_errors += run_for_type(content_type)
     return total_errors
 
@@ -235,7 +187,7 @@ def main():
     )
     parser.add_argument(
         "--type",
-        choices=sorted(_RESOLVERS),
+        choices=sorted(RESOLVERS),
         help="Content type to scan (discovery or encounters). Required unless --all is passed.",
     )
     parser.add_argument(

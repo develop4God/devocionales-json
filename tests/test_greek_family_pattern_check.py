@@ -23,12 +23,14 @@ REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 from shared_validation.family_check import Reporter  # noqa: E402
-from shared_validation.greek_family_pattern_check import (  # noqa: E402
-    check_greek_hebrew_consistency,
+from shared_validation.family_resolver import (  # noqa: E402
     _resolve_discovery_family,
     _resolve_encounters_family,
     _all_discovery_ids,
     _all_encounters_ids,
+)
+from shared_validation.greek_family_pattern_check import (  # noqa: E402
+    check_greek_hebrew_consistency,
     run_for_family,
 )
 
