@@ -18,7 +18,7 @@ from .greek_hebrew_gloss import find_greek_hebrew_glosses
 
 # Quote-like characters whose accidental back-to-back doubling indicates a
 # stray-punctuation typo (e.g. »» , "" , '')
-_DOUBLE_CHECK_CHARS = {'"', "'", '«', '»', '“', '”', '‘', '’'}
+_DOUBLE_CHECK_CHARS = {'"', "'", "«", "»", "“", "”", "‘", "’"}
 
 # Paired quote characters that should appear in balanced counts within a field.
 # Note: curly double quotes (“ ” „) are intentionally NOT balance-checked here —
@@ -34,12 +34,12 @@ _DOUBLE_CHECK_CHARS = {'"', "'", '«', '»', '“', '”', '‘', '’'}
 # entry discovery doesn't have; kept, it's harmless for discovery (which
 # never actually calls is_cognate('legion', 'de') in its current form).
 _ROMANCE_COGNATES = {
-    'fr': {'courage', 'grace', 'grâce'},
-    'pt': {'coragem', 'graça'},
-    'es': {'coraje', 'gracia'},
+    "fr": {"courage", "grace", "grâce"},
+    "pt": {"coragem", "graça"},
+    "es": {"coraje", "gracia"},
     # 'Legion' is spelled identically in German (from Latin legio) and is the
     # word used in the LU17 Bible text itself (Mark 5:9) — not a missed translation.
-    'de': {'legion'},
+    "de": {"legion"},
 }
 
 
@@ -72,7 +72,7 @@ def is_verse_continuation_close(text: str, mark_chars: str) -> bool:
     if len(positions) != 1:
         return False
     idx = positions[0]
-    return bool(re.match(r'^[\s.!?,;:]*$', text[idx + 1:]))
+    return bool(re.match(r"^[\s.!?,;:]*$", text[idx + 1 :]))
 
 
 # Languages whose native typography uses a full-width colon (：) rather
@@ -80,13 +80,15 @@ def is_verse_continuation_close(text: str, mark_chars: str) -> bool:
 # half-width colon there is a generation/template artifact, not a stylistic
 # choice (body text, greek_words, etc. legitimately mix both e.g. in inline
 # Bible chapter:verse citations).
-_FULLWIDTH_COLON_LANGS = {'ja', 'zh'}
+_FULLWIDTH_COLON_LANGS = {"ja", "zh"}
 
 
-_TITLE_LIKE_KEYS = {'title', 'subtitle'}
+_TITLE_LIKE_KEYS = {"title", "subtitle"}
 
 
-def check_halfwidth_colon_in_title(text: str, path: str, lang: str, ctx: str, report: ReportLike) -> None:
+def check_halfwidth_colon_in_title(
+    text: str, path: str, lang: str, ctx: str, report: ReportLike
+) -> None:
     """Flag a half-width ':' in a title/subtitle field for ja/zh content.
 
     Skips colons immediately followed by a digit, since those are Bible
@@ -96,11 +98,11 @@ def check_halfwidth_colon_in_title(text: str, path: str, lang: str, ctx: str, re
     """
     if lang not in _FULLWIDTH_COLON_LANGS:
         return
-    key = path.rsplit('.', 1)[-1].split('[')[0]
+    key = path.rsplit(".", 1)[-1].split("[")[0]
     if key not in _TITLE_LIKE_KEYS:
         return
     for i, c in enumerate(text):
-        if c == ':' and not (i + 1 < len(text) and text[i + 1].isdigit()):
+        if c == ":" and not (i + 1 < len(text) and text[i + 1].isdigit()):
             report.E(f"{ctx}: half-width ':' in title should be full-width '：'")
 
 
@@ -116,8 +118,8 @@ def _load_no_latin_config() -> dict:
         with open(_NO_LATIN_LANGUAGES_PATH, encoding="utf-8") as f:
             data = json.load(f)
         _no_latin_languages_cache = {
-            'languages': data['languages'],
-            'skip_keys': set(data['skip_keys']),
+            "languages": data["languages"],
+            "skip_keys": set(data["skip_keys"]),
         }
     return _no_latin_languages_cache
 
@@ -126,7 +128,9 @@ _LATIN_LETTER_RE = re.compile(r"[A-Za-zÀ-ɏḀ-ỿ]+")
 _LATIN_PUNCT_RE = re.compile(r'[,.!?"\']')
 
 
-def check_no_latin_leak(text: str, path: str, lang: str, ctx: str, report: ReportLike) -> None:
+def check_no_latin_leak(
+    text: str, path: str, lang: str, ctx: str, report: ReportLike
+) -> None:
     """Flag Latin letters/punctuation leaking into a non-Latin-script
     language's text field — e.g. a stray untranslated English word or
     phrase mixed into otherwise-translated zh content.
@@ -144,23 +148,29 @@ def check_no_latin_leak(text: str, path: str, lang: str, ctx: str, report: Repor
     right, and any Latin text near it is still fair game for this check.
     """
     config = _load_no_latin_config()
-    rules = config['languages'].get(lang)
+    rules = config["languages"].get(lang)
     if rules is None:
         return
-    key = path.rsplit('.', 1)[-1].split('[')[0]
-    if key in config['skip_keys']:
+    key = path.rsplit(".", 1)[-1].split("[")[0]
+    if key in config["skip_keys"]:
         return
     gloss_spans = find_greek_hebrew_glosses(text)
 
     def in_gloss(pos: int) -> bool:
-        return any(start <= pos < end for start, end, _, _, well_formed in gloss_spans if well_formed)
+        return any(
+            start <= pos < end
+            for start, end, _, _, well_formed in gloss_spans
+            if well_formed
+        )
 
-    if rules.get('letters'):
+    if rules.get("letters"):
         for m in _LATIN_LETTER_RE.finditer(text):
             if not in_gloss(m.start()):
-                report.W(f"{ctx}: Latin text '{m.group(0)}' in {lang} field — possible untranslated leftover")
+                report.W(
+                    f"{ctx}: Latin text '{m.group(0)}' in {lang} field — possible untranslated leftover"
+                )
 
-    if rules.get('punctuation'):
+    if rules.get("punctuation"):
         for m in _LATIN_PUNCT_RE.finditer(text):
             if not in_gloss(m.start()):
                 report.W(f"{ctx}: Latin punctuation '{m.group(0)}' in {lang} field")
@@ -182,11 +192,15 @@ def check_quote_anomalies(text: str, ctx: str, report: ReportLike) -> None:
     # Balanced guillemets (used in AR/FR/etc.). Skip fields that are the
     # trailing fragment of a quotation opened in a preceding verse — see
     # is_verse_continuation_close.
-    oc, cc = text.count('«'), text.count('»')
-    if oc != cc and not (oc + cc == 1 and is_verse_continuation_close(text, '«»')):
+    oc, cc = text.count("«"), text.count("»")
+    if oc != cc and not (oc + cc == 1 and is_verse_continuation_close(text, "«»")):
         report.W(f"{ctx}: unbalanced '«'/'»' — {oc} open vs {cc} close")
 
     # Straight double quotes should appear in pairs, with the same
     # verse-continuation exception as guillemets above.
-    if text.count('"') % 2 != 0 and not (text.count('"') == 1 and is_verse_continuation_close(text, '"')):
-        report.W(f"{ctx}: odd number of straight double quotes (\") — possible stray quote")
+    if text.count('"') % 2 != 0 and not (
+        text.count('"') == 1 and is_verse_continuation_close(text, '"')
+    ):
+        report.W(
+            f'{ctx}: odd number of straight double quotes (") — possible stray quote'
+        )

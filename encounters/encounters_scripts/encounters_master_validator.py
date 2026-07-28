@@ -19,7 +19,7 @@ from pathlib import Path
 SCRIPTS_DIR = Path(__file__).parent
 
 
-def run(script, args=None, label=''):
+def run(script, args=None, label=""):
     cmd = [sys.executable, str(SCRIPTS_DIR / script)] + (args or [])
     result = subprocess.run(cmd, text=True)
     if result.returncode != 0:

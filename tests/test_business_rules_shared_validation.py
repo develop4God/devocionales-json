@@ -37,25 +37,33 @@ from shared_validation.report import Report
 # character anywhere — evidence a Greek/Hebrew word is being discussed by
 # its transliteration only, with the native-script word never given.
 
+
 class TestCheckWordStudyBareTransliteration(unittest.TestCase):
     def test_bare_transliteration_in_parens_is_a_warning(self):
-        report = Report('TEST')
+        report = Report("TEST")
         check_word_study_bare_transliteration(
             "La palabra viene de 'Skēnē' (tienda). Dios no quería estar en un templo.",
-            'cards[2].greek_words[0].revelation', 'ctx', report,
+            "cards[2].greek_words[0].revelation",
+            "ctx",
+            report,
         )
 
         self.assertTrue(
-            any("Skēnē" in w and "bare Greek/Hebrew transliteration" in w for w in report.warnings),
+            any(
+                "Skēnē" in w and "bare Greek/Hebrew transliteration" in w
+                for w in report.warnings
+            ),
             f"Expected a bare-transliteration warning, got: {report.warnings}",
         )
 
     def test_bare_transliteration_as_the_quoted_side_is_also_a_warning(self):
-        report = Report('TEST')
+        report = Report("TEST")
         check_word_study_bare_transliteration(
             "Juan dice: 'He aquí el Cordero de Dios que Airōn el pecado del mundo'. "
             "No solo lo cubre con sangre, ¡lo levanta de tus hombros! 'Airōn' (levantar)",
-            'cards[2].greek_words[1].revelation', 'ctx', report,
+            "cards[2].greek_words[1].revelation",
+            "ctx",
+            report,
         )
 
         self.assertTrue(
@@ -67,14 +75,17 @@ class TestCheckWordStudyBareTransliteration(unittest.TestCase):
         # 'esclerosis' (endurecimiento) is a real Spanish word with its own
         # meaning in parens — identical shape to the bug, but neither side
         # carries a transliteration diacritic, so this must not fire.
-        report = Report('TEST')
+        report = Report("TEST")
         check_word_study_bare_transliteration(
             "Raíz de 'esclerosis' (endurecimiento). Este siervo está acusando a Dios.",
-            'cards[1].content', 'ctx', report,
+            "cards[1].content",
+            "ctx",
+            report,
         )
 
         self.assertEqual(
-            report.warnings, [],
+            report.warnings,
+            [],
             f"Ordinary quoted word + gloss should not be flagged, got: {report.warnings}",
         )
 
@@ -82,14 +93,17 @@ class TestCheckWordStudyBareTransliteration(unittest.TestCase):
         # Plain acutes (á é í ó ú) are ordinary Spanish/Portuguese/French
         # orthography, not exclusive to scholarly transliteration — only
         # macrons should trigger this check.
-        report = Report('TEST')
+        report = Report("TEST")
         check_word_study_bare_transliteration(
             "'está pasando' (presente continuo) describe la acción en curso.",
-            'cards[1].content', 'ctx', report,
+            "cards[1].content",
+            "ctx",
+            report,
         )
 
         self.assertEqual(
-            report.warnings, [],
+            report.warnings,
+            [],
             f"Plain-acute-only text should not be flagged, got: {report.warnings}",
         )
 
@@ -98,14 +112,17 @@ class TestCheckWordStudyBareTransliteration(unittest.TestCase):
         # Hebrew/Greek character anywhere in the same string means the
         # find_greek_hebrew_glosses gate is the one responsible for judging
         # this text, not this check — no double-reporting.
-        report = Report('TEST')
+        report = Report("TEST")
         check_word_study_bare_transliteration(
             "El texto griego usa πνεῦμα, (Pneuma) y también menciona 'Skēnē' (tienda) más adelante.",
-            'cards[1].content', 'ctx', report,
+            "cards[1].content",
+            "ctx",
+            report,
         )
 
         self.assertEqual(
-            report.warnings, [],
+            report.warnings,
+            [],
             f"A string containing real Greek script should be left to the gloss checker, got: {report.warnings}",
         )
 
@@ -113,17 +130,20 @@ class TestCheckWordStudyBareTransliteration(unittest.TestCase):
         # 'word' is the shared _SKIP_KEYS exemption used by every check in
         # this module — a bare 'greek_words[].word' field is structural
         # data, not prose, and must never be scanned.
-        report = Report('TEST')
+        report = Report("TEST")
         check_word_study_bare_transliteration(
             "'Skēnē' (tienda)",
-            'cards[2].greek_words[0].word', 'ctx', report,
+            "cards[2].greek_words[0].word",
+            "ctx",
+            report,
         )
 
         self.assertEqual(
-            report.warnings, [],
+            report.warnings,
+            [],
             f"The 'word' key should be skipped entirely, got: {report.warnings}",
         )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

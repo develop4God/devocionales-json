@@ -45,7 +45,9 @@ def main():
     parser = argparse.ArgumentParser(
         description="Cross-validate ALL language files for one Discovery study id.",
     )
-    parser.add_argument("study_id", help="Study id as it appears in discovery/index.json")
+    parser.add_argument(
+        "study_id", help="Study id as it appears in discovery/index.json"
+    )
     args = parser.parse_args()
 
     family = resolve_family(args.study_id)

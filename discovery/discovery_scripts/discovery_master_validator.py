@@ -19,7 +19,7 @@ argparse.ArgumentParser(
 ).parse_args()
 
 
-def run(script, args=None, label=''):
+def run(script, args=None, label=""):
     """Run a validator script. Exit with its code if it fails."""
     cmd = [sys.executable, str(SCRIPTS_DIR / script)] + (args or [])
     result = subprocess.run(cmd, text=True)

@@ -51,9 +51,11 @@ BASE_RE = re.compile(r"^Devocional_year_(?P<year>\d{4})\.json$")
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
 
+
 def expected_filename(lang: str, version: str, year: str) -> str:
-    return BASE_FILE_MAP.get((lang, version, str(year)),
-                             f"Devocional_year_{year}_{lang}_{version}.json")
+    return BASE_FILE_MAP.get(
+        (lang, version, str(year)), f"Devocional_year_{year}_{lang}_{version}.json"
+    )
 
 
 def validate_iso_date(value, label: str, errors: list) -> bool:
@@ -66,6 +68,7 @@ def validate_iso_date(value, label: str, errors: list) -> bool:
 
 
 # ── Core validator ─────────────────────────────────────────────────────────────
+
 
 def validate_index(index_path: Path, base_path: Path):
     """
@@ -83,7 +86,9 @@ def validate_index(index_path: Path, base_path: Path):
     # ── 2. schema_version ─────────────────────────────────────────────────────
     sv = index.get("schema_version")
     if sv != EXPECTED_SCHEMA_VERSION:
-        errors.append(f"schema_version: expected {EXPECTED_SCHEMA_VERSION}, got {repr(sv)}")
+        errors.append(
+            f"schema_version: expected {EXPECTED_SCHEMA_VERSION}, got {repr(sv)}"
+        )
     else:
         ok.append(f"schema_version = {sv}")
 
@@ -102,7 +107,9 @@ def validate_index(index_path: Path, base_path: Path):
 
     for lang, versions in files_section.items():
         if not isinstance(versions, dict):
-            errors.append(f"files.{lang}: expected object, got {type(versions).__name__}")
+            errors.append(
+                f"files.{lang}: expected object, got {type(versions).__name__}"
+            )
             continue
 
         # ── 5. Both years present for this lang ────────────────────────────
@@ -170,8 +177,7 @@ def validate_index(index_path: Path, base_path: Path):
 
                 # ── version field consistency ──────────────────────────────
                 wrong_ver = [
-                    e.get("id", "?") for e in entries
-                    if e.get("version") != version
+                    e.get("id", "?") for e in entries if e.get("version") != version
                 ]
                 if wrong_ver:
                     errors.append(
@@ -181,8 +187,7 @@ def validate_index(index_path: Path, base_path: Path):
 
                 # ── language field consistency ─────────────────────────────
                 wrong_lang = [
-                    e.get("id", "?") for e in entries
-                    if e.get("language") != lang
+                    e.get("id", "?") for e in entries if e.get("language") != lang
                 ]
                 if wrong_lang:
                     errors.append(
@@ -197,7 +202,7 @@ def validate_index(index_path: Path, base_path: Path):
                 )
                 if entry_dates:
                     first_yr = int(entry_dates[0][:4])
-                    last_yr  = int(entry_dates[-1][:4])
+                    last_yr = int(entry_dates[-1][:4])
                     int_year = int(year)
                     expected_yrs = {int_year, int_year + 1}
                     if first_yr not in expected_yrs or last_yr not in expected_yrs:
@@ -228,9 +233,9 @@ def validate_index(index_path: Path, base_path: Path):
 
         m_std = STANDARD_RE.match(fname)
         if m_std:
-            yr   = m_std.group("year")
+            yr = m_std.group("year")
             lang = m_std.group("lang")
-            ver  = m_std.group("version")
+            ver = m_std.group("version")
             if (lang, ver, yr) not in index_combos:
                 errors.append(
                     f"ORPHANED FILE (not in index.json): {fname}"
@@ -241,6 +246,7 @@ def validate_index(index_path: Path, base_path: Path):
 
 
 # ── Entry point ────────────────────────────────────────────────────────────────
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -254,20 +260,22 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument(
-        "--index", default=None,
+        "--index",
+        default=None,
         help="Path to index.json (default: auto-detect from script location)",
     )
     parser.add_argument(
-        "--base", default=None,
+        "--base",
+        default=None,
         help="Directory containing the devotional JSON files (default: auto-detect)",
     )
     args = parser.parse_args()
 
     script_dir = Path(__file__).parent
-    repo_root  = script_dir.parent
+    repo_root = script_dir.parent
 
     index_path = Path(args.index) if args.index else repo_root / "index.json"
-    base_path  = Path(args.base)  if args.base  else repo_root
+    base_path = Path(args.base) if args.base else repo_root
 
     sep = "=" * 64
     print(sep)
@@ -295,7 +303,9 @@ def main():
         sys.exit(1)
     else:
         print(sep)
-        print(f"✅ PASSED — index.json is consistent with all {len(ok_lines)} file entries")
+        print(
+            f"✅ PASSED — index.json is consistent with all {len(ok_lines)} file entries"
+        )
         print(sep)
         sys.exit(0)
 

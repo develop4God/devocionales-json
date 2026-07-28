@@ -52,9 +52,9 @@ _DEVA = str.maketrans("०१२३४५६७८९", "0123456789")
 # by long_name value, not by filename — see _native_book_name — so it's safe
 # regardless of what the DB file is named or how it was copied/symlinked.
 _HIOV_LONG_TO_SHORT = {
-    "मत्ती रचित सुसमाचार":  "मत्ती",
+    "मत्ती रचित सुसमाचार": "मत्ती",
     "मरकुस रचित सुसमाचार": "मरकुस",
-    "लूका रचित सुसमाचार":  "लूका",
+    "लूका रचित सुसमाचार": "लूका",
     "यूहन्ना रचित सुसमाचार": "यूहन्ना",
 }
 
@@ -65,6 +65,7 @@ _books_sot_cache: dict | None = None
 # ─────────────────────────────────────────────────────────────────────────────
 # LOW-LEVEL HELPERS  (module-level, usable without instantiation)
 # ─────────────────────────────────────────────────────────────────────────────
+
 
 def load_books_sot(local_path: str | None = None) -> dict:
     """
@@ -88,8 +89,7 @@ def load_books_sot(local_path: str | None = None) -> dict:
             data = json.loads(resp.read())
 
     _books_sot_cache = {
-        name: entry["book_number"]
-        for name, entry in data["books"].items()
+        name: entry["book_number"] for name, entry in data["books"].items()
     }
     return _books_sot_cache
 
@@ -109,9 +109,9 @@ def parse_en_ref(cita: str) -> tuple[str, int, int, int] | None:
       None                                           on failure
     """
     cita = cita.strip().translate(_DEVA)
-    cita = re.sub(r'\s+[A-Z0-9]{2,6}$', '', cita).strip()  # strip version code
+    cita = re.sub(r"\s+[A-Z0-9]{2,6}$", "", cita).strip()  # strip version code
     m = re.match(
-        r'^((?:\d\s+)?[A-Za-z]+(?:\s+[A-Za-z]+)*)\s+(\d+):(\d+)(?:-(\d+))?$',
+        r"^((?:\d\s+)?[A-Za-z]+(?:\s+[A-Za-z]+)*)\s+(\d+):(\d+)(?:-(\d+))?$",
         cita,
     )
     if not m:
@@ -158,8 +158,8 @@ def fetch_text(
     # below, not its content.
     combined = re.sub(r"<f>.*?</f>", "", combined)
     combined = re.sub(r"<n>.*?</n>", "", combined)
-    combined = re.sub(r"<[^>]+>", "", combined)            # strip remaining XML tags
-    combined = re.sub(r"[\u2460-\u24FF]", "", combined)    # strip Unicode ref markers
+    combined = re.sub(r"<[^>]+>", "", combined)  # strip remaining XML tags
+    combined = re.sub(r"[\u2460-\u24FF]", "", combined)  # strip Unicode ref markers
     combined = re.sub(r"\s+", " ", combined).strip()
     return combined
 
@@ -167,6 +167,7 @@ def fetch_text(
 # ─────────────────────────────────────────────────────────────────────────────
 # VERSE RESOLVER CLASS
 # ─────────────────────────────────────────────────────────────────────────────
+
 
 class VerseResolver:
     """
@@ -197,18 +198,21 @@ class VerseResolver:
         sqlite_path: str,
         books_sot_path: str | None = None,
     ) -> None:
-        self.books_sot   = load_books_sot(books_sot_path)
-        self._temp_path  = None
+        self.books_sot = load_books_sot(books_sot_path)
+        self._temp_path = None
 
         if sqlite_path.endswith(".gz"):
             fd, self._temp_path = tempfile.mkstemp(suffix=".SQLite3")
             os.close(fd)
-            with gzip.open(sqlite_path, "rb") as src, open(self._temp_path, "wb") as dst:
+            with (
+                gzip.open(sqlite_path, "rb") as src,
+                open(self._temp_path, "wb") as dst,
+            ):
                 shutil.copyfileobj(src, dst)
             sqlite_path = self._temp_path
 
-        self.conn      = sqlite3.connect(sqlite_path)
-        self.cursor    = self.conn.cursor()
+        self.conn = sqlite3.connect(sqlite_path)
+        self.cursor = self.conn.cursor()
 
     # ── context manager support ───────────────────────────────────────────────
 
@@ -222,7 +226,7 @@ class VerseResolver:
         """Close the SQLite connection."""
         if self.conn:
             self.conn.close()
-            self.conn   = None
+            self.conn = None
             self.cursor = None
         if self._temp_path:
             os.remove(self._temp_path)
@@ -281,7 +285,11 @@ class VerseResolver:
         # Confirm EN book name against SOT and get book_number
         book_number = self.books_sot.get(book_en)
         if book_number is None:
-            return None, None, f"unknown book: '{book_en}' — not in bible_books.json SOT"
+            return (
+                None,
+                None,
+                f"unknown book: '{book_en}' — not in bible_books.json SOT",
+            )
 
         # Get native book name directly from the DB (no manual mapping needed)
         local_name = self._native_book_name(book_number, fallback=book_en)
@@ -292,16 +300,20 @@ class VerseResolver:
                 "SELECT MAX(verse) FROM verses WHERE book_number=? AND chapter=?",
                 (book_number, chapter),
             )
-            row       = self.cursor.fetchone()
+            row = self.cursor.fetchone()
             max_verse = row[0] if row and row[0] else "unknown"
             range_str = f"{v_start}-{v_end}" if v_start != v_end else str(v_start)
-            return None, None, (
-                f"verse not found: '{cita_en}' → {local_name} {chapter}:{range_str} "
-                f"(chapter has {max_verse} verses)"
+            return (
+                None,
+                None,
+                (
+                    f"verse not found: '{cita_en}' → {local_name} {chapter}:{range_str} "
+                    f"(chapter has {max_verse} verses)"
+                ),
             )
 
         range_suffix = f"{v_start}-{v_end}" if v_start != v_end else str(v_start)
-        local_cita   = f"{local_name} {chapter}:{range_suffix}"
+        local_cita = f"{local_name} {chapter}:{range_suffix}"
         return local_cita, texto, None
 
     def resolve_many(
@@ -318,12 +330,14 @@ class VerseResolver:
         results = []
         for ref in refs:
             cita, texto, error = self.resolve(ref)
-            results.append({
-                "ref":   ref,
-                "cita":  cita,
-                "texto": texto,
-                "error": error,
-            })
+            results.append(
+                {
+                    "ref": ref,
+                    "cita": cita,
+                    "texto": texto,
+                    "error": error,
+                }
+            )
         return results
 
     def verse_count(self) -> int:

@@ -67,8 +67,14 @@ class ImageReferenceExtractor:
     extension (PNG + AVIF), since both are uploaded for every image."""
 
     SKIP_DIRS = {
-        "archive", "encounters_scripts", "discovery", "badges",
-        "bible_database", "devocionales_scripts", "skills", "image_promts",
+        "archive",
+        "encounters_scripts",
+        "discovery",
+        "badges",
+        "bible_database",
+        "devocionales_scripts",
+        "skills",
+        "image_promts",
     }
 
     def __init__(self, encounters_dir: Path, file_to_encounter_id: dict):
@@ -91,7 +97,9 @@ class ImageReferenceExtractor:
                 references.append(replace(base, ext=ext))
         return references
 
-    def _extract_from_file(self, json_file: Path, encounter_id: str, seen: dict) -> None:
+    def _extract_from_file(
+        self, json_file: Path, encounter_id: str, seen: dict
+    ) -> None:
         data = json.loads(json_file.read_text(encoding="utf-8"))
         for card in data.get("cards", []):
             filename = card.get("image_url")
@@ -110,7 +118,11 @@ class GitHubAssetChecker:
     """Checks whether an image reference resolves on the GitHub assets repo,
     retrying transient failures before giving up."""
 
-    def __init__(self, attempts: int = RETRY_ATTEMPTS, backoff_seconds: int = RETRY_BACKOFF_SECONDS):
+    def __init__(
+        self,
+        attempts: int = RETRY_ATTEMPTS,
+        backoff_seconds: int = RETRY_BACKOFF_SECONDS,
+    ):
         self._attempts = attempts
         self._backoff_seconds = backoff_seconds
 
@@ -128,7 +140,9 @@ class GitHubAssetChecker:
     def _check_once(self, url: str) -> tuple:
         request = urllib.request.Request(url, method="HEAD")
         try:
-            with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT_SECONDS) as response:
+            with urllib.request.urlopen(
+                request, timeout=REQUEST_TIMEOUT_SECONDS
+            ) as response:
                 return True, f"HTTP {response.status}", False
         except urllib.error.HTTPError as e:
             if e.code == 404:
@@ -164,14 +178,19 @@ class ImageFormatValidator:
             method="GET",
         )
         try:
-            with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT_SECONDS) as response:
+            with urllib.request.urlopen(
+                request, timeout=REQUEST_TIMEOUT_SECONDS
+            ) as response:
                 header = response.read(MAGIC_BYTES_FETCH_SIZE)
         except (urllib.error.URLError, TimeoutError) as e:
             return False, f"Format check network error: {e}"
 
         if checker(self, header):
             return True, f"Valid {reference.ext.upper()} signature"
-        return False, f"Bytes at {reference.url} do not match {reference.ext.upper()} signature"
+        return (
+            False,
+            f"Bytes at {reference.url} do not match {reference.ext.upper()} signature",
+        )
 
 
 class VerificationReport:
@@ -182,15 +201,19 @@ class VerificationReport:
         self._files_checked = files_checked
 
     def print(self) -> None:
-        unique_images = len({(r.reference.encounter_id, r.reference.filename) for r in self._results})
+        unique_images = len(
+            {(r.reference.encounter_id, r.reference.filename) for r in self._results}
+        )
 
         print("=" * 80)
         print("IMAGE URL VERIFICATION REPORT (SOT: Devocionales-assets on GitHub)")
         print("=" * 80)
         print()
         print(f"Encounter card files scanned: {self._files_checked}")
-        print(f"Unique images checked: {unique_images} (x{len(CROSS_CHECK_EXTENSIONS)} formats "
-              f"{'/'.join(CROSS_CHECK_EXTENSIONS)} = {len(self._results)} checks)")
+        print(
+            f"Unique images checked: {unique_images} (x{len(CROSS_CHECK_EXTENSIONS)} formats "
+            f"{'/'.join(CROSS_CHECK_EXTENSIONS)} = {len(self._results)} checks)"
+        )
         print()
 
         failures = [r for r in self._results if not r.ok]
@@ -199,29 +222,41 @@ class VerificationReport:
         if failures:
             print(f"MISSING/UNREACHABLE FILES ({len(failures)}):")
             for r in failures:
-                print(f"   - {r.reference.encounter_id}/{r.reference.filename} [{r.reference.ext.upper()}]")
+                print(
+                    f"   - {r.reference.encounter_id}/{r.reference.filename} [{r.reference.ext.upper()}]"
+                )
                 print(f"     Referenced in: {r.reference.source_file}")
                 print(f"     Status: {r.status}")
                 print(f"     URL: {r.reference.url}")
             print()
         else:
-            print(f"All images resolved successfully in both formats ({'/'.join(CROSS_CHECK_EXTENSIONS)}).")
+            print(
+                f"All images resolved successfully in both formats ({'/'.join(CROSS_CHECK_EXTENSIONS)})."
+            )
             print()
 
         if format_failures:
             print(f"FORMAT MISMATCHES ({len(format_failures)}):")
             for r in format_failures:
-                print(f"   - {r.reference.encounter_id}/{r.reference.filename} [{r.reference.ext.upper()}]")
+                print(
+                    f"   - {r.reference.encounter_id}/{r.reference.filename} [{r.reference.ext.upper()}]"
+                )
                 print(f"     Referenced in: {r.reference.source_file}")
                 print(f"     Status: {r.format_status}")
                 print(f"     URL: {r.reference.url}")
             print()
 
         print("=" * 80)
-        total_failed = len({(r.reference.encounter_id, r.reference.filename, r.reference.ext)
-                             for r in failures + format_failures})
-        print(f"Summary: {len(self._results) - total_failed}/{len(self._results)} checks OK, "
-              f"{total_failed} failed")
+        total_failed = len(
+            {
+                (r.reference.encounter_id, r.reference.filename, r.reference.ext)
+                for r in failures + format_failures
+            }
+        )
+        print(
+            f"Summary: {len(self._results) - total_failed}/{len(self._results)} checks OK, "
+            f"{total_failed} failed"
+        )
         print("=" * 80)
 
     def exit_code(self) -> int:
@@ -238,8 +273,8 @@ def parse_args(argv=None) -> argparse.Namespace:
         "--validate-format",
         action="store_true",
         help="Also range-fetch each resolved image's first bytes and verify "
-             "its magic-number signature matches its extension (slower: one "
-             "extra network request per successfully-resolved image).",
+        "its magic-number signature matches its extension (slower: one "
+        "extra network request per successfully-resolved image).",
     )
     return parser.parse_args(argv)
 

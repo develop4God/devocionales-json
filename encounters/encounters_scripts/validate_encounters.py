@@ -40,7 +40,7 @@ def _find_repo_root(start: Path) -> Path:
     this script is ever moved). Raises clearly instead of resolving to the
     wrong place."""
     for candidate in [start, *start.parents]:
-        if (candidate / 'shared_validation').is_dir():
+        if (candidate / "shared_validation").is_dir():
             return candidate
     raise RuntimeError(
         f"Could not find shared_validation/ above {start} — "
@@ -54,17 +54,25 @@ from shared_validation.run_report import RunReport
 from shared_validation.family_check import run_family_validation_all
 from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL
 from shared_validation.text_checks import (
-    iter_strings, check_quote_anomalies, check_halfwidth_colon_in_title,
-    check_no_latin_leak, is_cognate,
+    iter_strings,
+    check_quote_anomalies,
+    check_halfwidth_colon_in_title,
+    check_no_latin_leak,
+    is_cognate,
 )
 from shared_validation.greek_hebrew_gloss import (
-    check_greek_hebrew_transliteration, check_bare_transliteration_reuse,
-    check_script_boundary_spacing, check_strong_code_native_script,
+    check_greek_hebrew_transliteration,
+    check_bare_transliteration_reuse,
+    check_script_boundary_spacing,
+    check_strong_code_native_script,
     check_word_study_bare_transliteration,
 )
 from shared_validation.lint import lint_json_files
 from shared_validation.scripture_check import (
-    ScriptureValidator, find_scripture_pairs, validate_pair, validate_translated_pair,
+    ScriptureValidator,
+    find_scripture_pairs,
+    validate_pair,
+    validate_translated_pair,
     scripture_validation_enabled,
 )
 
@@ -81,31 +89,80 @@ from concurrent.futures import ThreadPoolExecutor
 
 SCRIPTS_DIR = Path(__file__).parent
 ENCOUNTERS_DIR = SCRIPTS_DIR.parent
-INDEX_PATH = ENCOUNTERS_DIR / 'index.json'
-BIBLE_DATABASE_DIR = ENCOUNTERS_DIR.parent / 'bible_database'
+INDEX_PATH = ENCOUNTERS_DIR / "index.json"
+BIBLE_DATABASE_DIR = ENCOUNTERS_DIR.parent / "bible_database"
 
-SCHEMA_VERSION = 'encounters_v1'
-VALID_STATUSES = {'published', 'coming_soon'}
-VALID_TESTAMENT = {'old', 'new'}
+SCHEMA_VERSION = "encounters_v1"
+VALID_STATUSES = {"published", "coming_soon"}
+VALID_TESTAMENT = {"old", "new"}
 
 # Required card keys by type
 CARD_REQUIRED_KEYS = {
-    'cinematic_scene':    ['order', 'type', 'image_url', 'title', 'narrative', 'revelation_key'],
-    'scripture_moment':   ['order', 'type', 'image_url', 'verse_reference', 'verse_text', 'reflection', 'revelation_key'],
-    'character_moment':   ['order', 'type', 'image_url', 'title', 'content', 'revelation_key'],
-    'theological_depth':  ['order', 'type', 'image_url', 'title', 'content', 'revelation_key'],
-    'interactive_moment': ['order', 'type', 'image_url', 'title', 'reflection_prompt'],
-    'discovery_activation': ['order', 'type', 'image_url', 'title', 'discovery_questions', 'prayer'],
-    'completion':         ['order', 'type', 'image_url', 'completion_verse', 'celebration_type'],
+    "cinematic_scene": [
+        "order",
+        "type",
+        "image_url",
+        "title",
+        "narrative",
+        "revelation_key",
+    ],
+    "scripture_moment": [
+        "order",
+        "type",
+        "image_url",
+        "verse_reference",
+        "verse_text",
+        "reflection",
+        "revelation_key",
+    ],
+    "character_moment": [
+        "order",
+        "type",
+        "image_url",
+        "title",
+        "content",
+        "revelation_key",
+    ],
+    "theological_depth": [
+        "order",
+        "type",
+        "image_url",
+        "title",
+        "content",
+        "revelation_key",
+    ],
+    "interactive_moment": ["order", "type", "image_url", "title", "reflection_prompt"],
+    "discovery_activation": [
+        "order",
+        "type",
+        "image_url",
+        "title",
+        "discovery_questions",
+        "prayer",
+    ],
+    "completion": [
+        "order",
+        "type",
+        "image_url",
+        "completion_verse",
+        "celebration_type",
+    ],
 }
 
-def validate_sot_source(report: Report, bible_versions: dict, used_remote_sot: bool,
-                         last_fetch_error: Optional[Exception]) -> bool:
+
+def validate_sot_source(
+    report: Report,
+    bible_versions: dict,
+    used_remote_sot: bool,
+    last_fetch_error: Optional[Exception],
+) -> bool:
     """Report whether this run resolved bible_version codes from the live
     remote SOT or fell back to the temp-dir bible_versions cache.
     """
     if used_remote_sot:
-        report.I(f"✓ bible_version codes resolved live from remote SOT ({REMOTE_INDEX_URL}) for all {len(bible_versions)} languages")
+        report.I(
+            f"✓ bible_version codes resolved live from remote SOT ({REMOTE_INDEX_URL}) for all {len(bible_versions)} languages"
+        )
         return True
     reason = f" ({last_fetch_error})" if last_fetch_error else ""
     report.W(
@@ -118,8 +175,9 @@ def validate_sot_source(report: Report, bible_versions: dict, used_remote_sot: b
 
 def load_json(path: Path, report: Report) -> Optional[dict]:
     import json
+
     try:
-        return json.loads(path.read_text(encoding='utf-8'))
+        return json.loads(path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as e:
         report.E(f"Invalid JSON in {path.name}: {e}")
         return None
@@ -129,6 +187,7 @@ def load_json(path: Path, report: Report) -> Optional[dict]:
 
 
 # ── Phase 1: Lint ────────────────────────────────────────────────────────────
+
 
 def validate_lint(report: Report) -> dict:
     """Check that all JSON files use indent=2 formatting and end with newline.
@@ -141,13 +200,16 @@ def validate_lint(report: Report) -> dict:
     report.I("PHASE 1: Lint — checking JSON formatting (indent=2)")
     report.I("=" * 60)
 
-    cache = lint_json_files(ENCOUNTERS_DIR, report, 'encounters_scripts', severity='error')
+    cache = lint_json_files(
+        ENCOUNTERS_DIR, report, "encounters_scripts", severity="error"
+    )
 
     report.I(f"✓ Checked {len(cache)} JSON files")
     return cache
 
 
 # ── Phase A: Index validation ─────────────────────────────────────────────────
+
 
 def validate_index(report: Report, expected_languages: list) -> Optional[dict]:
     report.I("=" * 60)
@@ -164,11 +226,11 @@ def validate_index(report: Report, expected_languages: list) -> Optional[dict]:
 
     report.I("✓ index.json is valid JSON")
 
-    if 'encounters' not in data:
+    if "encounters" not in data:
         report.E("index.json missing required 'encounters' array")
         return None
 
-    encounters = data['encounters']
+    encounters = data["encounters"]
     if not isinstance(encounters, list) or len(encounters) == 0:
         report.E("index.json 'encounters' must be a non-empty array")
         return None
@@ -178,7 +240,7 @@ def validate_index(report: Report, expected_languages: list) -> Optional[dict]:
     seen_ids = set()
     for i, enc in enumerate(encounters):
         num = i + 1
-        enc_id = enc.get('id', f'unknown_{num}')
+        enc_id = enc.get("id", f"unknown_{num}")
 
         # Duplicate ID check
         if enc_id in seen_ids:
@@ -186,40 +248,65 @@ def validate_index(report: Report, expected_languages: list) -> Optional[dict]:
         seen_ids.add(enc_id)
 
         # Required index fields
-        required = ['id', 'version', 'image_version', 'emoji', 'status', 'files',
-                    'titles', 'subtitles', 'scripture_reference',
-                    'estimated_reading_minutes', 'has_interactive',
-                    'testament', 'character']
+        required = [
+            "id",
+            "version",
+            "image_version",
+            "emoji",
+            "status",
+            "files",
+            "titles",
+            "subtitles",
+            "scripture_reference",
+            "estimated_reading_minutes",
+            "has_interactive",
+            "testament",
+            "character",
+        ]
         for field in required:
             if field not in enc:
                 report.E(f"Encounter {enc_id}: missing required field '{field}'")
 
         # Status
-        status = enc.get('status', '')
+        status = enc.get("status", "")
         if status not in VALID_STATUSES:
-            report.E(f"Encounter {enc_id}: invalid status '{status}', must be one of {VALID_STATUSES}")
+            report.E(
+                f"Encounter {enc_id}: invalid status '{status}', must be one of {VALID_STATUSES}"
+            )
 
         # Testament
-        testament = enc.get('testament', '')
+        testament = enc.get("testament", "")
         if testament not in VALID_TESTAMENT:
-            report.E(f"Encounter {enc_id}: invalid testament '{testament}', must be 'old' or 'new'")
+            report.E(
+                f"Encounter {enc_id}: invalid testament '{testament}', must be 'old' or 'new'"
+            )
 
         # Version format validation
-        version = enc.get('version', '')
-        if not re.match(r'^\d+\.\d+(\.\d+)?$', version):
-            report.W(f"Encounter {enc_id}: version '{version}' should follow semantic versioning (e.g., '1.0' or '1.0.0')")
+        version = enc.get("version", "")
+        if not re.match(r"^\d+\.\d+(\.\d+)?$", version):
+            report.W(
+                f"Encounter {enc_id}: version '{version}' should follow semantic versioning (e.g., '1.0' or '1.0.0')"
+            )
 
         # Image version format validation
-        image_version = enc.get('image_version', '')
-        if not re.match(r'^\d+\.\d+(\.\d+)?$', image_version):
-            report.W(f"Encounter {enc_id}: image_version '{image_version}' should follow semantic versioning (e.g., '1.0' or '1.0.0')")
+        image_version = enc.get("image_version", "")
+        if not re.match(r"^\d+\.\d+(\.\d+)?$", image_version):
+            report.W(
+                f"Encounter {enc_id}: image_version '{image_version}' should follow semantic versioning (e.g., '1.0' or '1.0.0')"
+            )
 
         # Language coverage for all language objects. Report once per encounter
         # (not once per field) so a Spanish-only draft doesn't produce five
         # near-identical warnings — and frame it by status: a coming_soon
         # encounter missing languages is expected (translation is a follow-up
         # step), a published one missing languages is a real gap.
-        lang_objects = ['files', 'titles', 'subtitles', 'scripture_reference', 'estimated_reading_minutes']
+        lang_objects = [
+            "files",
+            "titles",
+            "subtitles",
+            "scripture_reference",
+            "estimated_reading_minutes",
+        ]
         missing_by_field = {}
         present_langs = None
         for obj_key in lang_objects:
@@ -241,31 +328,43 @@ def validate_index(report: Report, expected_languages: list) -> Optional[dict]:
                 missing_langs = sorted(next(iter(missing_by_field.values())))
                 summary = f"missing {len(missing_langs)}/{len(expected_languages)} languages {missing_langs} across all fields (has: {have})"
             else:
-                parts = ", ".join(f"{k}: {sorted(v)}" for k, v in missing_by_field.items())
+                parts = ", ".join(
+                    f"{k}: {sorted(v)}" for k, v in missing_by_field.items()
+                )
                 summary = f"uneven language coverage — {parts}"
 
-            if status == 'coming_soon':
-                report.W(f"Encounter {enc_id}: {summary} — coming_soon, translation pending")
+            if status == "coming_soon":
+                report.W(
+                    f"Encounter {enc_id}: {summary} — coming_soon, translation pending"
+                )
             else:
-                report.W(f"Encounter {enc_id}: {summary} — encounter is published, translations should be complete")
+                report.W(
+                    f"Encounter {enc_id}: {summary} — encounter is published, translations should be complete"
+                )
 
         # File existence — checked regardless of status: a listed file must exist
-        if 'files' in enc:
-            for lang, fname in enc['files'].items():
+        if "files" in enc:
+            for lang, fname in enc["files"].items():
                 fpath = ENCOUNTERS_DIR / lang / fname
                 if not fpath.exists():
-                    report.E(f"Encounter {enc_id}: listed file {lang}/{fname} does not exist")
+                    report.E(
+                        f"Encounter {enc_id}: listed file {lang}/{fname} does not exist"
+                    )
 
         # coming_soon reminder — must be flipped to 'published' before shipping
-        if status == 'coming_soon':
-            report.W(f"Encounter {enc_id}: status is 'coming_soon' — flip to 'published' before release")
+        if status == "coming_soon":
+            report.W(
+                f"Encounter {enc_id}: status is 'coming_soon' — flip to 'published' before release"
+            )
 
         # Filename convention check
-        if 'files' in enc:
-            for lang, fname in enc['files'].items():
+        if "files" in enc:
+            for lang, fname in enc["files"].items():
                 expected = f"{enc_id.replace('_001', '')}_{lang}_001.json"
                 if fname != expected:
-                    report.W(f"Encounter {enc_id}: filename '{fname}' expected '{expected}'")
+                    report.W(
+                        f"Encounter {enc_id}: filename '{fname}' expected '{expected}'"
+                    )
 
     report.I("✓ index.json structure validation complete")
     return data
@@ -273,17 +372,25 @@ def validate_index(report: Report, expected_languages: list) -> Optional[dict]:
 
 # ── Phase B: File validation ──────────────────────────────────────────────────
 
-def validate_encounter_file(data: dict, lang: str, filename: str,
-                             enc_id: str, report: Report,
-                             bible_versions: dict,
-                             index_entry: Optional[dict] = None):
+
+def validate_encounter_file(
+    data: dict,
+    lang: str,
+    filename: str,
+    enc_id: str,
+    report: Report,
+    bible_versions: dict,
+    index_entry: Optional[dict] = None,
+):
     """Validate a single encounter file."""
 
     # Quote / stray-punctuation anomaly scan across all text fields
     for path, text in iter_strings(data):
         check_quote_anomalies(text, f"{filename}:{path}", report)
         check_halfwidth_colon_in_title(text, path, lang, f"{filename}:{path}", report)
-        check_greek_hebrew_transliteration(text, path, lang, f"{filename}:{path}", report)
+        check_greek_hebrew_transliteration(
+            text, path, lang, f"{filename}:{path}", report
+        )
         check_bare_transliteration_reuse(text, path, f"{filename}:{path}", report)
         check_script_boundary_spacing(text, path, lang, f"{filename}:{path}", report)
         check_strong_code_native_script(text, path, lang, f"{filename}:{path}", report)
@@ -291,93 +398,128 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
         check_no_latin_leak(text, path, lang, f"{filename}:{path}", report)
 
     # Required top-level fields
-    required = ['id', 'type', 'schema_version', 'language', 'bible_version',
-                'version', 'estimated_reading_minutes', 'meta', 'key_verse', 'cards']
+    required = [
+        "id",
+        "type",
+        "schema_version",
+        "language",
+        "bible_version",
+        "version",
+        "estimated_reading_minutes",
+        "meta",
+        "key_verse",
+        "cards",
+    ]
     for field in required:
         if field not in data:
             report.E(f"{filename}: missing required field '{field}'")
 
     # id must match index
-    internal_id = data.get('id', '')
+    internal_id = data.get("id", "")
     if not internal_id:
         report.E(f"{filename}: missing internal 'id' field")
     elif internal_id != enc_id:
-        report.E(f"{filename}: internal 'id' field '{internal_id}' does not match index id '{enc_id}'")
+        report.E(
+            f"{filename}: internal 'id' field '{internal_id}' does not match index id '{enc_id}'"
+        )
 
     # schema_version
-    if data.get('schema_version') != SCHEMA_VERSION:
-        report.E(f"{filename}: schema_version must be '{SCHEMA_VERSION}', got '{data.get('schema_version')}'")
+    if data.get("schema_version") != SCHEMA_VERSION:
+        report.E(
+            f"{filename}: schema_version must be '{SCHEMA_VERSION}', got '{data.get('schema_version')}'"
+        )
 
     # type
-    if data.get('type') != 'encounter':
+    if data.get("type") != "encounter":
         report.E(f"{filename}: type must be 'encounter', got '{data.get('type')}'")
 
     # language field matches folder
-    if data.get('language') != lang:
-        report.E(f"{filename}: language field '{data.get('language')}' does not match folder '{lang}'")
+    if data.get("language") != lang:
+        report.E(
+            f"{filename}: language field '{data.get('language')}' does not match folder '{lang}'"
+        )
 
     # bible_version
-    allowed = bible_versions.get(lang, {}).get('allowed_versions', [])
-    if data.get('bible_version') not in allowed:
-        report.E(f"{filename}: bible_version '{data.get('bible_version')}' not valid for '{lang}', expected one of {allowed}")
+    allowed = bible_versions.get(lang, {}).get("allowed_versions", [])
+    if data.get("bible_version") not in allowed:
+        report.E(
+            f"{filename}: bible_version '{data.get('bible_version')}' not valid for '{lang}', expected one of {allowed}"
+        )
 
     # meta block
-    meta = data.get('meta', {})
+    meta = data.get("meta", {})
     if not isinstance(meta, dict):
         report.E(f"{filename}: 'meta' must be an object")
     else:
-        for field in ['character', 'testament', 'scripture_reference', 'mood_primary',
-                      'accent_color', 'emoji', 'tags']:
+        for field in [
+            "character",
+            "testament",
+            "scripture_reference",
+            "mood_primary",
+            "accent_color",
+            "emoji",
+            "tags",
+        ]:
             if field not in meta:
                 report.E(f"{filename}: meta missing field '{field}'")
-        if 'tags' in meta and not isinstance(meta['tags'], list):
+        if "tags" in meta and not isinstance(meta["tags"], list):
             report.E(f"{filename}: meta.tags must be an array")
-        if 'accent_color' in meta:
-            if not re.match(r'^#[0-9a-fA-F]{6}$', meta.get('accent_color', '')):
-                report.W(f"{filename}: meta.accent_color '{meta['accent_color']}' is not a valid hex color")
+        if "accent_color" in meta:
+            if not re.match(r"^#[0-9a-fA-F]{6}$", meta.get("accent_color", "")):
+                report.W(
+                    f"{filename}: meta.accent_color '{meta['accent_color']}' is not a valid hex color"
+                )
         if index_entry:
-            for meta_key, index_key in [('emoji', 'emoji'), ('testament', 'testament')]:
-                meta_val = meta.get(meta_key, '')
-                index_val = index_entry.get(index_key, '')
+            for meta_key, index_key in [("emoji", "emoji"), ("testament", "testament")]:
+                meta_val = meta.get(meta_key, "")
+                index_val = index_entry.get(index_key, "")
                 if meta_val and index_val and meta_val != index_val:
-                    report.E(f"{filename}: meta.{meta_key} '{meta_val}' does not match index '{index_val}'")
+                    report.E(
+                        f"{filename}: meta.{meta_key} '{meta_val}' does not match index '{index_val}'"
+                    )
 
     # key_verse
-    kv = data.get('key_verse', {})
+    kv = data.get("key_verse", {})
     if not isinstance(kv, dict):
         report.E(f"{filename}: 'key_verse' must be an object")
     else:
-        for field in ['reference', 'text', 'bible_version']:
+        for field in ["reference", "text", "bible_version"]:
             if not kv.get(field):
                 report.E(f"{filename}: key_verse missing or empty '{field}'")
         # bible_version inside key_verse must also match
-        if kv.get('bible_version') not in allowed:
-            report.E(f"{filename}: key_verse.bible_version '{kv.get('bible_version')}' not valid for '{lang}'")
+        if kv.get("bible_version") not in allowed:
+            report.E(
+                f"{filename}: key_verse.bible_version '{kv.get('bible_version')}' not valid for '{lang}'"
+            )
 
     # cards
-    cards = data.get('cards', [])
+    cards = data.get("cards", [])
     if not isinstance(cards, list) or len(cards) == 0:
         report.E(f"{filename}: 'cards' must be a non-empty array")
         return
 
     # Must end with completion card
-    if cards[-1].get('type') != 'completion':
-        report.E(f"{filename}: last card must be type 'completion', got '{cards[-1].get('type')}'")
+    if cards[-1].get("type") != "completion":
+        report.E(
+            f"{filename}: last card must be type 'completion', got '{cards[-1].get('type')}'"
+        )
 
     # Must have discovery_activation card
-    card_types = [c.get('type') for c in cards]
-    if 'discovery_activation' not in card_types:
+    card_types = [c.get("type") for c in cards]
+    if "discovery_activation" not in card_types:
         report.E(f"{filename}: missing required 'discovery_activation' card")
 
     # Order must be sequential
     for i, card in enumerate(cards):
-        if card.get('order') != i + 1:
-            report.W(f"{filename}: card {i+1} has order={card.get('order')}, expected {i+1}")
+        if card.get("order") != i + 1:
+            report.W(
+                f"{filename}: card {i + 1} has order={card.get('order')}, expected {i + 1}"
+            )
 
     # Per-card validation
     for card in cards:
-        ctype = card.get('type', 'unknown')
-        cidx = card.get('order', '?')
+        ctype = card.get("type", "unknown")
+        cidx = card.get("order", "?")
         ctx = f"{filename} card[{cidx}]({ctype})"
 
         # Unknown card type
@@ -385,7 +527,7 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
             report.W(f"{ctx}: unknown card type '{ctype}'")
 
         # Required keys per card type
-        required_keys = CARD_REQUIRED_KEYS.get(ctype, ['order', 'type', 'image_url'])
+        required_keys = CARD_REQUIRED_KEYS.get(ctype, ["order", "type", "image_url"])
         for key in required_keys:
             if key not in card:
                 report.E(f"{ctx}: missing required key '{key}'")
@@ -393,112 +535,140 @@ def validate_encounter_file(data: dict, lang: str, filename: str,
                 report.E(f"{ctx}: field '{key}' is empty")
 
         # discovery_activation specific
-        if ctype == 'discovery_activation':
-            dqs = card.get('discovery_questions', [])
+        if ctype == "discovery_activation":
+            dqs = card.get("discovery_questions", [])
             if not dqs:
                 report.E(f"{ctx}: discovery_questions is empty")
             else:
                 for j, dq in enumerate(dqs):
-                    for field in ['category', 'question']:
-                        if not dq.get(field, '').strip():
-                            report.E(f"{ctx} question[{j+1}]: '{field}' is empty")
-            prayer = card.get('prayer', {})
-            if not prayer.get('title', '').strip():
+                    for field in ["category", "question"]:
+                        if not dq.get(field, "").strip():
+                            report.E(f"{ctx} question[{j + 1}]: '{field}' is empty")
+            prayer = card.get("prayer", {})
+            if not prayer.get("title", "").strip():
                 report.E(f"{ctx}: prayer.title is empty")
-            if not prayer.get('content', '').strip():
+            if not prayer.get("content", "").strip():
                 report.E(f"{ctx}: prayer.content is empty")
 
         # verse_overlay validation
-        vo = card.get('verse_overlay')
+        vo = card.get("verse_overlay")
         if vo is not None:
             if not isinstance(vo, dict):
                 report.E(f"{ctx}: verse_overlay must be an object")
             else:
-                for field in ['reference', 'text']:
-                    if not vo.get(field, '').strip():
+                for field in ["reference", "text"]:
+                    if not vo.get(field, "").strip():
                         report.E(f"{ctx}: verse_overlay.{field} is empty")
 
         # completion specific
-        if ctype == 'completion':
-            cv = card.get('completion_verse', {})
-            for field in ['reference', 'text', 'bible_version']:
-                if not cv.get(field, '').strip():
+        if ctype == "completion":
+            cv = card.get("completion_verse", {})
+            for field in ["reference", "text", "bible_version"]:
+                if not cv.get(field, "").strip():
                     report.E(f"{ctx}: completion_verse.{field} is empty")
-            if cv.get('bible_version') not in allowed:
-                report.E(f"{ctx}: completion_verse.bible_version '{cv.get('bible_version')}' not valid for '{lang}'")
+            if cv.get("bible_version") not in allowed:
+                report.E(
+                    f"{ctx}: completion_verse.bible_version '{cv.get('bible_version')}' not valid for '{lang}'"
+                )
 
         # scripture_moment specific
-        if ctype == 'scripture_moment':
-            for field in ['verse_reference', 'verse_text']:
-                if not card.get(field, '').strip():
+        if ctype == "scripture_moment":
+            for field in ["verse_reference", "verse_text"]:
+                if not card.get(field, "").strip():
                     report.E(f"{ctx}: '{field}' is empty")
 
         # scripture_connections check
-        for j, sc in enumerate(card.get('scripture_connections', [])):
-            for field in ['reference', 'text']:
-                if not sc.get(field, '').strip():
-                    report.E(f"{ctx} scripture_connections[{j+1}]: '{field}' is empty")
+        for j, sc in enumerate(card.get("scripture_connections", [])):
+            for field in ["reference", "text"]:
+                if not sc.get(field, "").strip():
+                    report.E(
+                        f"{ctx} scripture_connections[{j + 1}]: '{field}' is empty"
+                    )
 
 
-def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
-                                filename: str, report: Report):
+def validate_cross_translation(
+    en_data: dict, trans_data: dict, lang: str, filename: str, report: Report
+):
     """Validate translation against EN base: structure, counts, content."""
-    en_cards = en_data.get('cards', [])
-    tr_cards = trans_data.get('cards', [])
+    en_cards = en_data.get("cards", [])
+    tr_cards = trans_data.get("cards", [])
 
     # Card count
     if len(en_cards) != len(tr_cards):
-        report.E(f"{filename}: card count mismatch — EN={len(en_cards)}, {lang.upper()}={len(tr_cards)}")
+        report.E(
+            f"{filename}: card count mismatch — EN={len(en_cards)}, {lang.upper()}={len(tr_cards)}"
+        )
 
     for i, (ec, tc) in enumerate(zip(en_cards, tr_cards)):
-        ctx = f"{filename} card[{ec.get('order','?')}]({ec.get('type','?')})"
+        ctx = f"{filename} card[{ec.get('order', '?')}]({ec.get('type', '?')})"
 
         # type and order must match
-        if ec.get('type') != tc.get('type'):
-            report.E(f"{ctx}: type mismatch — EN='{ec.get('type')}', {lang.upper()}='{tc.get('type')}'")
-        if ec.get('order') != tc.get('order'):
+        if ec.get("type") != tc.get("type"):
+            report.E(
+                f"{ctx}: type mismatch — EN='{ec.get('type')}', {lang.upper()}='{tc.get('type')}'"
+            )
+        if ec.get("order") != tc.get("order"):
             report.E(f"{ctx}: order mismatch")
 
         # Key parity — no source key missing in translation
         for key in ec:
             if key not in tc:
-                report.E(f"{ctx}: key '{key}' present in EN but missing in {lang.upper()}")
+                report.E(
+                    f"{ctx}: key '{key}' present in EN but missing in {lang.upper()}"
+                )
 
         # Reverse key parity — no extra/stray key in translation absent from EN
         for key in tc:
             if key not in ec:
-                report.W(f"{ctx}: key '{key}' present in {lang.upper()} but missing in EN (possible extra/stray field)")
+                report.W(
+                    f"{ctx}: key '{key}' present in {lang.upper()} but missing in EN (possible extra/stray field)"
+                )
 
         # Text fields must be translated (non-empty, differ from EN)
-        for field in ('title', 'subtitle', 'narrative', 'content', 'reflection',
-                      'revelation_key', 'reflection_prompt'):
+        for field in (
+            "title",
+            "subtitle",
+            "narrative",
+            "content",
+            "reflection",
+            "revelation_key",
+            "reflection_prompt",
+        ):
             if field in ec and field in tc:
-                en_val = ec.get(field, '')
-                tr_val = tc.get(field, '')
+                en_val = ec.get(field, "")
+                tr_val = tc.get(field, "")
                 if not tr_val or not str(tr_val).strip():
                     report.E(f"{ctx}: field '{field}' is empty in {lang.upper()}")
                 elif isinstance(en_val, str) and isinstance(tr_val, str):
-                    if en_val.strip() == tr_val.strip() and not is_cognate(tr_val, lang):
+                    if en_val.strip() == tr_val.strip() and not is_cognate(
+                        tr_val, lang
+                    ):
                         report.W(f"{ctx}: field '{field}' appears untranslated")
 
         # discovery_questions count
-        if ec.get('type') == 'discovery_activation':
-            en_qs = ec.get('discovery_questions', [])
-            tr_qs = tc.get('discovery_questions', [])
+        if ec.get("type") == "discovery_activation":
+            en_qs = ec.get("discovery_questions", [])
+            tr_qs = tc.get("discovery_questions", [])
             if len(en_qs) != len(tr_qs):
-                report.E(f"{ctx}: discovery_questions count mismatch EN={len(en_qs)}, {lang.upper()}={len(tr_qs)}")
+                report.E(
+                    f"{ctx}: discovery_questions count mismatch EN={len(en_qs)}, {lang.upper()}={len(tr_qs)}"
+                )
             for j, (eq, tq) in enumerate(zip(en_qs, tr_qs)):
-                for field in ('category', 'question'):
-                    eq_val = eq.get(field, '').strip()
-                    tq_val = tq.get(field, '').strip()
+                for field in ("category", "question"):
+                    eq_val = eq.get(field, "").strip()
+                    tq_val = tq.get(field, "").strip()
                     if eq_val == tq_val and not is_cognate(tq_val, lang):
-                        report.W(f"{ctx} question[{j+1}]: '{field}' appears untranslated")
+                        report.W(
+                            f"{ctx} question[{j + 1}]: '{field}' appears untranslated"
+                        )
 
         # scripture_connections count
-        en_sc = ec.get('scripture_connections', [])
-        tr_sc = tc.get('scripture_connections', [])
+        en_sc = ec.get("scripture_connections", [])
+        tr_sc = tc.get("scripture_connections", [])
         if len(en_sc) != len(tr_sc):
-            report.E(f"{ctx}: scripture_connections count mismatch EN={len(en_sc)}, {lang.upper()}={len(tr_sc)}")
+            report.E(
+                f"{ctx}: scripture_connections count mismatch EN={len(en_sc)}, {lang.upper()}={len(tr_sc)}"
+            )
 
         # verse_overlay presence parity — the key-parity check above only
         # catches the key being absent entirely; it can't catch EN having
@@ -506,39 +676,48 @@ def validate_cross_translation(en_data: dict, trans_data: dict, lang: str,
         # null (or vice versa), which key-parity sees as "present" on both
         # sides. Confirmed via widow_nain_en_001.json/zacchaeus_en_001.json,
         # which both use verse_overlay: null on some cards deliberately.
-        if 'verse_overlay' in ec and 'verse_overlay' in tc:
-            en_has = ec['verse_overlay'] is not None
-            tr_has = tc['verse_overlay'] is not None
+        if "verse_overlay" in ec and "verse_overlay" in tc:
+            en_has = ec["verse_overlay"] is not None
+            tr_has = tc["verse_overlay"] is not None
             if en_has != tr_has:
-                report.E(f"{ctx}: verse_overlay present in EN={en_has} but {lang.upper()}={tr_has}")
+                report.E(
+                    f"{ctx}: verse_overlay present in EN={en_has} but {lang.upper()}={tr_has}"
+                )
 
     # key_verse presence parity (top-level, once per file, same reasoning
     # as verse_overlay above)
-    en_kv = en_data.get('key_verse')
-    tr_kv = trans_data.get('key_verse')
+    en_kv = en_data.get("key_verse")
+    tr_kv = trans_data.get("key_verse")
     if (en_kv is not None) != (tr_kv is not None):
-        report.E(f"{filename}: key_verse present in EN={en_kv is not None} but {lang.upper()}={tr_kv is not None}")
+        report.E(
+            f"{filename}: key_verse present in EN={en_kv is not None} but {lang.upper()}={tr_kv is not None}"
+        )
 
 
-def validate_encounter_files(report: Report, index_data: dict, lint_cache: dict,
-                              bible_versions: dict, expected_languages: list) -> None:
+def validate_encounter_files(
+    report: Report,
+    index_data: dict,
+    lint_cache: dict,
+    bible_versions: dict,
+    expected_languages: list,
+) -> None:
     """Phase B: load and validate every encounter's files (regardless of
     status), then cross-validate every non-EN language against the EN base."""
     report.I("=" * 60)
     report.I("PHASE B: Validating encounter files using EN as base")
     report.I("=" * 60)
 
-    encounters = index_data['encounters']
-    published = [e for e in encounters if e.get('status') == 'published']
-    coming_soon = [e for e in encounters if e.get('status') == 'coming_soon']
+    encounters = index_data["encounters"]
+    published = [e for e in encounters if e.get("status") == "published"]
+    coming_soon = [e for e in encounters if e.get("status") == "coming_soon"]
 
     report.I(f"Published: {len(published)} | Coming soon: {len(coming_soon)}")
 
     all_loaded = {}  # {lang: {enc_id: data}}
 
     for enc in encounters:
-        enc_id = enc['id']
-        files = enc.get('files', {})
+        enc_id = enc["id"]
+        files = enc.get("files", {})
 
         for lang, fname in files.items():
             fpath = ENCOUNTERS_DIR / lang / fname
@@ -550,14 +729,15 @@ def validate_encounter_files(report: Report, index_data: dict, lint_cache: dict,
                 continue
 
             # Individual file validation
-            validate_encounter_file(data, lang, fname, enc_id, report, bible_versions, index_entry=enc)
+            validate_encounter_file(
+                data, lang, fname, enc_id, report, bible_versions, index_entry=enc
+            )
 
             # has_interactive cross-check
             has_interactive_in_file = any(
-                c.get('type') == 'interactive_moment'
-                for c in data.get('cards', [])
+                c.get("type") == "interactive_moment" for c in data.get("cards", [])
             )
-            index_has_interactive = enc.get('has_interactive', False)
+            index_has_interactive = enc.get("has_interactive", False)
             if has_interactive_in_file != index_has_interactive:
                 report.E(
                     f"{fname}: index has_interactive={index_has_interactive} "
@@ -572,10 +752,10 @@ def validate_encounter_files(report: Report, index_data: dict, lint_cache: dict,
 
     # Cross-validate all languages against EN
     report.I("Cross-validating all languages against EN base...")
-    en_studies = all_loaded.get('en', {})
+    en_studies = all_loaded.get("en", {})
 
     for lang in expected_languages:
-        if lang == 'en':
+        if lang == "en":
             continue
         if lang not in all_loaded:
             continue
@@ -583,18 +763,19 @@ def validate_encounter_files(report: Report, index_data: dict, lint_cache: dict,
             if enc_id in all_loaded[lang]:
                 fname = f"{enc_id.replace('_001', '')}_{lang}_001.json"
                 validate_cross_translation(
-                    en_data, all_loaded[lang][enc_id],
-                    lang, fname, report
+                    en_data, all_loaded[lang][enc_id], lang, fname, report
                 )
 
     # Verify all index file references exist
     report.I("Verifying all index file references exist...")
     for enc in encounters:
-        enc_id = enc['id']
-        for lang, fname in enc.get('files', {}).items():
+        enc_id = enc["id"]
+        for lang, fname in enc.get("files", {}).items():
             fpath = ENCOUNTERS_DIR / lang / fname
             if not fpath.exists():
-                report.E(f"index.json: encounter {enc_id} lists {lang}/{fname} but file does not exist")
+                report.E(
+                    f"index.json: encounter {enc_id} lists {lang}/{fname} but file does not exist"
+                )
 
 
 # ── Phase C: Image URL verification ─────────────────────────────────────────
@@ -603,6 +784,7 @@ def validate_encounter_files(report: Report, index_data: dict, lint_cache: dict,
 # unreachable image is a content-completeness problem, not a structural one:
 # it never blocks the release the way a malformed card or a translation gap
 # does, so findings here are WARNINGs, not ERRORs, and never fail the run.
+
 
 def validate_image_urls(report: Report) -> None:
     """Verify every image_url referenced in an encounter card resolves on the
@@ -625,7 +807,9 @@ def validate_image_urls(report: Report) -> None:
         results = list(pool.map(checker.check, references))
 
     files_checked = len({r.reference.source_file for r in results})
-    report.I(f"✓ Scanned {files_checked} encounter card files, {len(results)} unique images")
+    report.I(
+        f"✓ Scanned {files_checked} encounter card files, {len(results)} unique images"
+    )
 
     failures = [r for r in results if not r.ok]
     for r in failures:
@@ -663,7 +847,9 @@ def validate_image_urls(report: Report) -> None:
         )
 
     if not format_failures:
-        report.I(f"✓ All {len(format_results)} resolved images match their declared format")
+        report.I(
+            f"✓ All {len(format_results)} resolved images match their declared format"
+        )
 
 
 # ── Phase D: Scripture references ───────────────────────────────────────────
@@ -678,8 +864,10 @@ def validate_image_urls(report: Report) -> None:
 # (the real gate) so scripture findings never block the release while the
 # threshold is being tuned.
 
-def validate_scripture_references(report: Report, index_data: dict, lint_cache: dict,
-                                   only_lang: Optional[str] = None) -> None:
+
+def validate_scripture_references(
+    report: Report, index_data: dict, lint_cache: dict, only_lang: Optional[str] = None
+) -> None:
     """Phase D: resolve every scripture reference found in every loaded
     encounter file and fuzzy-match its stored verse_text against the
     resolved text. Reuses lint_cache (already parsed in Phase 1) rather
@@ -705,10 +893,12 @@ def validate_scripture_references(report: Report, index_data: dict, lint_cache: 
     text_mismatches = 0
 
     with ScriptureValidator(BIBLE_DATABASE_DIR) as validator:
-        for enc in index_data['encounters']:
-            files = enc.get('files', {})
-            en_fname = files.get('en')
-            en_data = lint_cache.get(ENCOUNTERS_DIR / 'en' / en_fname) if en_fname else None
+        for enc in index_data["encounters"]:
+            files = enc.get("files", {})
+            en_fname = files.get("en")
+            en_data = (
+                lint_cache.get(ENCOUNTERS_DIR / "en" / en_fname) if en_fname else None
+            )
             en_pairs = find_scripture_pairs(en_data) if en_data else None
 
             for lang, fname in files.items():
@@ -719,16 +909,18 @@ def validate_scripture_references(report: Report, index_data: dict, lint_cache: 
                 if data is None:
                     continue
 
-                bible_version = data.get('bible_version')
+                bible_version = data.get("bible_version")
                 if not bible_version:
                     continue
 
                 resolver = validator.get_resolver(bible_version, lang)
                 if resolver is None:
-                    report.W(f"{fname}: no local Bible DB found for bible_version '{bible_version}' (lang '{lang}') — skipping scripture checks")
+                    report.W(
+                        f"{fname}: no local Bible DB found for bible_version '{bible_version}' (lang '{lang}') — skipping scripture checks"
+                    )
                     continue
 
-                if lang == 'en':
+                if lang == "en":
                     for ref in find_scripture_pairs(data):
                         pairs_checked += 1
                         finding = validate_pair(ref, resolver)
@@ -742,17 +934,23 @@ def validate_scripture_references(report: Report, index_data: dict, lint_cache: 
                     continue
 
                 if en_pairs is None:
-                    report.W(f"{fname}: no EN sibling file found — skipping scripture checks")
+                    report.W(
+                        f"{fname}: no EN sibling file found — skipping scripture checks"
+                    )
                     continue
 
                 native_pairs = find_scripture_pairs(data)
                 if len(native_pairs) != len(en_pairs):
-                    report.W(f"{fname}: scripture pair count ({len(native_pairs)}) doesn't match EN sibling ({len(en_pairs)}) — skipping scripture checks (cards likely out of sync, see Phase B)")
+                    report.W(
+                        f"{fname}: scripture pair count ({len(native_pairs)}) doesn't match EN sibling ({len(en_pairs)}) — skipping scripture checks (cards likely out of sync, see Phase B)"
+                    )
                     continue
 
                 for en_ref, native_ref in zip(en_pairs, native_pairs):
                     pairs_checked += 1
-                    finding = validate_translated_pair(en_ref, native_ref, resolver, bible_version)
+                    finding = validate_translated_pair(
+                        en_ref, native_ref, resolver, bible_version
+                    )
                     if finding is None:
                         continue
                     if finding.kind == "resolution_failed":
@@ -769,15 +967,23 @@ def validate_scripture_references(report: Report, index_data: dict, lint_cache: 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
+
 def main():
     import argparse
+
     parser = argparse.ArgumentParser()
-    parser.add_argument("--lang", help="Restrict PHASE D (scripture references) to one language "
-                                        "and run it locally without needing CI=true")
-    parser.add_argument("--scripture-only", action="store_true",
-                         help="Run only PHASE D (scripture references), skipping PHASE SOT/B/C. "
-                              "Still runs PHASE 1/A first since PHASE D depends on their output. "
-                              "Implies scripture validation runs regardless of CI env var.")
+    parser.add_argument(
+        "--lang",
+        help="Restrict PHASE D (scripture references) to one language "
+        "and run it locally without needing CI=true",
+    )
+    parser.add_argument(
+        "--scripture-only",
+        action="store_true",
+        help="Run only PHASE D (scripture references), skipping PHASE SOT/B/C. "
+        "Still runs PHASE 1/A first since PHASE D depends on their output. "
+        "Implies scripture validation runs regardless of CI env var.",
+    )
     args = parser.parse_args()
 
     print("🔍 Starting Encounters Validation...")
@@ -786,7 +992,9 @@ def main():
 
     run_report = RunReport("ENCOUNTERS VALIDATION")
 
-    bible_versions, used_remote_sot, last_fetch_error = load_bible_versions('encounters')
+    bible_versions, used_remote_sot, last_fetch_error = load_bible_versions(
+        "encounters"
+    )
     expected_languages = list(bible_versions.keys())
 
     lint_cache = run_report.wrap("PHASE 1: LINT", validate_lint)
@@ -805,9 +1013,21 @@ def main():
         sys.exit(1)
 
     if not args.scripture_only:
-        run_report.wrap("PHASE SOT: BIBLE VERSIONS SOURCE", validate_sot_source, bible_versions, used_remote_sot, last_fetch_error)
-        run_report.wrap("PHASE B: ENCOUNTER FILES", validate_encounter_files, index_data, lint_cache,
-                         bible_versions, expected_languages)
+        run_report.wrap(
+            "PHASE SOT: BIBLE VERSIONS SOURCE",
+            validate_sot_source,
+            bible_versions,
+            used_remote_sot,
+            last_fetch_error,
+        )
+        run_report.wrap(
+            "PHASE B: ENCOUNTER FILES",
+            validate_encounter_files,
+            index_data,
+            lint_cache,
+            bible_versions,
+            expected_languages,
+        )
 
         # Phase C runs after the real gate (Phase B) has passed. Its findings
         # are warnings only (see validate_image_urls); gate=False means an
@@ -822,20 +1042,29 @@ def main():
     # corpus (2000+ references across 10 languages) every run — confirmed
     # fast (~1s locally against the SQLite bible_database) so it always
     # runs, local or CI, not just when CI=true.
-    run_report.wrap("PHASE D: SCRIPTURE REFERENCES", validate_scripture_references, index_data, lint_cache,
-                     args.lang, gate=False, final=True)
+    run_report.wrap(
+        "PHASE D: SCRIPTURE REFERENCES",
+        validate_scripture_references,
+        index_data,
+        lint_cache,
+        args.lang,
+        gate=False,
+        final=True,
+    )
 
     if not args.scripture_only:
         run_report.wrap(
-            "PHASE E: CROSS-FILE FAMILY VALIDATION", run_family_validation_all,
+            "PHASE E: CROSS-FILE FAMILY VALIDATION",
+            run_family_validation_all,
             Path(__file__).parent / "validate_family.py",
-            [enc['id'] for enc in index_data['encounters']],
-            "encounter", "encounters",
+            [enc["id"] for enc in index_data["encounters"]],
+            "encounter",
+            "encounters",
         )
 
-    encounters = index_data['encounters']
-    published = [e for e in encounters if e.get('status') == 'published']
-    coming_soon = [e for e in encounters if e.get('status') == 'coming_soon']
+    encounters = index_data["encounters"]
+    published = [e for e in encounters if e.get("status") == "published"]
+    coming_soon = [e for e in encounters if e.get("status") == "coming_soon"]
     run_report.add_coverage(
         content_units=len(encounters),
         published=len(published),
@@ -851,5 +1080,5 @@ def main():
     sys.exit(run_report.exit_code)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -17,6 +17,7 @@ this script prints a loud warning instead of silently going stale.
 Usage:
     python3 app_preview.py <study.json> [--out out.html] [--dart-repo path]
 """
+
 import argparse
 import ast
 import base64
@@ -62,16 +63,66 @@ JSON_TO_DART_FIELD = {
 # Mirrors kEncounterCardRenderedFields in encounter_card_contract.dart as of
 # the last time this script was synced with the Dart source.
 RENDERED_FIELDS_BY_TYPE = {
-    "cinematic_scene": {"mood", "imageUrl", "title", "narrative", "verseOverlay", "scriptureConnections", "revelationKey"},
-    "scripture_moment": {"mood", "imageUrl", "title", "subtitle", "verseReference", "verseText",
-                          "reflection", "scriptureConnections", "revelationKey"},
-    "character_moment": {"mood", "imageUrl", "icon", "title", "subtitle", "content",
-                          "verseOverlay", "scriptureConnections", "revelationKey"},
-    "theological_depth": {"mood", "imageUrl", "icon", "title", "subtitle", "content",
-                           "verseOverlay", "scriptureConnections", "revelationKey"},
-    "discovery_activation": {"mood", "imageUrl", "title", "subtitle", "discoveryQuestions", "prayer"},
+    "cinematic_scene": {
+        "mood",
+        "imageUrl",
+        "title",
+        "narrative",
+        "verseOverlay",
+        "scriptureConnections",
+        "revelationKey",
+    },
+    "scripture_moment": {
+        "mood",
+        "imageUrl",
+        "title",
+        "subtitle",
+        "verseReference",
+        "verseText",
+        "reflection",
+        "scriptureConnections",
+        "revelationKey",
+    },
+    "character_moment": {
+        "mood",
+        "imageUrl",
+        "icon",
+        "title",
+        "subtitle",
+        "content",
+        "verseOverlay",
+        "scriptureConnections",
+        "revelationKey",
+    },
+    "theological_depth": {
+        "mood",
+        "imageUrl",
+        "icon",
+        "title",
+        "subtitle",
+        "content",
+        "verseOverlay",
+        "scriptureConnections",
+        "revelationKey",
+    },
+    "discovery_activation": {
+        "mood",
+        "imageUrl",
+        "title",
+        "subtitle",
+        "discoveryQuestions",
+        "prayer",
+    },
     "completion": {"mood", "imageUrl", "completionVerse", "reflectionPrompt"},
-    "interactive_moment": {"mood", "imageUrl", "icon", "title", "subtitle", "reflectionPrompt", "revelationKey"},
+    "interactive_moment": {
+        "mood",
+        "imageUrl",
+        "icon",
+        "title",
+        "subtitle",
+        "reflectionPrompt",
+        "revelationKey",
+    },
 }
 
 DEFERRED_FIELDS = {"ambientSound", "haptic", "celebrationType"}
@@ -79,9 +130,14 @@ DEFERRED_FIELDS = {"ambientSound", "haptic", "celebrationType"}
 CONTRACT_FILE_REL = "lib/models/encounter_card_contract.dart"
 
 MOOD_COLORS = {
-    "storm": "#0d1a2e", "tense": "#0f1828", "mysterious": "#0a0e1a",
-    "awe": "#0a1220", "falling": "#040810", "grace": "#12100a",
-    "peace": "#0a120e", "intense": "#1a0a0e",
+    "storm": "#0d1a2e",
+    "tense": "#0f1828",
+    "mysterious": "#0a0e1a",
+    "awe": "#0a1220",
+    "falling": "#040810",
+    "grace": "#12100a",
+    "peace": "#0a120e",
+    "intense": "#1a0a0e",
 }
 DEFAULT_MOOD_COLOR = "#0a0e1a"
 
@@ -102,7 +158,9 @@ def check_drift(dart_repo: Path):
     src = contract_file.read_text(encoding="utf-8")
     start = src.find("kEncounterCardRenderedFields = {")
     if start == -1:
-        warnings.append("kEncounterCardRenderedFields not found in encounter_card_contract.dart")
+        warnings.append(
+            "kEncounterCardRenderedFields not found in encounter_card_contract.dart"
+        )
         return warnings
     end = src.find("\n};", start)
     body = src[start:end]
@@ -117,9 +175,13 @@ def check_drift(dart_repo: Path):
     live_types = set(live.keys())
 
     if live_types - known_types:
-        warnings.append(f"Dart contract has new card type(s) this script doesn't handle: {sorted(live_types - known_types)}")
+        warnings.append(
+            f"Dart contract has new card type(s) this script doesn't handle: {sorted(live_types - known_types)}"
+        )
     if known_types - live_types:
-        warnings.append(f"This script expects card type(s) no longer in the Dart contract: {sorted(known_types - live_types)}")
+        warnings.append(
+            f"This script expects card type(s) no longer in the Dart contract: {sorted(known_types - live_types)}"
+        )
 
     for t in known_types & live_types:
         if live[t] != RENDERED_FIELDS_BY_TYPE[t]:
@@ -219,7 +281,9 @@ class AssetImageFetcher:
         ref = ImageReference(encounter_id=self._encounter_id, filename=filename)
         url = ref.url(ext=self._ext)
         try:
-            with urllib.request.urlopen(url, timeout=REQUEST_TIMEOUT_SECONDS) as response:
+            with urllib.request.urlopen(
+                url, timeout=REQUEST_TIMEOUT_SECONDS
+            ) as response:
                 raw = response.read()
         except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as e:
             print(f"WARNING: could not fetch {url}: {e}", file=sys.stderr)
@@ -241,11 +305,11 @@ def header_html(card, image_fetcher=None):
     if filename:
         uri = image_fetcher.data_uri(filename) if image_fetcher else None
         if uri:
-            style = (
-                f"background:{mood_color} url('{uri}') center/cover no-repeat"
-            )
+            style = f"background:{mood_color} url('{uri}') center/cover no-repeat"
         else:
-            image_note = f'<!-- image_url: {escape(filename)} (not fetched in this preview) -->'
+            image_note = (
+                f"<!-- image_url: {escape(filename)} (not fetched in this preview) -->"
+            )
     return f'<div class="header" style="{style}">{icon_html}{image_note}</div>'
 
 
@@ -254,8 +318,8 @@ def verse_overlay_html(vo):
         return ""
     return (
         '<div class="verse-overlay">'
-        f'<div class="text">"{escape(vo.get("text",""))}"</div>'
-        f'<div class="ref">— {escape(vo.get("reference",""))}</div></div>'
+        f'<div class="text">"{escape(vo.get("text", ""))}"</div>'
+        f'<div class="ref">— {escape(vo.get("reference", ""))}</div></div>'
     )
 
 
@@ -274,8 +338,8 @@ def connections_html(items):
         if isinstance(c, dict):
             out.append(
                 '<div class="connection-tile">'
-                f'<div class="ref">{escape(c.get("reference",""))}</div>'
-                f'<div class="text">{escape(c.get("text",""))}</div></div>'
+                f'<div class="ref">{escape(c.get("reference", ""))}</div>'
+                f'<div class="text">{escape(c.get("text", ""))}</div></div>'
             )
     return "\n".join(out)
 
@@ -285,8 +349,14 @@ def render_card(card, image_fetcher=None):
     order = card.get("order")
     body = []
     if order is not None:
-        body.append(f'<div class="card-number">CARD {escape(order)} · {escape(ctype)}</div>')
-    body += ['<div class="card">', header_html(card, image_fetcher), '<div class="body">']
+        body.append(
+            f'<div class="card-number">CARD {escape(order)} · {escape(ctype)}</div>'
+        )
+    body += [
+        '<div class="card">',
+        header_html(card, image_fetcher),
+        '<div class="body">',
+    ]
 
     if ctype == "cinematic_scene":
         if card.get("title"):
@@ -303,9 +373,13 @@ def render_card(card, image_fetcher=None):
         if card.get("title"):
             body.append(f'<div class="title center">{escape(card["title"])}</div>')
         if card.get("subtitle"):
-            body.append(f'<div class="subtitle center">{escape(card["subtitle"])}</div>')
+            body.append(
+                f'<div class="subtitle center">{escape(card["subtitle"])}</div>'
+            )
         if card.get("verse_reference"):
-            body.append(f'<div style="text-align:center"><span class="verse-badge">{escape(card["verse_reference"].upper())}</span></div>')
+            body.append(
+                f'<div style="text-align:center"><span class="verse-badge">{escape(card["verse_reference"].upper())}</span></div>'
+            )
         if card.get("verse_text"):
             body.append(f'<div class="verse-text">"{escape(card["verse_text"])}"</div>')
         if card.get("reflection"):
@@ -331,15 +405,17 @@ def render_card(card, image_fetcher=None):
         if card.get("title"):
             body.append(f'<div class="title upper">{escape(card["title"])}</div>')
         if card.get("subtitle"):
-            body.append(f'<div class="subtitle center">{escape(card["subtitle"])}</div>')
+            body.append(
+                f'<div class="subtitle center">{escape(card["subtitle"])}</div>'
+            )
         dq = card.get("discovery_questions")
         if isinstance(dq, list):
             for q in dq:
                 if isinstance(q, dict):
                     body.append(
                         '<div class="question-tile">'
-                        f'<div class="cat">{escape(q.get("category","").upper())}</div>'
-                        f'<div class="q">{escape(q.get("question",""))}</div></div>'
+                        f'<div class="cat">{escape(q.get("category", "").upper())}</div>'
+                        f'<div class="q">{escape(q.get("question", ""))}</div></div>'
                     )
         prayer = card.get("prayer")
         if isinstance(prayer, dict) and prayer.get("content"):
@@ -352,19 +428,29 @@ def render_card(card, image_fetcher=None):
     elif ctype == "completion":
         cv = card.get("completion_verse")
         if isinstance(cv, dict):
-            body.append(f'<div class="completion-verse">"{escape(cv.get("text",""))}"</div>')
-            body.append(f'<div class="completion-ref">— {escape(cv.get("reference",""))}</div>')
+            body.append(
+                f'<div class="completion-verse">"{escape(cv.get("text", ""))}"</div>'
+            )
+            body.append(
+                f'<div class="completion-ref">— {escape(cv.get("reference", ""))}</div>'
+            )
         if card.get("reflection_prompt"):
-            body.append(f'<div class="reflection-prompt">{escape(card["reflection_prompt"])}</div>')
+            body.append(
+                f'<div class="reflection-prompt">{escape(card["reflection_prompt"])}</div>'
+            )
 
     elif ctype == "interactive_moment":
-        body.append(f'<div class="big-icon">{escape(card.get("icon","🌊"))}</div>')
+        body.append(f'<div class="big-icon">{escape(card.get("icon", "🌊"))}</div>')
         if card.get("title"):
             body.append(f'<div class="title center">{escape(card["title"])}</div>')
         if card.get("subtitle"):
-            body.append(f'<div class="subtitle center">{escape(card["subtitle"])}</div>')
+            body.append(
+                f'<div class="subtitle center">{escape(card["subtitle"])}</div>'
+            )
         if card.get("reflection_prompt"):
-            body.append(f'<div class="reflection-prompt">{escape(card["reflection_prompt"])}</div>')
+            body.append(
+                f'<div class="reflection-prompt">{escape(card["reflection_prompt"])}</div>'
+            )
         if card.get("revelation_key"):
             body.append(revelation_html(card["revelation_key"]))
 
@@ -375,7 +461,8 @@ def render_card(card, image_fetcher=None):
     # bug -- the app's own debug contract check would flag this at runtime.
     rendered_dart_fields = RENDERED_FIELDS_BY_TYPE.get(ctype, set())
     populated_json_keys = {
-        k for k, v in card.items()
+        k
+        for k, v in card.items()
         if v not in (None, "", [], {}) and k not in ("order", "type")
     }
     orphaned = []
@@ -390,12 +477,12 @@ def render_card(card, image_fetcher=None):
         body.append(
             '<div class="unrendered">⚠ NOT RENDERED IN APP for type '
             f'"{escape(ctype)}" -- fields present in JSON with no renderer in the '
-            f'Dart contract: {", ".join(sorted(orphaned))}</div>'
+            f"Dart contract: {', '.join(sorted(orphaned))}</div>"
         )
     if pending:
         body.append(
             '<div class="pending">⏳ PENDING (deferred, not yet wired in app): '
-            f'{", ".join(sorted(pending))}</div>'
+            f"{', '.join(sorted(pending))}</div>"
         )
 
     body.append("</div></div>")
@@ -404,8 +491,10 @@ def render_card(card, image_fetcher=None):
 
 def build_html(data, drift_warnings, image_fetcher=None):
     title = data.get("title") or data.get("id") or "Encounter Preview"
-    parts = [f"<!doctype html><html><head><meta charset='utf-8'>"
-             f"<title>{escape(title)}</title><style>{CSS}</style></head><body>"]
+    parts = [
+        f"<!doctype html><html><head><meta charset='utf-8'>"
+        f"<title>{escape(title)}</title><style>{CSS}</style></head><body>"
+    ]
     for w in drift_warnings:
         parts.append(f'<div class="warning">⚠ {escape(w)}</div>')
     for card in data.get("cards", []):
@@ -419,17 +508,28 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("json_file")
     ap.add_argument("--out", default=None)
-    ap.add_argument("--dart-repo", default=None,
-                     help="Path to a local devocional_nuevo checkout (default: ../../devocional_nuevo)")
-    ap.add_argument("--no-open", action="store_true", help="Don't auto-open the result in a browser")
-    ap.add_argument("--no-images", action="store_true", help="Don't fetch real images from the assets repo")
+    ap.add_argument(
+        "--dart-repo",
+        default=None,
+        help="Path to a local devocional_nuevo checkout (default: ../../devocional_nuevo)",
+    )
+    ap.add_argument(
+        "--no-open", action="store_true", help="Don't auto-open the result in a browser"
+    )
+    ap.add_argument(
+        "--no-images",
+        action="store_true",
+        help="Don't fetch real images from the assets repo",
+    )
     args = ap.parse_args()
 
     json_path = Path(args.json_file)
     data = json.loads(json_path.read_text(encoding="utf-8"))
 
-    dart_repo = Path(args.dart_repo) if args.dart_repo else (
-        Path(__file__).resolve().parent.parent.parent.parent / "devocional_nuevo"
+    dart_repo = (
+        Path(args.dart_repo)
+        if args.dart_repo
+        else (Path(__file__).resolve().parent.parent.parent.parent / "devocional_nuevo")
     )
     warnings = check_drift(dart_repo)
     for w in warnings:
@@ -443,7 +543,10 @@ def main():
         if encounter_id:
             image_fetcher = AssetImageFetcher(encounter_id)
         else:
-            print(f"WARNING: {json_path.name} not found in index.json -- skipping image fetch", file=sys.stderr)
+            print(
+                f"WARNING: {json_path.name} not found in index.json -- skipping image fetch",
+                file=sys.stderr,
+            )
 
     html = build_html(data, warnings, image_fetcher)
     out_path = Path(args.out) if args.out else json_path.with_suffix(".preview.html")

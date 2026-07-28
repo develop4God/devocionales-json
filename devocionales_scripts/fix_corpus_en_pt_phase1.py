@@ -5,11 +5,13 @@ Applies P1 fixes, P2 hard typos, and one P3 batch-fixable pattern.
 Produces patched files in-place with a dry-run report first.
 Preserves original file indentation (2 or 4 spaces).
 """
+
 import argparse, json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).parent.resolve()
 FIELDS = ["reflexion", "para_meditar", "oracion"]
+
 
 def detect_indent(fname):
     """Return the indent integer used in the file (2 or 4)."""
@@ -20,6 +22,7 @@ def detect_indent(fname):
             return spaces if spaces in (2, 4) else 2
     return 2
 
+
 def load(fname, lang):
     path = ROOT / fname
     indent = detect_indent(path)
@@ -27,14 +30,17 @@ def load(fname, lang):
         data = json.load(f)
     return data, data["data"][lang], indent
 
+
 def save(fname, data, indent):
     with open(ROOT / fname, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=indent)
+
 
 def all_entries(lang_data):
     for date, arr in lang_data.items():
         for e in arr:
             yield e
+
 
 # ─── ARC FIXES ─────────────────────────────────────────────────────────────
 
@@ -43,9 +49,11 @@ ARC_FILES = [
     ("Devocional_year_2026_pt_ARC.json", "pt"),
 ]
 
+
 # P1-A: em o nome → em nome (oracion only)
 def fix_em_o_nome(text):
     return text.replace("em o nome de Jesus", "em nome de Jesus")
+
 
 # P1-B: dEle → d'Ele, dAquele → d'Aquele (all fields)
 def fix_dele(text):
@@ -53,25 +61,73 @@ def fix_dele(text):
     text = text.replace("dAquele", "d'Aquele")
     return text
 
+
 # P1-C: capitalize reverential pronouns in oracion
 # te → Te, teu → Teu, tua → Tua, ti → Ti (word-boundary aware)
-REV_PATTERN = re.compile(r'\b(te|teu|tua|ti)(?=[,. \n\r])')
+REV_PATTERN = re.compile(r"\b(te|teu|tua|ti)(?=[,. \n\r])")
+
+
 def fix_reverential(text):
     return REV_PATTERN.sub(lambda m: m.group(0).capitalize(), text)
 
+
 # P2: Hard typos in specific entries (id → list of (field, old, new))
 P2_FIXES_ARC = {
-    "hb612PTARC20251125":       [("oracion", "sabedidade", "sabedoria"), ("reflexion", "sabedidade", "sabedoria"), ("para_meditar", "sabedidade", "sabedoria")],
-    "tito1v5-9ARC":             [("oracion", "sabedemia", "sabedoria"), ("reflexion", "sabedemia", "sabedoria"), ("para_meditar", "sabedemia", "sabedoria")],
-    "2corintios517ARC":         [("oracion", "nossas vives", "nossas vidas"), ("reflexion", "nossas vives", "nossas vidas"), ("para_meditar", "nossas vives", "nossas vidas")],
-    "1pedro315ARC20251215":     [("oracion", "nossas vives", "nossas vidas"), ("reflexion", "nossas vives", "nossas vidas"), ("para_meditar", "nossas vives", "nossas vidas")],
-    "joao14_6ARC20260114":      [("oracion", "oferecend", "oferecendo"), ("reflexion", "oferecend", "oferecendo"), ("para_meditar", "oferecend", "oferecendo")],
-    "lucas24_6-7ARC20260120":   [("oracion", "crucifixação", "crucificação"), ("reflexion", "crucifixação", "crucificação"), ("para_meditar", "crucifixação", "crucificação")],
-    "lucas15_7ARC20260202":     [("oracion", "evangelio", "evangelho"), ("reflexion", "evangelio", "evangelho"), ("para_meditar", "evangelio", "evangelho")],
-    "tiago2_8ARC20260118":      [("oracion", "atmos de bondade", "atos de bondade"), ("reflexion", "atmos de bondade", "atos de bondade"), ("para_meditar", "atmos de bondade", "atos de bondade")],
-    "filemon116ARC20250827":    [("oracion", "Filemom 1:16", "Filemon 1:16"), ("reflexion", "Filemom 1:16", "Filemon 1:16"), ("versiculo", "Filemom 1:16", "Filemon 1:16")],
-    "2Timoteo317ARC":           [("oracion", "me equips", "me equipa"), ("reflexion", "me equips", "me equipa"), ("para_meditar", "me equips", "me equipa")],
-    "1Joao5v13ARC":             [("oracion", "assurance espiritual", "certeza espiritual"), ("reflexion", "assurance espiritual", "certeza espiritual"), ("para_meditar", "assurance espiritual", "certeza espiritual")],
+    "hb612PTARC20251125": [
+        ("oracion", "sabedidade", "sabedoria"),
+        ("reflexion", "sabedidade", "sabedoria"),
+        ("para_meditar", "sabedidade", "sabedoria"),
+    ],
+    "tito1v5-9ARC": [
+        ("oracion", "sabedemia", "sabedoria"),
+        ("reflexion", "sabedemia", "sabedoria"),
+        ("para_meditar", "sabedemia", "sabedoria"),
+    ],
+    "2corintios517ARC": [
+        ("oracion", "nossas vives", "nossas vidas"),
+        ("reflexion", "nossas vives", "nossas vidas"),
+        ("para_meditar", "nossas vives", "nossas vidas"),
+    ],
+    "1pedro315ARC20251215": [
+        ("oracion", "nossas vives", "nossas vidas"),
+        ("reflexion", "nossas vives", "nossas vidas"),
+        ("para_meditar", "nossas vives", "nossas vidas"),
+    ],
+    "joao14_6ARC20260114": [
+        ("oracion", "oferecend", "oferecendo"),
+        ("reflexion", "oferecend", "oferecendo"),
+        ("para_meditar", "oferecend", "oferecendo"),
+    ],
+    "lucas24_6-7ARC20260120": [
+        ("oracion", "crucifixação", "crucificação"),
+        ("reflexion", "crucifixação", "crucificação"),
+        ("para_meditar", "crucifixação", "crucificação"),
+    ],
+    "lucas15_7ARC20260202": [
+        ("oracion", "evangelio", "evangelho"),
+        ("reflexion", "evangelio", "evangelho"),
+        ("para_meditar", "evangelio", "evangelho"),
+    ],
+    "tiago2_8ARC20260118": [
+        ("oracion", "atmos de bondade", "atos de bondade"),
+        ("reflexion", "atmos de bondade", "atos de bondade"),
+        ("para_meditar", "atmos de bondade", "atos de bondade"),
+    ],
+    "filemon116ARC20250827": [
+        ("oracion", "Filemom 1:16", "Filemon 1:16"),
+        ("reflexion", "Filemom 1:16", "Filemon 1:16"),
+        ("versiculo", "Filemom 1:16", "Filemon 1:16"),
+    ],
+    "2Timoteo317ARC": [
+        ("oracion", "me equips", "me equipa"),
+        ("reflexion", "me equips", "me equipa"),
+        ("para_meditar", "me equips", "me equipa"),
+    ],
+    "1Joao5v13ARC": [
+        ("oracion", "assurance espiritual", "certeza espiritual"),
+        ("reflexion", "assurance espiritual", "certeza espiritual"),
+        ("para_meditar", "assurance espiritual", "certeza espiritual"),
+    ],
 }
 
 # ─── KJV FIXES ─────────────────────────────────────────────────────────────
@@ -83,11 +139,15 @@ KJV_FILES = [
 
 # P1: lowercase closing → capitalize "in" after period
 # ". in the name of Jesus, amen." → ". In the name of Jesus, amen."
-KJV_CLOSING = re.compile(r'\. in the name of Jesus, amen\.')
+KJV_CLOSING = re.compile(r"\. in the name of Jesus, amen\.")
+
+
 def fix_kjv_closing(text):
     return KJV_CLOSING.sub(". In the name of Jesus, amen.", text)
 
+
 # ─── RUNNER ────────────────────────────────────────────────────────────────
+
 
 def process_arc(dry_run=False):
     total_changes = {"em_o_nome": 0, "dele": 0, "reverential": 0, "p2": 0}
@@ -113,7 +173,8 @@ def process_arc(dry_run=False):
             # P1-B: dEle / dAquele (all fields)
             for field in FIELDS + ["versiculo"]:
                 orig = e.get(field, "")
-                if not isinstance(orig, str): continue
+                if not isinstance(orig, str):
+                    continue
                 fixed = fix_dele(orig)
                 if fixed != orig:
                     total_changes["dele"] += 1
@@ -138,7 +199,8 @@ def process_arc(dry_run=False):
             if eid in P2_FIXES_ARC:
                 for field, old, new in P2_FIXES_ARC[eid]:
                     orig = e.get(field, "")
-                    if not isinstance(orig, str): continue
+                    if not isinstance(orig, str):
+                        continue
                     if old in orig:
                         total_changes["p2"] += 1
                         if not dry_run:
@@ -156,6 +218,7 @@ def process_arc(dry_run=False):
 
     print(f"\nARC totals: {total_changes}")
 
+
 def process_kjv(dry_run=False):
     total_changes = {"kjv_closing": 0}
     for fname, lang in KJV_FILES:
@@ -164,7 +227,8 @@ def process_kjv(dry_run=False):
         for e in all_entries(lang_data):
             eid = e.get("id", "?")
             orig = e.get("oracion", "")
-            if not isinstance(orig, str): continue
+            if not isinstance(orig, str):
+                continue
             fixed = fix_kjv_closing(orig)
             if fixed != orig:
                 total_changes["kjv_closing"] += 1
@@ -180,6 +244,7 @@ def process_kjv(dry_run=False):
 
     print(f"\nKJV totals: {total_changes}")
 
+
 # ─── NVI FIXES (PT) ────────────────────────────────────────────────────────
 
 NVI_FILES = [
@@ -189,6 +254,7 @@ NVI_FILES = [
 
 # P2: Hard typos for NVI — to be added in a future phase
 P2_FIXES_NVI = {}
+
 
 def process_nvi(dry_run=False):
     total_changes = {"em_o_nome": 0, "dele": 0, "reverential": 0, "p2": 0}
@@ -213,7 +279,8 @@ def process_nvi(dry_run=False):
             # P1-B: dEle / dAquele (all fields)
             for field in FIELDS + ["versiculo"]:
                 orig = e.get(field, "")
-                if not isinstance(orig, str): continue
+                if not isinstance(orig, str):
+                    continue
                 fixed = fix_dele(orig)
                 if fixed != orig:
                     total_changes["dele"] += 1
@@ -238,7 +305,8 @@ def process_nvi(dry_run=False):
             if eid in P2_FIXES_NVI:
                 for field, old, new in P2_FIXES_NVI[eid]:
                     orig = e.get(field, "")
-                    if not isinstance(orig, str): continue
+                    if not isinstance(orig, str):
+                        continue
                     if old in orig:
                         total_changes["p2"] += 1
                         if not dry_run:
@@ -256,6 +324,7 @@ def process_nvi(dry_run=False):
 
     print(f"\nNVI totals: {total_changes}")
 
+
 # ─── NIV FIXES (EN) ────────────────────────────────────────────────────────
 
 NIV_FILES = [
@@ -265,6 +334,7 @@ NIV_FILES = [
 
 # P2: Hard typos for NIV — to be added in a future phase
 P2_FIXES_NIV = {}
+
 
 def process_niv(dry_run=False):
     total_changes = {"kjv_closing": 0, "p2": 0}
@@ -276,7 +346,8 @@ def process_niv(dry_run=False):
             eid = e.get("id", "?")
 
             orig = e.get("oracion", "")
-            if not isinstance(orig, str): continue
+            if not isinstance(orig, str):
+                continue
 
             fixed = fix_kjv_closing(orig)
             if fixed != orig:
@@ -291,7 +362,8 @@ def process_niv(dry_run=False):
             if eid in P2_FIXES_NIV:
                 for field, old, new in P2_FIXES_NIV[eid]:
                     orig = e.get(field, "")
-                    if not isinstance(orig, str): continue
+                    if not isinstance(orig, str):
+                        continue
                     if old in orig:
                         total_changes["p2"] += 1
                         if not dry_run:
@@ -309,11 +381,21 @@ def process_niv(dry_run=False):
 
     print(f"\nNIV totals: {total_changes}")
 
+
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Fix corpus JSON files (dry-run by default).")
-    parser.add_argument("--root", help="Path to repository root to use instead of the script location")
-    parser.add_argument("--file", help="Path to a file inside the repo; sets root to its parent directory")
-    parser.add_argument("--apply", action="store_true", help="Write changes instead of dry-run")
+    parser = argparse.ArgumentParser(
+        description="Fix corpus JSON files (dry-run by default)."
+    )
+    parser.add_argument(
+        "--root", help="Path to repository root to use instead of the script location"
+    )
+    parser.add_argument(
+        "--file",
+        help="Path to a file inside the repo; sets root to its parent directory",
+    )
+    parser.add_argument(
+        "--apply", action="store_true", help="Write changes instead of dry-run"
+    )
     args = parser.parse_args()
 
     # Allow overriding ROOT for CI or alternative layouts

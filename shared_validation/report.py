@@ -24,36 +24,48 @@ class Report:
         self.warnings: List[str] = []
         self.info: List[str] = []
 
-    def E(self, msg): self.errors.append(f"❌ ERROR: {msg}")
-    def W(self, msg): self.warnings.append(f"⚠️  WARNING: {msg}")
-    def I(self, msg): self.info.append(f"ℹ️  INFO: {msg}")
+    def E(self, msg):
+        self.errors.append(f"❌ ERROR: {msg}")
+
+    def W(self, msg):
+        self.warnings.append(f"⚠️  WARNING: {msg}")
+
+    def I(self, msg):
+        self.info.append(f"ℹ️  INFO: {msg}")
 
     def print(self, final=True) -> bool:
-        print(f"\n{'='*80}")
+        print(f"\n{'=' * 80}")
         print(f"{self.phase} VALIDATION REPORT")
-        print('='*80)
+        print("=" * 80)
         # On a fully clean pass, RunReport's rollup already covers what ran
         # and how it went — the full per-message INFO dump here is only
         # worth the noise when there's a warning/error to give context for.
         clean = not self.errors and not self.warnings
         if self.info and not clean:
             print(f"\nℹ️  INFORMATION ({len(self.info)}):")
-            for m in self.info: print(f"  {m}")
+            for m in self.info:
+                print(f"  {m}")
         if self.warnings:
             print(f"\n⚠️  WARNINGS ({len(self.warnings)}):")
-            for m in self.warnings: print(f"  {m}")
+            for m in self.warnings:
+                print(f"  {m}")
         if self.errors:
             print(f"\n❌ ERRORS ({len(self.errors)}):")
-            for m in self.errors: print(f"  {m}")
-            print('='*80)
+            for m in self.errors:
+                print(f"  {m}")
+            print("=" * 80)
             return False
-        msg = "✅ ALL VALIDATIONS PASSED!" if final else "✅ PHASE PASSED - Proceeding to next phase"
+        msg = (
+            "✅ ALL VALIDATIONS PASSED!"
+            if final
+            else "✅ PHASE PASSED - Proceeding to next phase"
+        )
         print(f"\n{msg}")
-        print('='*80)
+        print("=" * 80)
         return True
 
 
-T = TypeVar('T')
+T = TypeVar("T")
 
 
 def run_phase(name: str, fn: Callable[[Report], T], on_fail_msg: str = None) -> tuple:

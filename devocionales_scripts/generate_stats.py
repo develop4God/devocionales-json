@@ -95,7 +95,8 @@ def build_directory_structure_block() -> str:
     """Lists top-level directories only, skipping hidden/build dirs, so this
     block never has to be hand-updated when a directory is added or removed."""
     dirs = sorted(
-        d.name for d in REPO_ROOT.iterdir()
+        d.name
+        for d in REPO_ROOT.iterdir()
         if d.is_dir() and not d.name.startswith(".") and not d.name.startswith("__")
     )
     lines = ["```", "devocionales-json/"]
@@ -126,8 +127,7 @@ def github_slugify(heading: str) -> str:
     punctuation, spaces to hyphens."""
     s = heading.lower()
     s = "".join(
-        "" if (0x1F000 <= ord(c) <= 0x1FFFF or 0x2600 <= ord(c) <= 0x27BF)
-        else c
+        "" if (0x1F000 <= ord(c) <= 0x1FFFF or 0x2600 <= ord(c) <= 0x27BF) else c
         for c in s
     )
     s = re.sub(r"[^\w\s\-︀-️]", "", s)
@@ -158,13 +158,16 @@ def check_links(content: str) -> list[str]:
         if target.startswith("#"):
             anchor = target[1:].lower()
             if anchor not in headings:
-                problems.append(f"Broken anchor [{text}]({target}) — no matching heading")
+                problems.append(
+                    f"Broken anchor [{text}]({target}) — no matching heading"
+                )
         elif target.startswith("http://") or target.startswith("https://"):
             if urllib.parse.urlparse(target).hostname == "img.shields.io":
                 continue  # badge service, not a doc link
             try:
-                req = urllib.request.Request(target, method="HEAD",
-                                              headers={"User-Agent": "Mozilla/5.0"})
+                req = urllib.request.Request(
+                    target, method="HEAD", headers={"User-Agent": "Mozilla/5.0"}
+                )
                 urllib.request.urlopen(req, timeout=10)
             except urllib.error.HTTPError as e:
                 if e.code in (403, 405):
@@ -176,7 +179,9 @@ def check_links(content: str) -> list[str]:
             clean_target = target.split("#")[0]
             local_path = (README_PATH.parent / clean_target).resolve()
             if not local_path.exists():
-                problems.append(f"Broken local link [{text}]({target}) — path does not exist")
+                problems.append(
+                    f"Broken local link [{text}]({target}) — path does not exist"
+                )
 
     return problems
 
@@ -187,8 +192,8 @@ def main():
         "--check-links",
         action="store_true",
         help="Validate every link in README.md (internal paths, anchors, "
-             "external URLs) and exit non-zero if any are broken. Does not "
-             "modify the file.",
+        "external URLs) and exit non-zero if any are broken. Does not "
+        "modify the file.",
     )
     args = parser.parse_args()
 
@@ -207,27 +212,43 @@ def main():
     encounters = corpus_stats(REPO_ROOT / "encounters", "encounters")
 
     content = README_PATH.read_text()
-    content = replace_marked_block(content, "devocionales", build_devocionales_block(devo))
-    content = replace_marked_block(content, "discovery", build_corpus_block("Discovery", discovery))
-    content = replace_marked_block(content, "encounters", build_corpus_block("Encounters", encounters))
-    content = replace_marked_block(content, "directory-structure", build_directory_structure_block())
+    content = replace_marked_block(
+        content, "devocionales", build_devocionales_block(devo)
+    )
+    content = replace_marked_block(
+        content, "discovery", build_corpus_block("Discovery", discovery)
+    )
+    content = replace_marked_block(
+        content, "encounters", build_corpus_block("Encounters", encounters)
+    )
+    content = replace_marked_block(
+        content, "directory-structure", build_directory_structure_block()
+    )
 
     # Reverse validation: check the generated content BEFORE writing it to
     # disk. A bug in any substitution above (stray broken link, wrong path)
     # should never silently ship — fail loudly here instead.
     problems = check_links(content)
     if problems:
-        print(f"❌ Refusing to write README.md — {len(problems)} broken link(s) "
-              f"in the generated content:\n")
+        print(
+            f"❌ Refusing to write README.md — {len(problems)} broken link(s) "
+            f"in the generated content:\n"
+        )
         for p in problems:
             print(f"  - {p}")
         raise SystemExit(1)
 
     README_PATH.write_text(content)
-    print(f"Devocionales: {devo['total_files']} files, {devo['total_entries']:,} entries, "
-          f"{len(devo['languages'])} languages, {devo['total_versions']} versions")
-    print(f"Discovery: {discovery['item_count']} studies, {len(discovery['languages'])} languages")
-    print(f"Encounters: {encounters['item_count']} encounters, {len(encounters['languages'])} languages")
+    print(
+        f"Devocionales: {devo['total_files']} files, {devo['total_entries']:,} entries, "
+        f"{len(devo['languages'])} languages, {devo['total_versions']} versions"
+    )
+    print(
+        f"Discovery: {discovery['item_count']} studies, {len(discovery['languages'])} languages"
+    )
+    print(
+        f"Encounters: {encounters['item_count']} encounters, {len(encounters['languages'])} languages"
+    )
     print("README.md stats updated.")
     print("✅ Reverse validation passed — no broken links in generated content.")
 

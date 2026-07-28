@@ -49,10 +49,19 @@ class Reporter:
         self.errors = 0
         self.warnings = 0
 
-    def ok(self, msg):   print(f"  {GRN}✅ {msg}{RST}")
-    def warn(self, msg): print(f"  {YLW}⚠️  {msg}{RST}"); self.warnings += 1
-    def err(self, msg):  print(f"  {RED}❌ {msg}{RST}"); self.errors += 1
-    def info(self, msg): print(f"  {CYN}ℹ️  {msg}{RST}")
+    def ok(self, msg):
+        print(f"  {GRN}✅ {msg}{RST}")
+
+    def warn(self, msg):
+        print(f"  {YLW}⚠️  {msg}{RST}")
+        self.warnings += 1
+
+    def err(self, msg):
+        print(f"  {RED}❌ {msg}{RST}")
+        self.errors += 1
+
+    def info(self, msg):
+        print(f"  {CYN}ℹ️  {msg}{RST}")
 
 
 def nonempty(val):
@@ -65,11 +74,14 @@ def nonempty(val):
 
 # ── Loading ───────────────────────────────────────────────────────────────────
 
+
 def load_all(family: dict[str, Path], report: Reporter) -> dict[str, dict]:
     loaded = {}
     for lang, path in family.items():
         if not path.exists():
-            report.warn(f"{lang}: file listed in index but not found at {path} (pending translation?)")
+            report.warn(
+                f"{lang}: file listed in index but not found at {path} (pending translation?)"
+            )
             continue
         try:
             loaded[lang] = json.loads(path.read_text(encoding="utf-8"))
@@ -80,20 +92,28 @@ def load_all(family: dict[str, Path], report: Reporter) -> dict[str, dict]:
 
 # ── Filename <-> language field consistency ──────────────────────────────────
 
+
 def check_filename_language_match(lang: str, path: Path, data: dict, report: Reporter):
     m = re.search(r"_([a-z]{2,3})_\d+\.json$", path.name)
     if not m:
-        report.warn(f"{lang}: filename '{path.name}' doesn't match expected _<lang>_NNN.json pattern")
+        report.warn(
+            f"{lang}: filename '{path.name}' doesn't match expected _<lang>_NNN.json pattern"
+        )
         return
     filename_lang = m.group(1)
     field_lang = data.get("language")
     if filename_lang != lang:
-        report.err(f"{lang}: filename '{path.name}' lang segment is '{filename_lang}', expected '{lang}'")
+        report.err(
+            f"{lang}: filename '{path.name}' lang segment is '{filename_lang}', expected '{lang}'"
+        )
     if field_lang != lang:
-        report.err(f"{lang}: language field is '{field_lang}', expected '{lang}' (filename: {path.name})")
+        report.err(
+            f"{lang}: language field is '{field_lang}', expected '{lang}' (filename: {path.name})"
+        )
 
 
 # ── Cross-file: structural fields that must match across every language ──────
+
 
 def check_drift(field_label: str, values_by_lang: dict[str, object], report: Reporter):
     """Flag if one or more languages disagree with what the majority agree on."""
@@ -109,12 +129,15 @@ def check_drift(field_label: str, values_by_lang: dict[str, object], report: Rep
     for key, langs in counts.items():
         if key == majority_key:
             continue
-        report.err(f"{field_label}: {', '.join(sorted(langs))} disagree with the rest "
-                   f"({', '.join(sorted(counts[majority_key]))}) — values: "
-                   f"{json.loads(key)!r} vs {json.loads(majority_key)!r}")
+        report.err(
+            f"{field_label}: {', '.join(sorted(langs))} disagree with the rest "
+            f"({', '.join(sorted(counts[majority_key]))}) — values: "
+            f"{json.loads(key)!r} vs {json.loads(majority_key)!r}"
+        )
 
 
 # ── Cross-file structural key parity ──────────────────────────────────────────
+
 
 def flatten_keys(d, prefix=""):
     """Yield dotted key paths for a nested dict, stopping at list boundaries."""
@@ -140,15 +163,19 @@ def _report_missing_keys(scope: str, all_keys: dict[str, set], report: Reporter)
         if len(has_it) == len(all_langs):
             continue
         missing_it = sorted(all_langs - set(has_it))
-        report.err(f"{scope}key '{key}': present in {', '.join(has_it)} — "
-                   f"missing in {', '.join(missing_it)}")
+        report.err(
+            f"{scope}key '{key}': present in {', '.join(has_it)} — "
+            f"missing in {', '.join(missing_it)}"
+        )
 
 
 def check_key_parity(loaded: dict[str, dict], report: Reporter):
     """Cross-file key parity at the document level, plus per-card key parity
     (position-matched by card index) since flatten_keys stops at list boundaries
     and would otherwise never look inside `cards[]`."""
-    all_keys: dict[str, set] = {lang: set(flatten_keys(data)) for lang, data in loaded.items()}
+    all_keys: dict[str, set] = {
+        lang: set(flatten_keys(data)) for lang, data in loaded.items()
+    }
     _report_missing_keys("", all_keys, report)
 
     max_cards = max((len(d.get("cards", [])) for d in loaded.values()), default=0)
@@ -159,10 +186,11 @@ def check_key_parity(loaded: dict[str, dict], report: Reporter):
             if i < len(cards):
                 card_keys[lang] = set(flatten_keys(cards[i]))
         if len(card_keys) >= 2:
-            _report_missing_keys(f"card[{i+1}] ", card_keys, report)
+            _report_missing_keys(f"card[{i + 1}] ", card_keys, report)
 
 
 # ── Cross-file: Greek/Hebrew gloss consistency (all languages vs. all) ────────
+
 
 def check_greek_hebrew_consistency(loaded: dict[str, dict], report: Reporter):
     """Cross-file consistency for inline Greek/Hebrew word-study glosses: the
@@ -197,25 +225,36 @@ def check_greek_hebrew_consistency(loaded: dict[str, dict], report: Reporter):
             spans = find_greek_hebrew_glosses(text)
             if not spans:
                 continue
-            field = re.sub(r'\[\d+\]', '[]', path)
+            field = re.sub(r"\[\d+\]", "[]", path)
             occurrences = [(word, inner, wf) for _, _, word, inner, wf in spans]
             by_field.setdefault(field, {})[lang] = occurrences
 
     for field, per_lang in sorted(by_field.items()):
         if len(per_lang) < 2:
             continue
-        check_drift(f"greek/hebrew gloss count in '{field}'",
-                    {lang: len(occ) for lang, occ in per_lang.items()}, report)
+        check_drift(
+            f"greek/hebrew gloss count in '{field}'",
+            {lang: len(occ) for lang, occ in per_lang.items()},
+            report,
+        )
         max_n = max(len(occ) for occ in per_lang.values())
         for i in range(max_n):
-            words_at_i = {lang: occ[i][0] for lang, occ in per_lang.items() if i < len(occ)}
-            check_drift(f"'{field}' gloss #{i+1} word", words_at_i, report)
-            inners_at_i = {lang: occ[i][1] for lang, occ in per_lang.items()
-                           if i < len(occ) and occ[i][2]}
-            check_drift(f"'{field}' gloss #{i+1} transliteration", inners_at_i, report)
+            words_at_i = {
+                lang: occ[i][0] for lang, occ in per_lang.items() if i < len(occ)
+            }
+            check_drift(f"'{field}' gloss #{i + 1} word", words_at_i, report)
+            inners_at_i = {
+                lang: occ[i][1]
+                for lang, occ in per_lang.items()
+                if i < len(occ) and occ[i][2]
+            }
+            check_drift(
+                f"'{field}' gloss #{i + 1} transliteration", inners_at_i, report
+            )
 
 
 # ── Orchestration shell ───────────────────────────────────────────────────────
+
 
 def run(
     *,
@@ -235,21 +274,27 @@ def run(
     """
     report = Reporter()
 
-    print(f"\n{'='*70}")
+    print(f"\n{'=' * 70}")
     print(f"  {label} — {content_id}")
-    print(f"{'='*70}")
+    print(f"{'=' * 70}")
     print(f"  Languages in index: {', '.join(sorted(family))}")
 
     loaded = load_all(family, report)
     if len(loaded) < 2:
         print(f"{RED}Fewer than 2 files loaded — cannot cross-validate.{RST}")
-        print(f"{RED}This is a real failure, not a pass: cross-file checks never ran.{RST}")
-        print(f"{RED}(If this is mid-batch with only some languages translated so far,{RST}")
-        print(f"{RED} that's expected — but the caller must not treat this as 'validated.'){RST}")
+        print(
+            f"{RED}This is a real failure, not a pass: cross-file checks never ran.{RST}"
+        )
+        print(
+            f"{RED}(If this is mid-batch with only some languages translated so far,{RST}"
+        )
+        print(
+            f"{RED} that's expected — but the caller must not treat this as 'validated.'){RST}"
+        )
         return 1
 
     print(f"  Languages loaded:    {', '.join(sorted(loaded))}")
-    print(f"{'='*70}")
+    print(f"{'=' * 70}")
 
     print(f"\n{CYN}── filename ↔ language field consistency{RST}")
     for lang, path in family.items():
@@ -271,7 +316,9 @@ def run(
     print(f"\n{CYN}── cross-file: fields that must match across all languages{RST}")
     for field in drift_top_level_fields:
         check_drift(field, {l: d.get(field) for l, d in loaded.items()}, report)
-    check_drift("card count", {l: len(d.get("cards", [])) for l, d in loaded.items()}, report)
+    check_drift(
+        "card count", {l: len(d.get("cards", [])) for l, d in loaded.items()}, report
+    )
     for i in range(max_cards):
         order_values, type_values = {}, {}
         for lang, data in loaded.items():
@@ -279,27 +326,35 @@ def run(
             if i < len(cards):
                 order_values[lang] = cards[i].get("order")
                 type_values[lang] = cards[i].get("type")
-        check_drift(f"card[{i+1}].order", order_values, report)
-        check_drift(f"card[{i+1}].type", type_values, report)
+        check_drift(f"card[{i + 1}].order", order_values, report)
+        check_drift(f"card[{i + 1}].type", type_values, report)
 
-    print(f"\n{'='*70}")
+    print(f"\n{'=' * 70}")
     print(f"  SUMMARY")
-    print(f"{'='*70}")
+    print(f"{'=' * 70}")
     if report.errors == 0 and report.warnings == 0:
-        print(f"  {GRN}✅ PERFECT — no errors or warnings across {len(loaded)} files{RST}")
+        print(
+            f"  {GRN}✅ PERFECT — no errors or warnings across {len(loaded)} files{RST}"
+        )
     elif report.errors == 0:
-        print(f"  {YLW}⚠️  PASSED with {report.warnings} warning(s) — review recommended{RST}")
+        print(
+            f"  {YLW}⚠️  PASSED with {report.warnings} warning(s) — review recommended{RST}"
+        )
     else:
-        print(f"  {RED}❌ FAILED — {report.errors} error(s), {report.warnings} warning(s){RST}")
-    print(f"{'='*70}\n")
+        print(
+            f"  {RED}❌ FAILED — {report.errors} error(s), {report.warnings} warning(s){RST}"
+        )
+    print(f"{'=' * 70}\n")
 
     return 0 if report.errors == 0 else 1
 
 
 # ── Master-validator PHASE E runner ───────────────────────────────────────────
 
-def run_family_validation_all(report, validate_family_script: Path, ids: list[str],
-                                singular: str, plural: str) -> None:
+
+def run_family_validation_all(
+    report, validate_family_script: Path, ids: list[str], singular: str, plural: str
+) -> None:
     """Run validate_family.py once per id (subprocess) and fold ❌ findings into
     the caller's phase report as errors. Shared by both discovery_master_validator
     (via validate_discovery.py) and encounters_master_validator (via
@@ -319,14 +374,17 @@ def run_family_validation_all(report, validate_family_script: Path, ids: list[st
     for item_id in ids:
         result = subprocess.run(
             [sys.executable, str(validate_family_script), item_id],
-            capture_output=True, text=True,
+            capture_output=True,
+            text=True,
         )
         if result.returncode != 0:
             failed.append(item_id)
             for line in result.stdout.splitlines():
                 if "❌" in line and "FAILED —" not in line:
-                    clean = re.sub(r'\x1b\[[0-9;]*m', '', line).strip().lstrip("❌ ")
+                    clean = re.sub(r"\x1b\[[0-9;]*m", "", line).strip().lstrip("❌ ")
                     report.E(f"{item_id}: {clean}")
 
     noun = singular if len(ids) == 1 else plural
-    report.I(f"✓ Checked {len(ids)} {noun} — {len(failed)} failed cross-file validation")
+    report.I(
+        f"✓ Checked {len(ids)} {noun} — {len(failed)} failed cross-file validation"
+    )

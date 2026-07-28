@@ -53,13 +53,15 @@ def _current_branch() -> str:
     outside a git repo all fall back to 'unknown'."""
     try:
         result = subprocess.run(
-            ['git', 'rev-parse', '--abbrev-ref', 'HEAD'],
-            capture_output=True, text=True, timeout=5,
+            ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+            capture_output=True,
+            text=True,
+            timeout=5,
         )
         branch = result.stdout.strip()
-        return branch if result.returncode == 0 and branch else 'unknown'
+        return branch if result.returncode == 0 and branch else "unknown"
     except Exception:
-        return 'unknown'
+        return "unknown"
 
 
 class RunReport:
@@ -122,7 +124,9 @@ class RunReport:
         elapsed = time.monotonic() - phase_start
         passed = report.print(final=final)
 
-        self.phases.append(_PhaseResult(name=name, report=report, passed=passed, elapsed=elapsed))
+        self.phases.append(
+            _PhaseResult(name=name, report=report, passed=passed, elapsed=elapsed)
+        )
 
         if gate and not passed:
             print(f"\n❌ {name} FAILED - Stopping validation")
@@ -136,8 +140,9 @@ class RunReport:
 
         return result
 
-    def record_phase(self, name: str, report: Any, passed: bool, elapsed: float,
-                      gate: bool = True) -> None:
+    def record_phase(
+        self, name: str, report: Any, passed: bool, elapsed: float, gate: bool = True
+    ) -> None:
         """Record a phase whose Report-like object and pass/fail were
         already produced by the caller, instead of being constructed by
         wrap(). For pipelines (e.g. discovery) whose own report object
@@ -149,7 +154,9 @@ class RunReport:
         (duck-typed) — RunReport does not require shared_validation.Report
         specifically, only that shape.
         """
-        self.phases.append(_PhaseResult(name=name, report=report, passed=passed, elapsed=elapsed))
+        self.phases.append(
+            _PhaseResult(name=name, report=report, passed=passed, elapsed=elapsed)
+        )
 
         if gate and not passed:
             print(f"\n❌ {name} FAILED - Stopping validation")
@@ -159,45 +166,59 @@ class RunReport:
 
     def _status_icon(self, phase: _PhaseResult) -> str:
         if not phase.ran:
-            return '⬜ SKIP'
+            return "⬜ SKIP"
         if not phase.passed:
-            return '❌ FAIL'
+            return "❌ FAIL"
         if phase.report.warnings:
-            return '⚠️  WARN'
-        return '✅ PASS'
+            return "⚠️  WARN"
+        return "✅ PASS"
 
     def print_summary(self) -> None:
         total_elapsed = time.monotonic() - self._start_time
-        timestamp = self._started_at.strftime('%Y-%m-%d %H:%M:%S')
+        timestamp = self._started_at.strftime("%Y-%m-%d %H:%M:%S")
 
-        print(f"\n{'='*80}")
+        print(f"\n{'=' * 80}")
         print(f"{self.title} — {timestamp} — branch {self._branch}")
-        print('='*80)
+        print("=" * 80)
 
         print("\n📊 COVERAGE")
         c = self.coverage
         if c.content_units is not None:
-            extra = ''
+            extra = ""
             if c.published is not None or c.coming_soon is not None:
-                extra = f" ({c.published or 0} published, {c.coming_soon or 0} coming_soon)"
+                extra = (
+                    f" ({c.published or 0} published, {c.coming_soon or 0} coming_soon)"
+                )
             print(f"  Content units checked:     {c.content_units}{extra}")
         if c.studies_found is not None:
             print(f"  Studies found:             {c.studies_found}")
         if c.files_scanned is not None:
             lang_count = len(c.languages_present) if c.languages_present else 0
-            print(f"  Files scanned:             {c.files_scanned} JSON files across {lang_count} languages")
+            print(
+                f"  Files scanned:             {c.files_scanned} JSON files across {lang_count} languages"
+            )
         if c.languages_present is not None:
-            expected = f" ({len(c.languages_present)}/{c.expected_languages} expected)" if c.expected_languages else ""
-            print(f"  Languages present:         {', '.join(sorted(c.languages_present))}{expected}")
+            expected = (
+                f" ({len(c.languages_present)}/{c.expected_languages} expected)"
+                if c.expected_languages
+                else ""
+            )
+            print(
+                f"  Languages present:         {', '.join(sorted(c.languages_present))}{expected}"
+            )
         if c.sot_live is not None:
-            status = "✓ live remote" if c.sot_live else "⚠️  cached fallback (re-run before merging)"
+            status = (
+                "✓ live remote"
+                if c.sot_live
+                else "⚠️  cached fallback (re-run before merging)"
+            )
             print(f"  Bible SOT source:          {status}")
 
-        print(f"\n{'─'*80}")
+        print(f"\n{'─' * 80}")
         for phase in self.phases:
             icon = self._status_icon(phase)
             print(f"{phase.name:<60} {icon}  ({phase.elapsed:.1f}s)")
-        print('─'*80)
+        print("─" * 80)
 
         total_warnings = sum(len(p.report.warnings) for p in self.phases)
         total_errors = sum(len(p.report.errors) for p in self.phases)
@@ -213,13 +234,15 @@ class RunReport:
                     print(f"  [{phase.name}] {msg}")
 
         overall_passed = all(p.passed for p in self.phases) and total_warnings == 0
-        print(f"\n{'='*80}")
+        print(f"\n{'=' * 80}")
         if overall_passed:
             print(f"✅ RUN PASSED     (total: {total_elapsed:.1f}s)")
         else:
             exit_code = 1
-            print(f"❌ RUN FAILED — {total_errors} errors, {total_warnings} warnings, exit code {exit_code}     (total: {total_elapsed:.1f}s)")
-        print('='*80)
+            print(
+                f"❌ RUN FAILED — {total_errors} errors, {total_warnings} warnings, exit code {exit_code}     (total: {total_elapsed:.1f}s)"
+            )
+        print("=" * 80)
         self.exit_code = 0 if overall_passed else 1
 
     def write_github_summary(self) -> None:
@@ -233,7 +256,7 @@ class RunReport:
         py / validate_encounters.py Phase D docstrings) and would otherwise
         be lost among every other phase's warnings.
         """
-        summary_path = os.environ.get('GITHUB_STEP_SUMMARY')
+        summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
         if not summary_path:
             return
 
@@ -246,7 +269,9 @@ class RunReport:
         if overall_passed:
             lines.append("✅ PASSED\n")
         else:
-            lines.append(f"❌ FAILED — {total_errors} errors, {total_warnings} warnings\n")
+            lines.append(
+                f"❌ FAILED — {total_errors} errors, {total_warnings} warnings\n"
+            )
 
         lines.append("| Phase | Status | Time |")
         lines.append("|---|---|---|")
@@ -254,12 +279,14 @@ class RunReport:
             icon = self._status_icon(phase)
             lines.append(f"| {phase.name} | {icon} | {phase.elapsed:.1f}s |")
 
-        scripture_phases = [p for p in self.phases if 'SCRIPTURE' in p.name.upper()]
+        scripture_phases = [p for p in self.phases if "SCRIPTURE" in p.name.upper()]
         for phase in scripture_phases:
             if not phase.report.warnings and not phase.report.errors:
                 continue
             count = len(phase.report.warnings) + len(phase.report.errors)
-            lines.append(f"\n<details>\n<summary>⚠️ {phase.name} — {count} finding(s)</summary>\n")
+            lines.append(
+                f"\n<details>\n<summary>⚠️ {phase.name} — {count} finding(s)</summary>\n"
+            )
             for msg in phase.report.errors:
                 lines.append(f"- {msg}")
             for msg in phase.report.warnings:
@@ -268,14 +295,17 @@ class RunReport:
 
         other_findings = [
             (phase, msg)
-            for phase in self.phases if phase not in scripture_phases
+            for phase in self.phases
+            if phase not in scripture_phases
             for msg in (phase.report.errors + phase.report.warnings)
         ]
         if other_findings:
-            lines.append(f"\n<details>\n<summary>Other findings — {len(other_findings)}</summary>\n")
+            lines.append(
+                f"\n<details>\n<summary>Other findings — {len(other_findings)}</summary>\n"
+            )
             for phase, msg in other_findings:
                 lines.append(f"- [{phase.name}] {msg}")
             lines.append("\n</details>")
 
-        with open(summary_path, 'a', encoding='utf-8') as f:
+        with open(summary_path, "a", encoding="utf-8") as f:
             f.write("\n".join(lines) + "\n")

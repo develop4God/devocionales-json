@@ -20,25 +20,25 @@ from pathlib import Path
 
 from .report import ReportLike
 
-_GREEK_RE = re.compile(r'[Ͱ-Ͽἀ-῿]')
-_HEBREW_RE = re.compile(r'[֐-׿]')
+_GREEK_RE = re.compile(r"[Ͱ-Ͽἀ-῿]")
+_HEBREW_RE = re.compile(r"[֐-׿]")
 # A single native-script word: one run of Greek/Hebrew letters with no
 # internal whitespace.
-_NATIVE_WORD_RE = re.compile(r'[Ͱ-Ͽἀ-῿֐-׿][Ͱ-Ͽἀ-῿֐-׿֑-ׇ]*')
+_NATIVE_WORD_RE = re.compile(r"[Ͱ-Ͽἀ-῿֐-׿][Ͱ-Ͽἀ-῿֐-׿֑-ׇ]*")
 # A two-word native-script run: word, one ASCII space, word — used to try
 # the two-word-phrase form before falling back to single-word (see
 # find_greek_hebrew_glosses). The hard gate accepts 1 or 2 words only,
 # never 3+ (that's a multi-word/sentence pairing, rejected by
 # gloss_format.json).
 _NATIVE_TWO_WORD_RE = re.compile(
-    r'([Ͱ-Ͽἀ-῿֐-׿][Ͱ-Ͽἀ-῿֐-׿֑-ׇ]*) ([Ͱ-Ͽἀ-῿֐-׿][Ͱ-Ͽἀ-῿֐-׿֑-ׇ]*)'
+    r"([Ͱ-Ͽἀ-῿֐-׿][Ͱ-Ͽἀ-῿֐-׿֑-ׇ]*) ([Ͱ-Ͽἀ-῿֐-׿][Ͱ-Ͽἀ-῿֐-׿֑-ׇ]*)"
 )
 # The one accepted gloss immediately following a native word/phrase: exactly
 # ",<space>(<transliteration>)" — ASCII comma, exactly one ASCII space,
 # ASCII parens. Captured separately so we can tell "correctly-glossed" apart
 # from "native word with no gloss trailing it at all" vs. "native word with
 # a malformed gloss attempt trailing it".
-_STRICT_GLOSS_TAIL_RE = re.compile(r', \(([^()]*)\)')
+_STRICT_GLOSS_TAIL_RE = re.compile(r", \(([^()]*)\)")
 # A malformed gloss attempt whose transliteration slot was filled with a
 # phonetic respelling in a non-Latin script instead of Latin — e.g.
 # "κατέγραφεν, कतेग्राफेन)" (Devanagari, ASCII comma), "παρακαλέω،
@@ -97,12 +97,14 @@ def _phonetic_respelling_re_for_lang(lang: str):
     if not entry:
         _phonetic_respelling_re_cache[lang] = None
         return None
-    script_class = ''.join(entry["blocks"])
+    script_class = "".join(entry["blocks"])
     pattern = re.compile(
-        rf'(?:[,،、]\s*[(（]?|[(（])([{script_class}][{script_class}・ ]*)[)）]'
+        rf"(?:[,،、]\s*[(（]?|[(（])([{script_class}][{script_class}・ ]*)[)）]"
     )
     _phonetic_respelling_re_cache[lang] = pattern
     return pattern
+
+
 # Extended-Latin transliteration charset: ASCII + Latin-1/Extended-A/B +
 # combining diacritics used for scholarly romanization (ā, ṓ, ḥ, ʿ, etc.)
 # The specific diacritic set this corpus's transliteration convention
@@ -112,7 +114,7 @@ def _phonetic_respelling_re_for_lang(lang: str):
 # an accidental other-language character, or a not-yet-adopted style —
 # either way, worth flagging rather than silently accepting any Latin script.
 _LATIN_TRANSLIT_RE = re.compile(r"^[A-Za-zÁÉÍÓÚÝáéíóúýĀāĒēĪīŌōŪūḖḗṒṓ\s\-'’.:0-9]+$")
-_STRONG_PREFIX_RE = re.compile(r'^(Strong\s+)?[GH]?\d+\s*[:\-]?\s*', re.IGNORECASE)
+_STRONG_PREFIX_RE = re.compile(r"^(Strong\s+)?[GH]?\d+\s*[:\-]?\s*", re.IGNORECASE)
 # How far to look around a Strong's-code citation for the word it's
 # citing — generous enough to span "(كلمة — G1234)" or "G1234: كلمة"
 # but not so wide it crosses into unrelated prose.
@@ -136,9 +138,11 @@ def _strong_code_re():
     """
     global _strong_code_re_cache
     if _strong_code_re_cache is None:
-        _strong_code_re_cache = re.compile(r'(?:Strong\s+)?([A-Z])\d{2,5}')
+        _strong_code_re_cache = re.compile(r"(?:Strong\s+)?([A-Z])\d{2,5}")
     return _strong_code_re_cache
-_SKIP_KEYS = {'word'}
+
+
+_SKIP_KEYS = {"word"}
 # How far past the end of a native word we look for a malformed gloss
 # attempt, so the error message can show what's actually there instead of
 # just "no gloss found".
@@ -190,13 +194,23 @@ def find_greek_hebrew_glosses(text: str) -> list:
             two_word = f"{m2.group(1)} {m2.group(2)}"
             tail_match = _STRICT_GLOSS_TAIL_RE.match(text, m2.end())
             if tail_match:
-                spans.append((m2.start(), tail_match.end(), two_word, tail_match.group(1).strip(), True))
+                spans.append(
+                    (
+                        m2.start(),
+                        tail_match.end(),
+                        two_word,
+                        tail_match.group(1).strip(),
+                        True,
+                    )
+                )
                 pos = tail_match.end()
                 continue
         word = m1.group(0)
         tail_match = _STRICT_GLOSS_TAIL_RE.match(text, m1.end())
         if tail_match:
-            spans.append((m1.start(), tail_match.end(), word, tail_match.group(1).strip(), True))
+            spans.append(
+                (m1.start(), tail_match.end(), word, tail_match.group(1).strip(), True)
+            )
             pos = tail_match.end()
         else:
             spans.append((m1.start(), m1.end(), word, None, False))
@@ -204,7 +218,9 @@ def find_greek_hebrew_glosses(text: str) -> list:
     return spans
 
 
-def check_greek_hebrew_transliteration(text: str, path: str, lang: str, ctx: str, report: ReportLike) -> None:
+def check_greek_hebrew_transliteration(
+    text: str, path: str, lang: str, ctx: str, report: ReportLike
+) -> None:
     """HARD GATE: every Greek/Hebrew word or two-word phrase must be
     immediately followed by ", (<Latin transliteration>)" — nothing else is
     accepted.
@@ -222,7 +238,7 @@ def check_greek_hebrew_transliteration(text: str, path: str, lang: str, ctx: str
     sub-check entirely (nothing to check: their own language is already
     Latin script, so a Devanagari/Katakana/etc. respelling can't occur).
     """
-    key = path.rsplit('.', 1)[-1].split('[')[0]
+    key = path.rsplit(".", 1)[-1].split("[")[0]
     if key in _SKIP_KEYS:
         return
     if not (_GREEK_RE.search(text) or _HEBREW_RE.search(text)):
@@ -232,22 +248,32 @@ def check_greek_hebrew_transliteration(text: str, path: str, lang: str, ctx: str
         if not well_formed:
             phonetic_match = phonetic_re.match(text, end) if phonetic_re else None
             if phonetic_match:
-                report.E(f"{ctx}: '{word}' gloss uses a phonetic respelling in a non-Latin script ('{phonetic_match.group(1)}') instead of the required Latin transliteration (required format: '{word}, (translit)', see gloss_format.json)")
+                report.E(
+                    f"{ctx}: '{word}' gloss uses a phonetic respelling in a non-Latin script ('{phonetic_match.group(1)}') instead of the required Latin transliteration (required format: '{word}, (translit)', see gloss_format.json)"
+                )
                 continue
-            lookahead = text[end:end + _MALFORMED_LOOKAHEAD]
-            report.E(f"{ctx}: '{word}' is not followed by the required ', (transliteration)' gloss (required format: '{word}, (translit)', see gloss_format.json) — found: '{word}{lookahead}'")
+            lookahead = text[end : end + _MALFORMED_LOOKAHEAD]
+            report.E(
+                f"{ctx}: '{word}' is not followed by the required ', (transliteration)' gloss (required format: '{word}, (translit)', see gloss_format.json) — found: '{word}{lookahead}'"
+            )
             continue
-        stripped = _STRONG_PREFIX_RE.sub('', inner).strip()
+        stripped = _STRONG_PREFIX_RE.sub("", inner).strip()
         if not stripped:
             report.E(f"{ctx}: gloss '{word}, ({inner})' — empty transliteration")
             continue
         if _GREEK_RE.search(stripped) or _HEBREW_RE.search(stripped):
-            report.E(f"{ctx}: gloss '{word}, ({inner})' — parenthetical repeats original script instead of giving a Latin transliteration")
+            report.E(
+                f"{ctx}: gloss '{word}, ({inner})' — parenthetical repeats original script instead of giving a Latin transliteration"
+            )
         elif not _LATIN_TRANSLIT_RE.match(stripped):
-            report.E(f"{ctx}: gloss '{word}, ({inner})' — parenthetical is not Latin-alphabet (looks like a phonetic respelling into the target script)")
+            report.E(
+                f"{ctx}: gloss '{word}, ({inner})' — parenthetical is not Latin-alphabet (looks like a phonetic respelling into the target script)"
+            )
 
 
-def check_bare_transliteration_reuse(text: str, path: str, ctx: str, report: ReportLike) -> None:
+def check_bare_transliteration_reuse(
+    text: str, path: str, ctx: str, report: ReportLike
+) -> None:
     """HARD GATE: a transliteration introduced by one well-formed gloss in
     this field must never appear again later in the same field as bare
     Latin text with no accompanying native-script word — see
@@ -267,7 +293,7 @@ def check_bare_transliteration_reuse(text: str, path: str, ctx: str, report: Rep
     and must be excluded, or every correctly-repeated gloss of the same
     word would falsely trip this check on its own transliteration text.
     """
-    key = path.rsplit('.', 1)[-1].split('[')[0]
+    key = path.rsplit(".", 1)[-1].split("[")[0]
     if key in _SKIP_KEYS:
         return
     glosses = find_greek_hebrew_glosses(text)
@@ -275,11 +301,13 @@ def check_bare_transliteration_reuse(text: str, path: str, ctx: str, report: Rep
     for _, end, _, inner, well_formed in glosses:
         if not (well_formed and inner):
             continue
-        for m in re.finditer(rf'\b{re.escape(inner)}\b', text[end:]):
+        for m in re.finditer(rf"\b{re.escape(inner)}\b", text[end:]):
             m_start, m_end = end + m.start(), end + m.end()
             if any(s <= m_start and m_end <= e for s, e in wellformed_spans):
                 continue
-            report.E(f"{ctx}: '{inner}' reused as bare Latin text later in this field with no accompanying native-script gloss (every occurrence needs its own '<word>, ({inner})', see gloss_format.json 'Bare reuse without a gloss')")
+            report.E(
+                f"{ctx}: '{inner}' reused as bare Latin text later in this field with no accompanying native-script gloss (every occurrence needs its own '<word>, ({inner})', see gloss_format.json 'Bare reuse without a gloss')"
+            )
             break
 
 
@@ -298,7 +326,9 @@ def _rtl_script_re_for_lang(lang: str):
     return re.compile(f"[{''.join(entry['blocks'])}]")
 
 
-def check_script_boundary_spacing(text: str, path: str, lang: str, ctx: str, report: ReportLike) -> None:
+def check_script_boundary_spacing(
+    text: str, path: str, lang: str, ctx: str, report: ReportLike
+) -> None:
     """HARD GATE: an RTL language's own native script must never sit
     directly adjacent to a Greek/Hebrew gloss character with no
     whitespace between them. Catches glued-prefix bugs like 'بِـσῴζω'
@@ -314,20 +344,22 @@ def check_script_boundary_spacing(text: str, path: str, lang: str, ctx: str, rep
     far too broad and fires on normal prose; the actual bug class is
     specifically RTL script glued to a Greek/Hebrew gloss term.
     """
-    key = path.rsplit('.', 1)[-1].split('[')[0]
+    key = path.rsplit(".", 1)[-1].split("[")[0]
     if key in _SKIP_KEYS:
         return
     rtl_re = _rtl_script_re_for_lang(lang)
     if rtl_re is None or not rtl_re.search(text):
         return
-    foreign_re = re.compile(f'{_GREEK_RE.pattern}|{_HEBREW_RE.pattern}')
+    foreign_re = re.compile(f"{_GREEK_RE.pattern}|{_HEBREW_RE.pattern}")
     for i in range(len(text) - 1):
         a, b = text[i], text[i + 1]
         rtl_then_foreign = rtl_re.match(a) and foreign_re.match(b)
         foreign_then_rtl = foreign_re.match(a) and rtl_re.match(b)
         if rtl_then_foreign or foreign_then_rtl:
-            snippet = text[max(0, i - 10):i + 12]
-            report.E(f"{ctx}: {lang} native script glued directly to a Greek/Hebrew gloss with no space — '{snippet}' (RTL/LTR script-boundary bug, insert a space)")
+            snippet = text[max(0, i - 10) : i + 12]
+            report.E(
+                f"{ctx}: {lang} native script glued directly to a Greek/Hebrew gloss with no space — '{snippet}' (RTL/LTR script-boundary bug, insert a space)"
+            )
 
 
 def _native_script_re_for_lang(lang: str):
@@ -343,7 +375,9 @@ def _native_script_re_for_lang(lang: str):
     return re.compile(f"[{''.join(entry['blocks'])}]")
 
 
-def check_strong_code_native_script(text: str, path: str, lang: str, ctx: str, report: ReportLike) -> None:
+def check_strong_code_native_script(
+    text: str, path: str, lang: str, ctx: str, report: ReportLike
+) -> None:
     """HARD GATE: a Strong's-code citation (G1234, H5678, "Strong G40", ...)
     always cites a real Hebrew or Greek word. If the text around it contains
     the file's own native script (Arabic, Devanagari, ...) but no genuine
@@ -370,20 +404,22 @@ def check_strong_code_native_script(text: str, path: str, lang: str, ctx: str, r
     embedded in Latin-script prose is unremarkable (the language's own
     script can't be mistaken for the missing word).
     """
-    key = path.rsplit('.', 1)[-1].split('[')[0]
+    key = path.rsplit(".", 1)[-1].split("[")[0]
     if key in _SKIP_KEYS:
         return
     native_re = _native_script_re_for_lang(lang)
     if native_re is None:
         return
-    foreign_re = re.compile(f'{_GREEK_RE.pattern}|{_HEBREW_RE.pattern}')
+    foreign_re = re.compile(f"{_GREEK_RE.pattern}|{_HEBREW_RE.pattern}")
     for m in _strong_code_re().finditer(text):
         start = max(0, m.start() - _STRONG_CODE_WINDOW)
         end = min(len(text), m.end() + _STRONG_CODE_WINDOW)
         window = text[start:end]
         if native_re.search(window) and not foreign_re.search(window):
-            snippet = text[start:end].replace('\n', ' ')
-            report.E(f"{ctx}: Strong code '{m.group(0)}' has no real Hebrew/Greek word nearby — only {lang} native script, which is likely a phonetic respelling standing in for the missing gloss (found: '...{snippet}...', see gloss_format.json 'Phonetic respelling into the target script instead of Latin')")
+            snippet = text[start:end].replace("\n", " ")
+            report.E(
+                f"{ctx}: Strong code '{m.group(0)}' has no real Hebrew/Greek word nearby — only {lang} native script, which is likely a phonetic respelling standing in for the missing gloss (found: '...{snippet}...', see gloss_format.json 'Phonetic respelling into the target script instead of Latin')"
+            )
 
 
 # 'word' (word) — a quoted word immediately followed by a parenthetical
@@ -394,7 +430,9 @@ def check_strong_code_native_script(text: str, path: str, lang: str, ctx: str, r
 # "'esclerosis' (endurecimiento)"), so this regex alone is not a signal;
 # see check_word_study_bare_transliteration for the diacritic filter that
 # separates the two.
-_QUOTED_PAREN_PAIR_RE = re.compile(r"['‘’\"]([^'‘’\"()]{2,30})['‘’\"]\s*\(([^()]{2,30})\)")
+_QUOTED_PAREN_PAIR_RE = re.compile(
+    r"['‘’\"]([^'‘’\"()]{2,30})['‘’\"]\s*\(([^()]{2,30})\)"
+)
 _translit_diacritic_re_cache = None
 
 
@@ -414,12 +452,16 @@ def _translit_diacritic_re():
     check_word_study_bare_transliteration's docstring."""
     global _translit_diacritic_re_cache
     if _translit_diacritic_re_cache is None:
-        diacritics = _load_gloss_format()['transliteration_charset']['macron_only_diacritics']['marks']
+        diacritics = _load_gloss_format()["transliteration_charset"][
+            "macron_only_diacritics"
+        ]["marks"]
         _translit_diacritic_re_cache = re.compile(f"[{''.join(diacritics)}]")
     return _translit_diacritic_re_cache
 
 
-def check_word_study_bare_transliteration(text: str, path: str, ctx: str, report: ReportLike) -> None:
+def check_word_study_bare_transliteration(
+    text: str, path: str, ctx: str, report: ReportLike
+) -> None:
     """WARNING: a quoted word immediately followed by a parenthetical word
     (either order — "'mujer' (gynai)" or "'Skēnē' (tienda)") where one side
     carries this corpus's own scholarly-transliteration diacritics (ā, ē,
@@ -448,7 +490,7 @@ def check_word_study_bare_transliteration(text: str, path: str, ctx: str, report
     and it stays a manual reverse-read item, same as the already-documented
     ja duplicate-gloss case.
     """
-    key = path.rsplit('.', 1)[-1].split('[')[0]
+    key = path.rsplit(".", 1)[-1].split("[")[0]
     if key in _SKIP_KEYS:
         return
     if _GREEK_RE.search(text) or _HEBREW_RE.search(text):
@@ -457,4 +499,6 @@ def check_word_study_bare_transliteration(text: str, path: str, ctx: str, report
     for m in _QUOTED_PAREN_PAIR_RE.finditer(text):
         quoted, parenthetical = m.group(1), m.group(2)
         if diacritic_re.search(quoted) or diacritic_re.search(parenthetical):
-            report.W(f"{ctx}: '{quoted}' ({parenthetical}) has the shape of a bare Greek/Hebrew transliteration (scholarly diacritic present) but the field has no real Hebrew/Greek character anywhere — likely discussing a word by its transliteration only, with the actual native-script word never given (see gloss_format.json 'transliteration_charset')")
+            report.W(
+                f"{ctx}: '{quoted}' ({parenthetical}) has the shape of a bare Greek/Hebrew transliteration (scholarly diacritic present) but the field has no real Hebrew/Greek character anywhere — likely discussing a word by its transliteration only, with the actual native-script word never given (see gloss_format.json 'transliteration_charset')"
+            )
