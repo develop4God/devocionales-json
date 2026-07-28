@@ -204,3 +204,20 @@ def check_quote_anomalies(text: str, ctx: str, report: ReportLike) -> None:
         report.W(
             f'{ctx}: odd number of straight double quotes (") — possible stray quote'
         )
+
+    # Balanced parentheses, ASCII '()' and full-width '（）' counted as one
+    # shared pair — ja/zh content legitimately opens with '（' and closes
+    # with an ASCII ')' (or vice versa) within the same gloss/citation span,
+    # so counting each bracket style separately produces false positives on
+    # otherwise-correct content (see gold_silver_ashes_ja_001.json's
+    # '金（χρυσίον, (chrysíon) (G5553))：' — one full-width opener, two
+    # ASCII pairs, balanced overall). An imbalance after normalizing both
+    # styles to ASCII means a real dropped/extra paren, most often a
+    # Strong's-citation rewrite (see lexicon_fixer.py) that failed to close
+    # the outer wrapper it was editing inside of.
+    normalized = text.replace("（", "(").replace("）", ")")
+    poc, pcc = normalized.count("("), normalized.count(")")
+    if poc != pcc:
+        report.E(
+            f"{ctx}: unbalanced '('/')' — {poc} open vs {pcc} close — likely a dropped or extra parenthesis"
+        )
