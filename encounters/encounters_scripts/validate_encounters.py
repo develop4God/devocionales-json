@@ -68,6 +68,7 @@ from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_strong_code_bare_transliteration,
     check_word_study_bare_transliteration,
 )
+from shared_validation.lexicon_source import StrongsLexiconSource  # noqa: E402
 from shared_validation.lint import lint_json_files  # noqa: E402
 from shared_validation.scripture_check import (  # noqa: E402
     ScriptureValidator,
@@ -381,6 +382,7 @@ def validate_encounter_file(
     report: Report,
     bible_versions: dict,
     index_entry: Optional[dict] = None,
+    lexicon: Optional[StrongsLexiconSource] = None,
 ):
     """Validate a single encounter file."""
 
@@ -389,7 +391,7 @@ def validate_encounter_file(
         check_quote_anomalies(text, f"{filename}:{path}", report)
         check_halfwidth_colon_in_title(text, path, lang, f"{filename}:{path}", report)
         check_greek_hebrew_transliteration(
-            text, path, lang, f"{filename}:{path}", report
+            text, path, lang, f"{filename}:{path}", report, lexicon
         )
         check_bare_transliteration_reuse(text, path, f"{filename}:{path}", report)
         check_script_boundary_spacing(text, path, lang, f"{filename}:{path}", report)
@@ -714,6 +716,8 @@ def validate_encounter_files(
 
     report.I(f"Published: {len(published)} | Coming soon: {len(coming_soon)}")
 
+    lexicon = StrongsLexiconSource()  # loaded once, reused across the whole run
+
     all_loaded = {}  # {lang: {enc_id: data}}
 
     for enc in encounters:
@@ -731,7 +735,14 @@ def validate_encounter_files(
 
             # Individual file validation
             validate_encounter_file(
-                data, lang, fname, enc_id, report, bible_versions, index_entry=enc
+                data,
+                lang,
+                fname,
+                enc_id,
+                report,
+                bible_versions,
+                index_entry=enc,
+                lexicon=lexicon,
             )
 
             # has_interactive cross-check

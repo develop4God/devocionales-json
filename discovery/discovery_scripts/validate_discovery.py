@@ -62,6 +62,7 @@ from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_strong_code_bare_transliteration,
     check_word_study_bare_transliteration,
 )
+from shared_validation.lexicon_source import StrongsLexiconSource  # noqa: E402
 from shared_validation.lint import lint_json_files  # noqa: E402
 from shared_validation.scripture_check import (  # noqa: E402
     ScriptureValidator,
@@ -86,7 +87,12 @@ def load_json_file(filepath: Path, report: Report) -> Optional[Dict]:
 
 
 def validate_structure(
-    data: Dict, lang: str, filename: str, report: Report, expected_languages: dict
+    data: Dict,
+    lang: str,
+    filename: str,
+    report: Report,
+    expected_languages: dict,
+    lexicon: Optional[StrongsLexiconSource] = None,
 ) -> bool:
     """Validate the structure of a discovery study file."""
     required_fields = [
@@ -111,7 +117,7 @@ def validate_structure(
         check_quote_anomalies(text, f"{filename}:{path}", report)
         check_halfwidth_colon_in_title(text, path, lang, f"{filename}:{path}", report)
         check_greek_hebrew_transliteration(
-            text, path, lang, f"{filename}:{path}", report
+            text, path, lang, f"{filename}:{path}", report, lexicon
         )
         check_bare_transliteration_reuse(text, path, f"{filename}:{path}", report)
         check_strong_code_native_script(text, path, lang, f"{filename}:{path}", report)
@@ -504,6 +510,8 @@ def validate_translation_files(
     report.I("PHASE B: Validating translation files using index.json")
     report.I("=" * 60)
 
+    lexicon = StrongsLexiconSource()  # loaded once, reused across the whole run
+
     # Store all loaded data for cross-validation
     all_studies = {}
 
@@ -543,7 +551,9 @@ def validate_translation_files(
                 continue
 
             # Validate structure
-            validate_structure(data, lang, filename, report, expected_languages)
+            validate_structure(
+                data, lang, filename, report, expected_languages, lexicon
+            )
 
             # Store for cross-validation
             lang_studies[study_base] = data
