@@ -33,9 +33,6 @@ import sys
 from pathlib import Path
 from typing import Callable
 
-from .greek_hebrew_gloss import find_greek_hebrew_glosses
-from .text_checks import iter_strings
-
 RED, YLW, GRN, CYN, RST = "\033[91m", "\033[93m", "\033[92m", "\033[96m", "\033[0m"
 
 
@@ -189,77 +186,6 @@ def check_key_parity(loaded: dict[str, dict], report: Reporter):
             _report_missing_keys(f"card[{i + 1}] ", card_keys, report)
 
 
-# ── Cross-file: Greek/Hebrew gloss consistency (all languages vs. all) ────────
-
-
-def check_greek_hebrew_consistency(loaded: dict[str, dict], report: Reporter):
-    """Cross-file consistency for inline Greek/Hebrew word-study glosses: the
-    same source-language item translated into N languages should carry the
-    exact same sequence of native-script words/phrases at the exact same
-    field position (a translation changes the surrounding prose, never the
-    Greek/Hebrew word being studied), and the same Latin transliteration for
-    each occurrence, since a word's romanization doesn't depend on which
-    language is glossing it.
-
-    No language is treated as ground truth (same principle as check_drift):
-    an occurrence present in 7 of 8 languages, or transliterated one way in
-    7 of 8, flags the outlier(s) — not "en is right, X is wrong". This is
-    the only way to catch an error already baked into whichever language a
-    translation batch happened to be sourced from, since a single-baseline
-    pairwise check would just see every file "faithfully" agreeing with an
-    already-wrong original.
-
-    For each (field path, occurrence index) position, two things are
-    checked, both restricted to languages where that occurrence is
-    well-formed: whether the native word/phrase itself matches across
-    those languages (check_drift on the word), and whether the
-    transliteration matches (check_drift on inner). Malformed occurrences
-    are excluded from both comparisons rather than counted toward the
-    majority — otherwise a majority of languages sharing the same spec
-    violation (see gloss_format.json) would outvote a minority that is
-    actually correct, flagging the compliant file as the outlier instead
-    of the shared mistake. A well-formed/malformed split at the same
-    position is itself real drift (one language never finished glossing a
-    word another already has) and is reported by the word-sequence-length
-    mismatch below, not silently skipped.
-    """
-    # {field_path: {lang: [(word, inner, well_formed), ...]}}
-    by_field: dict[str, dict[str, list]] = {}
-    for lang, data in loaded.items():
-        for path, text in iter_strings(data):
-            spans = find_greek_hebrew_glosses(text)
-            if not spans:
-                continue
-            field = re.sub(r"\[\d+\]", "[]", path)
-            occurrences = [(word, inner, wf) for _, _, word, inner, wf in spans]
-            by_field.setdefault(field, {})[lang] = occurrences
-
-    for field, per_lang in sorted(by_field.items()):
-        if len(per_lang) < 2:
-            continue
-        check_drift(
-            f"greek/hebrew gloss count in '{field}'",
-            {lang: len(occ) for lang, occ in per_lang.items()},
-            report,
-        )
-        max_n = max(len(occ) for occ in per_lang.values())
-        for i in range(max_n):
-            words_at_i = {
-                lang: occ[i][0]
-                for lang, occ in per_lang.items()
-                if i < len(occ) and occ[i][2]
-            }
-            check_drift(f"'{field}' gloss #{i + 1} word", words_at_i, report)
-            inners_at_i = {
-                lang: occ[i][1]
-                for lang, occ in per_lang.items()
-                if i < len(occ) and occ[i][2]
-            }
-            check_drift(
-                f"'{field}' gloss #{i + 1} transliteration", inners_at_i, report
-            )
-
-
 # ── Orchestration shell ───────────────────────────────────────────────────────
 
 
@@ -314,9 +240,6 @@ def run(
 
     print(f"\n{CYN}── cross-file key parity{RST}")
     check_key_parity(loaded, report)
-
-    print(f"\n{CYN}── cross-file: Greek/Hebrew gloss consistency{RST}")
-    check_greek_hebrew_consistency(loaded, report)
 
     max_cards = max((len(d.get("cards", [])) for d in loaded.values()), default=0)
 

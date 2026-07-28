@@ -28,8 +28,37 @@ sys.path.insert(0, str(REPO_ROOT))
 from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_word_study_bare_transliteration,
     check_strong_code_bare_transliteration,
+    check_native_script_bare_transliteration,
 )
+from shared_validation.lexicon_check import check_lexical_accuracy  # noqa: E402
+from shared_validation.lexicon_source import LexiconEntry  # noqa: E402
 from shared_validation.report import Report  # noqa: E402
+
+
+class _FakeLexicon:
+    """Minimal LexiconSource test double — a fixed {lemma: [entries]} map,
+    no real Strong's data file loaded, so these tests exercise only
+    check_lexical_accuracy's own comparison logic, not the real lexicon's
+    12,450 entries."""
+
+    def __init__(self, entries: dict[str, list[LexiconEntry]]):
+        self._entries = entries
+
+    def lookup_by_lemma(self, word: str) -> list[LexiconEntry]:
+        return list(self._entries.get(word, []))
+
+    def lookup_by_lemma_and_number(self, word: str, strongs_number: str):
+        for entry in self._entries.get(word, []):
+            if entry.strongs_number == strongs_number:
+                return entry
+        return None
+
+    def lookup_by_number(self, strongs_number: str):
+        for entries in self._entries.values():
+            for entry in entries:
+                if entry.strongs_number == strongs_number:
+                    return entry
+        return None
 
 
 # ── check_word_study_bare_transliteration ───────────────────────────────────
@@ -243,6 +272,237 @@ class TestCheckStrongCodeBareTransliteration(unittest.TestCase):
             report.errors,
             [],
             f"The 'word' key should be skipped entirely, got: {report.errors}",
+        )
+
+
+# ── check_lexical_accuracy / _translit_matches ──────────────────────────────
+#
+# _translit_matches requires an exact (case-insensitive) match against
+# Strong's own transliteration — no diacritic-stripping. An earlier version
+# stripped combining marks from both sides before comparing, meant to
+# tolerate this corpus's occasional bare-ASCII house style (e.g. 'ginomai'
+# for 'gínomai'); that also silently accepted a real mismatch whenever the
+# given transliteration was missing a required accent, since stripping marks
+# from both sides made a wrong spelling indistinguishable from a
+# deliberately-plain-ASCII one (found 2026-07-28, peter_restoration_001:
+# 'anthrakia'/'lambano'/'bosko'/'poimaino' all silently matched against
+# Strong's 'anthrakiá'/'lambánō'/'bóskō'/'poimaínō').
+
+
+class TestCheckLexicalAccuracy(unittest.TestCase):
+    def test_exact_match_is_matched(self):
+        lexicon = _FakeLexicon(
+            {
+                "ἀνθρακιά": [
+                    LexiconEntry("G439", "ἀνθρακιά", "anthrakiá", "a bed of coals")
+                ]
+            }
+        )
+        report = Report("TEST")
+        results = check_lexical_accuracy(
+            "ἀνθρακιά, (anthrakiá) appears twice in John.",
+            lexicon,
+            "path",
+            "en",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(report.errors, [], f"Expected no errors, got: {report.errors}")
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0].status.value, "matched")
+
+    def test_missing_accent_is_translit_mismatch_not_silently_matched(self):
+        # This is the exact regression this fix closes: 'anthrakia' (no
+        # accent) must NOT be accepted as equivalent to Strong's
+        # 'anthrakiá' just because stripping diacritics would make them equal.
+        lexicon = _FakeLexicon(
+            {
+                "ἀνθρακιά": [
+                    LexiconEntry("G439", "ἀνθρακιά", "anthrakiá", "a bed of coals")
+                ]
+            }
+        )
+        report = Report("TEST")
+        results = check_lexical_accuracy(
+            "ἀνθρακιά, (anthrakia) appears twice in John.",
+            lexicon,
+            "path",
+            "en",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0].status.value, "translit_mismatch")
+        self.assertTrue(
+            any("anthrakia" in e and "anthrakiá" in e for e in report.errors),
+            f"Expected a spelling-mismatch error naming both spellings, got: {report.errors}",
+        )
+
+    def test_word_not_in_lexicon_is_inflected_no_lemma_match(self):
+        lexicon = _FakeLexicon({})  # no entries at all
+        report = Report("TEST")
+        results = check_lexical_accuracy(
+            "ἀγαπᾷς, (agapas) is the word Jesus uses.",
+            lexicon,
+            "path",
+            "en",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(report.errors, [], f"Expected no errors, got: {report.errors}")
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0].status.value, "inflected_no_lemma_match")
+
+
+# ── check_native_script_bare_transliteration ────────────────────────────────
+#
+# Detects `lang`'s own native script glued directly (zero space, no comma)
+# to a bare Latin transliteration in parens — e.g. Chinese '道(Logos)' —
+# meaning the real Greek/Hebrew word was never given, only a native-language
+# gloss word standing next to the transliteration. Confirmed in the wild
+# 2026-07-28: 52 occurrences across the zh discovery+encounters corpus.
+
+
+class TestCheckNativeScriptBareTransliteration(unittest.TestCase):
+    def test_zh_word_glued_to_bare_translit_is_an_error(self):
+        report = Report("TEST")
+        check_native_script_bare_transliteration(
+            "主耶稣啊,我的道(Logos)和我的晨星。",
+            "cards[4].prayer.content",
+            "zh",
+            "ctx",
+            report,
+        )
+
+        self.assertTrue(
+            any("Logos" in e and "glued directly" in e for e in report.errors),
+            f"Expected a glued-native-script error, got: {report.errors}",
+        )
+
+    def test_latin_script_language_is_never_checked(self):
+        # de/en/es/fil/fr/pt have no entry in native_script_ranges.json —
+        # their own script already is Latin, so this bug can't occur.
+        report = Report("TEST")
+        check_native_script_bare_transliteration(
+            "the word(Logos) appears here.",
+            "cards[0].content",
+            "en",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(
+            report.errors,
+            [],
+            f"Latin-script languages should skip this check entirely, got: {report.errors}",
+        )
+
+    def test_word_key_is_skipped(self):
+        # 'word' is the shared _SKIP_KEYS exemption used by every check in
+        # this module.
+        report = Report("TEST")
+        check_native_script_bare_transliteration(
+            "道(Logos)",
+            "cards[0].greek_words[0].word",
+            "zh",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(
+            report.errors,
+            [],
+            f"The 'word' key should be skipped entirely, got: {report.errors}",
+        )
+
+    def test_space_before_paren_does_not_trigger(self):
+        # A space between the native word and the parenthetical is a
+        # different (still likely wrong) shape, but not this specific
+        # glued-with-zero-space bug — out of scope for this check.
+        report = Report("TEST")
+        check_native_script_bare_transliteration(
+            "我的道 (Logos)是光。",
+            "cards[0].content",
+            "zh",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(
+            report.errors,
+            [],
+            f"A space before the parenthesis should not trigger this check, got: {report.errors}",
+        )
+
+    def test_lexicon_none_falls_back_to_shape_only_error(self):
+        # Default behavior (no lexicon wired in) must be unchanged from the
+        # shape-only detection — this is the actual call shape used by both
+        # validate_discovery.py and validate_encounters.py when lexicon
+        # loading is skipped/unavailable.
+        report = Report("TEST")
+        check_native_script_bare_transliteration(
+            "拯救者(Amnos)是羔羊。",
+            "cards[2].revelation_key",
+            "zh",
+            "ctx",
+            report,
+            lexicon=None,
+        )
+
+        self.assertTrue(
+            any("Amnos" in e and "glued directly" in e for e in report.errors),
+            f"Expected the shape-only error with lexicon=None, got: {report.errors}",
+        )
+
+    def test_lexicon_present_with_nearby_strong_code_checks_spelling(self):
+        # When a Strong's code sits right after the bare transliteration,
+        # the real headword is knowable even though never written out —
+        # verify the given spelling against Strong's own, rather than the
+        # generic missing-word message.
+        lexicon = _FakeLexicon(
+            {"λόγος": [LexiconEntry("G3056", "λόγος", "lógos", "a word")]}
+        )
+        report = Report("TEST")
+        check_native_script_bare_transliteration(
+            "太初有道(Logoz) G3056。",
+            "cards[0].content",
+            "zh",
+            "ctx",
+            report,
+            lexicon=lexicon,
+        )
+
+        self.assertTrue(
+            any(
+                "Logoz" in e and "lógos" in e and "check spelling" in e
+                for e in report.errors
+            ),
+            f"Expected a Strong's-verified spelling-mismatch error, got: {report.errors}",
+        )
+
+    def test_lexicon_present_no_nearby_strong_code_falls_back_to_shape_only(self):
+        # Most real corpus occurrences (all 52 found 2026-07-28) have no
+        # nearby Strong's code — lexicon being passed in must not change
+        # that outcome.
+        lexicon = _FakeLexicon(
+            {"λόγος": [LexiconEntry("G3056", "λόγος", "lógos", "a word")]}
+        )
+        report = Report("TEST")
+        check_native_script_bare_transliteration(
+            "我的道(Logos)和我的晨星。",
+            "cards[4].prayer.content",
+            "zh",
+            "ctx",
+            report,
+            lexicon=lexicon,
+        )
+
+        self.assertTrue(
+            any("Logos" in e and "glued directly" in e for e in report.errors),
+            f"Expected the shape-only fallback with no nearby Strong code, got: {report.errors}",
         )
 
 

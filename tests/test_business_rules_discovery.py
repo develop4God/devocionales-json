@@ -87,6 +87,52 @@ class TestCheckQuoteAnomalies(unittest.TestCase):
             f"Expected an odd-quote-count warning, got: {report.warnings}",
         )
 
+    def test_unbalanced_parens_is_an_error(self):
+        """A dropped/extra parenthesis is an ERROR (not a warning like the
+        guillemet/quote balance checks) — this is the shape lexicon_fixer.py
+        left behind twice in real corpus content: an outer paren wrapping a
+        whole "(word, (translit) — Strong Gxxxx)" gloss that the fixer's
+        rewrite failed to re-close after inserting its own inner citation
+        parens."""
+        report = Report("TEST")
+        check_quote_anomalies(
+            "The word (καταπέτασμα, (katapétasma) (G2665) means veil.",
+            "ctx",
+            report,
+        )
+
+        self.assertTrue(
+            any("unbalanced '('/')'" in e for e in report.errors),
+            f"Expected an unbalanced-paren error, got: {report.errors}",
+        )
+
+    def test_balanced_parens_produce_no_finding(self):
+        report = Report("TEST")
+        check_quote_anomalies(
+            "The word (καταπέτασμα, (katapétasma) (G2665)) means veil.",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(report.errors, [])
+        self.assertEqual(report.warnings, [])
+
+    def test_fullwidth_and_ascii_parens_balance_across_styles(self):
+        """ja/zh content legitimately opens with a full-width '（' and closes
+        the same span with an ASCII ')' (or the reverse) — e.g.
+        '金（χρυσίον, (chrysíon) (G5553))：' from a real gold_silver_ashes_ja
+        card: one full-width opener, two ASCII pairs, balanced overall once
+        both styles are counted as the same pair. Counting '()' and '（）'
+        separately would flag this real, correct content as unbalanced."""
+        report = Report("TEST")
+        check_quote_anomalies(
+            "金（χρυσίον, (chrysíon) (G5553))：value",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(report.errors, [])
+
     def test_verse_continuation_close_single_guillemet_does_not_warn(self):
         """A single trailing »-only fragment (the tail of a quotation that
         opened in a preceding verse, stored as a separate string field in

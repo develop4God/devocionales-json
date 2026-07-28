@@ -52,6 +52,9 @@ sys.path.insert(0, str(_find_repo_root(Path(__file__).resolve().parent)))
 from shared_validation.report import Report  # noqa: E402
 from shared_validation.run_report import RunReport  # noqa: E402
 from shared_validation.family_check import run_family_validation_all  # noqa: E402
+from shared_validation.lexicon_family_check import (  # noqa: E402
+    run_for_type as run_lexicon_family_check,
+)
 from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL  # noqa: E402
 from shared_validation.text_checks import (  # noqa: E402
     iter_strings,
@@ -67,7 +70,9 @@ from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_strong_code_native_script,
     check_strong_code_bare_transliteration,
     check_word_study_bare_transliteration,
+    check_native_script_bare_transliteration,
 )
+from shared_validation.lexicon_source import StrongsLexiconSource  # noqa: E402
 from shared_validation.lint import lint_json_files  # noqa: E402
 from shared_validation.scripture_check import (  # noqa: E402
     ScriptureValidator,
@@ -381,6 +386,7 @@ def validate_encounter_file(
     report: Report,
     bible_versions: dict,
     index_entry: Optional[dict] = None,
+    lexicon: Optional[StrongsLexiconSource] = None,
 ):
     """Validate a single encounter file."""
 
@@ -389,13 +395,16 @@ def validate_encounter_file(
         check_quote_anomalies(text, f"{filename}:{path}", report)
         check_halfwidth_colon_in_title(text, path, lang, f"{filename}:{path}", report)
         check_greek_hebrew_transliteration(
-            text, path, lang, f"{filename}:{path}", report
+            text, path, lang, f"{filename}:{path}", report, lexicon
         )
         check_bare_transliteration_reuse(text, path, f"{filename}:{path}", report)
         check_script_boundary_spacing(text, path, lang, f"{filename}:{path}", report)
         check_strong_code_native_script(text, path, lang, f"{filename}:{path}", report)
         check_strong_code_bare_transliteration(text, path, f"{filename}:{path}", report)
         check_word_study_bare_transliteration(text, path, f"{filename}:{path}", report)
+        check_native_script_bare_transliteration(
+            text, path, lang, f"{filename}:{path}", report, lexicon
+        )
         check_no_latin_leak(text, path, lang, f"{filename}:{path}", report)
 
     # Required top-level fields
@@ -714,6 +723,8 @@ def validate_encounter_files(
 
     report.I(f"Published: {len(published)} | Coming soon: {len(coming_soon)}")
 
+    lexicon = StrongsLexiconSource()  # loaded once, reused across the whole run
+
     all_loaded = {}  # {lang: {enc_id: data}}
 
     for enc in encounters:
@@ -731,7 +742,14 @@ def validate_encounter_files(
 
             # Individual file validation
             validate_encounter_file(
-                data, lang, fname, enc_id, report, bible_versions, index_entry=enc
+                data,
+                lang,
+                fname,
+                enc_id,
+                report,
+                bible_versions,
+                index_entry=enc,
+                lexicon=lexicon,
             )
 
             # has_interactive cross-check
@@ -864,6 +882,25 @@ def validate_image_urls(report: Report) -> None:
 # inherently fuzzy — see the issue's Rollout section. Runs after Phase B
 # (the real gate) so scripture findings never block the release while the
 # threshold is being tuned.
+
+
+def validate_greek_family_patterns(report: Report) -> None:
+    """Every inline and structured Greek/Hebrew gloss checked directly
+    against Strong's Concordance (the SOT) — no cross-file majority vote.
+    A majority-vote comparison can only ever detect DISAGREEMENT between
+    languages: if the same wrong spelling is copy-pasted into every file,
+    every file agrees and majority vote reports nothing even though the
+    shared value is factually wrong (this exact failure mode hid dozens of
+    real errors in this corpus under the previous majority-vote design).
+    Checking against Strong's directly, independently per language, has no
+    such blind spot. Prints its own per-family report; only the total
+    error count is folded into this phase's Report."""
+    lexicon = StrongsLexiconSource()
+    total_errors = run_lexicon_family_check("encounters", lexicon)
+    if total_errors:
+        report.E(
+            f"{total_errors} Strong's transliteration mismatch(es) — see output above"
+        )
 
 
 def validate_scripture_references(
@@ -1061,6 +1098,16 @@ def main():
             [enc["id"] for enc in index_data["encounters"]],
             "encounter",
             "encounters",
+        )
+
+    # PHASE F: Cross-file Greek/Hebrew gloss pattern consistency — independent
+    # of Phase E's family_check (which only compares schema/structure, not
+    # gloss content). Gated: a family with a genuine cross-language gloss
+    # mismatch fails the run.
+    if not args.scripture_only:
+        run_report.wrap(
+            "PHASE F: GREEK/HEBREW GLOSS PATTERN CONSISTENCY",
+            validate_greek_family_patterns,
         )
 
     encounters = index_data["encounters"]

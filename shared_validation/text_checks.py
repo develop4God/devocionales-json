@@ -163,9 +163,35 @@ def check_no_latin_leak(
             if well_formed
         )
 
+    # A malformed gloss span covers only the native word itself (no ", (...)"
+    # tail matched), so the stray Latin transliteration that was presumably
+    # meant to follow it sits just after `end`, not inside the span. Treat a
+    # Latin match starting within a few characters of a malformed span's end
+    # as "near" it — this is what distinguishes a shape bug (real gloss,
+    # broken punctuation) from a genuine untranslated leftover elsewhere in
+    # the field, which check_greek_hebrew_transliteration's hard gate is
+    # already responsible for flagging on its own.
+    _NEAR_MALFORMED_GLOSS_WINDOW = 5
+
+    def near_malformed_gloss(pos: int) -> bool:
+        return any(
+            0 <= pos - end <= _NEAR_MALFORMED_GLOSS_WINDOW
+            for _, end, _, _, well_formed in gloss_spans
+            if not well_formed
+        )
+
     if rules.get("letters"):
         for m in _LATIN_LETTER_RE.finditer(text):
-            if not in_gloss(m.start()):
+            if in_gloss(m.start()):
+                continue
+            if near_malformed_gloss(m.start()):
+                report.W(
+                    f"{ctx}: Latin text '{m.group(0)}' in {lang} field — "
+                    "near a malformed Greek/Hebrew gloss, likely a shape "
+                    "bug (see check_greek_hebrew_transliteration), not a "
+                    "translation gap"
+                )
+            else:
                 report.W(
                     f"{ctx}: Latin text '{m.group(0)}' in {lang} field — possible untranslated leftover"
                 )
@@ -203,4 +229,21 @@ def check_quote_anomalies(text: str, ctx: str, report: ReportLike) -> None:
     ):
         report.W(
             f'{ctx}: odd number of straight double quotes (") — possible stray quote'
+        )
+
+    # Balanced parentheses, ASCII '()' and full-width '（）' counted as one
+    # shared pair — ja/zh content legitimately opens with '（' and closes
+    # with an ASCII ')' (or vice versa) within the same gloss/citation span,
+    # so counting each bracket style separately produces false positives on
+    # otherwise-correct content (see gold_silver_ashes_ja_001.json's
+    # '金（χρυσίον, (chrysíon) (G5553))：' — one full-width opener, two
+    # ASCII pairs, balanced overall). An imbalance after normalizing both
+    # styles to ASCII means a real dropped/extra paren, most often a
+    # Strong's-citation rewrite (see lexicon_fixer.py) that failed to close
+    # the outer wrapper it was editing inside of.
+    normalized = text.replace("（", "(").replace("）", ")")
+    poc, pcc = normalized.count("("), normalized.count(")")
+    if poc != pcc:
+        report.E(
+            f"{ctx}: unbalanced '('/')' — {poc} open vs {pcc} close — likely a dropped or extra parenthesis"
         )
