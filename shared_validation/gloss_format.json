@@ -32,5 +32,13 @@
   "strong_code_prefixes": {
     "_comment": "Pattern for a citation-code prefix this corpus cites inline next to a Greek/Hebrew word (e.g. 'G4642', 'H5782', 'Strong G40'). Empirically only 'G' (Greek/NT) and 'H' (Hebrew/OT) appear in the corpus today (2026-07-27 scan, discovery+encounters), matching the Strong's Concordance standard — but the letter itself isn't hardcoded to G/H: any single uppercase Latin letter immediately followed by 2-5 digits is treated as a citation-code, so a not-yet-seen prefix (e.g. a different numbering system, or Strong's own less-common 'S' form used by some tools) is still caught by check_strong_code_native_script without a code or data change. This is deliberately broad rather than an enumerated letter list — the risk of a real citation-code being missed because its letter isn't in a hardcoded set is worse than the near-zero risk of a random capital+digits token appearing coincidentally next to native script in this corpus's prose style.",
     "pattern": "single uppercase Latin letter (A-Z) followed by 2-5 digits, optionally preceded by the word 'Strong '"
+  },
+  "native_script_bare_transliteration_gate": {
+    "_comment": "HARD GATE — a language's own native script (e.g. Chinese 道, 拯救者) glued directly to a bare Latin transliteration in parentheses, with no comma and no space: '道(Logos)', '拯救者(Amnos)'. Confirmed in the wild 2026-07-28: 52 occurrences across the zh discovery+encounters corpus (logos_creation, morning_star, restoration_by_fire, new_covenant_cup, and 12 other files), zero false positives on manual review — every parenthetical sampled was a genuine Greek/Hebrew transliteration (Logos, Amnos, AGAPAS, YHWH, kippur, ...), never an ordinary English gloss word. Zero hits in ja/hi/ar as of that scan. Enforced by check_native_script_bare_transliteration in greek_hebrew_gloss.py, scoped to any language present in native_script_ranges.json (same reuse pattern as check_strong_code_native_script) so a future occurrence in another language is still caught without a code change.",
+    "rule": "<language's own native script, zero space, zero comma>(<Latin transliteration>) is REJECTED — the real Greek/Hebrew word was never given, only a native-language gloss word standing next to the transliteration. Required form is the standard gloss: '<Greek/Hebrew word>, (translit)' with the native-script Greek/Hebrew word itself present.",
+    "violation_example": "道(Logos) — '道' is the Chinese gloss word for 'word', not the Greek λόγος itself; 'Logos' is a bare transliteration with no native-script anchor",
+    "severity": "error",
+    "min_translit_length": 2,
+    "max_translit_length": 30
   }
 }

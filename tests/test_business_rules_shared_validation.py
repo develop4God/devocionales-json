@@ -28,6 +28,7 @@ sys.path.insert(0, str(REPO_ROOT))
 from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_word_study_bare_transliteration,
     check_strong_code_bare_transliteration,
+    check_native_script_bare_transliteration,
 )
 from shared_validation.lexicon_check import check_lexical_accuracy  # noqa: E402
 from shared_validation.lexicon_source import LexiconEntry  # noqa: E402
@@ -354,6 +355,155 @@ class TestCheckLexicalAccuracy(unittest.TestCase):
         self.assertEqual(report.errors, [], f"Expected no errors, got: {report.errors}")
         self.assertEqual(len(results), 1)
         self.assertEqual(results[0].status.value, "inflected_no_lemma_match")
+
+
+# ── check_native_script_bare_transliteration ────────────────────────────────
+#
+# Detects `lang`'s own native script glued directly (zero space, no comma)
+# to a bare Latin transliteration in parens — e.g. Chinese '道(Logos)' —
+# meaning the real Greek/Hebrew word was never given, only a native-language
+# gloss word standing next to the transliteration. Confirmed in the wild
+# 2026-07-28: 52 occurrences across the zh discovery+encounters corpus.
+
+
+class TestCheckNativeScriptBareTransliteration(unittest.TestCase):
+    def test_zh_word_glued_to_bare_translit_is_an_error(self):
+        report = Report("TEST")
+        check_native_script_bare_transliteration(
+            "主耶稣啊,我的道(Logos)和我的晨星。",
+            "cards[4].prayer.content",
+            "zh",
+            "ctx",
+            report,
+        )
+
+        self.assertTrue(
+            any("Logos" in e and "glued directly" in e for e in report.errors),
+            f"Expected a glued-native-script error, got: {report.errors}",
+        )
+
+    def test_latin_script_language_is_never_checked(self):
+        # de/en/es/fil/fr/pt have no entry in native_script_ranges.json —
+        # their own script already is Latin, so this bug can't occur.
+        report = Report("TEST")
+        check_native_script_bare_transliteration(
+            "the word(Logos) appears here.",
+            "cards[0].content",
+            "en",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(
+            report.errors,
+            [],
+            f"Latin-script languages should skip this check entirely, got: {report.errors}",
+        )
+
+    def test_word_key_is_skipped(self):
+        # 'word' is the shared _SKIP_KEYS exemption used by every check in
+        # this module.
+        report = Report("TEST")
+        check_native_script_bare_transliteration(
+            "道(Logos)",
+            "cards[0].greek_words[0].word",
+            "zh",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(
+            report.errors,
+            [],
+            f"The 'word' key should be skipped entirely, got: {report.errors}",
+        )
+
+    def test_space_before_paren_does_not_trigger(self):
+        # A space between the native word and the parenthetical is a
+        # different (still likely wrong) shape, but not this specific
+        # glued-with-zero-space bug — out of scope for this check.
+        report = Report("TEST")
+        check_native_script_bare_transliteration(
+            "我的道 (Logos)是光。",
+            "cards[0].content",
+            "zh",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(
+            report.errors,
+            [],
+            f"A space before the parenthesis should not trigger this check, got: {report.errors}",
+        )
+
+    def test_lexicon_none_falls_back_to_shape_only_error(self):
+        # Default behavior (no lexicon wired in) must be unchanged from the
+        # shape-only detection — this is the actual call shape used by both
+        # validate_discovery.py and validate_encounters.py when lexicon
+        # loading is skipped/unavailable.
+        report = Report("TEST")
+        check_native_script_bare_transliteration(
+            "拯救者(Amnos)是羔羊。",
+            "cards[2].revelation_key",
+            "zh",
+            "ctx",
+            report,
+            lexicon=None,
+        )
+
+        self.assertTrue(
+            any("Amnos" in e and "glued directly" in e for e in report.errors),
+            f"Expected the shape-only error with lexicon=None, got: {report.errors}",
+        )
+
+    def test_lexicon_present_with_nearby_strong_code_checks_spelling(self):
+        # When a Strong's code sits right after the bare transliteration,
+        # the real headword is knowable even though never written out —
+        # verify the given spelling against Strong's own, rather than the
+        # generic missing-word message.
+        lexicon = _FakeLexicon(
+            {"λόγος": [LexiconEntry("G3056", "λόγος", "lógos", "a word")]}
+        )
+        report = Report("TEST")
+        check_native_script_bare_transliteration(
+            "太初有道(Logoz) G3056。",
+            "cards[0].content",
+            "zh",
+            "ctx",
+            report,
+            lexicon=lexicon,
+        )
+
+        self.assertTrue(
+            any(
+                "Logoz" in e and "lógos" in e and "check spelling" in e
+                for e in report.errors
+            ),
+            f"Expected a Strong's-verified spelling-mismatch error, got: {report.errors}",
+        )
+
+    def test_lexicon_present_no_nearby_strong_code_falls_back_to_shape_only(self):
+        # Most real corpus occurrences (all 52 found 2026-07-28) have no
+        # nearby Strong's code — lexicon being passed in must not change
+        # that outcome.
+        lexicon = _FakeLexicon(
+            {"λόγος": [LexiconEntry("G3056", "λόγος", "lógos", "a word")]}
+        )
+        report = Report("TEST")
+        check_native_script_bare_transliteration(
+            "我的道(Logos)和我的晨星。",
+            "cards[4].prayer.content",
+            "zh",
+            "ctx",
+            report,
+            lexicon=lexicon,
+        )
+
+        self.assertTrue(
+            any("Logos" in e and "glued directly" in e for e in report.errors),
+            f"Expected the shape-only fallback with no nearby Strong code, got: {report.errors}",
+        )
 
 
 if __name__ == "__main__":

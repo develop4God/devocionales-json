@@ -18,7 +18,11 @@ import json
 import re
 from pathlib import Path
 
-from .lexicon_source import load_native_script_ranges, resolve_lemma_entry
+from .lexicon_source import (
+    load_native_script_ranges,
+    resolve_lemma_entry,
+    find_nearby_strong_citation,
+)
 from .report import ReportLike
 
 _GREEK_RE = re.compile(r"[Ͱ-Ͽἀ-῿]")
@@ -450,6 +454,99 @@ def check_strong_code_native_script(
             report.E(
                 f"{ctx}: Strong code '{m.group(0)}' has no real Hebrew/Greek word nearby — only {lang} native script, which is likely a phonetic respelling standing in for the missing gloss (found: '...{snippet}...', see gloss_format.json 'Phonetic respelling into the target script instead of Latin')"
             )
+
+
+# A native-script word run immediately (zero space, no comma) followed by
+# a bare Latin transliteration in parentheses — e.g. Chinese '道(Logos)' or
+# '拯救者(Amnos)'. Confirmed in the wild 2026-07-28: 52 occurrences across
+# the whole zh discovery+encounters corpus (logos_creation, morning_star,
+# restoration_by_fire, new_covenant_cup, and others), zero false positives
+# — every parenthetical word sampled was a genuine Greek/Hebrew
+# transliteration (Logos, Amnos, AGAPAS, YHWH, kippur, ...), never an
+# ordinary English gloss/acronym. Zero hits in ja/hi/ar, which either
+# space the parenthetical differently or haven't picked up this habit —
+# scoped to any language in native_script_ranges.json anyway (same as
+# check_strong_code_native_script) so a future occurrence elsewhere is
+# still caught.
+_native_bare_translit_re_cache = None
+
+
+def _native_bare_translit_re():
+    """Compiled from gloss_format.json's native_script_bare_transliteration_gate
+    min/max length rather than hardcoded here — same _load_gloss_format()
+    reuse pattern as _translit_diacritic_re()."""
+    global _native_bare_translit_re_cache
+    if _native_bare_translit_re_cache is None:
+        gate = _load_gloss_format()["native_script_bare_transliteration_gate"]
+        lo, hi = gate["min_translit_length"], gate["max_translit_length"]
+        _native_bare_translit_re_cache = re.compile(
+            rf"[^\s(]\(([A-Za-zÁÉÍÓÚÝáéíóúýĀāĒēĪīŌōŪūḖḗṒṓ]{{{lo},{hi}}})\)"
+        )
+    return _native_bare_translit_re_cache
+
+
+def check_native_script_bare_transliteration(
+    text: str, path: str, lang: str, ctx: str, report: ReportLike, lexicon=None
+) -> None:
+    """HARD GATE: `lang`'s own native script glued directly (no space, no
+    comma) to a bare Latin transliteration in parentheses — e.g. Chinese
+    '道(Logos)' — means the real Greek/Hebrew word was never given at all,
+    only a Chinese gloss/translation standing next to the transliteration
+    that was meant to accompany it (required form: '<Greek/Hebrew word>,
+    (translit)', see gloss_format.json). Distinct from
+    check_word_study_bare_transliteration (which needs the whole field to
+    have zero Greek/Hebrew characters anywhere and a macron diacritic as
+    its trigger): this fires per-occurrence, anchored on the native-script
+    letter immediately before the parenthesis, so it still catches this
+    bug even in a field that also contains a separate, correctly-formed
+    gloss elsewhere.
+
+    `lexicon` (optional, a shared_validation.lexicon_source.LexiconSource):
+    when a Strong's-code citation (see find_nearby_strong_citation) sits
+    right after the bare transliteration — e.g. '道(Logos G3056)' — the
+    real headword is knowable even though it was never written out, so
+    this checks the given transliteration against Strong's own spelling
+    for that code and reports a spelling mismatch instead of the generic
+    missing-word error. No corpus example of this shape exists yet (all
+    52 occurrences found 2026-07-28 have no nearby Strong's code); this
+    branch is forward-looking, same reuse (find_nearby_strong_citation +
+    lookup_by_number) as check_strong_code_native_script already uses
+    elsewhere in this module. `lexicon=None` (the default) skips this
+    branch entirely and always falls back to the shape-only error below.
+
+    Latin-script languages (de, en, es, fil, fr, pt, ...) have no entry in
+    native_script_ranges.json and skip this check entirely — their own
+    script already is Latin, so this bug can't occur for them.
+    """
+    key = path.rsplit(".", 1)[-1].split("[")[0]
+    if key in _SKIP_KEYS:
+        return
+    native_re = _native_script_re_for_lang(lang)
+    if native_re is None:
+        return
+    for m in _native_bare_translit_re().finditer(text):
+        if not native_re.match(text[m.start()]):
+            continue
+        translit = m.group(1)
+        if not _LATIN_TRANSLIT_RE.match(translit):
+            continue
+        if lexicon is not None:
+            code, citation_end = find_nearby_strong_citation(text, m.end(), lang)
+            if code:
+                entry = lexicon.lookup_by_number(code)
+                if entry is not None:
+                    if translit.lower().strip() != entry.translit.lower().strip():
+                        report.E(
+                            f"{ctx}: '{translit}' near Strong's code '{code}' — {entry.strongs_number} gives '{entry.translit}', not '{translit}' — check spelling (native-script word is still missing, required format: '<word>, ({entry.translit})', see gloss_format.json)"
+                        )
+                    else:
+                        report.E(
+                            f"{ctx}: '{translit}' ({code}) is a bare transliteration standing next to a Strong's code with no native-script word given anywhere (required format: '<word>, ({translit})' with the native-script word present, see gloss_format.json)"
+                        )
+                    continue
+        report.E(
+            f"{ctx}: '{translit}' in parentheses is glued directly to {lang} native script with no comma — the real Greek/Hebrew word was never given, only its transliteration next to a {lang} gloss (required format: '<word>, ({translit})' with the native-script word present, see gloss_format.json)"
+        )
 
 
 # An ALL-CAPS (optionally macron/acute-accented) Latin word immediately
