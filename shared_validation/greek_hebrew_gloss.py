@@ -16,6 +16,7 @@ Latin elsewhere in a non-Latin-script field.
 
 import json
 import re
+import unicodedata
 from pathlib import Path
 
 from .lexicon_source import (
@@ -465,9 +466,10 @@ def check_strong_code_native_script(
 # transliteration (Logos, Amnos, AGAPAS, YHWH, kippur, ...), never an
 # ordinary English gloss/acronym. Zero hits in ja/hi/ar, which either
 # space the parenthetical differently or haven't picked up this habit —
-# scoped to any language in native_script_ranges.json anyway (same as
-# check_strong_code_native_script) so a future occurrence elsewhere is
-# still caught.
+# For Latin-script locales, the equivalent anchor is the complete word before
+# the parenthesis: it is an error only when that word is *not* the same
+# transliteration (e.g. ``love(agape)``). ``agape(agape)`` is ordinary prose,
+# not a substituted translation-word.
 _native_bare_translit_re_cache = None
 
 
@@ -483,6 +485,23 @@ def _native_bare_translit_re():
             rf"[^\s(]\(([A-Za-zÁÉÍÓÚÝáéíóúýĀāĒēĪīŌōŪūḖḗṒṓ]{{{lo},{hi}}})\)"
         )
     return _native_bare_translit_re_cache
+
+
+_LATIN_WORD_AT_END_RE = re.compile(r"[A-Za-zÁÉÍÓÚÝáéíóúýĀāĒēĪīŌōŪūḖḗṒṓ]+$")
+
+
+def _normalized_translit(word: str) -> str:
+    """Compare transliterations without treating case/diacritics as meaning.
+
+    Corpus prose may write ``AGAPAS`` beside ``agapās``; that is still the
+    same transliteration, whereas ``love(agape)`` is the malformed shape this
+    gate is intended to expose in Latin-script locales.
+    """
+    return "".join(
+        char
+        for char in unicodedata.normalize("NFD", word).casefold()
+        if not unicodedata.combining(char)
+    )
 
 
 def check_native_script_bare_transliteration(
@@ -514,22 +533,50 @@ def check_native_script_bare_transliteration(
     elsewhere in this module. `lexicon=None` (the default) skips this
     branch entirely and always falls back to the shape-only error below.
 
-    Latin-script languages (de, en, es, fil, fr, pt, ...) have no entry in
-    native_script_ranges.json and skip this check entirely — their own
-    script already is Latin, so this bug can't occur for them.
+    In Latin-script languages (de, en, es, fil, fr, pt, ...), the same shape
+    is only an error when the full Latin word immediately before the paren is
+    different from the transliteration. This catches a translated meaning
+    word substituted for the missing Greek/Hebrew word (``love(agape)``),
+    while allowing an ordinary repeated transliteration (``agape(agape)``).
     """
     key = path.rsplit(".", 1)[-1].split("[")[0]
     if key in _SKIP_KEYS:
         return
     native_re = _native_script_re_for_lang(lang)
-    if native_re is None:
-        return
     for m in _native_bare_translit_re().finditer(text):
-        if not native_re.match(text[m.start()]):
-            continue
         translit = m.group(1)
         if not _LATIN_TRANSLIT_RE.match(translit):
             continue
+        if native_re is not None:
+            if not native_re.match(text[m.start()]):
+                continue
+        else:
+            preceding = _LATIN_WORD_AT_END_RE.search(text[: m.start() + 1])
+            normalized_translit = _normalized_translit(translit)
+            if (
+                preceding is None
+                or _normalized_translit(preceding.group(0))
+                == normalized_translit
+                # Romance-language inclusive forms such as ``tel(le)`` and
+                # ``ami(e)`` are not transliterations.  The gate's two-letter
+                # minimum is necessary for non-Latin scripts (e.g. ``ēn``),
+                # but would otherwise mistake this ordinary suffix notation
+                # for a Latin-language gloss.
+                or (
+                    len(normalized_translit) <= 2
+                    and (
+                        _normalized_translit(preceding.group(0)).endswith(
+                            normalized_translit
+                        )
+                        # ``tel(le)`` overlaps its final ``l`` with the
+                        # optional feminine suffix; it is likewise ordinary
+                        # inclusive-language notation.
+                        or _normalized_translit(preceding.group(0))[-1:]
+                        == normalized_translit[:1]
+                    )
+                )
+            ):
+                continue
         if lexicon is not None:
             code, citation_end = find_nearby_strong_citation(text, m.end(), lang)
             if code:
@@ -544,8 +591,13 @@ def check_native_script_bare_transliteration(
                             f"{ctx}: '{translit}' ({code}) is a bare transliteration standing next to a Strong's code with no native-script word given anywhere (required format: '<word>, ({translit})' with the native-script word present, see gloss_format.json)"
                         )
                     continue
+        anchor = (
+            f"{lang} native script"
+            if native_re is not None
+            else f"the Latin meaning-word '{preceding.group(0)}'"
+        )
         report.E(
-            f"{ctx}: '{translit}' in parentheses is glued directly to {lang} native script with no comma — the real Greek/Hebrew word was never given, only its transliteration next to a {lang} gloss (required format: '<word>, ({translit})' with the native-script word present, see gloss_format.json)"
+            f"{ctx}: '{translit}' in parentheses is glued directly to {anchor} with no comma — the real Greek/Hebrew word was never given, only its transliteration next to a gloss (required format: '<word>, ({translit})' with the Greek/Hebrew word present, see gloss_format.json)"
         )
 
 

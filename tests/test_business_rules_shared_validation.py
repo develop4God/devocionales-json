@@ -382,12 +382,25 @@ class TestCheckNativeScriptBareTransliteration(unittest.TestCase):
             f"Expected a glued-native-script error, got: {report.errors}",
         )
 
-    def test_latin_script_language_is_never_checked(self):
-        # de/en/es/fil/fr/pt have no entry in native_script_ranges.json —
-        # their own script already is Latin, so this bug can't occur.
+    def test_latin_script_meaning_word_glued_to_translit_is_an_error(self):
         report = Report("TEST")
         check_native_script_bare_transliteration(
-            "the word(Logos) appears here.",
+            "The love(agape) of God is shown here.",
+            "cards[0].content",
+            "en",
+            "ctx",
+            report,
+        )
+
+        self.assertTrue(
+            any("agape" in e and "meaning-word 'love'" in e for e in report.errors),
+            f"Expected a Latin meaning-word error, got: {report.errors}",
+        )
+
+    def test_latin_script_repeated_translit_is_not_an_error(self):
+        report = Report("TEST")
+        check_native_script_bare_transliteration(
+            "The AGAPAS(agapās) form appears here.",
             "cards[0].content",
             "en",
             "ctx",
@@ -397,7 +410,23 @@ class TestCheckNativeScriptBareTransliteration(unittest.TestCase):
         self.assertEqual(
             report.errors,
             [],
-            f"Latin-script languages should skip this check entirely, got: {report.errors}",
+            f"Repeated transliteration must not be flagged, got: {report.errors}",
+        )
+
+    def test_latin_inclusive_suffix_is_not_a_transliteration(self):
+        report = Report("TEST")
+        check_native_script_bare_transliteration(
+            "Merci de me recevoir tel(le) que je suis.",
+            "cards[0].content",
+            "fr",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(
+            report.errors,
+            [],
+            f"Inclusive-language suffix must not be flagged, got: {report.errors}",
         )
 
     def test_word_key_is_skipped(self):
