@@ -80,7 +80,7 @@ Run these in order after every change, before reporting done.
 ```bash
 source .venv/bin/activate && ruff format <changed files>
 ```
-Run this **first**, before lint. The repo was normalized to `ruff format`'s Black-compatible style in a one-time repo-wide reformat (2026-07-27) — the codebase had no prior consistent quote convention (187 single vs 164 double-quoted string literals in `shared_validation/` alone before that commit). Every file you touch should come out of this step already formatted; do not hand-format or second-guess its output. Zero tolerance, same as `dart format` — unformatted code is not done.
+Run this **first**, before lint. The repo has been normalized to `ruff format`'s Black-compatible style repo-wide — every file should already come out clean from a bare `ruff format --check`. If a file you're about to touch isn't yet formatted (check with `ruff format --check <file>` before editing), that's either drift since the last reformat or a file the reformat missed; format it as part of your change rather than leaving it inconsistent, and mention it in your report. Every file you touch should come out of this step already formatted; do not hand-format or second-guess its output. Zero tolerance, same as `dart format` — unformatted code is not done.
 
 ### Gate 2 — Fix (ruff check --fix) — the `dart fix --apply` equivalent
 ```bash
@@ -111,7 +111,7 @@ source .venv/bin/activate && python3 -m unittest discover -s tests -v
 ```
 This is CI's other real gate. `tests/test_promoted_validators.py` smoke-tests the master validators against real repo content and a deliberately-broken fixture — run the full suite, not a subset, since it's fast and this is what CI actually runs.
 
-**Baseline note:** `test_discovery_master_validator_passes` currently fails whenever the content corpus has known, tracked, in-progress errors (e.g. mid-way through a multi-session gloss-format cleanup) — it asserts a fully clean validator run, not just "no regression." A pre-existing failure here is not necessarily caused by your change. Confirm by checking whether the specific errors printed in the failure output match files/studies you did not touch — if they do, it's baseline content debt, not something you broke; note it in your report rather than treating it as a blocker you must fix.
+**Baseline note:** `test_discovery_master_validator_passes` asserts a fully clean validator run, not just "no regression" — it will fail any time the content corpus has known, tracked, in-progress errors (e.g. content fixes spanning multiple sessions that aren't finished yet). A failure here is not necessarily caused by your change. Confirm by checking whether the specific errors printed in the failure output match files/content you did not touch — if they do, it's pre-existing content debt, not something you broke; note it in your report rather than treating it as a blocker you must fix.
 
 ### Gate 6 — False-positive review (detection checks only)
 If the task added or changed a check that flags content (not a pure refactor):
@@ -124,13 +124,13 @@ If the task added or changed a check that flags content (not a pure refactor):
 
 **A new or changed check function ships with a unit test, in the same PR. No exceptions.**
 
-`tests/test_promoted_validators.py` and `tests/test_run_report.py` only cover structural/gating behavior — they do not exercise individual check functions. `tests/test_business_rules_discovery.py`, `tests/test_business_rules_encounters.py`, and `tests/test_business_rules_shared_validation.py` are the established, named home for exactly this: their own docstrings state they exist to add "new coverage for pre-existing, currently-untested logic." `shared_validation/greek_hebrew_gloss.py`'s older checks (`check_greek_hebrew_transliteration`, `check_bare_transliteration_reuse`, `check_strong_code_native_script`) still have **zero** test coverage as of this skill's writing — do not treat that absence as precedent that new checks don't need tests. It means the module still has a coverage gap for its older functions, not that the gap is acceptable to widen with new ones.
+`tests/test_promoted_validators.py` and `tests/test_run_report.py` only cover structural/gating behavior — they do not exercise individual check functions. The `test_business_rules_*.py` files are the established, named home for exactly this: their own docstrings state they exist to add "new coverage for pre-existing, currently-untested logic." Before writing a test, `grep` the `test_business_rules_*.py` files for the function's name — if it's already covered, extend that coverage; if a sibling check function in the same module is untested, that's a pre-existing gap, not a license to leave your own change untested too.
 
 **Where a new test goes:**
-- `shared_validation/` logic shared by both pipelines → `tests/test_business_rules_shared_validation.py` (created 2026-07-27, starting with `check_word_study_bare_transliteration`'s coverage — follow its pattern for anything else in `greek_hebrew_gloss.py`, `text_checks.py`, etc.).
+- `shared_validation/` logic shared by both pipelines → whichever `test_business_rules_*.py` file already covers logic from that module; if none does, create one following the naming convention (`test_business_rules_<scope>.py`).
 - Pipeline-specific logic → the matching `test_business_rules_discovery.py` / `test_business_rules_encounters.py`.
-- If genuinely ambiguous which file fits, ask — don't silently create a fourth test file.
-- Follow the established pattern exactly: `from shared_validation.report import Report`, construct `report = Report('TEST')`, call the check function directly with real inputs, assert against `report.errors` / `report.warnings` — not via subprocess, not via the master validators. See `test_business_rules_shared_validation.py`'s `TestCheckWordStudyBareTransliteration` class for the shape.
+- If genuinely ambiguous which file fits, ask — don't silently create a new test file when an existing one might be the intended home.
+- Follow the established pattern exactly: `from shared_validation.report import Report`, construct `report = Report('TEST')`, call the check function directly with real inputs, assert against `report.errors` / `report.warnings` — not via subprocess, not via the master validators. Read an existing `Test*` class in whichever `test_business_rules_*.py` file you're adding to and match its shape (setup, naming, assertion style) exactly.
 
 **Minimum coverage for a new check function:**
 - At least one test proving it correctly flags a real positive case (a string you know should trigger it).
@@ -185,10 +185,10 @@ Non-negotiable. If you're about to do any of these, stop and ask instead.
 | 2 | Adding a second traversal/walker function instead of using the existing per-string loop / `iter_strings` | Every other check in the module already assumes one traversal; a second one means every future check has to remember which loop it's in |
 | 3 | Hardcoding a charset, word list, or marker set as a Python literal when the module already loads similar data from JSON | Breaks the "data, not hardcoded" convention this codebase deliberately follows — see every `_load_*()` function's docstring |
 | 4 | Wiring a new check into only one of `validate_discovery.py` / `validate_encounters.py` when the underlying module is shared by both | Silent asymmetry — a bug class gets caught in one pipeline and not the other for no principled reason |
-| 5 | Shipping a detection regex that hasn't been tested against real corpus text (only synthetic examples) | Synthetic examples don't reveal real-world false positives — this produced 1200+ false-positive warnings the first time it was skipped |
+| 5 | Shipping a detection regex that hasn't been tested against real corpus text (only synthetic examples) | Synthetic examples don't reveal real-world false positives — a check wired straight into the validator without this step can flood the report with hundreds of false positives on real content |
 | 6 | Reporting "done" after only skimming the first few validator findings | The false positive is never in the first three results — it's in result forty |
 | 7 | A check function that takes a concrete `Report` instead of `report: ReportLike` | Breaks the existing Dependency Inversion boundary |
-| 8 | Reporting a new or changed check function "done" with no unit test added | `greek_hebrew_gloss.py`'s existing checks already shipped untested — do not repeat that gap on new code; a check with no test is a regression waiting to happen the next time someone edits the regex it depends on |
+| 8 | Reporting a new or changed check function "done" with no unit test added | A check with no test is a regression waiting to happen the next time someone edits the regex it depends on — some existing checks predate this rule and are untested, but that history is not a license to add more |
 
 ---
 
