@@ -25,8 +25,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from shared_validation.greek_hebrew_gloss import check_word_study_bare_transliteration
-from shared_validation.report import Report
+from shared_validation.greek_hebrew_gloss import check_word_study_bare_transliteration  # noqa: E402
+from shared_validation.report import Report  # noqa: E402
 
 
 # ── check_word_study_bare_transliteration ───────────────────────────────────

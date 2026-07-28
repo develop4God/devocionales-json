@@ -435,7 +435,7 @@ def diff_json(original, rebuilt, path="root"):
     """Return a list of human-readable mismatch descriptions."""
     problems = []
 
-    if type(original) != type(rebuilt):
+    if type(original) is not type(rebuilt):
         # int/float/bool distinctions from decode_scalar are the only
         # expected wrinkle; treat numeric equality as acceptable.
         if (

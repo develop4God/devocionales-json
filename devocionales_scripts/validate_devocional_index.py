@@ -113,7 +113,6 @@ def validate_index(index_path: Path, base_path: Path):
             continue
 
         # ── 5. Both years present for this lang ────────────────────────────
-        declared_years = set(versions.keys()) if isinstance(versions, dict) else set()
         for version, years in versions.items():
             if not isinstance(years, dict):
                 errors.append(

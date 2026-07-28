@@ -315,9 +315,11 @@ def run(
 
     print(f"\n{CYN}── cross-file: fields that must match across all languages{RST}")
     for field in drift_top_level_fields:
-        check_drift(field, {l: d.get(field) for l, d in loaded.items()}, report)
+        check_drift(field, {lang: d.get(field) for lang, d in loaded.items()}, report)
     check_drift(
-        "card count", {l: len(d.get("cards", [])) for l, d in loaded.items()}, report
+        "card count",
+        {lang: len(d.get("cards", [])) for lang, d in loaded.items()},
+        report,
     )
     for i in range(max_cards):
         order_values, type_values = {}, {}

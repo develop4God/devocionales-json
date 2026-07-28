@@ -35,17 +35,20 @@ def _remote_to_local_shape(remote_entry: dict) -> dict:
     }
 
 
-def _fetch_remote_index(attempts: int = REMOTE_FETCH_ATTEMPTS) -> Optional[dict]:
+def _fetch_remote_index(
+    attempts: int = REMOTE_FETCH_ATTEMPTS,
+) -> tuple[Optional[dict], Optional[Exception]]:
     """Fetch the remote bible_versions SOT index, retrying transient failures
     a few times before giving up (a single flaky network blip shouldn't be
-    indistinguishable from genuine unreachability)."""
+    indistinguishable from genuine unreachability). Returns (index, last_err)
+    so callers falling back to a local cache can still report why."""
     last_err = None
     for attempt in range(1, attempts + 1):
         try:
             with urllib.request.urlopen(
                 REMOTE_INDEX_URL, timeout=REMOTE_FETCH_TIMEOUT
             ) as resp:
-                return json.loads(resp.read())
+                return json.loads(resp.read()), None
         except (
             urllib.error.URLError,
             TimeoutError,
@@ -55,7 +58,7 @@ def _fetch_remote_index(attempts: int = REMOTE_FETCH_ATTEMPTS) -> Optional[dict]
             last_err = e
             if attempt < attempts:
                 time.sleep(min(2**attempt, 8))  # 2s, 4s, ...
-    return None
+    return None, last_err
 
 
 def _write_local_cache(cache_path: Path, remote_langs: dict) -> None:
@@ -102,7 +105,7 @@ def load_bible_versions(cache_name: str) -> tuple[dict, bool, Optional[Exception
     """
     cache_path = Path(tempfile.gettempdir()) / f"{cache_name}_bible_versions_cache.json"
 
-    remote = _fetch_remote_index()
+    remote, fetch_err = _fetch_remote_index()
     if remote is not None:
         remote_langs = remote.get("languages", {})
         _write_local_cache(cache_path, remote_langs)
@@ -118,7 +121,7 @@ def load_bible_versions(cache_name: str) -> tuple[dict, bool, Optional[Exception
     if cache_path.exists():
         try:
             languages = json.loads(cache_path.read_text(encoding="utf-8"))["languages"]
-            return languages, False, None
+            return languages, False, fetch_err
         except (json.JSONDecodeError, KeyError, OSError) as e:
             raise RuntimeError(
                 f"Could not reach the Bible versions SOT at {REMOTE_INDEX_URL} "

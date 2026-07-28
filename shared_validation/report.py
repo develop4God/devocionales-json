@@ -14,7 +14,7 @@ class ReportLike(Protocol):
 
     def E(self, msg: str) -> None: ...
     def W(self, msg: str) -> None: ...
-    def I(self, msg: str) -> None: ...
+    def I(self, msg: str) -> None: ...  # noqa: E743
 
 
 class Report:
@@ -30,7 +30,7 @@ class Report:
     def W(self, msg):
         self.warnings.append(f"⚠️  WARNING: {msg}")
 
-    def I(self, msg):
+    def I(self, msg):  # noqa: E743
         self.info.append(f"ℹ️  INFO: {msg}")
 
     def print(self, final=True) -> bool:

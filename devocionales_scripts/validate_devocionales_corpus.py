@@ -57,15 +57,15 @@ _REPO_ROOT = _find_repo_root(Path(__file__).resolve().parent)
 sys.path.insert(0, str(_REPO_ROOT))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from shared_validation.report import ReportLike
-from shared_validation.run_report import RunReport
-from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL
-from shared_validation.lint import lint_json_files
+from shared_validation.report import ReportLike  # noqa: E402
+from shared_validation.run_report import RunReport  # noqa: E402
+from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL  # noqa: E402
+from shared_validation.lint import lint_json_files  # noqa: E402
 
-from corpus_index_reader import CorpusIndexReader
-from corpus_file_validator import CorpusFileValidator
-from corpus_calendar_checker import CorpusCalendarChecker
-from corpus_schema_checker import CorpusSchemaChecker
+from corpus_index_reader import CorpusIndexReader  # noqa: E402
+from corpus_file_validator import CorpusFileValidator  # noqa: E402
+from corpus_calendar_checker import CorpusCalendarChecker  # noqa: E402
+from corpus_schema_checker import CorpusSchemaChecker  # noqa: E402
 
 SCRIPTS_DIR = Path(__file__).parent
 CORPUS_DIR = SCRIPTS_DIR.parent

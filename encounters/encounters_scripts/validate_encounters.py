@@ -49,40 +49,40 @@ def _find_repo_root(start: Path) -> Path:
 
 
 sys.path.insert(0, str(_find_repo_root(Path(__file__).resolve().parent)))
-from shared_validation.report import Report
-from shared_validation.run_report import RunReport
-from shared_validation.family_check import run_family_validation_all
-from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL
-from shared_validation.text_checks import (
+from shared_validation.report import Report  # noqa: E402
+from shared_validation.run_report import RunReport  # noqa: E402
+from shared_validation.family_check import run_family_validation_all  # noqa: E402
+from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL  # noqa: E402
+from shared_validation.text_checks import (  # noqa: E402
     iter_strings,
     check_quote_anomalies,
     check_halfwidth_colon_in_title,
     check_no_latin_leak,
     is_cognate,
 )
-from shared_validation.greek_hebrew_gloss import (
+from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_greek_hebrew_transliteration,
     check_bare_transliteration_reuse,
     check_script_boundary_spacing,
     check_strong_code_native_script,
     check_word_study_bare_transliteration,
 )
-from shared_validation.lint import lint_json_files
-from shared_validation.scripture_check import (
+from shared_validation.lint import lint_json_files  # noqa: E402
+from shared_validation.scripture_check import (  # noqa: E402
     ScriptureValidator,
     find_scripture_pairs,
     validate_pair,
     validate_translated_pair,
 )
 
-from verify_image_urls import (
+from verify_image_urls import (  # noqa: E402
     EncounterIndexReader as ImageIndexReader,
     ImageReferenceExtractor,
     GitHubAssetChecker,
     ImageFormatValidator,
     MAX_CONCURRENT_REQUESTS,
 )
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor  # noqa: E402
 
 # ── Config ────────────────────────────────────────────────────────────────────
 

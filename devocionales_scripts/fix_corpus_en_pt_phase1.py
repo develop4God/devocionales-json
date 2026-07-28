@@ -155,7 +155,6 @@ def process_arc(dry_run=False):
     total_changes = {"em_o_nome": 0, "dele": 0, "reverential": 0, "p2": 0}
     for fname, lang in ARC_FILES:
         data, lang_data, indent = load(fname, lang)
-        year = "2025" if "2025" in fname else "2026"
         changed_entries = 0
         for e in all_entries(lang_data):
             entry_changed = False
