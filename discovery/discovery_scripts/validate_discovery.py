@@ -48,8 +48,8 @@ sys.path.insert(0, str(_find_repo_root(Path(__file__).resolve().parent)))
 from shared_validation.report import Report  # noqa: E402
 from shared_validation.run_report import RunReport  # noqa: E402
 from shared_validation.family_check import run_family_validation_all  # noqa: E402
-from shared_validation.greek_family_pattern_check import (  # noqa: E402
-    run_for_type as run_greek_family_pattern_check,
+from shared_validation.lexicon_family_check import (  # noqa: E402
+    run_for_type as run_lexicon_family_check,
 )
 from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL  # noqa: E402
 from shared_validation.text_checks import (  # noqa: E402
@@ -629,17 +629,21 @@ def validate_translation_files(
 
 
 def validate_greek_family_patterns(report: Report) -> None:
-    """Cross-file Greek/Hebrew gloss consistency, independent of Phase E's
-    family_check.run_family_validation_all — checks that the same inline
-    word-study gloss (native script + transliteration) appears identically
-    across every language of a family, catching cases where a translation
-    drifted to a different word/spelling at the same gloss position.
-    Prints its own per-family report; only the total error count is folded
-    into this phase's Report."""
-    total_errors = run_greek_family_pattern_check("discovery")
+    """Every inline and structured Greek/Hebrew gloss checked directly
+    against Strong's Concordance (the SOT) — no cross-file majority vote.
+    A majority-vote comparison can only ever detect DISAGREEMENT between
+    languages: if the same wrong spelling is copy-pasted into every file,
+    every file agrees and majority vote reports nothing even though the
+    shared value is factually wrong (this exact failure mode hid dozens of
+    real errors in this corpus under the previous majority-vote design).
+    Checking against Strong's directly, independently per language, has no
+    such blind spot. Prints its own per-family report; only the total
+    error count is folded into this phase's Report."""
+    lexicon = StrongsLexiconSource()
+    total_errors = run_lexicon_family_check("discovery", lexicon)
     if total_errors:
         report.E(
-            f"{total_errors} cross-file Greek/Hebrew gloss error(s) — see output above"
+            f"{total_errors} Strong's transliteration mismatch(es) — see output above"
         )
 
 
