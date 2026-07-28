@@ -16,11 +16,14 @@ What it checks: the same source-language item translated into N languages
 should carry the exact same sequence of native-script Greek/Hebrew words at
 the exact same field position (a translation changes the surrounding prose,
 never the word being studied), and the same Latin transliteration for each
-occurrence. No language is treated as ground truth — an occurrence present
-in 7 of 8 languages, or transliterated one way in 7 of 8, flags the
-outlier(s), not "en is right, X is wrong". Malformed occurrences (see
-gloss_format.json) are excluded from the majority so a shared spec
-violation can't outvote a compliant minority.
+occurrence. No language is treated as ground truth — the "correct" pattern
+for each occurrence is the one the majority of well-formed languages agree
+on (ties broken by first-seen), then every language at that position is
+graded against it: ✓ if it matches, ✗ if it doesn't. Malformed occurrences
+(see gloss_format.json) are excluded from the vote so a shared spec
+violation can't outvote a compliant minority — malformed-format checking
+itself is greek_hebrew_gloss.py's job, not this module's; a malformed
+occurrence here is shown as excluded, not marked ✗.
 
 Reuses, never reimplements:
     - shared_validation.family_check.{Reporter, load_all, check_drift}
@@ -49,6 +52,7 @@ import argparse
 import json
 import re
 import sys
+from collections import Counter
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent
@@ -62,14 +66,12 @@ DISCOVERY_DIR = REPO_ROOT / "discovery"
 ENCOUNTERS_DIR = REPO_ROOT / "encounters"
 
 
-# ── Detection primitive (unchanged from the removed family_check function) ───
+# ── Detection primitive ───────────────────────────────────────────────────────
 
 
-def check_greek_hebrew_consistency(loaded: dict[str, dict], report: Reporter) -> None:
-    """Cross-file consistency for inline Greek/Hebrew word-study glosses across
-    every loaded language file of one content item. See module docstring for
-    the full rationale."""
-    # {field_path: {lang: [(word, inner, well_formed), ...]}}
+def _build_gloss_index(loaded: dict[str, dict]) -> dict[str, dict[str, list]]:
+    """{field_path: {lang: [(word, inner, well_formed), ...]}} for every
+    Greek/Hebrew gloss occurrence found in every loaded language file."""
     by_field: dict[str, dict[str, list]] = {}
     for lang, data in loaded.items():
         for path, text in iter_strings(data):
@@ -79,7 +81,52 @@ def check_greek_hebrew_consistency(loaded: dict[str, dict], report: Reporter) ->
             field = re.sub(r"\[\d+\]", "[]", path)
             occurrences = [(word, inner, wf) for _, _, word, inner, wf in spans]
             by_field.setdefault(field, {})[lang] = occurrences
+    return by_field
 
+
+def _triage_occurrence(
+    field: str, i: int, per_lang: dict[str, list], report: Reporter
+) -> None:
+    """Grade every language's gloss #i of `field` against the majority-agreed
+    correct pattern (word + transliteration), per gloss_format.json's single
+    canonical form. Prints one ✓/✗ line per language; ✗ increments
+    report.errors, matching every other family_check finding."""
+    wellformed = {
+        lang: (occ[i][0], occ[i][1])
+        for lang, occ in per_lang.items()
+        if i < len(occ) and occ[i][2]
+    }
+    if len(wellformed) < 2:
+        return  # not enough well-formed data at this position to vote on a "correct" pattern
+
+    (correct_word, correct_inner), _ = Counter(wellformed.values()).most_common(1)[0]
+    report.info(
+        f"'{field}' gloss #{i + 1} — correct pattern: '{correct_word}, ({correct_inner})'"
+    )
+    for lang in sorted(per_lang):
+        occ = per_lang[lang]
+        if i >= len(occ):
+            report.warn(f"  {lang}: no occurrence at this position (excluded)")
+            continue
+        word, inner, wf = occ[i]
+        if not wf:
+            report.warn(
+                f"  {lang}: malformed gloss near '{word}' (excluded — see greek_hebrew_gloss.py)"
+            )
+            continue
+        if (word, inner) == (correct_word, correct_inner):
+            report.ok(f"  ✓ {lang}: '{word}, ({inner})'")
+        else:
+            report.err(
+                f"  ✗ {lang}: '{word}, ({inner})' — expected '{correct_word}, ({correct_inner})'"
+            )
+
+
+def check_greek_hebrew_consistency(loaded: dict[str, dict], report: Reporter) -> None:
+    """Cross-file consistency for inline Greek/Hebrew word-study glosses across
+    every loaded language file of one content item. See module docstring for
+    the full rationale."""
+    by_field = _build_gloss_index(loaded)
     for field, per_lang in sorted(by_field.items()):
         if len(per_lang) < 2:
             continue
@@ -90,20 +137,7 @@ def check_greek_hebrew_consistency(loaded: dict[str, dict], report: Reporter) ->
         )
         max_n = max(len(occ) for occ in per_lang.values())
         for i in range(max_n):
-            words_at_i = {
-                lang: occ[i][0]
-                for lang, occ in per_lang.items()
-                if i < len(occ) and occ[i][2]
-            }
-            check_drift(f"'{field}' gloss #{i + 1} word", words_at_i, report)
-            inners_at_i = {
-                lang: occ[i][1]
-                for lang, occ in per_lang.items()
-                if i < len(occ) and occ[i][2]
-            }
-            check_drift(
-                f"'{field}' gloss #{i + 1} transliteration", inners_at_i, report
-            )
+            _triage_occurrence(field, i, per_lang, report)
 
 
 # ── Family resolution (mirrors validate_family.py's resolve_family) ──────────

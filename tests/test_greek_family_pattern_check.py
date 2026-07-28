@@ -52,8 +52,10 @@ class TestCheckGreekHebrewConsistency(unittest.TestCase):
 
     def test_genuine_word_drift_still_flagged(self):
         """A real mismatch (different native word at the same position, all
-        well-formed) must still be caught — both the word and its
-        transliteration disagree, so two errors are expected."""
+        well-formed) must still be caught: the 2-language majority ('theos')
+        sets the correct pattern, and the outlier language is flagged with
+        one ✗ error (word + transliteration reported together, not as two
+        separate findings)."""
         loaded = {
             "en": {"content": "θεός, (theos) is good"},
             "es": {"content": "θεός, (theos) is good"},
@@ -61,7 +63,7 @@ class TestCheckGreekHebrewConsistency(unittest.TestCase):
         }
         report = Reporter()
         check_greek_hebrew_consistency(loaded, report)
-        self.assertEqual(report.errors, 2)
+        self.assertEqual(report.errors, 1)
 
     def test_agreeing_languages_no_findings(self):
         loaded = {
