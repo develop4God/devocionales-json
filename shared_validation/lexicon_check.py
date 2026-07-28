@@ -43,7 +43,6 @@ piece, not a rewrite of this module (Open/Closed).
 
 from __future__ import annotations
 
-import unicodedata
 from enum import Enum
 from typing import NamedTuple
 
@@ -68,20 +67,25 @@ class LexicalCheckResult(NamedTuple):
     candidates: tuple[str, ...] = ()
 
 
-def _strip_diacritics(s: str) -> str:
-    """NFD-decompose and drop combining marks — turns Strong's accented
-    transliteration ('gínomai', 'hēméra') into the plain-ASCII style this
-    corpus already uses ('ginomai', 'hemera'), so the comparison isn't
-    penalizing a house style choice that was never actually wrong.
-    """
-    decomposed = unicodedata.normalize("NFD", s)
-    return "".join(c for c in decomposed if unicodedata.category(c) != "Mn")
-
-
 def _translit_matches(given: str, official: str) -> bool:
-    given_norm = _strip_diacritics(given).lower().strip()
-    official_norm = _strip_diacritics(official).lower().strip()
-    return given_norm == official_norm
+    """Exact match required (case-insensitive) — no diacritic-stripping.
+
+    An earlier version stripped combining marks from both sides before
+    comparing, meant to tolerate this corpus's occasional bare-ASCII house
+    style (e.g. 'ginomai' for 'gínomai') without flagging it as wrong. That
+    silently accepted a real mismatch too: stripping marks from BOTH sides
+    makes 'anthrakia' (missing its required accent) indistinguishable from
+    'ginomai' (deliberately plain ASCII) — both reduce to the same
+    stripped form, so a wrong transliteration that happened to differ from
+    Strong's by only an accent passed as MATCHED (found 2026-07-28,
+    peter_restoration_001: anthrakia/lambano/bosko/poimaino all silently
+    accepted against Strong's anthrakiá/lambánō/bóskō/poimaínō). Strong's
+    own spelling — diacritics included — is this corpus's source of truth
+    (see lexicon_fixer.py's module docstring); an exact match is the only
+    comparison that can't hide this class of error, and it's the same
+    comparison lexicon_fixer.py already uses to decide what to rewrite.
+    """
+    return given.lower().strip() == official.lower().strip()
 
 
 def _grade_word_translit(
@@ -93,6 +97,7 @@ def _grade_word_translit(
     lang: str,
     ctx: str,
     report: ReportLike,
+    debug: bool = False,
 ) -> LexicalCheckResult:
     """Core grading step shared by every caller that has already resolved
     (or failed to resolve) a word against the lexicon — one word/translit
@@ -100,7 +105,21 @@ def _grade_word_translit(
     call. Used by check_lexical_accuracy (inline ", (translit)" prose
     spans) and check_structured_word_study_accuracy (greek_words/
     hebrew_words array entries) so both shapes are graded identically and
-    this logic exists exactly once."""
+    this logic exists exactly once.
+
+    `debug`, when True, prints the exact given-vs-official comparison for
+    EVERY span, including a clean MATCHED — a plain corpus scan only ever
+    reports errors/ambiguous cases, so a comparison that wrongly resolves
+    to MATCHED (as _translit_matches's old diacritic-stripping did, see
+    its docstring) produces no output at all in a normal run. --debug
+    makes that decision visible on demand without adding noise by default."""
+    if debug:
+        print(
+            f"[debug] {ctx}: '{word}' given={given_translit!r} "
+            f"entry={entry.strongs_number if entry else None!r} "
+            f"official={entry.translit if entry else None!r} "
+            f"candidates={tuple(c.strongs_number for c in candidates)}"
+        )
     if not candidates:
         report.I(
             f"{path} [{lang}] {ctx}: '{word}' ({given_translit}) is not a "
@@ -126,7 +145,10 @@ def _grade_word_translit(
             candidates=candidate_codes,
         )
 
-    if _translit_matches(given_translit, entry.translit):
+    exact_match = _translit_matches(given_translit, entry.translit)
+    if debug:
+        print(f"[debug]   -> exact_match={exact_match}")
+    if exact_match:
         return LexicalCheckResult(
             word=word,
             given_translit=given_translit,
@@ -155,6 +177,7 @@ def check_lexical_accuracy(
     lang: str,
     ctx: str,
     report: ReportLike,
+    debug: bool = False,
 ) -> list[LexicalCheckResult]:
     """Runs lexical validation over every well-formed gloss span in `text`.
 
@@ -172,7 +195,7 @@ def check_lexical_accuracy(
         entry, candidates = resolve_lemma_entry(lexicon, word, text, end, lang)
         results.append(
             _grade_word_translit(
-                word, inner, entry, candidates, path, lang, ctx, report
+                word, inner, entry, candidates, path, lang, ctx, report, debug
             )
         )
 
@@ -187,6 +210,7 @@ def check_structured_word_study_accuracy(
     lang: str,
     ctx: str,
     report: ReportLike,
+    debug: bool = False,
 ) -> LexicalCheckResult:
     """Same lexical grading as check_lexical_accuracy, for the OTHER shape
     this corpus uses to cite a Greek/Hebrew word study: the structured
@@ -217,5 +241,5 @@ def check_structured_word_study_accuracy(
     """
     entry, candidates = resolve_lemma_entry(lexicon, word, "", 0, lang)
     return _grade_word_translit(
-        word, transliteration, entry, candidates, path, lang, ctx, report
+        word, transliteration, entry, candidates, path, lang, ctx, report, debug
     )

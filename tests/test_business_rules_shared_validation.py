@@ -29,7 +29,35 @@ from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_word_study_bare_transliteration,
     check_strong_code_bare_transliteration,
 )
+from shared_validation.lexicon_check import check_lexical_accuracy  # noqa: E402
+from shared_validation.lexicon_source import LexiconEntry  # noqa: E402
 from shared_validation.report import Report  # noqa: E402
+
+
+class _FakeLexicon:
+    """Minimal LexiconSource test double — a fixed {lemma: [entries]} map,
+    no real Strong's data file loaded, so these tests exercise only
+    check_lexical_accuracy's own comparison logic, not the real lexicon's
+    12,450 entries."""
+
+    def __init__(self, entries: dict[str, list[LexiconEntry]]):
+        self._entries = entries
+
+    def lookup_by_lemma(self, word: str) -> list[LexiconEntry]:
+        return list(self._entries.get(word, []))
+
+    def lookup_by_lemma_and_number(self, word: str, strongs_number: str):
+        for entry in self._entries.get(word, []):
+            if entry.strongs_number == strongs_number:
+                return entry
+        return None
+
+    def lookup_by_number(self, strongs_number: str):
+        for entries in self._entries.values():
+            for entry in entries:
+                if entry.strongs_number == strongs_number:
+                    return entry
+        return None
 
 
 # ── check_word_study_bare_transliteration ───────────────────────────────────
@@ -244,6 +272,88 @@ class TestCheckStrongCodeBareTransliteration(unittest.TestCase):
             [],
             f"The 'word' key should be skipped entirely, got: {report.errors}",
         )
+
+
+# ── check_lexical_accuracy / _translit_matches ──────────────────────────────
+#
+# _translit_matches requires an exact (case-insensitive) match against
+# Strong's own transliteration — no diacritic-stripping. An earlier version
+# stripped combining marks from both sides before comparing, meant to
+# tolerate this corpus's occasional bare-ASCII house style (e.g. 'ginomai'
+# for 'gínomai'); that also silently accepted a real mismatch whenever the
+# given transliteration was missing a required accent, since stripping marks
+# from both sides made a wrong spelling indistinguishable from a
+# deliberately-plain-ASCII one (found 2026-07-28, peter_restoration_001:
+# 'anthrakia'/'lambano'/'bosko'/'poimaino' all silently matched against
+# Strong's 'anthrakiá'/'lambánō'/'bóskō'/'poimaínō').
+
+
+class TestCheckLexicalAccuracy(unittest.TestCase):
+    def test_exact_match_is_matched(self):
+        lexicon = _FakeLexicon(
+            {
+                "ἀνθρακιά": [
+                    LexiconEntry("G439", "ἀνθρακιά", "anthrakiá", "a bed of coals")
+                ]
+            }
+        )
+        report = Report("TEST")
+        results = check_lexical_accuracy(
+            "ἀνθρακιά, (anthrakiá) appears twice in John.",
+            lexicon,
+            "path",
+            "en",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(report.errors, [], f"Expected no errors, got: {report.errors}")
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0].status.value, "matched")
+
+    def test_missing_accent_is_translit_mismatch_not_silently_matched(self):
+        # This is the exact regression this fix closes: 'anthrakia' (no
+        # accent) must NOT be accepted as equivalent to Strong's
+        # 'anthrakiá' just because stripping diacritics would make them equal.
+        lexicon = _FakeLexicon(
+            {
+                "ἀνθρακιά": [
+                    LexiconEntry("G439", "ἀνθρακιά", "anthrakiá", "a bed of coals")
+                ]
+            }
+        )
+        report = Report("TEST")
+        results = check_lexical_accuracy(
+            "ἀνθρακιά, (anthrakia) appears twice in John.",
+            lexicon,
+            "path",
+            "en",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0].status.value, "translit_mismatch")
+        self.assertTrue(
+            any("anthrakia" in e and "anthrakiá" in e for e in report.errors),
+            f"Expected a spelling-mismatch error naming both spellings, got: {report.errors}",
+        )
+
+    def test_word_not_in_lexicon_is_inflected_no_lemma_match(self):
+        lexicon = _FakeLexicon({})  # no entries at all
+        report = Report("TEST")
+        results = check_lexical_accuracy(
+            "ἀγαπᾷς, (agapas) is the word Jesus uses.",
+            lexicon,
+            "path",
+            "en",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(report.errors, [], f"Expected no errors, got: {report.errors}")
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0].status.value, "inflected_no_lemma_match")
 
 
 if __name__ == "__main__":

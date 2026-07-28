@@ -93,7 +93,10 @@ class _ReportAdapter:
 
 
 def run_for_family(
-    content_type: str, content_id: str, lexicon: StrongsLexiconSource
+    content_type: str,
+    content_id: str,
+    lexicon: StrongsLexiconSource,
+    debug: bool = False,
 ) -> int:
     """Run the lexical-accuracy check for every language file of one content
     item. Returns the TRANSLIT_MISMATCH count (the only outcome that fails
@@ -124,6 +127,7 @@ def run_for_family(
                 lang=lang,
                 ctx=ctx,
                 report=report,
+                debug=debug,
             )
             matched += sum(1 for r in results if r.status == LexicalStatus.MATCHED)
 
@@ -150,6 +154,7 @@ def run_for_family(
                         lang=lang,
                         ctx=ctx,
                         report=report,
+                        debug=debug,
                     )
                     if result.status == LexicalStatus.MATCHED:
                         matched += 1
@@ -161,20 +166,22 @@ def run_for_family(
     return report.errors
 
 
-def run_for_type(content_type: str, lexicon: StrongsLexiconSource) -> int:
+def run_for_type(
+    content_type: str, lexicon: StrongsLexiconSource, debug: bool = False
+) -> int:
     """Run the check for every id of one content type. Returns the total
     TRANSLIT_MISMATCH count across all ids."""
     total_errors = 0
     for content_id in ID_LISTERS[content_type]():
-        total_errors += run_for_family(content_type, content_id, lexicon)
+        total_errors += run_for_family(content_type, content_id, lexicon, debug)
     return total_errors
 
 
-def run_all(lexicon: StrongsLexiconSource) -> int:
+def run_all(lexicon: StrongsLexiconSource, debug: bool = False) -> int:
     """Run the check across the whole corpus (both content types)."""
     total_errors = 0
     for content_type in RESOLVERS:
-        total_errors += run_for_type(content_type, lexicon)
+        total_errors += run_for_type(content_type, lexicon, debug)
     return total_errors
 
 
@@ -198,18 +205,26 @@ def main():
         action="store_true",
         help="Scan every id of every content type (whole-corpus scope). Ignores --type/--id.",
     )
+    parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="Print every gloss span's resolution decision (given vs Strong's "
+        "official transliteration, exact-match result) as the scan runs — "
+        "including MATCHED spans, which a plain run never reports. Verbose — "
+        "use with --id for one family.",
+    )
     args = parser.parse_args()
 
     lexicon = StrongsLexiconSource()  # loaded once, reused across the whole run
 
     if args.all:
-        total_errors = run_all(lexicon)
+        total_errors = run_all(lexicon, args.debug)
     elif args.id:
         if not args.type:
             parser.error("--id requires --type")
-        total_errors = run_for_family(args.type, args.id, lexicon)
+        total_errors = run_for_family(args.type, args.id, lexicon, args.debug)
     elif args.type:
-        total_errors = run_for_type(args.type, lexicon)
+        total_errors = run_for_type(args.type, lexicon, args.debug)
     else:
         parser.error("pass --id/--type, --type alone, or --all")
 
