@@ -15,9 +15,18 @@ acknowledged, shown in the warning message for traceability.
 """
 
 ACKNOWLEDGED_SOT_MISMATCHES = {
-    ("ja", "新改訳2003"): "Confirmed not a user-facing risk — pending formal SOT update",
-    ("ja", "リビングバイブル"): "Confirmed not a user-facing risk — pending formal SOT update",
-    ("zh", "和合本1919"): "Confirmed not a user-facing risk — pending formal SOT update",
+    (
+        "ja",
+        "新改訳2003",
+    ): "Confirmed not a user-facing risk — pending formal SOT update",
+    (
+        "ja",
+        "リビングバイブル",
+    ): "Confirmed not a user-facing risk — pending formal SOT update",
+    (
+        "zh",
+        "和合本1919",
+    ): "Confirmed not a user-facing risk — pending formal SOT update",
     ("zh", "新译本"): "Confirmed not a user-facing risk — pending formal SOT update",
     # ("fr", "TOB"): still open — usage/risk not yet confirmed, stays an error.
 }

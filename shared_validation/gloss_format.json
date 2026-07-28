@@ -1,0 +1,44 @@
+{
+  "_comment": "HARD GATE — canonical format for every inline Greek/Hebrew gloss in the corpus (discovery + encounters, every language). Enforced by check_greek_hebrew_transliteration / find_greek_hebrew_glosses in shared_validation/text_checks.py. This file is the spec; the Python code reads it rather than hardcoding the rule, so the format can be corrected in one place without touching validator logic. STRICT: exactly two accepted forms, no other conventions, no exceptions.",
+  "rule": "<original Greek or Hebrew word>,<one ASCII space>(<Latin transliteration>)  OR  <word> <word>,<one ASCII space>(<Latin transliteration>)",
+  "example": "θεός, (theos)  —  or, for a genuine two-word grammatical phrase  —  τὸ γεγονός, (to gegonos)",
+  "explanation": [
+    "Two accepted forms only: a single native-script word, or a genuine two-word native-script phrase (e.g. article + participle, adverb + participle, construct pair) — never three or more words, never a full sentence.",
+    "In both forms: the native-script word(s) first, then an ASCII comma ',' immediately after the last word (no space before the comma), then exactly one ASCII space, then an opening ASCII parenthesis '(' — never a full-width '（' or '，'.",
+    "The parenthetical contains ONLY the Latin-alphabet transliteration of the exact same word(s) — never the original script repeated, never a phonetic respelling into the target language's own script (e.g. Chinese 索索, Japanese カタカナ, Arabic script, Devanagari). This has shipped wrong before in AR/HI/JA/ZH — always Latin letters only.",
+    "No other form is accepted. No bare reuse of a transliteration without its gloss, no matter how recently the word was introduced in the same field. No full-sentence original/transliteration pairing. Every occurrence of every native-script word or two-word phrase must carry its own gloss, every time."
+  ],
+  "violations_not_accepted": [
+    "Missing comma: θεός (theos)",
+    "No space before the parenthesis: θεός,(theos)",
+    "Full-width parenthesis: θεός，（theos）",
+    "Full-width comma: θεός，(theos)",
+    "Original script repeated inside the parenthetical instead of a transliteration: θεός, (θεός)",
+    "Phonetic respelling into the target script instead of Latin: θεός, (泰奥斯)",
+    "Comma-joined single parenthetical: （θεός，theos）",
+    "Bare reuse without a gloss: introducing 'θεός, (theos)' once and later writing bare 'theos' with no gloss",
+    "Three-or-more-word phrase or full-sentence original/transliteration pairing instead of a 1-or-2-word gloss"
+  ],
+  "transliteration_charset": {
+    "_comment": "The specific Latin-alphabet characters this corpus's transliteration convention actually uses, derived empirically from every well-formed gloss already in the encounters corpus (2026-07-27 scan, 70 samples). NOT the full SBL academic Hebrew table (no ḥ/ṭ/ṣ/ś/š/ʾ/ʿ, no breves ă/ĕ/ŏ, no circumflexes â/î/ô) — this corpus uses a simplified scholarly style: macrons for Greek long vowels (η→ē, ω→ō) and acute-accented vowels for stress, including macron+acute combined forms for a stressed long vowel. A character outside this set (e.g. a Vietnamese/Turkish/Polish Latin letter, or a strict-academic Hebrew emphatic mark not yet used anywhere) is very likely either a mistake or a style the corpus hasn't adopted yet — treat as a flag to review, not a silent pass. Extend this list only after confirming a new mark is intentionally being introduced as house style, the same way this list itself was derived (empirical scan + explicit decision), not by loosening the regex ad hoc.",
+    "ascii": "A-Za-z (plain Latin letters, digits 0-9, and punctuation: space hyphen apostrophe period colon)",
+    "diacritics_in_use": ["ā", "ē", "ī", "ō", "ū", "á", "é", "í", "ó", "ú", "ý", "ḗ", "ṓ"],
+    "macron_only_diacritics": {
+      "_comment": "Subset of diacritics_in_use restricted to macrons (ā ē ī ō ū) plus macron+acute combined forms (ḗ ṓ) — the marks unique to this corpus's Greek-long-vowel transliteration convention, EXCLUDING the plain acute-accented vowels (á é í ó ú, used for stress). The acutes alone are not diagnostic: they are completely ordinary orthography in Spanish/Portuguese/French prose ('está', 'é', 'cántaros'), so a check that used the full diacritics_in_use list as its trigger produced dozens of false positives on everyday accented words (2026-07-27, check_word_study_bare_transliteration's first draft). Macrons never occur in Romance-language orthography, so they're a clean, low-noise signal that a token is scholarly transliteration rather than a plain dictionary word. Tradeoff: a transliteration using only an acute and no macron (e.g. 'ktémata') is invisible to this narrower set — accepted as a precision-over-recall choice, same as the plain-ASCII-transliteration gap ('gynai') that this check can't catch at all.",
+      "marks": ["ā", "ē", "ī", "ō", "ū", "ḗ", "ṓ"]
+    },
+    "not_yet_used_full_sbl_academic_marks": ["â", "î", "ô", "ă", "ĕ", "ŏ", "ḥ", "ṭ", "ṣ", "ś", "š", "ʾ", "ʿ"]
+  },
+  "strong_code_prefixes": {
+    "_comment": "Pattern for a citation-code prefix this corpus cites inline next to a Greek/Hebrew word (e.g. 'G4642', 'H5782', 'Strong G40'). Empirically only 'G' (Greek/NT) and 'H' (Hebrew/OT) appear in the corpus today (2026-07-27 scan, discovery+encounters), matching the Strong's Concordance standard — but the letter itself isn't hardcoded to G/H: any single uppercase Latin letter immediately followed by 2-5 digits is treated as a citation-code, so a not-yet-seen prefix (e.g. a different numbering system, or Strong's own less-common 'S' form used by some tools) is still caught by check_strong_code_native_script without a code or data change. This is deliberately broad rather than an enumerated letter list — the risk of a real citation-code being missed because its letter isn't in a hardcoded set is worse than the near-zero risk of a random capital+digits token appearing coincidentally next to native script in this corpus's prose style.",
+    "pattern": "single uppercase Latin letter (A-Z) followed by 2-5 digits, optionally preceded by the word 'Strong '"
+  },
+  "native_script_bare_transliteration_gate": {
+    "_comment": "HARD GATE — a language's own native script (e.g. Chinese 道, 拯救者) glued directly to a bare Latin transliteration in parentheses, with no comma and no space: '道(Logos)', '拯救者(Amnos)'. Confirmed in the wild 2026-07-28: 52 occurrences across the zh discovery+encounters corpus (logos_creation, morning_star, restoration_by_fire, new_covenant_cup, and 12 other files), zero false positives on manual review — every parenthetical sampled was a genuine Greek/Hebrew transliteration (Logos, Amnos, AGAPAS, YHWH, kippur, ...), never an ordinary English gloss word. Zero hits in ja/hi/ar as of that scan. Enforced by check_native_script_bare_transliteration in greek_hebrew_gloss.py, scoped to any language present in native_script_ranges.json (same reuse pattern as check_strong_code_native_script) so a future occurrence in another language is still caught without a code change.",
+    "rule": "<language's own native script, zero space, zero comma>(<Latin transliteration>) is REJECTED — the real Greek/Hebrew word was never given, only a native-language gloss word standing next to the transliteration. Required form is the standard gloss: '<Greek/Hebrew word>, (translit)' with the native-script Greek/Hebrew word itself present.",
+    "violation_example": "道(Logos) — '道' is the Chinese gloss word for 'word', not the Greek λόγος itself; 'Logos' is a bare transliteration with no native-script anchor",
+    "severity": "error",
+    "min_translit_length": 2,
+    "max_translit_length": 30
+  }
+}

@@ -58,7 +58,9 @@ def main():
     parser = argparse.ArgumentParser(
         description="Cross-validate ALL language files for one Encounter id.",
     )
-    parser.add_argument("encounter_id", help="Encounter id as it appears in encounters/index.json")
+    parser.add_argument(
+        "encounter_id", help="Encounter id as it appears in encounters/index.json"
+    )
     args = parser.parse_args()
 
     family = resolve_family(args.encounter_id)

@@ -48,6 +48,7 @@ from devocionales_scripts.verse_resolver import VerseResolver, fetch_text, parse
 # set, which GitHub Actions (and most other CI providers) already set
 # automatically with no workflow-file changes needed.
 
+
 def scripture_validation_enabled() -> bool:
     """True only when running in CI (CI env var set, as GitHub Actions and
     most CI providers do automatically). Callers use this to skip Phase D
@@ -78,7 +79,9 @@ def _load_versification_exceptions() -> dict:
     return _versification_exceptions_cache
 
 
-def _find_versification_exception(en_reference: str, bible_version: str) -> Optional[dict]:
+def _find_versification_exception(
+    en_reference: str, bible_version: str
+) -> Optional[dict]:
     return _load_versification_exceptions().get((en_reference, bible_version))
 
 
@@ -108,19 +111,25 @@ _PAIR_FIELD_NAMES = (
 )
 
 _WHITESPACE_RE = re.compile(r"\s+")
-_SMART_QUOTES = str.maketrans({
-    "“": '"', "”": '"',  # “ ”
-    "‘": "'", "’": "'",  # ‘ ’
-})
+_SMART_QUOTES = str.maketrans(
+    {
+        "“": '"',
+        "”": '"',  # “ ”
+        "‘": "'",
+        "’": "'",  # ‘ ’
+    }
+)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
 # EXTRACTION
 # ─────────────────────────────────────────────────────────────────────────────
 
+
 @dataclass
 class ScriptureRef:
     """One {reference, verse_text} pair found in a parsed card/file dict."""
+
     reference: str
     verse_text: str
     path: str  # e.g. "cards[2].scripture_moment.reference"
@@ -182,10 +191,16 @@ def _walk(obj, path: str, pairs: list) -> None:
         for ref_key, text_key in _PAIR_FIELD_NAMES:
             ref_val = obj.get(ref_key)
             text_val = obj.get(text_key)
-            if isinstance(ref_val, str) and ref_val.strip() and \
-               isinstance(text_val, str) and text_val.strip():
+            if (
+                isinstance(ref_val, str)
+                and ref_val.strip()
+                and isinstance(text_val, str)
+                and text_val.strip()
+            ):
                 ref_path = f"{path}.{ref_key}" if path else ref_key
-                pairs.append(ScriptureRef(reference=ref_val, verse_text=text_val, path=ref_path))
+                pairs.append(
+                    ScriptureRef(reference=ref_val, verse_text=text_val, path=ref_path)
+                )
                 break  # a dict matches at most one pair-shape; don't double-count
         for k, v in obj.items():
             _walk(v, f"{path}.{k}" if path else k, pairs)
@@ -197,6 +212,7 @@ def _walk(obj, path: str, pairs: list) -> None:
 # ─────────────────────────────────────────────────────────────────────────────
 # MATCHING
 # ─────────────────────────────────────────────────────────────────────────────
+
 
 def _normalize(text: str) -> str:
     """Strip punctuation-adjacent whitespace, collapse internal whitespace,
@@ -284,7 +300,9 @@ def _is_intentional_truncation(stored: str, resolved: str) -> bool:
     of Luke 19:9, rejected outright before this normalization)."""
     s = _PUNCT_AND_ELLIPSIS_RE.sub("", _normalize(stored).lower())
     s = _WHITESPACE_RE.sub(" ", s).strip()
-    min_length = _MIN_TRUNCATION_LENGTH_CJK if _CJK_RE.search(s) else _MIN_TRUNCATION_LENGTH
+    min_length = (
+        _MIN_TRUNCATION_LENGTH_CJK if _CJK_RE.search(s) else _MIN_TRUNCATION_LENGTH
+    )
     if len(s) < min_length:
         return False
     r = _PUNCT_AND_ELLIPSIS_RE.sub("", _normalize(resolved).lower())
@@ -309,11 +327,13 @@ def jaccard_similarity(a: str, b: str) -> float:
 # FINDING
 # ─────────────────────────────────────────────────────────────────────────────
 
+
 @dataclass
 class Finding:
     """One validation result for a ScriptureRef. kind distinguishes the two
     failure modes the issue calls out — both WARNING-only in this initial
     rollout (see module docstring / issue Rollout section)."""
+
     kind: str  # "resolution_failed" | "text_mismatch" | "footnote_artifact"
     ref: ScriptureRef
     message: str
@@ -367,7 +387,9 @@ def validate_pair(ref: ScriptureRef, resolver: VerseResolver) -> Optional[Findin
 
 
 def validate_translated_pair(
-    en_ref: ScriptureRef, native_ref: ScriptureRef, native_resolver: VerseResolver,
+    en_ref: ScriptureRef,
+    native_ref: ScriptureRef,
+    native_resolver: VerseResolver,
     bible_version: Optional[str] = None,
 ) -> Optional[Finding]:
     """Validate a translated card's stored verse_text against its EN
@@ -416,10 +438,16 @@ def validate_translated_pair(
             message=f"'{native_ref.path}': EN sibling book '{book_en}' unknown in bible_books.json SOT",
         )
 
-    exception = _find_versification_exception(en_ref.reference, bible_version) if bible_version else None
+    exception = (
+        _find_versification_exception(en_ref.reference, bible_version)
+        if bible_version
+        else None
+    )
     if exception is not None:
         chapter, v_start, v_end = (
-            exception["target_chapter"], exception["target_verse_start"], exception["target_verse_end"],
+            exception["target_chapter"],
+            exception["target_verse_start"],
+            exception["target_verse_end"],
         )
 
     texto = fetch_text(native_resolver.cursor, book_number, chapter, v_start, v_end)
@@ -461,7 +489,9 @@ def _compare_text(ref: ScriptureRef, resolved_text: str) -> Optional[Finding]:
         )
 
     similarity = jaccard_similarity(ref.verse_text, resolved_text)
-    if similarity < FUZZY_MATCH_THRESHOLD and not _is_intentional_truncation(ref.verse_text, resolved_text):
+    if similarity < FUZZY_MATCH_THRESHOLD and not _is_intentional_truncation(
+        ref.verse_text, resolved_text
+    ):
         return Finding(
             kind="text_mismatch",
             ref=ref,
@@ -480,6 +510,7 @@ def _compare_text(ref: ScriptureRef, resolved_text: str) -> Optional[Finding]:
 # ─────────────────────────────────────────────────────────────────────────────
 # RESOLVER LIFECYCLE
 # ─────────────────────────────────────────────────────────────────────────────
+
 
 class ScriptureValidator:
     """Owns one open VerseResolver per (language, bible_version) seen in a

@@ -13,6 +13,7 @@ below, this script prints a loud warning instead of silently going stale.
 Usage:
     python3 app_preview.py <study.json> [--out out.html] [--dart-repo path]
 """
+
 import argparse
 import json
 import re
@@ -57,7 +58,7 @@ def check_drift(dart_repo: Path):
     if start == -1:
         warnings.append("_buildCardContent not found in discovery_detail_page.dart")
         return warnings
-    body = src[start:start + 6000]  # generous slice past the method body
+    body = src[start : start + 6000]  # generous slice past the method body
 
     dart_fields = set(re.findall(r"if\s*\(card\.(\w+)\s*!=\s*null\)", body))
     dart_fields -= {"icon", "title", "subtitle"}
@@ -137,7 +138,7 @@ h2.section { font-size:20px; font-weight:900; margin-top:32px; }
 
 
 def render_card(card):
-    out = [f'<div class="card">']
+    out = ['<div class="card">']
     if card.get("icon"):
         out.append(f'<div class="icon">{escape(card["icon"])}</div>')
     if card.get("title"):
@@ -146,20 +147,22 @@ def render_card(card):
         out.append(f'<div class="subtitle">{escape(card["subtitle"])}</div>')
 
     if card.get("content"):
-        out.append(f'<div class="content">{render_bold_markdown(card["content"])}</div>')
+        out.append(
+            f'<div class="content">{render_bold_markdown(card["content"])}</div>'
+        )
 
     if card.get("revelation_key"):
         out.append(
             '<div class="revelation"><span class="bulb">💡</span>'
-            f'<span>{escape(card["revelation_key"])}</span></div>'
+            f"<span>{escape(card['revelation_key'])}</span></div>"
         )
 
     sa = card.get("scripture_anchor")
     if isinstance(sa, dict):
         out.append(
             '<div class="anchor-tile">'
-            f'<div class="ref">{escape(sa.get("reference",""))}</div>'
-            f'<div class="body">{escape(sa.get("text",""))}</div></div>'
+            f'<div class="ref">{escape(sa.get("reference", ""))}</div>'
+            f'<div class="body">{escape(sa.get("text", ""))}</div></div>'
         )
 
     for key in ("scripture_connections", "scripture_references"):
@@ -169,8 +172,8 @@ def render_card(card):
                 if isinstance(it, dict):
                     out.append(
                         '<div class="tile">'
-                        f'<div class="ref">{escape(it.get("reference",""))}</div>'
-                        f'<div class="body">{escape(it.get("text",""))}</div></div>'
+                        f'<div class="ref">{escape(it.get("reference", ""))}</div>'
+                        f'<div class="body">{escape(it.get("text", ""))}</div></div>'
                     )
 
     gw = card.get("greek_words")
@@ -178,13 +181,17 @@ def render_card(card):
         for w in gw:
             if not isinstance(w, dict):
                 continue
-            translit = f'<span class="greek-translit">({escape(w.get("transliteration",""))})</span>' if w.get("transliteration") else ""
+            translit = (
+                f'<span class="greek-translit">({escape(w.get("transliteration", ""))})</span>'
+                if w.get("transliteration")
+                else ""
+            )
             out.append(
                 '<div class="greek-tile">'
-                f'<span class="greek-word">{escape(w.get("word",""))}</span>{translit}'
-                f'<div class="greek-meaning">Meaning: {escape(w.get("meaning",""))}</div>'
-                f'<div class="greek-revelation">Revelation: {escape(w.get("revelation",""))}</div>'
-                '</div>'
+                f'<span class="greek-word">{escape(w.get("word", ""))}</span>{translit}'
+                f'<div class="greek-meaning">Meaning: {escape(w.get("meaning", ""))}</div>'
+                f'<div class="greek-revelation">Revelation: {escape(w.get("revelation", ""))}</div>'
+                "</div>"
             )
 
     dq = card.get("discovery_questions")
@@ -194,8 +201,8 @@ def render_card(card):
             if isinstance(q, dict):
                 out.append(
                     '<div class="question-tile">'
-                    f'<div class="question-cat">{escape(q.get("category","").upper())}</div>'
-                    f'<div class="question-text">{escape(q.get("question",""))}</div></div>'
+                    f'<div class="question-cat">{escape(q.get("category", "").upper())}</div>'
+                    f'<div class="question-text">{escape(q.get("question", ""))}</div></div>'
                 )
 
     prayer = card.get("prayer")
@@ -203,19 +210,23 @@ def render_card(card):
         out.append('<div class="prayer-tile">')
         if prayer.get("title"):
             out.append(f'<div class="prayer-title">{escape(prayer["title"])}</div>')
-        out.append(f'<div class="prayer-content">{escape(prayer["content"])}</div></div>')
+        out.append(
+            f'<div class="prayer-content">{escape(prayer["content"])}</div></div>'
+        )
 
     # Anything present in the JSON but not in FIELDS_RENDERED is a schema
     # drift bug: the app silently ignores it today.
     unrendered = [
-        k for k in card.keys()
-        if k not in FIELDS_RENDERED and k not in ("order", "type", "icon", "title", "subtitle")
+        k
+        for k in card.keys()
+        if k not in FIELDS_RENDERED
+        and k not in ("order", "type", "icon", "title", "subtitle")
     ]
     if unrendered:
         out.append(
             '<div class="unrendered">⚠ NOT RENDERED IN APP -- these JSON fields exist on '
-            f'this card but discovery_card_model.dart / discovery_detail_page.dart do not '
-            f'parse or display them: {", ".join(sorted(unrendered))}</div>'
+            f"this card but discovery_card_model.dart / discovery_detail_page.dart do not "
+            f"parse or display them: {', '.join(sorted(unrendered))}</div>"
         )
 
     out.append("</div>")
@@ -223,8 +234,10 @@ def render_card(card):
 
 
 def build_html(data, drift_warnings):
-    parts = [f"<!doctype html><html><head><meta charset='utf-8'>"
-             f"<title>{escape(data.get('title',''))}</title><style>{CSS}</style></head><body>"]
+    parts = [
+        f"<!doctype html><html><head><meta charset='utf-8'>"
+        f"<title>{escape(data.get('title', ''))}</title><style>{CSS}</style></head><body>"
+    ]
     for w in drift_warnings:
         parts.append(f'<div class="warning">⚠ {escape(w)}</div>')
     for card in data.get("cards", []):
@@ -238,16 +251,23 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("json_file")
     ap.add_argument("--out", default=None)
-    ap.add_argument("--dart-repo", default=None,
-                     help="Path to a local devocional_nuevo checkout (default: ../devocional_nuevo)")
-    ap.add_argument("--no-open", action="store_true", help="Don't auto-open the result in a browser")
+    ap.add_argument(
+        "--dart-repo",
+        default=None,
+        help="Path to a local devocional_nuevo checkout (default: ../devocional_nuevo)",
+    )
+    ap.add_argument(
+        "--no-open", action="store_true", help="Don't auto-open the result in a browser"
+    )
     args = ap.parse_args()
 
     json_path = Path(args.json_file)
     data = json.loads(json_path.read_text(encoding="utf-8"))
 
-    dart_repo = Path(args.dart_repo) if args.dart_repo else (
-        Path(__file__).resolve().parent.parent.parent.parent / "devocional_nuevo"
+    dart_repo = (
+        Path(args.dart_repo)
+        if args.dart_repo
+        else (Path(__file__).resolve().parent.parent.parent.parent / "devocional_nuevo")
     )
     warnings = check_drift(dart_repo)
     for w in warnings:

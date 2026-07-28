@@ -23,18 +23,18 @@ Usage:
     python3 json_to_md.py read-dir <dir> [output_dir]
         Runs `read` on every .json file in a directory.
 """
+
 import json
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent / "shared_validation"))
+sys.path.insert(
+    0, str(Path(__file__).resolve().parent.parent.parent / "shared_validation")
+)
 from json_md_converter import (  # noqa: E402
     is_scalar,
-    json_to_md,
-    md_to_json,
     encode_file,
     decode_file,
-    diff_json,
     verify_file,
 )
 
@@ -90,14 +90,18 @@ def json_to_reader_md(data, source_name=""):
     if data.get("subtitle"):
         header_bits.append(f"*{data['subtitle']}*")
     if data.get("estimated_reading_minutes"):
-        header_bits.append(f"**Estimated reading time:** {data['estimated_reading_minutes']} min")
+        header_bits.append(
+            f"**Estimated reading time:** {data['estimated_reading_minutes']} min"
+        )
     if header_bits:
         out.append("  \n".join(header_bits))
         out.append("")
 
     kv = data.get("key_verse")
     if isinstance(kv, dict) and kv.get("text"):
-        out.extend(_quote_block(kv["text"], kv.get("reference", ""), data.get("version")))
+        out.extend(
+            _quote_block(kv["text"], kv.get("reference", ""), data.get("version"))
+        )
         out.append("")
 
     out.append("---")
@@ -139,7 +143,9 @@ def json_to_reader_md(data, source_name=""):
         if isinstance(sc, list):
             for item in sc:
                 if isinstance(item, dict):
-                    out.append(f"**Connection:** {item.get('reference','')} — \"{item.get('text','')}\"")
+                    out.append(
+                        f'**Connection:** {item.get("reference", "")} — "{item.get("text", "")}"'
+                    )
             if sc:
                 out.append("")
 
@@ -147,7 +153,9 @@ def json_to_reader_md(data, source_name=""):
         if isinstance(sr, list):
             for item in sr:
                 if isinstance(item, dict):
-                    out.append(f"**Reference:** {item.get('reference','')} — \"{item.get('text','')}\"")
+                    out.append(
+                        f'**Reference:** {item.get("reference", "")} — "{item.get("text", "")}"'
+                    )
                     out.append("")
                 elif isinstance(item, str):
                     out.append(f"**Reference:** {item}")
@@ -158,7 +166,9 @@ def json_to_reader_md(data, source_name=""):
             out.append("**Timeline:**")
             for item in tl:
                 if isinstance(item, dict):
-                    out.append(f"- **{item.get('event','')}** — {item.get('description','')}")
+                    out.append(
+                        f"- **{item.get('event', '')}** — {item.get('description', '')}"
+                    )
                     if item.get("revelation"):
                         out.append(f"  {item['revelation']}")
             out.append("")
@@ -172,7 +182,9 @@ def json_to_reader_md(data, source_name=""):
             out.append("**Action steps:**")
             for s in steps:
                 if isinstance(s, dict):
-                    out.append(f"- **{s.get('title','')}**: {s.get('description','')}")
+                    out.append(
+                        f"- **{s.get('title', '')}**: {s.get('description', '')}"
+                    )
             out.append("")
 
         dq = c.get("discovery_questions")
@@ -180,7 +192,7 @@ def json_to_reader_md(data, source_name=""):
             out.append("**Questions for reflection:**")
             for q in dq:
                 if isinstance(q, dict):
-                    out.append(f"- ({q.get('category','')}) {q.get('question','')}")
+                    out.append(f"- ({q.get('category', '')}) {q.get('question', '')}")
             out.append("")
 
         prayer = c.get("prayer")
@@ -198,11 +210,24 @@ def json_to_reader_md(data, source_name=""):
         # Catch-all: any scalar field not already rendered above, so no
         # data is ever silently omitted from the reader view.
         _rendered = {
-            "order", "type", "icon", "title", "subtitle", "phase", "content",
-            "greek_words", "hebrew_words", "scripture_anchor",
-            "scripture_connections", "scripture_references", "timeline",
-            "identity_statement", "action_steps", "discovery_questions",
-            "prayer", "revelation_key",
+            "order",
+            "type",
+            "icon",
+            "title",
+            "subtitle",
+            "phase",
+            "content",
+            "greek_words",
+            "hebrew_words",
+            "scripture_anchor",
+            "scripture_connections",
+            "scripture_references",
+            "timeline",
+            "identity_statement",
+            "action_steps",
+            "discovery_questions",
+            "prayer",
+            "revelation_key",
         }
         for key, value in c.items():
             if key in _rendered or value in (None, "", [], {}):
@@ -221,7 +246,11 @@ def read_file(src_path, dst_path=None):
     src_path = Path(src_path)
     data = json.loads(src_path.read_text(encoding="utf-8"))
     md = json_to_reader_md(data, source_name=src_path.stem)
-    dst_path = Path(dst_path) if dst_path else src_path.with_name(src_path.stem + "_LECTURA.md")
+    dst_path = (
+        Path(dst_path)
+        if dst_path
+        else src_path.with_name(src_path.stem + "_LECTURA.md")
+    )
     dst_path.write_text(md, encoding="utf-8")
     return dst_path
 

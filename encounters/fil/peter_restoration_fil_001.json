@@ -14,7 +14,15 @@
     "mood_primary": "grace",
     "accent_color": "#3a2a1e",
     "emoji": "🔥",
-    "tags": ["pagpapanumbalik", "kapatawaran", "pagtawag", "pedro", "jesus", "biyaya", "misyon"]
+    "tags": [
+      "pagpapanumbalik",
+      "kapatawaran",
+      "pagtawag",
+      "pedro",
+      "jesus",
+      "biyaya",
+      "misyon"
+    ]
   },
   "key_verse": {
     "reference": "Juan 21:17",
@@ -47,7 +55,9 @@
       "reflection": "Isang simpleng utos ang ibinibigay ng isang estranghero sa pampang, mahirap paniwalaan para sa mga mangingisdang buong gabing walang nahuli: ihulog ang lambat sa kabilang panig ng parehong bangka. Sumunod sila, hindi pa alam kung kanino sila sumusunod, at doon nangyari ang himala; napuno ang lambat nang hindi na nila kayang iahon. Ito ang parehong tagpo na nagtatak sa pagtawag kay Pedro noong pinakaunang simula (Lucas 5:4-7), at ang minamahal na alagad ang unang nakaugnay sa dalawang sandaling ito: \"Ang Panginoon iyon.\"",
       "revelation_key": "Sumunod sila bago pa man nalaman kung kanino sila sumusunod.",
       "scripture_connections": [
-        { "reference": "Lucas 5:4-7", "text": "Pagkatapos niyang mangaral, sinabi niya kay Simon, “Pumalaot kayo at ihulog ang mga lambat upang manghuli.” Sumagot si Simon, “Guro, magdamag po kaming nagpagod ngunit wala kaming nahuli! Ngunit dahil sa sinabi ninyo, ihuhulog ko ang mga lambat.” Ganoon nga ang ginawa nila, at nakahuli sila ng maraming isda, kaya't halos mapunit ang kanilang mga lambat. Kinawayan nila ang kanilang mga kasamahang nasa kabilang bangka upang magpatulong. Lumapit naman ang mga ito at napuno nila ang dalawang bangka, anupa't halos lumubog ang mga ito."
+        {
+          "reference": "Lucas 5:4-7",
+          "text": "Pagkatapos niyang mangaral, sinabi niya kay Simon, “Pumalaot kayo at ihulog ang mga lambat upang manghuli.” Sumagot si Simon, “Guro, magdamag po kaming nagpagod ngunit wala kaming nahuli! Ngunit dahil sa sinabi ninyo, ihuhulog ko ang mga lambat.” Ganoon nga ang ginawa nila, at nakahuli sila ng maraming isda, kaya't halos mapunit ang kanilang mga lambat. Kinawayan nila ang kanilang mga kasamahang nasa kabilang bangka upang magpatulong. Lumapit naman ang mga ito at napuno nila ang dalawang bangka, anupa't halos lumubog ang mga ito."
         }
       ]
     },
@@ -61,7 +71,9 @@
       "content": "Ibinigkis ni Pedro ang kanyang balabal at itinapon ang sarili sa dagat bago pa man makarating ang bangka sa lupa. Kaugalian niyang magtrabaho nang halos walang saplot, ngunit nagbihis muna siya bago lumapit kay Jesus — isang tanda ng paggalang sa gitna ng kanyang pagmamadali. Ito na ang ikalawang beses na pumasok sa tubig ang lalaking ito upang mas mabilis siyang makalapit kay Jesus. Sa unang pagkakataon, lumakad siya sa ibabaw nito na nakatuon ang tingin kay Jesus, hanggang sa nagulantang siya sa hangin at nagsimulang lumubog (Mateo 14:29-30). Sa pagkakataong ito, lumangoy siya nang buong lakas, hinihimok ng pagnanais na makarating bago ang iba.",
       "revelation_key": "Si Juan ang unang nakakilala kay Jesus; agad kumilos si Pedro.",
       "scripture_connections": [
-        { "reference": "Mateo 14:29-30", "text": "Sumagot siya, \"Halika.\" Mula sa bangka ay lumakad si Pedro sa ibabaw ng tubig papunta kay Jesus. Ngunit nang mapansin niya na malakas ang hangin, siya'y natakot at nagsimulang lumubog. \"Panginoon, sagipin ninyo ako!\" sigaw niya."
+        {
+          "reference": "Mateo 14:29-30",
+          "text": "Sumagot siya, \"Halika.\" Mula sa bangka ay lumakad si Pedro sa ibabaw ng tubig papunta kay Jesus. Ngunit nang mapansin niya na malakas ang hangin, siya'y natakot at nagsimulang lumubog. \"Panginoon, sagipin ninyo ako!\" sigaw niya."
         }
       ],
       "verse_overlay": {
@@ -75,7 +87,7 @@
       "mood": "mysterious",
       "image_url": "peter_restoration_charcoal_fire.png",
       "title": "Nakahanda na",
-      "narrative": "Sa pampang, may nagbabagang uling. Sa ibabaw nito, isda at tinapay, nakahanda na bago pa sila sumapit sa lupa. Sa orihinal na tekstong Griyego, ang salitang ginamit ay κειμένην (keimenēn), na nangangahulugang 'nakahanda na, inihanda nang maaga.' Nakahanda na ang pagkain ni Jesus, at bagama't ganoon, hinihiling pa rin niya sa kanila na magdala ng ilang isdang katatapos lamang nilang mahuli.",
+      "narrative": "Sa pampang, may nagbabagang uling. Sa ibabaw nito, isda at tinapay, nakahanda na bago pa sila sumapit sa lupa. Sa orihinal na tekstong Griyego, ang salitang ginamit ay κειμένην, (keimenēn), na nangangahulugang 'nakahanda na, inihanda nang maaga.' Nakahanda na ang pagkain ni Jesus, at bagama't ganoon, hinihiling pa rin niya sa kanila na magdala ng ilang isdang katatapos lamang nilang mahuli.",
       "verse_overlay": {
         "reference": "Juan 21:9-10",
         "text": "Pagkaahon nila sa pampang, nakakita sila roon ng isdang iniihaw sa baga, at ilang tinapay. \"Magdala kayo rito ng ilang isdang nahuli ninyo,\" sabi ni Jesus."
@@ -91,7 +103,7 @@
       "image_url": "peter_restoration_anthrakia.png",
       "title": "Ang apoy na may alaala",
       "subtitle": "Isang salitang dalawang beses lamang lumitaw",
-      "content": "Ang salitang Griyego para sa 'nagbabagang uling,' ἀνθρακιά (anthrakia), dalawang beses lamang lumitaw sa buong Bagong Tipan — at pareho itong nasa Ebanghelyo ni Juan. Ang una ay sa Juan 18:18, ang patyo kung saan ikinaila ni Pedro si Jesus habang nagpapainit sa uling. Ang ikalawa ay sa Juan 21:9, sa pampang na ito. Makatwirang isipin na ang parehong tagpo ay nagpapabalik kay Pedro ng alaala sa gabing ikinaila niya si Jesus.",
+      "content": "Ang salitang Griyego para sa 'nagbabagang uling,' ἀνθρακιά, (anthrakiá) (G439), dalawang beses lamang lumitaw sa buong Bagong Tipan — at pareho itong nasa Ebanghelyo ni Juan. Ang una ay sa Juan 18:18, ang patyo kung saan ikinaila ni Pedro si Jesus habang nagpapainit sa uling. Ang ikalawa ay sa Juan 21:9, sa pampang na ito. Makatwirang isipin na ang parehong tagpo ay nagpapabalik kay Pedro ng alaala sa gabing ikinaila niya si Jesus.",
       "revelation_key": "Ang parehong apoy na saksi sa pagbagsak ni Pedro ay ngayo'y saksi rin sa kanyang pagbabalik sa pampang na ito.",
       "verse_overlay": {
         "reference": "Juan 21:9",
@@ -110,7 +122,7 @@
       "mood": "tense",
       "image_url": "peter_restoration_breakfast.png",
       "title": "Walang nangahas sa kanila",
-      "narrative": "Kumain sila nang tahimik. Ipinamahagi ni Jesus ang tinapay at ang isda sa pamamagitan ng sarili niyang mga kamay — ang parehong pandiwang Griyego, λαμβάνω (lambano), na ginamit niya upang kunin ang mga tinapay bago ito ipamahagi sa napakaraming tao sa tabi ng lawang ito rin (Juan 6:11). May bagong paggalang, iba sa dating kalapitan. Kumain din si Pedro, ngunit may kung anong nagpapatigas sa kanya: noong huling beses siyang tumayo malapit kay Jesus matapos siyang mabigo, hindi niya kinaya ang titig nito (Lucas 22:61-62). Ngayon, ibinabahagi niya ang kanyang tinapay.",
+      "narrative": "Kumain sila nang tahimik. Ipinamahagi ni Jesus ang tinapay at ang isda sa pamamagitan ng sarili niyang mga kamay — ang parehong pandiwang Griyego, λαμβάνω, (lambánō) (G2983), na ginamit niya upang kunin ang mga tinapay bago ito ipamahagi sa napakaraming tao sa tabi ng lawang ito rin (Juan 6:11). May bagong paggalang, iba sa dating kalapitan. Kumain din si Pedro, ngunit may kung anong nagpapatigas sa kanya: noong huling beses siyang tumayo malapit kay Jesus matapos siyang mabigo, hindi niya kinaya ang titig nito (Lucas 22:61-62). Ngayon, ibinabahagi niya ang kanyang tinapay.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
@@ -157,14 +169,16 @@
       "image_url": "peter_restoration_agape_phileo.png",
       "title": "Dalawang salita para sa pag-ibig",
       "subtitle": "Ang pag-ibig na ipinangako at ang pag-ibig na totoo",
-      "content": "Sa Griyego, may ilang salita para sa 'pag-ibig.' Nang dalawang beses tinanong ni Jesus si Simon kung mahal siya nito, ginamit niya ang salitang ἀγαπᾷς (agapas): ganap, sakripisyong pag-ibig, ang parehong pag-ibig na ipinangako ni Pedro nang gabing iyon. Sumagot si Pedro sa lahat ng tatlong pagkakataon, \"Opo, Panginoon; alam ninyong mahal ko kayo,\" ngunit sa φιλῶ (philō), ang pag-ibig ng pagkakaibigan at katapatan — isang tunay na pag-ibig, kahit na iba sa hiniling ni Jesus.\n\nSa ikatlong beses, binago ni Jesus ang sarili niyang tanong at ginamit ang φιλεῖς (phileis), ang parehong salitang ginamit ni Pedro mula sa simula: tinatanong niya ito tungkol mismo sa pag-ibig na tunay na taglay ni Pedro, at tinanggap ito kung ano man ito.",
+      "content": "Sa Griyego, may ilang salita para sa 'pag-ibig.' Nang dalawang beses tinanong ni Jesus si Simon kung mahal siya nito, ginamit niya ang salitang ἀγαπᾷς, (agapas): ganap, sakripisyong pag-ibig, ang parehong pag-ibig na ipinangako ni Pedro nang gabing iyon. Sumagot si Pedro sa lahat ng tatlong pagkakataon, \"Opo, Panginoon; alam ninyong mahal ko kayo,\" ngunit sa φιλῶ, (philō), ang pag-ibig ng pagkakaibigan at katapatan — isang tunay na pag-ibig, kahit na iba sa hiniling ni Jesus.\n\nSa ikatlong beses, binago ni Jesus ang sarili niyang tanong at ginamit ang φιλεῖς, (phileis), ang parehong salitang ginamit ni Pedro mula sa simula: tinatanong niya ito tungkol mismo sa pag-ibig na tunay na taglay ni Pedro, at tinanggap ito kung ano man ito.",
       "revelation_key": "Hindi hinihintay ng pagpapanumbalik na umabot ang pag-ibig ni Pedro sa ipinangakong sukdulan: gumagana ito sa tunay na pag-ibig na taglay niya.",
       "verse_overlay": {
         "reference": "Juan 21:17",
         "text": "Pangatlong ulit na tinanong siya ni Jesus, \"Simon, anak ni Juan, mahal mo ba ako?\" Nalungkot si Pedro sapagkat tatlong beses siyang tinanong, \"Mahal mo ba ako?\" At sumagot siya, \"Panginoon, alam po ninyo ang lahat ng bagay; alam ninyong mahal ko kayo.\" Sinabi sa kanya ni Jesus, \"Pakainin mo ang aking mga tupa.\""
       },
       "scripture_connections": [
-        { "reference": "Marcos 14:29", "text": "Sumagot si Pedro, \"Kahit na po kayo iwan ng lahat, hindi ko kayo iiwan.\""
+        {
+          "reference": "Marcos 14:29",
+          "text": "Sumagot si Pedro, \"Kahit na po kayo iwan ng lahat, hindi ko kayo iiwan.\""
         }
       ]
     },
@@ -175,14 +189,16 @@
       "image_url": "peter_restoration_feed_sheep.png",
       "title": "Pag-aalaga sa mahal ni Jesus",
       "subtitle": "Ang kapatawarang may kasamang gawain",
-      "content": "Sa orihinal na Griyego, ang tatlong gawaing ibinigay ni Jesus kay Pedro ay hindi umuulit sa parehong salita. Ang una at ang huli ay gumagamit ng βόσκω (bosko): pakainin, palakasin, bigyan ng pagkain ang kawan. Ang gitna ay gumagamit ng ibang pandiwa, ποιμαίνω (poimaino): pastulan nang ganap — patnubayan, protektahan, at pamahalaan ang kawan, hindi lamang pakainin ito. Si Jesus, na katatapos lamang magpakain sa kanila sa tabi ng apoy gamit ang sarili niyang mga kamay (Juan 21:12-13), ay ngayo'y ipinagkakatiwala kay Pedro ang pagpapakain at pamamahala sa sarili niyang kawan. Ang taong ikinaila na kilala niya si Jesus ang tumatanggap ng gawaing pag-aalaga sa mga mahal ni Jesus.",
+      "content": "Sa orihinal na Griyego, ang tatlong gawaing ibinigay ni Jesus kay Pedro ay hindi umuulit sa parehong salita. Ang una at ang huli ay gumagamit ng βόσκω, (bóskō) (G1006): pakainin, palakasin, bigyan ng pagkain ang kawan. Ang gitna ay gumagamit ng ibang pandiwa, ποιμαίνω, (poimaínō) (G4165): pastulan nang ganap — patnubayan, protektahan, at pamahalaan ang kawan, hindi lamang pakainin ito. Si Jesus, na katatapos lamang magpakain sa kanila sa tabi ng apoy gamit ang sarili niyang mga kamay (Juan 21:12-13), ay ngayo'y ipinagkakatiwala kay Pedro ang pagpapakain at pamamahala sa sarili niyang kawan. Ang taong ikinaila na kilala niya si Jesus ang tumatanggap ng gawaing pag-aalaga sa mga mahal ni Jesus.",
       "revelation_key": "Ang kapatawaran ni Pedro ay hindi natatapos sa pakiramdam ng ganap na kapatawaran: dumarating ito na may kasamang tunay na gawain.",
       "verse_overlay": {
         "reference": "Juan 21:16",
         "text": "Muli siyang tinanong ni Jesus, \"Simon, anak ni Juan, iniibig mo ba ako?\" Sumagot si Pedro, \"Opo, Panginoon, alam ninyong mahal ko kayo.\" Sabi ni Jesus, \"Alagaan mo ang aking mga tupa.\""
       },
       "scripture_connections": [
-        { "reference": "1 Pedro 5:2-3", "text": "alagaan ninyo ang kawan ng Diyos na ipinagkatiwala sa inyo. Alagaan ninyo ito nang maluwag sa loob at hindi napipilitan lamang. Iyan ang nais ng Diyos. Gampanan ninyo ang inyong tungkulin, hindi dahil sa kabayaran kundi dahil gusto ninyong makapaglingkod, hindi bilang panginoon ng inyong nasasakupan, kundi maging halimbawa nila kayo."
+        {
+          "reference": "1 Pedro 5:2-3",
+          "text": "alagaan ninyo ang kawan ng Diyos na ipinagkatiwala sa inyo. Alagaan ninyo ito nang maluwag sa loob at hindi napipilitan lamang. Iyan ang nais ng Diyos. Gampanan ninyo ang inyong tungkulin, hindi dahil sa kabayaran kundi dahil gusto ninyong makapaglingkod, hindi bilang panginoon ng inyong nasasakupan, kundi maging halimbawa nila kayo."
         }
       ]
     },
@@ -211,7 +227,9 @@
       "reflection": "Ang parehong utos na siyang pinagmulan ng lahat sa tabi ng lawang ito (Mateo 4:19) ay ngayo'y bumabalik upang isara ang bilog. Alam na ni Pedro kung magkano ang halaga ng mangako at pagkatapos ay mabigo, at kung magkano ang maaaring halaga ng tunay na pagsunod. Hindi humihiling si Jesus ng bago at mas malaking pangako; hinihiling niya ang parehong bagay tulad ng dati: sumunod ka sa akin. Sa pagkakataong ito, sumusunod si Pedro nang alam na ang halaga.",
       "revelation_key": "Ang parehong tawag mula sa simula ay bumabalik sa huli, ngayo'y alam na at tinanggap na ang halaga.",
       "scripture_connections": [
-        { "reference": "Mateo 4:19", "text": "Sinabi ni Jesus sa kanila, \"Sumunod kayo sa akin at gagawin ko kayong mga mangingisda ng mga tao.\""
+        {
+          "reference": "Mateo 4:19",
+          "text": "Sinabi ni Jesus sa kanila, \"Sumunod kayo sa akin at gagawin ko kayong mga mangingisda ng mga tao.\""
         }
       ]
     },
@@ -222,11 +240,17 @@
       "title": "Ang Iyong Pagtatagpo",
       "subtitle": "Hindi lamang pinapatawad ni Jesus ang iyong kabiguan; muli ka niyang pinagkakatiwalaan ng isang bagay.",
       "discovery_questions": [
-        { "category": "Katapatan", "question": "Tulad ni Pedrong hindi nakayanang tuparin ang kanyang salita kay Jesus at siya'y binigo, nararamdaman mo bang nabigo o nahulog ka rin? Alalahaning kahit ang uling ay nagpapabalik sa iyo ng alaalang iyon ng pagkahulog, naroroon si Jesus upang panumbalikin ka nang may layunin."
+        {
+          "category": "Katapatan",
+          "question": "Tulad ni Pedrong hindi nakayanang tuparin ang kanyang salita kay Jesus at siya'y binigo, nararamdaman mo bang nabigo o nahulog ka rin? Alalahaning kahit ang uling ay nagpapabalik sa iyo ng alaalang iyon ng pagkahulog, naroroon si Jesus upang panumbalikin ka nang may layunin."
         },
-        { "category": "Pag-ibig na kumikilos", "question": "Inaasahan ni Jesus kay Pedro, tulad ng inaasahan niya sa iyo, ang pag-ibig na ἀγαπᾷς (agapas): sakripisyo, ganap na pagbibigay ng sarili. Naging tapat si Pedro sa kanyang sagot, ngunit sa kanyang mga gawa ay ibinigay niya ang sarili niya kay Jesus hanggang sa kamatayan. Anong pag-ibig ang taglay mo para kay Jesu-Cristo: higit sa iyong mga gawa, o sa iyong mga salita?"
+        {
+          "category": "Pag-ibig na kumikilos",
+          "question": "Inaasahan ni Jesus kay Pedro, tulad ng inaasahan niya sa iyo, ang pag-ibig na ἀγαπᾷς, (agapas): sakripisyo, ganap na pagbibigay ng sarili. Naging tapat si Pedro sa kanyang sagot, ngunit sa kanyang mga gawa ay ibinigay niya ang sarili niya kay Jesus hanggang sa kamatayan. Anong pag-ibig ang taglay mo para kay Jesu-Cristo: higit sa iyong mga gawa, o sa iyong mga salita?"
         },
-        { "category": "Ang iyong gawain", "question": "Tulad ng lalaking ikinaila na kilala niya si Jesus ay pinanumbalik at binigyan ng gawaing pag-aalaga sa mga mahal ni Jesus, anong gawain sa palagay mo'y hindi mo na karapat-dapat tanggapin dahil sa iyong kabiguan? Alam mong gusto pa rin itong ipagkatiwala sa iyo ng Diyos. Alalahaning naroroon din si Jesus upang panumbalikin ka — upang makapaglingkod ka nang may pag-ibig."
+        {
+          "category": "Ang iyong gawain",
+          "question": "Tulad ng lalaking ikinaila na kilala niya si Jesus ay pinanumbalik at binigyan ng gawaing pag-aalaga sa mga mahal ni Jesus, anong gawain sa palagay mo'y hindi mo na karapat-dapat tanggapin dahil sa iyong kabiguan? Alam mong gusto pa rin itong ipagkatiwala sa iyo ng Diyos. Alalahaning naroroon din si Jesus upang panumbalikin ka — upang makapaglingkod ka nang may pag-ibig."
         }
       ],
       "prayer": {

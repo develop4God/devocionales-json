@@ -16,21 +16,21 @@ import re
 from contextlib import redirect_stdout
 from pathlib import Path
 
-GOLDEN_DIR = Path(__file__).parent / 'golden'
+GOLDEN_DIR = Path(__file__).parent / "golden"
 
-_TIMESTAMP_RE = re.compile(r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}')
-_BRANCH_RE = re.compile(r'branch \S+')
-_ELAPSED_RE = re.compile(r'\(\d+\.\d+s\)')
-_TOTAL_ELAPSED_RE = re.compile(r'\(total: \d+\.\d+s\)')
+_TIMESTAMP_RE = re.compile(r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}")
+_BRANCH_RE = re.compile(r"branch \S+")
+_ELAPSED_RE = re.compile(r"\(\d+\.\d+s\)")
+_TOTAL_ELAPSED_RE = re.compile(r"\(total: \d+\.\d+s\)")
 
 
 def normalize(output: str) -> str:
     """Replace run-dependent substrings with fixed placeholders so two runs
     of the same logical scenario produce byte-identical normalized output."""
-    output = _TIMESTAMP_RE.sub('<TIMESTAMP>', output)
-    output = _BRANCH_RE.sub('branch <BRANCH>', output)
-    output = _TOTAL_ELAPSED_RE.sub('(total: <ELAPSED>s)', output)
-    output = _ELAPSED_RE.sub('(<ELAPSED>s)', output)
+    output = _TIMESTAMP_RE.sub("<TIMESTAMP>", output)
+    output = _BRANCH_RE.sub("branch <BRANCH>", output)
+    output = _TOTAL_ELAPSED_RE.sub("(total: <ELAPSED>s)", output)
+    output = _ELAPSED_RE.sub("(<ELAPSED>s)", output)
     return output
 
 
@@ -46,7 +46,7 @@ def capture(fn, *args, **kwargs) -> str:
     summary panel alongside the actual validator results.
     """
     buf = io.StringIO()
-    old_summary = os.environ.pop('GITHUB_STEP_SUMMARY', None)
+    old_summary = os.environ.pop("GITHUB_STEP_SUMMARY", None)
     try:
         with redirect_stdout(buf):
             try:
@@ -55,7 +55,7 @@ def capture(fn, *args, **kwargs) -> str:
                 pass
     finally:
         if old_summary is not None:
-            os.environ['GITHUB_STEP_SUMMARY'] = old_summary
+            os.environ["GITHUB_STEP_SUMMARY"] = old_summary
     return normalize(buf.getvalue())
 
 
@@ -69,18 +69,19 @@ def assert_matches_golden(testcase, actual: str, golden_name: str) -> None:
     GOLDEN_DIR.mkdir(exist_ok=True)
     golden_path = GOLDEN_DIR / golden_name
 
-    if os.environ.get('REGENERATE_GOLDEN') == '1' or not golden_path.exists():
-        golden_path.write_text(actual, encoding='utf-8')
-        if not os.environ.get('REGENERATE_GOLDEN'):
+    if os.environ.get("REGENERATE_GOLDEN") == "1" or not golden_path.exists():
+        golden_path.write_text(actual, encoding="utf-8")
+        if not os.environ.get("REGENERATE_GOLDEN"):
             testcase.fail(
                 f"Golden file {golden_path} did not exist — created it now. "
                 "Re-run the test to verify, then review and commit the new golden file."
             )
         return
 
-    expected = golden_path.read_text(encoding='utf-8')
+    expected = golden_path.read_text(encoding="utf-8")
     testcase.assertEqual(
-        expected, actual,
+        expected,
+        actual,
         f"Output for {golden_name} no longer matches the committed golden file.\n"
-        f"If this change is deliberate, re-run with REGENERATE_GOLDEN=1 to update it."
+        f"If this change is deliberate, re-run with REGENERATE_GOLDEN=1 to update it.",
     )

@@ -1,0 +1,19 @@
+{
+  "_comment": "Languages whose native script is non-Latin, checked by check_no_latin_leak in text_checks.py for stray Latin content (untranslated leftovers) outside the one known-good exception: the Latin transliteration inside a Greek/Hebrew gloss's parenthetical, e.g. 'μονογενής (monogenēs)' — see find_greek_hebrew_glosses. 'letters': flag bare Latin letters (A-Z/a-z plus accented Latin) found in the field. 'punctuation': flag ASCII punctuation (, . ! ? \" ') where the language has its own native marks — OFF by default until confirmed against real corpus usage per language (this corpus intentionally tolerates some mixed punctuation conventions, see check_quote_anomalies comments on guillemets/curly quotes). Add a language only after confirming its script is genuinely non-Latin and the rule values are correct for it.",
+  "languages": {
+    "zh": {
+      "letters": true,
+      "punctuation": false
+    }
+  },
+  "_skip_keys_comment": "Field keys (matched by last JSON path segment, e.g. 'metadata.difficulty_level' matches 'difficulty_level') that are structural/identifier values by schema design, not translatable prose — legitimately Latin/ASCII regardless of language. Verified exhaustively: every value under every one of these keys, across all 53 zh files in discovery/zh + encounters/zh, contains zero Han characters (script-content check, not a guess from a sample). Add a key here only after confirming — the same way, corpus-wide — that its value is a schema identifier/code, not human-readable content.",
+  "skip_keys": [
+    "id", "type", "date", "language", "version", "schema_version",
+    "bible_version", "order", "icon", "mood", "mood_primary", "image_url",
+    "image_version", "ambient_sound", "haptic", "celebration_type",
+    "reference", "word", "transliteration", "strong",
+    "total_word_count", "greek_words_count", "scripture_references_count",
+    "difficulty_level", "testament", "accent_color", "emoji",
+    "application_focus", "emotional_intensity"
+  ]
+}

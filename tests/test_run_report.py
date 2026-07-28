@@ -42,12 +42,12 @@ def setUpModule():
     field was missing") leaks into the real job's GitHub Actions summary
     panel alongside the actual validator results."""
     global _saved_step_summary
-    _saved_step_summary = os.environ.pop('GITHUB_STEP_SUMMARY', None)
+    _saved_step_summary = os.environ.pop("GITHUB_STEP_SUMMARY", None)
 
 
 def tearDownModule():
     if _saved_step_summary is not None:
-        os.environ['GITHUB_STEP_SUMMARY'] = _saved_step_summary
+        os.environ["GITHUB_STEP_SUMMARY"] = _saved_step_summary
 
 
 def _phase_ok(report):
@@ -73,9 +73,13 @@ class TestRunReportCleanPass(unittest.TestCase):
         run_report.wrap("PHASE 1: FIRST", _phase_ok, final=False)
         run_report.wrap("PHASE 2: SECOND", _phase_ok, final=False)
         run_report.add_coverage(
-            content_units=3, published=2, coming_soon=1,
-            files_scanned=42, languages_present=["en", "es"],
-            expected_languages=2, sot_live=True,
+            content_units=3,
+            published=2,
+            coming_soon=1,
+            files_scanned=42,
+            languages_present=["en", "es"],
+            expected_languages=2,
+            sot_live=True,
         )
         run_report.print_summary()
         sys.exit(0)
@@ -98,7 +102,9 @@ class TestRunReportGateFailure(unittest.TestCase):
         # This phase fails and gates — wrap() must exit(1) here, meaning
         # PHASE 3 below never runs.
         run_report.wrap("PHASE 2: FAILS", _phase_fails, final=False)
-        run_report.wrap("PHASE 3: NEVER REACHED", _phase_ok, final=False)  # pragma: no cover
+        run_report.wrap(
+            "PHASE 3: NEVER REACHED", _phase_ok, final=False
+        )  # pragma: no cover
 
     def test_gate_failure_matches_golden(self):
         output = capture(self.run_scenario)
@@ -129,8 +135,11 @@ class TestRunReportWarningsOnlyFails(unittest.TestCase):
         run_report.wrap("PHASE 1: GATE", _phase_ok, final=False)
         run_report.wrap("PHASE 2: WARNS", _phase_warns, gate=False, final=True)
         run_report.add_coverage(
-            content_units=5, files_scanned=10,
-            languages_present=["en"], expected_languages=1, sot_live=False,
+            content_units=5,
+            files_scanned=10,
+            languages_present=["en"],
+            expected_languages=1,
+            sot_live=False,
         )
         run_report.print_summary()
         sys.exit(run_report.exit_code)
@@ -162,5 +171,5 @@ class TestRunReportAddCoverageTypoProtection(unittest.TestCase):
             run_report.add_coverage(fiels_scanned=5)  # deliberate typo
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

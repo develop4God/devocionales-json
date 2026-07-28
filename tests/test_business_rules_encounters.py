@@ -23,11 +23,11 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
-sys.path.insert(0, str(REPO_ROOT / 'encounters' / 'encounters_scripts'))
+sys.path.insert(0, str(REPO_ROOT / "encounters" / "encounters_scripts"))
 
-import validate_encounters as ve
-from shared_validation.report import Report
-from shared_validation.text_checks import is_cognate
+import validate_encounters as ve  # noqa: E402
+from shared_validation.report import Report  # noqa: E402
+from shared_validation.text_checks import is_cognate  # noqa: E402
 
 
 # ── CARD_REQUIRED_KEYS dispatch ─────────────────────────────────────────────
@@ -41,44 +41,71 @@ from shared_validation.text_checks import is_cognate
 # key, rather than asserting on the total error count (which would be
 # brittle against unrelated future validation additions).
 
-_BIBLE_VERSIONS = {'en': {'allowed_versions': ['KJV', 'NIV']}}
+_BIBLE_VERSIONS = {"en": {"allowed_versions": ["KJV", "NIV"]}}
 
 # One minimal valid card per CARD_REQUIRED_KEYS entry, satisfying every key
 # CARD_REQUIRED_KEYS.get(ctype) currently lists — used as the "everything
 # present" baseline that each test then knocks one key out of.
 _VALID_CARDS = {
-    'cinematic_scene': {
-        'order': 1, 'type': 'cinematic_scene', 'image_url': 'x.png',
-        'title': 'A Title', 'narrative': 'Some narrative text.',
-        'revelation_key': 'key1',
+    "cinematic_scene": {
+        "order": 1,
+        "type": "cinematic_scene",
+        "image_url": "x.png",
+        "title": "A Title",
+        "narrative": "Some narrative text.",
+        "revelation_key": "key1",
     },
-    'scripture_moment': {
-        'order': 1, 'type': 'scripture_moment', 'image_url': 'x.png',
-        'verse_reference': 'John 3:16', 'verse_text': 'For God so loved...',
-        'reflection': 'A reflection.', 'revelation_key': 'key1',
+    "scripture_moment": {
+        "order": 1,
+        "type": "scripture_moment",
+        "image_url": "x.png",
+        "verse_reference": "John 3:16",
+        "verse_text": "For God so loved...",
+        "reflection": "A reflection.",
+        "revelation_key": "key1",
     },
-    'character_moment': {
-        'order': 1, 'type': 'character_moment', 'image_url': 'x.png',
-        'title': 'A Title', 'content': 'Some content.', 'revelation_key': 'key1',
+    "character_moment": {
+        "order": 1,
+        "type": "character_moment",
+        "image_url": "x.png",
+        "title": "A Title",
+        "content": "Some content.",
+        "revelation_key": "key1",
     },
-    'theological_depth': {
-        'order': 1, 'type': 'theological_depth', 'image_url': 'x.png',
-        'title': 'A Title', 'content': 'Some content.', 'revelation_key': 'key1',
+    "theological_depth": {
+        "order": 1,
+        "type": "theological_depth",
+        "image_url": "x.png",
+        "title": "A Title",
+        "content": "Some content.",
+        "revelation_key": "key1",
     },
-    'interactive_moment': {
-        'order': 1, 'type': 'interactive_moment', 'image_url': 'x.png',
-        'title': 'A Title', 'reflection_prompt': 'A prompt.',
+    "interactive_moment": {
+        "order": 1,
+        "type": "interactive_moment",
+        "image_url": "x.png",
+        "title": "A Title",
+        "reflection_prompt": "A prompt.",
     },
-    'discovery_activation': {
-        'order': 1, 'type': 'discovery_activation', 'image_url': 'x.png',
-        'title': 'A Title',
-        'discovery_questions': [{'category': 'Trust', 'question': 'Why?'}],
-        'prayer': {'title': 'Pray', 'content': 'Content'},
+    "discovery_activation": {
+        "order": 1,
+        "type": "discovery_activation",
+        "image_url": "x.png",
+        "title": "A Title",
+        "discovery_questions": [{"category": "Trust", "question": "Why?"}],
+        "prayer": {"title": "Pray", "content": "Content"},
     },
-    'completion': {
-        'order': 1, 'type': 'completion', 'image_url': 'x.png',
-        'completion_verse': {'reference': 'John 3:16', 'text': 'x', 'bible_version': 'KJV'},
-        'reflection_prompt': 'A prompt.', 'celebration_type': 'confetti',
+    "completion": {
+        "order": 1,
+        "type": "completion",
+        "image_url": "x.png",
+        "completion_verse": {
+            "reference": "John 3:16",
+            "text": "x",
+            "bible_version": "KJV",
+        },
+        "reflection_prompt": "A prompt.",
+        "celebration_type": "confetti",
     },
 }
 
@@ -94,25 +121,30 @@ def _make_encounter(card: dict) -> dict:
     # discovery_activation + completion appended so those two structural
     # rules don't fire and pollute the report.
     cards = [card]
-    if card['type'] != 'discovery_activation':
-        cards.append(dict(_VALID_CARDS['discovery_activation'], order=len(cards) + 1))
-    if card['type'] != 'completion':
-        cards.append(dict(_VALID_CARDS['completion'], order=len(cards) + 1))
+    if card["type"] != "discovery_activation":
+        cards.append(dict(_VALID_CARDS["discovery_activation"], order=len(cards) + 1))
+    if card["type"] != "completion":
+        cards.append(dict(_VALID_CARDS["completion"], order=len(cards) + 1))
 
     return {
-        'id': 'test_encounter_001',
-        'type': 'encounter',
-        'schema_version': ve.SCHEMA_VERSION,
-        'language': 'en',
-        'bible_version': 'KJV',
-        'version': '1.0',
-        'estimated_reading_minutes': 5,
-        'meta': {
-            'character': 'x', 'testament': 'new', 'scripture_reference': 'John 3:16',
-            'mood_primary': 'hopeful', 'accent_color': '#123456', 'emoji': '✝️', 'tags': [],
+        "id": "test_encounter_001",
+        "type": "encounter",
+        "schema_version": ve.SCHEMA_VERSION,
+        "language": "en",
+        "bible_version": "KJV",
+        "version": "1.0",
+        "estimated_reading_minutes": 5,
+        "meta": {
+            "character": "x",
+            "testament": "new",
+            "scripture_reference": "John 3:16",
+            "mood_primary": "hopeful",
+            "accent_color": "#123456",
+            "emoji": "✝️",
+            "tags": [],
         },
-        'key_verse': {'reference': 'John 3:16', 'text': 'x', 'bible_version': 'KJV'},
-        'cards': cards,
+        "key_verse": {"reference": "John 3:16", "text": "x", "bible_version": "KJV"},
+        "cards": cards,
     }
 
 
@@ -125,10 +157,14 @@ class TestCardRequiredKeysDispatch(unittest.TestCase):
         del card[missing_key]
         data = _make_encounter(card)
 
-        report = Report('TEST')
-        ve.validate_encounter_file(data, 'en', 'test.json', 'test_encounter_001', report, _BIBLE_VERSIONS)
+        report = Report("TEST")
+        ve.validate_encounter_file(
+            data, "en", "test.json", "test_encounter_001", report, _BIBLE_VERSIONS
+        )
 
-        matching = [e for e in report.errors if f"missing required key '{missing_key}'" in e]
+        matching = [
+            e for e in report.errors if f"missing required key '{missing_key}'" in e
+        ]
         self.assertTrue(
             matching,
             f"Expected an error for missing '{missing_key}' on card type '{ctype}', "
@@ -136,25 +172,25 @@ class TestCardRequiredKeysDispatch(unittest.TestCase):
         )
 
     def test_cinematic_scene_missing_narrative(self):
-        self._assert_missing_key_flagged('cinematic_scene', 'narrative')
+        self._assert_missing_key_flagged("cinematic_scene", "narrative")
 
     def test_scripture_moment_missing_verse_text(self):
-        self._assert_missing_key_flagged('scripture_moment', 'verse_text')
+        self._assert_missing_key_flagged("scripture_moment", "verse_text")
 
     def test_character_moment_missing_content(self):
-        self._assert_missing_key_flagged('character_moment', 'content')
+        self._assert_missing_key_flagged("character_moment", "content")
 
     def test_theological_depth_missing_title(self):
-        self._assert_missing_key_flagged('theological_depth', 'title')
+        self._assert_missing_key_flagged("theological_depth", "title")
 
     def test_interactive_moment_missing_reflection_prompt(self):
-        self._assert_missing_key_flagged('interactive_moment', 'reflection_prompt')
+        self._assert_missing_key_flagged("interactive_moment", "reflection_prompt")
 
     def test_discovery_activation_missing_prayer(self):
-        self._assert_missing_key_flagged('discovery_activation', 'prayer')
+        self._assert_missing_key_flagged("discovery_activation", "prayer")
 
     def test_completion_missing_celebration_type(self):
-        self._assert_missing_key_flagged('completion', 'celebration_type')
+        self._assert_missing_key_flagged("completion", "celebration_type")
 
     def test_unknown_card_type_gets_a_warning(self):
         """Card types not in CARD_REQUIRED_KEYS fall back to a generic
@@ -162,14 +198,22 @@ class TestCardRequiredKeysDispatch(unittest.TestCase):
         warning (not an error) for being unrecognized — this is the
         behavior at validate_encounters.py's `if ctype not in
         CARD_REQUIRED_KEYS: report.W(...)` line."""
-        card = {'order': 1, 'type': 'some_future_card_type', 'image_url': 'x.png'}
+        card = {"order": 1, "type": "some_future_card_type", "image_url": "x.png"}
         data = _make_encounter(card)
 
-        report = Report('TEST')
-        ve.validate_encounter_file(data, 'en', 'test.json', 'test_encounter_001', report, _BIBLE_VERSIONS)
+        report = Report("TEST")
+        ve.validate_encounter_file(
+            data, "en", "test.json", "test_encounter_001", report, _BIBLE_VERSIONS
+        )
 
-        matching = [w for w in report.warnings if "unknown card type 'some_future_card_type'" in w]
-        self.assertTrue(matching, f"Expected an unknown-card-type warning, got: {report.warnings}")
+        matching = [
+            w
+            for w in report.warnings
+            if "unknown card type 'some_future_card_type'" in w
+        ]
+        self.assertTrue(
+            matching, f"Expected an unknown-card-type warning, got: {report.warnings}"
+        )
 
 
 # ── is_cognate (shared_validation.text_checks) ──────────────────────────────
@@ -177,6 +221,7 @@ class TestCardRequiredKeysDispatch(unittest.TestCase):
 # Note: this function lives in shared_validation/text_checks.py, not as a
 # local `_is_cognate` in validate_encounters.py anymore — it was extracted
 # during the shared_validation migration. Testing the actual live function.
+
 
 class TestIsCognate(unittest.TestCase):
     def test_known_french_cognates_pass(self):
@@ -211,5 +256,5 @@ class TestIsCognate(unittest.TestCase):
         self.assertFalse(is_cognate("anything", "zh"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

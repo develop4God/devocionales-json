@@ -9,7 +9,7 @@ otherwise require an LLM critic pass to notice.
 
 Greek/Hebrew Latin-transliteration checking is NOT duplicated here — it already
 exists, correctly implemented and wired into both master validators, at
-shared_validation/text_checks.py::check_greek_hebrew_transliteration (run via
+shared_validation/greek_hebrew_gloss.py::check_greek_hebrew_transliteration (run via
 validate_encounters.py / validate_discovery.py / validate_family.py). Run those for
 that check; this script only covers what they don't.
 
@@ -57,7 +57,11 @@ def check_forbidden_patterns(data: dict, rules: list[dict]) -> list[str]:
         for rule in rules:
             pattern = rule["pattern"]
             if re.search(pattern, value):
-                hint = f" -> use {rule['replacement']!r}" if rule.get("replacement") else ""
+                hint = (
+                    f" -> use {rule['replacement']!r}"
+                    if rule.get("replacement")
+                    else ""
+                )
                 violations.append(
                     f"  [{json_path}] matched forbidden pattern {pattern!r}: "
                     f"{rule['reason']}{hint}\n"
@@ -79,7 +83,10 @@ def run_checks(file_path: str, lang: str) -> list[str]:
 
 def main():
     if len(sys.argv) != 2:
-        print(f"Usage: {sys.argv[0]} path/to/{{content_id}}_{{lang}}_001.json", file=sys.stderr)
+        print(
+            f"Usage: {sys.argv[0]} path/to/{{content_id}}_{{lang}}_001.json",
+            file=sys.stderr,
+        )
         sys.exit(2)
 
     file_path = sys.argv[1]

@@ -27,8 +27,12 @@ import unittest
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent
-ENCOUNTERS_MASTER = REPO_ROOT / 'encounters' / 'encounters_scripts' / 'encounters_master_validator.py'
-DISCOVERY_MASTER = REPO_ROOT / 'discovery' / 'discovery_scripts' / 'discovery_master_validator.py'
+ENCOUNTERS_MASTER = (
+    REPO_ROOT / "encounters" / "encounters_scripts" / "encounters_master_validator.py"
+)
+DISCOVERY_MASTER = (
+    REPO_ROOT / "discovery" / "discovery_scripts" / "discovery_master_validator.py"
+)
 
 
 def _run(script_path: Path, timeout: int = 120) -> subprocess.CompletedProcess:
@@ -47,11 +51,14 @@ def _run(script_path: Path, timeout: int = 120) -> subprocess.CompletedProcess:
     real job's GitHub Actions summary panel alongside the actual validator
     results."""
     env = os.environ.copy()
-    env.pop('CI', None)
-    env.pop('GITHUB_STEP_SUMMARY', None)
+    env.pop("CI", None)
+    env.pop("GITHUB_STEP_SUMMARY", None)
     return subprocess.run(
         [sys.executable, str(script_path)],
-        capture_output=True, text=True, timeout=timeout, env=env,
+        capture_output=True,
+        text=True,
+        timeout=timeout,
+        env=env,
     )
 
 
@@ -63,7 +70,8 @@ class TestPromotedValidatorsCleanPass(unittest.TestCase):
     def test_encounters_master_validator_passes(self):
         result = _run(ENCOUNTERS_MASTER)
         self.assertEqual(
-            result.returncode, 0,
+            result.returncode,
+            0,
             f"encounters_master_validator.py failed unexpectedly.\n"
             f"stdout:\n{result.stdout}\nstderr:\n{result.stderr}",
         )
@@ -76,7 +84,8 @@ class TestPromotedValidatorsCleanPass(unittest.TestCase):
     def test_discovery_master_validator_passes(self):
         result = _run(DISCOVERY_MASTER)
         self.assertEqual(
-            result.returncode, 0,
+            result.returncode,
+            0,
             f"discovery_master_validator.py failed unexpectedly.\n"
             f"stdout:\n{result.stdout}\nstderr:\n{result.stderr}",
         )
@@ -107,38 +116,54 @@ class TestPromotedValidatorsGateOnFailure(unittest.TestCase):
         corrupt the copy's index.json. Does NOT copy bible_database/ (many
         GB of compressed SQLite) — Phase A's gate rejects the broken index
         before Phase D would ever need it."""
-        fixture_root = self.tmpdir / 'encounters_fixture'
-        shutil.copytree(REPO_ROOT / 'encounters', fixture_root / 'encounters')
-        shutil.copytree(REPO_ROOT / 'shared_validation', fixture_root / 'shared_validation')
-        shutil.copytree(REPO_ROOT / 'devocionales_scripts', fixture_root / 'devocionales_scripts')
+        fixture_root = self.tmpdir / "encounters_fixture"
+        shutil.copytree(REPO_ROOT / "encounters", fixture_root / "encounters")
+        shutil.copytree(
+            REPO_ROOT / "shared_validation", fixture_root / "shared_validation"
+        )
+        shutil.copytree(
+            REPO_ROOT / "devocionales_scripts", fixture_root / "devocionales_scripts"
+        )
 
-        index_path = fixture_root / 'encounters' / 'index.json'
-        data = json.loads(index_path.read_text(encoding='utf-8'))
-        del data['encounters']  # required top-level key — Phase A must reject this
-        index_path.write_text(json.dumps(data, indent=2), encoding='utf-8')
+        index_path = fixture_root / "encounters" / "index.json"
+        data = json.loads(index_path.read_text(encoding="utf-8"))
+        del data["encounters"]  # required top-level key — Phase A must reject this
+        index_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
 
-        return fixture_root / 'encounters' / 'encounters_scripts' / 'validate_encounters.py'
+        return (
+            fixture_root
+            / "encounters"
+            / "encounters_scripts"
+            / "validate_encounters.py"
+        )
 
     def _make_discovery_fixture(self) -> Path:
         """See _make_encounters_fixture's docstring for why
         devocionales_scripts/ must be copied too."""
-        fixture_root = self.tmpdir / 'discovery_fixture'
-        shutil.copytree(REPO_ROOT / 'discovery', fixture_root / 'discovery')
-        shutil.copytree(REPO_ROOT / 'shared_validation', fixture_root / 'shared_validation')
-        shutil.copytree(REPO_ROOT / 'devocionales_scripts', fixture_root / 'devocionales_scripts')
+        fixture_root = self.tmpdir / "discovery_fixture"
+        shutil.copytree(REPO_ROOT / "discovery", fixture_root / "discovery")
+        shutil.copytree(
+            REPO_ROOT / "shared_validation", fixture_root / "shared_validation"
+        )
+        shutil.copytree(
+            REPO_ROOT / "devocionales_scripts", fixture_root / "devocionales_scripts"
+        )
 
-        index_path = fixture_root / 'discovery' / 'index.json'
-        data = json.loads(index_path.read_text(encoding='utf-8'))
-        del data['studies']  # required top-level key — Phase A must reject this
-        index_path.write_text(json.dumps(data, indent=2), encoding='utf-8')
+        index_path = fixture_root / "discovery" / "index.json"
+        data = json.loads(index_path.read_text(encoding="utf-8"))
+        del data["studies"]  # required top-level key — Phase A must reject this
+        index_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
 
-        return fixture_root / 'discovery' / 'discovery_scripts' / 'validate_discovery.py'
+        return (
+            fixture_root / "discovery" / "discovery_scripts" / "validate_discovery.py"
+        )
 
     def test_encounters_validator_fails_on_broken_index(self):
         script = self._make_encounters_fixture()
         result = _run(script)
         self.assertNotEqual(
-            result.returncode, 0,
+            result.returncode,
+            0,
             f"Expected a non-zero exit on a broken index.json, got 0.\n"
             f"stdout:\n{result.stdout}",
         )
@@ -148,12 +173,13 @@ class TestPromotedValidatorsGateOnFailure(unittest.TestCase):
         script = self._make_discovery_fixture()
         result = _run(script)
         self.assertNotEqual(
-            result.returncode, 0,
+            result.returncode,
+            0,
             f"Expected a non-zero exit on a broken index.json, got 0.\n"
             f"stdout:\n{result.stdout}",
         )
         self.assertIn("missing required 'studies' array", result.stdout)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

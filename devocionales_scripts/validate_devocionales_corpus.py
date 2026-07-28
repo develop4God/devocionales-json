@@ -45,7 +45,7 @@ def _find_repo_root(start: Path) -> Path:
     this script is ever moved). Raises clearly instead of resolving to the
     wrong place."""
     for candidate in [start, *start.parents]:
-        if (candidate / 'shared_validation').is_dir():
+        if (candidate / "shared_validation").is_dir():
             return candidate
     raise RuntimeError(
         f"Could not find shared_validation/ above {start} — "
@@ -57,35 +57,39 @@ _REPO_ROOT = _find_repo_root(Path(__file__).resolve().parent)
 sys.path.insert(0, str(_REPO_ROOT))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from shared_validation.report import Report, ReportLike
-from shared_validation.run_report import RunReport
-from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL
-from shared_validation.lint import lint_json_files
+from shared_validation.report import ReportLike  # noqa: E402
+from shared_validation.run_report import RunReport  # noqa: E402
+from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL  # noqa: E402
+from shared_validation.lint import lint_json_files  # noqa: E402
 
-from corpus_index_reader import CorpusIndexReader
-from corpus_file_validator import CorpusFileValidator
-from corpus_calendar_checker import CorpusCalendarChecker
-from corpus_schema_checker import CorpusSchemaChecker
+from corpus_index_reader import CorpusIndexReader  # noqa: E402
+from corpus_file_validator import CorpusFileValidator  # noqa: E402
+from corpus_calendar_checker import CorpusCalendarChecker  # noqa: E402
+from corpus_schema_checker import CorpusSchemaChecker  # noqa: E402
 
 SCRIPTS_DIR = Path(__file__).parent
 CORPUS_DIR = SCRIPTS_DIR.parent
-INDEX_PATH = CORPUS_DIR / 'index.json'
+INDEX_PATH = CORPUS_DIR / "index.json"
 
 
 # ── Phase 1: Lint ────────────────────────────────────────────────────────────
+
 
 def validate_lint(report: ReportLike) -> dict:
     report.I("=" * 60)
     report.I("PHASE 1: Lint — checking JSON formatting (indent=2)")
     report.I("=" * 60)
 
-    cache = lint_json_files(CORPUS_DIR, report, 'devocionales_scripts', severity='error')
+    cache = lint_json_files(
+        CORPUS_DIR, report, "devocionales_scripts", severity="error"
+    )
 
     report.I(f"✓ Checked {len(cache)} JSON files")
     return cache
 
 
 # ── Phase A: Index validation ─────────────────────────────────────────────────
+
 
 def validate_index(report: ReportLike):
     report.I("=" * 60)
@@ -107,10 +111,14 @@ def validate_index(report: ReportLike):
 
 # ── Phase SOT: Bible versions source ─────────────────────────────────────────
 
-def validate_sot_source(report: ReportLike, bible_versions: dict, used_remote_sot: bool,
-                         last_fetch_error) -> bool:
+
+def validate_sot_source(
+    report: ReportLike, bible_versions: dict, used_remote_sot: bool, last_fetch_error
+) -> bool:
     if used_remote_sot:
-        report.I(f"✓ bible_version codes resolved live from remote SOT ({REMOTE_INDEX_URL}) for all {len(bible_versions)} languages")
+        report.I(
+            f"✓ bible_version codes resolved live from remote SOT ({REMOTE_INDEX_URL}) for all {len(bible_versions)} languages"
+        )
         return True
     reason = f" ({last_fetch_error})" if last_fetch_error else ""
     report.W(
@@ -123,7 +131,10 @@ def validate_sot_source(report: ReportLike, bible_versions: dict, used_remote_so
 
 # ── Phase B: Corpus files ─────────────────────────────────────────────────────
 
-def validate_corpus_files(report: ReportLike, combos: list, bible_versions: dict) -> None:
+
+def validate_corpus_files(
+    report: ReportLike, combos: list, bible_versions: dict
+) -> None:
     import json
 
     report.I("=" * 60)
@@ -142,11 +153,13 @@ def validate_corpus_files(report: ReportLike, combos: list, bible_versions: dict
         fpath = CORPUS_DIR / combo.filename
 
         if not fpath.exists():
-            report.E(f"FILE MISSING: {combo.filename} (index declares {combo.lang}/{combo.version}/{combo.year})")
+            report.E(
+                f"FILE MISSING: {combo.filename} (index declares {combo.lang}/{combo.version}/{combo.year})"
+            )
             continue
 
         try:
-            data = json.loads(fpath.read_text(encoding='utf-8'))
+            data = json.loads(fpath.read_text(encoding="utf-8"))
         except json.JSONDecodeError as ex:
             report.E(f"{combo.filename}: invalid JSON: {ex}")
             continue
@@ -169,10 +182,13 @@ def validate_corpus_files(report: ReportLike, combos: list, bible_versions: dict
     # corpus's own data, no hardcoded dates.
     calendar_checker.check(report)
 
-    report.I(f"✓ Checked {files_checked}/{len(combos)} declared files across {len(languages_present)} languages")
+    report.I(
+        f"✓ Checked {files_checked}/{len(combos)} declared files across {len(languages_present)} languages"
+    )
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
+
 
 def main():
     print("🔍 Starting Devocionales Corpus Validation...")
@@ -181,7 +197,9 @@ def main():
 
     run_report = RunReport("DEVOCIONALES CORPUS VALIDATION")
 
-    bible_versions, used_remote_sot, last_fetch_error = load_bible_versions('devocionales')
+    bible_versions, used_remote_sot, last_fetch_error = load_bible_versions(
+        "devocionales"
+    )
 
     run_report.wrap("PHASE 1: LINT", validate_lint)
     index_result = run_report.wrap("PHASE A: INDEX", validate_index)
@@ -193,8 +211,13 @@ def main():
 
     reader, combos = index_result
 
-    run_report.wrap("PHASE SOT: BIBLE VERSIONS SOURCE", validate_sot_source,
-                     bible_versions, used_remote_sot, last_fetch_error)
+    run_report.wrap(
+        "PHASE SOT: BIBLE VERSIONS SOURCE",
+        validate_sot_source,
+        bible_versions,
+        used_remote_sot,
+        last_fetch_error,
+    )
 
     # Coverage must be recorded before the gating Phase B call below —
     # RunReport.wrap() calls sys.exit() internally on gate failure, before
@@ -212,7 +235,10 @@ def main():
     )
 
     run_report.wrap(
-        "PHASE B: CORPUS FILES", validate_corpus_files, combos, bible_versions,
+        "PHASE B: CORPUS FILES",
+        validate_corpus_files,
+        combos,
+        bible_versions,
         final=True,
     )
 
@@ -221,5 +247,5 @@ def main():
     sys.exit(run_report.exit_code)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

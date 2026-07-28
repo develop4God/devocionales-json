@@ -1,18 +1,24 @@
 """text_checks.py — text-field validation helpers shared by both pipelines:
-quote-anomaly detection, string-tree iteration, and cognate lookup.
+quote-anomaly detection, string-tree iteration, cognate lookup, half-width
+colon detection, and Latin-leak detection. The Greek/Hebrew inline gloss
+hard gate lives in greek_hebrew_gloss.py; find_greek_hebrew_glosses is
+imported from there since check_no_latin_leak also depends on it.
 
 cognates.py was considered as a separate module and rejected as too small;
 folded in here per the spike scope.
 """
 
+import json
 import re
+from pathlib import Path
 from typing import Iterator, Tuple
 
 from .report import ReportLike
+from .greek_hebrew_gloss import find_greek_hebrew_glosses
 
 # Quote-like characters whose accidental back-to-back doubling indicates a
 # stray-punctuation typo (e.g. »» , "" , '')
-_DOUBLE_CHECK_CHARS = {'"', "'", '«', '»', '“', '”', '‘', '’'}
+_DOUBLE_CHECK_CHARS = {'"', "'", "«", "»", "“", "”", "‘", "’"}
 
 # Paired quote characters that should appear in balanced counts within a field.
 # Note: curly double quotes (“ ” „) are intentionally NOT balance-checked here —
@@ -28,12 +34,12 @@ _DOUBLE_CHECK_CHARS = {'"', "'", '«', '»', '“', '”', '‘', '’'}
 # entry discovery doesn't have; kept, it's harmless for discovery (which
 # never actually calls is_cognate('legion', 'de') in its current form).
 _ROMANCE_COGNATES = {
-    'fr': {'courage', 'grace', 'grâce'},
-    'pt': {'coragem', 'graça'},
-    'es': {'coraje', 'gracia'},
+    "fr": {"courage", "grace", "grâce"},
+    "pt": {"coragem", "graça"},
+    "es": {"coraje", "gracia"},
     # 'Legion' is spelled identically in German (from Latin legio) and is the
     # word used in the LU17 Bible text itself (Mark 5:9) — not a missed translation.
-    'de': {'legion'},
+    "de": {"legion"},
 }
 
 
@@ -66,7 +72,7 @@ def is_verse_continuation_close(text: str, mark_chars: str) -> bool:
     if len(positions) != 1:
         return False
     idx = positions[0]
-    return bool(re.match(r'^[\s.!?,;:]*$', text[idx + 1:]))
+    return bool(re.match(r"^[\s.!?,;:]*$", text[idx + 1 :]))
 
 
 # Languages whose native typography uses a full-width colon (：) rather
@@ -74,13 +80,15 @@ def is_verse_continuation_close(text: str, mark_chars: str) -> bool:
 # half-width colon there is a generation/template artifact, not a stylistic
 # choice (body text, greek_words, etc. legitimately mix both e.g. in inline
 # Bible chapter:verse citations).
-_FULLWIDTH_COLON_LANGS = {'ja', 'zh'}
+_FULLWIDTH_COLON_LANGS = {"ja", "zh"}
 
 
-_TITLE_LIKE_KEYS = {'title', 'subtitle'}
+_TITLE_LIKE_KEYS = {"title", "subtitle"}
 
 
-def check_halfwidth_colon_in_title(text: str, path: str, lang: str, ctx: str, report: ReportLike) -> None:
+def check_halfwidth_colon_in_title(
+    text: str, path: str, lang: str, ctx: str, report: ReportLike
+) -> None:
     """Flag a half-width ':' in a title/subtitle field for ja/zh content.
 
     Skips colons immediately followed by a digit, since those are Bible
@@ -90,66 +98,108 @@ def check_halfwidth_colon_in_title(text: str, path: str, lang: str, ctx: str, re
     """
     if lang not in _FULLWIDTH_COLON_LANGS:
         return
-    key = path.rsplit('.', 1)[-1].split('[')[0]
+    key = path.rsplit(".", 1)[-1].split("[")[0]
     if key not in _TITLE_LIKE_KEYS:
         return
     for i, c in enumerate(text):
-        if c == ':' and not (i + 1 < len(text) and text[i + 1].isdigit()):
+        if c == ":" and not (i + 1 < len(text) and text[i + 1].isdigit()):
             report.E(f"{ctx}: half-width ':' in title should be full-width '：'")
 
 
-# Greek/Hebrew inline word-study glosses. Skip the `word` field itself
-# (holds the original-script term by design) and `transliteration` (checked
-# separately by validate_family.py's word-block validation, for Discovery) — this
-# check is for inline prose glosses like "μονογενής (monogenēs)" in
-# content/reflection/narrative/question/etc.
-_GREEK_RE = re.compile(r'[Ͱ-Ͽἀ-῿]')
-_HEBREW_RE = re.compile(r'[֐-׿]')
-_NATIVE_RUN_RE = re.compile(
-    r'[Ͱ-Ͽἀ-῿֐-׿]'
-    r'[Ͱ-Ͽἀ-῿֐-׿\s֑-ׇ]*'
-)
-_PAREN_RE = re.compile(r'\(([^()]*)\)')
-# Extended-Latin transliteration charset: ASCII + Latin-1/Extended-A/B +
-# combining diacritics used for scholarly romanization (ā, ṓ, ḥ, ʿ, etc.)
-_LATIN_TRANSLIT_RE = re.compile(r"^[A-Za-zÀ-ɏḀ-ỿ\s\-'’.:0-9]+$")
-_STRONG_PREFIX_RE = re.compile(r'^(Strong\s+)?[GH]?\d+\s*[:\-]?\s*', re.IGNORECASE)
-_SKIP_KEYS = {'word'}
+# Per-language rules for check_no_latin_leak, see that file's own _comment
+# for what 'letters'/'punctuation' mean and when to add a language.
+_NO_LATIN_LANGUAGES_PATH = Path(__file__).parent / "no_latin_languages.json"
+_no_latin_languages_cache = None
 
 
-def check_greek_hebrew_transliteration(text: str, path: str, ctx: str, report: ReportLike) -> None:
-    """Flag inline Greek/Hebrew glosses whose parenthetical isn't Latin.
+def _load_no_latin_config() -> dict:
+    global _no_latin_languages_cache
+    if _no_latin_languages_cache is None:
+        with open(_NO_LATIN_LANGUAGES_PATH, encoding="utf-8") as f:
+            data = json.load(f)
+        _no_latin_languages_cache = {
+            "languages": data["languages"],
+            "skip_keys": set(data["skip_keys"]),
+        }
+    return _no_latin_languages_cache
 
-    Convention (see discovery-study-generator-SKILL.md, encounters_creation_SKILL.md):
-    inline word studies are written as "original script (Latin transliteration)",
-    e.g. "μονογενής (monogenēs)". The parenthetical must always be Latin-alphabet
-    romanization — never the original script repeated/duplicated, and never a
-    phonetic respelling into the target language's own script (this has shipped
-    wrong before: AR/HI/JA independently respelled Greek/Hebrew phonetically
-    into Arabic/Devanagari/Katakana instead of leaving the Latin transliteration).
+
+_LATIN_LETTER_RE = re.compile(r"[A-Za-zÀ-ɏḀ-ỿ]+")
+_LATIN_PUNCT_RE = re.compile(r'[,.!?"\']')
+
+
+def check_no_latin_leak(
+    text: str, path: str, lang: str, ctx: str, report: ReportLike
+) -> None:
+    """Flag Latin letters/punctuation leaking into a non-Latin-script
+    language's text field — e.g. a stray untranslated English word or
+    phrase mixed into otherwise-translated zh content.
+
+    Which languages are checked, whether punctuation is included, and which
+    field keys are structural (skipped — never prose) are all configured in
+    no_latin_languages.json rather than hardcoded here, so adding a language
+    or a new structural field doesn't require a code change (see that
+    file's _comment / _skip_keys_comment). The one accepted content
+    exception is the Latin transliteration inside a well-formed Greek/Hebrew
+    gloss, e.g. 'θεός, (theos)' — those spans are carved out via
+    find_greek_hebrew_glosses before scanning for stray Latin. A
+    malformed/incomplete gloss attempt is NOT carved out here — it is a
+    hard-gate error from check_greek_hebrew_transliteration in its own
+    right, and any Latin text near it is still fair game for this check.
     """
-    key = path.rsplit('.', 1)[-1].split('[')[0]
-    if key in _SKIP_KEYS:
+    config = _load_no_latin_config()
+    rules = config["languages"].get(lang)
+    if rules is None:
         return
-    if not (_GREEK_RE.search(text) or _HEBREW_RE.search(text)):
+    key = path.rsplit(".", 1)[-1].split("[")[0]
+    if key in config["skip_keys"]:
         return
-    for m in _NATIVE_RUN_RE.finditer(text):
-        run = m.group(0).strip()
-        if not run:
-            continue
-        rest = text[m.end():m.end() + 60].lstrip()
-        if not rest.startswith('('):
-            continue
-        pm = _PAREN_RE.match(rest)
-        if not pm:
-            continue
-        inner = _STRONG_PREFIX_RE.sub('', pm.group(1).strip()).strip()
-        if not inner:
-            continue
-        if _GREEK_RE.search(inner) or _HEBREW_RE.search(inner):
-            report.E(f"{ctx}: gloss '{run} ({pm.group(1).strip()})' — parenthetical repeats original script instead of giving a Latin transliteration")
-        elif not _LATIN_TRANSLIT_RE.match(inner):
-            report.E(f"{ctx}: gloss '{run} ({pm.group(1).strip()})' — parenthetical is not Latin-alphabet (looks like a phonetic respelling into the target script)")
+    gloss_spans = find_greek_hebrew_glosses(text)
+
+    def in_gloss(pos: int) -> bool:
+        return any(
+            start <= pos < end
+            for start, end, _, _, well_formed in gloss_spans
+            if well_formed
+        )
+
+    # A malformed gloss span covers only the native word itself (no ", (...)"
+    # tail matched), so the stray Latin transliteration that was presumably
+    # meant to follow it sits just after `end`, not inside the span. Treat a
+    # Latin match starting within a few characters of a malformed span's end
+    # as "near" it — this is what distinguishes a shape bug (real gloss,
+    # broken punctuation) from a genuine untranslated leftover elsewhere in
+    # the field, which check_greek_hebrew_transliteration's hard gate is
+    # already responsible for flagging on its own.
+    _NEAR_MALFORMED_GLOSS_WINDOW = 5
+
+    def near_malformed_gloss(pos: int) -> bool:
+        return any(
+            0 <= pos - end <= _NEAR_MALFORMED_GLOSS_WINDOW
+            for _, end, _, _, well_formed in gloss_spans
+            if not well_formed
+        )
+
+    if rules.get("letters"):
+        for m in _LATIN_LETTER_RE.finditer(text):
+            if in_gloss(m.start()):
+                continue
+            if near_malformed_gloss(m.start()):
+                report.W(
+                    f"{ctx}: Latin text '{m.group(0)}' in {lang} field — "
+                    "near a malformed Greek/Hebrew gloss, likely a shape "
+                    "bug (see check_greek_hebrew_transliteration), not a "
+                    "translation gap"
+                )
+            else:
+                report.W(
+                    f"{ctx}: Latin text '{m.group(0)}' in {lang} field — possible untranslated leftover"
+                )
+
+    if rules.get("punctuation"):
+        for m in _LATIN_PUNCT_RE.finditer(text):
+            if not in_gloss(m.start()):
+                report.W(f"{ctx}: Latin punctuation '{m.group(0)}' in {lang} field")
 
 
 def check_quote_anomalies(text: str, ctx: str, report: ReportLike) -> None:
@@ -168,11 +218,32 @@ def check_quote_anomalies(text: str, ctx: str, report: ReportLike) -> None:
     # Balanced guillemets (used in AR/FR/etc.). Skip fields that are the
     # trailing fragment of a quotation opened in a preceding verse — see
     # is_verse_continuation_close.
-    oc, cc = text.count('«'), text.count('»')
-    if oc != cc and not (oc + cc == 1 and is_verse_continuation_close(text, '«»')):
+    oc, cc = text.count("«"), text.count("»")
+    if oc != cc and not (oc + cc == 1 and is_verse_continuation_close(text, "«»")):
         report.W(f"{ctx}: unbalanced '«'/'»' — {oc} open vs {cc} close")
 
     # Straight double quotes should appear in pairs, with the same
     # verse-continuation exception as guillemets above.
-    if text.count('"') % 2 != 0 and not (text.count('"') == 1 and is_verse_continuation_close(text, '"')):
-        report.W(f"{ctx}: odd number of straight double quotes (\") — possible stray quote")
+    if text.count('"') % 2 != 0 and not (
+        text.count('"') == 1 and is_verse_continuation_close(text, '"')
+    ):
+        report.W(
+            f'{ctx}: odd number of straight double quotes (") — possible stray quote'
+        )
+
+    # Balanced parentheses, ASCII '()' and full-width '（）' counted as one
+    # shared pair — ja/zh content legitimately opens with '（' and closes
+    # with an ASCII ')' (or vice versa) within the same gloss/citation span,
+    # so counting each bracket style separately produces false positives on
+    # otherwise-correct content (see gold_silver_ashes_ja_001.json's
+    # '金（χρυσίον, (chrysíon) (G5553))：' — one full-width opener, two
+    # ASCII pairs, balanced overall). An imbalance after normalizing both
+    # styles to ASCII means a real dropped/extra paren, most often a
+    # Strong's-citation rewrite (see lexicon_fixer.py) that failed to close
+    # the outer wrapper it was editing inside of.
+    normalized = text.replace("（", "(").replace("）", ")")
+    poc, pcc = normalized.count("("), normalized.count(")")
+    if poc != pcc:
+        report.E(
+            f"{ctx}: unbalanced '('/')' — {poc} open vs {pcc} close — likely a dropped or extra parenthesis"
+        )

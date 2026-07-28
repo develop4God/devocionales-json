@@ -19,16 +19,20 @@ import unittest
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(REPO_ROOT / 'devocionales_scripts'))
+sys.path.insert(0, str(REPO_ROOT / "devocionales_scripts"))
 
 from verse_resolver import VerseResolver, _HIOV_LONG_TO_SHORT  # noqa: E402
 
 
-def _make_bible_db(path: str, books: list[tuple[int, str]], verses: list[tuple[int, int, int, str]]) -> None:
+def _make_bible_db(
+    path: str, books: list[tuple[int, str]], verses: list[tuple[int, int, int, str]]
+) -> None:
     """Create a minimal SQLite Bible DB with `books` and `verses` tables."""
     conn = sqlite3.connect(path)
     conn.execute("CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)")
-    conn.execute("CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)")
+    conn.execute(
+        "CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)"
+    )
     conn.executemany("INSERT INTO books (book_number, long_name) VALUES (?, ?)", books)
     conn.executemany(
         "INSERT INTO verses (book_number, chapter, verse, text) VALUES (?, ?, ?, ?)",
@@ -43,6 +47,7 @@ class VerseResolverTestCase(unittest.TestCase):
 
     def setUp(self):
         import verse_resolver
+
         verse_resolver._books_sot_cache = {
             "Matthew": 470,
             "Mark": 480,
@@ -53,6 +58,7 @@ class VerseResolverTestCase(unittest.TestCase):
 
     def tearDown(self):
         import verse_resolver
+
         verse_resolver._books_sot_cache = None
 
 
@@ -90,8 +96,10 @@ class TestHIOVLongFormNormalization(VerseResolverTestCase):
                     (500, "यूहन्ना रचित सुसमाचार"),
                 ],
                 verses=[
-                    (470, 3, 16, "t"), (480, 5, 1, "t"),
-                    (490, 19, 1, "t"), (500, 4, 1, "t"),
+                    (470, 3, 16, "t"),
+                    (480, 5, 1, "t"),
+                    (490, 19, 1, "t"),
+                    (500, 4, 1, "t"),
                 ],
             )
             with VerseResolver(path) as r:
@@ -105,7 +113,9 @@ class TestHIOVLongFormNormalization(VerseResolverTestCase):
     def test_mapping_applies_regardless_of_db_filename(self):
         """The fix must key off DB *content* (long_name), not the filename —
         a copy, symlink, or differently-named temp file must still normalize."""
-        with tempfile.NamedTemporaryFile(suffix=".SQLite3", prefix="not_hiov_named_", delete=False) as f:
+        with tempfile.NamedTemporaryFile(
+            suffix=".SQLite3", prefix="not_hiov_named_", delete=False
+        ) as f:
             path = f.name
         try:
             _make_bible_db(
@@ -170,7 +180,9 @@ class TestNativeBookNameFallbacks(VerseResolverTestCase):
             path = f.name
         try:
             conn = sqlite3.connect(path)
-            conn.execute("CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)")
+            conn.execute(
+                "CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)"
+            )
             conn.execute("INSERT INTO verses VALUES (490, 24, 13, 'verse text')")
             conn.commit()
             conn.close()
@@ -189,7 +201,7 @@ class TestNativeBookNameFallbacks(VerseResolverTestCase):
             _make_bible_db(
                 path,
                 books=[(470, "मत्ती रचित सुसमाचार")],  # only Matthew present
-                verses=[(490, 24, 13, "verse text")],   # but Luke has verses
+                verses=[(490, 24, 13, "verse text")],  # but Luke has verses
             )
             with VerseResolver(path) as r:
                 cita, _, error = r.resolve("Luke 24:13")
@@ -210,8 +222,12 @@ class TestNullVerseText(VerseResolverTestCase):
             path = f.name
         try:
             conn = sqlite3.connect(path)
-            conn.execute("CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)")
-            conn.execute("CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)")
+            conn.execute(
+                "CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)"
+            )
+            conn.execute(
+                "CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)"
+            )
             conn.execute("INSERT INTO books VALUES (10, 'Genesis')")
             conn.execute("INSERT INTO verses VALUES (10, 24, 16, NULL)")
             conn.commit()
@@ -234,8 +250,12 @@ class TestNullVerseText(VerseResolverTestCase):
             path = f.name
         try:
             conn = sqlite3.connect(path)
-            conn.execute("CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)")
-            conn.execute("CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)")
+            conn.execute(
+                "CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)"
+            )
+            conn.execute(
+                "CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)"
+            )
             conn.execute("INSERT INTO books VALUES (10, 'Genesis')")
             conn.execute("INSERT INTO verses VALUES (10, 24, 15, 'verse fifteen text')")
             conn.execute("INSERT INTO verses VALUES (10, 24, 16, NULL)")
@@ -267,10 +287,16 @@ class TestFootnoteAndNoteElementsStripped(VerseResolverTestCase):
             path = f.name
         try:
             conn = sqlite3.connect(path)
-            conn.execute("CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)")
-            conn.execute("CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)")
+            conn.execute(
+                "CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)"
+            )
+            conn.execute(
+                "CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)"
+            )
             conn.execute("INSERT INTO books VALUES (10, 'Genesis')")
-            conn.execute("INSERT INTO verses VALUES (10, 1, 1, '<pb/>起初神创<f>[1]</f>造天地。')")
+            conn.execute(
+                "INSERT INTO verses VALUES (10, 1, 1, '<pb/>起初神创<f>[1]</f>造天地。')"
+            )
             conn.commit()
             conn.close()
 
@@ -287,8 +313,12 @@ class TestFootnoteAndNoteElementsStripped(VerseResolverTestCase):
             path = f.name
         try:
             conn = sqlite3.connect(path)
-            conn.execute("CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)")
-            conn.execute("CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)")
+            conn.execute(
+                "CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)"
+            )
+            conn.execute(
+                "CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)"
+            )
             conn.execute("INSERT INTO books VALUES (10, 'Genesis')")
             conn.execute(
                 "INSERT INTO verses VALUES (10, 4, 1, "
@@ -313,10 +343,16 @@ class TestFootnoteAndNoteElementsStripped(VerseResolverTestCase):
             path = f.name
         try:
             conn = sqlite3.connect(path)
-            conn.execute("CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)")
-            conn.execute("CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)")
+            conn.execute(
+                "CREATE TABLE books (book_number INTEGER PRIMARY KEY, long_name TEXT)"
+            )
+            conn.execute(
+                "CREATE TABLE verses (book_number INTEGER, chapter INTEGER, verse INTEGER, text TEXT)"
+            )
             conn.execute("INSERT INTO books VALUES (10, 'Genesis')")
-            conn.execute("INSERT INTO verses VALUES (10, 1, 3, '神说：<J>「要有光。」</J>就有了<f>[3]</f>光。')")
+            conn.execute(
+                "INSERT INTO verses VALUES (10, 1, 3, '神说：<J>「要有光。」</J>就有了<f>[3]</f>光。')"
+            )
             conn.commit()
             conn.close()
 
@@ -334,7 +370,11 @@ class TestHIOVMappingTableIntegrity(unittest.TestCase):
     def test_mapping_has_exactly_the_four_gospels(self):
         self.assertEqual(len(_HIOV_LONG_TO_SHORT), 4)
         for short in _HIOV_LONG_TO_SHORT.values():
-            self.assertNotIn("रचित सुसमाचार", short, "short form must not retain the liturgical suffix")
+            self.assertNotIn(
+                "रचित सुसमाचार",
+                short,
+                "short form must not retain the liturgical suffix",
+            )
 
     def test_mapping_values_are_nonempty(self):
         for long_form, short_form in _HIOV_LONG_TO_SHORT.items():
