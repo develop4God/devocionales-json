@@ -422,6 +422,46 @@ def check_strong_code_native_script(
             )
 
 
+# An ALL-CAPS (optionally macron/acute-accented) Latin word immediately
+# followed by a Strong's-code citation in parentheses — e.g. "DIATHĒKĒ
+# (Strong G1242)" or "ESTIN (G1510)". This is the Latin-script twin of the
+# bug check_strong_code_native_script catches for non-Latin languages: the
+# Strong code always cites a real Hebrew/Greek word, but here the only
+# thing standing in for it is the word's own transliteration in full caps
+# — the native-script word was never given at all. Confirmed in the wild
+# 2026-07-27 across every Latin-script language (de/en/es/fil/fr/pt) in
+# new_covenant_cup, gethsemane_agony, cup_of_wrath, passed_from_death, and
+# saints_resurrected — zero false positives against the full corpus scan.
+_ALLCAPS_STRONG_CODE_RE = re.compile(
+    r"\b([A-ZĀĒĪŌŪÁÉÍÓÚḔṌ][A-ZĀĒĪŌŪÁÉÍÓÚḔṌ]{1,20})\s*\((?:Strong\s+)?([A-Z]\d{2,5})\)"
+)
+
+
+def check_strong_code_bare_transliteration(
+    text: str, path: str, ctx: str, report: ReportLike
+) -> None:
+    """HARD GATE: in Latin-script prose, an ALL-CAPS word immediately
+    before a Strong's-code citation — "DIATHĒKĒ (Strong G1242)" — is the
+    same dangling-citation bug check_strong_code_native_script catches for
+    non-Latin languages, just with the target script already being Latin.
+    check_strong_code_native_script skips Latin-script languages entirely
+    on the assumption that "a Strong code embedded in Latin-script prose is
+    unremarkable" — true in general, but not when the word right next to
+    the code is itself a bare transliteration standing in for the missing
+    native-script word. No native-script anchor is needed to see this one:
+    the ALL-CAPS shape directly adjacent to the citation is the signal.
+    """
+    key = path.rsplit(".", 1)[-1].split("[")[0]
+    if key in _SKIP_KEYS:
+        return
+    if _GREEK_RE.search(text) or _HEBREW_RE.search(text):
+        return
+    for m in _ALLCAPS_STRONG_CODE_RE.finditer(text):
+        report.E(
+            f"{ctx}: '{m.group(1)}' is a bare transliteration standing next to Strong code '{m.group(2)}' with no real Hebrew/Greek word given anywhere (required format: '<word>, ({m.group(1).lower()})' with the native-script word present, see gloss_format.json)"
+        )
+
+
 # 'word' (word) — a quoted word immediately followed by a parenthetical
 # word, both short enough to be a single term rather than a clause. This is
 # the shape a bare transliteration takes when it was never given a real

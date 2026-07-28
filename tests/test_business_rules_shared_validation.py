@@ -25,7 +25,10 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from shared_validation.greek_hebrew_gloss import check_word_study_bare_transliteration  # noqa: E402
+from shared_validation.greek_hebrew_gloss import (  # noqa: E402
+    check_word_study_bare_transliteration,
+    check_strong_code_bare_transliteration,
+)
 from shared_validation.report import Report  # noqa: E402
 
 
@@ -142,6 +145,104 @@ class TestCheckWordStudyBareTransliteration(unittest.TestCase):
             report.warnings,
             [],
             f"The 'word' key should be skipped entirely, got: {report.warnings}",
+        )
+
+
+# ── check_strong_code_bare_transliteration ──────────────────────────────────
+#
+# Detects an ALL-CAPS Latin word immediately followed by a Strong's-code
+# citation in parens — "DIATHĒKĒ (Strong G1242)" — in prose that has no real
+# Hebrew/Greek character anywhere. The Latin-script twin of
+# check_strong_code_native_script: same dangling-citation bug, just with the
+# target language's own script already being Latin instead of Arabic/
+# Devanagari/etc. Confirmed 2026-07-27 across en/es/pt/fr/de/fil in
+# new_covenant_cup, gethsemane_agony, cup_of_wrath, passed_from_death, and
+# saints_resurrected.
+
+
+class TestCheckStrongCodeBareTransliteration(unittest.TestCase):
+    def test_allcaps_word_before_strong_code_is_an_error(self):
+        report = Report("TEST")
+        check_strong_code_bare_transliteration(
+            "THE KEY WORD: DIATHĒKĒ (Strong G1242)\n\nIn Greek, diathēkē means TWO things.",
+            "cards[0].content",
+            "ctx",
+            report,
+        )
+
+        self.assertTrue(
+            any("DIATHĒKĒ" in e and "bare transliteration" in e for e in report.errors),
+            f"Expected a bare-transliteration error, got: {report.errors}",
+        )
+
+    def test_allcaps_word_without_diacritic_before_strong_code_is_also_an_error(self):
+        # ESTIN/KAINOS have no macron/acute at all — the ALL-CAPS shape next
+        # to the Strong code is itself the signal, no diacritic needed.
+        report = Report("TEST")
+        check_strong_code_bare_transliteration(
+            "The debate centers on ESTIN (Strong G1510).",
+            "cards[1].content",
+            "ctx",
+            report,
+        )
+
+        self.assertTrue(
+            any("ESTIN" in e for e in report.errors),
+            f"Expected a bare-transliteration error for ESTIN, got: {report.errors}",
+        )
+
+    def test_real_greek_script_present_anywhere_in_string_suppresses_the_check(self):
+        # If the field already contains real Greek/Hebrew script, that's
+        # find_greek_hebrew_glosses' job to judge, not this check's —
+        # no double-reporting.
+        report = Report("TEST")
+        check_strong_code_bare_transliteration(
+            "The word διαθήκη, (diathēkē) means covenant. THE KEY WORD: DIATHĒKĒ (Strong G1242)",
+            "cards[0].content",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(
+            report.errors,
+            [],
+            f"A string containing real Greek script should be left to the gloss checker, got: {report.errors}",
+        )
+
+    def test_ordinary_allcaps_acronym_without_strong_code_shape_produces_no_finding(
+        self,
+    ):
+        # An ordinary ALL-CAPS acronym followed by an unrelated parenthetical
+        # that isn't a Strong's-code shape (no letter+digits) must not fire.
+        report = Report("TEST")
+        check_strong_code_bare_transliteration(
+            "The NASB (a modern translation) renders this differently.",
+            "cards[0].content",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(
+            report.errors,
+            [],
+            f"Non-Strong-code parenthetical should not be flagged, got: {report.errors}",
+        )
+
+    def test_word_key_is_skipped(self):
+        # 'word' is the shared _SKIP_KEYS exemption used by every check in
+        # this module.
+        report = Report("TEST")
+        check_strong_code_bare_transliteration(
+            "DIATHĒKĒ (Strong G1242)",
+            "cards[0].greek_words[0].word",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(
+            report.errors,
+            [],
+            f"The 'word' key should be skipped entirely, got: {report.errors}",
         )
 
 

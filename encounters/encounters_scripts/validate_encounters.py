@@ -65,6 +65,7 @@ from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_bare_transliteration_reuse,
     check_script_boundary_spacing,
     check_strong_code_native_script,
+    check_strong_code_bare_transliteration,
     check_word_study_bare_transliteration,
 )
 from shared_validation.lint import lint_json_files  # noqa: E402
@@ -393,6 +394,7 @@ def validate_encounter_file(
         check_bare_transliteration_reuse(text, path, f"{filename}:{path}", report)
         check_script_boundary_spacing(text, path, lang, f"{filename}:{path}", report)
         check_strong_code_native_script(text, path, lang, f"{filename}:{path}", report)
+        check_strong_code_bare_transliteration(text, path, f"{filename}:{path}", report)
         check_word_study_bare_transliteration(text, path, f"{filename}:{path}", report)
         check_no_latin_leak(text, path, lang, f"{filename}:{path}", report)
 
