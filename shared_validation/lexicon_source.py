@@ -108,6 +108,32 @@ class StrongsLexiconSource:
     a list of every candidate; disambiguation is the caller's job via
     lookup_by_lemma_and_number, using whatever Strong's number (if any) the
     source text already cites as the hint.
+
+    Case mismatch is a second, independent source of false "not a
+    headword" misses, Greek-only (Hebrew has no case): the corpus quotes a
+    word exactly as Greek grammar requires wherever it appears — capitalized
+    at the start of a sentence/heading/title — while openscriptures stores
+    every headword in plain dictionary-citation form, which is lowercase
+    except for a handful of proper nouns. An exact-string dict lookup treats
+    that capitalization difference as "different word," identical to a
+    genuinely-absent inflected form, so 3 real words across 30 corpus
+    occurrences (ᾍδης, Λογίζομαι, Δύναμις — discovery/saints_resurrected_001,
+    discovery/union_with_christ_001, encounters/bleeding_woman_001) went
+    unmatched and uncorrected through every fixer/checker run this session
+    until caught by a dedicated corpus-wide casefold() scan. `_by_lemma_ci`
+    mirrors `_by_lemma` casefold()-keyed (Unicode-correct case folding, not
+    `.lower()` — handles final-sigma and every other multi-character case
+    mapping) and is consulted only when the exact-case lookup misses, so it
+    never changes behavior for the normal case-matching path. It is NOT a
+    blanket "ignore case" policy: Strong's own data has 6 lowercase forms
+    that collide across two truly distinct headwords under case-folding
+    (e.g. Στέφανος "Stephen" vs στέφανος "crown") — casefold() naturally
+    surfaces both as candidates in that case, same as any other lemma
+    collision, so the existing lookup_by_lemma_and_number/
+    resolve_lemma_entry disambiguation-by-nearby-Strong-code path handles
+    it with no new logic; verified none of those 6 collision words are
+    used anywhere in this corpus, so this fallback is unambiguous in
+    every real case found so far.
     """
 
     _DATA_DIR = Path(__file__).parent / "lexicon_data"
@@ -120,6 +146,7 @@ class StrongsLexiconSource:
 
         self._by_number: dict[str, LexiconEntry] = {}
         self._by_lemma: dict[str, list[LexiconEntry]] = {}
+        self._by_lemma_ci: dict[str, list[LexiconEntry]] = {}
 
         for path in (greek_path, hebrew_path):
             with open(path, encoding="utf-8") as f:
@@ -134,17 +161,27 @@ class StrongsLexiconSource:
                 self._by_number[number] = entry
                 if entry.lemma:
                     self._by_lemma.setdefault(entry.lemma, []).append(entry)
+                    self._by_lemma_ci.setdefault(
+                        entry.lemma.casefold(), []
+                    ).append(entry)
 
-        for entries in self._by_lemma.values():
-            entries.sort(key=lambda e: e.strongs_number)
+        for index in (self._by_lemma, self._by_lemma_ci):
+            for entries in index.values():
+                entries.sort(key=lambda e: e.strongs_number)
 
     def lookup_by_lemma(self, word: str) -> list[LexiconEntry]:
-        return list(self._by_lemma.get(word, []))
+        exact = self._by_lemma.get(word)
+        if exact:
+            return list(exact)
+        return list(self._by_lemma_ci.get(word.casefold(), []))
 
     def lookup_by_lemma_and_number(
         self, word: str, strongs_number: str
     ) -> Optional[LexiconEntry]:
         for entry in self._by_lemma.get(word, []):
+            if entry.strongs_number == strongs_number:
+                return entry
+        for entry in self._by_lemma_ci.get(word.casefold(), []):
             if entry.strongs_number == strongs_number:
                 return entry
         return None
