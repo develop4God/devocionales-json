@@ -210,13 +210,18 @@ def check_greek_hebrew_consistency(loaded: dict[str, dict], report: Reporter):
     already-wrong original.
 
     For each (field path, occurrence index) position, two things are
-    checked: whether the native word/phrase itself matches across languages
-    that have an occurrence there (check_drift on the word), and — only for
-    languages where that occurrence is well-formed — whether the
-    transliteration matches (check_drift on inner). A well-formed/malformed
-    split at the same position is itself real drift (one language never
-    finished glossing a word another already has) and is reported by the
-    word-sequence-length mismatch below, not silently skipped.
+    checked, both restricted to languages where that occurrence is
+    well-formed: whether the native word/phrase itself matches across
+    those languages (check_drift on the word), and whether the
+    transliteration matches (check_drift on inner). Malformed occurrences
+    are excluded from both comparisons rather than counted toward the
+    majority — otherwise a majority of languages sharing the same spec
+    violation (see gloss_format.json) would outvote a minority that is
+    actually correct, flagging the compliant file as the outlier instead
+    of the shared mistake. A well-formed/malformed split at the same
+    position is itself real drift (one language never finished glossing a
+    word another already has) and is reported by the word-sequence-length
+    mismatch below, not silently skipped.
     """
     # {field_path: {lang: [(word, inner, well_formed), ...]}}
     by_field: dict[str, dict[str, list]] = {}
@@ -240,7 +245,9 @@ def check_greek_hebrew_consistency(loaded: dict[str, dict], report: Reporter):
         max_n = max(len(occ) for occ in per_lang.values())
         for i in range(max_n):
             words_at_i = {
-                lang: occ[i][0] for lang, occ in per_lang.items() if i < len(occ)
+                lang: occ[i][0]
+                for lang, occ in per_lang.items()
+                if i < len(occ) and occ[i][2]
             }
             check_drift(f"'{field}' gloss #{i + 1} word", words_at_i, report)
             inners_at_i = {

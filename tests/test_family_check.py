@@ -27,6 +27,7 @@ from shared_validation.family_check import (  # noqa: E402
     check_drift,
     check_key_parity,
     check_filename_language_match,
+    check_greek_hebrew_consistency,
 )
 import discovery_schema_checks  # noqa: E402
 import encounters_schema_checks  # noqa: E402
@@ -74,6 +75,37 @@ class TestCheckDrift(unittest.TestCase):
         report = Reporter()
         check_drift("type", {"en": "a"}, report)
         self.assertEqual(report.errors, 0)
+
+
+# ── check_greek_hebrew_consistency ─────────────────────────────────────────
+
+
+class TestCheckGreekHebrewConsistency(unittest.TestCase):
+    def test_well_formed_minority_not_outvoted_by_malformed_majority(self):
+        """A majority of languages sharing the same malformed (ungloss'd) native
+        word must not outvote a well-formed minority — that would flag the
+        compliant file as the outlier instead of the shared spec violation."""
+        loaded = {
+            "en": {"content": "θεός, (theos) is good"},
+            "es": {"content": "θεός is good"},
+            "fr": {"content": "θεός is good"},
+        }
+        report = Reporter()
+        check_greek_hebrew_consistency(loaded, report)
+        self.assertEqual(report.errors, 0)
+
+    def test_genuine_word_drift_still_flagged(self):
+        """A real mismatch (different native word at the same position, all
+        well-formed) must still be caught — both the word and its
+        transliteration disagree, so two errors are expected."""
+        loaded = {
+            "en": {"content": "θεός, (theos) is good"},
+            "es": {"content": "θεός, (theos) is good"},
+            "fr": {"content": "λόγος, (logos) is good"},
+        }
+        report = Reporter()
+        check_greek_hebrew_consistency(loaded, report)
+        self.assertEqual(report.errors, 2)
 
 
 # ── check_key_parity ────────────────────────────────────────────────────────
