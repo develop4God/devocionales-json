@@ -384,3 +384,77 @@ def check_strong_code_native_script(text: str, path: str, lang: str, ctx: str, r
         if native_re.search(window) and not foreign_re.search(window):
             snippet = text[start:end].replace('\n', ' ')
             report.E(f"{ctx}: Strong code '{m.group(0)}' has no real Hebrew/Greek word nearby — only {lang} native script, which is likely a phonetic respelling standing in for the missing gloss (found: '...{snippet}...', see gloss_format.json 'Phonetic respelling into the target script instead of Latin')")
+
+
+# 'word' (word) — a quoted word immediately followed by a parenthetical
+# word, both short enough to be a single term rather than a clause. This is
+# the shape a bare transliteration takes when it was never given a real
+# Greek/Hebrew anchor anywhere — e.g. "'mujer' (gynai)" or "'Skēnē'
+# (tienda)" — but the same shape is also completely ordinary prose (e.g.
+# "'esclerosis' (endurecimiento)"), so this regex alone is not a signal;
+# see check_word_study_bare_transliteration for the diacritic filter that
+# separates the two.
+_QUOTED_PAREN_PAIR_RE = re.compile(r"['‘’\"]([^'‘’\"()]{2,30})['‘’\"]\s*\(([^()]{2,30})\)")
+_translit_diacritic_re_cache = None
+
+
+def _translit_diacritic_re():
+    """Character class of gloss_format.json's macron_only_diacritics (ā, ē,
+    ī, ō, ū, ḗ, ṓ) — deliberately the macron-only subset of
+    transliteration_charset.diacritics_in_use, not the full list. The full
+    list also includes plain acutes (á é í ó ú), which are ordinary
+    Spanish/Portuguese/French orthography ('está', 'é', 'cántaros') and
+    produced dozens of false positives when first tried as the trigger
+    here (2026-07-27) — macrons never occur in Romance-language prose, so
+    they're the low-noise signal. Read from that file rather than
+    hardcoded here, same as every other charset in this module. A
+    plain-ASCII transliteration (e.g. "gynai") or one using only an acute
+    and no macron (e.g. "ktémata") is indistinguishable from an ordinary
+    word by shape alone and is not caught here; see
+    check_word_study_bare_transliteration's docstring."""
+    global _translit_diacritic_re_cache
+    if _translit_diacritic_re_cache is None:
+        diacritics = _load_gloss_format()['transliteration_charset']['macron_only_diacritics']['marks']
+        _translit_diacritic_re_cache = re.compile(f"[{''.join(diacritics)}]")
+    return _translit_diacritic_re_cache
+
+
+def check_word_study_bare_transliteration(text: str, path: str, ctx: str, report: ReportLike) -> None:
+    """WARNING: a quoted word immediately followed by a parenthetical word
+    (either order — "'mujer' (gynai)" or "'Skēnē' (tienda)") where one side
+    carries this corpus's own scholarly-transliteration diacritics (ā, ē,
+    ī, ō, ū, ...) but the whole string has no real Hebrew/Greek character
+    anywhere. That combination means a Greek/Hebrew word is being discussed
+    by its transliteration only, with the actual native-script word never
+    given at all — not even a malformed attempt, just entirely absent.
+
+    Confirmed in the wild 2026-07-27: cana_wedding's "'mujer' (gynai)" and
+    morning_star's "'Skēnē' (tienda)" / "'tienda de carne' (sarx)" — none
+    of these ever cite the real Greek word or a Strong's code anywhere in
+    the file, so neither find_greek_hebrew_glosses (needs a real
+    Hebrew/Greek character to anchor on) nor check_strong_code_native_script
+    (needs an explicit citation code to anchor on) can see them.
+
+    The diacritic requirement is what keeps this from false-positiving on
+    completely ordinary prose of the identical shape — "'esclerosis'
+    (endurecimiento)" is a quoted word with its own gloss in parens, and
+    "it IS a real Spanish word" is the only difference from "'Skēnē'
+    (tienda)", which isn't a distinction this check (or any regex) can
+    make. It can only fire when one side of the pair looks like scholarly
+    romanization, which ordinary vocabulary essentially never does. A
+    plain-ASCII transliteration with no diacritic at all (e.g. "gynai"
+    itself, or "ti emoi kai soi") is NOT caught by this check for the same
+    reason — there is no shape left to distinguish it from a real word,
+    and it stays a manual reverse-read item, same as the already-documented
+    ja duplicate-gloss case.
+    """
+    key = path.rsplit('.', 1)[-1].split('[')[0]
+    if key in _SKIP_KEYS:
+        return
+    if _GREEK_RE.search(text) or _HEBREW_RE.search(text):
+        return
+    diacritic_re = _translit_diacritic_re()
+    for m in _QUOTED_PAREN_PAIR_RE.finditer(text):
+        quoted, parenthetical = m.group(1), m.group(2)
+        if diacritic_re.search(quoted) or diacritic_re.search(parenthetical):
+            report.W(f"{ctx}: '{quoted}' ({parenthetical}) has the shape of a bare Greek/Hebrew transliteration (scholarly diacritic present) but the field has no real Hebrew/Greek character anywhere — likely discussing a word by its transliteration only, with the actual native-script word never given (see gloss_format.json 'transliteration_charset')")
