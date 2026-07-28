@@ -218,8 +218,15 @@ def _fix_file_text(
             # canonical_citation_text (which always includes both parens)
             # would report a false mismatch on content that's already
             # perfectly correct, since existing_text would never have a
-            # trailing ")" to match against.
-            if raw_text[citation_end : citation_end + 1] == ")":
+            # trailing ")" to match against. Must check the full-width CJK
+            # "）" as well as ASCII ")" — a citation wrapped in full-width
+            # parens (e.g. ja/zh "（Strong G772）") has its closing paren in
+            # that form, and missing it here leaves the untouched "）"
+            # sitting right after the newly-inserted canonical "(G772)",
+            # corrupting the text (verified in the wild:
+            # discovery/ja/gethsemane_agony_ja_001.json produced
+            # "(asthenḗs) (G772)）" before this fix).
+            if raw_text[citation_end : citation_end + 1] in (")", "）"):
                 citation_end += 1
             existing_text = raw_text[end:citation_end]
         elif is_rtl_lang(lang):
