@@ -158,6 +158,44 @@ def triage_bare_latin_glosses(
     return findings
 
 
+def fix_bare_latin_glosses(
+    raw_text: str, lexicon: StrongsLexiconSource, lang: str
+) -> tuple[str, list[str]]:
+    """Apply only uniquely resolved bare-Latin replacements; keep REVIEW items."""
+    if lang in load_native_script_ranges():
+        return raw_text, []
+    by_translit: dict[str, list] = {}
+    for entry in lexicon._by_number.values():
+        by_translit.setdefault(_normalized_translit(entry.translit), []).append(entry)
+    canonical_ends = {
+        end
+        for _, end, _, _, well_formed in find_greek_hebrew_glosses(raw_text)
+        if well_formed
+    }
+    replacements = []
+    changes = []
+    for match in _BARE_LATIN_CANDIDATE_RE.finditer(raw_text):
+        if match.end() in canonical_ends:
+            continue
+        translit = match.group("translit").strip()
+        entries = by_translit.get(_normalized_translit(translit), [])
+        if len(entries) != 1:
+            continue
+        entry = entries[0]
+        # Only replace the transliteration part, preserving the original
+        # meaning word — the regex match spans "meaning (translit)" but we
+        # must not delete the meaning (e.g. "Christ (Bema)" should become
+        # "Christ (βῆμα, (bēma) (G968))", not "βῆμα, (bēma) (G968)").
+        translit_start = match.start("translit")
+        translit_end = match.end("translit")
+        replacement = f"{entry.lemma}, ({entry.translit}) ({entry.strongs_number})"
+        replacements.append((translit_start, translit_end, replacement))
+        changes.append(f"'{match.group(0)}' -> '{match.group('meaning')} ({replacement})'")
+    for start, end, replacement in reversed(replacements):
+        raw_text = raw_text[:start] + replacement + raw_text[end:]
+    return raw_text, changes
+
+
 def _fix_file_text(
     raw_text: str, lexicon: StrongsLexiconSource, lang: str, debug: bool = False
 ) -> tuple[str, list[str]]:
