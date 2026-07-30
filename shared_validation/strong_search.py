@@ -85,6 +85,13 @@ class StrongSearchResult(NamedTuple):
 _FORMAT_PATH = Path(__file__).parent / "strong_format.json"
 _format_cache: Optional[dict] = None
 
+# ---------------------------------------------------------------------------
+# Whitelist config (strong_whitelist.json) — false positive exclusions
+# ---------------------------------------------------------------------------
+
+_WHITELIST_PATH = Path(__file__).parent / "strong_whitelist.json"
+_whitelist_cache: Optional[dict] = None
+
 
 def load_strong_format() -> dict:
     """Load the canonical Strong code format spec from strong_format.json.
@@ -94,6 +101,45 @@ def load_strong_format() -> dict:
         with open(_FORMAT_PATH, encoding="utf-8") as f:
             _format_cache = json.load(f)
     return _format_cache
+
+
+def load_whitelist() -> dict:
+    """Load the whitelist of false positive patterns from strong_whitelist.json.
+    Cached after first load — the file never changes at runtime."""
+    global _whitelist_cache
+    if _whitelist_cache is None:
+        with open(_WHITELIST_PATH, encoding="utf-8") as f:
+            _whitelist_cache = json.load(f)
+    return _whitelist_cache
+
+
+def is_excluded(result: StrongSearchResult) -> bool:
+    """Check if a StrongSearchResult should be excluded as a false positive.
+    
+    Reads exclusion rules from strong_whitelist.json:
+    - Exact codes to exclude (e.g., G1910 when it's part of LSG1910)
+    - Pattern-based exclusions (e.g., LSG\\d{4} for Bible version codes)
+    
+    Args:
+        result: A StrongSearchResult to check.
+    
+    Returns:
+        True if the result should be excluded (is a false positive).
+    """
+    whitelist = load_whitelist()
+    
+    # Check exact code exclusions
+    for exclusion in whitelist.get("exact_codes_to_exclude", []):
+        if result.code == exclusion["code"]:
+            return True
+    
+    # Check pattern-based exclusions
+    for pattern_exclusion in whitelist.get("excluded_patterns", []):
+        pattern = pattern_exclusion["pattern"]
+        if re.search(pattern, result.full_match, re.IGNORECASE):
+            return True
+    
+    return False
 
 
 def is_correct_format(result: StrongSearchResult) -> bool:
@@ -151,7 +197,7 @@ def find_strong_codes_phase0(text: str, context_window: int = 40) -> List[Strong
     - (Strong G3327), Strong G1568, (G3327), - G728), G728, (G3327)., etc.
     - Case insensitive: STRONG, Strong, strong, G, g, H, h
 
-    No filtering, no deduplication — just raw matches.
+    Filters out false positives using strong_whitelist.json (e.g., LSG1910).
 
     Args:
         text: The prose text to search.
@@ -172,7 +218,7 @@ def find_strong_codes_phase0(text: str, context_window: int = 40) -> List[Strong
         context = text[ctx_start:ctx_end].replace("\n", " ")
         full_match = m.group(0)
         has_strong = "strong" in full_match.lower()
-        results.append(StrongSearchResult(
+        result = StrongSearchResult(
             code=code,
             prefix=prefix,
             number=number,
@@ -181,7 +227,10 @@ def find_strong_codes_phase0(text: str, context_window: int = 40) -> List[Strong
             end=end,
             context=context,
             has_strong=has_strong,
-        ))
+        )
+        # Filter out false positives using whitelist
+        if not is_excluded(result):
+            results.append(result)
     return results
 
 
