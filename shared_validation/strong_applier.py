@@ -65,7 +65,7 @@ def apply_fixes(filepath: str, actions: List[NamedTuple]) -> FixResult:
     """Apply fix actions to a file.
     
     This is the SINGLE IMPLEMENTATION for applying fixes.
-    Both strong_fixer and balance_fixer should use this.
+    Both strong_fixer and balance_fixer use this.
     
     Args:
         filepath: Path to the JSON file to modify

@@ -260,59 +260,24 @@ def _run():
             parser.print_help()
         return
 
-    # --preview-balance or --fix-balance mode
+    # Search mode (no preview/fix)
     if args.preview_balance or args.fix_balance:
-        if args.filepath:
-            actions = preview_balance_fixes(args.filepath)
-            if args.preview_balance:
-                print(f'\n{"─"*70}')
-                print(f'  File: {args.filepath}')
-                print(f'  Balance fixes ({len(actions)}):')
-                for a in actions:
-                    print(f'    {a.code:8s}  {a.issue_type:15s}  "{a.old:25s}" → "{a.new}"  ({a.field_path})')
-                print(f'{"─"*70}')
-            if args.fix_balance:
-                result = apply_balance_fixes(args.filepath, actions)
-                is_clean, remaining = validate_after_fix(args.filepath)
-                print(f"  Applied {result.applied} balance fix(es) to {args.filepath}")
-                if result.failed:
-                    print(f"  ⚠ {result.failed} balance fix(es) FAILED to apply (old text no longer matched)")
-                print(f"  Validation: {'✓ Clean' if is_clean else f'✗ {remaining} issues remain'}")
-
-        elif args.all:
-            total_fixes = 0
-            total_files = 0
-            total_failed = 0
-            for dirpath in ["discovery", "encounters"]:
-                for fp in sorted(glob.glob(os.path.join(dirpath, "**/*.json"), recursive=True)):
-                    actions = preview_balance_fixes(fp)
-                    if actions:
-                        total_files += 1
-                        total_fixes += len(actions)
-                        if args.preview_balance:
-                            print(f'\n{"─"*70}')
-                            print(f'  File: {fp}')
-                            print(f'  Balance fixes ({len(actions)}):')
-                            for a in actions:
-                                print(f'    {a.code:8s}  {a.issue_type:15s}  "{a.old:25s}" → "{a.new}"')
-                            print(f'{"─"*70}')
-                        if args.fix_balance:
-                            result = apply_balance_fixes(fp, actions)
-                            is_clean, remaining = validate_after_fix(fp)
-                            print(f"  Applied {result.applied} balance fix(es) to {fp}")
-                            if result.failed:
-                                total_failed += result.failed
-                                print(f"    ⚠ {result.failed} fix(es) FAILED to apply")
-                            if not is_clean:
-                                print(f"    ⚠ {remaining} issues remain")
-            print(f'\n  Total: {total_fixes} balance fix(es) across {total_files} files')
-            if total_failed:
-                print(f'  ⚠ {total_failed} fix(es) FAILED to apply across the run — see per-file output above')
-        else:
-            parser.print_help()
+        if not args.filepath:
+            parser.error("--preview-balance and --fix-balance require a JSON filepath")
+        actions = preview_balance_fixes(args.filepath)
+        if args.preview_balance:
+            print(f"Balance fixes ({len(actions)}) for {args.filepath}:")
+            for action in actions:
+                print(f"  {action.issue_type}: {action.old!r} → {action.new!r} ({action.field_path})")
+        if args.fix_balance:
+            result = apply_balance_fixes(args.filepath, actions)
+            is_clean, remaining = validate_after_fix(args.filepath)
+            print(f"Applied {result.applied} balance fix(es) to {args.filepath}")
+            if result.failed:
+                print(f"WARNING: {result.failed} balance fix(es) failed to apply")
+            print(f"Validation: {'clean' if is_clean else f'{remaining} issue(s) remain'}")
         return
 
-    # Search mode (no preview/fix)
     all_matches = []
 
     if args.filepath:

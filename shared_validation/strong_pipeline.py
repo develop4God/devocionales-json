@@ -1,7 +1,7 @@
 """strong_pipeline.py — Orchestrator for the Strong code fixing pipeline.
 
-Provides a unified interface to run the complete workflow:
-  SCAN → ANALYZE → APPLY → VALIDATE
+Provides a unified interface to run the Strong-code workflow:
+  ANALYZE → APPLY
 
 Modes:
   - dry_run: Preview all changes without modifying files
@@ -38,24 +38,12 @@ class StrongFixAction(NamedTuple):
     status: str
 
 
-class BalanceFixAction(NamedTuple):
-    """Balance fix action."""
-    filepath: str
-    field_path: str
-    code: str
-    old: str
-    new: str
-    start: int
-    end: int
-    issue_type: str
-
-
 class PipelineReport(NamedTuple):
     """Report from running the pipeline."""
     filepath: str
     dry_run: bool
     strong_fixes_preview: List[StrongFixAction]
-    balance_fixes_preview: List[BalanceFixAction]
+    balance_fixes_preview: List[object]
     strong_applied: int
     strong_failed: int
     balance_applied: int
@@ -70,16 +58,11 @@ def run_pipeline(filepath: str, dry_run: bool = True) -> PipelineReport:
     
     Pipeline stages:
     1. ANALYZE_STRONG - Find Strong code issues
-    2. ANALYZE_BALANCE - Find balance issues
-    3. APPLY_STRONG - Apply Strong code fixes (if not dry_run)
-    4. APPLY_BALANCE - Apply balance fixes (if not dry_run)
-    5. VALIDATE - Verify file is clean
+    2. APPLY_STRONG - Apply Strong code fixes (if not dry_run)
 
-    Note: strong_fixer.preview_file/apply_fixes and
-    strong_balance_fixer.preview_balance_fixes each read and parse the
-    JSON file independently — there is no shared scan artifact wired
-    between stages. If a shared scan is reintroduced later, every
-    downstream stage must actually consume it, not just the orchestrator.
+    Parenthesis balance repairs remain available through
+    ``strong_balance_fixer``. The generic checker is also available for
+    report-only dry runs; it is not part of CI.
     
     Args:
         filepath: Path to JSON file
@@ -96,26 +79,21 @@ def run_pipeline(filepath: str, dry_run: bool = True) -> PipelineReport:
     strong_actions = preview_strong(filepath)
     strong_fixes = [a for a in strong_actions if a.status == "fix"]
     strong_fixed_fields = {a.field_path for a in strong_fixes}
-    
-    # Stage 2: ANALYZE_BALANCE — restricted to fields strong_fixer actually
-    # fixed. Balance-checking is a safety net for strong_fixer's own edits,
-    # not a general corpus scanner: a field strong_fixer never touched
-    # must never be scanned or modified by the balance stage.
     balance_actions = [
-        a for a in preview_balance_fixes(filepath) if a.field_path in strong_fixed_fields
+        action for action in preview_balance_fixes(filepath)
+        if action.field_path in strong_fixed_fields
     ]
-    
     # Initialize counters
     strong_applied = 0
     strong_failed = 0
     balance_applied = 0
     balance_failed = 0
-    is_valid = False
+    is_valid = True
     validation_issues = 0
     abort_reason = None
     
     if not dry_run:
-        # Stage 3: APPLY_STRONG
+        # Stage 2: APPLY_STRONG
         if strong_fixes:
             # apply_strong_fixes (strong_fixer.apply_fixes) returns the full
             # FixResult — applied AND failed must both be read, never just
@@ -123,36 +101,26 @@ def run_pipeline(filepath: str, dry_run: bool = True) -> PipelineReport:
             strong_result = apply_strong_fixes(filepath, strong_fixes)
             strong_applied = strong_result.applied
             strong_failed = strong_result.failed
-        
-        # Stage 4: APPLY_BALANCE
-        # CRITICAL: balance_actions from Stage 2 were computed against the
-        # file BEFORE strong fixes rewrote it. Applying strong fixes
-        # shifts every character offset downstream of each edit within
-        # the same field, so the Stage 2 balance offsets are stale the
-        # moment Stage 3 writes anything. Re-analyze against the file's
-        # current on-disk state (post-strong-fix) instead of reusing the
-        # pre-fix preview — this was previously a silent, corpus-wide
-        # failure (confirmed: 63 balance fixes across 27 files failed to
-        # apply for exactly this reason before this fix).
+
+        # Re-scan after Strong fixes so balance action offsets are current.
         balance_actions_to_apply = (
-            [a for a in preview_balance_fixes(filepath) if a.field_path in strong_fixed_fields]
+            [action for action in preview_balance_fixes(filepath)
+             if action.field_path in strong_fixed_fields]
             if strong_applied else balance_actions
         )
         if balance_actions_to_apply:
             balance_result = apply_balance_fixes(filepath, balance_actions_to_apply)
             balance_applied = balance_result.applied
             balance_failed = balance_result.failed
-        
-        # Stage 5: VALIDATE
+
         is_valid, validation_issues = validate_after_fix(filepath)
 
-        # Surface silent-failure risk explicitly rather than leaving it
-        # to the caller to remember to check strong_failed/balance_failed.
         if strong_failed or balance_failed:
             abort_reason = (
-                f"{strong_failed} strong fix(es) and {balance_failed} balance "
-                f"fix(es) failed to apply (old text no longer matched on disk)"
+                f"{strong_failed} strong and {balance_failed} balance fix(es) "
+                "failed to apply (old text no longer matched on disk)"
             )
+            is_valid = False
         elif not is_valid:
             abort_reason = f"Post-apply validation failed: {validation_issues} issue(s) remain"
     else:
@@ -160,7 +128,6 @@ def run_pipeline(filepath: str, dry_run: bool = True) -> PipelineReport:
         # "nothing was flagged" — NOT the same guarantee as the
         # post-apply schema/structure validation done in production mode.
         is_valid = len(strong_fixes) == 0 and len(balance_actions) == 0
-        validation_issues = 0
     
     return PipelineReport(
         filepath=filepath,
@@ -206,7 +173,7 @@ def print_report(report: PipelineReport):
         print(f'    {action.code:8s}  "{action.old:25s}" → "{action.new}"')
     if len(report.strong_fixes_preview) > 5:
         print(f'    ... and {len(report.strong_fixes_preview) - 5} more')
-    
+
     print(f'\n  Balance Fixes: {len(report.balance_fixes_preview)}')
     for action in report.balance_fixes_preview[:5]:
         print(f'    {action.code:8s}  {action.issue_type:15s}  "{action.old:25s}" → "{action.new}"')

@@ -2,7 +2,7 @@
 first scan (strong_scanner.scan_file), instead of trusting each fixer's own
 internal re-scan or self-reported counts.
 
-For every fix action (Strong or balance), this checks:
+For every Strong or balance fix action, this checks:
   1. Does the field exist in the immutable scan?
   2. Does action.old == scan_baseline_text[action.start:action.end]?
   3. If applied, does the resulting text still parse as valid JSON?
@@ -24,7 +24,7 @@ def check_file(fp: str, debug: bool = False) -> dict:
     """Return gap counts for one file, checked against its immutable scan.
 
     scan_file's TextField.start/end are RAW-FILE offsets (into
-    baseline.raw_text, still escaped). strong_fixer/strong_balance_fixer
+    baseline.raw_text, still escaped). strong_fixer and strong_balance_fixer
     actions use FIELD-LOCAL offsets (into the decoded field.text). These
     are different coordinate systems, so gap-checking must decode the
     scanner's raw span before comparing text, and must independently
@@ -71,13 +71,6 @@ def check_file(fp: str, debug: bool = False) -> dict:
                     print(f"        old={a.old!r}")
                     print(f"        baseline_slice={slice_!r}")
                 continue
-
-            # Note: we do NOT re-check global paren balance after applying
-            # the fix. Balance fixes (double_open/double_close) intentionally
-            # change the field's total paren count by design — that's the
-            # point of the fix, not a defect. A meaningful post-fix check
-            # would need to verify LOCAL balance around the fixed span, not
-            # a naive global open/close count across the whole field.
 
     return {
         "filepath": fp,

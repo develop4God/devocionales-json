@@ -1,24 +1,9 @@
-"""balance_fixer.py — Fix parenthesis balance issues in Strong code patterns.
+"""Preview and apply Strong-code parenthesis fixes.
 
-Uses the balance checker to identify issues, then applies fixes to balance
-parentheses around Strong codes. Re-validates after fixes to confirm clean.
-
-Fixes:
-  - ((GXXXX)  → (GXXXX)   [double_open]
-  - (GXXXX))  → (GXXXX)   [double_close]
-  - GXXXX)    → (GXXXX)   [missing_open]
-  - (GXXXX    → (GXXXX)   [missing_close]
-
-Usage:
-    from shared_validation.strong_balance_fixer import preview_balance_fixes, apply_balance_fixes
-
-    # Preview what will change
-    actions = preview_balance_fixes('discovery/es/passed_from_death_es_001.json')
-    for a in actions:
-        print(f"  {a.old:20s} → {a.new}")
-
-    # Apply the fixes
-    apply_balance_fixes('discovery/es/passed_from_death_es_001.json', actions)
+The generic :mod:`paren_balance` checker identifies unmatched parentheses.
+This module keeps the established Strong-code repair workflow: it only
+creates a fix when an unmatched parenthesis belongs to a nearby ``(G####)``
+or ``(H####)`` citation. It never changes unrelated prose punctuation.
 """
 
 from __future__ import annotations
@@ -28,12 +13,15 @@ import re
 from pathlib import Path
 from typing import List, NamedTuple
 
-from shared_validation.balance_checker import check_balance, BalanceIssue
+from shared_validation.paren_balance import check_balance, ParenIssue
 from shared_validation.strong_applier import apply_fixes, FixResult
 
 
+_CODE = r"[GH]\d{1,5}"
+
+
 class BalanceFixAction(NamedTuple):
-    """A single balance fix: replace `old` with `new` at a position."""
+    """A replacement that corrects one unbalanced Strong-code citation."""
 
     filepath: str
     field_path: str
@@ -45,125 +33,99 @@ class BalanceFixAction(NamedTuple):
     issue_type: str
 
 
-def _fix_balance_issue(issue: BalanceIssue, text: str) -> str:
-    """Apply a fix for a single balance issue.
-    
-    Returns the fixed text.
-    """
-    code = issue.code
-    old_match = issue.match
-    issue_type = issue.issue_type
-    
-    # Find the exact match in text at the position
-    actual_match = text[issue.start:issue.end]
-    
-    if issue_type == "double_open":
-        # ((GXXXX) → (GXXXX)
-        # Remove one opening paren before the code
-        new_match = actual_match.replace('((', '(', 1)
-    elif issue_type == "double_close":
-        # (GXXXX)) → (GXXXX)
-        # Remove one closing paren after the code
-        new_match = actual_match.replace('))', ')', 1)
-    elif issue_type == "missing_open":
-        # GXXXX) → (GXXXX)
-        # Add opening paren before the code
-        new_match = actual_match.replace(code, f'({code}', 1)
-    elif issue_type == "missing_close":
-        # (GXXXX → (GXXXX)
-        # Add closing paren after the code
-        new_match = actual_match.replace(code, f'{code})', 1)
-    else:
-        new_match = actual_match
-    
-    return text[:issue.start] + new_match + text[issue.end:]
+def _action_for_issue(
+    filepath: str, field_path: str, text: str, issue: ParenIssue
+) -> BalanceFixAction | None:
+    """Translate a generic balance finding into a safe Strong-code repair."""
+    position = issue.position
+
+    if issue.issue_type == "missing_open":
+        # (G123)) -> (G123): the unmatched final ')' is simply removed.
+        double_close = re.search(rf"\(({_CODE})\)\)$", text[: position + 1])
+        if double_close:
+            return BalanceFixAction(
+                filepath, field_path, double_close.group(1), ")", "",
+                position, position + 1, "double_close",
+            )
+
+        # G123) -> (G123): add the missing opener around the full citation.
+        bare_close = re.search(rf"(?<!\()({_CODE})\)$", text[: position + 1])
+        if bare_close:
+            start = bare_close.start(1)
+            old = text[start : position + 1]
+            return BalanceFixAction(
+                filepath, field_path, bare_close.group(1), old, f"({old}",
+                start, position + 1, "missing_open",
+            )
+
+    elif issue.issue_type == "missing_close":
+        # ((G123) -> (G123): remove the unmatched first opener.
+        double_open = re.match(rf"\(\(({_CODE})\)", text[position:])
+        if double_open:
+            return BalanceFixAction(
+                filepath, field_path, double_open.group(1), "(", "",
+                position, position + 1, "double_open",
+            )
+
+        # (G123 -> (G123): close the citation after its code.
+        bare_open = re.match(rf"\(({_CODE})(?!\))", text[position:])
+        if bare_open:
+            old = bare_open.group(0)
+            return BalanceFixAction(
+                filepath, field_path, bare_open.group(1), old, f"{old})",
+                position, position + len(old), "missing_close",
+            )
+
+    return None
 
 
 def preview_balance_fixes(filepath: str) -> List[BalanceFixAction]:
-    """Analyze a file and return all balance fix actions (preview, no changes)."""
-    actions = []
-    
-    with open(filepath, encoding="utf-8") as f:
-        data = json.load(f)
-    
-    # Scan all text fields and check balance for each
-    def _collect(obj, path_prefix: str = ""):
-        if isinstance(obj, dict):
-            for k, v in obj.items():
-                ctx_key = f"{path_prefix}.{k}" if path_prefix else k
-                if isinstance(v, str):
-                    # Check balance in this field
-                    from shared_validation.balance_checker import check_balance
-                    issues = check_balance(v)
-                    for issue in issues:
-                        # Determine the fix
-                        actual_match = v[issue.start:issue.end]
-                        
-                        if issue.issue_type == "double_open":
-                            new_match = actual_match.replace('((', '(', 1)
-                        elif issue.issue_type == "double_close":
-                            new_match = actual_match.replace('))', ')', 1)
-                        elif issue.issue_type == "missing_open":
-                            new_match = actual_match.replace(issue.code, f'({issue.code}', 1)
-                        elif issue.issue_type == "missing_close":
-                            new_match = actual_match.replace(issue.code, f'{issue.code})', 1)
-                        else:
-                            new_match = actual_match
-                        
-                        actions.append(BalanceFixAction(
-                            filepath=filepath,
-                            field_path=ctx_key,
-                            code=issue.code,
-                            old=actual_match,
-                            new=new_match,
-                            start=issue.start,
-                            end=issue.end,
-                            issue_type=issue.issue_type,
-                        ))
-                elif isinstance(v, (dict, list)):
-                    _collect(v, ctx_key)
-        elif isinstance(obj, list):
-            for i, item in enumerate(obj):
-                _collect(item, f"{path_prefix}[{i}]")
-    
-    _collect(data)
+    """Return Strong-code balance fixes without modifying ``filepath``."""
+    path = Path(filepath)
+    with path.open(encoding="utf-8") as file:
+        data = json.load(file)
+
+    actions: List[BalanceFixAction] = []
+
+    def collect(value: object, field_path: str = "") -> None:
+        if isinstance(value, dict):
+            for key, child in value.items():
+                collect(child, f"{field_path}.{key}" if field_path else key)
+        elif isinstance(value, list):
+            for index, child in enumerate(value):
+                collect(child, f"{field_path}[{index}]")
+        elif isinstance(value, str):
+            for issue in check_balance(value):
+                action = _action_for_issue(filepath, field_path, value, issue)
+                if action:
+                    actions.append(action)
+
+    collect(data)
     return actions
 
 
 def apply_balance_fixes(filepath: str, actions: List[BalanceFixAction]) -> FixResult:
-    """Apply balance fix actions to a file.
-
-    Returns the full FixResult (applied AND failed counts) — see
-    strong_fixer.apply_fixes for why `failed` must not be discarded.
-    """
-    if not actions:
-        return FixResult(applied=0, failed=0, filepath=filepath)
-    
-    # Use the shared applier
+    """Apply previously-previewed Strong-code balance fixes."""
     return apply_fixes(filepath, actions)
 
 
 def validate_after_fix(filepath: str) -> tuple[bool, int]:
-    """Validate a file after applying fixes.
-    
-    Returns:
-        (is_clean, issue_count) - True if no balance issues remain
-    """
-    with open(filepath, encoding="utf-8") as f:
-        data = json.load(f)
-    
-    issues = []
-    def _collect(obj, path_prefix: str = ""):
-        if isinstance(obj, dict):
-            for k, v in obj.items():
-                ctx_key = f"{path_prefix}.{k}" if path_prefix else k
-                if isinstance(v, str):
-                    issues.extend(check_balance(v))
-                elif isinstance(v, (dict, list)):
-                    _collect(v, ctx_key)
-        elif isinstance(obj, list):
-            for i, item in enumerate(obj):
-                _collect(item, f"{path_prefix}[{i}]")
-    
-    _collect(data)
-    return (len(issues) == 0, len(issues))
+    """Return whether every string field in ``filepath`` is balanced."""
+    with Path(filepath).open(encoding="utf-8") as file:
+        data = json.load(file)
+
+    issue_count = 0
+
+    def collect(value: object) -> None:
+        nonlocal issue_count
+        if isinstance(value, dict):
+            for child in value.values():
+                collect(child)
+        elif isinstance(value, list):
+            for child in value:
+                collect(child)
+        elif isinstance(value, str):
+            issue_count += len(check_balance(value))
+
+    collect(data)
+    return issue_count == 0, issue_count
