@@ -30,6 +30,8 @@ from shared_validation.strong_search import (
     find_strong_codes_in_file,
     is_correct_format,
 )
+from shared_validation.strong_scanner import scan_file, get_field_text
+from shared_validation.strong_applier import apply_fixes as _apply_fixes_shared
 
 
 class FixAction(NamedTuple):
@@ -43,36 +45,6 @@ class FixAction(NamedTuple):
     start: int
     end: int
     status: str  # "fix" or "skip"
-
-
-def _get_field(data, field_path: str):
-    """Navigate a dotted path like 'cards[0].content' to get the value."""
-    parts = re.split(r'[.\[\]]+', field_path)
-    parts = [p for p in parts if p]
-    current = data
-    for part in parts:
-        if isinstance(current, dict):
-            current = current[part]
-        elif isinstance(current, list):
-            current = current[int(part)]
-    return current
-
-
-def _set_field(data, field_path: str, value):
-    """Set a value at a dotted path like 'cards[0].content'."""
-    parts = re.split(r'[.\[\]]+', field_path)
-    parts = [p for p in parts if p]
-    current = data
-    for i, part in enumerate(parts[:-1]):
-        if isinstance(current, dict):
-            current = current[part]
-        elif isinstance(current, list):
-            current = current[int(part)]
-    last = parts[-1]
-    if isinstance(current, dict):
-        current[last] = value
-    elif isinstance(current, list):
-        current[int(last)] = value
 
 
 def preview_file(filepath: str) -> List[FixAction]:
@@ -140,28 +112,7 @@ def apply_fixes(filepath: str, actions: List[FixAction]) -> int:
     fixes = [a for a in actions if a.status == "fix" and a.filepath == filepath]
     if not fixes:
         return 0
-
-    with open(filepath, encoding="utf-8") as f:
-        data = json.load(f)
-
-    # Group fixes by field path, reverse order so positions don't shift
-    from collections import defaultdict
-    by_field = defaultdict(list)
-    for a in fixes:
-        by_field[a.field_path].append(a)
-
-    count = 0
-    for field_path, field_fixes in by_field.items():
-        text = _get_field(data, field_path)
-        # Sort in reverse position order so edits don't shift positions
-        for a in sorted(field_fixes, key=lambda x: -x.start):
-            if text[a.start:a.end] == a.old:
-                text = text[:a.start] + a.new + text[a.end:]
-                count += 1
-        _set_field(data, field_path, text)
-
-    # Write back
-    with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
-    return count
+    
+    # Use the shared applier
+    result = _apply_fixes_shared(filepath, fixes)
+    return result.applied

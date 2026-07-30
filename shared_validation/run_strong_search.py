@@ -45,6 +45,11 @@ from shared_validation.strong_fixer import (
     apply_fixes,
     FixAction,
 )
+from shared_validation.strong_balance_fixer import (
+    preview_balance_fixes,
+    apply_balance_fixes,
+    validate_after_fix,
+)
 from shared_validation.lexicon_source import StrongsLexiconSource
 from shared_validation.family_resolver import (
     _resolve_discovery_family,
@@ -186,12 +191,14 @@ def _run():
     parser.add_argument("--all", action="store_true", help="Search all discovery + encounters")
     parser.add_argument("--preview", action="store_true", help="Preview fixes without applying")
     parser.add_argument("--fix", action="store_true", help="Apply fixes")
+    parser.add_argument("--preview-balance", action="store_true", help="Preview balance fixes")
+    parser.add_argument("--fix-balance", action="store_true", help="Apply balance fixes")
     parser.add_argument("--summary", action="store_true", help="Show only summary")
 
     args = parser.parse_args()
     lex = StrongsLexiconSource()
 
-    # --preview or --fix mode
+    # --preview or --fix mode (Strong codes)
     if args.preview or args.fix:
         if args.filepath:
             actions = preview_file(args.filepath)
@@ -236,6 +243,50 @@ def _run():
                         if args.fix:
                             n = apply_fixes(fp, actions)
                             print(f"  Applied {n} fix(es) to {fp}")
+        else:
+            parser.print_help()
+        return
+
+    # --preview-balance or --fix-balance mode
+    if args.preview_balance or args.fix_balance:
+        if args.filepath:
+            actions = preview_balance_fixes(args.filepath)
+            if args.preview_balance:
+                print(f'\n{"─"*70}')
+                print(f'  File: {args.filepath}')
+                print(f'  Balance fixes ({len(actions)}):')
+                for a in actions:
+                    print(f'    {a.code:8s}  {a.issue_type:15s}  "{a.old:25s}" → "{a.new}"  ({a.field_path})')
+                print(f'{"─"*70}')
+            if args.fix_balance:
+                n = apply_balance_fixes(args.filepath, actions)
+                is_clean, remaining = validate_after_fix(args.filepath)
+                print(f"  Applied {n} balance fix(es) to {args.filepath}")
+                print(f"  Validation: {'✓ Clean' if is_clean else f'✗ {remaining} issues remain'}")
+
+        elif args.all:
+            total_fixes = 0
+            total_files = 0
+            for dirpath in ["discovery", "encounters"]:
+                for fp in sorted(glob.glob(os.path.join(dirpath, "**/*.json"), recursive=True)):
+                    actions = preview_balance_fixes(fp)
+                    if actions:
+                        total_files += 1
+                        total_fixes += len(actions)
+                        if args.preview_balance:
+                            print(f'\n{"─"*70}')
+                            print(f'  File: {fp}')
+                            print(f'  Balance fixes ({len(actions)}):')
+                            for a in actions:
+                                print(f'    {a.code:8s}  {a.issue_type:15s}  "{a.old:25s}" → "{a.new}"')
+                            print(f'{"─"*70}')
+                        if args.fix_balance:
+                            n = apply_balance_fixes(fp, actions)
+                            is_clean, remaining = validate_after_fix(fp)
+                            print(f"  Applied {n} balance fix(es) to {fp}")
+                            if not is_clean:
+                                print(f"    ⚠ {remaining} issues remain")
+            print(f'\n  Total: {total_fixes} balance fix(es) across {total_files} files')
         else:
             parser.print_help()
         return
