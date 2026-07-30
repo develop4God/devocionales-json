@@ -205,8 +205,10 @@ def _run():
             if args.preview:
                 print_preview(actions, args.filepath)
             if args.fix:
-                n = apply_fixes(args.filepath, actions)
-                print(f"  Applied {n} fix(es) to {args.filepath}")
+                result = apply_fixes(args.filepath, actions)
+                print(f"  Applied {result.applied} fix(es) to {args.filepath}")
+                if result.failed:
+                    print(f"  ⚠ {result.failed} fix(es) FAILED to apply (old text no longer matched)")
 
         elif args.family:
             family_preview = preview_family(args.family, args.type)
@@ -214,12 +216,19 @@ def _run():
                 print_family_preview(family_preview, args.family)
             if args.fix:
                 total = 0
+                total_failed = 0
                 for lang, actions in family_preview.items():
                     fp = actions[0].filepath
-                    n = apply_fixes(fp, actions)
-                    total += n
-                    print(f"  Applied {n} fix(es) to {lang}")
+                    result = apply_fixes(fp, actions)
+                    total += result.applied
+                    total_failed += result.failed
+                    msg = f"  Applied {result.applied} fix(es) to {lang}"
+                    if result.failed:
+                        msg += f" (⚠ {result.failed} FAILED)"
+                    print(msg)
                 print(f"  Total: {total} fix(es) across {len(family_preview)} languages")
+                if total_failed:
+                    print(f"  ⚠ {total_failed} fix(es) FAILED to apply across the run")
 
         elif args.dir:
             for fp in sorted(glob.glob(os.path.join(args.dir, "**/*.json"), recursive=True)):
@@ -229,8 +238,10 @@ def _run():
                     if args.preview:
                         print_preview(actions, fp)
                     if args.fix:
-                        n = apply_fixes(fp, actions)
-                        print(f"  Applied {n} fix(es) to {fp}")
+                        result = apply_fixes(fp, actions)
+                        print(f"  Applied {result.applied} fix(es) to {fp}")
+                        if result.failed:
+                            print(f"  ⚠ {result.failed} fix(es) FAILED to apply")
 
         elif args.all:
             for dirpath in ["discovery", "encounters"]:
@@ -241,8 +252,10 @@ def _run():
                         if args.preview:
                             print_preview(actions, fp)
                         if args.fix:
-                            n = apply_fixes(fp, actions)
-                            print(f"  Applied {n} fix(es) to {fp}")
+                            result = apply_fixes(fp, actions)
+                            print(f"  Applied {result.applied} fix(es) to {fp}")
+                            if result.failed:
+                                print(f"  ⚠ {result.failed} fix(es) FAILED to apply")
         else:
             parser.print_help()
         return
@@ -259,14 +272,17 @@ def _run():
                     print(f'    {a.code:8s}  {a.issue_type:15s}  "{a.old:25s}" → "{a.new}"  ({a.field_path})')
                 print(f'{"─"*70}')
             if args.fix_balance:
-                n = apply_balance_fixes(args.filepath, actions)
+                result = apply_balance_fixes(args.filepath, actions)
                 is_clean, remaining = validate_after_fix(args.filepath)
-                print(f"  Applied {n} balance fix(es) to {args.filepath}")
+                print(f"  Applied {result.applied} balance fix(es) to {args.filepath}")
+                if result.failed:
+                    print(f"  ⚠ {result.failed} balance fix(es) FAILED to apply (old text no longer matched)")
                 print(f"  Validation: {'✓ Clean' if is_clean else f'✗ {remaining} issues remain'}")
 
         elif args.all:
             total_fixes = 0
             total_files = 0
+            total_failed = 0
             for dirpath in ["discovery", "encounters"]:
                 for fp in sorted(glob.glob(os.path.join(dirpath, "**/*.json"), recursive=True)):
                     actions = preview_balance_fixes(fp)
@@ -281,12 +297,17 @@ def _run():
                                 print(f'    {a.code:8s}  {a.issue_type:15s}  "{a.old:25s}" → "{a.new}"')
                             print(f'{"─"*70}')
                         if args.fix_balance:
-                            n = apply_balance_fixes(fp, actions)
+                            result = apply_balance_fixes(fp, actions)
                             is_clean, remaining = validate_after_fix(fp)
-                            print(f"  Applied {n} balance fix(es) to {fp}")
+                            print(f"  Applied {result.applied} balance fix(es) to {fp}")
+                            if result.failed:
+                                total_failed += result.failed
+                                print(f"    ⚠ {result.failed} fix(es) FAILED to apply")
                             if not is_clean:
                                 print(f"    ⚠ {remaining} issues remain")
             print(f'\n  Total: {total_fixes} balance fix(es) across {total_files} files')
+            if total_failed:
+                print(f'  ⚠ {total_failed} fix(es) FAILED to apply across the run — see per-file output above')
         else:
             parser.print_help()
         return

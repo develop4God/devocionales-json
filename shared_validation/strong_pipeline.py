@@ -57,7 +57,9 @@ class PipelineReport(NamedTuple):
     strong_fixes_preview: List[StrongFixAction]
     balance_fixes_preview: List[BalanceFixAction]
     strong_applied: int
+    strong_failed: int
     balance_applied: int
+    balance_failed: int
     is_valid: bool
     validation_issues: int
 
@@ -66,12 +68,17 @@ def run_pipeline(filepath: str, dry_run: bool = True) -> PipelineReport:
     """Run the complete Strong code fixing pipeline.
     
     Pipeline stages:
-    1. SCAN - Scan file once (single source of truth)
-    2. ANALYZE_STRONG - Find Strong code issues
-    3. ANALYZE_BALANCE - Find balance issues
-    4. APPLY_STRONG - Apply Strong code fixes (if not dry_run)
-    5. APPLY_BALANCE - Apply balance fixes (if not dry_run)
-    6. VALIDATE - Verify file is clean
+    1. ANALYZE_STRONG - Find Strong code issues
+    2. ANALYZE_BALANCE - Find balance issues
+    3. APPLY_STRONG - Apply Strong code fixes (if not dry_run)
+    4. APPLY_BALANCE - Apply balance fixes (if not dry_run)
+    5. VALIDATE - Verify file is clean
+
+    Note: strong_fixer.preview_file/apply_fixes and
+    strong_balance_fixer.preview_balance_fixes each read and parse the
+    JSON file independently — there is no shared scan artifact wired
+    between stages. If a shared scan is reintroduced later, every
+    downstream stage must actually consume it, not just the orchestrator.
     
     Args:
         filepath: Path to JSON file
@@ -80,42 +87,60 @@ def run_pipeline(filepath: str, dry_run: bool = True) -> PipelineReport:
     Returns:
         PipelineReport with all actions and results
     """
-    from shared_validation.strong_scanner import scan_file
     from shared_validation.strong_fixer import preview_file as preview_strong
     from shared_validation.strong_balance_fixer import preview_balance_fixes, apply_balance_fixes, validate_after_fix
     from shared_validation.strong_fixer import apply_fixes as apply_strong_fixes
     
-    # Stage 1: SCAN
-    scan_result = scan_file(filepath)
-    
-    # Stage 2: ANALYZE_STRONG
+    # Stage 1: ANALYZE_STRONG
     strong_actions = preview_strong(filepath)
     strong_fixes = [a for a in strong_actions if a.status == "fix"]
     
-    # Stage 3: ANALYZE_BALANCE
+    # Stage 2: ANALYZE_BALANCE (preview only, for the report — NOT reused
+    # for applying; see Stage 4 note below on why this must be re-run)
     balance_actions = preview_balance_fixes(filepath)
     
     # Initialize counters
     strong_applied = 0
+    strong_failed = 0
     balance_applied = 0
+    balance_failed = 0
     is_valid = False
     validation_issues = 0
     
     if not dry_run:
-        # Stage 4: APPLY_STRONG
+        # Stage 3: APPLY_STRONG
         if strong_fixes:
-            strong_result = apply_strong_fixes(filepath, strong_actions)
-            strong_applied = strong_result.applied if hasattr(strong_result, 'applied') else strong_result
+            # apply_strong_fixes (strong_fixer.apply_fixes) returns the full
+            # FixResult — applied AND failed must both be read, never just
+            # applied, or a fix that silently fails goes unnoticed again.
+            strong_result = apply_strong_fixes(filepath, strong_fixes)
+            strong_applied = strong_result.applied
+            strong_failed = strong_result.failed
         
-        # Stage 5: APPLY_BALANCE
-        if balance_actions:
-            balance_result = apply_balance_fixes(filepath, balance_actions)
-            balance_applied = balance_result
+        # Stage 4: APPLY_BALANCE
+        # CRITICAL: balance_actions from Stage 2 were computed against the
+        # file BEFORE strong fixes rewrote it. Applying strong fixes
+        # shifts every character offset downstream of each edit within
+        # the same field, so the Stage 2 balance offsets are stale the
+        # moment Stage 3 writes anything. Re-analyze against the file's
+        # current on-disk state (post-strong-fix) instead of reusing the
+        # pre-fix preview — this was previously a silent, corpus-wide
+        # failure (confirmed: 63 balance fixes across 27 files failed to
+        # apply for exactly this reason before this fix).
+        balance_actions_to_apply = (
+            preview_balance_fixes(filepath) if strong_applied else balance_actions
+        )
+        if balance_actions_to_apply:
+            balance_result = apply_balance_fixes(filepath, balance_actions_to_apply)
+            balance_applied = balance_result.applied
+            balance_failed = balance_result.failed
         
-        # Stage 6: VALIDATE
+        # Stage 5: VALIDATE
         is_valid, validation_issues = validate_after_fix(filepath)
     else:
-        # Dry run: assume valid if no fixes needed
+        # Dry run never touches the file, so "valid" here only means
+        # "nothing was flagged" — NOT the same guarantee as the
+        # post-apply schema/structure validation done in production mode.
         is_valid = len(strong_fixes) == 0 and len(balance_actions) == 0
         validation_issues = 0
     
@@ -125,7 +150,9 @@ def run_pipeline(filepath: str, dry_run: bool = True) -> PipelineReport:
         strong_fixes_preview=strong_fixes,
         balance_fixes_preview=balance_actions,
         strong_applied=strong_applied,
+        strong_failed=strong_failed,
         balance_applied=balance_applied,
+        balance_failed=balance_failed,
         is_valid=is_valid,
         validation_issues=validation_issues,
     )
@@ -170,7 +197,11 @@ def print_report(report: PipelineReport):
     if not report.dry_run:
         print(f'\n  Applied:')
         print(f'    Strong fixes: {report.strong_applied}')
+        if report.strong_failed:
+            print(f'    ⚠ Strong fixes FAILED: {report.strong_failed}')
         print(f'    Balance fixes: {report.balance_applied}')
+        if report.balance_failed:
+            print(f'    ⚠ Balance fixes FAILED: {report.balance_failed}')
         print(f'    Validation: {"✓ PASS" if report.is_valid else "✗ FAIL"}')
         if report.validation_issues > 0:
             print(f'    Remaining issues: {report.validation_issues}')

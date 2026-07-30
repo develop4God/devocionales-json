@@ -31,7 +31,7 @@ from shared_validation.strong_search import (
     is_correct_format,
 )
 from shared_validation.strong_scanner import scan_file, get_field_text
-from shared_validation.strong_applier import apply_fixes as _apply_fixes_shared
+from shared_validation.strong_applier import apply_fixes as _apply_fixes_shared, FixResult
 
 
 class FixAction(NamedTuple):
@@ -61,15 +61,27 @@ def preview_file(filepath: str) -> List[FixAction]:
         else:
             status = "fix"
 
+        # r.full_match includes leading/trailing whitespace captured by the
+        # broad regex (see strong_search._BROAD_RE), and r.start/r.end are
+        # offsets for that full (unstripped) match. FixAction.old must stay
+        # in sync with whichever span start/end point at, or the applier's
+        # `text[start:end] == old` check silently fails and no fix lands.
+        # Strip the match but shrink the offsets by the same trimmed amount
+        # so start/end keep pointing at exactly `old`.
+        stripped = r.full_match.strip()
+        left_trim = r.full_match.find(stripped)
+        fixed_start = r.start + left_trim
+        fixed_end = fixed_start + len(stripped)
+
         canonical = f"({r.code})"
         actions.append(FixAction(
             filepath=filepath,
             field_path=r.field_path if hasattr(r, 'field_path') else "",
             code=r.code,
-            old=r.full_match.strip(),
+            old=stripped,
             new=canonical,
-            start=r.start,
-            end=r.end,
+            start=fixed_start,
+            end=fixed_end,
             status=status,
         ))
 
@@ -107,12 +119,18 @@ def preview_family(study_id: str, content_type: str = "discovery") -> dict:
     return result
 
 
-def apply_fixes(filepath: str, actions: List[FixAction]) -> int:
-    """Apply fix actions to a file. Returns number of fixes applied."""
+def apply_fixes(filepath: str, actions: List[FixAction]) -> FixResult:
+    """Apply fix actions to a file.
+
+    Returns the full FixResult (applied AND failed counts) — callers must
+    not discard `failed`. A fix that fails to apply (its recorded `old`
+    text no longer matches the file, e.g. from a stale scan or a
+    conflicting concurrent edit) is a silent data-loss risk if the
+    failure count isn't surfaced somewhere a human can see it.
+    """
     fixes = [a for a in actions if a.status == "fix" and a.filepath == filepath]
     if not fixes:
-        return 0
+        return FixResult(applied=0, failed=0, filepath=filepath)
     
     # Use the shared applier
-    result = _apply_fixes_shared(filepath, fixes)
-    return result.applied
+    return _apply_fixes_shared(filepath, fixes)

@@ -29,7 +29,7 @@ from pathlib import Path
 from typing import List, NamedTuple
 
 from shared_validation.balance_checker import check_balance, BalanceIssue
-from shared_validation.strong_applier import apply_fixes
+from shared_validation.strong_applier import apply_fixes, FixResult
 
 
 class BalanceFixAction(NamedTuple):
@@ -130,14 +130,17 @@ def preview_balance_fixes(filepath: str) -> List[BalanceFixAction]:
     return actions
 
 
-def apply_balance_fixes(filepath: str, actions: List[BalanceFixAction]) -> int:
-    """Apply balance fix actions to a file. Returns number of fixes applied."""
+def apply_balance_fixes(filepath: str, actions: List[BalanceFixAction]) -> FixResult:
+    """Apply balance fix actions to a file.
+
+    Returns the full FixResult (applied AND failed counts) — see
+    strong_fixer.apply_fixes for why `failed` must not be discarded.
+    """
     if not actions:
-        return 0
+        return FixResult(applied=0, failed=0, filepath=filepath)
     
     # Use the shared applier
-    result = apply_fixes(filepath, actions)
-    return result.applied
+    return apply_fixes(filepath, actions)
 
 
 def validate_after_fix(filepath: str) -> tuple[bool, int]:

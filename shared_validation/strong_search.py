@@ -183,9 +183,19 @@ def is_correct_format(result: StrongSearchResult) -> bool:
 #   (?:Strong\s+)?       — optional "Strong" word (case insensitive)
 #   ([GHgh])             — the letter prefix (G=Greek, H=Hebrew)
 #   (\d{1,5})            — 1-5 digits
-#   [\s\)\]:.\-]*        — optional trailing whitespace, close parens, brackets, colons, dots, dashes
+#   [\s]*[\)\]]?         — optional whitespace, then AT MOST ONE closing
+#                          wrapper (paren or bracket) — never both, and
+#                          never sentence punctuation like ':' '.' '-'.
+#
+# The trailing class used to be [\s\)\]:.\-]* (unbounded). That let a
+# single match run past its own code's closing paren and swallow
+# adjacent sentence punctuation that belongs to the surrounding prose —
+# e.g. "(arrabon) - G728): pago" matched as "- G728): " and silently
+# deleted the colon when the fix was applied. A code's own trailing
+# wrapper is at most one character; anything after that is prose and
+# must be left alone.
 _BROAD_RE = re.compile(
-    r"[\s\(\[-]*(?:Strong\s+)?([GHgh])(\d{1,5})[\s\)\]:.\-]*",
+    r"[\s\(\[-]*(?:Strong\s+)?([GHgh])(\d{1,5})\s*[\)\]]?",
     re.IGNORECASE,
 )
 
