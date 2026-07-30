@@ -1,14 +1,20 @@
-"""run_strong_search.py — CLI entry point to search Strong's codes in corpus files.
-
-Shows detailed context for each match: field path, matched text, position,
-lexicon entry, text before/after, and nearby Greek/Hebrew words.
+"""run_strong_search.py — CLI for Strong code search, preview, and fix.
 
 Usage:
     # Search a single file
     python3 shared_validation/run_strong_search.py discovery/es/passed_from_death_es_001.json
 
-    # Search one family (all language versions of a study)
-    python3 shared_validation/run_strong_search.py --family passed_from_death_001
+    # Preview fixes for a file
+    python3 shared_validation/run_strong_search.py discovery/es/passed_from_death_es_001.json --preview
+
+    # Preview fixes for a family (all languages)
+    python3 shared_validation/run_strong_search.py --family passed_from_death_001 --preview
+
+    # Apply fixes to a file
+    python3 shared_validation/run_strong_search.py discovery/es/passed_from_death_es_001.json --fix
+
+    # Apply fixes to a family
+    python3 shared_validation/run_strong_search.py --family passed_from_death_001 --fix
 
     # Search all discovery + encounters files
     python3 shared_validation/run_strong_search.py --all
@@ -25,7 +31,6 @@ import re
 import sys
 from pathlib import Path
 
-# Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from shared_validation.strong_search import (
@@ -33,6 +38,12 @@ from shared_validation.strong_search import (
     find_strong_codes_phase2,
     find_strong_codes_phase3,
     summarize_results,
+)
+from shared_validation.strong_fixer import (
+    preview_file,
+    preview_family,
+    apply_fixes,
+    FixAction,
 )
 from shared_validation.lexicon_source import StrongsLexiconSource
 from shared_validation.family_resolver import (
@@ -42,7 +53,6 @@ from shared_validation.family_resolver import (
 
 
 def _find_nearby_script(text: str, pos: int, window: int = 80) -> dict:
-    """Find Greek and Hebrew characters near a position in text."""
     start = max(0, pos - window)
     end = min(len(text), pos + window)
     snippet = text[start:end]
@@ -50,55 +60,39 @@ def _find_nearby_script(text: str, pos: int, window: int = 80) -> dict:
     hebrew = re.findall(r'[\u0590-\u05FF]+', snippet)
     result = {}
     if greek:
-        result["greek"] = list(dict.fromkeys(greek))  # unique, preserve order
+        result["greek"] = list(dict.fromkeys(greek))
     if hebrew:
         result["hebrew"] = list(dict.fromkeys(hebrew))
     return result
 
 
 def analyze_file(filepath: str, lex: StrongsLexiconSource = None):
-    """Analyze a single file and return structured match data."""
     with open(filepath, encoding="utf-8") as f:
         data = json.load(f)
-
     if lex is None:
         lex = StrongsLexiconSource()
-
     matches = []
-
     for i, card in enumerate(data.get("cards", [])):
         for key in ["content", "reflection", "narrative", "title", "question", "answer", "note"]:
             text = card.get(key, "")
             if not text:
                 continue
-
             p1 = find_strong_codes_phase1(text)
             p2 = find_strong_codes_phase2(text)
             p3 = find_strong_codes_phase3(text)
-
             for r in p3:
                 entry = lex.lookup_by_number(r.code)
                 before = text[:r.start]
                 after = text[r.end:]
                 match = text[r.start:r.end]
-
-                # Determine if Phase 1 or Phase 2
                 in_p1 = any(r.start == p.start and r.end == p.end for p in p1)
-
-                # Find nearby script
                 nearby = _find_nearby_script(text, r.start)
-
                 matches.append({
                     "field_path": f"cards[{i}].{key}",
-                    "card_index": i,
-                    "field_type": key,
                     "code": r.code,
-                    "prefix": r.prefix,
-                    "number": r.number,
                     "matched_text": match,
                     "start": r.start,
                     "end": r.end,
-                    "match_length": len(match),
                     "phase": "Phase 1 (Strong prefix)" if in_p1 else "Phase 2 (bare code)",
                     "text_before": before,
                     "text_after": after,
@@ -108,72 +102,145 @@ def analyze_file(filepath: str, lex: StrongsLexiconSource = None):
                     "lexicon_gloss": entry.gloss if entry else None,
                     "lexicon_found": entry is not None,
                 })
-
     return matches
 
 
-def print_matches(matches: list, show_full_context: bool = False):
-    """Print match data in a readable format."""
+def print_matches(matches: list):
     if not matches:
         print("  (no Strong codes found)")
         return
-
     for m in matches:
         print(f'\n{"─"*70}')
         print(f'  Field: {m["field_path"]}')
         print(f'  Code:  {m["code"]}  ({m["phase"]})')
-        print(f'  Match: "{m["matched_text"]}"  (pos={m["start"]}-{m["end"]}, len={m["match_length"]})')
-
+        print(f'  Match: "{m["matched_text"]}"  (pos={m["start"]}-{m["end"]})')
         if m["lexicon_found"]:
             print(f'  Lexicon:  lemma="{m["lexicon_lemma"]}"  translit="{m["lexicon_translit"]}"')
-            print(f'  Gloss:    {m["lexicon_gloss"]}')
-        else:
-            print(f'  Lexicon:  NOT FOUND')
-
         if m["nearby_script"]:
             for script, words in m["nearby_script"].items():
                 print(f'  Nearby {script}: {", ".join(words)}')
-
-        # Show context before/after
         ctx_before = m["text_before"][-80:] if len(m["text_before"]) > 80 else m["text_before"]
         ctx_after = m["text_after"][:80] if len(m["text_after"]) > 80 else m["text_after"]
         print(f'  Before ({len(m["text_before"])} chars): ...{ctx_before}')
         print(f'  After  ({len(m["text_after"])} chars):  {ctx_after}...')
-
-        if show_full_context:
-            print(f'\n  --- Full text before ---')
-            print(f'  {m["text_before"]}')
-            print(f'  --- Full text after ---')
-            print(f'  {m["text_after"]}')
-
     print(f'\n{"─"*70}')
     print(f'  Total: {len(matches)} match(es)')
 
 
-def print_summary(matches: list):
-    """Print a summary table of all matches."""
-    codes = {}
-    for m in matches:
-        codes.setdefault(m["code"], []).append(m["field_path"])
+def print_preview(actions: list, filepath: str = ""):
+    """Print a clean preview of what will change."""
+    fixes = [a for a in actions if a.status == "fix"]
+    skips = [a for a in actions if a.status == "skip"]
 
-    print(f'\n{"─"*70}')
-    print(f'  SUMMARY: {len(matches)} match(es), {len(codes)} unique code(s)')
-    for code, fields in sorted(codes.items()):
-        print(f'    {code}: {len(fields)} occurrence(s) in {", ".join(fields)}')
+    if filepath:
+        print(f'\n{"─"*70}')
+        print(f'  File: {filepath}')
+
+    if fixes:
+        print(f'  Fixes ({len(fixes)}):')
+        for a in fixes:
+            with open(a.filepath, encoding="utf-8") as f:
+                data = json.load(f)
+            from shared_validation.strong_fixer import _get_field
+            text = _get_field(data, a.field_path)
+            before = text[:a.start]
+            after = text[a.end:]
+            ctx_before = before[-60:] if len(before) > 60 else before
+            ctx_after = after[:60] if len(after) > 60 else after
+            print(f'    {a.code:8s}  "{a.old:25s}" → "{a.new}"')
+            print(f'    {"":8s}  {"":25s}  ...{ctx_before}{a.old}{ctx_after}...')
+            print(f'    {"":8s}  {"":25s}  ...{ctx_before}{a.new}{ctx_after}...')
+    else:
+        print(f'  No fixes needed.')
+
+    if skips:
+        print(f'  Already correct: {len(skips)}')
+
+    if filepath:
+        print(f'{"─"*70}')
+
+
+def print_family_preview(family_preview: dict, study_id: str):
+    """Print preview across all languages in a family."""
+    total_fixes = sum(len(v) for v in family_preview.values())
+    total_langs = len(family_preview)
+
+    print(f'\n{"="*70}')
+    print(f'  Family: {study_id}')
+    print(f'  Languages with fixes: {total_langs}/{total_langs}')
+    print(f'  Total fixes: {total_fixes}')
+    print(f'{"="*70}')
+
+    for lang, actions in sorted(family_preview.items()):
+        print(f'\n  {lang}:')
+        for a in actions:
+            print(f'    {a.code:8s}  "{a.old:25s}" → "{a.new}"  ({a.field_path})')
 
 
 def _run():
-    parser = argparse.ArgumentParser(description="Search Strong's codes in corpus files")
+    parser = argparse.ArgumentParser(description="Search, preview, and fix Strong codes")
     parser.add_argument("filepath", nargs="?", help="Path to a single JSON file")
-    parser.add_argument("--family", help="Search one family (all language versions of a study)")
-    parser.add_argument("--type", default="discovery", choices=["discovery", "encounters"], help="Content type for --family (default: discovery)")
+    parser.add_argument("--family", help="Search/fix one family (all language versions)")
+    parser.add_argument("--type", default="discovery", choices=["discovery", "encounters"])
     parser.add_argument("--dir", help="Search all JSON files in a directory")
-    parser.add_argument("--all", action="store_true", help="Search all discovery + encounters files")
-    parser.add_argument("--full", action="store_true", help="Show full context (not just 80 chars)")
-    parser.add_argument("--summary", action="store_true", help="Show only summary, no details")
+    parser.add_argument("--all", action="store_true", help="Search all discovery + encounters")
+    parser.add_argument("--preview", action="store_true", help="Preview fixes without applying")
+    parser.add_argument("--fix", action="store_true", help="Apply fixes")
+    parser.add_argument("--summary", action="store_true", help="Show only summary")
 
     args = parser.parse_args()
     lex = StrongsLexiconSource()
+
+    # --preview or --fix mode
+    if args.preview or args.fix:
+        if args.filepath:
+            actions = preview_file(args.filepath)
+            if args.preview:
+                print_preview(actions, args.filepath)
+            if args.fix:
+                n = apply_fixes(args.filepath, actions)
+                print(f"  Applied {n} fix(es) to {args.filepath}")
+
+        elif args.family:
+            family_preview = preview_family(args.family, args.type)
+            if args.preview:
+                print_family_preview(family_preview, args.family)
+            if args.fix:
+                total = 0
+                for lang, actions in family_preview.items():
+                    fp = actions[0].filepath
+                    n = apply_fixes(fp, actions)
+                    total += n
+                    print(f"  Applied {n} fix(es) to {lang}")
+                print(f"  Total: {total} fix(es) across {len(family_preview)} languages")
+
+        elif args.dir:
+            for fp in sorted(glob.glob(os.path.join(args.dir, "**/*.json"), recursive=True)):
+                actions = preview_file(fp)
+                fixes = [a for a in actions if a.status == "fix"]
+                if fixes:
+                    if args.preview:
+                        print_preview(actions, fp)
+                    if args.fix:
+                        n = apply_fixes(fp, actions)
+                        print(f"  Applied {n} fix(es) to {fp}")
+
+        elif args.all:
+            for dirpath in ["discovery", "encounters"]:
+                for fp in sorted(glob.glob(os.path.join(dirpath, "**/*.json"), recursive=True)):
+                    actions = preview_file(fp)
+                    fixes = [a for a in actions if a.status == "fix"]
+                    if fixes:
+                        if args.preview:
+                            print_preview(actions, fp)
+                        if args.fix:
+                            n = apply_fixes(fp, actions)
+                            print(f"  Applied {n} fix(es) to {fp}")
+        else:
+            parser.print_help()
+        return
+
+    # Search mode (no preview/fix)
     all_matches = []
 
     if args.filepath:
@@ -189,25 +256,17 @@ def _run():
             return
         family = resolver(args.family)
         if not family:
-            print(f"Study '{args.family}' not found in {args.type} index")
+            print(f"Study '{args.family}' not found")
             return
-        print(f"\nFamily: {args.family} ({args.type})")
-        print(f"Languages: {', '.join(sorted(family.keys()))}")
         for lang in sorted(family.keys()):
             fp = str(family[lang])
             matches = analyze_file(fp, lex)
             if matches:
                 print(f"\n  {lang}: {os.path.basename(fp)} — {len(matches)} match(es)")
                 for m in matches:
-                    ctx_before = m["text_before"][-60:] if len(m["text_before"]) > 60 else m["text_before"]
-                    ctx_after = m["text_after"][:60] if len(m["text_after"]) > 60 else m["text_after"]
-                    print(f'    {m["code"]:8s}  "{m["matched_text"]:25s}"  before: ...{ctx_before}')
-                    print(f'    {"":8s}  {"":25s}  after:  {ctx_after}...')
-                    if m["nearby_script"]:
-                        for script, words in m["nearby_script"].items():
-                            print(f'    {"":8s}  {"":25s}  {script}: {", ".join(words)}')
+                    print(f'    {m["code"]:8s}  "{m["matched_text"]:25s}"  {m["field_path"]}')
                 all_matches.extend(matches)
-        print_summary(all_matches)
+        print(f'\n  Total: {len(all_matches)} match(es) across {len(family)} languages')
 
     elif args.dir:
         for fp in sorted(glob.glob(os.path.join(args.dir, "**/*.json"), recursive=True)):
@@ -217,7 +276,7 @@ def _run():
                 for m in matches:
                     print(f'  {m["code"]:8s}  "{m["matched_text"]:25s}"  {m["field_path"]}')
                 all_matches.extend(matches)
-        print_summary(all_matches)
+        print(f'\n  Total: {len(all_matches)} match(es)')
 
     elif args.all:
         for dirpath in ["discovery", "encounters"]:
@@ -228,14 +287,10 @@ def _run():
                     for m in matches:
                         print(f'  {m["code"]:8s}  "{m["matched_text"]:25s}"  {m["field_path"]}')
                     all_matches.extend(matches)
-        print_summary(all_matches)
+        print(f'\n  Total: {len(all_matches)} match(es)')
 
     else:
         parser.print_help()
-        return
-
-    if all_matches and not args.summary and not args.family:
-        print_matches(all_matches, show_full_context=args.full)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,72 @@
+{
+  "_comment": "HARD GATE — canonical format for every Strong's code citation in the corpus (discovery + encounters, every language). This file is the spec; the Python code reads it rather than hardcoding the rule, so the format can be corrected in one place without touching validator logic. Enforced by strong_search.py / strong_fixer.py.",
+  "rule": "Every Strong's code must be wrapped in parentheses: (NXXXX) where N is G (Greek) or H (Hebrew) and XXXX is 1-5 digits.",
+  "accepted_formats": [
+    "(GXXXX)",
+    "(HXXXX)"
+  ],
+  "examples_correct": [
+    "(G3327)",
+    "(H5782)",
+    "(G5)",
+    "(G12345)"
+  ],
+  "examples_incorrect": [
+    "(Strong G3327)  — remove the word 'Strong'",
+    "Strong G1568    — remove 'Strong', add parentheses",
+    "Strong G2665)   — remove 'Strong', add open paren, keep close paren",
+    "- G728)         — remove dash, add open paren, keep close paren",
+    "G728)           — add open paren, keep close paren",
+    "G1910           — add parentheses around the code",
+    "h00             — lowercase is not a valid Strong code prefix"
+  ],
+  "prefixes": {
+    "G": "Greek (New Testament) Strong's number",
+    "H": "Hebrew (Old Testament) Strong's number"
+  },
+  "digit_range": {
+    "min": 1,
+    "max": 5,
+    "_comment": "Strong's numbers range from 1 digit (G5) to 5 digits (G12345). Codes with 0 digits (e.g. H00) are invalid."
+  },
+  "case_sensitivity": {
+    "prefix_must_be_uppercase": true,
+    "_comment": "The prefix letter must be uppercase G or H. Lowercase g or h is not a valid Strong's code prefix (e.g. 'h00' is a false positive, not a real code)."
+  },
+  "violations_not_accepted": [
+    "Word 'Strong' before the code: (Strong G3327), Strong G1568",
+    "Missing open parenthesis: Strong G2665), G728)",
+    "Missing both parentheses: G1910, Strong G1568",
+    "Dash before the code: - G728), - G3954)",
+    "Lowercase prefix: h00, g1234",
+    "Zero digits: H00, G0"
+  ],
+  "fix_rules": {
+    "_comment": "How each violation pattern should be fixed to reach the canonical (NXXXX) format.",
+    "A_strong_with_parens": {
+      "pattern": "(Strong GXXXX)",
+      "fix": "Remove 'Strong ' → (GXXXX)"
+    },
+    "B_strong_no_open_paren": {
+      "pattern": "Strong GXXXX) or - Strong GXXXX)",
+      "fix": "Replace 'Strong ' or '- Strong ' with '(' → (GXXXX)"
+    },
+    "C1_dash_no_open_paren": {
+      "pattern": "- GXXXX)",
+      "fix": "Remove dash, add open paren, keep close paren → (GXXXX))"
+    },
+    "C2_bare_no_open_paren": {
+      "pattern": "GXXXX)",
+      "fix": "Add open paren, keep close paren → (GXXXX))"
+    },
+    "D_strong_no_parens": {
+      "pattern": "Strong GXXXX",
+      "fix": "Remove 'Strong ', add parentheses → (GXXXX)"
+    },
+    "F_bare_no_parens": {
+      "pattern": "GXXXX",
+      "fix": "Add parentheses → (GXXXX)",
+      "_note": "Some may be false positives (e.g. h00 lowercase). Filter by case_sensitivity.prefix_must_be_uppercase."
+    }
+  }
+}
