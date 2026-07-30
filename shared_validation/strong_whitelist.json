@@ -27,6 +27,13 @@
       "context": "French Bible version leak"
     }
   ],
+  "field_keys_without_parentheses": [
+    {
+      "key": "strong",
+      "pattern": "^[GH]\\d{1,5}$",
+      "reason": "Structured Strong-code fields store the raw G/H number; parentheses are prose formatting only."
+    }
+  ],
   "minimum_digit_range_override": {
     "_comment": "Override the digit range for specific codes if needed. Strong's numbers typically have 1-5 digits, but some patterns with more digits are definitely not Strong codes.",
     "codes_requiring_exact_match": {

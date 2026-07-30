@@ -142,6 +142,21 @@ def is_excluded(result: StrongSearchResult) -> bool:
     return False
 
 
+def is_field_excluded(field_path: str, value: str) -> bool:
+    """Return whether a structured field stores a raw, non-prose Strong code.
+
+    Whitelisted field keys are intentionally not subject to the prose-format
+    rule requiring ``(G####)``/``(H####)``. For example, a JSON ``strong``
+    property is structured data and stores ``G####`` directly.
+    """
+    field_key = field_path.rsplit(".", 1)[-1]
+    whitelist = load_whitelist()
+    for exclusion in whitelist.get("field_keys_without_parentheses", []):
+        if field_key == exclusion["key"] and re.fullmatch(exclusion["pattern"], value):
+            return True
+    return False
+
+
 def is_correct_format(result: StrongSearchResult) -> bool:
     """Check if a StrongSearchResult is already in the canonical (NXXXX) format.
 
@@ -368,6 +383,8 @@ def find_strong_codes_in_file(
             for k, v in obj.items():
                 ctx_key = f"{path_prefix}.{k}" if path_prefix else k
                 if isinstance(v, str):
+                    if is_field_excluded(ctx_key, v):
+                        continue
                     if phase == 0:
                         r = find_strong_codes_phase0(v, context_window)
                     elif phase == 1:
