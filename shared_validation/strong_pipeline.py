@@ -95,10 +95,15 @@ def run_pipeline(filepath: str, dry_run: bool = True) -> PipelineReport:
     # Stage 1: ANALYZE_STRONG
     strong_actions = preview_strong(filepath)
     strong_fixes = [a for a in strong_actions if a.status == "fix"]
+    strong_fixed_fields = {a.field_path for a in strong_fixes}
     
-    # Stage 2: ANALYZE_BALANCE (preview only, for the report — NOT reused
-    # for applying; see Stage 4 note below on why this must be re-run)
-    balance_actions = preview_balance_fixes(filepath)
+    # Stage 2: ANALYZE_BALANCE — restricted to fields strong_fixer actually
+    # fixed. Balance-checking is a safety net for strong_fixer's own edits,
+    # not a general corpus scanner: a field strong_fixer never touched
+    # must never be scanned or modified by the balance stage.
+    balance_actions = [
+        a for a in preview_balance_fixes(filepath) if a.field_path in strong_fixed_fields
+    ]
     
     # Initialize counters
     strong_applied = 0
@@ -130,7 +135,8 @@ def run_pipeline(filepath: str, dry_run: bool = True) -> PipelineReport:
         # failure (confirmed: 63 balance fixes across 27 files failed to
         # apply for exactly this reason before this fix).
         balance_actions_to_apply = (
-            preview_balance_fixes(filepath) if strong_applied else balance_actions
+            [a for a in preview_balance_fixes(filepath) if a.field_path in strong_fixed_fields]
+            if strong_applied else balance_actions
         )
         if balance_actions_to_apply:
             balance_result = apply_balance_fixes(filepath, balance_actions_to_apply)
