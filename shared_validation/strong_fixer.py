@@ -30,7 +30,6 @@ from shared_validation.strong_search import (
     find_strong_codes_in_file,
     is_correct_format,
 )
-from shared_validation.strong_scanner import scan_file, get_field_text
 from shared_validation.strong_applier import apply_fixes as _apply_fixes_shared, FixResult
 
 

@@ -78,7 +78,9 @@ def apply_fixes(filepath: str, actions: List[NamedTuple]) -> FixResult:
         return FixResult(applied=0, failed=0, filepath=filepath)
     
     with open(filepath, encoding="utf-8") as f:
-        data = json.load(f)
+        original_text = f.read()
+    data = json.loads(original_text)
+    had_trailing_newline = original_text.endswith("\n")
     
     # Group fixes by field path, reverse order so positions don't shift
     from collections import defaultdict
@@ -103,6 +105,13 @@ def apply_fixes(filepath: str, actions: List[NamedTuple]) -> FixResult:
     # Write back
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+        # json.dump never emits a trailing newline; restore it if the
+        # original file had one, so git diffs don't show a spurious
+        # newline removal on every applied fix. Internal whitespace-only
+        # lines are still lost — that's an inherent load/dump round-trip
+        # cost, not fixed here.
+        if had_trailing_newline:
+            f.write("\n")
     
     return FixResult(
         applied=applied,

@@ -62,6 +62,7 @@ class PipelineReport(NamedTuple):
     balance_failed: int
     is_valid: bool
     validation_issues: int
+    abort_reason: Optional[str]
 
 
 def run_pipeline(filepath: str, dry_run: bool = True) -> PipelineReport:
@@ -106,6 +107,7 @@ def run_pipeline(filepath: str, dry_run: bool = True) -> PipelineReport:
     balance_failed = 0
     is_valid = False
     validation_issues = 0
+    abort_reason = None
     
     if not dry_run:
         # Stage 3: APPLY_STRONG
@@ -137,6 +139,16 @@ def run_pipeline(filepath: str, dry_run: bool = True) -> PipelineReport:
         
         # Stage 5: VALIDATE
         is_valid, validation_issues = validate_after_fix(filepath)
+
+        # Surface silent-failure risk explicitly rather than leaving it
+        # to the caller to remember to check strong_failed/balance_failed.
+        if strong_failed or balance_failed:
+            abort_reason = (
+                f"{strong_failed} strong fix(es) and {balance_failed} balance "
+                f"fix(es) failed to apply (old text no longer matched on disk)"
+            )
+        elif not is_valid:
+            abort_reason = f"Post-apply validation failed: {validation_issues} issue(s) remain"
     else:
         # Dry run never touches the file, so "valid" here only means
         # "nothing was flagged" — NOT the same guarantee as the
@@ -155,6 +167,7 @@ def run_pipeline(filepath: str, dry_run: bool = True) -> PipelineReport:
         balance_failed=balance_failed,
         is_valid=is_valid,
         validation_issues=validation_issues,
+        abort_reason=abort_reason,
     )
 
 
@@ -205,6 +218,8 @@ def print_report(report: PipelineReport):
         print(f'    Validation: {"✓ PASS" if report.is_valid else "✗ FAIL"}')
         if report.validation_issues > 0:
             print(f'    Remaining issues: {report.validation_issues}')
+        if report.abort_reason:
+            print(f'    ⚠ {report.abort_reason}')
     else:
         print(f'\n  Dry run - no changes made')
         print(f'  Would apply: {len(report.strong_fixes_preview) + len(report.balance_fixes_preview)} fixes')
