@@ -65,6 +65,7 @@ class StrongSearchResult(NamedTuple):
         end:          Character offset where `full_match` ends in `text`.
         context:      A snippet of surrounding text for human review.
         has_strong:   True if the match includes the word "Strong" (any case).
+        field_path:   Dotted path to the field in the JSON, e.g. "cards[0].content".
     """
     code: str
     prefix: str
@@ -74,6 +75,7 @@ class StrongSearchResult(NamedTuple):
     end: int
     context: str
     has_strong: bool
+    field_path: str = ""
 
 
 # ---------------------------------------------------------------------------
@@ -315,7 +317,19 @@ def find_strong_codes_in_file(
                         r = find_strong_codes_phase2(v, context_window)
                     else:
                         r = find_strong_codes_phase3(v, context_window)
-                    results.extend(r)
+                    # Attach field_path to each result
+                    for result in r:
+                        results.append(StrongSearchResult(
+                            code=result.code,
+                            prefix=result.prefix,
+                            number=result.number,
+                            full_match=result.full_match,
+                            start=result.start,
+                            end=result.end,
+                            context=result.context,
+                            has_strong=result.has_strong,
+                            field_path=ctx_key,
+                        ))
                 elif isinstance(v, (dict, list)):
                     _collect(v, ctx_key)
         elif isinstance(obj, list):

@@ -27,11 +27,9 @@ from pathlib import Path
 from typing import List, NamedTuple, Optional
 
 from shared_validation.strong_search import (
-    find_strong_codes_phase1,
-    find_strong_codes_phase2,
-    find_strong_codes_phase3,
+    find_strong_codes_in_file,
+    is_correct_format,
 )
-from shared_validation.lexicon_source import StrongsLexiconSource
 
 
 class FixAction(NamedTuple):
@@ -79,49 +77,29 @@ def _set_field(data, field_path: str, value):
 
 def preview_file(filepath: str) -> List[FixAction]:
     """Analyze a file and return all fix actions (preview, no changes made)."""
-    with open(filepath, encoding="utf-8") as f:
-        data = json.load(f)
-
     actions = []
 
-    for i, card in enumerate(data.get("cards", [])):
-        for key in ["content", "reflection", "narrative", "title", "question", "answer", "note"]:
-            text = card.get(key, "")
-            if not text:
-                continue
+    # Use the new search logic — scans ALL string fields in the file
+    results = find_strong_codes_in_file(filepath, phase=3)
 
-            p1 = find_strong_codes_phase1(text)
-            p2 = find_strong_codes_phase2(text)
-            p3 = find_strong_codes_phase3(text)
+    for r in results:
+        # Use the format checker from strong_format.json
+        if is_correct_format(r):
+            status = "skip"
+        else:
+            status = "fix"
 
-            for r in p3:
-                match = text[r.start:r.end]
-                canonical = f"({r.code})"
-
-                # Check if already in correct format
-                if match.strip() == canonical:
-                    actions.append(FixAction(
-                        filepath=filepath,
-                        field_path=f"cards[{i}].{key}",
-                        code=r.code,
-                        old=match,
-                        new=canonical,
-                        start=r.start,
-                        end=r.end,
-                        status="skip",
-                    ))
-                    continue
-
-                actions.append(FixAction(
-                    filepath=filepath,
-                    field_path=f"cards[{i}].{key}",
-                    code=r.code,
-                    old=match,
-                    new=canonical,
-                    start=r.start,
-                    end=r.end,
-                    status="fix",
-                ))
+        canonical = f"({r.code})"
+        actions.append(FixAction(
+            filepath=filepath,
+            field_path=r.field_path if hasattr(r, 'field_path') else "",
+            code=r.code,
+            old=r.full_match.strip(),
+            new=canonical,
+            start=r.start,
+            end=r.end,
+            status=status,
+        ))
 
     return actions
 
