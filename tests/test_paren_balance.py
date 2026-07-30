@@ -39,11 +39,11 @@ class ParenBalanceTests(unittest.TestCase):
 
             self.assertEqual(main([str(path)]), 1)
 
-    def test_strong_balance_fixer_keeps_the_existing_four_repairs(self):
+    def test_strong_balance_fixer_supports_the_four_repair_patterns(self):
         cases = {
-            "(G1234))": ("double_close", ")", ""),
+            "(G1234))": ("double_close", "(G1234))", "(G1234)"),
             "G1234)": ("missing_open", "G1234)", "(G1234)"),
-            "((G1234)": ("double_open", "(", ""),
+            "((G1234)": ("double_open", "((G1234)", "(G1234)"),
             "(G1234": ("missing_close", "(G1234", "(G1234)"),
         }
         with tempfile.TemporaryDirectory() as directory:

@@ -8,6 +8,11 @@ For every Strong or balance fix action, this checks:
   3. If applied, does the resulting text still parse as valid JSON?
 
 No files are modified. Read-only gap analysis only.
+
+After all existing Strong/balance repairs have been simulated in memory,
+the generic parenthesis checker validates the resulting field text. This is
+deliberately a post-fix diff check, not a pre-fix corpus scan and not an
+auto-fix stage.
 """
 import sys
 import json
@@ -17,7 +22,12 @@ sys.path.insert(0, '.')
 
 from shared_validation.strong_scanner import scan_file
 from shared_validation.strong_fixer import preview_file as preview_strong
-from shared_validation.strong_balance_fixer import preview_balance_fixes
+from shared_validation.strong_balance_fixer import (
+    preview_balance_fixes,
+    preview_balance_fixes_for_text,
+)
+from shared_validation.strong_applier import apply_fixes_to_text
+from shared_validation.paren_balance import check_balance
 
 
 def check_file(fp: str, debug: bool = False) -> dict:
@@ -44,9 +54,12 @@ def check_file(fp: str, debug: bool = False) -> dict:
     gaps = []
     checked = 0
 
+    strong_actions = [action for action in preview_strong(fp) if action.status == "fix"]
+    balance_actions = preview_balance_fixes(fp)
+
     for label, actions in (
-        ("strong", [a for a in preview_strong(fp) if a.status == "fix"]),
-        ("balance", preview_balance_fixes(fp)),
+        ("strong", strong_actions),
+        ("balance", balance_actions),
     ):
         for a in actions:
             checked += 1
@@ -71,6 +84,37 @@ def check_file(fp: str, debug: bool = False) -> dict:
                     print(f"        old={a.old!r}")
                     print(f"        baseline_slice={slice_!r}")
                 continue
+
+    # Paren balance belongs to the post-fix diff: simulate Strong fixes, then
+    # derive and simulate balance fixes against that updated text. This is the
+    # same ordering as strong_pipeline, but remains completely read-only.
+    strong_actions_by_field = {}
+    for action in strong_actions:
+        strong_actions_by_field.setdefault(action.field_path, []).append(action)
+
+    for field_path, (field, _) in baseline_by_path.items():
+        simulated, applied, failed = apply_fixes_to_text(
+            field.text, strong_actions_by_field.get(field_path, [])
+        )
+        if failed:
+            continue
+        post_strong_balance_actions = preview_balance_fixes_for_text(
+            fp, field_path, simulated
+        )
+        simulated, applied, failed = apply_fixes_to_text(
+            simulated, post_strong_balance_actions
+        )
+        if failed:
+            continue
+        for issue in check_balance(simulated):
+            gaps.append(
+                (
+                    "paren_balance",
+                    field_path,
+                    issue.char,
+                    f"post_fix_{issue.issue_type}@{issue.position}",
+                )
+            )
 
     return {
         "filepath": fp,
