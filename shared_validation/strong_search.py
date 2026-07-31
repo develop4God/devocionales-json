@@ -119,6 +119,8 @@ def is_excluded(result: StrongSearchResult) -> bool:
     Reads exclusion rules from strong_whitelist.json:
     - Exact codes to exclude (e.g., G1910 when it's part of LSG1910)
     - Pattern-based exclusions (e.g., LSG\\d{4} for Bible version codes)
+    - Context-based exclusions: exclude a code only when the surrounding
+      context matches a pattern (e.g., G1910 only within LSG1910)
     
     Args:
         result: A StrongSearchResult to check.
@@ -133,11 +135,22 @@ def is_excluded(result: StrongSearchResult) -> bool:
         if result.code == exclusion["code"]:
             return True
     
-    # Check pattern-based exclusions
+    # Check pattern-based exclusions (against full_match AND context)
     for pattern_exclusion in whitelist.get("excluded_patterns", []):
         pattern = pattern_exclusion["pattern"]
         if re.search(pattern, result.full_match, re.IGNORECASE):
             return True
+        # Also check the broader context — catches cases like G1910
+        # inside LSG1910 where full_match is just "G1910"
+        if re.search(pattern, result.context, re.IGNORECASE):
+            return True
+    
+    # Check context-based exclusions: exclude a code only when
+    # the surrounding text matches a specific pattern
+    for exclusion in whitelist.get("context_exclusions", []):
+        if result.code == exclusion["code"]:
+            if re.search(exclusion["context_pattern"], result.context, re.IGNORECASE):
+                return True
     
     return False
 

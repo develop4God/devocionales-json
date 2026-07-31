@@ -34,6 +34,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from shared_validation.strong_search import (
+    find_strong_codes_in_file,
     find_strong_codes_phase1,
     find_strong_codes_phase2,
     find_strong_codes_phase3,
@@ -72,41 +73,32 @@ def _find_nearby_script(text: str, pos: int, window: int = 80) -> dict:
 
 
 def analyze_file(filepath: str, lex: StrongsLexiconSource = None):
-    with open(filepath, encoding="utf-8") as f:
-        data = json.load(f)
+    """Analyze a file for Strong's codes using the comprehensive search
+    (scans ALL string fields, not just a subset of card fields).
+    Matches the same logic used by preview_file / --preview."""
     if lex is None:
         lex = StrongsLexiconSource()
+    results = find_strong_codes_in_file(filepath, phase=3)
     matches = []
-    for i, card in enumerate(data.get("cards", [])):
-        for key in ["content", "reflection", "narrative", "title", "question", "answer", "note"]:
-            text = card.get(key, "")
-            if not text:
-                continue
-            p1 = find_strong_codes_phase1(text)
-            p2 = find_strong_codes_phase2(text)
-            p3 = find_strong_codes_phase3(text)
-            for r in p3:
-                entry = lex.lookup_by_number(r.code)
-                before = text[:r.start]
-                after = text[r.end:]
-                match = text[r.start:r.end]
-                in_p1 = any(r.start == p.start and r.end == p.end for p in p1)
-                nearby = _find_nearby_script(text, r.start)
-                matches.append({
-                    "field_path": f"cards[{i}].{key}",
-                    "code": r.code,
-                    "matched_text": match,
-                    "start": r.start,
-                    "end": r.end,
-                    "phase": "Phase 1 (Strong prefix)" if in_p1 else "Phase 2 (bare code)",
-                    "text_before": before,
-                    "text_after": after,
-                    "nearby_script": nearby,
-                    "lexicon_lemma": entry.lemma if entry else None,
-                    "lexicon_translit": entry.translit if entry else None,
-                    "lexicon_gloss": entry.gloss if entry else None,
-                    "lexicon_found": entry is not None,
-                })
+    for r in results:
+        entry = lex.lookup_by_number(r.code)
+        p1 = find_strong_codes_phase1(r.context)
+        in_p1 = any(r.code == p.code for p in p1)
+        matches.append({
+            "field_path": r.field_path,
+            "code": r.code,
+            "matched_text": r.full_match,
+            "start": r.start,
+            "end": r.end,
+            "phase": "Phase 1 (Strong prefix)" if in_p1 else "Phase 2 (bare code)",
+            "text_before": r.context[:40] if r.context else "",
+            "text_after": r.context[-40:] if r.context else "",
+            "nearby_script": _find_nearby_script(r.context, 0),
+            "lexicon_lemma": entry.lemma if entry else None,
+            "lexicon_translit": entry.translit if entry else None,
+            "lexicon_gloss": entry.gloss if entry else None,
+            "lexicon_found": entry is not None,
+        })
     return matches
 
 

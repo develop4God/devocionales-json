@@ -21,10 +21,12 @@
     }
   ],
   "exact_codes_to_exclude": [
+  ],
+  "context_exclusions": [
     {
       "code": "G1910",
-      "reason": "Mostly appears as part of 'LSG1910' (Louis Segond 1910), not a real Strong's code",
-      "context": "French Bible version leak"
+      "context_pattern": "LSG1910",
+      "reason": "Exclude G1910 only when it's part of LSG1910 (French Bible version), not when it appears as a standalone Strong's code."
     }
   ],
   "field_keys_without_parentheses": [
