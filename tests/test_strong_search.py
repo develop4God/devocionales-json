@@ -359,6 +359,25 @@ class TestEdgeCases(unittest.TestCase):
         self.assertEqual(len(results), 1)
         self.assertEqual(results[0].code, "G1234")
 
+    def test_no_false_positive_on_french_time_notation(self):
+        """French time notation like '3h00'/'6h00' is not a Strong's code.
+
+        The broad regex is case-insensitive on the G/H prefix and the
+        original lowercase is lost by the time is_correct_format runs (the
+        prefix is uppercased at match time), so this can only be caught by
+        a whitelist exclusion — see strong_whitelist.json.
+        """
+        text = "pendant la quatrième veille (entre 3h00 et 6h00 du matin)"
+        results = find_strong_codes_phase3(text)
+        self.assertEqual(results, [])
+
+    def test_real_hebrew_code_not_excluded_by_time_notation_whitelist(self):
+        """The french-time-notation whitelist entry must not swallow a
+        real 2-digit-adjacent Hebrew code like (Strong H50)."""
+        results = find_strong_codes_phase3("(Strong H50)")
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0].code, "H50")
+
 
 if __name__ == "__main__":
     unittest.main()
