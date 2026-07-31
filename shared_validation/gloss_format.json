@@ -40,5 +40,11 @@
     "severity": "error",
     "min_translit_length": 2,
     "max_translit_length": 30
+  },
+  "word_study_bare_clause_transliteration_gate": {
+    "_comment": "WARNING — a quoted native-language translation immediately followed by a parenthetical 3+ word clause transliteration/respelling of the underlying Greek, with no real Greek character anywhere in the field — e.g. zh '\"太初有道\"(Ēn archē ēn ho Logos)', ja '「初めに、ことばがあった」（エーン・アルケー・エーン・ホ・ロゴス）'. Confirmed in the wild 2026-07-31: logos_creation_{zh,ar,ja,hi}_001.json cards[1].content, quoting John 1:1's three clauses this way. Same root defect as native_script_bare_transliteration_gate above (real Greek/Hebrew text never given) but at clause granularity instead of a single glued word, and across bare-Latin (zh/ar) and phonetic-respelling-into-target-script (ja katakana, hi Devanagari) variants alike. Enforced by check_word_study_bare_clause_transliteration in greek_hebrew_gloss.py.",
+    "max_quoted_length": 32,
+    "max_parenthetical_length": 31,
+    "_length_comment": "Both max values are the exact longest confirmed real-corpus instance (2026-07-31 scan of the 4 logos_creation_*_001.json files: ar quoted clause is 32 chars, zh 'kai ho Logos ēn pros ton Theon' parenthetical is 31 chars) — not a round-number guess. Extend only after confirming a new, longer genuine instance the same way, not by loosening ad hoc."
   }
 }

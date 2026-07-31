@@ -64,6 +64,7 @@ from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_strong_code_native_script,
     check_strong_code_bare_transliteration,
     check_word_study_bare_transliteration,
+    check_word_study_bare_clause_transliteration,
     check_native_script_bare_transliteration,
 )
 from shared_validation.lexicon_source import StrongsLexiconSource  # noqa: E402
@@ -127,6 +128,9 @@ def validate_structure(
         check_strong_code_native_script(text, path, lang, f"{filename}:{path}", report)
         check_strong_code_bare_transliteration(text, path, f"{filename}:{path}", report)
         check_word_study_bare_transliteration(text, path, f"{filename}:{path}", report)
+        check_word_study_bare_clause_transliteration(
+            text, path, lang, f"{filename}:{path}", report
+        )
         check_native_script_bare_transliteration(
             text, path, lang, f"{filename}:{path}", report, lexicon
         )
