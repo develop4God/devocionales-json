@@ -134,7 +134,7 @@ def _strong_code_re():
     """
     global _strong_code_re_cache
     if _strong_code_re_cache is None:
-        _strong_code_re_cache = re.compile(r"(?:Strong\s+)?([A-Z])\d{2,5}")
+        _strong_code_re_cache = re.compile(r"(?:Strong\s+)?([A-Z])\d{1,5}")
     return _strong_code_re_cache
 
 
@@ -612,7 +612,7 @@ def check_native_script_bare_transliteration(
 # new_covenant_cup, gethsemane_agony, cup_of_wrath, passed_from_death, and
 # saints_resurrected — zero false positives against the full corpus scan.
 _ALLCAPS_STRONG_CODE_RE = re.compile(
-    r"\b([A-ZĀĒĪŌŪÁÉÍÓÚḔṌ][A-ZĀĒĪŌŪÁÉÍÓÚḔṌ]{1,20})\s*\((?:Strong\s+)?([A-Z]\d{2,5})\)"
+    r"\b([A-ZĀĒĪŌŪÁÉÍÓÚḔṌ][A-ZĀĒĪŌŪÁÉÍÓÚḔṌ]{1,20})\s*\((?:Strong\s+)?([A-Z]\d{1,5})\)"
 )
 
 

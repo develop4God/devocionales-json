@@ -14,7 +14,7 @@ from pathlib import Path
 from typing import Iterator, Tuple
 
 from .report import ReportLike
-from .greek_hebrew_gloss import find_greek_hebrew_glosses
+from .greek_hebrew_gloss import find_greek_hebrew_glosses, _strong_code_re
 
 # Quote-like characters whose accidental back-to-back doubling indicates a
 # stray-punctuation typo (e.g. »» , "" , '')
@@ -146,6 +146,13 @@ def check_no_latin_leak(
     malformed/incomplete gloss attempt is NOT carved out here — it is a
     hard-gate error from check_greek_hebrew_transliteration in its own
     right, and any Latin text near it is still fair game for this check.
+
+    A Strong's-code citation (G1242, H5782, "Strong G40", ...) is also
+    carved out via greek_hebrew_gloss._strong_code_re — the same regex
+    check_strong_code_native_script already uses to anchor on these citations
+    elsewhere in the pipeline. Without this, the citation's own letter
+    prefix (the bare 'G' in '(G1242)') gets matched by _LATIN_LETTER_RE and
+    reported as a stray Latin leak, which it is not.
     """
     config = _load_no_latin_config()
     rules = config["languages"].get(lang)
@@ -155,13 +162,14 @@ def check_no_latin_leak(
     if key in config["skip_keys"]:
         return
     gloss_spans = find_greek_hebrew_glosses(text)
+    strong_code_spans = [(m.start(), m.end()) for m in _strong_code_re().finditer(text)]
 
     def in_gloss(pos: int) -> bool:
         return any(
             start <= pos < end
             for start, end, _, _, well_formed in gloss_spans
             if well_formed
-        )
+        ) or any(start <= pos < end for start, end in strong_code_spans)
 
     # A malformed gloss span covers only the native word itself (no ", (...)"
     # tail matched), so the stray Latin transliteration that was presumably

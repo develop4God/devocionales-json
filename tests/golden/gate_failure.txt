@@ -33,9 +33,6 @@ PHASE 2: FAILS                                               ❌ FAIL  (<ELAPSED
 
 ⚠️  WARNINGS (0)     ❌ ERRORS (2)
 
-  [PHASE 2: FAILS] ❌ ERROR: a required field was missing
-  [PHASE 2: FAILS] ❌ ERROR: a second, unrelated error
-
 ================================================================================
 ❌ RUN FAILED — 2 errors, 0 warnings, exit code 1     (total: <ELAPSED>s)
 ================================================================================

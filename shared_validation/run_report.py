@@ -223,15 +223,13 @@ class RunReport:
         total_warnings = sum(len(p.report.warnings) for p in self.phases)
         total_errors = sum(len(p.report.errors) for p in self.phases)
         if total_warnings or total_errors:
+            # Messages themselves already printed once, in full, by each
+            # phase's own Report.print() call above — that output carries
+            # phase context via the section header, so re-listing every
+            # message again here (previously prefixed "[phase name]") was
+            # pure duplication with no added information, just verbatim
+            # noise doubling the report's length.
             print(f"\n⚠️  WARNINGS ({total_warnings})     ❌ ERRORS ({total_errors})")
-
-        if total_warnings or total_errors:
-            print()
-            for phase in self.phases:
-                for msg in phase.report.warnings:
-                    print(f"  [{phase.name}] {msg}")
-                for msg in phase.report.errors:
-                    print(f"  [{phase.name}] {msg}")
 
         overall_passed = all(p.passed for p in self.phases) and total_warnings == 0
         print(f"\n{'=' * 80}")
