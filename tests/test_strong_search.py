@@ -13,7 +13,6 @@ REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 from shared_validation.strong_search import (
-    StrongSearchResult,
     find_strong_codes_phase1,
     find_strong_codes_phase2,
     find_strong_codes_phase3,
@@ -40,9 +39,7 @@ class TestPhase1StrongPrefix(unittest.TestCase):
 
     def test_parens_strong_hebrew(self):
         """(Strong H5782) — Hebrew pattern."""
-        results = find_strong_codes_phase1(
-            "The word is עוּר, (ʻûwr) (Strong H5782)."
-        )
+        results = find_strong_codes_phase1("The word is עוּר, (ʻûwr) (Strong H5782).")
         self.assertEqual(len(results), 1)
         self.assertEqual(results[0].code, "H5782")
         self.assertEqual(results[0].prefix, "H")
@@ -57,9 +54,7 @@ class TestPhase1StrongPrefix(unittest.TestCase):
 
     def test_strong_short_number(self):
         """(Strong G5) — short number (1 digit)."""
-        results = find_strong_codes_phase1(
-            "ἀββά, (abba) (Strong G5)"
-        )
+        results = find_strong_codes_phase1("ἀββά, (abba) (Strong G5)")
         self.assertEqual(len(results), 1)
         self.assertEqual(results[0].code, "G5")
 
@@ -89,25 +84,19 @@ class TestPhase2BareCodes(unittest.TestCase):
 
     def test_bare_parens_code(self):
         """(G3327) — bare code in parentheses."""
-        results = find_strong_codes_phase2(
-            "The word (G3327) appears in parentheses."
-        )
+        results = find_strong_codes_phase2("The word (G3327) appears in parentheses.")
         self.assertEqual(len(results), 1)
         self.assertEqual(results[0].code, "G3327")
 
     def test_dash_prefix_code(self):
         """- G728) — dash-prefixed inside parens (common in bullet lists)."""
-        results = find_strong_codes_phase2(
-            "ARRAS (ἀρραβών, (arrabon) - G728):"
-        )
+        results = find_strong_codes_phase2("ARRAS (ἀρραβών, (arrabon) - G728):")
         self.assertEqual(len(results), 1)
         self.assertEqual(results[0].code, "G728")
 
     def test_standalone_code(self):
         """G728 — standalone code without any wrapping."""
-        results = find_strong_codes_phase2(
-            "The word is G728, a pledge."
-        )
+        results = find_strong_codes_phase2("The word is G728, a pledge.")
         self.assertEqual(len(results), 1)
         self.assertEqual(results[0].code, "G728")
 
@@ -116,22 +105,20 @@ class TestPhase2BareCodes(unittest.TestCase):
         text = "Here is (Strong G3327) and also (G728) separately."
         results = find_strong_codes_phase2(text)
         codes = [r.code for r in results]
-        self.assertNotIn("G3327", codes, "G3327 has 'Strong' prefix, should be Phase 1 only")
+        self.assertNotIn(
+            "G3327", codes, "G3327 has 'Strong' prefix, should be Phase 1 only"
+        )
         self.assertIn("G728", codes, "G728 is bare code, should be in Phase 2")
 
     def test_hebrew_bare_code(self):
         """(H5782) — Hebrew bare code."""
-        results = find_strong_codes_phase2(
-            "The Hebrew word (H5782) means 'to wake'."
-        )
+        results = find_strong_codes_phase2("The Hebrew word (H5782) means 'to wake'.")
         self.assertEqual(len(results), 1)
         self.assertEqual(results[0].code, "H5782")
 
     def test_no_bare_code(self):
         """Text with no bare codes returns empty list."""
-        results = find_strong_codes_phase2(
-            "This text has no codes at all."
-        )
+        results = find_strong_codes_phase2("This text has no codes at all.")
         self.assertEqual(len(results), 0)
 
 
@@ -140,10 +127,7 @@ class TestPhase3Combined(unittest.TestCase):
 
     def test_combined_results(self):
         """Phase 3 includes both Phase 1 and Phase 2 results."""
-        text = (
-            "(Strong G3327) is a prefix pattern, "
-            "while (G728) is a bare code."
-        )
+        text = "(Strong G3327) is a prefix pattern, while (G728) is a bare code."
         results = find_strong_codes_phase3(text)
         self.assertEqual(len(results), 2)
         codes = [r.code for r in results]
@@ -157,6 +141,7 @@ class TestPhase3Combined(unittest.TestCase):
         codes = [r.code for r in results]
         # Count occurrences of each code
         from collections import Counter
+
         counts = Counter(codes)
         for code, count in counts.items():
             self.assertEqual(count, 1, f"Code {code} appears {count} times, expected 1")
@@ -256,17 +241,44 @@ class TestFindInFile(unittest.TestCase):
         self.assertIn("G4289", codes)
 
     def test_phase_filtering(self):
-        """Phase parameter filters correctly."""
-        fp = "discovery/es/passed_from_death_es_001.json"
-        phase1 = find_strong_codes_in_file(fp, phase=1)
-        phase2 = find_strong_codes_in_file(fp, phase=2)
-        phase3 = find_strong_codes_in_file(fp, phase=3)
-        # Phase 1 finds only "Strong" prefix patterns
-        self.assertGreaterEqual(len(phase1), 1)
-        # Phase 2 finds only bare codes
-        self.assertGreaterEqual(len(phase2), 1)
-        # Phase 3 combines both
-        self.assertEqual(len(phase3), len(phase1) + len(phase2))
+        """Phase parameter filters correctly.
+
+        Uses a synthetic fixture rather than a live corpus file: the corpus
+        is expected to converge on zero "Strong "-prefixed citations over
+        time as the fixer is applied, which would make a real-file
+        assertion of "at least one Strong-prefixed match" flaky by design.
+        """
+        import tempfile
+        import json as json_module
+
+        fixture = {
+            "cards": [
+                {
+                    "content": (
+                        "La palabra clave aquí es μεταβέβηκεν, "
+                        "(metabebēken) (Strong G3327). Otro término es (G728)."
+                    )
+                }
+            ]
+        }
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".json", delete=False, encoding="utf-8"
+        ) as f:
+            json_module.dump(fixture, f)
+            fp = f.name
+
+        try:
+            phase1 = find_strong_codes_in_file(fp, phase=1)
+            phase2 = find_strong_codes_in_file(fp, phase=2)
+            phase3 = find_strong_codes_in_file(fp, phase=3)
+            # Phase 1 finds only "Strong" prefix patterns
+            self.assertGreaterEqual(len(phase1), 1)
+            # Phase 2 finds only bare codes
+            self.assertGreaterEqual(len(phase2), 1)
+            # Phase 3 combines both
+            self.assertEqual(len(phase3), len(phase1) + len(phase2))
+        finally:
+            Path(fp).unlink()
 
 
 class TestSummarizeResults(unittest.TestCase):
@@ -326,7 +338,9 @@ class TestEdgeCases(unittest.TestCase):
         text = "This is a very long sentence with (Strong G3327) in the middle of it."
         results_default = find_strong_codes_phase3(text, context_window=40)
         results_short = find_strong_codes_phase3(text, context_window=10)
-        self.assertGreater(len(results_default[0].context), len(results_short[0].context))
+        self.assertGreater(
+            len(results_default[0].context), len(results_short[0].context)
+        )
 
     def test_numeric_edge_cases(self):
         """Very short (G5) and very long (G12345) codes."""
