@@ -146,7 +146,7 @@ def print_preview(actions: list, filepath: str = ""):
         for a in fixes:
             with open(a.filepath, encoding="utf-8") as f:
                 data = json.load(f)
-            from shared_validation.strong_fixer import _get_field
+            from shared_validation.strong_applier import _get_field
             text = _get_field(data, a.field_path)
             before = text[:a.start]
             after = text[a.end:]
