@@ -32,19 +32,59 @@ class BalanceFixAction(NamedTuple):
     issue_type: str
 
 
+_CODE_RE = re.compile(_CODE)
+
+
+def _stack_balance_issues(text: str):
+    """Stack-based ASCII paren balance check across the whole field.
+
+    Unlike a regex pattern match, this correctly understands nesting depth —
+    a code sitting inside a legitimately nested group like
+    ``(word, (translit) (G1234))`` is NOT flagged, since every '(' in that
+    span has a matching ')' at the correct nesting level. Only a genuine
+    mismatch (an unmatched '(' or ')') is reported, tagged with the
+    character position it occurred at.
+    """
+    stack = []
+    issues = []  # (pos, kind) where kind is 'unmatched_close' or 'unclosed_open'
+    for i, ch in enumerate(text):
+        if ch == "(":
+            stack.append(i)
+        elif ch == ")":
+            if stack:
+                stack.pop()
+            else:
+                issues.append((i, "unmatched_close"))
+    for pos in stack:
+        issues.append((pos, "unclosed_open"))
+    return issues
+
+
 def _actions_for_text(
     filepath: str, field_path: str, text: str
 ) -> List[BalanceFixAction]:
-    """Return Strong-pattern repairs for one text field."""
-    patterns = (
-        ("double_open", re.compile(rf"\(\(({_CODE})\)"), lambda code: f"({code})"),
-        ("double_close", re.compile(rf"\(({_CODE})\)\)"), lambda code: f"({code})"),
+    """Return Strong-code balance repairs for one text field.
+
+    Two independent checks, each scoped to Strong-code citations only:
+
+    1. missing_open / missing_close — a code that has only one of its two
+       parens at all, e.g. bare ``G1568)`` or ``(G1568`` with no closer.
+       Unambiguous regardless of surrounding nesting.
+    2. Genuine structural imbalance — resolved via the stack-based checker
+       above rather than a flat regex, so a legitimately nested closing
+       paren (real corpus pattern: ``(word, (translit) (code))``) is never
+       mistaken for an extra/missing paren. A code is only reported here
+       if the paren immediately after it is the specific unmatched
+       position the stack identified.
+    """
+    actions = []
+    occupied = set()
+
+    simple_patterns = (
         ("missing_open", re.compile(rf"(?<!\()\b({_CODE})\)"), lambda code: f"({code})"),
         ("missing_close", re.compile(rf"\(({_CODE})(?![\d)])"), lambda code: f"({code})"),
     )
-    actions = []
-    occupied = set()
-    for issue_type, pattern, replacement in patterns:
+    for issue_type, pattern, replacement in simple_patterns:
         for match in pattern.finditer(text):
             span = (match.start(), match.end())
             if span in occupied:
@@ -57,6 +97,31 @@ def _actions_for_text(
                     match.start(), match.end(), issue_type,
                 )
             )
+
+    stack_issues = _stack_balance_issues(text)
+    if stack_issues:
+        unmatched_close_positions = {
+            pos for pos, kind in stack_issues if kind == "unmatched_close"
+        }
+        for m in _CODE_RE.finditer(text):
+            code = m.group(0)
+            close_pos = m.end()
+            if (
+                close_pos in unmatched_close_positions
+                and close_pos < len(text)
+                and text[close_pos] == ")"
+            ):
+                span = (m.start(), close_pos + 1)
+                if span not in occupied:
+                    occupied.add(span)
+                    old = text[span[0]:span[1]]
+                    actions.append(
+                        BalanceFixAction(
+                            filepath, field_path, code, old, f"({code})",
+                            span[0], span[1], "real_imbalance",
+                        )
+                    )
+
     return actions
 
 
