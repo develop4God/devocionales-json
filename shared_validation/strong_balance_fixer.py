@@ -103,24 +103,43 @@ def _actions_for_text(
         unmatched_close_positions = {
             pos for pos, kind in stack_issues if kind == "unmatched_close"
         }
+        unclosed_open_positions = {
+            pos for pos, kind in stack_issues if kind == "unclosed_open"
+        }
         for m in _CODE_RE.finditer(text):
             code = m.group(0)
+            open_pos = m.start() - 1
             close_pos = m.end()
-            if (
-                close_pos in unmatched_close_positions
+            has_own_parens = (
+                open_pos >= 0
+                and text[open_pos] == "("
                 and close_pos < len(text)
                 and text[close_pos] == ")"
-            ):
-                span = (m.start(), close_pos + 1)
-                if span not in occupied:
-                    occupied.add(span)
-                    old = text[span[0]:span[1]]
-                    actions.append(
-                        BalanceFixAction(
-                            filepath, field_path, code, old, f"({code})",
-                            span[0], span[1], "real_imbalance",
-                        )
+            )
+            if not has_own_parens:
+                continue
+
+            # A genuine extra paren sits immediately outside the code's own
+            # matched pair: an extra '(' right before open_pos (double_open)
+            # or an extra ')' right after close_pos (double_close).
+            span = None
+            issue_type = None
+            if open_pos - 1 in unclosed_open_positions and text[open_pos - 1] == "(":
+                span = (open_pos - 1, close_pos + 1)
+                issue_type = "double_open"
+            elif close_pos + 1 in unmatched_close_positions and text[close_pos + 1] == ")":
+                span = (open_pos, close_pos + 2)
+                issue_type = "double_close"
+
+            if span and span not in occupied:
+                occupied.add(span)
+                old = text[span[0]:span[1]]
+                actions.append(
+                    BalanceFixAction(
+                        filepath, field_path, code, old, f"({code})",
+                        span[0], span[1], issue_type,
                     )
+                )
 
     return actions
 

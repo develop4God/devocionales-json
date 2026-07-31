@@ -29,9 +29,9 @@ class ParenIssue(NamedTuple):
 
     Attributes:
         position:   Character offset of the unmatched paren.
-        char:       '(' or ')'.
-        issue_type: "missing_open"  — a ')' with nothing open to match
-                    "missing_close" — a '(' never closed by end of text
+        char:       '(', ')', '（', or '）'.
+        issue_type: "missing_open"  — a closer with nothing open to match
+                    "missing_close" — an opener never closed by end of text
     """
     position: int
     char: str
@@ -46,26 +46,40 @@ class ParenFinding(NamedTuple):
     issue: ParenIssue
 
 
+# Bracket pairs this checker understands. ASCII and full-width (CJK) parens
+# are each their own pair — an opener only matches a closer of its own kind,
+# so a '（' left open by a stray ASCII ')' is still reported as unclosed
+# rather than silently matched across bracket types.
+_OPENERS = {'(': ')', '（': '）'}
+_CLOSERS = {')': '(', '）': '（'}
+
+
 def check_balance(text: str) -> List[ParenIssue]:
     """Return a list of unmatched parens in text. Empty list = balanced.
 
-    Agnostic to content — only counts '(' and ')' characters in order.
+    Agnostic to content — tracks ASCII '(' '/')' and full-width '（'/'）'
+    as two independent bracket pairs, each on its own stack, so mismatched
+    nesting within either kind (or a real corpus pattern that opens with one
+    kind and closes with the other) is caught.
     """
     issues: List[ParenIssue] = []
-    open_stack: List[int] = []  # positions of unmatched '(' seen so far
+    open_stacks: dict = {'(': [], '（': []}
 
     for i, ch in enumerate(text):
-        if ch == '(':
-            open_stack.append(i)
-        elif ch == ')':
-            if open_stack:
-                open_stack.pop()  # matched
+        if ch in _OPENERS:
+            open_stacks[ch].append(i)
+        elif ch in _CLOSERS:
+            opener = _CLOSERS[ch]
+            if open_stacks[opener]:
+                open_stacks[opener].pop()  # matched
             else:
-                issues.append(ParenIssue(position=i, char=')', issue_type="missing_open"))
+                issues.append(ParenIssue(position=i, char=ch, issue_type="missing_open"))
 
-    for pos in open_stack:
-        issues.append(ParenIssue(position=pos, char='(', issue_type="missing_close"))
+    for opener, positions in open_stacks.items():
+        for pos in positions:
+            issues.append(ParenIssue(position=pos, char=opener, issue_type="missing_close"))
 
+    issues.sort(key=lambda issue: issue.position)
     return issues
 
 
