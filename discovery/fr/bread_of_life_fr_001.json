@@ -11,7 +11,6 @@
     "reference": "Jean 6:35",
     "text": "Jésus leur dit: Je suis le pain de vie. Celui qui vient à moi n'aura jamais faim, et celui qui croit en moi n'aura jamais soif."
   },
-
   "cards": [
     {
       "order": 1,
@@ -36,7 +35,6 @@
       ],
       "revelation_key": "La manne fut une ombre de quarante ans qui préparait Israël — et nous-mêmes — à reconnaître le véritable Pain lorsqu'il viendrait."
     },
-
     {
       "order": 2,
       "type": "greek_exegesis",
@@ -49,7 +47,7 @@
           "word": "ἄρτος",
           "transliteration": "Ártos",
           "meaning": "Pain, l'aliment de base et quotidien de toute personne",
-          "revelation": "Jésus emploie le mot ártos en Jean 6:35 quand il dit 'Je suis le pain de vie'. Il se compare à ce qu'il y a de plus élémentaire et indispensable — sans quoi une famille ne survivait pas dans le monde antique.\n\nIl s'offre comme la nourriture sans laquelle l'âme ne vit tout simplement pas.",
+          "revelation": "Jésus emploie le mot ἄρτος, (ártos) en Jean 6:35 quand il dit 'Je suis le pain de vie'. Il se compare à ce qu'il y a de plus élémentaire et indispensable — sans quoi une famille ne survivait pas dans le monde antique.\n\nIl s'offre comme la nourriture sans laquelle l'âme ne vit tout simplement pas.",
           "application": "Jésus est le soutien quotidien sans lequel ton âme s'affaiblit et meurt de faim."
         },
         {
@@ -76,7 +74,6 @@
       ],
       "revelation_key": "Jésus demande quelque chose de concret: que nous venions à lui chaque jour, pas une seule fois."
     },
-
     {
       "order": 3,
       "type": "prophetic_thread",
@@ -112,7 +109,6 @@
       ],
       "revelation_key": "La manne a nourri une nation pendant quarante ans dans le désert. Christ, le Pain véritable, nourrit l'âme pour l'éternité."
     },
-
     {
       "order": 4,
       "type": "theological_depth",
@@ -144,7 +140,6 @@
       },
       "revelation_key": "Chaque fois que nous participons à la Cène du Seigneur, nous recevons ce que Christ a donné pour nous: son corps et son sang, sacrifiés sur la croix."
     },
-
     {
       "order": 5,
       "type": "discovery_activation",
@@ -170,7 +165,6 @@
       }
     }
   ],
-
   "tags": [
     "pain_de_vie",
     "manne",
@@ -180,7 +174,6 @@
     "foi",
     "eucharistie"
   ],
-
   "metadata": {
     "total_word_count": 1241,
     "greek_words_count": 2,

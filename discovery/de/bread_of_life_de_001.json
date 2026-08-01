@@ -11,7 +11,6 @@
     "reference": "Johannes 6:35",
     "text": "Jesus aber sprach zu ihnen: Ich bin das Brot des Lebens. Wer zu mir kommt, den wird nicht hungern; und wer an mich glaubt, den wird nimmermehr dürsten."
   },
-
   "cards": [
     {
       "order": 1,
@@ -36,7 +35,6 @@
       ],
       "revelation_key": "Das Manna war ein vierzigjähriger Schatten, der Israel — und uns — darauf vorbereitete, das wahre Brot zu erkennen, als es kam."
     },
-
     {
       "order": 2,
       "type": "greek_exegesis",
@@ -49,7 +47,7 @@
           "word": "ἄρτος",
           "transliteration": "Ártos",
           "meaning": "Brot, die grundlegende und tägliche Nahrung jedes Menschen",
-          "revelation": "Jesus verwendet das Wort ártos in Johannes 6:35, wenn er sagt 'Ich bin das Brot des Lebens'. Er vergleicht sich mit dem Grundlegendsten und Unentbehrlichsten, das es gibt — ohne das eine Familie in der antiken Welt nicht überleben konnte.\n\nEr bietet sich selbst als die Nahrung an, ohne die die Seele schlicht nicht lebt.",
+          "revelation": "Jesus verwendet das Wort ἄρτος, (ártos) in Johannes 6:35, wenn er sagt 'Ich bin das Brot des Lebens'. Er vergleicht sich mit dem Grundlegendsten und Unentbehrlichsten, das es gibt — ohne das eine Familie in der antiken Welt nicht überleben konnte.\n\nEr bietet sich selbst als die Nahrung an, ohne die die Seele schlicht nicht lebt.",
           "application": "Jesus ist die tägliche Nahrung, ohne die deine Seele schwach wird und verhungert."
         },
         {
@@ -76,7 +74,6 @@
       ],
       "revelation_key": "Jesus verlangt etwas Konkretes: dass wir täglich zu ihm kommen, nicht nur einmal."
     },
-
     {
       "order": 3,
       "type": "prophetic_thread",
@@ -112,7 +109,6 @@
       ],
       "revelation_key": "Das Manna nährte ein Volk vierzig Jahre lang in der Wüste. Christus, das wahre Brot, nährt die Seele für die Ewigkeit."
     },
-
     {
       "order": 4,
       "type": "theological_depth",
@@ -144,7 +140,6 @@
       },
       "revelation_key": "Jedes Mal, wenn wir am Abendmahl des Herrn teilnehmen, empfangen wir, was Christus für uns gegeben hat: seinen Leib und sein Blut, geopfert am Kreuz."
     },
-
     {
       "order": 5,
       "type": "discovery_activation",
@@ -170,7 +165,6 @@
       }
     }
   ],
-
   "tags": [
     "brot_des_lebens",
     "manna",
@@ -180,7 +174,6 @@
     "glaube",
     "eucharistie"
   ],
-
   "metadata": {
     "total_word_count": 1016,
     "greek_words_count": 2,

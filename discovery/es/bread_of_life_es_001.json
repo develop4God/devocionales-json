@@ -11,7 +11,6 @@
     "reference": "Juan 6:35",
     "text": "Jesús les dijo: Yo soy el pan de vida; el que a mí viene, nunca tendrá hambre; y el que en mí cree, no tendrá sed jamás."
   },
-
   "cards": [
     {
       "order": 1,
@@ -36,7 +35,6 @@
       ],
       "revelation_key": "El maná fue una sombra de cuarenta años que preparó a Israel — y a nosotros — para reconocer al verdadero Pan cuando llegara."
     },
-
     {
       "order": 2,
       "type": "greek_exegesis",
@@ -49,7 +47,7 @@
           "word": "ἄρτος",
           "transliteration": "Ártos",
           "meaning": "Pan, el alimento básico y diario de toda persona",
-          "revelation": "Jesús usa la palabra ártos en Juan 6:35 cuando dice 'Yo soy el pan de vida'. Se compara con lo más básico e indispensable que existe — sin lo cual una familia no sobrevivía en el mundo antiguo.\n\nSe ofrece como el alimento sin el cual el alma simplemente no vive.",
+          "revelation": "Jesús usa la palabra ἄρτος, (ártos) en Juan 6:35 cuando dice 'Yo soy el pan de vida'. Se compara con lo más básico e indispensable que existe — sin lo cual una familia no sobrevivía en el mundo antiguo.\n\nSe ofrece como el alimento sin el cual el alma simplemente no vive.",
           "application": "Jesús es el sustento diario sin el cual tu alma se debilita y muere de hambre."
         },
         {
@@ -76,7 +74,6 @@
       ],
       "revelation_key": "Jesús pide algo concreto: que vengamos a él cada día, no una sola vez."
     },
-
     {
       "order": 3,
       "type": "prophetic_thread",
@@ -112,7 +109,6 @@
       ],
       "revelation_key": "El maná alimentó a una nación por cuarenta años en el desierto. Cristo, el Pan verdadero, alimenta al alma para la eternidad."
     },
-
     {
       "order": 4,
       "type": "theological_depth",
@@ -144,7 +140,6 @@
       },
       "revelation_key": "Cada vez que participamos de la Cena del Señor, recibimos lo que Cristo entregó por nosotros: su cuerpo y su sangre, sacrificados en la cruz."
     },
-
     {
       "order": 5,
       "type": "discovery_activation",
@@ -170,7 +165,6 @@
       }
     }
   ],
-
   "tags": [
     "pan_de_vida",
     "maná",
@@ -180,7 +174,6 @@
     "fe",
     "eucaristía"
   ],
-
   "metadata": {
     "total_word_count": 1180,
     "greek_words_count": 2,

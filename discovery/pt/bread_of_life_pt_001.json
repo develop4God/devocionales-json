@@ -11,7 +11,6 @@
     "reference": "João 6:35",
     "text": "E Jesus lhes disse: Eu sou o pão da vida; aquele que vem a mim não terá fome; e quem crê em mim nunca terá sede."
   },
-
   "cards": [
     {
       "order": 1,
@@ -36,7 +35,6 @@
       ],
       "revelation_key": "O maná foi uma sombra de quarenta anos que preparou Israel — e a nós — para reconhecer o verdadeiro Pão quando ele chegasse."
     },
-
     {
       "order": 2,
       "type": "greek_exegesis",
@@ -49,7 +47,7 @@
           "word": "ἄρτος",
           "transliteration": "Ártos",
           "meaning": "Pão, o alimento básico e diário de toda pessoa",
-          "revelation": "Jesus usa a palavra ártos em João 6:35 quando diz 'Eu sou o pão da vida'. Ele é comparável ao que há de mais básico e indispensável — sem o qual uma família não sobrevivia no mundo antigo.\n\nEle se oferece como o alimento sem o qual a alma simplesmente não vive.",
+          "revelation": "Jesus usa a palavra ἄρτος, (ártos) em João 6:35 quando diz 'Eu sou o pão da vida'. Ele é comparável ao que há de mais básico e indispensável — sem o qual uma família não sobrevivia no mundo antigo.\n\nEle se oferece como o alimento sem o qual a alma simplesmente não vive.",
           "application": "Jesus é o sustento diário sem o qual sua alma se enfraquece e morre de fome."
         },
         {
@@ -76,7 +74,6 @@
       ],
       "revelation_key": "Jesus pede algo concreto: que venhamos a ele todos os dias, não apenas uma vez."
     },
-
     {
       "order": 3,
       "type": "prophetic_thread",
@@ -112,7 +109,6 @@
       ],
       "revelation_key": "O maná alimentou uma nação por quarenta anos no deserto. Cristo, o Pão verdadeiro, alimenta a alma para a eternidade."
     },
-
     {
       "order": 4,
       "type": "theological_depth",
@@ -144,7 +140,6 @@
       },
       "revelation_key": "Cada vez que participamos da Ceia do Senhor, recebemos o que Cristo entregou por nós: seu corpo e seu sangue, sacrificados na cruz."
     },
-
     {
       "order": 5,
       "type": "discovery_activation",
@@ -170,7 +165,6 @@
       }
     }
   ],
-
   "tags": [
     "pao_da_vida",
     "mana",
@@ -180,7 +174,6 @@
     "fe",
     "eucaristia"
   ],
-
   "metadata": {
     "total_word_count": 1260,
     "greek_words_count": 2,

@@ -11,7 +11,6 @@
     "reference": "Juan 6:35",
     "text": "Sinabi ni Jesus, “Ako ang tinapay na nagbibigay-buhay. Ang lumalapit sa akin ay hindi na magugutom kailanman, at ang sumasampalataya sa akin ay hindi na mauuhaw kailanman.”"
   },
-
   "cards": [
     {
       "order": 1,
@@ -36,7 +35,6 @@
       ],
       "revelation_key": "Ang manna ay anino ng apatnapung taon na naghanda sa Israel — at sa atin — upang makilala ang tunay na Tinapay nang siya ay dumating."
     },
-
     {
       "order": 2,
       "type": "greek_exegesis",
@@ -49,7 +47,7 @@
           "word": "ἄρτος",
           "transliteration": "Ártos",
           "meaning": "Tinapay, ang pangunahin at araw-araw na pagkain ng bawat tao",
-          "revelation": "Ginagamit ni Jesus ang salitang ártos sa Juan 6:35 nang sabihin niyang 'Ako ang tinapay na nagbibigay-buhay.' Inihahambing niya ang kanyang sarili sa pinakapangunahin at kailangang-kailangan na bagay — na kung wala rito, hindi mabubuhay ang isang pamilya sa sinaunang mundo.\n\nInihahandog niya ang kanyang sarili bilang pagkain na kung wala rito, hindi lamang mabubuhay ang kaluluwa.",
+          "revelation": "Ginagamit ni Jesus ang salitang ἄρτος, (ártos) sa Juan 6:35 nang sabihin niyang 'Ako ang tinapay na nagbibigay-buhay.' Inihahambing niya ang kanyang sarili sa pinakapangunahin at kailangang-kailangan na bagay — na kung wala rito, hindi mabubuhay ang isang pamilya sa sinaunang mundo.\n\nInihahandog niya ang kanyang sarili bilang pagkain na kung wala rito, hindi lamang mabubuhay ang kaluluwa.",
           "application": "Si Jesus ang araw-araw mong ikinabubuhay — kung wala siya, humihina at nagugutom ang iyong kaluluwa."
         },
         {
@@ -76,7 +74,6 @@
       ],
       "revelation_key": "Humihingi si Jesus ng isang bagay na tiyak: na lumapit tayo sa kanya araw-araw, hindi lamang minsan."
     },
-
     {
       "order": 3,
       "type": "prophetic_thread",
@@ -112,7 +109,6 @@
       ],
       "revelation_key": "Pinakain ng manna ang isang bansa sa loob ng apatnapung taon sa ilang. Si Kristo, ang tunay na Tinapay, ay nagpapakain sa kaluluwa magpakailanman."
     },
-
     {
       "order": 4,
       "type": "theological_depth",
@@ -144,7 +140,6 @@
       },
       "revelation_key": "Tuwing tayo ay nakikibahagi sa Hapunan ng Panginoon, tinatanggap natin ang ibinigay ni Kristo para sa atin: ang kanyang katawan at dugo, inihandog sa krus."
     },
-
     {
       "order": 5,
       "type": "discovery_activation",
@@ -170,7 +165,6 @@
       }
     }
   ],
-
   "tags": [
     "tinapay_ng_buhay",
     "manna",
@@ -180,7 +174,6 @@
     "pananampalataya",
     "eukaristiya"
   ],
-
   "metadata": {
     "total_word_count": 1065,
     "greek_words_count": 2,

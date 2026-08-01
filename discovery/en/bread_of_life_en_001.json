@@ -11,7 +11,6 @@
     "reference": "John 6:35",
     "text": "And Jesus said unto them, I am the bread of life: he that comes to me shall never hunger; and he that believes on me shall never thirst."
   },
-
   "cards": [
     {
       "order": 1,
@@ -36,7 +35,6 @@
       ],
       "revelation_key": "The manna was a forty-year shadow that prepared Israel — and us — to recognize the true Bread when he came."
     },
-
     {
       "order": 2,
       "type": "greek_exegesis",
@@ -49,7 +47,7 @@
           "word": "ἄρτος",
           "transliteration": "Ártos",
           "meaning": "Bread, the basic and daily food of every person",
-          "revelation": "Jesus uses the word ártos in John 6:35 when he says 'I am the bread of life.' He compares himself to the most basic and indispensable thing there is — without which a family could not survive in the ancient world.\n\nHe offers himself as the food without which the soul simply does not live.",
+          "revelation": "Jesus uses the word ἄρτος, (ártos) in John 6:35 when he says 'I am the bread of life.' He compares himself to the most basic and indispensable thing there is — without which a family could not survive in the ancient world.\n\nHe offers himself as the food without which the soul simply does not live.",
           "application": "Jesus is the daily sustenance without which your soul weakens and starves."
         },
         {
@@ -76,7 +74,6 @@
       ],
       "revelation_key": "Jesus asks for something concrete: that we come to him every day, not just once."
     },
-
     {
       "order": 3,
       "type": "prophetic_thread",
@@ -112,7 +109,6 @@
       ],
       "revelation_key": "The manna fed a nation for forty years in the wilderness. Christ, the true Bread, feeds the soul for eternity."
     },
-
     {
       "order": 4,
       "type": "theological_depth",
@@ -144,7 +140,6 @@
       },
       "revelation_key": "Every time we partake of the Lord's Supper, we receive what Christ gave for us: his body and his blood, sacrificed on the cross."
     },
-
     {
       "order": 5,
       "type": "discovery_activation",
@@ -170,7 +165,6 @@
       }
     }
   ],
-
   "tags": [
     "bread_of_life",
     "manna",
@@ -180,7 +174,6 @@
     "faith",
     "eucharist"
   ],
-
   "metadata": {
     "total_word_count": 1065,
     "greek_words_count": 2,
