@@ -29,6 +29,7 @@ from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_word_study_bare_transliteration,
     check_strong_code_bare_transliteration,
     check_native_script_bare_transliteration,
+    check_bare_transliteration_reuse_cross_field,
 )
 from shared_validation.lexicon_check import check_lexical_accuracy  # noqa: E402
 from shared_validation.lexicon_source import LexiconEntry  # noqa: E402
@@ -532,6 +533,96 @@ class TestCheckNativeScriptBareTransliteration(unittest.TestCase):
         self.assertTrue(
             any("Logos" in e and "glued directly" in e for e in report.errors),
             f"Expected the shape-only fallback with no nearby Strong code, got: {report.errors}",
+        )
+
+
+# ── check_bare_transliteration_reuse_cross_field ────────────────────────────
+#
+# The cross-field twin of check_bare_transliteration_reuse: a transliteration
+# established by a well-formed gloss in one field of a card must not reappear
+# as bare Latin text in a LATER field of the same card. Confirmed in the wild
+# 2026-08-01: e.g. bread_of_life_en_001's cards[1].content correctly glosses
+# 'ἄρτος, (ártos)', then cards[1].greek_words[0].revelation reuses 'ártos'
+# bare with no native-script anchor.
+
+
+class TestCheckBareTransliterationReuseCrossField(unittest.TestCase):
+    def test_bare_reuse_in_a_later_field_is_an_error(self):
+        report = Report("TEST")
+        fields = [
+            (
+                "cards[1].content",
+                "Jesus uses the Greek word ἄρτος, (ártos) (G740) — everyday bread.",
+            ),
+            (
+                "cards[1].greek_words[0].revelation",
+                "Jesus uses the word ártos in John 6:35 when he says 'I am the bread of life.'",
+            ),
+        ]
+        check_bare_transliteration_reuse_cross_field(fields, "ctx", report)
+
+        self.assertTrue(
+            any(
+                "ártos" in e
+                and "cards[1].content" in e
+                and "cards[1].greek_words[0].revelation" in e
+                for e in report.errors
+            ),
+            f"Expected a cross-field bare-reuse error, got: {report.errors}",
+        )
+
+    def test_gloss_correctly_repeated_in_a_later_field_is_not_an_error(self):
+        # The word is re-glossed properly in the later field too — this is
+        # not bare reuse, it's a second correct occurrence.
+        report = Report("TEST")
+        fields = [
+            ("cards[1].content", "The Greek word ἄρτος, (ártos) means bread."),
+            (
+                "cards[1].greek_words[0].revelation",
+                "Here ἄρτος, (ártos) again refers to daily bread.",
+            ),
+        ]
+        check_bare_transliteration_reuse_cross_field(fields, "ctx", report)
+
+        self.assertEqual(
+            report.errors,
+            [],
+            f"A correctly-repeated gloss must not be flagged, got: {report.errors}",
+        )
+
+    def test_transliteration_key_is_excluded_from_scanning(self):
+        # greek_words[].transliteration holds a bare transliteration by
+        # schema design (the native word lives in the sibling 'word' key,
+        # a separate JSON field) — scanning it as a reuse target would
+        # falsely flag every structured word-study entry in the corpus.
+        report = Report("TEST")
+        fields = [
+            ("cards[1].content", "The Greek word ἄρτος, (ártos) means bread."),
+            ("cards[1].greek_words[0].transliteration", "ártos"),
+        ]
+        check_bare_transliteration_reuse_cross_field(fields, "ctx", report)
+
+        self.assertEqual(
+            report.errors,
+            [],
+            f"transliteration field must be excluded from scanning, got: {report.errors}",
+        )
+
+    def test_reuse_in_an_earlier_field_is_not_flagged(self):
+        # Reuse detection is strictly forward: a field cannot "reuse" a
+        # gloss established later in the list, matching
+        # check_bare_transliteration_reuse's own within-field forward order.
+        report = Report("TEST")
+        fields = [
+            ("cards[1].greek_words[0].revelation", "Jesus uses the word ártos here."),
+            ("cards[1].content", "The Greek word ἄρτος, (ártos) means bread."),
+        ]
+        check_bare_transliteration_reuse_cross_field(fields, "ctx", report)
+
+        self.assertEqual(
+            report.errors,
+            [],
+            f"Bare text before the gloss is established must not be flagged, got: {report.errors}",
         )
 
 

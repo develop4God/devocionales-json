@@ -346,6 +346,66 @@ def check_bare_transliteration_reuse(
             break
 
 
+# Structured word-study fields (greek_words[]/hebrew_words[] array entries)
+# store the transliteration as its own bare JSON value by schema design —
+# e.g. {"word": "ἐδάκρυσεν", "transliteration": "Edákrysen"} — there is no
+# native-script word "in the same field" for it to be glued to, because the
+# schema deliberately keeps them in separate keys. These must be excluded
+# from cross-field reuse scanning below, or every structured word-study
+# entry in the corpus would falsely trip the check on its own
+# transliteration value. Distinct from _SKIP_KEYS (just {"word"}, used by
+# the single-field checks above), since this exclusion is specific to the
+# cross-field scan's different failure mode.
+_CROSS_FIELD_SKIP_KEYS = {"word", "transliteration", "strong"}
+
+
+def check_bare_transliteration_reuse_cross_field(
+    fields: list, ctx: str, report: ReportLike
+) -> None:
+    """HARD GATE: a transliteration introduced by a well-formed gloss in one
+    field of a card must never reappear as bare Latin text in a LATER field
+    of the same card with no accompanying native-script gloss — the
+    cross-field twin of check_bare_transliteration_reuse above, which can
+    only see reuse within a single field's own text.
+
+    Confirmed in the wild 2026-08-01: e.g. a card's `greek_words[1].revelation`
+    correctly introduces 'ἐδάκρυσεν, (Edákrysen)', then a DIFFERENT card
+    covering the same word later reuses 'edákrysen' bare in its own prose,
+    invisible to the per-field check because it's a different `text` string
+    entirely. Also common: a card's `title` bare-quotes a transliteration
+    (e.g. 'Enebrimḗsato 与 Edákrysen：两种哭泣') that's only ever properly
+    glossed in that same card's `content` or `greek_words` fields — same bug,
+    title-vs-content instead of card-vs-card.
+
+    `fields` is the ordered list of (path, text) pairs for ONE card (or
+    other logical unit), in source order — reuse is checked strictly
+    forward (a field can reuse a transliteration established by an EARLIER
+    field in the same list, never a later one), mirroring
+    check_bare_transliteration_reuse's within-field forward-only order.
+    `_CROSS_FIELD_SKIP_KEYS` excludes structured word-study fields
+    (word/transliteration/strong) that legitimately hold a bare
+    transliteration by schema design.
+    """
+    established: dict[str, str] = {}  # transliteration -> path where first glossed
+    for path, text in fields:
+        key = path.rsplit(".", 1)[-1].split("[")[0]
+        if key in _CROSS_FIELD_SKIP_KEYS:
+            continue
+        glosses = find_greek_hebrew_glosses(text)
+        wellformed_spans = [(s, e) for s, e, _, i2, wf in glosses if wf and i2]
+        for m in re.finditer(r"[A-Za-zÀ-ɏḀ-ỿ]+", text):
+            if any(s <= m.start() and m.end() <= e for s, e in wellformed_spans):
+                continue
+            token = m.group(0)
+            if token in established and established[token] != path:
+                report.E(
+                    f"{ctx}: '{token}' (established via '{established[token]}, ({token})') reused as bare Latin text in a later field ('{path}') with no accompanying native-script gloss (every occurrence needs its own '<word>, ({token})', see gloss_format.json 'Bare reuse without a gloss')"
+                )
+        for _, end, _, inner, well_formed in glosses:
+            if well_formed and inner and inner not in established:
+                established[inner] = path
+
+
 def _rtl_script_re_for_lang(lang: str):
     """Return the compiled character-class regex for `lang`'s own native
     script, or None if `lang` isn't a known language, or its script isn't
@@ -555,8 +615,7 @@ def check_native_script_bare_transliteration(
             normalized_translit = _normalized_translit(translit)
             if (
                 preceding is None
-                or _normalized_translit(preceding.group(0))
-                == normalized_translit
+                or _normalized_translit(preceding.group(0)) == normalized_translit
                 # Romance-language inclusive forms such as ``tel(le)`` and
                 # ``ami(e)`` are not transliterations.  The gate's two-letter
                 # minimum is necessary for non-Latin scripts (e.g. ``ēn``),

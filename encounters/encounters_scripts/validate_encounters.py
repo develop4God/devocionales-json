@@ -66,6 +66,7 @@ from shared_validation.text_checks import (  # noqa: E402
 from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_greek_hebrew_transliteration,
     check_bare_transliteration_reuse,
+    check_bare_transliteration_reuse_cross_field,
     check_script_boundary_spacing,
     check_strong_code_native_script,
     check_strong_code_bare_transliteration,
@@ -410,6 +411,19 @@ def validate_encounter_file(
             text, path, lang, f"{filename}:{path}", report, lexicon
         )
         check_no_latin_leak(text, path, lang, f"{filename}:{path}", report)
+
+    # Bare-transliteration reuse across a card's own fields (title, content,
+    # greek_words[].revelation, etc.) — the same gloss must not be
+    # established in one field and reused bare in another field of the same
+    # card. Grouped by card index parsed from `path` (cards[N]...), reusing
+    # the same iter_strings(data) traversal above rather than a new one.
+    _card_fields: dict[str, list] = {}
+    for path, text in iter_strings(data):
+        card_match = re.match(r"cards\[(\d+)\]", path)
+        card_key = card_match.group(0) if card_match else "_top_level"
+        _card_fields.setdefault(card_key, []).append((path, text))
+    for card_key, fields in _card_fields.items():
+        check_bare_transliteration_reuse_cross_field(fields, filename, report)
 
     # Required top-level fields
     required = [
