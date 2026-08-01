@@ -29,7 +29,10 @@ from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_word_study_bare_transliteration,
     check_strong_code_bare_transliteration,
     check_native_script_bare_transliteration,
+    check_bare_transliteration_reuse,
     check_bare_transliteration_reuse_cross_field,
+    check_word_study_bare_clause_transliteration,
+    check_word_study_lexicon_verified_bare_transliteration,
 )
 from shared_validation.lexicon_check import check_lexical_accuracy  # noqa: E402
 from shared_validation.lexicon_source import LexiconEntry  # noqa: E402
@@ -60,6 +63,30 @@ class _FakeLexicon:
                 if entry.strongs_number == strongs_number:
                     return entry
         return None
+
+    def lookup_by_translit(self, translit: str) -> list[LexiconEntry]:
+        # Diacritic-stripped, casefolded comparison — mirrors
+        # StrongsLexiconSource.lookup_by_translit's real normalization
+        # (lexicon_source._normalized_translit) so a fake-lexicon entry
+        # written WITH its real accent (e.g. 'anámnēsis') still matches a
+        # corpus string written without one ('anamnesis'), same as the
+        # real dictionary data.
+        import unicodedata
+
+        def norm(w):
+            return "".join(
+                c
+                for c in unicodedata.normalize("NFD", w).casefold()
+                if not unicodedata.combining(c)
+            )
+
+        target = norm(translit)
+        results = []
+        for entries in self._entries.values():
+            for entry in entries:
+                if norm(entry.translit) == target:
+                    results.append(entry)
+        return results
 
 
 # ── check_word_study_bare_transliteration ───────────────────────────────────
@@ -623,6 +650,233 @@ class TestCheckBareTransliterationReuseCrossField(unittest.TestCase):
             report.errors,
             [],
             f"Bare text before the gloss is established must not be flagged, got: {report.errors}",
+        )
+
+
+# ── check_bare_transliteration_reuse: case-insensitive matching ────────────
+#
+# Confirmed in the wild 2026-08-01: veil_torn_zh_001's content establishes
+# 'ἐσχίσθη, (eschisthē)' then re-emphasizes the same word in all-caps prose
+# ('It says ESCHISTHĒ:') a few lines later — a real bare-reuse instance the
+# original case-sensitive \b-search missed entirely.
+
+
+class TestCheckBareTransliterationReuseCaseInsensitive(unittest.TestCase):
+    def test_reuse_in_a_different_case_is_still_an_error(self):
+        report = Report("TEST")
+        check_bare_transliteration_reuse(
+            "It says ἐσχίσθη, (eschisthē) violently. It says ESCHISTHĒ: torn apart.",
+            "cards[1].content",
+            "ctx",
+            report,
+        )
+
+        self.assertTrue(
+            any("ESCHISTHĒ" in e or "eschisthē" in e for e in report.errors),
+            f"Expected a case-insensitive reuse error, got: {report.errors}",
+        )
+
+    def test_same_case_reuse_still_an_error(self):
+        # Regression guard: the original exact-case behavior must still work.
+        report = Report("TEST")
+        check_bare_transliteration_reuse(
+            "It says ἐσχίσθη, (eschisthē) violently. It says eschisthē again.",
+            "cards[1].content",
+            "ctx",
+            report,
+        )
+
+        self.assertTrue(
+            any("eschisthē" in e for e in report.errors),
+            f"Expected a same-case reuse error, got: {report.errors}",
+        )
+
+
+# ── check_word_study_bare_clause_transliteration: unquoted prefix + local
+#    Greek/Hebrew guard ───────────────────────────────────────────────────
+#
+# Two fixes confirmed in the wild 2026-08-01 via veil_torn_zh_001: (1) the
+# translated phrase before the parenthetical clause is not always wrapped
+# in quote marks (numbered-list prose style like '2️⃣ 从上到下(Ap' Anōthen
+# Heōs Katō)'), and (2) a real Greek/Hebrew citation earlier in the same
+# field must not blind the check to a DIFFERENT bare clause later in that
+# field.
+
+
+class TestCheckWordStudyBareClauseTransliterationUnquotedAndLocalGuard(
+    unittest.TestCase
+):
+    def test_unquoted_bare_prefix_clause_is_a_warning(self):
+        report = Report("TEST")
+        check_word_study_bare_clause_transliteration(
+            "3️⃣ 从上到下(Ap' Anōthen Heōs Katō)\n\n这是最重要的细节",
+            "cards[1].content",
+            "zh",
+            "ctx",
+            report,
+        )
+
+        self.assertTrue(
+            any("Anōthen" in w for w in report.warnings),
+            f"Expected an unquoted-prefix clause warning, got: {report.warnings}",
+        )
+
+    def test_quoted_prefix_clause_still_works(self):
+        # Regression guard: the original quoted-prefix behavior must still work.
+        report = Report("TEST")
+        check_word_study_bare_clause_transliteration(
+            '"太初有道"(Ēn archē ēn ho Logos) 这是约翰福音的开篇',
+            "cards[1].content",
+            "zh",
+            "ctx",
+            report,
+        )
+
+        self.assertTrue(
+            any("Logos" in w for w in report.warnings),
+            f"Expected a quoted-prefix clause warning, got: {report.warnings}",
+        )
+
+    def test_real_greek_far_away_in_the_same_field_does_not_suppress_a_local_bare_clause(
+        self,
+    ):
+        report = Report("TEST")
+        text = (
+            "裂开了(ἐσχίσθη, (eschisthē) (G4977))\n\n"
+            + ("填充文字 " * 30)
+            + "3️⃣ 从上到下(Ap' Anōthen Heōs Katō)"
+        )
+        check_word_study_bare_clause_transliteration(
+            text, "cards[1].content", "zh", "ctx", report
+        )
+
+        self.assertTrue(
+            any("Anōthen" in w for w in report.warnings),
+            f"Expected the far-away real citation to not suppress this finding, got: {report.warnings}",
+        )
+
+    def test_real_greek_right_next_to_the_match_still_suppresses_it(self):
+        # The local guard must still protect a match that genuinely sits
+        # right next to real Greek/Hebrew script.
+        report = Report("TEST")
+        text = "从上到下(Ap' Anōthen Heōs Katō) ἐσχίσθη, (eschisthē)"
+        check_word_study_bare_clause_transliteration(
+            text, "cards[1].content", "zh", "ctx", report
+        )
+
+        self.assertEqual(
+            report.warnings,
+            [],
+            f"A match right next to real Greek script must still be suppressed, got: {report.warnings}",
+        )
+
+
+# ── check_word_study_lexicon_verified_bare_transliteration ─────────────────
+#
+# Catches a bare Latin word in parens that resolves to a REAL Strong's
+# headword transliteration, verified via a dictionary lookup rather than a
+# diacritic-shape heuristic — closes the precision gap
+# check_word_study_bare_transliteration leaves open for transliterations
+# with no scholarly diacritic at all (e.g. 'anamnesis', 'kippur'). Confirmed
+# in the wild 2026-08-01: new_covenant_cup's 'a memorial (anamnesis)',
+# 'Covered sin (kippur)' — real Strong's transliterations (G364, H3725)
+# invisible to the shape-only check.
+
+
+class TestCheckWordStudyLexiconVerifiedBareTransliteration(unittest.TestCase):
+    def setUp(self):
+        self.lex = _FakeLexicon(
+            {
+                "ἀνάμνησις": [
+                    LexiconEntry("G364", "ἀνάμνησις", "anámnēsis", "recollection")
+                ],
+                "כִּפֻּר": [LexiconEntry("H3725", "כִּפֻּר", "kippur", "expiation")],
+                "πέτρα": [LexiconEntry("G4073", "πέτρα", "petra", "a (mass of) rock")],
+            }
+        )
+
+    def test_diacritic_free_translit_resolving_to_a_real_headword_is_a_warning(self):
+        report = Report("TEST")
+        check_word_study_lexicon_verified_bare_transliteration(
+            "It is a memorial (anamnesis) of his death.",
+            "cards[1].content",
+            "ctx",
+            report,
+            self.lex,
+        )
+
+        self.assertTrue(
+            any("anamnesis" in w and "G364" in w for w in report.warnings),
+            f"Expected a lexicon-verified bare-transliteration warning, got: {report.warnings}",
+        )
+
+    def test_word_with_no_lexicon_match_produces_no_finding(self):
+        report = Report("TEST")
+        check_word_study_lexicon_verified_bare_transliteration(
+            "This happened on a Tuesday (weekday) in spring.",
+            "cards[1].content",
+            "ctx",
+            report,
+            self.lex,
+        )
+
+        self.assertEqual(
+            report.warnings,
+            [],
+            f"An ordinary English word with no lexicon match must not be flagged, got: {report.warnings}",
+        )
+
+    def test_whitelisted_coincidental_collision_is_not_flagged(self):
+        # Regression test for the confirmed false positive: 'Peter' (the
+        # disciple's name) diacritic-strips to the same letters as Strong's
+        # H6363 'peṭer' ('a fissure, firstling'), a completely unrelated
+        # Hebrew word — coincidental spelling overlap, not a real content
+        # gap. Uses 'petra' (G4073) in the fake lexicon as a stand-in
+        # collision target so this test doesn't depend on the real 13k-entry
+        # data file; the whitelist itself is read from gloss_format.json
+        # and already contains 'Peter'.
+        report = Report("TEST")
+        check_word_study_lexicon_verified_bare_transliteration(
+            "The apostle appeared to Simon (Peter) after the resurrection.",
+            "cards[11].narrative",
+            "ctx",
+            report,
+            self.lex,
+        )
+
+        self.assertEqual(
+            report.warnings,
+            [],
+            f"Whitelisted word 'Peter' must never be flagged, got: {report.warnings}",
+        )
+
+    def test_real_greek_script_locally_near_the_match_suppresses_it(self):
+        report = Report("TEST")
+        text = "It is a memorial (anamnesis) πέτρα, (petra) right here."
+        check_word_study_lexicon_verified_bare_transliteration(
+            text, "cards[1].content", "ctx", report, self.lex
+        )
+
+        self.assertEqual(
+            report.warnings,
+            [],
+            f"A match right next to real Greek script must be suppressed, got: {report.warnings}",
+        )
+
+    def test_word_key_is_skipped(self):
+        report = Report("TEST")
+        check_word_study_lexicon_verified_bare_transliteration(
+            "a memorial (anamnesis)",
+            "cards[2].greek_words[0].word",
+            "ctx",
+            report,
+            self.lex,
+        )
+
+        self.assertEqual(
+            report.warnings,
+            [],
+            f"The 'word' key should be skipped entirely, got: {report.warnings}",
         )
 
 

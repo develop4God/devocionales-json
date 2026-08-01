@@ -46,5 +46,9 @@
     "max_quoted_length": 32,
     "max_parenthetical_length": 31,
     "_length_comment": "Both max values are the exact longest confirmed real-corpus instance (2026-07-31 scan of the 4 logos_creation_*_001.json files: ar quoted clause is 32 chars, zh 'kai ho Logos ēn pros ton Theon' parenthetical is 31 chars) — not a round-number guess. Extend only after confirming a new, longer genuine instance the same way, not by loosening ad hoc."
+  },
+  "lexicon_verified_bare_transliteration_whitelist": {
+    "_comment": "Words excluded from check_word_study_lexicon_verified_bare_transliteration (greek_hebrew_gloss.py) — a bare Latin word in parens that happens to diacritic/case-fold-match a real Strong's transliteration, but is coincidental spelling overlap with ordinary vocabulary (usually a modern personal name), not the corpus actually discussing that Hebrew/Greek word. Confirmed 2026-08-01: encounters/en/emmaus_en_001.json cards[11].narrative's 'Simon (Peter)' matched H6363 ('peṭer', a fissure/firstling — completely unrelated to the disciple Peter) purely because 'Peter' diacritic-strips to the same letters. Same convention as strong_whitelist.json (a confirmed false positive with no structural regex signal to exclude it by, so an explicit list is the correct fix, not a broader pattern change). Add an entry here only after confirming (like this one) that the match is genuinely coincidental — a real match on a real proper noun the corpus IS discussing (Israel/G2474, Balaam/G903, Kana/G2580 all confirmed correct 2026-08-01) must never be added here.",
+    "words": ["Peter"]
   }
 }

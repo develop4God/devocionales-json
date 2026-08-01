@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import json
 import re
+import unicodedata
 from pathlib import Path
 from typing import NamedTuple, Optional, Protocol
 
@@ -33,6 +34,23 @@ class LexiconEntry(NamedTuple):
     lemma: str
     translit: str
     gloss: str
+
+
+def _normalized_translit(word: str) -> str:
+    """Strip diacritics and casefold, so a corpus transliteration written
+    without Strong's own stress marks (e.g. 'anamnesis') still matches its
+    headword ('anámnēsis', G364). Same tiny algorithm already duplicated in
+    greek_hebrew_gloss.py and lexicon_fixer.py for the identical reason
+    (comparing transliterations without treating case/accent as meaning) —
+    not imported from either, since lexicon_source.py sits below both in
+    the dependency graph (this module's own docstring) and importing from
+    a caller would invert that. Kept in sync by hand; not worth a larger
+    refactor to deduplicate for a 6-line function."""
+    return "".join(
+        char
+        for char in unicodedata.normalize("NFD", word).casefold()
+        if not unicodedata.combining(char)
+    )
 
 
 # native_script_ranges.json's per-language Unicode block ranges + writing
@@ -85,6 +103,20 @@ class LexiconSource(Protocol):
 
     def lookup_by_number(self, strongs_number: str) -> Optional[LexiconEntry]:
         """Direct lookup by Strong's number, e.g. 'G1096' or 'H1961'."""
+        ...
+
+    def lookup_by_translit(self, translit: str) -> list[LexiconEntry]:
+        """Every headword entry whose OWN transliteration matches `translit`,
+        diacritic/case-insensitively — e.g. 'anamnesis' matches G364's
+        'anámnēsis'. Same list-return shape as lookup_by_lemma for the same
+        reason: transliteration collisions are real (664 confirmed across
+        the combined Greek+Hebrew data, e.g. 'ō' alone maps to 3 different
+        Strong's numbers), so callers with no disambiguating hint must
+        handle multiple candidates themselves. Empty list if `translit`
+        matches no headword's transliteration at all — that is NOT proof
+        the underlying word is fictional, only that this specific spelling
+        isn't a Strong's headword transliteration (e.g. it could be an
+        inflected surface form, same caveat as lookup_by_lemma)."""
         ...
 
 
@@ -147,6 +179,7 @@ class StrongsLexiconSource:
         self._by_number: dict[str, LexiconEntry] = {}
         self._by_lemma: dict[str, list[LexiconEntry]] = {}
         self._by_lemma_ci: dict[str, list[LexiconEntry]] = {}
+        self._by_translit_norm: dict[str, list[LexiconEntry]] = {}
 
         for path in (greek_path, hebrew_path):
             with open(path, encoding="utf-8") as f:
@@ -161,11 +194,15 @@ class StrongsLexiconSource:
                 self._by_number[number] = entry
                 if entry.lemma:
                     self._by_lemma.setdefault(entry.lemma, []).append(entry)
-                    self._by_lemma_ci.setdefault(
-                        entry.lemma.casefold(), []
+                    self._by_lemma_ci.setdefault(entry.lemma.casefold(), []).append(
+                        entry
+                    )
+                if entry.translit:
+                    self._by_translit_norm.setdefault(
+                        _normalized_translit(entry.translit), []
                     ).append(entry)
 
-        for index in (self._by_lemma, self._by_lemma_ci):
+        for index in (self._by_lemma, self._by_lemma_ci, self._by_translit_norm):
             for entries in index.values():
                 entries.sort(key=lambda e: e.strongs_number)
 
@@ -174,6 +211,9 @@ class StrongsLexiconSource:
         if exact:
             return list(exact)
         return list(self._by_lemma_ci.get(word.casefold(), []))
+
+    def lookup_by_translit(self, translit: str) -> list[LexiconEntry]:
+        return list(self._by_translit_norm.get(_normalized_translit(translit), []))
 
     def lookup_by_lemma_and_number(
         self, word: str, strongs_number: str
