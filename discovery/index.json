@@ -267,7 +267,7 @@
     },
     {
       "id": "logos_creation_001",
-      "version": "1.4",
+      "version": "1.5",
       "emoji": "📖",
       "files": {
         "es": "logos_creation_es_001.json",
@@ -320,7 +320,7 @@
     },
     {
       "id": "lamb_of_god_001",
-      "version": "1.4",
+      "version": "1.5",
       "emoji": "🐑",
       "files": {
         "es": "lamb_of_god_es_001.json",
@@ -585,7 +585,7 @@
     },
     {
       "id": "woman_at_well_001",
-      "version": "1.4",
+      "version": "1.5",
       "emoji": "⛲",
       "files": {
         "es": "woman_at_well_es_001.json",
@@ -638,7 +638,7 @@
     },
     {
       "id": "bread_of_life_001",
-      "version": "1.3",
+      "version": "1.4",
       "emoji": "🍞",
       "files": {
         "es": "bread_of_life_es_001.json",
@@ -956,7 +956,7 @@
     },
     {
       "id": "transfiguration_001",
-      "version": "1.2",
+      "version": "1.3",
       "emoji": "⛰️",
       "files": {
         "es": "transfiguration_es_001.json",
@@ -1221,7 +1221,7 @@
     },
     {
       "id": "cup_of_wrath_001",
-      "version": "1.6",
+      "version": "1.7",
       "emoji": "😱",
       "files": {
         "es": "cup_of_wrath_es_001.json",
