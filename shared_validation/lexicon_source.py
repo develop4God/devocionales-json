@@ -166,6 +166,21 @@ class StrongsLexiconSource:
     it with no new logic; verified none of those 6 collision words are
     used anywhere in this corpus, so this fallback is unambiguous in
     every real case found so far.
+
+    Combining-mark order is a third, independent source of false "not a
+    headword" misses, Hebrew-only (niqqud are combining marks; Greek
+    accents are precomposed): two strings can be visually identical and
+    NFC/NFD-equal under unicodedata.normalize, yet still fail a raw `==`
+    dict lookup because the corpus and Strong's data disagree on which
+    combining mark comes first at the same base letter (e.g. tsere before
+    dagesh vs. dagesh before tsere on the same הִנֵּה) — Python does not
+    canonicalize combining-mark order for you outside of explicit NFC/NFD
+    normalization. Found in zechariah_14_return_001 (all 10 languages):
+    the corpus's הִנֵּה byte-differs from H2009's stored הִנֵּה though both
+    are the same word. `_by_lemma`/`_by_lemma_ci` are keyed (and queried)
+    NFC-normalized for this reason — same fix scripture_check.py's
+    _normalize() already applies to verse text for the identical reason,
+    see that function's docstring.
     """
 
     _DATA_DIR = Path(__file__).parent / "lexicon_data"
@@ -193,10 +208,9 @@ class StrongsLexiconSource:
                 )
                 self._by_number[number] = entry
                 if entry.lemma:
-                    self._by_lemma.setdefault(entry.lemma, []).append(entry)
-                    self._by_lemma_ci.setdefault(entry.lemma.casefold(), []).append(
-                        entry
-                    )
+                    lemma_nfc = unicodedata.normalize("NFC", entry.lemma)
+                    self._by_lemma.setdefault(lemma_nfc, []).append(entry)
+                    self._by_lemma_ci.setdefault(lemma_nfc.casefold(), []).append(entry)
                 if entry.translit:
                     self._by_translit_norm.setdefault(
                         _normalized_translit(entry.translit), []
@@ -207,10 +221,11 @@ class StrongsLexiconSource:
                 entries.sort(key=lambda e: e.strongs_number)
 
     def lookup_by_lemma(self, word: str) -> list[LexiconEntry]:
-        exact = self._by_lemma.get(word)
+        word_nfc = unicodedata.normalize("NFC", word)
+        exact = self._by_lemma.get(word_nfc)
         if exact:
             return list(exact)
-        return list(self._by_lemma_ci.get(word.casefold(), []))
+        return list(self._by_lemma_ci.get(word_nfc.casefold(), []))
 
     def lookup_by_translit(self, translit: str) -> list[LexiconEntry]:
         return list(self._by_translit_norm.get(_normalized_translit(translit), []))
@@ -218,10 +233,11 @@ class StrongsLexiconSource:
     def lookup_by_lemma_and_number(
         self, word: str, strongs_number: str
     ) -> Optional[LexiconEntry]:
-        for entry in self._by_lemma.get(word, []):
+        word_nfc = unicodedata.normalize("NFC", word)
+        for entry in self._by_lemma.get(word_nfc, []):
             if entry.strongs_number == strongs_number:
                 return entry
-        for entry in self._by_lemma_ci.get(word.casefold(), []):
+        for entry in self._by_lemma_ci.get(word_nfc.casefold(), []):
             if entry.strongs_number == strongs_number:
                 return entry
         return None
