@@ -30,10 +30,16 @@
       "content": "En hebreo, Josué y Jesús tienen exactamente el mismo nombre: Yeshua. No es una coincidencia de traducción, es que en su lengua nativa ambos se llamaban igual. Las traducciones de hoy los separaron en dos nombres distintos, pero en la vida real, en su tiempo y en su tierra, compartían el mismo nombre.\n\nCuando un judío del primer siglo escuchaba que Yeshua había ido al vado del Jordán frente a Jericó, tenía dos capas de información simultáneas: el nombre y el lugar. Ambos apuntaban a la misma historia anterior.\n\n🔍 Lo que el autor de Hebreos hace con esto:\n\nHebreos 4:8 hace un argumento simple: si Josué ya hubiera dado el reposo definitivo, Dios no tendría que hablar de otro reposo siglos después. Pero lo hizo. Eso significa que el cruce de Josué fue real y cumplió su propósito, pero Dios tenía más. Lo que Josué entregó era solo la primera parte del plan.\n\n'Porque si Josué les hubiera dado el reposo, no hablaría después de otro día.' (Hebreos 4:8)\n\nPor eso el autor continúa: 'Por tanto, queda un reposo para el pueblo de Dios.' (Hebreos 4:9)\n\nY ese reposo que quedaba pendiente tiene nombre: Jesús. Él mismo lo dijo: 'Venid a mí todos los que estáis trabajados y cargados, y yo os haré descansar.' (Mateo 11:28) El reposo que Josué no pudo dar, Jesús lo es.\n\nJosué fue el molde. Jesús fue la pieza final. El primero cruzó el río con su pueblo hacia una tierra. El segundo cruza con su pueblo hacia la presencia de Dios y la vida eterna.",
       "greek_words": [
         {
-          "word": "יֵשׁוּעַ / Ἰησοῦς",
-          "transliteration": "Yeshua / Iesous",
-          "meaning": "El Señor salva, nombre hebreo de Josué, transliterado al griego como Iesous, el mismo término que el NT usa para Jesús",
-          "revelation": "La Septuaginta llama Iesous a Josué. El NT llama Iesous a Jesús. El lector griego del primer siglo leía el mismo nombre en ambos casos. No era homofonía accidental, era continuidad teológica deliberada."
+          "word": "יְהוֹשׁוּעַ",
+          "transliteration": "Yᵉhôwshûwaʻ",
+          "meaning": "El Señor salva — nombre hebreo de Josué",
+          "revelation": "La Septuaginta llama Iesous a Josué — el mismo nombre griego que después se usará para Jesús."
+        },
+        {
+          "word": "Ἰησοῦς",
+          "transliteration": "Iēsoûs",
+          "meaning": "La forma griega del nombre de Josué, el mismo término que el NT usa para Jesús",
+          "revelation": "El NT llama Iesous a Jesús. El lector griego del primer siglo leía el mismo nombre en ambos casos. No era homofonía accidental, era continuidad teológica deliberada."
         },
         {
           "word": "τύπος",
@@ -116,7 +122,7 @@
         },
         {
           "category": "Confianza",
-          "question": "El mismo Dios que coordinó ese patrón con mil años de precisión es el mismo que tiene tu vida en sus manos. Nada escapa de su control. Aunque hoy no entiendas lo que estás viviendo, estás en el mejor lugar posible: en sus manos. Él no improvisa."
+          "question": "El mismo Dios que coordinó ese patrón con mil años de precisión es el mismo que tiene tu vida en sus manos. Nada escapa de su control. Él no improvisa. ¿Puedes confiar en que, aunque hoy no entiendas lo que estás viviendo, estás en el mejor lugar posible — en sus manos?"
         }
       ],
       "prayer": {
@@ -137,7 +143,7 @@
   "metadata": {
     "total_word_count": 2100,
     "greek_words_count": 2,
-    "scripture_references_count": 11,
+    "scripture_references_count": 8,
     "difficulty_level": "intermediate-advanced",
     "themes": [
       "Tipología geográfica",

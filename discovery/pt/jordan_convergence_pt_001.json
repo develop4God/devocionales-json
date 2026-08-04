@@ -30,10 +30,16 @@
       "content": "Em hebraico, Josué e Jesus compartilham exatamente o mesmo nome: Yeshua. Isso não é uma coincidência de tradução — em sua língua nativa, ambos eram chamados da mesma coisa. Nossas traduções hoje lhes deram dois nomes diferentes, mas na vida real, em seu tempo e em sua terra, eles compartilhavam o mesmo nome.\n\nQuando uma pessoa judaica do primeiro século ouvia que Yeshua havia ido ao vau do Jordão em frente a Jericó, ela tinha duas camadas de informação ao mesmo tempo: o nome e o lugar. Ambos apontavam para a mesma história anterior.\n\n🔍 O que o autor de Hebreus faz com isso:\n\nHebreus 4:8 faz um argumento simples: se Josué já tivesse dado o descanso final, Deus não precisaria falar de outro descanso séculos depois. Mas ele falou. Isso significa que a travessia de Josué foi real e cumpriu seu propósito, mas Deus tinha mais. O que Josué entregou foi apenas a primeira parte do plano.\n\n'Porque, se Josué lhes houvesse dado repouso, não falaria depois disso de outro dia.' (Hebreus 4:8)\n\nEntão o autor continua: 'Portanto resta ainda um repouso para o povo de Deus.' (Hebreus 4:9)\n\nE esse repouso que ainda estava por vir tem um nome: Jesus. Ele mesmo disse: 'Vinde a mim, todos os que estais cansados e oprimidos, e eu vos aliviarei.' (Mateus 11:28) O descanso que Josué não pôde dar, Jesus é.\n\nJosué era o molde. Jesus era a peça final. O primeiro atravessou o rio com seu povo em direção a uma terra. O segundo atravessa com seu povo em direção à presença de Deus e à vida eterna.",
       "greek_words": [
         {
-          "word": "יֵשׁוּעַ / Ἰησοῦς",
-          "transliteration": "Yeshua / Iesous",
-          "meaning": "O Senhor salva — o nome hebraico de Josué, levado para o grego como Iesous, a mesma palavra que o Novo Testamento usa para Jesus",
-          "revelation": "A Septuaginta chama Josué de 'Iesous.' O Novo Testamento chama Jesus de 'Iesous.' Um leitor que falava grego no primeiro século via o mesmo nome nos dois casos. Isso não foi acidental — foi continuidade teológica deliberada."
+          "word": "יְהוֹשׁוּעַ",
+          "transliteration": "Yᵉhôwshûwaʻ",
+          "meaning": "O Senhor salva — o nome hebraico de Josué",
+          "revelation": "A Septuaginta chama Josué de 'Iesous' — o mesmo nome grego usado mais tarde para Jesus."
+        },
+        {
+          "word": "Ἰησοῦς",
+          "transliteration": "Iēsoûs",
+          "meaning": "A forma grega do nome de Josué, a mesma palavra que o Novo Testamento usa para Jesus",
+          "revelation": "O Novo Testamento chama Jesus de 'Iesous.' Um leitor que falava grego no primeiro século via o mesmo nome nos dois casos. Isso não foi acidental — foi continuidade teológica deliberada."
         },
         {
           "word": "τύπος",
@@ -116,7 +122,7 @@
         },
         {
           "category": "Confiança",
-          "question": "O mesmo Deus que coordenou aquele padrão com mil anos de precisão é o mesmo Deus que segura sua vida em suas mãos. Nada escapa ao seu controle. Mesmo quando você não entende o que está atravessando, você está no melhor lugar possível — em suas mãos. Ele não improvisa."
+          "question": "O mesmo Deus que coordenou aquele padrão com mil anos de precisão é o mesmo Deus que segura sua vida em suas mãos. Nada escapa ao seu controle. Ele não improvisa. Você consegue confiar que, mesmo quando não entende o que está atravessando, está no melhor lugar possível — em suas mãos?"
         }
       ],
       "prayer": {
@@ -137,7 +143,7 @@
   "metadata": {
     "total_word_count": 2200,
     "greek_words_count": 2,
-    "scripture_references_count": 12,
+    "scripture_references_count": 8,
     "difficulty_level": "intermediate-advanced",
     "themes": [
       "Tipologia geográfica",
