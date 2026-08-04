@@ -21,7 +21,7 @@ import sys
 import time
 from dataclasses import dataclass
 from datetime import datetime
-from typing import Any, List, Optional
+from typing import Any
 
 from .report import Report
 
@@ -37,14 +37,14 @@ class _PhaseResult:
 
 @dataclass
 class Coverage:
-    content_units: Optional[int] = None
-    published: Optional[int] = None
-    coming_soon: Optional[int] = None
-    files_scanned: Optional[int] = None
-    languages_present: Optional[List[str]] = None
-    expected_languages: Optional[int] = None
-    studies_found: Optional[int] = None
-    sot_live: Optional[bool] = None
+    content_units: int | None = None
+    published: int | None = None
+    coming_soon: int | None = None
+    files_scanned: int | None = None
+    languages_present: list[str] | None = None
+    expected_languages: int | None = None
+    studies_found: int | None = None
+    sot_live: bool | None = None
 
 
 def _current_branch() -> str:
@@ -74,7 +74,7 @@ class RunReport:
 
     def __init__(self, title: str):
         self.title = title
-        self.phases: List[_PhaseResult] = []
+        self.phases: list[_PhaseResult] = []
         self.coverage: Coverage = Coverage()
         self.exit_code: int = 0
         self._start_time = time.monotonic()
@@ -83,14 +83,14 @@ class RunReport:
 
     def add_coverage(
         self,
-        content_units: Optional[int] = None,
-        published: Optional[int] = None,
-        coming_soon: Optional[int] = None,
-        files_scanned: Optional[int] = None,
-        languages_present: Optional[List[str]] = None,
-        expected_languages: Optional[int] = None,
-        studies_found: Optional[int] = None,
-        sot_live: Optional[bool] = None,
+        content_units: int | None = None,
+        published: int | None = None,
+        coming_soon: int | None = None,
+        files_scanned: int | None = None,
+        languages_present: list[str] | None = None,
+        expected_languages: int | None = None,
+        studies_found: int | None = None,
+        sot_live: bool | None = None,
     ) -> None:
         """Record the run's coverage snapshot. Explicit typed parameters,
         one per Coverage field — a typo'd or renamed field is a call-site

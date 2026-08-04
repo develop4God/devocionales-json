@@ -10,11 +10,11 @@ folded in here per the spike scope.
 
 import json
 import re
+from collections.abc import Iterator
 from pathlib import Path
-from typing import Iterator, Tuple
 
+from .greek_hebrew_gloss import _strong_code_re, find_greek_hebrew_glosses
 from .report import ReportLike
-from .greek_hebrew_gloss import find_greek_hebrew_glosses, _strong_code_re
 
 # Quote-like characters whose accidental back-to-back doubling indicates a
 # stray-punctuation typo (e.g. »» , "" , '')
@@ -48,7 +48,7 @@ def is_cognate(value: str, lang: str) -> bool:
     return value.strip().lower() in _ROMANCE_COGNATES.get(lang, set())
 
 
-def iter_strings(obj, path: str = "") -> Iterator[Tuple[str, str]]:
+def iter_strings(obj, path: str = "") -> Iterator[tuple[str, str]]:
     """Recursively yield (path, value) for every string leaf in obj."""
     if isinstance(obj, dict):
         for k, v in obj.items():

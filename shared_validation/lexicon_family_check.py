@@ -52,14 +52,14 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from shared_validation.family_resolver import RESOLVERS, ID_LISTERS  # noqa: E402
-from shared_validation.lexicon_check import (  # noqa: E402
+from shared_validation.family_resolver import ID_LISTERS, RESOLVERS
+from shared_validation.lexicon_check import (
+    LexicalStatus,
     check_lexical_accuracy,
     check_structured_word_study_accuracy,
-    LexicalStatus,
 )
-from shared_validation.lexicon_source import StrongsLexiconSource  # noqa: E402
-from shared_validation.text_checks import iter_strings  # noqa: E402
+from shared_validation.lexicon_source import StrongsLexiconSource
+from shared_validation.text_checks import iter_strings
 
 RED, YLW, GRN, CYN, RST = "\033[91m", "\033[93m", "\033[92m", "\033[96m", "\033[0m"
 
@@ -79,15 +79,15 @@ class _ReportAdapter:
         self.warnings = 0
         self.infos = 0
 
-    def E(self, msg):  # noqa: N802
+    def E(self, msg):
         print(f"  {RED}❌ {msg}{RST}")
         self.errors += 1
 
-    def W(self, msg):  # noqa: N802
+    def W(self, msg):
         print(f"  {YLW}⚠️  {msg}{RST}")
         self.warnings += 1
 
-    def I(self, msg):  # noqa: E743, N802
+    def I(self, msg):
         print(f"  {CYN}ℹ️  {msg}{RST}")
         self.infos += 1
 

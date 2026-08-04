@@ -11,14 +11,14 @@ Usage:
   CLI mode  : python validate_devocional_gui.py --file path.json --lang de --version LU17
 """
 
+import argparse
 import json
 import re
 import sys
-import argparse
 import tkinter as tk
-from tkinter import filedialog, ttk, scrolledtext
-from pathlib import Path
 from datetime import date, timedelta
+from pathlib import Path
+from tkinter import filedialog, scrolledtext, ttk
 
 REQUIRED_FIELDS = [
     "id",
@@ -65,7 +65,6 @@ SPANISH_LEAKS = {
     "nuestros",
     "nuestra",
     "nuestras",
-    "también",
     "arrepentimiento",
     "salvación",
     "hermanos",
@@ -126,7 +125,6 @@ AMEN_VARIANTS = frozenset(
         "amén",
         "āmen",
         "amém",  # Portuguese
-        "阿们",
         "阿们",
         "阿门",
         "阿門",

@@ -33,28 +33,24 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from shared_validation.strong_search import (
-    find_strong_codes_in_file,
-    find_strong_codes_phase1,
-    find_strong_codes_phase2,
-    find_strong_codes_phase3,
-    summarize_results,
-)
-from shared_validation.strong_fixer import (
-    preview_file,
-    preview_family,
-    apply_fixes,
-    FixAction,
-)
-from shared_validation.strong_balance_fixer import (
-    preview_balance_fixes,
-    apply_balance_fixes,
-    validate_after_fix,
-)
-from shared_validation.lexicon_source import StrongsLexiconSource
 from shared_validation.family_resolver import (
     _resolve_discovery_family,
     _resolve_encounters_family,
+)
+from shared_validation.lexicon_source import StrongsLexiconSource
+from shared_validation.strong_balance_fixer import (
+    apply_balance_fixes,
+    preview_balance_fixes,
+    validate_after_fix,
+)
+from shared_validation.strong_fixer import (
+    apply_fixes,
+    preview_family,
+    preview_file,
+)
+from shared_validation.strong_search import (
+    find_strong_codes_in_file,
+    find_strong_codes_phase1,
 )
 
 
@@ -148,7 +144,7 @@ def print_preview(actions: list, filepath: str = ""):
             print(f'    {"":8s}  {"":25s}  ...{ctx_before}{a.old}{ctx_after}...')
             print(f'    {"":8s}  {"":25s}  ...{ctx_before}{a.new}{ctx_after}...')
     else:
-        print(f'  No fixes needed.')
+        print('  No fixes needed.')
 
     if skips:
         print(f'  Already correct: {len(skips)}')

@@ -45,8 +45,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
-from typing import List, NamedTuple, Optional, Tuple
-
+from typing import NamedTuple
 
 # ---------------------------------------------------------------------------
 # Named tuple for a single Strong's code search result
@@ -83,14 +82,14 @@ class StrongSearchResult(NamedTuple):
 # ---------------------------------------------------------------------------
 
 _FORMAT_PATH = Path(__file__).parent / "strong_format.json"
-_format_cache: Optional[dict] = None
+_format_cache: dict | None = None
 
 # ---------------------------------------------------------------------------
 # Whitelist config (strong_whitelist.json) — false positive exclusions
 # ---------------------------------------------------------------------------
 
 _WHITELIST_PATH = Path(__file__).parent / "strong_whitelist.json"
-_whitelist_cache: Optional[dict] = None
+_whitelist_cache: dict | None = None
 
 
 def load_strong_format() -> dict:
@@ -228,7 +227,7 @@ _BROAD_RE = re.compile(
 )
 
 
-def find_strong_codes_phase0(text: str, context_window: int = 40) -> List[StrongSearchResult]:
+def find_strong_codes_phase0(text: str, context_window: int = 40) -> list[StrongSearchResult]:
     """Phase 0: BROADEST search — catch ALL G/H + digits patterns in text.
 
     This is the foundation. It catches every possible Strong code pattern:
@@ -244,7 +243,7 @@ def find_strong_codes_phase0(text: str, context_window: int = 40) -> List[Strong
     Returns:
         List of StrongSearchResult, ordered by occurrence in text.
     """
-    results: List[StrongSearchResult] = []
+    results: list[StrongSearchResult] = []
     for m in _BROAD_RE.finditer(text):
         prefix = m.group(1).upper()  # normalize to uppercase
         number = m.group(2)
@@ -276,7 +275,7 @@ def find_strong_codes_phase0(text: str, context_window: int = 40) -> List[Strong
 # Phase 1 — Filter Phase 0 to only "Strong" prefix patterns
 # ---------------------------------------------------------------------------
 
-def find_strong_codes_phase1(text: str, context_window: int = 40) -> List[StrongSearchResult]:
+def find_strong_codes_phase1(text: str, context_window: int = 40) -> list[StrongSearchResult]:
     """Phase 1: Filter Phase 0 results to only matches that include the
     word "Strong" (any case) — e.g. "(Strong G3327)", "Strong G1568".
 
@@ -294,7 +293,7 @@ def find_strong_codes_phase1(text: str, context_window: int = 40) -> List[Strong
 # Phase 2 — Filter Phase 0 to bare codes (no "Strong" word)
 # ---------------------------------------------------------------------------
 
-def find_strong_codes_phase2(text: str, context_window: int = 40) -> List[StrongSearchResult]:
+def find_strong_codes_phase2(text: str, context_window: int = 40) -> list[StrongSearchResult]:
     """Phase 2: Filter Phase 0 results to only matches that do NOT include
     the word "Strong" — e.g. "(G3327)", "G728", "- G728)".
 
@@ -312,7 +311,7 @@ def find_strong_codes_phase2(text: str, context_window: int = 40) -> List[Strong
 # Phase 3 — All results combined (same as Phase 0)
 # ---------------------------------------------------------------------------
 
-def find_strong_codes_phase3(text: str, context_window: int = 40) -> List[StrongSearchResult]:
+def find_strong_codes_phase3(text: str, context_window: int = 40) -> list[StrongSearchResult]:
     """Phase 3: All Strong code patterns in text — both "Strong" prefix
     patterns (Phase 1) and bare code patterns (Phase 2) — combined.
 
@@ -334,9 +333,9 @@ def find_strong_codes_phase3(text: str, context_window: int = 40) -> List[Strong
 # ---------------------------------------------------------------------------
 
 def resolve_strong_results(
-    results: List[StrongSearchResult],
+    results: list[StrongSearchResult],
     lexicon,
-) -> List[Tuple[StrongSearchResult, Optional[dict]]]:
+) -> list[tuple[StrongSearchResult, dict | None]]:
     """Phase 4: Resolve a list of StrongSearchResult to lexicon entries.
 
     Each result is looked up in the provided lexicon (expected to be a
@@ -352,7 +351,7 @@ def resolve_strong_results(
         List of (StrongSearchResult, Optional[LexiconEntry]) tuples, in the
         same order as `results`.
     """
-    resolved: List[Tuple[StrongSearchResult, Optional[dict]]] = []
+    resolved: list[tuple[StrongSearchResult, dict | None]] = []
     for r in results:
         entry = lexicon.lookup_by_number(r.code)
         resolved.append((r, entry))
@@ -367,7 +366,7 @@ def find_strong_codes_in_file(
     filepath: str,
     phase: int = 3,
     context_window: int = 40,
-) -> List[StrongSearchResult]:
+) -> list[StrongSearchResult]:
     """Convenience: load a JSON file's content fields and search for Strong's
     codes across all prose fields (content, reflection, narrative, question,
     etc.).
@@ -385,7 +384,7 @@ def find_strong_codes_in_file(
     with open(filepath, encoding="utf-8") as f:
         data = json.load(f)
 
-    results: List[StrongSearchResult] = []
+    results: list[StrongSearchResult] = []
     # Scan ALL string fields in the file, not just prose fields.
     # This catches Strong codes in subtitles, greek_words, hebrew_words,
     # revelation_key, and any other field that might contain a code.
@@ -434,7 +433,7 @@ def find_strong_codes_in_file(
 # Summary / reporting helper
 # ---------------------------------------------------------------------------
 
-def summarize_results(results: List[StrongSearchResult]) -> dict:
+def summarize_results(results: list[StrongSearchResult]) -> dict:
     """Produce a summary dict from a list of StrongSearchResult.
 
     Returns:

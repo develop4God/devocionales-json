@@ -14,8 +14,7 @@ from __future__ import annotations
 
 import json
 import re
-from pathlib import Path
-from typing import List, NamedTuple, Dict, Tuple
+from typing import NamedTuple
 
 
 class FixResult(NamedTuple):
@@ -61,7 +60,7 @@ def _set_field(data, field_path: str, value):
         current[int(last)] = value
 
 
-def apply_fixes(filepath: str, actions: List[NamedTuple]) -> FixResult:
+def apply_fixes(filepath: str, actions: list[NamedTuple]) -> FixResult:
     """Apply fix actions to a file.
     
     This is the SINGLE IMPLEMENTATION for applying fixes.
@@ -84,7 +83,7 @@ def apply_fixes(filepath: str, actions: List[NamedTuple]) -> FixResult:
     
     # Group fixes by field path, reverse order so positions don't shift
     from collections import defaultdict
-    by_field: Dict[str, List] = defaultdict(list)
+    by_field: dict[str, list] = defaultdict(list)
     for a in actions:
         by_field[a.field_path].append(a)
     
@@ -120,7 +119,7 @@ def apply_fixes(filepath: str, actions: List[NamedTuple]) -> FixResult:
     )
 
 
-def apply_fixes_to_text(text: str, actions: List[NamedTuple], inplace: bool = False) -> Tuple[str, int, int]:
+def apply_fixes_to_text(text: str, actions: list[NamedTuple], inplace: bool = False) -> tuple[str, int, int]:
     """Apply fixes to a text string (without touching the file).
     
     Useful for testing or when you need to modify text before writing.

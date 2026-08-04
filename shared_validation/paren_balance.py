@@ -20,8 +20,9 @@ from __future__ import annotations
 
 import argparse
 import json
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Iterable, List, NamedTuple
+from typing import NamedTuple
 
 
 class ParenIssue(NamedTuple):
@@ -54,7 +55,7 @@ _OPENERS = {'(': ')', '（': '）'}
 _CLOSERS = {')': '(', '）': '（'}
 
 
-def check_balance(text: str) -> List[ParenIssue]:
+def check_balance(text: str) -> list[ParenIssue]:
     """Return a list of unmatched parens in text. Empty list = balanced.
 
     Agnostic to content — tracks ASCII '(' '/')' and full-width '（'/'）'
@@ -62,7 +63,7 @@ def check_balance(text: str) -> List[ParenIssue]:
     nesting within either kind (or a real corpus pattern that opens with one
     kind and closes with the other) is caught.
     """
-    issues: List[ParenIssue] = []
+    issues: list[ParenIssue] = []
     open_stacks: dict = {'(': [], '（': []}
 
     for i, ch in enumerate(text):
@@ -88,7 +89,7 @@ def is_balanced(text: str) -> bool:
     return len(check_balance(text)) == 0
 
 
-def check_json_file(filepath: str | Path) -> List[ParenFinding]:
+def check_json_file(filepath: str | Path) -> list[ParenFinding]:
     """Return parenthesis findings for every string value in a JSON file.
 
     This is deliberately validation-only: it loads and inspects content but
@@ -99,7 +100,7 @@ def check_json_file(filepath: str | Path) -> List[ParenFinding]:
     with path.open(encoding="utf-8") as file:
         data = json.load(file)
 
-    findings: List[ParenFinding] = []
+    findings: list[ParenFinding] = []
 
     def walk(value: object, field_path: str = "") -> None:
         if isinstance(value, dict):

@@ -19,11 +19,10 @@ with each other" rule.
 """
 
 from collections import defaultdict
-from typing import Dict, Set
-
-from shared_validation.report import ReportLike
 
 from corpus_index_reader import CorpusCombo
+
+from shared_validation.report import ReportLike
 
 
 class CorpusCalendarChecker:
@@ -32,9 +31,9 @@ class CorpusCalendarChecker:
     date-set for that year."""
 
     def __init__(self):
-        self._dates_by_year: Dict[str, Dict[CorpusCombo, Set[str]]] = defaultdict(dict)
+        self._dates_by_year: dict[str, dict[CorpusCombo, set[str]]] = defaultdict(dict)
 
-    def record(self, combo: CorpusCombo, entry_dates: Set[str]) -> None:
+    def record(self, combo: CorpusCombo, entry_dates: set[str]) -> None:
         """Record one combo's entry-date set. Call once per combo as files
         are validated; call check() once at the end after all combos for
         all years have been recorded."""

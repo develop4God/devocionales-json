@@ -21,9 +21,8 @@ Usage:
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
-from typing import Optional, Dict, List, NamedTuple
+from typing import NamedTuple
 
 
 class StrongFixAction(NamedTuple):
@@ -42,15 +41,15 @@ class PipelineReport(NamedTuple):
     """Report from running the pipeline."""
     filepath: str
     dry_run: bool
-    strong_fixes_preview: List[StrongFixAction]
-    balance_fixes_preview: List[object]
+    strong_fixes_preview: list[StrongFixAction]
+    balance_fixes_preview: list[object]
     strong_applied: int
     strong_failed: int
     balance_applied: int
     balance_failed: int
     is_valid: bool
     validation_issues: int
-    abort_reason: Optional[str]
+    abort_reason: str | None
 
 
 def run_pipeline(filepath: str, dry_run: bool = True) -> PipelineReport:
@@ -71,9 +70,13 @@ def run_pipeline(filepath: str, dry_run: bool = True) -> PipelineReport:
     Returns:
         PipelineReport with all actions and results
     """
-    from shared_validation.strong_fixer import preview_file as preview_strong
-    from shared_validation.strong_balance_fixer import preview_balance_fixes, apply_balance_fixes, validate_after_fix
+    from shared_validation.strong_balance_fixer import (
+        apply_balance_fixes,
+        preview_balance_fixes,
+        validate_after_fix,
+    )
     from shared_validation.strong_fixer import apply_fixes as apply_strong_fixes
+    from shared_validation.strong_fixer import preview_file as preview_strong
     
     # Stage 1: ANALYZE_STRONG
     strong_actions = preview_strong(filepath)
@@ -144,7 +147,7 @@ def run_pipeline(filepath: str, dry_run: bool = True) -> PipelineReport:
     )
 
 
-def run_pipeline_batch(filepaths: List[str], dry_run: bool = True) -> List[PipelineReport]:
+def run_pipeline_batch(filepaths: list[str], dry_run: bool = True) -> list[PipelineReport]:
     """Run pipeline on multiple files.
     
     Args:
@@ -181,7 +184,7 @@ def print_report(report: PipelineReport):
         print(f'    ... and {len(report.balance_fixes_preview) - 5} more')
     
     if not report.dry_run:
-        print(f'\n  Applied:')
+        print('\n  Applied:')
         print(f'    Strong fixes: {report.strong_applied}')
         if report.strong_failed:
             print(f'    ⚠ Strong fixes FAILED: {report.strong_failed}')
@@ -194,7 +197,7 @@ def print_report(report: PipelineReport):
         if report.abort_reason:
             print(f'    ⚠ {report.abort_reason}')
     else:
-        print(f'\n  Dry run - no changes made')
+        print('\n  Dry run - no changes made')
         print(f'  Would apply: {len(report.strong_fixes_preview) + len(report.balance_fixes_preview)} fixes')
     
     print(f'{"="*70}')

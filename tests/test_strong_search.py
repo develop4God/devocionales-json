@@ -12,15 +12,15 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
+from shared_validation.lexicon_source import StrongsLexiconSource
 from shared_validation.strong_search import (
+    find_strong_codes_in_file,
     find_strong_codes_phase1,
     find_strong_codes_phase2,
     find_strong_codes_phase3,
-    find_strong_codes_in_file,
     resolve_strong_results,
     summarize_results,
 )
-from shared_validation.lexicon_source import StrongsLexiconSource
 
 
 class TestPhase1StrongPrefix(unittest.TestCase):
@@ -248,8 +248,8 @@ class TestFindInFile(unittest.TestCase):
         time as the fixer is applied, which would make a real-file
         assertion of "at least one Strong-prefixed match" flaky by design.
         """
-        import tempfile
         import json as json_module
+        import tempfile
 
         fixture = {
             "cards": [

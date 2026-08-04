@@ -11,10 +11,9 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
-from typing import List, NamedTuple
+from typing import NamedTuple
 
-from shared_validation.strong_applier import apply_fixes, FixResult
-
+from shared_validation.strong_applier import FixResult, apply_fixes
 
 _CODE = r"[GH]\d{1,5}"
 
@@ -62,7 +61,7 @@ def _stack_balance_issues(text: str):
 
 def _actions_for_text(
     filepath: str, field_path: str, text: str
-) -> List[BalanceFixAction]:
+) -> list[BalanceFixAction]:
     """Return Strong-code balance repairs for one text field.
 
     Two independent checks, each scoped to Strong-code citations only:
@@ -144,13 +143,13 @@ def _actions_for_text(
     return actions
 
 
-def preview_balance_fixes(filepath: str) -> List[BalanceFixAction]:
+def preview_balance_fixes(filepath: str) -> list[BalanceFixAction]:
     """Return Strong-code balance fixes without modifying ``filepath``."""
     path = Path(filepath)
     with path.open(encoding="utf-8") as file:
         data = json.load(file)
 
-    actions: List[BalanceFixAction] = []
+    actions: list[BalanceFixAction] = []
 
     def collect(value: object, field_path: str = "") -> None:
         if isinstance(value, dict):
@@ -168,7 +167,7 @@ def preview_balance_fixes(filepath: str) -> List[BalanceFixAction]:
 
 def preview_balance_fixes_for_text(
     filepath: str, field_path: str, text: str
-) -> List[BalanceFixAction]:
+) -> list[BalanceFixAction]:
     """Preview Strong-code balance repairs for one already-loaded field.
 
     This lets the read-only diff checker inspect the text *after* simulated
@@ -178,7 +177,7 @@ def preview_balance_fixes_for_text(
     return _actions_for_text(filepath, field_path, text)
 
 
-def apply_balance_fixes(filepath: str, actions: List[BalanceFixAction]) -> FixResult:
+def apply_balance_fixes(filepath: str, actions: list[BalanceFixAction]) -> FixResult:
     """Apply previously-previewed Strong-code balance fixes."""
     return apply_fixes(filepath, actions)
 

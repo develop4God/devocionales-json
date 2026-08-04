@@ -14,20 +14,20 @@ the generic parenthesis checker validates the resulting field text. This is
 deliberately a post-fix diff check, not a pre-fix corpus scan and not an
 auto-fix stage.
 """
-import sys
-import json
 import glob
+import json
+import sys
 
 sys.path.insert(0, '.')
 
-from shared_validation.strong_scanner import scan_file
-from shared_validation.strong_fixer import preview_file as preview_strong
+from shared_validation.paren_balance import check_balance
+from shared_validation.strong_applier import apply_fixes_to_text
 from shared_validation.strong_balance_fixer import (
     preview_balance_fixes,
     preview_balance_fixes_for_text,
 )
-from shared_validation.strong_applier import apply_fixes_to_text
-from shared_validation.paren_balance import check_balance
+from shared_validation.strong_fixer import preview_file as preview_strong
+from shared_validation.strong_scanner import scan_file
 
 
 def check_file(fp: str, debug: bool = False) -> dict:

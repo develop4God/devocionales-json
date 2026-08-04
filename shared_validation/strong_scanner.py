@@ -15,8 +15,7 @@ from __future__ import annotations
 
 import json
 import re
-from pathlib import Path
-from typing import List, NamedTuple, Optional
+from typing import NamedTuple
 
 
 class TextField(NamedTuple):
@@ -43,7 +42,7 @@ class ScanResult(NamedTuple):
         raw_text: The complete raw text of the file (for position tracking)
     """
     filepath: str
-    fields: List[TextField]
+    fields: list[TextField]
     raw_text: str
 
 
@@ -74,7 +73,7 @@ def scan_file(filepath: str) -> ScanResult:
         raw_text = f.read()
     
     data = json.loads(raw_text)
-    fields: List[TextField] = []
+    fields: list[TextField] = []
     
     # Locate each field's still-escaped JSON string literal in raw_text,
     # decode THAT literal (not compare raw bytes to the already-decoded
@@ -132,7 +131,7 @@ def scan_file(filepath: str) -> ScanResult:
     )
 
 
-def get_field_text(scan_result: ScanResult, field_path: str) -> Optional[str]:
+def get_field_text(scan_result: ScanResult, field_path: str) -> str | None:
     """Get the text for a specific field from a scan result.
     
     Args:

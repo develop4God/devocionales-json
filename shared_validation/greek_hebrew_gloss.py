@@ -20,9 +20,9 @@ import unicodedata
 from pathlib import Path
 
 from .lexicon_source import (
+    find_nearby_strong_citation,
     load_native_script_ranges,
     resolve_lemma_entry,
-    find_nearby_strong_citation,
 )
 from .report import ReportLike
 

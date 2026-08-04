@@ -27,8 +27,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from shared_validation.run_report import RunReport
-
-from tests.golden_utils import capture, assert_matches_golden
+from tests.golden_utils import assert_matches_golden, capture
 
 _saved_step_summary = None
 
@@ -58,7 +57,6 @@ def _phase_ok(report):
 def _phase_fails(report):
     report.E("a required field was missing")
     report.E("a second, unrelated error")
-    return None
 
 
 def _phase_warns(report):

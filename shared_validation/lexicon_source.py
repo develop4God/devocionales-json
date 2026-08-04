@@ -26,7 +26,7 @@ import json
 import re
 import unicodedata
 from pathlib import Path
-from typing import NamedTuple, Optional, Protocol
+from typing import NamedTuple, Protocol
 
 
 class LexiconEntry(NamedTuple):
@@ -64,7 +64,7 @@ def _normalized_translit(word: str) -> str:
 # used there; find_nearby_strong_citation below is this module's own user
 # of the same data.
 _NATIVE_SCRIPT_RANGES_PATH = Path(__file__).parent / "native_script_ranges.json"
-_native_script_ranges_cache: Optional[dict] = None
+_native_script_ranges_cache: dict | None = None
 
 
 def load_native_script_ranges() -> dict:
@@ -93,7 +93,7 @@ class LexiconSource(Protocol):
 
     def lookup_by_lemma_and_number(
         self, word: str, strongs_number: str
-    ) -> Optional[LexiconEntry]:
+    ) -> LexiconEntry | None:
         """Exact lemma match narrowed to one specific Strong's number —
         disambiguates the list lookup_by_lemma returns when `word` collides
         across multiple headwords. Returns None if `word` has no entry under
@@ -101,7 +101,7 @@ class LexiconSource(Protocol):
         is one but not under this number)."""
         ...
 
-    def lookup_by_number(self, strongs_number: str) -> Optional[LexiconEntry]:
+    def lookup_by_number(self, strongs_number: str) -> LexiconEntry | None:
         """Direct lookup by Strong's number, e.g. 'G1096' or 'H1961'."""
         ...
 
@@ -186,7 +186,7 @@ class StrongsLexiconSource:
     _DATA_DIR = Path(__file__).parent / "lexicon_data"
 
     def __init__(
-        self, greek_path: Optional[Path] = None, hebrew_path: Optional[Path] = None
+        self, greek_path: Path | None = None, hebrew_path: Path | None = None
     ):
         greek_path = greek_path or self._DATA_DIR / "strongs_greek.json"
         hebrew_path = hebrew_path or self._DATA_DIR / "strongs_hebrew.json"
@@ -232,7 +232,7 @@ class StrongsLexiconSource:
 
     def lookup_by_lemma_and_number(
         self, word: str, strongs_number: str
-    ) -> Optional[LexiconEntry]:
+    ) -> LexiconEntry | None:
         word_nfc = unicodedata.normalize("NFC", word)
         for entry in self._by_lemma.get(word_nfc, []):
             if entry.strongs_number == strongs_number:
@@ -242,7 +242,7 @@ class StrongsLexiconSource:
                 return entry
         return None
 
-    def lookup_by_number(self, strongs_number: str) -> Optional[LexiconEntry]:
+    def lookup_by_number(self, strongs_number: str) -> LexiconEntry | None:
         return self._by_number.get(strongs_number)
 
 
@@ -282,7 +282,7 @@ _STRONG_IN_TOKEN_RE = re.compile(r"[GH]\d{2,5}")
 _NEARBY_STRONG_WINDOW = 40
 
 
-_native_script_class_cache: dict[str, Optional[str]] = {}
+_native_script_class_cache: dict[str, str | None] = {}
 
 
 def is_rtl_lang(lang: str) -> bool:
@@ -299,7 +299,7 @@ def is_rtl_lang(lang: str) -> bool:
     return bool(entry and entry.get("direction") == "rtl")
 
 
-def _native_script_class_for_lang(lang: str) -> Optional[str]:
+def _native_script_class_for_lang(lang: str) -> str | None:
     """The regex character class for `lang`'s own native script (e.g.
     ja -> '぀-ヿ一-鿿'), read from native_script_ranges.json, or None for a
     Latin-script language (no entry there). Cached per language since the
@@ -315,8 +315,8 @@ def _native_script_class_for_lang(lang: str) -> Optional[str]:
 
 
 def find_nearby_strong_citation(
-    text: str, end: int, lang: Optional[str] = None
-) -> tuple[Optional[str], int]:
+    text: str, end: int, lang: str | None = None
+) -> tuple[str | None, int]:
     """Look at the "token" immediately following `end` (a gloss span's end
     offset, skipping exactly one leading space if present) for a Strong's-
     shaped code. Returns (code, citation_end): code is the code found (or
@@ -350,8 +350,8 @@ def find_nearby_strong_citation(
 
 
 def resolve_lemma_entry(
-    lexicon: LexiconSource, word: str, text: str, end: int, lang: Optional[str] = None
-) -> tuple[Optional[LexiconEntry], tuple[LexiconEntry, ...]]:
+    lexicon: LexiconSource, word: str, text: str, end: int, lang: str | None = None
+) -> tuple[LexiconEntry | None, tuple[LexiconEntry, ...]]:
     """Single shared resolution step for 'which Strong's entry does this
     gloss span mean' — used by every caller that needs a lemma resolved
     (the lexical-accuracy checker, the hard-gate transliteration check, and

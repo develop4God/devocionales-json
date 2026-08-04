@@ -12,12 +12,15 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from shared_validation.lexicon_fixer import (  # noqa: E402
+from shared_validation.lexicon_fixer import (
     _fix_file_text,
     fix_bare_latin_glosses,
     triage_bare_latin_glosses,
 )
-from shared_validation.lexicon_source import LexiconEntry, StrongsLexiconSource  # noqa: E402
+from shared_validation.lexicon_source import (
+    LexiconEntry,
+    StrongsLexiconSource,
+)
 
 
 class _FakeLexicon:

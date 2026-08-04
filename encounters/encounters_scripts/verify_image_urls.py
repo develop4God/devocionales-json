@@ -31,7 +31,8 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, replace
 from pathlib import Path
 
-from asset_urls import EncounterIndexReader, ImageReference as _BaseImageReference
+from asset_urls import EncounterIndexReader
+from asset_urls import ImageReference as _BaseImageReference
 
 RETRY_ATTEMPTS = 3
 RETRY_BACKOFF_SECONDS = 2

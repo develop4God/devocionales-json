@@ -36,8 +36,9 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-from shared_validation.family_check import run
 from encounters_schema_checks import check_required_fields
+
+from shared_validation.family_check import run
 
 ENCOUNTERS_DIR = Path(__file__).parent.parent
 INDEX_PATH = ENCOUNTERS_DIR / "index.json"

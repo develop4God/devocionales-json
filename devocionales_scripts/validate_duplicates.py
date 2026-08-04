@@ -9,7 +9,6 @@ import json
 import os
 from collections import defaultdict
 
-
 # Constants
 MAX_DUPLICATES_TO_DISPLAY = 20  # Maximum number of duplicates to show in output
 
@@ -98,7 +97,7 @@ def validate_all_files():
             print(f"✓ {filename}: {file_count} entries")
 
         except Exception as e:
-            print(f"❌ Error reading {filename}: {str(e)}")
+            print(f"❌ Error reading {filename}: {e!s}")
 
     print()
     print("=" * 80)

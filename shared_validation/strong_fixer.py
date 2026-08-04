@@ -21,16 +21,18 @@ Usage:
 from __future__ import annotations
 
 import json
-from typing import List, NamedTuple
+from typing import NamedTuple
 
-from shared_validation.strong_search import (
-    find_strong_codes_in_file,
-    is_correct_format,
+from shared_validation.strong_applier import (
+    FixResult,
+    _get_field,
 )
 from shared_validation.strong_applier import (
     apply_fixes as _apply_fixes_shared,
-    FixResult,
-    _get_field,
+)
+from shared_validation.strong_search import (
+    find_strong_codes_in_file,
+    is_correct_format,
 )
 
 
@@ -71,7 +73,7 @@ def _consumes_an_outer_wrapper_close(
     if not field_text[match_start:match_end].endswith(")"):
         return False
     close_pos = match_end - 1
-    stack: List[int] = []
+    stack: list[int] = []
     for i, ch in enumerate(field_text):
         if i >= close_pos:
             break
@@ -87,7 +89,7 @@ def _consumes_an_outer_wrapper_close(
     return bool(stack) and stack[-1] < match_start
 
 
-def preview_file(filepath: str) -> List[FixAction]:
+def preview_file(filepath: str) -> list[FixAction]:
     """Analyze a file and return all fix actions (preview, no changes made)."""
     actions = []
 
@@ -195,7 +197,7 @@ def preview_family(study_id: str, content_type: str = "discovery") -> dict:
     return result
 
 
-def apply_fixes(filepath: str, actions: List[FixAction]) -> FixResult:
+def apply_fixes(filepath: str, actions: list[FixAction]) -> FixResult:
     """Apply fix actions to a file.
 
     Returns the full FixResult (applied AND failed counts) — callers must
