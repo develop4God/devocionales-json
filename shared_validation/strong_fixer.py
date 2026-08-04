@@ -79,9 +79,8 @@ def _consumes_an_outer_wrapper_close(
             break
         if ch == "(":
             stack.append(i)
-        elif ch == ")":
-            if stack:
-                stack.pop()
+        elif ch == ")" and stack:
+            stack.pop()
     # Stopped scanning just before the match's own trailing ')'. Any
     # position left on the stack is a '(' still unclosed at that point —
     # i.e. the one `close_pos` is actually about to close. If it opened

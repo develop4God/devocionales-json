@@ -173,7 +173,6 @@ def preview_balance_fixes_for_text(
     This lets the read-only diff checker inspect the text *after* simulated
     Strong fixes without writing a temporary JSON file.
     """
-    actions = []
     return _actions_for_text(filepath, field_path, text)
 
 

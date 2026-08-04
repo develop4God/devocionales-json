@@ -161,7 +161,7 @@ def check_links(content: str) -> list[str]:
                 problems.append(
                     f"Broken anchor [{text}]({target}) — no matching heading"
                 )
-        elif target.startswith("http://") or target.startswith("https://"):
+        elif target.startswith(("http://", "https://")):
             if urllib.parse.urlparse(target).hostname == "img.shields.io":
                 continue  # badge service, not a doc link
             try:

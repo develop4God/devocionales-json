@@ -40,8 +40,7 @@ def save(fname, data, indent):
 
 def all_entries(lang_data):
     for arr in lang_data.values():
-        for e in arr:
-            yield e
+        yield from arr
 
 
 # ─── ARC FIXES ─────────────────────────────────────────────────────────────

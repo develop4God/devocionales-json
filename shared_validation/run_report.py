@@ -79,7 +79,7 @@ class RunReport:
         self.coverage: Coverage = Coverage()
         self.exit_code: int = 0
         self._start_time = time.monotonic()
-        self._started_at = datetime.now()
+        self._started_at = datetime.now()  # noqa: DTZ005 — display uses local wall-clock time
         self._branch = _current_branch()
 
     def add_coverage(

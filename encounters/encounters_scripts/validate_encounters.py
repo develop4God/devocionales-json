@@ -502,11 +502,12 @@ def validate_encounter_file(
                 report.E(f"{filename}: meta missing field '{field}'")
         if "tags" in meta and not isinstance(meta["tags"], list):
             report.E(f"{filename}: meta.tags must be an array")
-        if "accent_color" in meta:
-            if not re.match(r"^#[0-9a-fA-F]{6}$", meta.get("accent_color", "")):
-                report.W(
-                    f"{filename}: meta.accent_color '{meta['accent_color']}' is not a valid hex color"
-                )
+        if "accent_color" in meta and not re.match(
+            r"^#[0-9a-fA-F]{6}$", meta.get("accent_color", "")
+        ):
+            report.W(
+                f"{filename}: meta.accent_color '{meta['accent_color']}' is not a valid hex color"
+            )
         if index_entry:
             for meta_key, index_key in [("emoji", "emoji"), ("testament", "testament")]:
                 meta_val = meta.get(meta_key, "")
@@ -677,11 +678,13 @@ def validate_cross_translation(
                 tr_val = tc.get(field, "")
                 if not tr_val or not str(tr_val).strip():
                     report.E(f"{ctx}: field '{field}' is empty in {lang.upper()}")
-                elif isinstance(en_val, str) and isinstance(tr_val, str):
-                    if en_val.strip() == tr_val.strip() and not is_cognate(
-                        tr_val, lang
-                    ):
-                        report.W(f"{ctx}: field '{field}' appears untranslated")
+                elif (
+                    isinstance(en_val, str)
+                    and isinstance(tr_val, str)
+                    and en_val.strip() == tr_val.strip()
+                    and not is_cognate(tr_val, lang)
+                ):
+                    report.W(f"{ctx}: field '{field}' appears untranslated")
 
         # discovery_questions count
         if ec.get("type") == "discovery_activation":

@@ -389,7 +389,7 @@ class DevotionalIDFixer:
             "invalid_count": invalid_count,
         }
 
-    def generate_report(self, output_file: str = None):
+    def generate_report(self, output_file: str | None = None):
         """Generate a comprehensive report of fixes and validation"""
         report = []
         report.append("=" * 80)

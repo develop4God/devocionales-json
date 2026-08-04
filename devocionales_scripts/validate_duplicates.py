@@ -7,6 +7,7 @@ This script checks all devotional files for duplicate IDs across all files.
 
 import json
 import os
+import sys
 from collections import defaultdict
 
 # Constants
@@ -136,4 +137,4 @@ def validate_all_files():
 
 
 if __name__ == "__main__":
-    exit(validate_all_files())
+    sys.exit(validate_all_files())

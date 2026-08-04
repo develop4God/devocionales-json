@@ -203,9 +203,8 @@ def validate_structure(
             report.W(f"{filename}: 'tags' array is empty")
 
     # Validate metadata
-    if "metadata" in data:
-        if "themes" not in data["metadata"]:
-            report.W(f"{filename}: Missing 'themes' in metadata")
+    if "metadata" in data and "themes" not in data["metadata"]:
+        report.W(f"{filename}: Missing 'themes' in metadata")
 
     return is_valid
 
@@ -501,11 +500,10 @@ def validate_index_json(
                         )
 
         # Validate estimated_reading_minutes
-        if "estimated_reading_minutes" in study:
-            if not isinstance(study["estimated_reading_minutes"], dict):
-                report.E(
-                    f"Study {study_id}: 'estimated_reading_minutes' must be an object"
-                )
+        if "estimated_reading_minutes" in study and not isinstance(
+            study["estimated_reading_minutes"], dict
+        ):
+            report.E(f"Study {study_id}: 'estimated_reading_minutes' must be an object")
 
     if pending_studies:
         report.I(f"Found {len(pending_studies)} studies with incomplete translations")

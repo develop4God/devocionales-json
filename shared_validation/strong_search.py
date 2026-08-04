@@ -147,9 +147,10 @@ def is_excluded(result: StrongSearchResult) -> bool:
     # Check context-based exclusions: exclude a code only when
     # the surrounding text matches a specific pattern
     for exclusion in whitelist.get("context_exclusions", []):
-        if result.code == exclusion["code"]:
-            if re.search(exclusion["context_pattern"], result.context, re.IGNORECASE):
-                return True
+        if result.code == exclusion["code"] and re.search(
+            exclusion["context_pattern"], result.context, re.IGNORECASE
+        ):
+            return True
     
     return False
 
@@ -180,9 +181,11 @@ def is_correct_format(result: StrongSearchResult) -> bool:
     """
     fmt = load_strong_format()
     # Check prefix is uppercase
-    if fmt["case_sensitivity"]["prefix_must_be_uppercase"]:
-        if result.prefix not in ("G", "H"):
-            return False
+    if fmt["case_sensitivity"]["prefix_must_be_uppercase"] and result.prefix not in (
+        "G",
+        "H",
+    ):
+        return False
     # Check digit range
     digit_count = len(result.number)
     if digit_count < fmt["digit_range"]["min"] or digit_count > fmt["digit_range"]["max"]:
@@ -388,7 +391,6 @@ def find_strong_codes_in_file(
     # Scan ALL string fields in the file, not just prose fields.
     # This catches Strong codes in subtitles, greek_words, hebrew_words,
     # revelation_key, and any other field that might contain a code.
-    text_fields = None  # None = scan all string fields
 
     def _collect(obj, path_prefix: str = ""):
         if isinstance(obj, dict):

@@ -19,7 +19,7 @@ class ImageReference:
     encounter_id: str
     filename: str
 
-    def url(self, ext: str = None) -> str:
+    def url(self, ext: str | None = None) -> str:
         name = self.filename
         if ext:
             name = f"{Path(name).stem}.{ext.lstrip('.')}"

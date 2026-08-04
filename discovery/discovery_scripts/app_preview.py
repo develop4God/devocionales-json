@@ -218,7 +218,7 @@ def render_card(card):
     # drift bug: the app silently ignores it today.
     unrendered = [
         k
-        for k in card.keys()
+        for k in card
         if k not in FIELDS_RENDERED
         and k not in ("order", "type", "icon", "title", "subtitle")
     ]
@@ -235,8 +235,10 @@ def render_card(card):
 
 def build_html(data, drift_warnings):
     parts = [
-        f"<!doctype html><html><head><meta charset='utf-8'>"
-        f"<title>{escape(data.get('title', ''))}</title><style>{CSS}</style></head><body>"
+        (
+            f"<!doctype html><html><head><meta charset='utf-8'>"
+            f"<title>{escape(data.get('title', ''))}</title><style>{CSS}</style></head><body>"
+        )
     ]
     for w in drift_warnings:
         parts.append(f'<div class="warning">⚠ {escape(w)}</div>')

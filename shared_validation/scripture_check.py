@@ -33,6 +33,7 @@ import re
 import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Self
 
 from devocionales_scripts.verse_resolver import VerseResolver, fetch_text, parse_en_ref
 
@@ -551,7 +552,7 @@ class ScriptureValidator:
             resolver.close()
         self._resolvers.clear()
 
-    def __enter__(self) -> "ScriptureValidator":
+    def __enter__(self) -> Self:
         return self
 
     def __exit__(self, *_) -> None:

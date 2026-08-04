@@ -33,6 +33,7 @@ import shutil
 import sqlite3
 import tempfile
 import urllib.request
+from typing import Self
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CONSTANTS
@@ -216,7 +217,7 @@ class VerseResolver:
 
     # ── context manager support ───────────────────────────────────────────────
 
-    def __enter__(self) -> "VerseResolver":
+    def __enter__(self) -> Self:
         return self
 
     def __exit__(self, *_) -> None:

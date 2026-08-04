@@ -69,7 +69,7 @@ class Report:
 T = TypeVar("T")
 
 
-def run_phase(name: str, fn: Callable[[Report], T], on_fail_msg: str = None) -> tuple:
+def run_phase(name: str, fn: Callable[[Report], T], on_fail_msg: str | None = None) -> tuple:
     """Run a single validation phase: construct a Report, call fn(report),
     print it (non-final), and return (result, report, passed).
 

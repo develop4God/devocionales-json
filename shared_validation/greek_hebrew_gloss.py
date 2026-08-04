@@ -944,7 +944,7 @@ _CLAUSE_BUG_PHONETIC_RESPELLING_LANGS = {"ja", "hi"}
 _quoted_paren_clause_re_cache: dict = {}
 
 
-def _quoted_paren_clause_re(lang: str = None):
+def _quoted_paren_clause_re(lang: str | None = None):
     """Cached per-language, since alternative 2's native-script class comes
     from native_script_ranges.json and differs by language (zh's Han block
     vs ar's Arabic block); alternative 1 (quoted) is language-agnostic and

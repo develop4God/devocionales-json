@@ -336,12 +336,13 @@ def validate(filepath, lang_override, version_override):
     # For base files without lang/version in filename, auto-detect from data
     if expected_lang is None and not lang_override.strip():
         try:
-            _probe = json.load(open(path, encoding="utf-8"))
+            with open(path, encoding="utf-8") as f:
+                _probe = json.load(f)
             _keys = list(_probe.get("data", {}).keys())
             if len(_keys) == 1:
                 expected_lang = _keys[0]
-        except Exception:  # noqa: BLE001
-            pass
+        except Exception as probe_err:  # noqa: BLE001
+            info(f"Lang auto-detect skipped: {probe_err}")
 
     ok(f"Lang: {expected_lang} | Version: {expected_version} | Year: {expected_year}")
 
@@ -352,7 +353,8 @@ def validate(filepath, lang_override, version_override):
     )
 
     try:
-        data = json.load(open(path, encoding="utf-8"))
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
     except json.JSONDecodeError as ex:
         e(f"Invalid JSON: {ex}")
         summary["status"] = "❌ INVALID JSON"
