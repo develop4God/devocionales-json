@@ -956,7 +956,7 @@
     },
     {
       "id": "transfiguration_001",
-      "version": "1.3",
+      "version": "1.4",
       "emoji": "⛰️",
       "files": {
         "es": "transfiguration_es_001.json",
@@ -1274,7 +1274,7 @@
     },
     {
       "id": "veil_torn_001",
-      "version": "1.8",
+      "version": "1.9",
       "emoji": "🏛️",
       "files": {
         "es": "veil_torn_es_001.json",
