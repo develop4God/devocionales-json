@@ -804,7 +804,7 @@ def main():
 
     run_report = RunReport("DISCOVERY VALIDATION")
 
-    bible_versions, used_remote_sot, last_fetch_error = load_bible_versions("discovery")
+    bible_versions, used_remote_sot, _last_fetch_error = load_bible_versions("discovery")
     expected_languages = {
         lang: cfg["allowed_versions"] for lang, cfg in bible_versions.items()
     }

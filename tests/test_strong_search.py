@@ -204,7 +204,7 @@ class TestPhase4Resolution(unittest.TestCase):
         results = find_strong_codes_phase3(text)
         resolved = resolve_strong_results(results, self.lex)
         self.assertEqual(len(resolved), 1)
-        r, entry = resolved[0]
+        _r, entry = resolved[0]
         self.assertIsNone(entry)
 
     def test_resolve_multiple_codes(self):

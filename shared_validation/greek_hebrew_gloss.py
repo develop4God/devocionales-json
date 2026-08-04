@@ -652,7 +652,7 @@ def check_native_script_bare_transliteration(
             ):
                 continue
         if lexicon is not None:
-            code, citation_end = find_nearby_strong_citation(text, m.end(), lang)
+            code, _citation_end = find_nearby_strong_citation(text, m.end(), lang)
             if code:
                 entry = lexicon.lookup_by_number(code)
                 if entry is not None:

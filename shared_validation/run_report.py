@@ -57,6 +57,7 @@ def _current_branch() -> str:
             capture_output=True,
             text=True,
             timeout=5,
+            check=False,
         )
         branch = result.stdout.strip()
         return branch if result.returncode == 0 and branch else "unknown"

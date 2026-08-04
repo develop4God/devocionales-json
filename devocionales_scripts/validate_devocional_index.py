@@ -284,7 +284,7 @@ def main():
     print(f"  files : {base_path}")
     print()
 
-    passed, ok_lines, errors = validate_index(index_path, base_path)
+    _passed, ok_lines, errors = validate_index(index_path, base_path)
 
     for line in ok_lines:
         print(f"  {line}")

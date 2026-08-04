@@ -29,6 +29,7 @@ def git_sees(path: Path) -> bool:
         cwd=REPO_ROOT,
         capture_output=True,
         text=True,
+        check=False,
     )
     return bool(result.stdout.strip())
 

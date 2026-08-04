@@ -308,6 +308,7 @@ def run_family_validation_all(
             [sys.executable, str(validate_family_script), item_id],
             capture_output=True,
             text=True,
+            check=False,
         )
         if result.returncode != 0:
             failed.append(item_id)

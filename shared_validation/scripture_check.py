@@ -373,7 +373,7 @@ def validate_pair(ref: ScriptureRef, resolver: VerseResolver) -> Finding | None:
     report it (this module always returns WARNING-severity findings for
     both failure kinds, per the issue's initial-rollout scope).
     """
-    cita, texto, error = resolver.resolve(ref.reference)
+    _cita, texto, error = resolver.resolve(ref.reference)
 
     if error is not None:
         return Finding(

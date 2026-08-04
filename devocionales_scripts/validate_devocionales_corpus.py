@@ -212,7 +212,7 @@ def main():
         run_report.print_summary()
         sys.exit(1)
 
-    reader, combos = index_result
+    _reader, combos = index_result
 
     run_report.wrap(
         "PHASE SOT: BIBLE VERSIONS SOURCE",

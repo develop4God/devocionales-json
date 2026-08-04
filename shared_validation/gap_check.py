@@ -93,7 +93,7 @@ def check_file(fp: str, debug: bool = False) -> dict:
         strong_actions_by_field.setdefault(action.field_path, []).append(action)
 
     for field_path, (field, _) in baseline_by_path.items():
-        simulated, applied, failed = apply_fixes_to_text(
+        simulated, _applied, failed = apply_fixes_to_text(
             field.text, strong_actions_by_field.get(field_path, [])
         )
         if failed:
@@ -101,7 +101,7 @@ def check_file(fp: str, debug: bool = False) -> dict:
         post_strong_balance_actions = preview_balance_fixes_for_text(
             fp, field_path, simulated
         )
-        simulated, applied, failed = apply_fixes_to_text(
+        simulated, _applied, failed = apply_fixes_to_text(
             simulated, post_strong_balance_actions
         )
         if failed:

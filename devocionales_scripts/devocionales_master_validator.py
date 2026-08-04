@@ -21,7 +21,7 @@ SCRIPTS_DIR = Path(__file__).parent
 
 def run(script, args=None, label=""):
     cmd = [sys.executable, str(SCRIPTS_DIR / script)] + (args or [])
-    result = subprocess.run(cmd, text=True)
+    result = subprocess.run(cmd, text=True, check=False)
     if result.returncode != 0:
         print(f"\n❌ {label or script} failed.")
         sys.exit(result.returncode)

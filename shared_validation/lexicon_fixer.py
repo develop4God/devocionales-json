@@ -440,7 +440,7 @@ def _fix_structured_word_studies(
                 word, translit = w.get("word"), w.get("transliteration")
                 if not word or not translit:
                     continue  # discovery_schema_checks.py's job to flag, not this one's
-                entry, candidates = resolve_lemma_entry(lexicon, word, "", 0, lang)
+                entry, _candidates = resolve_lemma_entry(lexicon, word, "", 0, lang)
                 if entry is None:
                     continue  # no single confirmed match — INFLECTED_NO_LEMMA_MATCH or AMBIGUOUS_LEMMA, same as the checker
                 given_norm = translit.lower().strip()
