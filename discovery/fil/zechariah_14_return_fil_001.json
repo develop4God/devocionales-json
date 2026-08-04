@@ -2,65 +2,68 @@
   "id": "zechariah_14_return_001",
   "type": "discovery",
   "date": "2026-02-06",
-  "title": "Zacarias 14: Kapag Tumapat ang Kanyang mga Paa sa Bundok ng mga Olibo",
+  "title": "Zacarias 14: Kapag Tumapak ang Kanyang mga Paa sa Bundok ng mga Olibo",
   "subtitle": "Ang araw na bababa ang langit at mababago ang lupa",
   "language": "fil",
   "version": "MBB05",
-  "estimated_reading_minutes": 10,
+  "estimated_reading_minutes": 9,
   "key_verse": {
     "reference": "Zacarias 14:4",
     "text": "Sa araw na iyon, tatayo si Yahweh sa Bundok ng mga Olibo sa gawing silangan ng Jerusalem. Magkakaroon ng maluwang na libis sa gitna ng bundok, pagkat mahahati ito mula sa silangan hanggang kanluran: ang kalahati ay mapupunta sa hilaga at sa timog naman ang kalahati."
   },
+
   "cards": [
     {
       "order": 1,
       "type": "historical_context",
       "icon": "📜",
-      "title": "Ang Propetikong Konteksto: Kailan at Bakit ito Isinulat",
-      "subtitle": "Ang katuparan ng eskatologiya ng Lumang Tipan",
-      "content": "Ang Zacarias 14 ay ang rurok ng lahat ng propetikong literatura ng Bibliya. Ito ay hindi talinghaga o malinaw na tula. Ito ay literal na paglalarawan ng pinakamahalagang araw sa kasaysayan ng tao pagkatapos ng Krus: ang araw na babalik si Jesus bilang mananakop na Hari.\n\nANG KONTEKSTO:\nPagkatapos itayo ang Templo noong 515 BC, ang agarang mga pag-asa ng Mesiyaniko ay hindi natupad. Ang mabunying Hari ay hindi dumating. Ito ay humantong sa propeta na proyektahin ang huling pagwagi sa mas malayong hinaharap.\n\nANG PROPETIKONG PANANAW:\nTumitingin pabalik ang propeta (sa pagkakatapon at sa kabiguan ng agarang pagpapanumbalik) ngunit tumuturo nang ganap sa hinaharap (sa pisikal na pagbabalik ng Mesiyas). Ito ay isang teksto na tumalon sa 2,500 taon ng kasaysayan upang ilarawan ang ISANG tiyak na araw sa hinaharap.",
-      "revelation_key": "Ang Zacarias 14 ay hindi talinghaga. Ito ay literal na paglalarawan ng araw na babalik si Jesus bilang mananakop na Hari."
+      "title": "Ang Kontekstong Propetiko: Kailan at Bakit Ito Isinulat",
+      "subtitle": "Ang rurok ng eskatolohiya sa Lumang Tipan",
+      "content": "Ang Zacarias 14 ang rurok ng buong panitikang propetiko sa Bibliya. Upang maunawaan ang bigat nito, kailangan nating makita ang kasaysayang pinagmulan nito:\n\n📅 ANG PAGKAKAHATI NG AKLAT:\n\nAng Zacarias ay hinati sa dalawang bahaging malinaw na magkaiba:\n\n• KABANATA 1-8: Isinulat sa pagitan ng 520-518 B.C., noong panahon ni Darius I ng Persia. Nakatuon ang mga ito sa muling pagtatayo ng Templo at may tiyak na mga petsa.\n\n• KABANATA 9-14: Walang tiyak na petsa, malamang na isinulat sa pagitan ng 450-330 B.C. (Huling Panahon ng Persia o Unang Panahon ng Griyego). Ganap na apokaliptiko ang estilo ng mga ito.\n\n⏳ BAKIT MAHALAGA ANG PETSA:\n\nMatapos maitayong muli ang Templo noong 515 B.C., hindi natupad ang agarang pag-asang mesiyaniko. Hindi dumating ang maluwalhating Hari, walang naganap na ganap na pagpapanumbalik. Dahil dito, iniangat ng propeta (o ng kanyang mga alagad) ang huling tagumpay tungo sa mas malayong hinaharap.\n\n🔑 MGA PATUNAY SA HULING PETSA:\n\n1️⃣ KONTEKSTONG POLITIKAL: Walang binanggit na haring Judio, kundi si Yahweh mismo bilang Hari (14:9), na nagpapahiwatig ng panahong nasa ilalim ng dayuhang kapangyarihan ang Israel.\n\n2️⃣ ESTILONG PAMPANITIKAN: Ang kabanata 14 ay ganap na eskatolohiko — 'digmaang kosmiko' at 'huling paghuhukom'. Ang estilong ito ay naging tanyag sa Israel sa pagitan ng ika-4 hanggang ika-2 siglo B.C.\n\n3️⃣ TEOLOHIYANG UNIBERSALISTA: Binabanggit nito na aakyat ang lahat ng bansa upang ipagdiwang ang Pista ng mga Kubol (14:16), sumasalamin sa isang teolohiyang huminog matapos ang pagkabihag.\n\n🎯 ANG PANANAW NA PROPETIKO:\n\nTumitingin ang propeta pabalik (sa pagkabihag at sa kabiguan ng agarang pagpapanumbalik) ngunit ganap na nakaturo pasulong (sa pisikal na pagbabalik ng Mesiyas). Isa itong tekstong lumulundag sa 2,500 taon ng kasaysayan upang ilarawan ang ISANG tiyak na araw sa hinaharap.",
+      "revelation_key": "Ang Zacarias 14 ay hindi alegorya o malabong tula. Ito ay literal na paglalarawan ng pinakamahalagang araw sa kasaysayan ng sangkatauhan matapos ang Krus: ang araw na babalik si Jesus bilang nagtatagumpay na Hari."
     },
+
     {
       "order": 2,
       "type": "hebrew_exegesis",
       "icon": "🔤",
       "title": "Hinnēh Yôm-Bā': Narito, Dumarating ang Araw",
-      "subtitle": "Pagsusuri ng orihinal na Hebreo na naghahayag ng propetikong pagmamadali",
-      "content": "Nagsisimula ang kabanata sa pariralang puno ng propetikong bigat:\n\n'Hinnēh yôm-bā' la-YHWH' - 'Narito, dumarating ang araw PARA SA PANGINOON'\n\nPAGKAKABUKOD NG HEBREO:\n• HINNĒH: 'Narito' - isang particle ng madaliang pansin\n• YÔM: 'Araw' - sa propesiya, 'ang Araw ng YHWH' ay ang sandali ng direktang interbensyon ng Diyos\n• BĀ': 'Dumarating' - patuloy na aksyon\n\nANG KRISIS NG JERUSALEM (vv. 1-2):\nInilalarawan ng teksto ang isang apocalyptikong pagkubkob: 'Titipunin ko ang lahat ng mga bansa laban sa Jerusalem'\n\nANG THEOPHANY: ANG PROPETIKONG RUROK (vv. 3-4):\n'Pagkatapos ay lalabas ang PANGINOON at makikipaglaban... At tatayo ang Kanyang mga paa sa araw na iyon sa Bundok ng mga Olibo'\n\nANG HEOGRAPIKONG PHENOMENA:\nAng bundok ay hahati 'qarāʿ' - ang parehong salita na ginamit kapag:\n• Nahati ang Dagat na Pula sa harap ni Moises\n• Napunit ang tabing ng templo nang mamatay si Jesus\n\nIto ay aksyon ng supernatural na interbensyon na nagbabago sa pisikal na heograpiya ng planeta.",
+      "subtitle": "Ang pagsusuri sa orihinal na Hebreo ay naghahayag ng propetikong pagkaapurahan",
+      "content": "Nagsisimula ang kabanata sa isang pariralang punong-puno ng propetikong bigat (literal na salin): 'Narito, dumarating ang araw PARA kay YHWH'\n\n🔍 PAGSUSURI SA HEBREO:\n\n• הִנֵּה, (hinnêh) (H2009): 'Narito' — isang partikula ng agarang pansin. Parang sinasabing 'Tingnan mo! Magmasid ka! Ito ay mahalaga!'\n\n• יוֹם, (yôwm) (H3117): 'Araw' — hindi lang ito basta 24-oras na panahon. Sa propesiya, ang 'Araw ni YHWH' ay ang sandaling direktang namamagitan ang Diyos sa kasaysayan upang humatol at magpanumbalik.\n\n• בָּא, (Bā') (H935): 'Dumarating' — anyong pandiwang nagpapahiwatig ng patuloy na kilos. Hindi ito 'darating balang araw', kundi 'dumarating na ngayon mismo' (mula sa pananaw na propetiko).\n\n• לַיהוָה, (La-YHWH) (H3068): 'Para kay YHWH' — Sa Kanya nauukol ang araw na ito. Ito ang ARAW ng Kanyang tagumpay, ang ARAW ng Kanyang pagbibigay-katarungan sa sarili.\n\n⚔️ ANG KRISIS NG JERUSALEM (talata 1-2):\n\nInilalarawan ng teksto ang isang apokaliptikong pagkubkob:\n\n'Sapagkat titipunin ko ang lahat ng bansa upang lusubin ang Jerusalem'\n\nAng salitang 'lahat' (כָּל־הַגּוֹיִם, (kol-ha-goyim) (H3605, H1471)) ay hindi patulaing pagmamalabis. Ito ay literal: LAHAT ng bansa ay magkakaisang lulusob sa lungsod ng Diyos.\n\n• Sasakupin ang lungsod\n• Sasamsamin ang mga bahay\n• Gagahasain ang mga babae\n• Bibihagin ang kalahati ng lungsod\n\nItinatatag nito ang isang eksenang ganap na walang pag-asa bago ang panghihimasok ng Diyos. Ito ang pinakamadilim na sandali bago sumapit ang bukang-liwayway.\n\n✨ ANG TEOFANIYA: ANG RUROK NA PROPETIKO (talata 3-4):\n\n'Kaya lalabas si Yahweh at lalabanan ang mga bansang iyon... At tatayo ang Kanyang mga paa sa araw na iyon sa Bundok ng mga Olibo'\n\nAng salitang 'tatayo' (עָמְדוּ, (amedu) (H5975)) ay nangangahulugang 'tumayong matatag, kumuha ng posisyon'. Hindi ito banayad na paghipo — ito ay isang MILITAR na PAGLAPAG. Kinukuha ng Kumander-Heneral ang Kanyang posisyon sa labanan.\n\n🌍 ANG PANGYAYARING HEOGRAPIKO:\n\nMahahati ang bundok (קָרַע, (qâraʻ) (H7167)) — ang mismong salitang ginamit noong:\n• HINATI ang Dagat na Pula sa harap ni Moises (Exodo 14:21)\n• NAHAPAK ang tabing ng templo nang mamatay si Jesus (Mateo 27:51)\n\nIto ay isang gawang supernatural na panghihimasok na nagbabago sa pisikal na heograpiya ng planeta.",
       "hebrew_words": [
         {
           "word": "הִנֵּה",
           "transliteration": "hinnêh",
-          "meaning": "Narito, tingnan, makinig",
-          "revelation": "Tinatawag ng Diyos ang ating pansin na may pagmamadali. Hindi ito ordinaryong kaganapan; ito ang KAGANAPAN."
-        },
-        {
-          "word": "קָרַע",
-          "transliteration": "qâraʻ",
-          "meaning": "Hatiin, punitin, wasakin nang marahas",
-          "revelation": "Ang parehong salita mula sa Dagat na Pula at sa tabing ng templo. Kapag 'pinunit' ng Diyos ang isang bagay, ito ay upang magbukas ng landas ng kaligtasan."
+          "meaning": "Narito, tingnan, magmasid",
+          "revelation": "Hinihingi ng Diyos ang ating pansin nang may pagkaapurahan. Hindi lang ito isa pang pangyayari sa kasaysayan; ito ang PANGYAYARING pinatutunguhan ng buong kasaysayan."
         },
         {
           "word": "עָמְדוּ",
           "transliteration": "ʿĀməḏû",
-          "meaning": "Tumayo nang matatag, kumuha ng posisyon ng digmaan",
-          "revelation": "Ang mga paa ni Jesus ay hindi lamang 'mariing hihipo' sa bundok. Kukuha Siya ng posisyon bilang Komandante Militar. Ang Kordero ay bumabalik bilang Leon."
+          "meaning": "Tumayong matatag, kumuha ng posisyong pandigma",
+          "revelation": "Hindi 'banayad na hihipo' ang mga paa ni Jesus sa bundok. Kukuha Siya ng posisyon bilang Kumander na Militar. Ang Kordero ay babalik bilang Leon."
+        },
+        {
+          "word": "קָרַע",
+          "transliteration": "qâraʻ",
+          "meaning": "Hatiin, hapakin, biyakin nang may dahas",
+          "revelation": "Ang mismong salita mula sa Dagat na Pula at sa tabing ng templo. Kapag 'hinapak' ng Diyos ang isang bagay, ito ay upang buksan ang daan ng kaligtasan."
         }
       ],
-      "revelation_key": "Ang wikang Hebreo ay walang espasyo para sa simbolikong interpretasyon. Ito ay pisikal, literal, heograpikal at militar na kaganapan kung saan ang Diyos ng langit ay itatanim ang Kanyang mga paa sa lupa."
+      "revelation_key": "Walang puwang ang wikang Hebreo para sa simbolikong interpretasyon. Ito ay isang pisikal, literal, heograpiko, at militar na pangyayari kung saan itinatanim ng Diyos ng langit ang Kanyang mga paa sa lupa."
     },
+
     {
       "order": 3,
       "type": "theological_depth",
       "icon": "👑",
-      "title": "YHWH Eḥād: Ang Huling Pagpahayag ng Shema",
-      "subtitle": "Zacarias 14:9 - Ang teolohikal na sentro ng kabanata",
-      "content": "Pagkatapos ng labanan at ng tagumpay, ipinahayag ni Zacarias ang pinakamahalagang katotohanan:\n\nZacarias 14:9: 'At ang PANGINOON ay magiging Hari sa buong daigdig. Sa araw na iyon, iisa lamang ang PANGINOON, at iisa ang Kanyang pangalan.'\n\nANG PAGPAPALAWAK NG SHEMA:\nBawat Judio ay nagsasabi ng Shema nang dalawang beses bawat araw: 'Pakinggan, O Israel: Ang PANGINOON ay ating Diyos, ang PANGINOON ay iisa'\n\nNgunit sa Zacarias 14, ang Judayong pagpahayag ng pananampalataya ay PINALAWAK sa buong mundo:\n• Hindi na lamang 'ang PANGINOON ating Diyos' (pag-aari ng Israel)\n• Ngayon ay 'ang PANGINOON na Hari sa BUONG DAIGDIG' (pandaigdig)\n\nPRAKTIKAL NA IMPLIKASYON:\n1️⃣ Ang katapusan ng idolatriya\n2️⃣ Ang katapusan ng relihiyosong relativismo\n3️⃣ Ang katapusan ng ateismo\n4️⃣ Ang katapusan ng paghihimagsik\n\nJESUS: ANG KATUPARAN:\nSa Kristiyanismo, ang Zacarias 14:9 ay natutupad kay Jesus. Ang pangalang YHWH at ang pangalang JESUS (Yeshua = YHWH ay nagliligtas) ay IISA at PAREHO.",
+      "title": "YHWH Eḥād: Ang Huling Pagpapahayag ng Shema",
+      "subtitle": "Zacarias 14:9 — Ang teolohikong sentro ng kabanata",
+      "content": "Matapos ang labanan at ang tagumpay, ipinahayag ni Zacarias ang pinakamahalagang katotohanan:\n\nZacarias 14:9 (literal na salin ng orihinal na Hebreo):\n'At si YHWH ang magiging Hari sa buong lupa: sa araw na iyon si YHWH ay magiging ISA (אֶחָד, (ʼechâd) (H259)), at ang Kanyang pangalan ay ISA.'\n\n🔥 ANG PAGPAPALAWAK NG SHEMA:\n\nAng bawat Judio ay bumibigkas ng Shema dalawang beses araw-araw:\n'Pakinggan mo, O Israel: si YHWH na ating Diyos ay ISANG YHWH' (Deuteronomio 6:4)\n\nNgunit sa Zacarias 14, ang pananampalataya ng mga Judio ay PINALAWAK sa buong mundo:\n\n• Hindi na lamang ito 'YHWH na ating Diyos' (pag-aari ng Israel)\n• Ngayon ito ay 'si YHWH na Hari sa BUONG LUPA' (unibersal)\n\n• Hindi na tatawagin ang pangalan ng ibang mga diyos\n• Iisang pangalan lamang ang tatawagin sa buong daigdig\n\n🌍 PRAKTIKAL NA IMPLIKASYON:\n\n1️⃣ Ang katapusan ng idolatriya: Wala nang Baal, Molec, Astoret, o ang makabagong mga diyos ng salapi, katanyagan, at kapangyarihan.\n\n2️⃣ Ang katapusan ng relihiyosong relatibismo: Wala nang 'lahat ng landas ay patungo sa Diyos'. Iisa lamang ang makikitang daan para sa lahat.\n\n3️⃣ Ang katapusan ng ateismo: Ang pag-iral ng Diyos ay hindi na paksa ng pilosopikal na pananampalataya, kundi ng pisikal na pagmamasid. Makikita ng bawat mata ang Hari.\n\n4️⃣ Ang katapusan ng paghihimagsik: Ang soberanya ni Jesus ay magiging ganap at nakikita. Wala nang mga gobyernong tumutuligsa.\n\n👑 SI JESUS: ANG KATUPARAN:\n\nSa Kristiyanismo, ang Zacarias 14:9 ay natutupad kay Jesus:\n\n• Filipos 2:9-11: 'Kaya naman siya'y itinampok ng Diyos sa kaitaasan at binigyan ng pangalang higit sa lahat ng pangalan, upang sa pangalan ni Jesus ay lumuhod ang lahat sa langit, sa lupa, at sa ilalim ng lupa... at upang ipahayag ng lahat na si Jesu-Cristo ay Panginoon, sa ikaluluwalhati ng Diyos Ama.'\n\n• Pahayag 19:16: 'Nakasulat sa kanyang balabal at sa kanyang hita ang pangalang: HARI NG MGA HARI AT PANGINOON NG MGA PANGINOON.'\n\nAng pangalang YHWH at ang pangalang JESUS (Yeshua = nagliligtas si YHWH) ay IISA at PAREHONG pangalan.",
       "scripture_connections": [
         {
           "reference": "Deuteronomio 6:4",
-          "text": "“Pakinggan mo, O Israel: Si Yahweh na ating Diyos ang tanging Yahweh."
+          "text": "Pakinggan mo, O Israel: Si Yahweh na ating Diyos ang tanging Yahweh."
         },
         {
           "reference": "Mga Taga-Filipos 2:10-11",
@@ -68,39 +71,41 @@
         },
         {
           "reference": "Pahayag 11:15",
-          "text": "Hinipan ng ikapitong anghel ang kanyang trumpeta at mula sa langit ay may malalakas na tinig na nagsabi, “Ang paghahari sa sanlibutan ay inilipat na kay Cristo na ating Panginoon. Maghahari siya magpakailanman!”"
+          "text": "Hinipan ng ikapitong anghel ang kanyang trumpeta at mula sa langit ay may malalakas na tinig na nagsabi, \"Ang paghahari sa sanlibutan ay inilipat na kay Cristo na ating Panginoon. Maghahari siya magpakailanman!\""
         }
       ],
-      "revelation_key": "Ang Zacarias 14:9 ay hindi malinaw na pag-asa. Ito ay ganap na propetikong deklarasyon: darating ang araw na ang pribadong pagpahayag ng pananampalataya ('Si Jesus ay aking Panginoon') ay magiging pandaigdigang pampublikong pagpahayag ('Si Jesus ay ANG Panginoon')."
+      "revelation_key": "Ang Zacarias 14:9 ay hindi malabong pag-asa. Ito ay ganap na propetikong pahayag: darating ang araw na ang pribadong pagpapahayag ng pananampalataya ('Si Jesus ang aking Panginoon') ay magiging pampublikong pahayag ng buong daigdig ('Si Jesus ANG Panginoon')."
     },
+
     {
       "order": 4,
       "type": "structural_analysis",
       "icon": "💧",
-      "title": "Buhay na mga Tubig: Ang Pagpapanumbalik ng Eden",
-      "subtitle": "Zacarias 14:8 at ang pagpapagaling ng Patay na Dagat",
-      "content": "Isa sa pinakamaganda at misteryosong detalye ng Zacarias 14 ay ang hydrolohikal na pagbabago:\n\nZacarias 14:8: 'At mangyayari sa araw na iyon, na lalabas ang mga buhay na tubig mula sa Jerusalem...'\n\nKONEKSYON SA EZEKIEL 47:\nSi Ezekiel ay may katulad na pangitain 70 taon nang mas maaga: 'Ang mga tubig na ito... bumababa sa disyerto, at pumapasok sa dagat: na dinala sa dagat, ang mga tubig ay mapapagaling.'\n\nANG PATAY NA DAGAT AY MABUBUHAY:\nAng Patay na Dagat ay kasalukuyang:\n• 10 beses na mas maalat kaysa sa karagatan\n• Walang isda o buhay sa tubig\n• Tinatawag sa Hebreo na יָם הַמֶּלַח, (Yam ha-Melach) — 'Dagat ng Asin'\n\nNgunit sinabi ni Ezekiel: 'magkakaroon ng napakaraming isda'\n\nMALALIM NA SIMBOLISMO:\nIto ay hindi lamang heograpikal na pagbabago. Ito ay ang PAGBABALIK NG SUMPA:\n1️⃣ Sa Eden, mayroong isang ilog na lumalabas mula sa hardin\n2️⃣ Pagkatapos ng Pagkahulog, ang lupa ay sinumpa - mga tagtuyot, mga disyerto, patay na mga dagat\n3️⃣ Sa Milenyo, ang ilog ay muling dumaloy mula sa presensya ng Diyos (ang bagong Templo sa Jerusalem)\n4️⃣ Sa bagong langit at bagong lupa, nakita ni Juan 'ang isang malinis na ilog ng tubig ng buhay'\n\nESPIRITWAL NA KATUPARAN NGAYON:\nSinabi ni Jesus sa Juan 7:37-38: 'Kung may nauuhaw, lumapit siya sa akin at uminom. Ang sumasampalataya sa akin... ay aagos mula sa kanyang loob ang mga ilog ng buhay na tubig.'",
+      "title": "Buhay na Tubig: Ang Pagpapanumbalik ng Eden",
+      "subtitle": "Zacarias 14:8 at ang paggaling ng Dagat na Patay",
+      "content": "Isa sa pinakamaganda at pinakamahiwagang detalye ng Zacarias 14 ay ang hidrolohikal na pagbabago:\n\nZacarias 14:8:\n'At mangyayari sa araw na iyon, na dadaloy mula sa Jerusalem ang buhay na tubig; kalahati nito ay patungo sa unang dagat, at kalahati nito ay patungo sa huling dagat: sa tag-init at sa taglamig ay ganito.'\n\n💧 PAGSUSURING HEOGRAPIKO:\n\n• UNANG DAGAT = Dagat na Patay (ang pinakamababang punto sa lupa, -430 metro mula sa antas ng dagat)\n\n• HULING DAGAT = Dagat Mediteraneo\n\nSa kasalukuyan, ang Jerusalem ay nasa kabundukan (760 metro mula sa antas ng dagat), walang likas na ilog. Ang paglabas ng buhay na tubig mula rito patungo sa PAREHONG dagat ay ganap na himalang heograpiko.\n\n🏞️ KAUGNAYAN SA EZEKIEL 47:\n\nNagkaroon si Ezekiel ng katulad na pangitain 70 taon bago pa nito:\n\n'Muli niya akong dinala sa pintuan ng Templo, at nakita kong dumaloy ang tubig mula sa ilalim ng hagdanan patungong silangan... Ang tubig na ito... papasok sa Dagat na Patay, at gagaling ang tubig na iyon. Ang bawat buhay na bagay na dinadaanan ng ilog na ito ay mabubuhay: at magkakaroon ng napakaraming isda.' (Ezekiel 47:1,8-9)\n\n🐟 MABUBUHAY ANG DAGAT NA PATAY:\n\nSa kasalukuyan, ang Dagat na Patay ay:\n\n• 10 beses na mas maalat kaysa sa karagatan\n• Walang isda o buhay-tubig\n• Tinawag sa Hebreo na יָם הַמֶּלַח, (Yam ha-Melaj) — 'Dagat ng Asin'\n\nNgunit sinasabi ni Ezekiel: 'magkakaroon ng napakaraming isda' at 'tatayo ang mga mangingisda sa tabi nito' (Ez 47:10).\n\n🌊 MALALIM NA SIMBOLISMO:\n\nHindi lang ito basta pagbabagong heograpiko. Ito ang PAGBABALIK NG SUMPA:\n\n1️⃣ Sa Eden, may ilog na dumadaloy mula sa hardin at nahahati sa apat na sanga (Genesis 2:10).\n\n2️⃣ Matapos ang Pagkahulog, isinumpa ang lupa — tagtuyot, disyerto, mga patay na dagat.\n\n3️⃣ Sa Milenyo, muling dadaloy ang ilog mula sa presensya ng Diyos (ang bagong Templo sa Jerusalem), pinapanumbalik ang lupa sa kanyang orihinal na kalagayan.\n\n4️⃣ Sa bagong langit at bagong lupa, nakita ni Juan ang 'isang ilog ng tubig na buhay, maningning gaya ng kristal, na dumadaloy mula sa trono ng Diyos' (Pahayag 22:1).\n\n✨ ISPIRITUWAL NA KATUPARAN NGAYON:\n\nSinabi ni Jesus sa Juan 7:37-38:\n'Kung sinuman ang nauuhaw, lumapit siya sa akin at uminom. Ang sumasampalataya sa akin, gaya ng sinasabi ng Kasulatan, dadaloy mula sa kanyang kaloob-looban ang mga ilog ng buhay na tubig.'\n\nAng magiging literal sa Milenyo ay ispirituwal na NGAYON. Ang Banal na Espiritu ay dumadaloy mula kay Cristo tungo sa mga mananampalataya, nagdadala ng buhay kung saan may kamatayan noon.",
       "hebrew_words": [
         {
           "word": "מַיִם חַיִּים",
           "transliteration": "Mayim Ḥayyim",
-          "meaning": "Buhay na mga tubig, nagbibigay-buhay na mga tubig",
-          "revelation": "Hindi ito nakatigil o kontaminadong tubig. Ito ay BUHAY na tubig - na umaagos, na naglilinis, na nagbibigay-buhay."
+          "meaning": "Buhay na tubig, tubig na nagbibigay-buhay",
+          "revelation": "Hindi ito naiipong o nadungisang tubig. Ito ay BUHAY na tubig — na dumadaloy, na naglilinis, na nagbibigay-buhay. Sinasagisag nito ang Banal na Espiritu na bumubukal mula sa trono ng Diyos."
         }
       ],
-      "revelation_key": "Ang pagpapanumbalik ng Diyos ay hindi bahagya. Kapag bumalik si Jesus, hindi lamang Niya ipapanumbalik ang mga kaluluwa - ipapanumbalik Niya ang BUONG PAGLIKHA."
+      "revelation_key": "Ang pagpapanumbalik ng Diyos ay hindi bahagya lamang. Kapag bumalik si Jesus, hindi lang Niya papanumbalikin ang mga kaluluwa — Kanyang papanumbalikin ang BUONG NILIKHA. Ang binuhay na Dagat na Patay ay isang tanda: kung saan naghahari si Cristo, LAHAT ay muling nabubuhay."
     },
+
     {
       "order": 5,
       "type": "chronological_sequence",
       "icon": "⏱️",
-      "title": "Ang Eskatolohikal na Pagkakasunud-sunod",
-      "subtitle": "Mula ngayon hanggang sa walang hanggang trono",
-      "content": "Upang maunawaan ang Zacarias 14 sa ganap na konteksto, kailangan nating tingnan ang pagkakasunud-sunod ng propetikong mga kaganapan:\n\nKUMPLETONG TIMELINE:\n\n1️⃣ ANG 'NGAYON' - ANG DAKILANG KOMISYON\n2️⃣ ANG PAGDAKIP - ANG PAGLILIGTAS\n3️⃣ ANG PAGHUHUKOM NI CRISTO - BEMA\n4️⃣ ANG KASALAN NG KORDERO\n5️⃣ ANG DAKILANG TRIBULASYON - 7 taon\n6️⃣ ANG IKALAWANG PAGDATING - ZACARIAS 14:3-5\n7️⃣ ANG PAGHUHUKOM NG MGA BANSA\n8️⃣ ANG MILENYO - ZACARIAS 14:9-21\n\nAng kasaysayan ay hindi sirkular, ito ay linear. May simula (Genesis 1), punto ng pagliligtas (ang Pagdakip), punto ng rurok (Zacarias 14), at huling destinasyon (Pahayag 21-22).",
+      "title": "Ang Kaayusang Eskatolohiko: Mula Ngayon Hanggang sa Walang-Hanggang Trono",
+      "subtitle": "Ang linya ng panahon mula sa Dakilang Atas hanggang sa Milenyo",
+      "content": "Upang maunawaan ang Zacarias 14 sa kanyang ganap na konteksto, kailangan nating makita ang sunod-sunod na propetikong mga pangyayari:\n\n📅 GANAP NA LINYA NG PANAHON:\n\n1️⃣ ANG 'NGAYON' — ANG DAKILANG ATAS (Mateo 24:14):\n• Sinabi ni Jesus: 'At ang mabuting balitang ito ng kaharian ay ipangangaral sa buong sanlibutan... at kung magkagayon ay darating ang wakas.'\n• Ang ating gawain ngayon: dalhin ang mabuting balita sa lahat ng bansa\n• Bawat taong naabot ay isang taong naiiligtas sa Dakilang Kapighatian\n\n2️⃣ ANG PAGSASALUKSOK — ANG PAGLIGTAS (1 Tesalonica 4:16-17):\n• Darating si Jesus PARA sa Kanyang mga banal (sa mga ulap, hindi hihipo ng lupa)\n• 'Sa isang iglap, sa isang kisap-mata' — biglaan, pandaigdig\n• 'Isa ang dadalhin, at ang isa ay maiiwan' (Mateo 24:40-41)\n• Katuparan ng pattern nina Noe at Lot: pagliligtas BAGO ang paghuhukom\n\n3️⃣ ANG HUKUMAN NI CRISTO — BEMA (2 Corinto 5:10):\n• Sa langit, tatanggap ng gantimpala ang mga mananampalataya\n• Hindi ito hukuman ng kaligtasan (naligtas na sila), kundi ng gantimpala\n• Mga korona: ng katuwiran, ng kagalakan, ng buhay, ng di-nasisira, ng kaluwalhatian\n• Ang sandaling makikita mo ang bunga ng iyong pangangaral sa Ebanghelyo\n\n4️⃣ ANG KASALAN NG KORDERO (Pahayag 19:7-9):\n• Habang dumadaan ang lupa sa Kapighatian, ang Iglesya ay nasa piging\n• Ang matalik na pagsasanib ni Cristo at ng Kanyang Nobya\n• Paghahanda upang bumalik bilang hukbong nadaramtan ng mainam na lino\n\n5️⃣ ANG DAKILANG KAPIGHATIAN (Mateo 24:21):\n• 7 taong nahahati sa dalawang bahaging 3.5 taon bawat isa\n• Unang kalahati: Kapighatian (mga tatak at mga trumpeta)\n• Ikalawang kalahati: Dakilang Kapighatian (mga tasa ng poot, ipahahayag ang Anticristo)\n• Inilalarawan ng Zacarias 14:1-2 ang rurok: lahat ng bansa laban sa Jerusalem\n\n6️⃣ ANG IKALAWANG PAGPARITO — ZACARIAS 14:3-5 (Pahayag 19:11-16):\n• Darating si Jesus KASAMA ang Kanyang mga banal (hindi na para sa kanila)\n• Hihipo ang Bundok ng mga Olibo — pisikal na paglapag\n• Mahahati ang bundok, lumilikha ng libis na daanang-takasan\n• Matatalo ang mga hukbo sa Armagedon\n• 'Makikita Siya ng bawat mata' — makikita ng buong sangkatauhan\n\n7️⃣ ANG PAGHUHUKOM SA MGA BANSA (Mateo 25:31-46):\n• Paghihiwalay ng mga tupa at mga kambing\n• Batay sa kung paano nila trinato ang bayan ng Diyos noong panahon ng Kapighatian\n• Ang mga papasa ay papasok sa Milenyo bilang pisikal na nilalang\n\n8️⃣ ANG MILENYO — ZACARIAS 14:9-21 (Pahayag 20:4-6):\n• Maghahari si Jesus sa loob ng 1,000 taon mula sa Jerusalem\n• Ang mga niluwalhating banal (tayo) ay mamamahala kasama Niya\n• Papanumbalikin ang lupa (mabubuhay ang Dagat na Patay)\n• Aakyat ang mga bansa upang ipagdiwang ang Pista ng mga Kubol\n• Kapayapaan sa buong daigdig sa ilalim ng setro ng matuwid na Hari\n\n⚠️ TALA TUNGKOL SA PAGSASALUKSOK — TATLONG PANANAW:\n\nMayroong tatlong pangunahing interpretasyon tungkol sa KAILAN mangyayari ang Pagsasaluksok:\n\n• PRE-TRIBULASYONAL: Bago ang 7 taon (paniniwala ng karamihang ebanghelikal)\n• MID-TRIBULASYONAL: Sa gitna (3.5 taon)\n• POST-TRIBULASYONAL: Matapos ang 7 taon (iisang pangyayari ang Pagsasaluksok at ang Ikalawang Pagparito)\n\nAng pananaw na Pre-tribulasyonal ay nakabatay sa:\n1. Ang pattern sa Bibliya: Inililigtas ng Diyos ang mga matuwid BAGO ang paghuhukom (Noe, Lot)\n2. 1 Tesalonica 5:9: 'Sapagkat hindi tayo itinalaga ng Diyos sa Kanyang poot'\n3. Zacarias 14:5: 'darating si YHWH na aking Diyos, at ang lahat ng banal KASAMA mo' — upang dumating KASAMA Niya, kailangan muna nating pumunta SA Kanya",
       "scripture_connections": [
         {
           "reference": "Mateo 24:45-47",
-          "text": "\"Sino ang tapat at matalinong alipin? Hindi ba't ang pinamamahala ng kanyang panginoon upang magpakain sa iba pang mga alipin sa takdang oras? Mapalad ang aliping iyon kapag dinatnan siyang tapat na naglilingkod sa pagbabalik ng kanyang panginoon! Sinasabi ko sa inyo, gagawin siyang tagapamahala ng kanyang panginoon sa lahat ng mga ari-arian nito.\""
+          "text": "Sino ang tapat at matalinong alipin? Hindi ba't ang pinamamahala ng kanyang panginoon upang magpakain sa iba pang mga alipin sa takdang oras? Mapalad ang aliping iyon kapag dinatnan siyang tapat na naglilingkod sa pagbabalik ng kanyang panginoon! Sinasabi ko sa inyo, gagawin siyang tagapamahala ng kanyang panginoon sa lahat ng mga ari-arian nito."
         },
         {
           "reference": "Lucas 19:17",
@@ -111,24 +116,26 @@
           "text": "Mapalad at lubos na pinagpala ang mga nakasama sa unang pagbuhay sa mga patay. Walang kapangyarihan sa kanila ang pangalawang kamatayan; sila'y magiging mga pari ng Diyos at ni Cristo, at maghahari silang kasama niya sa loob ng sanlibong taon."
         }
       ],
-      "revelation_key": "Ang lahat ay gumagalaw tungo sa araw na tatapat ang Kanyang mga paa sa Bundok ng mga Olibo."
+      "revelation_key": "Ang kasaysayan ay hindi umiikot, ito ay dumadaloy nang tuwid. May pinagmulang punto (Genesis 1), may punto ng pagliligtas (ang Pagsasaluksok), may punto ng rurok (Zacarias 14), at may huling patutunguhan (Pahayag 21-22). Lahat ay dumadaloy tungo sa araw na hihipo ng Kanyang mga paa ang Bundok ng mga Olibo."
     },
+
     {
       "order": 6,
       "type": "new_testament_fulfillment",
       "icon": "🔗",
-      "title": "Ang Perpektong Koneksyon: Zacarias 14 at ang Bagong Tipan",
+      "title": "Ang Ganap na Kaugnayan: Zacarias 14 at ang Bagong Tipan",
       "subtitle": "Paano pinatunayan ng Gawa 1 ang propesiya ni Zacarias",
-      "content": "Ang koneksyon sa pagitan ng Zacarias 14 at ng Bagong Tipan ay napaka-eksakto na hindi ito maaaring pagkakataon.\n\nGAWA 1:9-12 - ANG PAG-AKYAT:\n'At habang tumitingin sila, dinala siya sa itaas, at natakpan siya ng ulap... Sinabi ng dalawang lalaki: \"Ang Jesus na ito, na dinala sa itaas mula sa inyo patungo sa langit, ay darating sa ganoon ding paraan gaya ng nakita ninyo siyang umalis.\"'\n\nDETALYADONG PAGSUSURI:\n1️⃣ LUGAR NG PAG-ALIS: Bundok ng mga Olibo\n2️⃣ PANGAKO NG ANGHEL: 'Darating sa ganoon ding paraan'\n3️⃣ IMPLIKASYON: Kung umalis Siya nang PISIKAL mula sa Bundok ng mga Olibo, babalik Siya nang PISIKAL sa Bundok ng mga Olibo\n\nAng propetikong katumpakan ng Zacarias: Hindi sinabi ng Zacarias na 'babalik ang Mesiyas sa Israel'. Sinabi niya 'ang Kanyang mga paa ay tatayo sa BUNDOK NG MGA OLIBO'. Ang heograpikal na katumpakan na iyon ay hindi maaaring pagkakataon.",
-      "revelation_key": "Ang Bibliya ay hindi koleksyon ng mga hiwalay na kuwento. Ito ay isang PROPETIKONG TAPESTRY kung saan bawat sinulid ay konektado."
+      "content": "Ang kaugnayan ng Zacarias 14 at ng Bagong Tipan ay napakatumpak kaya't hindi ito maaaring pagkakataon lamang:\n\n⛰️ GAWA 1:9-12 — ANG PAG-AKYAT SA LANGIT:\n\n'At pagkasabi niya nito, siya'y itinaas habang nakatingin sila, at natakpan siya ng ulap mula sa kanilang paningin. Habang nakatitig sila sa langit noong umaakyat siya, biglang may dalawang lalaking nakaputi ang kasuotan na tumayo sa kanilang tabi at nagsabi, \"Mga taga-Galilea, bakit kayo nakatingala sa langit? Ang Jesus na ito na inakyat mula sa inyo patungong langit ay babalik NA GAYON DING PARAAN na nakita ninyo siyang umakyat sa langit.\" Nagbalik sila sa Jerusalem mula sa bundok na tinatawag na Olibo, na malapit sa Jerusalem.'\n\n🔍 DETALYADONG PAGSUSURI:\n\n1️⃣ LUGAR NG PAG-ALIS: Bundok ng mga Olibo\n\n2️⃣ PANGAKONG ANGHELIKO: 'Babalik na GAYON DING PARAAN na nakita ninyo siyang umalis'\n\n3️⃣ IMPLIKASYON: Kung Siya ay umalis nang PISIKAL mula sa Bundok ng mga Olibo, babalik Siya nang PISIKAL sa Bundok ng mga Olibo\n\n📊 TABLANG PAGHAHAMBING:\n\n| PANGYAYARI | ZACARIAS 14 | BAGONG TIPAN |\n|--------|-------------|------------------|\n| Tiyak na lugar | Bundok ng mga Olibo (t.4) | Bundok ng mga Olibo (Gawa 1:12) |\n| Pisikal na kilos | 'Tatayo ang Kanyang mga paa' (t.4) | 'Gayon ding paraan na nakita ninyo siyang umalis' (Gawa 1:11) |\n| Kasamahan | 'Lahat ng banal kasama Mo' (t.5) | 'Mga hukbo ng langit' (Pah 19:14) |\n| Natatanging liwanag | 'Isang araw na kilala kay YHWH, hindi araw ni gabi' (t.7) | 'Hindi na kailangan ang araw ng lungsod' (Pah 21:23) |\n| Buhay na tubig | 'Dadaloy ang buhay na tubig mula sa Jerusalem' (t.8) | 'Isang malinis na ilog ng tubig ng buhay' (Pah 22:1) |\n| Mga salot | Laban sa mga kaaway (t.12-15) | Pagkatalo sa Armagedon (Pah 19:15-21) |\n| Unibersal na Kaharian | 'Si YHWH ang magiging hari sa buong lupa' (t.9) | 'Maghahari siya magpakailanman' (Pah 11:15) |\n\n🎯 ANG PROPETIKONG KATUMPAKAN:\n\nIsinulat ito ni Zacarias mga 400-450 taon BAGO si Cristo.\n\nHindi niya sinabing 'babalik ang Mesiyas sa Israel'.\nSinabi niya, 'tatayo ang Kanyang mga paa sa BUNDOK NG MGA OLIBO'.\n\nHindi maaaring pagkakataon lamang ang katumpakang heograpikong iyon. Ito ang selyo ng Diyos: 'Ipinahahayag ko ang wakas mula sa simula, at mula pa noong sinauna ang mga bagay na hindi pa nagaganap' (Isaias 46:10).\n\n✝️ PINATUNAYAN NI JESUS ANG PROPESIYA:\n\nSinipi mismo ni Jesus si Zacarias ng maraming beses:\n\n• Zacarias 9:9 — Matagumpay na pagpasok sakay ng asno (Mateo 21:5)\n• Zacarias 13:7 — 'Sasaktan ko ang pastol' sa Getsemani (Mateo 26:31)\n• Zacarias 12:10 — 'Titingnan nila ako, ang kanilang sinaksak' (Juan 19:37)\n\nKung pinatunayan ni Jesus ang kabanata 9, 12, at 13 ng Zacarias bilang literal na propesiya, bakit magiging iba ang kabanata 14?\n\n🌟 DALAWANG BESES NA KATUPARAN:\n\nMaraming eskolar ang nakakakita ng pattern ng 'dalawang beses na katuparan':\n\n• UNANG PAGPARITO: Dumating si Jesus bilang mapagpakumbabang Kordero (Zacarias 9:9)\n\n• IKALAWANG PAGPARITO: Darating si Jesus bilang nagtatagumpay na Leon (Zacarias 14:3)\n\nParehong nasa PAREHONG aklat na propetiko, pinatunayan ng PAREHONG Espiritu, natupad ng PAREHONG Jesus.",
+      "revelation_key": "Ang Bibliya ay hindi koleksyon ng mga kuwentong hindi magkaugnay. Ito ay isang PROPETIKONG TAPIS kung saan bawat sinulid ay nag-uugnay. Ang Zacarias 14 ay hindi katapusan ng isang sinaunang aklat; ito ang SCRIPT ng pangyayaring darating."
     },
+
     {
       "order": 7,
       "type": "millennial_transformation",
       "icon": "🌍",
-      "title": "Ang Pista ng mga Tabernakulo: Pandaigdigang Pagsamba",
-      "subtitle": "Zacarias 14:16-21 - Ang binagong mundo",
-      "content": "Pagkatapos ng labanan at ng tagumpay, inilalarawan ni Zacarias kung paano magiging pag-andar ang mundo sa ilalim ng paghahari ng Mesiyas:\n\nZacarias 14:16: 'At mangyayari, na bawat isa na natitira sa lahat ng mga bansa... ay aakyat taun-taon upang sambahin ang Hari, ang PANGINOON ng mga hukbo, at ipagdiwang ang pista ng mga tabernakulo.'\n\nBAKIT ANG PISTA NG MGA TABERNAKULO (SUKKOT)?\nAng Sukkot (סֻכּוֹת, (Çukkôwth) (H5523)) ay nangangahulugang 'tahanan'. Ito ay:\n1️⃣ PAGGUNITA: Noong nanirahan ang Diyos kasama ng Israel sa ilang\n2️⃣ SUMISIMBOLO: Ang presensya ng Diyos na nanirahan KASAMA ng Kanyang mga tao\n3️⃣ KATUPARAN: Sinabi ni Juan 1:14 'Ang Verbo ay nagkatawang-tao, at NANIRAHAN sa gitna natin'\n4️⃣ PROPESIYA: Pahayag 21:3 - 'Narito, ang tabernakulo ng Diyos ay kasama ng mga tao'\n\n'KABANALAN PARA SA PANGINOON' - KAHIT SA MGA KAMPANA (vv.20-21):\nSa araw na iyon, kahit ang mga kampana ng mga kabayo ay may nakasulat na 'KABANALAN PARA SA PANGINOON'. Ang mga kaldero sa kusina ay magiging kasing-banal ng mga sisidlan ng altar.\n\nITO AY REBOLUSYONARYO:\nKasalukuyan may 'paghihiwalay' sa pagitan ng banal at karaniwan. NGUNIT SA MILENYO, ang LAHAT ay magiging banal dahil ang Banal na Hari ay naghahari sa LAHAT.",
+      "title": "Ang Pista ng mga Kubol: Unibersal na Pagsamba",
+      "subtitle": "Zacarias 14:16-21 — Ang binagong mundo",
+      "content": "Matapos ang labanan at ang tagumpay, inilarawan ni Zacarias kung paano gagana ang mundo sa ilalim ng paghahari ng Mesiyas:\n\nZacarias 14:16:\n'At mangyayari na ang bawat matitirang buhay mula sa lahat ng bansang lumusob sa Jerusalem ay aakyat taon-taon upang sambahin ang Hari, si Yahweh ng mga hukbo, at upang ipagdiwang ang pista ng mga kubol.'\n\n🏕️ BAKIT ANG PISTA NG MGA KUBOL (SUKOT)?\n\nSa lahat ng pista ng mga Judio (Paskuwa, Pentekostes, Yom Kippur, at iba pa), ang Sukot mismo ang tiyak na hinihiling ng Diyos. Bakit?\n\nANG SUKOT (סֻכּוֹת, (Çukkôwth) (H5523)) AY NANGANGAHULUGANG 'TIRAHAN':\n\n1️⃣ GINUGUNITA: Nang manirahan ang Diyos kasama ang Israel sa disyerto sa ulap ng kaluwalhatian (Shekinah)\n\n2️⃣ SINASAGISAG: Ang presensya ng Diyos na naninirahan KASAMA ng Kanyang bayan\n\n3️⃣ KATUPARAN: Sinasabi ng Juan 1:14 na 'Ang Salita ay naging tao at NANIRAHAN (eskēnōsen — literal na 'nagtayo ng tolda') sa piling namin'\n\n4️⃣ PROPESIYA: Pahayag 21:3 — 'Narito, ang tahanan ng Diyos ay nasa piling ng mga tao, at maninirahan Siyang kasama nila'\n\nAng Pista ng mga Kubol ay ang pagdiriwang ng KATUPARAN ng pangako mula sa Genesis: 'Naglalakad ang Diyos sa hardin sa kahinahunan ng araw' (Genesis 3:8). Nais ng Diyos na manirahang kasama ng tao. Sinira ito ng kasalanan. Pinapanumbalik ito ni Jesus.\n\n🌧️ ANG BUNGA NG HINDI PAG-AKYAT (talata 17-19):\n\n'At mangyayari na sinuman sa mga angkan ng lupa na hindi aakyat sa Jerusalem upang sambahin ang Hari, si Yahweh ng mga hukbo, ay hindi babagsakan ng ulan.'\n\nHindi ito paniniil na tirano. Ito ay LIKAS NA BUNGA:\n\n• Sinasagisag ng ulan sa Bibliya ang pagpapala, pagkakaloob, ang Banal na Espiritu\n• Kung tanggihan ng isang bansa ang Hari, itinatanggi nito para sa kanyang sarili ang bukal ng buhay\n• Hindi ito arbitraryong parusa; ito ay ispirituwal na sanhi at bunga\n\n🔔 'BANAL PARA KAY YAHWEH' — MAGING SA MGA KAMPANILYA (talata 20-21):\n\n'Sa araw na iyon, mauukit sa mga kampanilya ng mga kabayo ang: BANAL PARA KAY YAHWEH; at ang mga palayok sa tahanan ni Yahweh ay magiging tulad ng mga mangkok sa harap ng dambana. Oo, bawat palayok sa Jerusalem at sa Juda ay magiging banal para kay Yahweh ng mga hukbo.'\n\n🤯 ITO AY REBOLUSYONARYO:\n\nSa kasalukuyan, may 'paghihiwalay' sa pagitan ng banal at pangkaraniwan:\n\n• Ang mga sisidlan ng templo ay 'banal'\n• Ang mga palayok sa kusina ay 'pangkaraniwan'\n• Ang pagkasaserdote ay 'banal'\n• Ang sekular na gawain ay 'pangkaraniwan'\n\nNGUNIT SA MILENYO:\n\n• Ang mga kampanilya ng mga kabayo (para sa gamit militar) ay magiging 'BANAL PARA KAY YAHWEH'\n• Ang mga palayok sa kusina ay magiging kasingbanal ng mga sisidlan sa dambana\n• Ang BUONG sansinukob ay magiging BANAL\n\nWala nang paghihiwalay sa pagitan ng 'sekular' at 'banal'. LAHAT ay magiging banal sapagkat naghahari ang Banal na Hari sa LAHAT.\n\n🌐 BINAGONG HEOGRAPIYA (talata 10):\n\n'Ang buong lupain ay magiging kapatagan mula sa Geba hanggang sa Rimon sa timog ng Jerusalem: at ito ay itataas at patuloy na titirahan sa dating kinatatayuan nito.'\n\nAng Jerusalem ay pisikal na ITATAAS habang ang natitirang lupa ay magiging kapatagan. Natutupad nito ang:\n\n• Isaias 2:2: 'At mangyayari sa mga darating na araw, na ang bundok na kinatatayuan ng Templo ni Yahweh ang magiging pinakamataas sa lahat ng bundok, at mamumukod sa lahat ng burol.'\n\nMagiging LITERAL itong pinakamataas na punto sa lupa, makikita mula sa lahat ng direksyon, nakaturo sa langit: 'Narito ang Hari'.",
       "scripture_connections": [
         {
           "reference": "Juan 1:14",
@@ -136,95 +143,99 @@
         },
         {
           "reference": "Pahayag 21:3",
-          "text": "Narinig ko ang isang malakas na tinig mula sa trono, “Tingnan ninyo, ang tahanan ng Diyos ay nasa piling na ng mga tao! Maninirahan siyang kasama nila, at sila'y magiging bayan niya. Makakapiling nilang palagi ang Diyos at siya ang magiging Diyos nila."
+          "text": "Narinig ko ang isang malakas na tinig mula sa trono, \"Tingnan ninyo, ang tahanan ng Diyos ay nasa piling na ng mga tao! Maninirahan siyang kasama nila, at sila'y magiging bayan niya. Makakapiling nilang palagi ang Diyos at siya ang magiging Diyos nila.\""
         },
         {
           "reference": "Isaias 2:2-3",
-          "text": "Sa mga darating na araw, ang bundok na kinatatayuan ng Templo ni Yahweh ang magiging pinakamataas sa lahat ng bundok, at mamumukod sa lahat ng burol, daragsa sa kanya ang lahat ng bansa. Maraming tao ang darating at sasabihin ang ganito: “Umakyat tayo sa bundok ni Yahweh, sa Templo ng Diyos ni Jacob, upang maituro niya sa atin ang kanyang mga daan; at matuto tayong lumakad sa kanyang mga landas. Sapagkat sa Zion magmumula ang kautusan, at sa Jerusalem, ang salita ni Yahweh.”"
+          "text": "Sa mga darating na araw, ang bundok na kinatatayuan ng Templo ni Yahweh ang magiging pinakamataas sa lahat ng bundok, at mamumukod sa lahat ng burol, daragsa sa kanya ang lahat ng bansa. Maraming tao ang darating at sasabihin ang ganito: \"Umakyat tayo sa bundok ni Yahweh, sa Templo ng Diyos ni Jacob, upang maituro niya sa atin ang kanyang mga daan; at matuto tayong lumakad sa kanyang mga landas. Sapagkat sa Zion magmumula ang kautusan, at sa Jerusalem, ang salita ni Yahweh.\""
         }
       ],
-      "revelation_key": "Ang Milenyo ay hindi lamang 'kapayapaan sa mundo' o 'pang-ekonomiyang kasaganaan'. Ito ay ang PAGPAPANUMBALIK ng orihinal na pakikipag-ugnayan sa pagitan ng Diyos at tao."
+      "revelation_key": "Ang Milenyo ay hindi lang 'kapayapaan sa daigdig' o 'kasaganaan sa ekonomiya'. Ito ang PAGPAPANUMBALIK ng orihinal na pakikisama ng Diyos at ng tao, ng langit at ng lupa. Ito ay UNIBERSAL na Eden sa ilalim ng ganap na Hari."
     },
+
     {
       "order": 8,
       "type": "personal_application",
       "icon": "💎",
-      "title": "Ang Ating Tungkulin sa Milenyo: Mga Gantimpala at Gawain",
-      "subtitle": "Ano ang gagawin natin kapag bumalik tayo kasama Niya",
-      "content": "Ang pinaka-praktikal na tanong ay: Ano ang gagawin NATIN (ang mga dinakip) kapag bumalik tayo kasama ni Jesus sa Zacarias 14?\n\nANG MGA GANTIMPALA NG PAGHUHUKOM NI CRISTO:\nBago bumalik sa lupa, dadaan tayo sa Bema kung saan tatanggap tayo ng mga gantimpala ayon sa ating mga gawa:\n\n🏆 ANG LIMANG KORONA:\n1️⃣ Koronang Hindi Nasisira\n2️⃣ Korona ng Kagalakan\n3️⃣ Korona ng Katuwiran\n4️⃣ Korona ng Buhay\n5️⃣ Korona ng Kaluwalhatian\n\n🏛️ IPINAGKATIWALAANG AWTORIDAD - PAGHAHARI NG MGA LUNGSOD:\nLucas 19:17-19: 'Mabuti, mabuting alipin... magkaroon ka ng awtoridad sa sampung lungsod'\n\nAng katapatan NGAYON ay tumutukoy sa responsibilidad NOON.\n\n💬 1 TESALONICA 2:19:\n'Sapagkat ano ang ating pag-asa, o kagalakan, o korona ng pagmamapuri? Hindi ba kayo sa presensya ng ating Panginoong Jesu-Cristo sa kanyang pagdating?'\n\nAng PINAKAMALAKING gantimpala (higit pa sa mga korona o mga lungsod) ay ang pakikipagtagpo sa mga dinala mo kay Cristo.",
-      "identity_statement": "Hindi ka naligtas upang lamang 'pumunta sa langit'. Naligtas ka upang MAGHARI kasama ni Cristo. Ikaw ay isang hari/reyna na nasa pagsasanay.",
-      "revelation_key": "Ang Pagdakip ay hindi ang katapusan ng iyong kuwento; ito ay ang SIMULA ng iyong tunay na bokasyon."
+      "title": "Ang Ating Tungkulin sa Milenyo: Mga Gantimpala at mga Gawain",
+      "subtitle": "Ano ang gagawin natin kapag bumalik tayong kasama Niya",
+      "content": "Ang pinakamahalagang tanong ay: Ano ang gagawin NATIN (yaong nasaluksok) kapag bumalik tayong kasama ni Jesus sa Zacarias 14?\n\n👑 ANG MGA GANTIMPALA SA HUKUMAN NI CRISTO:\n\nBago bumalik sa lupa, dadaan tayo sa Bema (hukuman) kung saan tatanggap tayo ng gantimpala ayon sa ating mga gawa:\n\n🏆 ANG LIMANG KORONA:\n\n1️⃣ Koronang Di-Nasisira (1 Corinto 9:25): Para sa mga nagpipigil sa kanilang laman\n\n2️⃣ Korona ng Kagalakan (1 Tesalonica 2:19): Para sa mga nagwagi ng kaluluwa\n\n3️⃣ Korona ng Katuwiran (2 Timoteo 4:8): Para sa mga nagmamahal sa Kanyang pagpapakita\n\n4️⃣ Korona ng Buhay (Santiago 1:12): Para sa mga nagtitiis ng tukso\n\n5️⃣ Korona ng Kaluwalhatian (1 Pedro 5:4): Para sa mga tapat na pastol\n\n🏛️ IPINAGKATIWALANG AWTORIDAD — PAMAMAHALA NG MGA LUNSOD:\n\nLucas 19:17-19 (Talinghaga ng mga Salaping Ibinigay):\n'Magaling, mabuting alipin! Dahil naging tapat ka sa kakaunting ipinagkatiwala sa iyo, pamamahalain kita sa sampung lunsod... Sinabi niya rin sa isa pa, Ikaw naman ay mamahala sa limang lunsod.'\n\n🔑 IMPLIKASYON:\n\n• Ang katapatan NGAYON ang nagtatakda ng pananagutan SA HINAHARAP\n• Kung ikaw ay naging tapat sa 'kaunti' (salapi, oras, kaloob), ipagkakatiwala sa iyo ni Jesus ang 'marami' (mga lunsod, mga bansa)\n• Hindi lahat ay magkakaroon ng parehong antas ng awtoridad sa Milenyo\n• Ang mga gantimpala ay UMAAYON sa antas ng paglilingkod\n\n⚖️ PAGHUHUKOM SA MUNDO:\n\n1 Corinto 6:2-3:\n'Hindi ba ninyo alam na ang mga banal ang maghuhukom sa mundo?... Hindi ba ninyo alam na tayo rin ang maghuhukom sa mga anghel?'\n\nMagkakaroon tayo ng gawaing pangasiwaan at panghukuman sa bagong kaayusan ng daigdig.\n\n📚 PAGTUTURO SA MGA BANSA:\n\nBilang 'mga pari ng Diyos at ni Cristo' (Pahayag 20:6), ang ating gawain ay:\n\n• Turuan ang mga bansang nakaligtas sa Kapighatian na sambahin ang Hari\n• Ipaliwanag ang Kasulatan at ang Torah ng Mesiyas\n• Iugnay ang pisikal na sangkatauhan sa makalangit na Hari\n• Maglingkod bilang 'mga embahador' sa pagitan ng langit at lupa\n\n🌍 PAGPAPANUMBALIK NG LUPA:\n\nDahil masisira ang mundo sa Kapighatian, makikibahagi tayo sa:\n\n• Pagpapanumbalik ng kalikasan sa ilalim ng utos ni Cristo\n• Pagpapatupad ng ganap na katarungan\n• Pagtanggal ng kahirapan, karamdaman, digmaan\n\n👥 ANG PAGKIKITA SA MGA BUNGA NG IYONG PAGLILINGKOD:\n\nAng PINAKADAKILANG gantimpala (higit pa sa mga korona o mga lunsod) ay ang pagkikita sa mga taong dinala mo kay Cristo:\n\n• Mga taong naligtas dahil ibinahagi mo sa kanila ang Ebanghelyo\n• May mga kasama mo (nasaluksok din sila)\n• May mga nakaligtas sa Kapighatian dahil naaalala nila ang iyong mga sinabi\n• Magpapasalamat sila sa iyo nang harapan sa harap ng trono\n\n💬 1 Tesalonica 2:19:\n'Sapagkat ano ang ating pag-asa, kagalakan, o koronang ipagmamalaki? Hindi ba kayo iyon sa harap ng ating Panginoong Jesu-Cristo, sa Kanyang pagparito?'\n\n🎯 PRAKTIKAL NA APLIKASYON NGAYON:\n\nKung mamamahala ka ng mga lunsod SA HINAHARAP, sinasanay ka ng Diyos NGAYON:\n\n• Tapat ka ba sa iyong pamilya? Iyan ang iyong kasalukuyang 'lunsod'\n• Maayos mo bang pinamamahalaan ang iyong salapi? Iyan ang iyong kasalukuyang 'ekonomiya'\n• Ibinabahagi mo ba ang Ebanghelyo? Iyan ang iyong kasalukuyang 'ministeryo'\n• Lumalago ka ba sa katangian? Iyan ang iyong kasalukuyang 'kaharian'\n\nAng ginagawa mo sa lihim ngayon ang magtatakda ng gagawin mo sa hayagan bukas.",
+      "identity_statement": "Hindi ka lang inililigtas upang 'pumunta sa langit'. Inililigtas ka upang MAGHARI kasama ni Cristo. Ikaw ay isang haring/reynang sinasanay. Ang iyong katapatan ngayon ang iyong resumeng magsisilbi sa Milenyo.",
+      "revelation_key": "Ang Pagsasaluksok ay hindi katapusan ng iyong kasaysayan; ito ang SIMULA ng iyong tunay na tungkulin. Ikaw ay ginawa upang maghari, mamahala, magturo, at magpanumbalik sa ilalim ng Hari ng mga hari. Ang buhay na walang-hanggan ay hindi katamlayan; ito ay maluwalhating gawain na walang katapusan."
     },
+
     {
       "order": 9,
       "type": "discovery_activation",
       "icon": "🙏",
-      "title": "Personal na Pagtuklas: Pamumuhay na May Walang Hanggang Kadalian",
+      "title": "Personal na Pagtuklas: Namumuhay sa Walang-Hanggang Pagkaapurahan",
       "discovery_questions": [
         {
-          "category": "Ebanghelistikong Kadalian",
-          "question": "Kung maaaring mangyari ang Pagdakip anumang sandali, namumuhay ka ba ng may kadalian para sa mga nawalang kaluluwa?"
+          "category": "Pagkaapurahan sa Pagpapatotoo",
+          "question": "Kung ang Pagsasaluksok ay maaaring maganap anumang sandali at ang bunga nito ay napakaluwalhati para sa iba ngunit napakahirap para sa iba (Zacarias 14), namumuhay ka ba nang may pagkaapurahan para sa mga naliligaw na kaluluwa? Kanino ka kailangang makipag-usap ngayong LINGGO tungkol kay Jesus?"
         },
         {
           "category": "Katapatan sa Kaunti",
-          "question": "Tapat ka ba sa 'kaunti' na ibinigay sa iyo ng Diyos ngayon (oras, pera, talento, impluwensya)?"
+          "question": "Sinasabi ni Jesus na sa Milenyo ay ipagkakatiwala Niya sa iyo ang 'lahat ng Kanyang ari-arian' kung matagpuan kang tapat. Ikaw ba ay tapat sa 'kaunti' na ibinigay na ng Diyos sa iyo ngayon (oras, salapi, talento, impluwensya)? Anong bahagi ng iyong buhay ang kailangan mong pamahalaang mas mabuti bilang pagsasanay para sa kaharian?"
         },
         {
           "category": "Pag-asam sa Kanyang Pagbabalik",
-          "question": "Umiibig ka ba sa pagpapakita ni Cristo? O ang ideya ng Kanyang pagbabalik ay nagbibigay sa iyo ng mas maraming takot kaysa kagalakan?"
+          "question": "Minamahal mo ba ang pagpapakita ni Cristo? O ang ideya ng Kanyang pagbabalik ay nagdudulot sa iyo ng higit na takot kaysa kagalakan? Kung nararamdaman mo ang takot, anong bahagi ng iyong buhay ang kailangan mong isuko sa Kanya ngayon?"
         },
         {
-          "category": "Ang Nagsasalitang Asno",
-          "question": "Sa kuwento na napag-aralan mo dati (Nang Nakita ng Asno ang Anghel at Ang Propeta ay Bulag), gumamit ang Diyos ng isang asno upang pigilin ang isang propetang binulag ng kasakiman. May isang bagay ba sa iyong buhay na 'binubulag mo nang madalas' nang hindi mo napapansin na hinaharangan ng Diyos ang landas na iyon upang protektahan ka?"
+          "category": "Ang Asnong Nagsalita",
+          "question": "Sa kuwentong pinag-aralan mo noon (Nang Nakita ng Asno ang Anghel at Ang Propeta ay Bulag), ginamit ng Diyos ang isang asno upang pigilan ang isang propetang nabulag ng kasakiman. May bagay ba sa iyong buhay na paulit-ulit mong 'pinapalo' nang hindi mo namamalayang hinaharangan ka ng Diyos upang ingatan ka? Anong 'asno' ang inilagay ng Diyos sa iyong buhay upang panatilihin kang mapagpakumbaba?"
         }
       ],
       "prayer": {
-        "title": "Panalangin ng Pag-asa at Paglaan",
-        "content": "Amang nasa langit, YHWH na aming Hari,\n\nSalamat sa Iyo sa paghahayag sa Iyong Salita ng kung ano ang darating. Salamat dahil ang kasaysayan ay hindi walang kahulugang bilog, kundi isang linya na gumagalaw tungo sa maluwalhating araw na tatapat ang Iyong mga paa sa Bundok ng mga Olibo.\n\nPanginoong Jesus, nananabik ako sa Iyo. Nawa ang aking puso ay sumigaw kasama ng Espiritu at ng Kasintahan: 'Halika!' Tulungan akong mabuhay bawat araw na parang ito ang huling bago ng Iyong pagbabalik.\n\nPatawarin Mo ako kung ako ay naging walang malasakit sa walang hanggang kapalaran ng mga nakapaligid sa akin. Bigyan Mo ako ng kadalian para sa mga kaluluwa.\n\nAma, ihanda Mo ako para sa araw na babalik kami kasama Mo mula sa langit patungo sa lupa. Nawa ang aking buhay ngayon ay maging tapat na pagsasanay para sa kaharian na papangasiwaan ko kasama Mo.\n\nHanggang sa araw na iyon, panatilihin Mo akong tapat. Hanggang sa araw na iyon, gamitin Mo ako para sa Iyong kaluwalhatian.\n\nHalika na, Panginoong Jesus. Maranatha.\n\nSa Iyong makapangyarihang pangalan, ang pangalang higit sa lahat ng pangalan, ang pangalang luluhod ang bawat tuhod.\n\nAmen."
+        "title": "Panalangin ng Pag-asa at Pag-aalay",
+        "content": "Amang nasa Langit, YHWH na aming Hari,\n\nSalamat sa paghahayag Mo sa Iyong Salita ng mga bagay na darating. Salamat sapagkat ang kasaysayan ay hindi walang-kahulugang pag-ikot, kundi isang landas na dumadaloy tungo sa maluwalhating araw na hihipo ng Iyong mga paa ang Bundok ng mga Olibo.\n\nPanginoong Jesus, hinahangad Kita. Nawa'y sumigaw ang aking puso kasama ng Espiritu at ng Nobya: 'Halina!' Tulungan Mo akong mamuhay bawat araw na parang ito na ang huling araw bago ang Iyong pagbabalik.\n\nPatawarin Mo ako kung ako ay naging walang-malasakit sa walang-hanggang kapalaran ng mga taong nasa palibot ko. Bigyan Mo ako ng pagkaapurahan para sa mga kaluluwa. Kapag Ikaw ay dumating, sana'y matagpuan Mo akong 'nagbibigay ng pagkain sa takdang oras', ibinabahagi ang mabuting balita nang may katapangan at pagmamahal.\n\nAma, ihanda Mo ako sa araw na babalik kami kasama Mo mula sa langit patungong lupa. Nawa'y ang aking buhay ngayon — sa lihim, sa maliliit na bagay, sa pangkaraniwang sandali — ay maging tapat na pagsasanay para sa kahariang pamamahalaan kong kasama Mo.\n\nAlisin Mo sa akin ang kasakiman sa mga bagay ng mundong ito. Nawa'y hindi ko mahalin ang 'ginto ng Moab' tulad ni Balaam, kundi mahalin Kita nang higit sa lahat ng katanyagan, katungkulan, o kayamanan.\n\nPanginoon, kapag dumating ang araw na iyon — kapag mahati ang bundok, kapag mabuhay ang Dagat na Patay, kapag umakyat ang lahat ng bansa upang sambahin Ka — nais kong kabilang sa mga babalik na kasama Mo, nadaramtan ng mainam na lino. Nais kong marinig ang Iyong tinig na nagsasabing, 'Magaling, mabuti at tapat na alipin... pumasok ka sa kagalakan ng iyong Panginoon.'\n\nHanggang sa araw na iyon, panatilihin Mo akong tapat. Hanggang sa araw na iyon, gamitin Mo ako para sa Iyong kaluwalhatian. Hanggang sa araw na iyon, nawa'y ang aking buhay ay maging ilaw na nagtuturo tungo sa Iyo.\n\nHalina Ka na, Panginoong Jesus. Maranatha.\n\nSa Iyong makapangyarihang pangalan, ang pangalang higit sa lahat ng pangalan, ang pangalang lalaluhod ang bawat tuhod.\n\nAmen."
       },
       "action_steps": [
         {
-          "title": "Listahan ng Panalangin para sa mga Nawala",
-          "description": "Isulat ang mga pangalan ng 5 taong hindi kilala si Jesus. Manalangin para sa kanila araw-araw."
+          "title": "Listahan ng Panalangin para sa mga Naliligaw",
+          "description": "Isulat ang mga pangalan ng 5 taong hindi pa kilala si Jesus. Ipanalangin sila araw-araw at hilingin sa Banal na Espiritu ang pagkakataong maibahagi mo sa kanila ang Ebanghelyo NGAYONG LINGGO. Tandaan: bawat taong naaabot ngayon ay isang taong naiiligtas sa Dakilang Kapighatian at maaaring makasama mo sa Pagsasaluksok."
         },
         {
-          "title": "Audit ng Katapatan",
-          "description": "Gumawa ng tapat na pagtatasa sa sarili: Tapat ka ba sa iyong oras, pera, katawan, pamilya, trabaho?"
+          "title": "Pagsusuring Pangkatapatan",
+          "description": "Gumawa ng tapat na pagsusuri sa sarili: Tapat ka ba sa iyong oras, salapi, katawan, pamilya, gawain? Tukuyin ang ISANG bahagi na kailangan mong pagbutihin ang pamamahala. Tandaan: ipagkakatiwala sa iyo ni Jesus ang 'Kanyang ari-arian' sa Milenyo kung matagpuan kang tapat sa kaunti ngayon."
         },
         {
-          "title": "Patuloy na Propetikong Pag-aaral",
-          "description": "Magbasa ng isang propetikong kabanata bawat linggo at ihambing ito sa Zacarias 14."
+          "title": "Patuloy na Pag-aaral ng Propesiya",
+          "description": "Basahin ang isang propetikong kabanata bawat linggo (Daniel, Ezekiel, Pahayag) at ihambing ito sa Zacarias 14. Tingnan mo kung paano nag-uugnay ang lahat ng propesiya. Ang pag-aaral ng propesiya ay hindi para sa intelektuwal na pag-uusisa, kundi upang paalabin ang pag-asa at pagkaapurahan."
         },
         {
           "title": "Isaulo ang Zacarias 14:9",
-          "description": "'At ang PANGINOON ay magiging Hari sa buong daigdig: sa araw na iyon, iisa lamang ang PANGINOON, at iisa ang Kanyang pangalan.'"
+          "description": "'At si YHWH ang magiging Hari sa buong lupa: sa araw na iyon si YHWH ay magiging isa, at ang Kanyang pangalan ay isa.' Kapag nahaharap ka sa alinlangan, takot, o panghihina ng loob, bigkasin mo ang talatang ito. Ito ay isang GANAP na propetikong pahayag: darating ang araw, hindi ito maiiwasan, ito ay tiyak."
         }
       ]
     }
   ],
+
   "tags": [
     "zacarias",
-    "eskatologiya",
-    "ikalawang_pagdating",
+    "eskatolohiya",
+    "ikalawang_pagparito",
     "bundok_ng_mga_olibo",
     "milenyo",
-    "pagdakip",
-    "tribulasyon",
+    "pagsasaluksok",
+    "kapighatian",
     "pagpapanumbalik",
     "natupad_na_propesiya"
   ],
+
   "metadata": {
     "total_word_count": 5200,
-    "hebrew_words_count": 3,
-    "scripture_references_count": 12,
+    "hebrew_words_count": 6,
+    "scripture_references_count": 25,
     "difficulty_level": "intermediate-advanced",
     "themes": [
       "Pisikal na pagbabalik ni Cristo",
-      "Heograpikal na pagbabago",
-      "Kaharian ng Milenyo",
-      "Eskatologikal na pagkakasunud-sunod",
-      "Walang hanggang mga gantimpala",
-      "Ebanghelistikong kadalian",
+      "Heograpikong pagbabago",
+      "Kahariang Milenyal",
+      "Eskatolohikong pagkakasunod-sunod",
+      "Walang-hanggang gantimpala",
+      "Pagkaapurahan sa pagpapatotoo",
       "Natupad na propesiya"
     ]
   }
