@@ -194,7 +194,7 @@ def load_json(path: Path, report: Report) -> dict | None:
     except json.JSONDecodeError as e:
         report.E(f"Invalid JSON in {path.name}: {e}")
         return None
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         report.E(f"Cannot read {path.name}: {e}")
         return None
 

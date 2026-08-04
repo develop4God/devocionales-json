@@ -136,7 +136,7 @@ def main():
     for fp in files:
         try:
             result = check_file(fp)
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001
             print(f"ERROR on {fp}: {e}")
             continue
         total_checked += result["checked"]

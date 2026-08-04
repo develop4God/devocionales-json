@@ -90,7 +90,7 @@ def load_json_file(filepath: Path, report: Report) -> dict | None:
     except json.JSONDecodeError as e:
         report.E(f"Invalid JSON in {filepath.name}: {e}")
         return None
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         report.E(f"Error reading {filepath.name}: {e}")
         return None
 
@@ -390,7 +390,7 @@ def validate_index_json(
     except json.JSONDecodeError as e:
         report.E(f"index.json has invalid JSON syntax: {e}")
         return None
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         report.E(f"Error reading index.json: {e}")
         return None
 

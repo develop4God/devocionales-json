@@ -340,7 +340,7 @@ def validate(filepath, lang_override, version_override):
             _keys = list(_probe.get("data", {}).keys())
             if len(_keys) == 1:
                 expected_lang = _keys[0]
-        except Exception:
+        except Exception:  # noqa: BLE001
             pass
 
     ok(f"Lang: {expected_lang} | Version: {expected_version} | Year: {expected_year}")

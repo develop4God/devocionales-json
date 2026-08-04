@@ -85,8 +85,8 @@ def validate_all_files():
                 data = json.load(f)
 
             file_count = 0
-            for lang_key, lang_data in data.get("data", {}).items():
-                for date_key, entries in lang_data.items():
+            for lang_data in data.get("data", {}).values():
+                for entries in lang_data.values():
                     for entry in entries:
                         entry_id = entry.get("id", "")
                         date = entry.get("date", "")
@@ -96,7 +96,7 @@ def validate_all_files():
 
             print(f"✓ {filename}: {file_count} entries")
 
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001
             print(f"❌ Error reading {filename}: {e!s}")
 
     print()

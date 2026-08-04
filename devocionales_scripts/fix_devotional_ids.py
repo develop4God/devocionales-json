@@ -250,7 +250,7 @@ class DevotionalIDFixer:
         try:
             with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001
             error_msg = f"Error reading {filepath}: {e!s}"
             print(f"  ❌ {error_msg}")
             self.stats["errors"].append(error_msg)
@@ -264,8 +264,8 @@ class DevotionalIDFixer:
             print("  ⚠️  No 'data' key found in file")
             return {"success": False, "error": "No data key"}
 
-        for lang_key, lang_data in data["data"].items():
-            for date_key, entries in lang_data.items():
+        for lang_data in data["data"].values():
+            for entries in lang_data.values():
                 for entry in entries:
                     old_id = entry.get("id", "")
                     versiculo = entry.get("versiculo", "")
@@ -311,7 +311,7 @@ class DevotionalIDFixer:
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 print(f"  ✅ Fixed {fixed_count} entries")
-            except Exception as e:
+            except Exception as e:  # noqa: BLE001
                 error_msg = f"Error writing {filepath}: {e!s}"
                 print(f"  ❌ {error_msg}")
                 self.stats["errors"].append(error_msg)
@@ -336,7 +336,7 @@ class DevotionalIDFixer:
         try:
             with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001
             error_msg = f"Error reading {filepath}: {e!s}"
             print(f"  ❌ {error_msg}")
             self.stats["errors"].append(error_msg)
@@ -350,8 +350,8 @@ class DevotionalIDFixer:
             print("  ⚠️  No 'data' key found in file")
             return {"success": False, "error": "No data key"}
 
-        for lang_key, lang_data in data["data"].items():
-            for date_key, entries in lang_data.items():
+        for lang_data in data["data"].values():
+            for entries in lang_data.values():
                 for entry in entries:
                     entry_id = entry.get("id", "")
                     validated_count += 1

@@ -60,7 +60,7 @@ def _current_branch() -> str:
         )
         branch = result.stdout.strip()
         return branch if result.returncode == 0 and branch else "unknown"
-    except Exception:
+    except Exception:  # noqa: BLE001
         return "unknown"
 
 

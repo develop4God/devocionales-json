@@ -39,7 +39,7 @@ def save(fname, data, indent):
 
 
 def all_entries(lang_data):
-    for date, arr in lang_data.items():
+    for arr in lang_data.values():
         for e in arr:
             yield e
 

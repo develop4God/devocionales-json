@@ -31,8 +31,8 @@ def devocionales_stats():
         total_files += file_count
 
         entries = 0
-        for version, meta in versions.items():
-            for year, filename in meta["files"].items():
+        for meta in versions.values():
+            for filename in meta["files"].values():
                 path = REPO_ROOT / filename
                 data = json.loads(path.read_text())
                 entries += sum(len(v) for v in data["data"][lang].values())
@@ -173,7 +173,7 @@ def check_links(content: str) -> list[str]:
                 if e.code in (403, 405):
                     continue  # some hosts block HEAD; not a real 404
                 problems.append(f"Broken link [{text}]({target}) — HTTP {e.code}")
-            except Exception as e:
+            except Exception as e:  # noqa: BLE001
                 problems.append(f"Broken link [{text}]({target}) — {e}")
         else:
             clean_target = target.split("#")[0]
