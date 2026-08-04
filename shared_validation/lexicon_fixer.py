@@ -70,9 +70,9 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from shared_validation.family_resolver import ID_LISTERS, RESOLVERS
-from shared_validation.greek_hebrew_gloss import find_greek_hebrew_glosses
-from shared_validation.lexicon_source import (
+from shared_validation.family_resolver import ID_LISTERS, RESOLVERS  # noqa: E402
+from shared_validation.greek_hebrew_gloss import find_greek_hebrew_glosses  # noqa: E402
+from shared_validation.lexicon_source import (  # noqa: E402
     StrongsLexiconSource,
     is_rtl_lang,
     load_native_script_ranges,
@@ -190,7 +190,9 @@ def fix_bare_latin_glosses(
         translit_end = match.end("translit")
         replacement = f"{entry.lemma}, ({entry.translit}) ({entry.strongs_number})"
         replacements.append((translit_start, translit_end, replacement))
-        changes.append(f"'{match.group(0)}' -> '{match.group('meaning')} ({replacement})'")
+        changes.append(
+            f"'{match.group(0)}' -> '{match.group('meaning')} ({replacement})'"
+        )
     for start, end, replacement in reversed(replacements):
         raw_text = raw_text[:start] + replacement + raw_text[end:]
     return raw_text, changes

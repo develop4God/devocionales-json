@@ -129,7 +129,7 @@ _LATIN_PUNCT_RE = re.compile(r'[,.!?"\']')
 
 
 def check_no_latin_leak(
-    text: str, path: str, lang: str, ctx: str, report: ReportLike
+    text: str, path: str, lang: str, ctx: str, report: ReportLike, lexicon=None
 ) -> None:
     """Flag Latin letters/punctuation leaking into a non-Latin-script
     language's text field — e.g. a stray untranslated English word or
@@ -153,6 +153,25 @@ def check_no_latin_leak(
     elsewhere in the pipeline. Without this, the citation's own letter
     prefix (the bare 'G' in '(G1242)') gets matched by _LATIN_LETTER_RE and
     reported as a stray Latin leak, which it is not.
+
+    A third exception, when `lexicon` is given: a Latin word that exactly
+    matches a real Strong's headword's own transliteration (verified via
+    lexicon.lookup_by_translit, case-insensitive) is not a translation gap —
+    it's the corpus's own house style of quoting the original verse in Latin
+    transliteration (e.g. zh new_covenant_cup_001's "'TOUTO ESTIN TO SŌMA
+    MOU'", matching TOUTO/G5124, SŌMA/G4983, MOU/G3450, SARX/G4561 exactly).
+    Confirmed 2026-08-04: every non-zh language quotes the identical Latin
+    transliteration in the same spot and is never flagged (Latin-script
+    languages aren't in no_latin_languages.json at all; ja transliterates
+    into katakana instead) — zh was the only language actually re-quoting
+    the verse in bare Latin, and this check had no way to tell that apart
+    from a genuine untranslated leftover. This does NOT cover inflected
+    Greek forms (e.g. ESTIN itself, the inflected form of lemma εἰμί/G1510)
+    — lookup_by_translit only matches a word's own dictionary-citation
+    transliteration, same limitation documented on that method and on
+    check_word_study_lexicon_verified_bare_transliteration; an inflected
+    form still gets flagged and needs the same manual SOT-lemma citation
+    fix as everywhere else in this corpus, not a silent pass here.
     """
     config = _load_no_latin_config()
     rules = config["languages"].get(lang)
@@ -191,6 +210,8 @@ def check_no_latin_leak(
     if rules.get("letters"):
         for m in _LATIN_LETTER_RE.finditer(text):
             if in_gloss(m.start()):
+                continue
+            if lexicon is not None and lexicon.lookup_by_translit(m.group(0)):
                 continue
             if near_malformed_gloss(m.start()):
                 report.W(

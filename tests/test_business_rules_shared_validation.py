@@ -25,7 +25,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from shared_validation.greek_hebrew_gloss import (
+from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_bare_transliteration_reuse,
     check_bare_transliteration_reuse_cross_field,
     check_native_script_bare_transliteration,
@@ -34,9 +34,10 @@ from shared_validation.greek_hebrew_gloss import (
     check_word_study_bare_transliteration,
     check_word_study_lexicon_verified_bare_transliteration,
 )
-from shared_validation.lexicon_check import check_lexical_accuracy
-from shared_validation.lexicon_source import LexiconEntry
-from shared_validation.report import Report
+from shared_validation.lexicon_check import check_lexical_accuracy  # noqa: E402
+from shared_validation.lexicon_source import LexiconEntry  # noqa: E402
+from shared_validation.report import Report  # noqa: E402
+from shared_validation.text_checks import check_no_latin_leak  # noqa: E402
 
 
 class _FakeLexicon:
@@ -877,6 +878,79 @@ class TestCheckWordStudyLexiconVerifiedBareTransliteration(unittest.TestCase):
             report.warnings,
             [],
             f"The 'word' key should be skipped entirely, got: {report.warnings}",
+        )
+
+
+# ── check_no_latin_leak ──────────────────────────────────────────────────────
+#
+# Flags Latin letters leaking into a non-Latin-script language's text field.
+# Regression coverage for the 2026-08-04 false-positive fix: a Latin word
+# that exactly matches a real Strong's headword's own transliteration (the
+# corpus's house style of quoting the original verse in Latin transliteration,
+# e.g. zh new_covenant_cup_001's "'TOUTO ESTIN TO SŌMA MOU'") must not be
+# flagged as an untranslated leftover when a lexicon is supplied — but a
+# genuine untranslated word (no lexicon match at all) must still be flagged,
+# both with and without a lexicon available.
+
+
+class TestCheckNoLatinLeak(unittest.TestCase):
+    def setUp(self):
+        self.lex = _FakeLexicon(
+            {
+                "τοῦτο": [LexiconEntry("G5124", "τοῦτο", "touto", "this")],
+                "σῶμα": [LexiconEntry("G4983", "σῶμα", "sōma", "the body")],
+            }
+        )
+
+    def test_real_strongs_translit_is_suppressed_when_lexicon_given(self):
+        report = Report("TEST")
+        check_no_latin_leak(
+            "马可福音14:22——耶稣拿起饼说:'TOUTO...SŌMA'(这是我的身体)。",
+            "cards[1].content",
+            "zh",
+            "ctx",
+            report,
+            self.lex,
+        )
+
+        self.assertEqual(
+            report.warnings,
+            [],
+            f"A word matching a real Strong's transliteration must not be flagged when a lexicon is supplied, got: {report.warnings}",
+        )
+
+    def test_genuine_untranslated_word_still_flagged_with_lexicon(self):
+        report = Report("TEST")
+        check_no_latin_leak(
+            "产业vs.功德",
+            "cards[4].discovery_questions[2].category",
+            "zh",
+            "ctx",
+            report,
+            self.lex,
+        )
+
+        self.assertTrue(
+            any("vs" in w for w in report.warnings),
+            f"Expected 'vs' to still be flagged as a genuine untranslated leftover, got: {report.warnings}",
+        )
+
+    def test_real_strongs_translit_still_flagged_with_no_lexicon(self):
+        # lexicon=None (the default) preserves the check's prior behavior —
+        # no lexicon means no SOT verification is possible, so the word is
+        # flagged same as before this fix.
+        report = Report("TEST")
+        check_no_latin_leak(
+            "马可福音14:22——耶稣拿起饼说:'TOUTO'(这是我的身体)。",
+            "cards[1].content",
+            "zh",
+            "ctx",
+            report,
+        )
+
+        self.assertTrue(
+            any("TOUTO" in w for w in report.warnings),
+            f"Without a lexicon, a real Strong's transliteration should still be flagged (no verification possible), got: {report.warnings}",
         )
 
 

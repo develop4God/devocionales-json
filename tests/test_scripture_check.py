@@ -20,9 +20,9 @@ REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 sys.path.insert(0, str(REPO_ROOT / "devocionales_scripts"))
 
-from verse_resolver import VerseResolver
+from verse_resolver import VerseResolver  # noqa: E402
 
-from shared_validation.scripture_check import (
+from shared_validation.scripture_check import (  # noqa: E402
     FUZZY_MATCH_THRESHOLD,
     ScriptureRef,
     _is_intentional_truncation,

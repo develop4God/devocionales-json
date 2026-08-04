@@ -15,7 +15,7 @@ class ReportLike(Protocol):
 
     def E(self, msg: str) -> None: ...
     def W(self, msg: str) -> None: ...
-    def I(self, msg: str) -> None: ...
+    def I(self, msg: str) -> None: ...  # noqa: E743
 
 
 class Report:
@@ -31,7 +31,7 @@ class Report:
     def W(self, msg):
         self.warnings.append(f"⚠️  WARNING: {msg}")
 
-    def I(self, msg):
+    def I(self, msg):  # noqa: E743
         self.info.append(f"ℹ️  INFO: {msg}")
 
     def print(self, final=True) -> bool:
@@ -69,7 +69,9 @@ class Report:
 T = TypeVar("T")
 
 
-def run_phase(name: str, fn: Callable[[Report], T], on_fail_msg: str | None = None) -> tuple:
+def run_phase(
+    name: str, fn: Callable[[Report], T], on_fail_msg: str | None = None
+) -> tuple:
     """Run a single validation phase: construct a Report, call fn(report),
     print it (non-final), and return (result, report, passed).
 
