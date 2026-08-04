@@ -953,6 +953,55 @@ class TestCheckNoLatinLeak(unittest.TestCase):
             f"Without a lexicon, a real Strong's transliteration should still be flagged (no verification possible), got: {report.warnings}",
         )
 
+    def test_literal_escaped_newline_is_flagged_as_error_not_warning(self):
+        # Regression coverage for the 2026-08-04 discovery/zh/jordan_convergence_zh_001
+        # bug: a double-escaped "\\n" survives json.load() as the two literal
+        # characters '\' + 'n' instead of becoming a real newline. That 'n' was
+        # previously misreported as a generic "possible untranslated leftover"
+        # Latin warning — it must now be a distinct, clearer error.
+        report = Report("TEST")
+        check_no_latin_leak(
+            "第一段文字。\\n\\n第二段文字。",
+            "cards[0].content",
+            "zh",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(
+            report.warnings,
+            [],
+            f"A literal escape artifact must not also be reported as a generic Latin-leak warning, got: {report.warnings}",
+        )
+        self.assertTrue(
+            any("literal escape sequence" in e for e in report.errors),
+            f"Expected a literal escape sequence error for the double-escaped '\\\\n', got: {report.errors}",
+        )
+
+    def test_genuine_leftover_word_starting_with_escape_letter_not_misclassified(self):
+        # A real untranslated word that happens to start with 'n'/'r'/'t' (the
+        # same letters used by escape codes) must still be flagged as a normal
+        # leftover warning — only a letter immediately preceded by a literal
+        # backslash is an escape artifact.
+        report = Report("TEST")
+        check_no_latin_leak(
+            "这是一个not translated的词。",
+            "cards[0].content",
+            "zh",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(
+            report.errors,
+            [],
+            f"A genuine leftover word must not be misclassified as an escape artifact, got: {report.errors}",
+        )
+        self.assertTrue(
+            any("not" in w for w in report.warnings),
+            f"Expected 'not' to still be flagged as a genuine untranslated leftover, got: {report.warnings}",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

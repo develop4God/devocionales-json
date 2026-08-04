@@ -127,6 +127,23 @@ def _load_no_latin_config() -> dict:
 _LATIN_LETTER_RE = re.compile(r"[A-Za-zÀ-ɏḀ-ỿ]+")
 _LATIN_PUNCT_RE = re.compile(r'[,.!?"\']')
 
+# Single-letter escape codes that indicate double-escaping when preceded by a
+# literal backslash in already-JSON-decoded text — i.e. the source JSON had
+# "\\n" (backslash-backslash-n) instead of "\n" (a real escaped newline), so
+# json.load() leaves behind the two literal characters '\' + 'n' rather than
+# producing an actual U+000A control character. 'n'/'r'/'t' are the escapes
+# this corpus's content actually uses (paragraph breaks); 'u' is intentionally
+# excluded since a bare "\u" without 4 hex digits is a different, rarer bug
+# not observed in this corpus and would need its own verified detection.
+_ESCAPE_ARTIFACT_LETTERS = {"n", "r", "t"}
+
+
+def _is_literal_escape_artifact(text: str, start: int, matched: str) -> bool:
+    """True if `matched` (e.g. 'n') at `start` in `text` is the letter half of
+    a literal '\\n'-style double-escape artifact — a backslash immediately
+    precedes it and the letter is one of the known escape codes."""
+    return matched in _ESCAPE_ARTIFACT_LETTERS and start > 0 and text[start - 1] == "\\"
+
 
 def check_no_latin_leak(
     text: str, path: str, lang: str, ctx: str, report: ReportLike, lexicon=None
@@ -213,7 +230,14 @@ def check_no_latin_leak(
                 continue
             if lexicon is not None and lexicon.lookup_by_translit(m.group(0)):
                 continue
-            if near_malformed_gloss(m.start()):
+            if _is_literal_escape_artifact(text, m.start(), m.group(0)):
+                report.E(
+                    f"{ctx}: literal escape sequence '\\{m.group(0)}' in {lang} field — "
+                    "content is double-escaped; the JSON source should contain a real "
+                    "newline/tab/carriage-return character here, not the literal two-character "
+                    "backslash+letter text (compare a sibling language's equivalent field)"
+                )
+            elif near_malformed_gloss(m.start()):
                 report.W(
                     f"{ctx}: Latin text '{m.group(0)}' in {lang} field — "
                     "near a malformed Greek/Hebrew gloss, likely a shape "
