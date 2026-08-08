@@ -230,9 +230,10 @@ def check_structured_word_study_accuracy(
     disambiguation hint in (unlike inline prose, there's no surrounding
     sentence here) — so when `word` is ambiguous across multiple Strong's
     headwords, this reports AMBIGUOUS_LEMMA unless the caller passes
-    `strongs_hint` (from the entry's own optional "strongs" JSON field),
-    in which case that code is tried directly via resolve_lemma_entry's
-    explicit_hint path.
+    `strongs_hint` (from the entry's own optional "strong" JSON field —
+    the same key breath_new_adam/hammer_of_god/jesus_troubled_himself/
+    restoration_by_fire/road_to_emmaus already use), in which case that
+    code is tried directly via resolve_lemma_entry's explicit_hint path.
 
     Multi-word phrases (e.g. "ὁ υἱὸς τοῦ ἀνθρώπου", a title, not a single
     lexical term) are deliberately NOT split into per-word checks here —

@@ -155,7 +155,7 @@ def run_for_family(
                         ctx=ctx,
                         report=report,
                         debug=debug,
-                        strongs_hint=w.get("strongs"),
+                        strongs_hint=w.get("strong"),
                     )
                     if result.status == LexicalStatus.MATCHED:
                         matched += 1
