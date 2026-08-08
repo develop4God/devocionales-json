@@ -185,9 +185,7 @@ class StrongsLexiconSource:
 
     _DATA_DIR = Path(__file__).parent / "lexicon_data"
 
-    def __init__(
-        self, greek_path: Path | None = None, hebrew_path: Path | None = None
-    ):
+    def __init__(self, greek_path: Path | None = None, hebrew_path: Path | None = None):
         greek_path = greek_path or self._DATA_DIR / "strongs_greek.json"
         hebrew_path = hebrew_path or self._DATA_DIR / "strongs_hebrew.json"
 
@@ -350,7 +348,12 @@ def find_nearby_strong_citation(
 
 
 def resolve_lemma_entry(
-    lexicon: LexiconSource, word: str, text: str, end: int, lang: str | None = None
+    lexicon: LexiconSource,
+    word: str,
+    text: str,
+    end: int,
+    lang: str | None = None,
+    explicit_hint: str | None = None,
 ) -> tuple[LexiconEntry | None, tuple[LexiconEntry, ...]]:
     """Single shared resolution step for 'which Strong's entry does this
     gloss span mean' — used by every caller that needs a lemma resolved
@@ -360,18 +363,28 @@ def resolve_lemma_entry(
     Returns (resolved_entry, all_candidates):
       - no candidates at all: (None, ())                    — word isn't a headword (e.g. inflected form)
       - exactly one candidate: (that entry, (that entry,))  — ordinary matched/mismatched case
-      - 2+ candidates, a nearby Strong's-code hint picks one: (that entry, all candidates)
+      - 2+ candidates, a hint (explicit or nearby) picks one: (that entry, all candidates)
       - 2+ candidates, no hint (or hint matches none of them): (None, all candidates) — genuinely ambiguous
 
     `lang` is passed through to find_nearby_strong_citation so the
     disambiguation hint's token boundary is correct for CJK files (no
     whitespace between words) — see that function's docstring.
+
+    `explicit_hint` is a caller-supplied Strong's number (e.g. from a
+    structured hebrew_words[]/greek_words[] entry's own "strongs" field,
+    which has no surrounding text for find_nearby_strong_citation to scan)
+    — tried first, before falling back to the text-scan hint, so a caller
+    that already knows the code never needs prose to carry it.
     """
     candidates = tuple(lexicon.lookup_by_lemma(word))
     if not candidates:
         return None, ()
     if len(candidates) == 1:
         return candidates[0], candidates
+    if explicit_hint:
+        resolved = lexicon.lookup_by_lemma_and_number(word, explicit_hint)
+        if resolved is not None:
+            return resolved, candidates
     hint, _ = find_nearby_strong_citation(text, end, lang)
     if hint:
         resolved = lexicon.lookup_by_lemma_and_number(word, hint)

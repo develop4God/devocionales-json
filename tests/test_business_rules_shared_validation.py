@@ -34,7 +34,10 @@ from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_word_study_bare_transliteration,
     check_word_study_lexicon_verified_bare_transliteration,
 )
-from shared_validation.lexicon_check import check_lexical_accuracy  # noqa: E402
+from shared_validation.lexicon_check import (  # noqa: E402
+    check_lexical_accuracy,
+    check_structured_word_study_accuracy,
+)
 from shared_validation.lexicon_source import LexiconEntry  # noqa: E402
 from shared_validation.report import Report  # noqa: E402
 from shared_validation.text_checks import check_no_latin_leak  # noqa: E402
@@ -384,6 +387,85 @@ class TestCheckLexicalAccuracy(unittest.TestCase):
         self.assertEqual(report.errors, [], f"Expected no errors, got: {report.errors}")
         self.assertEqual(len(results), 1)
         self.assertEqual(results[0].status.value, "inflected_no_lemma_match")
+
+
+# ── check_structured_word_study_accuracy ────────────────────────────────────
+#
+# The hebrew_words[]/greek_words[] array shape (word + transliteration as
+# separate JSON keys) has no surrounding prose for resolve_lemma_entry's
+# text-scan hint to search — so an ambiguous lemma (e.g. Hebrew עָמַד,
+# H5975 "to stand" vs H5976 "to shake") always reported AMBIGUOUS_LEMMA
+# with no way to resolve it, even when the caller already knows which
+# headword is meant (zechariah_14_return_001, all 10 languages, 2026-08-08).
+# strongs_hint closes that gap by feeding the array entry's own optional
+# "strongs" field into resolve_lemma_entry's explicit_hint path.
+
+
+class TestCheckStructuredWordStudyAccuracy(unittest.TestCase):
+    def _ambiguous_lexicon(self):
+        return _FakeLexicon(
+            {
+                "עָמַד": [
+                    LexiconEntry("H5975", "עָמַד", "ʻâmad", "to stand"),
+                    LexiconEntry("H5976", "עָמַד", "ʻâmad", "to shake"),
+                ]
+            }
+        )
+
+    def test_ambiguous_lemma_with_no_hint_is_reported(self):
+        report = Report("TEST")
+        result = check_structured_word_study_accuracy(
+            word="עָמַד",
+            transliteration="ʻâmad",
+            lexicon=self._ambiguous_lexicon(),
+            path="path",
+            lang="en",
+            ctx="ctx",
+            report=report,
+        )
+
+        self.assertEqual(result.status.value, "ambiguous_lemma")
+        self.assertEqual(report.errors, [])
+        self.assertTrue(
+            any("distinct Strong's headwords" in i for i in report.info),
+            f"Expected an AMBIGUOUS_LEMMA info notice, got: {report.info}",
+        )
+
+    def test_correct_strongs_hint_resolves_to_matched(self):
+        report = Report("TEST")
+        result = check_structured_word_study_accuracy(
+            word="עָמַד",
+            transliteration="ʻâmad",
+            lexicon=self._ambiguous_lexicon(),
+            path="path",
+            lang="en",
+            ctx="ctx",
+            report=report,
+            strongs_hint="H5975",
+        )
+
+        self.assertEqual(result.status.value, "matched")
+        self.assertEqual(result.strongs_number, "H5975")
+        self.assertEqual(report.errors, [])
+        self.assertEqual(report.info, [])
+
+    def test_unknown_strongs_hint_falls_back_to_ambiguous(self):
+        # A hint that doesn't match either candidate (typo, wrong code) must
+        # not silently resolve to nothing found — same AMBIGUOUS_LEMMA
+        # outcome as no hint at all, not a crash or a wrong resolution.
+        report = Report("TEST")
+        result = check_structured_word_study_accuracy(
+            word="עָמַד",
+            transliteration="ʻâmad",
+            lexicon=self._ambiguous_lexicon(),
+            path="path",
+            lang="en",
+            ctx="ctx",
+            report=report,
+            strongs_hint="H9999",
+        )
+
+        self.assertEqual(result.status.value, "ambiguous_lemma")
 
 
 # ── check_native_script_bare_transliteration ────────────────────────────────
