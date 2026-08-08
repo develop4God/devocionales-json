@@ -41,7 +41,7 @@
       "icon": "📖",
       "title": "Trṓgōn: weit mehr als essen",
       "subtitle": "Das Verb, das Jesus mit Bedacht wählte",
-      "content": "Jesus wählt seine Worte mit Präzision. Wenn er sagt 'Ich bin das Brot des Lebens', verwendet er im Urtext das griechische Wort ἄρτος, (ártos) (G740) — das alltägliche Brot, die Grundnahrung, ohne die niemand überlebt.\n\nSpäter, am dichtesten Punkt seiner Rede, wenn er sagt 'wenn jemand von diesem Brot isst', wechselt er das Verb: Er spricht nicht mehr vom Essen im allgemeinen Sinn, sondern von τρώγων, (trṓgōn), kauen, nagen. Dieser Wechsel im Urtext offenbart die Tiefe dessen, was er verlangt: eine tägliche, körperliche, wiederholte Hingabe — kein Augenblick distanzierter Bewunderung.",
+      "content": "Jesus wählt seine Worte mit Präzision. Wenn er sagt 'Ich bin das Brot des Lebens', verwendet er im Urtext das griechische Wort ἄρτος, (ártos) (G740) — das alltägliche Brot, die Grundnahrung, ohne die niemand überlebt.\n\nSpäter, am dichtesten Punkt seiner Rede, wenn er sagt 'wenn jemand von diesem Brot isst', wechselt er das Verb: Er spricht nicht mehr vom Essen im allgemeinen Sinn, sondern von τρώγω, (trṓgō) (G5176), kauen, nagen. Dieser Wechsel im Urtext offenbart die Tiefe dessen, was er verlangt: eine tägliche, körperliche, wiederholte Hingabe — kein Augenblick distanzierter Bewunderung.",
       "greek_words": [
         {
           "word": "ἄρτος",
@@ -51,11 +51,12 @@
           "application": "Jesus ist die tägliche Nahrung, ohne die deine Seele schwach wird und verhungert."
         },
         {
-          "word": "τρώγων",
-          "transliteration": "Trṓgōn",
+          "word": "τρώγω",
+          "transliteration": "trṓgō",
           "meaning": "Beißen, kauen, nagen — ein körperliches Verb, verschieden von 'essen' im allgemeinen Sinn",
-          "revelation": "In Johannes 6:54 verwendet Jesus für 'essen' das griechische Wort τρώγων, (trṓgōn), was kauen oder nagen bedeutet, nicht essen im allgemeinen Sinn.\n\nEs ist ein rohes, fast unangenehmes Wort. Es beschreibt den körperlichen Akt des Beißens und Kauens, keine abstrakte geistliche Vorstellung.\n\nJesus wählt es bewusst. Er macht deutlich, dass ihn zu empfangen kein einmaliger Gedanke ist, sondern eine Handlung, die sich wiederholt, wie das tägliche Essen.",
-          "application": "Jesus nachzufolgen ist eine tägliche, beständige Handlung: zu ihm zu kommen und ihn zu empfangen — wie das Essen."
+          "revelation": "In Johannes 6:54 verwendet Jesus für 'essen' das griechische Wort τρώγω, (trṓgō) (G5176), was kauen oder nagen bedeutet, nicht essen im allgemeinen Sinn.\n\nEs ist ein rohes, fast unangenehmes Wort. Es beschreibt den körperlichen Akt des Beißens und Kauens, keine abstrakte geistliche Vorstellung.\n\nJesus wählt es bewusst. Er macht deutlich, dass ihn zu empfangen kein einmaliger Gedanke ist, sondern eine Handlung, die sich wiederholt, wie das tägliche Essen.",
+          "application": "Jesus nachzufolgen ist eine tägliche, beständige Handlung: zu ihm zu kommen und ihn zu empfangen — wie das Essen.",
+          "strong": "G5176"
         }
       ],
       "scripture_references": [
@@ -152,7 +153,7 @@
         },
         {
           "category": "Beständigkeit",
-          "question": "'τρώγων, (trṓgōn)' beschreibt eine wiederholte Handlung, keine einmalige Entscheidung. Ist deine Beziehung zu Jesus ein Ereignis der Vergangenheit oder eine tägliche Übung, zu ihm zu kommen?"
+          "question": "'τρώγω, (trṓgō) (G5176)' beschreibt eine wiederholte Handlung, keine einmalige Entscheidung. Ist deine Beziehung zu Jesus ein Ereignis der Vergangenheit oder eine tägliche Übung, zu ihm zu kommen?"
         },
         {
           "category": "Entscheidung",
