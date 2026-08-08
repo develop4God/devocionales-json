@@ -854,6 +854,24 @@ def check_word_study_lexicon_verified_bare_transliteration(
     unavailable; a caller with no lexicon should simply not call this
     check rather than receive a permanently-empty one.
 
+    A no-match against the dictionary does not automatically mean nothing
+    is wrong: `lookup_by_translit` is an exact-spelling match, so an
+    INFLECTED surface form of a real headword (e.g. 'Eskēnōsen' for G4637's
+    lemma 'skēnóō' — the augment 'e-' and the ending both change) also
+    produces zero entries, same as an ordinary English word like
+    '(weekday)' does. Confirmed in the wild 2026-08-08:
+    morning_star_001's revelation_key wrote '(Eskēnōsen)' with no
+    Hebrew/Greek character anywhere in the field, and this check stayed
+    completely silent — worse than a WARNING, since even the shape-only
+    check_word_study_bare_transliteration would have caught it (the word
+    carries a macron). Reusing that same diacritic-shape gate here (not a
+    new heuristic) distinguishes "this no-match might be an inflected
+    Greek/Hebrew word slipping past the exact-match lookup" from "this
+    no-match is unremarkable prose" — '(Eskēnōsen)' now gets a distinct,
+    lower-confidence WARNING instead of silence; '(weekday)' still
+    produces nothing, since it has no scholarly-transliteration shape to
+    raise the hand on.
+
     Guard against real Greek/Hebrew script is checked LOCALLY around each
     candidate match (± _MALFORMED_LOOKAHEAD chars), not once for the whole
     field — new_covenant_cup's cards[1].content has both a correctly-glossed
@@ -893,6 +911,11 @@ def check_word_study_lexicon_verified_bare_transliteration(
             continue
         entries = lexicon.lookup_by_translit(word)
         if not entries:
+            if _translit_diacritic_re().search(word):
+                seen.add(word)
+                report.W(
+                    f"{ctx}: '{word}' has the shape of a scholarly Greek/Hebrew transliteration (diacritic present) but does not match any Strong's headword transliteration exactly — likely an inflected surface form of a real word (e.g. augment/ending changed from the dictionary lemma); confirm the lemma manually and cite it with its native-script word (see gloss_format.json)"
+                )
             continue
         seen.add(word)
         codes = ", ".join(e.strongs_number for e in entries)

@@ -880,6 +880,63 @@ class TestCheckWordStudyLexiconVerifiedBareTransliteration(unittest.TestCase):
             f"The 'word' key should be skipped entirely, got: {report.warnings}",
         )
 
+    def test_inflected_translit_with_diacritic_and_no_exact_match_is_flagged(self):
+        # Regression test for the confirmed silent-failure bug: a real
+        # Strong's word cited by its INFLECTED spelling (not the dictionary
+        # lemma) has no exact match in lookup_by_translit, so the
+        # already-existing branch below (no entries -> continue) used to
+        # skip it with zero finding, same as an ordinary English word.
+        # Confirmed in the wild 2026-08-08: morning_star_001's
+        # revelation_key wrote '(Eskēnōsen)' for G4637's lemma 'skēnóō' (the
+        # augment 'e-' and the ending both differ) with no Hebrew/Greek
+        # character anywhere in the field — this check stayed completely
+        # silent even though the word carries the same macron diacritic
+        # check_word_study_bare_transliteration already uses as its signal.
+        # 'Eskēnōsen' itself isn't in the fake lexicon (only 'anámnēsis',
+        # 'kippur', 'petra' are) precisely because the whole point is: no
+        # exact match is required to raise this — only the diacritic shape.
+        report = Report("TEST")
+        check_word_study_lexicon_verified_bare_transliteration(
+            "the close presence (Eskēnōsen), and the total liberator (Amnos)",
+            "cards[2].revelation_key",
+            "ctx",
+            report,
+            self.lex,
+        )
+
+        self.assertTrue(
+            any("Eskēnōsen" in w and "does not match" in w for w in report.warnings),
+            f"Expected a distinct 'no exact match' warning for the inflected "
+            f"form, got: {report.warnings}",
+        )
+
+    def test_ordinary_word_with_no_diacritic_and_no_match_still_produces_no_finding(
+        self,
+    ):
+        # The new no-match branch must stay silent for ordinary prose with
+        # no scholarly-transliteration shape — same diacritic gate
+        # check_word_study_bare_transliteration already uses, reused here
+        # rather than flagging every unmatched bare word (which would flood
+        # every language's ordinary vocabulary). This is the same input as
+        # test_word_with_no_lexicon_match_produces_no_finding above, kept
+        # as its own test so a future change to the diacritic branch can't
+        # silently regress this without a dedicated failure.
+        report = Report("TEST")
+        check_word_study_lexicon_verified_bare_transliteration(
+            "This happened on a Tuesday (weekday) in spring.",
+            "cards[1].content",
+            "ctx",
+            report,
+            self.lex,
+        )
+
+        self.assertEqual(
+            report.warnings,
+            [],
+            f"An ordinary word with no diacritic and no lexicon match must "
+            f"not be flagged, got: {report.warnings}",
+        )
+
 
 # ── check_no_latin_leak ──────────────────────────────────────────────────────
 #
