@@ -6,8 +6,29 @@ an explicit typing.Protocol so callers can type-hint against either the
 concrete Report class here or their own compatible report object.
 """
 
+import re
 from collections.abc import Callable
 from typing import Protocol, TypeVar
+
+# Matches the "<file.json>:<location>: <detail>" shape most check functions
+# already emit (e.g. "restoration_by_fire_en_001.json:cards[2].content: ...").
+# Used only to group an already-printed message list by file for scanability
+# — it does not change what a check emits, just how Report.print() renders it.
+_FILE_PREFIX_RE = re.compile(r"^(?:❌ ERROR|⚠️  WARNING): ([A-Za-z0-9_.-]+\.json):")
+
+# The fixed explanatory tail greek_hebrew_gloss.py's bare-transliteration
+# checks repeat verbatim on every hit (same wording regardless of word/file)
+# — real information (word, code, location) is always before this point, so
+# for display only it's collapsed to a short tag. The messages themselves
+# are untouched; this only affects how Report.print() renders them.
+_BARE_TRANSLIT_TAIL_RE = re.compile(
+    r"(?: \(scholarly diacritic present\))?"
+    r"(?: \(3\+ tokens\))?"
+    r" but the field has no real (?:Hebrew/Greek|Greek) character anywhere"
+    r" — likely discussing a (?:word|whole clause) by its transliteration only,"
+    r" with the actual (?:native-script word|Greek text) never given"
+    r" \([^)]*\)$"
+)
 
 
 class ReportLike(Protocol):
@@ -48,12 +69,10 @@ class Report:
                 print(f"  {m}")
         if self.warnings:
             print(f"\n⚠️  WARNINGS ({len(self.warnings)}):")
-            for m in self.warnings:
-                print(f"  {m}")
+            _print_grouped_by_file(self.warnings)
         if self.errors:
             print(f"\n❌ ERRORS ({len(self.errors)}):")
-            for m in self.errors:
-                print(f"  {m}")
+            _print_grouped_by_file(self.errors)
             print("=" * 80)
             return False
         msg = (
@@ -64,6 +83,31 @@ class Report:
         print(f"\n{msg}")
         print("=" * 80)
         return True
+
+
+def _print_grouped_by_file(messages: list[str]) -> None:
+    """Render a message list grouped by the leading 'file.json:' each
+    message already carries, worst-offender file first, so a large finding
+    count (e.g. 289 warnings from one recurring rule) is scannable by file
+    instead of a flat wall of near-identical lines. Messages without a
+    parseable file prefix are printed as-is, ungrouped, at the end — nothing
+    is ever dropped for not matching the pattern."""
+    by_file: dict[str, list[str]] = {}
+    unmatched: list[str] = []
+    for m in messages:
+        match = _FILE_PREFIX_RE.match(m)
+        if match:
+            by_file.setdefault(match.group(1), []).append(m[match.end() :].strip())
+        else:
+            unmatched.append(m)
+
+    for filename, items in sorted(by_file.items(), key=lambda kv: -len(kv[1])):
+        print(f"  {filename} ({len(items)}):")
+        for item in items:
+            print(f"    {_BARE_TRANSLIT_TAIL_RE.sub(' [bare-translit]', item)}")
+
+    for m in unmatched:
+        print(f"  {m}")
 
 
 T = TypeVar("T")
