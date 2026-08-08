@@ -1002,6 +1002,61 @@ class TestCheckNoLatinLeak(unittest.TestCase):
             f"Expected 'not' to still be flagged as a genuine untranslated leftover, got: {report.warnings}",
         )
 
+    def test_allowed_word_from_config_is_suppressed(self):
+        # Regression coverage for the i_am_before_abraham_zh_001 false positive:
+        # zh's "English derivatives of the Greek root" word-study convention
+        # deliberately quotes 'Crypt', 'cryptic', 'encryption' in English —
+        # these are listed in no_latin_languages.json's allowed_words.zh and
+        # must not be flagged as untranslated leftovers.
+        report = Report("TEST")
+        check_no_latin_leak(
+            "英语衍生词：「Crypt（地窖）」、」cryptic（神秘的）」、」encryption（加密）」",
+            "cards[3].content",
+            "zh",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(
+            report.warnings,
+            [],
+            f"Allowed words from config must not be flagged, got: {report.warnings}",
+        )
+
+    def test_allowed_word_match_is_case_insensitive(self):
+        report = Report("TEST")
+        check_no_latin_leak(
+            "衍生词：CRYPT",
+            "cards[3].content",
+            "zh",
+            "ctx",
+            report,
+        )
+
+        self.assertEqual(
+            report.warnings,
+            [],
+            f"Allowed word matching must be case-insensitive, got: {report.warnings}",
+        )
+
+    def test_word_not_in_allowed_list_still_flagged(self):
+        # A word that merely looks similar (shares a prefix) to an allowed
+        # word must not be silently suppressed — only an exact (case-insensitive)
+        # match against the configured allowed_words entry is exempt.
+        report = Report("TEST")
+        check_no_latin_leak(
+            "这是cryptography的意思",
+            "cards[3].content",
+            "zh",
+            "ctx",
+            report,
+        )
+
+        self.assertTrue(
+            any("cryptography" in w for w in report.warnings),
+            f"Expected 'cryptography' (not in allowed_words) to still be flagged, got: {report.warnings}",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -120,6 +120,10 @@ def _load_no_latin_config() -> dict:
         _no_latin_languages_cache = {
             "languages": data["languages"],
             "skip_keys": set(data["skip_keys"]),
+            "allowed_words": {
+                lang: {w.lower() for w in words}
+                for lang, words in data.get("allowed_words", {}).items()
+            },
         }
     return _no_latin_languages_cache
 
@@ -189,6 +193,12 @@ def check_no_latin_leak(
     check_word_study_lexicon_verified_bare_transliteration; an inflected
     form still gets flagged and needs the same manual SOT-lemma citation
     fix as everywhere else in this corpus, not a silent pass here.
+
+    A fourth exception: a word listed in no_latin_languages.json's
+    allowed_words for this language (case-insensitive) is a deliberate
+    content citation, not a leftover — e.g. zh's "English derivatives of the
+    Greek root" word-study convention quoting 'Crypt', 'cryptic',
+    'encryption' in English on purpose.
     """
     config = _load_no_latin_config()
     rules = config["languages"].get(lang)
@@ -197,6 +207,7 @@ def check_no_latin_leak(
     key = path.rsplit(".", 1)[-1].split("[")[0]
     if key in config["skip_keys"]:
         return
+    allowed_words = config["allowed_words"].get(lang, set())
     gloss_spans = find_greek_hebrew_glosses(text)
     strong_code_spans = [(m.start(), m.end()) for m in _strong_code_re().finditer(text)]
 
@@ -227,6 +238,8 @@ def check_no_latin_leak(
     if rules.get("letters"):
         for m in _LATIN_LETTER_RE.finditer(text):
             if in_gloss(m.start()):
+                continue
+            if m.group(0).lower() in allowed_words:
                 continue
             if lexicon is not None and lexicon.lookup_by_translit(m.group(0)):
                 continue
