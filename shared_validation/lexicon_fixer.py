@@ -70,9 +70,9 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from shared_validation.family_resolver import ID_LISTERS, RESOLVERS  # noqa: E402
-from shared_validation.greek_hebrew_gloss import find_greek_hebrew_glosses  # noqa: E402
-from shared_validation.lexicon_source import (  # noqa: E402
+from shared_validation.family_resolver import ID_LISTERS, RESOLVERS
+from shared_validation.greek_hebrew_gloss import find_greek_hebrew_glosses
+from shared_validation.lexicon_source import (
     StrongsLexiconSource,
     is_rtl_lang,
     load_native_script_ranges,

@@ -25,7 +25,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from shared_validation.greek_hebrew_gloss import (  # noqa: E402
+from shared_validation.greek_hebrew_gloss import (
     check_bare_transliteration_reuse,
     check_bare_transliteration_reuse_cross_field,
     check_native_script_bare_transliteration,
@@ -34,10 +34,10 @@ from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_word_study_bare_transliteration,
     check_word_study_lexicon_verified_bare_transliteration,
 )
-from shared_validation.lexicon_check import check_lexical_accuracy  # noqa: E402
-from shared_validation.lexicon_source import LexiconEntry  # noqa: E402
-from shared_validation.report import Report  # noqa: E402
-from shared_validation.text_checks import check_no_latin_leak  # noqa: E402
+from shared_validation.lexicon_check import check_lexical_accuracy
+from shared_validation.lexicon_source import LexiconEntry
+from shared_validation.report import Report
+from shared_validation.text_checks import check_no_latin_leak
 
 
 class _FakeLexicon:
