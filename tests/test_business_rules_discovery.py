@@ -26,8 +26,8 @@ REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 sys.path.insert(0, str(REPO_ROOT / "discovery" / "discovery_scripts"))
 
-from shared_validation.report import Report
-from shared_validation.text_checks import (
+from shared_validation.report import Report  # noqa: E402
+from shared_validation.text_checks import (  # noqa: E402
     check_halfwidth_colon_in_title,
     check_quote_anomalies,
 )

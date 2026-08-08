@@ -12,8 +12,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from shared_validation.lexicon_source import StrongsLexiconSource
-from shared_validation.strong_search import (
+from shared_validation.lexicon_source import StrongsLexiconSource  # noqa: E402
+from shared_validation.strong_search import (  # noqa: E402
     find_strong_codes_in_file,
     find_strong_codes_phase1,
     find_strong_codes_phase2,

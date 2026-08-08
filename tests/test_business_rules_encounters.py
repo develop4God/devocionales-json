@@ -25,10 +25,10 @@ REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 sys.path.insert(0, str(REPO_ROOT / "encounters" / "encounters_scripts"))
 
-import validate_encounters as ve
+import validate_encounters as ve  # noqa: E402
 
-from shared_validation.report import Report
-from shared_validation.text_checks import is_cognate
+from shared_validation.report import Report  # noqa: E402
+from shared_validation.text_checks import is_cognate  # noqa: E402
 
 # ── CARD_REQUIRED_KEYS dispatch ─────────────────────────────────────────────
 #

@@ -15,8 +15,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from shared_validation.report import Report
-from tests.golden_utils import capture
+from shared_validation.report import Report  # noqa: E402
+from tests.golden_utils import capture  # noqa: E402
 
 
 class TestReportGroupedByFile(unittest.TestCase):

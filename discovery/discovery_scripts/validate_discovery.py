@@ -44,12 +44,12 @@ def _find_repo_root(start: Path) -> Path:
 
 
 sys.path.insert(0, str(_find_repo_root(Path(__file__).resolve().parent)))
-from shared_validation.bible_sot import (
+from shared_validation.bible_sot import (  # noqa: E402
     REMOTE_INDEX_URL,
     load_bible_versions,
 )
-from shared_validation.family_check import run_family_validation_all
-from shared_validation.greek_hebrew_gloss import (
+from shared_validation.family_check import run_family_validation_all  # noqa: E402
+from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_bare_transliteration_reuse,
     check_bare_transliteration_reuse_cross_field,
     check_greek_hebrew_transliteration,
@@ -60,20 +60,20 @@ from shared_validation.greek_hebrew_gloss import (
     check_word_study_bare_transliteration,
     check_word_study_lexicon_verified_bare_transliteration,
 )
-from shared_validation.lexicon_family_check import (
+from shared_validation.lexicon_family_check import (  # noqa: E402
     run_for_type as run_lexicon_family_check,
 )
-from shared_validation.lexicon_source import StrongsLexiconSource
-from shared_validation.lint import lint_json_files
-from shared_validation.report import Report
-from shared_validation.run_report import RunReport
-from shared_validation.scripture_check import (
+from shared_validation.lexicon_source import StrongsLexiconSource  # noqa: E402
+from shared_validation.lint import lint_json_files  # noqa: E402
+from shared_validation.report import Report  # noqa: E402
+from shared_validation.run_report import RunReport  # noqa: E402
+from shared_validation.scripture_check import (  # noqa: E402
     ScriptureValidator,
     find_scripture_pairs,
     validate_pair,
     validate_translated_pair,
 )
-from shared_validation.text_checks import (
+from shared_validation.text_checks import (  # noqa: E402
     check_halfwidth_colon_in_title,
     check_no_latin_leak,
     check_quote_anomalies,
