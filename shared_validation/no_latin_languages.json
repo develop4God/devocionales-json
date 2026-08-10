@@ -16,8 +16,8 @@
     "difficulty_level", "testament", "accent_color", "emoji",
     "application_focus", "emotional_intensity"
   ],
-  "_allowed_words_comment": "Case-insensitive bare-Latin words that are content, not translation leftovers, in a specific language — e.g. the corpus's 'English derivatives of the Greek root' word-study convention (κρύπτω, G2928 → 'Crypt', 'cryptic', 'encryption'), which is correctly quoted in English in every language except fr, which localized to French derivatives instead. Add an entry only after confirming the word is deliberately cited, not a missed translation.",
+  "_allowed_words_comment": "Case-insensitive bare-Latin words that are content, not translation leftovers, in a specific language — e.g. the corpus's 'English derivatives of the Greek root' word-study convention (κρύπτω, G2928 → 'Crypt', 'cryptic', 'encryption'), which is correctly quoted in English in every language except fr, which localized to French derivatives instead. Add an entry only after confirming the word is deliberately cited, not a missed translation. '×' and '÷' (multiplication/division signs) are also listed here for zh: _LATIN_LETTER_RE's accented-Latin range (À-ɏ, U+00C0–U+024F) incidentally includes these two math symbols since they sit inside that Unicode block by Unicode's own layout, not because they are Latin letters — confirmed × is the correct, standard multiplication sign in Chinese-language math notation (乘号), not an untranslated leftover.",
   "allowed_words": {
-    "zh": ["crypt", "cryptic", "encryption"]
+    "zh": ["crypt", "cryptic", "encryption", "×", "÷"]
   }
 }
