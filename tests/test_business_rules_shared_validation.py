@@ -38,6 +38,9 @@ from shared_validation.lexicon_check import (  # noqa: E402
     check_lexical_accuracy,
     check_structured_word_study_accuracy,
 )
+from shared_validation.lexicon_family_check import (  # noqa: E402
+    check_family_citation_balance,
+)
 from shared_validation.lexicon_source import LexiconEntry  # noqa: E402
 from shared_validation.report import Report  # noqa: E402
 from shared_validation.text_checks import check_no_latin_leak  # noqa: E402
@@ -1220,6 +1223,120 @@ class TestCheckNoLatinLeak(unittest.TestCase):
         self.assertTrue(
             any("cryptography" in w for w in report.warnings),
             f"Expected 'cryptography' (not in allowed_words) to still be flagged, got: {report.warnings}",
+        )
+
+
+# ── check_family_citation_balance ────────────────────────────────────────
+#
+# check_lexical_accuracy grades one gloss span in isolation and has no
+# notion of "how many times should this word appear in THIS language given
+# its 9 siblings" — a citation can be individually well-formed and still be
+# missing several times where a sibling language cited the same word. Found
+# 2026-08-10, restoration_by_fire_001: a dropped bracket or phonetic
+# respelling in one language's dialogue quote is invisible to every
+# shape-based check but shows up immediately as a per-language count that
+# diverges from its siblings'.
+
+
+class TestCheckFamilyCitationBalance(unittest.TestCase):
+    def test_divergent_language_is_flagged(self):
+        # 9 languages cite G25 once; zh cites it twice — zh should be
+        # flagged, the 9 agreeing languages should not.
+        counts_by_lang = {
+            lang: {"G25": 1}
+            for lang in ["ar", "de", "en", "es", "fil", "fr", "hi", "ja", "pt"]
+        }
+        counts_by_lang["zh"] = {"G25": 2}
+        report = Report("TEST")
+
+        check_family_citation_balance(counts_by_lang, report)
+
+        self.assertEqual(
+            len(report.warnings),
+            1,
+            f"Expected exactly 1 warning, got: {report.warnings}",
+        )
+        self.assertTrue(
+            any("zh" in w and "G25" in w for w in report.warnings),
+            f"Expected the warning to name zh and G25, got: {report.warnings}",
+        )
+
+    def test_missing_citation_in_one_language_is_flagged(self):
+        # A language that never cites a code its siblings all cite once is
+        # exactly as reportable as a count mismatch — a 0 count is still a
+        # divergent count, not a special case.
+        counts_by_lang = {
+            lang: {"G1392": 1}
+            for lang in ["de", "en", "es", "fr", "pt", "hi", "ja", "zh", "ar"]
+        }
+        counts_by_lang["fil"] = {}  # never cites G1392 at all
+        report = Report("TEST")
+
+        check_family_citation_balance(counts_by_lang, report)
+
+        self.assertEqual(
+            len(report.warnings),
+            1,
+            f"Expected exactly 1 warning, got: {report.warnings}",
+        )
+        self.assertTrue(
+            any("fil" in w and "0 time(s)" in w for w in report.warnings),
+            f"Expected fil flagged with a 0 count, got: {report.warnings}",
+        )
+
+    def test_all_languages_agreeing_produces_no_warning(self):
+        # Every language citing the same code the same number of times is
+        # the balanced, expected state — must not be flagged just because
+        # a code exists.
+        counts_by_lang = {
+            lang: {"G25": 4, "G5368": 8}
+            for lang in ["ar", "de", "en", "es", "fil", "fr", "hi", "ja", "pt", "zh"]
+        }
+        report = Report("TEST")
+
+        check_family_citation_balance(counts_by_lang, report)
+
+        self.assertEqual(
+            report.warnings, [], f"Expected no warnings, got: {report.warnings}"
+        )
+
+    def test_code_cited_by_only_one_language_is_not_flagged(self):
+        # A code that only ONE language happens to cite (e.g. a structured
+        # greek_words[] entry present in just that language's file) is not
+        # a cross-family imbalance by definition — there's no sibling count
+        # to diverge from. Must not be flagged.
+        counts_by_lang = {
+            "en": {"G1392": 1},
+            "de": {},
+            "es": {},
+        }
+        report = Report("TEST")
+
+        check_family_citation_balance(counts_by_lang, report)
+
+        self.assertEqual(
+            report.warnings, [], f"Expected no warnings, got: {report.warnings}"
+        )
+
+    def test_tie_breaks_toward_smallest_count(self):
+        # 5 languages cite a code once, 5 cite it twice — an exact tie.
+        # Under-citing is the more common real bug in this corpus's history
+        # (a dropped bracket), so the smaller count wins the tie and the
+        # "cited twice" languages are the ones flagged, not the reverse.
+        counts_by_lang = {}
+        for lang in ["ar", "de", "en", "es", "fil"]:
+            counts_by_lang[lang] = {"G25": 1}
+        for lang in ["fr", "hi", "ja", "pt", "zh"]:
+            counts_by_lang[lang] = {"G25": 2}
+        report = Report("TEST")
+
+        check_family_citation_balance(counts_by_lang, report)
+
+        flagged_langs = {w.split(": ")[1].split(":")[0] for w in report.warnings}
+        self.assertEqual(
+            flagged_langs,
+            {"fr", "hi", "ja", "pt", "zh"},
+            f"Expected the double-citing languages flagged against a baseline of 1, got: {report.warnings}",
         )
 
 
