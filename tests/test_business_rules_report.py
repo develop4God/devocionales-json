@@ -46,6 +46,88 @@ class TestReportGroupedByFile(unittest.TestCase):
             self.assertIn(f"distinct message {i}", output)
 
 
+class TestReportGroupedByFamily(unittest.TestCase):
+    def test_family_grouped_worst_first_with_languages_nested(self):
+        report = Report("TEST")
+        report.W("study_a_ar_001.json:tags[0]: one hit")
+        report.W("study_b_ar_001.json:tags[0]: hit one")
+        report.W("study_b_hi_001.json:tags[0]: hit two")
+        output = capture(report.print, final=False)
+
+        b_pos = output.index("study_b (2):")
+        a_pos = output.index("study_a (1):")
+        self.assertLess(b_pos, a_pos)
+        self.assertIn("[ar] (1):", output)
+        self.assertIn("[hi] (1):", output)
+
+    def test_non_family_filename_falls_back_ungrouped(self):
+        report = Report("TEST")
+        report.W("a.json:cards[0].content: one hit")
+        output = capture(report.print, final=False)
+        self.assertIn("a.json (1):", output)
+
+    def test_no_message_dropped_when_grouping_by_family(self):
+        report = Report("TEST")
+        for i in range(5):
+            report.W(f"study_x_ar_00{i}.json:cards[{i}].content: distinct message {i}")
+        output = capture(report.print, final=False)
+        for i in range(5):
+            self.assertIn(f"distinct message {i}", output)
+
+
+class TestCollapseLatinLeakWords(unittest.TestCase):
+    def test_repeated_words_on_same_path_collapsed_to_one_line(self):
+        report = Report("TEST")
+        report.W(
+            "study_a_ar_001.json:tags[0]: Latin text 'judgment' in ar field — possible untranslated leftover"
+        )
+        report.W(
+            "study_a_ar_001.json:tags[0]: Latin text 'seat' in ar field — possible untranslated leftover"
+        )
+        output = capture(report.print, final=False)
+        self.assertIn(
+            "tags[0]: Latin text judgment, seat — possible untranslated leftover",
+            output,
+        )
+        self.assertNotIn("'judgment' in ar field", output)
+
+    def test_single_occurrence_on_path_left_untouched(self):
+        report = Report("TEST")
+        report.W(
+            "study_a_ar_001.json:tags[0]: Latin text 'judgment' in ar field — possible untranslated leftover"
+        )
+        output = capture(report.print, final=False)
+        self.assertIn(
+            "tags[0]: Latin text 'judgment' in ar field — possible untranslated leftover",
+            output,
+        )
+
+    def test_different_paths_not_merged_together(self):
+        report = Report("TEST")
+        report.W(
+            "study_a_ar_001.json:tags[0]: Latin text 'judgment' in ar field — possible untranslated leftover"
+        )
+        report.W(
+            "study_a_ar_001.json:tags[1]: Latin text 'reward' in ar field — possible untranslated leftover"
+        )
+        output = capture(report.print, final=False)
+        self.assertIn(
+            "tags[0]: Latin text 'judgment' in ar field — possible untranslated leftover",
+            output,
+        )
+        self.assertIn(
+            "tags[1]: Latin text 'reward' in ar field — possible untranslated leftover",
+            output,
+        )
+
+    def test_unrelated_message_on_same_path_not_collapsed(self):
+        report = Report("TEST")
+        report.W("study_a_ar_001.json:cards[0].content: some other warning entirely")
+        report.W("study_a_ar_001.json:cards[0].content: some other warning entirely")
+        output = capture(report.print, final=False)
+        self.assertEqual(output.count("some other warning entirely"), 2)
+
+
 class TestReportBareTranslitTagCollapse(unittest.TestCase):
     def test_word_form_tail_collapsed_to_tag(self):
         report = Report("TEST")

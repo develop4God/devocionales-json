@@ -16,6 +16,23 @@ from typing import Protocol, TypeVar
 # — it does not change what a check emits, just how Report.print() renders it.
 _FILE_PREFIX_RE = re.compile(r"^(?:❌ ERROR|⚠️  WARNING): ([A-Za-z0-9_.-]+\.json):")
 
+# Every content filename in this corpus is "<family>_<lang>_<seq>.json" (e.g.
+# "gold_silver_ashes_ar_001.json" -> family "gold_silver_ashes", lang "ar").
+# Splits on the trailing "_<letters>_<digits>" so no hardcoded language list
+# is needed — matches this project's existing convention of deriving such
+# splits structurally rather than maintaining a second source of truth.
+_FAMILY_LANG_RE = re.compile(r"^(.+)_([a-z]{2,3})_(\d+)\.json$")
+
+# Matches the single-word "Latin text 'X' in <lang> field — possible
+# untranslated leftover" message text_checks.check_no_latin_leak emits (see
+# shared_validation/text_checks.py). Used only to collapse several such hits
+# on the same file+field into one line listing the distinct words, since a
+# tags[] list or a dense card can otherwise repeat this exact wording once
+# per leaked word.
+_LATIN_LEAK_WORD_RE = re.compile(
+    r"^Latin text '([^']+)' in ([a-z]{2,3}) field — possible untranslated leftover$"
+)
+
 # The fixed explanatory tail greek_hebrew_gloss.py's bare-transliteration
 # checks repeat verbatim on every hit (same wording regardless of word/file)
 # — real information (word, code, location) is always before this point, so
@@ -85,13 +102,54 @@ class Report:
         return True
 
 
+def _collapse_latin_leak_words(items: list[str]) -> list[str]:
+    """Within one file's already-grouped messages, merge repeated
+    "Latin text 'X' in <lang> field — possible untranslated leftover" hits
+    that share the same leading path (e.g. several tags[i] entries reporting
+    single leaked words one line each) into one "<path>: word, word, word"
+    line. A dense tags[] list or card can otherwise repeat this exact
+    wording once per leaked word — the path and words are still fully
+    present, just joined instead of restated. Any message that doesn't
+    match this exact shape (other checks, or a path that appears only once)
+    is left untouched and in its original position."""
+    per_path: dict[str, list[str]] = {}
+    for item in items:
+        path, _, rest = item.partition(": ")
+        m = _LATIN_LEAK_WORD_RE.match(rest)
+        if not m:
+            continue
+        per_path.setdefault(path, []).append(m.group(1))
+    collapsible_paths = {p for p, words in per_path.items() if len(words) > 1}
+    if not collapsible_paths:
+        return items
+
+    result: list[str] = []
+    emitted_paths: set[str] = set()
+    for item in items:
+        path, _, rest = item.partition(": ")
+        if path in collapsible_paths and _LATIN_LEAK_WORD_RE.match(rest):
+            if path in emitted_paths:
+                continue
+            emitted_paths.add(path)
+            words = ", ".join(per_path[path])
+            result.append(
+                f"{path}: Latin text {words} — possible untranslated leftover"
+            )
+        else:
+            result.append(item)
+    return result
+
+
 def _print_grouped_by_file(messages: list[str]) -> None:
-    """Render a message list grouped by the leading 'file.json:' each
-    message already carries, worst-offender file first, so a large finding
-    count (e.g. 289 warnings from one recurring rule) is scannable by file
-    instead of a flat wall of near-identical lines. Messages without a
-    parseable file prefix are printed as-is, ungrouped, at the end — nothing
-    is ever dropped for not matching the pattern."""
+    """Render a message list grouped by family (the "<family>_<lang>_<seq>
+    .json" filename each message already carries) and then by language
+    within it, worst-offender-count first at both levels, so a large
+    finding count (e.g. 163 warnings from one recurring rule) is scannable
+    per study rather than scattered across arbitrarily-ordered individual
+    filenames or a flat wall of near-identical lines. Files whose name
+    doesn't match that pattern, and messages without a parseable file
+    prefix at all, are printed as-is, ungrouped, at the end — nothing is
+    ever dropped for not matching a pattern."""
     by_file: dict[str, list[str]] = {}
     unmatched: list[str] = []
     for m in messages:
@@ -101,9 +159,29 @@ def _print_grouped_by_file(messages: list[str]) -> None:
         else:
             unmatched.append(m)
 
-    for filename, items in sorted(by_file.items(), key=lambda kv: -len(kv[1])):
+    by_family: dict[str, dict[str, list[str]]] = {}
+    unfamilied: list[tuple[str, list[str]]] = []
+    for filename, items in by_file.items():
+        fam_match = _FAMILY_LANG_RE.match(filename)
+        if fam_match:
+            family, lang = fam_match.group(1), fam_match.group(2)
+            by_family.setdefault(family, {}).setdefault(lang, []).extend(items)
+        else:
+            unfamilied.append((filename, items))
+
+    def family_count(langs: dict[str, list[str]]) -> int:
+        return sum(len(v) for v in langs.values())
+
+    for family, langs in sorted(by_family.items(), key=lambda kv: -family_count(kv[1])):
+        print(f"  {family} ({family_count(langs)}):")
+        for lang, items in sorted(langs.items(), key=lambda kv: -len(kv[1])):
+            print(f"    [{lang}] ({len(items)}):")
+            for item in _collapse_latin_leak_words(items):
+                print(f"      {_BARE_TRANSLIT_TAIL_RE.sub(' [bare-translit]', item)}")
+
+    for filename, items in sorted(unfamilied, key=lambda kv: -len(kv[1])):
         print(f"  {filename} ({len(items)}):")
-        for item in items:
+        for item in _collapse_latin_leak_words(items):
             print(f"    {_BARE_TRANSLIT_TAIL_RE.sub(' [bare-translit]', item)}")
 
     for m in unmatched:
