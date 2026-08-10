@@ -11,23 +11,45 @@
     "reference": "Johannes 21:15",
     "text": "Da sie nun das Mahl gehalten hatten, spricht Jesus zu Simon Petrus: Simon, Sohn des Johannes, liebst du mich mehr, als mich diese lieb haben? Er spricht zu ihm: Ja, Herr, du weißt, dass ich dich lieb habe. Spricht Jesus zu ihm: Weide meine Lämmer!"
   },
-
   "scripture_passage": {
     "reference": "Johannes 21:9-19",
     "verses": [
-      {"number": 9, "text": "Als sie nun an Land stiegen, sahen sie ein Kohlenfeuer am Boden und Fisch darauf und Brot."},
-      {"number": 15, "text": "Da sie nun das Mahl gehalten hatten, spricht Jesus zu Simon Petrus: Simon, Sohn des Johannes, liebst du mich mehr, als mich diese lieb haben? Er spricht zu ihm: Ja, Herr, du weißt, dass ich dich lieb habe. Spricht Jesus zu ihm: Weide meine Lämmer!"},
-      {"number": 16, "text": "Spricht er zum zweiten Mal zu ihm: Simon, Sohn des Johannes, hast du mich lieb? Er spricht zu ihm: Ja, Herr, du weißt, dass ich dich lieb habe. Spricht Jesus zu ihm: Weide meine Schafe!"},
-      {"number": 17, "text": "Spricht er zum dritten Mal zu ihm: Simon, Sohn des Johannes, hast du mich lieb? Petrus wurde traurig, weil er zum dritten Mal zu ihm sagte: Hast du mich lieb?, und sprach zu ihm: Herr, du weißt alle Dinge, du weißt, dass ich dich lieb habe. Spricht Jesus zu ihm: Weide meine Schafe!"},
-      {"number": 18, "text": "Wahrlich, wahrlich, ich sage dir: Als du jünger warst, gürtetest du dich selbst und gingst, wo du hinwolltest; wenn du aber alt bist, wirst du deine Hände ausstrecken und ein anderer wird dich gürten und führen, wo du nicht hinwillst."},
-      {"number": 19, "text": "Das sagte er aber, um anzuzeigen, mit welchem Tod er Gott preisen würde. Und als er das gesagt hatte, spricht er zu ihm: Folge mir nach!"}
+      {
+        "number": 9,
+        "text": "Als sie nun an Land stiegen, sahen sie ein Kohlenfeuer am Boden und Fisch darauf und Brot."
+      },
+      {
+        "number": 15,
+        "text": "Da sie nun das Mahl gehalten hatten, spricht Jesus zu Simon Petrus: Simon, Sohn des Johannes, liebst du mich mehr, als mich diese lieb haben? Er spricht zu ihm: Ja, Herr, du weißt, dass ich dich lieb habe. Spricht Jesus zu ihm: Weide meine Lämmer!"
+      },
+      {
+        "number": 16,
+        "text": "Spricht er zum zweiten Mal zu ihm: Simon, Sohn des Johannes, hast du mich lieb? Er spricht zu ihm: Ja, Herr, du weißt, dass ich dich lieb habe. Spricht Jesus zu ihm: Weide meine Schafe!"
+      },
+      {
+        "number": 17,
+        "text": "Spricht er zum dritten Mal zu ihm: Simon, Sohn des Johannes, hast du mich lieb? Petrus wurde traurig, weil er zum dritten Mal zu ihm sagte: Hast du mich lieb?, und sprach zu ihm: Herr, du weißt alle Dinge, du weißt, dass ich dich lieb habe. Spricht Jesus zu ihm: Weide meine Schafe!"
+      },
+      {
+        "number": 18,
+        "text": "Wahrlich, wahrlich, ich sage dir: Als du jünger warst, gürtetest du dich selbst und gingst, wo du hinwolltest; wenn du aber alt bist, wirst du deine Hände ausstrecken und ein anderer wird dich gürten und führen, wo du nicht hinwillst."
+      },
+      {
+        "number": 19,
+        "text": "Das sagte er aber, um anzuzeigen, mit welchem Tod er Gott preisen würde. Und als er das gesagt hatte, spricht er zu ihm: Folge mir nach!"
+      }
     ],
     "context_verses": [
-      {"reference": "Johannes 18:18", "text": "Es standen da aber die Knechte und Diener und hatten ein Kohlenfeuer gemacht, denn es war kalt, und sie wärmten sich. Aber auch Petrus stand bei ihnen und wärmte sich."},
-      {"reference": "Johannes 18:25-27", "text": "Simon Petrus aber stand da und wärmte sich. Da sprachen sie zu ihm: Bist du nicht einer seiner Jünger? Er leugnete aber und sprach: Ich bin's nicht. Spricht einer von den Knechten des Hohenpriesters, ein Verwandter dessen, dem Petrus das Ohr abgehauen hatte: Sah ich dich nicht im Garten bei ihm? Da leugnete Petrus abermals, und alsbald krähte der Hahn."}
+      {
+        "reference": "Johannes 18:18",
+        "text": "Es standen da aber die Knechte und Diener und hatten ein Kohlenfeuer gemacht, denn es war kalt, und sie wärmten sich. Aber auch Petrus stand bei ihnen und wärmte sich."
+      },
+      {
+        "reference": "Johannes 18:25-27",
+        "text": "Simon Petrus aber stand da und wärmte sich. Da sprachen sie zu ihm: Bist du nicht einer seiner Jünger? Er leugnete aber und sprach: Ich bin's nicht. Spricht einer von den Knechten des Hohenpriesters, ein Verwandter dessen, dem Petrus das Ohr abgehauen hatte: Sah ich dich nicht im Garten bei ihm? Da leugnete Petrus abermals, und alsbald krähte der Hahn."
+      }
     ]
   },
-
   "cards": [
     {
       "order": 1,
@@ -52,7 +74,7 @@
       "order": 3,
       "type": "greek_exegesis",
       "icon": "💬",
-      "title": "Agapaō vs. Phileō: Die Herablassung der Liebe",
+      "title": "ἀγαπάω, (agapáō) (G25) vs φιλέω, (philéō) (G5368): Die Herablassung der Liebe",
       "subtitle": "Wenn Jesus sich auf dein Niveau begibt",
       "content": "Dieses Gespräch ist chirurgisch präzise. Jedes Wort zählt. Und im griechischen Original gibt es ein Detail, das die Bedeutung VOLLSTÄNDIG verändert.\n\nDas Griechische kennt mehrere Wörter für 'lieben'. Hier begegnen uns ZWEI:\n\n💎 ἀγαπάω, (agapáō) (G25):\n• Liebe der AUFOPFERUNG\n• BEDINGUNGSLOSE Liebe\n• Liebe als ENTSCHEIDUNG, nicht als Gefühl\n• Die Liebe, mit der Gott uns liebt\n\n❤️ φιλέω, (philéō) (G5368):\n• Liebe der FREUNDSCHAFT\n• Liebe der ZUNEIGUNG\n• GESCHWISTERLICHE, zärtliche Liebe\n• Die Liebe, die man für einen engen Bruder empfindet\n\n🗣️ DAS EIGENTLICHE GESPRÄCH:\n\n1️⃣ ERSTE FRAGE (V.15):\nJesus: 'Liebst du mich (AGAPAS)?'\nPetrus: 'Du weißt, dass ich dich lieb habe (φιλέω, (philéō) (G5368))'\n\n2️⃣ ZWEITE FRAGE (V.16):\nJesus: 'Hast du mich lieb (AGAPAS)?'\nPetrus: 'Du weißt, dass ich dich lieb habe (φιλέω, (philéō) (G5368))'\n\n3️⃣ DRITTE FRAGE (V.17):\nJesus: 'Hast du mich lieb (PHILEIS)?'\nPetrus: 'Du weißt, dass ich dich lieb habe (φιλέω, (philéō) (G5368))'\n\n💔 SIEHST DU, WAS GESCHEHEN IST?\n\nBei den ersten ZWEI Fragen:\n• Jesus fragt nach AGAPĒ (göttlicher Liebe)\n• Petrus antwortet mit φιλέω, (philéō) (G5368) (menschlicher Liebe)\n\nPetrus sagt damit: 'Herr, ich wage es nicht mehr zu behaupten, meine Liebe gleiche der Deinen. Ich bin gescheitert. Ich kann Dir nur sagen, dass ich Dich liebe wie einen innigen Freund – aber ich erhebe keinen Anspruch auf vollkommene Liebe.'\n\nDoch bei der DRITTEN Frage:\n• ÄNDERT Jesus sein Wort\n• Jesus fragt nun: 'Hast du mich lieb (PHILEIS)?'\n\n😢 WARUM PETRUS TRAURIG WURDE:\n\n'Petrus wurde traurig, weil er zum dritten Mal zu ihm sagte: Hast du mich lieb?'\n\nNicht nur, weil es das dritte Mal war. Petrus wurde traurig, weil er erkannte:\n\n'Mein Herr musste sein NIVEAU der Liebe SENKEN, weil ich es nicht erreichen konnte.'\n\n✨ DAS GÖTTLICHE ZEICHEN:\n\nJesus STEIGT zu Petrus herab. Er sagt:\n'Simon, wenn alles, was du mir heute geben kannst, die unvollkommene Liebe eines gescheiterten Freundes ist – ICH NEHME SIE. Ich segne sie. Und MIT IHR stelle ich dich wieder her.'\n\nJesus wartet nicht darauf, dass Petrus vollkommen ist, bevor er ihm den Dienst anvertraut. Er vollendet Petrus DURCH seine Ehrlichkeit.",
       "greek_words": [
@@ -81,8 +103,14 @@
       "subtitle": "Vom Verräter zum Hirten",
       "content": "Nach jedem Liebesbekenntnis gibt Jesus Petrus eine AUFGABE. Sie sind nicht identisch. Jede steigt im Anspruch:\n\n🥛 ERSTE AUFGABE (V.15):\n'Weide (βόσκω, (bóskō) (G1006)) meine Lämmer (ARNIA)'\n\n📖 βόσκω, (bóskō) (G1006) = WEIDEN, nähren, auf die Weide führen\n📖 ἀρνίον, (arníon) (G721) = Kleine LÄMMER, Jungtiere\n\nBedeutung: 'Nähre die Neugeborenen. Gib Milch denen, die gerade erst anfangen. Sorge dich um die Verletzlichsten.'\n\n🛡️ ZWEITE AUFGABE (V.16):\n'Weide (POIMAINŌ) meine Schafe (PROBATA)'\n\n📖 ποιμαίνω, (poimaínō) (G4165) = HIRTEN (umfassend): führen, schützen, leiten, bewachen\n📖 πρόβατον, (próbaton) (G4263) = Erwachsene SCHAFE\n\nBedeutung: 'Jetzt nicht nur nähren. FÜHRE die, die schon unterwegs sind. Schütze sie vor Wölfen. Leite die Herde mit Weisheit.'\n\n🍞 DRITTE AUFGABE (V.17):\n'Weide (βόσκω, (bóskō) (G1006)) meine Schafe (PROBATA)'\n\nBedeutung: 'Nähre weiterhin die gesamte Herde bis zum Ende. Höre nie auf, mein Volk zu speisen.'\n\n🔑 DAS MUSTER:\n\n1️⃣ Nähre die, die gerade anfangen (LÄMMER)\n2️⃣ Führe und schütze die, die schon gehen (SCHAFE)\n3️⃣ Nähre alle beständig weiter (SCHAFE)\n\n💡 DIE RECHTLICHE WIEDERHERSTELLUNG:\n\nAchte auf die Struktur:\n• 3 Verleugnungen am Feuer (Johannes 18)\n• 3 Bekenntnisse am Feuer (Johannes 21)\n• 3 Aufgaben, die die 3 Verrate auslöschen\n\nJesus vollzieht eine RECHTLICHE WIEDERHERSTELLUNG. Das Schuldkonto ist gelöscht.\n\n❤️ DAS SCHÖNE DETAIL:\n\nJedes Mal sagt Jesus 'MEINE Lämmer', 'MEINE Schafe'.\n\nJesus gibt seine Herde nicht aus der Hand. Er setzt Petrus als seinen STELLVERTRETER ein:\n\n'Petrus, das sind MEINE Schafe. Ich bin noch immer der Eigentümer. Aber ich vertraue dir das an, was mir am kostbarsten ist. Sorge für sie, wie ich es täte.'\n\n⚡ DIE VORBEREITUNG:\n\nBevor Jesus ihm diese Aufgaben gibt, tat er etwas:\n\nEr speiste sie LEIBLICH am Strand (V.12-13).\n\nDann sagt Er zu Petrus: 'Jetzt tu dasselbe GEISTLICH mit anderen.'",
       "scripture_connections": [
-        {"reference": "Johannes 10:11", "text": "Ich bin der gute Hirte. Der gute Hirte lässt sein Leben für die Schafe."},
-        {"reference": "1. Petrus 5:2-4", "text": "Weidet die Herde Gottes, die euch anbefohlen ist, und achtet auf sie, nicht gezwungen, sondern freiwillig, wie es Gott gefällt, nicht um schändlichen Gewinns willen, sondern von Herzensgrund, nicht als solche, die über die Gemeinden herrschen, sondern als Vorbilder der Herde. So werdet ihr, wenn erscheinen wird der Erzhirte, die unverwelkliche Krone der Herrlichkeit empfangen."}
+        {
+          "reference": "Johannes 10:11",
+          "text": "Ich bin der gute Hirte. Der gute Hirte lässt sein Leben für die Schafe."
+        },
+        {
+          "reference": "1. Petrus 5:2-4",
+          "text": "Weidet die Herde Gottes, die euch anbefohlen ist, und achtet auf sie, nicht gezwungen, sondern freiwillig, wie es Gott gefällt, nicht um schändlichen Gewinns willen, sondern von Herzensgrund, nicht als solche, die über die Gemeinden herrschen, sondern als Vorbilder der Herde. So werdet ihr, wenn erscheinen wird der Erzhirte, die unverwelkliche Krone der Herrlichkeit empfangen."
+        }
       ],
       "revelation_key": "Jesus verwandelt dein Scheitern in deinen Dienst. Der Bereich, in dem du am tiefsten gefallen bist, kann der Bereich werden, in dem du am treuesten dienst – denn jetzt dienst du aus Gnade, nicht aus Anmaßung."
     },
@@ -102,11 +130,26 @@
       "icon": "🙏",
       "title": "Persönliche Entdeckung",
       "discovery_questions": [
-        {"category": "Deine Kohlen", "question": "Was ist der 'Kohlengeruch' in deinem Leben? Welche sinnliche Erinnerung versetzt dich sofort zurück in deinen Moment der größten Scham oder des tiefsten Versagens? Hast du schon bedacht, dass Jesus diese Erinnerung erlösen – und nicht meiden – möchte?"},
-        {"category": "Ehrlichkeit über die Liebe", "question": "Petrus konnte nur sagen 'Ich habe dich lieb (φιλέω, (philéō) (G5368))' statt 'Ich liebe dich (ἀγαπάω, (agapáō) (G25)).' Bist du ehrlich zu Jesus über den WIRKLICHEN Zustand deiner Liebe zu Ihm – oder verstellst du eine vollkommene Liebe, die du (noch) nicht hast?"},
-        {"category": "Jesu Herablassung", "question": "Jesus hat sein Wort von agapaō zu phileō GESENKT, um Petrus zu erreichen. Glaubst du, dass Jesus bereit ist, zu DIR herabzusteigen, um dich emporzuheben? Oder meinst du, du müsstest erst 'hinaufklettern', bevor du dich näherst?"},
-        {"category": "Vom Verräter zum Hirten", "question": "Gibt es einen Bereich, in dem du am tiefsten versagt hast, den Jesus vielleicht in deinen Bereich größten Dienstes verwandeln möchte? Bist du bereit, aus Gnade zu dienen statt aus Anmaßung?"},
-        {"category": "Allwissenheit", "question": "Petrus sagte: 'Herr, du weißt ALLE DINGE; du weißt, dass ich dich lieb habe.' Bist du bereit, dich auf Jesu Allwissenheit zu berufen? Er sieht dein Herz – jenseits deiner Fehler."}
+        {
+          "category": "Deine Kohlen",
+          "question": "Was ist der 'Kohlengeruch' in deinem Leben? Welche sinnliche Erinnerung versetzt dich sofort zurück in deinen Moment der größten Scham oder des tiefsten Versagens? Hast du schon bedacht, dass Jesus diese Erinnerung erlösen – und nicht meiden – möchte?"
+        },
+        {
+          "category": "Ehrlichkeit über die Liebe",
+          "question": "Petrus konnte nur sagen 'Ich habe dich lieb (φιλέω, (philéō) (G5368))' statt 'Ich liebe dich (ἀγαπάω, (agapáō) (G25)).' Bist du ehrlich zu Jesus über den WIRKLICHEN Zustand deiner Liebe zu Ihm – oder verstellst du eine vollkommene Liebe, die du (noch) nicht hast?"
+        },
+        {
+          "category": "Jesu Herablassung",
+          "question": "Jesus hat sein Wort von agapaō zu phileō GESENKT, um Petrus zu erreichen. Glaubst du, dass Jesus bereit ist, zu DIR herabzusteigen, um dich emporzuheben? Oder meinst du, du müsstest erst 'hinaufklettern', bevor du dich näherst?"
+        },
+        {
+          "category": "Vom Verräter zum Hirten",
+          "question": "Gibt es einen Bereich, in dem du am tiefsten versagt hast, den Jesus vielleicht in deinen Bereich größten Dienstes verwandeln möchte? Bist du bereit, aus Gnade zu dienen statt aus Anmaßung?"
+        },
+        {
+          "category": "Allwissenheit",
+          "question": "Petrus sagte: 'Herr, du weißt ALLE DINGE; du weißt, dass ich dich lieb habe.' Bist du bereit, dich auf Jesu Allwissenheit zu berufen? Er sieht dein Herz – jenseits deiner Fehler."
+        }
       ],
       "prayer": {
         "title": "Gebet der Wiederherstellung",
@@ -114,9 +157,16 @@
       }
     }
   ],
-
-  "tags": ["wiederherstellung", "petrus", "vergebung", "agapao_phileo", "johannes_21", "zweite_berufung", "kohlen", "anthrakian"],
-
+  "tags": [
+    "wiederherstellung",
+    "petrus",
+    "vergebung",
+    "agapao_phileo",
+    "johannes_21",
+    "zweite_berufung",
+    "kohlen",
+    "anthrakian"
+  ],
   "metadata": {
     "total_word_count": 2300,
     "greek_words_count": 4,
