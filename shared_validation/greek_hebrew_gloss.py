@@ -940,7 +940,6 @@ def check_word_study_lexicon_verified_bare_transliteration(
 # a bug — the reader's own language already IS the target script, there is
 # nothing being "respelled into" or substituted for.
 _CLAUSE_BUG_LATIN_TRANSLIT_LANGS = {"zh", "ar"}
-_CLAUSE_BUG_PHONETIC_RESPELLING_LANGS = {"ja", "hi"}
 
 # A native-language translation immediately followed by a parenthetical
 # clause — 3+ space/interpunct-separated tokens. Interpunct '・' is included
@@ -1006,93 +1005,51 @@ def _is_bare_latin_clause(tokens: list) -> bool:
     return all(_LATIN_TRANSLIT_RE.match(t) for t in tokens)
 
 
-# Whole-parenthetical purity test for the phonetic-respelling variant (ja,
-# hi): every character in the parenthetical must be in the language's own
-# native-script Unicode block, plus only the '・' interpunct and
-# whitespace as separators — reusing _phonetic_respelling_re_for_lang's
-# script_class construction so this stays in sync with the same source
-# language definitions rather than re-deriving script ranges here. This is
-# what rejects ordinary Hindi/Arabic sentences that merely contain 3+
-# words of native script: e.g. hi 'फिर से' (एक बार और, दूसरी बार) — plain
-# synonym elaboration — fails purity because of its comma (ordinary prose
-# punctuation, not a transliteration-run separator), while the real bug hi
-# 'आदि में वचन था' (एन आर्के एन हो लोगॉस) is pure Devanagari + spaces and
-# correctly matches.
-#
-# KNOWN PRECISION GAP (hi specifically, confirmed 2026-07-31): an ordinary
-# Hindi contrastive-paraphrase aside with zero internal punctuation and 3+
-# words — e.g. 'जीवित प्राणी' (केवल प्राप्त करते हुए) "'living being'
-# (merely receiving)" — is indistinguishable from the real bug by script
-# purity alone and WILL false-positive. This is a real, accepted
-# limitation, not an oversight: there is no regex-only signal left to
-# separate "ordinary Devanagari paraphrase" from "Devanagari phonetic
-# respelling of a Greek clause" (unlike the zh/ar bare-Latin variant,
-# where the macron-diacritic trigger makes ordinary prose essentially
-# impossible to false-positive on). ja is unaffected — katakana is used
-# almost exclusively for loanwords/transliteration in this corpus, so
-# pure-katakana asides are reliably the real bug. Every hi hit from this
-# check needs a human read before acting on it; do not auto-fix based on
-# this warning alone for hi. A lexicon-backed check (verifying the
-# parenthetical against Strong's own transliteration, same pattern
-# check_native_script_bare_transliteration uses via `lexicon` for the
-# single-word case) would fix this properly but was out of scope here.
-def _is_pure_native_script_clause(parenthetical: str, lang: str) -> bool:
-    entry = load_native_script_ranges().get(lang)
-    if not entry:
-        return False
-    script_class = "".join(entry["blocks"])
-    pure_re = re.compile(rf"^[{script_class}・\s]+$")
-    return bool(pure_re.match(parenthetical))
-
-
 def check_word_study_bare_clause_transliteration(
     text: str, path: str, lang: str, ctx: str, report: ReportLike
 ) -> None:
     """WARNING: a quoted native-language translation immediately followed by
-    a parenthetical multi-word clause transliteration/respelling of the
+    a parenthetical multi-word bare-Latin clause transliteration of the
     underlying Greek — e.g. zh '"太初有道"(Ēn archē ēn ho Logos)', ar
-    "'فِي الْبَدْءِ...' (Ēn archē ēn ho Logos)", ja
-    '「初めに、ことばがあった」（エーン・アルケー・エーン・ホ・ロゴス）', hi
-    "'आदि में वचन था' (एन आर्के एन हो लोगॉस)" — where the field has no real
+    "'فِي الْبَدْءِ...' (Ēn archē ēn ho Logos)" — where the field has no real
     Hebrew/Greek character anywhere. The whole clause is being discussed by
-    its transliteration (bare Latin in zh/ar) or a phonetic respelling into
-    the reader's own script (katakana in ja, Devanagari in hi) with the
-    actual Greek clause never given at all, same root bug
-    check_word_study_bare_transliteration catches for a single word — see
-    that function's docstring and gloss_format.json's
-    'Three-or-more-word phrase ... instead of a 1-or-2-word gloss'
-    violation.
+    its transliteration only, same root bug check_word_study_bare_transliteration
+    catches for a single word — see that function's docstring and
+    gloss_format.json's 'Three-or-more-word phrase ... instead of a
+    1-or-2-word gloss' violation.
 
-    Scoped to exactly _CLAUSE_BUG_LATIN_TRANSLIT_LANGS |
-    _CLAUSE_BUG_PHONETIC_RESPELLING_LANGS (zh/ar/ja/hi) — the confirmed
-    family, not every non-Latin-script language and never a Latin-script
-    one (see that set's own comment for why native_script_ranges.json
-    membership alone is the wrong scoping signal here).
+    Scoped to exactly _CLAUSE_BUG_LATIN_TRANSLIT_LANGS (zh/ar) — the
+    macron-diacritic signal (_translit_diacritic_re) is what makes this
+    check precise: ordinary prose essentially never carries a macron, so a
+    macron-bearing Latin clause is reliably the real bug.
+
+    ja/hi (phonetic respelling into the reader's own native script —
+    katakana/Devanagari — instead of bare Latin) are deliberately NOT
+    covered here: there is no diacritic or lexicon signal available to
+    distinguish a genuine respelled clause from ordinary native-language
+    prose in parens (confirmed via real corpus false positive, hi
+    breath_new_adam_hi_001.json cards[4].discovery_questions[2]:
+    'जीवित प्राणी' (केवल प्राप्त करते हुए) "'living being' (merely
+    receiving)" — ordinary contrastive paraphrase, indistinguishable by
+    script-purity alone from a real respelled clause). Verifying a
+    Devanagari/Katakana span against the Greek/Hebrew SOT would require a
+    phonetic script->Latin transliteration table this codebase doesn't
+    have; rather than guess, this check simply doesn't run for ja/hi. Real
+    ja/hi clause-level bugs are still caught at the word level once a
+    macron-bearing Latin token appears next to them (check_native_script_
+    bare_transliteration, check_word_study_bare_transliteration).
 
     Requires 3+ tokens in the parenthetical (an ordinary 1-2-word gloss
-    pair is already check_word_study_bare_transliteration's job), AND the
-    parenthetical must pass a whole-content purity test — every token is
-    itself transliteration-shaped (zh/ar) or every character is the
-    language's own native script (ja/hi) — not just "contains a native
-    character/diacritic somewhere". The first draft of this check used a
-    'contains' test and produced dozens of false positives on ordinary
-    prose asides (2026-07-31); the purity test is what actually
-    distinguishes "the whole parenthetical IS a transliterated/respelled
-    clause" from "this sentence happens to touch the target script or a
-    Latin loanword".
-
-    KNOWN PRECISION GAP — hi specifically: confirmed clean (zero false
-    positives) for zh/ar/ja; hi still produces false positives on ordinary
-    punctuation-free Devanagari prose asides that happen to have 3+ words
-    (e.g. "'living being' (merely receiving)"), because script purity
-    alone can't distinguish that from a real phonetic-respelled clause —
-    see _is_pure_native_script_clause's comment for the full explanation
-    and why this is a deliberate, accepted tradeoff rather than a bug.
-    Every hi hit from this check needs a human read before acting on it.
+    pair is already check_word_study_bare_transliteration's job), AND
+    every token must itself be transliteration-shaped with at least one
+    macron present (_is_bare_latin_clause) — not just "contains a Latin
+    diacritic somewhere". The first draft of this check used a 'contains'
+    test and produced dozens of false positives on ordinary prose asides
+    (2026-07-31); the purity test is what actually distinguishes "the
+    whole parenthetical IS a transliterated clause" from "this sentence
+    happens to touch a Latin loanword".
     """
-    if lang not in (
-        _CLAUSE_BUG_LATIN_TRANSLIT_LANGS | _CLAUSE_BUG_PHONETIC_RESPELLING_LANGS
-    ):
+    if lang not in _CLAUSE_BUG_LATIN_TRANSLIT_LANGS:
         return
     key = path.rsplit(".", 1)[-1].split("[")[0]
     if key in _SKIP_KEYS:
@@ -1121,11 +1078,7 @@ def check_word_study_bare_clause_transliteration(
         tokens = [t for t in re.split(r"[\s・]+", parenthetical.strip()) if t]
         if len(tokens) < 3:
             continue
-        if lang in _CLAUSE_BUG_LATIN_TRANSLIT_LANGS:
-            matched = _is_bare_latin_clause(tokens)
-        else:
-            matched = _is_pure_native_script_clause(parenthetical, lang)
-        if not matched:
+        if not _is_bare_latin_clause(tokens):
             continue
         report.W(
             f"{ctx}: '{quoted}' ({parenthetical}) has the shape of a bare Greek clause transliteration/respelling (3+ tokens) but the field has no real Hebrew/Greek character anywhere — likely discussing a whole clause by its transliteration only, with the actual Greek text never given (see gloss_format.json 'Three-or-more-word phrase ... instead of a 1-or-2-word gloss')"

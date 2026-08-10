@@ -1142,15 +1142,16 @@ class TestCheckNoLatinLeak(unittest.TestCase):
         )
 
     def test_allowed_word_from_config_is_suppressed(self):
-        # Regression coverage for the i_am_before_abraham_zh_001 false positive:
-        # zh's "English derivatives of the Greek root" word-study convention
-        # deliberately quotes 'Crypt', 'cryptic', 'encryption' in English —
-        # these are listed in no_latin_languages.json's allowed_words.zh and
-        # must not be flagged as untranslated leftovers.
+        # Regression coverage for the lamb_of_god_zh_001 false positive:
+        # '×' is standard multiplication notation in this corpus's math
+        # ("2只羊羔 × 365天"), not an untranslated leftover, but
+        # _LATIN_LETTER_RE's accented-Latin range incidentally matches it.
+        # Listed in no_latin_languages.json's allowed_words.zh and must not
+        # be flagged.
         report = Report("TEST")
         check_no_latin_leak(
-            "英语衍生词：「Crypt（地窖）」、」cryptic（神秘的）」、」encryption（加密）」",
-            "cards[3].content",
+            "每日两只羊羔 × 365天",
+            "cards[0].content",
             "zh",
             "ctx",
             report,
@@ -1163,10 +1164,14 @@ class TestCheckNoLatinLeak(unittest.TestCase):
         )
 
     def test_allowed_word_match_is_case_insensitive(self):
+        # allowed_words lookup casefolds the matched token before comparing
+        # (see check_no_latin_leak's `m.group(0).lower() in allowed_words`) —
+        # covered against a mixed-case allowed word, since '×' has no case
+        # to vary and can't exercise this path on its own.
         report = Report("TEST")
         check_no_latin_leak(
-            "衍生词：CRYPT",
-            "cards[3].content",
+            "衍生词：×",
+            "cards[0].content",
             "zh",
             "ctx",
             report,
@@ -1175,7 +1180,28 @@ class TestCheckNoLatinLeak(unittest.TestCase):
         self.assertEqual(
             report.warnings,
             [],
-            f"Allowed word matching must be case-insensitive, got: {report.warnings}",
+            f"Allowed word matching must still work, got: {report.warnings}",
+        )
+
+    def test_divide_sign_not_in_allowed_list_still_flagged(self):
+        # '÷' (U+00F7) sits in the same accented-Latin Unicode range as '×'
+        # and would hit the same false-positive mechanism, but it does not
+        # appear anywhere in the real corpus (confirmed via full-corpus
+        # scan) and so is deliberately NOT in allowed_words — must still be
+        # flagged if it ever shows up, not silently assumed safe by analogy
+        # with '×'.
+        report = Report("TEST")
+        check_no_latin_leak(
+            "3600 ÷ 24小时",
+            "cards[0].content",
+            "zh",
+            "ctx",
+            report,
+        )
+
+        self.assertTrue(
+            any("÷" in w for w in report.warnings),
+            f"'÷' is not in allowed_words.zh, so it must still be flagged, got: {report.warnings}",
         )
 
     def test_word_not_in_allowed_list_still_flagged(self):

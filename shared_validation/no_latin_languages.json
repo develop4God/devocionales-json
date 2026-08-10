@@ -1,6 +1,18 @@
 {
   "_comment": "Languages whose native script is non-Latin, checked by check_no_latin_leak in text_checks.py for stray Latin content (untranslated leftovers) outside the one known-good exception: the Latin transliteration inside a Greek/Hebrew gloss's parenthetical, e.g. 'μονογενής (monogenēs)' — see find_greek_hebrew_glosses. 'letters': flag bare Latin letters (A-Z/a-z plus accented Latin) found in the field. 'punctuation': flag ASCII punctuation (, . ! ? \" ') where the language has its own native marks — OFF by default until confirmed against real corpus usage per language (this corpus intentionally tolerates some mixed punctuation conventions, see check_quote_anomalies comments on guillemets/curly quotes). Add a language only after confirming its script is genuinely non-Latin and the rule values are correct for it.",
   "languages": {
+    "ar": {
+      "letters": true,
+      "punctuation": false
+    },
+    "hi": {
+      "letters": true,
+      "punctuation": false
+    },
+    "ja": {
+      "letters": true,
+      "punctuation": false
+    },
     "zh": {
       "letters": true,
       "punctuation": false
@@ -16,8 +28,11 @@
     "difficulty_level", "testament", "accent_color", "emoji",
     "application_focus", "emotional_intensity"
   ],
-  "_allowed_words_comment": "Case-insensitive bare-Latin words that are content, not translation leftovers, in a specific language — e.g. the corpus's 'English derivatives of the Greek root' word-study convention (κρύπτω, G2928 → 'Crypt', 'cryptic', 'encryption'), which is correctly quoted in English in every language except fr, which localized to French derivatives instead. Add an entry only after confirming the word is deliberately cited, not a missed translation. '×' and '÷' (multiplication/division signs) are also listed here for zh: _LATIN_LETTER_RE's accented-Latin range (À-ɏ, U+00C0–U+024F) incidentally includes these two math symbols since they sit inside that Unicode block by Unicode's own layout, not because they are Latin letters — confirmed × is the correct, standard multiplication sign in Chinese-language math notation (乘号), not an untranslated leftover.",
+  "_allowed_words_comment": "Case-insensitive bare-Latin words that are content, not translation leftovers, in a specific language. Add an entry only after confirming the word is deliberately cited, not a missed translation. '×' (multiplication sign, U+00D7) is listed here: _LATIN_LETTER_RE's accented-Latin range (À-ɏ, U+00C0–U+024F) incidentally includes it since it sits inside that Unicode block by Unicode's own layout, not because it's a Latin letter — confirmed the identical U+00D7 codepoint is used as multiplication notation across ar/hi/ja/zh corpus content, not an untranslated leftover. No '÷' entry: the division sign does not appear anywhere in the corpus (confirmed via full-corpus scan) — add it back only if/when it's actually used.",
   "allowed_words": {
-    "zh": ["crypt", "cryptic", "encryption", "×", "÷"]
+    "ar": ["×"],
+    "hi": ["×"],
+    "ja": ["×"],
+    "zh": ["×"]
   }
 }
