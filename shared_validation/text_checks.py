@@ -304,9 +304,9 @@ def check_quote_anomalies(text: str, ctx: str, report: ReportLike) -> None:
     # otherwise-correct content (see gold_silver_ashes_ja_001.json's
     # '金（χρυσίον, (chrysíon) (G5553))：' — one full-width opener, two
     # ASCII pairs, balanced overall). An imbalance after normalizing both
-    # styles to ASCII means a real dropped/extra paren, most often a
-    # Strong's-citation rewrite (see lexicon_fixer.py) that failed to close
-    # the outer wrapper it was editing inside of.
+    # styles to ASCII means a real dropped/extra paren, most often a manual
+    # Strong's-citation edit that failed to close the outer wrapper it was
+    # editing inside of.
     normalized = text.replace("（", "(").replace("）", ")")
     poc, pcc = normalized.count("("), normalized.count(")")
     if poc != pcc:

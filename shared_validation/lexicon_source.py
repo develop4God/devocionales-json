@@ -40,11 +40,11 @@ def _normalized_translit(word: str) -> str:
     """Strip diacritics and casefold, so a corpus transliteration written
     without Strong's own stress marks (e.g. 'anamnesis') still matches its
     headword ('anámnēsis', G364). Same tiny algorithm already duplicated in
-    greek_hebrew_gloss.py and lexicon_fixer.py for the identical reason
-    (comparing transliterations without treating case/accent as meaning) —
-    not imported from either, since lexicon_source.py sits below both in
-    the dependency graph (this module's own docstring) and importing from
-    a caller would invert that. Kept in sync by hand; not worth a larger
+    greek_hebrew_gloss.py for the identical reason (comparing
+    transliterations without treating case/accent as meaning) — not
+    imported from there, since lexicon_source.py sits below it in the
+    dependency graph (this module's own docstring) and importing from a
+    caller would invert that. Kept in sync by hand; not worth a larger
     refactor to deduplicate for a 6-line function."""
     return "".join(
         char

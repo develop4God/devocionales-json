@@ -31,28 +31,29 @@ both already wired into every validator run — no gap here.
 ## Standalone tools (not part of the gate, run manually)
 
 These have their own `__main__` / CLI and are explicitly **not** imported by either
-`validate_*.py` entrypoint — they're for interactively finding and fixing malformed
-Strong's citations, not for gating CI:
+`validate_*.py` entrypoint:
 
 | Module | Purpose |
 |---|---|
-| `strong_scanner.py` | Immutable single-pass scan of a JSON file's text fields (SOT for downstream fix tooling). |
-| `strong_search.py` | Phased regex search for Strong's-number patterns in prose. |
-| `strong_fixer.py`, `strong_balance_fixer.py`, `strong_applier.py` | Propose/apply Strong's-code and citation-balance fixes. |
-| `strong_pipeline.py` | Orchestrates scan → analyze → apply as one pipeline (dry-run or production). |
-| `run_strong_search.py` | CLI entrypoint for the above (search / preview / fix, single file or whole family). |
-| `gap_check.py` | Diffs a fixer's proposed action against the immutable scan before it's trusted — read-only. |
-| `lexicon_fixer.py` | Rewrites glosses to Strong's canonical form. |
 | `content_length_report.py` | Opt-in diagnostic comparing prose length across sibling-language files. Not a pass/fail check — see its own docstring for why. |
 | `check_gitignore_pycache.py` | Repo-hygiene check: no `__pycache__` tracked or untracked. |
+| `paren_balance.py` | Report-only parenthesis balance scan over a JSON file's text fields. |
+
+The Strong's-citation repair toolchain (scanner/search/fixer/balance-fixer/applier/
+pipeline CLI, plus the gloss-rewrite fixer) was removed 2026-08-11: it required a
+human to run it and decide, had zero callers from either live validator, and its
+one automated concern — citation *format* normalization — isn't something the gate
+enforces in the first place (`gloss_format.json`'s `strong_code_prefixes` rule
+already accepts multiple citation shapes). Strong's correctness itself is still
+fully covered by the gate — see the table above.
 
 ## Tests
 
 - `tests/test_business_rules_shared_validation.py` — unit tests for shared check
   functions not otherwise covered by a pipeline's own `test_business_rules_*.py`.
-- `tests/test_family_check.py`, `test_lexicon_source.py`, `test_lexicon_fixer.py`,
-  `test_paren_balance.py`, `test_scripture_check.py`, `test_strong_search.py`,
-  `test_run_report.py`, `test_business_rules_report.py` — per-module coverage.
+- `tests/test_family_check.py`, `test_lexicon_source.py`, `test_paren_balance.py`,
+  `test_scripture_check.py`, `test_run_report.py`, `test_business_rules_report.py`
+  — per-module coverage.
 - `tests/test_promoted_validators.py` — smoke-shells both real master validators
   against real repo content on every run; the durable end-to-end gate.
 
