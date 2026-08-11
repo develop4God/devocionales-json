@@ -255,10 +255,10 @@ class TestCheckStrongCodeBareTransliteration(unittest.TestCase):
             f"Expected a bare-transliteration error for ESTIN, got: {report.errors}",
         )
 
-    def test_real_greek_script_present_anywhere_in_string_suppresses_the_check(self):
-        # If the field already contains real Greek/Hebrew script, that's
-        # find_greek_hebrew_glosses' job to judge, not this check's —
-        # no double-reporting.
+    def test_real_greek_script_nearby_suppresses_the_check(self):
+        # If real Greek/Hebrew script appears within the window around a
+        # bare-transliteration match, that's find_greek_hebrew_glosses' job
+        # to judge, not this check's — no double-reporting.
         report = Report("TEST")
         check_strong_code_bare_transliteration(
             "The word διαθήκη, (diathēkē) means covenant. THE KEY WORD: DIATHĒKĒ (Strong G1242)",
@@ -270,7 +270,66 @@ class TestCheckStrongCodeBareTransliteration(unittest.TestCase):
         self.assertEqual(
             report.errors,
             [],
-            f"A string containing real Greek script should be left to the gloss checker, got: {report.errors}",
+            f"A bare match with real Greek script nearby should be left to the gloss checker, got: {report.errors}",
+        )
+
+    def test_titlecase_word_before_strong_code_is_an_error(self):
+        # Confirmed in the wild 2026-08-10: veil_torn/hammer_of_god had this
+        # exact shape ("Katapetasma (G2665)", "Parrhēsía (G3954)") in six
+        # Latin-script languages, invisible to the original ALL-CAPS-only
+        # regex because only the first letter was capitalized.
+        report = Report("TEST")
+        check_strong_code_bare_transliteration(
+            "WHAT WAS THE VEIL? (Katapetasma (G2665))",
+            "cards[0].content",
+            "ctx",
+            report,
+        )
+
+        self.assertTrue(
+            any(
+                "Katapetasma" in e and "bare transliteration" in e
+                for e in report.errors
+            ),
+            f"Expected a bare-transliteration error for Title Case, got: {report.errors}",
+        )
+
+    def test_lowercase_word_before_strong_code_is_an_error(self):
+        report = Report("TEST")
+        check_strong_code_bare_transliteration(
+            "The debate centers on mashiach (H4899).",
+            "cards[0].content",
+            "ctx",
+            report,
+        )
+
+        self.assertTrue(
+            any("mashiach" in e for e in report.errors),
+            f"Expected a bare-transliteration error for lowercase, got: {report.errors}",
+        )
+
+    def test_real_greek_script_far_away_in_same_field_does_not_suppress_a_later_bare_match(
+        self,
+    ):
+        # A field can legitimately contain one correct, well-formed
+        # citation (a verse quote) alongside a second, later bare one (a
+        # "KEY WORD" restatement) — confirmed in the wild 2026-08-10,
+        # hammer_of_god's de/ar/hi/ja/zh files. Whole-string suppression
+        # would silently miss the second, broken occurrence; the window
+        # must be local to each match.
+        report = Report("TEST")
+        check_strong_code_bare_transliteration(
+            "'Thus saith the LORD to his ANOINTED (מָשִׁיחַ, (mâshîyach) (H4899)), to Cyrus...'"
+            + " " * 200
+            + "THE KEY WORD: Mashiach (H4899) = MESSIAH",
+            "cards[0].content",
+            "ctx",
+            report,
+        )
+
+        self.assertTrue(
+            any("Mashiach" in e for e in report.errors),
+            f"Expected the far-away bare restatement to still be flagged, got: {report.errors}",
         )
 
     def test_ordinary_allcaps_acronym_without_strong_code_shape_produces_no_finding(

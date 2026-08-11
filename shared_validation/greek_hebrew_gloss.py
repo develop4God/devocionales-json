@@ -675,43 +675,67 @@ def check_native_script_bare_transliteration(
         )
 
 
-# An ALL-CAPS (optionally macron/acute-accented) Latin word immediately
-# followed by a Strong's-code citation in parentheses — e.g. "DIATHĒKĒ
-# (Strong G1242)" or "ESTIN (G1510)". This is the Latin-script twin of the
-# bug check_strong_code_native_script catches for non-Latin languages: the
-# Strong code always cites a real Hebrew/Greek word, but here the only
-# thing standing in for it is the word's own transliteration in full caps
+# A Latin word (any case — ALL-CAPS, Title Case, or lowercase; optionally
+# macron/acute-accented) immediately followed by a Strong's-code citation
+# in parentheses — e.g. "DIATHĒKĒ (Strong G1242)", "ESTIN (G1510)",
+# "Katapetasma (G2665)", or "mashiach (H4899)". This is the Latin-script
+# twin of the bug check_strong_code_native_script catches for non-Latin
+# languages: the Strong code always cites a real Hebrew/Greek word, but
+# here the only thing standing in for it is the word's own transliteration
 # — the native-script word was never given at all. Confirmed in the wild
-# 2026-07-27 across every Latin-script language (de/en/es/fil/fr/pt) in
-# new_covenant_cup, gethsemane_agony, cup_of_wrath, passed_from_death, and
-# saints_resurrected — zero false positives against the full corpus scan.
-_ALLCAPS_STRONG_CODE_RE = re.compile(
-    r"\b([A-ZĀĒĪŌŪÁÉÍÓÚḔṌ][A-ZĀĒĪŌŪÁÉÍÓÚḔṌ]{1,20})\s*\((?:Strong\s+)?([A-Z]\d{1,5})\)"
+# 2026-07-27 (ALL-CAPS shape only) across every Latin-script language
+# (de/en/es/fil/fr/pt) in new_covenant_cup, gethsemane_agony, cup_of_wrath,
+# passed_from_death, and saints_resurrected. Widened 2026-08-10 after
+# veil_torn/hammer_of_god showed the identical bug in Title Case
+# ("Parrhēsía (G3954)", "Katapetasma (G2665)") — the ALL-CAPS-only version
+# of this regex missed every one of them because only the first letter was
+# capitalized, not the whole word. Case was never the actual signal; the
+# signal is a Latin word directly adjacent to a Strong's-code citation with
+# no comma and no real Hebrew/Greek word given — that holds regardless of
+# capitalization, including a lowercase bare transliteration like "mashiach
+# (H4899)".
+_BARE_TRANSLIT_STRONG_CODE_RE = re.compile(
+    r"\b([A-Za-zĀĒĪŌŪāēīōūÁÉÍÓÚáéíóúḔṌḗṓ]{2,30})\s*\((?:Strong\s+)?([A-Z]\d{1,5})\)"
 )
+_STRONG_CODE_WINDOW_FOR_BARE_TRANSLIT = 60
 
 
 def check_strong_code_bare_transliteration(
     text: str, path: str, ctx: str, report: ReportLike
 ) -> None:
-    """HARD GATE: in Latin-script prose, an ALL-CAPS word immediately
-    before a Strong's-code citation — "DIATHĒKĒ (Strong G1242)" — is the
-    same dangling-citation bug check_strong_code_native_script catches for
-    non-Latin languages, just with the target script already being Latin.
-    check_strong_code_native_script skips Latin-script languages entirely
-    on the assumption that "a Strong code embedded in Latin-script prose is
-    unremarkable" — true in general, but not when the word right next to
-    the code is itself a bare transliteration standing in for the missing
-    native-script word. No native-script anchor is needed to see this one:
-    the ALL-CAPS shape directly adjacent to the citation is the signal.
+    """HARD GATE: in Latin-script prose, a Latin word immediately before a
+    Strong's-code citation — "DIATHĒKĒ (Strong G1242)" or "Katapetasma
+    (G2665)" — is the same dangling-citation bug check_strong_code_native_script
+    catches for non-Latin languages, just with the target script already
+    being Latin. check_strong_code_native_script skips Latin-script
+    languages entirely on the assumption that "a Strong code embedded in
+    Latin-script prose is unremarkable" — true in general, but not when the
+    word right next to the code is itself a bare transliteration standing
+    in for the missing native-script word. No native-script anchor is
+    needed to see this one: the shape directly adjacent to the citation is
+    the signal, independent of capitalization.
+
+    The suppression check is windowed around each match (not a single
+    whole-string check) — a field can legitimately contain one correct,
+    well-formed citation (e.g. a verse quote's 'ANOINTED (מָשִׁיחַ,
+    (mâshîyach) (H4899))') alongside a second, later bare one in the same
+    field ('THE KEY WORD: Mashiach (H4899)'); suppressing the whole string
+    because Hebrew/Greek appears anywhere in it would silently miss the
+    second, broken occurrence. Confirmed in the wild 2026-08-10: hammer_of_god's
+    "KEY WORD" restatement repeated several codes as a bare phonetic in the
+    same field as an already-correct verse-quote citation.
     """
     key = path.rsplit(".", 1)[-1].split("[")[0]
     if key in _SKIP_KEYS:
         return
-    if _GREEK_RE.search(text) or _HEBREW_RE.search(text):
-        return
-    for m in _ALLCAPS_STRONG_CODE_RE.finditer(text):
+    foreign_re = re.compile(f"{_GREEK_RE.pattern}|{_HEBREW_RE.pattern}")
+    for m in _BARE_TRANSLIT_STRONG_CODE_RE.finditer(text):
+        start = max(0, m.start() - _STRONG_CODE_WINDOW_FOR_BARE_TRANSLIT)
+        end = min(len(text), m.end() + _STRONG_CODE_WINDOW_FOR_BARE_TRANSLIT)
+        if foreign_re.search(text[start:end]):
+            continue  # a real Hebrew/Greek word is nearby — find_greek_hebrew_glosses' job
         report.E(
-            f"{ctx}: '{m.group(1)}' is a bare transliteration standing next to Strong code '{m.group(2)}' with no real Hebrew/Greek word given anywhere (required format: '<word>, ({m.group(1).lower()})' with the native-script word present, see gloss_format.json)"
+            f"{ctx}: '{m.group(1)}' is a bare transliteration standing next to Strong code '{m.group(2)}' with no real Hebrew/Greek word given nearby (required format: '<word>, ({m.group(1).lower()})' with the native-script word present, see gloss_format.json)"
         )
 
 
