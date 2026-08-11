@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "ja",
   "bible_version": "SK2003",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 15,
   "meta": {
     "character": "ザアカイ",
@@ -27,8 +27,8 @@
     ]
   },
   "key_verse": {
-    "reference": "ルカ 19:10",
-    "text": "人の子は、失われた人を捜して救うために来たのです。",
+    "reference": "ルカ 19:1-2",
+    "text": "それからイエスは、エリコに入って、町をお通りになった。 ここには、ザアカイという人がいたが、彼は取税人のかしらで、金持ちであった。",
     "bible_version": "SK2003"
   },
   "cards": [

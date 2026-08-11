@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "fil",
   "bible_version": "MBB05",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 15,
   "meta": {
     "character": "Zaqueo",
@@ -27,8 +27,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Lucas 19:10",
-    "text": "Ang Anak ng Tao ay naparito upang hanapin at iligtas ang naligaw.",
+    "reference": "Lucas 19:1-2",
+    "text": "Pumasok si Jesus sa Jerico at naglakad sa kabayanan. May isang tao roong ang pangalan ay Zaqueo, isang pinuno ng mga maniningil ng buwis at napakayaman.",
     "bible_version": "MBB05"
   },
   "cards": [

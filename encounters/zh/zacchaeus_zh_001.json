@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "zh",
   "bible_version": "CUV1919",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 10,
   "meta": {
     "character": "撒该",
@@ -27,8 +27,8 @@
     ]
   },
   "key_verse": {
-    "reference": "路加福音 19:10",
-    "text": "人子来，为要寻找、拯救失丧的人。",
+    "reference": "路加福音 19:1-2",
+    "text": "耶稣进了耶利哥，正经过的时候， 有一个人名叫撒该，作税吏长，是个财主。",
     "bible_version": "CUV1919"
   },
   "cards": [
