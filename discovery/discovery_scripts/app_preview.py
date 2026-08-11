@@ -21,6 +21,24 @@ import sys
 import webbrowser
 from pathlib import Path
 
+
+def _find_repo_root(start: Path) -> Path:
+    """Walk upward from `start` looking for the shared_preview/ package,
+    rather than assuming a fixed directory depth (which silently breaks if
+    this script is ever moved). Raises clearly instead of resolving to the
+    wrong place."""
+    for candidate in [start, *start.parents]:
+        if (candidate / "shared_preview").is_dir():
+            return candidate
+    raise RuntimeError(
+        f"Could not find shared_preview/ above {start} — "
+        "is this script still inside the devocionales-json repo?"
+    )
+
+
+sys.path.insert(0, str(_find_repo_root(Path(__file__).resolve().parent)))
+from shared_preview.markdown import escape, render_emphasis_markdown  # noqa: E402
+
 # Fields this script knows how to render, matching _buildCardContent in
 # discovery_detail_page.dart as of the last time this script was synced.
 # JSON keys are snake_case; the Dart guard names are camelCase -- this maps
@@ -82,24 +100,6 @@ def check_drift(dart_repo: Path):
     return warnings
 
 
-def escape(text):
-    if text is None:
-        return ""
-    return (
-        str(text)
-        .replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-    )
-
-
-def render_bold_markdown(text):
-    """Mirror _buildBoldMarkdownText: only **bold** is special-cased."""
-    escaped = escape(text)
-    return re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", escaped).replace("\n", "<br>")
-
-
 CSS = """
 body { font-family: -apple-system, Roboto, Arial, sans-serif; background:#f2f2f5; margin:0; padding:24px; }
 .card { max-width:640px; margin:0 auto 32px; background:#fff; border-radius:32px;
@@ -148,7 +148,7 @@ def render_card(card):
 
     if card.get("content"):
         out.append(
-            f'<div class="content">{render_bold_markdown(card["content"])}</div>'
+            f'<div class="content">{render_emphasis_markdown(card["content"])}</div>'
         )
 
     if card.get("revelation_key"):

@@ -30,6 +30,24 @@ from pathlib import Path
 
 from asset_urls import EncounterIndexReader, ImageReference
 
+
+def _find_repo_root(start: Path) -> Path:
+    """Walk upward from `start` looking for the shared_preview/ package,
+    rather than assuming a fixed directory depth (which silently breaks if
+    this script is ever moved). Raises clearly instead of resolving to the
+    wrong place."""
+    for candidate in [start, *start.parents]:
+        if (candidate / "shared_preview").is_dir():
+            return candidate
+    raise RuntimeError(
+        f"Could not find shared_preview/ above {start} — "
+        "is this script still inside the devocionales-json repo?"
+    )
+
+
+sys.path.insert(0, str(_find_repo_root(Path(__file__).resolve().parent)))
+from shared_preview.markdown import escape, render_emphasis_markdown  # noqa: E402
+
 IMAGE_EXT = "avif"
 IMAGE_MIME = "image/avif"
 REQUEST_TIMEOUT_SECONDS = 10
@@ -189,18 +207,6 @@ def check_drift(dart_repo: Path):
                 f"script has {sorted(RENDERED_FIELDS_BY_TYPE[t])}"
             )
     return warnings
-
-
-def escape(text):
-    if text is None:
-        return ""
-    return (
-        str(text)
-        .replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-    )
 
 
 CSS = """
@@ -395,7 +401,9 @@ def render_card(card, image_fetcher=None):
         if card.get("verse_overlay"):
             body.append(verse_overlay_html(card["verse_overlay"]))
         if card.get("content"):
-            body.append(f'<div class="content strong">{escape(card["content"])}</div>')
+            body.append(
+                f'<div class="content strong">{render_emphasis_markdown(card["content"])}</div>'
+            )
         body.append(connections_html(card.get("scripture_connections")))
         if card.get("revelation_key"):
             body.append(revelation_html(card["revelation_key"]))
@@ -421,7 +429,7 @@ def render_card(card, image_fetcher=None):
             title = prayer.get("title", "Prayer").upper()
             body.append(
                 f'<div class="prayer-box"><div class="title">{escape(title)}</div>'
-                f'<div class="content">{escape(prayer["content"])}</div></div>'
+                f'<div class="content">{render_emphasis_markdown(prayer["content"])}</div></div>'
             )
 
     elif ctype == "completion":
