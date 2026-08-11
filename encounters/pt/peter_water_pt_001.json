@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "pt",
   "bible_version": "ARC",
-  "version": "1.1",
+  "version": "1.2",
   "estimated_reading_minutes": 5,
   "meta": {
     "character": "Pedro",
@@ -24,8 +24,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Mateus 14:31",
-    "text": "E logo Jesus, estendendo a mão, segurou-o e disse-lhe: Homem de pequena fé, por que duvidaste?",
+    "reference": "Mateus 14:24",
+    "text": "E o barco estava já no meio do mar, açoitado pelas ondas; porque o vento era contrário.",
     "bible_version": "ARC"
   },
   "cards": [

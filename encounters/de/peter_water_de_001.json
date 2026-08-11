@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "de",
   "bible_version": "LU17",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 5,
   "meta": {
     "character": "Petrus",
@@ -24,8 +24,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Matthäus 14:31",
-    "text": "Jesus aber streckte sogleich die Hand aus und ergriff ihn und sprach zu ihm: Du Kleingläubiger, warum hast du gezweifelt?",
+    "reference": "Matthäus 14:24",
+    "text": "Das Boot aber war schon weit vom Land entfernt und kam in Not durch die Wellen; denn der Wind stand ihm entgegen.",
     "bible_version": "LU17"
   },
   "cards": [

@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "en",
   "bible_version": "KJV",
-  "version": "6.0",
+  "version": "6.1",
   "estimated_reading_minutes": 10,
   "meta": {
     "character": "The Samaritan Woman",
@@ -27,8 +27,8 @@
     ]
   },
   "key_verse": {
-    "reference": "John 4:14",
-    "text": "But whosoever drinks of the water that I shall give him shall never thirst; but the water that I shall give him shall be in him a well of water springing up into everlasting life.",
+    "reference": "John 4:4",
+    "text": "And he must needs go through Samaria.",
     "bible_version": "KJV"
   },
   "cards": [

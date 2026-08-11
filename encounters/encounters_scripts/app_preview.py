@@ -30,6 +30,25 @@ from pathlib import Path
 
 from asset_urls import EncounterIndexReader, ImageReference
 
+
+def _find_repo_root(start: Path) -> Path:
+    """Walk upward from `start` looking for the shared_preview/ package,
+    rather than assuming a fixed directory depth (which silently breaks if
+    this script is ever moved). Raises clearly instead of resolving to the
+    wrong place."""
+    for candidate in [start, *start.parents]:
+        if (candidate / "shared_preview").is_dir():
+            return candidate
+    raise RuntimeError(
+        f"Could not find shared_preview/ above {start} — "
+        "is this script still inside the devocionales-json repo?"
+    )
+
+
+sys.path.insert(0, str(_find_repo_root(Path(__file__).resolve().parent)))
+from shared_preview.markdown import escape, render_emphasis_markdown  # noqa: E402
+from shared_preview.unrendered import TrackedDict, find_unrendered_keys  # noqa: E402
+
 IMAGE_EXT = "avif"
 IMAGE_MIME = "image/avif"
 REQUEST_TIMEOUT_SECONDS = 10
@@ -191,18 +210,6 @@ def check_drift(dart_repo: Path):
     return warnings
 
 
-def escape(text):
-    if text is None:
-        return ""
-    return (
-        str(text)
-        .replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-    )
-
-
 CSS = """
 body { font-family: -apple-system, Roboto, Arial, sans-serif; background:#1a1a1a; margin:0; padding:24px; }
 .card { max-width:480px; margin:0 auto 32px; border-radius:28px; overflow:hidden;
@@ -259,6 +266,11 @@ body { font-family: -apple-system, Roboto, Arial, sans-serif; background:#1a1a1a
            background:#e8f0ff; border:1px solid #5580d0; color:#1a3a7a; font-weight:600; font-size:14px; }
 .card-number { max-width:480px; margin:0 auto; color:#ffc107; font-size:13px;
                font-weight:700; font-family:monospace; }
+.key-verse-card { max-width:480px; margin:0 auto 32px; background:linear-gradient(135deg,#4a3a7a,#2a1f4d);
+                   border-radius:20px; padding:32px; color:#fff; text-align:center; }
+.key-verse-label { font-size:11px; font-weight:800; letter-spacing:1.8px; opacity:0.8; color:#ffc107; }
+.key-verse-text { margin-top:20px; font-size:19px; font-weight:600; line-height:1.5; font-style:italic; }
+.key-verse-ref { margin-top:20px; font-size:14px; font-weight:900; letter-spacing:1px; color:#ffc107; }
 """
 
 
@@ -395,7 +407,9 @@ def render_card(card, image_fetcher=None):
         if card.get("verse_overlay"):
             body.append(verse_overlay_html(card["verse_overlay"]))
         if card.get("content"):
-            body.append(f'<div class="content strong">{escape(card["content"])}</div>')
+            body.append(
+                f'<div class="content strong">{render_emphasis_markdown(card["content"])}</div>'
+            )
         body.append(connections_html(card.get("scripture_connections")))
         if card.get("revelation_key"):
             body.append(revelation_html(card["revelation_key"]))
@@ -421,7 +435,7 @@ def render_card(card, image_fetcher=None):
             title = prayer.get("title", "Prayer").upper()
             body.append(
                 f'<div class="prayer-box"><div class="title">{escape(title)}</div>'
-                f'<div class="content">{escape(prayer["content"])}</div></div>'
+                f'<div class="content">{render_emphasis_markdown(prayer["content"])}</div></div>'
             )
 
     elif ctype == "completion":
@@ -456,22 +470,24 @@ def render_card(card, image_fetcher=None):
     else:
         body.append(f'<div class="title">Unknown card type: {escape(ctype)}</div>')
 
-    # Any populated field not in this type's rendered set is a schema drift
-    # bug -- the app's own debug contract check would flag this at runtime.
-    rendered_dart_fields = RENDERED_FIELDS_BY_TYPE.get(ctype, set())
-    populated_json_keys = {
+    # Automatic gate: compares keys this function actually READ from `card`
+    # (tracked live by TrackedDict) against keys populated in the JSON --
+    # no per-type allowlist to keep in sync by hand. DEFERRED_FIELDS (known,
+    # intentionally-not-yet-wired fields) are reported separately as
+    # "pending" rather than flagged as a drop.
+    deferred_json_keys = {
+        jkey
+        for jkey, dart_field in JSON_TO_DART_FIELD.items()
+        if dart_field in DEFERRED_FIELDS
+    }
+    orphaned = find_unrendered_keys(
+        card, ignored_keys={"order", "type"} | deferred_json_keys
+    )
+    pending = sorted(
         k
         for k, v in card.items()
-        if v not in (None, "", [], {}) and k not in ("order", "type")
-    }
-    orphaned = []
-    pending = []
-    for jkey in populated_json_keys:
-        dart_field = JSON_TO_DART_FIELD.get(jkey, jkey)
-        if dart_field in DEFERRED_FIELDS:
-            pending.append(jkey)
-        elif dart_field not in rendered_dart_fields:
-            orphaned.append(jkey)
+        if v not in (None, "", [], {}) and k in deferred_json_keys
+    )
     if orphaned:
         body.append(
             '<div class="unrendered">⚠ NOT RENDERED IN APP for type '
@@ -488,7 +504,39 @@ def render_card(card, image_fetcher=None):
     return "\n".join(body)
 
 
+def render_key_verse(kv):
+    return (
+        '<div class="key-verse-card">'
+        '<div class="key-verse-label">KEY VERSE</div>'
+        f'<div class="key-verse-text">&ldquo;{escape(kv.get("text", ""))}&rdquo;</div>'
+        f'<div class="key-verse-ref">{escape(kv.get("reference", "")).upper()}</div>'
+        "</div>"
+    )
+
+
+# Study-level keys that are deliberately non-visual (internal/authoring
+# metadata) -- not a list of "what renders"; find_unrendered_keys() derives
+# that automatically from what render_* actually reads off `data`.
+TOP_LEVEL_IGNORED = {
+    "id",
+    "type",
+    "date",
+    "title",
+    "language",
+    "version",
+    "bible_version",
+    "schema_version",
+    "estimated_reading_minutes",
+    "meta",
+    # Cache-busting key sourced from index.json's entry.imageVersion, not
+    # displayed content -- see encounter_repository.dart/encounter_card_model.dart.
+    "image_version",
+}
+
+
 def build_html(data, drift_warnings, image_fetcher=None):
+    """`data` must be a TrackedDict (see main()) so the unrendered-field
+    check below reflects what render_key_verse/render_card actually read."""
     title = data.get("title") or data.get("id") or "Encounter Preview"
     parts = [
         (
@@ -498,16 +546,110 @@ def build_html(data, drift_warnings, image_fetcher=None):
     ]
     for w in drift_warnings:
         parts.append(f'<div class="warning">⚠ {escape(w)}</div>')
+
+    kv = data.get("key_verse")
+    if isinstance(kv, dict):
+        parts.append(render_key_verse(kv))
+
     for card in data.get("cards", []):
         if isinstance(card, dict):
             parts.append(render_card(card, image_fetcher))
+
+    # Run last: by now every render_* call above has recorded which keys it
+    # actually read off `data`, so this reflects real usage, not a guess.
+    unrendered_top = find_unrendered_keys(data, ignored_keys=TOP_LEVEL_IGNORED)
+    if unrendered_top:
+        parts.append(
+            '<div class="warning">⚠ NOT RENDERED IN PREVIEW -- these top-level JSON '
+            f"fields exist but this script does not display them: "
+            f"{', '.join(sorted(unrendered_top))}</div>"
+        )
+
     parts.append("</body></html>")
     return "\n".join(parts)
 
 
+def scan_unrendered(json_path: Path):
+    """Run the same TrackedDict gate build_html() uses, without writing any
+    HTML or fetching images. Returns ({field: count}, {field: count}) for
+    (orphaned, pending) on this one file."""
+    data = TrackedDict(json.loads(json_path.read_text(encoding="utf-8")))
+    build_html(data, drift_warnings=[], image_fetcher=None)
+
+    deferred_json_keys = {
+        jkey
+        for jkey, dart_field in JSON_TO_DART_FIELD.items()
+        if dart_field in DEFERRED_FIELDS
+    }
+
+    orphaned_counts = {}
+    pending_counts = {}
+    for kv in find_unrendered_keys(data, ignored_keys=TOP_LEVEL_IGNORED):
+        orphaned_counts[kv] = orphaned_counts.get(kv, 0) + 1
+    for card in data.get("cards", []):
+        if not isinstance(card, dict):
+            continue
+        for k in find_unrendered_keys(
+            card, ignored_keys={"order", "type"} | deferred_json_keys
+        ):
+            orphaned_counts[k] = orphaned_counts.get(k, 0) + 1
+        for k, v in card.items():
+            if v not in (None, "", [], {}) and k in deferred_json_keys:
+                pending_counts[k] = pending_counts.get(k, 0) + 1
+    return orphaned_counts, pending_counts
+
+
+def run_report(root: Path):
+    """Batch version of the per-card ⚠ NOT RENDERED / ⏳ PENDING warnings:
+    scans every *.json under `root` (skipping index.json) and prints one
+    consolidated table instead of requiring each preview HTML to be opened
+    by hand."""
+    per_field_orphaned = {}
+    per_field_pending = {}
+    files_scanned = 0
+    for json_path in sorted(root.rglob("*.json")):
+        if json_path.name == "index.json" or "image_prompts" in json_path.name:
+            continue
+        files_scanned += 1
+        try:
+            orphaned, pending = scan_unrendered(json_path)
+        except Exception as e:
+            print(f"SKIP (parse/render error): {json_path}: {e}", file=sys.stderr)
+            continue
+        for field, n in orphaned.items():
+            per_field_orphaned.setdefault(field, []).append((json_path, n))
+        for field, n in pending.items():
+            per_field_pending.setdefault(field, []).append((json_path, n))
+
+    print(f"Scanned {files_scanned} files.\n")
+
+    if not per_field_orphaned:
+        print("0 unrendered (orphaned) fields found.")
+    else:
+        print(f"{'ORPHANED FIELD':<28} {'FILES':>6} {'OCCURRENCES':>12}")
+        print("-" * 50)
+        for field, hits in sorted(per_field_orphaned.items(), key=lambda kv: -len(kv[1])):
+            total = sum(n for _, n in hits)
+            print(f"{field:<28} {len(hits):>6} {total:>12}")
+        print()
+        for field, hits in sorted(per_field_orphaned.items(), key=lambda kv: -len(kv[1])):
+            print(f"=== {field} ({len(hits)} files) ===")
+            for path, n in hits:
+                rel = path.relative_to(root.parent) if root.parent in path.parents else path
+                print(f"  {rel} ({n})")
+            print()
+
+    if per_field_pending:
+        print(f"{'PENDING (deferred) FIELD':<28} {'FILES':>6} {'OCCURRENCES':>12}")
+        print("-" * 50)
+        for field, hits in sorted(per_field_pending.items(), key=lambda kv: -len(kv[1])):
+            total = sum(n for _, n in hits)
+            print(f"{field:<28} {len(hits):>6} {total:>12}")
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("json_file")
+    ap.add_argument("json_file", nargs="?")
     ap.add_argument("--out", default=None)
     ap.add_argument(
         "--dart-repo",
@@ -522,10 +664,32 @@ def main():
         action="store_true",
         help="Don't fetch real images from the assets repo",
     )
+    ap.add_argument(
+        "--report",
+        nargs="?",
+        const=".",
+        default=None,
+        metavar="DIR",
+        help=(
+            "Skip HTML generation; scan every *.json under DIR (default: "
+            "current encounters/ tree) and print a consolidated unrendered-"
+            "field report instead of opening each preview one by one."
+        ),
+    )
     args = ap.parse_args()
 
+    if args.report is not None:
+        root = Path(args.report)
+        if str(root) == ".":
+            root = Path(__file__).resolve().parent.parent
+        run_report(root)
+        return
+
+    if not args.json_file:
+        ap.error("json_file is required unless --report is given")
+
     json_path = Path(args.json_file)
-    data = json.loads(json_path.read_text(encoding="utf-8"))
+    data = TrackedDict(json.loads(json_path.read_text(encoding="utf-8")))
 
     dart_repo = (
         Path(args.dart_repo)

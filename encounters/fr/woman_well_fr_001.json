@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "fr",
   "bible_version": "LSG1910",
-  "version": "6.0",
+  "version": "6.1",
   "estimated_reading_minutes": 11,
   "meta": {
     "character": "La Femme Samaritaine",
@@ -27,8 +27,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Jean 4:14",
-    "text": "mais celui qui boira de l'eau que je lui donnerai n'aura jamais soif, et l'eau que je lui donnerai deviendra en lui une source d'eau qui jaillira jusque dans la vie éternelle.",
+    "reference": "Jean 4:4",
+    "text": "Comme il fallait qu'il passât par la Samarie,",
     "bible_version": "LSG1910"
   },
   "cards": [

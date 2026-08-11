@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "zh",
   "bible_version": "CUV1919",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 5,
   "meta": {
     "character": "巴底买",
@@ -25,8 +25,8 @@
     ]
   },
   "key_verse": {
-    "reference": "马可福音 10:52",
-    "text": "耶稣说：「你去吧！你的信心救了你了。」瞎子立刻看见了，就在路上跟随耶稣。",
+    "reference": "马可福音 10:46",
+    "text": "到了耶利哥；耶稣同门徒并许多人出耶利哥的时候，有一个讨饭的瞎子，是底买的儿子巴底买，坐在路旁。",
     "bible_version": "CUV1919"
   },
   "cards": [

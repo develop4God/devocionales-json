@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "pt",
   "bible_version": "ARC",
-  "version": "1.1",
+  "version": "1.2",
   "estimated_reading_minutes": 7,
   "meta": {
     "character": "Bartimeu",
@@ -25,8 +25,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Marcos 10:52",
-    "text": "E Jesus lhe disse: Vai, a tua fé te salvou. E logo viu, e seguiu a Jesus pelo caminho.",
+    "reference": "Marcos 10:46",
+    "text": "Depois, foram para Jericó. E, saindo ele de Jericó com seus discípulos e uma grande multidão, Bartimeu, o cego, filho de Timeu, estava assentado junto ao caminho, mendigando.",
     "bible_version": "ARC"
   },
   "cards": [
