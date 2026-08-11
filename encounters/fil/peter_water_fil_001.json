@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "fil",
   "bible_version": "MBB05",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 6,
   "meta": {
     "character": "Pedro",
@@ -24,8 +24,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Mateo 14:31",
-    "text": "Agad siyang inabot ni Jesus. \"Bakit ka nag-alinlangan? Napakaliit ng iyong pananampalataya!\" sabi niya kay Pedro.",
+    "reference": "Mateo 14:24",
+    "text": "Samantala, ang bangka ay nasa laot na ngunit sinasalpok ito ng mga alon dahil pasalungat ito sa hangin.",
     "bible_version": "MBB05"
   },
   "cards": [
