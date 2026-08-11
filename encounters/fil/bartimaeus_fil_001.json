@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "fil",
   "bible_version": "MBB05",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 9,
   "meta": {
     "character": "Bartimeo",
@@ -25,8 +25,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Marcos 10:52",
-    "text": "Sinabi ni Jesus, \"Kung gayon, magaling ka na dahil sa iyong pananampalataya.\" Noon di'y nakakita siyang muli, at sumunod kay Jesus.",
+    "reference": "Marcos 10:46",
+    "text": "Dumating sina Jesus sa Jerico. Nang papaalis na siya sa Jerico kasama ang kanyang mga alagad at marami pang iba, may nadaanan silang isang bulag na nakaupo sa tabi ng daan at namamalimos. Siya'y si Bartimeo na anak ni Timeo.",
     "bible_version": "MBB05"
   },
   "cards": [
