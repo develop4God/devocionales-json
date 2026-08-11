@@ -13,22 +13,35 @@ class TrackedDict(dict):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._accessed_keys = set()
+        self._wrapped_cache = {}
 
-    def _wrap(self, value):
+    def _wrap(self, key, value):
+        # Cache by key so repeated access (e.g. a report scanning `data`
+        # after build_html() already rendered it) returns the SAME wrapped
+        # object -- otherwise a second .get("cards") would hand back fresh
+        # TrackedDicts with none of the access history from rendering.
+        if key in self._wrapped_cache:
+            return self._wrapped_cache[key]
         if isinstance(value, dict) and not isinstance(value, TrackedDict):
-            return TrackedDict(value)
-        if isinstance(value, list):
-            return [self._wrap(v) for v in value]
-        return value
+            wrapped = TrackedDict(value)
+        elif isinstance(value, list):
+            wrapped = [
+                TrackedDict(v) if isinstance(v, dict) and not isinstance(v, TrackedDict) else v
+                for v in value
+            ]
+        else:
+            wrapped = value
+        self._wrapped_cache[key] = wrapped
+        return wrapped
 
     def __getitem__(self, key):
         self._accessed_keys.add(key)
-        return self._wrap(super().__getitem__(key))
+        return self._wrap(key, super().__getitem__(key))
 
     def get(self, key, default=None):
         self._accessed_keys.add(key)
         if key in self:
-            return self._wrap(super().get(key))
+            return self._wrap(key, super().get(key))
         return default
 
     def __contains__(self, key):

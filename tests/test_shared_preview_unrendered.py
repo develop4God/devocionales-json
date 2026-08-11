@@ -68,6 +68,17 @@ class TestTrackedDict(unittest.TestCase):
         items[0].get("a")
         self.assertEqual(find_unrendered_keys(items[0]), ["b"])
 
+    def test_repeated_get_returns_same_wrapped_object_with_access_history(self):
+        # Regression: a report script that scans `data` again AFTER a
+        # render pass already read from it must see that render pass's
+        # accessed_keys, not a fresh, empty-history wrapper.
+        d = TrackedDict({"cards": [{"title": "x", "dropped": "y"}]})
+        first_cards = d.get("cards")
+        first_cards[0].get("title")  # simulates render_card() reading title
+        second_cards = d.get("cards")  # simulates a report re-scanning later
+        self.assertIs(first_cards[0], second_cards[0])
+        self.assertEqual(find_unrendered_keys(second_cards[0]), ["dropped"])
+
 
 class TestFindUnrenderedKeys(unittest.TestCase):
     def test_flags_populated_key_never_read(self):

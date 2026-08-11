@@ -507,8 +507,7 @@ def render_card(card, image_fetcher=None):
 def render_key_verse(kv):
     return (
         '<div class="key-verse-card">'
-        '<div class="key-verse-label">KEY VERSE (⚠ parsed by encounter_study.dart '
-        "but not currently displayed anywhere in the app)</div>"
+        '<div class="key-verse-label">KEY VERSE</div>'
         f'<div class="key-verse-text">&ldquo;{escape(kv.get("text", ""))}&rdquo;</div>'
         f'<div class="key-verse-ref">{escape(kv.get("reference", "")).upper()}</div>'
         "</div>"
@@ -570,9 +569,87 @@ def build_html(data, drift_warnings, image_fetcher=None):
     return "\n".join(parts)
 
 
+def scan_unrendered(json_path: Path):
+    """Run the same TrackedDict gate build_html() uses, without writing any
+    HTML or fetching images. Returns ({field: count}, {field: count}) for
+    (orphaned, pending) on this one file."""
+    data = TrackedDict(json.loads(json_path.read_text(encoding="utf-8")))
+    build_html(data, drift_warnings=[], image_fetcher=None)
+
+    deferred_json_keys = {
+        jkey
+        for jkey, dart_field in JSON_TO_DART_FIELD.items()
+        if dart_field in DEFERRED_FIELDS
+    }
+
+    orphaned_counts = {}
+    pending_counts = {}
+    for kv in find_unrendered_keys(data, ignored_keys=TOP_LEVEL_IGNORED):
+        orphaned_counts[kv] = orphaned_counts.get(kv, 0) + 1
+    for card in data.get("cards", []):
+        if not isinstance(card, dict):
+            continue
+        for k in find_unrendered_keys(
+            card, ignored_keys={"order", "type"} | deferred_json_keys
+        ):
+            orphaned_counts[k] = orphaned_counts.get(k, 0) + 1
+        for k, v in card.items():
+            if v not in (None, "", [], {}) and k in deferred_json_keys:
+                pending_counts[k] = pending_counts.get(k, 0) + 1
+    return orphaned_counts, pending_counts
+
+
+def run_report(root: Path):
+    """Batch version of the per-card ⚠ NOT RENDERED / ⏳ PENDING warnings:
+    scans every *.json under `root` (skipping index.json) and prints one
+    consolidated table instead of requiring each preview HTML to be opened
+    by hand."""
+    per_field_orphaned = {}
+    per_field_pending = {}
+    files_scanned = 0
+    for json_path in sorted(root.rglob("*.json")):
+        if json_path.name == "index.json" or "image_prompts" in json_path.name:
+            continue
+        files_scanned += 1
+        try:
+            orphaned, pending = scan_unrendered(json_path)
+        except Exception as e:
+            print(f"SKIP (parse/render error): {json_path}: {e}", file=sys.stderr)
+            continue
+        for field, n in orphaned.items():
+            per_field_orphaned.setdefault(field, []).append((json_path, n))
+        for field, n in pending.items():
+            per_field_pending.setdefault(field, []).append((json_path, n))
+
+    print(f"Scanned {files_scanned} files.\n")
+
+    if not per_field_orphaned:
+        print("0 unrendered (orphaned) fields found.")
+    else:
+        print(f"{'ORPHANED FIELD':<28} {'FILES':>6} {'OCCURRENCES':>12}")
+        print("-" * 50)
+        for field, hits in sorted(per_field_orphaned.items(), key=lambda kv: -len(kv[1])):
+            total = sum(n for _, n in hits)
+            print(f"{field:<28} {len(hits):>6} {total:>12}")
+        print()
+        for field, hits in sorted(per_field_orphaned.items(), key=lambda kv: -len(kv[1])):
+            print(f"=== {field} ({len(hits)} files) ===")
+            for path, n in hits:
+                rel = path.relative_to(root.parent) if root.parent in path.parents else path
+                print(f"  {rel} ({n})")
+            print()
+
+    if per_field_pending:
+        print(f"{'PENDING (deferred) FIELD':<28} {'FILES':>6} {'OCCURRENCES':>12}")
+        print("-" * 50)
+        for field, hits in sorted(per_field_pending.items(), key=lambda kv: -len(kv[1])):
+            total = sum(n for _, n in hits)
+            print(f"{field:<28} {len(hits):>6} {total:>12}")
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("json_file")
+    ap.add_argument("json_file", nargs="?")
     ap.add_argument("--out", default=None)
     ap.add_argument(
         "--dart-repo",
@@ -587,7 +664,29 @@ def main():
         action="store_true",
         help="Don't fetch real images from the assets repo",
     )
+    ap.add_argument(
+        "--report",
+        nargs="?",
+        const=".",
+        default=None,
+        metavar="DIR",
+        help=(
+            "Skip HTML generation; scan every *.json under DIR (default: "
+            "current encounters/ tree) and print a consolidated unrendered-"
+            "field report instead of opening each preview one by one."
+        ),
+    )
     args = ap.parse_args()
+
+    if args.report is not None:
+        root = Path(args.report)
+        if str(root) == ".":
+            root = Path(__file__).resolve().parent.parent
+        run_report(root)
+        return
+
+    if not args.json_file:
+        ap.error("json_file is required unless --report is given")
 
     json_path = Path(args.json_file)
     data = TrackedDict(json.loads(json_path.read_text(encoding="utf-8")))
