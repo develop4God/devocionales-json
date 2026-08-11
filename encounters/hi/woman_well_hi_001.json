@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "hi",
   "bible_version": "HIOV",
-  "version": "6.0",
+  "version": "6.1",
   "estimated_reading_minutes": 13,
   "meta": {
     "character": "सामरी स्त्री",
@@ -27,8 +27,8 @@
     ]
   },
   "key_verse": {
-    "reference": "यूहन्ना 4:14",
-    "text": "परन्तु जो कोई उस जल में से पीएगा जो मैं उसे दूँगा, वह फिर अनन्तकाल तक प्यासा न होगा; वरन् जो जल मैं उसे दूँगा, वह उसमें एक सोता बन जाएगा जो अनन्त जीवन के लिये उमड़ता रहेगा।",
+    "reference": "यूहन्ना 4:4",
+    "text": "और उसको सामरिया से होकर जाना अवश्य था।",
     "bible_version": "HIOV"
   },
   "cards": [

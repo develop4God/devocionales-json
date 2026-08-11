@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "ja",
   "bible_version": "SK2003",
-  "version": "6.0",
+  "version": "6.1",
   "estimated_reading_minutes": 13,
   "meta": {
     "character": "サマリヤの女",
@@ -27,8 +27,8 @@
     ]
   },
   "key_verse": {
-    "reference": "ヨハネの福音書 4:14",
-    "text": "しかし、わたしが与える水を飲む者はだれでも、決して渇くことがありません。わたしが与える水は、その人のうちで泉となり、永遠のいのちへの水がわき出ます。」",
+    "reference": "ヨハネの福音書 4:4",
+    "text": "しかし、サマリヤを通って行かなければならなかった。",
     "bible_version": "SK2003"
   },
   "cards": [

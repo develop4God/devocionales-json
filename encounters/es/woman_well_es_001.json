@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "es",
   "bible_version": "RVR1960",
-  "version": "6.0",
+  "version": "6.1",
   "estimated_reading_minutes": 10,
   "meta": {
     "character": "La Mujer Samaritana",
@@ -27,8 +27,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Juan 4:14",
-    "text": "mas el que bebiere del agua que yo le daré, no tendrá sed jamás; sino que el agua que yo le daré será en él una fuente de agua que salte para vida eterna.",
+    "reference": "Juan 4:4",
+    "text": "Y le era necesario pasar por Samaria.",
     "bible_version": "RVR1960"
   },
   "cards": [
