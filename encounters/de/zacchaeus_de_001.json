@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "de",
   "bible_version": "LU17",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 11,
   "meta": {
     "character": "Zachäus",
@@ -27,8 +27,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Lukas 19:10",
-    "text": "Denn der Menschensohn ist gekommen, zu suchen und selig zu machen, was verloren ist.",
+    "reference": "Lukas 19:1-2",
+    "text": "Und er ging nach Jericho hinein und zog hindurch. Und siehe, da war ein Mann mit Namen Zachäus, der war ein Oberer der Zöllner und war reich.",
     "bible_version": "LU17"
   },
   "cards": [

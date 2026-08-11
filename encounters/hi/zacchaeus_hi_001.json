@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "hi",
   "bible_version": "HIOV",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 17,
   "meta": {
     "character": "जक्‍कई",
@@ -27,8 +27,8 @@
     ]
   },
   "key_verse": {
-    "reference": "लूका 19:10",
-    "text": "क्योंकि मनुष्य का पुत्र खोए हुओं को ढूँढ़ने और उनका उद्धार करने आया है।",
+    "reference": "लूका 19:1-2",
+    "text": "वह यरीहो में प्रवेश करके जा रहा था। वहाँ जक्कई नामक एक मनुष्य था जो चुंगी लेनेवालों का सरदार था और धनी था।",
     "bible_version": "HIOV"
   },
   "cards": [

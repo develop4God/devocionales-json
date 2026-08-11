@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "fr",
   "bible_version": "LSG1910",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 14,
   "meta": {
     "character": "Zachée",
@@ -27,8 +27,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Luc 19:10",
-    "text": "Car le Fils de l'homme est venu chercher et sauver ce qui était perdu.",
+    "reference": "Luc 19:1-2",
+    "text": "Jésus, étant entré dans Jéricho, traversait la ville. Et voici, un homme riche, appelé Zachée, chef des publicains,",
     "bible_version": "LSG1910"
   },
   "cards": [
