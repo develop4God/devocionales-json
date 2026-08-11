@@ -31,10 +31,10 @@ from pathlib import Path
 sys.path.insert(
     0, str(Path(__file__).resolve().parent.parent.parent / "shared_validation")
 )
-from json_md_converter import (  # noqa: E402
-    is_scalar,
-    encode_file,
+from json_md_converter import (
     decode_file,
+    encode_file,
+    is_scalar,
     verify_file,
 )
 

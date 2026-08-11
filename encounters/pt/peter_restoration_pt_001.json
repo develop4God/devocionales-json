@@ -87,7 +87,7 @@
       "mood": "mysterious",
       "image_url": "peter_restoration_charcoal_fire.png",
       "title": "Já preparado",
-      "narrative": "Na praia arde um fogo de brasas. Sobre ele, peixe e pão, já preparados quando eles chegam à terra. No texto grego original, a palavra usada é κειμένην, (keiménēn), que significa 'já posto, disposto de antemão'. Jesus já tem a comida pronta, e ainda assim pede que tragam também dos peixes que acabaram de pescar.",
+      "narrative": "Na praia arde um fogo de brasas. Sobre ele, peixe e pão, já preparados quando eles chegam à terra. No texto grego original, a palavra usada é κεῖμαι, (keîmai) (G2749), que significa 'já posto, disposto de antemão'. Jesus já tem a comida pronta, e ainda assim pede que tragam também dos peixes que acabaram de pescar.",
       "verse_overlay": {
         "reference": "João 21:9-10",
         "text": "Logo que saltaram em terra, viram ali brasas, e um peixe posto em cima, e pão. Disse-lhes Jesus: Trazei dos peixes que agora apanhastes."
@@ -169,7 +169,7 @@
       "image_url": "peter_restoration_agape_phileo.png",
       "title": "Duas palavras para amar",
       "subtitle": "O amor prometido e o amor real",
-      "content": "Em grego existem várias palavras para 'amar'. Quando Jesus pergunta a Simão duas vezes se o ama, usa a palavra ἀγαπᾷς, (agapas): o amor absoluto, sacrificial, o mesmo que Pedro havia prometido naquela mesma noite. Pedro responde as três vezes: 'Sim, Senhor; tu sabes que te amo', mas com φιλῶ, (philō), amor de amizade e lealdade — um amor real, ainda que diferente do que Jesus perguntou.\n\nNa terceira vez, Jesus muda a própria pergunta e usa φιλεῖς, (phileis), a mesma palavra que Pedro vem usando desde o início: pergunta exatamente pelo amor que Pedro verdadeiramente tem, aceitando-o assim.",
+      "content": "Em grego existem várias palavras para 'amar'. Quando Jesus pergunta a Simão duas vezes se o ama, usa a palavra ἀγαπάω, (agapáō) (G25): o amor absoluto, sacrificial, o mesmo que Pedro havia prometido naquela mesma noite. Pedro responde as três vezes: 'Sim, Senhor; tu sabes que te amo', mas com φιλέω, (philéō) (G5368), amor de amizade e lealdade — um amor real, ainda que diferente do que Jesus perguntou.\n\nNa terceira vez, Jesus muda a própria pergunta e usa φιλέω, (philéō) (G5368), a mesma palavra que Pedro vem usando desde o início: pergunta exatamente pelo amor que Pedro verdadeiramente tem, aceitando-o assim.",
       "revelation_key": "A restauração não espera que o amor de Pedro alcance o ideal prometido: ela opera com o amor real que ele de fato tem.",
       "verse_overlay": {
         "reference": "João 21:17",
@@ -246,7 +246,7 @@
         },
         {
           "category": "Amor em ação",
-          "question": "Jesus esperava de Pedro, assim como espera de você, um amor ἀγαπᾷς, (agapas): sacrificial, de entrega total. Pedro foi honesto em sua resposta, mas em seus atos entregou a si mesmo a Jesus até a morte. E você, que amor tem por Jesus Cristo: mais em suas ações do que em suas palavras?"
+          "question": "Jesus esperava de Pedro, assim como espera de você, um amor ἀγαπάω, (agapáō) (G25): sacrificial, de entrega total. Pedro foi honesto em sua resposta, mas em seus atos entregou a si mesmo a Jesus até a morte. E você, que amor tem por Jesus Cristo: mais em suas ações do que em suas palavras?"
         },
         {
           "category": "Sua tarefa",

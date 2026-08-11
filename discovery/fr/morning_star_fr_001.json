@@ -19,7 +19,7 @@
       "icon": "🔭",
       "title": "Le Témoignage de la Création : Vénus",
       "subtitle": "Dieu a écrit Son plan dans les cieux avant de l'écrire sur papier",
-      "content": "En astronomie, Vénus est connue comme « l'Étoile du Matin ». Contrairement aux étoiles lointaines, Vénus est proche et son éclat est si intense qu'elle est la dernière chose à disparaître lorsque le soleil se lève.\n\nVénus atteint sa splendeur maximale pendant la quatrième veille (entre 3h00 et 6h00 du matin), le moment où l'atmosphère est la plus froide et où l'obscurité semble la plus dense.\n\nVénus n'est pas le soleil, mais elle en est le héraut (Eskēnōsen - preuve physique). Son apparition à l'horizon est la preuve que la rotation de la terre a vaincu la nuit. Si vous voyez Vénus, le lever du soleil est mathématiquement inévitable.",
+      "content": "En astronomie, Vénus est connue comme « l'Étoile du Matin ». Contrairement aux étoiles lointaines, Vénus est proche et son éclat est si intense qu'elle est la dernière chose à disparaître lorsque le soleil se lève.\n\nVénus atteint sa splendeur maximale pendant la quatrième veille (entre 3h00 et 6h00 du matin), le moment où l'atmosphère est la plus froide et où l'obscurité semble la plus dense.\n\nVénus n'est pas le soleil, mais elle en est le héraut. Son apparition à l'horizon est la preuve que la rotation de la terre a vaincu la nuit. Si vous voyez Vénus, le lever du soleil est mathématiquement inévitable.",
       "revelation_key": "Tout comme Vénus reflète la gloire du Soleil que nous ne voyons pas encore, nous reflétons la gloire de Christ au milieu des ténèbres du monde."
     },
     
@@ -59,11 +59,11 @@
           "application": "Lorsque votre vie semble chaotique, souvenez-vous : le même Logos qui a dit « Que la lumière soit » dans la Genèse peut parler l'ordre sur votre situation."
         },
         {
-          "word": "ἐσκήνωσεν",
-          "transliteration": "Eskēnōsen",
+          "word": "σκηνόω",
+          "transliteration": "skēnóō",
           "reference": "Jean 1:14",
           "meaning": "A dressé sa tente / A habité / A demeuré",
-          "revelation": "Le mot vient de « Skēnē » (tente). Dieu ne voulait pas être dans un temple de pierre ; Il est entré dans une « tente de chair » (sarx) pour comprendre votre douleur, votre soif et votre fatigue de l'intérieur.",
+          "revelation": "Le mot vient de σκηνή, (skēnḗ) (G4633) (tente). Dieu ne voulait pas être dans un temple de pierre ; Il est entré dans une « tente de chair » (σάρξ, (sárx) (G4561)) pour comprendre votre douleur, votre soif et votre fatigue de l'intérieur.",
           "application": "Jésus n'est pas un Dieu distant. Il a vécu dans la même « tente fragile » que vous habitez. Il connaît vos limites parce qu'Il les a expérimentées."
         },
         {
@@ -71,12 +71,12 @@
           "transliteration": "amnós",
           "reference": "Jean 1:29",
           "meaning": "L'Agneau",
-          "related_verb": "Airōn (αἴρων, (airōn)) - soulever, porter et enlever",
-          "revelation": "Jean dit : « Voici l'Agneau de Dieu, qui Airōn le péché du monde. » Il ne le couvre pas seulement de sang—Il le soulève de vos épaules, le porte et l'emporte loin afin que vous puissiez marcher libre !",
+          "related_verb": "αἴρω, (aírō) (G142) - soulever, porter et enlever",
+          "revelation": "Jean dit : « Voici l'Agneau de Dieu, qui ôte le péché du monde. » Il ne le couvre pas seulement de sang—Il le soulève de vos épaules, le porte et l'emporte loin afin que vous puissiez marcher libre !",
           "application": "Le poids de votre passé, votre honte, votre culpabilité—Christ ne les a pas seulement pardonnés, Il les a complètement enlevés. Ils ne sont plus sur vous."
         }
       ],
-      "revelation_key": "Christ est simultanément le Dessein éternel (Logos), la présence proche (Eskēnōsen), et le libérateur total (Amnos). Rien ne manque en Lui."
+      "revelation_key": "Christ est simultanément le Dessein éternel, la présence proche, et le libérateur total. Rien ne manque en Lui."
     },
     
     {
@@ -115,7 +115,7 @@
       ],
       "prayer": {
         "title": "Prière de Conclusion",
-        "content": "Seigneur Jésus, mon Logos et mon Étoile du Matin. Merci car aujourd'hui je comprends que ma victoire n'est pas une possibilité, mais une garantie mathématique et spirituelle. Merci de soulever (airōn) mon fardeau aujourd'hui. Je fixe mes yeux sur Ton éclat et je choisis de marcher comme un tabernacle de Ta gloire au milieu de ce monde. Que Ta lumière en moi soit le héraut du nouveau jour pour ceux qui m'entourent. Tout comme Vénus annonce le soleil, que ma vie annonce Ton royaume. Au nom de Jésus, Amen."
+        "content": "Seigneur Jésus, mon Logos et mon Étoile du Matin. Merci car aujourd'hui je comprends que ma victoire n'est pas une possibilité, mais une garantie mathématique et spirituelle. Merci de soulever mon fardeau aujourd'hui. Je fixe mes yeux sur Ton éclat et je choisis de marcher comme un tabernacle de Ta gloire au milieu de ce monde. Que Ta lumière en moi soit le héraut du nouveau jour pour ceux qui m'entourent. Tout comme Vénus annonce le soleil, que ma vie annonce Ton royaume. Au nom de Jésus, Amen."
       }
     }
   ],

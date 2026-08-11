@@ -24,8 +24,9 @@ from __future__ import annotations
 
 import json
 import re
+import unicodedata
 from pathlib import Path
-from typing import NamedTuple, Optional, Protocol
+from typing import NamedTuple, Protocol
 
 
 class LexiconEntry(NamedTuple):
@@ -33,6 +34,23 @@ class LexiconEntry(NamedTuple):
     lemma: str
     translit: str
     gloss: str
+
+
+def _normalized_translit(word: str) -> str:
+    """Strip diacritics and casefold, so a corpus transliteration written
+    without Strong's own stress marks (e.g. 'anamnesis') still matches its
+    headword ('anámnēsis', G364). Same tiny algorithm already duplicated in
+    greek_hebrew_gloss.py for the identical reason (comparing
+    transliterations without treating case/accent as meaning) — not
+    imported from there, since lexicon_source.py sits below it in the
+    dependency graph (this module's own docstring) and importing from a
+    caller would invert that. Kept in sync by hand; not worth a larger
+    refactor to deduplicate for a 6-line function."""
+    return "".join(
+        char
+        for char in unicodedata.normalize("NFD", word).casefold()
+        if not unicodedata.combining(char)
+    )
 
 
 # native_script_ranges.json's per-language Unicode block ranges + writing
@@ -46,7 +64,7 @@ class LexiconEntry(NamedTuple):
 # used there; find_nearby_strong_citation below is this module's own user
 # of the same data.
 _NATIVE_SCRIPT_RANGES_PATH = Path(__file__).parent / "native_script_ranges.json"
-_native_script_ranges_cache: Optional[dict] = None
+_native_script_ranges_cache: dict | None = None
 
 
 def load_native_script_ranges() -> dict:
@@ -75,7 +93,7 @@ class LexiconSource(Protocol):
 
     def lookup_by_lemma_and_number(
         self, word: str, strongs_number: str
-    ) -> Optional[LexiconEntry]:
+    ) -> LexiconEntry | None:
         """Exact lemma match narrowed to one specific Strong's number —
         disambiguates the list lookup_by_lemma returns when `word` collides
         across multiple headwords. Returns None if `word` has no entry under
@@ -83,8 +101,22 @@ class LexiconSource(Protocol):
         is one but not under this number)."""
         ...
 
-    def lookup_by_number(self, strongs_number: str) -> Optional[LexiconEntry]:
+    def lookup_by_number(self, strongs_number: str) -> LexiconEntry | None:
         """Direct lookup by Strong's number, e.g. 'G1096' or 'H1961'."""
+        ...
+
+    def lookup_by_translit(self, translit: str) -> list[LexiconEntry]:
+        """Every headword entry whose OWN transliteration matches `translit`,
+        diacritic/case-insensitively — e.g. 'anamnesis' matches G364's
+        'anámnēsis'. Same list-return shape as lookup_by_lemma for the same
+        reason: transliteration collisions are real (664 confirmed across
+        the combined Greek+Hebrew data, e.g. 'ō' alone maps to 3 different
+        Strong's numbers), so callers with no disambiguating hint must
+        handle multiple candidates themselves. Empty list if `translit`
+        matches no headword's transliteration at all — that is NOT proof
+        the underlying word is fictional, only that this specific spelling
+        isn't a Strong's headword transliteration (e.g. it could be an
+        inflected surface form, same caveat as lookup_by_lemma)."""
         ...
 
 
@@ -134,19 +166,33 @@ class StrongsLexiconSource:
     it with no new logic; verified none of those 6 collision words are
     used anywhere in this corpus, so this fallback is unambiguous in
     every real case found so far.
+
+    Combining-mark order is a third, independent source of false "not a
+    headword" misses, Hebrew-only (niqqud are combining marks; Greek
+    accents are precomposed): two strings can be visually identical and
+    NFC/NFD-equal under unicodedata.normalize, yet still fail a raw `==`
+    dict lookup because the corpus and Strong's data disagree on which
+    combining mark comes first at the same base letter (e.g. tsere before
+    dagesh vs. dagesh before tsere on the same הִנֵּה) — Python does not
+    canonicalize combining-mark order for you outside of explicit NFC/NFD
+    normalization. Found in zechariah_14_return_001 (all 10 languages):
+    the corpus's הִנֵּה byte-differs from H2009's stored הִנֵּה though both
+    are the same word. `_by_lemma`/`_by_lemma_ci` are keyed (and queried)
+    NFC-normalized for this reason — same fix scripture_check.py's
+    _normalize() already applies to verse text for the identical reason,
+    see that function's docstring.
     """
 
     _DATA_DIR = Path(__file__).parent / "lexicon_data"
 
-    def __init__(
-        self, greek_path: Optional[Path] = None, hebrew_path: Optional[Path] = None
-    ):
+    def __init__(self, greek_path: Path | None = None, hebrew_path: Path | None = None):
         greek_path = greek_path or self._DATA_DIR / "strongs_greek.json"
         hebrew_path = hebrew_path or self._DATA_DIR / "strongs_hebrew.json"
 
         self._by_number: dict[str, LexiconEntry] = {}
         self._by_lemma: dict[str, list[LexiconEntry]] = {}
         self._by_lemma_ci: dict[str, list[LexiconEntry]] = {}
+        self._by_translit_norm: dict[str, list[LexiconEntry]] = {}
 
         for path in (greek_path, hebrew_path):
             with open(path, encoding="utf-8") as f:
@@ -160,33 +206,41 @@ class StrongsLexiconSource:
                 )
                 self._by_number[number] = entry
                 if entry.lemma:
-                    self._by_lemma.setdefault(entry.lemma, []).append(entry)
-                    self._by_lemma_ci.setdefault(
-                        entry.lemma.casefold(), []
+                    lemma_nfc = unicodedata.normalize("NFC", entry.lemma)
+                    self._by_lemma.setdefault(lemma_nfc, []).append(entry)
+                    self._by_lemma_ci.setdefault(lemma_nfc.casefold(), []).append(entry)
+                if entry.translit:
+                    self._by_translit_norm.setdefault(
+                        _normalized_translit(entry.translit), []
                     ).append(entry)
 
-        for index in (self._by_lemma, self._by_lemma_ci):
+        for index in (self._by_lemma, self._by_lemma_ci, self._by_translit_norm):
             for entries in index.values():
                 entries.sort(key=lambda e: e.strongs_number)
 
     def lookup_by_lemma(self, word: str) -> list[LexiconEntry]:
-        exact = self._by_lemma.get(word)
+        word_nfc = unicodedata.normalize("NFC", word)
+        exact = self._by_lemma.get(word_nfc)
         if exact:
             return list(exact)
-        return list(self._by_lemma_ci.get(word.casefold(), []))
+        return list(self._by_lemma_ci.get(word_nfc.casefold(), []))
+
+    def lookup_by_translit(self, translit: str) -> list[LexiconEntry]:
+        return list(self._by_translit_norm.get(_normalized_translit(translit), []))
 
     def lookup_by_lemma_and_number(
         self, word: str, strongs_number: str
-    ) -> Optional[LexiconEntry]:
-        for entry in self._by_lemma.get(word, []):
+    ) -> LexiconEntry | None:
+        word_nfc = unicodedata.normalize("NFC", word)
+        for entry in self._by_lemma.get(word_nfc, []):
             if entry.strongs_number == strongs_number:
                 return entry
-        for entry in self._by_lemma_ci.get(word.casefold(), []):
+        for entry in self._by_lemma_ci.get(word_nfc.casefold(), []):
             if entry.strongs_number == strongs_number:
                 return entry
         return None
 
-    def lookup_by_number(self, strongs_number: str) -> Optional[LexiconEntry]:
+    def lookup_by_number(self, strongs_number: str) -> LexiconEntry | None:
         return self._by_number.get(strongs_number)
 
 
@@ -226,7 +280,7 @@ _STRONG_IN_TOKEN_RE = re.compile(r"[GH]\d{2,5}")
 _NEARBY_STRONG_WINDOW = 40
 
 
-_native_script_class_cache: dict[str, Optional[str]] = {}
+_native_script_class_cache: dict[str, str | None] = {}
 
 
 def is_rtl_lang(lang: str) -> bool:
@@ -243,7 +297,7 @@ def is_rtl_lang(lang: str) -> bool:
     return bool(entry and entry.get("direction") == "rtl")
 
 
-def _native_script_class_for_lang(lang: str) -> Optional[str]:
+def _native_script_class_for_lang(lang: str) -> str | None:
     """The regex character class for `lang`'s own native script (e.g.
     ja -> '぀-ヿ一-鿿'), read from native_script_ranges.json, or None for a
     Latin-script language (no entry there). Cached per language since the
@@ -259,8 +313,8 @@ def _native_script_class_for_lang(lang: str) -> Optional[str]:
 
 
 def find_nearby_strong_citation(
-    text: str, end: int, lang: Optional[str] = None
-) -> tuple[Optional[str], int]:
+    text: str, end: int, lang: str | None = None
+) -> tuple[str | None, int]:
     """Look at the "token" immediately following `end` (a gloss span's end
     offset, skipping exactly one leading space if present) for a Strong's-
     shaped code. Returns (code, citation_end): code is the code found (or
@@ -294,8 +348,13 @@ def find_nearby_strong_citation(
 
 
 def resolve_lemma_entry(
-    lexicon: LexiconSource, word: str, text: str, end: int, lang: Optional[str] = None
-) -> tuple[Optional[LexiconEntry], tuple[LexiconEntry, ...]]:
+    lexicon: LexiconSource,
+    word: str,
+    text: str,
+    end: int,
+    lang: str | None = None,
+    explicit_hint: str | None = None,
+) -> tuple[LexiconEntry | None, tuple[LexiconEntry, ...]]:
     """Single shared resolution step for 'which Strong's entry does this
     gloss span mean' — used by every caller that needs a lemma resolved
     (the lexical-accuracy checker, the hard-gate transliteration check, and
@@ -304,18 +363,28 @@ def resolve_lemma_entry(
     Returns (resolved_entry, all_candidates):
       - no candidates at all: (None, ())                    — word isn't a headword (e.g. inflected form)
       - exactly one candidate: (that entry, (that entry,))  — ordinary matched/mismatched case
-      - 2+ candidates, a nearby Strong's-code hint picks one: (that entry, all candidates)
+      - 2+ candidates, a hint (explicit or nearby) picks one: (that entry, all candidates)
       - 2+ candidates, no hint (or hint matches none of them): (None, all candidates) — genuinely ambiguous
 
     `lang` is passed through to find_nearby_strong_citation so the
     disambiguation hint's token boundary is correct for CJK files (no
     whitespace between words) — see that function's docstring.
+
+    `explicit_hint` is a caller-supplied Strong's number (e.g. from a
+    structured hebrew_words[]/greek_words[] entry's own "strongs" field,
+    which has no surrounding text for find_nearby_strong_citation to scan)
+    — tried first, before falling back to the text-scan hint, so a caller
+    that already knows the code never needs prose to carry it.
     """
     candidates = tuple(lexicon.lookup_by_lemma(word))
     if not candidates:
         return None, ()
     if len(candidates) == 1:
         return candidates[0], candidates
+    if explicit_hint:
+        resolved = lexicon.lookup_by_lemma_and_number(word, explicit_hint)
+        if resolved is not None:
+            return resolved, candidates
     hint, _ = find_nearby_strong_citation(text, end, lang)
     if hint:
         resolved = lexicon.lookup_by_lemma_and_number(word, hint)

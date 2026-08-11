@@ -30,8 +30,10 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, replace
 from pathlib import Path
+from typing import ClassVar
 
-from asset_urls import EncounterIndexReader, ImageReference as _BaseImageReference
+from asset_urls import EncounterIndexReader
+from asset_urls import ImageReference as _BaseImageReference
 
 RETRY_ATTEMPTS = 3
 RETRY_BACKOFF_SECONDS = 2
@@ -66,7 +68,7 @@ class ImageReferenceExtractor:
     Each unique image_url expands into one ImageReference per cross-check
     extension (PNG + AVIF), since both are uploaded for every image."""
 
-    SKIP_DIRS = {
+    SKIP_DIRS: ClassVar[set[str]] = {
         "archive",
         "encounters_scripts",
         "discovery",
@@ -165,7 +167,7 @@ class ImageFormatValidator:
         # ISOBMFF box: 4-byte size, b"ftyp", then a major brand of avif/avis.
         return header[4:8] == b"ftyp" and header[8:12] in (b"avif", b"avis")
 
-    CHECKERS = {"png": _is_png, "avif": _is_avif}
+    CHECKERS: ClassVar[dict] = {"png": _is_png, "avif": _is_avif}
 
     def validate(self, reference: ImageReference) -> tuple:
         checker = self.CHECKERS.get(reference.ext)

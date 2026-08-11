@@ -80,10 +80,9 @@ def _translit_matches(given: str, official: str) -> bool:
     Strong's by only an accent passed as MATCHED (found 2026-07-28,
     peter_restoration_001: anthrakia/lambano/bosko/poimaino all silently
     accepted against Strong's anthrakiá/lambánō/bóskō/poimaínō). Strong's
-    own spelling — diacritics included — is this corpus's source of truth
-    (see lexicon_fixer.py's module docstring); an exact match is the only
-    comparison that can't hide this class of error, and it's the same
-    comparison lexicon_fixer.py already uses to decide what to rewrite.
+    own spelling — diacritics included — is this corpus's source of truth;
+    an exact match is the only comparison that can't hide this class of
+    error.
     """
     return given.lower().strip() == official.lower().strip()
 
@@ -211,6 +210,7 @@ def check_structured_word_study_accuracy(
     ctx: str,
     report: ReportLike,
     debug: bool = False,
+    strongs_hint: str | None = None,
 ) -> LexicalCheckResult:
     """Same lexical grading as check_lexical_accuracy, for the OTHER shape
     this corpus uses to cite a Greek/Hebrew word study: the structured
@@ -228,10 +228,11 @@ def check_structured_word_study_accuracy(
     A structured array entry has no "nearby citation" text to hunt for a
     disambiguation hint in (unlike inline prose, there's no surrounding
     sentence here) — so when `word` is ambiguous across multiple Strong's
-    headwords, this always reports AMBIGUOUS_LEMMA; a caller with a
-    `reference` field (e.g. "John 1:47") wanting to disambiguate via that
-    verse reference would need a different lookup this module doesn't
-    provide (verse-to-lemma is a different data source than lemma-to-entry).
+    headwords, this reports AMBIGUOUS_LEMMA unless the caller passes
+    `strongs_hint` (from the entry's own optional "strong" JSON field —
+    the same key breath_new_adam/hammer_of_god/jesus_troubled_himself/
+    restoration_by_fire/road_to_emmaus already use), in which case that
+    code is tried directly via resolve_lemma_entry's explicit_hint path.
 
     Multi-word phrases (e.g. "ὁ υἱὸς τοῦ ἀνθρώπου", a title, not a single
     lexical term) are deliberately NOT split into per-word checks here —
@@ -239,7 +240,9 @@ def check_structured_word_study_accuracy(
     (INFLECTED_NO_LEMMA_MATCH), which is the correct, harmless outcome for
     a phrase this check was never meant to grade word-by-word.
     """
-    entry, candidates = resolve_lemma_entry(lexicon, word, "", 0, lang)
+    entry, candidates = resolve_lemma_entry(
+        lexicon, word, "", 0, lang, explicit_hint=strongs_hint
+    )
     return _grade_word_translit(
         word, transliteration, entry, candidates, path, lang, ctx, report, debug
     )

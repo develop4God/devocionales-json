@@ -491,8 +491,10 @@ def render_card(card, image_fetcher=None):
 def build_html(data, drift_warnings, image_fetcher=None):
     title = data.get("title") or data.get("id") or "Encounter Preview"
     parts = [
-        f"<!doctype html><html><head><meta charset='utf-8'>"
-        f"<title>{escape(title)}</title><style>{CSS}</style></head><body>"
+        (
+            f"<!doctype html><html><head><meta charset='utf-8'>"
+            f"<title>{escape(title)}</title><style>{CSS}</style></head><body>"
+        )
     ]
     for w in drift_warnings:
         parts.append(f'<div class="warning">⚠ {escape(w)}</div>')

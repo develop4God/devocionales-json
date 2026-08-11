@@ -33,7 +33,7 @@ import re
 import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Optional
+from typing import Self
 
 from devocionales_scripts.verse_resolver import VerseResolver, fetch_text, parse_en_ref
 
@@ -61,7 +61,7 @@ def scripture_validation_enabled() -> bool:
 # ─────────────────────────────────────────────────────────────────────────────
 
 _VERSIFICATION_EXCEPTIONS_PATH = Path(__file__).parent / "versification_exceptions.json"
-_versification_exceptions_cache: Optional[dict] = None
+_versification_exceptions_cache: dict | None = None
 
 
 def _load_versification_exceptions() -> dict:
@@ -81,7 +81,7 @@ def _load_versification_exceptions() -> dict:
 
 def _find_versification_exception(
     en_reference: str, bible_version: str
-) -> Optional[dict]:
+) -> dict | None:
     return _load_versification_exceptions().get((en_reference, bible_version))
 
 
@@ -351,7 +351,7 @@ _FOOTNOTE_MARKER_RE = re.compile(r"[①-⓿]")
 _FOOTNOTE_BRACKET_RE = re.compile(r"\[\d+\]")
 
 
-def _find_footnote_artifact(text: str) -> Optional[str]:
+def _find_footnote_artifact(text: str) -> str | None:
     """Return the first leaked footnote-marker substring found in `text`,
     or None if it's clean."""
     m = _FOOTNOTE_MARKER_RE.search(text)
@@ -363,7 +363,7 @@ def _find_footnote_artifact(text: str) -> Optional[str]:
     return None
 
 
-def validate_pair(ref: ScriptureRef, resolver: VerseResolver) -> Optional[Finding]:
+def validate_pair(ref: ScriptureRef, resolver: VerseResolver) -> Finding | None:
     """Resolve `ref.reference` (must be an English reference) via `resolver`
     and compare against `ref.verse_text`. Returns a Finding describing
     what's wrong, or None if the pair is clean (resolves, and text
@@ -374,7 +374,7 @@ def validate_pair(ref: ScriptureRef, resolver: VerseResolver) -> Optional[Findin
     report it (this module always returns WARNING-severity findings for
     both failure kinds, per the issue's initial-rollout scope).
     """
-    cita, texto, error = resolver.resolve(ref.reference)
+    _cita, texto, error = resolver.resolve(ref.reference)
 
     if error is not None:
         return Finding(
@@ -390,8 +390,8 @@ def validate_translated_pair(
     en_ref: ScriptureRef,
     native_ref: ScriptureRef,
     native_resolver: VerseResolver,
-    bible_version: Optional[str] = None,
-) -> Optional[Finding]:
+    bible_version: str | None = None,
+) -> Finding | None:
     """Validate a translated card's stored verse_text against its EN
     sibling card's reference — the corpus guarantees cards align 1:1 by
     position across languages (see validate_cross_translation's parity
@@ -465,7 +465,7 @@ def validate_translated_pair(
     return _compare_text(native_ref, texto)
 
 
-def _compare_text(ref: ScriptureRef, resolved_text: str) -> Optional[Finding]:
+def _compare_text(ref: ScriptureRef, resolved_text: str) -> Finding | None:
     """Shared fuzzy-match step for both validate_pair() and
     validate_translated_pair() — same threshold, same Finding shape.
     A low jaccard score is only reported if the stored text also fails
@@ -524,12 +524,12 @@ class ScriptureValidator:
     respectively; this class only manages resolver lifecycle/caching.
     """
 
-    def __init__(self, bible_database_dir: Path, books_sot_path: Optional[str] = None):
+    def __init__(self, bible_database_dir: Path, books_sot_path: str | None = None):
         self._bible_database_dir = Path(bible_database_dir)
         self._books_sot_path = books_sot_path
         self._resolvers: dict[tuple[str, str], VerseResolver] = {}
 
-    def get_resolver(self, bible_version: str, lang: str) -> Optional[VerseResolver]:
+    def get_resolver(self, bible_version: str, lang: str) -> VerseResolver | None:
         """Return the open VerseResolver for (bible_version, lang), opening
         and caching it on first use. Returns None if no matching DB file
         exists under bible_database_dir — callers should treat that as
@@ -552,7 +552,7 @@ class ScriptureValidator:
             resolver.close()
         self._resolvers.clear()
 
-    def __enter__(self) -> "ScriptureValidator":
+    def __enter__(self) -> Self:
         return self
 
     def __exit__(self, *_) -> None:

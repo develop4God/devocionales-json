@@ -39,9 +39,8 @@ def save(fname, data, indent):
 
 
 def all_entries(lang_data):
-    for date, arr in lang_data.items():
-        for e in arr:
-            yield e
+    for arr in lang_data.values():
+        yield from arr
 
 
 # ─── ARC FIXES ─────────────────────────────────────────────────────────────

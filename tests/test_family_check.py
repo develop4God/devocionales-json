@@ -21,16 +21,16 @@ sys.path.insert(0, str(REPO_ROOT))
 sys.path.insert(0, str(REPO_ROOT / "discovery" / "discovery_scripts"))
 sys.path.insert(0, str(REPO_ROOT / "encounters" / "encounters_scripts"))
 
-from shared_validation.family_check import (  # noqa: E402
-    Reporter,
-    nonempty,
-    check_drift,
-    check_key_parity,
-    check_filename_language_match,
-)
 import discovery_schema_checks  # noqa: E402
 import encounters_schema_checks  # noqa: E402
 
+from shared_validation.family_check import (  # noqa: E402
+    Reporter,
+    check_drift,
+    check_filename_language_match,
+    check_key_parity,
+    nonempty,
+)
 
 # ── nonempty ──────────────────────────────────────────────────────────────────
 

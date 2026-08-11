@@ -26,12 +26,11 @@ REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 sys.path.insert(0, str(REPO_ROOT / "discovery" / "discovery_scripts"))
 
-from shared_validation.text_checks import (  # noqa: E402
-    check_quote_anomalies,
-    check_halfwidth_colon_in_title,
-)
 from shared_validation.report import Report  # noqa: E402
-
+from shared_validation.text_checks import (  # noqa: E402
+    check_halfwidth_colon_in_title,
+    check_quote_anomalies,
+)
 
 # ── check_quote_anomalies (shared_validation.text_checks) ───────────────────
 #
@@ -89,11 +88,11 @@ class TestCheckQuoteAnomalies(unittest.TestCase):
 
     def test_unbalanced_parens_is_an_error(self):
         """A dropped/extra parenthesis is an ERROR (not a warning like the
-        guillemet/quote balance checks) — this is the shape lexicon_fixer.py
-        left behind twice in real corpus content: an outer paren wrapping a
-        whole "(word, (translit) — Strong Gxxxx)" gloss that the fixer's
-        rewrite failed to re-close after inserting its own inner citation
-        parens."""
+        guillemet/quote balance checks) — this is the shape a manual Strong's
+        citation edit left behind twice in real corpus content: an outer
+        paren wrapping a whole "(word, (translit) — Strong Gxxxx)" gloss
+        that the edit failed to re-close after inserting its own inner
+        citation parens."""
         report = Report("TEST")
         check_quote_anomalies(
             "The word (καταπέτασμα, (katapétasma) (G2665) means veil.",

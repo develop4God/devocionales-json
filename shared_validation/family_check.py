@@ -30,8 +30,8 @@ import json
 import re
 import subprocess
 import sys
+from collections.abc import Callable
 from pathlib import Path
-from typing import Callable
 
 RED, YLW, GRN, CYN, RST = "\033[91m", "\033[93m", "\033[92m", "\033[96m", "\033[0m"
 
@@ -308,6 +308,7 @@ def run_family_validation_all(
             [sys.executable, str(validate_family_script), item_id],
             capture_output=True,
             text=True,
+            check=False,
         )
         if result.returncode != 0:
             failed.append(item_id)

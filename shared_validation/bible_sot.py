@@ -14,7 +14,6 @@ import time
 import urllib.error
 import urllib.request
 from pathlib import Path
-from typing import Optional
 
 REMOTE_INDEX_URL = "https://raw.githubusercontent.com/develop4God/bible_versions/refs/heads/main/index.json"
 REMOTE_FETCH_ATTEMPTS = 3
@@ -37,7 +36,7 @@ def _remote_to_local_shape(remote_entry: dict) -> dict:
 
 def _fetch_remote_index(
     attempts: int = REMOTE_FETCH_ATTEMPTS,
-) -> tuple[Optional[dict], Optional[Exception]]:
+) -> tuple[dict | None, Exception | None]:
     """Fetch the remote bible_versions SOT index, retrying transient failures
     a few times before giving up (a single flaky network blip shouldn't be
     indistinguishable from genuine unreachability). Returns (index, last_err)
@@ -83,7 +82,7 @@ def _write_local_cache(cache_path: Path, remote_langs: dict) -> None:
         pass  # best-effort — a read-only filesystem shouldn't fail validation
 
 
-def load_bible_versions(cache_name: str) -> tuple[dict, bool, Optional[Exception]]:
+def load_bible_versions(cache_name: str) -> tuple[dict, bool, Exception | None]:
     """Load bible version config for every language the remote SOT defines.
 
     Tries the live remote SOT first (source of truth, with retries); only

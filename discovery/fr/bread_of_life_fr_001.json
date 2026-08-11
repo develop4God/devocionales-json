@@ -11,7 +11,6 @@
     "reference": "Jean 6:35",
     "text": "Jésus leur dit: Je suis le pain de vie. Celui qui vient à moi n'aura jamais faim, et celui qui croit en moi n'aura jamais soif."
   },
-
   "cards": [
     {
       "order": 1,
@@ -36,28 +35,28 @@
       ],
       "revelation_key": "La manne fut une ombre de quarante ans qui préparait Israël — et nous-mêmes — à reconnaître le véritable Pain lorsqu'il viendrait."
     },
-
     {
       "order": 2,
       "type": "greek_exegesis",
       "icon": "📖",
-      "title": "Trṓgōn: bien plus que manger",
+      "title": "τρώγω, (trṓgō) (G5176): bien plus que manger",
       "subtitle": "Le verbe que Jésus a choisi avec intention",
-      "content": "Jésus choisit ses mots avec précision. En disant 'Je suis le pain de vie', il utilise le mot grec ἄρτος, (ártos) (G740) dans l'original, qui désigne le pain quotidien, l'aliment de base sans lequel personne ne survit.\n\nPlus loin, au point le plus intense de son discours, quand il dit 'si quelqu'un mange de ce pain', il change de verbe: il ne parle plus de manger au sens général, mais de τρώγων, (trṓgōn), mâcher, ronger. Ce changement dans la langue originale révèle la profondeur de ce qu'il demande: un don quotidien, physique, répété — pas un instant d'admiration lointaine.",
+      "content": "Jésus choisit ses mots avec précision. En disant 'Je suis le pain de vie', il utilise le mot grec ἄρτος, (ártos) (G740) dans l'original, qui désigne le pain quotidien, l'aliment de base sans lequel personne ne survit.\n\nPlus loin, au point le plus intense de son discours, quand il dit 'si quelqu'un mange de ce pain', il change de verbe: il ne parle plus de manger au sens général, mais de τρώγω, (trṓgō) (G5176), mâcher, ronger. Ce changement dans la langue originale révèle la profondeur de ce qu'il demande: un don quotidien, physique, répété — pas un instant d'admiration lointaine.",
       "greek_words": [
         {
           "word": "ἄρτος",
           "transliteration": "Ártos",
           "meaning": "Pain, l'aliment de base et quotidien de toute personne",
-          "revelation": "Jésus emploie le mot ártos en Jean 6:35 quand il dit 'Je suis le pain de vie'. Il se compare à ce qu'il y a de plus élémentaire et indispensable — sans quoi une famille ne survivait pas dans le monde antique.\n\nIl s'offre comme la nourriture sans laquelle l'âme ne vit tout simplement pas.",
+          "revelation": "Jésus emploie le mot ἄρτος, (ártos) en Jean 6:35 quand il dit 'Je suis le pain de vie'. Il se compare à ce qu'il y a de plus élémentaire et indispensable — sans quoi une famille ne survivait pas dans le monde antique.\n\nIl s'offre comme la nourriture sans laquelle l'âme ne vit tout simplement pas.",
           "application": "Jésus est le soutien quotidien sans lequel ton âme s'affaiblit et meurt de faim."
         },
         {
-          "word": "τρώγων",
-          "transliteration": "Trṓgōn",
+          "word": "τρώγω",
+          "transliteration": "trṓgō",
           "meaning": "Mordre, mâcher, ronger — un verbe physique, distinct de 'manger' au sens général",
-          "revelation": "En Jean 6:54, le mot grec que Jésus emploie pour 'manger' est τρώγων, (trṓgōn), qui signifie mâcher ou ronger, non pas manger au sens général.\n\nC'est un mot cru, presque dérangeant. Il décrit le geste physique de mordre et de mâcher, non une idée spirituelle abstraite.\n\nJésus le choisit délibérément. Il précise ainsi que le recevoir n'est pas une pensée ponctuelle, mais un acte qui se répète, comme manger chaque jour.",
-          "application": "Suivre Jésus est un acte quotidien et constant de venir à lui et de le recevoir — comme on mange."
+          "revelation": "En Jean 6:54, le mot grec que Jésus emploie pour 'manger' est τρώγω, (trṓgō) (G5176), qui signifie mâcher ou ronger, non pas manger au sens général.\n\nC'est un mot cru, presque dérangeant. Il décrit le geste physique de mordre et de mâcher, non une idée spirituelle abstraite.\n\nJésus le choisit délibérément. Il précise ainsi que le recevoir n'est pas une pensée ponctuelle, mais un acte qui se répète, comme manger chaque jour.",
+          "application": "Suivre Jésus est un acte quotidien et constant de venir à lui et de le recevoir — comme on mange.",
+          "strong": "G5176"
         }
       ],
       "scripture_references": [
@@ -76,7 +75,6 @@
       ],
       "revelation_key": "Jésus demande quelque chose de concret: que nous venions à lui chaque jour, pas une seule fois."
     },
-
     {
       "order": 3,
       "type": "prophetic_thread",
@@ -112,7 +110,6 @@
       ],
       "revelation_key": "La manne a nourri une nation pendant quarante ans dans le désert. Christ, le Pain véritable, nourrit l'âme pour l'éternité."
     },
-
     {
       "order": 4,
       "type": "theological_depth",
@@ -144,7 +141,6 @@
       },
       "revelation_key": "Chaque fois que nous participons à la Cène du Seigneur, nous recevons ce que Christ a donné pour nous: son corps et son sang, sacrifiés sur la croix."
     },
-
     {
       "order": 5,
       "type": "discovery_activation",
@@ -157,7 +153,7 @@
         },
         {
           "category": "Constance",
-          "question": "'τρώγων, (trṓgōn)' décrit un acte répété, non une décision unique. Ta relation avec Jésus est-elle un événement du passé ou une pratique quotidienne de venir à lui?"
+          "question": "'τρώγω, (trṓgō) (G5176)' décrit un acte répété, non une décision unique. Ta relation avec Jésus est-elle un événement du passé ou une pratique quotidienne de venir à lui?"
         },
         {
           "category": "Décision",
@@ -170,7 +166,6 @@
       }
     }
   ],
-
   "tags": [
     "pain_de_vie",
     "manne",
@@ -180,7 +175,6 @@
     "foi",
     "eucharistie"
   ],
-
   "metadata": {
     "total_word_count": 1241,
     "greek_words_count": 2,

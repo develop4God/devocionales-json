@@ -27,13 +27,19 @@
       "icon": "📖",
       "title": "Jeschua: derselbe Name, zweimal",
       "subtitle": "Was das erste Jahrhundert verstand, ohne dass es jemand erklären musste",
-      "content": "Im Hebräischen teilen Josua und Jesus genau denselben Namen: Jeschua. Das ist keine Übersetzungszufälligkeit — in ihrer Muttersprache wurden beide gleich genannt. Unsere heutigen Übersetzungen gaben ihnen zwei verschiedene Namen, aber im wirklichen Leben, zu ihrer Zeit und in ihrem Land, teilten sie denselben Namen.\n\nWenn ein jüdischer Mensch im ersten Jahrhundert hörte, dass Jeschua zur Furt des Jordan gegenüber von Jericho gegangen war, hatte er zwei Informationsebenen zugleich: den Namen und den Ort. Beide wiesen auf dieselbe frühere Geschichte hin.\n\n🔍 Was der Autor des Hebräerbriefs damit macht:\n\nHebräer 4,8 führt ein einfaches Argument: Wenn Josua bereits die endgültige Ruhe gegeben hätte, würde Gott nicht Jahrhunderte später von einer anderen Ruhe sprechen. Aber er tat es. Das bedeutet, dass Josuas Überquerung echt war und ihren Zweck erfüllte, aber Gott hatte mehr. Was Josua lieferte, war nur der erste Teil des Plans.\n\n'Denn wenn Josua sie zur Ruhe gebracht hätte, so würde nicht hernach von einem andern Tag gesprochen.' (Hebräer 4,8)\n\nDaher fährt der Verfasser fort: 'Es ist also dem Volke Gottes noch eine Ruhe vorhanden.' (Hebräer 4,9)\n\nUnd diese Ruhe, die noch kommen sollte, hat einen Namen: Jesus. Er selbst sagte es: 'Kommet her zu mir alle, die ihr mühselig und beladen seid, so will ich euch erquicken!' (Matthäus 11,28) Die Ruhe, die Josua nicht geben konnte, ist Jesus.\n\nJosua war die Form. Jesus war das endgültige Stück. Der erste überquerte den Fluss mit seinem Volk zu einem Land hin. Der zweite überquert mit seinem Volk zur Gegenwart Gottes und zum ewigen Leben hin.",
+      "content": "Im Hebräischen teilen Josua und Jesus genau denselben Namen: יֵשׁוּעַ, (Yêshûwaʻ) (H3442). Das ist keine Übersetzungszufälligkeit — in ihrer Muttersprache wurden beide gleich genannt. Unsere heutigen Übersetzungen gaben ihnen zwei verschiedene Namen, aber im wirklichen Leben, zu ihrer Zeit und in ihrem Land, teilten sie denselben Namen.\n\nWenn ein jüdischer Mensch im ersten Jahrhundert hörte, dass Jeschua zur Furt des Jordan gegenüber von Jericho gegangen war, hatte er zwei Informationsebenen zugleich: den Namen und den Ort. Beide wiesen auf dieselbe frühere Geschichte hin.\n\n🔍 Was der Autor des Hebräerbriefs damit macht:\n\nHebräer 4,8 führt ein einfaches Argument: Wenn Josua bereits die endgültige Ruhe gegeben hätte, würde Gott nicht Jahrhunderte später von einer anderen Ruhe sprechen. Aber er tat es. Das bedeutet, dass Josuas Überquerung echt war und ihren Zweck erfüllte, aber Gott hatte mehr. Was Josua lieferte, war nur der erste Teil des Plans.\n\n'Denn wenn Josua sie zur Ruhe gebracht hätte, so würde nicht hernach von einem andern Tag gesprochen.' (Hebräer 4,8)\n\nDaher fährt der Verfasser fort: 'Es ist also dem Volke Gottes noch eine Ruhe vorhanden.' (Hebräer 4,9)\n\nUnd diese Ruhe, die noch kommen sollte, hat einen Namen: Jesus. Er selbst sagte es: 'Kommet her zu mir alle, die ihr mühselig und beladen seid, so will ich euch erquicken!' (Matthäus 11,28) Die Ruhe, die Josua nicht geben konnte, ist Jesus.\n\nJosua war die Form. Jesus war das endgültige Stück. Der erste überquerte den Fluss mit seinem Volk zu einem Land hin. Der zweite überquert mit seinem Volk zur Gegenwart Gottes und zum ewigen Leben hin.",
       "greek_words": [
         {
-          "word": "יֵשׁוּעַ / Ἰησοῦς",
-          "transliteration": "Yeshua / Iesous",
-          "meaning": "Der Herr rettet — der hebräische Name von Josua, ins Griechische als Iesous übertragen, dasselbe Wort, das das Neue Testament für Jesus verwendet",
-          "revelation": "Die Septuaginta nennt Josua 'Iesous.' Das Neue Testament nennt Jesus 'Iesous.' Ein griechischsprachiger Leser im ersten Jahrhundert sah in beiden Fällen denselben Namen. Dies war nicht zufällig — es war bewusste theologische Kontinuität."
+          "word": "יְהוֹשׁוּעַ",
+          "transliteration": "Yᵉhôwshûwaʻ",
+          "meaning": "Der Herr rettet — der hebräische Name von Josua",
+          "revelation": "Die Septuaginta nennt Josua 'Iesous' — derselbe griechische Name, der später für Jesus verwendet wird."
+        },
+        {
+          "word": "Ἰησοῦς",
+          "transliteration": "Iēsoûs",
+          "meaning": "Die griechische Form von Josuas Namen, dasselbe Wort, das das Neue Testament für Jesus verwendet",
+          "revelation": "Das Neue Testament nennt Jesus 'Iesous.' Ein griechischsprachiger Leser im ersten Jahrhundert sah in beiden Fällen denselben Namen. Dies war nicht zufällig — es war bewusste theologische Kontinuität."
         },
         {
           "word": "τύπος",
@@ -116,7 +122,7 @@
         },
         {
           "category": "Vertrauen",
-          "question": "Derselbe Gott, der dieses Muster mit tausendjähriger Präzision koordinierte, ist derselbe Gott, der Ihr Leben in Seinen Händen hält. Nichts entgeht Seiner Kontrolle. Selbst wenn Sie nicht verstehen, was Sie durchleben, sind Sie am bestmöglichen Ort — in Seinen Händen. Er improvisiert nicht."
+          "question": "Derselbe Gott, der dieses Muster mit tausendjähriger Präzision koordinierte, ist derselbe Gott, der Ihr Leben in Seinen Händen hält. Nichts entgeht Seiner Kontrolle. Er improvisiert nicht. Können Sie darauf vertrauen, dass Sie selbst dann, wenn Sie nicht verstehen, was Sie durchleben, am bestmöglichen Ort sind — in Seinen Händen?"
         }
       ],
       "prayer": {
@@ -137,7 +143,7 @@
   "metadata": {
     "total_word_count": 2200,
     "greek_words_count": 2,
-    "scripture_references_count": 12,
+    "scripture_references_count": 8,
     "difficulty_level": "intermediate-advanced",
     "themes": [
       "Geographische Typologie",

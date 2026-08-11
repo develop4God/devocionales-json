@@ -21,14 +21,15 @@ sys.path.insert(0, str(REPO_ROOT))
 sys.path.insert(0, str(REPO_ROOT / "devocionales_scripts"))
 
 from verse_resolver import VerseResolver  # noqa: E402
+
 from shared_validation.scripture_check import (  # noqa: E402
+    FUZZY_MATCH_THRESHOLD,
     ScriptureRef,
+    _is_intentional_truncation,
     find_scripture_pairs,
+    jaccard_similarity,
     validate_pair,
     validate_translated_pair,
-    jaccard_similarity,
-    FUZZY_MATCH_THRESHOLD,
-    _is_intentional_truncation,
 )
 
 
