@@ -80,10 +80,9 @@ def _translit_matches(given: str, official: str) -> bool:
     Strong's by only an accent passed as MATCHED (found 2026-07-28,
     peter_restoration_001: anthrakia/lambano/bosko/poimaino all silently
     accepted against Strong's anthrakiá/lambánō/bóskō/poimaínō). Strong's
-    own spelling — diacritics included — is this corpus's source of truth
-    (see lexicon_fixer.py's module docstring); an exact match is the only
-    comparison that can't hide this class of error, and it's the same
-    comparison lexicon_fixer.py already uses to decide what to rewrite.
+    own spelling — diacritics included — is this corpus's source of truth;
+    an exact match is the only comparison that can't hide this class of
+    error.
     """
     return given.lower().strip() == official.lower().strip()
 

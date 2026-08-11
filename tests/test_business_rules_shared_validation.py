@@ -18,13 +18,18 @@ test_business_rules_discovery.py.
 Does not modify any production logic — test-only.
 """
 
+import json
 import sys
+import tempfile
 import unittest
+import urllib.error
 from pathlib import Path
+from unittest.mock import patch
 
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
+from shared_validation import bible_sot  # noqa: E402
 from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_bare_transliteration_reuse,
     check_bare_transliteration_reuse_cross_field,
@@ -42,6 +47,7 @@ from shared_validation.lexicon_family_check import (  # noqa: E402
     check_family_citation_balance,
 )
 from shared_validation.lexicon_source import LexiconEntry  # noqa: E402
+from shared_validation.lint import lint_json_files  # noqa: E402
 from shared_validation.report import Report  # noqa: E402
 from shared_validation.text_checks import check_no_latin_leak  # noqa: E402
 
@@ -1397,6 +1403,225 @@ class TestCheckFamilyCitationBalance(unittest.TestCase):
             {"fr", "hi", "ja", "pt", "zh"},
             f"Expected the double-citing languages flagged against a baseline of 1, got: {report.warnings}",
         )
+
+
+class TestLintJsonFiles(unittest.TestCase):
+    """lint_json_files() — indent=2 / tab / trailing-newline / invalid-JSON
+    checks, shared by both pipelines' Phase 1 lint pass."""
+
+    def _write(self, tmpdir: Path, name: str, raw: str) -> None:
+        (tmpdir / name).write_text(raw, encoding="utf-8")
+
+    def test_odd_indentation_flagged_at_error_severity(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            self._write(tmp_path, "bad.json", '{\n   "a": 1\n}\n')
+            report = Report("TEST")
+
+            lint_json_files(tmp_path, report, exclude_dir_part="scripts")
+
+            self.assertTrue(
+                any("odd indentation" in e for e in report.errors),
+                f"Expected an odd-indentation error, got: {report.errors}",
+            )
+
+    def test_odd_indentation_flagged_at_warning_severity(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            self._write(tmp_path, "bad.json", '{\n   "a": 1\n}\n')
+            report = Report("TEST")
+
+            lint_json_files(
+                tmp_path, report, exclude_dir_part="scripts", severity="warning"
+            )
+
+            self.assertEqual(report.errors, [])
+            self.assertTrue(
+                any("odd indentation" in w for w in report.warnings),
+                f"Expected an odd-indentation warning, got: {report.warnings}",
+            )
+
+    def test_tab_character_flagged(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            self._write(tmp_path, "tabbed.json", '{\n\t"a": 1\n}\n')
+            report = Report("TEST")
+
+            lint_json_files(tmp_path, report, exclude_dir_part="scripts")
+
+            self.assertTrue(
+                any("tab character" in e for e in report.errors),
+                f"Expected a tab-character error, got: {report.errors}",
+            )
+
+    def test_missing_trailing_newline_is_always_a_warning(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            # Well-formed indent, but no trailing newline.
+            self._write(tmp_path, "no_newline.json", '{\n  "a": 1\n}')
+            report = Report("TEST")
+
+            lint_json_files(tmp_path, report, exclude_dir_part="scripts")
+
+            self.assertEqual(report.errors, [])
+            self.assertTrue(
+                any("missing trailing newline" in w for w in report.warnings),
+                f"Expected a missing-trailing-newline warning, got: {report.warnings}",
+            )
+
+    def test_well_formed_file_produces_no_findings(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            self._write(tmp_path, "clean.json", '{\n  "a": 1\n}\n')
+            report = Report("TEST")
+
+            cache = lint_json_files(tmp_path, report, exclude_dir_part="scripts")
+
+            self.assertEqual(report.errors, [])
+            self.assertEqual(report.warnings, [])
+            self.assertEqual(len(cache), 1)
+
+    def test_exclude_dir_part_skips_matching_files(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            scripts_dir = tmp_path / "scripts"
+            scripts_dir.mkdir()
+            # Malformed, but lives under the excluded dir part.
+            self._write(scripts_dir, "bad.json", '{\n\t"a": 1\n}\n')
+            report = Report("TEST")
+
+            cache = lint_json_files(tmp_path, report, exclude_dir_part="scripts")
+
+            self.assertEqual(report.errors, [])
+            self.assertEqual(cache, {})
+
+    def test_invalid_json_reported_only_at_error_severity(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            self._write(tmp_path, "broken.json", "{not valid json")
+
+            report_error = Report("TEST")
+            lint_json_files(tmp_path, report_error, exclude_dir_part="scripts")
+            self.assertTrue(
+                any("invalid JSON" in e for e in report_error.errors),
+                f"Expected an invalid-JSON error, got: {report_error.errors}",
+            )
+
+            report_warning = Report("TEST")
+            lint_json_files(
+                tmp_path,
+                report_warning,
+                exclude_dir_part="scripts",
+                severity="warning",
+            )
+            self.assertEqual(
+                report_warning.errors,
+                [],
+                "Invalid JSON must not be reported when severity='warning'",
+            )
+
+    def test_invalid_severity_raises_value_error(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            report = Report("TEST")
+            with self.assertRaises(ValueError):
+                lint_json_files(
+                    Path(tmp), report, exclude_dir_part="scripts", severity="bogus"
+                )
+
+
+class TestBibleSotLoadBibleVersions(unittest.TestCase):
+    """load_bible_versions() — remote SOT fetch, offline cache fallback, and
+    the hard-failure path when neither is available."""
+
+    _REMOTE_INDEX = {
+        "languages": {
+            "en": {
+                "name": "English",
+                "script": "Latin",
+                "primary_version": "KJV",
+                "fallback_version": "ASV",
+                "reading_speed": 200,
+            }
+        }
+    }
+
+    def test_successful_remote_fetch_returns_shaped_languages(self):
+        with (
+            tempfile.TemporaryDirectory() as tmp,
+            patch("shared_validation.bible_sot.tempfile.gettempdir", return_value=tmp),
+            patch(
+                "shared_validation.bible_sot._fetch_remote_index",
+                return_value=(self._REMOTE_INDEX, None),
+            ),
+        ):
+            languages, used_remote, err = bible_sot.load_bible_versions("test_cache")
+
+        self.assertTrue(used_remote)
+        self.assertIsNone(err)
+        self.assertEqual(
+            languages["en"],
+            {
+                "name": "English",
+                "script": "Latin",
+                "primary_version": "KJV",
+                "fallback_version": "ASV",
+                "allowed_versions": ["KJV", "ASV"],
+                "reading_speed": 200,
+            },
+        )
+
+    def test_successful_fetch_refreshes_local_cache(self):
+        with (
+            tempfile.TemporaryDirectory() as tmp,
+            patch("shared_validation.bible_sot.tempfile.gettempdir", return_value=tmp),
+            patch(
+                "shared_validation.bible_sot._fetch_remote_index",
+                return_value=(self._REMOTE_INDEX, None),
+            ),
+        ):
+            bible_sot.load_bible_versions("test_cache")
+
+            cache_path = Path(tmp) / "test_cache_bible_versions_cache.json"
+            self.assertTrue(cache_path.exists())
+            cached = json.loads(cache_path.read_text(encoding="utf-8"))
+            self.assertIn("en", cached["languages"])
+
+    def test_falls_back_to_local_cache_when_remote_unreachable(self):
+        fetch_err = urllib.error.URLError("network unreachable")
+        with tempfile.TemporaryDirectory() as tmp:
+            cache_path = Path(tmp) / "test_cache_bible_versions_cache.json"
+            cache_path.write_text(
+                json.dumps({"languages": {"es": {"name": "Spanish"}}}),
+                encoding="utf-8",
+            )
+            with (
+                patch(
+                    "shared_validation.bible_sot.tempfile.gettempdir", return_value=tmp
+                ),
+                patch(
+                    "shared_validation.bible_sot._fetch_remote_index",
+                    return_value=(None, fetch_err),
+                ),
+            ):
+                languages, used_remote, err = bible_sot.load_bible_versions(
+                    "test_cache"
+                )
+
+        self.assertFalse(used_remote)
+        self.assertIs(err, fetch_err)
+        self.assertEqual(languages, {"es": {"name": "Spanish"}})
+
+    def test_raises_runtime_error_when_remote_and_cache_both_unavailable(self):
+        with (
+            tempfile.TemporaryDirectory() as tmp,
+            patch("shared_validation.bible_sot.tempfile.gettempdir", return_value=tmp),
+            patch(
+                "shared_validation.bible_sot._fetch_remote_index",
+                return_value=(None, urllib.error.URLError("network unreachable")),
+            ),
+        ):
+            with self.assertRaises(RuntimeError):
+                bible_sot.load_bible_versions("test_cache")
 
 
 if __name__ == "__main__":

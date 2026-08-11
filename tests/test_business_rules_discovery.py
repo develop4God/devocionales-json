@@ -88,11 +88,11 @@ class TestCheckQuoteAnomalies(unittest.TestCase):
 
     def test_unbalanced_parens_is_an_error(self):
         """A dropped/extra parenthesis is an ERROR (not a warning like the
-        guillemet/quote balance checks) — this is the shape lexicon_fixer.py
-        left behind twice in real corpus content: an outer paren wrapping a
-        whole "(word, (translit) — Strong Gxxxx)" gloss that the fixer's
-        rewrite failed to re-close after inserting its own inner citation
-        parens."""
+        guillemet/quote balance checks) — this is the shape a manual Strong's
+        citation edit left behind twice in real corpus content: an outer
+        paren wrapping a whole "(word, (translit) — Strong Gxxxx)" gloss
+        that the edit failed to re-close after inserting its own inner
+        citation parens."""
         report = Report("TEST")
         check_quote_anomalies(
             "The word (καταπέτασμα, (katapétasma) (G2665) means veil.",

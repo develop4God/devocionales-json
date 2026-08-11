@@ -25,8 +25,7 @@ Reuses, never reimplements:
 
 This module only owns the reporting shell (loading files, walking fields,
 tallying MATCHED/INFLECTED_NO_LEMMA_MATCH/TRANSLIT_MISMATCH per file, CLI
-scope). It is READ-ONLY — see lexicon_fixer.py for the separate script that
-rewrites TRANSLIT_MISMATCH occurrences in place.
+scope). It is READ-ONLY — it never rewrites content.
 
 Usage:
     # one family (a single study or encounter id)
