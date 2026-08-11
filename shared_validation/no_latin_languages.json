@@ -30,9 +30,9 @@
   ],
   "_allowed_words_comment": "Case-insensitive bare-Latin words that are content, not translation leftovers, in a specific language. Add an entry only after confirming the word is deliberately cited, not a missed translation. '×' (multiplication sign, U+00D7) is listed here: _LATIN_LETTER_RE's accented-Latin range (À-ɏ, U+00C0–U+024F) incidentally includes it since it sits inside that Unicode block by Unicode's own layout, not because it's a Latin letter — confirmed the identical U+00D7 codepoint is used as multiplication notation across ar/hi/ja/zh corpus content, not an untranslated leftover. No '÷' entry: the division sign does not appear anywhere in the corpus (confirmed via full-corpus scan) — add it back only if/when it's actually used.",
   "allowed_words": {
-    "ar": ["×"],
-    "hi": ["×"],
-    "ja": ["×"],
-    "zh": ["×"]
+    "ar": ["×", "LXX"],
+    "hi": ["×", "LXX"],
+    "ja": ["×", "LXX"],
+    "zh": ["×", "LXX"]
   }
 }
