@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "zh",
   "bible_version": "CUV1919",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 4,
   "meta": {
     "character": "彼得",
@@ -24,8 +24,8 @@
     ]
   },
   "key_verse": {
-    "reference": "马太福音 14:31",
-    "text": "耶稣赶紧伸手拉住他，说：你这小信的人哪，为什么疑惑呢？",
+    "reference": "马太福音 14:24",
+    "text": "那时，船在海中，因风不顺，被浪摇撼。",
     "bible_version": "CUV1919"
   },
   "cards": [

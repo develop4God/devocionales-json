@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "de",
   "bible_version": "LU17",
-  "version": "6.0",
+  "version": "6.1",
   "estimated_reading_minutes": 9,
   "meta": {
     "character": "Die Samaritanerin",
@@ -27,8 +27,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Johannes 4:14",
-    "text": "wer aber von dem Wasser trinkt, das ich ihm gebe, den wird in Ewigkeit nicht dürsten, sondern das Wasser, das ich ihm geben werde, das wird in ihm eine Quelle des Wassers werden, das in das ewige Leben quillt.",
+    "reference": "Johannes 4:4",
+    "text": "Er musste aber durch Samarien reisen.",
     "bible_version": "LU17"
   },
   "cards": [

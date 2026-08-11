@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "es",
   "bible_version": "RVR1960",
-  "version": "1.1",
+  "version": "1.2",
   "estimated_reading_minutes": 5,
   "meta": {
     "character": "Pedro",
@@ -24,8 +24,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Mateo 14:31",
-    "text": "Al momento Jesús, extendiendo la mano, asió de él, y le dijo: ¡Hombre de poca fe! ¿Por qué dudaste?",
+    "reference": "Mateo 14:24",
+    "text": "Y ya la barca estaba en medio del mar, azotada por las olas; porque el viento era contrario.",
     "bible_version": "RVR1960"
   },
   "cards": [

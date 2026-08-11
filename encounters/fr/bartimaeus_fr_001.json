@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "fr",
   "bible_version": "LSG1910",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 7,
   "meta": {
     "character": "Bartimée",
@@ -25,8 +25,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Marc 10:52",
-    "text": "Et Jésus lui dit: Va, ta foi t'a sauvé.",
+    "reference": "Marc 10:46",
+    "text": "Ils arrivèrent à Jéricho. Et, lorsque Jésus en sortit, avec ses disciples et une assez grande foule, le fils de Timée, Bartimée, mendiant aveugle, était assis au bord du chemin.",
     "bible_version": "LSG1910"
   },
   "cards": [

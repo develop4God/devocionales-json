@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "ja",
   "bible_version": "SK2003",
-  "version": "1.1",
+  "version": "1.2",
   "estimated_reading_minutes": 6,
   "meta": {
     "character": "ペテロ",
@@ -24,8 +24,8 @@
     ]
   },
   "key_verse": {
-    "reference": "マタイ 14:31",
-    "text": "そこで、イエスはすぐに手を伸ばして、彼をつかんで言われた。「信仰の薄い人だな。なぜ疑うのか。」",
+    "reference": "マタイ 14:24",
+    "text": "しかし、舟は、陸からもう何キロメートルも離れていたが、風が向かい風なので、波に悩まされていた。",
     "bible_version": "SK2003"
   },
   "cards": [

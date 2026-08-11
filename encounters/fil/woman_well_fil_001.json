@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "fil",
   "bible_version": "MBB05",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 12,
   "meta": {
     "character": "Ang Babaeng Samaritana",
@@ -27,8 +27,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Juan 4:14",
-    "text": "Ngunit ang sinumang uminom ng tubig na ibibigay ko sa kanya ay hindi na muling mauuhaw kailanman. Ang tubig na ibibigay ko ay magiging batis sa loob niya, at patuloy na bubukal at magbibigay sa kanya ng buhay na walang hanggan.",
+    "reference": "Juan 4:4",
+    "text": "ngunit kailangang sa Samaria siya dumaan.",
     "bible_version": "MBB05"
   },
   "cards": [

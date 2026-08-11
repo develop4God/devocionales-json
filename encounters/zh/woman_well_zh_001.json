@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "zh",
   "bible_version": "CUV1919",
-  "version": "6.0",
+  "version": "6.1",
   "estimated_reading_minutes": 8,
   "meta": {
     "character": "撒玛利亚妇人",
@@ -27,8 +27,8 @@
     ]
   },
   "key_verse": {
-    "reference": "约翰福音 4:14",
-    "text": "人若喝我所赐的水就永远不渴。我所赐的水要在他里头成为泉源，直涌到永生。」",
+    "reference": "约翰福音 4:4",
+    "text": "必须经过撒玛利亚，",
     "bible_version": "CUV1919"
   },
   "cards": [

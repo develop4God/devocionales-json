@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "ja",
   "bible_version": "SK2003",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 8,
   "meta": {
     "character": "バルテマイ",
@@ -25,8 +25,8 @@
     ]
   },
   "key_verse": {
-    "reference": "マルコ 10:52",
-    "text": "イエスは彼に言われた。「さあ、行きなさい。あなたの信仰が、あなたを救った。」すると、すぐに彼は見えるようになり、イエスの後について行った。",
+    "reference": "マルコ 10:46",
+    "text": "彼らはエリコに来た。イエスが、弟子たちや多くの群衆といっしょにエリコを出られると、テマイの子のバルテマイという盲人の物ごいが、道ばたにすわっていた。",
     "bible_version": "SK2003"
   },
   "cards": [

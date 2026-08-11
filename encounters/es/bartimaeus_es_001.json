@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "es",
   "bible_version": "RVR1960",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 7,
   "meta": {
     "character": "Bartimeo",
@@ -25,8 +25,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Marcos 10:52",
-    "text": "Y Jesús le dijo: Vete, tu fe te ha salvado. Y en seguida recobró la vista, y seguía a Jesús en el camino.",
+    "reference": "Marcos 10:46",
+    "text": "Entonces vinieron a Jericó; y al salir de Jericó él y sus discípulos y una gran multitud, Bartimeo el ciego, hijo de Timeo, estaba sentado junto al camino mendigando.",
     "bible_version": "RVR1960"
   },
   "cards": [

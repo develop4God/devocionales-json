@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "en",
   "bible_version": "KJV",
-  "version": "1.2",
+  "version": "1.3",
   "estimated_reading_minutes": 5,
   "meta": {
     "character": "Peter",
@@ -24,8 +24,8 @@
     ]
   },
   "key_verse": {
-    "reference": "Matthew 14:31",
-    "text": "And immediately Jesus stretched forth his hand, and caught him, and said unto him, O you of little faith, why did you doubt?",
+    "reference": "Matthew 14:24",
+    "text": "But the ship was now in the midst of the sea, tossed with waves: for the wind was contrary.",
     "bible_version": "KJV"
   },
   "cards": [
