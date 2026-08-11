@@ -27,13 +27,19 @@
       "icon": "📖",
       "title": "Yeshua : le même nom, deux fois",
       "subtitle": "Ce que le premier siècle comprenait sans que personne n'ait besoin de l'expliquer",
-      "content": "En hébreu, Josué et Jésus partagent exactement le même nom : Yeshua. Ce n'est pas une coïncidence de traduction — dans leur langue maternelle, tous les deux s'appelaient de la même façon. Nos traductions d'aujourd'hui leur ont donné deux noms différents, mais dans la vraie vie, à leur époque et dans leur pays, ils partageaient le même nom.\n\nQuand une personne juive du premier siècle entendait que Yeshua était allé au gué du Jourdain en face de Jéricho, elle avait deux couches d'information à la fois : le nom et le lieu. Les deux pointaient vers la même histoire antérieure.\n\n🔍 Ce que l'auteur de l'épître aux Hébreux fait avec ceci :\n\nHébreux 4:8 présente un argument simple : si Josué avait déjà donné le repos final, Dieu n'aurait pas besoin de parler d'un autre repos des siècles plus tard. Mais il l'a fait. Cela signifie que la traversée de Josué était réelle et a accompli son but, mais Dieu avait plus en réserve. Ce que Josué a livré n'était que la première partie du plan.\n\n'Car si Josué leur eût donné le repos, il ne parlerait pas après cela d'un autre jour.' (Hébreux 4:8)\n\nL'auteur continue donc : 'Il y a donc un repos de sabbat réservé au peuple de Dieu.' (Hébreux 4:9)\n\nEt ce repos qui allait encore venir a un nom : Jésus. Il l'a dit lui-même : 'Venez à moi, vous tous qui êtes fatigués et chargés, et je vous donnerai du repos.' (Matthieu 11:28) Le repos que Josué ne pouvait pas donner, Jésus l'est.\n\nJosué était le moule. Jésus était la pièce finale. Le premier a traversé le fleuve avec son peuple vers une terre. Le second traverse avec son peuple vers la présence de Dieu et la vie éternelle.",
+      "content": "En hébreu, Josué et Jésus partagent exactement le même nom : יֵשׁוּעַ, (Yêshûwaʻ) (H3442). Ce n'est pas une coïncidence de traduction — dans leur langue maternelle, tous les deux s'appelaient de la même façon. Nos traductions d'aujourd'hui leur ont donné deux noms différents, mais dans la vraie vie, à leur époque et dans leur pays, ils partageaient le même nom.\n\nQuand une personne juive du premier siècle entendait que Yeshua était allé au gué du Jourdain en face de Jéricho, elle avait deux couches d'information à la fois : le nom et le lieu. Les deux pointaient vers la même histoire antérieure.\n\n🔍 Ce que l'auteur de l'épître aux Hébreux fait avec ceci :\n\nHébreux 4:8 présente un argument simple : si Josué avait déjà donné le repos final, Dieu n'aurait pas besoin de parler d'un autre repos des siècles plus tard. Mais il l'a fait. Cela signifie que la traversée de Josué était réelle et a accompli son but, mais Dieu avait plus en réserve. Ce que Josué a livré n'était que la première partie du plan.\n\n'Car si Josué leur eût donné le repos, il ne parlerait pas après cela d'un autre jour.' (Hébreux 4:8)\n\nL'auteur continue donc : 'Il y a donc un repos de sabbat réservé au peuple de Dieu.' (Hébreux 4:9)\n\nEt ce repos qui allait encore venir a un nom : Jésus. Il l'a dit lui-même : 'Venez à moi, vous tous qui êtes fatigués et chargés, et je vous donnerai du repos.' (Matthieu 11:28) Le repos que Josué ne pouvait pas donner, Jésus l'est.\n\nJosué était le moule. Jésus était la pièce finale. Le premier a traversé le fleuve avec son peuple vers une terre. Le second traverse avec son peuple vers la présence de Dieu et la vie éternelle.",
       "greek_words": [
         {
-          "word": "יֵשׁוּעַ / Ἰησοῦς",
-          "transliteration": "Yeshua / Iesous",
-          "meaning": "Le Seigneur sauve — le nom hébreu de Josué, porté en grec comme Iesous, le même mot que le Nouveau Testament utilise pour Jésus",
-          "revelation": "La Septante appelle Josué 'Iesous'. Le Nouveau Testament appelle Jésus 'Iesous'. Un lecteur parlant grec au premier siècle voyait le même nom dans les deux cas. Ce n'était pas accidentel — c'était une continuité théologique délibérée."
+          "word": "יְהוֹשׁוּעַ",
+          "transliteration": "Yᵉhôwshûwaʻ",
+          "meaning": "Le Seigneur sauve — le nom hébreu de Josué",
+          "revelation": "La Septante appelle Josué 'Iesous' — le même nom grec qui sera plus tard utilisé pour Jésus."
+        },
+        {
+          "word": "Ἰησοῦς",
+          "transliteration": "Iēsoûs",
+          "meaning": "La forme grecque du nom de Josué, le même mot que le Nouveau Testament utilise pour Jésus",
+          "revelation": "Le Nouveau Testament appelle Jésus 'Iesous'. Un lecteur parlant grec au premier siècle voyait le même nom dans les deux cas. Ce n'était pas accidentel — c'était une continuité théologique délibérée."
         },
         {
           "word": "τύπος",
@@ -116,7 +122,7 @@
         },
         {
           "category": "Confiance",
-          "question": "Le même Dieu qui a coordonné ce motif avec mille ans de précision est le même Dieu qui tient ta vie entre ses mains. Rien n'échappe à son contrôle. Même quand tu ne comprends pas ce que tu traverses, tu es au meilleur endroit possible — dans ses mains. Il n'improvise pas."
+          "question": "Le même Dieu qui a coordonné ce motif avec mille ans de précision est le même Dieu qui tient ta vie entre ses mains. Rien n'échappe à son contrôle. Il n'improvise pas. Peux-tu croire que, même quand tu ne comprends pas ce que tu traverses, tu es au meilleur endroit possible — dans ses mains ?"
         }
       ],
       "prayer": {
@@ -137,7 +143,7 @@
   "metadata": {
     "total_word_count": 2200,
     "greek_words_count": 2,
-    "scripture_references_count": 12,
+    "scripture_references_count": 8,
     "difficulty_level": "intermediate-advanced",
     "themes": [
       "Typologie géographique",

@@ -64,16 +64,18 @@ import argparse
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from shared_validation.family_resolver import RESOLVERS, ID_LISTERS  # noqa: E402
+from shared_validation.family_resolver import ID_LISTERS, RESOLVERS  # noqa: E402
 from shared_validation.greek_hebrew_gloss import find_greek_hebrew_glosses  # noqa: E402
 from shared_validation.lexicon_source import (  # noqa: E402
     StrongsLexiconSource,
     is_rtl_lang,
+    load_native_script_ranges,
     resolve_lemma_entry,
 )
 
@@ -98,9 +100,102 @@ _STRONG_CODE_RE = re.compile(r"[GH]\d{2,5}")
 # boundary alone when the next real occurrence is an entire card away —
 # see the comment at its use site for the corruption this prevents.
 _SEARCH_WINDOW = 40
+_BARE_LATIN_CANDIDATE_RE = re.compile(
+    r"(?P<meaning>\S+)\s+\((?P<translit>[^()]{2,30})\)"
+)
 
 RED, YLW, GRN, CYN, RST = "\033[91m", "\033[93m", "\033[92m", "\033[96m", "\033[0m"
 DBG = "\033[95m"
+
+
+def _normalized_translit(word: str) -> str:
+    return "".join(
+        char
+        for char in unicodedata.normalize("NFD", word).casefold()
+        if not unicodedata.combining(char)
+    )
+
+
+def triage_bare_latin_glosses(
+    raw_text: str, lexicon: StrongsLexiconSource, lang: str
+) -> list[str]:
+    """Report, without editing, Latin ``meaning (translit)`` substitutions.
+
+    This deliberately complements the normal fixer rather than sharing its
+    write path: the Greek/Hebrew lemma is absent, so a reverse Strong's lookup
+    can propose a replacement but must not silently apply it.  Canonical
+    ``lemma, (translit)`` spans are excluded using the existing gloss parser.
+    """
+    if lang in load_native_script_ranges():
+        return []
+    by_translit: dict[str, list] = {}
+    for entry in lexicon._by_number.values():
+        by_translit.setdefault(_normalized_translit(entry.translit), []).append(entry)
+    canonical_ends = {
+        end
+        for _, end, _, _, well_formed in find_greek_hebrew_glosses(raw_text)
+        if well_formed
+    }
+    findings = []
+    for match in _BARE_LATIN_CANDIDATE_RE.finditer(raw_text):
+        if match.end() in canonical_ends:
+            continue
+        translit = match.group("translit").strip()
+        entries = by_translit.get(_normalized_translit(translit), [])
+        if not entries:
+            continue
+        meaning = match.group("meaning")
+        if len(entries) != 1:
+            codes = ", ".join(entry.strongs_number for entry in entries)
+            findings.append(
+                f"'{meaning} ({translit})': REVIEW — ambiguous transliteration; candidates {codes}"
+            )
+            continue
+        entry = entries[0]
+        findings.append(
+            f"'{meaning} ({translit})' -> '{entry.lemma}, ({entry.translit}) ({entry.strongs_number})'"
+        )
+    return findings
+
+
+def fix_bare_latin_glosses(
+    raw_text: str, lexicon: StrongsLexiconSource, lang: str
+) -> tuple[str, list[str]]:
+    """Apply only uniquely resolved bare-Latin replacements; keep REVIEW items."""
+    if lang in load_native_script_ranges():
+        return raw_text, []
+    by_translit: dict[str, list] = {}
+    for entry in lexicon._by_number.values():
+        by_translit.setdefault(_normalized_translit(entry.translit), []).append(entry)
+    canonical_ends = {
+        end
+        for _, end, _, _, well_formed in find_greek_hebrew_glosses(raw_text)
+        if well_formed
+    }
+    replacements = []
+    changes = []
+    for match in _BARE_LATIN_CANDIDATE_RE.finditer(raw_text):
+        if match.end() in canonical_ends:
+            continue
+        translit = match.group("translit").strip()
+        entries = by_translit.get(_normalized_translit(translit), [])
+        if len(entries) != 1:
+            continue
+        entry = entries[0]
+        # Only replace the transliteration part, preserving the original
+        # meaning word — the regex match spans "meaning (translit)" but we
+        # must not delete the meaning (e.g. "Christ (Bema)" should become
+        # "Christ (βῆμα, (bēma) (G968))", not "βῆμα, (bēma) (G968)").
+        translit_start = match.start("translit")
+        translit_end = match.end("translit")
+        replacement = f"{entry.lemma}, ({entry.translit}) ({entry.strongs_number})"
+        replacements.append((translit_start, translit_end, replacement))
+        changes.append(
+            f"'{match.group(0)}' -> '{match.group('meaning')} ({replacement})'"
+        )
+    for start, end, replacement in reversed(replacements):
+        raw_text = raw_text[:start] + replacement + raw_text[end:]
+    return raw_text, changes
 
 
 def _fix_file_text(
@@ -347,7 +442,7 @@ def _fix_structured_word_studies(
                 word, translit = w.get("word"), w.get("transliteration")
                 if not word or not translit:
                     continue  # discovery_schema_checks.py's job to flag, not this one's
-                entry, candidates = resolve_lemma_entry(lexicon, word, "", 0, lang)
+                entry, _candidates = resolve_lemma_entry(lexicon, word, "", 0, lang)
                 if entry is None:
                     continue  # no single confirmed match — INFLECTED_NO_LEMMA_MATCH or AMBIGUOUS_LEMMA, same as the checker
                 given_norm = translit.lower().strip()
@@ -461,6 +556,40 @@ def run_all(lexicon: StrongsLexiconSource, apply: bool, debug: bool = False) -> 
     return total_failures
 
 
+def run_bare_latin_triage(
+    content_type: str | None,
+    content_id: str | None,
+    all_types: bool,
+    lexicon: StrongsLexiconSource,
+) -> int:
+    """Print proposed fixes for the spaced Latin bug shape; never writes."""
+    types = list(RESOLVERS) if all_types else [content_type]
+    for selected_type in types:
+        ids = [content_id] if content_id else ID_LISTERS[selected_type]()
+        for selected_id in ids:
+            family = RESOLVERS[selected_type](selected_id)
+            if not family:
+                print(
+                    f"No {selected_type} item with id '{selected_id}' found in index.json"
+                )
+                return 1
+            for lang, path in sorted(family.items()):
+                if not path.exists():
+                    continue
+                try:
+                    findings = triage_bare_latin_glosses(
+                        path.read_text(encoding="utf-8"), lexicon, lang
+                    )
+                except (OSError, json.JSONDecodeError) as e:
+                    print(f"  {RED}❌ {lang}: failed to triage {path.name}: {e}{RST}")
+                    return 1
+                if findings:
+                    print(f"  {YLW}Review {lang}:{path.name}{RST}")
+                    for finding in findings:
+                        print(f"    {finding}")
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Rewrite Greek/Hebrew gloss transliterations flagged as "
@@ -485,7 +614,21 @@ def main():
         "detection, wrapper handling, exact text about to be replaced) as "
         "the fixer walks each file. Verbose — use with --id for one family.",
     )
+    parser.add_argument(
+        "--triage-bare-latin",
+        action="store_true",
+        help="Read-only report of Latin 'meaning (translit)' substitutions; never writes.",
+    )
     args = parser.parse_args()
+
+    if args.triage_bare_latin and args.apply:
+        parser.error(
+            "--triage-bare-latin is read-only and cannot be combined with --apply"
+        )
+    if args.triage_bare_latin and not (args.all or args.type):
+        parser.error("--triage-bare-latin requires --type or --all")
+    if args.triage_bare_latin and args.id and not args.type:
+        parser.error("--id requires --type")
 
     lexicon = StrongsLexiconSource()
 
@@ -494,7 +637,9 @@ def main():
             f"{CYN}DRY RUN — no files will be modified. Pass --apply to write changes.{RST}\n"
         )
 
-    if args.all:
+    if args.triage_bare_latin:
+        failures = run_bare_latin_triage(args.type, args.id, args.all, lexicon)
+    elif args.all:
         failures = run_all(lexicon, args.apply, args.debug)
     elif args.id:
         if not args.type:

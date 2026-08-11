@@ -27,13 +27,19 @@
       "icon": "📖",
       "title": "Yeshua: the same name, twice",
       "subtitle": "What the first century understood without anyone having to explain it",
-      "content": "In Hebrew, Joshua and Jesus share the exact same name: Yeshua. This is not a coincidence of translation — in their native language, both were called the same thing. Our translations today gave them two different names, but in real life, in their time and in their land, they shared the same name.\n\nWhen a Jewish person in the first century heard that Yeshua had gone to the ford of the Jordan across from Jericho, they had two layers of information at once: the name and the place. Both pointed to the same earlier story.\n\n🔍 What the author of Hebrews does with this:\n\nHebrews 4:8 makes a simple argument: if Joshua had already given the final rest, God would not need to speak of another rest centuries later. But he did. That means Joshua's crossing was real and fulfilled its purpose, but God had more. What Joshua delivered was only the first part of the plan.\n\n'For if Jesus had given them rest, then would he not afterward have spoken of another day.' (Hebrews 4:8)\n\nSo the author continues: 'There remaineth therefore a rest to the people of God.' (Hebrews 4:9)\n\nAnd that rest that was still coming has a name: Jesus. He said it himself: 'Come unto me, all ye that labour and are heavy laden, and I will give you rest.' (Matthew 11:28) The rest that Joshua could not give, Jesus is.\n\nJoshua was the mold. Jesus was the final piece. The first crossed the river with his people toward a land. The second crosses with his people toward the presence of God and eternal life.",
+      "content": "In Hebrew, Joshua and Jesus share the exact same name: יֵשׁוּעַ, (Yêshûwaʻ) (H3442). This is not a coincidence of translation — in their native language, both were called the same thing. Our translations today gave them two different names, but in real life, in their time and in their land, they shared the same name.\n\nWhen a Jewish person in the first century heard that Yeshua had gone to the ford of the Jordan across from Jericho, they had two layers of information at once: the name and the place. Both pointed to the same earlier story.\n\n🔍 What the author of Hebrews does with this:\n\nHebrews 4:8 makes a simple argument: if Joshua had already given the final rest, God would not need to speak of another rest centuries later. But he did. That means Joshua's crossing was real and fulfilled its purpose, but God had more. What Joshua delivered was only the first part of the plan.\n\n'For if Jesus had given them rest, then would he not afterward have spoken of another day.' (Hebrews 4:8)\n\nSo the author continues: 'There remaineth therefore a rest to the people of God.' (Hebrews 4:9)\n\nAnd that rest that was still coming has a name: Jesus. He said it himself: 'Come unto me, all ye that labour and are heavy laden, and I will give you rest.' (Matthew 11:28) The rest that Joshua could not give, Jesus is.\n\nJoshua was the mold. Jesus was the final piece. The first crossed the river with his people toward a land. The second crosses with his people toward the presence of God and eternal life.",
       "greek_words": [
         {
-          "word": "יֵשׁוּעַ / Ἰησοῦς",
-          "transliteration": "Yeshua / Iesous",
-          "meaning": "The Lord saves — the Hebrew name of Joshua, carried into Greek as Iesous, the same word the New Testament uses for Jesus",
-          "revelation": "The Septuagint calls Joshua 'Iesous.' The New Testament calls Jesus 'Iesous.' A Greek-speaking reader in the first century saw the same name in both cases. This was not accidental — it was deliberate theological continuity."
+          "word": "יְהוֹשׁוּעַ",
+          "transliteration": "Yᵉhôwshûwaʻ",
+          "meaning": "The Lord saves — the Hebrew name of Joshua",
+          "revelation": "The Septuagint calls Joshua 'Iesous' — the same Greek name later used for Jesus."
+        },
+        {
+          "word": "Ἰησοῦς",
+          "transliteration": "Iēsoûs",
+          "meaning": "The Greek form of Joshua's name, the same word the New Testament uses for Jesus",
+          "revelation": "The New Testament calls Jesus 'Iesous.' A Greek-speaking reader in the first century saw the same name in both cases. This was not accidental — it was deliberate theological continuity."
         },
         {
           "word": "τύπος",
@@ -116,7 +122,7 @@
         },
         {
           "category": "Trust",
-          "question": "The same God who coordinated that pattern with a thousand years of precision is the same God who holds your life in his hands. Nothing escapes his control. Even when you do not understand what you are walking through, you are in the best possible place — in his hands. He does not improvise."
+          "question": "The same God who coordinated that pattern with a thousand years of precision is the same God who holds your life in his hands. Nothing escapes his control. He does not improvise. Can you trust that, even when you do not understand what you are walking through, you are in the best possible place — in his hands?"
         }
       ],
       "prayer": {
@@ -137,7 +143,7 @@
   "metadata": {
     "total_word_count": 2200,
     "greek_words_count": 2,
-    "scripture_references_count": 12,
+    "scripture_references_count": 8,
     "difficulty_level": "intermediate-advanced",
     "themes": [
       "Geographical typology",

@@ -67,19 +67,21 @@
       "icon": "🏛️",
       "title": "Ang Taglay Niya at Ang Nadama Niya",
       "subtitle": "Ipinapakita ng Griego kung bakit sumasakit ang pagbitiw nang parang pagkawala ng pagkakakilanlan",
-      "content": "Ang huling talata ng pagtatagpo, sa Mateo 19:22, ay nagsasaad na malungkot na umalis ang binata sapagkat siya'y napakayaman. Dalawang salita mula sa orihinal na Griego ang nagpapakita nang tumpak kung ano ang nakasalalay.\n\n💎 κτήματα, (ktémata)\nKahulugan: naglalarawan ng **mga ari-arian, lupain, at pag-aari** — ang uri ng pag-aaring nagbibigay ng katayuan, mana, at pangmatagalang kaligtasang panlipunan sa kanyang kultura.\nKapahayagan: ang hiniling ni Jesus na iwan niya ay ang buong pundasyon ng kanyang pagkakakilanlan at ang kanyang lugar sa mundo.\n\n😔 λυπούμενος, (lypoumenos)\nKahulugan: **nagdadalamhati, matindi ang paghihirap** — isang tunay na kalungkutang tumatanim sa dibdib.\nKapahayagan: pinatutunayan ng kanyang kalungkutan na lubos niyang naunawaan ang alok ni Jesus. Umalis siyang nagdadalamhati, sapagkat naunawaan niyang mabuti kung ano ang hinihiling sa kanya at kung ano ang ibig sabihin ng pagbibigay nito.\n\n📍 Ang koneksyon sa desisyon ngayon:\nAng dalawang salitang ito, kapag pinagsama, ay naghahayag ng isang mahalagang katotohanan: ang desisyong iwan ang kontrol ay nasasaktan sapagkat malinaw na naiintindihan kung ano ang nakasalalay. Alam na alam ng mayamang binata kung ano ang nasa timbangan — ngunit isang panig lamang ang kanyang nakikita.\n\nAng kanyang mga ari-arian ay matatag, kilala, at nasa harapan. Ang kayamanang walang hanggan na inalok sa kanya ni Jesus bilang kapalit ay nangangailangan ng pananampalataya, ayon din sa pagpapatunay ng Mga Hebreo 11:6. Ang pag-iwan sa pansamantala para sa walang hanggan ay gawa ng pananampalataya. At ang inialok bilang kapalit ay ang pinakadakila sa lahat ng gantimpala: ang walang hanggang buhay kasama ang Diyos.",
+      "content": "Ang huling talata ng pagtatagpo, sa Mateo 19:22, ay nagsasaad na malungkot na umalis ang binata sapagkat siya'y napakayaman. Dalawang salita mula sa orihinal na Griego ang nagpapakita nang tumpak kung ano ang nakasalalay.\n\n💎 κτῆμα, (ktēma) (G2933)\nKahulugan: naglalarawan ng **mga ari-arian, lupain, at pag-aari** — ang uri ng pag-aaring nagbibigay ng katayuan, mana, at pangmatagalang kaligtasang panlipunan sa kanyang kultura.\nKapahayagan: ang hiniling ni Jesus na iwan niya ay ang buong pundasyon ng kanyang pagkakakilanlan at ang kanyang lugar sa mundo.\n\n😔 λυπέω, (lypéō) (G3076)\nKahulugan: **nagdadalamhati, matindi ang paghihirap** — isang tunay na kalungkutang tumatanim sa dibdib.\nKapahayagan: pinatutunayan ng kanyang kalungkutan na lubos niyang naunawaan ang alok ni Jesus. Umalis siyang nagdadalamhati, sapagkat naunawaan niyang mabuti kung ano ang hinihiling sa kanya at kung ano ang ibig sabihin ng pagbibigay nito.\n\n📍 Ang koneksyon sa desisyon ngayon:\nAng dalawang salitang ito, kapag pinagsama, ay naghahayag ng isang mahalagang katotohanan: ang desisyong iwan ang kontrol ay nasasaktan sapagkat malinaw na naiintindihan kung ano ang nakasalalay. Alam na alam ng mayamang binata kung ano ang nasa timbangan — ngunit isang panig lamang ang kanyang nakikita.\n\nAng kanyang mga ari-arian ay matatag, kilala, at nasa harapan. Ang kayamanang walang hanggan na inalok sa kanya ni Jesus bilang kapalit ay nangangailangan ng pananampalataya, ayon din sa pagpapatunay ng Mga Hebreo 11:6. Ang pag-iwan sa pansamantala para sa walang hanggan ay gawa ng pananampalataya. At ang inialok bilang kapalit ay ang pinakadakila sa lahat ng gantimpala: ang walang hanggang buhay kasama ang Diyos.",
       "greek_words": [
         {
-          "word": "κτήματα",
-          "transliteration": "ktémata",
+          "word": "κτῆμα",
+          "transliteration": "ktēma",
           "meaning": "mga ari-arian, lupain, mga pag-aaring nagbibigay ng katayuan at kaligtasang panlipunan",
-          "revelation": "Ang hiniling ni Jesus na iwan niya ay ang buong pundasyon ng kanyang pagkakakilanlan."
+          "revelation": "Ang hiniling ni Jesus na iwan niya ay ang buong pundasyon ng kanyang pagkakakilanlan.",
+          "strong": "G2933"
         },
         {
-          "word": "λυπούμενος",
-          "transliteration": "lypoumenos",
+          "word": "λυπέω",
+          "transliteration": "lypéō",
           "meaning": "nagdadalamhati, matindi ang paghihirap",
-          "revelation": "Ang kanyang paghihirap ay nagpapatunay na lubos niyang naunawaan kung magkano ang halaga ng paanyaya ni Jesus."
+          "revelation": "Ang kanyang paghihirap ay nagpapatunay na lubos niyang naunawaan kung magkano ang halaga ng paanyaya ni Jesus.",
+          "strong": "G3076"
         }
       ],
       "scripture_references": [

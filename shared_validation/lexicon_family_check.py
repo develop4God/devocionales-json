@@ -52,13 +52,14 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from shared_validation.family_resolver import RESOLVERS, ID_LISTERS  # noqa: E402
+from shared_validation.family_resolver import ID_LISTERS, RESOLVERS  # noqa: E402
 from shared_validation.lexicon_check import (  # noqa: E402
+    LexicalStatus,
     check_lexical_accuracy,
     check_structured_word_study_accuracy,
-    LexicalStatus,
 )
 from shared_validation.lexicon_source import StrongsLexiconSource  # noqa: E402
+from shared_validation.report import ReportLike  # noqa: E402
 from shared_validation.text_checks import iter_strings  # noqa: E402
 
 RED, YLW, GRN, CYN, RST = "\033[91m", "\033[93m", "\033[92m", "\033[96m", "\033[0m"
@@ -79,17 +80,80 @@ class _ReportAdapter:
         self.warnings = 0
         self.infos = 0
 
-    def E(self, msg):  # noqa: N802
+    def E(self, msg):
         print(f"  {RED}❌ {msg}{RST}")
         self.errors += 1
 
-    def W(self, msg):  # noqa: N802
+    def W(self, msg):
         print(f"  {YLW}⚠️  {msg}{RST}")
         self.warnings += 1
 
-    def I(self, msg):  # noqa: E743, N802
+    def I(self, msg):  # noqa: E743
         print(f"  {CYN}ℹ️  {msg}{RST}")
         self.infos += 1
+
+
+def check_family_citation_balance(
+    counts_by_lang: dict[str, dict[str, int]],
+    report: ReportLike,
+) -> None:
+    """Warn when a Strong's code's citation COUNT diverges across a family's
+    languages, even though every individual citation is independently
+    well-formed and lexically correct (i.e. check_lexical_accuracy already
+    passed on all of them).
+
+    Why this exists: check_lexical_accuracy grades one gloss span at a time
+    and has no notion of "how many times should this word appear in THIS
+    language, given how many times it appears in its 9 siblings" — a
+    citation can be individually perfect and still be missing three more
+    times where a sibling language cited the same underlying word. Found
+    2026-08-10 (restoration_by_fire): a phonetic respelling or a dropped
+    bracket in one language's dialogue-quote/discovery_question is
+    invisible to every shape-based check (no bare Latin, no malformed
+    gloss) but shows up immediately as a per-language count that doesn't
+    match its siblings'.
+
+    `counts_by_lang` is `{lang: {strongs_number: count}}`, built by the
+    caller from the SAME LexicalCheckResult stream check_lexical_accuracy /
+    check_structured_word_study_accuracy already produce — no new
+    traversal or detection regex, this is a comparison over already-graded
+    results.
+
+    For each Strong's code that appears in at least 2 languages, the most
+    common count across all languages (mode; ties broken toward the
+    smallest count, since under-citing is more common than over-citing in
+    this corpus's edit history) is treated as the family's baseline. Every
+    language whose count differs — including a language that never cites
+    the word at all — gets a warning. This can be a false positive for a
+    family where one language's prose genuinely never needed a word its
+    siblings used (Gate 11/12 in the project's Discovery gloss master
+    plan cover how to tell the two apart by reading the actual text) —
+    same tier as this module's other WARNING-level findings, not a hard
+    gate.
+    """
+    all_codes = {code for counts in counts_by_lang.values() for code in counts}
+    for code in sorted(all_codes):
+        per_lang = {
+            lang: counts.get(code, 0) for lang, counts in counts_by_lang.items()
+        }
+        if len(set(per_lang.values())) <= 1:
+            continue  # every language agrees, nothing to report
+        counted_langs = [lang for lang, n in per_lang.items() if n > 0]
+        if len(counted_langs) < 2:
+            continue  # only one language cites this code at all — not a cross-family imbalance
+        tally: dict[int, int] = {}
+        for n in per_lang.values():
+            tally[n] = tally.get(n, 0) + 1
+        baseline = min(tally, key=lambda n: (-tally[n], n))
+        for lang in sorted(per_lang):
+            n = per_lang[lang]
+            if n != baseline:
+                report.W(
+                    f"{lang}: Strong's {code} cited {n} time(s), but {baseline} "
+                    f"is the family's common count across its sibling languages — "
+                    "possible missing/extra citation (verify by reading the text; "
+                    "a language's own prose can legitimately differ)"
+                )
 
 
 def run_for_family(
@@ -109,6 +173,7 @@ def run_for_family(
     report = _ReportAdapter()
     print(f"\n── {content_type}/{content_id} ──")
     matched = 0
+    counts_by_lang: dict[str, dict[str, int]] = {}
     for lang, path in sorted(family.items()):
         if not path.exists():
             report.W(f"{lang}: file listed in index but not found at {path}")
@@ -118,6 +183,7 @@ def run_for_family(
         except json.JSONDecodeError as e:
             report.E(f"{lang}: invalid JSON in {path.name}: {e}")
             continue
+        lang_counts = counts_by_lang.setdefault(lang, {})
         for field_path, text in iter_strings(data):
             ctx = f"{lang}:{field_path}"
             results = check_lexical_accuracy(
@@ -129,7 +195,12 @@ def run_for_family(
                 report=report,
                 debug=debug,
             )
-            matched += sum(1 for r in results if r.status == LexicalStatus.MATCHED)
+            for r in results:
+                if r.status == LexicalStatus.MATCHED:
+                    matched += 1
+                    lang_counts[r.strongs_number] = (
+                        lang_counts.get(r.strongs_number, 0) + 1
+                    )
 
         # The structured greek_words/hebrew_words array (word +
         # transliteration as separate JSON keys) is a distinct shape from
@@ -155,9 +226,15 @@ def run_for_family(
                         ctx=ctx,
                         report=report,
                         debug=debug,
+                        strongs_hint=w.get("strong"),
                     )
                     if result.status == LexicalStatus.MATCHED:
                         matched += 1
+                        lang_counts[result.strongs_number] = (
+                            lang_counts.get(result.strongs_number, 0) + 1
+                        )
+
+    check_family_citation_balance(counts_by_lang, report)
 
     if report.errors == 0:
         print(

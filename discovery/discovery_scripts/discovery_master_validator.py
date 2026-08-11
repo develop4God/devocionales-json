@@ -22,7 +22,7 @@ argparse.ArgumentParser(
 def run(script, args=None, label=""):
     """Run a validator script. Exit with its code if it fails."""
     cmd = [sys.executable, str(SCRIPTS_DIR / script)] + (args or [])
-    result = subprocess.run(cmd, text=True)
+    result = subprocess.run(cmd, text=True, check=False)
     if result.returncode != 0:
         lbl = label or script
         print(f"\n❌ {lbl} failed.")

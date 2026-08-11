@@ -19,7 +19,7 @@
       "icon": "🕍",
       "title": "Le système que tous connaissaient",
       "subtitle": "Quand Jean a parlé, chaque Juif a compris instantanément",
-      "content": "Imaginez le Jourdain ce jour-là. Jean-Baptiste, le prophète le plus célèbre d'Israël, désigne un charpentier inconnu et dit : « Voici l'Agneau de Dieu. »\n\nPour l'auditoire juif, cette phrase a activé 1 500 ans de mémoire collective :\n\n• Chaque matin et chaque soir, des agneaux étaient sacrifiés au Temple de Jérusalem (Exode 29:38-39). Deux agneaux quotidiens × 365 jours × 1 500 ans = plus d'un million d'agneaux.\n\n• À chaque Pâque, chaque famille juive sacrifiait son propre agneau. Le sang sur les poteaux était ce qui a sauvé Israël de la mort en Égypte.\n\n• Au Jour des Expiations (Yom Kippour), le grand prêtre entrait dans le Lieu Très Saint avec le sang d'un agneau pour expier les péchés de toute la nation.\n\nQuand Jean dit « l'Agneau de Dieu », il n'utilise pas une jolie métaphore. Il déclare : « C'est l'Agneau final. Celui vers lequel tous les autres agneaux pointaient. »",
+      "content": "Imaginez le Jourdain ce jour-là. Jean-Baptiste, le prophète le plus célèbre d'Israël, désigne un charpentier inconnu et dit : « Voici l'Agneau de Dieu. »\n\nPour l'auditoire juif, cette phrase a activé 1 500 ans de mémoire collective :\n\n• Chaque matin et chaque soir, des agneaux étaient sacrifiés au Temple de Jérusalem (Exode 29:38-39). Deux agneaux quotidiens × 365 jours × 1 500 ans = plus d'un million d'agneaux.\n\n• À chaque Pâque, chaque famille juive sacrifiait son propre agneau. Le sang sur les poteaux était ce qui a sauvé Israël de la mort en Égypte.\n\n• Au Jour des Expiations (יוֹם, (yôwm) (H3117) כִּפֻּר, (kippur) (H3725)), le grand prêtre entrait dans le Lieu Très Saint avec le sang d'un agneau pour expier les péchés de toute la nation.\n\nQuand Jean dit « l'Agneau de Dieu », il n'utilise pas une jolie métaphore. Il déclare : « C'est l'Agneau final. Celui vers lequel tous les autres agneaux pointaient. »",
       "revelation_key": "Le système sacrificiel n'a jamais été le plan final. C'était une ombre éducative pointant vers Christ."
     },
     
@@ -27,20 +27,22 @@
       "order": 2,
       "type": "greek_exegesis",
       "icon": "📖",
-      "title": "Le mot qui change tout : AIRŌN",
+      "title": "Le mot qui change tout : αἴρω, (aírō) (G142)",
       "subtitle": "Non seulement couvrir le péché, mais L'ÔTER",
       "greek_words": [
         {
-          "word": "αἴρων",
-          "transliteration": "Airōn",
+          "word": "αἴρω",
+          "transliteration": "aírō",
+          "strong": "G142",
           "reference": "Jean 1:29",
           "meaning": "Lever, porter sur les épaules, emporter complètement",
-          "revelation": "Ce verbe est crucial. Il ne dit pas « couvre » (kalyptō) ou « pardonne » (aphiēmi). Il dit AIRŌN - lève, porte, et EMPORTE.\n\nC'est le même mot utilisé quand les disciples « emportèrent » les paniers de pain restant, ou quand les soldats « prirent » la croix pour la porter.\n\nJésus ne met pas un voile sur votre péché pour que Dieu ne le voie pas. Il le soulève de vos épaules, le porte sur les siennes, marche avec lui jusqu'au Golgotha, et l'enterre dans son tombeau. Quand Il ressuscite, votre péché ne ressuscite pas avec Lui. IL EST PARTI.",
+          "revelation": "Ce verbe est crucial : (αἴρω, (aírō) (G142)) - lève, porte, et EMPORTE.\n\nC'est le même mot utilisé quand les disciples « emportèrent » les paniers de pain restant, ou quand les soldats « prirent » la croix pour la porter.\n\nJésus ne met pas un voile sur votre péché pour que Dieu ne le voie pas. Il le soulève de vos épaules, le porte sur les siennes, marche avec lui jusqu'au Golgotha, et l'enterre dans son tombeau. Quand Il ressuscite, votre péché ne ressuscite pas avec Lui. IL EST PARTI.",
           "application": "Votre culpabilité, votre honte, votre passé - Christ ne l'a pas seulement pardonné. Il l'a ENLEVÉ. Il n'existe plus sur vous."
         },
         {
           "word": "ἀμνός",
           "transliteration": "amnós",
+          "strong": "G286",
           "reference": "Jean 1:29",
           "meaning": "Jeune agneau, tendre, sans défaut",
           "revelation": "Jean aurait pu utiliser « probaton » (mouton adulte) ou « arnion » (petit agneau). Il a utilisé AMNOS - l'agneau parfait d'un an, sans tache, celui utilisé dans les sacrifices les plus sacrés.\n\nCe mot se connecte directement avec Ésaïe 53:7 : « Il est amené comme un agneau à la boucherie. » Aucune coïncidence. Jean déclare : « C'est le Serviteur souffrant qu'Ésaïe a vu il y a 700 ans. »",
@@ -108,7 +110,7 @@
       "discovery_questions": [
         {
           "category": "Liberté",
-          "question": "Quel péché, culpabilité ou honte continuez-vous à « porter » dans votre vie que Christ a déjà ÔTÉ (airōn) il y a 2 000 ans ?"
+          "question": "Quel péché, culpabilité ou honte continuez-vous à « porter » dans votre vie que Christ a déjà ÔTÉ (αἴρω, (aírō) (G142)) il y a 2 000 ans ?"
         },
         {
           "category": "Identité",

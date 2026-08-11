@@ -36,8 +36,6 @@ PHASE 2: WARNS                                               ⚠️  WARN  (<ELA
 
 ⚠️  WARNINGS (1)     ❌ ERRORS (0)
 
-  [PHASE 2: WARNS] ⚠️  WARNING: one item could not be reached, but this is non-fatal
-
 ================================================================================
 ❌ RUN FAILED — 0 errors, 1 warnings, exit code 1     (total: <ELAPSED>s)
 ================================================================================

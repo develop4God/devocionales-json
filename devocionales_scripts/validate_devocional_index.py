@@ -63,7 +63,7 @@ def validate_iso_date(value, label: str, errors: list) -> bool:
         date.fromisoformat(str(value))
         return True
     except (ValueError, TypeError):
-        errors.append(f"{label}: invalid ISO date — got {repr(value)}")
+        errors.append(f"{label}: invalid ISO date — got {value!r}")
         return False
 
 
@@ -87,7 +87,7 @@ def validate_index(index_path: Path, base_path: Path):
     sv = index.get("schema_version")
     if sv != EXPECTED_SCHEMA_VERSION:
         errors.append(
-            f"schema_version: expected {EXPECTED_SCHEMA_VERSION}, got {repr(sv)}"
+            f"schema_version: expected {EXPECTED_SCHEMA_VERSION}, got {sv!r}"
         )
     else:
         ok.append(f"schema_version = {sv}")
@@ -284,7 +284,7 @@ def main():
     print(f"  files : {base_path}")
     print()
 
-    passed, ok_lines, errors = validate_index(index_path, base_path)
+    _passed, ok_lines, errors = validate_index(index_path, base_path)
 
     for line in ok_lines:
         print(f"  {line}")

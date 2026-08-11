@@ -21,7 +21,7 @@ import sys
 import time
 from dataclasses import dataclass
 from datetime import datetime
-from typing import Any, List, Optional
+from typing import Any
 
 from .report import Report
 
@@ -37,14 +37,14 @@ class _PhaseResult:
 
 @dataclass
 class Coverage:
-    content_units: Optional[int] = None
-    published: Optional[int] = None
-    coming_soon: Optional[int] = None
-    files_scanned: Optional[int] = None
-    languages_present: Optional[List[str]] = None
-    expected_languages: Optional[int] = None
-    studies_found: Optional[int] = None
-    sot_live: Optional[bool] = None
+    content_units: int | None = None
+    published: int | None = None
+    coming_soon: int | None = None
+    files_scanned: int | None = None
+    languages_present: list[str] | None = None
+    expected_languages: int | None = None
+    studies_found: int | None = None
+    sot_live: bool | None = None
 
 
 def _current_branch() -> str:
@@ -57,10 +57,11 @@ def _current_branch() -> str:
             capture_output=True,
             text=True,
             timeout=5,
+            check=False,
         )
         branch = result.stdout.strip()
         return branch if result.returncode == 0 and branch else "unknown"
-    except Exception:
+    except Exception:  # noqa: BLE001
         return "unknown"
 
 
@@ -74,23 +75,23 @@ class RunReport:
 
     def __init__(self, title: str):
         self.title = title
-        self.phases: List[_PhaseResult] = []
+        self.phases: list[_PhaseResult] = []
         self.coverage: Coverage = Coverage()
         self.exit_code: int = 0
         self._start_time = time.monotonic()
-        self._started_at = datetime.now()
+        self._started_at = datetime.now()  # noqa: DTZ005 — display uses local wall-clock time
         self._branch = _current_branch()
 
     def add_coverage(
         self,
-        content_units: Optional[int] = None,
-        published: Optional[int] = None,
-        coming_soon: Optional[int] = None,
-        files_scanned: Optional[int] = None,
-        languages_present: Optional[List[str]] = None,
-        expected_languages: Optional[int] = None,
-        studies_found: Optional[int] = None,
-        sot_live: Optional[bool] = None,
+        content_units: int | None = None,
+        published: int | None = None,
+        coming_soon: int | None = None,
+        files_scanned: int | None = None,
+        languages_present: list[str] | None = None,
+        expected_languages: int | None = None,
+        studies_found: int | None = None,
+        sot_live: bool | None = None,
     ) -> None:
         """Record the run's coverage snapshot. Explicit typed parameters,
         one per Coverage field — a typo'd or renamed field is a call-site
@@ -223,15 +224,13 @@ class RunReport:
         total_warnings = sum(len(p.report.warnings) for p in self.phases)
         total_errors = sum(len(p.report.errors) for p in self.phases)
         if total_warnings or total_errors:
+            # Messages themselves already printed once, in full, by each
+            # phase's own Report.print() call above — that output carries
+            # phase context via the section header, so re-listing every
+            # message again here (previously prefixed "[phase name]") was
+            # pure duplication with no added information, just verbatim
+            # noise doubling the report's length.
             print(f"\n⚠️  WARNINGS ({total_warnings})     ❌ ERRORS ({total_errors})")
-
-        if total_warnings or total_errors:
-            print()
-            for phase in self.phases:
-                for msg in phase.report.warnings:
-                    print(f"  [{phase.name}] {msg}")
-                for msg in phase.report.errors:
-                    print(f"  [{phase.name}] {msg}")
 
         overall_passed = all(p.passed for p in self.phases) and total_warnings == 0
         print(f"\n{'=' * 80}")

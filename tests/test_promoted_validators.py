@@ -59,6 +59,7 @@ def _run(script_path: Path, timeout: int = 120) -> subprocess.CompletedProcess:
         text=True,
         timeout=timeout,
         env=env,
+        check=False,
     )
 
 

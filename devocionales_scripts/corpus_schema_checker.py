@@ -19,13 +19,12 @@ reference, its own comparison unit (dates vs. key-sets), and its own
 reporting shape.
 """
 
-from typing import Optional, Tuple
-
-from shared_validation.report import ReportLike
 
 from corpus_index_reader import CorpusCombo
 
-_KeySet = Tuple[str, ...]
+from shared_validation.report import ReportLike
+
+_KeySet = tuple[str, ...]
 
 
 class CorpusSchemaChecker:
@@ -34,9 +33,9 @@ class CorpusSchemaChecker:
     doesn't match it."""
 
     def __init__(self):
-        self._reference_keys: Optional[_KeySet] = None
-        self._reference_pm_keys: Optional[_KeySet] = None
-        self._reference_source: Optional[str] = None
+        self._reference_keys: _KeySet | None = None
+        self._reference_pm_keys: _KeySet | None = None
+        self._reference_source: str | None = None
 
     def check_file(self, combo: CorpusCombo, entries: list, report: ReportLike) -> None:
         """Call once per file, after CorpusFileValidator has already

@@ -27,7 +27,6 @@ import json
 import re
 import sys
 from pathlib import Path
-from typing import Dict, Optional
 
 
 def _find_repo_root(start: Path) -> Path:
@@ -45,38 +44,44 @@ def _find_repo_root(start: Path) -> Path:
 
 
 sys.path.insert(0, str(_find_repo_root(Path(__file__).resolve().parent)))
-from shared_validation.report import Report  # noqa: E402
-from shared_validation.run_report import RunReport  # noqa: E402
+from shared_validation.bible_sot import (  # noqa: E402
+    REMOTE_INDEX_URL,
+    load_bible_versions,
+)
 from shared_validation.family_check import run_family_validation_all  # noqa: E402
+from shared_validation.greek_hebrew_gloss import (  # noqa: E402
+    check_bare_transliteration_reuse,
+    check_bare_transliteration_reuse_cross_field,
+    check_greek_hebrew_transliteration,
+    check_native_script_bare_transliteration,
+    check_strong_code_bare_transliteration,
+    check_strong_code_native_script,
+    check_word_study_bare_clause_transliteration,
+    check_word_study_bare_transliteration,
+    check_word_study_lexicon_verified_bare_transliteration,
+)
 from shared_validation.lexicon_family_check import (  # noqa: E402
     run_for_type as run_lexicon_family_check,
 )
-from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL  # noqa: E402
-from shared_validation.text_checks import (  # noqa: E402
-    iter_strings,
-    check_quote_anomalies,
-    check_halfwidth_colon_in_title,
-    check_no_latin_leak,
-)
-from shared_validation.greek_hebrew_gloss import (  # noqa: E402
-    check_greek_hebrew_transliteration,
-    check_bare_transliteration_reuse,
-    check_strong_code_native_script,
-    check_strong_code_bare_transliteration,
-    check_word_study_bare_transliteration,
-    check_native_script_bare_transliteration,
-)
 from shared_validation.lexicon_source import StrongsLexiconSource  # noqa: E402
 from shared_validation.lint import lint_json_files  # noqa: E402
+from shared_validation.report import Report  # noqa: E402
+from shared_validation.run_report import RunReport  # noqa: E402
 from shared_validation.scripture_check import (  # noqa: E402
     ScriptureValidator,
     find_scripture_pairs,
     validate_pair,
     validate_translated_pair,
 )
+from shared_validation.text_checks import (  # noqa: E402
+    check_halfwidth_colon_in_title,
+    check_no_latin_leak,
+    check_quote_anomalies,
+    iter_strings,
+)
 
 
-def load_json_file(filepath: Path, report: Report) -> Optional[Dict]:
+def load_json_file(filepath: Path, report: Report) -> dict | None:
     """Load and validate JSON file. Returns (data, is_valid) is not needed —
     caller distinguishes success by None."""
     try:
@@ -85,18 +90,18 @@ def load_json_file(filepath: Path, report: Report) -> Optional[Dict]:
     except json.JSONDecodeError as e:
         report.E(f"Invalid JSON in {filepath.name}: {e}")
         return None
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         report.E(f"Error reading {filepath.name}: {e}")
         return None
 
 
 def validate_structure(
-    data: Dict,
+    data: dict,
     lang: str,
     filename: str,
     report: Report,
     expected_languages: dict,
-    lexicon: Optional[StrongsLexiconSource] = None,
+    lexicon: StrongsLexiconSource | None = None,
 ) -> bool:
     """Validate the structure of a discovery study file."""
     required_fields = [
@@ -127,10 +132,30 @@ def validate_structure(
         check_strong_code_native_script(text, path, lang, f"{filename}:{path}", report)
         check_strong_code_bare_transliteration(text, path, f"{filename}:{path}", report)
         check_word_study_bare_transliteration(text, path, f"{filename}:{path}", report)
+        if lexicon is not None:
+            check_word_study_lexicon_verified_bare_transliteration(
+                text, path, f"{filename}:{path}", report, lexicon
+            )
+        check_word_study_bare_clause_transliteration(
+            text, path, lang, f"{filename}:{path}", report
+        )
         check_native_script_bare_transliteration(
             text, path, lang, f"{filename}:{path}", report, lexicon
         )
-        check_no_latin_leak(text, path, lang, f"{filename}:{path}", report)
+        check_no_latin_leak(text, path, lang, f"{filename}:{path}", report, lexicon)
+
+    # Bare-transliteration reuse across a card's own fields (title, content,
+    # greek_words[].revelation, etc.) — the same gloss must not be
+    # established in one field and reused bare in another field of the same
+    # card. Grouped by card index parsed from `path` (cards[N]...), reusing
+    # the same iter_strings(data) traversal above rather than a new one.
+    _card_fields: dict[str, list] = {}
+    for path, text in iter_strings(data):
+        card_match = re.match(r"cards\[(\d+)\]", path)
+        card_key = card_match.group(0) if card_match else "_top_level"
+        _card_fields.setdefault(card_key, []).append((path, text))
+    for card_key, fields in _card_fields.items():
+        check_bare_transliteration_reuse_cross_field(fields, filename, report)
 
     # Check required fields
     for field in required_fields:
@@ -178,9 +203,8 @@ def validate_structure(
             report.W(f"{filename}: 'tags' array is empty")
 
     # Validate metadata
-    if "metadata" in data:
-        if "themes" not in data["metadata"]:
-            report.W(f"{filename}: Missing 'themes' in metadata")
+    if "metadata" in data and "themes" not in data["metadata"]:
+        report.W(f"{filename}: Missing 'themes' in metadata")
 
     return is_valid
 
@@ -244,7 +268,7 @@ def _check_key_parity(
 
 
 def validate_content_translation(
-    en_data: Dict, trans_data: Dict, lang: str, filename: str, report: Report
+    en_data: dict, trans_data: dict, lang: str, filename: str, report: Report
 ):
     """Validate translation has the same data shape as EN: same fields,
     same list lengths, no empty text where EN has content. Deliberately
@@ -341,7 +365,7 @@ def validate_lint(report: Report, discovery_dir: Path) -> None:
 
 def validate_index_json(
     report: Report, discovery_dir: Path, expected_languages: dict
-) -> Optional[Dict]:
+) -> dict | None:
     """
     PHASE A: Validate index.json format, structure, and data integrity.
     Returns the index data if valid, None if errors found.
@@ -365,7 +389,7 @@ def validate_index_json(
     except json.JSONDecodeError as e:
         report.E(f"index.json has invalid JSON syntax: {e}")
         return None
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         report.E(f"Error reading index.json: {e}")
         return None
 
@@ -476,11 +500,10 @@ def validate_index_json(
                         )
 
         # Validate estimated_reading_minutes
-        if "estimated_reading_minutes" in study:
-            if not isinstance(study["estimated_reading_minutes"], dict):
-                report.E(
-                    f"Study {study_id}: 'estimated_reading_minutes' must be an object"
-                )
+        if "estimated_reading_minutes" in study and not isinstance(
+            study["estimated_reading_minutes"], dict
+        ):
+            report.E(f"Study {study_id}: 'estimated_reading_minutes' must be an object")
 
     if pending_studies:
         report.I(f"Found {len(pending_studies)} studies with incomplete translations")
@@ -594,7 +617,7 @@ def validate_translation_files(
                 continue
 
             # Use index_studies instead of EXPECTED_STUDIES
-            for study_id in index_studies.keys():
+            for study_id in index_studies:
                 if study_id in all_studies["en"] and study_id in all_studies[lang]:
                     filename = f"{study_id.replace('_001', '')}_{lang}_001.json"
                     validate_content_translation(
@@ -655,7 +678,7 @@ def validate_scripture_references(
     report: Report,
     all_studies: dict,
     bible_database_dir: Path,
-    only_lang: Optional[str] = None,
+    only_lang: str | None = None,
 ) -> None:
     """Resolve every scripture reference found in every loaded study file
     and fuzzy-match its stored verse text against the resolved text.
@@ -779,7 +802,9 @@ def main():
 
     run_report = RunReport("DISCOVERY VALIDATION")
 
-    bible_versions, used_remote_sot, last_fetch_error = load_bible_versions("discovery")
+    bible_versions, used_remote_sot, _last_fetch_error = load_bible_versions(
+        "discovery"
+    )
     expected_languages = {
         lang: cfg["allowed_versions"] for lang, cfg in bible_versions.items()
     }

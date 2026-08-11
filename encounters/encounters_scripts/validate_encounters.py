@@ -31,7 +31,6 @@ Exit codes: 0 = all passed, 1 = errors found in 1/A/SOT/B/E, or any warning anyw
 import re
 import sys
 from pathlib import Path
-from typing import Optional
 
 
 def _find_repo_root(start: Path) -> Path:
@@ -49,46 +48,55 @@ def _find_repo_root(start: Path) -> Path:
 
 
 sys.path.insert(0, str(_find_repo_root(Path(__file__).resolve().parent)))
-from shared_validation.report import Report  # noqa: E402
-from shared_validation.run_report import RunReport  # noqa: E402
+from concurrent.futures import ThreadPoolExecutor  # noqa: E402
+
+from verify_image_urls import (  # noqa: E402
+    MAX_CONCURRENT_REQUESTS,
+    GitHubAssetChecker,
+    ImageFormatValidator,
+    ImageReferenceExtractor,
+)
+from verify_image_urls import (  # noqa: E402
+    EncounterIndexReader as ImageIndexReader,
+)
+
+from shared_validation.bible_sot import (  # noqa: E402
+    REMOTE_INDEX_URL,
+    load_bible_versions,
+)
 from shared_validation.family_check import run_family_validation_all  # noqa: E402
+from shared_validation.greek_hebrew_gloss import (  # noqa: E402
+    check_bare_transliteration_reuse,
+    check_bare_transliteration_reuse_cross_field,
+    check_greek_hebrew_transliteration,
+    check_native_script_bare_transliteration,
+    check_script_boundary_spacing,
+    check_strong_code_bare_transliteration,
+    check_strong_code_native_script,
+    check_word_study_bare_clause_transliteration,
+    check_word_study_bare_transliteration,
+    check_word_study_lexicon_verified_bare_transliteration,
+)
 from shared_validation.lexicon_family_check import (  # noqa: E402
     run_for_type as run_lexicon_family_check,
 )
-from shared_validation.bible_sot import load_bible_versions, REMOTE_INDEX_URL  # noqa: E402
-from shared_validation.text_checks import (  # noqa: E402
-    iter_strings,
-    check_quote_anomalies,
-    check_halfwidth_colon_in_title,
-    check_no_latin_leak,
-    is_cognate,
-)
-from shared_validation.greek_hebrew_gloss import (  # noqa: E402
-    check_greek_hebrew_transliteration,
-    check_bare_transliteration_reuse,
-    check_script_boundary_spacing,
-    check_strong_code_native_script,
-    check_strong_code_bare_transliteration,
-    check_word_study_bare_transliteration,
-    check_native_script_bare_transliteration,
-)
 from shared_validation.lexicon_source import StrongsLexiconSource  # noqa: E402
 from shared_validation.lint import lint_json_files  # noqa: E402
+from shared_validation.report import Report  # noqa: E402
+from shared_validation.run_report import RunReport  # noqa: E402
 from shared_validation.scripture_check import (  # noqa: E402
     ScriptureValidator,
     find_scripture_pairs,
     validate_pair,
     validate_translated_pair,
 )
-
-from verify_image_urls import (  # noqa: E402
-    EncounterIndexReader as ImageIndexReader,
-    ImageReferenceExtractor,
-    GitHubAssetChecker,
-    ImageFormatValidator,
-    MAX_CONCURRENT_REQUESTS,
+from shared_validation.text_checks import (  # noqa: E402
+    check_halfwidth_colon_in_title,
+    check_no_latin_leak,
+    check_quote_anomalies,
+    is_cognate,
+    iter_strings,
 )
-from concurrent.futures import ThreadPoolExecutor  # noqa: E402
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
@@ -159,7 +167,7 @@ def validate_sot_source(
     report: Report,
     bible_versions: dict,
     used_remote_sot: bool,
-    last_fetch_error: Optional[Exception],
+    last_fetch_error: Exception | None,
 ) -> bool:
     """Report whether this run resolved bible_version codes from the live
     remote SOT or fell back to the temp-dir bible_versions cache.
@@ -178,7 +186,7 @@ def validate_sot_source(
     return True
 
 
-def load_json(path: Path, report: Report) -> Optional[dict]:
+def load_json(path: Path, report: Report) -> dict | None:
     import json
 
     try:
@@ -186,7 +194,7 @@ def load_json(path: Path, report: Report) -> Optional[dict]:
     except json.JSONDecodeError as e:
         report.E(f"Invalid JSON in {path.name}: {e}")
         return None
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         report.E(f"Cannot read {path.name}: {e}")
         return None
 
@@ -216,7 +224,7 @@ def validate_lint(report: Report) -> dict:
 # ── Phase A: Index validation ─────────────────────────────────────────────────
 
 
-def validate_index(report: Report, expected_languages: list) -> Optional[dict]:
+def validate_index(report: Report, expected_languages: list) -> dict | None:
     report.I("=" * 60)
     report.I("PHASE A: Validating encounters/index.json")
     report.I("=" * 60)
@@ -385,8 +393,8 @@ def validate_encounter_file(
     enc_id: str,
     report: Report,
     bible_versions: dict,
-    index_entry: Optional[dict] = None,
-    lexicon: Optional[StrongsLexiconSource] = None,
+    index_entry: dict | None = None,
+    lexicon: StrongsLexiconSource | None = None,
 ):
     """Validate a single encounter file."""
 
@@ -402,10 +410,30 @@ def validate_encounter_file(
         check_strong_code_native_script(text, path, lang, f"{filename}:{path}", report)
         check_strong_code_bare_transliteration(text, path, f"{filename}:{path}", report)
         check_word_study_bare_transliteration(text, path, f"{filename}:{path}", report)
+        if lexicon is not None:
+            check_word_study_lexicon_verified_bare_transliteration(
+                text, path, f"{filename}:{path}", report, lexicon
+            )
+        check_word_study_bare_clause_transliteration(
+            text, path, lang, f"{filename}:{path}", report
+        )
         check_native_script_bare_transliteration(
             text, path, lang, f"{filename}:{path}", report, lexicon
         )
-        check_no_latin_leak(text, path, lang, f"{filename}:{path}", report)
+        check_no_latin_leak(text, path, lang, f"{filename}:{path}", report, lexicon)
+
+    # Bare-transliteration reuse across a card's own fields (title, content,
+    # greek_words[].revelation, etc.) — the same gloss must not be
+    # established in one field and reused bare in another field of the same
+    # card. Grouped by card index parsed from `path` (cards[N]...), reusing
+    # the same iter_strings(data) traversal above rather than a new one.
+    _card_fields: dict[str, list] = {}
+    for path, text in iter_strings(data):
+        card_match = re.match(r"cards\[(\d+)\]", path)
+        card_key = card_match.group(0) if card_match else "_top_level"
+        _card_fields.setdefault(card_key, []).append((path, text))
+    for card_key, fields in _card_fields.items():
+        check_bare_transliteration_reuse_cross_field(fields, filename, report)
 
     # Required top-level fields
     required = [
@@ -474,11 +502,12 @@ def validate_encounter_file(
                 report.E(f"{filename}: meta missing field '{field}'")
         if "tags" in meta and not isinstance(meta["tags"], list):
             report.E(f"{filename}: meta.tags must be an array")
-        if "accent_color" in meta:
-            if not re.match(r"^#[0-9a-fA-F]{6}$", meta.get("accent_color", "")):
-                report.W(
-                    f"{filename}: meta.accent_color '{meta['accent_color']}' is not a valid hex color"
-                )
+        if "accent_color" in meta and not re.match(
+            r"^#[0-9a-fA-F]{6}$", meta.get("accent_color", "")
+        ):
+            report.W(
+                f"{filename}: meta.accent_color '{meta['accent_color']}' is not a valid hex color"
+            )
         if index_entry:
             for meta_key, index_key in [("emoji", "emoji"), ("testament", "testament")]:
                 meta_val = meta.get(meta_key, "")
@@ -649,11 +678,13 @@ def validate_cross_translation(
                 tr_val = tc.get(field, "")
                 if not tr_val or not str(tr_val).strip():
                     report.E(f"{ctx}: field '{field}' is empty in {lang.upper()}")
-                elif isinstance(en_val, str) and isinstance(tr_val, str):
-                    if en_val.strip() == tr_val.strip() and not is_cognate(
-                        tr_val, lang
-                    ):
-                        report.W(f"{ctx}: field '{field}' appears untranslated")
+                elif (
+                    isinstance(en_val, str)
+                    and isinstance(tr_val, str)
+                    and en_val.strip() == tr_val.strip()
+                    and not is_cognate(tr_val, lang)
+                ):
+                    report.W(f"{ctx}: field '{field}' appears untranslated")
 
         # discovery_questions count
         if ec.get("type") == "discovery_activation":
@@ -904,7 +935,7 @@ def validate_greek_family_patterns(report: Report) -> None:
 
 
 def validate_scripture_references(
-    report: Report, index_data: dict, lint_cache: dict, only_lang: Optional[str] = None
+    report: Report, index_data: dict, lint_cache: dict, only_lang: str | None = None
 ) -> None:
     """Phase D: resolve every scripture reference found in every loaded
     encounter file and fuzzy-match its stored verse_text against the

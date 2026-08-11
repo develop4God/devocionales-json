@@ -10,11 +10,10 @@ Example incorrect format: "リビングバイブル-20250801"
 """
 
 import json
-import re
 import os
-from typing import Dict, Tuple
-from collections import defaultdict
+import re
 import sys
+from collections import defaultdict
 
 
 class DevotionalIDFixer:
@@ -185,7 +184,7 @@ class DevotionalIDFixer:
             "ARC": "ARC",
         }
 
-    def extract_scripture_reference(self, versiculo: str) -> Tuple[str, str, str]:
+    def extract_scripture_reference(self, versiculo: str) -> tuple[str, str, str]:
         """
         Extract book, chapter, and verse from versiculo field.
 
@@ -242,7 +241,7 @@ class DevotionalIDFixer:
         # Generate ID
         return f"{book}{chapter}v{verse}{version_short}{date_clean}"
 
-    def fix_file(self, filepath: str, dry_run: bool = False) -> Dict:
+    def fix_file(self, filepath: str, dry_run: bool = False) -> dict:
         """Fix IDs in a single devotional file"""
         print(
             f"\n{'[DRY RUN] ' if dry_run else ''}Processing: {os.path.basename(filepath)}"
@@ -251,8 +250,8 @@ class DevotionalIDFixer:
         try:
             with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)
-        except Exception as e:
-            error_msg = f"Error reading {filepath}: {str(e)}"
+        except Exception as e:  # noqa: BLE001
+            error_msg = f"Error reading {filepath}: {e!s}"
             print(f"  ❌ {error_msg}")
             self.stats["errors"].append(error_msg)
             return {"success": False, "error": str(e)}
@@ -265,8 +264,8 @@ class DevotionalIDFixer:
             print("  ⚠️  No 'data' key found in file")
             return {"success": False, "error": "No data key"}
 
-        for lang_key, lang_data in data["data"].items():
-            for date_key, entries in lang_data.items():
+        for lang_data in data["data"].values():
+            for entries in lang_data.values():
                 for entry in entries:
                     old_id = entry.get("id", "")
                     versiculo = entry.get("versiculo", "")
@@ -312,8 +311,8 @@ class DevotionalIDFixer:
                 with open(filepath, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 print(f"  ✅ Fixed {fixed_count} entries")
-            except Exception as e:
-                error_msg = f"Error writing {filepath}: {str(e)}"
+            except Exception as e:  # noqa: BLE001
+                error_msg = f"Error writing {filepath}: {e!s}"
                 print(f"  ❌ {error_msg}")
                 self.stats["errors"].append(error_msg)
                 return {"success": False, "error": str(e)}
@@ -330,15 +329,15 @@ class DevotionalIDFixer:
 
         return {"success": True, "fixed_count": fixed_count, "error_count": error_count}
 
-    def validate_file(self, filepath: str) -> Dict:
+    def validate_file(self, filepath: str) -> dict:
         """Validate IDs in a file and check for duplicates"""
         print(f"\nValidating: {os.path.basename(filepath)}")
 
         try:
             with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)
-        except Exception as e:
-            error_msg = f"Error reading {filepath}: {str(e)}"
+        except Exception as e:  # noqa: BLE001
+            error_msg = f"Error reading {filepath}: {e!s}"
             print(f"  ❌ {error_msg}")
             self.stats["errors"].append(error_msg)
             return {"success": False, "error": str(e)}
@@ -351,8 +350,8 @@ class DevotionalIDFixer:
             print("  ⚠️  No 'data' key found in file")
             return {"success": False, "error": "No data key"}
 
-        for lang_key, lang_data in data["data"].items():
-            for date_key, entries in lang_data.items():
+        for lang_data in data["data"].values():
+            for entries in lang_data.values():
                 for entry in entries:
                     entry_id = entry.get("id", "")
                     validated_count += 1
@@ -390,7 +389,7 @@ class DevotionalIDFixer:
             "invalid_count": invalid_count,
         }
 
-    def generate_report(self, output_file: str = None):
+    def generate_report(self, output_file: str | None = None):
         """Generate a comprehensive report of fixes and validation"""
         report = []
         report.append("=" * 80)
@@ -451,7 +450,7 @@ def main():
     print("\nThis script will fix incorrect ID formats in JA and ZH devotional files.")
     print("Correct format: book+chapter+verse+version+date")
     print("Example: galatians2v20LB20250801")
-    print("")
+    print()
 
     # Files to fix (JA and ZH for 2025 and 2026)
     files_to_fix = [

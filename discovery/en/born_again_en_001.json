@@ -11,7 +11,6 @@
     "reference": "John 3:3",
     "text": "Jesus answered and said unto him, Verily, verily, I say unto thee, Except a man be born again, he cannot see the kingdom of God."
   },
-  
   "cards": [
     {
       "order": 1,
@@ -22,7 +21,6 @@
       "content": "John gives us three crucial facts about Nicodemus in a single verse (John 3:1):\n\n1️⃣ 'A MAN OF THE PHARISEES':\n• The Pharisees were the religious elite - only 6,000 in all Israel\n• They memorized the entire Torah\n• They fasted twice per week\n• They tithed even the spices from their garden\n• They were the most respected by the people\n\n2️⃣ 'NAMED NICODEMUS':\n• His name means 'Conqueror of the people'\n• It was a prestigious name, from an aristocratic family\n\n3️⃣ 'A RULER OF THE JEWS':\n• Member of the Sanhedrin - the supreme council of 70 elders\n• Only the most learned reached the Sanhedrin\n• Jesus later calls him 'THE master of Israel' (John 3:10)\n\n🌙 WHY HE CAME AT NIGHT:\n\nIt wasn't just to avoid criticism. It was symbolic:\n• Nicodemus was in 'spiritual darkness' despite his knowledge\n• He was afraid of losing his position\n• The night represents the state of the religious soul without Christ\n\n💔 THE IRONY:\n\nThe man with the most religious knowledge in Israel comes to ask the carpenter from Nazareth. His perfect religion left him empty.",
       "revelation_key": "You can be religiously impeccable and spiritually dead. Theological education does not replace the new birth."
     },
-    
     {
       "order": 2,
       "type": "greek_exegesis",
@@ -38,22 +36,22 @@
           "revelation": "Both meanings are necessary: it's a birth that happens AGAIN (you're not improved, you're REPLACED), and comes FROM ABOVE (it's not self-generated, it's God's gift)."
         },
         {
-          "word": "γεννηθῇ",
-          "transliteration": "Gennēthē",
+          "word": "γεννάω",
+          "transliteration": "gennáō",
+          "strong": "G1080",
           "meaning": "To be born, to be begotten",
           "revelation": "It's passive voice in Greek - 'to be born', not 'to birth yourself'. The new birth is something you RECEIVE, not something you PRODUCE."
         }
       ],
       "revelation_key": "You cannot be born again by yourself, just as you could not be born the first time by yourself. Both births are received, not achieved."
     },
-    
     {
       "order": 3,
       "type": "theological_depth",
       "icon": "🍃",
       "title": "The Wind Bloweth Where It Listeth",
       "subtitle": "John 3:8 - The mystery of the Spirit",
-      "content": "Jesus uses a perfect illustration to explain the new birth:\n\n'The wind bloweth where it listeth, and thou hearest the sound thereof, but canst not tell whence it cometh, and whither it goeth: so is every one that is born of the Spirit.'\n\n🌬️ THE WORDPLAY:\n\nIn Greek (and Hebrew), the same word means WIND and SPIRIT:\n• Greek: πνεῦμα, (pneûma) (G4151)\n• Hebrew: רוּחַ, (Ruach)\n\nJesus makes a triple parallel:\n\n1️⃣ THE WIND IS INVISIBLE:\n• You cannot SEE the wind\n• You only see its EFFECTS (leaves moving, trees bending)\n• So is the Spirit - you don't see Him, but you see His work in transformed lives\n\n2️⃣ THE WIND IS UNCONTROLLABLE:\n• The wind 'bloweth where it listeth' - you don't direct it\n• The Spirit is sovereign - He chooses when and where to move\n• You cannot manufacture a revival; you can only prepare for when the Wind blows\n\n3️⃣ THE WIND IS UNDENIABLE:\n• 'Thou hearest the sound thereof' - though you don't see it, you KNOW it's there\n• A person born of the Spirit produces EVIDENCE - fruit, change, transformation\n\n⚠️ THE WARNING TO NICODEMUS:\n\nNicodemus wanted to UNDERSTAND before believing. Jesus tells him: 'You cannot fully understand the new birth, just as you cannot fully understand the wind. But you can EXPERIENCE it'.",
+      "content": "Jesus uses a perfect illustration to explain the new birth:\n\n'The wind bloweth where it listeth, and thou hearest the sound thereof, but canst not tell whence it cometh, and whither it goeth: so is every one that is born of the Spirit.'\n\n🌬️ THE WORDPLAY:\n\nIn Greek (and Hebrew), the same word means WIND and SPIRIT:\n• Greek: πνεῦμα, (pneûma) (G4151)\n• Hebrew: רוּחַ, (rûwach) (H7307)\n\nJesus makes a triple parallel:\n\n1️⃣ THE WIND IS INVISIBLE:\n• You cannot SEE the wind\n• You only see its EFFECTS (leaves moving, trees bending)\n• So is the Spirit - you don't see Him, but you see His work in transformed lives\n\n2️⃣ THE WIND IS UNCONTROLLABLE:\n• The wind 'bloweth where it listeth' - you don't direct it\n• The Spirit is sovereign - He chooses when and where to move\n• You cannot manufacture a revival; you can only prepare for when the Wind blows\n\n3️⃣ THE WIND IS UNDENIABLE:\n• 'Thou hearest the sound thereof' - though you don't see it, you KNOW it's there\n• A person born of the Spirit produces EVIDENCE - fruit, change, transformation\n\n⚠️ THE WARNING TO NICODEMUS:\n\nNicodemus wanted to UNDERSTAND before believing. Jesus tells him: 'You cannot fully understand the new birth, just as you cannot fully understand the wind. But you can EXPERIENCE it'.",
       "scripture_connections": [
         {
           "reference": "Ezekiel 37:9",
@@ -66,7 +64,6 @@
       ],
       "revelation_key": "The Spirit's work is mysterious yet real, invisible yet undeniable, sovereign yet experienceable."
     },
-    
     {
       "order": 4,
       "type": "necessity_emphasis",
@@ -77,7 +74,6 @@
       "identity_statement": "If you've been born again, you're not an improved version of your old self. You are a NEW CREATION. The old you died with Christ; the new you rose with Him.",
       "revelation_key": "Christianity is not spiritual self-improvement. It's death and resurrection. Not 'be better'; it's 'die and receive a new life'."
     },
-    
     {
       "order": 5,
       "type": "discovery_activation",
@@ -103,7 +99,6 @@
       }
     }
   ],
-  
   "tags": [
     "salvation",
     "new_birth",
@@ -112,7 +107,6 @@
     "nicodemus",
     "religion_vs_relationship"
   ],
-  
   "metadata": {
     "total_word_count": 1100,
     "greek_words_count": 2,

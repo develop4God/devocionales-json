@@ -20,9 +20,9 @@ import unicodedata
 from pathlib import Path
 
 from .lexicon_source import (
+    find_nearby_strong_citation,
     load_native_script_ranges,
     resolve_lemma_entry,
-    find_nearby_strong_citation,
 )
 from .report import ReportLike
 
@@ -134,7 +134,7 @@ def _strong_code_re():
     """
     global _strong_code_re_cache
     if _strong_code_re_cache is None:
-        _strong_code_re_cache = re.compile(r"(?:Strong\s+)?([A-Z])\d{2,5}")
+        _strong_code_re_cache = re.compile(r"(?:Strong\s+)?([A-Z])\d{1,5}")
     return _strong_code_re_cache
 
 
@@ -327,6 +327,12 @@ def check_bare_transliteration_reuse(
     was re-glossed again, correctly, later in the field) is not bare reuse
     and must be excluded, or every correctly-repeated gloss of the same
     word would falsely trip this check on its own transliteration text.
+
+    Case-insensitive: a transliteration established in lowercase ('eschisthē')
+    still counts as reused when it later reappears in a different case
+    ('ESCHISTHĒ') — confirmed in the wild 2026-08-01, veil_torn_zh_001's
+    content re-emphasizes the same word in all-caps for prose effect a few
+    lines after establishing it correctly.
     """
     key = path.rsplit(".", 1)[-1].split("[")[0]
     if key in _SKIP_KEYS:
@@ -336,7 +342,7 @@ def check_bare_transliteration_reuse(
     for _, end, _, inner, well_formed in glosses:
         if not (well_formed and inner):
             continue
-        for m in re.finditer(rf"\b{re.escape(inner)}\b", text[end:]):
+        for m in re.finditer(rf"\b{re.escape(inner)}\b", text[end:], re.IGNORECASE):
             m_start, m_end = end + m.start(), end + m.end()
             if any(s <= m_start and m_end <= e for s, e in wellformed_spans):
                 continue
@@ -344,6 +350,75 @@ def check_bare_transliteration_reuse(
                 f"{ctx}: '{inner}' reused as bare Latin text later in this field with no accompanying native-script gloss (every occurrence needs its own '<word>, ({inner})', see gloss_format.json 'Bare reuse without a gloss')"
             )
             break
+
+
+# Structured word-study fields (greek_words[]/hebrew_words[] array entries)
+# store the transliteration as its own bare JSON value by schema design —
+# e.g. {"word": "ἐδάκρυσεν", "transliteration": "Edákrysen"} — there is no
+# native-script word "in the same field" for it to be glued to, because the
+# schema deliberately keeps them in separate keys. These must be excluded
+# from cross-field reuse scanning below, or every structured word-study
+# entry in the corpus would falsely trip the check on its own
+# transliteration value. Distinct from _SKIP_KEYS (just {"word"}, used by
+# the single-field checks above), since this exclusion is specific to the
+# cross-field scan's different failure mode.
+_CROSS_FIELD_SKIP_KEYS = {"word", "transliteration", "strong"}
+
+
+def check_bare_transliteration_reuse_cross_field(
+    fields: list, ctx: str, report: ReportLike
+) -> None:
+    """HARD GATE: a transliteration introduced by a well-formed gloss in one
+    field of a card must never reappear as bare Latin text in a LATER field
+    of the same card with no accompanying native-script gloss — the
+    cross-field twin of check_bare_transliteration_reuse above, which can
+    only see reuse within a single field's own text.
+
+    Confirmed in the wild 2026-08-01: e.g. a card's `greek_words[1].revelation`
+    correctly introduces 'ἐδάκρυσεν, (Edákrysen)', then a DIFFERENT card
+    covering the same word later reuses 'edákrysen' bare in its own prose,
+    invisible to the per-field check because it's a different `text` string
+    entirely. Also common: a card's `title` bare-quotes a transliteration
+    (e.g. 'Enebrimḗsato 与 Edákrysen：两种哭泣') that's only ever properly
+    glossed in that same card's `content` or `greek_words` fields — same bug,
+    title-vs-content instead of card-vs-card.
+
+    `fields` is the ordered list of (path, text) pairs for ONE card (or
+    other logical unit), in source order — reuse is checked strictly
+    forward (a field can reuse a transliteration established by an EARLIER
+    field in the same list, never a later one), mirroring
+    check_bare_transliteration_reuse's within-field forward-only order.
+    `_CROSS_FIELD_SKIP_KEYS` excludes structured word-study fields
+    (word/transliteration/strong) that legitimately hold a bare
+    transliteration by schema design.
+
+    Case-insensitive, same rationale as check_bare_transliteration_reuse
+    above: matching is done on a casefolded key so 'eschisthē' established
+    in one field still counts as reused when a later field reads
+    'ESCHISTHĒ', while the reported message keeps each occurrence's own
+    original casing for readability.
+    """
+    established: dict[str, tuple] = {}  # casefolded translit -> (path, original_text)
+    for path, text in fields:
+        key = path.rsplit(".", 1)[-1].split("[")[0]
+        if key in _CROSS_FIELD_SKIP_KEYS:
+            continue
+        glosses = find_greek_hebrew_glosses(text)
+        wellformed_spans = [(s, e) for s, e, _, i2, wf in glosses if wf and i2]
+        for m in re.finditer(r"[A-Za-zÀ-ɏḀ-ỿ]+", text):
+            if any(s <= m.start() and m.end() <= e for s, e in wellformed_spans):
+                continue
+            token = m.group(0)
+            fold = token.casefold()
+            if fold in established and established[fold][0] != path:
+                established_path, established_text = established[fold]
+                report.E(
+                    f"{ctx}: '{token}' (established via '{established_path}, ({established_text})') reused as bare Latin text in a later field ('{path}') with no accompanying native-script gloss (every occurrence needs its own '<word>, ({token})', see gloss_format.json 'Bare reuse without a gloss')"
+                )
+        for _, end, _, inner, well_formed in glosses:
+            fold = inner.casefold() if inner else None
+            if well_formed and inner and fold not in established:
+                established[fold] = (path, inner)
 
 
 def _rtl_script_re_for_lang(lang: str):
@@ -555,8 +630,7 @@ def check_native_script_bare_transliteration(
             normalized_translit = _normalized_translit(translit)
             if (
                 preceding is None
-                or _normalized_translit(preceding.group(0))
-                == normalized_translit
+                or _normalized_translit(preceding.group(0)) == normalized_translit
                 # Romance-language inclusive forms such as ``tel(le)`` and
                 # ``ami(e)`` are not transliterations.  The gate's two-letter
                 # minimum is necessary for non-Latin scripts (e.g. ``ēn``),
@@ -578,7 +652,7 @@ def check_native_script_bare_transliteration(
             ):
                 continue
         if lexicon is not None:
-            code, citation_end = find_nearby_strong_citation(text, m.end(), lang)
+            code, _citation_end = find_nearby_strong_citation(text, m.end(), lang)
             if code:
                 entry = lexicon.lookup_by_number(code)
                 if entry is not None:
@@ -601,43 +675,67 @@ def check_native_script_bare_transliteration(
         )
 
 
-# An ALL-CAPS (optionally macron/acute-accented) Latin word immediately
-# followed by a Strong's-code citation in parentheses — e.g. "DIATHĒKĒ
-# (Strong G1242)" or "ESTIN (G1510)". This is the Latin-script twin of the
-# bug check_strong_code_native_script catches for non-Latin languages: the
-# Strong code always cites a real Hebrew/Greek word, but here the only
-# thing standing in for it is the word's own transliteration in full caps
+# A Latin word (any case — ALL-CAPS, Title Case, or lowercase; optionally
+# macron/acute-accented) immediately followed by a Strong's-code citation
+# in parentheses — e.g. "DIATHĒKĒ (Strong G1242)", "ESTIN (G1510)",
+# "Katapetasma (G2665)", or "mashiach (H4899)". This is the Latin-script
+# twin of the bug check_strong_code_native_script catches for non-Latin
+# languages: the Strong code always cites a real Hebrew/Greek word, but
+# here the only thing standing in for it is the word's own transliteration
 # — the native-script word was never given at all. Confirmed in the wild
-# 2026-07-27 across every Latin-script language (de/en/es/fil/fr/pt) in
-# new_covenant_cup, gethsemane_agony, cup_of_wrath, passed_from_death, and
-# saints_resurrected — zero false positives against the full corpus scan.
-_ALLCAPS_STRONG_CODE_RE = re.compile(
-    r"\b([A-ZĀĒĪŌŪÁÉÍÓÚḔṌ][A-ZĀĒĪŌŪÁÉÍÓÚḔṌ]{1,20})\s*\((?:Strong\s+)?([A-Z]\d{2,5})\)"
+# 2026-07-27 (ALL-CAPS shape only) across every Latin-script language
+# (de/en/es/fil/fr/pt) in new_covenant_cup, gethsemane_agony, cup_of_wrath,
+# passed_from_death, and saints_resurrected. Widened 2026-08-10 after
+# veil_torn/hammer_of_god showed the identical bug in Title Case
+# ("Parrhēsía (G3954)", "Katapetasma (G2665)") — the ALL-CAPS-only version
+# of this regex missed every one of them because only the first letter was
+# capitalized, not the whole word. Case was never the actual signal; the
+# signal is a Latin word directly adjacent to a Strong's-code citation with
+# no comma and no real Hebrew/Greek word given — that holds regardless of
+# capitalization, including a lowercase bare transliteration like "mashiach
+# (H4899)".
+_BARE_TRANSLIT_STRONG_CODE_RE = re.compile(
+    r"\b([A-Za-zĀĒĪŌŪāēīōūÁÉÍÓÚáéíóúḔṌḗṓ]{2,30})\s*\((?:Strong\s+)?([A-Z]\d{1,5})\)"
 )
+_STRONG_CODE_WINDOW_FOR_BARE_TRANSLIT = 60
 
 
 def check_strong_code_bare_transliteration(
     text: str, path: str, ctx: str, report: ReportLike
 ) -> None:
-    """HARD GATE: in Latin-script prose, an ALL-CAPS word immediately
-    before a Strong's-code citation — "DIATHĒKĒ (Strong G1242)" — is the
-    same dangling-citation bug check_strong_code_native_script catches for
-    non-Latin languages, just with the target script already being Latin.
-    check_strong_code_native_script skips Latin-script languages entirely
-    on the assumption that "a Strong code embedded in Latin-script prose is
-    unremarkable" — true in general, but not when the word right next to
-    the code is itself a bare transliteration standing in for the missing
-    native-script word. No native-script anchor is needed to see this one:
-    the ALL-CAPS shape directly adjacent to the citation is the signal.
+    """HARD GATE: in Latin-script prose, a Latin word immediately before a
+    Strong's-code citation — "DIATHĒKĒ (Strong G1242)" or "Katapetasma
+    (G2665)" — is the same dangling-citation bug check_strong_code_native_script
+    catches for non-Latin languages, just with the target script already
+    being Latin. check_strong_code_native_script skips Latin-script
+    languages entirely on the assumption that "a Strong code embedded in
+    Latin-script prose is unremarkable" — true in general, but not when the
+    word right next to the code is itself a bare transliteration standing
+    in for the missing native-script word. No native-script anchor is
+    needed to see this one: the shape directly adjacent to the citation is
+    the signal, independent of capitalization.
+
+    The suppression check is windowed around each match (not a single
+    whole-string check) — a field can legitimately contain one correct,
+    well-formed citation (e.g. a verse quote's 'ANOINTED (מָשִׁיחַ,
+    (mâshîyach) (H4899))') alongside a second, later bare one in the same
+    field ('THE KEY WORD: Mashiach (H4899)'); suppressing the whole string
+    because Hebrew/Greek appears anywhere in it would silently miss the
+    second, broken occurrence. Confirmed in the wild 2026-08-10: hammer_of_god's
+    "KEY WORD" restatement repeated several codes as a bare phonetic in the
+    same field as an already-correct verse-quote citation.
     """
     key = path.rsplit(".", 1)[-1].split("[")[0]
     if key in _SKIP_KEYS:
         return
-    if _GREEK_RE.search(text) or _HEBREW_RE.search(text):
-        return
-    for m in _ALLCAPS_STRONG_CODE_RE.finditer(text):
+    foreign_re = re.compile(f"{_GREEK_RE.pattern}|{_HEBREW_RE.pattern}")
+    for m in _BARE_TRANSLIT_STRONG_CODE_RE.finditer(text):
+        start = max(0, m.start() - _STRONG_CODE_WINDOW_FOR_BARE_TRANSLIT)
+        end = min(len(text), m.end() + _STRONG_CODE_WINDOW_FOR_BARE_TRANSLIT)
+        if foreign_re.search(text[start:end]):
+            continue  # a real Hebrew/Greek word is nearby — find_greek_hebrew_glosses' job
         report.E(
-            f"{ctx}: '{m.group(1)}' is a bare transliteration standing next to Strong code '{m.group(2)}' with no real Hebrew/Greek word given anywhere (required format: '<word>, ({m.group(1).lower()})' with the native-script word present, see gloss_format.json)"
+            f"{ctx}: '{m.group(1)}' is a bare transliteration standing next to Strong code '{m.group(2)}' with no real Hebrew/Greek word given nearby (required format: '<word>, ({m.group(1).lower()})' with the native-script word present, see gloss_format.json)"
         )
 
 
@@ -721,3 +819,291 @@ def check_word_study_bare_transliteration(
             report.W(
                 f"{ctx}: '{quoted}' ({parenthetical}) has the shape of a bare Greek/Hebrew transliteration (scholarly diacritic present) but the field has no real Hebrew/Greek character anywhere — likely discussing a word by its transliteration only, with the actual native-script word never given (see gloss_format.json 'transliteration_charset')"
             )
+
+
+# A single bare Latin word standing alone in parens, immediately preceded
+# by a space — e.g. "a memorial (anamnesis)", "Covered sin (kippur)". Not
+# scoped to the quoted-pair shape _QUOTED_PAREN_PAIR_RE requires (many real
+# corpus instances are a plain English/Spanish/etc. clause immediately
+# followed by the parenthetical, no quote marks at all). Length range
+# matches _QUOTED_PAREN_PAIR_RE's own parenthetical bound (2-30) for
+# consistency, not a new number.
+_BARE_PAREN_WORD_RE = re.compile(r"(?<=[^\s(])\s\(([A-Za-zÀ-ɏḀ-ỿ]{2,30})\)")
+_lexicon_verified_whitelist_cache = None
+
+
+def _lexicon_verified_bare_transliteration_whitelist() -> set:
+    """Words excluded from check_word_study_lexicon_verified_bare_
+    transliteration — confirmed coincidental collisions with a real Strong's
+    transliteration (e.g. 'Peter' vs H6363 'peṭer'), not genuine content
+    gaps. See gloss_format.json's lexicon_verified_bare_transliteration_
+    whitelist entry for the full rationale and confirmed-correct-match
+    counterexamples."""
+    global _lexicon_verified_whitelist_cache
+    if _lexicon_verified_whitelist_cache is None:
+        words = _load_gloss_format()["lexicon_verified_bare_transliteration_whitelist"][
+            "words"
+        ]
+        _lexicon_verified_whitelist_cache = set(words)
+    return _lexicon_verified_whitelist_cache
+
+
+def check_word_study_lexicon_verified_bare_transliteration(
+    text: str, path: str, ctx: str, report: ReportLike, lexicon
+) -> None:
+    """WARNING: a bare Latin word in parens that resolves to a REAL Strong's
+    headword transliteration (verified via lexicon.lookup_by_translit), in
+    a field with no real Hebrew/Greek character anywhere — same root bug as
+    check_word_study_bare_transliteration (a Greek/Hebrew word discussed by
+    its transliteration only, the native-script word never given at all),
+    but catches the precision gap that check leaves open: a transliteration
+    with NO scholarly diacritic (macron/acute) has no shape left to
+    distinguish it from ordinary vocabulary by regex alone — see that
+    function's own docstring for why 'gynai' or 'ti emoi kai soi' go
+    uncaught there. A real dictionary lookup closes that gap directly: if
+    the bare word IS a genuine Strong's transliteration, that settles it
+    regardless of diacritics.
+
+    Confirmed in the wild 2026-08-01: new_covenant_cup's 'a memorial
+    (anamnesis)', 'Covered sin (kippur)', 'Removes sin (apolytrōsis)', 'NO
+    forgiveness (aphesis)', 'Once for all (ephapax)' — five real Strong's
+    transliterations (G364, H3725, G629, G859, G2178) with zero diacritic
+    among them, invisible to check_word_study_bare_transliteration, and
+    present in EVERY language including Latin-script ones (en/es/pt/de/fr/
+    fil), which check_native_script_bare_transliteration also can't catch
+    since that check only fires for non-Latin-script target languages.
+
+    `lexicon` is required (not Optional like other checks' lexicon param)
+    — this check has no fallback path once the dictionary verification is
+    unavailable; a caller with no lexicon should simply not call this
+    check rather than receive a permanently-empty one.
+
+    A no-match against the dictionary does not automatically mean nothing
+    is wrong: `lookup_by_translit` is an exact-spelling match, so an
+    INFLECTED surface form of a real headword (e.g. 'Eskēnōsen' for G4637's
+    lemma 'skēnóō' — the augment 'e-' and the ending both change) also
+    produces zero entries, same as an ordinary English word like
+    '(weekday)' does. Confirmed in the wild 2026-08-08:
+    morning_star_001's revelation_key wrote '(Eskēnōsen)' with no
+    Hebrew/Greek character anywhere in the field, and this check stayed
+    completely silent — worse than a WARNING, since even the shape-only
+    check_word_study_bare_transliteration would have caught it (the word
+    carries a macron). Reusing that same diacritic-shape gate here (not a
+    new heuristic) distinguishes "this no-match might be an inflected
+    Greek/Hebrew word slipping past the exact-match lookup" from "this
+    no-match is unremarkable prose" — '(Eskēnōsen)' now gets a distinct,
+    lower-confidence WARNING instead of silence; '(weekday)' still
+    produces nothing, since it has no scholarly-transliteration shape to
+    raise the hand on.
+
+    Guard against real Greek/Hebrew script is checked LOCALLY around each
+    candidate match (± _MALFORMED_LOOKAHEAD chars), not once for the whole
+    field — new_covenant_cup's cards[1].content has both a correctly-glossed
+    'ἐστίν, (estin)' AND a bare 'a memorial (anamnesis)' in the same field;
+    a field-wide guard would make the second permanently invisible because
+    of the first. Same fix, same rationale, as
+    check_word_study_bare_clause_transliteration's own local guard.
+
+    WARNING, not a hard gate: unlike check_native_script_bare_transliteration
+    (which has a language-appropriate native word to point to as the
+    required fix), this check cannot always tell what higher-level fix the
+    author intends (add the Greek word inline vs. rephrase without the
+    transliteration), so it flags for human review rather than asserting
+    one required replacement shape.
+    """
+    key = path.rsplit(".", 1)[-1].split("[")[0]
+    if key in _SKIP_KEYS:
+        return
+    whitelist = _lexicon_verified_bare_transliteration_whitelist()
+    seen: set = set()
+    for m in _BARE_PAREN_WORD_RE.finditer(text):
+        word = m.group(1)
+        if word in seen or word in whitelist:
+            continue
+        # Real Greek/Hebrew script right next to THIS match means the
+        # match itself isn't bare — checked locally, not once for the
+        # whole field, so a correct citation elsewhere in a mixed field
+        # (e.g. new_covenant_cup's cards[1].content has both a correct
+        # 'ἐστίν, (estin)' AND a bare 'a memorial (anamnesis)') doesn't
+        # blind this check to the bare one. Same fix, same rationale, as
+        # check_word_study_bare_clause_transliteration's own local guard —
+        # see that function's comment for the full history.
+        window_start = max(0, m.start() - _MALFORMED_LOOKAHEAD)
+        window_end = min(len(text), m.end() + _MALFORMED_LOOKAHEAD)
+        nearby = text[window_start:window_end]
+        if _GREEK_RE.search(nearby) or _HEBREW_RE.search(nearby):
+            continue
+        entries = lexicon.lookup_by_translit(word)
+        if not entries:
+            if _translit_diacritic_re().search(word):
+                seen.add(word)
+                report.W(
+                    f"{ctx}: '{word}' has the shape of a scholarly Greek/Hebrew transliteration (diacritic present) but does not match any Strong's headword transliteration exactly — likely an inflected surface form of a real word (e.g. augment/ending changed from the dictionary lemma); confirm the lemma manually and cite it with its native-script word (see gloss_format.json)"
+                )
+            continue
+        seen.add(word)
+        codes = ", ".join(e.strongs_number for e in entries)
+        report.W(
+            f"{ctx}: '{word}' matches Strong's transliteration for {codes} but the field has no real Hebrew/Greek character anywhere — likely discussing a word by its transliteration only, with the actual native-script word never given (verified against the Strong's dictionary, not just shape)"
+        )
+
+
+# Languages confirmed 2026-07-31 to carry the whole-clause bare-
+# transliteration/respelling bug (logos_creation_{zh,ar,ja,hi}_001.json,
+# all quoting John 1:1's three Greek clauses this way in cards[1].content).
+# Deliberately an explicit enum, NOT driven by native_script_ranges.json
+# membership: that file groups zh with ja/hi (all three have a `blocks`
+# entry), but zh's real bug is bare-LATIN transliteration (no Chinese
+# characters in the parenthetical at all, same shape as ar), while ja/hi's
+# bug is phonetic respelling INTO their own native script — two different
+# checks below, and native_script_ranges.json's grouping doesn't line up
+# with which check each language needs. Latin-script languages
+# (en/es/pt/de/fil/...) are never in scope for either variant: an ALL-CAPS
+# scripture quote followed by a transliteration in a Latin-script field
+# (e.g. en 'IN THE BEGINNING WAS THE WORD' (Ēn archē ēn ho Logos)) is not
+# a bug — the reader's own language already IS the target script, there is
+# nothing being "respelled into" or substituted for.
+_CLAUSE_BUG_LATIN_TRANSLIT_LANGS = {"zh", "ar"}
+
+# A native-language translation immediately followed by a parenthetical
+# clause — 3+ space/interpunct-separated tokens. Interpunct '・' is included
+# in the token-splitting class since JA renders each transliterated
+# syllable as its own katakana run joined by '・', not by whitespace.
+# Length caps come from gloss_format.json's
+# word_study_bare_clause_transliteration_gate (the exact longest confirmed
+# real instance, not a round-number guess) — see _quoted_paren_clause_re()
+# below, same _load_gloss_format() reuse pattern as _native_bare_translit_re().
+#
+# Two alternatives, tried in order: (1) the translation wrapped in quote
+# marks (the original, still the common case — e.g. zh '"太初有道"
+# (Ēn archē ēn ho Logos)'), or (2) a short BARE native-script run with no
+# quote marks at all, directly against the paren — e.g. zh
+# '成两半(Eis Dyo)' "into two halves (Eis Dyo)". Confirmed missed in the
+# wild 2026-08-01: veil_torn_zh_001's numbered-list prose style
+# ('2️⃣ 成两半(Eis Dyo)') never quotes its short phrase headers, so 7 real
+# corpus-wide instances of this exact bug were invisible to the
+# quote-required-only pattern. The bare alternative is intentionally
+# narrower than the quoted one (a language-scoped native-script character
+# class, not "any non-quote/paren character") so it can't casually match
+# ordinary prose the way a quote-agnostic version of the first alternative
+# would.
+_quoted_paren_clause_re_cache: dict = {}
+
+
+def _quoted_paren_clause_re(lang: str | None = None):
+    """Cached per-language, since alternative 2's native-script class comes
+    from native_script_ranges.json and differs by language (zh's Han block
+    vs ar's Arabic block); alternative 1 (quoted) is language-agnostic and
+    identical across all cache entries."""
+    cache_key = lang or "_quoted_only"
+    if cache_key not in _quoted_paren_clause_re_cache:
+        gate = _load_gloss_format()["word_study_bare_clause_transliteration_gate"]
+        q_hi = gate["max_quoted_length"]
+        p_hi = gate["max_parenthetical_length"]
+        quoted_alt = rf"['‘’\"「]([^'‘’\"「」()（）]{{2,{q_hi}}})['‘’\"」]\s*[\(（]([^()（）]{{2,{p_hi}}})[\)）]"
+        entry = load_native_script_ranges().get(lang) if lang else None
+        if entry:
+            script_class = "".join(entry["blocks"])
+            bare_alt = rf"([{script_class}]{{2,10}})[\(（]([^()（）]{{2,{p_hi}}})[\)）]"
+            pattern = rf"{quoted_alt}|{bare_alt}"
+        else:
+            pattern = quoted_alt
+        _quoted_paren_clause_re_cache[cache_key] = re.compile(pattern)
+    return _quoted_paren_clause_re_cache[cache_key]
+
+
+# Whole-parenthetical purity test for the Latin-transliteration variant
+# (zh, ar): every token must itself be a well-formed transliteration word
+# (same charset _LATIN_TRANSLIT_RE already validates for single-word
+# glosses — ASCII + scholarly diacritics, nothing else), and at least one
+# token must carry a macron (the low-noise scholarly-romanization signal
+# _translit_diacritic_re already uses — see check_word_study_bare_
+# transliteration's docstring for why acutes alone are too noisy). This is
+# what rejects ordinary explanatory asides that happen to contain a Latin
+# loanword (e.g. ar 'قوة' (dynamis = قوة جسدية) — 'dynamis' has no macron
+# and the rest of the parenthetical isn't Latin transliteration at all, so
+# it correctly fails the "every token is transliteration" test).
+def _is_bare_latin_clause(tokens: list) -> bool:
+    if not any(_translit_diacritic_re().search(t) for t in tokens):
+        return False
+    return all(_LATIN_TRANSLIT_RE.match(t) for t in tokens)
+
+
+def check_word_study_bare_clause_transliteration(
+    text: str, path: str, lang: str, ctx: str, report: ReportLike
+) -> None:
+    """WARNING: a quoted native-language translation immediately followed by
+    a parenthetical multi-word bare-Latin clause transliteration of the
+    underlying Greek — e.g. zh '"太初有道"(Ēn archē ēn ho Logos)', ar
+    "'فِي الْبَدْءِ...' (Ēn archē ēn ho Logos)" — where the field has no real
+    Hebrew/Greek character anywhere. The whole clause is being discussed by
+    its transliteration only, same root bug check_word_study_bare_transliteration
+    catches for a single word — see that function's docstring and
+    gloss_format.json's 'Three-or-more-word phrase ... instead of a
+    1-or-2-word gloss' violation.
+
+    Scoped to exactly _CLAUSE_BUG_LATIN_TRANSLIT_LANGS (zh/ar) — the
+    macron-diacritic signal (_translit_diacritic_re) is what makes this
+    check precise: ordinary prose essentially never carries a macron, so a
+    macron-bearing Latin clause is reliably the real bug.
+
+    ja/hi (phonetic respelling into the reader's own native script —
+    katakana/Devanagari — instead of bare Latin) are deliberately NOT
+    covered here: there is no diacritic or lexicon signal available to
+    distinguish a genuine respelled clause from ordinary native-language
+    prose in parens (confirmed via real corpus false positive, hi
+    breath_new_adam_hi_001.json cards[4].discovery_questions[2]:
+    'जीवित प्राणी' (केवल प्राप्त करते हुए) "'living being' (merely
+    receiving)" — ordinary contrastive paraphrase, indistinguishable by
+    script-purity alone from a real respelled clause). Verifying a
+    Devanagari/Katakana span against the Greek/Hebrew SOT would require a
+    phonetic script->Latin transliteration table this codebase doesn't
+    have; rather than guess, this check simply doesn't run for ja/hi. Real
+    ja/hi clause-level bugs are still caught at the word level once a
+    macron-bearing Latin token appears next to them (check_native_script_
+    bare_transliteration, check_word_study_bare_transliteration).
+
+    Requires 3+ tokens in the parenthetical (an ordinary 1-2-word gloss
+    pair is already check_word_study_bare_transliteration's job), AND
+    every token must itself be transliteration-shaped with at least one
+    macron present (_is_bare_latin_clause) — not just "contains a Latin
+    diacritic somewhere". The first draft of this check used a 'contains'
+    test and produced dozens of false positives on ordinary prose asides
+    (2026-07-31); the purity test is what actually distinguishes "the
+    whole parenthetical IS a transliterated clause" from "this sentence
+    happens to touch a Latin loanword".
+    """
+    if lang not in _CLAUSE_BUG_LATIN_TRANSLIT_LANGS:
+        return
+    key = path.rsplit(".", 1)[-1].split("[")[0]
+    if key in _SKIP_KEYS:
+        return
+    for m in _quoted_paren_clause_re(lang).finditer(text):
+        # A real Greek/Hebrew character elsewhere in the field (e.g. a
+        # correctly-formed citation a few sentences earlier) must not
+        # blind this check to a DIFFERENT bare clause later in the same
+        # field — confirmed in the wild 2026-08-01: veil_torn_zh_001's
+        # cards[1].content has one correct 'ἐσχίσθη, (eschisthē)' citation
+        # followed by two later bare clauses ('Eis Dyo', 'Ap' Anōthen Heōs
+        # Katō') that a whole-field guard made permanently invisible. The
+        # guard is still needed — a genuine Greek/Hebrew word sitting right
+        # next to this specific match means the match itself isn't bare —
+        # so it's checked locally around each candidate match instead of
+        # once for the whole field. Window matches _MALFORMED_LOOKAHEAD's
+        # existing precedent for "how far to look around a match" rather
+        # than inventing a new magic number.
+        window_start = max(0, m.start() - _MALFORMED_LOOKAHEAD)
+        window_end = min(len(text), m.end() + _MALFORMED_LOOKAHEAD)
+        nearby = text[window_start:window_end]
+        if _GREEK_RE.search(nearby) or _HEBREW_RE.search(nearby):
+            continue
+        quoted = m.group(1) if m.group(1) is not None else m.group(3)
+        parenthetical = m.group(2) if m.group(2) is not None else m.group(4)
+        tokens = [t for t in re.split(r"[\s・]+", parenthetical.strip()) if t]
+        if len(tokens) < 3:
+            continue
+        if not _is_bare_latin_clause(tokens):
+            continue
+        report.W(
+            f"{ctx}: '{quoted}' ({parenthetical}) has the shape of a bare Greek clause transliteration/respelling (3+ tokens) but the field has no real Hebrew/Greek character anywhere — likely discussing a whole clause by its transliteration only, with the actual Greek text never given (see gloss_format.json 'Three-or-more-word phrase ... instead of a 1-or-2-word gloss')"
+        )

@@ -11,14 +11,14 @@ Usage:
   CLI mode  : python validate_devocional_gui.py --file path.json --lang de --version LU17
 """
 
+import argparse
 import json
 import re
 import sys
-import argparse
 import tkinter as tk
-from tkinter import filedialog, ttk, scrolledtext
-from pathlib import Path
 from datetime import date, timedelta
+from pathlib import Path
+from tkinter import filedialog, scrolledtext, ttk
 
 REQUIRED_FIELDS = [
     "id",
@@ -65,7 +65,6 @@ SPANISH_LEAKS = {
     "nuestros",
     "nuestra",
     "nuestras",
-    "también",
     "arrepentimiento",
     "salvación",
     "hermanos",
@@ -126,7 +125,6 @@ AMEN_VARIANTS = frozenset(
         "amén",
         "āmen",
         "amém",  # Portuguese
-        "阿们",
         "阿们",
         "阿门",
         "阿門",
@@ -338,12 +336,13 @@ def validate(filepath, lang_override, version_override):
     # For base files without lang/version in filename, auto-detect from data
     if expected_lang is None and not lang_override.strip():
         try:
-            _probe = json.load(open(path, encoding="utf-8"))
+            with open(path, encoding="utf-8") as f:
+                _probe = json.load(f)
             _keys = list(_probe.get("data", {}).keys())
             if len(_keys) == 1:
                 expected_lang = _keys[0]
-        except Exception:
-            pass
+        except Exception as probe_err:  # noqa: BLE001
+            info(f"Lang auto-detect skipped: {probe_err}")
 
     ok(f"Lang: {expected_lang} | Version: {expected_version} | Year: {expected_year}")
 
@@ -354,7 +353,8 @@ def validate(filepath, lang_override, version_override):
     )
 
     try:
-        data = json.load(open(path, encoding="utf-8"))
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
     except json.JSONDecodeError as ex:
         e(f"Invalid JSON: {ex}")
         summary["status"] = "❌ INVALID JSON"

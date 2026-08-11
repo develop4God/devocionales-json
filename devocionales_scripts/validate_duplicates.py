@@ -7,8 +7,8 @@ This script checks all devotional files for duplicate IDs across all files.
 
 import json
 import os
+import sys
 from collections import defaultdict
-
 
 # Constants
 MAX_DUPLICATES_TO_DISPLAY = 20  # Maximum number of duplicates to show in output
@@ -86,8 +86,8 @@ def validate_all_files():
                 data = json.load(f)
 
             file_count = 0
-            for lang_key, lang_data in data.get("data", {}).items():
-                for date_key, entries in lang_data.items():
+            for lang_data in data.get("data", {}).values():
+                for entries in lang_data.values():
                     for entry in entries:
                         entry_id = entry.get("id", "")
                         date = entry.get("date", "")
@@ -97,8 +97,8 @@ def validate_all_files():
 
             print(f"✓ {filename}: {file_count} entries")
 
-        except Exception as e:
-            print(f"❌ Error reading {filename}: {str(e)}")
+        except Exception as e:  # noqa: BLE001
+            print(f"❌ Error reading {filename}: {e!s}")
 
     print()
     print("=" * 80)
@@ -137,4 +137,4 @@ def validate_all_files():
 
 
 if __name__ == "__main__":
-    exit(validate_all_files())
+    sys.exit(validate_all_files())

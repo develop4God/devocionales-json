@@ -10,11 +10,11 @@ folded in here per the spike scope.
 
 import json
 import re
+from collections.abc import Iterator
 from pathlib import Path
-from typing import Iterator, Tuple
 
+from .greek_hebrew_gloss import _strong_code_re, find_greek_hebrew_glosses
 from .report import ReportLike
-from .greek_hebrew_gloss import find_greek_hebrew_glosses
 
 # Quote-like characters whose accidental back-to-back doubling indicates a
 # stray-punctuation typo (e.g. »» , "" , '')
@@ -48,7 +48,7 @@ def is_cognate(value: str, lang: str) -> bool:
     return value.strip().lower() in _ROMANCE_COGNATES.get(lang, set())
 
 
-def iter_strings(obj, path: str = "") -> Iterator[Tuple[str, str]]:
+def iter_strings(obj, path: str = "") -> Iterator[tuple[str, str]]:
     """Recursively yield (path, value) for every string leaf in obj."""
     if isinstance(obj, dict):
         for k, v in obj.items():
@@ -120,6 +120,10 @@ def _load_no_latin_config() -> dict:
         _no_latin_languages_cache = {
             "languages": data["languages"],
             "skip_keys": set(data["skip_keys"]),
+            "allowed_words": {
+                lang: {w.lower() for w in words}
+                for lang, words in data.get("allowed_words", {}).items()
+            },
         }
     return _no_latin_languages_cache
 
@@ -127,9 +131,26 @@ def _load_no_latin_config() -> dict:
 _LATIN_LETTER_RE = re.compile(r"[A-Za-zÀ-ɏḀ-ỿ]+")
 _LATIN_PUNCT_RE = re.compile(r'[,.!?"\']')
 
+# Single-letter escape codes that indicate double-escaping when preceded by a
+# literal backslash in already-JSON-decoded text — i.e. the source JSON had
+# "\\n" (backslash-backslash-n) instead of "\n" (a real escaped newline), so
+# json.load() leaves behind the two literal characters '\' + 'n' rather than
+# producing an actual U+000A control character. 'n'/'r'/'t' are the escapes
+# this corpus's content actually uses (paragraph breaks); 'u' is intentionally
+# excluded since a bare "\u" without 4 hex digits is a different, rarer bug
+# not observed in this corpus and would need its own verified detection.
+_ESCAPE_ARTIFACT_LETTERS = {"n", "r", "t"}
+
+
+def _is_literal_escape_artifact(text: str, start: int, matched: str) -> bool:
+    """True if `matched` (e.g. 'n') at `start` in `text` is the letter half of
+    a literal '\\n'-style double-escape artifact — a backslash immediately
+    precedes it and the letter is one of the known escape codes."""
+    return matched in _ESCAPE_ARTIFACT_LETTERS and start > 0 and text[start - 1] == "\\"
+
 
 def check_no_latin_leak(
-    text: str, path: str, lang: str, ctx: str, report: ReportLike
+    text: str, path: str, lang: str, ctx: str, report: ReportLike, lexicon=None
 ) -> None:
     """Flag Latin letters/punctuation leaking into a non-Latin-script
     language's text field — e.g. a stray untranslated English word or
@@ -146,6 +167,38 @@ def check_no_latin_leak(
     malformed/incomplete gloss attempt is NOT carved out here — it is a
     hard-gate error from check_greek_hebrew_transliteration in its own
     right, and any Latin text near it is still fair game for this check.
+
+    A Strong's-code citation (G1242, H5782, "Strong G40", ...) is also
+    carved out via greek_hebrew_gloss._strong_code_re — the same regex
+    check_strong_code_native_script already uses to anchor on these citations
+    elsewhere in the pipeline. Without this, the citation's own letter
+    prefix (the bare 'G' in '(G1242)') gets matched by _LATIN_LETTER_RE and
+    reported as a stray Latin leak, which it is not.
+
+    A third exception, when `lexicon` is given: a Latin word that exactly
+    matches a real Strong's headword's own transliteration (verified via
+    lexicon.lookup_by_translit, case-insensitive) is not a translation gap —
+    it's the corpus's own house style of quoting the original verse in Latin
+    transliteration (e.g. zh new_covenant_cup_001's "'TOUTO ESTIN TO SŌMA
+    MOU'", matching TOUTO/G5124, SŌMA/G4983, MOU/G3450, SARX/G4561 exactly).
+    Confirmed 2026-08-04: every non-zh language quotes the identical Latin
+    transliteration in the same spot and is never flagged (Latin-script
+    languages aren't in no_latin_languages.json at all; ja transliterates
+    into katakana instead) — zh was the only language actually re-quoting
+    the verse in bare Latin, and this check had no way to tell that apart
+    from a genuine untranslated leftover. This does NOT cover inflected
+    Greek forms (e.g. ESTIN itself, the inflected form of lemma εἰμί/G1510)
+    — lookup_by_translit only matches a word's own dictionary-citation
+    transliteration, same limitation documented on that method and on
+    check_word_study_lexicon_verified_bare_transliteration; an inflected
+    form still gets flagged and needs the same manual SOT-lemma citation
+    fix as everywhere else in this corpus, not a silent pass here.
+
+    A fourth exception: a word listed in no_latin_languages.json's
+    allowed_words for this language (case-insensitive) is a deliberate
+    content citation, not a leftover — e.g. zh's "English derivatives of the
+    Greek root" word-study convention quoting 'Crypt', 'cryptic',
+    'encryption' in English on purpose.
     """
     config = _load_no_latin_config()
     rules = config["languages"].get(lang)
@@ -154,14 +207,16 @@ def check_no_latin_leak(
     key = path.rsplit(".", 1)[-1].split("[")[0]
     if key in config["skip_keys"]:
         return
+    allowed_words = config["allowed_words"].get(lang, set())
     gloss_spans = find_greek_hebrew_glosses(text)
+    strong_code_spans = [(m.start(), m.end()) for m in _strong_code_re().finditer(text)]
 
     def in_gloss(pos: int) -> bool:
         return any(
             start <= pos < end
             for start, end, _, _, well_formed in gloss_spans
             if well_formed
-        )
+        ) or any(start <= pos < end for start, end in strong_code_spans)
 
     # A malformed gloss span covers only the native word itself (no ", (...)"
     # tail matched), so the stray Latin transliteration that was presumably
@@ -184,7 +239,18 @@ def check_no_latin_leak(
         for m in _LATIN_LETTER_RE.finditer(text):
             if in_gloss(m.start()):
                 continue
-            if near_malformed_gloss(m.start()):
+            if m.group(0).lower() in allowed_words:
+                continue
+            if lexicon is not None and lexicon.lookup_by_translit(m.group(0)):
+                continue
+            if _is_literal_escape_artifact(text, m.start(), m.group(0)):
+                report.E(
+                    f"{ctx}: literal escape sequence '\\{m.group(0)}' in {lang} field — "
+                    "content is double-escaped; the JSON source should contain a real "
+                    "newline/tab/carriage-return character here, not the literal two-character "
+                    "backslash+letter text (compare a sibling language's equivalent field)"
+                )
+            elif near_malformed_gloss(m.start()):
                 report.W(
                     f"{ctx}: Latin text '{m.group(0)}' in {lang} field — "
                     "near a malformed Greek/Hebrew gloss, likely a shape "

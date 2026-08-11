@@ -1,0 +1,52 @@
+{
+  "_comment": "Whitelist of patterns that look like Strong's codes but are NOT valid Strong's numbers. These are false positives that should be excluded from matching. The strong_search.py validator reads this file and skips any matches that match these patterns.",
+  "excluded_patterns": [
+    {
+      "pattern": "LSG1910",
+      "reason": "Louis Segond 1910 French Bible version abbreviation, not a Strong's number",
+      "languages": ["fr"],
+      "context": "Bible version references in French content"
+    },
+    {
+      "pattern": "LSG\\d{4}",
+      "reason": "Louis Segond Bible version patterns (LSG + year)",
+      "languages": ["fr"],
+      "context": "Bible version references"
+    },
+    {
+      "pattern": "[A-Z]{2,}\\d{4}",
+      "reason": "Bible version abbreviations with 4+ digits (e.g., KJV1611, NIV1984, etc.)",
+      "languages": ["all"],
+      "context": "Bible version references that look like Strong codes but aren't"
+    },
+    {
+      "pattern": "\\d{1,2}h\\d{2}",
+      "reason": "French time notation (e.g., '3h00', '6h00' = 3:00, 6:00), not a Strong's code — the broad regex's case-insensitive H match and 'zero digits are invalid' rule (see strong_format.json) both apply here, but the digit-range check alone can't see the original lowercase 'h' since the prefix is uppercased before the check runs.",
+      "languages": ["fr"],
+      "context": "Time-of-day references in French content"
+    }
+  ],
+  "exact_codes_to_exclude": [
+  ],
+  "context_exclusions": [
+    {
+      "code": "G1910",
+      "context_pattern": "LSG1910",
+      "reason": "Exclude G1910 only when it's part of LSG1910 (French Bible version), not when it appears as a standalone Strong's code."
+    }
+  ],
+  "field_keys_without_parentheses": [
+    {
+      "key": "strong",
+      "pattern": "^[GH]\\d{1,5}$",
+      "reason": "Structured Strong-code fields store the raw G/H number; parentheses are prose formatting only."
+    }
+  ],
+  "minimum_digit_range_override": {
+    "_comment": "Override the digit range for specific codes if needed. Strong's numbers typically have 1-5 digits, but some patterns with more digits are definitely not Strong codes.",
+    "codes_requiring_exact_match": {
+      "min_digits": 1,
+      "max_digits": 5
+    }
+  }
+}

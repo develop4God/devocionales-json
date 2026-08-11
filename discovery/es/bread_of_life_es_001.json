@@ -11,7 +11,6 @@
     "reference": "Juan 6:35",
     "text": "Jesús les dijo: Yo soy el pan de vida; el que a mí viene, nunca tendrá hambre; y el que en mí cree, no tendrá sed jamás."
   },
-
   "cards": [
     {
       "order": 1,
@@ -36,28 +35,28 @@
       ],
       "revelation_key": "El maná fue una sombra de cuarenta años que preparó a Israel — y a nosotros — para reconocer al verdadero Pan cuando llegara."
     },
-
     {
       "order": 2,
       "type": "greek_exegesis",
       "icon": "📖",
-      "title": "Trṓgōn: mucho más que comer",
+      "title": "τρώγω, (trṓgō) (G5176): mucho más que comer",
       "subtitle": "El verbo que Jesús usó con intención",
-      "content": "Jesús elige sus palabras con precisión. Al decir 'Yo soy el pan de vida', utiliza en el original la palabra griega ἄρτος, (ártos) (G740), el pan cotidiano, el alimento básico sin el cual nadie sobrevive.\n\nDespués, en el punto más intenso de su discurso, cuando dice 'si alguno comiere de este pan', cambia el verbo: ya no habla de comer en sentido general, sino de τρώγων, (trṓgōn), masticar, roer. Ese giro en el idioma original revela la profundidad de lo que está pidiendo: una entrega diaria, física, repetida — no un momento de admiración lejana.",
+      "content": "Jesús elige sus palabras con precisión. Al decir 'Yo soy el pan de vida', utiliza en el original la palabra griega ἄρτος, (ártos) (G740), el pan cotidiano, el alimento básico sin el cual nadie sobrevive.\n\nDespués, en el punto más intenso de su discurso, cuando dice 'si alguno comiere de este pan', cambia el verbo: ya no habla de comer en sentido general, sino de τρώγω, (trṓgō) (G5176), masticar, roer. Ese giro en el idioma original revela la profundidad de lo que está pidiendo: una entrega diaria, física, repetida — no un momento de admiración lejana.",
       "greek_words": [
         {
           "word": "ἄρτος",
           "transliteration": "Ártos",
           "meaning": "Pan, el alimento básico y diario de toda persona",
-          "revelation": "Jesús usa la palabra ártos en Juan 6:35 cuando dice 'Yo soy el pan de vida'. Se compara con lo más básico e indispensable que existe — sin lo cual una familia no sobrevivía en el mundo antiguo.\n\nSe ofrece como el alimento sin el cual el alma simplemente no vive.",
+          "revelation": "Jesús usa la palabra ἄρτος, (ártos) en Juan 6:35 cuando dice 'Yo soy el pan de vida'. Se compara con lo más básico e indispensable que existe — sin lo cual una familia no sobrevivía en el mundo antiguo.\n\nSe ofrece como el alimento sin el cual el alma simplemente no vive.",
           "application": "Jesús es el sustento diario sin el cual tu alma se debilita y muere de hambre."
         },
         {
-          "word": "τρώγων",
-          "transliteration": "Trṓgōn",
+          "word": "τρώγω",
+          "transliteration": "trṓgō",
           "meaning": "Morder, masticar, roer — un verbo físico, distinto de 'comer' en sentido general",
-          "revelation": "En Juan 6:54, la palabra griega que Jesús usa para 'comer' es τρώγων, (trṓgōn), que significa masticar o roer, no comer en sentido general.\n\nEs una palabra cruda, casi incómoda. Describe el gesto físico de morder y masticar, no una idea espiritual abstracta.\n\nJesús la escoge a propósito. Así deja claro que recibirlo a Él no es un pensamiento de una sola vez, sino un acto que se repite, como comer cada día.",
-          "application": "Seguir a Jesús es un acto diario y constante de venir a Él y recibirlo — como comer."
+          "revelation": "En Juan 6:54, la palabra griega que Jesús usa para 'comer' es τρώγω, (trṓgō) (G5176), que significa masticar o roer, no comer en sentido general.\n\nEs una palabra cruda, casi incómoda. Describe el gesto físico de morder y masticar, no una idea espiritual abstracta.\n\nJesús la escoge a propósito. Así deja claro que recibirlo a Él no es un pensamiento de una sola vez, sino un acto que se repite, como comer cada día.",
+          "application": "Seguir a Jesús es un acto diario y constante de venir a Él y recibirlo — como comer.",
+          "strong": "G5176"
         }
       ],
       "scripture_references": [
@@ -76,7 +75,6 @@
       ],
       "revelation_key": "Jesús pide algo concreto: que vengamos a él cada día, no una sola vez."
     },
-
     {
       "order": 3,
       "type": "prophetic_thread",
@@ -112,7 +110,6 @@
       ],
       "revelation_key": "El maná alimentó a una nación por cuarenta años en el desierto. Cristo, el Pan verdadero, alimenta al alma para la eternidad."
     },
-
     {
       "order": 4,
       "type": "theological_depth",
@@ -144,7 +141,6 @@
       },
       "revelation_key": "Cada vez que participamos de la Cena del Señor, recibimos lo que Cristo entregó por nosotros: su cuerpo y su sangre, sacrificados en la cruz."
     },
-
     {
       "order": 5,
       "type": "discovery_activation",
@@ -157,7 +153,7 @@
         },
         {
           "category": "Constancia",
-          "question": "'τρώγων, (trṓgōn)' describe un acto repetido, no una decisión única. ¿Tu relación con Jesús es un evento del pasado o una práctica diaria de venir a Él?"
+          "question": "'τρώγω, (trṓgō) (G5176)' describe un acto repetido, no una decisión única. ¿Tu relación con Jesús es un evento del pasado o una práctica diaria de venir a Él?"
         },
         {
           "category": "Decisión",
@@ -170,7 +166,6 @@
       }
     }
   ],
-
   "tags": [
     "pan_de_vida",
     "maná",
@@ -180,7 +175,6 @@
     "fe",
     "eucaristía"
   ],
-
   "metadata": {
     "total_word_count": 1180,
     "greek_words_count": 2,

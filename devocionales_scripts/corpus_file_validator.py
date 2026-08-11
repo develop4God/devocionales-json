@@ -10,10 +10,10 @@ thing: does this file's content match what the index — and the Bible
 version SOT — say it should be.
 """
 
-from shared_validation.report import ReportLike
-
 from corpus_index_reader import CorpusCombo
 from sot_exceptions import ACKNOWLEDGED_SOT_MISMATCHES
+
+from shared_validation.report import ReportLike
 
 
 class CorpusFileValidator:

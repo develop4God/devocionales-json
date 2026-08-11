@@ -17,10 +17,10 @@ than three small, content-type-specific readers.
 """
 
 import json
+from collections.abc import Iterator
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
-from typing import Iterator, Optional
 
 from shared_validation.report import ReportLike
 
@@ -46,7 +46,7 @@ class CorpusIndexReader:
 
     def __init__(self, index_path: Path):
         self._index_path = index_path
-        self._data: Optional[dict] = None
+        self._data: dict | None = None
 
     def load(self, report: ReportLike) -> bool:
         """Parse index.json and validate its own shape. Returns False (and

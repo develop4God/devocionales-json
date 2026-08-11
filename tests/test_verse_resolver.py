@@ -21,7 +21,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT / "devocionales_scripts"))
 
-from verse_resolver import VerseResolver, _HIOV_LONG_TO_SHORT  # noqa: E402
+from verse_resolver import _HIOV_LONG_TO_SHORT, VerseResolver  # noqa: E402
 
 
 def _make_bible_db(

@@ -11,7 +11,6 @@
     "reference": "Johannes 6:35",
     "text": "Jesus aber sprach zu ihnen: Ich bin das Brot des Lebens. Wer zu mir kommt, den wird nicht hungern; und wer an mich glaubt, den wird nimmermehr dürsten."
   },
-
   "cards": [
     {
       "order": 1,
@@ -36,28 +35,28 @@
       ],
       "revelation_key": "Das Manna war ein vierzigjähriger Schatten, der Israel — und uns — darauf vorbereitete, das wahre Brot zu erkennen, als es kam."
     },
-
     {
       "order": 2,
       "type": "greek_exegesis",
       "icon": "📖",
-      "title": "Trṓgōn: weit mehr als essen",
+      "title": "τρώγω, (trṓgō) (G5176): weit mehr als essen",
       "subtitle": "Das Verb, das Jesus mit Bedacht wählte",
-      "content": "Jesus wählt seine Worte mit Präzision. Wenn er sagt 'Ich bin das Brot des Lebens', verwendet er im Urtext das griechische Wort ἄρτος, (ártos) (G740) — das alltägliche Brot, die Grundnahrung, ohne die niemand überlebt.\n\nSpäter, am dichtesten Punkt seiner Rede, wenn er sagt 'wenn jemand von diesem Brot isst', wechselt er das Verb: Er spricht nicht mehr vom Essen im allgemeinen Sinn, sondern von τρώγων, (trṓgōn), kauen, nagen. Dieser Wechsel im Urtext offenbart die Tiefe dessen, was er verlangt: eine tägliche, körperliche, wiederholte Hingabe — kein Augenblick distanzierter Bewunderung.",
+      "content": "Jesus wählt seine Worte mit Präzision. Wenn er sagt 'Ich bin das Brot des Lebens', verwendet er im Urtext das griechische Wort ἄρτος, (ártos) (G740) — das alltägliche Brot, die Grundnahrung, ohne die niemand überlebt.\n\nSpäter, am dichtesten Punkt seiner Rede, wenn er sagt 'wenn jemand von diesem Brot isst', wechselt er das Verb: Er spricht nicht mehr vom Essen im allgemeinen Sinn, sondern von τρώγω, (trṓgō) (G5176), kauen, nagen. Dieser Wechsel im Urtext offenbart die Tiefe dessen, was er verlangt: eine tägliche, körperliche, wiederholte Hingabe — kein Augenblick distanzierter Bewunderung.",
       "greek_words": [
         {
           "word": "ἄρτος",
           "transliteration": "Ártos",
           "meaning": "Brot, die grundlegende und tägliche Nahrung jedes Menschen",
-          "revelation": "Jesus verwendet das Wort ártos in Johannes 6:35, wenn er sagt 'Ich bin das Brot des Lebens'. Er vergleicht sich mit dem Grundlegendsten und Unentbehrlichsten, das es gibt — ohne das eine Familie in der antiken Welt nicht überleben konnte.\n\nEr bietet sich selbst als die Nahrung an, ohne die die Seele schlicht nicht lebt.",
+          "revelation": "Jesus verwendet das Wort ἄρτος, (ártos) in Johannes 6:35, wenn er sagt 'Ich bin das Brot des Lebens'. Er vergleicht sich mit dem Grundlegendsten und Unentbehrlichsten, das es gibt — ohne das eine Familie in der antiken Welt nicht überleben konnte.\n\nEr bietet sich selbst als die Nahrung an, ohne die die Seele schlicht nicht lebt.",
           "application": "Jesus ist die tägliche Nahrung, ohne die deine Seele schwach wird und verhungert."
         },
         {
-          "word": "τρώγων",
-          "transliteration": "Trṓgōn",
+          "word": "τρώγω",
+          "transliteration": "trṓgō",
           "meaning": "Beißen, kauen, nagen — ein körperliches Verb, verschieden von 'essen' im allgemeinen Sinn",
-          "revelation": "In Johannes 6:54 verwendet Jesus für 'essen' das griechische Wort τρώγων, (trṓgōn), was kauen oder nagen bedeutet, nicht essen im allgemeinen Sinn.\n\nEs ist ein rohes, fast unangenehmes Wort. Es beschreibt den körperlichen Akt des Beißens und Kauens, keine abstrakte geistliche Vorstellung.\n\nJesus wählt es bewusst. Er macht deutlich, dass ihn zu empfangen kein einmaliger Gedanke ist, sondern eine Handlung, die sich wiederholt, wie das tägliche Essen.",
-          "application": "Jesus nachzufolgen ist eine tägliche, beständige Handlung: zu ihm zu kommen und ihn zu empfangen — wie das Essen."
+          "revelation": "In Johannes 6:54 verwendet Jesus für 'essen' das griechische Wort τρώγω, (trṓgō) (G5176), was kauen oder nagen bedeutet, nicht essen im allgemeinen Sinn.\n\nEs ist ein rohes, fast unangenehmes Wort. Es beschreibt den körperlichen Akt des Beißens und Kauens, keine abstrakte geistliche Vorstellung.\n\nJesus wählt es bewusst. Er macht deutlich, dass ihn zu empfangen kein einmaliger Gedanke ist, sondern eine Handlung, die sich wiederholt, wie das tägliche Essen.",
+          "application": "Jesus nachzufolgen ist eine tägliche, beständige Handlung: zu ihm zu kommen und ihn zu empfangen — wie das Essen.",
+          "strong": "G5176"
         }
       ],
       "scripture_references": [
@@ -76,7 +75,6 @@
       ],
       "revelation_key": "Jesus verlangt etwas Konkretes: dass wir täglich zu ihm kommen, nicht nur einmal."
     },
-
     {
       "order": 3,
       "type": "prophetic_thread",
@@ -112,7 +110,6 @@
       ],
       "revelation_key": "Das Manna nährte ein Volk vierzig Jahre lang in der Wüste. Christus, das wahre Brot, nährt die Seele für die Ewigkeit."
     },
-
     {
       "order": 4,
       "type": "theological_depth",
@@ -144,7 +141,6 @@
       },
       "revelation_key": "Jedes Mal, wenn wir am Abendmahl des Herrn teilnehmen, empfangen wir, was Christus für uns gegeben hat: seinen Leib und sein Blut, geopfert am Kreuz."
     },
-
     {
       "order": 5,
       "type": "discovery_activation",
@@ -157,7 +153,7 @@
         },
         {
           "category": "Beständigkeit",
-          "question": "'τρώγων, (trṓgōn)' beschreibt eine wiederholte Handlung, keine einmalige Entscheidung. Ist deine Beziehung zu Jesus ein Ereignis der Vergangenheit oder eine tägliche Übung, zu ihm zu kommen?"
+          "question": "'τρώγω, (trṓgō) (G5176)' beschreibt eine wiederholte Handlung, keine einmalige Entscheidung. Ist deine Beziehung zu Jesus ein Ereignis der Vergangenheit oder eine tägliche Übung, zu ihm zu kommen?"
         },
         {
           "category": "Entscheidung",
@@ -170,7 +166,6 @@
       }
     }
   ],
-
   "tags": [
     "brot_des_lebens",
     "manna",
@@ -180,7 +175,6 @@
     "glaube",
     "eucharistie"
   ],
-
   "metadata": {
     "total_word_count": 1016,
     "greek_words_count": 2,
