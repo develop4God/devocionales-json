@@ -47,6 +47,7 @@ def _find_repo_root(start: Path) -> Path:
 
 sys.path.insert(0, str(_find_repo_root(Path(__file__).resolve().parent)))
 from shared_preview.markdown import escape, render_emphasis_markdown  # noqa: E402
+from shared_preview.unrendered import TrackedDict, find_unrendered_keys  # noqa: E402
 
 IMAGE_EXT = "avif"
 IMAGE_MIME = "image/avif"
@@ -265,6 +266,11 @@ body { font-family: -apple-system, Roboto, Arial, sans-serif; background:#1a1a1a
            background:#e8f0ff; border:1px solid #5580d0; color:#1a3a7a; font-weight:600; font-size:14px; }
 .card-number { max-width:480px; margin:0 auto; color:#ffc107; font-size:13px;
                font-weight:700; font-family:monospace; }
+.key-verse-card { max-width:480px; margin:0 auto 32px; background:linear-gradient(135deg,#4a3a7a,#2a1f4d);
+                   border-radius:20px; padding:32px; color:#fff; text-align:center; }
+.key-verse-label { font-size:11px; font-weight:800; letter-spacing:1.8px; opacity:0.8; color:#ffc107; }
+.key-verse-text { margin-top:20px; font-size:19px; font-weight:600; line-height:1.5; font-style:italic; }
+.key-verse-ref { margin-top:20px; font-size:14px; font-weight:900; letter-spacing:1px; color:#ffc107; }
 """
 
 
@@ -464,22 +470,24 @@ def render_card(card, image_fetcher=None):
     else:
         body.append(f'<div class="title">Unknown card type: {escape(ctype)}</div>')
 
-    # Any populated field not in this type's rendered set is a schema drift
-    # bug -- the app's own debug contract check would flag this at runtime.
-    rendered_dart_fields = RENDERED_FIELDS_BY_TYPE.get(ctype, set())
-    populated_json_keys = {
+    # Automatic gate: compares keys this function actually READ from `card`
+    # (tracked live by TrackedDict) against keys populated in the JSON --
+    # no per-type allowlist to keep in sync by hand. DEFERRED_FIELDS (known,
+    # intentionally-not-yet-wired fields) are reported separately as
+    # "pending" rather than flagged as a drop.
+    deferred_json_keys = {
+        jkey
+        for jkey, dart_field in JSON_TO_DART_FIELD.items()
+        if dart_field in DEFERRED_FIELDS
+    }
+    orphaned = find_unrendered_keys(
+        card, ignored_keys={"order", "type"} | deferred_json_keys
+    )
+    pending = sorted(
         k
         for k, v in card.items()
-        if v not in (None, "", [], {}) and k not in ("order", "type")
-    }
-    orphaned = []
-    pending = []
-    for jkey in populated_json_keys:
-        dart_field = JSON_TO_DART_FIELD.get(jkey, jkey)
-        if dart_field in DEFERRED_FIELDS:
-            pending.append(jkey)
-        elif dart_field not in rendered_dart_fields:
-            orphaned.append(jkey)
+        if v not in (None, "", [], {}) and k in deferred_json_keys
+    )
     if orphaned:
         body.append(
             '<div class="unrendered">⚠ NOT RENDERED IN APP for type '
@@ -496,7 +504,40 @@ def render_card(card, image_fetcher=None):
     return "\n".join(body)
 
 
+def render_key_verse(kv):
+    return (
+        '<div class="key-verse-card">'
+        '<div class="key-verse-label">KEY VERSE (⚠ parsed by encounter_study.dart '
+        "but not currently displayed anywhere in the app)</div>"
+        f'<div class="key-verse-text">&ldquo;{escape(kv.get("text", ""))}&rdquo;</div>'
+        f'<div class="key-verse-ref">{escape(kv.get("reference", "")).upper()}</div>'
+        "</div>"
+    )
+
+
+# Study-level keys that are deliberately non-visual (internal/authoring
+# metadata) -- not a list of "what renders"; find_unrendered_keys() derives
+# that automatically from what render_* actually reads off `data`.
+TOP_LEVEL_IGNORED = {
+    "id",
+    "type",
+    "date",
+    "title",
+    "language",
+    "version",
+    "bible_version",
+    "schema_version",
+    "estimated_reading_minutes",
+    "meta",
+    # Cache-busting key sourced from index.json's entry.imageVersion, not
+    # displayed content -- see encounter_repository.dart/encounter_card_model.dart.
+    "image_version",
+}
+
+
 def build_html(data, drift_warnings, image_fetcher=None):
+    """`data` must be a TrackedDict (see main()) so the unrendered-field
+    check below reflects what render_key_verse/render_card actually read."""
     title = data.get("title") or data.get("id") or "Encounter Preview"
     parts = [
         (
@@ -506,9 +547,25 @@ def build_html(data, drift_warnings, image_fetcher=None):
     ]
     for w in drift_warnings:
         parts.append(f'<div class="warning">⚠ {escape(w)}</div>')
+
+    kv = data.get("key_verse")
+    if isinstance(kv, dict):
+        parts.append(render_key_verse(kv))
+
     for card in data.get("cards", []):
         if isinstance(card, dict):
             parts.append(render_card(card, image_fetcher))
+
+    # Run last: by now every render_* call above has recorded which keys it
+    # actually read off `data`, so this reflects real usage, not a guess.
+    unrendered_top = find_unrendered_keys(data, ignored_keys=TOP_LEVEL_IGNORED)
+    if unrendered_top:
+        parts.append(
+            '<div class="warning">⚠ NOT RENDERED IN PREVIEW -- these top-level JSON '
+            f"fields exist but this script does not display them: "
+            f"{', '.join(sorted(unrendered_top))}</div>"
+        )
+
     parts.append("</body></html>")
     return "\n".join(parts)
 
@@ -533,7 +590,7 @@ def main():
     args = ap.parse_args()
 
     json_path = Path(args.json_file)
-    data = json.loads(json_path.read_text(encoding="utf-8"))
+    data = TrackedDict(json.loads(json_path.read_text(encoding="utf-8")))
 
     dart_repo = (
         Path(args.dart_repo)

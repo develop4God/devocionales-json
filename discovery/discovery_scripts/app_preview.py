@@ -38,6 +38,7 @@ def _find_repo_root(start: Path) -> Path:
 
 sys.path.insert(0, str(_find_repo_root(Path(__file__).resolve().parent)))
 from shared_preview.markdown import escape, render_emphasis_markdown  # noqa: E402
+from shared_preview.unrendered import TrackedDict, find_unrendered_keys  # noqa: E402
 
 # Fields this script knows how to render, matching _buildCardContent in
 # discovery_detail_page.dart as of the last time this script was synced.
@@ -47,6 +48,7 @@ FIELDS_RENDERED = {
     "content": "content",
     "revelation_key": "revelationKey",
     "scripture_anchor": "scriptureAnchor",
+    "identity_statement": "identityStatement",
     "scripture_connections": "scriptureConnections",
     "scripture_references": "scriptureReferences",
     "greek_words": "greekWords",
@@ -118,11 +120,19 @@ body { font-family: -apple-system, Roboto, Arial, sans-serif; background:#f2f2f5
 .tile .body { margin-top:8px; line-height:1.5; }
 .anchor-tile { margin-top:16px; padding:20px; border-radius:20px; background:rgba(108,79,214,0.07);
                border:1px solid rgba(108,79,214,0.25); }
+.identity-tile { margin-top:16px; padding:20px; border-radius:20px; background:rgba(108,79,214,0.12);
+                  border:1px solid rgba(108,79,214,0.3); font-weight:700; font-size:16px;
+                  line-height:1.4; display:flex; gap:16px; align-items:flex-start; }
+.identity-tile .sparkle { font-size:20px; }
 .greek-tile { margin-top:16px; padding:20px; border-radius:20px; background:rgba(230,225,250,0.4); }
 .greek-word { font-size:26px; font-weight:900; }
 .greek-translit { font-size:16px; font-weight:600; color:#6c4fd6; margin-left:8px; }
+.greek-strong { font-size:12px; font-weight:700; color:#6c4fd6; margin-left:8px; padding:3px 8px;
+                background:rgba(108,79,214,0.12); border-radius:8px; }
 .greek-meaning { margin-top:12px; font-weight:800; font-size:15px; }
 .greek-revelation { margin-top:8px; }
+.greek-reference { margin-top:8px; }
+.greek-application { margin-top:8px; }
 .question-tile { margin-top:12px; padding:16px; border-radius:16px; border:1px solid rgba(0,0,0,0.1); }
 .question-cat { font-size:10px; font-weight:900; color:#6c4fd6; letter-spacing:1px; }
 .question-text { margin-top:4px; font-weight:600; }
@@ -134,6 +144,12 @@ h2.section { font-size:20px; font-weight:900; margin-top:32px; }
            background:#ffe8e8; border:1px solid #e05555; color:#a02020; font-weight:600; }
 .unrendered { max-width:640px; margin:16px auto 0; padding:14px 20px; border-radius:12px;
               background:#fff3cd; border:1px solid #d0a000; color:#7a5c00; font-weight:600; }
+.key-verse-card { max-width:640px; margin:0 auto 32px; background:linear-gradient(135deg,#8b6fd9,#6c4fd6);
+                   border-radius:20px; padding:32px; color:#fff; text-align:center; }
+.key-verse-label { font-size:11px; font-weight:800; letter-spacing:1.8px; opacity:0.8; }
+.key-verse-text { margin-top:20px; font-size:19px; font-weight:600; line-height:1.5; }
+.key-verse-ref { margin-top:20px; font-size:14px; font-weight:900; letter-spacing:1px; }
+.key-verse-version { margin-top:4px; font-size:11px; opacity:0.7; }
 """
 
 
@@ -165,6 +181,12 @@ def render_card(card):
             f'<div class="body">{escape(sa.get("text", ""))}</div></div>'
         )
 
+    if card.get("identity_statement"):
+        out.append(
+            '<div class="identity-tile"><span class="sparkle">✨</span>'
+            f"<span>{escape(card['identity_statement'])}</span></div>"
+        )
+
     for key in ("scripture_connections", "scripture_references"):
         items = card.get(key)
         if isinstance(items, list):
@@ -186,11 +208,22 @@ def render_card(card):
                 if w.get("transliteration")
                 else ""
             )
+            strong = (
+                f'<span class="greek-strong">{escape(w.get("strong", ""))}</span>'
+                if w.get("strong")
+                else ""
+            )
+            extra = ""
+            if w.get("reference"):
+                extra += f'<div class="greek-reference">Reference: {escape(w["reference"])}</div>'
+            if w.get("application"):
+                extra += f'<div class="greek-application">Application: {escape(w["application"])}</div>'
             out.append(
                 '<div class="greek-tile">'
-                f'<span class="greek-word">{escape(w.get("word", ""))}</span>{translit}'
+                f'<span class="greek-word">{escape(w.get("word", ""))}</span>{translit}{strong}'
                 f'<div class="greek-meaning">Meaning: {escape(w.get("meaning", ""))}</div>'
                 f'<div class="greek-revelation">Revelation: {escape(w.get("revelation", ""))}</div>'
+                f"{extra}"
                 "</div>"
             )
 
@@ -214,14 +247,10 @@ def render_card(card):
             f'<div class="prayer-content">{escape(prayer["content"])}</div></div>'
         )
 
-    # Anything present in the JSON but not in FIELDS_RENDERED is a schema
-    # drift bug: the app silently ignores it today.
-    unrendered = [
-        k
-        for k in card
-        if k not in FIELDS_RENDERED
-        and k not in ("order", "type", "icon", "title", "subtitle")
-    ]
+    # Automatic gate: compares keys this function actually READ from `card`
+    # (tracked live by TrackedDict) against keys populated in the JSON --
+    # no allowlist to keep in sync by hand.
+    unrendered = find_unrendered_keys(card, ignored_keys=("order", "type"))
     if unrendered:
         out.append(
             '<div class="unrendered">⚠ NOT RENDERED IN APP -- these JSON fields exist on '
@@ -233,7 +262,36 @@ def render_card(card):
     return "\n".join(out)
 
 
+def render_key_verse(kv):
+    return (
+        '<div class="key-verse-card">'
+        '<div class="key-verse-label">VERSÍCULO CLAVE</div>'
+        f'<div class="key-verse-text">&ldquo;{escape(kv.get("text", ""))}&rdquo;</div>'
+        f'<div class="key-verse-ref">{escape(kv.get("reference", "")).upper()}</div>'
+        "</div>"
+    )
+
+
+# Study-level keys that are deliberately non-visual (authoring/search
+# metadata never shown on any discovery screen) -- not a list of "what
+# renders"; find_unrendered_keys() derives that automatically.
+TOP_LEVEL_IGNORED = {
+    "id",
+    "type",
+    "date",
+    "title",
+    "subtitle",
+    "language",
+    "version",
+    "estimated_reading_minutes",
+    "tags",
+    "metadata",
+}
+
+
 def build_html(data, drift_warnings):
+    """`data` must be a TrackedDict (see main()) so the unrendered-field
+    check below reflects what render_key_verse/render_card actually read."""
     parts = [
         (
             f"<!doctype html><html><head><meta charset='utf-8'>"
@@ -242,9 +300,25 @@ def build_html(data, drift_warnings):
     ]
     for w in drift_warnings:
         parts.append(f'<div class="warning">⚠ {escape(w)}</div>')
+
+    kv = data.get("key_verse")
+    if isinstance(kv, dict):
+        parts.append(render_key_verse(kv))
+
     for card in data.get("cards", []):
         if isinstance(card, dict):
             parts.append(render_card(card))
+
+    # Run last: by now every render_* call above has recorded which keys it
+    # actually read off `data`, so this reflects real usage, not a guess.
+    unrendered_top = find_unrendered_keys(data, ignored_keys=TOP_LEVEL_IGNORED)
+    if unrendered_top:
+        parts.append(
+            '<div class="warning">⚠ NOT RENDERED IN PREVIEW -- these top-level JSON '
+            f"fields exist but this script does not display them: "
+            f"{', '.join(sorted(unrendered_top))}</div>"
+        )
+
     parts.append("</body></html>")
     return "\n".join(parts)
 
@@ -264,7 +338,7 @@ def main():
     args = ap.parse_args()
 
     json_path = Path(args.json_file)
-    data = json.loads(json_path.read_text(encoding="utf-8"))
+    data = TrackedDict(json.loads(json_path.read_text(encoding="utf-8")))
 
     dart_repo = (
         Path(args.dart_repo)
