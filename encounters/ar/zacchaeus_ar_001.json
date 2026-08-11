@@ -4,7 +4,7 @@
   "schema_version": "encounters_v1",
   "language": "ar",
   "bible_version": "NAV",
-  "version": "1.0",
+  "version": "1.1",
   "estimated_reading_minutes": 12,
   "meta": {
     "character": "زَكَّا",
@@ -27,8 +27,8 @@
     ]
   },
   "key_verse": {
-    "reference": "لوقا 19:10",
-    "text": "فَإِنَّ ابْنَ الإِنْسَانِ قَدْ جَاءَ لِيَبْحَثَ عَنِ الْهَالِكِينَ وَيُخَلِّصَهُمْ.",
+    "reference": "لوقا 19:1-2",
+    "text": "ثُمَّ دَخَلَ أَرِيحَا وَاجْتَازَ فِيهَا. وَإِذَا هُنَاكَ رَجُلٌ اسْمُهُ زَكَّا، رَئِيسٌ لِجُبَاةِ الضَّرَائِبِ، وَكَانَ غَنِيّاً.",
     "bible_version": "NAV"
   },
   "cards": [

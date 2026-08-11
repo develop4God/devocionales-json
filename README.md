@@ -60,6 +60,7 @@ devocionales-json/
 ├── devocionales_scripts/
 ├── discovery/
 ├── encounters/
+├── shared_preview/
 ├── shared_validation/
 ├── skills/
 └── tests/
