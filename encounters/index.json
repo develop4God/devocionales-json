@@ -952,7 +952,7 @@
     },
     {
       "id": "man_born_blind_001",
-      "version": "1.0",
+      "version": "1.1",
       "image_version": "1.0",
       "emoji": "🌅",
       "status": "published",
@@ -976,16 +976,16 @@
         "zh": "man_born_blind_zh_001.json"
       },
       "titles": {
-        "es": "Una cosa sé",
-        "en": "One thing I know",
-        "fr": "Je sais une chose",
-        "pt": "Uma coisa sei",
-        "ar": "شيئاً واحداً أعلمه",
-        "de": "Eins weiß ich",
-        "fil": "Isang bagay ang alam ko",
-        "hi": "एक बात मैं जानता हूँ",
-        "ja": "ただ一つのことだけ知っています",
-        "zh": "有一件事我知道"
+        "es": "El hombre que nació ciego",
+        "en": "The Man Born Blind",
+        "fr": "L'homme né aveugle",
+        "pt": "O homem que nasceu cego",
+        "ar": "الرجل الذي ولد أعمى",
+        "de": "Der Mann, der blind geboren wurde",
+        "fil": "Ang lalaking ipinanganak na bulag",
+        "hi": "वह आदमी जो जन्म से अंधा था",
+        "ja": "生まれつき目の見えない男",
+        "zh": "生来失明的人"
       },
       "subtitles": {
         "es": "El testimonio que resistió todos los interrogatorios.",
