@@ -24,7 +24,7 @@ from .lexicon_source import (
     load_native_script_ranges,
     resolve_lemma_entry,
 )
-from .report import ReportLike
+from ..report import ReportLike
 
 _GREEK_RE = re.compile(r"[Ͱ-Ͽἀ-῿]")
 _HEBREW_RE = re.compile(r"[֐-׿]")
@@ -69,7 +69,7 @@ _STRICT_GLOSS_TAIL_RE = re.compile(r", \(([^()]*)\)")
 # language's. Latin-script languages (de, en, es, fil, fr, pt, ...) have
 # no range at all and skip this check entirely — the bug can't occur when
 # the target language's own script already IS Latin.
-_GLOSS_FORMAT_PATH = Path(__file__).parent / "gloss_format.json"
+_GLOSS_FORMAT_PATH = Path(__file__).parent.parent / "data" / "gloss_format.json"
 _gloss_format_cache = None
 _phonetic_respelling_re_cache: dict = {}
 

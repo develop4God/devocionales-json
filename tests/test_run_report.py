@@ -26,7 +26,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from shared_validation.run_report import RunReport
+from shared_validation.checks.run_report import RunReport
 from tests.golden_utils import assert_matches_golden, capture
 
 _saved_step_summary = None

@@ -14,7 +14,7 @@ from collections.abc import Iterator
 from pathlib import Path
 
 from .greek_hebrew_gloss import _strong_code_re, find_greek_hebrew_glosses
-from .report import ReportLike
+from ..report import ReportLike
 
 # Quote-like characters whose accidental back-to-back doubling indicates a
 # stray-punctuation typo (e.g. »» , "" , '')
@@ -108,7 +108,7 @@ def check_halfwidth_colon_in_title(
 
 # Per-language rules for check_no_latin_leak, see that file's own _comment
 # for what 'letters'/'punctuation' mean and when to add a language.
-_NO_LATIN_LANGUAGES_PATH = Path(__file__).parent / "no_latin_languages.json"
+_NO_LATIN_LANGUAGES_PATH = Path(__file__).parent.parent / "data" / "no_latin_languages.json"
 _no_latin_languages_cache = None
 
 

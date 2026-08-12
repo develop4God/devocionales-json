@@ -48,18 +48,17 @@ import json
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(REPO_ROOT))
+REPO_ROOT = Path(__file__).parent.parent.parent
 
-from shared_validation.family_resolver import ID_LISTERS, RESOLVERS  # noqa: E402
-from shared_validation.lexicon_check import (  # noqa: E402
+from shared_validation.checks.family_resolver import ID_LISTERS, RESOLVERS
+from shared_validation.checks.lexicon_check import (
     LexicalStatus,
     check_lexical_accuracy,
     check_structured_word_study_accuracy,
 )
-from shared_validation.lexicon_source import StrongsLexiconSource  # noqa: E402
-from shared_validation.report import ReportLike  # noqa: E402
-from shared_validation.text_checks import iter_strings  # noqa: E402
+from shared_validation.checks.lexicon_source import StrongsLexiconSource
+from shared_validation.checks.text_checks import iter_strings
+from shared_validation.report import ReportLike
 
 RED, YLW, GRN, CYN, RST = "\033[91m", "\033[93m", "\033[92m", "\033[96m", "\033[0m"
 

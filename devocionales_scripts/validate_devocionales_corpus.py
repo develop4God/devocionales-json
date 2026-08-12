@@ -62,13 +62,13 @@ from corpus_file_validator import CorpusFileValidator  # noqa: E402
 from corpus_index_reader import CorpusIndexReader  # noqa: E402
 from corpus_schema_checker import CorpusSchemaChecker  # noqa: E402
 
-from shared_validation.bible_sot import (  # noqa: E402
+from shared_validation.checks.bible_sot import (  # noqa: E402
     REMOTE_INDEX_URL,
     load_bible_versions,
 )
-from shared_validation.lint import lint_json_files  # noqa: E402
+from shared_validation.checks.lint import lint_json_files  # noqa: E402
 from shared_validation.report import ReportLike  # noqa: E402
-from shared_validation.run_report import RunReport  # noqa: E402
+from shared_validation.checks.run_report import RunReport  # noqa: E402
 
 SCRIPTS_DIR = Path(__file__).parent
 CORPUS_DIR = SCRIPTS_DIR.parent
