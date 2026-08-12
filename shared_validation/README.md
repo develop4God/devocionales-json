@@ -39,6 +39,12 @@ subpackage depends on it.
 | `report.py` | `Report` class + `ReportLike` Protocol — the shared error/warning/info contract. |
 | `checks/run_report.py` | `RunReport` — phase-scoped run summary used by both master validators. |
 
+## Consumed outside the gate
+
+| Module | Purpose |
+|---|---|
+| `checks/review_fields.py` | Per-content-type map of which fields are worth sending to an AI review pass (e.g. content_batch_graph's flag/verify/critic nodes) — not a structural validator, no Reporter dependency. Path format is dot/digit only (`cards.2.content`), matching content_batch_graph's `field_path` splicing exactly, NOT this package's own bracket convention (`cards[2].content`) used in check error messages elsewhere. |
+
 **Strong's coverage today:** format/citation correctness (`greek_hebrew_gloss.py`) and
 lexical accuracy against Strong's (`lexicon_check.py` / `lexicon_family_check.py`) are
 both already wired into every validator run — no gap here.
