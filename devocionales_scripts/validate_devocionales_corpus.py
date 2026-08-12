@@ -38,37 +38,22 @@ Exit codes: 0 = all passed, 1 = errors found
 import sys
 from pathlib import Path
 
-
-def _find_repo_root(start: Path) -> Path:
-    """Walk upward from `start` looking for the shared_validation/ package,
-    rather than assuming a fixed directory depth (which silently breaks if
-    this script is ever moved). Raises clearly instead of resolving to the
-    wrong place."""
-    for candidate in [start, *start.parents]:
-        if (candidate / "shared_validation").is_dir():
-            return candidate
-    raise RuntimeError(
-        f"Could not find shared_validation/ above {start} — "
-        "is this script still inside the devocionales-json repo?"
-    )
-
-
-_REPO_ROOT = _find_repo_root(Path(__file__).resolve().parent)
-sys.path.insert(0, str(_REPO_ROOT))
+# corpus_calendar_checker etc. are same-directory sibling scripts, not an
+# installed package — still needs sys.path for those, unlike shared_validation.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from corpus_calendar_checker import CorpusCalendarChecker  # noqa: E402
-from corpus_file_validator import CorpusFileValidator  # noqa: E402
-from corpus_index_reader import CorpusIndexReader  # noqa: E402
-from corpus_schema_checker import CorpusSchemaChecker  # noqa: E402
+from corpus_calendar_checker import CorpusCalendarChecker
+from corpus_file_validator import CorpusFileValidator
+from corpus_index_reader import CorpusIndexReader
+from corpus_schema_checker import CorpusSchemaChecker
 
-from shared_validation.checks.bible_sot import (  # noqa: E402
+from shared_validation.checks.bible_sot import (
     REMOTE_INDEX_URL,
     load_bible_versions,
 )
-from shared_validation.checks.lint import lint_json_files  # noqa: E402
-from shared_validation.report import ReportLike  # noqa: E402
-from shared_validation.checks.run_report import RunReport  # noqa: E402
+from shared_validation.checks.lint import lint_json_files
+from shared_validation.checks.run_report import RunReport
+from shared_validation.report import ReportLike
 
 SCRIPTS_DIR = Path(__file__).parent
 CORPUS_DIR = SCRIPTS_DIR.parent
