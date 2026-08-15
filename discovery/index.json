@@ -5,16 +5,28 @@
       "version": "1.0",
       "emoji": "🧎",
       "files": {
-        "es": "foot_washing_love_es_001.json"
+        "es": "foot_washing_love_es_001.json",
+        "en": "foot_washing_love_en_001.json",
+        "fr": "foot_washing_love_fr_001.json",
+        "pt": "foot_washing_love_pt_001.json"
       },
       "titles": {
-        "es": "El amor que se arrodilla"
+        "es": "El amor que se arrodilla",
+        "en": "Love That Kneels",
+        "fr": "L'amour qui s'agenouille",
+        "pt": "O amor que se ajoelha"
       },
       "subtitles": {
-        "es": "Lo que Jesús hizo en la última cena antes de la cruz, y lo que sigue revelando de nuestro propio corazón"
+        "es": "Lo que Jesús hizo en la última cena antes de la cruz, y lo que sigue revelando de nuestro propio corazón",
+        "en": "What Jesus did at the last supper before the cross, and what it still reveals about your own heart",
+        "fr": "Ce que Jésus a fait lors du dernier repas avant la croix, et ce que cela révèle encore de notre propre cœur",
+        "pt": "O que Jesus fez na última ceia antes da cruz, e o que continua revelando sobre o nosso próprio coração"
       },
       "estimated_reading_minutes": {
-        "es": 9
+        "es": 9,
+        "en": 9,
+        "fr": 11,
+        "pt": 11
       }
     },
     {
