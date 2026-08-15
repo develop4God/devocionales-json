@@ -2,7 +2,7 @@
   "studies": [
     {
       "id": "foot_washing_love_001",
-      "version": "1.0",
+      "version": "1.1",
       "emoji": "🧎",
       "files": {
         "es": "foot_washing_love_es_001.json",
@@ -161,7 +161,7 @@
     },
     {
       "id": "morning_star_001",
-      "version": "1.8",
+      "version": "1.9",
       "emoji": "🌟",
       "files": {
         "es": "morning_star_es_001.json",
@@ -267,7 +267,7 @@
     },
     {
       "id": "balaam_humble_vision_001",
-      "version": "1.6",
+      "version": "1.7",
       "emoji": "🫏",
       "files": {
         "es": "balaam_humble_vision_es_001.json",
@@ -320,7 +320,7 @@
     },
     {
       "id": "logos_creation_001",
-      "version": "1.6",
+      "version": "1.7",
       "emoji": "📖",
       "files": {
         "es": "logos_creation_es_001.json",
@@ -426,7 +426,7 @@
     },
     {
       "id": "natanael_fig_tree_001",
-      "version": "1.4",
+      "version": "1.5",
       "emoji": "🌳",
       "files": {
         "es": "natanael_fig_tree_es_001.json",
@@ -903,7 +903,7 @@
     },
     {
       "id": "jesus_troubled_himself_001",
-      "version": "1.4",
+      "version": "1.5",
       "emoji": "😢",
       "files": {
         "es": "jesus_troubled_himself_es_001.json",
@@ -956,7 +956,7 @@
     },
     {
       "id": "passed_from_death_001",
-      "version": "1.7",
+      "version": "1.8",
       "emoji": "🔄",
       "files": {
         "es": "passed_from_death_es_001.json",
@@ -1009,7 +1009,7 @@
     },
     {
       "id": "transfiguration_001",
-      "version": "1.4",
+      "version": "1.5",
       "emoji": "⛰️",
       "files": {
         "es": "transfiguration_es_001.json",
@@ -1168,7 +1168,7 @@
     },
     {
       "id": "gethsemane_agony_001",
-      "version": "1.6",
+      "version": "1.7",
       "emoji": "🫒",
       "files": {
         "es": "gethsemane_agony_es_001.json",
@@ -1645,7 +1645,7 @@
     },
     {
       "id": "ascension_victory_001",
-      "version": "1.5",
+      "version": "1.6",
       "emoji": "☁️",
       "files": {
         "es": "ascension_victory_es_001.json",
@@ -1857,7 +1857,7 @@
     },
     {
       "id": "zechariah_14_return_001",
-      "version": "1.7",
+      "version": "1.8",
       "emoji": "⛰️",
       "files": {
         "es": "zechariah_14_return_es_001.json",
