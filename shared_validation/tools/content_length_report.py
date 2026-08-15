@@ -33,8 +33,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from shared_validation.family_resolver import RESOLVERS
-from shared_validation.text_checks import iter_strings
+from shared_validation.checks.family_resolver import RESOLVERS
+from shared_validation.checks.text_checks import iter_strings
 
 YLW, CYN, RST = "\033[93m", "\033[96m", "\033[0m"
 

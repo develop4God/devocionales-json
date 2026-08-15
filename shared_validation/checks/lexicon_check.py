@@ -48,7 +48,7 @@ from typing import NamedTuple
 
 from .greek_hebrew_gloss import find_greek_hebrew_glosses
 from .lexicon_source import LexiconSource, resolve_lemma_entry
-from .report import ReportLike
+from ..report import ReportLike
 
 
 class LexicalStatus(Enum):

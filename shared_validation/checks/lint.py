@@ -12,7 +12,7 @@ one pipeline's choice.
 import json
 from pathlib import Path
 
-from .report import ReportLike
+from ..report import ReportLike
 
 
 def lint_json_files(

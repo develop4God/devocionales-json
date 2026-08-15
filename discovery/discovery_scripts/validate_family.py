@@ -25,7 +25,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from discovery_schema_checks import check_required_fields
 
-from shared_validation.family_check import run
+from shared_validation.checks.family_check import run
 
 DISCOVERY_DIR = Path(__file__).parent.parent
 INDEX_PATH = DISCOVERY_DIR / "index.json"

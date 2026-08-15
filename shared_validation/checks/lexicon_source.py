@@ -63,7 +63,9 @@ def _normalized_translit(word: str) -> str:
 # _phonetic_respelling_re_for_lang / _rtl_script_re_for_lang for how it's
 # used there; find_nearby_strong_citation below is this module's own user
 # of the same data.
-_NATIVE_SCRIPT_RANGES_PATH = Path(__file__).parent / "native_script_ranges.json"
+_NATIVE_SCRIPT_RANGES_PATH = (
+    Path(__file__).parent.parent / "data" / "native_script_ranges.json"
+)
 _native_script_ranges_cache: dict | None = None
 
 

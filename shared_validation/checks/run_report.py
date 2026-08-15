@@ -23,7 +23,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from typing import Any
 
-from .report import Report
+from ..report import Report
 
 
 @dataclass

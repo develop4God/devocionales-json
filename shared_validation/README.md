@@ -8,21 +8,42 @@ Library shared by the `discovery` and `encounters` validator pipelines. No CLI, 
 Contract: every check function takes `report: ReportLike` (`report.py`'s Protocol —
 `.E()`/`.W()`/`.I()`), never the concrete `Report` class.
 
+Installed as a real editable package (`uv sync`, see the repo-root `pyproject.toml`)
+— import via `shared_validation.checks.X` / `shared_validation.tools.X`, not
+directory-relative sys.path tricks. `report.py` stays at the package root since every
+subpackage depends on it.
+
+## Layout
+
+- `checks/` — wired into the gate (imported by `validate_discovery.py` /
+  `validate_encounters.py`), see table below.
+- `tools/` — standalone, manual, not part of the gate.
+- `data/` — static config/data files (`gloss_format.json`, `native_script_ranges.json`,
+  `no_latin_languages.json`, `versification_exceptions.json`).
+- `report.py` — stays at the package root, the shared error/warning/info contract.
+
 ## Wired into both validators (the gate)
 
 | Module | What it checks |
 |---|---|
-| `bible_sot.py` | Loads Bible version/language config from the remote SOT, with a temp-dir offline cache fallback. |
-| `lint.py` | JSON indent=2 / tab / trailing-newline formatting. |
-| `text_checks.py` | Quote-anomaly detection, Latin-leak (untranslated text) detection, string traversal (`iter_strings`). |
-| `greek_hebrew_gloss.py` | Structural well-formedness of inline Greek/Hebrew glosses and Strong's-code citations — comma placement, script boundaries, bare-transliteration-without-native-script detection. |
-| `lexicon_check.py` | Lexical accuracy of a well-formed gloss against Strong's Concordance (real headword? correct transliteration?). |
-| `lexicon_family_check.py` | Cross-language Strong's-citation balance checks, orchestrates `lexicon_check` + `greek_hebrew_gloss` per family. |
-| `lexicon_source.py` | `StrongsLexiconSource` — loads and queries the Strong's lexicon data (the SOT lexicon lookups above depend on this). |
-| `family_check.py` | Cross-language structural checks within a content family: filename/language match, key parity, field drift. |
-| `scripture_check.py` | Scripture reference resolution and quote-accuracy validation against Bible text (SOT-gated, see `scripture_validation_enabled()`). |
+| `checks/bible_sot.py` | Loads Bible version/language config from the remote SOT, with a temp-dir offline cache fallback. |
+| `checks/lint.py` | JSON indent=2 / tab / trailing-newline formatting. |
+| `checks/text_checks.py` | Quote-anomaly detection, Latin-leak (untranslated text) detection, string traversal (`iter_strings`). |
+| `checks/greek_hebrew_gloss.py` | Structural well-formedness of inline Greek/Hebrew glosses and Strong's-code citations — comma placement, script boundaries, bare-transliteration-without-native-script detection. |
+| `checks/lexicon_check.py` | Lexical accuracy of a well-formed gloss against Strong's Concordance (real headword? correct transliteration?). |
+| `checks/lexicon_family_check.py` | Cross-language Strong's-citation balance checks, orchestrates `lexicon_check` + `greek_hebrew_gloss` per family. |
+| `checks/lexicon_source.py` | `StrongsLexiconSource` — loads and queries the Strong's lexicon data (the SOT lexicon lookups above depend on this); its `lexicon_data/` JSON files live alongside it. |
+| `checks/family_check.py` | Cross-language structural checks within a content family: filename/language match, key parity, field drift. |
+| `checks/family_resolver.py` | Resolve a content id to its `{lang: file_path}` family, and list every id of a content type, both read from that content type's `index.json`. |
+| `checks/scripture_check.py` | Scripture reference resolution and quote-accuracy validation against Bible text (SOT-gated, see `scripture_validation_enabled()`). |
 | `report.py` | `Report` class + `ReportLike` Protocol — the shared error/warning/info contract. |
-| `run_report.py` | `RunReport` — phase-scoped run summary used by both master validators. |
+| `checks/run_report.py` | `RunReport` — phase-scoped run summary used by both master validators. |
+
+## Consumed outside the gate
+
+| Module | Purpose |
+|---|---|
+| `checks/review_fields.py` | Per-content-type map of which fields are worth sending to an AI review pass (e.g. content_batch_graph's flag/verify/critic nodes) — not a structural validator, no Reporter dependency. Path format is dot/digit only (`cards.2.content`), matching content_batch_graph's `field_path` splicing exactly, NOT this package's own bracket convention (`cards[2].content`) used in check error messages elsewhere. |
 
 **Strong's coverage today:** format/citation correctness (`greek_hebrew_gloss.py`) and
 lexical accuracy against Strong's (`lexicon_check.py` / `lexicon_family_check.py`) are
@@ -35,9 +56,9 @@ These have their own `__main__` / CLI and are explicitly **not** imported by eit
 
 | Module | Purpose |
 |---|---|
-| `content_length_report.py` | Opt-in diagnostic comparing prose length across sibling-language files. Not a pass/fail check — see its own docstring for why. |
-| `check_gitignore_pycache.py` | Repo-hygiene check: no `__pycache__` tracked or untracked. |
-| `paren_balance.py` | Report-only parenthesis balance scan over a JSON file's text fields. |
+| `tools/content_length_report.py` | Opt-in diagnostic comparing prose length across sibling-language files. Not a pass/fail check — see its own docstring for why. |
+| `tools/check_gitignore_pycache.py` | Repo-hygiene check: no `__pycache__` tracked or untracked. |
+| `tools/paren_balance.py` | Report-only parenthesis balance scan over a JSON file's text fields. |
 
 The Strong's-citation repair toolchain (scanner/search/fixer/balance-fixer/applier/
 pipeline CLI, plus the gloss-rewrite fixer) was removed 2026-08-11: it required a

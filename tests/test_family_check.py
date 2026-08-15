@@ -24,7 +24,7 @@ sys.path.insert(0, str(REPO_ROOT / "encounters" / "encounters_scripts"))
 import discovery_schema_checks  # noqa: E402
 import encounters_schema_checks  # noqa: E402
 
-from shared_validation.family_check import (  # noqa: E402
+from shared_validation.checks.family_check import (  # noqa: E402
     Reporter,
     check_drift,
     check_filename_language_match,

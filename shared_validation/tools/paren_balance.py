@@ -5,7 +5,7 @@ Single pass over text: does every '(' have a matching ')', properly
 nested, by the end of the text?
 
 Usage:
-    from shared_validation.paren_balance import check_balance
+    from shared_validation.tools.paren_balance import check_balance
 
     issues = check_balance(text)
     if not issues:

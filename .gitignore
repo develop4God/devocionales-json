@@ -1,2 +1,4 @@
 __pycache__/
 *.preview.html
+.venv/
+*.egg-info/
