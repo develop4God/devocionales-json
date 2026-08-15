@@ -1,6 +1,23 @@
 {
   "studies": [
     {
+      "id": "foot_washing_love_001",
+      "version": "1.0",
+      "emoji": "🧎",
+      "files": {
+        "es": "foot_washing_love_es_001.json"
+      },
+      "titles": {
+        "es": "El amor que se arrodilla"
+      },
+      "subtitles": {
+        "es": "Lo que Jesús hizo en la última cena antes de la cruz, y lo que sigue revelando de nuestro propio corazón"
+      },
+      "estimated_reading_minutes": {
+        "es": 9
+      }
+    },
+    {
       "id": "mammon_anxiety_freedom_001",
       "version": "1.6",
       "emoji": "⛓️",
