@@ -15,7 +15,7 @@ lexicon_family_check.py, ...), not a replacement for those.
 import json
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).parent.parent
+REPO_ROOT = Path(__file__).parent.parent.parent
 DISCOVERY_DIR = REPO_ROOT / "discovery"
 ENCOUNTERS_DIR = REPO_ROOT / "encounters"
 

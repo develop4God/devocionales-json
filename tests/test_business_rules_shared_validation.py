@@ -29,8 +29,8 @@ from unittest.mock import patch
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from shared_validation import bible_sot  # noqa: E402
-from shared_validation.greek_hebrew_gloss import (  # noqa: E402
+from shared_validation.checks import bible_sot  # noqa: E402
+from shared_validation.checks.greek_hebrew_gloss import (  # noqa: E402
     check_bare_transliteration_reuse,
     check_bare_transliteration_reuse_cross_field,
     check_native_script_bare_transliteration,
@@ -39,17 +39,17 @@ from shared_validation.greek_hebrew_gloss import (  # noqa: E402
     check_word_study_bare_transliteration,
     check_word_study_lexicon_verified_bare_transliteration,
 )
-from shared_validation.lexicon_check import (  # noqa: E402
+from shared_validation.checks.lexicon_check import (  # noqa: E402
     check_lexical_accuracy,
     check_structured_word_study_accuracy,
 )
-from shared_validation.lexicon_family_check import (  # noqa: E402
+from shared_validation.checks.lexicon_family_check import (  # noqa: E402
     check_family_citation_balance,
 )
-from shared_validation.lexicon_source import LexiconEntry  # noqa: E402
-from shared_validation.lint import lint_json_files  # noqa: E402
+from shared_validation.checks.lexicon_source import LexiconEntry  # noqa: E402
+from shared_validation.checks.lint import lint_json_files  # noqa: E402
 from shared_validation.report import Report  # noqa: E402
-from shared_validation.text_checks import check_no_latin_leak  # noqa: E402
+from shared_validation.checks.text_checks import check_no_latin_leak  # noqa: E402
 
 
 class _FakeLexicon:
@@ -1548,9 +1548,9 @@ class TestBibleSotLoadBibleVersions(unittest.TestCase):
     def test_successful_remote_fetch_returns_shaped_languages(self):
         with (
             tempfile.TemporaryDirectory() as tmp,
-            patch("shared_validation.bible_sot.tempfile.gettempdir", return_value=tmp),
+            patch("shared_validation.checks.bible_sot.tempfile.gettempdir", return_value=tmp),
             patch(
-                "shared_validation.bible_sot._fetch_remote_index",
+                "shared_validation.checks.bible_sot._fetch_remote_index",
                 return_value=(self._REMOTE_INDEX, None),
             ),
         ):
@@ -1573,9 +1573,9 @@ class TestBibleSotLoadBibleVersions(unittest.TestCase):
     def test_successful_fetch_refreshes_local_cache(self):
         with (
             tempfile.TemporaryDirectory() as tmp,
-            patch("shared_validation.bible_sot.tempfile.gettempdir", return_value=tmp),
+            patch("shared_validation.checks.bible_sot.tempfile.gettempdir", return_value=tmp),
             patch(
-                "shared_validation.bible_sot._fetch_remote_index",
+                "shared_validation.checks.bible_sot._fetch_remote_index",
                 return_value=(self._REMOTE_INDEX, None),
             ),
         ):
@@ -1596,10 +1596,10 @@ class TestBibleSotLoadBibleVersions(unittest.TestCase):
             )
             with (
                 patch(
-                    "shared_validation.bible_sot.tempfile.gettempdir", return_value=tmp
+                    "shared_validation.checks.bible_sot.tempfile.gettempdir", return_value=tmp
                 ),
                 patch(
-                    "shared_validation.bible_sot._fetch_remote_index",
+                    "shared_validation.checks.bible_sot._fetch_remote_index",
                     return_value=(None, fetch_err),
                 ),
             ):
@@ -1614,9 +1614,9 @@ class TestBibleSotLoadBibleVersions(unittest.TestCase):
     def test_raises_runtime_error_when_remote_and_cache_both_unavailable(self):
         with (
             tempfile.TemporaryDirectory() as tmp,
-            patch("shared_validation.bible_sot.tempfile.gettempdir", return_value=tmp),
+            patch("shared_validation.checks.bible_sot.tempfile.gettempdir", return_value=tmp),
             patch(
-                "shared_validation.bible_sot._fetch_remote_index",
+                "shared_validation.checks.bible_sot._fetch_remote_index",
                 return_value=(None, urllib.error.URLError("network unreachable")),
             ),
         ):

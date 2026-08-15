@@ -8,7 +8,7 @@ encounters_schema_checks.py (a different schema) so neither content type's rules
 be edited in a way that accidentally touches the other.
 """
 
-from shared_validation.family_check import Reporter, nonempty
+from shared_validation.checks.family_check import Reporter, nonempty
 
 # Card fields that must be non-empty when present.
 _NONEMPTY_CARD_FIELDS = (

@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from shared_validation.paren_balance import check_balance, check_json_file, main
+from shared_validation.tools.paren_balance import check_balance, check_json_file, main
 
 
 class ParenBalanceTests(unittest.TestCase):

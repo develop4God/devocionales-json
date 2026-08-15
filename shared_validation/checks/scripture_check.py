@@ -60,7 +60,9 @@ def scripture_validation_enabled() -> bool:
 # VERSIFICATION EXCEPTIONS
 # ─────────────────────────────────────────────────────────────────────────────
 
-_VERSIFICATION_EXCEPTIONS_PATH = Path(__file__).parent / "versification_exceptions.json"
+_VERSIFICATION_EXCEPTIONS_PATH = (
+    Path(__file__).parent.parent / "data" / "versification_exceptions.json"
+)
 _versification_exceptions_cache: dict | None = None
 
 
