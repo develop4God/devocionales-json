@@ -56,6 +56,21 @@
     },
     {
       "order": 3,
+      "type": "character_context",
+      "icon": "🙅",
+      "title": "La protesta de Pedro",
+      "subtitle": "Por qué el discípulo más impulsivo reacciona así ante una toalla",
+      "content": "😳 Una reacción que se siente familiar\n\nCuando le llega el turno a Pedro, él protesta: le pregunta a Jesús si en verdad piensa lavarle los pies, y al escuchar la respuesta, rechaza la idea de forma tajante (Juan 13:6, 8). En la cultura de esa mesa, un superior jamás se rebajaba así ante alguien de menor rango. Pedro ve a su Maestro tomando el lugar del esclavo, y su reacción nace de algo que a primera vista parece honroso: proteger la dignidad de Jesús.\n\n⚖️ Lo que la respuesta de Jesús revela\n\nJesús le responde a Pedro, en Juan 13:8, que dejarse lavar por él es la condición para tener parte con él. La palabra que se traduce como \"parte\" es **μέρος, (méros) (G3313)** — tener una porción, compartir una misma herencia. Jesús está diciendo que recibir su servicio es la puerta de entrada a la comunión con Él. Rechazar que Jesús lo lave equivale, en la lógica de Jesús, a quedarse fuera de esa comunión.\n\n🔄 El giro de Pedro al otro extremo\n\nAl escuchar eso, Pedro cambia de posición por completo: en Juan 13:9 pide que Jesús le lave también las manos y la cabeza, no solo los pies. Pasa del rechazo total a pedir un baño completo, en el mismo aliento en que Jesús acaba de decirle que todavía no comprende lo que está haciendo (Juan 13:7).\n\n🪞 Debajo de las dos reacciones\n\nEn ambos extremos hay algo en común: a Pedro le cuesta simplemente recibir lo que Jesús le ofrece en los términos exactos en que se lo ofrece. Primero lo rechaza porque le parece indigno de su Maestro. Después lo exagera porque quiere asegurarse de estar completamente bien con Él. En los dos casos, Pedro reacciona antes de dejarse servir tal como Jesús se lo propone.",
+      "scripture_references": [
+        {
+          "reference": "Juan 13:6-9",
+          "text": "Entonces vino a Simón Pedro; y Pedro le dijo: Señor, ¿tú me lavas los pies? Respondió Jesús y le dijo: Lo que yo hago, tú no lo comprendes ahora; mas lo entenderás después. Pedro le dijo: No me lavarás los pies jamás. Jesús le respondió: Si no te lavo, no tienes parte conmigo. Le dijo Simón Pedro: Señor, no solo mis pies, sino también las manos y la cabeza."
+        }
+      ],
+      "revelation_key": "Antes de aprender a servir como Jesús, Pedro tuvo que aprender algo más difícil: dejarse servir por Él."
+    },
+    {
+      "order": 4,
       "type": "greek_exegesis",
       "icon": "💧",
       "title": "Dos palabras para lavar",
@@ -84,21 +99,6 @@
         }
       ],
       "revelation_key": "Jesús usó dos palabras distintas para dos limpiezas distintas: una que se recibe una vez, y otra que se repite mientras se camina en este mundo."
-    },
-    {
-      "order": 4,
-      "type": "character_context",
-      "icon": "🙅",
-      "title": "La protesta de Pedro",
-      "subtitle": "Por qué el discípulo más impulsivo reacciona así ante una toalla",
-      "content": "😳 Una reacción que se siente familiar\n\nCuando le llega el turno a Pedro, él protesta: le pregunta a Jesús si en verdad piensa lavarle los pies, y al escuchar la respuesta, rechaza la idea de forma tajante (Juan 13:6, 8). En la cultura de esa mesa, un superior jamás se rebajaba así ante alguien de menor rango. Pedro ve a su Maestro tomando el lugar del esclavo, y su reacción nace de algo que a primera vista parece honroso: proteger la dignidad de Jesús.\n\n⚖️ Lo que la respuesta de Jesús revela\n\nJesús le responde a Pedro, en Juan 13:8, que dejarse lavar por él es la condición para tener parte con él. La palabra que se traduce como \"parte\" es **μέρος, (méros) (G3313)** — tener una porción, compartir una misma herencia. Jesús está diciendo que recibir su servicio es la puerta de entrada a la comunión con Él. Rechazar que Jesús lo lave equivale, en la lógica de Jesús, a quedarse fuera de esa comunión.\n\n🔄 El giro de Pedro al otro extremo\n\nAl escuchar eso, Pedro cambia de posición por completo: en Juan 13:9 pide que Jesús le lave también las manos y la cabeza, no solo los pies. Pasa del rechazo total a pedir un baño completo, en el mismo aliento en que Jesús acaba de decirle que todavía no comprende lo que está haciendo (Juan 13:7).\n\n🪞 Debajo de las dos reacciones\n\nEn ambos extremos hay algo en común: a Pedro le cuesta simplemente recibir lo que Jesús le ofrece en los términos exactos en que se lo ofrece. Primero lo rechaza porque le parece indigno de su Maestro. Después lo exagera porque quiere asegurarse de estar completamente bien con Él. En los dos casos, Pedro reacciona antes de dejarse servir tal como Jesús se lo propone.",
-      "scripture_references": [
-        {
-          "reference": "Juan 13:6-9",
-          "text": "Entonces vino a Simón Pedro; y Pedro le dijo: Señor, ¿tú me lavas los pies? Respondió Jesús y le dijo: Lo que yo hago, tú no lo comprendes ahora; mas lo entenderás después. Pedro le dijo: No me lavarás los pies jamás. Jesús le respondió: Si no te lavo, no tienes parte conmigo. Le dijo Simón Pedro: Señor, no solo mis pies, sino también las manos y la cabeza."
-        }
-      ],
-      "revelation_key": "Antes de aprender a servir como Jesús, Pedro tuvo que aprender algo más difícil: dejarse servir por Él."
     },
     {
       "order": 5,
