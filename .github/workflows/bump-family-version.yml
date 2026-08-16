@@ -6,22 +6,22 @@ on:
 
 jobs:
   bump-discovery-encounters:
-    name: 🔢 Auto-bump changed family versions
+    name: 🏷️ Auto-bump changed family versions
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - name: 🔢 Checkout
+      - name: 🏷️ Checkout
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
-      - name: 🔢 Set up Python
+      - name: 🏷️ Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
-      - name: 🔢 Bump and commit
+      - name: 🏷️ Bump and commit
         run: |
           python3 shared_validation/tools/bump_family_version.py "${{ github.event.before }}" "${{ github.sha }}"
 
@@ -29,7 +29,7 @@ jobs:
           git config --local user.name "GitHub Action [bot]"
           git add discovery/index.json encounters/index.json
           if ! git diff --cached --quiet; then
-            git commit -m "🔢 Auto-bump family versions [skip ci]"
+            git commit -m "🏷️ Auto-bump family versions [skip ci]"
 
             attempt=1
             max_attempts=3
