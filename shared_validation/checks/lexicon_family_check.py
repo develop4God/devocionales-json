@@ -39,8 +39,9 @@ Usage:
     # whole corpus (both content types, every id)
     python3 shared_validation/lexicon_family_check.py --all
 
-Exit code: 0 if no TRANSLIT_MISMATCH found anywhere scanned, 1 otherwise.
-INFLECTED_NO_LEMMA_MATCH is informational only and never affects exit code.
+Exit code: 0 only if nothing was flagged anywhere scanned — no
+TRANSLIT_MISMATCH, no citation-balance warning, no info. Any finding of any
+severity fails the run (per-user directive 2026-08-15: no silent passing).
 """
 
 import argparse
@@ -159,14 +160,15 @@ def run_for_family(
     content_id: str,
     lexicon: StrongsLexiconSource,
     debug: bool = False,
-) -> int:
+) -> tuple[int, int]:
     """Run the lexical-accuracy check for every language file of one content
-    item. Returns the TRANSLIT_MISMATCH count (the only outcome that fails
-    the gate)."""
+    item. Returns (errors, warnings): TRANSLIT_MISMATCH count (the only
+    outcome that fails the gate) and citation-balance warning count from
+    check_family_citation_balance (advisory, never gates)."""
     family = RESOLVERS[content_type](content_id)
     if not family:
         print(f"No {content_type} item with id '{content_id}' found in index.json")
-        return 1
+        return 1, 0
 
     report = _ReportAdapter()
     print(f"\n── {content_type}/{content_id} ──")
@@ -234,30 +236,36 @@ def run_for_family(
 
     check_family_citation_balance(counts_by_lang, report)
 
-    if report.errors == 0:
+    if report.errors == 0 and report.warnings == 0 and report.infos == 0:
         print(
             f"  {GRN}✅ no lexical mismatches ({matched} gloss(es) matched Strong's){RST}"
         )
-    return report.errors
+    return report.errors, report.warnings + report.infos
 
 
 def run_for_type(
     content_type: str, lexicon: StrongsLexiconSource, debug: bool = False
-) -> int:
-    """Run the check for every id of one content type. Returns the total
-    TRANSLIT_MISMATCH count across all ids."""
+) -> tuple[int, int]:
+    """Run the check for every id of one content type. Returns (errors,
+    warnings) totals across all ids."""
     total_errors = 0
+    total_warnings = 0
     for content_id in ID_LISTERS[content_type]():
-        total_errors += run_for_family(content_type, content_id, lexicon, debug)
-    return total_errors
+        errors, warnings = run_for_family(content_type, content_id, lexicon, debug)
+        total_errors += errors
+        total_warnings += warnings
+    return total_errors, total_warnings
 
 
-def run_all(lexicon: StrongsLexiconSource, debug: bool = False) -> int:
+def run_all(lexicon: StrongsLexiconSource, debug: bool = False) -> tuple[int, int]:
     """Run the check across the whole corpus (both content types)."""
     total_errors = 0
+    total_warnings = 0
     for content_type in RESOLVERS:
-        total_errors += run_for_type(content_type, lexicon, debug)
-    return total_errors
+        errors, warnings = run_for_type(content_type, lexicon, debug)
+        total_errors += errors
+        total_warnings += warnings
+    return total_errors, total_warnings
 
 
 def main():
@@ -293,24 +301,30 @@ def main():
     lexicon = StrongsLexiconSource()  # loaded once, reused across the whole run
 
     if args.all:
-        total_errors = run_all(lexicon, args.debug)
+        total_errors, total_warnings = run_all(lexicon, args.debug)
     elif args.id:
         if not args.type:
             parser.error("--id requires --type")
-        total_errors = run_for_family(args.type, args.id, lexicon, args.debug)
+        total_errors, total_warnings = run_for_family(
+            args.type, args.id, lexicon, args.debug
+        )
     elif args.type:
-        total_errors = run_for_type(args.type, lexicon, args.debug)
+        total_errors, total_warnings = run_for_type(args.type, lexicon, args.debug)
     else:
         parser.error("pass --id/--type, --type alone, or --all")
 
+    total_findings = total_errors + total_warnings
     print(f"\n{'=' * 60}")
-    if total_errors == 0:
-        print("✅ PASSED — no Strong's transliteration mismatches found")
+    if total_findings == 0:
+        print("✅ PASSED — no Strong's lexicon findings")
     else:
-        print(f"❌ FAILED — {total_errors} transliteration mismatch(es) vs Strong's")
+        print(
+            f"❌ FAILED — {total_errors} mismatch(es), {total_warnings} "
+            "citation-balance warning(s)/info(s) vs Strong's"
+        )
     print(f"{'=' * 60}")
 
-    sys.exit(0 if total_errors == 0 else 1)
+    sys.exit(0 if total_findings == 0 else 1)
 
 
 if __name__ == "__main__":

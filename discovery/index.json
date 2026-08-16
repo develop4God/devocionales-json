@@ -1,6 +1,59 @@
 {
   "studies": [
     {
+      "id": "foot_washing_love_001",
+      "version": "1.1",
+      "emoji": "🧎",
+      "files": {
+        "es": "foot_washing_love_es_001.json",
+        "en": "foot_washing_love_en_001.json",
+        "fr": "foot_washing_love_fr_001.json",
+        "pt": "foot_washing_love_pt_001.json",
+        "ja": "foot_washing_love_ja_001.json",
+        "zh": "foot_washing_love_zh_001.json",
+        "hi": "foot_washing_love_hi_001.json",
+        "de": "foot_washing_love_de_001.json",
+        "ar": "foot_washing_love_ar_001.json",
+        "fil": "foot_washing_love_fil_001.json"
+      },
+      "titles": {
+        "es": "El amor que se arrodilla",
+        "en": "Love That Kneels",
+        "fr": "L'amour qui s'agenouille",
+        "pt": "O amor que se ajoelha",
+        "ja": "ひざまずく愛",
+        "zh": "俯身下跪的爱",
+        "hi": "प्रेम जो घुटनों पर आता है",
+        "de": "Liebe, die sich niederkniet",
+        "ar": "المحبة التي تركع",
+        "fil": "Pag-ibig na Lumuluhod"
+      },
+      "subtitles": {
+        "es": "Lo que Jesús hizo en la última cena antes de la cruz, y lo que sigue revelando de nuestro propio corazón",
+        "en": "What Jesus did at the last supper before the cross, and what it still reveals about your own heart",
+        "fr": "Ce que Jésus a fait lors du dernier repas avant la croix, et ce que cela révèle encore de notre propre cœur",
+        "pt": "O que Jesus fez na última ceia antes da cruz, e o que continua revelando sobre o nosso próprio coração",
+        "ja": "十字架の前、最後の晩餐でイエスがなさったこと。それが今もあなたの心に語りかけていること",
+        "zh": "耶稣在十字架之前的最后晚餐中所做的事，如今仍在向你的内心显明什么",
+        "hi": "क्रूस से पहले अंतिम भोज में यीशु ने क्या किया, और वह आज भी तुम्हारे हृदय के विषय में क्या प्रकट करता है",
+        "de": "Was Jesus beim letzten Abendmahl vor dem Kreuz tat, und was es noch heute über dein eigenes Herz offenbart",
+        "ar": "ما فعله يسوع في العشاء الأخير قبل الصليب، وما يزال يكشفه عن قلبك أنت",
+        "fil": "Ang ginawa ni Jesus sa huling hapunan bago ang krus, at ang ipinapakita pa rin nito tungkol sa iyong puso"
+      },
+      "estimated_reading_minutes": {
+        "es": 9,
+        "en": 9,
+        "fr": 11,
+        "pt": 11,
+        "ja": 12,
+        "zh": 12,
+        "hi": 11,
+        "de": 10,
+        "ar": 11,
+        "fil": 10
+      }
+    },
+    {
       "id": "mammon_anxiety_freedom_001",
       "version": "1.6",
       "emoji": "⛓️",
@@ -108,7 +161,7 @@
     },
     {
       "id": "morning_star_001",
-      "version": "1.8",
+      "version": "1.9",
       "emoji": "🌟",
       "files": {
         "es": "morning_star_es_001.json",
@@ -214,7 +267,7 @@
     },
     {
       "id": "balaam_humble_vision_001",
-      "version": "1.6",
+      "version": "1.7",
       "emoji": "🫏",
       "files": {
         "es": "balaam_humble_vision_es_001.json",
@@ -267,7 +320,7 @@
     },
     {
       "id": "logos_creation_001",
-      "version": "1.6",
+      "version": "1.7",
       "emoji": "📖",
       "files": {
         "es": "logos_creation_es_001.json",
@@ -373,7 +426,7 @@
     },
     {
       "id": "natanael_fig_tree_001",
-      "version": "1.4",
+      "version": "1.5",
       "emoji": "🌳",
       "files": {
         "es": "natanael_fig_tree_es_001.json",
@@ -850,7 +903,7 @@
     },
     {
       "id": "jesus_troubled_himself_001",
-      "version": "1.4",
+      "version": "1.5",
       "emoji": "😢",
       "files": {
         "es": "jesus_troubled_himself_es_001.json",
@@ -903,7 +956,7 @@
     },
     {
       "id": "passed_from_death_001",
-      "version": "1.7",
+      "version": "1.8",
       "emoji": "🔄",
       "files": {
         "es": "passed_from_death_es_001.json",
@@ -956,7 +1009,7 @@
     },
     {
       "id": "transfiguration_001",
-      "version": "1.4",
+      "version": "1.5",
       "emoji": "⛰️",
       "files": {
         "es": "transfiguration_es_001.json",
@@ -1115,7 +1168,7 @@
     },
     {
       "id": "gethsemane_agony_001",
-      "version": "1.6",
+      "version": "1.7",
       "emoji": "🫒",
       "files": {
         "es": "gethsemane_agony_es_001.json",
@@ -1592,7 +1645,7 @@
     },
     {
       "id": "ascension_victory_001",
-      "version": "1.5",
+      "version": "1.6",
       "emoji": "☁️",
       "files": {
         "es": "ascension_victory_es_001.json",
@@ -1804,7 +1857,7 @@
     },
     {
       "id": "zechariah_14_return_001",
-      "version": "1.7",
+      "version": "1.8",
       "emoji": "⛰️",
       "files": {
         "es": "zechariah_14_return_es_001.json",

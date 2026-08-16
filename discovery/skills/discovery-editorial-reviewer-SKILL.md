@@ -1,5 +1,10 @@
 ---
 name: discovery-studies-editorial-reviewer
+description: "Use this skill whenever reviewing, auditing, or refining existing Discovery Bible study JSON cards. Triggers: \"review card X\", \"let's refine this discovery study\", \"check this card\", \"revise the content\", \"session de revisión\", \"veo un error en el card X\", or any request to improve already-drafted Discovery study content. Always load this skill before touching any card in a review session. This skill is a COMPANION to discovery-study-generator — load both when needed."
+---
+
+---
+name: discovery-studies-editorial-reviewer
 description: >
   Use this skill whenever reviewing, auditing, or refining existing Discovery
   Bible study JSON cards. Triggers: "review card X", "let's refine this
@@ -168,16 +173,7 @@ If a Greek or Hebrew word appears, explain it in the same sentence or the
 next one. Never assume the reader knows the term.
 
 **Format:** word in original characters + transliteration + plain-language
-meaning, together, every time. The transliteration is always Latin-alphabet,
-regardless of the study's own language/script (Arabic, Chinese, Hindi, Japanese
-included) — never a phonetic respelling into that language's own script. This
-shipped wrong once across every non-Latin-script encounter translation for the
-same term simultaneously (each translator independently "finished the job" by
-respelling the Greek transliteration into the target script), and a critic
-review reading fluently in that script did not catch it because the respelling
-looked plausible in isolation — only a diff against a sibling published file's
-convention caught it. Check any inline Greek/Hebrew gloss against a sibling
-file before approving, not just for presence of a transliteration.
+meaning, together, every time.
 
 > "κτήματα (ktémata) — bienes inmuebles, propiedades que dan estatus y
 > seguridad social."
@@ -199,44 +195,6 @@ understand this?
 - Academic vocabulary or theological jargon without inline explanation
 - Idioms that don't translate across Spanish-speaking regions
 - Sentences longer than 3 clauses
-
----
-
-### 8.5. No abstract, unanchored phrases
-A sentence can pass every rule above — nothing invented, no negation-built
-argument, no marketing cliché — and still fail because it sounds profound
-but says nothing concrete or verifiable.
-
-**Test:** For every sentence, ask: "if a reader asked 'what does this
-actually mean, concretely?', could I answer without adding new
-information?" If the honest answer only restates the same sentence more
-poetically, or leans on unexplained theological shorthand (tipología,
-sombra, cumplimiento) without unpacking it in plain words, rewrite it to
-name the concrete fact, event, or action it's pointing to.
-
-**Wrong:** "El que un día se llamará a sí mismo Pan de vida primero
-practicó la verdad que después proclamaría." (Sounds elegant, says
-nothing concrete — practiced *what*, *how*?)
-**Right:** "Jesús mismo, antes de decir 'Yo soy el pan de vida', vivió esa
-misma verdad: en el desierto, con hambre real, el diablo lo tentó a
-convertir piedras en pan. Jesús no lo hizo." — names the actual event.
-
-**Wrong:** "cantaba sobre el maná... sin saber que cantaba sobre una
-sombra." ("Sombra" is unexplained typology jargon — a plain reader has no
-idea what it means.)
-**Right:** "cantaba sobre el maná... No sabía que ese pan del desierto
-solo era un anuncio de algo más grande que vendría después: Jesús mismo."
-— unpacks the idea in plain words.
-
-**Wrong:** "Jesús se ofrece a sí mismo, para ser recibido, no solo
-admirado." (Assumes a contrast — admiration vs. reception — the text
-never sets up; nobody in John 6 asked Jesus for admiration.)
-**Right:** "Jesús pide algo concreto: que vengamos a él cada día, no una
-sola vez." — states what the text actually shows Jesus asking for.
-
-**Why this is separate from Rule 8:** Rule 8 catches jargon and long
-sentences. This rule catches sentences that are already short and plain
-in vocabulary, yet still empty — the failure is conceptual, not lexical.
 
 ---
 
@@ -277,9 +235,97 @@ original error — it looks resolved but isn't.
 
 ---
 
-## CARD-BY-CARD REVIEW PROTOCOL
+### 13. Verse citations always carry the book name — MANDATORY
+Every in-text citation of a verse, anywhere in `content`, must use the full
+reference — `(Juan 13:9)` — never a bare `v. 9` or `versículo 9`. A citation
+without the book name breaks once the study is translated into other
+languages, since "versículo 9" doesn't travel with the file.
 
-For each card, check in this order:
+**Wrong:** "...como se ve en el versículo 9." / "(v. 8)"
+**Right:** "...como se ve en Juan 13:9." / "(Juan 13:8)"
+
+This applies even when the whole card only discusses one book — never rely
+on context to imply which book "v. 9" refers to.
+
+**Also check (restates Rule 3's orphan-reference check for citations
+specifically):** every verse cited this way — even briefly, even unquoted —
+must have a matching entry in that card's `scripture_references[]`. A verse
+mentioned only by number in prose, with no `scripture_references` entry, is
+still an orphaned reference.
+
+---
+
+### 14. Multi-word Greek/Hebrew phrases — cite each word separately
+When a term under discussion is made of two (or more) original-language
+words — e.g. ἐντολή καινή (a "new commandment") — cite each word on its own,
+each with its own Strong's number, rather than combining both words under
+one transliteration with both numbers stacked at the end.
+
+**Wrong:** "ἐντολή καινή, entolē kainē (G1785, G2537)"
+**Right:** "ἐντολή, entolē (G1785)... καινή, kainē (G2537)..." — each word
+introduced and glossed on its own.
+
+**Why:** Giovanni cross-checks every Greek/Hebrew citation against a
+dictionary after review. A combined citation can't be looked up directly;
+separated citations can be verified word by word.
+
+**Format for a single word (all cards, not just `greek_exegesis`):**
+`word, transliteration (GXXX)` — e.g. `μέρος, méros (G3313)`.
+
+---
+
+### 15. Titles, subtitles, and key_verse must not spoil the discovery
+The series is called "Discovery" because the reader is meant to arrive at
+the insight themselves, through the content — not have it handed to them
+in the title before they've read a word. This applies at three levels:
+
+**Card titles/subtitles** must not name the connection, term, or conclusion
+the card exists to reveal. They can name the *scene*, the *question*, or
+the *tension* — never the *answer*.
+
+**Wrong:** "El mismo verbo de la cruz" (names the connection up front)
+**Wrong:** "Dos palabras para lavar" (states the card's own discovery)
+**Right:** "Una palabra que ya había usado antes" (invites, doesn't resolve)
+**Right:** "¿Por qué Jesús responde así a Pedro?" (opens the question)
+
+**A card must never spoil a *later* card.** If Card 1 ends on an open
+question, Card 3's title must not hand over the answer before the reader
+reaches Card 3's content — even though the study is sequential, the title
+appears in navigation/preview contexts before the reader has necessarily
+read the intervening cards.
+
+**Wrong:** Card 1 asks "how does this happen?"; Card 3 is titled "El bocado
+y la entrada" — this answers Card 1's question in Card 3's title alone.
+**Right:** Card 3 titled "Lo que dice el texto griego" — signals depth
+without pre-answering.
+
+**The study's top-level `key_verse`** appears on the study's cover, before
+Card 1. It must not be the narrative's climax verse — that spoils the
+entire study before it opens. Choose a verse that opens the tension or
+sets the scene instead.
+
+**Wrong:** `key_verse` = Juan 13:27 ("Satanás entró en él") for a study
+about Judas's betrayal — this is the story's climax, shown on the cover.
+**Right:** `key_verse` = Juan 13:21 ("uno de vosotros me va a entregar") —
+opens the mystery without resolving it.
+
+**Not in scope of this rule:** a card's own `revelation_key` (the closing
+insight *within* that same card, read only after its content) and a
+card's own content resolving its own question by the end. The rule is
+about what appears *before* the reader has engaged with the relevant
+content — title, subtitle, and the study-level key_verse — not about
+content properly building to its own conclusion.
+
+**Small-card exception:** for a compact card with only one clear beat
+(most `discovery_activation` or very short `cultural_context` cards), a
+plain descriptive title that doesn't reveal a specific connection or
+term is fine even if it's not phrased as a question — the anti-spoiler
+concern is about naming the discovery, not about every title needing to
+be a cliffhanger.
+
+---
+
+
 
 ### A. Structural check
 - [ ] Has correct `type`, `order`, `icon`, `title`, `subtitle`
@@ -300,10 +346,15 @@ For each card, check in this order:
 - [ ] No unverifiable claims or unreal hyperbole (Rule 5)
 - [ ] Greek/Hebrew terms explained inline where they appear (Rule 7)
 - [ ] Language accessible to all readers (Rule 8)
-- [ ] No abstract, unanchored phrases — every sentence answers "what does
-      this concretely mean?" (Rule 8.5)
 - [ ] Card adds something new vs. adjacent cards (Rule 6)
 - [ ] Per-language register correct, for non-Spanish files (Rule 11)
+- [ ] Every verse citation uses full book:chapter:verse, never bare "v. N"
+      (Rule 13)
+- [ ] Multi-word Greek/Hebrew terms cited word by word, each with its own
+      Strong's number (Rule 14)
+- [ ] Title/subtitle don't name the card's own discovery or spoil a later
+      card's answer; study-level `key_verse` isn't the narrative's climax
+      (Rule 15)
 
 ### C. Theological check
 - [ ] Reflections are grounded directly in the biblical text
@@ -359,16 +410,8 @@ git commit -m "feat(<lang>): <brief description of what changed>"
 ```
 
 Present the file after each commit using `present_files`. Regenerate the
-app-accurate preview after any content change, so Giovanni is always
-reviewing the current version:
-
-```bash
-python3 discovery/discovery_scripts/app_preview.py <filepath>
-```
-
-This renders the JSON as it will actually look in the app, and flags any
-field the app doesn't parse/display (e.g. `timeline`) with a visible
-warning — a stronger check than a plain reading copy.
+companion `.md` reading copy (if one exists for this session) after any
+content change, so Giovanni is always reviewing the current version.
 
 ---
 
@@ -404,3 +447,23 @@ Real mistakes caught in this review session, which shaped this skill:
 
 These lessons are canon for future Discovery study reviews and should
 inform review sessions on any study, not only "Morir al yo."
+
+---
+
+## LESSONS FROM "El amor que se arrodilla" (Juan 13) — first session
+using the gate-per-card generation workflow
+
+- **Gates applied during generation, not after, cut review time
+  drastically**: running each card through all 12 (now 14) gates
+  immediately after drafting it — before moving to the next card — caught
+  every issue in minutes instead of requiring a full back-and-forth pass
+  over a finished file. This is now the default generation workflow, not
+  just a review-session practice.
+- **Bare verse citations ("v. 9") slip in constantly during drafting**,
+  especially in the second half of a card once the book has already been
+  named once. This is what Rule 13 exists to catch — check every single
+  parenthetical and inline verse mention, not just the first one in a card.
+- **Combined Greek/Hebrew citations for multi-word phrases** (e.g.
+  "entolē kainē (G1785, G2537)") look tidy but can't be cross-checked
+  word by word against a dictionary. Rule 14 exists because Giovanni
+  verifies every citation afterward — combined citations block that.
