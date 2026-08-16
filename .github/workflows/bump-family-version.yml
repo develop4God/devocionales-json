@@ -1,0 +1,47 @@
+name: 🔢 Bump Family Versions
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  bump:
+    name: 🔢 Auto-bump changed family versions
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 🔢 Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: 🔢 Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: 🔢 Bump and commit
+        run: |
+          python3 shared_validation/tools/bump_family_version.py "${{ github.event.before }}" "${{ github.sha }}"
+
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action [bot]"
+          git add discovery/index.json encounters/index.json
+          if ! git diff --cached --quiet; then
+            git commit -m "🔢 Auto-bump family versions [skip ci]"
+
+            attempt=1
+            max_attempts=3
+            until git push; do
+              if [ "$attempt" -ge "$max_attempts" ]; then
+                echo "❌ git push failed after $attempt attempts"
+                exit 1
+              fi
+              echo "⚠️ git push failed (attempt $attempt/$max_attempts) — main likely moved, rebasing and retrying"
+              git pull --rebase origin main
+              attempt=$((attempt + 1))
+            done
+          else
+            echo "ℹ️ No family versions to bump — skipping commit"
+          fi
