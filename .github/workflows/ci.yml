@@ -20,6 +20,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: 🚀 Install package (editable)
+        run: pip install -e .
+
       - name: 🚀 Check .gitignore covers __pycache__
         run: python3 shared_validation/tools/check_gitignore_pycache.py
 
