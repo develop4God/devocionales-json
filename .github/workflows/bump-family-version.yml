@@ -48,6 +48,8 @@ jobs:
 
   bump-devocionales:
     name: 🗓️ Auto-bump changed devocionales dates
+    needs: bump-discovery-encounters
+    if: always()
     runs-on: ubuntu-latest
     permissions:
       contents: write
