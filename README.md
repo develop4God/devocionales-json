@@ -42,7 +42,7 @@ Generated biblical content consumed by the [devocional_nuevo](https://github.com
 ### ✨ Discovery & Encounters
 
 <!-- README-STATS:discovery -->
-**Discovery** — 38 studies × 10 languages (ar, de, en, es, fil, fr, hi, ja, pt, zh) — 380 files.
+**Discovery** — 39 studies × 10 languages (ar, de, en, es, fil, fr, hi, ja, pt, zh) — 390 files.
 <!-- /README-STATS:discovery -->
 
 <!-- README-STATS:encounters -->
@@ -57,6 +57,7 @@ devocionales-json/
 ├── archive/
 ├── badges/
 ├── bible_database/
+├── devocionales_json.egg-info/
 ├── devocionales_scripts/
 ├── discovery/
 ├── encounters/
