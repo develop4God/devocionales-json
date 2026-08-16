@@ -648,13 +648,19 @@ def validate_greek_family_patterns(report: Report) -> None:
     shared value is factually wrong (this exact failure mode hid dozens of
     real errors in this corpus under the previous majority-vote design).
     Checking against Strong's directly, independently per language, has no
-    such blind spot. Prints its own per-family report; only the total
-    error count is folded into this phase's Report."""
+    such blind spot. Prints its own per-family report; both the mismatch
+    count and the citation-balance warning/info count are folded into this
+    phase's Report as errors — per-user directive 2026-08-15, no finding
+    from this checker passes silently."""
     lexicon = StrongsLexiconSource()
-    total_errors = run_lexicon_family_check("discovery", lexicon)
+    total_errors, total_warnings = run_lexicon_family_check("discovery", lexicon)
     if total_errors:
         report.E(
             f"{total_errors} Strong's transliteration mismatch(es) — see output above"
+        )
+    if total_warnings:
+        report.E(
+            f"{total_warnings} Strong's citation-balance warning(s)/info(s) — see output above"
         )
 
 
