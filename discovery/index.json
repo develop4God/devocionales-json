@@ -2066,6 +2066,23 @@
         "ar": 12,
         "fil": 10
       }
+    },
+    {
+      "id": "bread_and_the_night_001",
+      "version": "1.0",
+      "emoji": "🕯️",
+      "files": {
+        "es": "bread_and_the_night_es_001.json"
+      },
+      "titles": {
+        "es": "El pan y la noche"
+      },
+      "subtitles": {
+        "es": "Lo que pasó en el corazón de Judas mientras Jesús le ofrecía gracia hasta el final"
+      },
+      "estimated_reading_minutes": {
+        "es": 7
+      }
     }
   ]
 }

@@ -173,10 +173,15 @@ If a Greek or Hebrew word appears, explain it in the same sentence or the
 next one. Never assume the reader knows the term.
 
 **Format:** word in original characters + transliteration + plain-language
-meaning, together, every time.
+meaning, together, every time. The transliteration must sit in its own
+parentheses immediately after the word, separate from the Strong's code —
+`word, (transliteration) (GXXX)` — this is a HARD GATE the validator
+enforces (`check_greek_hebrew_transliteration` in
+`shared_validation/checks/greek_hebrew_gloss.py`); `word, transliteration
+(GXXX)` (transliteration outside its own parens) fails it.
 
-> "κτήματα (ktémata) — bienes inmuebles, propiedades que dan estatus y
-> seguridad social."
+> "κτῆμα, (ktēma) (G2933) — bienes inmuebles, propiedades que dan
+> estatus y seguridad social."
 
 **Maximum one `greek_exegesis`/`hebrew_exegesis` card per study** (per
 discovery-study-generator's architecture rules) — additional terms can
@@ -262,15 +267,55 @@ each with its own Strong's number, rather than combining both words under
 one transliteration with both numbers stacked at the end.
 
 **Wrong:** "ἐντολή καινή, entolē kainē (G1785, G2537)"
-**Right:** "ἐντολή, entolē (G1785)... καινή, kainē (G2537)..." — each word
-introduced and glossed on its own.
+**Right:** "ἐντολή, (entolē) (G1785)... καινή, (kainē) (G2537)..." — each
+word introduced and glossed on its own.
 
 **Why:** Giovanni cross-checks every Greek/Hebrew citation against a
 dictionary after review. A combined citation can't be looked up directly;
 separated citations can be verified word by word.
 
 **Format for a single word (all cards, not just `greek_exegesis`):**
-`word, transliteration (GXXX)` — e.g. `μέρος, méros (G3313)`.
+`word, (transliteration) (GXXX)` — the transliteration sits in its own
+parentheses immediately after the word, separate from the Strong's code —
+e.g. `μέρος, (méros) (G3313)`. This is a HARD GATE
+(`check_greek_hebrew_transliteration` in
+`shared_validation/checks/greek_hebrew_gloss.py`): `word, translit (GXXX)`
+— transliteration outside its own parens — fails validation even though it
+reads naturally in prose.
+
+**`greek_words[]`/`hebrew_words[].transliteration` never carries the
+Strong's code inline.** That field is bare transliteration only (e.g.
+`méros`, not `méros (G3313)`) — confirmed against every clean file in the
+corpus (gethsemane_agony, good_shepherd, damascus_road, etc.). Putting the
+code inline there triggers a separate HARD GATE
+(`check_strong_code_bare_transliteration`): each string field is checked
+in isolation, and `transliteration` alone has no native Greek/Hebrew
+character nearby to anchor the code to, so the validator reports it as a
+dangling citation.
+
+**The Strong's code goes in its own sibling field, `"strong"`** (e.g.
+`born_again_es_001.json`'s `{"word": "γεννάω", "transliteration":
+"gennáō", "strong": "G1080", ...}`) — not inside `transliteration`, and
+not omitted. Use this field on every `greek_words[]`/`hebrew_words[]`
+entry. The Strong's code also belongs inline in `content` prose, attached
+to the real word in its own well-formed gloss, wherever the term is
+discussed there.
+
+**Every transliteration must match the SOT exactly, diacritics
+included** — pull it from `shared_validation/checks/lexicon_data/
+strongs_greek.json` (or `strongs_hebrew.json`) by Strong's code rather
+than typing from memory; a missing macron/acute (`tarassō` vs. the SOT's
+`tarássō`) is a HARD GATE failure (`check_greek_hebrew_transliteration`),
+not a stylistic nicety.
+
+**A transliteration introduced once by a well-formed gloss must never
+reappear bare later in the same field.** HARD GATE
+(`check_bare_transliteration_reuse`): every occurrence needs its own
+`word, (translit)` — reusing just the bare Latin transliteration for
+flow ("el **psōmion** era gracia...") fails, even mid-paragraph, even
+in the same card that already introduced it correctly. If re-glossing
+every occurrence reads clunky, fall back to the Spanish gloss word
+("el bocado...") instead of repeating the transliteration.
 
 ---
 
@@ -334,8 +379,15 @@ be a cliffhanger.
 - [ ] Every passage discussed in `content` has a matching
       `scripture_references[]` entry (Rule 3)
 - [ ] `revelation_key` present, one sentence, theologically precise
-- [ ] `greek_words[]` entries have word, transliteration, meaning, AND
-      revelation — all four fields (if the card type is `greek_exegesis`)
+- [ ] `greek_words[]` entries have word, transliteration, strong, meaning,
+      AND revelation — all five fields (if the card type is
+      `greek_exegesis`)
+- [ ] `greek_words[]`/`hebrew_words[].transliteration` is bare
+      transliteration only, never `translit (GXXX)`; the code lives in its
+      own `strong` field instead (Rule 14)
+- [ ] Every transliteration matches strongs_greek/hebrew.json exactly,
+      diacritics included — pulled from the file, not typed from memory
+      (Rule 14)
 
 ### B. Content check
 - [ ] Nothing added that the biblical text does not say (Rule 1)
@@ -351,7 +403,7 @@ be a cliffhanger.
 - [ ] Every verse citation uses full book:chapter:verse, never bare "v. N"
       (Rule 13)
 - [ ] Multi-word Greek/Hebrew terms cited word by word, each with its own
-      Strong's number (Rule 14)
+      Strong's number, in gate format `word, (translit) (GXXX)` (Rule 14)
 - [ ] Title/subtitle don't name the card's own discovery or spoil a later
       card's answer; study-level `key_verse` isn't the narrative's climax
       (Rule 15)
