@@ -42,7 +42,7 @@ Generated biblical content consumed by the [devocional_nuevo](https://github.com
 ### ✨ Discovery & Encounters
 
 <!-- README-STATS:discovery -->
-**Discovery** — 39 studies × 10 languages (ar, de, en, es, fil, fr, hi, ja, pt, zh) — 390 files.
+**Discovery** — 40 studies × 10 languages (ar, de, en, es, fil, fr, hi, ja, pt, zh) — 400 files.
 <!-- /README-STATS:discovery -->
 
 <!-- README-STATS:encounters -->
