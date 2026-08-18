@@ -2072,16 +2072,28 @@
       "version": "1.0",
       "emoji": "🕯️",
       "files": {
-        "es": "bread_and_the_night_es_001.json"
+        "es": "bread_and_the_night_es_001.json",
+        "pt": "bread_and_the_night_pt_001.json",
+        "fr": "bread_and_the_night_fr_001.json",
+        "en": "bread_and_the_night_en_001.json"
       },
       "titles": {
-        "es": "El pan y la noche"
+        "es": "El pan y la noche",
+        "pt": "O pão e a noite",
+        "fr": "Le pain et la nuit",
+        "en": "The Bread and the Night"
       },
       "subtitles": {
-        "es": "Lo que pasó en el corazón de Judas mientras Jesús le ofrecía gracia hasta el final"
+        "es": "Lo que pasó en el corazón de Judas mientras Jesús le ofrecía gracia hasta el final",
+        "pt": "O que aconteceu no coração de Judas enquanto Jesus lhe oferecia graça até o fim",
+        "fr": "Ce qui s'est passé dans le cœur de Judas pendant que Jésus lui offrait la grâce jusqu'au bout",
+        "en": "What happened in Judas' heart while Jesus offered him grace to the very end"
       },
       "estimated_reading_minutes": {
-        "es": 7
+        "es": 7,
+        "pt": 8,
+        "fr": 9,
+        "en": 7
       }
     }
   ]
