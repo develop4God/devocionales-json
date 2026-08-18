@@ -166,6 +166,31 @@ Before approving any card, ask: does this card reveal something the
 previous cards did not? If the answer is no — merge it, rewrite it, or
 eliminate it. Overlap between cards is waste. Revelation should never repeat.
 
+**What a `revelation_key` is (and isn't) — analyze before writing.** This
+is Rule 6 applied specifically to the `revelation_key` field, not just to
+whole cards. A `revelation_key` is not a summary of the card's `content`,
+not a poetic flourish, and not a place to cram extra biblical content just
+because it's available. It is the single sharpened "aha" specific to
+*this card's moment* — distinct from what the content already said,
+distinct from neighboring cards, and without spoiling what a later card
+will reveal (see also Rule 15).
+
+Before writing or approving one, answer explicitly: **what is this
+specific card trying to make the reader take away, and is that different
+from what neighboring cards already carry or will carry?** Don't write it
+"a lo loco" (recklessly, without this analysis). If a following card
+already owns the heavy theological weight of a moment, the current card's
+`revelation_key` doesn't need to carry that weight too — it should
+capture only what belongs to its own moment.
+
+**Concrete case (2026-08-18, "El pan y la noche," Card 4 — "Una expresión
+con historia"):** first draft of the `revelation_key` restated the card's
+own content almost verbatim ("El lenguaje que Jesús usa para describir la
+traición de Judas es el de un golpe violento...") — technically accurate,
+but it added nothing beyond what the card's body had just said. Caught in
+review, not by an automated scan, because it read as reasonable rather
+than obviously redundant.
+
 ---
 
 ### 7. Greek and Hebrew terms must be explained inline
@@ -378,7 +403,9 @@ be a cliffhanger.
       not truncated
 - [ ] Every passage discussed in `content` has a matching
       `scripture_references[]` entry (Rule 3)
-- [ ] `revelation_key` present, one sentence, theologically precise
+- [ ] `revelation_key` present, one sentence, theologically precise, and
+      its own moment's "aha" — not a summary/repeat of the card's own
+      content (Rule 6)
 - [ ] `greek_words[]` entries have word, transliteration, strong, meaning,
       AND revelation — all five fields (if the card type is
       `greek_exegesis`)
