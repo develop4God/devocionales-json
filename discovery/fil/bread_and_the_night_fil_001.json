@@ -1,0 +1,189 @@
+{
+  "id": "bread_and_the_night_001",
+  "type": "discovery",
+  "date": "2026-08-15",
+  "title": "Ang Tinapay at ang Gabi",
+  "subtitle": "Ang nangyari sa puso ni Judas habang inaalok pa rin siya ni Jesus ng biyaya hanggang sa katapusan",
+  "language": "fil",
+  "version": "MBB05",
+  "estimated_reading_minutes": 8,
+  "key_verse": {
+    "reference": "Juan 13:21",
+    "text": "Pagkasabi nito, si Jesus ay labis na nabagabag at nagpahayag sa kanila, \"Pakatandaan ninyo: ako'y pagtataksilan ng isa sa inyo.\""
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "opening_mystery",
+      "icon": "🕯️",
+      "title": "Ang naramdaman ni Jesus bago niya banggitin ang taksil",
+      "subtitle": "Ang pagkabagabag na nauna sa pinakamadilim na sandali ng Huling Hapunan",
+      "content": "😨 Ang salitang ginamit ni Juan\n\nSa Juan 13:21, bago ipahayag na ipagkakanulo siya ng isa sa labindalawa, inilalarawan ng teksto si Jesus gamit ang isang malakas na salita: **ταράσσω, (tarássō) (G5015)** — ang mabagabag sa loob, tulad ng tubig na marahas na ginalaw. Hindi ito basta kaunting kaguluhan. Isa itong tunay na pagkabalisa sa kaibuturan.\n\n🔁 Isang salitang nagamit na noon ni Juan\n\nGinamit lamang ni Juan ang parehong pandiwa sa mga sandali ng matinding pagkalumo: sa libingan ni Lazaro, sa Juan 11:33, nang makita ni Jesus ang pighati ni Maria at ng mga kasama niyang umiiyak. At muli sa Juan 12:27, nang ipahayag mismo ni Jesus na nababagabag ang kanyang kaluluwa habang papalapit na ang oras ng krus. Ikatlong beses na ito sa Juan 13:21, at ngayon ang dahilan ay ang pagtataksil ng isang taong tatlong taon nang kasama niya sa buhay.\n\n❓ Ang tanong na magbubukas sa pag-aaral na ito\n\nKatabi ni Jesus si Judas sa gabing iyon, mas malapit sa kanya kaysa halos sinuman sa iba pang nasa hapag.\n\nAno ang nangyayari sa isang pusong ganito kalapit... at sa parehong sandali, ganito rin kalayo?",
+      "scripture_references": [
+        {
+          "reference": "Juan 11:33",
+          "text": "Nahabag si Jesus at nabagbag ang kanyang kalooban nang makita niyang umiiyak si Maria, pati ang mga Judiong kasama nito."
+        },
+        {
+          "reference": "Juan 12:27",
+          "text": "“Ako'y nababagabag ngayon. Sasabihin ko bang, ‘Ama, iligtas mo ako sa oras na ito?’ Hindi! Sapagkat ito ang dahilan kung bakit ako naparito.”"
+        },
+        {
+          "reference": "Juan 13:21",
+          "text": "Pagkasabi nito, si Jesus ay labis na nabagabag at nagpahayag sa kanila, \"Pakatandaan ninyo: ako'y pagtataksilan ng isa sa inyo.\""
+        }
+      ],
+      "revelation_key": "Ipinahayag ni Jesus ang pagtataksil nang buong pagmamalasakit, hindi nang may kalamigan ng loob. Naramdaman niya ito nang kasing tindi ng pighati ng iba na naramdaman niya noon sa harap ng isang libingan."
+    },
+    {
+      "order": 2,
+      "type": "cultural_context",
+      "icon": "🍞",
+      "title": "Ang lugar sa tabi ni Jesus",
+      "subtitle": "Bakit mahalaga ang puwesto ni Judas sa hapag para maunawaan ang susunod na mangyayari",
+      "content": "🛋️ Ang ayos ng triclinium\n\nHumihilig ang mga panauhin sa kaliwang siko sa palibot ng isang mababang mesa, magkakadugtong sa tatlong panig at bukas sa ikaapat, tulad ng isang horseshoe. Ibig sabihin, ang ulo ng bawat tao ay malapit sa dibdib ng nakahilig sa kaliwa niya. Si Juan, ang minamahal na alagad, ay nakahilig sa dibdib ni Jesus (Juan 13:23) — ang lugar ng pinakamalapit na kalapitan. Para maabot ni Jesus si Judas at maiabot sa kanya ang tinapay nang hindi tumatayo, kailangang kasinglapit din ni Judas ang upuan, sa kabilang panig.\n\n🍞 Ang kahulugan ng ibinahaging tinapay\n\nSa kulturang iyon, ang pagsawsaw ng may-bahay sa isang pirasong tinapay at pag-abot nito sa isang panauhin ang pinakamataas na parangal na maaaring ialay sa isang hapag-kainan. Hindi ito basta kilos lamang. Ibinibigay ni Jesus kay Judas, sa harap ng lahat, ang lugar at pagtrato na nakalaan para sa pinakapinahahalagahan sa hapag na iyon.\n\n👥 Ang hindi nakita ng iba\n\nNang iabot ni Jesus ang tinapay kay Judas (Juan 13:26), naiwan ang ibang mga alagad sa hapag na hindi nauunawaan ang ibig sabihin ng tanda, gaya ng nakatala sa Juan 13:28. Tinanggap ni Judas, sa iisang sandali, ang pinakamalaking parangal sa hapag at ang tahimik na paglantad ng kanyang pagtataksil, at siya lamang ang nakaalam nito.",
+      "scripture_references": [
+        {
+          "reference": "Juan 13:23",
+          "text": "Katabi noon ni Jesus ang alagad na minamahal niya,"
+        },
+        {
+          "reference": "Juan 13:26",
+          "text": "\"Siya ang taong aabutan ko ng tinapay na aking isinawsaw,\" sagot ni Jesus. Nagsawsaw nga siya ng tinapay at ibinigay iyon kay Judas na anak ni Simon Iscariote."
+        },
+        {
+          "reference": "Juan 13:28",
+          "text": "Walang sinuman sa mga kasalo ni Jesus ang nakaunawa kung bakit niya sinabi iyon."
+        }
+      ],
+      "revelation_key": "Ang mismong kilos na nagtatak sa taksil ay siya ring, ayon sa kaugalian ng hapag na iyon, pinakamataas na parangal na maibibigay ng isang may-bahay."
+    },
+    {
+      "order": 3,
+      "type": "greek_exegesis",
+      "icon": "🌑",
+      "title": "Ang sinasabi ng tekstong Griego",
+      "subtitle": "Ang tumpak na sandaling nasagot ang tanong ng nakaraang card",
+      "content": "🍞 Ang piraso ng tinapay\n\nLumalabas lamang ang salitang **ψωμίον, (psōmíon) (G5596)** sa Juan 13, wala nang ibang lugar sa buong Bagong Tipan — isang maliit na piraso ng tinapay na isinawsaw sa sarsa ng karaniwang ulam. Walang negatibong bigat ang salitang ito; sa halip, inilalarawan nito ang kilos ng parangal na iaalay ng isang may-bahay sa isang kagalang-galang na panauhin.\n\n🚪 Ang pagpasok\n\nSinasabi ng Juan 13:27 na, pagkatapos mismo ng tinapay, pumasok si Satanas kay Judas. Ang pandiwa ay **εἰσέρχομαι, (eisérchomai) (G1525)** — tunay na pumasok, kumuha ng puwesto sa loob ng isang bagay.\n\n⏱️ Ang tumpak na pagkakasunod-sunod ng mga pangyayari\n\nMinarkahan ng teksto ang pagkakasunod-sunod nang may katumpakan: una ang tinapay, saka ang pagpasok ni Satanas. Sunud-sunod na naganap ang mga kilos — una ang biyayang inaalok ni Jesus, at pagkatapos, ang kadiliman na pumasok. Nasabi na ni Juan na inilagay ng diyablo sa puso ni Judas ang ideya ng pagtataksil kay Jesus (Juan 13:2); nasa isip at puso na ni Judas ang pagtataksil na iyon bago pa man ang gabing iyon.\n\nSinabi ni Jesus kay Judas na gawin agad ang gagawin niya (Juan 13:27).",
+      "greek_words": [
+        {
+          "word": "ψωμίον",
+          "transliteration": "psōmíon",
+          "strong": "G5596",
+          "meaning": "isang maliit na piraso ng isinawsaw na tinapay, inaalay bilang kilos ng parangal sa hapag",
+          "revelation": "Ang mismong kilos na nagtatak sa taksil ay, sa kanyang anyo, isang tunay na kilos ng parangal para sa kanya."
+        },
+        {
+          "word": "εἰσέρχομαι",
+          "transliteration": "eisérchomai",
+          "strong": "G1525",
+          "meaning": "pumasok nang epektibo, kumuha ng puwesto sa loob ng isang bagay",
+          "revelation": "Ang pumasok kay Judas ay isang tunay na pananakop, sa mismong sandaling tinanggap niya ang pinakamalaking parangal sa hapag."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "Juan 13:2",
+          "text": "Sa panahon ng hapunan, inilagay na ng diyablo sa isip ni Judas, na anak ni Simon Iscariote, na ipagkakanulo niya si Jesus sa mga Judio."
+        },
+        {
+          "reference": "Juan 13:27",
+          "text": "Nang matanggap ni Judas ang tinapay, pumasok sa kanya si Satanas. Sinabi ni Jesus kay Judas, \"Gawin mo na ang dapat mong gawin.\""
+        }
+      ],
+      "revelation_key": "Hindi pinasya ng tinapay at ng pagpasok ni Satanas ang pagtataksil: inilantad lamang nito ito, dahil inilagay na ng diyablo iyon sa puso ni Judas bago pa man ang gabing iyon."
+    },
+    {
+      "order": 4,
+      "type": "cultural_context",
+      "icon": "👣",
+      "title": "Isang kasabihan na may kasaysayan",
+      "subtitle": "Ang inilalantad ng salitang Griego sa likod ng sinaunang kasabihang ito",
+      "content": "📜 Isang sinaunang hula\n\nSa gabi ring iyon, sinipi ni Jesus ang isang taludtod mula sa Awit 41, na isinulat mga siglo bago pa noon: nailarawan na sa mga Kasulatan ang pagtataksil ng isang malapit na kasama (Juan 13:18; Awit 41:9).\n\n👣 Ang nakataas na sakong\n\nGumagamit ang parirala ng isang malakas na salita: **πτέρνα, (ptérna) (G4418)** — ang sakong. Sa kulturang iyon, inilalarawan ng buong pahayag ang isang hayop na tinatadyakan ng kanyang sakong ang amo na nagpapakain dito: isang suntok ng pagtataksil, marahas at direkta.\n\n👣 Ang ginawa ni Judas gamit ang sarili niyang mga paa\n\nItinala ng Lucas 22:3-4 na, bago ang gabing iyon, si Judas mismo ang pumunta para makipag-usap sa mga punong pari. Isang hakbang itong ginawa niya sa sarili niyang kagustuhan.",
+      "greek_words": [
+        {
+          "word": "πτέρνα",
+          "transliteration": "ptérna",
+          "strong": "G4418",
+          "meaning": "ang sakong",
+          "revelation": "Ang mismong sakong na dating sumuporta sa isang hayop sa harap ng kanyang amo ay naging, sa larawang ito, ang sandata ng pagtataksil."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "Mga Awit 41:9",
+          "text": "Lubos akong nagtiwala sa tapat kong kaibigan kasalo ko sa tuwina karamay sa anuman; ngunit ngayon, lubos siyang naging taksil na kalaban."
+        },
+        {
+          "reference": "Juan 13:18",
+          "text": "“Hindi kayong lahat ang tinutukoy ko; kilala ko ang aking mga pinili. Ngunit dapat matupad ang sinasabi sa kasulatan, ‘Pinagtaksilan ako ng taong pinapakain ko.’”"
+        },
+        {
+          "reference": "Lucas 22:3-4",
+          "text": "Noon nama'y pumasok si Satanas kay Judas, na tinatawag na Iscariote, na kabilang sa Labindalawa. Kaya't nakipagkita siya sa mga punong pari at sa mga pinuno ng bantay sa Templo upang kanilang pag-usapan kung paano niyang maipagkakanulo si Jesus."
+        }
+      ],
+      "revelation_key": "Tumpak ang larawan ng Awit: inilalarawan nito ang hayop na tinatadyakan ng kanyang sakong ang amo na nagpapakain dito."
+    },
+    {
+      "order": 5,
+      "type": "personal_application",
+      "icon": "🪞",
+      "title": "Ang tinaglay ni Judas, at ang ginawa niya rito",
+      "subtitle": "Ang itinatanong ng gabi ni Judas tungkol sa disposisyon ng puso",
+      "content": "📍 Lahat ng tinaglay ni Judas\n\nNaroon si Judas sa iisang silid kasama ang Anak ng Diyos. Narinig niya ang parehong mga aral na narinig ng labing-isa pang iba. Nakita niya ang parehong mga himala. Nilinis ni Jesus ang mismong mga paa niya sa gabing iyon rin, at tinanggap niya mula sa kanya ang pinakamalaking kilos ng parangal sa hapag. Isa si Judas sa labindalawang namuhay nang tatlong taon kasama si Jesus, araw-araw.\n\n🚪 Ang napagpasyahan niya sa kabila ng lahat ng kalapitang iyon\n\nAt gayunpaman, lumabas siya sa silid na iyon patungo sa pagtataksil (Juan 13:30). Ang pisikal na kalapitan kay Jesus ay hindi sapat, sa sarili nito, para magdulot ng pagbabago sa kanyang puso. Iningatan ni Judas ang kanyang desisyon sa buong pagtuturo, sa paghuhugas ng paa, at sa tinapay ng parangal, hanggang sa sandaling isinagawa niya ito.\n\n🌙 Ang tanong na naiiwan\n\n\"At gabi na noon\" (Juan 13:30) ay higit pa sa isang detalye tungkol sa oras ng araw. Tinawag na ni Juan si Jesus na ilaw ng sanlibutan sa mas nauna sa kanyang ebanghelyo; ang paglabas mula sa hapag na iyon patungo sa kadiliman sa labas ay sumasalamin sa kung ano na ang nangyari sa kalooban.\n\nIniiwan ng eksenang ito ang isang tanong na lampas pa kay Judas: gaano karami sa iyong kalapitan kay Jesus — ang pakikinig sa kanyang salita, ang pakikibahagi sa kanyang iglesia, ang pagkakaalam ng wastong doktrina — ang naging tunay na disposisyon ng puso na payagang mabago, at gaano karami rito ang nananatili, tulad ni Judas, kalapitan nang walang pagsuko?",
+      "scripture_references": [
+        {
+          "reference": "Juan 13:30",
+          "text": "Nang makain na ni Judas ang tinapay, kaagad itong umalis. Noon ay gabi na."
+        }
+      ],
+      "revelation_key": "Ang agwat sa pagitan ng pagiging malapit kay Jesus at ang pagiging kanya ay sinusukat sa disposisyon ng puso na payagang mabago ng nakita at natanggap na nito."
+    },
+    {
+      "order": 6,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Personal na pagtuklas",
+      "discovery_questions": [
+        {
+          "category": "Disposisyon ng puso",
+          "question": "Gaano karami sa iyong kalapitan kay Jesus — ang pagbabasa ng kanyang salita, ang pagtitipon kasama ng kanyang bayan, ang pananalangin — ang naging tunay na disposisyon na payagang mabago?"
+        },
+        {
+          "category": "Biyayang natanggap",
+          "question": "Isipin ang isang kamakailang sandali nang malinaw mong naramdaman ang biyaya ng Diyos. Paano tumugon ang iyong puso sa sandaling iyon: lumambot ba ito, o nanatili sa sarili nitong plano?"
+        },
+        {
+          "category": "Kalayaan at pananagutan",
+          "question": "Sa anong bahagi ng iyong buhay mo alam nang eksakto ang hinihiling ng Diyos sa iyo, ngunit patuloy mo pa ring ipinagpapaliban ang desisyon na tumugon? Ano ang ipinapabayad sa iyo ng pag-antalang iyon, at ano ang pumipigil sa iyong gumawa ng hakbang?"
+        }
+      ],
+      "prayer": {
+        "title": "Isang panalangin bago ang biyayang inaalok",
+        "content": "Panginoong Jesus, salamat sa patuloy mong pag-aalok ng biyaya kahit alam mo nang paano ako tutugon. Kinikilala ko na kung minsan, tinatanggap ko ang iyong salita at ang iyong mga kaloob gamit lamang ang aking mga kamay, habang nananatiling nakakapit ang aking puso sa sarili nitong plano. Patawarin mo ako sa mga pagkakataong ang aking kalapitan sa iyo ay naging ugali na lamang sa halip na pagsuko. Palambutin mo ngayon ang naging matigas sa akin. Bigyan mo ako ng pusong tunay na handang tumugon sa iyong biyaya, higit pa sa panlabas na kalapitan lamang. Salamat dahil ang pag-ibig mo sa akin ay nakasalalay sa kung sino ka: ang iyong biyaya at ang iyong awa. Sa iyong pangalan, amen."
+      }
+    }
+  ],
+  "tags": [
+    "biyaya",
+    "malayang_kalooban",
+    "pagtataksil",
+    "juan_13",
+    "judas",
+    "liwanag_at_dilim"
+  ],
+  "metadata": {
+    "total_word_count": 977,
+    "greek_words_count": 3,
+    "scripture_references_count": 12,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "biyayang inalok at tinanggihan",
+      "malayang kalooban",
+      "hulang natupad",
+      "pagtataksil",
+      "disposisyon ng puso"
+    ]
+  }
+}
