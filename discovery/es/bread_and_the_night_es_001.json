@@ -95,34 +95,35 @@
     },
     {
       "order": 4,
-      "type": "theological_tension",
-      "icon": "⚖️",
-      "title": "Lo que estaba escrito, y lo que Judas decidió",
-      "subtitle": "La Escritura sostiene dos verdades a la vez, sin explicar cómo encajan",
-      "content": "📖 Estaba escrito\n\nJesús mismo dice, en este mismo capítulo, que lo que va a pasar cumple una profecía escrita siglos antes, en el Salmo 41 (Juan 13:18). Mucho antes de esa noche, Juan ya había registrado que Jesús sabía desde el principio quién lo iba a entregar (Juan 6:64).\n\n🕊️ Judas sigue siendo libre\n\nAl mismo tiempo, el texto presenta a Judas actuando con voluntad propia en cada paso del camino. Lucas 22:3 ya registra que Satanás había influido en Judas días antes, cuando fue a negociar con los sacerdotes. Lo de Juan 13:27 es la culminación de un proceso que Judas mismo fue construyendo con sus propias decisiones.\n\n💡 Dos verdades que la Escritura sostiene juntas\n\nLa Biblia sostiene juntas la profecía cumplida y la decisión libre de Judas, con la misma naturalidad con que Pedro predicó después sobre la muerte de Jesús, afirmando en la misma frase el plan de Dios y la responsabilidad humana (Hechos 2:23). Lo que estaba escrito no le quitó a Judas su propia voluntad; ambas cosas son ciertas al mismo tiempo, y el texto las deja así, sin resolverlas por nosotros.\n\nPor eso el amor de Jesús hacia Judas hasta el último instante tiene tanto peso: fue una oferta genuina de gracia, dirigida a una voluntad que todavía podía responder distinto. Judas decidió no hacerlo.",
+      "type": "cultural_context",
+      "icon": "👣",
+      "title": "Una imagen más violenta de lo que parece",
+      "subtitle": "Lo que revela la palabra griega detrás de esa expresión antigua",
+      "content": "📜 Una profecía antigua\n\nEsa misma noche, Jesús cita una frase del Salmo 41, escrita siglos antes: la traición de alguien cercano ya estaba descrita en las Escrituras (Juan 13:18; Salmo 41:9).\n\n👣 El talón levantado\n\nLa frase usa una palabra fuerte: **πτέρνα, (ptérna) (G4418)** — el talón. La expresión completa describía, en esa cultura, la imagen de una bestia que golpea con su pata trasera al amo que la alimenta: un golpe de traición violento y directo, una imagen dura y concreta.\n\n👣 Lo que Judas hizo con sus propios pies\n\nLucas 22:3 registra que, antes de esa noche, Judas mismo fue a negociar con los sacerdotes. Fue un paso que dio con su propia voluntad.",
+      "greek_words": [
+        {
+          "word": "πτέρνα",
+          "transliteration": "ptérna",
+          "strong": "G4418",
+          "meaning": "el talón, el calcañar",
+          "revelation": "El mismo talón que sostenía a un animal frente a su amo se convierte, en esta imagen, en el arma de la traición."
+        }
+      ],
       "scripture_references": [
         {
-          "reference": "Juan 6:64",
-          "text": "Pero hay algunos de vosotros que no creen. Porque Jesús sabía desde el principio quiénes eran los que no creían, y quién le había de entregar."
-        },
-        {
-          "reference": "Lucas 22:3",
-          "text": "Y entró Satanás en Judas, por sobrenombre Iscariote, el cual era uno del número de los doce;"
+          "reference": "Salmo 41:9",
+          "text": "Aun el hombre de mi paz, en quien yo confiaba, el que de mi pan comía, alzó contra mí el calcañar."
         },
         {
           "reference": "Juan 13:18",
           "text": "No hablo de todos vosotros; yo sé a quienes he elegido; mas para que se cumpla la Escritura: El que come pan conmigo, levantó contra mí su calcañar."
         },
         {
-          "reference": "Juan 13:27",
-          "text": "Y después del bocado, Satanás entró en él. Entonces Jesús le dijo: Lo que vas a hacer, hazlo más pronto."
-        },
-        {
-          "reference": "Hechos 2:23",
-          "text": "a éste, entregado por el determinado consejo y anticipado conocimiento de Dios, prendisteis y matasteis por manos de inicuos, crucificándole;"
+          "reference": "Lucas 22:3",
+          "text": "Y entró Satanás en Judas, por sobrenombre Iscariote, el cual era uno del número de los doce;"
         }
       ],
-      "revelation_key": "Lo que estaba profetizado y lo que Judas decidió libremente son, ambas, verdaderas al mismo tiempo — la Escritura las sostiene juntas sin explicar el misterio."
+      "revelation_key": "El lenguaje que Jesús usa para describir la traición de Judas es el de un golpe violento, como el de una bestia contra su amo."
     },
     {
       "order": 5,
@@ -173,14 +174,14 @@
     "luz_y_tinieblas"
   ],
   "metadata": {
-    "total_word_count": 1439,
+    "total_word_count": 1354,
     "greek_words_count": 3,
-    "scripture_references_count": 9,
+    "scripture_references_count": 12,
     "difficulty_level": "intermediate",
     "themes": [
       "gracia ofrecida y rechazada",
       "libre albedrio",
-      "soberania de Dios",
+      "profecia cumplida",
       "traicion",
       "disposicion del corazon"
     ]
