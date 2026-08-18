@@ -72,6 +72,26 @@
       "verified": "LU17 shifts Psalm 18 by one verse starting partway through the chapter; confirmed text at 18:17 ('Er streckte seine Hand aus von der Höhe und fasste mich und zog mich aus großen Wassern') matches KJV Psalm 18:16 verbatim (God reaches down and draws the psalmist out of many waters)."
     },
     {
+      "en_reference": "Psalms 41:9",
+      "bible_version": "LSG1910",
+      "lang": "fr",
+      "target_chapter": 41,
+      "target_verse_start": 10,
+      "target_verse_end": 10,
+      "native_reference": "Psaume 41:10",
+      "verified": "LSG1910 shifts Psalm 41 by one verse (verse 1 is the psalm superscription, counted separately from KJV's unnumbered title); confirmed text at 41:10 ('Celui-là même avec qui j'étais en paix, Qui avait ma confiance et qui mangeait mon pain, Lève le talon contre moi.') matches KJV Psalm 41:9 verbatim (familiar friend who ate my bread lifted up his heel against me)."
+    },
+    {
+      "en_reference": "Psalms 41:9",
+      "bible_version": "LU17",
+      "lang": "de",
+      "target_chapter": 41,
+      "target_verse_start": 10,
+      "target_verse_end": 10,
+      "native_reference": "Psalm 41:10",
+      "verified": "LU17 shifts Psalm 41 by one verse (verse 1 is the psalm superscription, counted separately from KJV's unnumbered title); confirmed text at 41:10 ('Auch mein Freund, dem ich vertraute, der mein Brot aß, tritt mich mit Füßen.') matches KJV Psalm 41:9 verbatim (familiar friend who ate my bread lifted up his heel against me)."
+    },
+    {
       "en_reference": "John 7:37",
       "bible_version": "MBB05",
       "lang": "fil",
