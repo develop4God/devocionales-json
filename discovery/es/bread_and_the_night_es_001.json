@@ -64,7 +64,7 @@
       "icon": "🌑",
       "title": "Lo que dice el texto griego",
       "subtitle": "El momento exacto en que la pregunta del card anterior encuentra su respuesta",
-      "content": "🍞 El bocado\n\nLa palabra **ψωμίον, (psōmíon) (G5596)** aparece solo en los evangelios, y solo en esta escena: un pequeño trozo de pan mojado en la salsa del plato común. No es una palabra con carga negativa en sí misma — describe simplemente el gesto de honor que un anfitrión ofrecía a un invitado distinguido.\n\n🚪 La entrada\n\nJuan 13:27 dice que, después del bocado, Satanás entró en Judas. El verbo es **εἰσέρχομαι, (eisérchomai) (G1525)** — entrar de forma efectiva, tomar posición dentro de algo. Describe una ocupación real: Satanás toma un lugar concreto dentro de la voluntad de Judas.\n\n⏱️ El orden exacto de los hechos\n\nEl texto griego marca la secuencia con precisión: primero el bocado, después la entrada. Judas recibe en sus manos el gesto de mayor honor de toda la mesa, y en el mismo instante en que lo recibe, endurece su corazón contra lo que ese gesto representaba. El **psōmion** era gracia extendida; la reacción de Judas ante ella fue lo que abrió la puerta a lo que Juan describe con **eiserchomai**.\n\nJesús responde a esa realidad, no la provoca: le dice a Judas que haga pronto lo que va a hacer (Juan 13:27). La entrega ya estaba decidida en el corazón de Judas; el bocado solo hizo visible el momento en que esa decisión se volvió irreversible.",
+      "content": "🍞 El bocado\n\nLa palabra **ψωμίον, (psōmíon) (G5596)** aparece solo en Juan 13, en ningún otro lugar del Nuevo Testamento — un pequeño trozo de pan mojado en la salsa del plato común. No es una palabra con carga negativa, por el contrario describe el gesto de honor que un anfitrión ofrecía a un invitado distinguido.\n\n🚪 La entrada\n\nJuan 13:27 dice que, justo después del bocado, Satanás entró en Judas. El verbo es **εἰσέρχομαι, (eisérchomai) (G1525)** — entrar de verdad, tomar un lugar dentro de algo.\n\n⏱️ El orden exacto de los hechos\n\nEl texto marca el orden con precisión: primero el bocado, después la entrada de Satanás. Las acciones ocurren una después de la otra: gracia extendida ofrecida por Jesús, pero en contraparte oscuridad que entra. Juan ya había dicho antes que el diablo puso en el corazón de Judas la idea de entregar a Jesús (Juan 13:2); esa traición ya estaba en la mente y el corazón de Judas.\n\nJesús le dice a Judas que haga pronto lo que va a hacer (Juan 13:27).",
       "greek_words": [
         {
           "word": "ψωμίον",
@@ -78,16 +78,20 @@
           "transliteration": "eisérchomai",
           "strong": "G1525",
           "meaning": "entrar de forma efectiva, tomar posición dentro de algo",
-          "revelation": "Lo que entró en Judas fue una ocupación real, en el instante en que su corazón se cerró a la gracia que acababa de recibir."
+          "revelation": "Lo que entró en Judas fue una ocupación real, en el mismo momento en que recibía el mayor honor de la mesa."
         }
       ],
       "scripture_references": [
+        {
+          "reference": "Juan 13:2",
+          "text": "Y cuando cenaban, como el diablo ya había puesto en el corazón de Judas Iscariote, hijo de Simón, que le entregase,"
+        },
         {
           "reference": "Juan 13:27",
           "text": "Y después del bocado, Satanás entró en él. Entonces Jesús le dijo: Lo que vas a hacer, hazlo más pronto."
         }
       ],
-      "revelation_key": "Entre el bocado y la entrada de Satanás hay una decisión humana que se endurece justo en el momento en que la gracia se le ofrece de frente."
+      "revelation_key": "El bocado y la entrada de Satanás no deciden la traición: la hacen visible, porque el diablo ya la había puesto en el corazón de Judas antes de esa noche."
     },
     {
       "order": 4,
