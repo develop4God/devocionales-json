@@ -1,0 +1,189 @@
+{
+  "id": "bread_and_the_night_001",
+  "type": "discovery",
+  "date": "2026-08-15",
+  "title": "Le pain et la nuit",
+  "subtitle": "Ce qui s'est passé dans le cœur de Judas pendant que Jésus lui offrait la grâce jusqu'au bout",
+  "language": "fr",
+  "version": "LSG1910",
+  "estimated_reading_minutes": 9,
+  "key_verse": {
+    "reference": "Jean 13:21",
+    "text": "Ayant ainsi parlé, Jésus fut troublé en son esprit, et il dit expressément: En vérité, en vérité, je vous le dis, l'un de vous me livrera."
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "opening_mystery",
+      "icon": "🕯️",
+      "title": "Ce que Jésus a ressenti avant de nommer le traître",
+      "subtitle": "Le trouble qui précède le moment le plus sombre de la dernière Cène",
+      "content": "😨 Le mot que Jean choisit\n\nEn Jean 13:21, avant d'annoncer que l'un des douze va le livrer, le texte décrit Jésus avec un mot fort: **ταράσσω, (tarássō) (G5015)** — être agité intérieurement, comme une eau brassée avec violence. Ce n'est pas un simple malaise. C'est un véritable bouleversement intérieur.\n\n🔁 Un mot que Jean avait déjà employé\n\nJean utilise ce même verbe uniquement dans des moments de rupture profonde: devant le tombeau de Lazare, en Jean 11:33, quand Jésus voit la douleur de Marie et de ceux qui pleuraient avec elle. Et de nouveau en Jean 12:27, quand Jésus lui-même déclare que son âme est troublée à l'approche de l'heure de la croix. Jean 13:21 est la troisième fois, et cette fois la cause est la trahison de quelqu'un avec qui Jésus a partagé trois ans de vie.\n\n❓ La question qui ouvre cette étude\n\nJudas est assis auprès de Jésus ce soir-là, plus près de lui que presque tous les autres à table.\n\nQue se passe-t-il dans un cœur qui est aussi proche... et en même temps aussi distant?",
+      "scripture_references": [
+        {
+          "reference": "Jean 11:33",
+          "text": "Jésus, la voyant pleurer, elle et les Juifs qui étaient venus avec elle, frémit en son esprit, et fut tout ému."
+        },
+        {
+          "reference": "Jean 12:27",
+          "text": "Maintenant mon âme est troublée. Et que dirai-je?… Père, délivre-moi de cette heure?… Mais c'est pour cela que je suis venu jusqu'à cette heure."
+        },
+        {
+          "reference": "Jean 13:21",
+          "text": "Ayant ainsi parlé, Jésus fut troublé en son esprit, et il dit expressément: En vérité, en vérité, je vous le dis, l'un de vous me livrera."
+        }
+      ],
+      "revelation_key": "Jésus n'a pas annoncé la trahison avec une froideur calculée. Il l'a ressentie, avec la même intensité qu'il avait ressentie la douleur des autres devant un tombeau."
+    },
+    {
+      "order": 2,
+      "type": "cultural_context",
+      "icon": "🍞",
+      "title": "La place auprès de Jésus",
+      "subtitle": "Pourquoi la position de Judas à table compte pour comprendre la suite",
+      "content": "🛋️ La disposition du triclinium\n\nLes convives s'inclinaient sur le coude gauche autour d'une table basse, fermée sur trois côtés et ouverte sur le quatrième, comme un fer à cheval. Cela signifiait que la tête de chaque personne se trouvait près de la poitrine de celui qui était à sa gauche. Jean, le disciple bien-aimé, est couché sur le sein de Jésus (Jean 13:23) — la place la plus proche de toutes. Pour que Jésus puisse tendre une bouchée directement à Judas sans se lever, Judas devait être assis tout aussi près, de l'autre côté.\n\n🍞 La signification de la bouchée partagée\n\nDans cette culture, le fait que l'hôte trempe un morceau de pain et le tende à un invité constituait le plus grand honneur que l'on pouvait offrir lors d'un repas. Ce n'était pas un geste anodin. Jésus donne publiquement à Judas la place et le traitement réservés à celui que l'on estime le plus à cette table.\n\n👥 Ce que les autres n'ont pas vu\n\nQuand Jésus tend la bouchée à Judas (Jean 13:26), les autres disciples à table restent sans comprendre le sens de ce geste, comme le rapporte Jean 13:28. Judas reçoit, au même instant, le plus grand honneur de la table et l'identification silencieuse de sa trahison, et lui seul le sait.",
+      "scripture_references": [
+        {
+          "reference": "Jean 13:23",
+          "text": "Un des disciples, celui que Jésus aimait, était couché sur le sein de Jésus."
+        },
+        {
+          "reference": "Jean 13:26",
+          "text": "Jésus répondit: C'est celui à qui je donnerai le morceau trempé. Et, ayant trempé le morceau, il le donna à Judas, fils de Simon, l'Iscariot."
+        },
+        {
+          "reference": "Jean 13:28",
+          "text": "Mais aucun de ceux qui étaient à table ne comprit pourquoi il lui disait cela;"
+        }
+      ],
+      "revelation_key": "Le geste même qui désignait le traître était, selon la coutume de cette table, le plus grand honneur qu'un hôte pouvait accorder."
+    },
+    {
+      "order": 3,
+      "type": "greek_exegesis",
+      "icon": "🌑",
+      "title": "Ce que dit le texte grec",
+      "subtitle": "Le moment exact où la question du card précédent trouve sa réponse",
+      "content": "🍞 La bouchée\n\nLe mot **ψωμίον, (psōmíon) (G5596)** apparaît uniquement en Jean 13, nulle part ailleurs dans le Nouveau Testament — un petit morceau de pain trempé dans la sauce du plat commun. Ce n'est pas un mot à connotation négative; au contraire, il décrit le geste d'honneur qu'un hôte offrait à un invité distingué.\n\n🚪 L'entrée\n\nJean 13:27 dit que, juste après la bouchée, Satan entra dans Judas. Le verbe est **εἰσέρχομαι, (eisérchomai) (G1525)** — entrer véritablement, prendre place à l'intérieur de quelque chose.\n\n⏱️ L'ordre exact des faits\n\nLe texte marque l'ordre avec précision: d'abord la bouchée, ensuite l'entrée de Satan. Les actions se succèdent l'une après l'autre: d'abord la grâce que Jésus offre, et ensuite l'obscurité qui entre. Jean avait déjà dit que le diable avait mis dans le cœur de Judas l'idée de livrer Jésus (Jean 13:2); cette trahison était déjà présente dans l'esprit et le cœur de Judas.\n\nJésus dit à Judas de faire promptement ce qu'il va faire (Jean 13:27).",
+      "greek_words": [
+        {
+          "word": "ψωμίον",
+          "transliteration": "psōmíon",
+          "strong": "G5596",
+          "meaning": "un petit morceau de pain trempé, offert comme geste d'honneur à table",
+          "revelation": "Le même geste qui identifiait le traître était, dans sa forme, un acte d'honneur authentique envers lui."
+        },
+        {
+          "word": "εἰσέρχομαι",
+          "transliteration": "eisérchomai",
+          "strong": "G1525",
+          "meaning": "entrer réellement, prendre position à l'intérieur de quelque chose",
+          "revelation": "Ce qui est entré en Judas fut une occupation réelle, au moment même où il recevait le plus grand honneur de la table."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "Jean 13:2",
+          "text": "Pendant le souper, lorsque le diable avait déjà inspiré au cœur de Judas Iscariot, fils de Simon, le dessein de le livrer,"
+        },
+        {
+          "reference": "Jean 13:27",
+          "text": "Dès que le morceau fut donné, Satan entra dans Judas. Jésus lui dit: Ce que tu fais, fais-le promptement."
+        }
+      ],
+      "revelation_key": "La bouchée et l'entrée de Satan ne décident pas de la trahison: elles la rendent visible, car le diable l'avait déjà mise dans le cœur de Judas avant cette nuit-là."
+    },
+    {
+      "order": 4,
+      "type": "cultural_context",
+      "icon": "👣",
+      "title": "Une expression chargée d'histoire",
+      "subtitle": "Ce que révèle le mot grec derrière cette ancienne expression",
+      "content": "📜 Une prophétie ancienne\n\nCette même nuit, Jésus cite une phrase du Psaume 41, écrite des siècles plus tôt: la trahison d'un proche était déjà décrite dans les Écritures (Jean 13:18; Psaume 41:10).\n\n👣 Le talon levé\n\nLa phrase emploie un mot fort: **πτέρνα, (ptérna) (G4418)** — le talon. L'expression complète décrivait, dans cette culture, l'image d'une bête qui frappe de son talon le maître qui la nourrit: un coup de trahison violent et direct.\n\n👣 Ce que Judas a fait de ses propres pas\n\nLuc 22:3-4 rapporte que, avant cette nuit-là, Judas lui-même est allé négocier avec les prêtres. C'était un pas qu'il a fait de sa propre volonté.",
+      "greek_words": [
+        {
+          "word": "πτέρνα",
+          "transliteration": "ptérna",
+          "strong": "G4418",
+          "meaning": "le talon",
+          "revelation": "Le même talon qui soutenait un animal devant son maître devient, dans cette image, l'arme de la trahison."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "Psaumes 41:10",
+          "text": "Celui-là même avec qui j'étais en paix, Qui avait ma confiance et qui mangeait mon pain, Lève le talon contre moi."
+        },
+        {
+          "reference": "Jean 13:18",
+          "text": "Ce n'est pas de vous tous que je parle; je connais ceux que j'ai choisis. Mais il faut que l'Écriture s'accomplisse: Celui qui mange avec moi le pain A levé son talon contre moi."
+        },
+        {
+          "reference": "Luc 22:3-4",
+          "text": "Or, Satan entra dans Judas, surnommé Iscariot, qui était du nombre des douze. Et Judas alla s'entendre avec les principaux sacrificateurs et les chefs des gardes, sur la manière de le leur livrer."
+        }
+      ],
+      "revelation_key": "L'image du Psaume est précise: elle décrit la bête qui frappe de son talon le maître qui la nourrit."
+    },
+    {
+      "order": 5,
+      "type": "personal_application",
+      "icon": "🪞",
+      "title": "Ce que Judas a eu et ce qu'il en a fait",
+      "subtitle": "Ce que la nuit de Judas révèle sur la disposition du cœur",
+      "content": "📍 Tout ce que Judas a eu\n\nJudas s'est trouvé dans la même pièce que le Fils de Dieu. Il a entendu les mêmes enseignements que les onze autres. Il a vu les mêmes miracles. Il a eu ses propres pieds lavés par les mains de Jésus cette nuit-là même, et il a reçu de lui le plus grand geste d'honneur à table. Judas était l'un des douze qui ont vécu trois ans aux côtés de Jésus, jour après jour.\n\n🚪 Ce qu'il a décidé malgré cette proximité\n\nEt pourtant, il est sorti de cette salle pour aller vers la trahison (Jean 13:30). La proximité physique avec Jésus n'a pas produit, à elle seule, un changement dans son cœur. Judas a gardé sa décision intacte à travers l'enseignement, le lavement des pieds et la bouchée d'honneur, jusqu'à l'instant où il l'a mise à exécution.\n\n🌙 La question qui reste ouverte\n\n\"Et il était nuit\" (Jean 13:30) est plus qu'une simple indication d'heure. Jean a déjà appelé Jésus la lumière du monde plus tôt dans son évangile; sortir de cette table vers l'obscurité extérieure reflète ce qui s'était déjà produit à l'intérieur.\n\nCette scène laisse une question qui dépasse Judas: quelle part de ta proximité avec Jésus (écouter sa parole, participer à son Église, connaître la saine doctrine) est devenue une disposition réelle du cœur à te laisser transformer, et quelle part reste, comme chez Judas, une proximité sans reddition?",
+      "scripture_references": [
+        {
+          "reference": "Jean 13:30",
+          "text": "Judas, ayant pris le morceau, se hâta de sortir. Il était nuit."
+        }
+      ],
+      "revelation_key": "La distance entre être proche de Jésus et lui appartenir se mesure à la disposition du cœur à se laisser transformer par ce qu'il a déjà vu et reçu."
+    },
+    {
+      "order": 6,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Découverte personnelle",
+      "discovery_questions": [
+        {
+          "category": "Disposition du cœur",
+          "question": "Quelle part de ta proximité avec Jésus — lire sa parole, te rassembler avec l'Église, prier — est devenue une disposition réelle à te laisser transformer?"
+        },
+        {
+          "category": "Grâce reçue",
+          "question": "Pense à un moment récent où tu as senti la grâce de Dieu de façon claire. Comment ton cœur a-t-il répondu à cet instant: s'est-il attendri, ou a-t-il continué avec ses propres plans?"
+        },
+        {
+          "category": "Liberté et responsabilité",
+          "question": "Dans quel domaine de ta vie sais-tu exactement ce que Dieu te demande, mais continues-tu à reporter la décision d'y répondre? Que te coûte ce délai, et qu'est-ce qui t'empêche de faire ce pas?"
+        }
+      ],
+      "prayer": {
+        "title": "Prière devant la grâce offerte",
+        "content": "Seigneur Jésus, merci de continuer à m'offrir ta grâce même quand tu sais d'avance comment je vais répondre. Je reconnais que parfois je reçois ta parole et tes dons avec mes mains, tandis que mon cœur reste attaché à mes propres plans. Pardonne-moi pour les fois où la proximité avec toi est devenue une habitude au lieu d'une reddition. Attendris aujourd'hui ce qui s'est endurci en moi. Donne-moi un cœur disposé à répondre vraiment à ta grâce, au-delà de la proximité extérieure. Merci parce que ton amour pour moi dépend de qui tu es: ta grâce et ta miséricorde. En ton nom, amen."
+      }
+    }
+  ],
+  "tags": [
+    "grâce",
+    "libre_arbitre",
+    "trahison",
+    "jean_13",
+    "judas",
+    "lumière_et_ténèbres"
+  ],
+  "metadata": {
+    "total_word_count": 971,
+    "greek_words_count": 3,
+    "scripture_references_count": 12,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "grâce offerte et rejetée",
+      "libre arbitre",
+      "prophétie accomplie",
+      "trahison",
+      "disposition du cœur"
+    ]
+  }
+}
