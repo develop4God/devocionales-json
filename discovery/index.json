@@ -2066,6 +2066,59 @@
         "ar": 12,
         "fil": 10
       }
+    },
+    {
+      "id": "bread_and_the_night_001",
+      "version": "1.0",
+      "emoji": "🕯️",
+      "files": {
+        "es": "bread_and_the_night_es_001.json",
+        "pt": "bread_and_the_night_pt_001.json",
+        "fr": "bread_and_the_night_fr_001.json",
+        "en": "bread_and_the_night_en_001.json",
+        "ar": "bread_and_the_night_ar_001.json",
+        "de": "bread_and_the_night_de_001.json",
+        "fil": "bread_and_the_night_fil_001.json",
+        "hi": "bread_and_the_night_hi_001.json",
+        "ja": "bread_and_the_night_ja_001.json",
+        "zh": "bread_and_the_night_zh_001.json"
+      },
+      "titles": {
+        "es": "El pan y la noche",
+        "pt": "O pão e a noite",
+        "fr": "Le pain et la nuit",
+        "en": "The Bread and the Night",
+        "ar": "الخبز والليل",
+        "de": "Das Brot und die Nacht",
+        "fil": "Ang Tinapay at ang Gabi",
+        "hi": "रोटी और वह रात",
+        "ja": "パンと夜",
+        "zh": "饼与黑夜"
+      },
+      "subtitles": {
+        "es": "Lo que pasó en el corazón de Judas mientras Jesús le ofrecía gracia hasta el final",
+        "pt": "O que aconteceu no coração de Judas enquanto Jesus lhe oferecia graça até o fim",
+        "fr": "Ce qui s'est passé dans le cœur de Judas pendant que Jésus lui offrait la grâce jusqu'au bout",
+        "en": "What happened in Judas' heart while Jesus offered him grace to the very end",
+        "ar": "ما جرى في قلب يهوذا بينما كان يسوع يمدّ له النعمة حتى النهاية",
+        "de": "Was im Herzen des Judas geschah, während Jesus ihm bis zuletzt seine Gnade anbot",
+        "fil": "Ang nangyari sa puso ni Judas habang inaalok pa rin siya ni Jesus ng biyaya hanggang sa katapusan",
+        "hi": "यहूदा के हृदय में उस रात क्या हुआ, जब यीशु अंत तक उसे अनुग्रह देते रहे",
+        "ja": "御方が最後までユダに恵みを差し出しておられた間、ユダの心の中で何が起きていたのか",
+        "zh": "耶稣将恩典赐给犹大直到最后一刻，他心里发生了什么"
+      },
+      "estimated_reading_minutes": {
+        "es": 7,
+        "pt": 8,
+        "fr": 9,
+        "en": 7,
+        "ar": 9,
+        "de": 9,
+        "fil": 8,
+        "hi": 9,
+        "ja": 10,
+        "zh": 9
+      }
     }
   ]
 }

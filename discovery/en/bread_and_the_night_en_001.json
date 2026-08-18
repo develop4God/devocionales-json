@@ -1,0 +1,189 @@
+{
+  "id": "bread_and_the_night_001",
+  "type": "discovery",
+  "date": "2026-08-15",
+  "title": "The Bread and the Night",
+  "subtitle": "What happened in Judas' heart while Jesus offered him grace to the very end",
+  "language": "en",
+  "version": "KJV",
+  "estimated_reading_minutes": 7,
+  "key_verse": {
+    "reference": "John 13:21",
+    "text": "When Jesus had thus said, he was troubled in spirit, and testified, and said, Verily, verily, I say unto you, that one of you shall betray me."
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "opening_mystery",
+      "icon": "🕯️",
+      "title": "What Jesus felt before naming the traitor",
+      "subtitle": "The turmoil that precedes the darkest moment of the Last Supper",
+      "content": "😨 The word John uses\n\nIn John 13:21, before announcing that one of the twelve is going to betray him, the text describes Jesus with a strong word: **ταράσσω, (tarássō) (G5015)** — to be stirred within, like water violently disturbed. This is not a mild discomfort. It is a real inner turmoil.\n\n🔁 A word John had already used\n\nJohn uses that same verb only at moments of deep breaking: at Lazarus' tomb, in John 11:33, when Jesus sees the grief of Mary and those weeping with her. And again in John 12:27, when Jesus himself declares that his soul is troubled as the hour of the cross draws near. John 13:21 is the third time, and now the cause is the betrayal of someone with whom Jesus has shared three years of life.\n\n❓ The question that opens this study\n\nJudas is sitting beside Jesus that night, closer to him than almost anyone else at the table.\n\nWhat happens in a heart that is this close... and at the same time this distant?",
+      "scripture_references": [
+        {
+          "reference": "John 11:33",
+          "text": "When Jesus therefore saw her weeping, and the Jews also weeping who came with her, he groaned in his spirit, and was troubled,"
+        },
+        {
+          "reference": "John 12:27",
+          "text": "Now is my soul troubled; and what shall I say? Father, save me from this hour: but for this cause came I unto this hour."
+        },
+        {
+          "reference": "John 13:21",
+          "text": "When Jesus had thus said, he was troubled in spirit, and testified, and said, Verily, verily, I say unto you, that one of you shall betray me."
+        }
+      ],
+      "revelation_key": "Jesus did not announce the betrayal with calculated coldness. He felt it, with the same intensity he had felt another's grief before a tomb."
+    },
+    {
+      "order": 2,
+      "type": "cultural_context",
+      "icon": "🍞",
+      "title": "The place beside Jesus",
+      "subtitle": "Why Judas' position at the table matters for what follows",
+      "content": "🛋️ The layout of the triclinium\n\nGuests reclined on their left elbow around a low table, joined on three sides and open on the fourth, like a horseshoe. That meant each person's head rested near the chest of whoever lay to their left. John, the beloved disciple, is reclining on Jesus' chest (John 13:23) — the place of closest nearness. For Jesus to hand a morsel directly to Judas without standing, Judas had to be seated just as close, on the other side.\n\n🍞 The meaning of the shared morsel\n\nIn that culture, for a host to dip a piece of bread and hand it to a guest was the greatest honor that could be offered at a meal. It was not a casual gesture. Jesus is giving Judas, in full view of everyone, the place and treatment reserved for the one held in highest esteem at that table.\n\n👥 What the others did not see\n\nWhen Jesus hands the morsel to Judas (John 13:26), the other disciples at the table are left not understanding the sign, exactly as John 13:28 records. Judas receives, in the same instant, the greatest honor at the table and the silent identification of his betrayal, and only he knows it.",
+      "scripture_references": [
+        {
+          "reference": "John 13:23",
+          "text": "Now there was leaning on Jesus' bosom one of his disciples, whom Jesus loved."
+        },
+        {
+          "reference": "John 13:26",
+          "text": "Jesus answered, He it is, to whom I shall give a morsel, when I have dipped it. And when he had dipped the morsel, he gave it to Judas Iscariot, the son of Simon."
+        },
+        {
+          "reference": "John 13:28",
+          "text": "Now no man at the table knew for what intent he spoke this unto him."
+        }
+      ],
+      "revelation_key": "The same gesture that marked the traitor was, by the custom of that table, the greatest honor a host could give."
+    },
+    {
+      "order": 3,
+      "type": "greek_exegesis",
+      "icon": "🌑",
+      "title": "What the Greek text says",
+      "subtitle": "The exact moment the previous card's question finds its answer",
+      "content": "🍞 The morsel\n\nThe word **ψωμίον, (psōmíon) (G5596)** appears only in John 13, nowhere else in the New Testament — a small piece of bread dipped in the sauce of the common dish. It carries no negative weight; on the contrary, it describes the gesture of honor a host would offer a distinguished guest.\n\n🚪 The entering\n\nJohn 13:27 says that, right after the morsel, Satan entered into Judas. The verb is **εἰσέρχομαι, (eisérchomai) (G1525)** — to truly enter, to take a place within something.\n\n⏱️ The exact order of events\n\nThe text marks the order with precision: first the morsel, then Satan's entering. The actions happen one after the other — first the grace Jesus offers, and after it, the darkness that enters. John had already said that the devil put into Judas' heart the idea of betraying Jesus (John 13:2); that betrayal was already in Judas' mind and heart.\n\nJesus tells Judas to do quickly what he is going to do (John 13:27).",
+      "greek_words": [
+        {
+          "word": "ψωμίον",
+          "transliteration": "psōmíon",
+          "strong": "G5596",
+          "meaning": "a small piece of dipped bread, offered as a gesture of honor at the table",
+          "revelation": "The same gesture that identified the traitor was, in its form, a genuine act of honor toward him."
+        },
+        {
+          "word": "εἰσέρχομαι",
+          "transliteration": "eisérchomai",
+          "strong": "G1525",
+          "meaning": "to enter effectively, to take up a position within something",
+          "revelation": "What entered Judas was a real occupation, in the very moment he received the greatest honor at the table."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "John 13:2",
+          "text": "And supper being ended, the devil having now put into the heart of Judas Iscariot, Simon's son, to betray him;"
+        },
+        {
+          "reference": "John 13:27",
+          "text": "And after the morsel Satan entered into him. Then said Jesus unto him, What you do, do quickly."
+        }
+      ],
+      "revelation_key": "The morsel and Satan's entering did not decide the betrayal: they made it visible, because the devil had already put it into Judas' heart before that night."
+    },
+    {
+      "order": 4,
+      "type": "cultural_context",
+      "icon": "👣",
+      "title": "An expression with a history",
+      "subtitle": "What the Greek word behind that ancient expression reveals",
+      "content": "📜 An ancient prophecy\n\nThat same night, Jesus quotes a line from Psalm 41, written centuries earlier: the betrayal of someone close had already been described in the Scriptures (John 13:18; Psalm 41:9).\n\n👣 The lifted heel\n\nThe phrase uses a strong word: **πτέρνα, (ptérna) (G4418)** — the heel. The full expression pictured, in that culture, a beast striking with its heel at the master who feeds it: a blow of betrayal, violent and direct.\n\n👣 What Judas did with his own feet\n\nLuke 22:3-4 records that, before that night, Judas himself went to negotiate with the priests. It was a step he took by his own will.",
+      "greek_words": [
+        {
+          "word": "πτέρνα",
+          "transliteration": "ptérna",
+          "strong": "G4418",
+          "meaning": "the heel",
+          "revelation": "The same heel that supported an animal before its master becomes, in this image, the weapon of betrayal."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "Psalms 41:9",
+          "text": "Yea, my own familiar friend, in whom I trusted, who did eat of my bread, has lifted up his heel against me."
+        },
+        {
+          "reference": "John 13:18",
+          "text": "I speak not of you all: I know whom I have chosen: but that the scripture may be fulfilled, He that eats bread with me has lifted up his heel against me."
+        },
+        {
+          "reference": "Luke 22:3-4",
+          "text": "Then entered Satan into Judas surnamed Iscariot, being of the number of the twelve. And he went his way, and conferred with the chief priests and captains, how he might betray him unto them."
+        }
+      ],
+      "revelation_key": "The Psalm's image is precise: it describes the beast striking with its heel the master who feeds it."
+    },
+    {
+      "order": 5,
+      "type": "personal_application",
+      "icon": "🪞",
+      "title": "What Judas had, and what he did with it",
+      "subtitle": "What Judas' night asks about the disposition of the heart",
+      "content": "📍 Everything Judas had\n\nJudas stood in the same room as the Son of God. He heard the same teachings as the other eleven. He saw the same miracles. He had his own feet washed by Jesus' hands that same night, and he received from him the greatest gesture of honor at the table. Judas was one of the twelve who lived three years alongside Jesus, day after day.\n\n🚪 What he decided with all that nearness\n\nAnd yet, he walked out of that room toward betrayal (John 13:30). Physical nearness to Jesus did not, on its own, produce a change in his heart. Judas held on to his decision through the teaching, through the foot-washing, and through the morsel of honor, until the instant he carried it out.\n\n🌙 The question this leaves open\n\n\"And it was night\" (John 13:30) is more than a detail about the time of day. John has already called Jesus the light of the world earlier in his gospel; walking out of that table into the darkness outside reflects what had already happened within.\n\nThis scene leaves behind a question that reaches beyond Judas: how much of your nearness to Jesus — hearing his word, taking part in his church, knowing sound doctrine — has become a real disposition of the heart to be transformed, and how much of it remains, as with Judas, nearness without surrender?",
+      "scripture_references": [
+        {
+          "reference": "John 13:30",
+          "text": "He then having received the morsel went immediately out: and it was night."
+        }
+      ],
+      "revelation_key": "The distance between being near Jesus and belonging to him is measured by the heart's disposition to be transformed by what it has already seen and received."
+    },
+    {
+      "order": 6,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Personal discovery",
+      "discovery_questions": [
+        {
+          "category": "Disposition of the heart",
+          "question": "How much of your nearness to Jesus — reading his word, gathering with his people, praying — has become a real disposition to be transformed?"
+        },
+        {
+          "category": "Grace received",
+          "question": "Think of a recent moment when you clearly felt God's grace. How did your heart respond in that instant: did it soften, or did it keep to its own plans?"
+        },
+        {
+          "category": "Freedom and responsibility",
+          "question": "In what area of your life do you know exactly what God is asking of you, yet keep putting off the decision to respond? What is that delay costing you, and what is holding you back from taking the step?"
+        }
+      ],
+      "prayer": {
+        "title": "A prayer before the grace offered",
+        "content": "Lord Jesus, thank you for continuing to extend grace even when you know beforehand how I will respond. I recognize that at times I receive your word and your gifts with my hands, while my heart stays fixed on its own plans. Forgive me for the times my nearness to you has become habit instead of surrender. Soften today what has grown hard in me. Give me a heart truly willing to respond to your grace, beyond mere outward nearness. Thank you that your love for me depends on who you are: your grace and your mercy. In your name, amen."
+      }
+    }
+  ],
+  "tags": [
+    "grace",
+    "free_will",
+    "betrayal",
+    "john_13",
+    "judas",
+    "light_and_darkness"
+  ],
+  "metadata": {
+    "total_word_count": 1354,
+    "greek_words_count": 3,
+    "scripture_references_count": 12,
+    "difficulty_level": "intermediate",
+    "themes": [
+      "grace offered and refused",
+      "free will",
+      "prophecy fulfilled",
+      "betrayal",
+      "disposition of the heart"
+    ]
+  }
+}
