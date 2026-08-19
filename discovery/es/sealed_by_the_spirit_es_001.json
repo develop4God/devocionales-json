@@ -42,6 +42,20 @@
           "strong": "G4972",
           "meaning": "Sellar — Dios marca al creyente como suyo.",
           "revelation": "Dios es el agente que coloca su marca de propiedad de forma definitiva sobre el creyente."
+        },
+        {
+          "word": "σφραγίς",
+          "transliteration": "sphragís",
+          "strong": "G4973",
+          "meaning": "Sello — la marca que declara propiedad y autenticidad.",
+          "revelation": "El sello es la prueba visible de que el creyente pertenece legalmente a Dios."
+        },
+        {
+          "word": "πνεῦμα",
+          "transliteration": "pneûma",
+          "strong": "G4151",
+          "meaning": "Espíritu — el Espíritu Santo, la presencia viva de Dios.",
+          "revelation": "El Espíritu no es un símbolo sino la marca misma que Dios coloca en el creyente."
         }
       ],
       "scripture_references": [
@@ -56,8 +70,8 @@
       "type": "theological_depth",
       "icon": "📑",
       "title": "Lo que Dios dejó como señal",
-      "subtitle": "Un término que Pablo tomó prestado del comercio",
-      "content": "⚖️ El término mercantil y su peso:\n\nEn Efesios 1:14, Pablo usa la palabra ἀῤῥαβών, (arrhabṓn) (G728), tomada del mundo del comercio:\n\n• **Concepto legal:** este depósito era en efectivo. Obligaba legalmente al comprador a completar el pago total en la fecha acordada.\n• **Implicación teológica:** el Espíritu Santo en el creyente es como ese primer pago de la herencia eterna, κληρονομία, (klēronomía) (G2817).\n\nSi el comprador no completaba el pago final, perdía el depósito entregado. Al darnos el Espíritu Santo como garantía, Dios compromete su propio carácter en completar nuestra redención (ἀπολύτρωσις, (apolýtrōsis) (G629)) — el rescate final de su posesión adquirida (περιποίησις, (peripoíēsis) (G4047)).",
+      "subtitle": "Un término legal que garantiza lo prometido",
+      "content": "⚖️ El término legal y su peso:\n\nEn Efesios 1:14, Pablo usa la palabra ἀῤῥαβών, (arrhabṓn) (G728), un término legal vinculante:\n\n• **Concepto legal:** este depósito era en efectivo. Obligaba legalmente al comprador a completar el pago total en la fecha acordada.\n• **Implicación teológica:** el Espíritu Santo en el creyente es como ese primer pago de la herencia eterna, κληρονομία, (klēronomía) (G2817).\n\nSi el comprador no completaba el pago final, perdía el depósito entregado. Al darnos el Espíritu Santo como garantía, Dios compromete su propio carácter en completar nuestra redención (ἀπολύτρωσις, (apolýtrōsis) (G629)) — el rescate final de su posesión adquirida (περιποίησις, (peripoíēsis) (G4047)).",
       "revelation_key": "La presencia del Espíritu Santo es el compromiso empeñado por Dios de culminar nuestra redención.",
       "scripture_references": [
         {
@@ -132,7 +146,7 @@
         },
         {
           "category": "Fruto del Espíritu",
-          "question": "¿De qué manera se evidencia en tu vida diaria la presencia conviccionante del Espíritu Santo ante el pecado?"
+          "question": "¿De qué manera notas en tu vida diaria que el Espíritu Santo te convence de pecado y te hace más sensible a él?"
         },
         {
           "category": "Esperanza futura",
@@ -141,7 +155,7 @@
       ],
       "prayer": {
         "title": "Oración de descanso en la promesa",
-        "content": "Padre Celestial, te doy gracias por tu palabra de verdad y por el evangelio de mi salvación. Gracias porque, al haber creído en Cristo, me sellaste con el Espíritu Santo de la promesa, declarándome tu propiedad para siempre. Reconozco que mi seguridad no depende de mis méritos ni de mis emociones, sino de tu fidelidad inmutable. Te pido que tu Espíritu guíe mis pasos, me redarguya en el error y me llene de gozo al saber que soy tu hijo y que mi herencia eterna está segura en ti. En el nombre de Jesús, amén."
+        "content": "Padre Celestial, te doy gracias por tu palabra de verdad y por el evangelio de mi salvación. Gracias porque, al haber creído en Cristo, me sellaste con el Espíritu Santo de la promesa, declarándome tu propiedad para siempre. Reconozco que mi seguridad no depende de mis méritos ni de mis emociones, sino de tu fidelidad que nunca cambia. Te pido que tu Espíritu guíe mis pasos, me muestre cuando me equivoco y me llene de gozo al saber que soy tu hijo y que mi herencia eterna está segura en ti. En el nombre de Jesús, amén."
       }
     }
   ],
