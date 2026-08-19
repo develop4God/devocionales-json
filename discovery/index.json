@@ -2119,6 +2119,23 @@
         "ja": 10,
         "zh": 9
       }
+    },
+    {
+      "id": "sealed_by_the_spirit_001",
+      "version": "1.0",
+      "emoji": "🕊️",
+      "files": {
+        "es": "sealed_by_the_spirit_es_001.json"
+      },
+      "titles": {
+        "es": "Marcados por la promesa"
+      },
+      "subtitles": {
+        "es": "El significado del sello y la garantía del Espíritu Santo en la experiencia del creyente"
+      },
+      "estimated_reading_minutes": {
+        "es": 6
+      }
     }
   ]
 }
