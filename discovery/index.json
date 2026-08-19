@@ -2125,16 +2125,28 @@
       "version": "1.0",
       "emoji": "🕊️",
       "files": {
-        "es": "sealed_by_the_spirit_es_001.json"
+        "es": "sealed_by_the_spirit_es_001.json",
+        "en": "sealed_by_the_spirit_en_001.json",
+        "fr": "sealed_by_the_spirit_fr_001.json",
+        "pt": "sealed_by_the_spirit_pt_001.json"
       },
       "titles": {
-        "es": "Marcados por la promesa"
+        "es": "Marcados por la promesa",
+        "en": "Marked by the Promise",
+        "fr": "Marqués par la promesse",
+        "pt": "Marcados pela promessa"
       },
       "subtitles": {
-        "es": "El significado del sello y la garantía del Espíritu Santo en la experiencia del creyente"
+        "es": "El significado del sello y la garantía del Espíritu Santo en la experiencia del creyente",
+        "en": "The meaning of the seal and the guarantee of the Holy Spirit in the believer's experience",
+        "fr": "Le sens du sceau et du gage du Saint-Esprit dans l'expérience du croyant",
+        "pt": "O significado do selo e o penhor do Espírito Santo na experiência do crente"
       },
       "estimated_reading_minutes": {
-        "es": 6
+        "es": 6,
+        "en": 6,
+        "fr": 7,
+        "pt": 8
       }
     }
   ]
