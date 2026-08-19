@@ -2119,6 +2119,59 @@
         "ja": 10,
         "zh": 9
       }
+    },
+    {
+      "id": "sealed_by_the_spirit_001",
+      "version": "1.0",
+      "emoji": "🕊️",
+      "files": {
+        "es": "sealed_by_the_spirit_es_001.json",
+        "en": "sealed_by_the_spirit_en_001.json",
+        "fr": "sealed_by_the_spirit_fr_001.json",
+        "pt": "sealed_by_the_spirit_pt_001.json",
+        "ja": "sealed_by_the_spirit_ja_001.json",
+        "zh": "sealed_by_the_spirit_zh_001.json",
+        "hi": "sealed_by_the_spirit_hi_001.json",
+        "de": "sealed_by_the_spirit_de_001.json",
+        "ar": "sealed_by_the_spirit_ar_001.json",
+        "fil": "sealed_by_the_spirit_fil_001.json"
+      },
+      "titles": {
+        "es": "Marcados por la promesa",
+        "en": "Marked by the Promise",
+        "fr": "Marqués par la promesse",
+        "pt": "Marcados pela promessa",
+        "ja": "約束によって刻まれた者",
+        "zh": "因应许而受的印记",
+        "hi": "प्रतिज्ञा की मुहर",
+        "de": "Gezeichnet von der Verheißung",
+        "ar": "مختومون بالوعد",
+        "fil": "Tinatakan ng Pangako"
+      },
+      "subtitles": {
+        "es": "El significado del sello y la garantía del Espíritu Santo en la experiencia del creyente",
+        "en": "The meaning of the seal and the guarantee of the Holy Spirit in the believer's experience",
+        "fr": "Le sens du sceau et du gage du Saint-Esprit dans l'expérience du croyant",
+        "pt": "O significado do selo e o penhor do Espírito Santo na experiência do crente",
+        "ja": "御霊の証印と保証が信じる者の内に持つ意味",
+        "zh": "圣灵的印记与担保在信徒生命中的意义",
+        "hi": "विश्वासी के जीवन में पवित्र आत्मा की मुहर और गारंटी का अर्थ",
+        "de": "Die Bedeutung des Siegels und des Unterpfands des Heiligen Geistes im Leben des Glaubenden",
+        "ar": "معنى الختم وعربون الروح القدس في اختبار المؤمن",
+        "fil": "Ang kahulugan ng tatak at ang garantiya ng Banal na Espiritu sa karanasan ng mananampalataya"
+      },
+      "estimated_reading_minutes": {
+        "es": 6,
+        "en": 6,
+        "fr": 7,
+        "pt": 8,
+        "ja": 8,
+        "zh": 9,
+        "hi": 8,
+        "de": 7,
+        "ar": 8,
+        "fil": 6
+      }
     }
   ]
 }
