@@ -297,6 +297,14 @@ def validate_index(report: Report, expected_languages: list) -> dict | None:
                 f"Encounter {enc_id}: image_version '{image_version}' should follow semantic versioning (e.g., '1.0' or '1.0.0')"
             )
 
+        # Sound version format validation (optional field; only checked when present)
+        if "sound_version" in enc:
+            sound_version = enc.get("sound_version", "")
+            if not re.match(r"^\d+\.\d+(\.\d+)?$", sound_version):
+                report.W(
+                    f"Encounter {enc_id}: sound_version '{sound_version}' should follow semantic versioning (e.g., '1.0' or '1.0.0')"
+                )
+
         # Language coverage for all language objects. Report once per encounter
         # (not once per field) so a Spanish-only draft doesn't produce five
         # near-identical warnings — and frame it by status: a coming_soon
