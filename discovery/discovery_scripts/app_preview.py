@@ -491,7 +491,15 @@ def main():
     for w in warnings:
         print(f"WARNING: {w}", file=sys.stderr)
 
-    html = build_html(data, warnings)
+    # A missing local devocional_nuevo checkout is expected in most
+    # environments (e.g. this repo alone, or a review sandbox) -- it just
+    # means the drift check against live Dart source didn't run. It's
+    # worth a console note (above) but not a banner on every preview a
+    # reader opens. Genuine drift warnings (repo found, fields mismatched)
+    # still surface in the HTML.
+    html_warnings = [w for w in warnings if not w.startswith("Could not find")]
+
+    html = build_html(data, html_warnings)
     out_path = Path(args.out) if args.out else json_path.with_suffix(".preview.html")
     out_path.write_text(html, encoding="utf-8")
     print(f"Wrote {out_path}")
