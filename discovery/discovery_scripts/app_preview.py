@@ -177,8 +177,7 @@ h2.section { font-size:20px; font-weight:900; margin-top:32px; color:var(--text)
 THEME_SCRIPT = """
 (function() {
   var saved = localStorage.getItem('discoveryPreviewTheme');
-  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  var theme = saved || (prefersDark ? 'dark' : 'light');
+  var theme = saved || 'dark';
   document.documentElement.setAttribute('data-theme', theme);
   document.addEventListener('DOMContentLoaded', function() {
     var btn = document.getElementById('theme-toggle-btn');
@@ -357,7 +356,7 @@ def build_html(data, drift_warnings):
             f"<!doctype html><html><head><meta charset='utf-8'>"
             f"<title>{escape(data.get('title', ''))}</title><style>{CSS}</style>"
             f"<script>{THEME_SCRIPT}</script></head><body>"
-            '<button id="theme-toggle-btn" class="theme-toggle">Dark mode</button>'
+            '<button id="theme-toggle-btn" class="theme-toggle">Light mode</button>'
         )
     ]
     for w in drift_warnings:
