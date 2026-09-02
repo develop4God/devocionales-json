@@ -2194,24 +2194,24 @@
         "en": "The Fast That Never Reached Heaven",
         "pt": "O jejum que não chegou aos céus",
         "fr": "Le jeûne qui n'est jamais monté jusqu'au ciel",
-        "ja": "PENDING_TRANSLATION",
-        "zh": "PENDING_TRANSLATION",
-        "hi": "PENDING_TRANSLATION",
-        "de": "PENDING_TRANSLATION",
-        "ar": "PENDING_TRANSLATION",
-        "fil": "PENDING_TRANSLATION"
+        "ja": "天に届かなかった断食",
+        "zh": "从未升到天上的禁食",
+        "hi": "वह उपवास जो कभी स्वर्ग तक नहीं पहुँचा",
+        "de": "Das Fasten, das nie den Himmel erreichte",
+        "ar": "الصوم الذي لم يصل إلى السماء",
+        "fil": "Ang Pag-aayuno na Hindi Umabot sa Langit"
       },
       "subtitles": {
         "es": "Lo que Isaías y Jesús enseñan sobre afligir el alma para volver a Dios, no para negociar con Él",
         "en": "A people who fasted with precision, and a God who said He took no notice",
         "pt": "Um povo que jejuava com exatidão e um Deus que fingia não entender",
         "fr": "Un peuple qui jeûnait avec exactitude et un Dieu qui disait ne pas en tenir compte",
-        "ja": "PENDING_TRANSLATION",
-        "zh": "PENDING_TRANSLATION",
-        "hi": "PENDING_TRANSLATION",
-        "de": "PENDING_TRANSLATION",
-        "ar": "PENDING_TRANSLATION",
-        "fil": "PENDING_TRANSLATION"
+        "ja": "正確に断食した民と、それに気づかなかったと言われた神",
+        "zh": "一群精确禁食的百姓，一位说自己毫不理会的神",
+        "hi": "एक ऐसी प्रजा जिसने पूरी सटीकता से उपवास रखा, और एक परमेश्वर जिसने कहा कि उसने इसकी सुधि ही नहीं ली",
+        "de": "Ein Volk, das mit Genauigkeit fastete, und ein Gott, der sagte, Er habe es nicht bemerkt",
+        "ar": "شعب صام بدقة، وإله قال إنه لم يلتفت إلى صومهم",
+        "fil": "Isang bayan na nag-ayuno nang eksakto, at isang Diyos na nagsabing hindi niya ito napansin"
       },
       "estimated_reading_minutes": {
         "es": 11,
@@ -2219,11 +2219,11 @@
         "pt": 13,
         "fr": 13,
         "ja": 11,
-        "zh": 11,
-        "hi": 11,
-        "de": 11,
-        "ar": 11,
-        "fil": 11
+        "zh": 15,
+        "hi": 14,
+        "de": 13,
+        "ar": 14,
+        "fil": 13
       }
     }
   ]
