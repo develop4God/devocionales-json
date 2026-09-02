@@ -1,0 +1,280 @@
+{
+  "id": "true_fasting_001",
+  "type": "discovery",
+  "date": "2026-09-02",
+  "title": "O jejum que não chegou aos céus",
+  "subtitle": "Um povo que jejuava com exatidão e um Deus que fingia não entender",
+  "language": "pt",
+  "version": "ARC",
+  "estimated_reading_minutes": 13,
+  "key_verse": {
+    "reference": "Isaías 58:3",
+    "text": "dizendo: Por que jejuamos nós, e tu não atentas para isso? Por que afligimos a nossa alma, e tu o não sabes? Eis que, no dia em que jejuais, achais o vosso próprio contentamento e requereis todo o vosso trabalho."
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "opening_mystery",
+      "icon": "🍞",
+      "title": "Comprai sem dinheiro",
+      "subtitle": "Isaías 55 abre com um convite que quebra a lógica do mérito",
+      "content": "Isaías 55 começa com uma exclamação: \"Ó!\" — um chamado urgente dirigido a todo aquele que tem sede. O que vem em seguida é um convite contrário à economia humana: vinde, comprai e comei, sem dinheiro e sem preço.\n\nEm Isaías 55:2, Deus pergunta por que o povo gasta seu dinheiro no que não é pão e seu trabalho no que não sacia: a imagem descreve alguém que investe esforço real em algo que nunca enche. O contraste fica claro: o esforço humano não basta para saciar. O que Deus oferece não se compra, se recebe como presente.\n\nEssa mesma tensão aparece séculos depois nas palavras de Jesus em Mateus 4:4, citando Deuteronômio 8:3: a vida não depende só do alimento físico, mas do que sai da boca de Deus. O pão físico sustenta o corpo por um dia; a Palavra de Deus sustenta a vida inteira.\n\nEsse convite é a moldura que dá sentido a tudo o que Isaías vai dizer depois sobre o jejum: abster-se de comida nunca foi o ponto final. O ponto é chegar a Deus com fome real e receber dele o que nenhum esforço próprio pode comprar.",
+      "scripture_references": [
+        {
+          "reference": "Isaías 55:1-2",
+          "text": "Ó vós todos os que tendes sede, vinde às águas, e vós que não tendes dinheiro, vinde, comprai e comei; sim, vinde e comprai, sem dinheiro e sem preço, vinho e leite. Por que gastais o dinheiro naquilo que não é pão? E o produto do vosso trabalho naquilo que não pode satisfazer? Ouvi-me atentamente e comei o que é bom, e a vossa alma se deleite com a gordura."
+        },
+        {
+          "reference": "Deuteronômio 8:3",
+          "text": "E te humilhou, e te deixou ter fome, e te sustentou com o maná, que tu não conheceste, nem teus pais o conheceram, para te dar a entender que o homem não viverá só de pão, mas que de tudo o que sai da boca do SENHOR viverá o homem."
+        },
+        {
+          "reference": "Mateus 4:4",
+          "text": "Ele, porém, respondendo, disse: Está escrito: Nem só de pão viverá o homem, mas de toda a palavra que sai da boca de Deus."
+        }
+      ],
+      "revelation_key": "Deus convida a comprar sem dinheiro porque daquilo que a alma precisa se recebe da mão dele, não do esforço humano — e essa é a porta de entrada para entender o jejum que ele realmente busca."
+    },
+    {
+      "order": 2,
+      "type": "hebrew_exegesis",
+      "icon": "📖",
+      "title": "Afligir a alma",
+      "subtitle": "A origem do vocabulário hebraico do jejum, desde o Dia da Expiação até Isaías",
+      "content": "A palavra hebraica mais direta para jejum é צוֹם, (tsôwm) (H6685): a abstenção literal de alimento. Mas quando a Escritura descreve o jejum bíblico, usa com mais frequência uma frase mais precisa: עָנָה, (ʻânâh) (H6031) נֶפֶשׁ, (nephesh) (H5315), literalmente \"afligir a alma\". Essa frase, não a palavra isolada, é que define o que Deus realmente pede.\n\nEla aparece primeiro em Levítico 16, nas instruções para o Dia da Expiação. Uma vez por ano, enquanto o Sumo Sacerdote entrava no Lugar Santíssimo, todo Israel devia \"afligir sua alma\". A ordem pedia que o corpo inteiro fosse privado de comida, como sinal visível de entrega a Deus.\n\nEssas mesmas palavras, \"afligir sua alma\", são as que o povo repete em Isaías 58:3 quando reclama \"afligimos a nossa alma\". Herdavam com exatidão o vocabulário de Levítico 16: conheciam as palavras certas e cumpriam o rito com precisão.\n\nO vocabulário nunca foi o problema. A pergunta que Isaías 58 levanta é o que há por trás dessa aflição do corpo: um coração que realmente se submete a Deus, ou um rito vazio repetido de memória?",
+      "scripture_references": [
+        {
+          "reference": "Levítico 16:29",
+          "text": "E isto vos será por estatuto perpétuo: no sétimo mês, aos dez do mês, afligireis a vossa alma e nenhuma obra fareis, nem o natural nem o estrangeiro que peregrina entre vós."
+        },
+        {
+          "reference": "Levítico 16:31",
+          "text": "É um sábado de descanso para vós, e afligireis a vossa alma; isto é estatuto perpétuo."
+        },
+        {
+          "reference": "Isaías 58:3",
+          "text": "dizendo: Por que jejuamos nós, e tu não atentas para isso? Por que afligimos a nossa alma, e tu o não sabes? Eis que, no dia em que jejuais, achais o vosso próprio contentamento e requereis todo o vosso trabalho."
+        }
+      ],
+      "revelation_key": "Afligir a alma era o vocabulário exato que a Lei entregou a Israel para o jejum — e por isso Isaías 58 pode usá-lo para expor com precisão onde o povo estava falhando.",
+      "hebrew_words": [
+        {
+          "word": "צוֹם",
+          "transliteration": "tsôwm",
+          "strong": "H6685",
+          "meaning": "Jejum; abstenção literal de alimento",
+          "revelation": "Usado para o ato físico de jejuar, em Isaías 58:3-5 e em todo o Antigo Testamento."
+        },
+        {
+          "word": "עָנָה",
+          "transliteration": "ʻânâh",
+          "strong": "H6031",
+          "meaning": "Afligir, humilhar, abater",
+          "revelation": "O verbo que a Lei usa para o ato físico de se humilhar — uma submissão do corpo inteiro, além de uma emoção interior isolada."
+        },
+        {
+          "word": "נֶפֶשׁ",
+          "transliteration": "nephesh",
+          "strong": "H5315",
+          "meaning": "Alma, ser vivo, a pessoa inteira",
+          "revelation": "Nomeia o ser vivo completo, não apenas o espiritual separado do corpo, por isso afligir o נֶפֶשׁ, (nephesh) envolve corpo e espírito juntos."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "historical_context",
+      "icon": "🪞",
+      "title": "Um rito correto por fora",
+      "subtitle": "Isaías 58:3-5: o povo jejuava com exatidão e perguntava por que Deus não respondia",
+      "content": "O povo se apresenta diante de Deus com uma reclamação direta: \"Por que jejuamos nós, e tu não atentas para isso?\" (Isaías 58:3). Cumpriam o rito. Abstinham-se de comida. Curvavam a cabeça e se deitavam sobre pano de saco e cinza: a encenação completa do luto religioso.\n\nDeus responde apontando a contradição exata: no mesmo dia do jejum, o povo buscava seu próprio contentamento (Isaías 58:3) e explorava seus trabalhadores. O jejum terminava em contendas e debates (Isaías 58:4). O corpo se privava de comida enquanto o coração continuava funcionando exatamente igual a qualquer outro dia: com as mesmas disputas, a mesma opressão, o mesmo egoísmo. Por isso, em Isaías 58:5, Deus pergunta diretamente se isso merece se chamar jejum, um dia que ele possa aceitar: a forma exterior estava correta, mas a postura interior contradizia cada gesto.\n\nZacarias 7 apresenta o mesmo problema. O povo pergunta se deve continuar jejuando em memória da destruição do templo, e Deus responde com uma pergunta direta: \"jejuastes vós para mim, mesmo para mim?\" (Zacarias 7:5). O jejum do povo tinha a forma correta, mas estava dirigido a eles mesmos, não a Deus.\n\nEssa cena é o pano de fundo exato sobre o qual Deus vai construir sua redefinição do verdadeiro jejum nos versículos seguintes.",
+      "scripture_references": [
+        {
+          "reference": "Isaías 58:3",
+          "text": "dizendo: Por que jejuamos nós, e tu não atentas para isso? Por que afligimos a nossa alma, e tu o não sabes? Eis que, no dia em que jejuais, achais o vosso próprio contentamento e requereis todo o vosso trabalho."
+        },
+        {
+          "reference": "Isaías 58:4-5",
+          "text": "Eis que, para contendas e debates, jejuais e para dardes punhadas impiamente; não jejueis como hoje, para fazer ouvir a vossa voz no alto. Seria este o jejum que eu escolheria: que o homem um dia aflija a sua alma, que incline a cabeça como o junco e estenda debaixo de si pano de saco grosseiro e cinza? Chamarias tu a isso jejum e dia aprazível ao SENHOR?"
+        },
+        {
+          "reference": "Zacarias 7:5-6",
+          "text": "Fala a todo o povo desta terra e aos sacerdotes, dizendo: Quando jejuastes e pranteastes, no quinto e no sétimo mês, durante estes setenta anos, jejuastes vós para mim, mesmo para mim? Ou, quando comestes e quando bebestes, não foi para vós mesmos que comestes e bebestes?"
+        }
+      ],
+      "revelation_key": "O coração do povo seguia vivendo em direção contrária enquanto o corpo cumpria o rito com exatidão, e Deus aponta isso com a mesma precisão em Isaías e em Zacarias."
+    },
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "icon": "🔓",
+      "title": "O que Deus responde",
+      "subtitle": "Isaías 58:6-12 responde à reclamação do povo com uma definição própria do jejum",
+      "content": "Depois de mostrar que o jejum do povo estava vazio por dentro, Deus dá sua própria definição em Isaías 58:6: o jejum que ele escolhe consiste em soltar as ligaduras da impiedade, desfazer as ataduras do jugo, deixar livres os quebrantados e despedaçar todo jugo.\n\nCada verbo desse versículo é um ato concreto: soltar, desfazer, deixar livres, despedaçar. O jejum que Deus busca exige justiça prática como seu verdadeiro conteúdo.\n\n✋ O que Deus pede em concreto (Isaías 58:7):\n\n• Repartir o pão com o faminto.\n• Recolher em casa os pobres desterrados.\n• Cobrir o nu.\n• Não se esconder daquele que é da própria carne.\n\nEsse é o giro central do capítulo: o jejum verdadeiro reparte o pão da própria mesa com quem não tem nenhum, em vez de deixá-la vazia. A abstenção pessoal se transforma em generosidade para com o outro.\n\n🌅 As promessas que seguem (Isaías 58:8-12):\n\nQuando essa espécie de jejum substitui o rito vazio, o texto descreve uma série de promessas: a luz nasce como a alva (Isaías 58:8), a cura se acelera (Isaías 58:8), a oração recebe uma resposta imediata da parte de Deus (Isaías 58:9), e ele promete guiar continuamente (Isaías 58:11), mesmo em tempos de seca.\n\nEsse padrão, justiça primeiro e depois promessa, já aparecia antes em Isaías 1:16-17 a respeito das ofertas: purificar as mãos, deixar de fazer o mal e buscar ativamente a justiça do órfão e da viúva. O capítulo 58 aplica ao jejum a mesma verdade que o capítulo 1 aplicou ao sacrifício: nenhum rito substitui a justiça para com o próximo.",
+      "scripture_references": [
+        {
+          "reference": "Isaías 58:6-7",
+          "text": "Porventura, não é este o jejum que escolhi: que soltes as ligaduras da impiedade, que desfaças as ataduras do jugo, e que deixes livres os quebrantados, e que despedaces todo o jugo? Porventura, não é também que repartas o teu pão com o faminto e recolhas em casa os pobres desterrados? E, vendo o nu, o cubras e não te escondas daquele que é da tua carne?"
+        },
+        {
+          "reference": "Isaías 58:9",
+          "text": "Então, clamarás, e o SENHOR te responderá; gritarás, e ele dirá: Eis-me aqui; acontecerá isso se tirares do meio de ti o jugo, o estender do dedo e o falar vaidade;"
+        },
+        {
+          "reference": "Isaías 1:16-17",
+          "text": "Lavai-vos, purificai-vos, tirai a maldade de vossos atos de diante dos meus olhos e cessai de fazer mal. Aprendei a fazer o bem; praticai o que é reto; ajudai o oprimido; fazei justiça ao órfão; tratai da causa das viúvas."
+        }
+      ],
+      "revelation_key": "O jejum que Deus escolhe reparte o pão com o faminto em vez de guardá-lo — e essa espécie de jejum abre a porta para a luz, a cura e a resposta imediata de Deus."
+    },
+    {
+      "order": 5,
+      "type": "new_testament_fulfillment",
+      "icon": "🕊️",
+      "title": "No secreto",
+      "subtitle": "Mateus 6:16-18 completa em grego a mesma correção que Isaías fez em hebraico",
+      "content": "Jesus retoma a mesma correção de Isaías 58, agora dirigida diretamente aos seus ouvintes: \"quando jejuardes, não vos mostreis contristados como os hipócritas\" (Mateus 6:16). A palavra grega é ὑποκριτής, (hypokritḗs) (G5273), literalmente, atores de teatro. Descreve quem representa um papel para uma plateia, não quem vive o que mostra.\n\nJesus descreve a atuação com precisão (Mateus 6:16). O verbo grego para desfigurar o rosto é ἀφανίζω, (aphanízō) (G853) — desfigurar propositalmente o próprio rosto para que outros notem o sacrifício. É o mesmo diagnóstico de Isaías 58:5 em outro idioma: inclinar a cabeça para que a aflição seja vista.\n\n💰 O termo comercial:\n\nSobre a recompensa dos hipócritas, Jesus usa o verbo grego ἀπέχω, (apéchō) (G568) — \"já receberam o seu galardão\" (Mateus 6:16). Nos recibos comerciais do século I, essa palavra era a fórmula para dizer \"pagamento recebido em sua totalidade, nada mais se deve\". Se o jejum é feito para ser admirado, o reconhecimento humano é o pagamento completo e Deus já não deve nada, porque ninguém pediu isso a ele.\n\n🫒 A instrução positiva (Mateus 6:17-18):\n\nJesus ordena o contrário: \"unge a cabeça e lava o rosto\", a rotina de cada dia. O jejum permanece no κρυπτός, (kryptós) (G2927), \"o secreto\", visível somente para o Pai que vê o que está oculto.",
+      "greek_words": [
+        {
+          "word": "ὑποκριτής",
+          "transliteration": "hypokritḗs",
+          "strong": "G5273",
+          "meaning": "Ator sob um personagem assumido; por extensão, quem finge",
+          "revelation": "Jesus acusa quem transforma o jejum em atuação, não o jejum em si — o mesmo rito que Isaías 58 desmascara como espetáculo."
+        },
+        {
+          "word": "ἀπέχω",
+          "transliteration": "apéchō",
+          "strong": "G568",
+          "meaning": "Receber por completo; ter em sua totalidade",
+          "revelation": "O aplauso humano é um pagamento completo e final — quem jejua para ser visto já recebeu tudo o que buscava, e não fica nada pendente da parte de Deus."
+        },
+        {
+          "word": "κρυπτός",
+          "transliteration": "kryptós",
+          "strong": "G2927",
+          "meaning": "Oculto, escondido; o privado",
+          "revelation": "O jejum que Jesus ordena vive no κρυπτός, (kryptós), visível somente para o Pai, nunca planejado para uma plateia humana."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "Mateus 6:16-18",
+          "text": "E, quando jejuardes, não vos mostreis contristados como os hipócritas, porque desfiguram o rosto, para que aos homens pareça que jejuam. Em verdade vos digo que já receberam o seu galardão. Porém tu, quando jejuares, unge a cabeça e lava o rosto, para não pareceres aos homens que jejuas, mas sim a teu Pai, que está oculto; e teu Pai, que vê o que está oculto, te recompensará."
+        }
+      ],
+      "revelation_key": "Isaías 58 mede o jejum pelo seu fruto para com o próximo; Jesus o mede pela sua motivação diante do Pai — dois ângulos da mesma verdade: o jejum perde seu valor no instante em que busca uma plateia humana."
+    },
+    {
+      "order": 6,
+      "type": "typology_thread",
+      "icon": "🔥",
+      "title": "Um padrão que atravessa toda a Escritura",
+      "subtitle": "Daniel, Josafá, Ester e Joel mostram o mesmo jejum dirigido a Deus",
+      "content": "O jejum bíblico não aparece só em Isaías. Ao longo da Escritura, o mesmo padrão se repete em momentos muito distintos: pessoas que se voltam para Deus com o corpo inteiro, não só com palavras.\n\n📜 Daniel — buscar direção (Daniel 9:3):\n\nDaniel, estudando as profecias de Jeremias sobre os setenta anos de exílio, \"dirige o rosto a Deus\" em oração, súplica, jejum, pano de saco e cinza. O jejum aqui acompanha a busca séria de entendimento — se soma ao estudo da Palavra, sem substituí-lo.\n\n⚔️ Josafá — enfrentar uma crise (2 Crônicas 20:3):\n\nQuando um grande exército avança contra Judá, Josafá, \"temendo\", proclama jejum em toda a nação. O povo inteiro se reúne \"para pedir socorro ao SENHOR\" (2 Crônicas 20:4), sem planejar uma estratégia militar própria. O jejum nacional é a confissão pública de que a vitória não depende da força humana.\n\n👑 Ester — interceder diante de uma ameaça mortal (Ester 4:16):\n\nDiante do edito que ameaçava exterminar os judeus, Ester pede a Mordecai que reúna todo o povo em Susã para jejuar três dias antes de ela se apresentar ao rei sem ter sido chamada. O jejum precede o ato de maior risco.\n\n💔 Joel — arrependimento genuíno (Joel 2:12-13):\n\nDeus chama o povo a voltar a ele \"com jejum, choro e pranto\", e acrescenta a advertência central: \"rasgai o vosso coração, e não as vossas vestes\". O rasgar das vestes era o gesto exterior tradicional de luto; Deus pede o gesto interior que esse exterior deveria representar.\n\n🔗 O que os quatro têm em comum:\n\nNenhum deles jejua para forçar a mão de Deus. Cada um jejua ao chegar ao limite de sua própria capacidade (entendimento, força militar, proteção legal, ou um coração que precisa se voltar) e dirige esse limite a Deus com o corpo inteiro, não só com palavras.",
+      "scripture_references": [
+        {
+          "reference": "Daniel 9:3",
+          "text": "E eu dirigi o meu rosto ao Senhor Deus, para o buscar com oração, e rogos, e jejum, e pano de saco, e cinza."
+        },
+        {
+          "reference": "2 Crônicas 20:3-4",
+          "text": "Então, Josafá temeu e pôs-se a buscar o SENHOR; e apregoou jejum em todo o Judá. E Judá se ajuntou, para pedir socorro ao SENHOR; também de todas as cidades de Judá vieram para buscarem o SENHOR."
+        },
+        {
+          "reference": "Ester 4:16",
+          "text": "Vai, e ajunta todos os judeus que se acharem em Susã, e jejuai por mim, e não comais nem bebais por três dias, nem de dia nem de noite, e eu e as minhas moças também assim jejuaremos; e assim irei ter com o rei, ainda que não é segundo a lei; e, perecendo, pereço."
+        },
+        {
+          "reference": "Joel 2:12-13",
+          "text": "Ainda assim, agora mesmo diz o SENHOR: Convertei-vos a mim de todo o vosso coração; e isso com jejuns, e com choro, e com pranto. E rasgai o vosso coração, e não as vossas vestes, e convertei-vos ao SENHOR, vosso Deus; porque ele é misericordioso, e compassivo, e tardio em irar-se, e grande em beneficência e se arrepende do mal."
+        }
+      ],
+      "revelation_key": "Daniel, Josafá, Ester e Joel jejuam em circunstâncias distintas, mas cada um o faz no mesmo ponto: no fim de sua própria capacidade, voltando o corpo inteiro para Deus em vez de para uma solução própria."
+    },
+    {
+      "order": 7,
+      "type": "theological_tension",
+      "icon": "⚖️",
+      "title": "Três nomes que se confundem",
+      "subtitle": "O que hoje se chama \"jejum\" nem sempre é o que a Escritura chamou assim",
+      "content": "Em comunidades cristãs de hoje é comum ouvir a palavra \"jejum\" aplicada a deixar o celular ou as redes sociais por um tempo. A motivação costuma ser sincera, mas o nome bíblico que a Escritura dá a isso é outro.\n\n📊 Três conceitos:\n\n1️⃣ Jejum — hebraico צוֹם, (tsôwm) (H6685), grego νηστεία, (nēsteía) (G3521): abstenção de alimento ou sustento físico. É o termo que usam Isaías 58, Daniel 9, Ester 4 e Mateus 6, sempre referido ao corpo privado de comida.\n\n2️⃣ Domínio próprio — grego ἐγκράτεια, (enkráteia) (G1466): o controle constante dos desejos e apetites. Paulo o nomeia entre o fruto do Espírito em Gálatas 5:23 e o compara com a disciplina de um atleta em 1 Coríntios 9:25. É um caráter que se vive todos os dias.\n\n3️⃣ Consagração — separar algo lícito por um tempo para se dedicar à oração, como descreve Paulo em 1 Coríntios 7:5 a respeito da vida matrimonial.\n\nO jejum bíblico priva o corpo do alimento, a necessidade mais básica da vida física. Deixar o celular ou uma série é uma disciplina real e valiosa, mas pertence à categoria do domínio próprio.\n\n🧭 Como viver isso hoje:\n\n• Se o jejum consiste em privar o corpo de alimento, preencha esse tempo com oração, leitura da Palavra e busca ativa de Deus — como a igreja de Antioquia em Atos 13:2-3, que ministrava ao Senhor jejuando quando o Espírito Santo falou e separou Barnabé e Saulo para sua obra.\n\n• Se o que se deixa é o celular, as redes ou uma série, essa disciplina pode ser chamada pelo seu próprio nome bíblico: domínio próprio ou tempo de consagração. Nomeá-la assim a coloca onde a Escritura a coloca.\n\n• Em qualquer um dos dois casos, Isaías 58 exige que a privação se traduza em algo para com o próximo: compartilhar, servir, soltar cargas.\n\n• E em qualquer um dos dois casos, Mateus 6 exige que se viva \"no secreto\", visível somente para o Pai.",
+      "greek_words": [
+        {
+          "word": "ἐγκράτεια",
+          "transliteration": "enkráteia",
+          "strong": "G1466",
+          "meaning": "Domínio próprio, autocontrole constante",
+          "revelation": "Fruto do Espírito que se vive todos os dias, diferente do jejum como ato específico de privação de alimento por um tempo determinado."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "Gálatas 5:22-23",
+          "text": "Mas o fruto do Espírito é: amor, gozo, paz, longanimidade, benignidade, bondade, fé, mansidão, temperança. Contra essas coisas não há lei."
+        },
+        {
+          "reference": "1 Coríntios 9:25",
+          "text": "E todo aquele que luta de tudo se abstém; eles o fazem para alcançar uma coroa corruptível, nós, porém, uma incorruptível."
+        },
+        {
+          "reference": "1 Coríntios 7:5",
+          "text": "Não vos defraudeis um ao outro, senão por consentimento mútuo, por algum tempo, para vos aplicardes à oração; e, depois, ajuntai-vos outra vez, para que Satanás vos não tente pela vossa incontinência."
+        },
+        {
+          "reference": "Atos dos Apóstolos 13:2-3",
+          "text": "E, servindo eles ao Senhor e jejuando, disse o Espírito Santo: Apartai-me a Barnabé e a Saulo para a obra a que os tenho chamado. Então, jejuando, e orando, e pondo sobre eles as mãos, os despediram."
+        }
+      ],
+      "revelation_key": "O jejum, o domínio próprio e a consagração são três práticas bíblicas reais, mas só a primeira priva o corpo do próprio sustento — e cada uma cumpre seu propósito quando se enche de oração, Palavra e justiça para com o próximo."
+    },
+    {
+      "order": 8,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Descoberta pessoal",
+      "discovery_questions": [
+        {
+          "category": "Coração",
+          "question": "Quando você jejua, faz isso esperando que Deus responda como você quer, ou faz isso para entregar sua vontade a ele, sem condição sobre o que ele vai responder?"
+        },
+        {
+          "category": "Justiça",
+          "question": "Isaías 58:7 pede para repartir o pão com o faminto e cuidar do próprio irmão necessitado. Que ato concreto de justiça ou generosidade você vai fazer na sua próxima temporada de jejum ou consagração?"
+        },
+        {
+          "category": "Nome certo",
+          "question": "Você está chamando de \"jejum\" algo que na verdade é domínio próprio ou consagração? Nomear isso corretamente muda a maneira como você vê ou vive essa disciplina?"
+        }
+      ],
+      "prayer": {
+        "title": "Oração por um jejum segundo o teu coração",
+        "content": "Pai, obrigado pela tua Palavra, que revela com tanta clareza o que buscas de nós.\n\nHoje vimos que não queremos afligir o corpo enquanto o coração continua igual. Queremos um jejum que se traduza em justiça para com quem tem menos, e que se viva diante de ti no secreto, sem precisar de plateia humana.\n\nComo o povo de Isaías 55, viemos sem nada para pagar, para receber da tua mão o que nenhum esforço próprio alcança. Como Daniel, como Josafá, como Ester, queremos voltar nosso rosto para ti nos momentos que superam nossa própria capacidade.\n\nEnsina-nos a nomear bem cada disciplina que praticamos, e a encher cada espaço de renúncia com oração, tua Palavra e amor para com o próximo.\n\nEm nome de Jesus, Amém."
+      }
+    }
+  ],
+  "tags": [
+    "jejum",
+    "isaias_58",
+    "isaias_55",
+    "mateus_6",
+    "dominio_proprio",
+    "hebraico_biblico",
+    "grego_biblico",
+    "padrao_biblico_jejum"
+  ],
+  "metadata": {
+    "total_word_count": 1705,
+    "hebrew_words_count": 3,
+    "greek_words_count": 4,
+    "scripture_references_count": 21,
+    "difficulty_level": "intermediate-advanced",
+    "themes": [
+      "O jejum como aflição genuína da alma",
+      "O jejum ritualista frente ao jejum que Deus escolhe",
+      "Isaías 58 e Mateus 6 em diálogo",
+      "O padrão bíblico do jejum em momentos de crise e busca",
+      "Distinção entre jejum, domínio próprio e consagração"
+    ]
+  }
+}
