@@ -105,20 +105,20 @@ def check_drift(dart_repo: Path):
 
 CSS = """
 :root {
-  --bg: #f2f2f5; --card-bg: #fff; --text: rgba(0,0,0,0.9); --subtitle: rgba(80,60,180,0.7);
-  --tile-bg: rgba(230,230,235,0.5); --tile-border: rgba(108,79,214,0.1);
-  --anchor-bg: rgba(108,79,214,0.07); --anchor-border: rgba(108,79,214,0.25);
-  --identity-bg: rgba(108,79,214,0.12); --identity-border: rgba(108,79,214,0.3);
-  --greek-bg: rgba(230,225,250,0.4); --accent: #6c4fd6;
-  --question-border: rgba(0,0,0,0.1); --shadow: rgba(0,0,0,0.08);
-}
-html[data-theme="dark"] {
   --bg: #16161a; --card-bg: #232228; --text: rgba(255,255,255,0.92); --subtitle: #b9a6ff;
   --tile-bg: rgba(255,255,255,0.06); --tile-border: rgba(180,150,255,0.2);
   --anchor-bg: rgba(180,150,255,0.1); --anchor-border: rgba(180,150,255,0.3);
   --identity-bg: rgba(180,150,255,0.14); --identity-border: rgba(180,150,255,0.35);
   --greek-bg: rgba(180,150,255,0.1); --accent: #a68fff;
   --question-border: rgba(255,255,255,0.15); --shadow: rgba(0,0,0,0.4);
+}
+html[data-theme="light"] {
+  --bg: #f2f2f5; --card-bg: #fff; --text: rgba(0,0,0,0.9); --subtitle: rgba(80,60,180,0.7);
+  --tile-bg: rgba(230,230,235,0.5); --tile-border: rgba(108,79,214,0.1);
+  --anchor-bg: rgba(108,79,214,0.07); --anchor-border: rgba(108,79,214,0.25);
+  --identity-bg: rgba(108,79,214,0.12); --identity-border: rgba(108,79,214,0.3);
+  --greek-bg: rgba(230,225,250,0.4); --accent: #6c4fd6;
+  --question-border: rgba(0,0,0,0.1); --shadow: rgba(0,0,0,0.08);
 }
 body { font-family: -apple-system, Roboto, Arial, sans-serif; background:var(--bg); margin:0; padding:24px; }
 .theme-toggle { position:fixed; top:16px; right:16px; z-index:100; padding:10px 16px; border-radius:20px;
@@ -177,21 +177,23 @@ h2.section { font-size:20px; font-weight:900; margin-top:32px; color:var(--text)
 THEME_SCRIPT = """
 (function() {
   var saved = localStorage.getItem('discoveryPreviewTheme');
-  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  var theme = saved || (prefersDark ? 'dark' : 'light');
-  document.documentElement.setAttribute('data-theme', theme);
+  if (saved === 'light') { document.documentElement.setAttribute('data-theme', 'light'); }
   document.addEventListener('DOMContentLoaded', function() {
     var btn = document.getElementById('theme-toggle-btn');
     function updateLabel() {
-      var current = document.documentElement.getAttribute('data-theme');
-      btn.textContent = current === 'dark' ? 'Light mode' : 'Dark mode';
+      var isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      btn.textContent = isLight ? 'Dark mode' : 'Light mode';
     }
     updateLabel();
     btn.addEventListener('click', function() {
-      var current = document.documentElement.getAttribute('data-theme');
-      var next = current === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('discoveryPreviewTheme', next);
+      var isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      if (isLight) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('discoveryPreviewTheme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('discoveryPreviewTheme', 'light');
+      }
       updateLabel();
     });
   });
@@ -357,7 +359,7 @@ def build_html(data, drift_warnings):
             f"<!doctype html><html><head><meta charset='utf-8'>"
             f"<title>{escape(data.get('title', ''))}</title><style>{CSS}</style>"
             f"<script>{THEME_SCRIPT}</script></head><body>"
-            '<button id="theme-toggle-btn" class="theme-toggle">Dark mode</button>'
+            '<button id="theme-toggle-btn" class="theme-toggle">Light mode</button>'
         )
     ]
     for w in drift_warnings:
@@ -489,7 +491,15 @@ def main():
     for w in warnings:
         print(f"WARNING: {w}", file=sys.stderr)
 
-    html = build_html(data, warnings)
+    # A missing local devocional_nuevo checkout is expected in most
+    # environments (e.g. this repo alone, or a review sandbox) -- it just
+    # means the drift check against live Dart source didn't run. It's
+    # worth a console note (above) but not a banner on every preview a
+    # reader opens. Genuine drift warnings (repo found, fields mismatched)
+    # still surface in the HTML.
+    html_warnings = [w for w in warnings if not w.startswith("Could not find")]
+
+    html = build_html(data, html_warnings)
     out_path = Path(args.out) if args.out else json_path.with_suffix(".preview.html")
     out_path.write_text(html, encoding="utf-8")
     print(f"Wrote {out_path}")

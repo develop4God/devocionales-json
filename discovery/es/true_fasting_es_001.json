@@ -1,0 +1,280 @@
+{
+  "id": "true_fasting_001",
+  "type": "discovery",
+  "date": "2026-09-02",
+  "title": "El ayuno que no llegó a los cielos",
+  "subtitle": "Un pueblo que ayunaba con exactitud y un Dios que decía no darse por entendido",
+  "language": "es",
+  "version": "RVR1960",
+  "estimated_reading_minutes": 11,
+  "key_verse": {
+    "reference": "Isaías 58:3",
+    "text": "¿Por qué, dicen, ayunamos, y no hiciste caso; humillamos nuestras almas, y no te diste por entendido? He aquí que en el día de vuestro ayuno buscáis vuestro propio gusto, y oprimís a todos vuestros trabajadores."
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "opening_mystery",
+      "icon": "🍞",
+      "title": "Comprad sin dinero",
+      "subtitle": "Isaías 55 abre con una invitación que rompe la lógica del mérito",
+      "content": "Isaías 55 comienza con una exclamación: \"¡Ho!\" — una llamada de atención urgente dirigida a todo el que tiene sed. Lo que sigue es una invitación contraria a la economía humana: venid, comprad y comed, sin dinero y sin precio.\n\nEn Isaías 55:2, Dios pregunta por qué el pueblo gasta su dinero en lo que no es pan y su trabajo en lo que no sacia: la imagen describe a alguien que invierte esfuerzo real en algo que nunca llena. El contraste queda planteado: el esfuerzo humano no alcanza a saciar. Lo que Dios ofrece no se compra, se recibe como un regalo.\n\nEsa misma tensión aparece siglos después en las palabras de Jesús en Mateo 4:4, citando Deuteronomio 8:3: la vida no depende solo del alimento físico, sino de lo que sale de la boca de Dios. El pan físico sostiene el cuerpo por un día; la Palabra de Dios sostiene la vida entera.\n\nEsta invitación es el marco que da sentido a todo lo que Isaías dirá después sobre el ayuno: la abstención de comida nunca fue el punto final. El punto es acudir a Dios con hambre real y recibir de Él lo que ningún esfuerzo propio puede comprar.",
+      "scripture_references": [
+        {
+          "reference": "Isaías 55:1-2",
+          "text": "A todos los sedientos: Venid a las aguas; y los que no tienen dinero, venid, comprad y comed. Venid, comprad sin dinero y sin precio, vino y leche. ¿Por qué gastáis el dinero en lo que no es pan, y vuestro trabajo en lo que no sacia? Oídme atentamente, y comed del bien, y se deleitará vuestra alma con grosura."
+        },
+        {
+          "reference": "Deuteronomio 8:3",
+          "text": "Y te afligió, y te hizo tener hambre, y te sustentó con maná, comida que no habías conocido tú, ni tus padres la habían conocido, para hacerte saber que no solo de pan vivirá el hombre, mas de todo lo que sale de la boca de Jehová vivirá el hombre."
+        },
+        {
+          "reference": "Mateo 4:4",
+          "text": "Él respondió y dijo: Escrito está: No solo de pan vivirá el hombre, sino de toda palabra que sale de la boca de Dios."
+        }
+      ],
+      "revelation_key": "Dios invita a comprar sin dinero porque lo que el alma necesita se recibe de su mano, no del esfuerzo humano — y esa es la puerta de entrada para entender el ayuno que Él realmente busca."
+    },
+    {
+      "order": 2,
+      "type": "hebrew_exegesis",
+      "icon": "📖",
+      "title": "Afligir el alma",
+      "subtitle": "El origen del lenguaje hebreo del ayuno, desde el Día de la Expiación hasta Isaías",
+      "content": "La palabra hebrea más directa para ayuno es צוֹם, (tsôwm) (H6685): la abstención literal de alimento. Pero cuando la Escritura describe el ayuno bíblico, usa con más frecuencia una frase más precisa: עָנָה, (ʻânâh) (H6031) נֶפֶשׁ, (nephesh) (H5315), literalmente \"afligir el alma\". Esa frase, no la palabra suelta, es la que define lo que Dios realmente pide.\n\nAparece primero en Levítico 16, en las instrucciones para el Día de la Expiación. Una vez al año, mientras el Sumo Sacerdote entraba al Lugar Santísimo, todo Israel debía \"afligir su alma\". El mandato pedía privar de comida al cuerpo entero, como señal visible de entrega a Dios.\n\nEsas mismas palabras, \"afligir su alma\", son las que el pueblo repite en Isaías 58:3 cuando reclama \"humillamos nuestras almas\". Heredaban con exactitud el vocabulario de Levítico 16: conocían las palabras correctas y cumplían el rito con precisión.\n\nEl vocabulario nunca fue el problema. La pregunta que Isaías 58 plantea es qué hay detrás de esa aflicción del cuerpo: ¿un corazón que realmente se somete a Dios, o un rito vacío repetido de memoria?",
+      "scripture_references": [
+        {
+          "reference": "Levítico 16:29",
+          "text": "Y esto tendréis por estatuto perpetuo: En el mes séptimo, a los diez días del mes, afligiréis vuestras almas, y ninguna obra haréis, ni el natural ni el extranjero que peregrina entre vosotros."
+        },
+        {
+          "reference": "Levítico 16:31",
+          "text": "Es día de reposo para vosotros, y afligiréis vuestras almas, por estatuto perpetuo."
+        },
+        {
+          "reference": "Isaías 58:3",
+          "text": "¿Por qué, dicen, ayunamos, y no hiciste caso; humillamos nuestras almas, y no te diste por entendido? He aquí que en el día de vuestro ayuno buscáis vuestro propio gusto, y oprimís a todos vuestros trabajadores."
+        }
+      ],
+      "revelation_key": "Afligir el alma era el vocabulario exacto que la Ley entregó a Israel para el ayuno — y por eso Isaías 58 puede usarlo para exponer con precisión dónde estaba fallando el pueblo.",
+      "hebrew_words": [
+        {
+          "word": "צוֹם",
+          "transliteration": "tsôwm",
+          "strong": "H6685",
+          "meaning": "Ayuno; abstención literal de alimento",
+          "revelation": "Usado para el acto físico de ayunar, en Isaías 58:3-5 y en todo el Antiguo Testamento."
+        },
+        {
+          "word": "עָנָה",
+          "transliteration": "ʻânâh",
+          "strong": "H6031",
+          "meaning": "Afligir, humillar, deprimir",
+          "revelation": "El verbo que la Ley usa para el acto físico de humillarse — un sometimiento del cuerpo entero, más allá de una emoción interior aislada."
+        },
+        {
+          "word": "נֶפֶשׁ",
+          "transliteration": "nephesh",
+          "strong": "H5315",
+          "meaning": "Alma, ser vital, la persona entera",
+          "revelation": "Nombra al ser vivo completo, no solo lo espiritual separado del cuerpo, por eso afligir el נֶפֶשׁ, (nephesh) involucra cuerpo y espíritu juntos."
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "type": "historical_context",
+      "icon": "🪞",
+      "title": "Un rito correcto por fuera",
+      "subtitle": "Isaías 58:3-5: el pueblo ayunaba con exactitud y preguntaba por qué Dios no respondía",
+      "content": "El pueblo se presenta ante Dios con un reclamo directo: \"¿Por qué ayunamos, y no hiciste caso?\" (Isaías 58:3). Cumplían el rito. Se abstenían de comida. Doblaban la cabeza y se acostaban sobre cilicio y ceniza: la puesta en escena completa del duelo religioso.\n\nDios responde señalando la contradicción exacta: el mismo día del ayuno, el pueblo buscaba su propio gusto (Isaías 58:3) y oprimía a sus trabajadores. El ayuno terminaba en contiendas y debates (Isaías 58:4). El cuerpo se privaba de comida mientras el corazón seguía funcionando exactamente igual que cualquier otro día: con las mismas disputas, la misma opresión, el mismo egoísmo. Por eso, en Isaías 58:5, Dios pregunta directamente si eso merece llamarse ayuno, un día que Él pueda aceptar: la forma exterior era correcta, pero la postura interior contradecía cada gesto.\n\nZacarías 7 presenta el mismo problema. El pueblo pregunta si debe seguir ayunando en memoria de la destrucción del templo, y Dios responde con una pregunta directa: \"¿habéis ayunado para mí?\" (Zacarías 7:5). El ayuno del pueblo tenía la forma correcta, pero estaba dirigido a ellos mismos, no a Dios.\n\nEsta escena es el trasfondo exacto sobre el que Dios va a construir su redefinición del ayuno verdadero en los versículos siguientes.",
+      "scripture_references": [
+        {
+          "reference": "Isaías 58:3",
+          "text": "¿Por qué, dicen, ayunamos, y no hiciste caso; humillamos nuestras almas, y no te diste por entendido? He aquí que en el día de vuestro ayuno buscáis vuestro propio gusto, y oprimís a todos vuestros trabajadores."
+        },
+        {
+          "reference": "Isaías 58:4-5",
+          "text": "He aquí que para contiendas y debates ayunáis, y para herir con el puño inicuamente; no ayunéis como hasta ahora, para que vuestra voz sea oída en lo alto. ¿Es tal el ayuno que yo escogí, que el hombre aflija su alma un día, que incline su cabeza como junco, y haga cama de cilicio y de ceniza? ¿Llamaréis esto ayuno, y día agradable a Jehová?"
+        },
+        {
+          "reference": "Zacarías 7:5-6",
+          "text": "Habla a todo el pueblo del país, y a los sacerdotes, diciendo: Cuando ayunasteis y llorasteis en el quinto y en el séptimo mes estos setenta años, ¿habéis ayunado para mí? Y cuando coméis y bebéis, ¿no coméis y bebéis para vosotros mismos?"
+        }
+      ],
+      "revelation_key": "El corazón del pueblo seguía viviendo en dirección contraria mientras el cuerpo cumplía el rito con exactitud, y Dios lo señala con la misma precisión en Isaías y en Zacarías."
+    },
+    {
+      "order": 4,
+      "type": "theological_depth",
+      "icon": "🔓",
+      "title": "Lo que Dios responde",
+      "subtitle": "Isaías 58:6-12 responde al reclamo del pueblo con una definición propia del ayuno",
+      "content": "Después de mostrar que el ayuno del pueblo estaba vacío por dentro, Dios da su propia definición en Isaías 58:6: el ayuno que Él escoge consiste en desatar ligaduras de impiedad, soltar cargas de opresión, dejar libres a los quebrantados y romper todo yugo.\n\nCada verbo de ese versículo es un acto concreto: desatar, soltar, dejar ir libres, romper. El ayuno que Dios busca exige justicia práctica como su verdadero contenido.\n\n✋ Lo que Dios pide en concreto (Isaías 58:7):\n\n• Partir el pan con el hambriento.\n• Recibir en casa a los pobres errantes.\n• Cubrir al desnudo.\n• No esconderse de la propia familia necesitada.\n\nEste es el giro central del capítulo: el ayuno verdadero comparte el pan de la mesa propia con quien no tiene ninguno, en lugar de dejarla vacía. La abstención personal se convierte en generosidad hacia otro.\n\n🌅 Las promesas que siguen (Isaías 58:8-12):\n\nCuando esta clase de ayuno reemplaza al rito vacío, el texto describe una serie de promesas: la luz nace como el alba (Isaías 58:8), la sanidad se acelera (Isaías 58:8), la oración recibe una respuesta inmediata de parte de Dios (Isaías 58:9), y Él promete guiar continuamente (Isaías 58:11), incluso en tiempos de sequía.\n\nEste patrón, justicia primero y luego promesa, ya aparecía antes en Isaías 1:16-17 respecto a las ofrendas: purificar las manos, dejar de hacer el mal y buscar activamente la justicia del huérfano y la viuda. El capítulo 58 aplica al ayuno la misma verdad que el capítulo 1 aplicó al sacrificio: ningún rito reemplaza la justicia hacia el prójimo.",
+      "scripture_references": [
+        {
+          "reference": "Isaías 58:6-7",
+          "text": "¿No es más bien el ayuno que yo escogí, desatar las ligaduras de impiedad, soltar las cargas de opresión, y dejar ir libres a los quebrantados, y que rompáis todo yugo? ¿No es que partas tu pan con el hambriento, y a los pobres errantes albergues en casa; que cuando veas al desnudo, lo cubras, y no te escondas de tu hermano?"
+        },
+        {
+          "reference": "Isaías 58:9",
+          "text": "Entonces invocarás, y te oirá Jehová; clamarás, y dirá él: Heme aquí."
+        },
+        {
+          "reference": "Isaías 1:16-17",
+          "text": "Lavaos y limpiaos; quitad la iniquidad de vuestras obras de delante de mis ojos; dejad de hacer lo malo; aprended a hacer bien; buscad el juicio, restituid al agraviado, oíd en derecho al huérfano, amparad a la viuda."
+        }
+      ],
+      "revelation_key": "El ayuno que Dios escoge comparte el pan con el hambriento en lugar de guardarlo — y esa clase de ayuno abre la puerta a la luz, la sanidad y la respuesta inmediata de Dios."
+    },
+    {
+      "order": 5,
+      "type": "new_testament_fulfillment",
+      "icon": "🕊️",
+      "title": "En lo secreto",
+      "subtitle": "Mateo 6:16-18 completa en griego la misma corrección que Isaías hizo en hebreo",
+      "content": "Jesús retoma la misma corrección de Isaías 58, ahora dirigida directamente a sus oyentes: \"Cuando ayunéis, no seáis austeros, como los hipócritas\" (Mateo 6:16). La palabra griega es ὑποκριτής, (hypokritḗs) (G5273), literalmente, actores de teatro. Describe a quien representa un papel para una audiencia, no a quien vive lo que muestra.\n\nJesús describe la actuación con precisión (Mateo 6:16). El verbo griego para desfigurar el rostro es ἀφανίζω, (aphanízō) (G853) — cambiar a propósito el propio rostro para que otros noten el sacrificio. Es el mismo diagnóstico de Isaías 58:5 en otro idioma: inclinar la cabeza para que la aflicción sea vista.\n\n💰 El término comercial:\n\nSobre la recompensa de los hipócritas, Jesús usa el verbo griego ἀπέχω, (apéchō) (G568) — \"ya tienen su recompensa\" (Mateo 6:16). En los recibos comerciales del siglo I, esa palabra era la fórmula para decir \"pago recibido en su totalidad, nada más se debe\". Si el ayuno se hace para ser admirado, el reconocimiento humano es el pago completo y Dios ya no debe nada, porque nadie se lo pidió a Él.\n\n🫒 La instrucción positiva (Mateo 6:17-18):\n\nJesús ordena lo contrario: \"unge tu cabeza y lava tu rostro\", la rutina de cada día. El ayuno permanece en lo κρυπτός, (kryptós) (G2927), \"lo secreto\", visible solo para el Padre que ve en lo secreto.",
+      "greek_words": [
+        {
+          "word": "ὑποκριτής",
+          "transliteration": "hypokritḗs",
+          "strong": "G5273",
+          "meaning": "Actor bajo un personaje asumido; por extensión, quien finge",
+          "revelation": "Jesús acusa a quien convierte el ayuno en actuación, no al ayuno en sí — el mismo rito que Isaías 58 desenmascara como espectáculo."
+        },
+        {
+          "word": "ἀπέχω",
+          "transliteration": "apéchō",
+          "strong": "G568",
+          "meaning": "Recibir en su totalidad; tener por completo",
+          "revelation": "El aplauso humano es un pago completo y final — quien ayuna para ser visto ya recibió todo lo que buscaba, y no queda nada pendiente de parte de Dios."
+        },
+        {
+          "word": "κρυπτός",
+          "transliteration": "kryptós",
+          "strong": "G2927",
+          "meaning": "Oculto, escondido; lo privado",
+          "revelation": "El ayuno que Jesús ordena vive en lo κρυπτός, (kryptós), visible solo para el Padre, nunca diseñado para una audiencia humana."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "Mateo 6:16-18",
+          "text": "Cuando ayunéis, no seáis austeros, como los hipócritas; porque ellos demudan sus rostros para mostrar a los hombres que ayunan; de cierto os digo que ya tienen su recompensa. Pero tú, cuando ayunes, unge tu cabeza y lava tu rostro, para no manifestar a los hombres que ayunas, sino a tu Padre que está en secreto; y tu Padre que ve en lo secreto te recompensará en público."
+        }
+      ],
+      "revelation_key": "Isaías 58 mide el ayuno por su fruto hacia el prójimo; Jesús lo mide por su motivación ante el Padre — dos ángulos de la misma verdad: el ayuno pierde su valor en el instante en que busca una audiencia humana."
+    },
+    {
+      "order": 6,
+      "type": "typology_thread",
+      "icon": "🔥",
+      "title": "Un patrón que atraviesa toda la Escritura",
+      "subtitle": "Daniel, Josafat, Ester y Joel muestran el mismo ayuno dirigido hacia Dios",
+      "content": "El ayuno bíblico no aparece solo en Isaías. A lo largo de la Escritura, el mismo patrón se repite en momentos muy distintos: personas que se vuelven hacia Dios con el cuerpo entero, no solo con palabras.\n\n📜 Daniel — buscar dirección (Daniel 9:3):\n\nDaniel, estudiando las profecías de Jeremías sobre los setenta años de exilio, \"vuelve su rostro a Dios\" en oración, ruego, ayuno, cilicio y ceniza. El ayuno aquí acompaña la búsqueda seria de entendimiento — se suma al estudio de la Palabra, sin reemplazarlo.\n\n⚔️ Josafat — enfrentar una crisis (2 Crónicas 20:3):\n\nCuando un gran ejército avanza contra Judá, Josafat, \"temiendo\", proclama ayuno en toda la nación. El pueblo entero se reúne \"para pedir socorro a Jehová\" (2 Crónicas 20:4), sin planear una estrategia militar propia. El ayuno nacional es la confesión pública de que la victoria no depende de la fuerza humana.\n\n👑 Ester — interceder en una amenaza mortal (Ester 4:16):\n\nAnte el edicto que amenazaba con exterminar a los judíos, Ester pide a Mardoqueo reunir a todo el pueblo en Susa para ayunar tres días antes de que ella se presente ante el rey sin haber sido llamada. El ayuno precede al acto de mayor riesgo.\n\n💔 Joel — arrepentimiento genuino (Joel 2:12-13):\n\nDios llama al pueblo a volver a Él \"con ayuno, lloro y lamento\", y añade la advertencia central: \"Rasgad vuestro corazón, y no vuestros vestidos\". El rasgado de vestiduras era el gesto exterior tradicional de duelo; Dios pide el gesto interior que ese exterior debía representar.\n\n🔗 Lo que los cuatro tienen en común:\n\nNinguno ayuna para forzar la mano de Dios. Cada uno ayuna al llegar al límite de su propia capacidad (entendimiento, fuerza militar, protección legal, o un corazón que necesita volverse) y dirige ese límite hacia Dios con el cuerpo entero, no solo con palabras.",
+      "scripture_references": [
+        {
+          "reference": "Daniel 9:3",
+          "text": "Y volví mi rostro a Dios el Señor, buscándole en oración y ruego, en ayuno, cilicio y ceniza."
+        },
+        {
+          "reference": "2 Crónicas 20:3-4",
+          "text": "Entonces Josafat tuvo temor, y volvió su rostro para consultar a Jehová, e hizo pregonar ayuno a todo Judá. Y se reunieron los de Judá para pedir socorro a Jehová; y también de todas las ciudades de Judá vinieron a pedir socorro a Jehová."
+        },
+        {
+          "reference": "Ester 4:16",
+          "text": "Ve y reúne a todos los judíos que se hallan en Susa, y ayunad por mí, y no comáis ni bebáis en tres días, noche ni día; yo también con mis doncellas ayunaré igualmente, y así entraré al rey, aunque no sea conforme a la ley; y si perezco, que perezca."
+        },
+        {
+          "reference": "Joel 2:12-13",
+          "text": "Por eso pues, ahora, dice Jehová, convertíos a mí con todo vuestro corazón, con ayuno y lloro y lamento. Rasgad vuestro corazón, y no vuestros vestidos, y convertíos a Jehová vuestro Dios; porque misericordioso es y clemente, tardo para la ira y grande en misericordia."
+        }
+      ],
+      "revelation_key": "Daniel, Josafat, Ester y Joel ayunan en circunstancias distintas, pero cada uno lo hace en el mismo punto: al final de su propia capacidad, volviendo el cuerpo entero hacia Dios en lugar de hacia una solución propia."
+    },
+    {
+      "order": 7,
+      "type": "theological_tension",
+      "icon": "⚖️",
+      "title": "Tres nombres que se confunden",
+      "subtitle": "Lo que hoy se llama \"ayuno\" no siempre es lo que la Escritura llamó así",
+      "content": "En comunidades cristianas actuales es común escuchar la palabra \"ayuno\" aplicada a dejar el celular o las redes sociales por un tiempo. La motivación suele ser sincera, pero el nombre bíblico que la Escritura le da es otro.\n\n📊 Tres conceptos:\n\n1️⃣ Ayuno — hebreo צוֹם, (tsôwm) (H6685), griego νηστεία, (nēsteía) (G3521): abstención de alimento o sustento físico. Es el término que usan Isaías 58, Daniel 9, Ester 4 y Mateo 6, siempre referido al cuerpo privado de comida.\n\n2️⃣ Dominio propio — griego ἐγκράτεια, (enkráteia) (G1466): el control constante de los deseos y apetitos. Pablo lo nombra entre el fruto del Espíritu en Gálatas 5:23 y lo compara con la disciplina de un atleta en 1 Corintios 9:25. Es un carácter que se vive todos los días.\n\n3️⃣ Consagración — apartar algo lícito por un tiempo para dedicarse a la oración, como describe Pablo en 1 Corintios 7:5 respecto a la vida matrimonial.\n\nEl ayuno bíblico priva al cuerpo del alimento, la necesidad más básica de la vida física. Dejar el celular o una serie es una disciplina real y valiosa, pero pertenece a la categoría del dominio propio.\n\n🧭 Cómo vivir esto hoy:\n\n• Si el ayuno consiste en privar al cuerpo de alimento, llena ese tiempo con oración, lectura de la Palabra y búsqueda activa de Dios — como la iglesia de Antioquía en Hechos 13:2-3, que ministraba al Señor ayunando cuando el Espíritu Santo habló y apartó a Bernabé y a Saulo para su obra.\n\n• Si lo que se deja es el celular, las redes o una serie, esa disciplina puede llamarse con su propio nombre bíblico: dominio propio o tiempo de consagración. Nombrarla así la ubica donde la Escritura la ubica.\n\n• En cualquiera de los dos casos, Isaías 58 exige que la privación se traduzca en algo hacia el prójimo: compartir, servir, desatar cargas.\n\n• Y en cualquiera de los dos casos, Mateo 6 exige que se viva \"en lo secreto\", visible solo para el Padre.",
+      "greek_words": [
+        {
+          "word": "ἐγκράτεια",
+          "transliteration": "enkráteia",
+          "strong": "G1466",
+          "meaning": "Dominio propio, autocontrol constante",
+          "revelation": "Fruto del Espíritu que se vive todos los días, distinto del ayuno como acto específico de privación de alimento por un tiempo determinado."
+        }
+      ],
+      "scripture_references": [
+        {
+          "reference": "Gálatas 5:22-23",
+          "text": "Mas el fruto del Espíritu es amor, gozo, paz, paciencia, benignidad, bondad, fe, mansedumbre, templanza; contra tales cosas no hay ley."
+        },
+        {
+          "reference": "1 Corintios 9:25",
+          "text": "Todo aquel que lucha, de todo se abstiene; ellos, a la verdad, para recibir una corona corruptible, pero nosotros, una incorruptible."
+        },
+        {
+          "reference": "1 Corintios 7:5",
+          "text": "No os neguéis el uno al otro, a no ser por algún tiempo de mutuo consentimiento, para ocuparos sosegadamente en la oración; y volved a juntaros en uno, para que no os tiente Satanás a causa de vuestra incontinencia."
+        },
+        {
+          "reference": "Hechos 13:2-3",
+          "text": "Ministrando estos al Señor, y ayunando, dijo el Espíritu Santo: Apartadme a Bernabé y a Saulo para la obra a que los he llamado. Entonces, habiendo ayunado y orado, les impusieron las manos y los despidieron."
+        }
+      ],
+      "revelation_key": "El ayuno, el dominio propio y la consagración son tres prácticas bíblicas reales, pero solo la primera priva al cuerpo del sustento mismo — y cada una cumple su propósito cuando se llena de oración, Palabra y justicia hacia el prójimo."
+    },
+    {
+      "order": 8,
+      "type": "discovery_activation",
+      "icon": "🙏",
+      "title": "Descubrimiento personal",
+      "discovery_questions": [
+        {
+          "category": "Corazón",
+          "question": "Cuando ayunas, ¿lo haces esperando que Dios responda como tú quieres, o lo haces para entregarle tu voluntad, sin condición sobre lo que Él responda?"
+        },
+        {
+          "category": "Justicia",
+          "question": "Isaías 58:7 pide partir el pan con el hambriento y cuidar al propio hermano necesitado. ¿Qué acto concreto de justicia o generosidad vas a hacer en tu próxima temporada de ayuno o consagración?"
+        },
+        {
+          "category": "Nombre correcto",
+          "question": "¿Estás llamando \"ayuno\" a algo que en realidad es dominio propio o consagración? Nombrarlo correctamente, ¿cambia tu manera de verlo o vivirlo?"
+        }
+      ],
+      "prayer": {
+        "title": "Oración por un ayuno según tu corazón",
+        "content": "Padre, gracias por tu Palabra, que revela con tanta claridad lo que buscas de nosotros.\n\nHoy vimos que no queremos afligir el cuerpo mientras el corazón sigue igual. Queremos un ayuno que se traduzca en justicia hacia quien tiene menos, y que se viva delante de ti en lo secreto, sin necesidad de audiencia humana.\n\nComo el pueblo de Isaías 55, venimos sin poder pagar nada, a recibir de tu mano lo que ningún esfuerzo propio alcanza. Como Daniel, como Josafat, como Ester, queremos volver nuestro rostro hacia ti en los momentos que superan nuestra propia capacidad.\n\nEnséñanos a nombrar bien cada disciplina que practicamos, y a llenar cada espacio de renuncia con oración, tu Palabra y amor hacia el prójimo.\n\nEn el nombre de Jesús, Amén."
+      }
+    }
+  ],
+  "tags": [
+    "ayuno",
+    "isaias_58",
+    "isaias_55",
+    "mateo_6",
+    "dominio_propio",
+    "hebreo_biblico",
+    "griego_biblico",
+    "patron_biblico_ayuno"
+  ],
+  "metadata": {
+    "total_word_count": 2691,
+    "hebrew_words_count": 3,
+    "greek_words_count": 4,
+    "scripture_references_count": 21,
+    "difficulty_level": "intermediate-advanced",
+    "themes": [
+      "El ayuno como aflicción genuina del alma",
+      "El ayuno ritualista frente al ayuno que Dios escoge",
+      "Isaías 58 y Mateo 6 en diálogo",
+      "El patrón bíblico del ayuno en momentos de crisis y búsqueda",
+      "Distinción entre ayuno, dominio propio y consagración"
+    ]
+  }
+}
