@@ -2172,6 +2172,59 @@
         "ar": 8,
         "fil": 6
       }
+    },
+    {
+      "id": "true_fasting_001",
+      "version": "1.0",
+      "emoji": "🍞",
+      "files": {
+        "es": "true_fasting_es_001.json",
+        "en": "true_fasting_en_001.json",
+        "pt": "true_fasting_pt_001.json",
+        "fr": "true_fasting_fr_001.json",
+        "ja": "true_fasting_ja_001.json",
+        "zh": "true_fasting_zh_001.json",
+        "hi": "true_fasting_hi_001.json",
+        "de": "true_fasting_de_001.json",
+        "ar": "true_fasting_ar_001.json",
+        "fil": "true_fasting_fil_001.json"
+      },
+      "titles": {
+        "es": "El ayuno que Dios escoge",
+        "en": "PENDING_TRANSLATION",
+        "pt": "PENDING_TRANSLATION",
+        "fr": "PENDING_TRANSLATION",
+        "ja": "PENDING_TRANSLATION",
+        "zh": "PENDING_TRANSLATION",
+        "hi": "PENDING_TRANSLATION",
+        "de": "PENDING_TRANSLATION",
+        "ar": "PENDING_TRANSLATION",
+        "fil": "PENDING_TRANSLATION"
+      },
+      "subtitles": {
+        "es": "Lo que Isaías y Jesús enseñan sobre afligir el alma para volver a Dios, no para negociar con Él",
+        "en": "PENDING_TRANSLATION",
+        "pt": "PENDING_TRANSLATION",
+        "fr": "PENDING_TRANSLATION",
+        "ja": "PENDING_TRANSLATION",
+        "zh": "PENDING_TRANSLATION",
+        "hi": "PENDING_TRANSLATION",
+        "de": "PENDING_TRANSLATION",
+        "ar": "PENDING_TRANSLATION",
+        "fil": "PENDING_TRANSLATION"
+      },
+      "estimated_reading_minutes": {
+        "es": 11,
+        "en": 11,
+        "pt": 11,
+        "fr": 11,
+        "ja": 11,
+        "zh": 11,
+        "hi": 11,
+        "de": 11,
+        "ar": 11,
+        "fil": 11
+      }
     }
   ]
 }
