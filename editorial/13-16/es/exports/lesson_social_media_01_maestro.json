@@ -1,0 +1,75 @@
+{
+  "lesson_id": "lesson_social_media_01",
+  "unit_id": "unit_social_media_01",
+  "title": "Redes sociales: el espejo que nunca deja de hablar",
+  "objective": "Que el joven identifique cómo sus hábitos en redes sociales moldean su manera de pensar, sentir y valorarse, y desarrolle discernimiento bíblico para vivir con libertad frente a la pantalla.",
+  "bible_reading": {
+    "reference": "Filipenses 4:4-9",
+    "version": "RVR1960",
+    "context_note": "Pablo escribe desde la cárcel, animando a la iglesia a cuidar su mente en medio de circunstancias difíciles, un contexto que resuena con la ansiedad digital de hoy."
+  },
+  "key_verse": {
+    "reference": "Filipenses 4:8",
+    "text": "Por lo demás, hermanos, todo lo que es verdadero, todo lo honesto, todo lo justo, todo lo puro, todo lo amable, todo lo que es de buen nombre; si hay virtud alguna, si algo digno de alabanza, en esto pensad."
+  },
+  "hook": {
+    "type": "historia_real",
+    "content": "Camila abre su teléfono apenas despierta. Antes de levantarse de la cama ya vio treinta publicaciones: un viaje a la playa, un cuerpo perfecto, una fiesta a la que no fue invitada. Su día apenas comienza y ya siente que va perdiendo."
+  },
+  "metadata": {
+    "language": "es",
+    "editorial_status": "draft",
+    "created_by": "ai_generated"
+  },
+  "content": {
+    "audience": "maestro",
+    "teaching_deep_dive": "Las plataformas sociales están construidas sobre un modelo de negocio que depende de la atención sostenida: mientras más tiempo permanece un usuario mirando, mayor es el ingreso publicitario. Por eso el contenido que el algoritmo prioriza suele ser el que genera comparación, indignación o deseo, emociones que mantienen al usuario desplazando la pantalla. Para un adolescente en pleno desarrollo de identidad, esta exposición constante entrena su sentido de valor propio alrededor de métricas externas: likes, seguidores, comentarios. Bíblicamente, esto choca de frente con Gálatas 1:10, donde Pablo pregunta si busca agradar a hombres o a Dios, y con Efesios 2:10, que sitúa la identidad del creyente en la obra de Cristo, no en la aprobación de otros.",
+    "facilitation_notes": "Antes de la sesión, pide a los jóvenes que revisen (en privado, sin compartir el número si les incomoda) su tiempo de pantalla semanal desde la configuración del teléfono. Abre la sesión preguntando qué sintieron al ver ese número: sorpresa, culpa, indiferencia. Evita el tono de regaño; el objetivo es despertar conciencia, no generar vergüenza.",
+    "group_dynamics": [
+      "Actividad 'Feed real vs. feed editado': en parejas, comparan una foto espontánea propia con una foto 'preparada' para redes, y conversan sobre la diferencia entre ambas",
+      "Ronda de una frase: cada joven completa en voz alta 'Me siento valioso cuando ______' y el grupo identifica juntos cuántas respuestas dependen de otras personas"
+    ],
+    "leader_training": {
+      "topic": "Cómo acompañar a un joven que muestra señales de ansiedad ligada a redes sociales",
+      "content": "Si un joven expresa angustia recurrente relacionada con su imagen o su valor a partir de redes sociales, tu papel como líder es escuchar sin minimizar, orar con él, e involucrar a sus padres o a un consejero pastoral cuando la situación lo amerite. Tu enseñanza en el aula construye conciencia preventiva; el acompañamiento pastoral individual es el espacio para atender casos específicos con el cuidado que merecen."
+    },
+    "materials_needed": [
+      "Teléfonos de los alumnos (para revisar tiempo de pantalla, opcional)",
+      "Tarjetas o papel para la dinámica de comparación de fotos"
+    ]
+  },
+  "student_reference": {
+    "audience": "alumno",
+    "teaching_summary": "Cada vez que abres una red social, alguien decidió qué vas a ver: un algoritmo diseñado para mantenerte mirando el mayor tiempo posible. Eso significa que tu mente recibe cientos de mensajes silenciosos cada día sobre cómo debes verte, qué debes tener y quién vale la pena. La Biblia enseña que guardamos nuestro corazón con diligencia, porque de él mana la vida (Proverbios 4:23). Pablo nos da una brújula clara en Filipenses 4:8: llenar la mente de lo verdadero, lo puro y lo admirable. Esto convierte el uso de redes sociales en una decisión espiritual, tanto como leer la Biblia o congregarte.",
+    "comprehension_questions": [
+      {
+        "id": "q1",
+        "text": "Según Filipenses 4:8, ¿en qué tipo de cosas debemos pensar?",
+        "type": "recall"
+      },
+      {
+        "id": "q2",
+        "text": "Piensa en tu última hora en redes sociales: ¿qué mensajes silenciosos recibiste sobre tu cuerpo, tu vida o tu valor?",
+        "type": "reflection"
+      }
+    ],
+    "fill_in_blanks": [
+      "Esta semana, cuando sienta el impulso de compararme con alguien en redes, voy a ______"
+    ],
+    "personal_outline": {
+      "title": "Para tu tiempo a solas",
+      "points": [
+        "Lee Proverbios 4:23 y escribe qué significa 'guardar tu corazón' en tu propio contexto digital",
+        "Revisa el tiempo de pantalla de tu teléfono de esta semana y anota qué sentiste al ver ese número",
+        "Elige una cuenta que te hace sentir menos valioso y decide qué harás con ella"
+      ]
+    },
+    "family_discussion": {
+      "questions": [
+        "¿Alguna vez sentiste tristeza o ansiedad después de estar mucho tiempo en redes sociales? ¿Qué la provocó?",
+        "¿Qué reglas de uso de pantallas tenemos en casa, y por qué existen?"
+      ]
+    },
+    "evangelism_prompt": "Piensa en un amigo que suele publicar cosas tristes o de baja autoestima. Esta semana, en vez de solo darle 'me gusta', escríbele un mensaje directo animándolo con una palabra de esperanza."
+  }
+}
