@@ -3,7 +3,10 @@ name = "devocionales-json"
 version = "0.1.0"
 description = "Content, validation, and generation pipelines for devocionales-json (Devotionals, Discovery, Encounters)."
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "jsonschema",
+    "reportlab",
+]
 
 [project.optional-dependencies]
 dev = [

@@ -2,3 +2,4 @@ __pycache__/
 *.preview.html
 .venv/
 *.egg-info/
+editorial/**/exports/*.pdf
