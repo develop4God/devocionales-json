@@ -49,6 +49,7 @@ def split_lesson(doc: dict) -> tuple[dict, dict]:
         "bible_reading": lesson["shared"]["bible_reading"],
         "key_verse": lesson["shared"]["key_verse"],
         "hook": lesson["shared"]["hook"],
+        "cover_image": lesson["shared"].get("cover_image"),
         "metadata": lesson["metadata"],
     }
 

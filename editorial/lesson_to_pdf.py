@@ -19,8 +19,20 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
 from reportlab.lib.enums import TA_LEFT
 from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, ListFlowable, ListItem,
+    SimpleDocTemplate, Paragraph, Spacer, ListFlowable, ListItem, Image,
 )
+
+
+def resolve_cover_image(cover_image: str, lesson_file: Path, unit_id: str) -> Path | None:
+    """Busca la imagen de portada junto al export o en units/<unit_id>/ (carpeta hermana)."""
+    candidates = [
+        lesson_file.parent / cover_image,
+        lesson_file.parent.parent / "units" / unit_id / cover_image,
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    return None
 
 
 def load_json(path: Path) -> dict:
@@ -111,9 +123,18 @@ def render_maestro(doc_data: dict, story: list, styles):
         ))
 
 
-def render_lesson_pdf(doc_data: dict, out_path: Path):
+def render_lesson_pdf(doc_data: dict, out_path: Path, lesson_file: Path):
     styles = build_styles()
     story = []
+
+    cover_image = doc_data.get("cover_image")
+    if cover_image:
+        image_path = resolve_cover_image(cover_image, lesson_file, doc_data["unit_id"])
+        if image_path:
+            img = Image(str(image_path), width=3.5 * inch, height=3.5 * inch * 1.5, kind="proportional")
+            img.hAlign = "CENTER"
+            story.append(img)
+            story.append(Spacer(1, 12))
 
     story.append(Paragraph(doc_data["title"], styles["LessonTitle"]))
     story.append(Paragraph(doc_data["objective"], styles["Body"]))
@@ -167,7 +188,7 @@ def main():
         args.out.mkdir(parents=True, exist_ok=True)
         out_path = args.out / args.lesson_file.with_suffix(".pdf").name
 
-    render_lesson_pdf(doc_data, out_path)
+    render_lesson_pdf(doc_data, out_path, args.lesson_file)
     print(f"✓ generado: {out_path}")
 
 
