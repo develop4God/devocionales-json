@@ -36,9 +36,9 @@ Entry structure (confirmed via `Devocional_year_2025_es_NVI.json`):
 }
 ```
 
-**Open question for Giovanni:** which fields go into the embedded text? Candidate:
-`versiculo + reflexion + para_meditar` (the substantive content) with `tags` excluded from the
-embedded text (tags stay a separate/existing filter mechanism, not blended into the vector).
+**Decided:** embed `versiculo + reflexion + para_meditar`. `oracion` (prayer) excluded — more
+formulaic/generic across entries, low distinguishing signal. `tags` excluded from the embedded
+text — stays a separate/existing filter mechanism, not blended into the vector.
 
 ## Model decision
 
@@ -61,11 +61,10 @@ Validated 2026-09-11 against community practice:
 corpus). `paraphrase-multilingual-MiniLM-L12-v2` (legitimate alternative, weaker retrieval
 accuracy per independent benchmarks, kept as fallback if e5-small underperforms in practice).
 
-**Open question:** do we embed once per language (using each language's own text) into one
-shared vector space, or once per (language, version) pair if the two Bible-version variants per
-language have meaningfully different `versiculo`/`reflexion` text? Recommend: embed at the
-`(language, version)` granularity since that's the actual content unit that gets served — avoid
-assuming versions are interchangeable without checking.
+**Decided:** embed per `(language, version)` pair, not deduped per language. Verified 2026-09-11
+by comparing `en_KJV` vs `en_NIV` for the same date — different verses and different `reflexion`
+text entirely, not just a translation variant of the same content. Versions are not
+interchangeable.
 
 ## Storage format decision
 
@@ -121,6 +120,15 @@ fully offline/on-device required? This determines which path to build.
 6. Add an incremental update path for new devotionals added after initial embedding (avoid
    requiring a full re-embed of the whole corpus every time).
 7. No UI integration scoped yet — confirm with Giovanni where results surface in the app.
+
+## Follow-up (deferred, not in scope for this branch)
+
+Giovanni raised a concern that existing `tags` per devotional may not reliably reflect content.
+A quick spot-check (5 `es_NVI` entries, 2026-09-11) showed tags that did match content well
+(e.g. "Comunidad, Edificación" for a verse about mutual encouragement), so this is not confirmed
+as a corpus-wide problem. Deferred until after semantic search ships: a proper audit across the
+full corpus, and only then decide whether an LLM-based re-tagging pass is warranted. Not part of
+this embedding pipeline — tags stay untouched here.
 
 ## Environment status (2026-09-11)
 
