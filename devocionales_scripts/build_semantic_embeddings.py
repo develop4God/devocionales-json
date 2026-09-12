@@ -19,7 +19,7 @@ from sentence_transformers import SentenceTransformer
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "editorial" / "semantic_search"
-FILE_PATTERN = re.compile(r"^Devocional_year_\d{4}_([a-z]+)_([A-Za-z0-9]+)\.json$")
+FILE_PATTERN = re.compile(r"^Devocional_year_\d{4}_([a-z]+)_(.+)\.json$")
 MODEL_NAME = "intfloat/multilingual-e5-small"
 
 
@@ -54,7 +54,7 @@ def main():
     entries = load_entries()
     print(f"Loaded {len(entries)} devotional entries")
 
-    model = SentenceTransformer(MODEL_NAME)
+    model = SentenceTransformer(MODEL_NAME, device="cpu")
     passages = [f"passage: {e['text']}" for e in entries]
     vectors = model.encode(
         passages,
