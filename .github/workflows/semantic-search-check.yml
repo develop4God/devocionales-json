@@ -32,23 +32,22 @@ jobs:
       - name: 🔬 Run semantic search tests only
         run: uv run python3 -m unittest tests.test_semantic_embeddings -v
 
-  # TEMPORARY job for PR #118's ranking-gap investigation. bge-m3 already
-  # proved a clean win for the 4 languages with documented gaps (ar, fil,
-  # ja, zh — see benchmark_candidate_model.py's docstring: 15/24 -> 19/24,
-  # no per-language regression). Before deciding to re-embed the FULL
-  # corpus with bge-m3 (simpler than a per-language hybrid setup, but pays
-  # its cost for languages that were never broken), this checks bge-m3
-  # against the 5 remaining languages that already have ground-truth
-  # topic queries and were never flagged as gaps — es/pt/fr/de (Latin
-  # script) plus hi — to confirm it doesn't regress languages e5-small
-  # already handled well. Remove this job once read.
-  benchmark-bge-m3-remaining-languages:
-    name: 🔬 EXPERIMENT — bge-m3 regression check
+  # DEEP-DIVE follow-up to the single-query-per-topic regression check
+  # (which used exactly 1 single-word + 1 multi-sentence query per topic
+  # and found fr 6/6->5/6, de 5/6->4/6 — see benchmark_candidate_model.py's
+  # docstring). Before accepting or rejecting that as a real regression,
+  # run many additional synonym/rephrasing queries per topic against the
+  # same expected verses, broken down by single-word vs multi-word, so a
+  # narrow phrasing-specific miss isn't mistaken for a systemic model
+  # weakness. Companion job below does the same for the 4 languages that
+  # improved (ar/fil/ja/zh), to confirm that win is equally robust.
+  deep-dive-fr-de-regression:
+    name: 🔬 DEEP-DIVE — fr/de regression check
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        language: [es, pt, fr, de, hi]
+        language: [fr, de]
     steps:
       - name: 🔬 Checkout
         uses: actions/checkout@v5
@@ -68,20 +67,47 @@ jobs:
       - name: 🔬 Sync dependencies from uv.lock
         run: uv sync --locked
 
-      - name: 🔬 Benchmark bge-m3 for ${{ matrix.language }}
-        run: uv run python3 devocionales_scripts/benchmark_candidate_model.py --language ${{ matrix.language }} --model bge-m3
+      - name: 🔬 Deep-dive bge-m3 vs small for ${{ matrix.language }}
+        run: uv run python3 devocionales_scripts/benchmark_fr_de_deep_dive.py --language ${{ matrix.language }}
 
-  # PRODUCTION build (not yet committed): re-embeds the FULL corpus with
-  # bge-m3, one language per job in parallel so this doesn't take the
-  # ~7-8 hours it would sequentially (ar alone took ~2h42m for its
-  # ~1460-entry subset in prior benchmarking). Writes each language's
-  # shard as a build artifact rather than committing directly — nothing
-  # under editorial/semantic_search/ (the current committed baseline) is
-  # touched by this job. Once the regression-check job above confirms no
-  # per-language regression on es/pt/fr/de/hi, the merge job below
-  # combines all 10 shards into one embeddings.bin + manifest.json,
-  # uploaded as a final artifact for review before anyone commits it as
-  # the new baseline.
+  deep-dive-gap-languages-improvement:
+    name: 🔬 DEEP-DIVE — gap-language improvement check
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ar, fil, ja, zh]
+    steps:
+      - name: 🔬 Checkout
+        uses: actions/checkout@v5
+
+      - name: 🔬 Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+          python-version: "3.12"
+
+      - name: 🔬 Cache Hugging Face model weights
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-cache-candidate-models
+
+      - name: 🔬 Sync dependencies from uv.lock
+        run: uv sync --locked
+
+      - name: 🔬 Deep-dive bge-m3 vs small for ${{ matrix.language }}
+        run: uv run python3 devocionales_scripts/benchmark_gap_languages_deep_dive.py --language ${{ matrix.language }}
+
+  # PRODUCTION build (already validated once — see PR #118 discussion: the
+  # full-corpus bge-m3 build succeeded, 13,870 entries, 1024-dim, uploaded
+  # as artifact bge-m3-full-corpus on a prior run of this workflow).
+  # Re-embeds the FULL corpus with bge-m3, one language per job in
+  # parallel so this doesn't take the ~7-8 hours it would sequentially
+  # (ar alone took ~2h42m for its ~1460-entry subset in prior
+  # benchmarking). Writes each language's shard as a build artifact rather
+  # than committing directly — nothing under editorial/semantic_search/
+  # (the current committed baseline) is touched by this job.
   build-bge-m3-shards:
     name: 🏗️ Build bge-m3 shard (${{ matrix.language }})
     runs-on: ubuntu-latest
