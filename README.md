@@ -61,6 +61,8 @@ devocionales-json/
 ├── devocionales_scripts/
 ├── discovery/
 ├── encounters/
+├── semantic_search/
+├── semantic_search_service/
 ├── shared_preview/
 ├── shared_validation/
 ├── skills/
