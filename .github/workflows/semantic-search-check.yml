@@ -14,11 +14,11 @@ jobs:
       - name: 🔬 Checkout
         uses: actions/checkout@v5
 
-      - name: 🔬 Set up Python
-        uses: actions/setup-python@v6
+      - name: 🔬 Install uv
+        uses: astral-sh/setup-uv@v3
         with:
+          enable-cache: true
           python-version: "3.12"
-          cache: "pip"
 
       - name: 🔬 Cache Hugging Face model weights
         uses: actions/cache@v4
@@ -26,8 +26,8 @@ jobs:
           path: ~/.cache/huggingface
           key: hf-cache-intfloat-multilingual-e5-small
 
-      - name: 🔬 Install package (editable)
-        run: pip install -e .
+      - name: 🔬 Sync dependencies from uv.lock
+        run: uv sync --locked
 
       - name: 🔬 Run semantic search tests only
-        run: python3 -m unittest tests.test_semantic_embeddings -v
+        run: uv run python3 -m unittest tests.test_semantic_embeddings -v
