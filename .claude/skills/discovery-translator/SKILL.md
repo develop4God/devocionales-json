@@ -1,3 +1,8 @@
+---
+name: discovery-translator
+description: "Use this skill to translate an existing Discovery Bible study JSON file into a target language. Triggers: \"translate this discovery study into [language]\", \"translate the pending languages for [study]\", or any request to produce a non-source-language version of an existing Discovery JSON file. Load `.claude/skills/translation-core/SKILL.md` first, in full, then this file for Discovery-specific rules."
+---
+
 # SKILL: Bible Studies (Discovery) JSON Translator
 
 ## Identity

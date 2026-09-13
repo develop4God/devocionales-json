@@ -164,7 +164,7 @@ pass.
     forbidden pattern — propose it explicitly to the user: state the rule, which file
     it would go in (`skills/language_notes/{lang}.md` for judgment rules, `{lang}.json`
     `forbidden_patterns` for mechanically-checkable ones, or
-    `skills/translation_core_SKILL.md` if it applies to every language), and wait for
+    `.claude/skills/translation-core/SKILL.md` if it applies to every language), and wait for
     explicit confirmation.
 22. **Never write to a skill or language-note file without that confirmation** — an
     unverified or one-off critic finding must not silently become a permanent rule

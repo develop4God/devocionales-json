@@ -1,17 +1,6 @@
 ---
-name: encounters-content-creator
+name: encounters-creation
 description: "Use this skill whenever the user wants to create, draft, or generate a new Encounter — a biblical character study distributed as a structured JSON file for the Encounters devotional app series. Triggers include: \"create an encounter\", \"new encounter for [character]\", \"write the encounter about [biblical scene]\", \"draft [character] encounter\", or any request to produce Encounters-format content. Always load this skill before generating any encounter JSON or card content, even if the request seems simple."
----
-
----
-name: encounters-content-creator
-description: >
-  Use this skill whenever the user wants to create, draft, or generate a new Encounter —
-  a biblical character study distributed as a structured JSON file for the Encounters devotional
-  app series. Triggers include: "create an encounter", "new encounter for [character]",
-  "write the encounter about [biblical scene]", "draft [character] encounter", or any request
-  to produce Encounters-format content. Always load this skill before generating any encounter
-  JSON or card content, even if the request seems simple.
 ---
 
 # Encounters Content Creator

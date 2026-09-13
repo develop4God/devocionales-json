@@ -1,18 +1,6 @@
 ---
-name: discovery-studies-editorial-reviewer
+name: discovery-editorial-reviewer
 description: "Use this skill whenever reviewing, auditing, or refining existing Discovery Bible study JSON cards. Triggers: \"review card X\", \"let's refine this discovery study\", \"check this card\", \"revise the content\", \"session de revisión\", \"veo un error en el card X\", or any request to improve already-drafted Discovery study content. Always load this skill before touching any card in a review session. This skill is a COMPANION to discovery-study-generator — load both when needed."
----
-
----
-name: discovery-studies-editorial-reviewer
-description: >
-  Use this skill whenever reviewing, auditing, or refining existing Discovery
-  Bible study JSON cards. Triggers: "review card X", "let's refine this
-  discovery study", "check this card", "revise the content", "session de
-  revisión", "veo un error en el card X", or any request to improve
-  already-drafted Discovery study content. Always load this skill before
-  touching any card in a review session. This skill is a COMPANION to
-  discovery-study-generator — load both when needed.
 ---
 
 # Discovery Studies Editorial Reviewer

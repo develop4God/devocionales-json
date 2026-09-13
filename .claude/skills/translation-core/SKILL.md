@@ -64,7 +64,7 @@ Store in both the JSON file and `index.json`.
 
 ## 5. Critic review pipeline
 
-Owned entirely by whoever is running `~/.claude/skills/translate-batch/SKILL.md` (the
+Owned entirely by whoever is running `.claude/skills/translate-batch/SKILL.md` (the
 orchestrating conversation — this must run in a context with a real Agent tool, not a
 spawned subagent, since it delegates to `translator_agent` and `critic_reviewer_agent`).
 Each phase runs its own two independent critic rounds — verify-before-apply, pattern
