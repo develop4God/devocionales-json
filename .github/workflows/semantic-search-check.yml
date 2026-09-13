@@ -1,6 +1,9 @@
 name: 🔬 Semantic Search Fast Check
 
 on:
+  push:
+    branches:
+      - "claude/**"
   workflow_dispatch:
 
 jobs:
