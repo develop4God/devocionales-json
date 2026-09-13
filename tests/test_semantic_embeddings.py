@@ -14,10 +14,13 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "devocionales_scripts"))
 
-EMBEDDINGS_PATH = ROOT / "editorial" / "semantic_search" / "embeddings.bin"
-MANIFEST_PATH = ROOT / "editorial" / "semantic_search" / "manifest.json"
+from semantic_search_service.config import settings
+
+EMBEDDINGS_PATH = settings.data_dir / "embeddings.bin"
+MANIFEST_PATH = settings.data_dir / "manifest.json"
 DIM = 1024  # bge-m3, the committed baseline as of PR #118
 
 

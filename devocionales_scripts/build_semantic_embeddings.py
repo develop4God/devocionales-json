@@ -9,13 +9,13 @@ versiculo + reflexion + para_meditar per entry, and writes:
   - <out-dir>/manifest.json    (parallel list of {id, language, version,
                                  date} in the same row order)
 
---model selects the embedding model (default e5-small, the current
-committed baseline; bge-m3 is the PR #118-recommended replacement — see
-benchmark_candidate_model.py for the full comparison). --out-dir writes to
-an alternate location instead of overwriting the committed baseline, for
-side-by-side comparison — always pass it when trying a new model so the
-committed editorial/semantic_search/ files are never touched until a
-result is validated.
+--model selects the embedding model (default bge-m3, the committed
+baseline as of PR #118, which replaced multilingual-e5-small after
+benchmarking). --out-dir writes to an alternate location instead of
+overwriting the committed baseline, for side-by-side comparison — always
+pass it when trying a new model so the committed data dir (see
+semantic_search_service/config.py's data_dir setting) is never touched
+until a result is validated.
 
 --exclude-reflexion embeds only versiculo + para_meditar (dropping the long
 free-form reflexion commentary) — an experiment to check whether reflexion's
@@ -29,11 +29,16 @@ import glob
 import json
 import re
 import struct
+import sys
 from pathlib import Path
 
 from sentence_transformers import SentenceTransformer
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+from semantic_search_service.config import settings
+
 # Matches both the standard Devocional_year_{year}_{lang}_{version}.json
 # naming and the bare Devocional_year_{year}.json form — the latter is a
 # legacy holdover (predates the _{lang}_{version} suffix convention) that
@@ -121,7 +126,7 @@ def main():
     parser.add_argument("--model", default="bge-m3", choices=MODELS.keys())
     args = parser.parse_args()
 
-    out_dir = Path(args.out_dir) if args.out_dir else ROOT / "editorial" / "semantic_search"
+    out_dir = Path(args.out_dir) if args.out_dir else settings.data_dir
     languages = set(args.languages.split(",")) if args.languages else None
     model_spec = MODELS[args.model]
 
