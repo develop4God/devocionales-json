@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parent.parent
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_prefix="SEMANTIC_SEARCH_", env_file=".env", extra="ignore")
 
-    data_dir: Path = ROOT / "editorial" / "semantic_search"
+    data_dir: Path = ROOT / "semantic_search"
     model_name: str = "BAAI/bge-m3"
 
 

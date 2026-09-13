@@ -6,8 +6,7 @@ server-side too, so the client never needs the bge-m3 model itself).
 
 No index, no vector DB: at ~14,600 rows, brute-force is sub-millisecond
 and a vector DB would add a dependency for a scale problem this corpus
-doesn't have (see editorial/semantic_search_plan.md's storage-format
-decision).
+doesn't have (see PR #118's storage-format decision).
 """
 
 import hashlib
