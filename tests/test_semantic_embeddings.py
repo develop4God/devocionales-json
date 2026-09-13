@@ -10,6 +10,7 @@ import sys
 import unicodedata
 import unittest
 from pathlib import Path
+from typing import ClassVar
 
 import numpy as np
 
@@ -134,7 +135,7 @@ class TestSemanticRelevance(unittest.TestCase):
     # tagged candidates (tag=Relationships) are about discernment in choosing
     # partners, not general family conflict — no clean ground truth exists for
     # that topic in this corpus.
-    TOPIC_GROUND_TRUTH = {
+    TOPIC_GROUND_TRUTH: ClassVar[dict] = {
         "anxiety": {
             "queries": {
                 "single": "I'm so anxious and worried, I can't stop worrying about everything",
@@ -222,7 +223,7 @@ class TestSemanticRelevance(unittest.TestCase):
     # independent set of entries/tags, not a translated copy of the English
     # corpus. "anxiety"/"fear" collapse into one topic per language, matching
     # whichever single tag that language actually uses for this theme.
-    MULTILINGUAL_TOPIC_GROUND_TRUTH = {
+    MULTILINGUAL_TOPIC_GROUND_TRUTH: ClassVar[dict] = {
         "es": {
             "anxiety_fear": {
                 "single": "ansiedad",
