@@ -3,6 +3,15 @@
 **Branch:** `feature/semantic-search-embeddings`
 **Status:** Planning complete, model download in progress. No embedding/search code written yet.
 
+> **Update (2026-09-13, PR #118):** the committed model below (`intfloat/multilingual-e5-small`)
+> was superseded by `BAAI/bge-m3` after benchmarking found it wins on every one of the 10
+> languages, including the 4 (ar/fil/ja/zh) where e5-small had documented ranking gaps — see
+> `devocionales_scripts/benchmark_candidate_model.py`, `benchmark_fr_de_deep_dive.py`, and
+> `benchmark_gap_languages_deep_dive.py` for the investigation. `editorial/semantic_search/`
+> now holds bge-m3 vectors (1024-dim), not e5-small (384-dim). The rest of this document is kept
+> as a historical record of the original decision process; treat the "Model decision" section
+> below as superseded, not current.
+
 ## Goal
 
 Let a user type a free-form phrase (e.g. "I'm depressed, I need something") and get back the

@@ -5,6 +5,7 @@ binary output.
 """
 
 import json
+import os
 import sys
 import unicodedata
 import unittest
@@ -80,6 +81,14 @@ class TestEmbeddingArtifactIntegrity(unittest.TestCase):
         self.assertTrue(np.isfinite(self.vectors).all())
 
 
+@unittest.skipUnless(
+    os.environ.get("RUN_SEMANTIC_MODEL_TESTS") == "1",
+    "requires RUN_SEMANTIC_MODEL_TESTS=1 — downloads BAAI/bge-m3 (~2GB) and runs "
+    "real inference; ci.yml's generic `unittest discover` skips this so it doesn't "
+    "duplicate semantic-search-check.yml's dedicated, HF-cached run of the same "
+    "suite on every push/PR. Structural checks in TestEmbeddingArtifactIntegrity "
+    "above still run everywhere — they need no model.",
+)
 class TestSemanticRelevance(unittest.TestCase):
     """Loads the real model and confirms a query actually surfaces thematically
     relevant devotionals — guards against a wrong-model or wrong-field regression

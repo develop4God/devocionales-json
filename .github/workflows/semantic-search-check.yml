@@ -30,6 +30,8 @@ jobs:
         run: uv sync --locked
 
       - name: 🔬 Run semantic search tests only
+        env:
+          RUN_SEMANTIC_MODEL_TESTS: "1"
         run: uv run python3 -m unittest tests.test_semantic_embeddings -v
 
   # bge-m3 (BAAI/bge-m3, 1024-dim) is the committed semantic search
