@@ -565,18 +565,19 @@ class TestSemanticRelevance(unittest.TestCase):
         for lang, topics in self.MULTILINGUAL_TOPIC_GROUND_TRUTH.items():
             for topic, spec in topics.items():
                 for style in ("single", "multi"):
-                    query_text = spec[style]
-                    results = self._search(query_text, top_n=10, language=lang)
-                    result_ids = {entry["id"] for _, entry in results}
-                    overlap = spec["ids"] & result_ids
-                    if (lang, topic, style) in KNOWN_RANKING_GAPS:
-                        continue
-                    self.assertTrue(
-                        overlap,
-                        f"{lang} topic '{topic}' ({style}) query {query_text!r} "
-                        f"retrieved none of {spec['ids']} in its top 10 "
-                        f"({sorted(result_ids)})",
-                    )
+                    with self.subTest(lang=lang, topic=topic, style=style):
+                        if (lang, topic, style) in KNOWN_RANKING_GAPS:
+                            continue
+                        query_text = spec[style]
+                        results = self._search(query_text, top_n=10, language=lang)
+                        result_ids = {entry["id"] for _, entry in results}
+                        overlap = spec["ids"] & result_ids
+                        self.assertTrue(
+                            overlap,
+                            f"{lang} topic '{topic}' ({style}) query {query_text!r} "
+                            f"retrieved none of {spec['ids']} in its top 10 "
+                            f"({sorted(result_ids)})",
+                        )
 
     def test_topic_queries_surface_tag_verified_relevant_entries(self):
         """The actual product requirement: a user describing a life situation in
@@ -593,14 +594,15 @@ class TestSemanticRelevance(unittest.TestCase):
         hit is well above chance (roughly 0.1% for a random top-10 draw)."""
         for topic, spec in self.TOPIC_GROUND_TRUTH.items():
             for style, query_text in spec["queries"].items():
-                results = self._search(query_text, top_n=10)
-                result_ids = {entry["id"] for _, entry in results}
-                overlap = spec["ids"] & result_ids
-                self.assertTrue(
-                    overlap,
-                    f"topic '{topic}' ({style}) query {query_text!r} retrieved none "
-                    f"of {spec['ids']} in its top 10 ({sorted(result_ids)})",
-                )
+                with self.subTest(topic=topic, style=style):
+                    results = self._search(query_text, top_n=10)
+                    result_ids = {entry["id"] for _, entry in results}
+                    overlap = spec["ids"] & result_ids
+                    self.assertTrue(
+                        overlap,
+                        f"topic '{topic}' ({style}) query {query_text!r} retrieved none "
+                        f"of {spec['ids']} in its top 10 ({sorted(result_ids)})",
+                    )
 
     def test_cross_language_queries_find_same_target_entry(self):
         """Each language has its own independent devotional calendar — the same
@@ -731,18 +733,19 @@ class TestSemanticRelevance(unittest.TestCase):
         SKIP_STRICT_CHECK = {"ar_single"}
 
         for label, text in queries.items():
-            lang = label.split("_")[0]
-            valid_ids = target_ids[lang]
-            results = self._search(text, top_n=10)
-            result_ids = [entry["id"] for _, entry in results]
-            matched = valid_ids.intersection(result_ids)
-            if label in SKIP_STRICT_CHECK:
-                continue
-            self.assertTrue(
-                matched,
-                f"{label} query retrieved none of {valid_ids} in its top 10 "
-                f"({result_ids}) — cross-lingual alignment may be broken",
-            )
+            with self.subTest(label=label):
+                if label in SKIP_STRICT_CHECK:
+                    continue
+                lang = label.split("_")[0]
+                valid_ids = target_ids[lang]
+                results = self._search(text, top_n=10)
+                result_ids = [entry["id"] for _, entry in results]
+                matched = valid_ids.intersection(result_ids)
+                self.assertTrue(
+                    matched,
+                    f"{label} query retrieved none of {valid_ids} in its top 10 "
+                    f"({result_ids}) — cross-lingual alignment may be broken",
+                )
 
 
 if __name__ == "__main__":
