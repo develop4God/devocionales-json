@@ -9,6 +9,7 @@ RUN_SEMANTIC_MODEL_TESTS=1, matching tests/test_semantic_embeddings.py's gate.
 """
 
 import os
+import subprocess
 import sys
 import unittest
 from pathlib import Path
@@ -21,6 +22,22 @@ sys.path.insert(0, str(ROOT))
 from semantic_search_service.search import DATA_DIR, DIM, SearchIndex
 
 RUN_MODEL_TESTS = os.environ.get("RUN_SEMANTIC_MODEL_TESTS") == "1"
+
+
+class DataDirOverrideTests(unittest.TestCase):
+    def test_semantic_search_data_dir_env_var_overrides_default(self):
+        # A fresh interpreter is required: search.py resolves DATA_DIR at
+        # import time, and this test's own process already imported it
+        # with the real path above.
+        result = subprocess.run(
+            [sys.executable, "-c", "from semantic_search_service.search import DATA_DIR; print(DATA_DIR)"],
+            cwd=ROOT,
+            env={**os.environ, "SEMANTIC_SEARCH_DATA_DIR": "/tmp/some-other-dir"},
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+        self.assertEqual(result.stdout.strip(), "/tmp/some-other-dir")
 
 
 @unittest.skipUnless(DATA_DIR.exists(), f"committed embeddings not found at {DATA_DIR}")

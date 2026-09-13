@@ -12,12 +12,16 @@ decision).
 
 import hashlib
 import json
+import os
 from pathlib import Path
 
 import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = ROOT / "editorial" / "semantic_search"
+# SEMANTIC_SEARCH_DATA_DIR lets a deployment (container, packaged install,
+# a different repo layout) point at the committed embeddings without
+# editing code; falls back to the path used everywhere else in this repo.
+DATA_DIR = Path(os.environ.get("SEMANTIC_SEARCH_DATA_DIR", ROOT / "editorial" / "semantic_search"))
 DIM = 1024  # bge-m3, the committed baseline as of PR #118
 
 
