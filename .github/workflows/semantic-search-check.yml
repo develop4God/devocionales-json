@@ -1,0 +1,49 @@
+name: 🔬 Semantic Search Fast Check
+
+on:
+  push:
+    branches:
+      - "claude/**"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: 🔬 Semantic embeddings tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔬 Checkout
+        uses: actions/checkout@v5
+
+      - name: 🔬 Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+          python-version: "3.12"
+
+      - name: 🔬 Cache Hugging Face model weights
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-cache-BAAI-bge-m3
+
+      - name: 🔬 Sync dependencies from uv.lock
+        run: uv sync --locked
+
+      - name: 🔬 Run semantic search tests only
+        env:
+          RUN_SEMANTIC_MODEL_TESTS: "1"
+        run: uv run python3 -m unittest tests.test_semantic_embeddings -v
+
+  # bge-m3 (BAAI/bge-m3, 1024-dim) is the committed semantic search
+  # baseline as of 2026-09-13 (commit 91fa9d3), replacing
+  # multilingual-e5-small — see PR #118 discussion. Deep-dive benchmarking
+  # (devocionales_scripts/benchmark_fr_de_deep_dive.py and
+  # benchmark_gap_languages_deep_dive.py) confirmed bge-m3 wins on every
+  # language once tested with many query phrasings per topic instead of
+  # just one; no per-language hybrid needed. The CI jobs that drove that
+  # decision and the build/promotion (candidate benchmarking,
+  # build-bge-m3-shards, merge-bge-m3-shards, the deep-dive comparison
+  # jobs, promote-bge-m3-baseline) have all been removed now that their
+  # job is done — see git history (this file before commit c45a8f2, and
+  # PR #118's commits) for the exact steps if a future model swap needs
+  # the same workflow.
