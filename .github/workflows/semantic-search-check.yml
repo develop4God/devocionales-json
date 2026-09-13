@@ -32,23 +32,23 @@ jobs:
       - name: 🔬 Run semantic search tests only
         run: uv run python3 -m unittest tests.test_semantic_embeddings -v
 
-  # TEMPORARY job for PR #118's ranking-gap investigation — remove once the
-  # candidate-model benchmark results are read and a decision made.
-  # e5-base gave a mixed, language-dependent result (see
-  # benchmark_e5_base_model.py's docstring): helped fil/zh, badly regressed
-  # ar, ~neutral for ja. Testing whether a single newer model (Qwen3-Embedding
-  # or BGE-M3) handles all 4 affected languages well instead of needing a
-  # per-language hybrid model setup. Runs all (language, model) combinations
-  # as parallel matrix jobs — each embeds its ~1460-entry subset twice
-  # (small + candidate) and would be slow run sequentially.
-  benchmark-candidate-model:
-    name: 🔬 EXPERIMENT — candidate model benchmark
+  # TEMPORARY job for PR #118's ranking-gap investigation. bge-m3 already
+  # proved a clean win for the 4 languages with documented gaps (ar, fil,
+  # ja, zh — see benchmark_candidate_model.py's docstring: 15/24 -> 19/24,
+  # no per-language regression). Before deciding to re-embed the FULL
+  # corpus with bge-m3 (simpler than a per-language hybrid setup, but pays
+  # its cost for languages that were never broken), this checks bge-m3
+  # against the 5 remaining languages that already have ground-truth
+  # topic queries and were never flagged as gaps — es/pt/fr/de (Latin
+  # script) plus hi — to confirm it doesn't regress languages e5-small
+  # already handled well. Remove this job once read.
+  benchmark-bge-m3-remaining-languages:
+    name: 🔬 EXPERIMENT — bge-m3 regression check
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        language: [ar, fil, ja, zh]
-        model: [qwen3, bge-m3]
+        language: [es, pt, fr, de, hi]
     steps:
       - name: 🔬 Checkout
         uses: actions/checkout@v5
@@ -68,5 +68,5 @@ jobs:
       - name: 🔬 Sync dependencies from uv.lock
         run: uv sync --locked
 
-      - name: 🔬 Benchmark ${{ matrix.model }} for ${{ matrix.language }}
-        run: uv run python3 devocionales_scripts/benchmark_candidate_model.py --language ${{ matrix.language }} --model ${{ matrix.model }}
+      - name: 🔬 Benchmark bge-m3 for ${{ matrix.language }}
+        run: uv run python3 devocionales_scripts/benchmark_candidate_model.py --language ${{ matrix.language }} --model bge-m3

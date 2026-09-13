@@ -29,6 +29,67 @@ newer model just handles all 4 affected languages well on its own:
     multi-vector retrieval modes are a separate, larger evaluation this
     script does not attempt.
 
+RESULT (run via semantic-search-check.yml matrix, 2026-09-13):
+
+  BGE-M3 — all 4 affected languages, full run:
+
+    Language | small       | bge-m3      | Verdict
+    zh       | 3/6 (50.0%) | 4/6 (66.7%) | Improved. rest/multi flips from a
+             |             |             | genuine miss (rank 23) to a hit
+             |             |             | (rank 2).
+    ja       | 5/6 (83.3%) | 6/6 (100%)  | Improved, no regressions. The
+             |             |             | one prior miss (anxiety/multi,
+             |             |             | rank 745 with small) becomes a
+             |             |             | rank-1 hit with bge-m3.
+    fil      | 3/6 (50.0%) | 4/6 (66.7%) | Mixed but net positive: two
+             |             |             | misses flip to hits (anxiety/
+             |             |             | single rank 11->2, rest/multi
+             |             |             | rank 25->1), but one prior hit
+             |             |             | regresses to a miss (comfort/
+             |             |             | single rank 3->36). comfort/multi
+             |             |             | stays a miss either way (rank
+             |             |             | 96->171, worse but was already
+             |             |             | failing).
+    ar       | 4/6 (66.7%) | 5/6 (83.3%) | Improved. rest/single and rest/
+             |             |             | multi both flip from deep misses
+             |             |             | (rank 178, 217) to rank-1 hits.
+             |             |             | One regression: comfort/multi
+             |             |             | flips from a weak hit (rank 8)
+             |             |             | to a miss (rank 41).
+
+    Combined: small 15/24 (62.5%) vs bge-m3 19/24 (79.2%) — a genuine
+    improvement in every single language, unlike e5-base (which tied in
+    aggregate only by trading a severe ar regression for fil/zh gains).
+    bge-m3 is the strongest single-model candidate found in this
+    investigation: no language gets worse overall, three of four gain
+    exactly +1 hit, and ja reaches a perfect 6/6.
+
+  Qwen3-Embedding-0.6B — partial (only zh completed; fil/ja/ar were still
+  running after 4+ hours each on the CPU runner and were abandoned in
+  favor of finalizing on bge-m3, which had already completed for all 4
+  languages and runs several times faster per language, e.g. ~1h for zh
+  vs ~4h25m for qwen3):
+
+    Language | small       | qwen3       | Verdict
+    zh       | 3/6 (50.0%) | 4/6 (66.7%) | Same net result as bge-m3 for
+             |             |             | zh (identical hit count, same
+             |             |             | query flipping: rest/multi).
+
+  qwen3's only completed data point ties bge-m3 exactly while taking
+  ~4x longer to embed — no evidence it would outperform bge-m3 on the
+  remaining languages, and its far higher compute cost makes it a worse
+  practical choice for this corpus regardless.
+
+  CONCLUSION: bge-m3 is the recommended replacement for
+  multilingual-e5-small for zh/ja/fil/ar (the 4 languages with documented
+  ranking gaps). It is the only candidate tested that improves every
+  affected language with no aggregate regression, and it's already fully
+  benchmarked. Next step (not yet done): decide whether to re-embed just
+  these 4 languages with bge-m3 (a per-language hybrid model setup) or
+  the full corpus (simpler deployment, but pays the bge-m3 embedding cost
+  for languages that didn't need fixing, and changes the embedding
+  dimension for everything).
+
 Usage:
     uv run python3 devocionales_scripts/benchmark_candidate_model.py --language zh --model qwen3
     uv run python3 devocionales_scripts/benchmark_candidate_model.py --language zh --model bge-m3
