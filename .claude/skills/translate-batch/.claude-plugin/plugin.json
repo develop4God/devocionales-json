@@ -1,0 +1,6 @@
+{
+  "name": "translate-batch",
+  "description": "Orchestrate a batch translation of an Encounters or Discovery JSON file into one or more target languages.",
+  "skills": ".",
+  "agents": ["./agents/"]
+}
