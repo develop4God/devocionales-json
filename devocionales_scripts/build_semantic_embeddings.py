@@ -1,6 +1,8 @@
 """Precompute multilingual sentence embeddings for the devotional corpus.
 
-Reads every Devocional_year_{year}_{lang}_{version}.json file, embeds
+Reads every Devocional_year_{year}_{lang}_{version}.json file — plus the
+bare Devocional_year_{year}.json files, a legacy naming holdover that is
+still the canonical es/RVR1960 source per index.json — embeds
 versiculo + reflexion + para_meditar per entry, and writes:
   - <out-dir>/embeddings.bin   (little-endian float32, unit-normalized,
                                  row-major, one row per entry)
@@ -32,7 +34,17 @@ from pathlib import Path
 from sentence_transformers import SentenceTransformer
 
 ROOT = Path(__file__).resolve().parent.parent
-FILE_PATTERN = re.compile(r"^Devocional_year_\d{4}_([a-z]+)_(.+)\.json$")
+# Matches both the standard Devocional_year_{year}_{lang}_{version}.json
+# naming and the bare Devocional_year_{year}.json form — the latter is a
+# legacy holdover (predates the _{lang}_{version} suffix convention) that
+# is still index.json's canonical source for es/RVR1960. A prior version
+# of this pattern required the suffix, which silently dropped RVR1960
+# (730 entries) from every embedding build, e5-small and bge-m3 alike —
+# language/version are now read from each entry's own fields (already
+# present and correct in every file, suffixed or not) instead of being
+# inferred from the filename, so this covers both forms without a
+# special case.
+FILE_PATTERN = re.compile(r"^Devocional_year_\d{4}(?:_[a-z]+_.+)?\.json$")
 MODEL_NAME = "intfloat/multilingual-e5-small"
 
 # bge-m3 needs no "passage: " prefix (unlike e5-small/e5-base) — see PR #118's
@@ -62,33 +74,32 @@ def strip_arabic_diacritics(text):
 def load_entries(include_reflexion=True, include_para_meditar=True, languages=None, strip_arabic=False):
     entries = []
     for path in sorted(ROOT.glob("Devocional_year_*.json")):
-        match = FILE_PATTERN.match(path.name)
-        if not match:
-            continue
-        lang, version = match.groups()
-        if languages is not None and lang not in languages:
+        if not FILE_PATTERN.match(path.name):
             continue
         data = json.loads(path.read_text(encoding="utf-8"))
-        for date, day_entries in data["data"][lang].items():
-            for entry in day_entries:
-                fields = ("versiculo", "reflexion") if include_reflexion else ("versiculo",)
-                parts = [entry[field] for field in fields if entry.get(field)]
-                if include_para_meditar:
-                    for meditar in entry.get("para_meditar") or []:
-                        if meditar.get("texto"):
-                            parts.append(meditar["texto"])
-                text = " ".join(parts)
-                if strip_arabic and lang == "ar":
-                    text = strip_arabic_diacritics(text)
-                entries.append(
-                    {
-                        "id": entry["id"],
-                        "language": lang,
-                        "version": version,
-                        "date": date,
-                        "text": text,
-                    }
-                )
+        for lang, day_map in data["data"].items():
+            if languages is not None and lang not in languages:
+                continue
+            for date, day_entries in day_map.items():
+                for entry in day_entries:
+                    fields = ("versiculo", "reflexion") if include_reflexion else ("versiculo",)
+                    parts = [entry[field] for field in fields if entry.get(field)]
+                    if include_para_meditar:
+                        for meditar in entry.get("para_meditar") or []:
+                            if meditar.get("texto"):
+                                parts.append(meditar["texto"])
+                    text = " ".join(parts)
+                    if strip_arabic and lang == "ar":
+                        text = strip_arabic_diacritics(text)
+                    entries.append(
+                        {
+                            "id": entry["id"],
+                            "language": entry["language"],
+                            "version": entry["version"],
+                            "date": date,
+                            "text": text,
+                        }
+                    )
     return entries
 
 
