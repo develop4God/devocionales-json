@@ -5,6 +5,9 @@ description = "Content, validation, and generation pipelines for devocionales-js
 requires-python = ">=3.12"
 dependencies = [
     "sentence-transformers>=6.0.1",
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "pydantic-settings>=2.5",
 ]
 
 [project.optional-dependencies]
@@ -18,4 +21,4 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include = ["shared_validation*", "devocionales_scripts*"]
+include = ["shared_validation*", "devocionales_scripts*", "semantic_search_service*"]
