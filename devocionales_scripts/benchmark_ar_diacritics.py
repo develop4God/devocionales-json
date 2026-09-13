@@ -14,6 +14,15 @@ via build_semantic_embeddings.strip_arabic_diacritics, and compares hit
 rate against the same ground-truth queries used in
 tests/test_semantic_embeddings.py's Arabic cases.
 
+RESULT (run via semantic-search-check.yml, 2026-09-13): hypothesis
+falsified. Baseline 4/7 (57.1%) vs stripped 2/7 (28.6%) — stripping
+diacritics made retrieval WORSE, flipping ar/comfort/single and
+ar/comfort/multi from HIT to MISS while fixing nothing (ar/rest and the
+cross-language case stayed MISS either way). Diacritics carry real
+signal multilingual-e5-small actually uses here, not noise. Kept in the
+repo as a documented, already-tried dead end rather than deleted — do
+not re-attempt this exact change without new evidence.
+
 Usage:
     uv run python3 devocionales_scripts/benchmark_ar_diacritics.py
 """

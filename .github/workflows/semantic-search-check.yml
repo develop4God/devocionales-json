@@ -32,8 +32,9 @@ jobs:
       - name: 🔬 Run semantic search tests only
         run: uv run python3 -m unittest tests.test_semantic_embeddings -v
 
-      # TEMPORARY experiment step for PR #118's Arabic ranking-gap
-      # investigation — remove once the diacritic-stripping benchmark
-      # result has been read and a decision made.
-      - name: 🔬 EXPERIMENT — Arabic diacritic stripping benchmark
-        run: uv run python3 devocionales_scripts/benchmark_ar_diacritics.py
+      # TEMPORARY experiment step for PR #118's ranking-gap investigation —
+      # remove once the multilingual-e5-base benchmark result is read and a
+      # decision made. Starting with zh (3 of 9 gaps); will re-run for other
+      # languages if this looks promising.
+      - name: 🔬 EXPERIMENT — multilingual-e5-base benchmark (zh)
+        run: uv run python3 devocionales_scripts/benchmark_e5_base_model.py --language zh
