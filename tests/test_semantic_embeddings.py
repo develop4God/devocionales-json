@@ -17,7 +17,7 @@ sys.path.insert(0, str(ROOT / "devocionales_scripts"))
 
 EMBEDDINGS_PATH = ROOT / "editorial" / "semantic_search" / "embeddings.bin"
 MANIFEST_PATH = ROOT / "editorial" / "semantic_search" / "manifest.json"
-DIM = 384
+DIM = 1024  # bge-m3, the committed baseline as of PR #118
 
 
 def _nfc(entry_id):
@@ -55,7 +55,7 @@ class TestEmbeddingArtifactIntegrity(unittest.TestCase):
         self.assertEqual(
             self.vectors.size,
             expected_floats,
-            "embeddings.bin float count must equal len(manifest) * 384 — "
+            "embeddings.bin float count must equal len(manifest) * 1024 — "
             "a mismatch means the two files are out of sync.",
         )
 
@@ -91,7 +91,7 @@ class TestSemanticRelevance(unittest.TestCase):
 
         cls.manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
         cls.vectors = np.fromfile(EMBEDDINGS_PATH, dtype="<f4").reshape(len(cls.manifest), DIM)
-        cls.model = SentenceTransformer("intfloat/multilingual-e5-small")
+        cls.model = SentenceTransformer("BAAI/bge-m3")
 
     def _search(self, query_text, top_n=5, language=None):
         """language=None searches the full multilingual corpus (used by the
@@ -103,7 +103,7 @@ class TestSemanticRelevance(unittest.TestCase):
         Spanish query "ansiedad" surfaced the objectively correct passages
         (Phil 4:6, 1 Peter 5:7) but in Portuguese, not Spanish — the model was
         right about the content, wrong language for the product's needs."""
-        query_vec = self.model.encode([f"query: {query_text}"], normalize_embeddings=True)[0]
+        query_vec = self.model.encode([query_text], normalize_embeddings=True)[0]
         scores = self.vectors @ query_vec
         if language is not None:
             mask = np.array([e["language"] == language for e in self.manifest])

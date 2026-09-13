@@ -22,7 +22,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
 BASELINE_DIR = ROOT / "editorial" / "semantic_search"
-DIM = 384
+DIM = 1024  # bge-m3, the committed baseline as of PR #118
 
 
 def load_baseline():

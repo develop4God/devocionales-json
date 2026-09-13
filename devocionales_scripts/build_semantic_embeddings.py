@@ -107,7 +107,7 @@ def main():
         help="Strip Arabic harakat/tanwin/sukun/shadda/tatweel from Arabic entries before embedding.",
     )
     parser.add_argument("--out-dir", default=None)
-    parser.add_argument("--model", default="e5-small", choices=MODELS.keys())
+    parser.add_argument("--model", default="bge-m3", choices=MODELS.keys())
     args = parser.parse_args()
 
     out_dir = Path(args.out_dir) if args.out_dir else ROOT / "editorial" / "semantic_search"

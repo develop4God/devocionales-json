@@ -24,7 +24,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface
-          key: hf-cache-intfloat-multilingual-e5-small
+          key: hf-cache-BAAI-bge-m3
 
       - name: 🔬 Sync dependencies from uv.lock
         run: uv sync --locked
@@ -138,3 +138,53 @@ jobs:
   # shards directly. Re-add a build-bge-m3-shards + merge-bge-m3-shards
   # pair (see git history for the exact steps) only if the corpus content
   # changes and the embeddings need regenerating.
+  #
+  # One-off: promote the already-validated bge-m3 build to be the committed
+  # baseline, replacing e5-small. Downloads the "bge-m3-full-corpus"
+  # artifact from run 34747384632 (the sandbox that drives this workflow
+  # can't reach GitHub's artifact storage directly — see PR #118
+  # discussion) and commits it over editorial/semantic_search/. Remove this
+  # job once it has run once and the commit lands; it's not meant to run on
+  # every push.
+  promote-bge-m3-baseline:
+    name: 🔬 Promote bge-m3 full-corpus build to committed baseline
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 🔬 Checkout
+        uses: actions/checkout@v5
+
+      - name: 🔬 Download bge-m3 full-corpus artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: bge-m3-full-corpus
+          path: editorial/semantic_search
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          run-id: 34747384632
+
+      - name: 🔬 Verify artifact contents
+        run: |
+          test -f editorial/semantic_search/embeddings.bin
+          test -f editorial/semantic_search/manifest.json
+          python3 -c "
+          import json
+          m = json.load(open('editorial/semantic_search/manifest.json'))
+          size = __import__('os').path.getsize('editorial/semantic_search/embeddings.bin')
+          assert size == len(m) * 1024 * 4, f'size mismatch: {size} != {len(m)*1024*4}'
+          print(f'OK: {len(m)} entries, 1024-dim')
+          "
+
+      - name: 🔬 Commit and push new baseline
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add editorial/semantic_search/embeddings.bin editorial/semantic_search/manifest.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Promote bge-m3 full-corpus build to committed semantic search baseline" \
+              -m "Replaces intfloat/multilingual-e5-small with BAAI/bge-m3 (13,870 entries, 1024-dim). Deep-dive testing with expanded single-word and multi-sentence query sets confirmed bge-m3 wins on every language, including fr/de which had looked regressed under a single query per topic (fr 55.0%->70.0%, de 60.0%->65.0%; ar/fil/ja/zh improvements reconfirmed). No per-language hybrid needed."
+            git push origin HEAD:${{ github.ref_name }}
+          fi
