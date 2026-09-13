@@ -56,11 +56,32 @@ def embed_corpus(model, entries):
     return manifest, vectors
 
 
-def search(model, manifest, vectors, query_text, top_n=10):
+def rank_all(model, manifest, vectors, query_text):
+    """Returns (order, scores): order is every row index sorted best-first,
+    scores is the raw cosine-similarity array indexed like manifest/vectors.
+    Lets callers find not just the top-10 but the actual rank and score of
+    any specific entry, even if it didn't make the top-10 — needed to tell
+    a near-miss (rank 11, score 0.001 behind) from a real miss (rank 800)."""
     query_vec = model.encode([f"query: {query_text}"], normalize_embeddings=True)[0]
     scores = vectors @ query_vec
-    top_indices = np.argsort(-scores)[:top_n]
-    return [manifest[i]["id"] for i in top_indices]
+    order = np.argsort(-scores)
+    return order, scores
+
+
+def describe_expected(manifest, order, scores, expected_nfc):
+    """For each expected ground-truth id, find its 1-indexed rank and score
+    in this ranking. Returns them sorted best-rank-first."""
+    id_to_row = {unicodedata.normalize("NFC", e["id"]): i for i, e in enumerate(manifest)}
+    rank_of_row = {row: rank + 1 for rank, row in enumerate(order)}
+    found = []
+    for eid in expected_nfc:
+        row = id_to_row.get(eid)
+        if row is None:
+            found.append((eid, None, None))  # not in this corpus subset at all
+        else:
+            found.append((eid, rank_of_row[row], float(scores[row])))
+    found.sort(key=lambda x: (x[1] is None, x[1] if x[1] is not None else 0))
+    return found
 
 
 def iter_language_queries(language):
@@ -95,19 +116,32 @@ def main():
         rows = []
         for q_label, query_text, expected_ids in queries:
             expected_nfc = nfc_set(expected_ids)
-            result_ids = nfc_set(search(model, manifest, vectors, query_text))
-            hit = bool(expected_nfc & result_ids)
+            order, scores = rank_all(model, manifest, vectors, query_text)
+            top10_ids = nfc_set(manifest[i]["id"] for i in order[:10])
+            hit = bool(expected_nfc & top10_ids)
             hits += hit
-            rows.append((q_label, hit, query_text))
+            best_expected = describe_expected(manifest, order, scores, expected_nfc)[0]
+            top10_preview = [
+                (manifest[i]["id"], round(float(scores[i]), 4)) for i in order[:3]
+            ]
+            rows.append((q_label, hit, query_text, best_expected, top10_preview))
         results[label] = {"hits": hits, "total": len(queries), "rows": rows}
 
     print("\n=== RESULTS ===")
-    for q_label, small_hit, query_text in results["small"]["rows"]:
-        base_hit = next(h for lbl, h, _ in results["base"]["rows"] if lbl == q_label)
+    for small_row, base_row in zip(results["small"]["rows"], results["base"]["rows"]):
+        q_label, small_hit, query_text, small_best, small_top3 = small_row
+        _, base_hit, _, base_best, base_top3 = base_row
         marker = "SAME" if small_hit == base_hit else "CHANGED"
+        print(f"[{marker}] {q_label} — {query_text[:50]!r}")
         print(
-            f"[{marker}] {q_label}: small={'HIT' if small_hit else 'MISS'} "
-            f"base={'HIT' if base_hit else 'MISS'} — {query_text[:50]!r}"
+            f"    small: {'HIT ' if small_hit else 'MISS'} "
+            f"best-expected-id rank={small_best[1]} score={small_best[2]} "
+            f"top3={small_top3}"
+        )
+        print(
+            f"    base:  {'HIT ' if base_hit else 'MISS'} "
+            f"best-expected-id rank={base_best[1]} score={base_best[2]} "
+            f"top3={base_top3}"
         )
 
     for label in ("small", "base"):
