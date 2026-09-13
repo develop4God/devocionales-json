@@ -22,10 +22,19 @@ free-form reflexion commentary) — an experiment to check whether reflexion's
 variable, often-long length was diluting the verse's weight in the pooled
 embedding (suspected contributor to the Arabic/German ranking gaps found in
 testing).
+
+--device defaults to "auto" (cuda if torch.cuda.is_available(), else cpu).
+A full 10-language corpus (~14,600 entries) takes multiple hours on CPU —
+confirmed in practice on a 16-core machine and separately on GitHub Actions
+runners (~4h per language there). A small/laptop GPU is not guaranteed to
+be faster: bge-m3's ~2.3GB footprint plus batch activations can exceed
+4GB VRAM even at --batch-size 4, and low-VRAM GPUs may show a similar or
+worse wall-clock time than a many-core CPU despite 100% GPU utilization —
+verify with a short --languages-limited run before committing to either
+device for a full rebuild.
 """
 
 import argparse
-import glob
 import json
 import re
 import struct
@@ -124,11 +133,27 @@ def main():
     )
     parser.add_argument("--out-dir", default=None)
     parser.add_argument("--model", default="bge-m3", choices=MODELS.keys())
+    parser.add_argument(
+        "--device",
+        default="auto",
+        help="'auto' picks cuda when available (checked via torch.cuda.is_available()), "
+        "else cpu. A full-corpus encode on CPU alone has taken multiple hours in practice "
+        "(see PR #118); pass 'cpu' explicitly to force it anyway, or a specific device string.",
+    )
+    parser.add_argument("--batch-size", type=int, default=64)
     args = parser.parse_args()
 
     out_dir = Path(args.out_dir) if args.out_dir else settings.data_dir
     languages = set(args.languages.split(",")) if args.languages else None
     model_spec = MODELS[args.model]
+
+    if args.device == "auto":
+        import torch
+
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+    else:
+        device = args.device
+    print(f"Using device: {device}")
 
     entries = load_entries(
         include_reflexion=not args.exclude_reflexion,
@@ -138,21 +163,20 @@ def main():
     )
     print(f"Loaded {len(entries)} devotional entries")
 
-    model = SentenceTransformer(model_spec["name"], device="cpu", trust_remote_code=True)
+    model = SentenceTransformer(model_spec["name"], device=device, trust_remote_code=True)
     passages = [model_spec["passage_prefix"] + e["text"] for e in entries]
     vectors = model.encode(
         passages,
         normalize_embeddings=True,
         show_progress_bar=True,
-        batch_size=64,
+        batch_size=args.batch_size,
     )
 
     out_dir.mkdir(parents=True, exist_ok=True)
 
     bin_path = out_dir / "embeddings.bin"
     with open(bin_path, "wb") as f:
-        for vector in vectors:
-            f.write(struct.pack(f"<{len(vector)}f", *vector))
+        f.writelines(struct.pack(f"<{len(vector)}f", *vector) for vector in vectors)
 
     manifest_path = out_dir / "manifest.json"
     manifest = [
