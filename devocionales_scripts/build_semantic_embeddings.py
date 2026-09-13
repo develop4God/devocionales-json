@@ -1,19 +1,25 @@
 """Precompute multilingual sentence embeddings for the devotional corpus.
 
 Reads every Devocional_year_{year}_{lang}_{version}.json file, embeds
-versiculo + reflexion + para_meditar per entry with intfloat/multilingual-e5-small,
-and writes:
-  - editorial/semantic_search/embeddings.bin   (little-endian float32, unit-normalized,
-                                                 row-major, one row per entry)
-  - editorial/semantic_search/manifest.json    (parallel list of {id, language, version,
-                                                 date} in the same row order)
+versiculo + reflexion + para_meditar per entry, and writes:
+  - <out-dir>/embeddings.bin   (little-endian float32, unit-normalized,
+                                 row-major, one row per entry)
+  - <out-dir>/manifest.json    (parallel list of {id, language, version,
+                                 date} in the same row order)
+
+--model selects the embedding model (default e5-small, the current
+committed baseline; bge-m3 is the PR #118-recommended replacement — see
+benchmark_candidate_model.py for the full comparison). --out-dir writes to
+an alternate location instead of overwriting the committed baseline, for
+side-by-side comparison — always pass it when trying a new model so the
+committed editorial/semantic_search/ files are never touched until a
+result is validated.
 
 --exclude-reflexion embeds only versiculo + para_meditar (dropping the long
 free-form reflexion commentary) — an experiment to check whether reflexion's
 variable, often-long length was diluting the verse's weight in the pooled
 embedding (suspected contributor to the Arabic/German ranking gaps found in
-testing). --out-dir writes to an alternate location instead of overwriting
-the committed baseline, for side-by-side comparison.
+testing).
 """
 
 import argparse
@@ -28,6 +34,16 @@ from sentence_transformers import SentenceTransformer
 ROOT = Path(__file__).resolve().parent.parent
 FILE_PATTERN = re.compile(r"^Devocional_year_\d{4}_([a-z]+)_(.+)\.json$")
 MODEL_NAME = "intfloat/multilingual-e5-small"
+
+# bge-m3 needs no "passage: " prefix (unlike e5-small/e5-base) — see PR #118's
+# benchmark_candidate_model.py investigation, which found it beats e5-small
+# on every one of the 4 languages with documented ranking gaps (ar/fil/ja/zh:
+# 15/24 -> 19/24 combined hit rate, no per-language regression) with qwen3
+# only tying it at ~4x the embedding cost.
+MODELS = {
+    "e5-small": {"name": "intfloat/multilingual-e5-small", "passage_prefix": "passage: "},
+    "bge-m3": {"name": "BAAI/bge-m3", "passage_prefix": ""},
+}
 
 # Arabic combining marks (harakat/tanwin/sukun/shadda/quranic annotation
 # marks) plus tatweel — stripped by --strip-arabic-diacritics to test
@@ -91,10 +107,12 @@ def main():
         help="Strip Arabic harakat/tanwin/sukun/shadda/tatweel from Arabic entries before embedding.",
     )
     parser.add_argument("--out-dir", default=None)
+    parser.add_argument("--model", default="e5-small", choices=MODELS.keys())
     args = parser.parse_args()
 
     out_dir = Path(args.out_dir) if args.out_dir else ROOT / "editorial" / "semantic_search"
     languages = set(args.languages.split(",")) if args.languages else None
+    model_spec = MODELS[args.model]
 
     entries = load_entries(
         include_reflexion=not args.exclude_reflexion,
@@ -104,8 +122,8 @@ def main():
     )
     print(f"Loaded {len(entries)} devotional entries")
 
-    model = SentenceTransformer(MODEL_NAME, device="cpu")
-    passages = [f"passage: {e['text']}" for e in entries]
+    model = SentenceTransformer(model_spec["name"], device="cpu", trust_remote_code=True)
+    passages = [model_spec["passage_prefix"] + e["text"] for e in entries]
     vectors = model.encode(
         passages,
         normalize_embeddings=True,
