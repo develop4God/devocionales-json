@@ -6,7 +6,7 @@ pull ~2GB of weights, only the first embed() call does.
 
 from sentence_transformers import SentenceTransformer
 
-MODEL_NAME = "BAAI/bge-m3"
+from semantic_search_service.config import settings
 
 _model = None
 
@@ -14,7 +14,7 @@ _model = None
 def _get_model():
     global _model
     if _model is None:
-        _model = SentenceTransformer(MODEL_NAME, device="cpu", trust_remote_code=True)
+        _model = SentenceTransformer(settings.model_name, device="cpu", trust_remote_code=True)
     return _model
 
 
