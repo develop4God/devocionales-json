@@ -32,9 +32,36 @@ jobs:
       - name: 🔬 Run semantic search tests only
         run: uv run python3 -m unittest tests.test_semantic_embeddings -v
 
-      # TEMPORARY experiment step for PR #118's ranking-gap investigation —
-      # remove once the multilingual-e5-base benchmark result is read and a
-      # decision made. Starting with zh (3 of 9 gaps); will re-run for other
-      # languages if this looks promising.
-      - name: 🔬 EXPERIMENT — multilingual-e5-base benchmark (zh)
-        run: uv run python3 devocionales_scripts/benchmark_e5_base_model.py --language zh
+  # TEMPORARY job for PR #118's ranking-gap investigation — remove once the
+  # multilingual-e5-base benchmark results are read and a decision made.
+  # Runs all 4 affected languages (ar, fil, ja, zh) as parallel matrix jobs
+  # instead of one language per push, since each embeds its ~1460-entry
+  # subset twice (small + base) and would be slow run sequentially.
+  benchmark-e5-base:
+    name: 🔬 EXPERIMENT — e5-base benchmark
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ar, fil, ja, zh]
+    steps:
+      - name: 🔬 Checkout
+        uses: actions/checkout@v5
+
+      - name: 🔬 Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+          python-version: "3.12"
+
+      - name: 🔬 Cache Hugging Face model weights
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-cache-e5-small-and-base
+
+      - name: 🔬 Sync dependencies from uv.lock
+        run: uv sync --locked
+
+      - name: 🔬 Benchmark e5-base for ${{ matrix.language }}
+        run: uv run python3 devocionales_scripts/benchmark_e5_base_model.py --language ${{ matrix.language }}
