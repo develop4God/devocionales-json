@@ -33,17 +33,22 @@ jobs:
         run: uv run python3 -m unittest tests.test_semantic_embeddings -v
 
   # TEMPORARY job for PR #118's ranking-gap investigation — remove once the
-  # multilingual-e5-base benchmark results are read and a decision made.
-  # Runs all 4 affected languages (ar, fil, ja, zh) as parallel matrix jobs
-  # instead of one language per push, since each embeds its ~1460-entry
-  # subset twice (small + base) and would be slow run sequentially.
-  benchmark-e5-base:
-    name: 🔬 EXPERIMENT — e5-base benchmark
+  # candidate-model benchmark results are read and a decision made.
+  # e5-base gave a mixed, language-dependent result (see
+  # benchmark_e5_base_model.py's docstring): helped fil/zh, badly regressed
+  # ar, ~neutral for ja. Testing whether a single newer model (Qwen3-Embedding
+  # or BGE-M3) handles all 4 affected languages well instead of needing a
+  # per-language hybrid model setup. Runs all (language, model) combinations
+  # as parallel matrix jobs — each embeds its ~1460-entry subset twice
+  # (small + candidate) and would be slow run sequentially.
+  benchmark-candidate-model:
+    name: 🔬 EXPERIMENT — candidate model benchmark
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         language: [ar, fil, ja, zh]
+        model: [qwen3, bge-m3]
     steps:
       - name: 🔬 Checkout
         uses: actions/checkout@v5
@@ -58,10 +63,10 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface
-          key: hf-cache-e5-small-and-base
+          key: hf-cache-candidate-models
 
       - name: 🔬 Sync dependencies from uv.lock
         run: uv sync --locked
 
-      - name: 🔬 Benchmark e5-base for ${{ matrix.language }}
-        run: uv run python3 devocionales_scripts/benchmark_e5_base_model.py --language ${{ matrix.language }}
+      - name: 🔬 Benchmark ${{ matrix.model }} for ${{ matrix.language }}
+        run: uv run python3 devocionales_scripts/benchmark_candidate_model.py --language ${{ matrix.language }} --model ${{ matrix.model }}

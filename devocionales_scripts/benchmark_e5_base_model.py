@@ -19,6 +19,41 @@ comparison is apples-to-apples on identical text if the corpus subset
 happens to differ slightly (it shouldn't, but this stays correct either
 way rather than assuming the committed file matches current corpus JSON).
 
+RESULT (run via semantic-search-check.yml matrix, 2026-09-13, all 4
+affected languages, with rank/score diagnostics):
+
+  Language | small      | base       | Verdict
+  ar       | 4/6 (66.7%)| 1/6 (16.7%)| Real, severe regression — misses by
+           |            |            | wide margins (rank 19-65), plus a
+           |            |            | suspicious pattern: base's top-3 for
+           |            |            | 4 different topic queries all surface
+           |            |            | the same irrelevant entry ("Titus
+           |            |            | 2:11-14"), suggesting base collapses
+           |            |            | toward a generic high-scoring
+           |            |            | attractor for this corpus's Arabic
+           |            |            | text rather than discriminating by
+           |            |            | topic.
+  ja       | 5/6 (83.3%)| 5/6 (83.3%)| Tied on the coarse metric but
+           |            |            | deceptive: base is consistently,
+           |            |            | quietly worse rank-for-rank even on
+           |            |            | shared hits (e.g. comfort/multi:
+           |            |            | small rank=1, base rank=8).
+  zh       | 3/6 (50.0%)| 4/6 (66.7%)| Real improvement — rest/multi flips
+           |            |            | from a genuine miss (rank 23) to a
+           |            |            | strong hit (rank 3).
+  fil      | 3/6 (50.0%)| 5/6 (83.3%)| Real improvement — comfort/multi
+           |            |            | flips from a deep miss (rank 96) to
+           |            |            | a strong hit (rank 2).
+
+Combined: small 15/24 (62.5%) vs base 15/24 (62.5%) — exactly tied in
+aggregate, which would look like "no meaningful difference" if only the
+combined number were reported. The per-language breakdown says otherwise:
+base is a genuine upgrade for fil/zh, roughly neutral-to-worse for ja, and
+a severe, mechanistically-visible regression for ar specifically. This
+motivated evaluating other candidate models (Qwen3-Embedding, BGE-M3) as
+a possible single-model replacement, and considering a per-language
+hybrid model setup as a fallback if no single model wins across the board.
+
 Usage:
     uv run python3 devocionales_scripts/benchmark_e5_base_model.py --language zh
 """
