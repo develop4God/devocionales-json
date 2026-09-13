@@ -85,7 +85,9 @@ def strip_arabic_diacritics(text):
     return ARABIC_DIACRITICS_RE.sub("", text)
 
 
-def load_entries(include_reflexion=True, include_para_meditar=True, languages=None, strip_arabic=False):
+def load_entries(
+    include_reflexion=True, include_para_meditar=True, languages=None, versions=None, strip_arabic=False
+):
     entries = []
     for path in sorted(ROOT.glob("Devocional_year_*.json")):
         if not FILE_PATTERN.match(path.name):
@@ -96,6 +98,8 @@ def load_entries(include_reflexion=True, include_para_meditar=True, languages=No
                 continue
             for date, day_entries in day_map.items():
                 for entry in day_entries:
+                    if versions is not None and entry["version"] not in versions:
+                        continue
                     fields = ("versiculo", "reflexion") if include_reflexion else ("versiculo",)
                     parts = [entry[field] for field in fields if entry.get(field)]
                     if include_para_meditar:
@@ -127,6 +131,13 @@ def main():
         help="Comma-separated language codes to embed (default: all). E.g. --languages ar",
     )
     parser.add_argument(
+        "--versions",
+        default=None,
+        help="Comma-separated Bible version codes to embed (default: all). E.g. --versions RVR1960 "
+        "to add just one missing version to an otherwise-complete corpus, without re-embedding "
+        "sibling versions (e.g. es/NVI) that are already correct.",
+    )
+    parser.add_argument(
         "--strip-arabic-diacritics",
         action="store_true",
         help="Strip Arabic harakat/tanwin/sukun/shadda/tatweel from Arabic entries before embedding.",
@@ -145,6 +156,7 @@ def main():
 
     out_dir = Path(args.out_dir) if args.out_dir else settings.data_dir
     languages = set(args.languages.split(",")) if args.languages else None
+    versions = set(args.versions.split(",")) if args.versions else None
     model_spec = MODELS[args.model]
 
     if args.device == "auto":
@@ -159,6 +171,7 @@ def main():
         include_reflexion=not args.exclude_reflexion,
         include_para_meditar=not args.exclude_para_meditar,
         languages=languages,
+        versions=versions,
         strip_arabic=args.strip_arabic_diacritics,
     )
     print(f"Loaded {len(entries)} devotional entries")
