@@ -66,13 +66,18 @@ def main():
     parser.add_argument("--top", type=int, default=5)
     args = parser.parse_args()
 
+    language = args.language
+    top_n = args.top
+
     print("Loading search index and model (bge-m3)...")
     index = SearchIndex()
-    print(f"Ready — {len(index)} entries loaded. Type a query, or 'quit' to exit.\n")
+    print(f"Ready — {len(index)} entries loaded.")
+    print("Type a query, or a command: :lang <code>|all, :top <n>, quit\n")
 
     while True:
+        prompt = f"search[{language or 'all'}]> "
         try:
-            query = input("search> ").strip()
+            query = input(prompt).strip()
         except (EOFError, KeyboardInterrupt):
             print()
             break
@@ -81,8 +86,22 @@ def main():
         if query.lower() in ("quit", "exit", "q"):
             break
 
+        if query.startswith(":lang"):
+            parts = query.split(maxsplit=1)
+            language = None if len(parts) < 2 or parts[1].strip().lower() == "all" else parts[1].strip()
+            print(f"  language filter -> {language or 'all'}\n")
+            continue
+        if query.startswith(":top"):
+            parts = query.split(maxsplit=1)
+            if len(parts) == 2 and parts[1].strip().isdigit():
+                top_n = int(parts[1].strip())
+                print(f"  top -> {top_n}\n")
+            else:
+                print("  usage: :top <number>\n")
+            continue
+
         vector = embed(query)
-        results = index.search(vector, top_n=args.top, language=args.language)
+        results = index.search(vector, top_n=top_n, language=language)
 
         if not results:
             print("  (no results)")
