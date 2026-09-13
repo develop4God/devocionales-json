@@ -1,0 +1,5 @@
+{
+  "name": "encounters-translator",
+  "description": "Translate an existing Encounters JSON file into a target language.",
+  "skills": "."
+}

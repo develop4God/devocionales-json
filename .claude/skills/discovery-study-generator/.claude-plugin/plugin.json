@@ -1,0 +1,5 @@
+{
+  "name": "discovery-study-generator",
+  "description": "Generate new Discovery Bible study JSON files for the devocional_nuevo app.",
+  "skills": "."
+}

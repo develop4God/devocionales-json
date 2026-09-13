@@ -1,0 +1,5 @@
+{
+  "name": "discovery-translator",
+  "description": "Translate an existing Discovery Bible study JSON file into a target language.",
+  "skills": "."
+}
