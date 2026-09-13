@@ -6,6 +6,7 @@ binary output.
 
 import json
 import sys
+import unicodedata
 import unittest
 from pathlib import Path
 
@@ -17,6 +18,27 @@ sys.path.insert(0, str(ROOT / "devocionales_scripts"))
 EMBEDDINGS_PATH = ROOT / "editorial" / "semantic_search" / "embeddings.bin"
 MANIFEST_PATH = ROOT / "editorial" / "semantic_search" / "manifest.json"
 DIM = 384
+
+
+def _nfc(entry_id):
+    """Normalize an id to NFC before comparing.
+
+    Real bug found investigating 12 multilingual topic-search "ranking gap"
+    failures on PR #118: several ground-truth Arabic ids hardcoded below are
+    byte-for-byte different from the manifest's ids for the exact same
+    entry — e.g. a fatha/shadda combining-mark pair written in one order in
+    this file and the opposite (but canonically equivalent) order in the
+    corpus. `==`/`set`/`in` compare raw code points, not canonical meaning,
+    so these compared as different strings even though NFC normalization
+    proves they're the same id. Same class of bug already documented and
+    fixed for scripture text elsewhere in this repo (see
+    test_scripture_check.py's Arabic combining-diacritic-order tests) —
+    just never applied to these id comparisons."""
+    return unicodedata.normalize("NFC", entry_id)
+
+
+def _nfc_set(ids):
+    return {_nfc(i) for i in ids}
 
 
 class TestEmbeddingArtifactIntegrity(unittest.TestCase):
@@ -58,15 +80,6 @@ class TestEmbeddingArtifactIntegrity(unittest.TestCase):
         self.assertTrue(np.isfinite(self.vectors).all())
 
 
-@unittest.skip(
-    "Temporarily disabled on PR #118: the multilingual topic-search assertions "
-    "surfaced 12 real ranking-quality failures (Arabic fails 5/6 topic/style "
-    "combos, Filipino and Chinese 3/6 each, Japanese and German 1/6 each) that "
-    "need investigation with real HF/model access before being re-enabled or "
-    "individually documented as accepted gaps. Not a code defect in this test "
-    "file — see PR #118 discussion. Structural checks in "
-    "TestEmbeddingArtifactIntegrity above still run and still gate CI."
-)
 class TestSemanticRelevance(unittest.TestCase):
     """Loads the real model and confirms a query actually surfaces thematically
     relevant devotionals — guards against a wrong-model or wrong-field regression
@@ -579,8 +592,8 @@ class TestSemanticRelevance(unittest.TestCase):
                             continue
                         query_text = spec[style]
                         results = self._search(query_text, top_n=10, language=lang)
-                        result_ids = {entry["id"] for _, entry in results}
-                        overlap = spec["ids"] & result_ids
+                        result_ids = _nfc_set(entry["id"] for _, entry in results)
+                        overlap = _nfc_set(spec["ids"]) & result_ids
                         self.assertTrue(
                             overlap,
                             f"{lang} topic '{topic}' ({style}) query {query_text!r} "
@@ -605,8 +618,8 @@ class TestSemanticRelevance(unittest.TestCase):
             for style, query_text in spec["queries"].items():
                 with self.subTest(topic=topic, style=style):
                     results = self._search(query_text, top_n=10)
-                    result_ids = {entry["id"] for _, entry in results}
-                    overlap = spec["ids"] & result_ids
+                    result_ids = _nfc_set(entry["id"] for _, entry in results)
+                    overlap = _nfc_set(spec["ids"]) & result_ids
                     self.assertTrue(
                         overlap,
                         f"topic '{topic}' ({style}) query {query_text!r} retrieved none "
@@ -746,9 +759,9 @@ class TestSemanticRelevance(unittest.TestCase):
                 if label in SKIP_STRICT_CHECK:
                     continue
                 lang = label.split("_")[0]
-                valid_ids = target_ids[lang]
+                valid_ids = _nfc_set(target_ids[lang])
                 results = self._search(text, top_n=10)
-                result_ids = [entry["id"] for _, entry in results]
+                result_ids = _nfc_set(entry["id"] for _, entry in results)
                 matched = valid_ids.intersection(result_ids)
                 self.assertTrue(
                     matched,
