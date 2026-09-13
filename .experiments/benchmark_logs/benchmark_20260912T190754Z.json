@@ -1,0 +1,4870 @@
+{
+  "timestamp": "20260912T190754Z",
+  "model": "intfloat/multilingual-e5-small",
+  "query_count": 60,
+  "variants": {
+    "A_baseline_verse+reflexion+meditar": {
+      "hit_rate": 0.7833333333333333,
+      "hits": 47,
+      "total": 60,
+      "rows": [
+        {
+          "query_label": "en/anxiety/single",
+          "language": "en",
+          "query_text": "I'm so anxious and worried, I can't stop worrying about everything",
+          "hit": true,
+          "expected_ids": [
+            "1Peter57KJV20251023",
+            "1peter57NIV20251224",
+            "fil4v6EN-NIV20270214",
+            "phil47KJV20260902",
+            "philippians4v6KJV20270318"
+          ],
+          "result_ids": [
+            "1peter57NIV20251224",
+            "fil4v6EN-NIV20270214",
+            "philippians4_7NIV20270816",
+            "mark1124NIV20261016",
+            "Filipenses413NIV20251111",
+            "john1633NIV20250904",
+            "mark923NIV20270614",
+            "hebreos13v5NIV20270831",
+            "devocional20261023EN-NIV",
+            "1john418KJV20251115"
+          ]
+        },
+        {
+          "query_label": "en/anxiety/multi",
+          "language": "en",
+          "query_text": "I've been so anxious lately.\nI can't stop worrying about everything going on in my life.\nIt feels like the worry never stops.",
+          "hit": true,
+          "expected_ids": [
+            "1Peter57KJV20251023",
+            "1peter57NIV20251224",
+            "fil4v6EN-NIV20270214",
+            "phil47KJV20260902",
+            "philippians4v6KJV20270318"
+          ],
+          "result_ids": [
+            "philippians4_7NIV20270816",
+            "1peter57NIV20251224",
+            "john1633NIV20250904",
+            "fil4v6EN-NIV20270214",
+            "Phil4v67NIV20260115",
+            "1john418NIV20270523",
+            "hebreos13v5NIV20270831",
+            "mark1124NIV20261016",
+            "mark536KJV20270205",
+            "luke2136NIV20270729"
+          ]
+        },
+        {
+          "query_label": "en/fear/single",
+          "language": "en",
+          "query_text": "I'm afraid and scared, fear has taken hold of me",
+          "hit": true,
+          "expected_ids": [
+            "1john418KJV20251115",
+            "1john418KJV20261008",
+            "1john418NIV20250929",
+            "1john418NIV20270523",
+            "juan1427EN-NIV20260109",
+            "luke12_4-5NIV20251116",
+            "luke12v4-5KJV",
+            "mat82627NIV20260121",
+            "matthew82627KJV20260630"
+          ],
+          "result_ids": [
+            "1john418KJV20251115",
+            "1john418NIV20250929",
+            "luke12v4-5KJV",
+            "2timoteo17KJV20260131",
+            "1john418NIV20270523",
+            "revelacion320NIV20251011",
+            "1john418KJV20261008",
+            "fil4v6EN-NIV20270214",
+            "revelacion24NIV20260114",
+            "luke12_4-5NIV20251116"
+          ]
+        },
+        {
+          "query_label": "en/fear/multi",
+          "language": "en",
+          "query_text": "I've been feeling really afraid lately.\nFear has taken hold of me and I don't know how to shake it.\nI feel scared most of the time.",
+          "hit": true,
+          "expected_ids": [
+            "1john418KJV20251115",
+            "1john418KJV20261008",
+            "1john418NIV20250929",
+            "1john418NIV20270523",
+            "juan1427EN-NIV20260109",
+            "luke12_4-5NIV20251116",
+            "luke12v4-5KJV",
+            "mat82627NIV20260121",
+            "matthew82627KJV20260630"
+          ],
+          "result_ids": [
+            "1john418KJV20251115",
+            "1john418NIV20270523",
+            "1corintios1128NIV20270617",
+            "1john418NIV20250929",
+            "1peter57NIV20251224",
+            "mark1124NIV20261016",
+            "luke12_4-5NIV20251116",
+            "devocional20261023EN-NIV",
+            "fil4v6EN-NIV20270214",
+            "luke12v4-5KJV"
+          ]
+        },
+        {
+          "query_label": "en/comfort/single",
+          "language": "en",
+          "query_text": "I need comfort, I'm going through a hard time and feel broken",
+          "hit": true,
+          "expected_ids": [
+            "2Corintios1_3-4NIV20251117",
+            "2corintios1_3-4KJV20251006",
+            "john1416KJV",
+            "john1427KJV20251029",
+            "john16_7-8NIV20261125",
+            "john16v7KJV20260106",
+            "juan1416-17EN-NIV",
+            "rev71617KJV20251204",
+            "revelacion71617NIV20260124"
+          ],
+          "result_ids": [
+            "Filipenses413NIV20251111",
+            "john1633NIV20250904",
+            "2Corintios1_3-4NIV20251117",
+            "ephesians431NIV20260614",
+            "mark217KJV20251218",
+            "matthew1220NIV20260910",
+            "1john18NIV20270208",
+            "2peter39EN-NIV20261218",
+            "heb12v2NIV20260730",
+            "2corintios1_3-4KJV20251006"
+          ]
+        },
+        {
+          "query_label": "en/comfort/multi",
+          "language": "en",
+          "query_text": "I'm going through a really hard time right now.\nI feel broken and I don't know how to keep going.\nI just need some comfort.",
+          "hit": true,
+          "expected_ids": [
+            "2Corintios1_3-4NIV20251117",
+            "2corintios1_3-4KJV20251006",
+            "john1416KJV",
+            "john1427KJV20251029",
+            "john16_7-8NIV20261125",
+            "john16v7KJV20260106",
+            "juan1416-17EN-NIV",
+            "rev71617KJV20251204",
+            "revelacion71617NIV20260124"
+          ],
+          "result_ids": [
+            "john1633NIV20250904",
+            "2Corintios1_3-4NIV20251117",
+            "ephesians431NIV20260614",
+            "juan14v1NIV20260610",
+            "2corintios1_3-4KJV20251006",
+            "mark217EN-NIV20261011",
+            "heb12v2NIV20260730",
+            "mark631KJV20260516",
+            "1peter57NIV20251224",
+            "Filipenses413NIV20251111"
+          ]
+        },
+        {
+          "query_label": "en/rest/single",
+          "language": "en",
+          "query_text": "I'm exhausted and burned out, I need rest",
+          "hit": true,
+          "expected_ids": [
+            "devocional20251203EN-NIV",
+            "mark631KJV20260516",
+            "mark631NIV20251020",
+            "mateo1129NIV20270829",
+            "matthew112830KJV20260308",
+            "matthew1129KJV20270601",
+            "mt112830enNIV",
+            "revelation14v13KJV20260228"
+          ],
+          "result_ids": [
+            "mark631KJV20260516",
+            "mark631NIV20251020",
+            "philippians4_7NIV20270816",
+            "hebreos13v5NIV20270831",
+            "mt112830enNIV",
+            "2peter310KJV20260605",
+            "matthew1129KJV20270601",
+            "rev21v4NIV20260502",
+            "gal6v2KJV20260512",
+            "2corintios317NIV20270202"
+          ]
+        },
+        {
+          "query_label": "en/rest/multi",
+          "language": "en",
+          "query_text": "I've been running on empty for weeks.\nI'm completely exhausted and burned out.\nI just need to find real rest.",
+          "hit": true,
+          "expected_ids": [
+            "devocional20251203EN-NIV",
+            "mark631KJV20260516",
+            "mark631NIV20251020",
+            "mateo1129NIV20270829",
+            "matthew112830KJV20260308",
+            "matthew1129KJV20270601",
+            "mt112830enNIV",
+            "revelation14v13KJV20260228"
+          ],
+          "result_ids": [
+            "mark631KJV20260516",
+            "mark631NIV20251020",
+            "hebreos13v5NIV20270831",
+            "matthew1129KJV20270601",
+            "timoteo4v7NIV",
+            "revelacion24NIV20260114",
+            "1timoteo4v8NIV20270130",
+            "2corintios416NIV20260920",
+            "2peter310KJV20260605",
+            "heb12v2NIV20260730"
+          ]
+        },
+        {
+          "query_label": "es/anxiety_fear/single",
+          "language": "es",
+          "query_text": "ansiedad",
+          "hit": true,
+          "expected_ids": [
+            "1pedro57NVI20260111",
+            "filipenses4_6-7NVI20250925"
+          ],
+          "result_ids": [
+            "1pedro57NVI20260111",
+            "filipenses4_6-7NVI20250925",
+            "marcos536NVI20260907",
+            "2corintios5_7NVI20251028",
+            "filipenses4_7_20261026",
+            "1pedro2_2_NVI",
+            "efesios431NVI20251123",
+            "efesios42627NVI20260529",
+            "filipenses4v6NVI20270114",
+            "santiago414NVI20260522"
+          ]
+        },
+        {
+          "query_label": "es/anxiety_fear/multi",
+          "language": "es",
+          "query_text": "Me siento muy ansioso.\nNo puedo dejar de preocuparme.\nSiento miedo todo el tiempo.",
+          "hit": true,
+          "expected_ids": [
+            "1pedro57NVI20260111",
+            "filipenses4_6-7NVI20250925"
+          ],
+          "result_ids": [
+            "2corintios5_7NVI20251028",
+            "1juan418NVI20260417",
+            "filipenses4v6NVI20270114",
+            "1pedro57NVI20260111",
+            "1juan418NVI20261227",
+            "filipenses4_6-7NVI20250925",
+            "juan14_1_20251014_ESNVI",
+            "santiago414NVI20260522",
+            "hebreos2_1_NVI_20270108",
+            "santiago124NVI20261003"
+          ]
+        },
+        {
+          "query_label": "es/comfort/single",
+          "language": "es",
+          "query_text": "consuelo",
+          "hit": true,
+          "expected_ids": [
+            "2corintios1_3-4NVI20260319",
+            "apocalipsis214NVI",
+            "apocalipsis71617NVI",
+            "juan16_7NVI"
+          ],
+          "result_ids": [
+            "2corintios1_3-4NVI20260319",
+            "juan16_7NVI",
+            "lucas1113NVI20260305",
+            "juan1930NVI20270822",
+            "lucas2_10_11_NVI",
+            "juan2029NVI20260427",
+            "col312-14ESNVI20260127",
+            "hechos214NVI20251001",
+            "efesios11314NVI",
+            "1juan1v7NVI20270427"
+          ]
+        },
+        {
+          "query_label": "es/comfort/multi",
+          "language": "es",
+          "query_text": "Estoy pasando por un momento muy difícil.\nMe siento roto.\nNecesito consuelo.",
+          "hit": true,
+          "expected_ids": [
+            "2corintios1_3-4NVI20260319",
+            "apocalipsis214NVI",
+            "apocalipsis71617NVI",
+            "juan16_7NVI"
+          ],
+          "result_ids": [
+            "1Pedro221NVI20270520",
+            "efesios42627NVI20260529",
+            "2corintios1_9NVI",
+            "marcos631NVI20250930",
+            "1pedro5_10ESNVI20251031",
+            "2corintios1_3-4NVI20260319",
+            "filipenses32021NVI20260423",
+            "juan16_7NVI",
+            "1corintios311ESNVI",
+            "santiago11920NVI20260429"
+          ]
+        },
+        {
+          "query_label": "es/rest/single",
+          "language": "es",
+          "query_text": "descanso",
+          "hit": true,
+          "expected_ids": [
+            "marcos631NVI20250930",
+            "mateo1128-30NVI20260627",
+            "mateo1129NVI20270425"
+          ],
+          "result_ids": [
+            "marcos631NVI20250930",
+            "mateo1128-30NVI20260627",
+            "marcos435NVI20260718",
+            "hebreos1014NVI20270223",
+            "mateo1129NVI20270425",
+            "col312-14ESNVI20260127",
+            "lucas2136NVI20270124",
+            "filipenses29-11ESNVI20260218",
+            "devocional20261209",
+            "mateo2413NVI20270123"
+          ]
+        },
+        {
+          "query_label": "es/rest/multi",
+          "language": "es",
+          "query_text": "Estoy agotado y exhausto.\nHe estado funcionando sin descanso por semanas.\nNecesito descanso de verdad.",
+          "hit": true,
+          "expected_ids": [
+            "marcos631NVI20250930",
+            "mateo1128-30NVI20260627",
+            "mateo1129NVI20270425"
+          ],
+          "result_ids": [
+            "marcos631NVI20250930",
+            "col210NVI20260920",
+            "mateo2746NVI20260512",
+            "mateo1128-30NVI20260627",
+            "hebreos1014NVI20270223",
+            "hebreos1211NVI",
+            "santiago11920NVI20260429",
+            "1Pedro221NVI20270520",
+            "romanos213NVI20261013",
+            "1corintios11_28_NVI"
+          ]
+        },
+        {
+          "query_label": "pt/anxiety_fear/single",
+          "language": "pt",
+          "query_text": "ansiedade",
+          "hit": true,
+          "expected_ids": [
+            "1Pedro5_7PTNVI20250904",
+            "1Pedro5v7ARC20260527",
+            "filipenses4_6-7ARC20260722",
+            "filipenses4v6PTNVI20270216"
+          ],
+          "result_ids": [
+            "1Pedro5v7ARC20260527",
+            "1Pedro5_7PTNVI20250904",
+            "filipenses4v6PTNVI20270216",
+            "filipenses4v6-7PTNVI20260212",
+            "filipenses4_6-7ARC20260722",
+            "hebreus13v5ARC20251118",
+            "col210NVI20270424",
+            "2Timoteo1_7_ARC_20260429",
+            "filipenses4_7ARC20270609",
+            "filipenses4v6ARC20261009"
+          ]
+        },
+        {
+          "query_label": "pt/anxiety_fear/multi",
+          "language": "pt",
+          "query_text": "Estou me sentindo muito ansioso.\nNão consigo parar de me preocupar.\nSinto medo o tempo todo.",
+          "hit": true,
+          "expected_ids": [
+            "1Pedro5_7PTNVI20250904",
+            "1Pedro5v7ARC20260527",
+            "filipenses4_6-7ARC20260722",
+            "filipenses4v6PTNVI20270216"
+          ],
+          "result_ids": [
+            "filipenses4v6-7PTNVI20260212",
+            "1Pedro5_7PTNVI20250904",
+            "1Pedro5v7ARC20260527",
+            "lucas21011PTNVI20260812",
+            "1Pedro314PTNVI20261002",
+            "hebreus13v5ARC20251118",
+            "1joao418ARC",
+            "1joao418NVI20260625",
+            "tiago414PTNVI",
+            "1joao4v18PTNVI20270516"
+          ]
+        },
+        {
+          "query_label": "pt/comfort/single",
+          "language": "pt",
+          "query_text": "consolo",
+          "hit": true,
+          "expected_ids": [
+            "2cor1_3_4ptnvi20260510",
+            "2cor7v10ARC20260518",
+            "Hebreus21718PTNVI",
+            "apocalipse214ARC20260113",
+            "apocalipse21_4PTNVI20251006",
+            "apocalipse71617ARC",
+            "apocalipse71617PTNVI",
+            "efesios430ARC",
+            "joao16_7_8_PTNVI",
+            "joao16v7NVI20251025",
+            "romanos15v4ARC20251005"
+          ],
+          "result_ids": [
+            "1Tessalonicenses5_11ARC",
+            "atos15ARC20270420",
+            "1Tessalonicenses5_11ARC20270428",
+            "1Tessalonicenses5_11PTNVI",
+            "2cor1_3_4ptnvi20260510",
+            "colossenses316PTNVI20260404",
+            "romanos5v5ARC20251206",
+            "col210NVI20270424",
+            "romanos15v4ARC20251005",
+            "joao16v7NVI20251025"
+          ]
+        },
+        {
+          "query_label": "pt/comfort/multi",
+          "language": "pt",
+          "query_text": "Estou passando por um momento muito difícil.\nMe sinto quebrado.\nPreciso de consolo.",
+          "hit": true,
+          "expected_ids": [
+            "2cor1_3_4ptnvi20260510",
+            "2cor7v10ARC20260518",
+            "Hebreus21718PTNVI",
+            "apocalipse214ARC20260113",
+            "apocalipse21_4PTNVI20251006",
+            "apocalipse71617ARC",
+            "apocalipse71617PTNVI",
+            "efesios430ARC",
+            "joao16_7_8_PTNVI",
+            "joao16v7NVI20251025",
+            "romanos15v4ARC20251005"
+          ],
+          "result_ids": [
+            "2cor1_3_4ptnvi20260510",
+            "1Pedro5_7PTNVI20250904",
+            "hb4_14_16_PTNVI",
+            "tiago414PTNVI",
+            "apocalipse21_4PTNVI20251006",
+            "2Timoteo1v7PTNVI20260401",
+            "Tiago516ARC20261007",
+            "Mateus1820PTNVI20251005",
+            "2corintios1_9PTNVI",
+            "2Corintios12_9-10ARC20251219"
+          ]
+        },
+        {
+          "query_label": "pt/rest/single",
+          "language": "pt",
+          "query_text": "descanso",
+          "hit": true,
+          "expected_ids": [
+            "apocalipse1413PTNVI",
+            "marcos631ARC20260130",
+            "marcos631PTNVI20260603",
+            "mateus1128-30ARC20260121",
+            "mateus1128-30PTNVI",
+            "mateus1129ARC20270114",
+            "mateus1129PTNVI20260808"
+          ],
+          "result_ids": [
+            "marcos631ARC20260130",
+            "marcos631PTNVI20260603",
+            "mateus1129PTNVI20260808",
+            "apocalipse14_13ARC20260331",
+            "mateus1129ARC20270114",
+            "mateus1128-30PTNVI",
+            "atos1728NVI",
+            "1Corintios14_33ARC",
+            "filipenses413ARC20251222",
+            "marcos435ARC20251030"
+          ]
+        },
+        {
+          "query_label": "pt/rest/multi",
+          "language": "pt",
+          "query_text": "Estou exausto e esgotado.\nEstou sem parar há semanas.\nPreciso de descanso de verdade.",
+          "hit": true,
+          "expected_ids": [
+            "apocalipse1413PTNVI",
+            "marcos631ARC20260130",
+            "marcos631PTNVI20260603",
+            "mateus1128-30ARC20260121",
+            "mateus1128-30PTNVI",
+            "mateus1129ARC20270114",
+            "mateus1129PTNVI20260808"
+          ],
+          "result_ids": [
+            "marcos631ARC20260130",
+            "hb4_14_16_PTNVI",
+            "marcos631PTNVI20260603",
+            "lucas532PTNVI20270217",
+            "marcos217PTNVI20261008",
+            "hebreus13v5ARC20251118",
+            "atos1728NVI",
+            "2Corintios4v17PTNVI",
+            "mateus1129PTNVI20260808",
+            "atos1630PTNVI"
+          ]
+        },
+        {
+          "query_label": "fr/anxiety_fear/single",
+          "language": "fr",
+          "query_text": "crainte",
+          "hit": true,
+          "expected_ids": [
+            "1Jean418FRTOB20270317",
+            "1Jean4v18LSG1910",
+            "1Jean4v18LSG191020270504",
+            "1jean418FRTOB20260212",
+            "luc12_4-5LSG1910",
+            "luc12v4-5FRTOB20260504"
+          ],
+          "result_ids": [
+            "2Tim1v7LSG1910",
+            "1Jean4v18LSG1910",
+            "luc12_4-5LSG1910",
+            "1jean418FRTOB20260212",
+            "luc21011LSG191020261111",
+            "1Jean4v18LSG191020270504",
+            "2Cor5v7FRTOB20260530",
+            "luc12v4-5FRTOB20260504",
+            "1Corinthiens13v7_FR-LSG1910",
+            "2co416LSG1910"
+          ]
+        },
+        {
+          "query_label": "fr/anxiety_fear/multi",
+          "language": "fr",
+          "query_text": "Je me sens très anxieux.\nJe n'arrive pas à arrêter de m'inquiéter.\nJ'ai peur tout le temps.",
+          "hit": true,
+          "expected_ids": [
+            "1Jean418FRTOB20270317",
+            "1Jean4v18LSG1910",
+            "1Jean4v18LSG191020270504",
+            "1jean418FRTOB20260212",
+            "luc12_4-5LSG1910",
+            "luc12v4-5FRTOB20260504"
+          ],
+          "result_ids": [
+            "luc21011LSG191020261111",
+            "juan14v1FRTOB20260821",
+            "1Jean4v18LSG191020270504",
+            "juan1427LSG1910",
+            "phil413LSG1910",
+            "jean14v1LSG1910",
+            "1Jean5v14LSG1910",
+            "devocional20260207FR-LSG1910",
+            "eph111LSG1910",
+            "1pierre314FRTOB"
+          ]
+        },
+        {
+          "query_label": "fr/comfort/single",
+          "language": "fr",
+          "query_text": "consolation",
+          "hit": true,
+          "expected_ids": [
+            "2Cor1_3-4LSG1910-20260720",
+            "devocional20260207FR-LSG1910",
+            "devocional20260227FR1910",
+            "devocional_20260227_FR-TOB",
+            "jean16R1910",
+            "jean16v7LSG1910",
+            "juan16frtob20270821",
+            "juan16v7FRTOB20260727"
+          ],
+          "result_ids": [
+            "2Cor1_3-4LSG1910-20260720",
+            "marc1539LSG1910",
+            "juan1930LSG1910",
+            "jean141617LSG1910",
+            "Col315LSG1910",
+            "devocional20270112FRTOB",
+            "rom1215lsg1910",
+            "ap7v16-17FRTOB",
+            "1pierre3v9LSG1910",
+            "Col315FRTOB"
+          ]
+        },
+        {
+          "query_label": "fr/comfort/multi",
+          "language": "fr",
+          "query_text": "Je traverse une période très difficile.\nJe me sens brisé.\nJ'ai besoin de consolation.",
+          "hit": true,
+          "expected_ids": [
+            "2Cor1_3-4LSG1910-20260720",
+            "devocional20260207FR-LSG1910",
+            "devocional20260227FR1910",
+            "devocional_20260227_FR-TOB",
+            "jean16R1910",
+            "jean16v7LSG1910",
+            "juan16frtob20270821",
+            "juan16v7FRTOB20260727"
+          ],
+          "result_ids": [
+            "2Cor1_3-4LSG1910-20260720",
+            "matthieu2746LSG1910",
+            "Matthieu12v20LSG1910",
+            "matthieu5v44frtob20251124",
+            "Eph431FRTOB20260630",
+            "luc41819LSG1910",
+            "jacques11920FRTOB20260616",
+            "1pierre510FRTOB20251030",
+            "jacques12-4FRTOB20270729",
+            "Matthieu25_31-36_LSG1910"
+          ]
+        },
+        {
+          "query_label": "fr/rest/single",
+          "language": "fr",
+          "query_text": "repos",
+          "hit": true,
+          "expected_ids": [
+            "devocional20250912FR-LSG1910",
+            "devocional20260308FRTOB",
+            "marc631FR-LSG1910",
+            "marc631FRTOB20251207",
+            "matthieu1128-30FRTOB",
+            "matthieu1128LSG1910",
+            "matthieu1129LSG1910",
+            "matthieu1129frtob"
+          ],
+          "result_ids": [
+            "marc631FRTOB20251207",
+            "marc631FR-LSG1910",
+            "matthieu1128-30FRTOB",
+            "matthieu1128LSG1910",
+            "matthieu1129LSG1910",
+            "frEph1v13-14TOB20260812",
+            "matthieu1129frtob",
+            "matthieu77-8LSG1910",
+            "mat7v7-8FRTOB20251213",
+            "actes319FRTOB20270719"
+          ]
+        },
+        {
+          "query_label": "fr/rest/multi",
+          "language": "fr",
+          "query_text": "Je suis épuisé.\nJe fonctionne sans repos depuis des semaines.\nJ'ai besoin d'un vrai repos.",
+          "hit": true,
+          "expected_ids": [
+            "devocional20250912FR-LSG1910",
+            "devocional20260308FRTOB",
+            "marc631FR-LSG1910",
+            "marc631FRTOB20251207",
+            "matthieu1128-30FRTOB",
+            "matthieu1128LSG1910",
+            "matthieu1129LSG1910",
+            "matthieu1129frtob"
+          ],
+          "result_ids": [
+            "marc631FR-LSG1910",
+            "marc631FRTOB20251207",
+            "Eph610FRTOB20261115",
+            "devocional20250912FR-LSG1910",
+            "jean15v5LSG1910",
+            "devocional-20270512-FR-TOB-2Cor1-9",
+            "eph6v10LSG1910",
+            "ephesiens4v1FRTOB20260915",
+            "eph316FRTOB20261024",
+            "1Cor6v19FRTOB20270813"
+          ]
+        },
+        {
+          "query_label": "de/anxiety_fear/single",
+          "language": "de",
+          "query_text": "Angst",
+          "hit": true,
+          "expected_ids": [
+            "1.Petrus57LU1720251023",
+            "1.Petrus57SCH200020251023",
+            "Philipper46LU1720270318",
+            "Philipper46SCH200020270318",
+            "Philipper47LU1720260902",
+            "Philipper47SCH200020260902"
+          ],
+          "result_ids": [
+            "Hebräer135LU1720260509",
+            "Hebräer135SCH200020260509",
+            "Jakobus42LU1720270506",
+            "Offenbarung320LU1720260117",
+            "Philipper47SCH200020260902",
+            "Markus536LU1720270205",
+            "Philipper46LU1720270318",
+            "Lukas124-5LU1720260405",
+            "Lukas124-5SCH200020260405",
+            "Markus536SCH200020270205"
+          ]
+        },
+        {
+          "query_label": "de/anxiety_fear/multi",
+          "language": "de",
+          "query_text": "Ich fühle mich sehr ängstlich.\nIch kann nicht aufhören, mir Sorgen zu machen.\nIch habe die ganze Zeit Angst.",
+          "hit": false,
+          "expected_ids": [
+            "1.Petrus57LU1720251023",
+            "1.Petrus57SCH200020251023",
+            "Philipper46LU1720270318",
+            "Philipper46SCH200020270318",
+            "Philipper47LU1720260902",
+            "Philipper47SCH200020260902"
+          ],
+          "result_ids": [
+            "Jakobus42LU1720270506",
+            "Jakobus12-4LU1720261001",
+            "Jakobus42SCH200020270506",
+            "Römer1513SCH200020260731",
+            "Jakobus12-4SCH200020261001",
+            "Epheser431SCH200020260402",
+            "Epheser431LU1720260402",
+            "Römer1513LU1720260731",
+            "2.Timotheus31-5LU1720261020",
+            "Epheser426-27LU1720260608"
+          ]
+        },
+        {
+          "query_label": "de/comfort/single",
+          "language": "de",
+          "query_text": "Trost",
+          "hit": true,
+          "expected_ids": [
+            "2.Korinther13-4LU1720251006",
+            "2.Korinther13-4SCH200020251006",
+            "Johannes1416-17LU1720260305",
+            "Johannes1416-17SCH200020260305",
+            "Johannes1427LU1720251029",
+            "Johannes1427SCH200020251029",
+            "Johannes167LU1720260106",
+            "Johannes167SCH200020260106",
+            "Offenbarung716-17LU1720251204",
+            "Offenbarung716-17SCH200020251204"
+          ],
+          "result_ids": [
+            "Epheser429LU1720260628",
+            "Offenbarung716-17LU1720251204",
+            "2.Korinther13-4SCH200020251006",
+            "Offenbarung716-17SCH200020251204",
+            "2.Korinther13-4LU1720251006",
+            "Kolosser118LU1720261013",
+            "Epheser429SCH200020260628",
+            "Philipper46-7SCH200020260710",
+            "Kolosser118SCH200020261013",
+            "Römer154SCH200020260324"
+          ]
+        },
+        {
+          "query_label": "de/comfort/multi",
+          "language": "de",
+          "query_text": "Ich mache gerade eine sehr schwere Zeit durch.\nIch fühle mich zerbrochen.\nIch brauche Trost.",
+          "hit": true,
+          "expected_ids": [
+            "2.Korinther13-4LU1720251006",
+            "2.Korinther13-4SCH200020251006",
+            "Johannes1416-17LU1720260305",
+            "Johannes1416-17SCH200020260305",
+            "Johannes1427LU1720251029",
+            "Johannes1427SCH200020251029",
+            "Johannes167LU1720260106",
+            "Johannes167SCH200020260106",
+            "Offenbarung716-17LU1720251204",
+            "Offenbarung716-17SCH200020251204"
+          ],
+          "result_ids": [
+            "Epheser431SCH200020260402",
+            "2.Korinther13-4SCH200020251006",
+            "2.Korinther13-4LU1720251006",
+            "Epheser431LU1720260402",
+            "Epheser429LU1720260628",
+            "Offenbarung214SCH200020260514",
+            "Lukas2219-20SCH200020270104",
+            "Offenbarung214LU1720260514",
+            "Epheser429SCH200020260628",
+            "Apostelgeschichte319SCH200020261112"
+          ]
+        },
+        {
+          "query_label": "de/rest/single",
+          "language": "de",
+          "query_text": "Ruhe",
+          "hit": true,
+          "expected_ids": [
+            "Markus631LU1720260516",
+            "Markus631SCH200020260516",
+            "Matthäus1128-30LU1720260308",
+            "Matthäus1128-30SCH200020260308",
+            "Matthäus1129LU1720270601",
+            "Matthäus1129SCH200020270601",
+            "Offenbarung1413LU1720260228",
+            "Offenbarung1413SCH200020260228"
+          ],
+          "result_ids": [
+            "Römer1513LU1720260731",
+            "Matthäus1129LU1720270601",
+            "Matthäus1128-30LU1720260308",
+            "Matthäus1128-30SCH200020260308",
+            "1.Korinther311LU1720260707",
+            "Johannes141LU1720260122",
+            "1.Korinther619LU1720270513",
+            "Jakobus42LU1720270506",
+            "Römer328LU1720260216",
+            "Matthäus1129SCH200020270601"
+          ]
+        },
+        {
+          "query_label": "de/rest/multi",
+          "language": "de",
+          "query_text": "Ich bin erschöpft und ausgebrannt.\nIch laufe seit Wochen ohne Pause.\nIch brauche echte Ruhe.",
+          "hit": true,
+          "expected_ids": [
+            "Markus631LU1720260516",
+            "Markus631SCH200020260516",
+            "Matthäus1128-30LU1720260308",
+            "Matthäus1128-30SCH200020260308",
+            "Matthäus1129LU1720270601",
+            "Matthäus1129SCH200020270601",
+            "Offenbarung1413LU1720260228",
+            "Offenbarung1413SCH200020260228"
+          ],
+          "result_ids": [
+            "Markus631LU1720260516",
+            "Epheser431SCH200020260402",
+            "Epheser431LU1720260402",
+            "Markus631SCH200020260516",
+            "2.Timotheus47-8LU1720250815",
+            "Offenbarung24LU1720250911",
+            "2.Timotheus47-8SCH200020250815",
+            "Offenbarung24SCH200020250911",
+            "Matthäus1128-30LU1720260308",
+            "Matthäus1128-30SCH200020260308"
+          ]
+        },
+        {
+          "query_label": "ar/anxiety/single",
+          "language": "ar",
+          "query_text": "القلق",
+          "hit": true,
+          "expected_ids": [
+            "رسالةبطرسالرسولالاولى57SVDA20251023",
+            "رسالةبولسالرسولالىاهلفيلبي46SVDA20270318",
+            "رسالةبولسالرسولالىاهلفيلبي47SVDA20260902",
+            "رِسَالَةُبُطْرُسَٱلرَّسُولِٱلْأُولَى57NAV20251023",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي46NAV20270318",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي47NAV20260902"
+          ],
+          "result_ids": [
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي46NAV20270318",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي46-7NAV20260710",
+            "رسالةبولسالرسولالىاهلفيلبي46SVDA20270318",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي47NAV20260902",
+            "رِسَالَةُيُوحَنَّاٱلرَّسُولِٱلْأُولَى418NAV20251115",
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ1024-25NAV20260217",
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ414-16NAV20260225",
+            "رِسَالَةُبُطْرُسَٱلرَّسُولِٱلثَّانِيَةُ15-7NAV20261219",
+            "رِسَالَةُيَعْقُوبَ12-4NAV20260614",
+            "رِسَالَةُيُوحَنَّاٱلرَّسُولِٱلْأُولَى41NAV20270627"
+          ]
+        },
+        {
+          "query_label": "ar/anxiety/multi",
+          "language": "ar",
+          "query_text": "أشعر بقلق شديد.\nلا أستطيع التوقف عن القلق.\nأشعر بالخوف طوال الوقت.",
+          "hit": false,
+          "expected_ids": [
+            "رسالةبطرسالرسولالاولى57SVDA20251023",
+            "رسالةبولسالرسولالىاهلفيلبي46SVDA20270318",
+            "رسالةبولسالرسولالىاهلفيلبي47SVDA20260902",
+            "رِسَالَةُبُطْرُسَٱلرَّسُولِٱلْأُولَى57NAV20251023",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي46NAV20270318",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي47NAV20260902"
+          ],
+          "result_ids": [
+            "رِسَالَةُيَعْقُوبَ12-4NAV20260614",
+            "رِسَالَةُيَهُوذَا124-25NAV20260510",
+            "إِنْجِيلُلُوقَا124-5NAV20260405",
+            "انجيللوقا124-5SVDA20260405",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي46NAV20270318",
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ121NAV20260604",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىتِيطُسَ211-14NAV20270331",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي46-7NAV20260710",
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ412NAV20270216",
+            "إِنْجِيلُمَتَّى544-45NAV20260320"
+          ]
+        },
+        {
+          "query_label": "ar/comfort/single",
+          "language": "ar",
+          "query_text": "العزاء",
+          "hit": false,
+          "expected_ids": [
+            "إِنْجِيلُيُوحَنَّا1416-17NAV20260305",
+            "إِنْجِيلُيُوحَنَّا1427NAV20251029",
+            "إِنْجِيلُيُوحَنَّا167NAV20260106",
+            "انجيليوحنا1416-17SVDA20260305",
+            "انجيليوحنا1427SVDA20251029",
+            "انجيليوحنا167SVDA20260106",
+            "رؤيايوحنااللاهوتي716-17SVDA20251204",
+            "رسالةبولسالرسولالثانيةالىاهلكورنثوس13-4SVDA20251006",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ716-17NAV20251204",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلثَّانِيةُإِلَىأَهْلِكُورِنْثُوسَ13-4NAV20251006"
+          ],
+          "result_ids": [
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ927-28NAV20261221",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِكُولُوسِّي35NAV20260702",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِرُومِيَةَ517NAV20260802",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ2217NAV20251127",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ2217NAV20260517",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلأُولَىإِلَىأَهْلِتَسَالُونِيكِي43-5NAV20260730",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلثَّانِيةُإِلَىأَهْلِكُورِنْثُوسَ13-4NAV20251006",
+            "إِنْجِيلُيُوحَنَّا167-8NAV20260831",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىتِيطُسَ211-14NAV20270331",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِأَفَسُسَ219-20NAV20270220"
+          ]
+        },
+        {
+          "query_label": "ar/comfort/multi",
+          "language": "ar",
+          "query_text": "أمر بوقت عصيب جداً.\nأشعر أنني منكسر.\nأحتاج إلى العزاء.",
+          "hit": false,
+          "expected_ids": [
+            "إِنْجِيلُيُوحَنَّا1416-17NAV20260305",
+            "إِنْجِيلُيُوحَنَّا1427NAV20251029",
+            "إِنْجِيلُيُوحَنَّا167NAV20260106",
+            "انجيليوحنا1416-17SVDA20260305",
+            "انجيليوحنا1427SVDA20251029",
+            "انجيليوحنا167SVDA20260106",
+            "رؤيايوحنااللاهوتي716-17SVDA20251204",
+            "رسالةبولسالرسولالثانيةالىاهلكورنثوس13-4SVDA20251006",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ716-17NAV20251204",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلثَّانِيةُإِلَىأَهْلِكُورِنْثُوسَ13-4NAV20251006"
+          ],
+          "result_ids": [
+            "رِسَالَةُيَعْقُوبَ12-4NAV20260614",
+            "أَعْمَالُٱلرُّسُلِ1630NAV20270325",
+            "إِنْجِيلُمَتَّى133-9NAV20251221",
+            "رِسَالَةُيَهُوذَا124-25NAV20260510",
+            "أَعْمَالُٱلرُّسُلِ1730-31NAV20260205",
+            "سفراعمالالرسل1630SVDA20270325",
+            "إِنْجِيلُيُوحَنَّا1140NAV20261016",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلثَّانِيةُإِلَىأَهْلِكُورِنْثُوسَ13-4NAV20251006",
+            "إِنْجِيلُيُوحَنَّا167-8NAV20260831",
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ927-28NAV20261221"
+          ]
+        },
+        {
+          "query_label": "ar/rest/single",
+          "language": "ar",
+          "query_text": "الراحة",
+          "hit": false,
+          "expected_ids": [
+            "إِنْجِيلُمَتَّى1128-30NAV20260308",
+            "إِنْجِيلُمَتَّى1129NAV20270601",
+            "إِنْجِيلُمَرْقُسَ631NAV20260516",
+            "انجيلمتى1128-30SVDA20260308",
+            "انجيلمتى1129SVDA20270601",
+            "انجيلمرقس631SVDA20260516",
+            "رؤيايوحنااللاهوتي1413SVDA20260228",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ1413NAV20260228"
+          ],
+          "result_ids": [
+            "رِسَالَةُيَهُوذَا124-25NAV20260510",
+            "أَعْمَالُٱلرُّسُلِ21-4NAV20260211",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي44NAV20251004",
+            "رِسَالَةُيَعْقُوبَ12-4NAV20261001",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِرُومِيَةَ86NAV20261006",
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ927-28NAV20261221",
+            "رِسَالَةُبُطْرُسَٱلرَّسُولِٱلْأُولَى13-5NAV20250910",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىتِيطُسَ211-14NAV20251001",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلثَّانِيةُإِلَىأَهْلِكُورِنْثُوسَ416-18NAV20250824",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلأُولَىإِلَىأَهْلِكُورِنْثُوسَ134-7NAV20260306"
+          ]
+        },
+        {
+          "query_label": "ar/rest/multi",
+          "language": "ar",
+          "query_text": "أنا مرهق ومنهك تماماً.\nأعمل بلا توقف منذ أسابيع.\nأحتاج إلى راحة حقيقية.",
+          "hit": false,
+          "expected_ids": [
+            "إِنْجِيلُمَتَّى1128-30NAV20260308",
+            "إِنْجِيلُمَتَّى1129NAV20270601",
+            "إِنْجِيلُمَرْقُسَ631NAV20260516",
+            "انجيلمتى1128-30SVDA20260308",
+            "انجيلمتى1129SVDA20270601",
+            "انجيلمرقس631SVDA20260516",
+            "رؤيايوحنااللاهوتي1413SVDA20260228",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ1413NAV20260228"
+          ],
+          "result_ids": [
+            "رِسَالَةُيَهُوذَا124-25NAV20260510",
+            "رِسَالَةُيَعْقُوبَ12-4NAV20260614",
+            "أَعْمَالُٱلرُّسُلِ1730-31NAV20260205",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلثَّانِيةُإِلَىأَهْلِكُورِنْثُوسَ13-4NAV20251006",
+            "إِنْجِيلُمَتَّى544-45NAV20260320",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ2212-13NAV20250914",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ716-17NAV20251204",
+            "رسالةبولسالرسولالىاهلفيلبي320-21SVDA20260729",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي320-21NAV20260729",
+            "رِسَالَةُيُوحَنَّاٱلرَّسُولِٱلْأُولَى15-7NAV20260410"
+          ]
+        },
+        {
+          "query_label": "fil/anxiety/single",
+          "language": "fil",
+          "query_text": "Pagkabalisa",
+          "hit": false,
+          "expected_ids": [
+            "1Pedro57ASND20251023",
+            "1Pedro57MBB0520251023",
+            "Filipos46ASND20270318",
+            "Filipos47ASND20260902",
+            "MgaTaga-Filipos46MBB0520270318",
+            "MgaTaga-Filipos47MBB0520260902"
+          ],
+          "result_ids": [
+            "MgaTagaFilMBB0520260710",
+            "Mateo71MBB0520270225",
+            "Mateo71ASND20270225",
+            "Filipos46-7ASND20260710",
+            "Efeso426-27ASND20260608",
+            "Efeso518ASND20250816",
+            "Efeso422-24ASND20260610",
+            "Mateo513MBB0520270427",
+            "MgaTagaEfeMBB0520260610",
+            "Hebreo313ASND20261104"
+          ]
+        },
+        {
+          "query_label": "fil/anxiety/multi",
+          "language": "fil",
+          "query_text": "Sobra akong nababalisa.\nHindi ako mapigilan mag-alala.\nParang natatakot ako palagi.",
+          "hit": true,
+          "expected_ids": [
+            "1Pedro57ASND20251023",
+            "1Pedro57MBB0520251023",
+            "Filipos46ASND20270318",
+            "Filipos47ASND20260902",
+            "MgaTaga-Filipos46MBB0520270318",
+            "MgaTaga-Filipos47MBB0520260902"
+          ],
+          "result_ids": [
+            "1Pedro589MBB0520250818",
+            "Lucas532MBB0520270611",
+            "2Timoteo112MBB0520270609",
+            "MgaTagaFilMBB0520251002",
+            "1Pedro58-9ASND20250818",
+            "1Pedro57MBB0520251023",
+            "1Pedro314MBB0520260923",
+            "MgaHebreo21MBB0520260918",
+            "Pahayag716-17ASND20251204",
+            "Pahayag716MBB0520251204"
+          ]
+        },
+        {
+          "query_label": "fil/comfort/single",
+          "language": "fil",
+          "query_text": "Kaginhawaan",
+          "hit": true,
+          "expected_ids": [
+            "2Corinto13-4ASND20251006",
+            "2MgaTagaCoMBB0520251006",
+            "Juan1416-17ASND20260305",
+            "Juan141617MBB0520260305",
+            "Juan1427ASND20251029",
+            "Juan1427MBB0520251029",
+            "Juan167ASND20260106",
+            "Juan167MBB0520260106",
+            "Pahayag716-17ASND20251204",
+            "Pahayag716MBB0520251204"
+          ],
+          "result_ids": [
+            "1Timoteo611MBB0520270703",
+            "MgaHebreo1MBB0520260509",
+            "Pahayag716-17ASND20251204",
+            "Lucas636MBB0520260420",
+            "Lucas636ASND20260420",
+            "Hebreo135ASND20260509",
+            "1Pedro389MBB0520260519",
+            "Mateo1129MBB0520270601",
+            "MgaGawa1630ASND20270325",
+            "MgaGawa1630MBB0520270325"
+          ]
+        },
+        {
+          "query_label": "fil/comfort/multi",
+          "language": "fil",
+          "query_text": "Nagdaraan ako sa mahirap na panahon.\nParang nasira ako.\nKailangan ko ng kaginhawaan.",
+          "hit": false,
+          "expected_ids": [
+            "2Corinto13-4ASND20251006",
+            "2MgaTagaCoMBB0520251006",
+            "Juan1416-17ASND20260305",
+            "Juan141617MBB0520260305",
+            "Juan1427ASND20251029",
+            "Juan1427MBB0520251029",
+            "Juan167ASND20260106",
+            "Juan167MBB0520260106",
+            "Pahayag716-17ASND20251204",
+            "Pahayag716MBB0520251204"
+          ],
+          "result_ids": [
+            "MgaTagaFilMBB0520251002",
+            "Mateo1414MBB0520270419",
+            "Mateo2531-36ASND20260422",
+            "Marcos1436ASND20250907",
+            "MgaGawa1630MBB0520270325",
+            "1Timoteo66ASND20270407",
+            "1Pedro314MBB0520260923",
+            "Marcos631MBB0520260516",
+            "Mateo1414ASND20270419",
+            "Juan330MBB0520260906"
+          ]
+        },
+        {
+          "query_label": "fil/rest/single",
+          "language": "fil",
+          "query_text": "Pahinga",
+          "hit": true,
+          "expected_ids": [
+            "Marcos631ASND20260516",
+            "Marcos631MBB0520260516",
+            "Mateo1128-30ASND20260308",
+            "Mateo11283MBB0520260308",
+            "Mateo1129ASND20270601",
+            "Mateo1129MBB0520270601",
+            "Pahayag1413ASND20260228",
+            "Pahayag141MBB0520260228"
+          ],
+          "result_ids": [
+            "Mateo1129MBB0520270601",
+            "Mateo82627MBB0520260630",
+            "1Timoteo611MBB0520270703",
+            "Santiago15ASND20250928",
+            "Marcos631MBB0520260516",
+            "Mateo1032MBB0520260909",
+            "MgaTagaColMBB0520260112",
+            "Mateo826-27ASND20260630",
+            "Mateo778MBB0520251126",
+            "Santiago11MBB0520250920"
+          ]
+        },
+        {
+          "query_label": "fil/rest/multi",
+          "language": "fil",
+          "query_text": "Pagod na pagod na ako.\nWala akong pahinga sa loob ng mga linggo.\nKailangan ko ng tunay na pahinga.",
+          "hit": false,
+          "expected_ids": [
+            "Marcos631ASND20260516",
+            "Marcos631MBB0520260516",
+            "Mateo1128-30ASND20260308",
+            "Mateo11283MBB0520260308",
+            "Mateo1129ASND20270601",
+            "Mateo1129MBB0520270601",
+            "Pahayag1413ASND20260228",
+            "Pahayag141MBB0520260228"
+          ],
+          "result_ids": [
+            "Santiago42MBB0520270506",
+            "Mateo1414MBB0520270419",
+            "MgaTaga-Roma1214MBB0520270720",
+            "Marcos723MBB0520260914",
+            "Lucas119-10MBB0520270103",
+            "Hebreo313ASND20261104",
+            "Pahayag716-17ASND20251204",
+            "Pahayag716MBB0520251204",
+            "1Juan18MBB0520260817",
+            "MgaHebreo313MBB0520261104"
+          ]
+        },
+        {
+          "query_label": "hi/anxiety/single",
+          "language": "hi",
+          "query_text": "चिंता",
+          "hit": true,
+          "expected_ids": [
+            "1पतरस57HERV20251023",
+            "1पतरस57OV20251023",
+            "फिलिप्पियों46HERV",
+            "फिलिप्पियों46OV20270318",
+            "फिलिप्पियों47HERV",
+            "फिलिप्पियों47OV20260902"
+          ],
+          "result_ids": [
+            "1पतरस57HERV20251023",
+            "1पतरस57OV20251023",
+            "फिलिप्पियों46-7HIOV20260710",
+            "फिलिप्पियों46HERV",
+            "1कुरिन्थियों29HERV",
+            "फिलिप्पियों46-7HERV20260710",
+            "1कुरिन्थियों29OV20270602",
+            "फिलिप्पियों46OV20270318",
+            "2कुरिन्थियों57HERV20260328",
+            "लूका1231HERV"
+          ]
+        },
+        {
+          "query_label": "hi/anxiety/multi",
+          "language": "hi",
+          "query_text": "मुझे बहुत चिंता हो रही है।\nमैं चिंता करना बंद नहीं कर सकता।\nमुझे हर समय डर लगता है।",
+          "hit": true,
+          "expected_ids": [
+            "1पतरस57HERV20251023",
+            "1पतरस57OV20251023",
+            "फिलिप्पियों46HERV",
+            "फिलिप्पियों46OV20270318",
+            "फिलिप्पियों47HERV",
+            "फिलिप्पियों47OV20260902"
+          ],
+          "result_ids": [
+            "1पतरस57HERV20251023",
+            "1यूहन्ना418HERV",
+            "1पतरस57OV20251023",
+            "2कुरिन्थियों416HERV",
+            "यूहन्ना141HERV20260122",
+            "लूका124-5HERV20260405",
+            "इब्रानियों21HERV",
+            "मत्ती2413OV20270620",
+            "मत्ती2413HERV",
+            "1यूहन्ना418OV20261008"
+          ]
+        },
+        {
+          "query_label": "hi/rest/single",
+          "language": "hi",
+          "query_text": "विश्राम",
+          "hit": true,
+          "expected_ids": [
+            "प्रकाशितवाक्य1413HERV20260228",
+            "प्रकाशितवाक्य1413HIOV20260228",
+            "मत्ती1128-30HERV20260308",
+            "मत्ती1128-30HIOV20260308",
+            "मत्ती1129HERV",
+            "मत्ती1129OV20270601",
+            "मरकुस631HERV20260516",
+            "मरकुस631HIOV20260516"
+          ],
+          "result_ids": [
+            "मत्ती1128-30HIOV20260308",
+            "मरकुस631HIOV20260516",
+            "मरकुस631HERV20260516",
+            "प्रकाशितवाक्य1413HIOV20260228",
+            "प्रकाशितवाक्य1413HERV20260228",
+            "मत्ती1129OV20270601",
+            "मत्ती1128-30HERV20260308",
+            "प्रेरितोंकेकाम319OV20261112",
+            "मत्ती1129HERV",
+            "प्रेरितोंकेकाम319HERV"
+          ]
+        },
+        {
+          "query_label": "hi/rest/multi",
+          "language": "hi",
+          "query_text": "मैं बहुत थका हुआ हूँ।\nमैं हफ्तों से बिना आराम के काम कर रहा हूँ।\nमुझे सच में विश्राम चाहिए।",
+          "hit": true,
+          "expected_ids": [
+            "प्रकाशितवाक्य1413HERV20260228",
+            "प्रकाशितवाक्य1413HIOV20260228",
+            "मत्ती1128-30HERV20260308",
+            "मत्ती1128-30HIOV20260308",
+            "मत्ती1129HERV",
+            "मत्ती1129OV20270601",
+            "मरकुस631HERV20260516",
+            "मरकुस631HIOV20260516"
+          ],
+          "result_ids": [
+            "मरकुस631HERV20260516",
+            "मरकुस631HIOV20260516",
+            "मत्ती1128-30HERV20260308",
+            "मत्ती1128-30HIOV20260308",
+            "प्रकाशितवाक्य1413HIOV20260228",
+            "प्रेरितोंकेकाम319HERV",
+            "प्रेरितोंकेकाम319OV20261112",
+            "प्रकाशितवाक्य1413HERV20260228",
+            "इब्रानियों135HERV",
+            "रोमियों1417HERV"
+          ]
+        },
+        {
+          "query_label": "ja/anxiety/single",
+          "language": "ja",
+          "query_text": "思い煩い",
+          "hit": true,
+          "expected_ids": [
+            "1peter5v7LB20251023",
+            "1peter5v7SHK200320251014"
+          ],
+          "result_ids": [
+            "1peter5v7SHK200320251014",
+            "1peter5v7LB20251023",
+            "mark7v2023SHK200320251216",
+            "mark14v38LB20261031",
+            "mark5v36SHK200320260822",
+            "mark14v38SHK200320270520",
+            "revelation3v16SHK200320251011",
+            "john20v29SHK200320260611",
+            "mark6v31SHK200320260215",
+            "matthew26v41LB20260908"
+          ]
+        },
+        {
+          "query_label": "ja/anxiety/multi",
+          "language": "ja",
+          "query_text": "とても不安を感じています。\n心配が止まりません。\nいつも怖い気持ちです。",
+          "hit": false,
+          "expected_ids": [
+            "1peter5v7LB20251023",
+            "1peter5v7SHK200320251014"
+          ],
+          "result_ids": [
+            "john5v24SHK200320261217",
+            "mark5v36SHK200320260822",
+            "matthew11v29SHK200320260811",
+            "luke12v45LB20260321",
+            "john14v1SHK200320251126",
+            "1john4v18LB20260504",
+            "1john4v18LB20270207",
+            "john11v2526SHK200320270203",
+            "mark5v36LB20261013",
+            "john11v2526LB20261126"
+          ]
+        },
+        {
+          "query_label": "ja/comfort/single",
+          "language": "ja",
+          "query_text": "慰め",
+          "hit": true,
+          "expected_ids": [
+            "2corinthians1v34LB20251001",
+            "2corinthians1v34SHK200320250818",
+            "john14v1617LB20251122",
+            "john14v1617SHK200320260130",
+            "john16v7LB20250901",
+            "john16v7SHK200320260226",
+            "revelation21v4LB20250926",
+            "revelation21v4SHK200320251211",
+            "revelation7v1617LB20260605",
+            "romans15v4LB20270413"
+          ],
+          "result_ids": [
+            "2corinthians1v34LB20251001",
+            "2corinthians1v34SHK200320250818",
+            "john14v23LB20260224",
+            "revelation14v13SHK200320251207",
+            "revelation21v4SHK200320251211",
+            "john1v29LB20261024",
+            "revelation21v4LB20250926",
+            "revelation1v7SHK200320270716",
+            "revelation7v910SHK200320261030",
+            "john16v78SHK200320270313"
+          ]
+        },
+        {
+          "query_label": "ja/comfort/multi",
+          "language": "ja",
+          "query_text": "とても辛い時期を過ごしています。\n心が壊れているように感じます。\n慰めが必要です。",
+          "hit": true,
+          "expected_ids": [
+            "2corinthians1v34LB20251001",
+            "2corinthians1v34SHK200320250818",
+            "john14v1617LB20251122",
+            "john14v1617SHK200320260130",
+            "john16v7LB20250901",
+            "john16v7SHK200320260226",
+            "revelation21v4LB20250926",
+            "revelation21v4SHK200320251211",
+            "revelation7v1617LB20260605",
+            "romans15v4LB20270413"
+          ],
+          "result_ids": [
+            "2corinthians1v34LB20251001",
+            "2corinthians1v34SHK200320250818",
+            "matthew8v17LB20261018",
+            "matthew11v29SHK200320260811",
+            "revelation21v4SHK200320251211",
+            "revelation21v4LB20250926",
+            "john16v7SHK200320260226",
+            "revelation7v1617SHK200320260211",
+            "john16v78SHK200320270313",
+            "mark7v2023LB20260620"
+          ]
+        },
+        {
+          "query_label": "ja/rest/single",
+          "language": "ja",
+          "query_text": "安息",
+          "hit": true,
+          "expected_ids": [
+            "matthew11v2830LB20260621",
+            "matthew11v2830SHK200320260219",
+            "matthew11v29SHK200320260811",
+            "revelation14v13SHK200320251207"
+          ],
+          "result_ids": [
+            "matthew11v29SHK200320260811",
+            "matthew11v2830SHK200320260219",
+            "matthew11v2830LB20260621",
+            "revelation14v13SHK200320251207",
+            "john12v24SHK200320251015",
+            "matthew11v29LB20270529",
+            "1john4v18LB20260504",
+            "john14v1SHK200320251126",
+            "john14v1LB20250913",
+            "john10v10SHK200320260306"
+          ]
+        },
+        {
+          "query_label": "ja/rest/multi",
+          "language": "ja",
+          "query_text": "とても疲れて燃え尽きています。\n何週間も休みなく働いています。\n本当の休息が必要です。",
+          "hit": true,
+          "expected_ids": [
+            "matthew11v2830LB20260621",
+            "matthew11v2830SHK200320260219",
+            "matthew11v29SHK200320260811",
+            "revelation14v13SHK200320251207"
+          ],
+          "result_ids": [
+            "mark6v31LB20251125",
+            "matthew11v2830LB20260621",
+            "mark6v31SHK200320260215",
+            "matthew11v29SHK200320260811",
+            "acts17v11SHK200320260411",
+            "acts17v11LB20270405",
+            "john9v4SHK200320260814",
+            "acts17v11LB20250921",
+            "acts17v11SHK200320261206",
+            "1corinthians3v13LB20270618"
+          ]
+        },
+        {
+          "query_label": "zh/anxiety/single",
+          "language": "zh",
+          "query_text": "焦虑",
+          "hit": false,
+          "expected_ids": [
+            "彼得前书57CUV191920251023",
+            "腓立比书46CUV191920270318",
+            "腓立比书47CUV191920260902"
+          ],
+          "result_ids": [
+            "希伯来书21CUV191920260918",
+            "philippians4v6CNV20260918",
+            "希伯来书1214CUV191920251110",
+            "philippians4v67CNV20260613",
+            "马可福音1124CUV191920261201",
+            "matthew11v2830CNV20260206",
+            "2timothy1v7CNV20260721",
+            "腓立比书48CUV191920260321",
+            "1john4v18CNV20250911",
+            "matthew11v29CNV20261118"
+          ]
+        },
+        {
+          "query_label": "zh/anxiety/multi",
+          "language": "zh",
+          "query_text": "我感到非常焦虑。\n我无法停止担心。\n我一直感到害怕。",
+          "hit": false,
+          "expected_ids": [
+            "彼得前书57CUV191920251023",
+            "腓立比书46CUV191920270318",
+            "腓立比书47CUV191920260902"
+          ],
+          "result_ids": [
+            "1john4v18CNV20250911",
+            "以弗所书610CUV191920261027",
+            "luke12v45CNV20260203",
+            "2timothy1v7CNV20260721",
+            "1peter3v14CNV20270429",
+            "加拉太书110CUV191920270207",
+            "luke1v37CNV20260421",
+            "希伯来书21CUV191920260918",
+            "歌罗西书118CUV191920251220",
+            "腓立比书16CUV191920260525"
+          ]
+        },
+        {
+          "query_label": "zh/comfort/single",
+          "language": "zh",
+          "query_text": "安慰",
+          "hit": true,
+          "expected_ids": [
+            "2corinthians1v34CNV20260224",
+            "john14v1617CNV20260327",
+            "john14v1CNV20250805",
+            "john16v78CNV20270119",
+            "john16v7CNV20260712",
+            "revelation21v4CNV20260730",
+            "启示录716-17CUV191920251204",
+            "哥林多后书13-4CUV191920251006",
+            "约翰福音1416-17CUV191920260305",
+            "约翰福音1427CUV191920251029",
+            "约翰福音167CUV191920260106"
+          ],
+          "result_ids": [
+            "2corinthians1v34CNV20260224",
+            "路加福音637-38CUV191920251203",
+            "以弗所书61-3CUV191920250906",
+            "哥林多后书13-4CUV191920251006",
+            "john16v33CNV20250927",
+            "路加福音137CUV191920260722",
+            "mark6v31CNV20260628",
+            "雅各书28CUV191920261128",
+            "mark5v36CNV20270125",
+            "matthew11v2830CNV20260206"
+          ]
+        },
+        {
+          "query_label": "zh/comfort/multi",
+          "language": "zh",
+          "query_text": "我正在经历一段非常艰难的时期。\n我感到很破碎。\n我需要安慰。",
+          "hit": true,
+          "expected_ids": [
+            "2corinthians1v34CNV20260224",
+            "john14v1617CNV20260327",
+            "john14v1CNV20250805",
+            "john16v78CNV20270119",
+            "john16v7CNV20260712",
+            "revelation21v4CNV20260730",
+            "启示录716-17CUV191920251204",
+            "哥林多后书13-4CUV191920251006",
+            "约翰福音1416-17CUV191920260305",
+            "约翰福音1427CUV191920251029",
+            "约翰福音167CUV191920260106"
+          ],
+          "result_ids": [
+            "希伯来书121CUV191920260604",
+            "revelation21v4CNV20260730",
+            "2corinthians1v34CNV20260224",
+            "马太福音513CUV191920270427",
+            "启示录18CUV191920260317",
+            "约翰福音33CUV191920270616",
+            "约翰福音524CUV191920260624",
+            "哥林多前书1557CUV191920250903",
+            "提多书211-14CUV191920251001",
+            "ephesians4v31CNV20250821"
+          ]
+        },
+        {
+          "query_label": "zh/rest/single",
+          "language": "zh",
+          "query_text": "安息",
+          "hit": true,
+          "expected_ids": [
+            "matthew11v2830CNV20260206",
+            "matthew11v29CNV20261118",
+            "revelation14v13CNV20260408",
+            "启示录1413CUV191920260228",
+            "马可福音631CUV191920260516",
+            "马太福音1128-30CUV191920260308",
+            "马太福音1129CUV191920270601"
+          ],
+          "result_ids": [
+            "matthew11v2830CNV20260206",
+            "matthew11v29CNV20261118",
+            "1john4v18CNV20250911",
+            "马可福音1124CUV191920261201",
+            "使徒行传1631CUV191920261118",
+            "路加福音1411CUV191920270328",
+            "luke2v1011CNV20261201",
+            "1peter3v15CNV20250819",
+            "提摩太前书316CUV191920260413",
+            "以弗所书430CUV191920260124"
+          ]
+        },
+        {
+          "query_label": "zh/rest/multi",
+          "language": "zh",
+          "query_text": "我感到非常疲惫和精疲力竭。\n我已经好几个星期没有休息了。\n我需要真正的休息。",
+          "hit": false,
+          "expected_ids": [
+            "matthew11v2830CNV20260206",
+            "matthew11v29CNV20261118",
+            "revelation14v13CNV20260408",
+            "启示录1413CUV191920260228",
+            "马可福音631CUV191920260516",
+            "马太福音1128-30CUV191920260308",
+            "马太福音1129CUV191920270601"
+          ],
+          "result_ids": [
+            "提多书211-14CUV191920251001",
+            "mark6v34CNV20270527",
+            "路加福音1814CUV191920251009",
+            "腓立比书320CUV191920270721",
+            "提多书35CUV191920261107",
+            "约翰福音155CUV191920250801",
+            "以弗所书17CUV191920261017",
+            "2corinthians13v5CNV20251020",
+            "2peter3v10CNV20250910",
+            "以弗所书610CUV191920261027"
+          ]
+        }
+      ]
+    },
+    "B_verses_only_verse+meditar": {
+      "hit_rate": 0.65,
+      "hits": 39,
+      "total": 60,
+      "rows": [
+        {
+          "query_label": "en/anxiety/single",
+          "language": "en",
+          "query_text": "I'm so anxious and worried, I can't stop worrying about everything",
+          "hit": true,
+          "expected_ids": [
+            "1Peter57KJV20251023",
+            "1peter57NIV20251224",
+            "fil4v6EN-NIV20270214",
+            "phil47KJV20260902",
+            "philippians4v6KJV20270318"
+          ],
+          "result_ids": [
+            "john1633NIV20250904",
+            "mark1124NIV20261016",
+            "fil4v6EN-NIV20270214",
+            "juan14v1NIV20260610",
+            "juan1427EN-NIV20260109",
+            "Mark536NIV20270727",
+            "mark923NIV20270614",
+            "heb12v2NIV20260730",
+            "1peter57NIV20251224",
+            "Phil4v67NIV20260115"
+          ]
+        },
+        {
+          "query_label": "en/anxiety/multi",
+          "language": "en",
+          "query_text": "I've been so anxious lately.\nI can't stop worrying about everything going on in my life.\nIt feels like the worry never stops.",
+          "hit": true,
+          "expected_ids": [
+            "1Peter57KJV20251023",
+            "1peter57NIV20251224",
+            "fil4v6EN-NIV20270214",
+            "phil47KJV20260902",
+            "philippians4v6KJV20270318"
+          ],
+          "result_ids": [
+            "john1633NIV20250904",
+            "Phil4v67NIV20260115",
+            "fil4v6EN-NIV20270214",
+            "mark1124NIV20261016",
+            "juan14v1NIV20260610",
+            "romanos1212NIV20251107",
+            "heb12v2NIV20260730",
+            "1john418NIV20270523",
+            "1peter57NIV20251224",
+            "james414NIV20251213"
+          ]
+        },
+        {
+          "query_label": "en/fear/single",
+          "language": "en",
+          "query_text": "I'm afraid and scared, fear has taken hold of me",
+          "hit": true,
+          "expected_ids": [
+            "1john418KJV20251115",
+            "1john418KJV20261008",
+            "1john418NIV20250929",
+            "1john418NIV20270523",
+            "juan1427EN-NIV20260109",
+            "luke12_4-5NIV20251116",
+            "luke12v4-5KJV",
+            "mat82627NIV20260121",
+            "matthew82627KJV20260630"
+          ],
+          "result_ids": [
+            "2corintios1_9_en_niv",
+            "luke12v4-5KJV",
+            "luke12_4-5NIV20251116",
+            "2timoteo17KJV20260131",
+            "john1633NIV20250904",
+            "luke1019KJV20260127",
+            "mark536KJV20270205",
+            "mark1124NIV20261016",
+            "devocional20261023EN-NIV",
+            "revelacion320NIV20251011"
+          ]
+        },
+        {
+          "query_label": "en/fear/multi",
+          "language": "en",
+          "query_text": "I've been feeling really afraid lately.\nFear has taken hold of me and I don't know how to shake it.\nI feel scared most of the time.",
+          "hit": true,
+          "expected_ids": [
+            "1john418KJV20251115",
+            "1john418KJV20261008",
+            "1john418NIV20250929",
+            "1john418NIV20270523",
+            "juan1427EN-NIV20260109",
+            "luke12_4-5NIV20251116",
+            "luke12v4-5KJV",
+            "mat82627NIV20260121",
+            "matthew82627KJV20260630"
+          ],
+          "result_ids": [
+            "mark1124NIV20261016",
+            "john14v2-3NIV20260802",
+            "john1633NIV20250904",
+            "devocional20261023EN-NIV",
+            "1timoteo3v9NIV20270610",
+            "heb3v6NIV20270218",
+            "luke12_4-5NIV20251116",
+            "mark1124NIV20251118",
+            "fil4v6EN-NIV20270214",
+            "luke12v4-5KJV"
+          ]
+        },
+        {
+          "query_label": "en/comfort/single",
+          "language": "en",
+          "query_text": "I need comfort, I'm going through a hard time and feel broken",
+          "hit": true,
+          "expected_ids": [
+            "2Corintios1_3-4NIV20251117",
+            "2corintios1_3-4KJV20251006",
+            "john1416KJV",
+            "john1427KJV20251029",
+            "john16_7-8NIV20261125",
+            "john16v7KJV20260106",
+            "juan1416-17EN-NIV",
+            "rev71617KJV20251204",
+            "revelacion71617NIV20260124"
+          ],
+          "result_ids": [
+            "2corintios12_9NIV20261123",
+            "corintios12_9-10_20260717_en_niv",
+            "Filipenses413NIV20251111",
+            "john1633NIV20250904",
+            "2Cor12v9-10KJV20251107",
+            "2Corintios1_3-4NIV20251117",
+            "2Cor7v10NIV20260713",
+            "romanos1212NIV20251107",
+            "2corintios1_3-4KJV20251006",
+            "juan14v1NIV20260610"
+          ]
+        },
+        {
+          "query_label": "en/comfort/multi",
+          "language": "en",
+          "query_text": "I'm going through a really hard time right now.\nI feel broken and I don't know how to keep going.\nI just need some comfort.",
+          "hit": true,
+          "expected_ids": [
+            "2Corintios1_3-4NIV20251117",
+            "2corintios1_3-4KJV20251006",
+            "john1416KJV",
+            "john1427KJV20251029",
+            "john16_7-8NIV20261125",
+            "john16v7KJV20260106",
+            "juan1416-17EN-NIV",
+            "rev71617KJV20251204",
+            "revelacion71617NIV20260124"
+          ],
+          "result_ids": [
+            "john16_7-8NIV20261125",
+            "2Corintios1_3-4NIV20251117",
+            "2corintios1_3-4KJV20251006",
+            "john1633NIV20250904",
+            "juan14v1NIV20260610",
+            "hebreos13v5NIV20270831",
+            "2tim112NIV20261009",
+            "romans1513KJV20260731",
+            "juan1427EN-NIV20260109",
+            "2Cor12v9-10KJV20251107"
+          ]
+        },
+        {
+          "query_label": "en/rest/single",
+          "language": "en",
+          "query_text": "I'm exhausted and burned out, I need rest",
+          "hit": true,
+          "expected_ids": [
+            "devocional20251203EN-NIV",
+            "mark631KJV20260516",
+            "mark631NIV20251020",
+            "mateo1129NIV20270829",
+            "matthew112830KJV20260308",
+            "matthew1129KJV20270601",
+            "mt112830enNIV",
+            "revelation14v13KJV20260228"
+          ],
+          "result_ids": [
+            "rev22v7NIV20270429",
+            "mark631KJV20260516",
+            "hebreos13v5NIV20270831",
+            "matthew1129KJV20270601",
+            "rom1212KJV20260116",
+            "mark631NIV20251020",
+            "john94KJV20270211",
+            "Filipenses413NIV20251111",
+            "matthew112830KJV20260308",
+            "juan9v4NIV20261108"
+          ]
+        },
+        {
+          "query_label": "en/rest/multi",
+          "language": "en",
+          "query_text": "I've been running on empty for weeks.\nI'm completely exhausted and burned out.\nI just need to find real rest.",
+          "hit": true,
+          "expected_ids": [
+            "devocional20251203EN-NIV",
+            "mark631KJV20260516",
+            "mark631NIV20251020",
+            "mateo1129NIV20270829",
+            "matthew112830KJV20260308",
+            "matthew1129KJV20270601",
+            "mt112830enNIV",
+            "revelation14v13KJV20260228"
+          ],
+          "result_ids": [
+            "mark631KJV20260516",
+            "2timoteo478NIV20270311",
+            "timoteo4v7NIV",
+            "2tim478KJV20270404",
+            "rev22v7NIV20270429",
+            "2timoteo4v78NIV20260116",
+            "mt112830enNIV",
+            "1tim6v6v8NIV20260322",
+            "hebreos13v5NIV20270831",
+            "heb612NIV20260605"
+          ]
+        },
+        {
+          "query_label": "es/anxiety_fear/single",
+          "language": "es",
+          "query_text": "ansiedad",
+          "hit": false,
+          "expected_ids": [
+            "1pedro57NVI20260111",
+            "filipenses4_6-7NVI20250925"
+          ],
+          "result_ids": [
+            "efesios431NVI20251123",
+            "tesalonicenses522NVI",
+            "santiago414NVI20260522",
+            "santiago11920NVI20260429",
+            "efesios42627NVI20260529",
+            "marcos14_38_NVI",
+            "efesios610NVI20270514",
+            "1timoteo3v9NVI20270210",
+            "1pedro2_2_NVI",
+            "1Pedro4_8NVI20270411"
+          ]
+        },
+        {
+          "query_label": "es/anxiety_fear/multi",
+          "language": "es",
+          "query_text": "Me siento muy ansioso.\nNo puedo dejar de preocuparme.\nSiento miedo todo el tiempo.",
+          "hit": false,
+          "expected_ids": [
+            "1pedro57NVI20260111",
+            "filipenses4_6-7NVI20250925"
+          ],
+          "result_ids": [
+            "santiago112NVI20260701",
+            "tesalonicenses522NVI",
+            "hebreos5_8-9_20270503",
+            "efesios610NVI20270514",
+            "1timoteo4_7-8_NVI_20260801",
+            "hebreos1211NVI",
+            "judas12425NVI",
+            "santiago414NVI20260522",
+            "1timoteo3v9NVI20270210",
+            "santiago112NVI20270115"
+          ]
+        },
+        {
+          "query_label": "es/comfort/single",
+          "language": "es",
+          "query_text": "consuelo",
+          "hit": true,
+          "expected_ids": [
+            "2corintios1_3-4NVI20260319",
+            "apocalipsis214NVI",
+            "apocalipsis71617NVI",
+            "juan16_7NVI"
+          ],
+          "result_ids": [
+            "efesios429NVI20260121",
+            "efesios11314NVI",
+            "hechos214NVI20251001",
+            "2corintios1_3-4NVI20260319",
+            "juan16_7NVI",
+            "juan16_7_8_NVI",
+            "juan316NVI20260128",
+            "lucas2_10_11_NVI",
+            "2Corintios6_14NVI20270708",
+            "rom811NVI20251012"
+          ]
+        },
+        {
+          "query_label": "es/comfort/multi",
+          "language": "es",
+          "query_text": "Estoy pasando por un momento muy difícil.\nMe siento roto.\nNecesito consuelo.",
+          "hit": true,
+          "expected_ids": [
+            "2corintios1_3-4NVI20260319",
+            "apocalipsis214NVI",
+            "apocalipsis71617NVI",
+            "juan16_7NVI"
+          ],
+          "result_ids": [
+            "1Pedro221NVI20270520",
+            "2corintios1_9NVI",
+            "efesios429NVI20260121",
+            "efesios610NVI20270514",
+            "2Corintios12_9-10_NVI_20260601",
+            "1corintios13_7_NVI",
+            "efesios42627NVI20260529",
+            "efesios431NVI20251123",
+            "juan16_7NVI",
+            "hechos214NVI20251001"
+          ]
+        },
+        {
+          "query_label": "es/rest/single",
+          "language": "es",
+          "query_text": "descanso",
+          "hit": true,
+          "expected_ids": [
+            "marcos631NVI20250930",
+            "mateo1128-30NVI20260627",
+            "mateo1129NVI20270425"
+          ],
+          "result_ids": [
+            "marcos631NVI20250930",
+            "mateo1128-30NVI20260627",
+            "lucas2136NVI20270124",
+            "lucas636NVI20251025",
+            "1juan2_6NVI",
+            "hechos1043NVI20270515",
+            "Filipenses4_4_ESNVI",
+            "tesalonicenses522NVI",
+            "1Pedro221NVI20270520",
+            "hechos20_35NVI"
+          ]
+        },
+        {
+          "query_label": "es/rest/multi",
+          "language": "es",
+          "query_text": "Estoy agotado y exhausto.\nHe estado funcionando sin descanso por semanas.\nNecesito descanso de verdad.",
+          "hit": true,
+          "expected_ids": [
+            "marcos631NVI20250930",
+            "mateo1128-30NVI20260627",
+            "mateo1129NVI20270425"
+          ],
+          "result_ids": [
+            "1Pedro221NVI20270520",
+            "mateo1128-30NVI20260627",
+            "hebreos12_6-7_20260528_es_nvi",
+            "efesios431NVI20251123",
+            "hebreos1211NVI",
+            "filipenses4v13NVI20250902",
+            "efesios610NVI20270514",
+            "santiago112NVI20260701",
+            "marcos631NVI20250930",
+            "2Corintios4_16NVI"
+          ]
+        },
+        {
+          "query_label": "pt/anxiety_fear/single",
+          "language": "pt",
+          "query_text": "ansiedade",
+          "hit": true,
+          "expected_ids": [
+            "1Pedro5_7PTNVI20250904",
+            "1Pedro5v7ARC20260527",
+            "filipenses4_6-7ARC20260722",
+            "filipenses4v6PTNVI20270216"
+          ],
+          "result_ids": [
+            "1Pedro5v7ARC20260527",
+            "filipenses4_6-7ARC20260722",
+            "filipenses4v6ARC20261009",
+            "1Pedro5_7PTNVI20250904",
+            "filipenses4v6-7PTNVI20260212",
+            "filipenses4v6PTNVI20270216",
+            "1Timoteo316ARC20260608",
+            "1Tes5v19ARC20260725",
+            "1Tess4v3-5ARC20260618",
+            "2Timoteo1_7_ARC_20260429"
+          ]
+        },
+        {
+          "query_label": "pt/anxiety_fear/multi",
+          "language": "pt",
+          "query_text": "Estou me sentindo muito ansioso.\nNão consigo parar de me preocupar.\nSinto medo o tempo todo.",
+          "hit": true,
+          "expected_ids": [
+            "1Pedro5_7PTNVI20250904",
+            "1Pedro5v7ARC20260527",
+            "filipenses4_6-7ARC20260722",
+            "filipenses4v6PTNVI20270216"
+          ],
+          "result_ids": [
+            "1Pedro5v7ARC20260527",
+            "filipenses4v6-7PTNVI20260212",
+            "1Pedro5_7PTNVI20250904",
+            "filipenses4_6-7ARC20260722",
+            "1Pedro314PTNVI20261002",
+            "filipenses4v6ARC20261009",
+            "2Corintios12_10ARC_20261111",
+            "1joao418NVI20260625",
+            "tiago112ARC20251001",
+            "joao311ARC"
+          ]
+        },
+        {
+          "query_label": "pt/comfort/single",
+          "language": "pt",
+          "query_text": "consolo",
+          "hit": false,
+          "expected_ids": [
+            "2cor1_3_4ptnvi20260510",
+            "2cor7v10ARC20260518",
+            "Hebreus21718PTNVI",
+            "apocalipse214ARC20260113",
+            "apocalipse21_4PTNVI20251006",
+            "apocalipse71617ARC",
+            "apocalipse71617PTNVI",
+            "efesios430ARC",
+            "joao16_7_8_PTNVI",
+            "joao16v7NVI20251025",
+            "romanos15v4ARC20251005"
+          ],
+          "result_ids": [
+            "1Tessalonicenses5_11ARC20270428",
+            "Mateus1820PTNVI20251005",
+            "atos15ARC20270420",
+            "col31214PTNVI",
+            "2Corintios6_14ARC",
+            "atos1_5_ptnvi",
+            "gal516ARC20250922",
+            "lucas1113ARC20260605",
+            "joao16_7_ARC",
+            "gal525ARC20270702"
+          ]
+        },
+        {
+          "query_label": "pt/comfort/multi",
+          "language": "pt",
+          "query_text": "Estou passando por um momento muito difícil.\nMe sinto quebrado.\nPreciso de consolo.",
+          "hit": true,
+          "expected_ids": [
+            "2cor1_3_4ptnvi20260510",
+            "2cor7v10ARC20260518",
+            "Hebreus21718PTNVI",
+            "apocalipse214ARC20260113",
+            "apocalipse21_4PTNVI20251006",
+            "apocalipse71617ARC",
+            "apocalipse71617PTNVI",
+            "efesios430ARC",
+            "joao16_7_8_PTNVI",
+            "joao16v7NVI20251025",
+            "romanos15v4ARC20251005"
+          ],
+          "result_ids": [
+            "2Corintios12_9_ARC_20270701",
+            "2Corintios12_10ARC_20261111",
+            "Mateus1820PTNVI20251005",
+            "2cor1_3_4ptnvi20260510",
+            "2Corintios12_9-10ARC20251219",
+            "2corintios4_7_ARC_20260705",
+            "2timoteo112PTNVI20260805",
+            "joao16_7_8_PTNVI",
+            "filipenses4v6-7PTNVI20260212",
+            "tiago112ARC20251001"
+          ]
+        },
+        {
+          "query_label": "pt/rest/single",
+          "language": "pt",
+          "query_text": "descanso",
+          "hit": true,
+          "expected_ids": [
+            "apocalipse1413PTNVI",
+            "marcos631ARC20260130",
+            "marcos631PTNVI20260603",
+            "mateus1128-30ARC20260121",
+            "mateus1128-30PTNVI",
+            "mateus1129ARC20270114",
+            "mateus1129PTNVI20260808"
+          ],
+          "result_ids": [
+            "marcos631PTNVI20260603",
+            "lucas21v36NVI",
+            "marcos631ARC20260130",
+            "mateus27v46PTNVI",
+            "1Corintios14_33_PTARC",
+            "joao17v3NVI20261228",
+            "joao311ARC",
+            "2Timoteo4_18ARC",
+            "1Corintios14_33ARC",
+            "filipenses4_4_ARC_20260218"
+          ]
+        },
+        {
+          "query_label": "pt/rest/multi",
+          "language": "pt",
+          "query_text": "Estou exausto e esgotado.\nEstou sem parar há semanas.\nPreciso de descanso de verdade.",
+          "hit": false,
+          "expected_ids": [
+            "apocalipse1413PTNVI",
+            "marcos631ARC20260130",
+            "marcos631PTNVI20260603",
+            "mateus1128-30ARC20260121",
+            "mateus1128-30PTNVI",
+            "mateus1129ARC20270114",
+            "mateus1129PTNVI20260808"
+          ],
+          "result_ids": [
+            "2Corintios12_10ARC_20261111",
+            "efesios316PTNVI",
+            "1Timoteo6v6ARC",
+            "mateus27v46PTNVI",
+            "mateus253136NVI",
+            "efesios61920NVI",
+            "hebreus1211ARC",
+            "2corintios416PTNVI",
+            "2Corintios416ARC",
+            "filipenses4v6-7PTNVI20260212"
+          ]
+        },
+        {
+          "query_label": "fr/anxiety_fear/single",
+          "language": "fr",
+          "query_text": "crainte",
+          "hit": true,
+          "expected_ids": [
+            "1Jean418FRTOB20270317",
+            "1Jean4v18LSG1910",
+            "1Jean4v18LSG191020270504",
+            "1jean418FRTOB20260212",
+            "luc12_4-5LSG1910",
+            "luc12v4-5FRTOB20260504"
+          ],
+          "result_ids": [
+            "jacques317FRTOB20260920",
+            "1Jean4v18LSG1910",
+            "2Tim1v7LSG1910",
+            "1Corinthiens3v18LSG1910",
+            "1Jean4v18LSG191020270504",
+            "Galates1v10_FR-TOB_20260922",
+            "1Corinthiens13v7FRTOB",
+            "luc12v4-5FRTOB20260504",
+            "1jean418FRTOB20260212",
+            "rom5v5LSG1910"
+          ]
+        },
+        {
+          "query_label": "fr/anxiety_fear/multi",
+          "language": "fr",
+          "query_text": "Je me sens très anxieux.\nJe n'arrive pas à arrêter de m'inquiéter.\nJ'ai peur tout le temps.",
+          "hit": true,
+          "expected_ids": [
+            "1Jean418FRTOB20270317",
+            "1Jean4v18LSG1910",
+            "1Jean4v18LSG191020270504",
+            "1jean418FRTOB20260212",
+            "luc12_4-5LSG1910",
+            "luc12v4-5FRTOB20260504"
+          ],
+          "result_ids": [
+            "1Corinthiens1_25_FRTOB",
+            "eph4_1_fr_lsg1910_20261130",
+            "1Jean4v18LSG191020270504",
+            "Philippiens4_6-7_FRTOB",
+            "1pierre1v8-9LSG1910",
+            "2Tim1v7LSG1910",
+            "jude12425LSG1910",
+            "philippiens467LSG1910",
+            "2Timothée4v2LSG1910",
+            "1Corinthiens1_25LSG1910"
+          ]
+        },
+        {
+          "query_label": "fr/comfort/single",
+          "language": "fr",
+          "query_text": "consolation",
+          "hit": true,
+          "expected_ids": [
+            "2Cor1_3-4LSG1910-20260720",
+            "devocional20260207FR-LSG1910",
+            "devocional20260227FR1910",
+            "devocional_20260227_FR-TOB",
+            "jean16R1910",
+            "jean16v7LSG1910",
+            "juan16frtob20270821",
+            "juan16v7FRTOB20260727"
+          ],
+          "result_ids": [
+            "2Cor1_3-4LSG1910-20260720",
+            "jean16R1910",
+            "Col315LSG1910",
+            "2Corinthiens1v3-4FRTOB",
+            "2cor7v10FRTOB20250919",
+            "2Corinthiens4v17FR-LSG1910",
+            "devocional-20270512-FR-TOB-2Cor1-9",
+            "eph431LSG1910",
+            "2Corinthiens12v10LSG1910",
+            "mat54445LSG1910"
+          ]
+        },
+        {
+          "query_label": "fr/comfort/multi",
+          "language": "fr",
+          "query_text": "Je traverse une période très difficile.\nJe me sens brisé.\nJ'ai besoin de consolation.",
+          "hit": false,
+          "expected_ids": [
+            "2Cor1_3-4LSG1910-20260720",
+            "devocional20260207FR-LSG1910",
+            "devocional20260227FR1910",
+            "devocional_20260227_FR-TOB",
+            "jean16R1910",
+            "jean16v7LSG1910",
+            "juan16frtob20270821",
+            "juan16v7FRTOB20260727"
+          ],
+          "result_ids": [
+            "Matthieu25_31-36_LSG1910",
+            "1pierre510FRTOB20251030",
+            "2Corinthiens12v10LSG1910",
+            "devocional20250915FR-LSG1910",
+            "heb41416FRTOB",
+            "matthieu25_31-36_FR-TOB_20250922",
+            "eph4_1_fr_lsg1910_20261130",
+            "2Cor12v9-10FRTOB",
+            "mat54445LSG1910",
+            "1Corinthiens11_23-25_LSG1910_20270703"
+          ]
+        },
+        {
+          "query_label": "fr/rest/single",
+          "language": "fr",
+          "query_text": "repos",
+          "hit": true,
+          "expected_ids": [
+            "devocional20250912FR-LSG1910",
+            "devocional20260308FRTOB",
+            "marc631FR-LSG1910",
+            "marc631FRTOB20251207",
+            "matthieu1128-30FRTOB",
+            "matthieu1128LSG1910",
+            "matthieu1129LSG1910",
+            "matthieu1129frtob"
+          ],
+          "result_ids": [
+            "matthieu1128-30FRTOB",
+            "matthieu1128LSG1910",
+            "matthieu1129LSG1910",
+            "philippiens2v5LSG191020270605",
+            "matthieu1129frtob",
+            "philippiens2v5LSG1910",
+            "1jean2v6LSG1910",
+            "devocional20260814FR-LSG1910",
+            "heb41416FRTOB",
+            "marc115LSG1910"
+          ]
+        },
+        {
+          "query_label": "fr/rest/multi",
+          "language": "fr",
+          "query_text": "Je suis épuisé.\nJe fonctionne sans repos depuis des semaines.\nJ'ai besoin d'un vrai repos.",
+          "hit": true,
+          "expected_ids": [
+            "devocional20250912FR-LSG1910",
+            "devocional20260308FRTOB",
+            "marc631FR-LSG1910",
+            "marc631FRTOB20251207",
+            "matthieu1128-30FRTOB",
+            "matthieu1128LSG1910",
+            "matthieu1129LSG1910",
+            "matthieu1129frtob"
+          ],
+          "result_ids": [
+            "Eph610FRTOB20261115",
+            "eph4_1_fr_lsg1910_20261130",
+            "1Thess4_3-5FRTOB20250831",
+            "1Tim4v8FRTOB20261223",
+            "heb41416FRTOB",
+            "1Corinthiens11_23-25_LSG1910_20270703",
+            "1Corinthiens1_25_FRTOB",
+            "philippiens413TOB20260312",
+            "matthieu1128-30FRTOB",
+            "devocional20250915FR-LSG1910"
+          ]
+        },
+        {
+          "query_label": "de/anxiety_fear/single",
+          "language": "de",
+          "query_text": "Angst",
+          "hit": false,
+          "expected_ids": [
+            "1.Petrus57LU1720251023",
+            "1.Petrus57SCH200020251023",
+            "Philipper46LU1720270318",
+            "Philipper46SCH200020270318",
+            "Philipper47LU1720260902",
+            "Philipper47SCH200020260902"
+          ],
+          "result_ids": [
+            "Johannes1633LU1720260612",
+            "Römer1513SCH200020260731",
+            "2.Timotheus17SCH200020260131",
+            "Epheser429SCH200020260628",
+            "Jakobus410SCH200020251213",
+            "Philipper46-7LU1720260710",
+            "Jakobus112LU1720260822",
+            "Römer1212SCH200020260116",
+            "Markus1436SCH200020261230",
+            "Römer1513LU1720260731"
+          ]
+        },
+        {
+          "query_label": "de/anxiety_fear/multi",
+          "language": "de",
+          "query_text": "Ich fühle mich sehr ängstlich.\nIch kann nicht aufhören, mir Sorgen zu machen.\nIch habe die ganze Zeit Angst.",
+          "hit": false,
+          "expected_ids": [
+            "1.Petrus57LU1720251023",
+            "1.Petrus57SCH200020251023",
+            "Philipper46LU1720270318",
+            "Philipper46SCH200020270318",
+            "Philipper47LU1720260902",
+            "Philipper47SCH200020260902"
+          ],
+          "result_ids": [
+            "2.Korinther416-18SCH200020250824",
+            "Jakobus112LU1720260822",
+            "Johannes1633LU1720260612",
+            "Jakobus112LU1720260102",
+            "Jakobus112SCH200020260102",
+            "2.Korinther129-10LU1720251107",
+            "Jakobus112SCH200020260822",
+            "2.Korinther416-18LU1720250824",
+            "Jakobus12-4LU1720260614",
+            "2.Timotheus112LU1720270609"
+          ]
+        },
+        {
+          "query_label": "de/comfort/single",
+          "language": "de",
+          "query_text": "Trost",
+          "hit": true,
+          "expected_ids": [
+            "2.Korinther13-4LU1720251006",
+            "2.Korinther13-4SCH200020251006",
+            "Johannes1416-17LU1720260305",
+            "Johannes1416-17SCH200020260305",
+            "Johannes1427LU1720251029",
+            "Johannes1427SCH200020251029",
+            "Johannes167LU1720260106",
+            "Johannes167SCH200020260106",
+            "Offenbarung716-17LU1720251204",
+            "Offenbarung716-17SCH200020251204"
+          ],
+          "result_ids": [
+            "2.Korinther13-4SCH200020251006",
+            "2.Korinther13-4LU1720251006",
+            "Galater525LU1720270613",
+            "Apostelgeschichte21-4LU1720260211",
+            "2.Petrus29LU1720270203",
+            "Lukas1610SCH200020270401",
+            "Lukas1610LU1720270401",
+            "Galater67-8SCH200020260618",
+            "Offenbarung2217LU1720251127",
+            "Apostelgeschichte15LU1720261211"
+          ]
+        },
+        {
+          "query_label": "de/comfort/multi",
+          "language": "de",
+          "query_text": "Ich mache gerade eine sehr schwere Zeit durch.\nIch fühle mich zerbrochen.\nIch brauche Trost.",
+          "hit": true,
+          "expected_ids": [
+            "2.Korinther13-4LU1720251006",
+            "2.Korinther13-4SCH200020251006",
+            "Johannes1416-17LU1720260305",
+            "Johannes1416-17SCH200020260305",
+            "Johannes1427LU1720251029",
+            "Johannes1427SCH200020251029",
+            "Johannes167LU1720260106",
+            "Johannes167SCH200020260106",
+            "Offenbarung716-17LU1720251204",
+            "Offenbarung716-17SCH200020251204"
+          ],
+          "result_ids": [
+            "Apostelgeschichte21-4LU1720260211",
+            "Markus720-23SCH200020260619",
+            "Lukas2219-20SCH200020270104",
+            "Markus720-23LU1720260619",
+            "2.Korinther13-4LU1720251006",
+            "2.Korinther13-4SCH200020251006",
+            "Lukas2219-20LU1720270104",
+            "Hebräer414-16LU1720260225",
+            "Apostelgeschichte21-4SCH200020260211",
+            "1.Korinther1123-25LU1720270728"
+          ]
+        },
+        {
+          "query_label": "de/rest/single",
+          "language": "de",
+          "query_text": "Ruhe",
+          "hit": true,
+          "expected_ids": [
+            "Markus631LU1720260516",
+            "Markus631SCH200020260516",
+            "Matthäus1128-30LU1720260308",
+            "Matthäus1128-30SCH200020260308",
+            "Matthäus1129LU1720270601",
+            "Matthäus1129SCH200020270601",
+            "Offenbarung1413LU1720260228",
+            "Offenbarung1413SCH200020260228"
+          ],
+          "result_ids": [
+            "Matthäus1129LU1720270601",
+            "Matthäus1129SCH200020270601",
+            "Epheser429LU1720260628",
+            "Matthäus912-13LU1720260113",
+            "Römer323LU1720260430",
+            "1.Johannes18LU1720260817",
+            "Matthäus1128-30LU1720260308",
+            "Römer154LU1720261022",
+            "Apostelgeschichte21-4LU1720260211",
+            "Römer1417LU1720270321"
+          ]
+        },
+        {
+          "query_label": "de/rest/multi",
+          "language": "de",
+          "query_text": "Ich bin erschöpft und ausgebrannt.\nIch laufe seit Wochen ohne Pause.\nIch brauche echte Ruhe.",
+          "hit": false,
+          "expected_ids": [
+            "Markus631LU1720260516",
+            "Markus631SCH200020260516",
+            "Matthäus1128-30LU1720260308",
+            "Matthäus1128-30SCH200020260308",
+            "Matthäus1129LU1720270601",
+            "Matthäus1129SCH200020270601",
+            "Offenbarung1413LU1720260228",
+            "Offenbarung1413SCH200020260228"
+          ],
+          "result_ids": [
+            "Matthäus2413SCH200020270620",
+            "2.Korinther416-18SCH200020250824",
+            "2.Timotheus47-8LU1720270404",
+            "Jakobus414LU1720260705",
+            "Titus211-14SCH200020270331",
+            "2.Timotheus47-8SCH200020270404",
+            "Jakobus112SCH200020260822",
+            "2.Korinther129-10LU1720251107",
+            "Markus720-23SCH200020260619",
+            "Apostelgeschichte2024SCH200020250820"
+          ]
+        },
+        {
+          "query_label": "ar/anxiety/single",
+          "language": "ar",
+          "query_text": "القلق",
+          "hit": false,
+          "expected_ids": [
+            "رسالةبطرسالرسولالاولى57SVDA20251023",
+            "رسالةبولسالرسولالىاهلفيلبي46SVDA20270318",
+            "رسالةبولسالرسولالىاهلفيلبي47SVDA20260902",
+            "رِسَالَةُبُطْرُسَٱلرَّسُولِٱلْأُولَى57NAV20251023",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي46NAV20270318",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي47NAV20260902"
+          ],
+          "result_ids": [
+            "إِنْجِيلُلُوقَا124-5NAV20260405",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِكُولُوسِّي42NAV20250807",
+            "انجيللوقا1411SVDA20260311",
+            "انجيللوقا124-5SVDA20260405",
+            "إِنْجِيلُمَتَّى2221NAV20270608",
+            "رسالةبولسالرسولالثانيةالىتيموثاوس17SVDA20260131",
+            "انجيلمرقس536SVDA20270205",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِرُومِيَةَ55NAV20270428",
+            "رِسَالَةُيُوحَنَّاٱلرَّسُولِٱلْأُولَى418NAV20251115",
+            "رِسَالَةُيُوحَنَّاٱلرَّسُولِٱلْأُولَى418NAV20261008"
+          ]
+        },
+        {
+          "query_label": "ar/anxiety/multi",
+          "language": "ar",
+          "query_text": "أشعر بقلق شديد.\nلا أستطيع التوقف عن القلق.\nأشعر بالخوف طوال الوقت.",
+          "hit": false,
+          "expected_ids": [
+            "رسالةبطرسالرسولالاولى57SVDA20251023",
+            "رسالةبولسالرسولالىاهلفيلبي46SVDA20270318",
+            "رسالةبولسالرسولالىاهلفيلبي47SVDA20260902",
+            "رِسَالَةُبُطْرُسَٱلرَّسُولِٱلْأُولَى57NAV20251023",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي46NAV20270318",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي47NAV20260902"
+          ],
+          "result_ids": [
+            "رِسَالَةُيُوحَنَّاٱلرَّسُولِٱلْأُولَى418NAV20261008",
+            "رِسَالَةُيُوحَنَّاٱلرَّسُولِٱلْأُولَى418NAV20251115",
+            "إِنْجِيلُلُوقَا124-5NAV20260405",
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ135NAV20260509",
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ135NAV20270603",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِرُومِيَةَ837-39NAV20251116",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلْأُولَىإِلَىتِيمُوثَاوُسَ66NAV20270407",
+            "انجيلمرقس536SVDA20270205",
+            "رِسَالَةُيَعْقُوبَ516NAV20270518",
+            "انجيللوقا124-5SVDA20260405"
+          ]
+        },
+        {
+          "query_label": "ar/comfort/single",
+          "language": "ar",
+          "query_text": "العزاء",
+          "hit": false,
+          "expected_ids": [
+            "إِنْجِيلُيُوحَنَّا1416-17NAV20260305",
+            "إِنْجِيلُيُوحَنَّا1427NAV20251029",
+            "إِنْجِيلُيُوحَنَّا167NAV20260106",
+            "انجيليوحنا1416-17SVDA20260305",
+            "انجيليوحنا1427SVDA20251029",
+            "انجيليوحنا167SVDA20260106",
+            "رؤيايوحنااللاهوتي716-17SVDA20251204",
+            "رسالةبولسالرسولالثانيةالىاهلكورنثوس13-4SVDA20251006",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ716-17NAV20251204",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلثَّانِيةُإِلَىأَهْلِكُورِنْثُوسَ13-4NAV20251006"
+          ],
+          "result_ids": [
+            "إِنْجِيلُمَتَّى1231NAV20260825",
+            "إِنْجِيلُمَتَّى1519NAV20261223",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِرُومِيَةَ1513NAV20260731",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِأَفَسُسَ17NAV20260128",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلْأُولَىإِلَىتِيمُوثَاوُسَ48NAV20270711",
+            "إِنْجِيلُيُوحَنَّا141NAV20260122",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِغَلَاطِيَّةَ516NAV20261007",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلثَّانِيةُإِلَىأَهْلِكُورِنْثُوسَ517NAV20260416",
+            "إِنْجِيلُيُوحَنَّا146NAV20251017",
+            "إِنْجِيلُيُوحَنَّا1010NAV20260318"
+          ]
+        },
+        {
+          "query_label": "ar/comfort/multi",
+          "language": "ar",
+          "query_text": "أمر بوقت عصيب جداً.\nأشعر أنني منكسر.\nأحتاج إلى العزاء.",
+          "hit": false,
+          "expected_ids": [
+            "إِنْجِيلُيُوحَنَّا1416-17NAV20260305",
+            "إِنْجِيلُيُوحَنَّا1427NAV20251029",
+            "إِنْجِيلُيُوحَنَّا167NAV20260106",
+            "انجيليوحنا1416-17SVDA20260305",
+            "انجيليوحنا1427SVDA20251029",
+            "انجيليوحنا167SVDA20260106",
+            "رؤيايوحنااللاهوتي716-17SVDA20251204",
+            "رسالةبولسالرسولالثانيةالىاهلكورنثوس13-4SVDA20251006",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ716-17NAV20251204",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلثَّانِيةُإِلَىأَهْلِكُورِنْثُوسَ13-4NAV20251006"
+          ],
+          "result_ids": [
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِرُومِيَةَ837-39NAV20251116",
+            "رِسَالَةُيَعْقُوبَ516NAV20270518",
+            "أَعْمَالُٱلرُّسُلِ2024NAV20261103",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ320NAV20260117",
+            "إِنْجِيلُمَتَّى1231NAV20260825",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلْأُولَىإِلَىتِيمُوثَاوُسَ66NAV20270407",
+            "إِنْجِيلُمَتَّى1220NAV20270604",
+            "إِنْجِيلُيُوحَنَّا173NAV20251201",
+            "إِنْجِيلُمَتَّى66NAV20261229",
+            "رِسَالَةُيُوحَنَّاٱلرَّسُولِٱلْأُولَى18NAV20260817"
+          ]
+        },
+        {
+          "query_label": "ar/rest/single",
+          "language": "ar",
+          "query_text": "الراحة",
+          "hit": false,
+          "expected_ids": [
+            "إِنْجِيلُمَتَّى1128-30NAV20260308",
+            "إِنْجِيلُمَتَّى1129NAV20270601",
+            "إِنْجِيلُمَرْقُسَ631NAV20260516",
+            "انجيلمتى1128-30SVDA20260308",
+            "انجيلمتى1129SVDA20270601",
+            "انجيلمرقس631SVDA20260516",
+            "رؤيايوحنااللاهوتي1413SVDA20260228",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ1413NAV20260228"
+          ],
+          "result_ids": [
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِغَلَاطِيَّةَ513NAV20260129",
+            "رِسَالَةُيَعْقُوبَ414NAV20260705",
+            "إِنْجِيلُمَتَّى1519NAV20261223",
+            "رِسَالَةُيَعْقُوبَ516NAV20270518",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلْأُولَىإِلَىتِيمُوثَاوُسَ48NAV20270711",
+            "رِسَالَةُيَعْقُوبَ515-16NAV20260304",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِغَلَاطِيَّةَ51NAV20260728",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلْأُولَىإِلَىتِيمُوثَاوُسَ47-8NAV20260202",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِأَفَسُسَ426-27NAV20260608",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِغَلَاطِيَّةَ610NAV20270709"
+          ]
+        },
+        {
+          "query_label": "ar/rest/multi",
+          "language": "ar",
+          "query_text": "أنا مرهق ومنهك تماماً.\nأعمل بلا توقف منذ أسابيع.\nأحتاج إلى راحة حقيقية.",
+          "hit": false,
+          "expected_ids": [
+            "إِنْجِيلُمَتَّى1128-30NAV20260308",
+            "إِنْجِيلُمَتَّى1129NAV20270601",
+            "إِنْجِيلُمَرْقُسَ631NAV20260516",
+            "انجيلمتى1128-30SVDA20260308",
+            "انجيلمتى1129SVDA20270601",
+            "انجيلمرقس631SVDA20260516",
+            "رؤيايوحنااللاهوتي1413SVDA20260228",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ1413NAV20260228"
+          ],
+          "result_ids": [
+            "أَعْمَالُٱلرُّسُلِ2024NAV20261103",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلْأُولَىإِلَىتِيمُوثَاوُسَ66NAV20270407",
+            "إِنْجِيلُيُوحَنَّا1247NAV20270702",
+            "رِسَالَةُيَعْقُوبَ516NAV20270518",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلأُولَىإِلَىأَهْلِكُورِنْثُوسَ717NAV20261215",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِرُومِيَةَ837-39NAV20251116",
+            "رِسَالَةُيُوحَنَّاٱلرَّسُولِٱلْأُولَى18NAV20260817",
+            "أَعْمَالُٱلرُّسُلِ2024NAV20250820",
+            "سفراعمالالرسل2024SVDA20250820",
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ135NAV20270603"
+          ]
+        },
+        {
+          "query_label": "fil/anxiety/single",
+          "language": "fil",
+          "query_text": "Pagkabalisa",
+          "hit": true,
+          "expected_ids": [
+            "1Pedro57ASND20251023",
+            "1Pedro57MBB0520251023",
+            "Filipos46ASND20270318",
+            "Filipos47ASND20260902",
+            "MgaTaga-Filipos46MBB0520270318",
+            "MgaTaga-Filipos47MBB0520260902"
+          ],
+          "result_ids": [
+            "MgaTagaFilMBB0520260710",
+            "Juan141MBB0520260122",
+            "Santiago112ASND20260822",
+            "2Timoteo47-8ASND20270404",
+            "Hebreo1211ASND20260930",
+            "Hebreo127ASND20270313",
+            "Santiago51MBB0520260304",
+            "Santiago112ASND20260102",
+            "2Timoteo112ASND20270609",
+            "1Pedro57MBB0520251023"
+          ]
+        },
+        {
+          "query_label": "fil/anxiety/multi",
+          "language": "fil",
+          "query_text": "Sobra akong nababalisa.\nHindi ako mapigilan mag-alala.\nParang natatakot ako palagi.",
+          "hit": false,
+          "expected_ids": [
+            "1Pedro57ASND20251023",
+            "1Pedro57MBB0520251023",
+            "Filipos46ASND20270318",
+            "Filipos47ASND20260902",
+            "MgaTaga-Filipos46MBB0520270318",
+            "MgaTaga-Filipos47MBB0520260902"
+          ],
+          "result_ids": [
+            "MgaTagaEfeMBB0520251007",
+            "1Corinto29ASND20260408",
+            "2Timoteo47-8MBB0520270404",
+            "Lucas924ASND20270522",
+            "2Timoteo47MBB0520250815",
+            "2MgaTagaCoMBB0520250824",
+            "2Timoteo47-8ASND20270404",
+            "Mateo2641ASND20261015",
+            "Mateo2641MBB0520261015",
+            "Lucas1245MBB0520260405"
+          ]
+        },
+        {
+          "query_label": "fil/comfort/single",
+          "language": "fil",
+          "query_text": "Kaginhawaan",
+          "hit": true,
+          "expected_ids": [
+            "2Corinto13-4ASND20251006",
+            "2MgaTagaCoMBB0520251006",
+            "Juan1416-17ASND20260305",
+            "Juan141617MBB0520260305",
+            "Juan1427ASND20251029",
+            "Juan1427MBB0520251029",
+            "Juan167ASND20260106",
+            "Juan167MBB0520260106",
+            "Pahayag716-17ASND20251204",
+            "Pahayag716MBB0520251204"
+          ],
+          "result_ids": [
+            "1Timoteo316ASND20270126",
+            "Pahayag191MBB0520260214",
+            "1MgaTaga-Corinto125MBB0520261110",
+            "1Timoteo48ASND20270711",
+            "Pahayag716-17ASND20251204",
+            "1Corinto1433ASND20260712",
+            "Roma1133-36ASND20250808",
+            "1Corinto1433ASND20260919",
+            "MgaTaga-Roma915-16MBB0520261129",
+            "1Timoteo617-19ASND20251230"
+          ]
+        },
+        {
+          "query_label": "fil/comfort/multi",
+          "language": "fil",
+          "query_text": "Nagdaraan ako sa mahirap na panahon.\nParang nasira ako.\nKailangan ko ng kaginhawaan.",
+          "hit": false,
+          "expected_ids": [
+            "2Corinto13-4ASND20251006",
+            "2MgaTagaCoMBB0520251006",
+            "Juan1416-17ASND20260305",
+            "Juan141617MBB0520260305",
+            "Juan1427ASND20251029",
+            "Juan1427MBB0520251029",
+            "Juan167ASND20260106",
+            "Juan167MBB0520260106",
+            "Pahayag716-17ASND20251204",
+            "Pahayag716MBB0520251204"
+          ],
+          "result_ids": [
+            "MgaGawa2024ASND20261103",
+            "Lucas924ASND20270522",
+            "Juan330MBB0520260906",
+            "MgaGawa2024ASND20250820",
+            "Mateo11283MBB0520260308",
+            "Lucas418-19ASND20270204",
+            "Marcos834MBB0520260303",
+            "Marcos834ASND20260303",
+            "2Corinto129ASND20270224",
+            "Mateo2531-36ASND20260422"
+          ]
+        },
+        {
+          "query_label": "fil/rest/single",
+          "language": "fil",
+          "query_text": "Pahinga",
+          "hit": true,
+          "expected_ids": [
+            "Marcos631ASND20260516",
+            "Marcos631MBB0520260516",
+            "Mateo1128-30ASND20260308",
+            "Mateo11283MBB0520260308",
+            "Mateo1129ASND20270601",
+            "Mateo1129MBB0520270601",
+            "Pahayag1413ASND20260228",
+            "Pahayag141MBB0520260228"
+          ],
+          "result_ids": [
+            "MgaTagaRomMBB0520251208",
+            "2Corinto57ASND20270424",
+            "Marcos1124MBB0520260109",
+            "Santiago317ASND20250922",
+            "Mateo21212MBB0520260725",
+            "Pahayag214ASND20260514",
+            "Mateo1129ASND20270601",
+            "Mateo11283MBB0520260308",
+            "Hebreo1211ASND20260930",
+            "Mateo2122MBB0520270726"
+          ]
+        },
+        {
+          "query_label": "fil/rest/multi",
+          "language": "fil",
+          "query_text": "Pagod na pagod na ako.\nWala akong pahinga sa loob ng mga linggo.\nKailangan ko ng tunay na pahinga.",
+          "hit": true,
+          "expected_ids": [
+            "Marcos631ASND20260516",
+            "Marcos631MBB0520260516",
+            "Mateo1128-30ASND20260308",
+            "Mateo11283MBB0520260308",
+            "Mateo1129ASND20270601",
+            "Mateo1129MBB0520270601",
+            "Pahayag1413ASND20260228",
+            "Pahayag141MBB0520260228"
+          ],
+          "result_ids": [
+            "Mateo912-13ASND20260113",
+            "MgaGawa2024ASND20250820",
+            "1Corinto131-3ASND20260327",
+            "1MgaTagaCoMBB0520260327",
+            "Mateo11283MBB0520260308",
+            "MgaHebreo1MBB0520260616",
+            "Mateo544-45ASND20260320",
+            "Santiago11MBB0520260102",
+            "MgaGawa2024ASND20261103",
+            "2MgaTagaCoMBB0520250824"
+          ]
+        },
+        {
+          "query_label": "hi/anxiety/single",
+          "language": "hi",
+          "query_text": "चिंता",
+          "hit": true,
+          "expected_ids": [
+            "1पतरस57HERV20251023",
+            "1पतरस57OV20251023",
+            "फिलिप्पियों46HERV",
+            "फिलिप्पियों46OV20270318",
+            "फिलिप्पियों47HERV",
+            "फिलिप्पियों47OV20260902"
+          ],
+          "result_ids": [
+            "1पतरस57HERV20251023",
+            "फिलिप्पियों46-7HIOV20260710",
+            "फिलिप्पियों46HERV",
+            "फिलिप्पियों46-7HERV20260710",
+            "लूका1231HERV",
+            "2कुरिन्थियों135HIOV20260226",
+            "मरकुस536HERV",
+            "1पतरस57OV20251023",
+            "इब्रानियों21HERV",
+            "2कुरिन्थियों113HERV"
+          ]
+        },
+        {
+          "query_label": "hi/anxiety/multi",
+          "language": "hi",
+          "query_text": "मुझे बहुत चिंता हो रही है।\nमैं चिंता करना बंद नहीं कर सकता।\nमुझे हर समय डर लगता है।",
+          "hit": false,
+          "expected_ids": [
+            "1पतरस57HERV20251023",
+            "1पतरस57OV20251023",
+            "फिलिप्पियों46HERV",
+            "फिलिप्पियों46OV20270318",
+            "फिलिप्पियों47HERV",
+            "फिलिप्पियों47OV20260902"
+          ],
+          "result_ids": [
+            "1यूहन्ना418HERV",
+            "2कुरिन्थियों416-18HERV20250824",
+            "1यूहन्ना418HERV20251115",
+            "फिलिप्पियों46-7HIOV20260710",
+            "2तीमुथियुस112HERV",
+            "लूका2136HERV",
+            "मत्ती2413HERV",
+            "2कुरिन्थियों113HERV",
+            "फिलिप्पियों46-7HERV20260710",
+            "2कुरिन्थियों113OV20270125"
+          ]
+        },
+        {
+          "query_label": "hi/rest/single",
+          "language": "hi",
+          "query_text": "विश्राम",
+          "hit": true,
+          "expected_ids": [
+            "प्रकाशितवाक्य1413HERV20260228",
+            "प्रकाशितवाक्य1413HIOV20260228",
+            "मत्ती1128-30HERV20260308",
+            "मत्ती1128-30HIOV20260308",
+            "मत्ती1129HERV",
+            "मत्ती1129OV20270601",
+            "मरकुस631HERV20260516",
+            "मरकुस631HIOV20260516"
+          ],
+          "result_ids": [
+            "मत्ती1129OV20270601",
+            "मरकुस631HIOV20260516",
+            "यूहन्ना738-39HIOV20260531",
+            "मत्ती1129HERV",
+            "1यूहन्ना323OV20261105",
+            "2थिस्सलुनीकियों13OV20270614",
+            "मरकुस115OV20250908",
+            "याकूब217OV20250822",
+            "मत्ती1128-30HIOV20260308",
+            "याकूब112OV20260102"
+          ]
+        },
+        {
+          "query_label": "hi/rest/multi",
+          "language": "hi",
+          "query_text": "मैं बहुत थका हुआ हूँ।\nमैं हफ्तों से बिना आराम के काम कर रहा हूँ।\nमुझे सच में विश्राम चाहिए।",
+          "hit": true,
+          "expected_ids": [
+            "प्रकाशितवाक्य1413HERV20260228",
+            "प्रकाशितवाक्य1413HIOV20260228",
+            "मत्ती1128-30HERV20260308",
+            "मत्ती1128-30HIOV20260308",
+            "मत्ती1129HERV",
+            "मत्ती1129OV20270601",
+            "मरकुस631HERV20260516",
+            "मरकुस631HIOV20260516"
+          ],
+          "result_ids": [
+            "2कुरिन्थियों416-18HERV20250824",
+            "याकूब112OV20260102",
+            "प्रेरितोंकेकाम2024OV20250820",
+            "प्रेरितोंकेकाम2024HERV20250820",
+            "याकूब112OV20260822",
+            "याकूब12-4OV20261001",
+            "मत्ती1129HERV",
+            "गलातियों56OV20270710",
+            "यूहन्ना738-39HIOV20260531",
+            "2थिस्सलुनीकियों13OV20270614"
+          ]
+        },
+        {
+          "query_label": "ja/anxiety/single",
+          "language": "ja",
+          "query_text": "思い煩い",
+          "hit": true,
+          "expected_ids": [
+            "1peter5v7LB20251023",
+            "1peter5v7SHK200320251014"
+          ],
+          "result_ids": [
+            "1peter5v7LB20251023",
+            "1peter5v7SHK200320251014",
+            "philippians4v67SHK200320260518",
+            "matthew6v33SHK200320260716",
+            "philippians4v67LB20260609",
+            "mark14v38LB20261031",
+            "philippians4v6LB20270215",
+            "2corinthians7v10LB20251008",
+            "john14v1LB20250913",
+            "mark7v2023LB20260620"
+          ]
+        },
+        {
+          "query_label": "ja/anxiety/multi",
+          "language": "ja",
+          "query_text": "とても不安を感じています。\n心配が止まりません。\nいつも怖い気持ちです。",
+          "hit": false,
+          "expected_ids": [
+            "1peter5v7LB20251023",
+            "1peter5v7SHK200320251014"
+          ],
+          "result_ids": [
+            "revelation7v910SHK200320261030",
+            "2corinthians4v1618LB20250830",
+            "john14v1617SHK200320260130",
+            "jude1v2021SHK200320251124",
+            "matthew11v29SHK200320260811",
+            "2timothy4v18LB20250917",
+            "romans12v12SHK200320260409",
+            "1john4v18SHK200320251220",
+            "john14v12SHK200320270310",
+            "john5v24SHK200320261217"
+          ]
+        },
+        {
+          "query_label": "ja/comfort/single",
+          "language": "ja",
+          "query_text": "慰め",
+          "hit": true,
+          "expected_ids": [
+            "2corinthians1v34LB20251001",
+            "2corinthians1v34SHK200320250818",
+            "john14v1617LB20251122",
+            "john14v1617SHK200320260130",
+            "john16v7LB20250901",
+            "john16v7SHK200320260226",
+            "revelation21v4LB20250926",
+            "revelation21v4SHK200320251211",
+            "revelation7v1617LB20260605",
+            "romans15v4LB20270413"
+          ],
+          "result_ids": [
+            "2corinthians1v34LB20251001",
+            "john13v3435LB20260113",
+            "john15v12LB20251204",
+            "2corinthians1v34SHK200320250818",
+            "revelation7v1617SHK200320260211",
+            "revelation21v4LB20250926",
+            "john13v3435SHK200320260719",
+            "mark12v3031SHK200320260201",
+            "ephesians1v7SHK200320260408",
+            "revelation3v16LB20260218"
+          ]
+        },
+        {
+          "query_label": "ja/comfort/multi",
+          "language": "ja",
+          "query_text": "とても辛い時期を過ごしています。\n心が壊れているように感じます。\n慰めが必要です。",
+          "hit": true,
+          "expected_ids": [
+            "2corinthians1v34LB20251001",
+            "2corinthians1v34SHK200320250818",
+            "john14v1617LB20251122",
+            "john14v1617SHK200320260130",
+            "john16v7LB20250901",
+            "john16v7SHK200320260226",
+            "revelation21v4LB20250926",
+            "revelation21v4SHK200320251211",
+            "revelation7v1617LB20260605",
+            "romans15v4LB20270413"
+          ],
+          "result_ids": [
+            "revelation7v910SHK200320261030",
+            "2corinthians1v34SHK200320250818",
+            "2corinthians4v17SHK200320261122",
+            "revelation21v1LB20250906",
+            "revelation21v4SHK200320251211",
+            "revelation14v13SHK200320251207",
+            "2corinthians1v34LB20251001",
+            "revelation14v13LB20251020",
+            "2peter1v1921LB20260216",
+            "2corinthians4v1618LB20250830"
+          ]
+        },
+        {
+          "query_label": "ja/rest/single",
+          "language": "ja",
+          "query_text": "安息",
+          "hit": true,
+          "expected_ids": [
+            "matthew11v2830LB20260621",
+            "matthew11v2830SHK200320260219",
+            "matthew11v29SHK200320260811",
+            "revelation14v13SHK200320251207"
+          ],
+          "result_ids": [
+            "philippians4v4LB20251015",
+            "1john5v3LB20260421",
+            "acts2v14LB20250903",
+            "john12v24LB20260513",
+            "john14v1617SHK200320260130",
+            "matthew11v29SHK200320260811",
+            "john12v24SHK200320251015",
+            "matthew11v2830LB20260621",
+            "acts2v14SHK200320260406",
+            "2timothy4v18LB20250917"
+          ]
+        },
+        {
+          "query_label": "ja/rest/multi",
+          "language": "ja",
+          "query_text": "とても疲れて燃え尽きています。\n何週間も休みなく働いています。\n本当の休息が必要です。",
+          "hit": true,
+          "expected_ids": [
+            "matthew11v2830LB20260621",
+            "matthew11v2830SHK200320260219",
+            "matthew11v29SHK200320260811",
+            "revelation14v13SHK200320251207"
+          ],
+          "result_ids": [
+            "acts17v11SHK200320261206",
+            "acts2v14LB20250903",
+            "acts17v11SHK200320260411",
+            "acts17v3031LB20260525",
+            "acts2v14SHK200320260406",
+            "revelation14v13LB20251020",
+            "matthew11v2830LB20260621",
+            "acts17v11LB20270405",
+            "john9v4SHK200320260814",
+            "revelation3v16LB20260218"
+          ]
+        },
+        {
+          "query_label": "zh/anxiety/single",
+          "language": "zh",
+          "query_text": "焦虑",
+          "hit": false,
+          "expected_ids": [
+            "彼得前书57CUV191920251023",
+            "腓立比书46CUV191920270318",
+            "腓立比书47CUV191920260902"
+          ],
+          "result_ids": [
+            "matthew11v29CNV20261118",
+            "2timothy1v7CNV20260721",
+            "马太福音1129CUV191920270601",
+            "马太福音1128-30CUV191920260308",
+            "matthew11v2830CNV20260206",
+            "马太福音826-27CUV191920260630",
+            "matthew8v2627CNV20251102",
+            "彼得前书314CUV191920260923",
+            "哥林多后书710CUV191920251209",
+            "罗马书1212CUV191920260116"
+          ]
+        },
+        {
+          "query_label": "zh/anxiety/multi",
+          "language": "zh",
+          "query_text": "我感到非常焦虑。\n我无法停止担心。\n我一直感到害怕。",
+          "hit": false,
+          "expected_ids": [
+            "彼得前书57CUV191920251023",
+            "腓立比书46CUV191920270318",
+            "腓立比书47CUV191920260902"
+          ],
+          "result_ids": [
+            "matthew11v29CNV20261118",
+            "2timothy1v7CNV20260721",
+            "约翰壹书418CUV191920261008",
+            "约翰壹书418CUV191920251115",
+            "约翰福音1633CUV191920260612",
+            "罗马书1212CUV191920260116",
+            "2timothy2v34CNV20260415",
+            "philippians4v13CNV20251214",
+            "腓立比书413CUV191920251219",
+            "2timothy1v12CNV20270616"
+          ]
+        },
+        {
+          "query_label": "zh/comfort/single",
+          "language": "zh",
+          "query_text": "安慰",
+          "hit": true,
+          "expected_ids": [
+            "2corinthians1v34CNV20260224",
+            "john14v1617CNV20260327",
+            "john14v1CNV20250805",
+            "john16v78CNV20270119",
+            "john16v7CNV20260712",
+            "revelation21v4CNV20260730",
+            "启示录716-17CUV191920251204",
+            "哥林多后书13-4CUV191920251006",
+            "约翰福音1416-17CUV191920260305",
+            "约翰福音1427CUV191920251029",
+            "约翰福音167CUV191920260106"
+          ],
+          "result_ids": [
+            "哥林多后书13-4CUV191920251006",
+            "2corinthians1v34CNV20260224",
+            "matthew5v310CNV20260530",
+            "galatians6v2CNV20260622",
+            "马太福音53-10CUV191920250913",
+            "希伯来书126-7CUV191920260616",
+            "2corinthians12v10CNV20270106",
+            "hebrews12v11CNV20260920",
+            "希伯来书1211CUV191920260930",
+            "james1v24CNV20270312"
+          ]
+        },
+        {
+          "query_label": "zh/comfort/multi",
+          "language": "zh",
+          "query_text": "我正在经历一段非常艰难的时期。\n我感到很破碎。\n我需要安慰。",
+          "hit": false,
+          "expected_ids": [
+            "2corinthians1v34CNV20260224",
+            "john14v1617CNV20260327",
+            "john14v1CNV20250805",
+            "john16v78CNV20270119",
+            "john16v7CNV20260712",
+            "revelation21v4CNV20260730",
+            "启示录716-17CUV191920251204",
+            "哥林多后书13-4CUV191920251006",
+            "约翰福音1416-17CUV191920260305",
+            "约翰福音1427CUV191920251029",
+            "约翰福音167CUV191920260106"
+          ],
+          "result_ids": [
+            "2corinthians12v910CNV20260221",
+            "matthew5v310CNV20260530",
+            "2corinthians12v10CNV20270106",
+            "2timothy2v34CNV20260415",
+            "哥林多前书1557CUV191920250903",
+            "1corinthians15v34CNV20260418",
+            "哥林多后书129-10CUV191920251107",
+            "马太福音2413CUV191920270620",
+            "1corinthians15v57CNV20260426",
+            "哥林多前书1123-25CUV191920270728"
+          ]
+        },
+        {
+          "query_label": "zh/rest/single",
+          "language": "zh",
+          "query_text": "安息",
+          "hit": true,
+          "expected_ids": [
+            "matthew11v2830CNV20260206",
+            "matthew11v29CNV20261118",
+            "revelation14v13CNV20260408",
+            "启示录1413CUV191920260228",
+            "马可福音631CUV191920260516",
+            "马太福音1128-30CUV191920260308",
+            "马太福音1129CUV191920270601"
+          ],
+          "result_ids": [
+            "马太福音1129CUV191920270601",
+            "matthew11v29CNV20261118",
+            "matthew11v2830CNV20260206",
+            "matthew5v310CNV20260530",
+            "马太福音1128-30CUV191920260308",
+            "彼得前书314CUV191920260923",
+            "提摩太前书316CUV191920260413",
+            "腓立比书25CUV191920270526",
+            "james4v10CNV20260531",
+            "1corinthians4v20CNV20270507"
+          ]
+        },
+        {
+          "query_label": "zh/rest/multi",
+          "language": "zh",
+          "query_text": "我感到非常疲惫和精疲力竭。\n我已经好几个星期没有休息了。\n我需要真正的休息。",
+          "hit": true,
+          "expected_ids": [
+            "matthew11v2830CNV20260206",
+            "matthew11v29CNV20261118",
+            "revelation14v13CNV20260408",
+            "启示录1413CUV191920260228",
+            "马可福音631CUV191920260516",
+            "马太福音1128-30CUV191920260308",
+            "马太福音1129CUV191920270601"
+          ],
+          "result_ids": [
+            "revelation14v13CNV20260408",
+            "titus2v1114CNV20260807",
+            "2corinthians12v10CNV20270106",
+            "马可福音631CUV191920260516",
+            "2timothy2v34CNV20260415",
+            "titus2v1114CNV20260522",
+            "matthew5v310CNV20260530",
+            "2corinthians12v910CNV20260221",
+            "revelation22v7CNV20270607",
+            "哥林多前书1123-25CUV191920270728"
+          ]
+        }
+      ]
+    },
+    "C_verse+reflexion_only": {
+      "hit_rate": 0.7166666666666667,
+      "hits": 43,
+      "total": 60,
+      "rows": [
+        {
+          "query_label": "en/anxiety/single",
+          "language": "en",
+          "query_text": "I'm so anxious and worried, I can't stop worrying about everything",
+          "hit": true,
+          "expected_ids": [
+            "1Peter57KJV20251023",
+            "1peter57NIV20251224",
+            "fil4v6EN-NIV20270214",
+            "phil47KJV20260902",
+            "philippians4v6KJV20270318"
+          ],
+          "result_ids": [
+            "fil4v6EN-NIV20270214",
+            "1peter57NIV20251224",
+            "Filipenses413NIV20251111",
+            "philippians4_7NIV20270816",
+            "1john418NIV20250929",
+            "1cor13v7KJV20270227",
+            "philippians4v6KJV20270318",
+            "philippians4_6-7_KJV_20260710",
+            "1john418KJV20251115",
+            "1john418KJV20261008"
+          ]
+        },
+        {
+          "query_label": "en/anxiety/multi",
+          "language": "en",
+          "query_text": "I've been so anxious lately.\nI can't stop worrying about everything going on in my life.\nIt feels like the worry never stops.",
+          "hit": true,
+          "expected_ids": [
+            "1Peter57KJV20251023",
+            "1peter57NIV20251224",
+            "fil4v6EN-NIV20270214",
+            "phil47KJV20260902",
+            "philippians4v6KJV20270318"
+          ],
+          "result_ids": [
+            "philippians4_7NIV20270816",
+            "fil4v6EN-NIV20270214",
+            "Filipenses413NIV20251111",
+            "hebreos13v5NIV20270831",
+            "john1633NIV20250904",
+            "1cor13v7KJV20270227",
+            "1john418NIV20250929",
+            "philippians4_6-7_KJV_20260710",
+            "1john418NIV20270523",
+            "1peter57NIV20251224"
+          ]
+        },
+        {
+          "query_label": "en/fear/single",
+          "language": "en",
+          "query_text": "I'm afraid and scared, fear has taken hold of me",
+          "hit": true,
+          "expected_ids": [
+            "1john418KJV20251115",
+            "1john418KJV20261008",
+            "1john418NIV20250929",
+            "1john418NIV20270523",
+            "juan1427EN-NIV20260109",
+            "luke12_4-5NIV20251116",
+            "luke12v4-5KJV",
+            "mat82627NIV20260121",
+            "matthew82627KJV20260630"
+          ],
+          "result_ids": [
+            "1john418NIV20250929",
+            "1john418KJV20251115",
+            "1john418NIV20270523",
+            "luke12v4-5KJV",
+            "fil4v6EN-NIV20270214",
+            "1peter315KJV20260417",
+            "2timoteo17KJV20260131",
+            "1john418KJV20261008",
+            "revelacion320NIV20251011",
+            "mark536KJV20270205"
+          ]
+        },
+        {
+          "query_label": "en/fear/multi",
+          "language": "en",
+          "query_text": "I've been feeling really afraid lately.\nFear has taken hold of me and I don't know how to shake it.\nI feel scared most of the time.",
+          "hit": true,
+          "expected_ids": [
+            "1john418KJV20251115",
+            "1john418KJV20261008",
+            "1john418NIV20250929",
+            "1john418NIV20270523",
+            "juan1427EN-NIV20260109",
+            "luke12_4-5NIV20251116",
+            "luke12v4-5KJV",
+            "mat82627NIV20260121",
+            "matthew82627KJV20260630"
+          ],
+          "result_ids": [
+            "1john418NIV20270523",
+            "1john418KJV20251115",
+            "1john418NIV20250929",
+            "fil4v6EN-NIV20270214",
+            "luke12_4-5NIV20251116",
+            "luke12v4-5KJV",
+            "1peter315KJV20260417",
+            "1peter57NIV20251224",
+            "1corintios1128NIV20270617",
+            "philippians4_7NIV20270816"
+          ]
+        },
+        {
+          "query_label": "en/comfort/single",
+          "language": "en",
+          "query_text": "I need comfort, I'm going through a hard time and feel broken",
+          "hit": false,
+          "expected_ids": [
+            "2Corintios1_3-4NIV20251117",
+            "2corintios1_3-4KJV20251006",
+            "john1416KJV",
+            "john1427KJV20251029",
+            "john16_7-8NIV20261125",
+            "john16v7KJV20260106",
+            "juan1416-17EN-NIV",
+            "rev71617KJV20251204",
+            "revelacion71617NIV20260124"
+          ],
+          "result_ids": [
+            "ephesians431NIV20260614",
+            "matthew2746NIV20251120",
+            "Filipenses413NIV20251111",
+            "2peter39EN-NIV20261218",
+            "2cor7v10KJV20251209",
+            "1peter57NIV20251224",
+            "matthew1220NIV20260910",
+            "2Cor7v10NIV20260713",
+            "heb12v2NIV20260730",
+            "philippians4_7NIV20270816"
+          ]
+        },
+        {
+          "query_label": "en/comfort/multi",
+          "language": "en",
+          "query_text": "I'm going through a really hard time right now.\nI feel broken and I don't know how to keep going.\nI just need some comfort.",
+          "hit": true,
+          "expected_ids": [
+            "2Corintios1_3-4NIV20251117",
+            "2corintios1_3-4KJV20251006",
+            "john1416KJV",
+            "john1427KJV20251029",
+            "john16_7-8NIV20261125",
+            "john16v7KJV20260106",
+            "juan1416-17EN-NIV",
+            "rev71617KJV20251204",
+            "revelacion71617NIV20260124"
+          ],
+          "result_ids": [
+            "ephesians431NIV20260614",
+            "2corintios1_3-4KJV20251006",
+            "mark631NIV20251020",
+            "john1633NIV20250904",
+            "juan14v1NIV20260610",
+            "mark631KJV20260516",
+            "hebreos13v5NIV20270831",
+            "mark217EN-NIV20261011",
+            "Filipenses413NIV20251111",
+            "2peter39EN-NIV20261218"
+          ]
+        },
+        {
+          "query_label": "en/rest/single",
+          "language": "en",
+          "query_text": "I'm exhausted and burned out, I need rest",
+          "hit": true,
+          "expected_ids": [
+            "devocional20251203EN-NIV",
+            "mark631KJV20260516",
+            "mark631NIV20251020",
+            "mateo1129NIV20270829",
+            "matthew112830KJV20260308",
+            "matthew1129KJV20270601",
+            "mt112830enNIV",
+            "revelation14v13KJV20260228"
+          ],
+          "result_ids": [
+            "mark631NIV20251020",
+            "mark631KJV20260516",
+            "ephesians431NIV20260614",
+            "mt112830enNIV",
+            "philippians4_7NIV20270816",
+            "mateo1129NIV20270829",
+            "1peter5v8-9NIV20251129",
+            "matthew1129KJV20270601",
+            "hebreos313KJV20261104",
+            "2peter310KJV20260605"
+          ]
+        },
+        {
+          "query_label": "en/rest/multi",
+          "language": "en",
+          "query_text": "I've been running on empty for weeks.\nI'm completely exhausted and burned out.\nI just need to find real rest.",
+          "hit": true,
+          "expected_ids": [
+            "devocional20251203EN-NIV",
+            "mark631KJV20260516",
+            "mark631NIV20251020",
+            "mateo1129NIV20270829",
+            "matthew112830KJV20260308",
+            "matthew1129KJV20270601",
+            "mt112830enNIV",
+            "revelation14v13KJV20260228"
+          ],
+          "result_ids": [
+            "mark631NIV20251020",
+            "mark631KJV20260516",
+            "hebreos13v5NIV20270831",
+            "ephesians431NIV20260614",
+            "revelacion24NIV20260114",
+            "matthew1129KJV20270601",
+            "timoteo4v7NIV",
+            "rom811NIV20260618",
+            "hebreos12v1KJV",
+            "james226KJV20260927"
+          ]
+        },
+        {
+          "query_label": "es/anxiety_fear/single",
+          "language": "es",
+          "query_text": "ansiedad",
+          "hit": true,
+          "expected_ids": [
+            "1pedro57NVI20260111",
+            "filipenses4_6-7NVI20250925"
+          ],
+          "result_ids": [
+            "1pedro57NVI20260111",
+            "filipenses4_6-7NVI20250925",
+            "marcos536NVI20260907",
+            "filipenses4v6NVI20270114",
+            "hebreos313NVI20261126",
+            "2corintios5_7NVI20251028",
+            "timoteo58NVI20270209",
+            "1pedro2_2_NVI",
+            "2corintios11_14_es_nvi_20260827",
+            "1pedro314NVI20270523"
+          ]
+        },
+        {
+          "query_label": "es/anxiety_fear/multi",
+          "language": "es",
+          "query_text": "Me siento muy ansioso.\nNo puedo dejar de preocuparme.\nSiento miedo todo el tiempo.",
+          "hit": true,
+          "expected_ids": [
+            "1pedro57NVI20260111",
+            "filipenses4_6-7NVI20250925"
+          ],
+          "result_ids": [
+            "1pedro57NVI20260111",
+            "filipenses4_6-7NVI20250925",
+            "juan14_1_20251014_ESNVI",
+            "1cor731ESNVI20270630",
+            "santiago124NVI20261003",
+            "filipenses4v6NVI20270114",
+            "marcos923NVI20270823",
+            "1juan513NVI20251208",
+            "1juan418NVI20260417",
+            "mateo1129NVI20270425"
+          ]
+        },
+        {
+          "query_label": "es/comfort/single",
+          "language": "es",
+          "query_text": "consuelo",
+          "hit": true,
+          "expected_ids": [
+            "2corintios1_3-4NVI20260319",
+            "apocalipsis214NVI",
+            "apocalipsis71617NVI",
+            "juan16_7NVI"
+          ],
+          "result_ids": [
+            "2corintios1_3-4NVI20260319",
+            "juan1930NVI20270822",
+            "juan16_7NVI",
+            "apocalipsis71617NVI",
+            "col312-14ESNVI20260127",
+            "col11517NVI20260401",
+            "juan2029NVI20260427",
+            "hechos420NVI20270429",
+            "1juan1v7NVI20270427",
+            "1corintios13_7_NVI"
+          ]
+        },
+        {
+          "query_label": "es/comfort/multi",
+          "language": "es",
+          "query_text": "Estoy pasando por un momento muy difícil.\nMe siento roto.\nNecesito consuelo.",
+          "hit": true,
+          "expected_ids": [
+            "2corintios1_3-4NVI20260319",
+            "apocalipsis214NVI",
+            "apocalipsis71617NVI",
+            "juan16_7NVI"
+          ],
+          "result_ids": [
+            "santiago11920NVI20260429",
+            "2corintios1_3-4NVI20260319",
+            "filipenses32021NVI20260423",
+            "marcos631NVI20250930",
+            "1Pedro221NVI20270520",
+            "efesios42627NVI20260529",
+            "hechos1630NVI20261111",
+            "1pedro5_10ESNVI20251031",
+            "1pedro57NVI20260111",
+            "galatas419NVI"
+          ]
+        },
+        {
+          "query_label": "es/rest/single",
+          "language": "es",
+          "query_text": "descanso",
+          "hit": true,
+          "expected_ids": [
+            "marcos631NVI20250930",
+            "mateo1128-30NVI20260627",
+            "mateo1129NVI20270425"
+          ],
+          "result_ids": [
+            "marcos631NVI20250930",
+            "mateo1128-30NVI20260627",
+            "marcos435NVI20260718",
+            "mateo1129NVI20270425",
+            "hebreos1014NVI20270223",
+            "mateo2413NVI20270123",
+            "filipenses29-11ESNVI20260218",
+            "col312-14ESNVI20260127",
+            "devocional20261209",
+            "2tes316NVI20270813"
+          ]
+        },
+        {
+          "query_label": "es/rest/multi",
+          "language": "es",
+          "query_text": "Estoy agotado y exhausto.\nHe estado funcionando sin descanso por semanas.\nNecesito descanso de verdad.",
+          "hit": true,
+          "expected_ids": [
+            "marcos631NVI20250930",
+            "mateo1128-30NVI20260627",
+            "mateo1129NVI20270425"
+          ],
+          "result_ids": [
+            "marcos631NVI20250930",
+            "mateo1128-30NVI20260627",
+            "col210NVI20260920",
+            "santiago11920NVI20260429",
+            "mateo2413NVI20270123",
+            "mateo1129NVI20270425",
+            "hebreos1014NVI20270223",
+            "hechos420NVI20270429",
+            "hebreos1211NVI",
+            "marcos923NVI20270823"
+          ]
+        },
+        {
+          "query_label": "pt/anxiety_fear/single",
+          "language": "pt",
+          "query_text": "ansiedade",
+          "hit": true,
+          "expected_ids": [
+            "1Pedro5_7PTNVI20250904",
+            "1Pedro5v7ARC20260527",
+            "filipenses4_6-7ARC20260722",
+            "filipenses4v6PTNVI20270216"
+          ],
+          "result_ids": [
+            "1Pedro5v7ARC20260527",
+            "1Pedro5_7PTNVI20250904",
+            "filipenses4_6-7ARC20260722",
+            "filipenses4v6PTNVI20270216",
+            "filipenses4v6-7PTNVI20260212",
+            "2Timoteo1_7_ARC_20260429",
+            "filipenses4_7ARC20270609",
+            "joao141ARC20260327",
+            "2Corintios1114PTNVI",
+            "2Timoteo1v7PTNVI20260401"
+          ]
+        },
+        {
+          "query_label": "pt/anxiety_fear/multi",
+          "language": "pt",
+          "query_text": "Estou me sentindo muito ansioso.\nNão consigo parar de me preocupar.\nSinto medo o tempo todo.",
+          "hit": true,
+          "expected_ids": [
+            "1Pedro5_7PTNVI20250904",
+            "1Pedro5v7ARC20260527",
+            "filipenses4_6-7ARC20260722",
+            "filipenses4v6PTNVI20270216"
+          ],
+          "result_ids": [
+            "1Pedro5_7PTNVI20250904",
+            "1joao418NVI20260625",
+            "1joao4v18ARC",
+            "1Pedro314PTNVI20261002",
+            "lucas21011PTNVI20260812",
+            "filipenses4v6-7PTNVI20260212",
+            "1Pedro5v7ARC20260527",
+            "1corintios13v1PTNVI",
+            "2Timoteo1v7PTNVI20260401",
+            "1joao418ARC"
+          ]
+        },
+        {
+          "query_label": "pt/comfort/single",
+          "language": "pt",
+          "query_text": "consolo",
+          "hit": true,
+          "expected_ids": [
+            "2cor1_3_4ptnvi20260510",
+            "2cor7v10ARC20260518",
+            "Hebreus21718PTNVI",
+            "apocalipse214ARC20260113",
+            "apocalipse21_4PTNVI20251006",
+            "apocalipse71617ARC",
+            "apocalipse71617PTNVI",
+            "efesios430ARC",
+            "joao16_7_8_PTNVI",
+            "joao16v7NVI20251025",
+            "romanos15v4ARC20251005"
+          ],
+          "result_ids": [
+            "1Tessalonicenses5_11ARC",
+            "1Tessalonicenses5_11ARC20270428",
+            "romanos15v4ARC20251005",
+            "colossenses316PTNVI20260404",
+            "1Tessalonicenses5_11PTNVI",
+            "joao16_7_8_PTNVI",
+            "joao141617ARC",
+            "joao16v7NVI20251025",
+            "2cor1_3_4ptnvi20260510",
+            "atos15ARC20270420"
+          ]
+        },
+        {
+          "query_label": "pt/comfort/multi",
+          "language": "pt",
+          "query_text": "Estou passando por um momento muito difícil.\nMe sinto quebrado.\nPreciso de consolo.",
+          "hit": true,
+          "expected_ids": [
+            "2cor1_3_4ptnvi20260510",
+            "2cor7v10ARC20260518",
+            "Hebreus21718PTNVI",
+            "apocalipse214ARC20260113",
+            "apocalipse21_4PTNVI20251006",
+            "apocalipse71617ARC",
+            "apocalipse71617PTNVI",
+            "efesios430ARC",
+            "joao16_7_8_PTNVI",
+            "joao16v7NVI20251025",
+            "romanos15v4ARC20251005"
+          ],
+          "result_ids": [
+            "2Timoteo1v7PTNVI20260401",
+            "1Pedro5_7PTNVI20250904",
+            "tiago11920ARC",
+            "2cor1_3_4ptnvi20260510",
+            "joao16v7NVI20251025",
+            "tiago414PTNVI",
+            "mateus1220PTNVI20261217",
+            "romanos15v4ARC20251005",
+            "1Pedro314PTNVI20261002",
+            "apocalipse21_4PTNVI20251006"
+          ]
+        },
+        {
+          "query_label": "pt/rest/single",
+          "language": "pt",
+          "query_text": "descanso",
+          "hit": true,
+          "expected_ids": [
+            "apocalipse1413PTNVI",
+            "marcos631ARC20260130",
+            "marcos631PTNVI20260603",
+            "mateus1128-30ARC20260121",
+            "mateus1128-30PTNVI",
+            "mateus1129ARC20270114",
+            "mateus1129PTNVI20260808"
+          ],
+          "result_ids": [
+            "marcos631ARC20260130",
+            "mateus1129PTNVI20260808",
+            "marcos631PTNVI20260603",
+            "mateus1129ARC20270114",
+            "apocalipse14_13ARC20260331",
+            "mateus1128-30PTNVI",
+            "mateus1128-30ARC20260121",
+            "1Cor9_27PTNVI20270312",
+            "1joao2_15-17ARC20260205",
+            "hebreus414ARC"
+          ]
+        },
+        {
+          "query_label": "pt/rest/multi",
+          "language": "pt",
+          "query_text": "Estou exausto e esgotado.\nEstou sem parar há semanas.\nPreciso de descanso de verdade.",
+          "hit": true,
+          "expected_ids": [
+            "apocalipse1413PTNVI",
+            "marcos631ARC20260130",
+            "marcos631PTNVI20260603",
+            "mateus1128-30ARC20260121",
+            "mateus1128-30PTNVI",
+            "mateus1129ARC20270114",
+            "mateus1129PTNVI20260808"
+          ],
+          "result_ids": [
+            "marcos631PTNVI20260603",
+            "marcos631ARC20260130",
+            "marcos217PTNVI20261008",
+            "1Corintios731PTNVI20270221",
+            "lucas532PTNVI20270217",
+            "mateus1129PTNVI20260808",
+            "2Corintios4v17PTNVI",
+            "atos319PTNVI20261011",
+            "atos1630ARC20261020",
+            "joao832NVI20251105"
+          ]
+        },
+        {
+          "query_label": "fr/anxiety_fear/single",
+          "language": "fr",
+          "query_text": "crainte",
+          "hit": true,
+          "expected_ids": [
+            "1Jean418FRTOB20270317",
+            "1Jean4v18LSG1910",
+            "1Jean4v18LSG191020270504",
+            "1jean418FRTOB20260212",
+            "luc12_4-5LSG1910",
+            "luc12v4-5FRTOB20260504"
+          ],
+          "result_ids": [
+            "luc12_4-5LSG1910",
+            "luc21011LSG191020261111",
+            "1Jean4v18LSG191020270504",
+            "1pierre315LSG1910",
+            "marc536FRTOB20260903",
+            "1pierre314FRTOB",
+            "2Cor11v14FRTOB20270602",
+            "1Corinthiens13v7_FR-LSG1910",
+            "rev2220LSG1910",
+            "devocional20260401FRTOB"
+          ]
+        },
+        {
+          "query_label": "fr/anxiety_fear/multi",
+          "language": "fr",
+          "query_text": "Je me sens très anxieux.\nJe n'arrive pas à arrêter de m'inquiéter.\nJ'ai peur tout le temps.",
+          "hit": true,
+          "expected_ids": [
+            "1Jean418FRTOB20270317",
+            "1Jean4v18LSG1910",
+            "1Jean4v18LSG191020270504",
+            "1jean418FRTOB20260212",
+            "luc12_4-5LSG1910",
+            "luc12v4-5FRTOB20260504"
+          ],
+          "result_ids": [
+            "luc21011LSG191020261111",
+            "juan14v1FRTOB20260821",
+            "jean14v1LSG1910",
+            "1pierre314FRTOB",
+            "1Jean4v18LSG191020270504",
+            "1Jean5v14LSG1910",
+            "luc12v4-5FRTOB20260504",
+            "philippiens214LSG1910",
+            "phil413LSG1910",
+            "juan1427LSG1910"
+          ]
+        },
+        {
+          "query_label": "fr/comfort/single",
+          "language": "fr",
+          "query_text": "consolation",
+          "hit": true,
+          "expected_ids": [
+            "2Cor1_3-4LSG1910-20260720",
+            "devocional20260207FR-LSG1910",
+            "devocional20260227FR1910",
+            "devocional_20260227_FR-TOB",
+            "jean16R1910",
+            "jean16v7LSG1910",
+            "juan16frtob20270821",
+            "juan16v7FRTOB20260727"
+          ],
+          "result_ids": [
+            "2Cor1_3-4LSG1910-20260720",
+            "jean141617LSG1910",
+            "marc1539LSG1910",
+            "juan1930LSG1910",
+            "jacques1v12FRTOB20260827",
+            "Col315FRTOB",
+            "1Cor7v23FRTOB20260216",
+            "devocional20270112FRTOB",
+            "col3v5FRTOB20251018",
+            "heb12v11FRTOB"
+          ]
+        },
+        {
+          "query_label": "fr/comfort/multi",
+          "language": "fr",
+          "query_text": "Je traverse une période très difficile.\nJe me sens brisé.\nJ'ai besoin de consolation.",
+          "hit": true,
+          "expected_ids": [
+            "2Cor1_3-4LSG1910-20260720",
+            "devocional20260207FR-LSG1910",
+            "devocional20260227FR1910",
+            "devocional_20260227_FR-TOB",
+            "jean16R1910",
+            "jean16v7LSG1910",
+            "juan16frtob20270821",
+            "juan16v7FRTOB20260727"
+          ],
+          "result_ids": [
+            "jacques12-4FRTOB20270729",
+            "jacques1_2-4FRTOB20260407",
+            "luc1532FRTOB20251128",
+            "Eph431FRTOB20260630",
+            "2Cor1_3-4LSG1910-20260720",
+            "devocional20270124FR-LSG1910",
+            "matthieu2746LSG1910",
+            "Matthieu25_31-36_LSG1910",
+            "jacques11920FRTOB20260616",
+            "devocional20251223FRTOB"
+          ]
+        },
+        {
+          "query_label": "fr/rest/single",
+          "language": "fr",
+          "query_text": "repos",
+          "hit": true,
+          "expected_ids": [
+            "devocional20250912FR-LSG1910",
+            "devocional20260308FRTOB",
+            "marc631FR-LSG1910",
+            "marc631FRTOB20251207",
+            "matthieu1128-30FRTOB",
+            "matthieu1128LSG1910",
+            "matthieu1129LSG1910",
+            "matthieu1129frtob"
+          ],
+          "result_ids": [
+            "marc631FRTOB20251207",
+            "marc631FR-LSG1910",
+            "matthieu1128LSG1910",
+            "matthieu1129frtob",
+            "actes319FRTOB20270719",
+            "frEph1v13-14TOB20260812",
+            "matthieu1129LSG1910",
+            "matthieu1128-30FRTOB",
+            "Actes221LSG1910",
+            "2Pierre2_9LSG1910_20270119"
+          ]
+        },
+        {
+          "query_label": "fr/rest/multi",
+          "language": "fr",
+          "query_text": "Je suis épuisé.\nJe fonctionne sans repos depuis des semaines.\nJ'ai besoin d'un vrai repos.",
+          "hit": true,
+          "expected_ids": [
+            "devocional20250912FR-LSG1910",
+            "devocional20260308FRTOB",
+            "marc631FR-LSG1910",
+            "marc631FRTOB20251207",
+            "matthieu1128-30FRTOB",
+            "matthieu1128LSG1910",
+            "matthieu1129LSG1910",
+            "matthieu1129frtob"
+          ],
+          "result_ids": [
+            "marc631FR-LSG1910",
+            "marc631FRTOB20251207",
+            "devocional-20270512-FR-TOB-2Cor1-9",
+            "matthieu1128LSG1910",
+            "1Cor6v19FRTOB20270813",
+            "Ap221213FRTOB",
+            "devocional20250912FR-LSG1910",
+            "eph316FRTOB20261024",
+            "Eph610FRTOB20261115",
+            "marcos217LSG191020260707"
+          ]
+        },
+        {
+          "query_label": "de/anxiety_fear/single",
+          "language": "de",
+          "query_text": "Angst",
+          "hit": true,
+          "expected_ids": [
+            "1.Petrus57LU1720251023",
+            "1.Petrus57SCH200020251023",
+            "Philipper46LU1720270318",
+            "Philipper46SCH200020270318",
+            "Philipper47LU1720260902",
+            "Philipper47SCH200020260902"
+          ],
+          "result_ids": [
+            "Hebräer135LU1720260509",
+            "Hebräer135SCH200020260509",
+            "Jakobus42LU1720270506",
+            "Offenbarung320LU1720260117",
+            "Philipper47SCH200020260902",
+            "Markus536LU1720270205",
+            "Philipper46LU1720270318",
+            "Lukas124-5LU1720260405",
+            "Lukas124-5SCH200020260405",
+            "Markus536SCH200020270205"
+          ]
+        },
+        {
+          "query_label": "de/anxiety_fear/multi",
+          "language": "de",
+          "query_text": "Ich fühle mich sehr ängstlich.\nIch kann nicht aufhören, mir Sorgen zu machen.\nIch habe die ganze Zeit Angst.",
+          "hit": false,
+          "expected_ids": [
+            "1.Petrus57LU1720251023",
+            "1.Petrus57SCH200020251023",
+            "Philipper46LU1720270318",
+            "Philipper46SCH200020270318",
+            "Philipper47LU1720260902",
+            "Philipper47SCH200020260902"
+          ],
+          "result_ids": [
+            "Jakobus42LU1720270506",
+            "Jakobus42SCH200020270506",
+            "Römer1513SCH200020260731",
+            "Epheser431SCH200020260402",
+            "Epheser431LU1720260402",
+            "Römer1513LU1720260731",
+            "2.Timotheus31-5LU1720261020",
+            "Epheser426-27LU1720260608",
+            "Hebräer135SCH200020260509",
+            "Johannes141LU1720260122"
+          ]
+        },
+        {
+          "query_label": "de/comfort/single",
+          "language": "de",
+          "query_text": "Trost",
+          "hit": true,
+          "expected_ids": [
+            "2.Korinther13-4LU1720251006",
+            "2.Korinther13-4SCH200020251006",
+            "Johannes1416-17LU1720260305",
+            "Johannes1416-17SCH200020260305",
+            "Johannes1427LU1720251029",
+            "Johannes1427SCH200020251029",
+            "Johannes167LU1720260106",
+            "Johannes167SCH200020260106",
+            "Offenbarung716-17LU1720251204",
+            "Offenbarung716-17SCH200020251204"
+          ],
+          "result_ids": [
+            "Epheser429LU1720260628",
+            "Offenbarung716-17LU1720251204",
+            "2.Korinther13-4SCH200020251006",
+            "Offenbarung716-17SCH200020251204",
+            "2.Korinther13-4LU1720251006",
+            "Kolosser118LU1720261013",
+            "Epheser429SCH200020260628",
+            "Philipper46-7SCH200020260710",
+            "Kolosser118SCH200020261013",
+            "1.Thessalonicher511LU1720251011"
+          ]
+        },
+        {
+          "query_label": "de/comfort/multi",
+          "language": "de",
+          "query_text": "Ich mache gerade eine sehr schwere Zeit durch.\nIch fühle mich zerbrochen.\nIch brauche Trost.",
+          "hit": true,
+          "expected_ids": [
+            "2.Korinther13-4LU1720251006",
+            "2.Korinther13-4SCH200020251006",
+            "Johannes1416-17LU1720260305",
+            "Johannes1416-17SCH200020260305",
+            "Johannes1427LU1720251029",
+            "Johannes1427SCH200020251029",
+            "Johannes167LU1720260106",
+            "Johannes167SCH200020260106",
+            "Offenbarung716-17LU1720251204",
+            "Offenbarung716-17SCH200020251204"
+          ],
+          "result_ids": [
+            "Epheser431SCH200020260402",
+            "2.Korinther13-4SCH200020251006",
+            "2.Korinther13-4LU1720251006",
+            "Epheser431LU1720260402",
+            "Epheser429LU1720260628",
+            "Lukas2219-20SCH200020270104",
+            "Epheser429SCH200020260628",
+            "Apostelgeschichte319SCH200020261112",
+            "Philipper46-7SCH200020260710",
+            "Apostelgeschichte1630SCH200020270325"
+          ]
+        },
+        {
+          "query_label": "de/rest/single",
+          "language": "de",
+          "query_text": "Ruhe",
+          "hit": true,
+          "expected_ids": [
+            "Markus631LU1720260516",
+            "Markus631SCH200020260516",
+            "Matthäus1128-30LU1720260308",
+            "Matthäus1128-30SCH200020260308",
+            "Matthäus1129LU1720270601",
+            "Matthäus1129SCH200020270601",
+            "Offenbarung1413LU1720260228",
+            "Offenbarung1413SCH200020260228"
+          ],
+          "result_ids": [
+            "Römer1513LU1720260731",
+            "Matthäus1129LU1720270601",
+            "Johannes141LU1720260122",
+            "1.Korinther619LU1720270513",
+            "Jakobus42LU1720270506",
+            "Römer328LU1720260216",
+            "Matthäus1128-30LU1720260308",
+            "Matthäus1129SCH200020270601",
+            "Römer1513SCH200020260731",
+            "Matthäus1128-30SCH200020260308"
+          ]
+        },
+        {
+          "query_label": "de/rest/multi",
+          "language": "de",
+          "query_text": "Ich bin erschöpft und ausgebrannt.\nIch laufe seit Wochen ohne Pause.\nIch brauche echte Ruhe.",
+          "hit": true,
+          "expected_ids": [
+            "Markus631LU1720260516",
+            "Markus631SCH200020260516",
+            "Matthäus1128-30LU1720260308",
+            "Matthäus1128-30SCH200020260308",
+            "Matthäus1129LU1720270601",
+            "Matthäus1129SCH200020270601",
+            "Offenbarung1413LU1720260228",
+            "Offenbarung1413SCH200020260228"
+          ],
+          "result_ids": [
+            "Markus631LU1720260516",
+            "Epheser431SCH200020260402",
+            "Epheser431LU1720260402",
+            "Markus631SCH200020260516",
+            "2.Timotheus47-8LU1720250815",
+            "Offenbarung24LU1720250911",
+            "2.Timotheus47-8SCH200020250815",
+            "Offenbarung24SCH200020250911",
+            "Apostelgeschichte319SCH200020261112",
+            "Römer1513SCH200020260731"
+          ]
+        },
+        {
+          "query_label": "ar/anxiety/single",
+          "language": "ar",
+          "query_text": "القلق",
+          "hit": true,
+          "expected_ids": [
+            "رسالةبطرسالرسولالاولى57SVDA20251023",
+            "رسالةبولسالرسولالىاهلفيلبي46SVDA20270318",
+            "رسالةبولسالرسولالىاهلفيلبي47SVDA20260902",
+            "رِسَالَةُبُطْرُسَٱلرَّسُولِٱلْأُولَى57NAV20251023",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي46NAV20270318",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي47NAV20260902"
+          ],
+          "result_ids": [
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي46NAV20270318",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي46-7NAV20260710",
+            "رسالةبولسالرسولالىاهلفيلبي46SVDA20270318",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي47NAV20260902",
+            "رِسَالَةُيُوحَنَّاٱلرَّسُولِٱلْأُولَى418NAV20251115",
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ1024-25NAV20260217",
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ414-16NAV20260225",
+            "رِسَالَةُبُطْرُسَٱلرَّسُولِٱلثَّانِيَةُ15-7NAV20261219",
+            "رِسَالَةُيَعْقُوبَ12-4NAV20260614",
+            "رِسَالَةُيُوحَنَّاٱلرَّسُولِٱلْأُولَى41NAV20270627"
+          ]
+        },
+        {
+          "query_label": "ar/anxiety/multi",
+          "language": "ar",
+          "query_text": "أشعر بقلق شديد.\nلا أستطيع التوقف عن القلق.\nأشعر بالخوف طوال الوقت.",
+          "hit": false,
+          "expected_ids": [
+            "رسالةبطرسالرسولالاولى57SVDA20251023",
+            "رسالةبولسالرسولالىاهلفيلبي46SVDA20270318",
+            "رسالةبولسالرسولالىاهلفيلبي47SVDA20260902",
+            "رِسَالَةُبُطْرُسَٱلرَّسُولِٱلْأُولَى57NAV20251023",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي46NAV20270318",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي47NAV20260902"
+          ],
+          "result_ids": [
+            "رِسَالَةُيَعْقُوبَ12-4NAV20260614",
+            "رِسَالَةُيَهُوذَا124-25NAV20260510",
+            "إِنْجِيلُلُوقَا124-5NAV20260405",
+            "انجيللوقا124-5SVDA20260405",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي46NAV20270318",
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ121NAV20260604",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىتِيطُسَ211-14NAV20270331",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي46-7NAV20260710",
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ412NAV20270216",
+            "إِنْجِيلُمَتَّى544-45NAV20260320"
+          ]
+        },
+        {
+          "query_label": "ar/comfort/single",
+          "language": "ar",
+          "query_text": "العزاء",
+          "hit": false,
+          "expected_ids": [
+            "إِنْجِيلُيُوحَنَّا1416-17NAV20260305",
+            "إِنْجِيلُيُوحَنَّا1427NAV20251029",
+            "إِنْجِيلُيُوحَنَّا167NAV20260106",
+            "انجيليوحنا1416-17SVDA20260305",
+            "انجيليوحنا1427SVDA20251029",
+            "انجيليوحنا167SVDA20260106",
+            "رؤيايوحنااللاهوتي716-17SVDA20251204",
+            "رسالةبولسالرسولالثانيةالىاهلكورنثوس13-4SVDA20251006",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ716-17NAV20251204",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلثَّانِيةُإِلَىأَهْلِكُورِنْثُوسَ13-4NAV20251006"
+          ],
+          "result_ids": [
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ927-28NAV20261221",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِكُولُوسِّي35NAV20260702",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِرُومِيَةَ517NAV20260802",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ2217NAV20251127",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ2217NAV20260517",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلأُولَىإِلَىأَهْلِتَسَالُونِيكِي43-5NAV20260730",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلثَّانِيةُإِلَىأَهْلِكُورِنْثُوسَ13-4NAV20251006",
+            "إِنْجِيلُيُوحَنَّا167-8NAV20260831",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىتِيطُسَ211-14NAV20270331",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِأَفَسُسَ219-20NAV20270220"
+          ]
+        },
+        {
+          "query_label": "ar/comfort/multi",
+          "language": "ar",
+          "query_text": "أمر بوقت عصيب جداً.\nأشعر أنني منكسر.\nأحتاج إلى العزاء.",
+          "hit": false,
+          "expected_ids": [
+            "إِنْجِيلُيُوحَنَّا1416-17NAV20260305",
+            "إِنْجِيلُيُوحَنَّا1427NAV20251029",
+            "إِنْجِيلُيُوحَنَّا167NAV20260106",
+            "انجيليوحنا1416-17SVDA20260305",
+            "انجيليوحنا1427SVDA20251029",
+            "انجيليوحنا167SVDA20260106",
+            "رؤيايوحنااللاهوتي716-17SVDA20251204",
+            "رسالةبولسالرسولالثانيةالىاهلكورنثوس13-4SVDA20251006",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ716-17NAV20251204",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلثَّانِيةُإِلَىأَهْلِكُورِنْثُوسَ13-4NAV20251006"
+          ],
+          "result_ids": [
+            "رِسَالَةُيَعْقُوبَ12-4NAV20260614",
+            "أَعْمَالُٱلرُّسُلِ1630NAV20270325",
+            "إِنْجِيلُمَتَّى133-9NAV20251221",
+            "رِسَالَةُيَهُوذَا124-25NAV20260510",
+            "أَعْمَالُٱلرُّسُلِ1730-31NAV20260205",
+            "سفراعمالالرسل1630SVDA20270325",
+            "إِنْجِيلُيُوحَنَّا1140NAV20261016",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلثَّانِيةُإِلَىأَهْلِكُورِنْثُوسَ13-4NAV20251006",
+            "إِنْجِيلُيُوحَنَّا167-8NAV20260831",
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ927-28NAV20261221"
+          ]
+        },
+        {
+          "query_label": "ar/rest/single",
+          "language": "ar",
+          "query_text": "الراحة",
+          "hit": false,
+          "expected_ids": [
+            "إِنْجِيلُمَتَّى1128-30NAV20260308",
+            "إِنْجِيلُمَتَّى1129NAV20270601",
+            "إِنْجِيلُمَرْقُسَ631NAV20260516",
+            "انجيلمتى1128-30SVDA20260308",
+            "انجيلمتى1129SVDA20270601",
+            "انجيلمرقس631SVDA20260516",
+            "رؤيايوحنااللاهوتي1413SVDA20260228",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ1413NAV20260228"
+          ],
+          "result_ids": [
+            "رِسَالَةُيَهُوذَا124-25NAV20260510",
+            "أَعْمَالُٱلرُّسُلِ21-4NAV20260211",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي44NAV20251004",
+            "رِسَالَةُيَعْقُوبَ12-4NAV20261001",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِرُومِيَةَ86NAV20261006",
+            "اَلرِّسَالَةُإِلَىٱلْعِبْرَانِيِّينَ927-28NAV20261221",
+            "رِسَالَةُبُطْرُسَٱلرَّسُولِٱلْأُولَى13-5NAV20250910",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىتِيطُسَ211-14NAV20251001",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلثَّانِيةُإِلَىأَهْلِكُورِنْثُوسَ416-18NAV20250824",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلأُولَىإِلَىأَهْلِكُورِنْثُوسَ134-7NAV20260306"
+          ]
+        },
+        {
+          "query_label": "ar/rest/multi",
+          "language": "ar",
+          "query_text": "أنا مرهق ومنهك تماماً.\nأعمل بلا توقف منذ أسابيع.\nأحتاج إلى راحة حقيقية.",
+          "hit": false,
+          "expected_ids": [
+            "إِنْجِيلُمَتَّى1128-30NAV20260308",
+            "إِنْجِيلُمَتَّى1129NAV20270601",
+            "إِنْجِيلُمَرْقُسَ631NAV20260516",
+            "انجيلمتى1128-30SVDA20260308",
+            "انجيلمتى1129SVDA20270601",
+            "انجيلمرقس631SVDA20260516",
+            "رؤيايوحنااللاهوتي1413SVDA20260228",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ1413NAV20260228"
+          ],
+          "result_ids": [
+            "رِسَالَةُيَهُوذَا124-25NAV20260510",
+            "رِسَالَةُيَعْقُوبَ12-4NAV20260614",
+            "أَعْمَالُٱلرُّسُلِ1730-31NAV20260205",
+            "رِسَالَةُبُولُسَٱلرَّسُولِٱلثَّانِيةُإِلَىأَهْلِكُورِنْثُوسَ13-4NAV20251006",
+            "إِنْجِيلُمَتَّى544-45NAV20260320",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ2212-13NAV20250914",
+            "رُؤْيَايُوحَنَّاٱللَّاهُوتِيِّ716-17NAV20251204",
+            "رسالةبولسالرسولالىاهلفيلبي320-21SVDA20260729",
+            "رِسَالَةُبُولُسَٱلرَّسُولِإِلَىأَهْلِفِيلِبِّي320-21NAV20260729",
+            "رِسَالَةُيُوحَنَّاٱلرَّسُولِٱلْأُولَى15-7NAV20260410"
+          ]
+        },
+        {
+          "query_label": "fil/anxiety/single",
+          "language": "fil",
+          "query_text": "Pagkabalisa",
+          "hit": false,
+          "expected_ids": [
+            "1Pedro57ASND20251023",
+            "1Pedro57MBB0520251023",
+            "Filipos46ASND20270318",
+            "Filipos47ASND20260902",
+            "MgaTaga-Filipos46MBB0520270318",
+            "MgaTaga-Filipos47MBB0520260902"
+          ],
+          "result_ids": [
+            "MgaTagaFilMBB0520260710",
+            "Mateo71MBB0520270225",
+            "Mateo71ASND20270225",
+            "Filipos46-7ASND20260710",
+            "1Pedro314MBB0520260923",
+            "Efeso426-27ASND20260608",
+            "Efeso518ASND20250816",
+            "Efeso422-24ASND20260610",
+            "Mateo513MBB0520270427",
+            "1Pedro314ASND20260923"
+          ]
+        },
+        {
+          "query_label": "fil/anxiety/multi",
+          "language": "fil",
+          "query_text": "Sobra akong nababalisa.\nHindi ako mapigilan mag-alala.\nParang natatakot ako palagi.",
+          "hit": false,
+          "expected_ids": [
+            "1Pedro57ASND20251023",
+            "1Pedro57MBB0520251023",
+            "Filipos46ASND20270318",
+            "Filipos47ASND20260902",
+            "MgaTaga-Filipos46MBB0520270318",
+            "MgaTaga-Filipos47MBB0520260902"
+          ],
+          "result_ids": [
+            "1Pedro589MBB0520250818",
+            "Lucas532MBB0520270611",
+            "2Timoteo112MBB0520270609",
+            "MgaTagaFilMBB0520251002",
+            "1MgaTaga-Tesalonica522MBB0520270129",
+            "1Pedro314MBB0520260923",
+            "1Pedro58-9ASND20250818",
+            "MgaHebreo21MBB0520260918",
+            "Mateo82627MBB0520260630",
+            "Marcos1124MBB0520261201"
+          ]
+        },
+        {
+          "query_label": "fil/comfort/single",
+          "language": "fil",
+          "query_text": "Kaginhawaan",
+          "hit": false,
+          "expected_ids": [
+            "2Corinto13-4ASND20251006",
+            "2MgaTagaCoMBB0520251006",
+            "Juan1416-17ASND20260305",
+            "Juan141617MBB0520260305",
+            "Juan1427ASND20251029",
+            "Juan1427MBB0520251029",
+            "Juan167ASND20260106",
+            "Juan167MBB0520260106",
+            "Pahayag716-17ASND20251204",
+            "Pahayag716MBB0520251204"
+          ],
+          "result_ids": [
+            "1Timoteo611MBB0520270703",
+            "MgaHebreo1MBB0520260509",
+            "Lucas636MBB0520260420",
+            "Lucas636ASND20260420",
+            "Hebreo135ASND20260509",
+            "Mateo1129MBB0520270601",
+            "1Pedro389MBB0520260519",
+            "MgaGawa1630ASND20270325",
+            "MgaGawa1630MBB0520270325",
+            "Santiago42MBB0520270506"
+          ]
+        },
+        {
+          "query_label": "fil/comfort/multi",
+          "language": "fil",
+          "query_text": "Nagdaraan ako sa mahirap na panahon.\nParang nasira ako.\nKailangan ko ng kaginhawaan.",
+          "hit": false,
+          "expected_ids": [
+            "2Corinto13-4ASND20251006",
+            "2MgaTagaCoMBB0520251006",
+            "Juan1416-17ASND20260305",
+            "Juan141617MBB0520260305",
+            "Juan1427ASND20251029",
+            "Juan1427MBB0520251029",
+            "Juan167ASND20260106",
+            "Juan167MBB0520260106",
+            "Pahayag716-17ASND20251204",
+            "Pahayag716MBB0520251204"
+          ],
+          "result_ids": [
+            "MgaTagaFilMBB0520251002",
+            "Mateo1414MBB0520270419",
+            "Mateo2531-36ASND20260422",
+            "Marcos1436ASND20250907",
+            "MgaGawa1630MBB0520270325",
+            "Juan330MBB0520260906",
+            "Lucas532MBB0520270611",
+            "1Pedro314MBB0520260923",
+            "Mateo1414ASND20270419",
+            "Marcos631MBB0520260516"
+          ]
+        },
+        {
+          "query_label": "fil/rest/single",
+          "language": "fil",
+          "query_text": "Pahinga",
+          "hit": true,
+          "expected_ids": [
+            "Marcos631ASND20260516",
+            "Marcos631MBB0520260516",
+            "Mateo1128-30ASND20260308",
+            "Mateo11283MBB0520260308",
+            "Mateo1129ASND20270601",
+            "Mateo1129MBB0520270601",
+            "Pahayag1413ASND20260228",
+            "Pahayag141MBB0520260228"
+          ],
+          "result_ids": [
+            "Mateo1129MBB0520270601",
+            "Mateo82627MBB0520260630",
+            "1Timoteo611MBB0520270703",
+            "Mateo1032MBB0520260909",
+            "Marcos631MBB0520260516",
+            "MgaTagaColMBB0520260112",
+            "Mateo826-27ASND20260630",
+            "Mateo778MBB0520251126",
+            "Santiago11MBB0520250920",
+            "Mateo1128-30ASND20260308"
+          ]
+        },
+        {
+          "query_label": "fil/rest/multi",
+          "language": "fil",
+          "query_text": "Pagod na pagod na ako.\nWala akong pahinga sa loob ng mga linggo.\nKailangan ko ng tunay na pahinga.",
+          "hit": false,
+          "expected_ids": [
+            "Marcos631ASND20260516",
+            "Marcos631MBB0520260516",
+            "Mateo1128-30ASND20260308",
+            "Mateo11283MBB0520260308",
+            "Mateo1129ASND20270601",
+            "Mateo1129MBB0520270601",
+            "Pahayag1413ASND20260228",
+            "Pahayag141MBB0520260228"
+          ],
+          "result_ids": [
+            "Mateo1414MBB0520270419",
+            "Lucas532MBB0520270611",
+            "Santiago42MBB0520270506",
+            "1Juan18MBB0520260817",
+            "Marcos723MBB0520260914",
+            "Lucas119-10MBB0520270103",
+            "Hebreo313ASND20261104",
+            "1Juan18ASND20260817",
+            "Mateo1414ASND20270419",
+            "MgaHebreo313MBB0520261104"
+          ]
+        },
+        {
+          "query_label": "hi/anxiety/single",
+          "language": "hi",
+          "query_text": "चिंता",
+          "hit": true,
+          "expected_ids": [
+            "1पतरस57HERV20251023",
+            "1पतरस57OV20251023",
+            "फिलिप्पियों46HERV",
+            "फिलिप्पियों46OV20270318",
+            "फिलिप्पियों47HERV",
+            "फिलिप्पियों47OV20260902"
+          ],
+          "result_ids": [
+            "1पतरस57HERV20251023",
+            "1पतरस57OV20251023",
+            "1कुरिन्थियों29OV20270602",
+            "1कुरिन्थियों29HERV",
+            "फिलिप्पियों46-7HIOV20260710",
+            "फिलिप्पियों46-7HERV20260710",
+            "फिलिप्पियों46HERV",
+            "2कुरिन्थियों416HERV",
+            "फिलिप्पियों46OV20270318",
+            "2कुरिन्थियों57HERV20260328"
+          ]
+        },
+        {
+          "query_label": "hi/anxiety/multi",
+          "language": "hi",
+          "query_text": "मुझे बहुत चिंता हो रही है।\nमैं चिंता करना बंद नहीं कर सकता।\nमुझे हर समय डर लगता है।",
+          "hit": true,
+          "expected_ids": [
+            "1पतरस57HERV20251023",
+            "1पतरस57OV20251023",
+            "फिलिप्पियों46HERV",
+            "फिलिप्पियों46OV20270318",
+            "फिलिप्पियों47HERV",
+            "फिलिप्पियों47OV20260902"
+          ],
+          "result_ids": [
+            "1पतरस57HERV20251023",
+            "1पतरस57OV20251023",
+            "यूहन्ना141HERV20260122",
+            "लूका124-5HERV20260405",
+            "2कुरिन्थियों416HERV",
+            "इब्रानियों313HERV",
+            "लूका119-10HERV",
+            "2कुरिन्थियों57HERV20260328",
+            "लूका124-5HIOV20260405",
+            "1यूहन्ना418HERV"
+          ]
+        },
+        {
+          "query_label": "hi/rest/single",
+          "language": "hi",
+          "query_text": "विश्राम",
+          "hit": true,
+          "expected_ids": [
+            "प्रकाशितवाक्य1413HERV20260228",
+            "प्रकाशितवाक्य1413HIOV20260228",
+            "मत्ती1128-30HERV20260308",
+            "मत्ती1128-30HIOV20260308",
+            "मत्ती1129HERV",
+            "मत्ती1129OV20270601",
+            "मरकुस631HERV20260516",
+            "मरकुस631HIOV20260516"
+          ],
+          "result_ids": [
+            "मत्ती1128-30HIOV20260308",
+            "मरकुस631HIOV20260516",
+            "मरकुस631HERV20260516",
+            "प्रकाशितवाक्य1413HIOV20260228",
+            "प्रेरितोंकेकाम319OV20261112",
+            "प्रकाशितवाक्य1413HERV20260228",
+            "मत्ती1129OV20270601",
+            "मत्ती1128-30HERV20260308",
+            "मत्ती1129HERV",
+            "प्रेरितोंकेकाम319HERV"
+          ]
+        },
+        {
+          "query_label": "hi/rest/multi",
+          "language": "hi",
+          "query_text": "मैं बहुत थका हुआ हूँ।\nमैं हफ्तों से बिना आराम के काम कर रहा हूँ।\nमुझे सच में विश्राम चाहिए।",
+          "hit": true,
+          "expected_ids": [
+            "प्रकाशितवाक्य1413HERV20260228",
+            "प्रकाशितवाक्य1413HIOV20260228",
+            "मत्ती1128-30HERV20260308",
+            "मत्ती1128-30HIOV20260308",
+            "मत्ती1129HERV",
+            "मत्ती1129OV20270601",
+            "मरकुस631HERV20260516",
+            "मरकुस631HIOV20260516"
+          ],
+          "result_ids": [
+            "मरकुस631HERV20260516",
+            "मरकुस631HIOV20260516",
+            "मत्ती1128-30HERV20260308",
+            "मत्ती1128-30HIOV20260308",
+            "प्रेरितोंकेकाम319OV20261112",
+            "प्रकाशितवाक्य1413HIOV20260228",
+            "प्रेरितोंकेकाम319HERV",
+            "प्रकाशितवाक्य1413HERV20260228",
+            "1यूहन्ना318HERV20251210",
+            "इब्रानियों135HERV"
+          ]
+        },
+        {
+          "query_label": "ja/anxiety/single",
+          "language": "ja",
+          "query_text": "思い煩い",
+          "hit": true,
+          "expected_ids": [
+            "1peter5v7LB20251023",
+            "1peter5v7SHK200320251014"
+          ],
+          "result_ids": [
+            "1peter5v7SHK200320251014",
+            "1peter5v7LB20251023",
+            "mark14v38SHK200320270520",
+            "mark14v38LB20261031",
+            "mark7v2023SHK200320251216",
+            "revelation3v16SHK200320251011",
+            "john20v29SHK200320260611",
+            "mark5v36SHK200320260822",
+            "matthew26v41LB20260908",
+            "revelation3v16LB20260218"
+          ]
+        },
+        {
+          "query_label": "ja/anxiety/multi",
+          "language": "ja",
+          "query_text": "とても不安を感じています。\n心配が止まりません。\nいつも怖い気持ちです。",
+          "hit": false,
+          "expected_ids": [
+            "1peter5v7LB20251023",
+            "1peter5v7SHK200320251014"
+          ],
+          "result_ids": [
+            "john5v24SHK200320261217",
+            "mark5v36SHK200320260822",
+            "matthew11v29SHK200320260811",
+            "1john4v18LB20260504",
+            "john14v1LB20250913",
+            "luke12v45LB20260321",
+            "john14v27LB20260619",
+            "1john4v18LB20270207",
+            "john14v1SHK200320251126",
+            "mark14v38LB20261031"
+          ]
+        },
+        {
+          "query_label": "ja/comfort/single",
+          "language": "ja",
+          "query_text": "慰め",
+          "hit": true,
+          "expected_ids": [
+            "2corinthians1v34LB20251001",
+            "2corinthians1v34SHK200320250818",
+            "john14v1617LB20251122",
+            "john14v1617SHK200320260130",
+            "john16v7LB20250901",
+            "john16v7SHK200320260226",
+            "revelation21v4LB20250926",
+            "revelation21v4SHK200320251211",
+            "revelation7v1617LB20260605",
+            "romans15v4LB20270413"
+          ],
+          "result_ids": [
+            "2corinthians1v34LB20251001",
+            "2corinthians1v34SHK200320250818",
+            "revelation21v4SHK200320251211",
+            "1john4v910SHK200320251003",
+            "john14v23LB20260224",
+            "revelation7v910SHK200320261030",
+            "luke15v7LB20260324",
+            "revelation14v13SHK200320251207",
+            "luke15v10LB20251107",
+            "acts2v21LB20260318"
+          ]
+        },
+        {
+          "query_label": "ja/comfort/multi",
+          "language": "ja",
+          "query_text": "とても辛い時期を過ごしています。\n心が壊れているように感じます。\n慰めが必要です。",
+          "hit": true,
+          "expected_ids": [
+            "2corinthians1v34LB20251001",
+            "2corinthians1v34SHK200320250818",
+            "john14v1617LB20251122",
+            "john14v1617SHK200320260130",
+            "john16v7LB20250901",
+            "john16v7SHK200320260226",
+            "revelation21v4LB20250926",
+            "revelation21v4SHK200320251211",
+            "revelation7v1617LB20260605",
+            "romans15v4LB20270413"
+          ],
+          "result_ids": [
+            "matthew8v17LB20261018",
+            "2corinthians1v34SHK200320250818",
+            "mark14v38SHK200320270520",
+            "matthew15v19SHK200320260911",
+            "john16v78SHK200320270313",
+            "2corinthians1v34LB20251001",
+            "matthew11v29SHK200320260811",
+            "1peter5v10SHK200320250929",
+            "revelation21v4SHK200320251211",
+            "revelation21v4LB20250926"
+          ]
+        },
+        {
+          "query_label": "ja/rest/single",
+          "language": "ja",
+          "query_text": "安息",
+          "hit": true,
+          "expected_ids": [
+            "matthew11v2830LB20260621",
+            "matthew11v2830SHK200320260219",
+            "matthew11v29SHK200320260811",
+            "revelation14v13SHK200320251207"
+          ],
+          "result_ids": [
+            "revelation14v13SHK200320251207",
+            "matthew11v2830SHK200320260219",
+            "matthew11v29SHK200320260811",
+            "matthew11v2830LB20260621",
+            "1john4v18LB20260504",
+            "matthew11v29LB20270529",
+            "john14v1LB20250913",
+            "john12v24SHK200320251015",
+            "revelation7v1617SHK200320260211",
+            "john12v24LB20260907"
+          ]
+        },
+        {
+          "query_label": "ja/rest/multi",
+          "language": "ja",
+          "query_text": "とても疲れて燃え尽きています。\n何週間も休みなく働いています。\n本当の休息が必要です。",
+          "hit": true,
+          "expected_ids": [
+            "matthew11v2830LB20260621",
+            "matthew11v2830SHK200320260219",
+            "matthew11v29SHK200320260811",
+            "revelation14v13SHK200320251207"
+          ],
+          "result_ids": [
+            "mark6v31LB20251125",
+            "matthew11v2830LB20260621",
+            "mark6v31SHK200320260215",
+            "john9v4SHK200320260814",
+            "1corinthians3v13LB20270618",
+            "acts17v11LB20270405",
+            "revelation7v1617LB20260605",
+            "matthew11v29SHK200320260811",
+            "1thessalonians5v19LB20260618",
+            "2timothy2v15SHK200320251029"
+          ]
+        },
+        {
+          "query_label": "zh/anxiety/single",
+          "language": "zh",
+          "query_text": "焦虑",
+          "hit": false,
+          "expected_ids": [
+            "彼得前书57CUV191920251023",
+            "腓立比书46CUV191920270318",
+            "腓立比书47CUV191920260902"
+          ],
+          "result_ids": [
+            "希伯来书21CUV191920260918",
+            "philippians4v6CNV20260918",
+            "腓立比书48CUV191920260321",
+            "希伯来书1214CUV191920251110",
+            "philippians4v67CNV20260613",
+            "matthew11v2830CNV20260206",
+            "彼得前书58-9CUV191920250818",
+            "腓立比书16CUV191920260525",
+            "马可福音1124CUV191920261201",
+            "1john4v18CNV20250911"
+          ]
+        },
+        {
+          "query_label": "zh/anxiety/multi",
+          "language": "zh",
+          "query_text": "我感到非常焦虑。\n我无法停止担心。\n我一直感到害怕。",
+          "hit": false,
+          "expected_ids": [
+            "彼得前书57CUV191920251023",
+            "腓立比书46CUV191920270318",
+            "腓立比书47CUV191920260902"
+          ],
+          "result_ids": [
+            "1john4v18CNV20250911",
+            "luke12v45CNV20260203",
+            "希伯来书21CUV191920260918",
+            "以弗所书430CUV191920260124",
+            "1peter3v14CNV20270429",
+            "腓立比书16CUV191920260525",
+            "提摩太后书23-4CUV191920260808",
+            "歌罗西书118CUV191920251220",
+            "哥林多后书51CUV191920270510",
+            "2timothy1v7CNV20260721"
+          ]
+        },
+        {
+          "query_label": "zh/comfort/single",
+          "language": "zh",
+          "query_text": "安慰",
+          "hit": true,
+          "expected_ids": [
+            "2corinthians1v34CNV20260224",
+            "john14v1617CNV20260327",
+            "john14v1CNV20250805",
+            "john16v78CNV20270119",
+            "john16v7CNV20260712",
+            "revelation21v4CNV20260730",
+            "启示录716-17CUV191920251204",
+            "哥林多后书13-4CUV191920251006",
+            "约翰福音1416-17CUV191920260305",
+            "约翰福音1427CUV191920251029",
+            "约翰福音167CUV191920260106"
+          ],
+          "result_ids": [
+            "2corinthians1v34CNV20260224",
+            "路加福音637-38CUV191920251203",
+            "john16v33CNV20250927",
+            "john11v2526CNV20261128",
+            "以弗所书61-3CUV191920250906",
+            "雅各书28CUV191920261128",
+            "mark14v36CNV20260706",
+            "雅各书28CUV191920260506",
+            "john14v23CNV20251119",
+            "希伯来书121CUV191920260604"
+          ]
+        },
+        {
+          "query_label": "zh/comfort/multi",
+          "language": "zh",
+          "query_text": "我正在经历一段非常艰难的时期。\n我感到很破碎。\n我需要安慰。",
+          "hit": false,
+          "expected_ids": [
+            "2corinthians1v34CNV20260224",
+            "john14v1617CNV20260327",
+            "john14v1CNV20250805",
+            "john16v78CNV20270119",
+            "john16v7CNV20260712",
+            "revelation21v4CNV20260730",
+            "启示录716-17CUV191920251204",
+            "哥林多后书13-4CUV191920251006",
+            "约翰福音1416-17CUV191920260305",
+            "约翰福音1427CUV191920251029",
+            "约翰福音167CUV191920260106"
+          ],
+          "result_ids": [
+            "希伯来书121CUV191920260604",
+            "ephesians4v31CNV20250821",
+            "john14v23CNV20251119",
+            "马太福音513CUV191920270427",
+            "使徒行传221CUV191920270512",
+            "马太福音1820CUV191920251205",
+            "约翰福音738-39CUV191920260531",
+            "john16v33CNV20250927",
+            "提多书38CUV191920251226",
+            "2timothy3v15CNV20261223"
+          ]
+        },
+        {
+          "query_label": "zh/rest/single",
+          "language": "zh",
+          "query_text": "安息",
+          "hit": true,
+          "expected_ids": [
+            "matthew11v2830CNV20260206",
+            "matthew11v29CNV20261118",
+            "revelation14v13CNV20260408",
+            "启示录1413CUV191920260228",
+            "马可福音631CUV191920260516",
+            "马太福音1128-30CUV191920260308",
+            "马太福音1129CUV191920270601"
+          ],
+          "result_ids": [
+            "matthew11v2830CNV20260206",
+            "matthew11v29CNV20261118",
+            "revelation14v13CNV20260408",
+            "马可福音1124CUV191920261201",
+            "1john4v18CNV20250911",
+            "以弗所书430CUV191920260124",
+            "使徒行传1631CUV191920261118",
+            "luke2v1011CNV20261201",
+            "matthew8v2627CNV20251102",
+            "彼得前书510CUV191920250821"
+          ]
+        },
+        {
+          "query_label": "zh/rest/multi",
+          "language": "zh",
+          "query_text": "我感到非常疲惫和精疲力竭。\n我已经好几个星期没有休息了。\n我需要真正的休息。",
+          "hit": false,
+          "expected_ids": [
+            "matthew11v2830CNV20260206",
+            "matthew11v29CNV20261118",
+            "revelation14v13CNV20260408",
+            "启示录1413CUV191920260228",
+            "马可福音631CUV191920260516",
+            "马太福音1128-30CUV191920260308",
+            "马太福音1129CUV191920270601"
+          ],
+          "result_ids": [
+            "路加福音1814CUV191920251009",
+            "提多书211-14CUV191920251001",
+            "约翰福音640CUV191920270527",
+            "腓立比书16CUV191920260525",
+            "2timothy2v34CNV20270512",
+            "哥林多后书36CUV191920260826",
+            "mark6v34CNV20270527",
+            "希伯来书412CUV191920270216",
+            "1thessalonians5v2324CNV20260315",
+            "约翰福音155CUV191920250801"
+          ]
+        }
+      ]
+    }
+  }
+}
