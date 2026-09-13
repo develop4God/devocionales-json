@@ -12,14 +12,22 @@ verse ids, for both models, broken down by single-word vs multi-word, so
 the "bge-m3 fixed these languages" conclusion rests on more than 6 data
 points per language.
 
+Reuses ALREADY-COMPUTED passage vectors instead of re-embedding the
+corpus: --small-dir defaults to the committed e5-small baseline
+(editorial/semantic_search/), --bge-m3-dir points at a bge-m3 shard
+directory (embeddings.bin + manifest.json for this language only, as
+produced by build_semantic_embeddings.py --model bge-m3 --languages
+<lang>, e.g. downloaded from the bge-m3-shard-<lang> CI artifact). Only
+the query text gets encoded fresh per model, so this runs in seconds per
+language instead of tens of minutes.
+
 Usage:
-    uv run python3 devocionales_scripts/benchmark_gap_languages_deep_dive.py --language ar
-    uv run python3 devocionales_scripts/benchmark_gap_languages_deep_dive.py --language fil
-    uv run python3 devocionales_scripts/benchmark_gap_languages_deep_dive.py --language ja
-    uv run python3 devocionales_scripts/benchmark_gap_languages_deep_dive.py --language zh
+    uv run python3 devocionales_scripts/benchmark_gap_languages_deep_dive.py \
+        --language ar --bge-m3-dir /path/to/bge-m3-shard-ar
 """
 
 import argparse
+import json
 import sys
 import unicodedata
 from pathlib import Path
@@ -28,14 +36,24 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT / "devocionales_scripts"))
 sys.path.insert(0, str(ROOT / "tests"))
 
-from build_semantic_embeddings import load_entries  # noqa: E402
 from test_semantic_embeddings import TestSemanticRelevance  # noqa: E402
 
 SMALL_MODEL = "intfloat/multilingual-e5-small"
 BGE_M3_MODEL = "BAAI/bge-m3"
+SMALL_DIM = 384
+BGE_M3_DIM = 1024
+
+
+def load_precomputed(vec_dir, dim, language=None):
+    manifest = json.loads((vec_dir / "manifest.json").read_text(encoding="utf-8"))
+    vectors = np.fromfile(vec_dir / "embeddings.bin", dtype="<f4").reshape(len(manifest), dim)
+    if language is not None:
+        mask = [i for i, e in enumerate(manifest) if e["language"] == language]
+        manifest = [manifest[i] for i in mask]
+        vectors = vectors[mask]
+    return manifest, vectors
 
 # Note: ar/fil/ja/zh ground truth topic keys are "anxiety" (not
 # "anxiety_fear" as in es/pt/fr/de/hi) — matched against
@@ -140,12 +158,6 @@ def nfc_set(ids):
     return {unicodedata.normalize("NFC", i) for i in ids}
 
 
-def encode_passages(model, model_key, texts):
-    if model_key == "small":
-        texts = [f"passage: {t}" for t in texts]
-    return model.encode(texts, normalize_embeddings=True, show_progress_bar=True, batch_size=32)
-
-
 def encode_query(model, model_key, text):
     if model_key == "small":
         return model.encode([f"query: {text}"], normalize_embeddings=True)[0]
@@ -170,28 +182,36 @@ def iter_all_queries(language):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--language", required=True, choices=["ar", "fil", "ja", "zh"])
+    parser.add_argument(
+        "--small-dir",
+        default=str(ROOT / "editorial" / "semantic_search"),
+        help="Directory with the committed e5-small embeddings.bin + manifest.json (full corpus; filtered by language)",
+    )
+    parser.add_argument(
+        "--bge-m3-dir",
+        required=True,
+        help="Directory with a bge-m3 shard's embeddings.bin + manifest.json for this language only",
+    )
     args = parser.parse_args()
     language = args.language
 
-    print(f"Loading corpus subset for language={language}...")
-    entries = load_entries(languages={language})
-    texts = [e["text"] for e in entries]
-    manifest = [
-        {"id": e["id"], "language": e["language"], "version": e["version"], "date": e["date"]}
-        for e in entries
-    ]
-    print(f"  {len(entries)} entries")
-
     queries = list(iter_all_queries(language))
-    print(f"  {len(queries)} total query variants ({sum(1 for _,_,_,s in queries if s=='single')} single-word, "
+    print(f"{len(queries)} total query variants ({sum(1 for _,_,_,s in queries if s=='single')} single-word, "
           f"{sum(1 for _,_,_,s in queries if s=='multi')} multi-sentence)")
 
+    vec_sources = {
+        "small": (SMALL_MODEL, Path(args.small_dir), SMALL_DIM, True),
+        "bge-m3": (BGE_M3_MODEL, Path(args.bge_m3_dir), BGE_M3_DIM, False),
+    }
+
     results = {}
-    for model_name, label in ((SMALL_MODEL, "small"), (BGE_M3_MODEL, "bge-m3")):
-        print(f"\nLoading {model_name}...")
+    for label, (model_name, vec_dir, dim, filter_lang) in vec_sources.items():
+        print(f"\nLoading precomputed {label} vectors from {vec_dir}...")
+        manifest, vectors = load_precomputed(vec_dir, dim, language=language if filter_lang else None)
+        print(f"  {len(manifest)} entries, {vectors.shape[1]}-dim")
+
+        print(f"Loading {model_name} (for query encoding only)...")
         model = SentenceTransformer(model_name, device="cpu", trust_remote_code=True)
-        print(f"Embedding {len(entries)} {language} entries with {label}...")
-        vectors = encode_passages(model, label, texts)
 
         rows = []
         for q_label, query_text, expected_ids, style in queries:
