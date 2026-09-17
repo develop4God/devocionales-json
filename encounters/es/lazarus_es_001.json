@@ -54,7 +54,7 @@
       "image_url": "lazarus_martha_encounter.png",
       "title": "Marta sale a su encuentro",
       "subtitle": "El reclamo y la fe en la misma frase",
-      "content": "Marta oye que Jesús se acerca y sale del pueblo a recibirlo, mientras María se queda en casa. Frente a Él, dice lo que lleva días cargando: 'Señor, si hubieses estado aquí, mi hermano no habría muerto.'\n\nEn la misma respiración, añade: 'Mas también sé ahora que todo lo que pidas a Dios, Dios te lo dará.' El dolor y la confianza salen juntos, sin que uno anule al otro.",
+      "content": "Marta oye que Jesús se acerca y sale del pueblo a recibirlo, mientras María se queda en casa. Frente a Él, dice lo que lleva días cargando: 'Señor, si hubieses estado aquí, mi hermano no habría muerto.'\n\nEn la misma respiración, añade: 'Mas también sé ahora que todo lo que pidas a Dios, Dios te lo dará.' El dolor y la confianza salen juntos, uno sostenido por el otro.",
       "verse_overlay": {
         "reference": "Juan 11:21-22",
         "text": "Y Marta dijo a Jesús: Señor, si hubieses estado aquí, mi hermano no habría muerto. Mas también sé ahora que todo lo que pidas a Dios, Dios te lo dará."
@@ -68,7 +68,17 @@
       "image_url": "lazarus_i_am.png",
       "verse_reference": "Juan 11:23-26",
       "verse_text": "Jesús le dijo: Tu hermano resucitará. Marta le dijo: Yo sé que resucitará en la resurrección, en el día postrero. Le dijo Jesús: Yo soy la resurrección y la vida; el que cree en mí, aunque esté muerto, vivirá. Y todo aquel que vive y cree en mí, no morirá eternamente. ¿Crees esto?",
-      "reflection": "Marta guarda su esperanza para el día final, un consuelo real pero distante. Jesús responde presentándose a Sí mismo como esa esperanza: no una doctrina sobre el futuro, sino una Persona de pie frente a ella, ese mismo día.",
+      "reflection": "Marta guarda su esperanza para el día final, un consuelo real pero distante. Jesús responde presentándose a Sí mismo como esa esperanza: no una doctrina sobre el futuro, sino una Persona de pie frente a ella, ese mismo día. Es la misma promesa que Jesús ya había hecho antes (Juan 6:39-40) y que apunta hacia Su propia venida (Juan 14:3).",
+      "scripture_connections": [
+        {
+          "reference": "Juan 6:39-40",
+          "text": "Y esta es la voluntad del Padre, el que me envió: Que de todo lo que me diere, no pierda yo nada, sino que lo resucite en el día postrero. Y esta es la voluntad del que me ha enviado: Que todo aquel que ve al Hijo, y cree en él, tenga vida eterna; y yo le resucitaré en el día postrero."
+        },
+        {
+          "reference": "Juan 14:3",
+          "text": "Y si me fuere y os preparare lugar, vendré otra vez, y os tomaré a mí mismo, para que donde yo estoy, vosotros también estéis."
+        }
+      ],
       "revelation_key": "Marta guardaba la resurrección para el último día; Jesús se presenta como esa misma esperanza, ese mismo día."
     },
     {
@@ -76,8 +86,8 @@
       "type": "theological_depth",
       "mood": "mysterious",
       "image_url": "lazarus_anastasis.png",
-      "title": "ἀνάστασις, (anástasis): levantarse de nuevo",
-      "content": "La palabra griega que Jesús usa para 'resurrección' es ἀνάστασις, (anástasis), formada del verbo 'levantarse, ponerse de pie de nuevo'. Marta la conoce como un evento futuro, reservado para el fin de los tiempos.\n\nJesús toma esa misma palabra, ἀνάστασις, (anástasis), y la convierte en identidad propia: 'Yo soy la resurrección.' El levantarse de los muertos deja de ser un acontecimiento lejano y se vuelve la Persona que Marta tiene enfrente.",
+      "title": "Levantarse de nuevo",
+      "content": "La palabra griega que Jesús usa para 'resurrección' es ἀνάστασις, (anástasis) (G386), formada del verbo 'levantarse, ponerse de pie de nuevo'. Marta la conoce como un evento futuro, reservado para el fin de los tiempos.\n\nJesús toma esa misma palabra, ἀνάστασις, (anástasis), y la convierte en identidad propia: 'Yo soy la resurrección.' El levantarse de los muertos deja de ser un acontecimiento lejano y se vuelve la Persona que Marta tiene enfrente.",
       "verse_overlay": {
         "reference": "Juan 11:25",
         "text": "Le dijo Jesús: Yo soy la resurrección y la vida; el que cree en mí, aunque esté muerto, vivirá."
