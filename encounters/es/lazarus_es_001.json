@@ -27,15 +27,15 @@
       "type": "cinematic_scene",
       "mood": "tense",
       "image_url": "lazarus_urgent_message.png",
-      "title": "Un mensaje urgente",
-      "narrative": "Envían a alguien de confianza con un mensaje breve para Jesús: 'Señor, he aquí el que amas está enfermo.' El mensaje no pide nada más: solo nombra el amor de Jesús por Lázaro.\n\nLas horas pasan. Luego un día completo. Marta mide el tiempo por las sombras que se mueven en la casa, por cada vez que alguien sale a mirar el camino. Su hermano empeora con cada hora.\n\nEl camino frente a la casa permanece vacío.",
+      "title": "Betania, a las afueras de Jerusalén",
+      "narrative": "Betania está a poco menos de tres kilómetros de Jerusalén. Allí viven Marta, su hermana María, y su hermano Lázaro — una familia que Jesús conoce bien y visita con frecuencia.\n\nLázaro cae enfermo. Envían a alguien de confianza con un mensaje breve para Jesús: 'Señor, he aquí el que amas está enfermo.' El mensaje solo nombra el amor de Jesús por Lázaro.\n\nLas horas pasan. Luego un día completo. Marta mide el tiempo por las sombras que se mueven en la casa, por cada vez que alguien sale a mirar el camino. Su hermano empeora con cada hora.\n\nEl camino frente a la casa permanece vacío.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
         "reference": "Juan 11:3",
         "text": "Enviaron, pues, sus hermanas para decirle: Señor, he aquí el que amas está enfermo."
       },
-      "revelation_key": "La fe de Marta descansa en lo que conoce del amor de Jesús, todavía no en lo que Él hará."
+      "revelation_key": "El mensaje de las hermanas apela a lo que Jesús ya siente por Lázaro."
     },
     {
       "order": 2,
