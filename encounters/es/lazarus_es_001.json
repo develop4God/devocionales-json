@@ -142,14 +142,14 @@
       "mood": "tense",
       "image_url": "lazarus_take_away_the_stone.png",
       "title": "Quitad la piedra",
-      "narrative": "Jesús llega a la tumba y da una orden sencilla: 'Quitad la piedra.' Marta responde con la realidad del cuerpo: cuatro días, el olor ya presente.\n\nJesús le recuerda lo que ya le había dicho antes: si cree, verá la gloria de Dios. La piedra se aparta antes de que aparezca ninguna señal visible.",
+      "narrative": "Jesús llega a la tumba y da una orden sencilla: 'Quitad la piedra.' Marta responde con la realidad del cuerpo: cuatro días, el olor ya presente.\n\nJesús le recuerda lo que ya le había dicho antes: si cree, verá la gloria de Dios. La orden se cumple con la fe de Marta todavía por delante de cualquier señal.",
       "ambient_sound": "wind",
       "haptic": null,
       "verse_overlay": {
         "reference": "Juan 11:39-40",
         "text": "Dijo Jesús: Quitad la piedra. Marta, la hermana del que había muerto, le dijo: Señor, hiede ya, porque es de cuatro días. Jesús le dijo: ¿No te he dicho que si crees, verás la gloria de Dios?"
       },
-      "revelation_key": "Jesús pide una fe que antecede a la evidencia, para ver después la gloria de Dios."
+      "revelation_key": "Marta describe lo que huelen sus sentidos; Jesús le pide sostenerse en lo que ya le prometió."
     },
     {
       "order": 10,
