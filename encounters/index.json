@@ -1098,6 +1098,34 @@
         "hi": 12,
         "fil": 10
       }
+    },
+    {
+      "id": "lazarus_001",
+      "version": "1.0",
+      "image_version": "1.0",
+      "emoji": "🕯️",
+      "status": "published",
+      "intro_image": "lazarus_intro.png",
+      "mood_primary": "falling",
+      "accent_color": "#5C4A72",
+      "has_interactive": false,
+      "testament": "new",
+      "character": "Martha and Lazarus",
+      "files": {
+        "es": "lazarus_es_001.json"
+      },
+      "titles": {
+        "es": "Cuatro días de silencio"
+      },
+      "subtitles": {
+        "es": "Cuando Jesús llega justo después de que toda esperanza se ha agotado."
+      },
+      "scripture_reference": {
+        "es": "Juan 11:1-44"
+      },
+      "estimated_reading_minutes": {
+        "es": 10
+      }
     }
   ]
 }

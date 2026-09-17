@@ -28,7 +28,7 @@
       "mood": "tense",
       "image_url": "lazarus_urgent_message.png",
       "title": "Un mensaje urgente",
-      "narrative": "Envían a alguien de confianza con un mensaje breve para Jesús: 'Señor, he aquí el que amas está enfermo.' Marta confía en que la noticia bastará. Jesús ama a Lázaro, así que vendrá pronto.\n\nLas horas pasan. Luego un día completo. Marta mide el tiempo por las sombras que se mueven en la casa, por cada vez que alguien sale a mirar el camino. Su hermano empeora con cada hora.\n\nElla sigue confiando en lo que conoce de Jesús: que ama a Lázaro, que puede sanar con una sola palabra. El camino frente a la casa permanece vacío.",
+      "narrative": "Envían a alguien de confianza con un mensaje breve para Jesús: 'Señor, he aquí el que amas está enfermo.' El mensaje no pide nada más: solo nombra el amor de Jesús por Lázaro.\n\nLas horas pasan. Luego un día completo. Marta mide el tiempo por las sombras que se mueven en la casa, por cada vez que alguien sale a mirar el camino. Su hermano empeora con cada hora.\n\nEl camino frente a la casa permanece vacío.",
       "ambient_sound": "silence",
       "haptic": null,
       "verse_overlay": {
@@ -90,7 +90,7 @@
       "mood": "falling",
       "image_url": "lazarus_mary_weeping.png",
       "title": "María y el llanto de la multitud",
-      "narrative": "María sale también al encuentro de Jesús y se postra a sus pies, repitiendo las mismas palabras de Marta. Los judíos que la acompañaban en el duelo lloran con ella, en voz alta, como marcaba la costumbre.\n\nJesús ve la escena completa: la hermana postrada, el lamento público, el peso de cuatro días de duelo instalado en cada rostro.",
+      "narrative": "María sale también al encuentro de Jesús y se postra a sus pies, repitiendo las mismas palabras de Marta. Los judíos que la acompañaban en el duelo lloran con ella, en voz alta, como marcaba la costumbre.\n\nJesús ve la escena completa: la hermana postrada a sus pies, el lamento público de los que la acompañan.",
       "ambient_sound": "crowd_distant",
       "haptic": null,
       "verse_overlay": {
