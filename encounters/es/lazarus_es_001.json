@@ -1,5 +1,5 @@
 {
-  "id": "lazarus_es_001",
+  "id": "lazarus_001",
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "es",
@@ -13,7 +13,7 @@
     "scripture_reference": "Juan 11:1-44",
     "mood_primary": "falling",
     "accent_color": "#5C4A72",
-    "emoji": "🕯️",
+    "emoji": "🪨",
     "tags": ["resurrección", "fe", "duelo", "lázaro", "juan_11", "esperanza", "vida_eterna"]
   },
   "key_verse": {
