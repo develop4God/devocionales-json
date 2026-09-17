@@ -87,12 +87,12 @@
       "mood": "mysterious",
       "image_url": "lazarus_anastasis.png",
       "title": "Levantarse de nuevo",
-      "content": "La palabra griega que Jesús usa para 'resurrección' es ἀνάστασις, (anástasis) (G386), formada del verbo 'levantarse, ponerse de pie de nuevo'. Marta la conoce como un evento futuro, reservado para el fin de los tiempos.\n\nJesús toma esa misma palabra, ἀνάστασις, (anástasis), y la convierte en identidad propia: 'Yo soy la resurrección.' El levantarse de los muertos deja de ser un acontecimiento lejano y se vuelve la Persona que Marta tiene enfrente.",
+      "content": "La palabra griega que Jesús usa para 'resurrección' es ἀνάστασις, (anástasis) (G386), formada del verbo 'levantarse, ponerse de pie de nuevo'. Marta la conoce como un evento futuro, reservado para el fin de los tiempos.\n\nJesús toma esa misma palabra de resurrección y la convierte en identidad propia: 'Yo soy la resurrección.' El levantarse de los muertos deja de ser un acontecimiento lejano y se vuelve la Persona que Marta tiene enfrente.",
       "verse_overlay": {
         "reference": "Juan 11:25",
         "text": "Le dijo Jesús: Yo soy la resurrección y la vida; el que cree en mí, aunque esté muerto, vivirá."
       },
-      "revelation_key": "El griego ἀνάστασις, (anástasis), deja de ser un evento futuro y se convierte en la Persona frente a Marta."
+      "revelation_key": "La palabra que significa 'levantarse de nuevo' tiene nombre: Jesús."
     },
     {
       "order": 6,
@@ -100,7 +100,7 @@
       "mood": "falling",
       "image_url": "lazarus_mary_weeping.png",
       "title": "María y el llanto de la multitud",
-      "narrative": "María sale también al encuentro de Jesús y se postra a sus pies, repitiendo las mismas palabras de Marta. Los judíos que la acompañaban en el duelo lloran con ella, en voz alta, como marcaba la costumbre.\n\nJesús ve la escena completa: la hermana postrada a sus pies, el lamento público de los que la acompañan.",
+      "narrative": "María sale también al encuentro de Jesús y se postra a sus pies, repitiendo las mismas palabras de su hermana Marta. Los judíos que la acompañaban en el duelo lloran con ella, en voz alta, como marcaba la costumbre.\n\nJesús ve la escena completa: la hermana postrada a sus pies, el lamento público de los que la acompañan.",
       "ambient_sound": "crowd_distant",
       "haptic": null,
       "verse_overlay": {
