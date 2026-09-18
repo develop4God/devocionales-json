@@ -134,7 +134,7 @@
         "reference": "Juan 11:35",
         "text": "Jesús lloró."
       },
-      "revelation_key": "Sentir ese dolor genuino y acompañar a otros en el suyo es lo que estamos llamados a hacer en este mundo distante."
+      "revelation_key": "Sentir ese dolor genuino y acompañar a otros en el suyo es lo que estamos llamados a hacer, como hizo Jesús con María."
     },
     {
       "order": 9,
@@ -172,7 +172,7 @@
       "mood": "grace",
       "image_url": "lazarus_loose_him.png",
       "title": "Desatadle y dejadle ir",
-      "content": "Lázaro sale vivo, pero todavía envuelto en las vendas de la muerte. Jesús entrega la tarea siguiente a quienes están alrededor: 'Desatadle, y dejadle ir.' El milagro llama a Lázaro a salir de la tumba; la comunidad se encarga de soltar lo que aún lo ataba.\n\nPablo escribirá después que el postrer enemigo que será destruido es la muerte (1 Corintios 15:26). Lo que ocurre en Betania es una señal que apunta hacia la propia resurrección de Jesús, donde la muerte quedará vencida para siempre.",
+      "content": "Lázaro sale vivo, pero todavía envuelto en las vendas de la muerte. Jesús entrega la tarea siguiente a quienes están alrededor: 'Desatadle, y dejadle ir.' El milagro llama a Lázaro a salir de la tumba; la comunidad se encarga de soltar lo que aún lo ataba.\n\nJesús pudo haber desatado a Lázaro con la misma palabra que lo levantó de la muerte. En cambio, deja que sean las manos de los presentes las que quiten las vendas — como si quisiera que ellos mismos tocaran la evidencia, no solo la vieran.\n\nEsta señal apunta hacia algo más grande. Lázaro vuelve a la misma vida que ya tenía, y un día volverá a morir. Lo que Jesús hará después, al resucitar, será distinto: una vida nueva, victoriosa sobre la muerte para siempre (1 Co. 15:26).",
       "verse_overlay": {
         "reference": "Juan 11:44",
         "text": "Jesús les dijo: Desatadle, y dejadle ir."
@@ -183,7 +183,7 @@
           "text": "Y el postrer enemigo que será destruido es la muerte."
         }
       ],
-      "revelation_key": "El milagro llama a Lázaro a salir; la comunidad todavía tiene la tarea de desatarlo."
+      "revelation_key": "Jesús elige que otros desaten a Lázaro; cuando Él resucite, saldrá ya libre."
     },
     {
       "order": 12,
@@ -194,7 +194,7 @@
       "discovery_questions": [
         {
           "category": "Espera",
-          "question": "Marta esperó una respuesta inmediata y recibió silencio durante cuatro días. ¿Qué haces hoy con el tiempo en que Dios parece tardar?"
+          "question": "Marta esperó una respuesta inmediata y recibió silencio durante cuatro días. ¿Confías en el tiempo de Dios cuando no coincide con el tuyo?"
         },
         {
           "category": "Fe",
@@ -202,12 +202,12 @@
         },
         {
           "category": "Libertad",
-          "question": "Lázaro salió vivo, pero todavía atado, y otros tuvieron que desatarlo. ¿Qué parte de tu vida ya fue llamada a salir a la vida, pero sigue atada?"
+          "question": "Lázaro salió vivo, pero todavía atado, y otros tuvieron que desatarlo. ¿Qué culpa, hábito, herida o pecado sigue atándote, aunque ya recibiste la vida nueva de Cristo?"
         }
       ],
       "prayer": {
-        "title": "PENDIENTE — a escribir por Giovanni desde lo ya orado",
-        "content": "PENDIENTE — Regla 12.1: Claude no origina el primer borrador de esta oración. Escribe aquí lo que salió de tu oración de este encuentro y lo reviso contra los gates de idioma."
+        "title": "Una oración desde la tumba",
+        "content": "Padre celestial, gracias porque, así como levantaste a Lázaro de la muerte, tú me has cambiado de muerte a vida al aceptarte como mi salvador y creer en tu sacrificio en la cruz. Gracias por ese milagro inmerecido que hoy me hace estar cerca de ti. Señor, así como Lázaro, quiero permanecer vivo y libre del pecado. Ayúdame a llevar esta misma esperanza a otros, en un mundo que tanto necesita de tu amor y de conocerte; ayúdame a honrarte en todas mis acciones. Tú, que levantaste a tu amigo en la tumba de Betania, tienes el poder para cualquiera de mis situaciones — tú tienes el control. En el nombre de Jesús, amén."
       }
     },
     {
@@ -220,7 +220,7 @@
         "text": "Le dijo Jesús: Yo soy la resurrección y la vida; el que cree en mí, aunque esté muerto, vivirá. Y todo aquel que vive y cree en mí, no morirá eternamente. ¿Crees esto?",
         "bible_version": "RVR1960"
       },
-      "reflection_prompt": "El Jesús que se turbó a Sí mismo por Marta y lloró por Lázaro sigue llamando a salir de tumbas hoy. ¿Crees esto?",
+      "reflection_prompt": "El Jesús que se turbó a Sí mismo por Marta y lloró por Lázaro sigue liberando de la muerte hoy. ¿Crees esto?",
       "celebration_type": "gentle_light"
     }
   ]
