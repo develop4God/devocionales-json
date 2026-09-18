@@ -17,6 +17,7 @@ than three small, content-type-specific readers.
 """
 
 import json
+import re
 from collections.abc import Iterator
 from dataclasses import dataclass
 from datetime import date
@@ -25,7 +26,6 @@ from pathlib import Path
 from shared_validation.report import ReportLike
 
 EXPECTED_SCHEMA_VERSION = 1
-EXPECTED_YEARS = {"2025", "2026"}
 
 
 @dataclass(frozen=True)
@@ -96,6 +96,24 @@ class CorpusIndexReader:
         here rather than re-derived by every caller."""
         files_section = self._data.get("files", {})
 
+        expected_years: set = set()
+        for lang, versions in files_section.items():
+            if not isinstance(versions, dict):
+                continue
+            for version, payload in versions.items():
+                if not isinstance(payload, dict):
+                    continue
+                files_map = payload.get("files", {})
+                if not isinstance(files_map, dict):
+                    continue
+                for year in files_map:
+                    if not re.match(r"^\d{4}$", str(year)):
+                        report.E(
+                            f"index.json: files.{lang}.{version}.files: invalid year key {year!r}"
+                        )
+                        continue
+                    expected_years.add(str(year))
+
         for lang, versions in files_section.items():
             if not isinstance(versions, dict):
                 report.E(
@@ -118,12 +136,13 @@ class CorpusIndexReader:
                     continue
 
                 declared_years = set(files_map.keys())
-                missing_years = EXPECTED_YEARS - declared_years
+                missing_years = expected_years - declared_years
                 if missing_years:
                     report.E(
                         f"index.json: files.{lang}.{version} missing year(s) {sorted(missing_years)}"
                     )
-                extra_years = declared_years - EXPECTED_YEARS
+
+                extra_years = declared_years - expected_years
                 if extra_years:
                     report.E(
                         f"index.json: files.{lang}.{version} unexpected year(s) {sorted(extra_years)}"
