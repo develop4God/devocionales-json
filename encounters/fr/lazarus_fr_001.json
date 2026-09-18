@@ -1,0 +1,227 @@
+{
+  "id": "lazarus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fr",
+  "bible_version": "LSG1910",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 11,
+  "meta": {
+    "character": "Marthe et Lazare",
+    "testament": "new",
+    "scripture_reference": "Jean 11:1-44",
+    "mood_primary": "falling",
+    "accent_color": "#5C4A72",
+    "emoji": "🪨",
+    "tags": ["résurrection", "foi", "deuil", "lazare", "jean_11", "espérance", "vie_éternelle"]
+  },
+  "key_verse": {
+    "reference": "Jean 11:25-26",
+    "text": "Jésus lui dit: Je suis la résurrection et la vie. Celui qui croit en moi vivra, quand même il serait mort; et quiconque vit et croit en moi ne mourra jamais. Crois-tu cela?",
+    "bible_version": "LSG1910"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "lazarus_urgent_message.png",
+      "title": "Béthanie, aux portes de Jérusalem",
+      "narrative": "Béthanie se trouve à un peu moins de trois kilomètres de Jérusalem. Là vivent Marthe, sa sœur Marie, et leur frère Lazare — une famille que Jésus connaît bien et visite souvent.\n\nLazare tombe malade. On envoie quelqu'un de confiance porter à Jésus un message bref: 'Seigneur, voici, celui que tu aimes est malade.' Le message ne fait que nommer l'amour de Jésus pour Lazare.\n\nLes heures passent. Puis un jour entier. Marthe mesure le temps aux ombres qui se déplacent dans la maison, à chaque fois que quelqu'un sort scruter le chemin. Son frère s'affaiblit d'heure en heure.\n\nLe chemin devant la maison reste vide.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 11:3",
+        "text": "Les sœurs envoyèrent dire à Jésus: Seigneur, voici, celui que tu aimes est malade."
+      },
+      "revelation_key": "Le message des sœurs en appelle à ce que Jésus ressent déjà pour Lazare."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "lazarus_fourth_day.png",
+      "verse_reference": "Jean 11:17",
+      "verse_text": "Jésus, étant arrivé, trouva que Lazare était déjà depuis quatre jours dans le sépulcre.",
+      "reflection": "Selon la coutume juive du premier siècle, les corps étaient ensevelis le jour même de la mort. Durant les trois premiers jours subsistait l'espoir populaire que l'âme demeurait près du corps. Au quatrième jour, cet espoir était considéré comme perdu.\n\nJésus arrive juste après cette limite, au point précis où tout espoir humain s'était déjà épuisé.",
+      "revelation_key": "Le quatrième jour confirme devant tous qu'il ne reste plus d'espoir humain; Jésus arrive exactement là."
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "lazarus_martha_encounter.png",
+      "title": "Marthe sort à sa rencontre",
+      "subtitle": "Le reproche et la foi dans la même phrase",
+      "content": "Marthe entend que Jésus approche et sort du village pour l'accueillir, tandis que Marie reste à la maison. Devant Lui, elle dit ce qu'elle porte depuis des jours: 'Seigneur, si tu eusses été ici, mon frère ne serait pas mort.'\n\nDans le même souffle, elle ajoute: 'Mais, maintenant même, je sais que tout ce que tu demanderas à Dieu, Dieu te l'accordera.' La douleur et la confiance sortent ensemble, l'une portée par l'autre.",
+      "verse_overlay": {
+        "reference": "Jean 11:21-22",
+        "text": "Marthe dit à Jésus: Seigneur, si tu eusses été ici, mon frère ne serait pas mort. Mais, maintenant même, je sais que tout ce que tu demanderas à Dieu, Dieu te l'accordera."
+      },
+      "revelation_key": "Le reproche de Marthe et sa foi en Jésus sortent dans la même phrase."
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "lazarus_i_am.png",
+      "verse_reference": "Jean 11:23-26",
+      "verse_text": "Jésus lui dit: Ton frère ressuscitera. Je sais, lui répondit Marthe, qu'il ressuscitera à la résurrection, au dernier jour. Jésus lui dit: Je suis la résurrection et la vie. Celui qui croit en moi vivra, quand même il serait mort; et quiconque vit et croit en moi ne mourra jamais. Crois-tu cela?",
+      "reflection": "Marthe garde son espérance pour le jour dernier, une consolation réelle mais lointaine. Jésus répond en se présentant Lui-même comme cette espérance: non une doctrine sur l'avenir, mais une Personne debout devant elle, ce jour même. C'est la même promesse que Jésus avait déjà faite auparavant (Jean 6:39-40) et qui annonce Sa propre venue (Jean 14:3).",
+      "scripture_connections": [
+        {
+          "reference": "Jean 6:39-40",
+          "text": "Or, la volonté de celui qui m'a envoyé, c'est que je ne perde rien de tout ce qu'il m'a donné, mais que je le ressuscite au dernier jour. La volonté de mon Père, c'est que quiconque voit le Fils et croit en lui ait la vie éternelle; et je le ressusciterai au dernier jour."
+        },
+        {
+          "reference": "Jean 14:3",
+          "text": "Et, lorsque je m'en serai allé, et que je vous aurai préparé une place, je reviendrai, et je vous prendrai avec moi, afin que là où je suis vous y soyez aussi."
+        }
+      ],
+      "revelation_key": "Marthe gardait la résurrection pour le dernier jour; Jésus se présente comme cette même espérance, ce jour même."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "lazarus_anastasis.png",
+      "title": "Se relever à nouveau",
+      "content": "Le mot grec que Jésus emploie pour 'résurrection' est ἀνάστασις, (anástasis) (G386), formé du verbe 'se lever, se tenir debout de nouveau'. Marthe le connaît comme un événement futur, réservé pour la fin des temps.\n\nJésus prend ce même mot de résurrection et en fait son identité: 'Je suis la résurrection.' Le relèvement des morts cesse d'être un événement lointain et devient la Personne que Marthe a devant elle.",
+      "verse_overlay": {
+        "reference": "Jean 11:25",
+        "text": "Jésus lui dit: Je suis la résurrection et la vie. Celui qui croit en moi vivra, quand même il serait mort."
+      },
+      "revelation_key": "Le mot qui signifie 'se relever à nouveau' porte un nom: Jésus."
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "lazarus_mary_weeping.png",
+      "title": "Marie et les pleurs de la foule",
+      "narrative": "Marie sort à son tour à la rencontre de Jésus et se jette à ses pieds, répétant les mêmes mots que sa sœur Marthe. Les Juifs qui l'accompagnaient dans le deuil pleurent avec elle, à voix haute, comme le voulait la coutume.\n\nJésus voit toute la scène: la sœur prosternée à ses pieds, la plainte publique de ceux qui l'accompagnent.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 11:32",
+        "text": "Lorsque Marie fut arrivée là où était Jésus, et qu'elle le vit, elle tomba à ses pieds, et lui dit: Seigneur, si tu eusses été ici, mon frère ne serait pas mort."
+      },
+      "revelation_key": "Marthe et Marie croient la même chose: la foi de l'une et de l'autre suffit à guérir avant la mort, et s'arrête juste à la porte du tombeau."
+    },
+    {
+      "order": 7,
+      "type": "theological_depth",
+      "mood": "tense",
+      "image_url": "lazarus_he_troubled_himself.png",
+      "title": "Il se troubla Lui-même",
+      "content": "Le texte grec de Jean 11:33 emploie ταράσσω, (tarássō) (G5015), le même mot qui décrit l'eau agitée, remuée du dedans, avec ἑαυτοῦ, (heautoû) (G1438), qui signifie 'lui-même'. La phrase dit, littéralement, que Jésus se troubla Lui-même.\n\nJésus choisit d'agiter Sa propre âme devant la douleur de Marie et de ceux qui pleuraient avec elle. C'est un acte volontaire d'amour, une décision d'entrer dans cette douleur avant de la résoudre.",
+      "verse_overlay": {
+        "reference": "Jean 11:33",
+        "text": "Jésus, la voyant pleurer, elle et les Juifs qui étaient venus avec elle, frémit en son esprit, et fut tout ému."
+      },
+      "revelation_key": "Jésus agite Sa propre âme par décision personnelle, un acte volontaire d'amour avant d'agir."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "lazarus_jesus_wept.png",
+      "title": "Jésus pleura",
+      "subtitle": "Des larmes silencieuses",
+      "content": "Le verbe qui décrit les pleurs de Jésus en Jean 11:35 est δακρύω, (dakrýō) (G1145), des larmes versées en silence. Il diffère de κλαίω, (klaíō) (G2799), la plainte sonore et publique que le texte emploie pour Marie et ceux qui l'accompagnaient.\n\nJésus vient en sachant que Lazare est parti, et Il a le pouvoir de changer la situation. Il s'arrête pourtant d'abord pour pleurer, en silence, aux côtés de ceux qu'Il aime. C'est une expression d'amour: Il ressent la même douleur, alors même qu'Il a tout le pouvoir de la résoudre.",
+      "verse_overlay": {
+        "reference": "Jean 11:35",
+        "text": "Jésus pleura."
+      },
+      "revelation_key": "Nous sommes appelés à ressentir cette douleur véritable et à accompagner les autres dans la leur, comme Jésus l'a fait avec Marie."
+    },
+    {
+      "order": 9,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "lazarus_take_away_the_stone.png",
+      "title": "Ôtez la pierre",
+      "narrative": "Jésus arrive au tombeau et donne un ordre simple: 'Ôtez la pierre.' Marthe répond avec la réalité du corps: quatre jours, l'odeur déjà présente.\n\nJésus lui rappelle ce qu'Il lui avait déjà dit: si elle croit, elle verra la gloire de Dieu. L'ordre s'accomplit alors que la foi de Marthe précède encore tout signe.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 11:39-40",
+        "text": "Jésus dit: Otez la pierre. Marthe, la sœur du mort, lui dit: Seigneur, il sent déjà, car il y a quatre jours qu'il est là. Jésus lui dit: Ne t'ai-je pas dit que, si tu crois, tu verras la gloire de Dieu?"
+      },
+      "revelation_key": "Marthe décrit ce que ses sens perçoivent; Jésus lui demande de s'appuyer sur ce qu'Il lui a déjà promis."
+    },
+    {
+      "order": 10,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "lazarus_come_forth.png",
+      "title": "Lazare, sors",
+      "narrative": "Jésus lève les yeux et prie en sachant déjà que le Père L'entend toujours. Il prononce cette prière à voix haute pour la foule qui L'entoure, afin qu'elle voie ce qu'Il sait déjà: que le Père L'a envoyé. Puis Il crie d'une voix forte: 'Lazare, sors!'\n\nCelui qui était mort sort, les pieds et les mains liés de bandes, le visage enveloppé d'un linge — σουδάριον, (soudárion) (G4676), le même tissu qui servait à essuyer la sueur du visage et aussi à couvrir le visage des morts. La voix de Jésus atteint le lieu où toute voix humaine s'arrête.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Jean 11:43-44",
+        "text": "Ayant dit cela, il cria d'une voix forte: Lazare, sors! Et le mort sortit, les pieds et les mains liés de bandes, et le visage enveloppé d'un linge."
+      },
+      "revelation_key": "La voix de Jésus parvient là où plus aucune voix humaine n'arrive, et Lazare sort vivant."
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "lazarus_loose_him.png",
+      "title": "Déliez-le et laissez-le aller",
+      "content": "Lazare sort vivant, mais encore enveloppé dans les bandes de la mort. Jésus confie la tâche suivante à ceux qui l'entourent: 'Déliez-le, et laissez-le aller.' Le miracle appelle Lazare à sortir du tombeau; la communauté se charge de défaire ce qui le retenait encore.\n\nJésus aurait pu délier Lazare par la même parole qui l'avait relevé d'entre les morts. Il laisse plutôt les mains des présents ôter les bandes — comme s'Il voulait qu'ils touchent eux-mêmes la preuve, et pas seulement qu'ils la voient.\n\nCe signe pointe vers quelque chose de plus grand. Lazare retourne à la même vie qu'il avait déjà, et un jour il mourra de nouveau. Ce que Jésus fera ensuite, en ressuscitant, sera différent: une vie nouvelle, victorieuse sur la mort pour toujours (1 Co. 15:26).",
+      "verse_overlay": {
+        "reference": "Jean 11:44",
+        "text": "Jésus leur dit: Déliez-le, et laissez-le aller."
+      },
+      "scripture_connections": [
+        {
+          "reference": "1 Corinthiens 15:26",
+          "text": "Le dernier ennemi qui sera détruit, c'est la mort."
+        }
+      ],
+      "revelation_key": "Jésus choisit que d'autres délient Lazare; quand Lui-même ressuscitera, Il sortira déjà libre."
+    },
+    {
+      "order": 12,
+      "type": "discovery_activation",
+      "mood": "peace",
+      "image_url": "lazarus_personal_discovery.png",
+      "title": "Découverte personnelle",
+      "discovery_questions": [
+        {
+          "category": "Attente",
+          "question": "Marthe attendait une réponse immédiate et a reçu le silence pendant quatre jours. Fais-tu confiance au temps de Dieu quand il ne coïncide pas avec le tien?"
+        },
+        {
+          "category": "Foi",
+          "question": "Marthe croyait en une résurrection réservée pour le dernier jour. Crois-tu que Jésus agit aujourd'hui, dans ce qui te semble aujourd'hui impossible?"
+        },
+        {
+          "category": "Liberté",
+          "question": "Lazare est sorti vivant, mais encore lié, et d'autres ont dû le délier. Quelle culpabilité, quelle habitude, quelle blessure ou quel péché continue de te lier, même si tu as déjà reçu la vie nouvelle en Christ?"
+        }
+      ],
+      "prayer": {
+        "title": "Une prière depuis le tombeau",
+        "content": "Père céleste, merci car, tout comme tu as relevé Lazare d'entre les morts, tu m'as fait passer de la mort à la vie en t'acceptant comme mon sauveur et en croyant en ton sacrifice sur la croix. Merci pour ce miracle immérité qui me rapproche aujourd'hui de toi. Seigneur, tout comme Lazare, je veux demeurer vivant et libre du péché. Aide-moi à porter cette même espérance aux autres, dans un monde qui a tant besoin de ton amour et de te connaître; aide-moi à t'honorer dans toutes mes actions. Toi qui as relevé ton ami dans le tombeau de Béthanie, tu as le pouvoir sur chacune de mes situations — tu as le contrôle. Au nom de Jésus, amen."
+      }
+    },
+    {
+      "order": 13,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "lazarus_closing.png",
+      "completion_verse": {
+        "reference": "Jean 11:25-26",
+        "text": "Jésus lui dit: Je suis la résurrection et la vie. Celui qui croit en moi vivra, quand même il serait mort; et quiconque vit et croit en moi ne mourra jamais. Crois-tu cela?",
+        "bible_version": "LSG1910"
+      },
+      "reflection_prompt": "Le Jésus qui se troubla Lui-même pour Marthe et pleura pour Lazare continue à libérer de la mort aujourd'hui. Crois-tu cela?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}
