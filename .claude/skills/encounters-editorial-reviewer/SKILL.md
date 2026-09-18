@@ -35,13 +35,13 @@ before this has happened, Claude says so plainly and waits.
 4. Only then begin card-by-card review
 
 **If this review is happening inside a Claude chat session** (not a subagent with file
-tools), convert the encounter JSON to Markdown first with
-`encounters/encounters_scripts/json_to_md.py encode <file.json>` before reading it —
-raw JSON with deep nesting is harder to read in chat than the flat, field-labeled
-Markdown output. Only ever read/edit the `.json` as the source of truth; the `.md` is a
-disposable reading aid. After any edit to the JSON, re-run
-`json_to_md.py verify <file.json>` to confirm no field was dropped or corrupted, and
-regenerate the `.md` (or discard it) rather than editing the `.md` directly.
+tools), generate the app preview first with
+`encounters/encounters_scripts/app_preview.py <file.json> --no-open` before reading it —
+it renders the encounter as app-accurate HTML with live drift-checking against the Dart
+source, which is far easier to review than raw nested JSON. Always pass `--no-open`
+(the user reviews the HTML in VS Code, not a browser tab). Only ever edit the `.json` as
+the source of truth; the preview is a disposable reading aid. After any edit to the JSON,
+regenerate the preview to confirm the change rendered correctly.
 
 ---
 

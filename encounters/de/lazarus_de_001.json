@@ -1,0 +1,227 @@
+{
+  "id": "lazarus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "de",
+  "bible_version": "LU17",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 12,
+  "meta": {
+    "character": "Marta und Lazarus",
+    "testament": "new",
+    "scripture_reference": "Johannes 11:1-44",
+    "mood_primary": "falling",
+    "accent_color": "#5C4A72",
+    "emoji": "🪨",
+    "tags": ["auferstehung", "glaube", "trauer", "lazarus", "johannes_11", "hoffnung", "ewiges_leben"]
+  },
+  "key_verse": {
+    "reference": "Johannes 11:25-26",
+    "text": "Jesus spricht zu ihr: Ich bin die Auferstehung und das Leben. Wer an mich glaubt, der wird leben, ob er gleich stürbe; und wer da lebt und glaubt an mich, der wird nimmermehr sterben. Glaubst du das?",
+    "bible_version": "LU17"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "lazarus_urgent_message.png",
+      "title": "Bethanien, am Rand von Jerusalem",
+      "narrative": "Bethanien liegt keine drei Kilometer von Jerusalem entfernt. Dort lebt Marta, zusammen mit ihrer Schwester Maria und ihrem Bruder Lazarus — eine Familie, die Jesus gut kennt und oft besucht.\n\nLazarus erkrankt. Sie schicken einen Vertrauten mit einer knappen Botschaft an Jesus: 'Herr, siehe, der, den du lieb hast, liegt krank.' Die Botschaft nennt nur eines — die Liebe, die Jesus für Lazarus bereits trägt.\n\nDie Stunden vergehen. Dann ein ganzer Tag. Marta misst die Zeit an den Schatten, die über das Haus wandern, an jedem Weg, den jemand macht, um nach der Straße zu sehen. Ihrem Bruder geht es mit jeder Stunde schlechter.\n\nDer Weg vor dem Haus bleibt leer.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 11:3",
+        "text": "Da sandten die Schwestern zu Jesus und ließen ihm sagen: Herr, siehe, der, den du lieb hast, liegt krank."
+      },
+      "revelation_key": "Die Botschaft der Schwestern appelliert an das, was Jesus für Lazarus bereits empfindet."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "lazarus_fourth_day.png",
+      "verse_reference": "Johannes 11:17",
+      "verse_text": "Da kam Jesus und fand Lazarus schon vier Tage im Grabe liegen.",
+      "reflection": "Nach jüdischer Sitte des ersten Jahrhunderts wurden die Toten noch am Todestag begraben. In den ersten drei Tagen hielt die volkstümliche Hoffnung fest, die Seele bleibe noch in der Nähe des Leibes. Am vierten Tag galt diese Hoffnung als erloschen.\n\nJesus kommt genau an diesem Punkt an, dort, wo jede menschliche Hoffnung bereits zu Ende ist.",
+      "revelation_key": "Der vierte Tag bestätigt allen, dass keine menschliche Hoffnung mehr bleibt; genau an diesem Punkt kommt Jesus an."
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "lazarus_martha_encounter.png",
+      "title": "Marta geht ihm entgegen",
+      "subtitle": "Die Klage und der Glaube im selben Atemzug",
+      "content": "Marta hört, dass Jesus kommt, und verlässt das Dorf, um ihm entgegenzugehen, während Maria im Haus zurückbleibt. Vor ihm stehend, sagt sie, was sie seit Tagen mit sich trägt: 'Herr, wärst du hier gewesen, mein Bruder wäre nicht gestorben.'\n\nIm selben Atemzug fügt sie hinzu: 'Aber auch jetzt weiß ich: Was du bittest von Gott, das wird dir Gott geben.' Trauer und Vertrauen kommen zusammen hervor, eines trägt das andere.",
+      "verse_overlay": {
+        "reference": "Johannes 11:21-22",
+        "text": "Da sprach Marta zu Jesus: Herr, wärst du hier gewesen, mein Bruder wäre nicht gestorben. Aber auch jetzt weiß ich: Was du bittest von Gott, das wird dir Gott geben."
+      },
+      "revelation_key": "Martas Klage und ihr Glaube an Jesus kommen im selben Satz zum Ausdruck."
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "lazarus_i_am.png",
+      "verse_reference": "Johannes 11:23-26",
+      "verse_text": "Jesus spricht zu ihr: Dein Bruder wird auferstehen. Marta spricht zu ihm: Ich weiß, dass er auferstehen wird bei der Auferstehung am Jüngsten Tage. Jesus spricht zu ihr: Ich bin die Auferstehung und das Leben. Wer an mich glaubt, der wird leben, ob er gleich stürbe; und wer da lebt und glaubt an mich, der wird nimmermehr sterben. Glaubst du das?",
+      "reflection": "Marta hält ihre Hoffnung für den Jüngsten Tag bereit — ein echter Trost, aber ein ferner. Jesus antwortet, indem er sich selbst als eben diese Hoffnung vorstellt: keine Lehre über die Zukunft, sondern eine Person, die noch am selben Tag vor ihr steht. Es ist dieselbe Verheißung, die Jesus schon zuvor gegeben hatte (Johannes 6:39-40), und sie weist auf sein eigenes Wiederkommen hin (Johannes 14:3).",
+      "scripture_connections": [
+        {
+          "reference": "Johannes 6:39-40",
+          "text": "Das ist aber der Wille dessen, der mich gesandt hat, dass ich nichts verliere von allem, was er mir gegeben hat, sondern dass ich's auferwecke am Jüngsten Tage. Denn das ist der Wille meines Vaters, dass, wer den Sohn sieht und glaubt an ihn, das ewige Leben habe; und ich werde ihn auferwecken am Jüngsten Tage."
+        },
+        {
+          "reference": "Johannes 14:3",
+          "text": "Und wenn ich hingehe, euch die Stätte zu bereiten, will ich wiederkommen und euch zu mir nehmen, auf dass auch ihr seid, wo ich bin."
+        }
+      ],
+      "revelation_key": "Marta hielt die Auferstehung für den Jüngsten Tag bereit; Jesus stellt sich selbst als eben diese Hoffnung vor, an diesem selben Tag."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "lazarus_anastasis.png",
+      "title": "Wieder auferstehen",
+      "content": "Das griechische Wort, das Jesus für 'Auferstehung' verwendet, ist ἀνάστασις, (anástasis) (G386), gebildet aus dem Verb 'sich erheben, wieder aufstehen.' Marta kennt es als ein zukünftiges Ereignis, das dem Ende der Zeit vorbehalten ist.\n\nJesus nimmt dieses Wort für Auferstehung und macht es zu seiner eigenen Identität: 'Ich bin die Auferstehung.' Das Auferstehen von den Toten hört auf, ein fernes Geschehen zu sein, und wird zu der Person, die vor Marta steht.",
+      "verse_overlay": {
+        "reference": "Johannes 11:25",
+        "text": "Jesus spricht zu ihr: Ich bin die Auferstehung und das Leben. Wer an mich glaubt, der wird leben, ob er gleich stürbe."
+      },
+      "revelation_key": "Das Wort, das 'wieder auferstehen' bedeutet, trägt einen Namen: Jesus."
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "lazarus_mary_weeping.png",
+      "title": "Maria und die weinende Menge",
+      "narrative": "Auch Maria geht Jesus entgegen und fällt ihm zu Füßen, wobei sie die Worte ihrer Schwester Marta wiederholt. Die Juden, die mit ihr trauern, weinen laut, wie es der Brauch verlangte.\n\nJesus nimmt die ganze Szene wahr: die Schwester, die ihm zu Füßen liegt, die öffentliche Klage derer, die mit ihr gekommen sind.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 11:32",
+        "text": "Als nun Maria dahin kam, wo Jesus war, und sah ihn, fiel sie ihm zu Füßen und sprach zu ihm: Herr, wärst du hier gewesen, mein Bruder wäre nicht gestorben."
+      },
+      "revelation_key": "Marta und Maria glauben beide dasselbe: Jesus hätte Lazarus vor seinem Tod heilen können — doch keine erwartete, dass der Glaube über das Grab hinausreicht."
+    },
+    {
+      "order": 7,
+      "type": "theological_depth",
+      "mood": "tense",
+      "image_url": "lazarus_he_troubled_himself.png",
+      "title": "Er erbebte in sich selbst",
+      "content": "Der griechische Text von Johannes 11:33 verwendet ταράσσω, (tarássō) (G5015), dasselbe Wort, das für aufgewühltes Wasser gebraucht wird, von innen heraus in Bewegung gebracht, zusammen mit ἑαυτοῦ, (heautoû) (G1438), das 'sich selbst' bedeutet. Der ganze Ausdruck sagt wörtlich, dass Jesus sich selbst innerlich aufwühlte.\n\nJesus entscheidet sich, seine eigene Seele angesichts von Marias Trauer und dem Weinen derer, die mit ihr sind, aufzuwühlen. Es ist eine freiwillige Tat der Liebe, eine Entscheidung, in diese Trauer einzutreten, bevor er sie löst.",
+      "verse_overlay": {
+        "reference": "Johannes 11:33",
+        "text": "Als Jesus sah, wie sie weinte und wie auch die Juden weinten, die mit ihr kamen, ergrimmte er im Geist und erbebte"
+      },
+      "revelation_key": "Jesus wühlt seine eigene Seele auf aus freiem Willen, eine freiwillige Tat der Liebe, bevor er handelt."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "lazarus_jesus_wept.png",
+      "title": "Jesus weinte",
+      "subtitle": "Stille Tränen",
+      "content": "Das Verb, das Jesu Weinen in Johannes 11:35 beschreibt, ist δακρύω, (dakrýō) (G1145), Tränen, die still vergossen werden. Es unterscheidet sich von κλαίω, (klaíō) (G2799), der lauten, öffentlichen Trauer, die der Text für Maria und die mit ihr Gekommenen verwendet.\n\nJesus kommt bereits wissend, dass Lazarus gestorben ist, und hat die Macht, die Lage zu ändern. Dennoch hält er zunächst inne, um still zu weinen, an der Seite derer, die er liebt. Es ist ein Ausdruck der Liebe: Er wird innerlich von derselben Trauer bewegt, während er zugleich die ganze Macht besitzt, sie aufzulösen.",
+      "verse_overlay": {
+        "reference": "Johannes 11:35",
+        "text": "Und Jesus gingen die Augen über."
+      },
+      "revelation_key": "Echte Trauer zu empfinden und mit anderen durch ihre Trauer zu gehen, ist, wozu wir berufen sind, so wie Jesus es mit Maria tat."
+    },
+    {
+      "order": 9,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "lazarus_take_away_the_stone.png",
+      "title": "Nehmt den Stein weg",
+      "narrative": "Jesus kommt zum Grab und gibt einen schlichten Befehl: 'Hebt den Stein weg!' Marta antwortet mit der Wirklichkeit des Leibes: vier Tage, der Geruch bereits vorhanden.\n\nJesus erinnert sie an das, was er ihr schon gesagt hatte: Wenn sie glaubt, wird sie die Herrlichkeit Gottes sehen. Der Befehl wird ausgeführt, während Martas Glaube noch jedem Zeichen vorausgeht.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 11:39-40",
+        "text": "Jesus spricht: Hebt den Stein weg! Spricht zu ihm Marta, die Schwester des Verstorbenen: Herr, er stinkt schon; denn er liegt seit vier Tagen. Jesus spricht zu ihr: Habe ich dir nicht gesagt: Wenn du glaubst, wirst du die Herrlichkeit Gottes sehen?"
+      },
+      "revelation_key": "Marta beschreibt, was ihre Sinne ihr sagen; Jesus bittet sie, auf das zu vertrauen, was er ihr bereits verheißen hat."
+    },
+    {
+      "order": 10,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "lazarus_come_forth.png",
+      "title": "Lazarus, komm heraus",
+      "narrative": "Jesus erhebt seine Augen und betet, bereits wissend, dass der Vater ihn stets erhört. Er spricht dieses Gebet laut aus, für die Menge um ihn herum, damit sie sehen, was er bereits weiß: dass der Vater ihn gesandt hat. Dann ruft er mit lauter Stimme: 'Lazarus, komm heraus!'\n\nDer, der gestorben war, kommt heraus, Hände und Füße mit Grabtüchern gebunden, sein Gesicht in ein Tuch gehüllt — σουδάριον, (soudárion) (G4676), dasselbe Tuch, das man benutzte, um Schweiß von einem Gesicht zu wischen, und ebenso, um die Gesichter der Toten zu bedecken. Die Stimme Jesu erreicht den Ort, an dem jede menschliche Stimme verstummt.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Johannes 11:43-44",
+        "text": "Als er das gesagt hatte, rief er mit lauter Stimme: Lazarus, komm heraus! Und der Verstorbene kam heraus, gebunden mit Grabtüchern an Füßen und Händen, und sein Gesicht war verhüllt mit einem Schweißtuch. Jesus spricht zu ihnen: Löst die Binden und lasst ihn gehen!"
+      },
+      "revelation_key": "Die Stimme Jesu erreicht, wohin keine menschliche Stimme reicht, und Lazarus kommt lebendig heraus."
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "lazarus_loose_him.png",
+      "title": "Löst ihn und lasst ihn gehen",
+      "content": "Lazarus kommt lebendig heraus, aber noch immer in die Grabtücher des Todes gehüllt. Jesus überträgt die nächste Aufgabe denen, die dort stehen: 'Löst die Binden und lasst ihn gehen!' Das Wunder ruft Lazarus aus dem Grab heraus; die Gemeinschaft übernimmt die Aufgabe, ihn von dem zu befreien, was ihn noch bindet.\n\nJesus hätte Lazarus mit demselben Wort lösen können, das ihn vom Tod auferweckte. Stattdessen lässt er die Hände der Anwesenden die Umwicklungen entfernen — als wollte er, dass sie den Beweis selbst berührten, nicht nur sähen.\n\nDieses Zeichen weist auf etwas Größeres hin. Lazarus kehrt in dasselbe Leben zurück, das er schon hatte, und eines Tages wird er wieder sterben. Was Jesus danach tun wird, in seiner eigenen Auferstehung, wird anders sein: ein neues Leben, für immer über den Tod siegreich (1. Korinther 15:26).",
+      "verse_overlay": {
+        "reference": "Johannes 11:44",
+        "text": "Und der Verstorbene kam heraus, gebunden mit Grabtüchern an Füßen und Händen, und sein Gesicht war verhüllt mit einem Schweißtuch. Jesus spricht zu ihnen: Löst die Binden und lasst ihn gehen!"
+      },
+      "scripture_connections": [
+        {
+          "reference": "1. Korinther 15:26",
+          "text": "Der letzte Feind, der vernichtet wird, ist der Tod."
+        }
+      ],
+      "revelation_key": "Jesus entscheidet sich, andere Lazarus lösen zu lassen; wenn er selbst aufersteht, wird er bereits frei hervorkommen."
+    },
+    {
+      "order": 12,
+      "type": "discovery_activation",
+      "mood": "peace",
+      "image_url": "lazarus_personal_discovery.png",
+      "title": "Persönliche Entdeckung",
+      "discovery_questions": [
+        {
+          "category": "Warten",
+          "question": "Marta wartete auf eine sofortige Antwort und erhielt stattdessen vier Tage Schweigen. Vertraust du auf Gottes Timing, auch wenn es nicht mit deinem eigenen übereinstimmt?"
+        },
+        {
+          "category": "Glaube",
+          "question": "Marta glaubte an eine Auferstehung, aufgehoben für den Jüngsten Tag. Vertraust du darauf, dass Jesus heute handelt, gerade dort, wo heute alles unmöglich erscheint?"
+        },
+        {
+          "category": "Freiheit",
+          "question": "Lazarus kam lebendig heraus, aber noch immer gebunden, und andere mussten ihn lösen. Welche Schuld, welche Gewohnheit, welche Wunde oder Sünde bindet dich noch, obwohl du Christi neues Leben bereits empfangen hast?"
+        }
+      ],
+      "prayer": {
+        "title": "Ein Gebet aus dem Grab",
+        "content": "Himmlischer Vater, danke, dass du mich, so wie du Lazarus vom Tod auferweckt hast, vom Tod zum Leben gebracht hast, seit ich dich als meinen Retter angenommen und an dein Opfer am Kreuz geglaubt habe. Danke für dieses unverdiente Wunder, das mich bis heute nah bei dir hält. Herr, wie Lazarus möchte ich lebendig und frei von Sünde bleiben. Hilf mir, dieselbe Hoffnung zu anderen zu tragen, in einer Welt, die deine Liebe braucht und dich kennenlernen muss; hilf mir, dich in allem zu ehren, was ich tue. Du, der du deinen Freund aus dem Grab in Bethanien auferweckt hast, hast die Macht über alles, was ich gerade durchlebe — du hältst alles in deiner Hand. In Jesu Namen, Amen."
+      }
+    },
+    {
+      "order": 13,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "lazarus_closing.png",
+      "completion_verse": {
+        "reference": "Johannes 11:25-26",
+        "text": "Jesus spricht zu ihr: Ich bin die Auferstehung und das Leben. Wer an mich glaubt, der wird leben, ob er gleich stürbe; und wer da lebt und glaubt an mich, der wird nimmermehr sterben. Glaubst du das?",
+        "bible_version": "LU17"
+      },
+      "reflection_prompt": "Der Jesus, der sich für Marta aufwühlen ließ und um Lazarus weinte, befreit auch heute noch Menschen vom Tod. Glaubst du das?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

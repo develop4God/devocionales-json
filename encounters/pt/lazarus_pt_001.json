@@ -1,0 +1,227 @@
+{
+  "id": "lazarus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "pt",
+  "bible_version": "ARC",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 11,
+  "meta": {
+    "character": "Marta e Lázaro",
+    "testament": "new",
+    "scripture_reference": "João 11:1-44",
+    "mood_primary": "falling",
+    "accent_color": "#5C4A72",
+    "emoji": "🪨",
+    "tags": ["ressurreição", "fé", "luto", "lázaro", "joão_11", "esperança", "vida_eterna"]
+  },
+  "key_verse": {
+    "reference": "João 11:25-26",
+    "text": "Disse-lhe Jesus: Eu sou a ressurreição e a vida; quem crê em mim, ainda que esteja morto, viverá; e todo aquele que vive e crê em mim nunca morrerá. Crês tu isso?",
+    "bible_version": "ARC"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "lazarus_urgent_message.png",
+      "title": "Betânia, nos arredores de Jerusalém",
+      "narrative": "Betânia fica a pouco menos de três quilômetros de Jerusalém. Ali vivem Marta, sua irmã Maria, e seu irmão Lázaro — uma família que Jesus conhece bem e visita com frequência.\n\nLázaro adoece. Mandam alguém de confiança com uma mensagem breve para Jesus: 'Senhor, eis que está enfermo aquele que tu amas.' A mensagem só menciona o amor de Jesus por Lázaro.\n\nAs horas passam. Depois, um dia inteiro. Marta mede o tempo pelas sombras que se movem na casa, por cada vez que alguém sai para olhar o caminho. Seu irmão piora a cada hora.\n\nO caminho diante da casa permanece vazio.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "João 11:3",
+        "text": "Mandaram-lhe, pois, suas irmãs dizer: Senhor, eis que está enfermo aquele que tu amas."
+      },
+      "revelation_key": "A mensagem das irmãs apela para aquilo que Jesus já sente por Lázaro."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "lazarus_fourth_day.png",
+      "verse_reference": "João 11:17",
+      "verse_text": "Chegando, pois, Jesus, achou que já havia quatro dias que estava na sepultura.",
+      "reflection": "No costume judaico do primeiro século, os corpos eram sepultados no mesmo dia da morte. Durante os três primeiros dias existia a esperança popular de que a alma permanecia perto do corpo. No quarto dia, essa esperança já se dava por perdida.\n\nJesus chega exatamente depois desse limite, no ponto em que toda esperança humana já havia se esgotado.",
+      "revelation_key": "O quarto dia confirma diante de todos que não resta mais esperança humana; Jesus chega exatamente ali."
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "lazarus_martha_encounter.png",
+      "title": "Marta sai ao seu encontro",
+      "subtitle": "O lamento e a fé na mesma frase",
+      "content": "Marta ouve que Jesus se aproxima e sai da cidade para recebê-lo, enquanto Maria fica em casa. Diante dele, diz o que carrega há dias: 'Senhor, se tu estivesses aqui, meu irmão não teria morrido.'\n\nNa mesma respiração, acrescenta: 'Mas também, agora, sei que tudo quanto pedires a Deus, Deus to concederá.' A dor e a confiança saem juntas, uma sustentada pela outra.",
+      "verse_overlay": {
+        "reference": "João 11:21-22",
+        "text": "Disse, pois, Marta a Jesus: Senhor, se tu estivesses aqui, meu irmão não teria morrido. Mas também, agora, sei que tudo quanto pedires a Deus, Deus to concederá."
+      },
+      "revelation_key": "O lamento de Marta e sua fé em Jesus saem na mesma frase."
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "lazarus_i_am.png",
+      "verse_reference": "João 11:23-26",
+      "verse_text": "Disse-lhe Jesus: Teu irmão há de ressuscitar. Disse-lhe Marta: Eu sei que há de ressuscitar na ressurreição do último Dia. Disse-lhe Jesus: Eu sou a ressurreição e a vida; quem crê em mim, ainda que esteja morto, viverá; e todo aquele que vive e crê em mim nunca morrerá. Crês tu isso?",
+      "reflection": "Marta guarda sua esperança para o último dia, um consolo real, mas distante. Jesus responde apresentando-se a si mesmo como essa esperança: não uma doutrina sobre o futuro, mas uma Pessoa de pé diante dela, naquele mesmo dia. É a mesma promessa que Jesus já havia feito antes (João 6:39-40) e que aponta para a Sua própria vinda (João 14:3).",
+      "scripture_connections": [
+        {
+          "reference": "João 6:39-40",
+          "text": "E a vontade do Pai, que me enviou, é esta: que nenhum de todos aqueles que me deu se perca, mas que o ressuscite no último Dia. Porquanto a vontade daquele que me enviou é esta: que todo aquele que vê o Filho e crê nele tenha a vida eterna; e eu o ressuscitarei no último Dia."
+        },
+        {
+          "reference": "João 14:3",
+          "text": "E, se eu for e vos preparar lugar, virei outra vez e vos levarei para mim mesmo, para que, onde eu estiver, estejais vós também."
+        }
+      ],
+      "revelation_key": "Marta guardava a ressurreição para o último dia; Jesus se apresenta como essa mesma esperança, naquele mesmo dia."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "lazarus_anastasis.png",
+      "title": "Levantar-se de novo",
+      "content": "A palavra grega que Jesus usa para 'ressurreição' é ἀνάστασις, (anástasis) (G386), formada a partir do verbo 'levantar-se, pôr-se de pé de novo'. Marta a conhece como um evento futuro, reservado para o fim dos tempos.\n\nJesus toma essa mesma palavra de ressurreição e a transforma em identidade própria: 'Eu sou a ressurreição.' O levantar-se dos mortos deixa de ser um acontecimento distante e passa a ser a Pessoa que Marta tem diante de si.",
+      "verse_overlay": {
+        "reference": "João 11:25",
+        "text": "Disse-lhe Jesus: Eu sou a ressurreição e a vida; quem crê em mim, ainda que esteja morto, viverá;"
+      },
+      "revelation_key": "A palavra que significa 'levantar-se de novo' tem nome: Jesus."
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "lazarus_mary_weeping.png",
+      "title": "Maria e o pranto da multidão",
+      "narrative": "Maria também sai ao encontro de Jesus e se prostra aos seus pés, repetindo as mesmas palavras de sua irmã Marta. Os judeus que a acompanhavam no luto choram com ela, em voz alta, como determinava o costume.\n\nJesus vê a cena inteira: a irmã prostrada a seus pés, o lamento público dos que a acompanham.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "João 11:32",
+        "text": "Tendo, pois, Maria chegado aonde Jesus estava e vendo-o, lançou-se aos seus pés, dizendo-lhe: Senhor, se tu estivesses aqui, meu irmão não teria morrido."
+      },
+      "revelation_key": "Marta e Maria creem na mesma coisa: a fé de ambas se estende tanto à cura antes da morte quanto à porta do túmulo."
+    },
+    {
+      "order": 7,
+      "type": "theological_depth",
+      "mood": "tense",
+      "image_url": "lazarus_he_troubled_himself.png",
+      "title": "Ele se perturbou a si mesmo",
+      "content": "O texto grego de João 11:33 usa ταράσσω, (tarássō) (G5015), a mesma palavra que descreve a água agitada, revolta por dentro, junto com ἑαυτοῦ, (heautoû) (G1438), que significa 'a si mesmo'. A frase completa diz, literalmente, que Jesus se perturbou a si mesmo.\n\nJesus escolhe agitar Sua própria alma diante da dor de Maria e dos que choravam com ela. É um ato voluntário de amor, uma decisão de entrar nessa dor antes de resolvê-la.",
+      "verse_overlay": {
+        "reference": "João 11:33",
+        "text": "Jesus, pois, quando a viu chorar e também chorando os judeus que com ela vinham, moveu-se muito em espírito e perturbou-se."
+      },
+      "revelation_key": "Jesus agita Sua própria alma por decisão própria, um ato voluntário de amor antes de agir."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "lazarus_jesus_wept.png",
+      "title": "Jesus chorou",
+      "subtitle": "Lágrimas silenciosas",
+      "content": "O verbo que descreve o choro de Jesus em João 11:35 é δακρύω, (dakrýō) (G1145), lágrimas derramadas em silêncio. É diferente de κλαίω, (klaíō) (G2799), o lamento sonoro e público que o texto usa para Maria e os que a acompanhavam.\n\nJesus chega sabendo que Lázaro já partiu, e tem o poder para mudar a situação. Ainda assim, Ele para primeiro, para chorar em silêncio, junto de quem ama. É uma expressão de amor: se agita por dentro com a mesma dor, mesmo tendo todo o poder para resolvê-la.",
+      "verse_overlay": {
+        "reference": "João 11:35",
+        "text": "Jesus chorou."
+      },
+      "revelation_key": "Sentir essa dor genuína e acompanhar outros na sua é o que somos chamados a fazer, como Jesus fez com Maria."
+    },
+    {
+      "order": 9,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "lazarus_take_away_the_stone.png",
+      "title": "Tirai a pedra",
+      "narrative": "Jesus chega ao túmulo e dá uma ordem simples: 'Tirai a pedra.' Marta responde com a realidade do corpo: quatro dias, o cheiro já presente.\n\nJesus lhe lembra o que já havia dito antes: se crê, verá a glória de Deus. A ordem se cumpre com a fé de Marta ainda à frente de qualquer sinal.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "João 11:39-40",
+        "text": "Disse Jesus: Tirai a pedra. Marta, irmã do defunto, disse-lhe: Senhor, já cheira mal, porque é já de quatro dias. Disse-lhe Jesus: Não te hei dito que, se creres, verás a glória de Deus?"
+      },
+      "revelation_key": "Marta descreve o que seus sentidos percebem; Jesus lhe pede que se firme no que já lhe havia prometido."
+    },
+    {
+      "order": 10,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "lazarus_come_forth.png",
+      "title": "Lázaro, vem para fora",
+      "narrative": "Jesus levanta os olhos e ora já sabendo que o Pai sempre o ouve. Faz essa oração em voz alta por causa da multidão que o rodeia, para que eles vejam o que Ele já sabe: que o Pai o enviou. Depois clama em alta voz: 'Lázaro, vem para fora!'\n\nAquele que havia morrido sai, com as mãos e os pés ligados com faixas, o rosto coberto por um lenço — σουδάριον, (soudárion) (G4676), o mesmo pano usado para secar o suor do rosto e também para cobrir o rosto dos mortos. A voz de Jesus alcança o lugar onde toda voz humana se detém.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "João 11:43-44",
+        "text": "E, tendo dito isso, clamou com grande voz: Lázaro, vem para fora. E o defunto saiu, tendo as mãos e os pés ligados com faixas, e o seu rosto, envolto num lenço. Disse-lhes Jesus: Desligai-o e deixai-o ir."
+      },
+      "revelation_key": "A voz de Jesus chega até onde já não chega nenhuma voz humana, e Lázaro sai vivo."
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "lazarus_loose_him.png",
+      "title": "Desligai-o e deixai-o ir",
+      "content": "Lázaro sai vivo, mas ainda envolto nas faixas da morte. Jesus entrega a tarefa seguinte aos que estão ao redor: 'Desligai-o e deixai-o ir.' O milagre chama Lázaro para fora do túmulo; a comunidade se encarrega de soltar o que ainda o prendia.\n\nJesus poderia ter desligado Lázaro com a mesma palavra que o levantou da morte. Em vez disso, deixa que sejam as mãos dos presentes a tirar as faixas — como se quisesse que eles mesmos tocassem a evidência, não apenas a vissem.\n\nEsse sinal aponta para algo maior. Lázaro volta à mesma vida que já tinha, e um dia voltará a morrer. O que Jesus fará depois, ao ressuscitar, será diferente: uma vida nova, vitoriosa sobre a morte para sempre (1 Co 15:26).",
+      "verse_overlay": {
+        "reference": "João 11:44",
+        "text": "E o defunto saiu, tendo as mãos e os pés ligados com faixas, e o seu rosto, envolto num lenço. Disse-lhes Jesus: Desligai-o e deixai-o ir."
+      },
+      "scripture_connections": [
+        {
+          "reference": "1 Coríntios 15:26",
+          "text": "Ora, o último inimigo que há de ser aniquilado é a morte."
+        }
+      ],
+      "revelation_key": "Jesus escolhe que outros desliguem Lázaro; quando Ele ressuscitar, sairá já livre."
+    },
+    {
+      "order": 12,
+      "type": "discovery_activation",
+      "mood": "peace",
+      "image_url": "lazarus_personal_discovery.png",
+      "title": "Descoberta pessoal",
+      "discovery_questions": [
+        {
+          "category": "Espera",
+          "question": "Marta esperou uma resposta imediata e recebeu silêncio por quatro dias. Você confia no tempo de Deus quando ele não coincide com o seu?"
+        },
+        {
+          "category": "Fé",
+          "question": "Marta acreditava em uma ressurreição guardada para o último dia. Você confia que Jesus age hoje, naquilo que hoje parece impossível?"
+        },
+        {
+          "category": "Liberdade",
+          "question": "Lázaro saiu vivo, mas ainda amarrado, e outros precisaram desamarrá-lo. Que culpa, hábito, ferida ou pecado ainda prende você, mesmo que você já tenha recebido a vida nova de Cristo?"
+        }
+      ],
+      "prayer": {
+        "title": "Uma oração desde o túmulo",
+        "content": "Pai celestial, obrigado porque, assim como levantaste Lázaro da morte, tu me mudaste de morte para vida ao te aceitar como meu salvador e crer no teu sacrifício na cruz. Obrigado por esse milagre imerecido que hoje me faz estar perto de ti. Senhor, assim como Lázaro, quero permanecer vivo e livre do pecado. Ajuda-me a levar essa mesma esperança a outros, em um mundo que tanto precisa do teu amor e de te conhecer; ajuda-me a te honrar em todas as minhas ações. Tu, que levantaste teu amigo no túmulo de Betânia, tens o poder para qualquer uma das minhas situações — tu tens o controle. Em nome de Jesus, amém."
+      }
+    },
+    {
+      "order": 13,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "lazarus_closing.png",
+      "completion_verse": {
+        "reference": "João 11:25-26",
+        "text": "Disse-lhe Jesus: Eu sou a ressurreição e a vida; quem crê em mim, ainda que esteja morto, viverá; e todo aquele que vive e crê em mim nunca morrerá. Crês tu isso?",
+        "bible_version": "ARC"
+      },
+      "reflection_prompt": "O Jesus que se perturbou a si mesmo por Marta e chorou por Lázaro continua libertando da morte hoje. Você crê isso?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

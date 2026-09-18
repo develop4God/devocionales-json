@@ -169,23 +169,26 @@ class ImageFormatValidator:
 
     CHECKERS: ClassVar[dict] = {"png": _is_png, "avif": _is_avif}
 
-    def validate(self, reference: ImageReference) -> tuple:
+    def validate(
+        self,
+        reference: ImageReference,
+        attempts: int = RETRY_ATTEMPTS,
+        backoff_seconds: int = RETRY_BACKOFF_SECONDS,
+    ) -> tuple:
         checker = self.CHECKERS.get(reference.ext)
         if checker is None:
             return None, f"No format checker registered for .{reference.ext}"
 
-        request = urllib.request.Request(
-            reference.url,
-            headers={"Range": f"bytes=0-{MAGIC_BYTES_FETCH_SIZE - 1}"},
-            method="GET",
-        )
-        try:
-            with urllib.request.urlopen(
-                request, timeout=REQUEST_TIMEOUT_SECONDS
-            ) as response:
-                header = response.read(MAGIC_BYTES_FETCH_SIZE)
-        except (urllib.error.URLError, TimeoutError) as e:
-            return False, f"Format check network error: {e}"
+        last_error = "unknown error"
+        for attempt in range(1, attempts + 1):
+            header, error = self._fetch_header(reference.url)
+            if error is None:
+                break
+            last_error = error
+            if attempt < attempts:
+                time.sleep(backoff_seconds)
+        else:
+            return False, f"Format check network error: {last_error}"
 
         if checker(self, header):
             return True, f"Valid {reference.ext.upper()} signature"
@@ -193,6 +196,20 @@ class ImageFormatValidator:
             False,
             f"Bytes at {reference.url} do not match {reference.ext.upper()} signature",
         )
+
+    def _fetch_header(self, url: str) -> tuple:
+        request = urllib.request.Request(
+            url,
+            headers={"Range": f"bytes=0-{MAGIC_BYTES_FETCH_SIZE - 1}"},
+            method="GET",
+        )
+        try:
+            with urllib.request.urlopen(
+                request, timeout=REQUEST_TIMEOUT_SECONDS
+            ) as response:
+                return response.read(MAGIC_BYTES_FETCH_SIZE), None
+        except (urllib.error.URLError, TimeoutError) as e:
+            return None, str(e)
 
 
 class VerificationReport:
