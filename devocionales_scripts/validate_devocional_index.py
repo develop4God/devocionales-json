@@ -14,7 +14,8 @@ Checks:
         - has the expected root data.<lang> key
         - has entries whose 'language' and 'version' fields match
         - has a date range consistent with the declared year
-  5.  Both years ("2025" and "2026") are present for every lang/version combo
+  5.  Every year declared anywhere in index.json is present for every
+      lang/version combo (year-completeness, derived from the index itself)
   6.  Every production file on disk has a corresponding entry in index.json
       (no orphaned files)
   7.  Per-year updated_at timestamps are valid ISO dates
@@ -34,13 +35,6 @@ from pathlib import Path
 
 # ── Constants ──────────────────────────────────────────────────────────────────
 EXPECTED_SCHEMA_VERSION = 1
-EXPECTED_YEARS = {"2025", "2026"}
-
-# Base files have no lang/version in their filename; they are es/RVR1960.
-BASE_FILE_MAP = {
-    ("es", "RVR1960", "2025"): "Devocional_year_2025.json",
-    ("es", "RVR1960", "2026"): "Devocional_year_2026.json",
-}
 
 # Pattern for standard lang/version files
 STANDARD_RE = re.compile(
@@ -48,14 +42,13 @@ STANDARD_RE = re.compile(
 )
 BASE_RE = re.compile(r"^Devocional_year_(?P<year>\d{4})\.json$")
 
-
-# ── Helpers ────────────────────────────────────────────────────────────────────
+YEAR_RE = re.compile(r"^\d{4}$")
 
 
 def expected_filename(lang: str, version: str, year: str) -> str:
-    return BASE_FILE_MAP.get(
-        (lang, version, str(year)), f"Devocional_year_{year}_{lang}_{version}.json"
-    )
+    if lang == "es" and version == "RVR1960":
+        return f"Devocional_year_{year}.json"
+    return f"Devocional_year_{year}_{lang}_{version}.json"
 
 
 def validate_iso_date(value, label: str, errors: list) -> bool:
@@ -105,6 +98,24 @@ def validate_index(index_path: Path, base_path: Path):
 
     index_combos: set[tuple[str, str, str]] = set()
 
+    # ── Expected years = union of years declared anywhere in index.json ────
+    expected_years: set[str] = set()
+    for lang, versions in files_section.items():
+        if not isinstance(versions, dict):
+            continue
+        for version, payload in versions.items():
+            if not isinstance(payload, dict):
+                continue
+            files_map = payload.get("files", {})
+            if isinstance(files_map, dict):
+                for year in files_map:
+                    if not YEAR_RE.match(str(year)):
+                        errors.append(
+                            f"files.{lang}.{version}.files: invalid year key {year!r}"
+                        )
+                        continue
+                    expected_years.add(str(year))
+
     for lang, versions in files_section.items():
         if not isinstance(versions, dict):
             errors.append(
@@ -112,40 +123,52 @@ def validate_index(index_path: Path, base_path: Path):
             )
             continue
 
-        # ── 5. Both years present for this lang ────────────────────────────
-        for version, years in versions.items():
-            if not isinstance(years, dict):
+        # ── 5. Every year present for this lang/version ─────────────────────
+        for version, payload in versions.items():
+            if not isinstance(payload, dict):
                 errors.append(
-                    f"files.{lang}.{version}: expected object, got {type(years).__name__}"
+                    f"files.{lang}.{version}: expected object, got {type(payload).__name__}"
                 )
                 continue
 
-            declared_version_years = set(years.keys())
-            missing_years = EXPECTED_YEARS - declared_version_years
+            files_map = payload.get("files", {})
+            if not isinstance(files_map, dict):
+                errors.append(f"files.{lang}.{version}.files missing or not an object")
+                continue
+
+            declared_version_years = set(files_map.keys())
+            missing_years = expected_years - declared_version_years
             if missing_years:
                 errors.append(
                     f"files.{lang}.{version}: missing year(s) {sorted(missing_years)}"
                 )
 
-            extra_years = declared_version_years - EXPECTED_YEARS
+            extra_years = declared_version_years - expected_years
             if extra_years:
                 errors.append(
                     f"files.{lang}.{version}: unexpected year(s) {sorted(extra_years)}"
                 )
 
-            for year, upd_date in years.items():
+            for year, fname in files_map.items():
                 combo = (lang, version, str(year))
                 index_combos.add(combo)
 
                 # ── updated_at per entry ──────────────────────────────────
                 validate_iso_date(
-                    upd_date,
+                    payload.get(year),
                     f"files.{lang}.{version}.{year}",
                     errors,
                 )
 
+                # ── Filename matches expected convention ──────────────────
+                exp_fname = expected_filename(lang, version, str(year))
+                if fname != exp_fname:
+                    errors.append(
+                        f"files.{lang}.{version}.{year}: filename {fname!r}"
+                        f" does not match expected {exp_fname!r}"
+                    )
+
                 # ── File existence ────────────────────────────────────────
-                fname = expected_filename(lang, version, year)
                 fpath = base_path / fname
                 if not fpath.exists():
                     errors.append(
