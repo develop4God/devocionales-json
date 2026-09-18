@@ -1112,19 +1112,34 @@
       "testament": "new",
       "character": "Martha and Lazarus",
       "files": {
-        "es": "lazarus_es_001.json"
+        "es": "lazarus_es_001.json",
+        "pt": "lazarus_pt_001.json",
+        "fr": "lazarus_fr_001.json",
+        "en": "lazarus_en_001.json"
       },
       "titles": {
-        "es": "Cuatro días de silencio"
+        "es": "Cuatro días de silencio",
+        "pt": "Quatro dias de silêncio",
+        "fr": "Quatre jours de silence",
+        "en": "Four days of silence"
       },
       "subtitles": {
-        "es": "Cuando Jesús llega justo después de que toda esperanza se ha agotado."
+        "es": "Cuando Jesús llega justo después de que toda esperanza se ha agotado.",
+        "pt": "Quando Jesus chega bem depois que toda esperança já se esgotou.",
+        "fr": "Quand Jésus arrive juste après que tout espoir s'est épuisé.",
+        "en": "When Jesus arrives just after every hope has run out."
       },
       "scripture_reference": {
-        "es": "Juan 11:1-44"
+        "es": "Juan 11:1-44",
+        "pt": "João 11:1-44",
+        "fr": "Jean 11:1-44",
+        "en": "John 11:1-44"
       },
       "estimated_reading_minutes": {
-        "es": 10
+        "es": 10,
+        "pt": 11,
+        "fr": 11,
+        "en": 11
       }
     }
   ]
