@@ -1,0 +1,227 @@
+{
+  "id": "lazarus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "en",
+  "bible_version": "KJV",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 11,
+  "meta": {
+    "character": "Martha and Lazarus",
+    "testament": "new",
+    "scripture_reference": "John 11:1-44",
+    "mood_primary": "falling",
+    "accent_color": "#5C4A72",
+    "emoji": "🪨",
+    "tags": ["resurrection", "faith", "grief", "lazarus", "john_11", "hope", "eternal_life"]
+  },
+  "key_verse": {
+    "reference": "John 11:25-26",
+    "text": "Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live: And whosoever liveth and believeth in me shall never die. Believest thou this?",
+    "bible_version": "KJV"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "lazarus_urgent_message.png",
+      "title": "Bethany, on the edge of Jerusalem",
+      "narrative": "Bethany sits just under two miles from Jerusalem. Martha lives there, along with her sister Mary and her brother Lazarus — a family Jesus knows well and visits often.\n\nLazarus falls ill. They send someone they trust with a brief message for Jesus: 'Lord, behold, he whom thou lovest is sick.' The message names only one thing — the love Jesus already has for Lazarus.\n\nThe hours pass. Then a full day. Martha measures the time by the shadows shifting across the house, by every trip someone makes to check the road. Her brother worsens with each hour.\n\nThe road outside the house stays empty.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 11:3",
+        "text": "Therefore his sisters sent unto him, saying, Lord, behold, he whom thou lovest is sick."
+      },
+      "revelation_key": "The sisters' message appeals to what Jesus already feels for Lazarus."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "lazarus_fourth_day.png",
+      "verse_reference": "John 11:17",
+      "verse_text": "Then when Jesus came, he found that he had lain in the grave four days already.",
+      "reflection": "In first-century Jewish custom, bodies were buried the same day they died. For the first three days, popular hope held that the soul lingered near the body. By the fourth day, that hope was considered gone.\n\nJesus arrives just past that point, where every human hope had already run out.",
+      "revelation_key": "The fourth day confirms to everyone that no human hope remains; Jesus arrives at exactly that point."
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "lazarus_martha_encounter.png",
+      "title": "Martha goes out to meet Him",
+      "subtitle": "The complaint and the faith in the same breath",
+      "content": "Martha hears that Jesus is coming and leaves the village to meet him, while Mary stays behind at the house. Standing before him, she says what she has carried for days: 'Lord, if thou hadst been here, my brother had not died.'\n\nIn the same breath, she adds: 'But I know, that even now, whatsoever thou wilt ask of God, God will give it thee.' The grief and the trust come out together, one holding up the other.",
+      "verse_overlay": {
+        "reference": "John 11:21-22",
+        "text": "Then said Martha unto Jesus, Lord, if thou hadst been here, my brother had not died. But I know, that even now, whatsoever thou wilt ask of God, God will give it thee."
+      },
+      "revelation_key": "Martha's complaint and her faith in Jesus come out in the same sentence."
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "lazarus_i_am.png",
+      "verse_reference": "John 11:23-26",
+      "verse_text": "Jesus saith unto her, Thy brother shall rise again. Martha saith unto him, I know that he shall rise again in the resurrection at the last day. Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live: And whosoever liveth and believeth in me shall never die. Believest thou this?",
+      "reflection": "Martha keeps her hope for the last day — a real comfort, but a distant one. Jesus answers by presenting himself as that very hope: not a doctrine about the future, but a Person standing in front of her, that same day. It is the same promise Jesus had already made before (John 6:39-40), and it points toward his own coming again (John 14:3).",
+      "scripture_connections": [
+        {
+          "reference": "John 6:39-40",
+          "text": "And this is the Father's will which hath sent me, that of all which he hath given me I should lose nothing, but should raise it up again at the last day. And this is the will of him that sent me, that every one which seeth the Son, and believeth on him, may have everlasting life: and I will raise him up at the last day."
+        },
+        {
+          "reference": "John 14:3",
+          "text": "And if I go and prepare a place for you, I will come again, and receive you unto myself; that where I am, there ye may be also."
+        }
+      ],
+      "revelation_key": "Martha kept the resurrection for the last day; Jesus presents himself as that very hope, that very day."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "lazarus_anastasis.png",
+      "title": "Rising again",
+      "content": "The Greek word Jesus uses for 'resurrection' is ἀνάστασις, (anástasis) (G386), formed from the verb 'to rise, to stand up again.' Martha knows it as a future event, reserved for the end of the age.\n\nJesus takes that same word for resurrection and turns it into his own identity: 'I am the resurrection.' Rising from the dead stops being a distant occurrence and becomes the Person standing in front of Martha.",
+      "verse_overlay": {
+        "reference": "John 11:25",
+        "text": "Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live."
+      },
+      "revelation_key": "The word that means 'to rise again' has a name: Jesus."
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "lazarus_mary_weeping.png",
+      "title": "Mary and the crowd's weeping",
+      "narrative": "Mary also goes out to meet Jesus and falls at his feet, repeating her sister Martha's same words. The Jews mourning with her weep aloud, as custom required.\n\nJesus takes in the whole scene: the sister fallen at his feet, the public lament of those who came with her.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 11:32",
+        "text": "Then when Mary was come where Jesus was, and saw him, she fell down at his feet, saying unto him, Lord, if thou hadst been here, my brother had not died."
+      },
+      "revelation_key": "Martha and Mary both believe the same thing: Jesus could have healed Lazarus before he died — but neither expected faith to reach beyond the grave."
+    },
+    {
+      "order": 7,
+      "type": "theological_depth",
+      "mood": "tense",
+      "image_url": "lazarus_he_troubled_himself.png",
+      "title": "He troubled himself",
+      "content": "The Greek text of John 11:33 uses ταράσσω, (tarássō) (G5015), the same word used for water stirred up, churned from within, together with ἑαυτοῦ, (heautoû) (G1438), meaning 'himself.' The full phrase says, literally, that Jesus troubled himself.\n\nJesus chooses to stir his own soul in the face of Mary's grief and the weeping of those with her. It is a voluntary act of love, a decision to enter that grief before resolving it.",
+      "verse_overlay": {
+        "reference": "John 11:33",
+        "text": "When Jesus therefore saw her weeping, and the Jews also weeping which came with her, he groaned in the spirit, and was troubled."
+      },
+      "revelation_key": "Jesus stirs his own soul by choice, a voluntary act of love before he acts."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "lazarus_jesus_wept.png",
+      "title": "Jesus wept",
+      "subtitle": "Silent tears",
+      "content": "The verb describing Jesus' weeping in John 11:35 is δακρύω, (dakrýō) (G1145), tears shed in silence. It differs from κλαίω, (klaíō) (G2799), the loud, public mourning the text uses for Mary and those with her.\n\nJesus comes already knowing Lazarus has died, and he holds the power to change the situation. Even so, he stops first to weep, quietly, alongside those he loves. It is an expression of love: he stirs within with the same grief, even while holding all the power to resolve it.",
+      "verse_overlay": {
+        "reference": "John 11:35",
+        "text": "Jesus wept."
+      },
+      "revelation_key": "Feeling that genuine grief and walking with others through theirs is what we are called to do, as Jesus did with Mary."
+    },
+    {
+      "order": 9,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "lazarus_take_away_the_stone.png",
+      "title": "Take away the stone",
+      "narrative": "Jesus arrives at the tomb and gives a simple order: 'Take ye away the stone.' Martha answers with the reality of the body: four days, the smell already there.\n\nJesus reminds her of what he had already told her: if she believes, she will see the glory of God. The order is carried out with Martha's faith still ahead of any sign.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 11:39-40",
+        "text": "Jesus said, Take ye away the stone. Martha, the sister of him that was dead, saith unto him, Lord, by this time he stinketh: for he hath been dead four days. Jesus saith unto her, Said I not unto thee, that, if thou wouldest believe, thou shouldest see the glory of God?"
+      },
+      "revelation_key": "Martha describes what her senses can tell; Jesus asks her to stand on what he already promised her."
+    },
+    {
+      "order": 10,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "lazarus_come_forth.png",
+      "title": "Lazarus, come forth",
+      "narrative": "Jesus lifts his eyes and prays already knowing the Father always hears him. He prays that prayer aloud for the crowd around him, so they can see what he already knows: that the Father sent him. Then he cries out with a loud voice: 'Lazarus, come forth!'\n\nThe one who had died comes out, hands and feet bound with graveclothes, his face wrapped in a napkin — σουδάριον, (soudárion) (G4676), the same cloth used to wipe sweat from a face and also to cover the faces of the dead. The voice of Jesus reaches the place where every human voice stops.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "John 11:43-44",
+        "text": "And when he thus had spoken, he cried with a loud voice, Lazarus, come forth. And he that was dead came forth, bound hand and foot with graveclothes: and his face was bound about with a napkin. Jesus said unto them, Loose him, and let him go."
+      },
+      "revelation_key": "The voice of Jesus reaches where no human voice can, and Lazarus comes out alive."
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "lazarus_loose_him.png",
+      "title": "Loose him, and let him go",
+      "content": "Lazarus comes out alive, but still wrapped in the graveclothes of death. Jesus hands the next task to those standing there: 'Loose him, and let him go.' The miracle calls Lazarus out of the tomb; the community takes on the work of freeing him from what still binds him.\n\nJesus could have loosed Lazarus with the same word that raised him from death. Instead, he lets the hands of those present remove the wrappings — as if he wanted them to touch the evidence themselves, not just see it.\n\nThis sign points toward something greater. Lazarus returns to the same life he already had, and one day he will die again. What Jesus will do afterward, in his own resurrection, will be different: a new life, victorious over death forever (1 Corinthians 15:26).",
+      "verse_overlay": {
+        "reference": "John 11:44",
+        "text": "And he that was dead came forth, bound hand and foot with graveclothes: and his face was bound about with a napkin. Jesus saith unto them, Loose him, and let him go."
+      },
+      "scripture_connections": [
+        {
+          "reference": "1 Corinthians 15:26",
+          "text": "The last enemy that shall be destroyed is death."
+        }
+      ],
+      "revelation_key": "Jesus chooses to let others loose Lazarus; when he himself rises, he will come out already free."
+    },
+    {
+      "order": 12,
+      "type": "discovery_activation",
+      "mood": "peace",
+      "image_url": "lazarus_personal_discovery.png",
+      "title": "Personal discovery",
+      "discovery_questions": [
+        {
+          "category": "Waiting",
+          "question": "Martha waited for an immediate answer and got four days of silence instead. Do you trust God's timing when it doesn't match your own?"
+        },
+        {
+          "category": "Faith",
+          "question": "Martha believed in a resurrection saved for the last day. Do you trust Jesus to act today, in what today looks impossible?"
+        },
+        {
+          "category": "Freedom",
+          "question": "Lazarus came out alive, but still bound, and others had to loose him. What guilt, habit, wound, or sin still binds you, even though you've already received Christ's new life?"
+        }
+      ],
+      "prayer": {
+        "title": "A prayer from the tomb",
+        "content": "Heavenly Father, thank you that, just as you raised Lazarus from death, you have moved me from death to life, since I've accepted you as my Savior and believed in your sacrifice on the cross. Thank you for that undeserved miracle that keeps me close to you today. Lord, like Lazarus, I want to stay alive and free from sin. Help me carry this same hope to others, in a world that needs your love and needs to know you; help me honor you in everything I do. You, who raised your friend from the tomb in Bethany, hold the power over anything I'm facing — you are in control. In Jesus' name, amen."
+      }
+    },
+    {
+      "order": 13,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "lazarus_closing.png",
+      "completion_verse": {
+        "reference": "John 11:25-26",
+        "text": "Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live: And whosoever liveth and believeth in me shall never die. Believest thou this?",
+        "bible_version": "KJV"
+      },
+      "reflection_prompt": "The Jesus who troubled himself for Martha and wept for Lazarus is still setting people free from death today. Believest thou this?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

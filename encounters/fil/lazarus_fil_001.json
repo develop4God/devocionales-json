@@ -1,0 +1,227 @@
+{
+  "id": "lazarus_001",
+  "type": "encounter",
+  "schema_version": "encounters_v1",
+  "language": "fil",
+  "bible_version": "MBB05",
+  "version": "1.0",
+  "image_version": "1.0",
+  "estimated_reading_minutes": 12,
+  "meta": {
+    "character": "Sina Marta at Lazaro",
+    "testament": "new",
+    "scripture_reference": "Juan 11:1-44",
+    "mood_primary": "falling",
+    "accent_color": "#5C4A72",
+    "emoji": "🪨",
+    "tags": ["muling-pagkabuhay", "pananampalataya", "pagdadalamhati", "lazaro", "juan_11", "pag-asa", "buhay-na-walang-hanggan"]
+  },
+  "key_verse": {
+    "reference": "Juan 11:25-26",
+    "text": "Sinabi sa kanya ni Jesus, \"Ako ang nagbibigay-buhay at muling pagkabuhay. Ang sinumang sumasampalataya sa akin, kahit mamatay ay muling mabubuhay; at sinumang nabubuhay at sumasampalataya sa akin ay hindi mamamatay kailanman. Naniniwala ka ba sa sinabi ko?\"",
+    "bible_version": "MBB05"
+  },
+  "cards": [
+    {
+      "order": 1,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "lazarus_urgent_message.png",
+      "title": "Betania, sa gilid ng Jerusalem",
+      "narrative": "Wala pang dalawang milya ang layo ng Betania mula sa Jerusalem. Doon nakatira si Marta, kasama ang kanyang kapatid na si Maria at ang kanilang kapatid na si Lazaro — isang pamilyang kilalang-kilala ni Jesus at madalas niyang dinadalaw.\n\nNagkasakit si Lazaro. Nagpadala sila ng mensahe kay Jesus sa pamamagitan ng isang taong maaasahan: \"Panginoon, ang minamahal ninyong kaibigan ay may sakit.\" Iisang bagay lamang ang binanggit ng mensahe — ang pagmamahal na taglay na ni Jesus para kay Lazaro.\n\nDumaan ang mga oras. Pagkatapos, isang buong araw. Sinusukat ni Marta ang panahon sa paglipat ng mga anino sa loob ng bahay, sa bawat paglabas nila upang tingnan ang daan. Lumalala ang kalagayan ng kanyang kapatid sa bawat oras.\n\nNananatiling walang laman ang daan sa labas ng bahay.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 11:3",
+        "text": "nagpasabi kay Jesus ang magkapatid, \"Panginoon, ang minamahal ninyong kaibigan ay may sakit.\""
+      },
+      "revelation_key": "Ang mensahe ng magkapatid ay umaapela sa nararamdaman na ni Jesus para kay Lazaro."
+    },
+    {
+      "order": 2,
+      "type": "scripture_moment",
+      "mood": "falling",
+      "image_url": "lazarus_fourth_day.png",
+      "verse_reference": "Juan 11:17",
+      "verse_text": "Pagdating ni Jesus, nalaman niyang apat na araw nang nakalibing si Lazaro.",
+      "reflection": "Ayon sa kaugaliang Judio noong unang siglo, inililibing ang bangkay sa mismong araw ng kamatayan. Sa unang tatlong araw, may popular na paniniwala na nananatili pa ang kaluluwa malapit sa katawan. Pagsapit ng ikaapat na araw, itinuturing nang wala ang pag-asang iyon.\n\nDumating si Jesus nang lampas na sa puntong iyon, kung saan naubos na ang lahat ng pag-asa ng tao.",
+      "revelation_key": "Kinukumpirma ng ikaapat na araw sa lahat na wala nang natitirang pag-asang pantao; dumating si Jesus sa eksaktong puntong iyon."
+    },
+    {
+      "order": 3,
+      "type": "character_moment",
+      "mood": "intense",
+      "image_url": "lazarus_martha_encounter.png",
+      "title": "Sinalubong siya ni Marta",
+      "subtitle": "Ang hinaing at ang pananampalataya sa iisang hininga",
+      "content": "Nabalitaan ni Marta na paparating si Jesus, kaya iniwan niya ang nayon upang salubungin siya, habang si Maria ay nanatili sa bahay. Sa harap niya, sinabi niya ang bigat na tinatago niya sa loob ng maraming araw: \"Panginoon, kung kayo po ay narito, buháy pa sana ang kapatid ko.\"\n\nSa parehong hininga, idinagdag niya: \"Subalit nalalaman kong kahit ngayo'y ipagkakaloob sa inyo ng Diyos ang anumang hingin ninyo sa kanya.\" Lumabas nang magkasabay ang kalungkutan at ang tiwala, ang isa'y umaalalay sa isa.",
+      "verse_overlay": {
+        "reference": "Juan 11:21-22",
+        "text": "Sinabi ni Marta, \"Panginoon, kung kayo po ay narito, buháy pa sana ang kapatid ko. Subalit nalalaman kong kahit ngayo'y ipagkakaloob sa inyo ng Diyos ang anumang hingin ninyo sa kanya.\""
+      },
+      "revelation_key": "Ang hinaing ni Marta at ang kanyang pananampalataya kay Jesus ay lumabas sa iisang pangungusap."
+    },
+    {
+      "order": 4,
+      "type": "scripture_moment",
+      "mood": "awe",
+      "image_url": "lazarus_i_am.png",
+      "verse_reference": "Juan 11:23-26",
+      "verse_text": "\"Muling mabubuhay ang iyong kapatid,\" sabi ni Jesus. Sumagot si Marta, \"Nalalaman ko pong siya'y mabubuhay muli sa huling araw.\" Sinabi sa kanya ni Jesus, \"Ako ang nagbibigay-buhay at muling pagkabuhay. Ang sinumang sumasampalataya sa akin, kahit mamatay ay muling mabubuhay; at sinumang nabubuhay at sumasampalataya sa akin ay hindi mamamatay kailanman. Naniniwala ka ba sa sinabi ko?\"",
+      "reflection": "Iniingatan ni Marta ang kanyang pag-asa para sa huling araw — isang tunay na kaaliwan, ngunit malayo pa. Sumagot si Jesus sa pamamagitan ng pagpapakilala sa kanyang sarili bilang ang mismong pag-asang iyon: hindi isang doktrina tungkol sa hinaharap, kundi isang Persona na nakatayo sa harap niya, sa mismong araw na iyon. Ito ang parehong pangako na sinabi na ni Jesus noon pa (Juan 6:39-40), at itinuturo nito ang kanyang muling pagbabalik (Juan 14:3).",
+      "scripture_connections": [
+        {
+          "reference": "Juan 6:39-40",
+          "text": "At ito ang kanyang kalooban: ang huwag kong hayaang mapahamak ang kahit sinuman sa mga ibinigay niya sa akin, kundi ang buhayin ko siyang muli sa huling araw. Sapagkat ito ang kalooban ng aking Ama: ang lahat ng kumilala at sumampalataya sa Anak ay magkaroon ng buhay na walang hanggan. At sila'y muli kong bubuhayin sa huling araw.\""
+        },
+        {
+          "reference": "Juan 14:3",
+          "text": "At kapag naipaghanda ko na kayo ng matitirhan, ako'y babalik at isasama ko kayo upang kayo'y makapiling ko kung saan ako naroroon."
+        }
+      ],
+      "revelation_key": "Iningatan ni Marta ang muling pagkabuhay para sa huling araw; ipinakilala ni Jesus ang kanyang sarili bilang ang mismong pag-asang iyon, sa mismong araw na iyon."
+    },
+    {
+      "order": 5,
+      "type": "theological_depth",
+      "mood": "mysterious",
+      "image_url": "lazarus_anastasis.png",
+      "title": "Ang muling pagkabuhay",
+      "content": "Ang salitang Griyego na ginagamit ni Jesus para sa \"muling pagkabuhay\" ay ἀνάστασις, (anástasis) (G386), hango sa pandiwang \"bumangon, tumayong muli.\" Alam ni Marta ito bilang isang pangyayaring darating pa, nakalaan para sa katapusan ng panahon.\n\nKinuha ni Jesus ang parehong salitang iyon para sa muling pagkabuhay at ginawa niya itong sarili niyang pagkakakilanlan: \"Ako ang muling pagkabuhay.\" Ang pagbangon mula sa mga patay ay hindi na naging isang malayong pangyayari, kundi ang Persona mismong nakatayo sa harap ni Marta.",
+      "verse_overlay": {
+        "reference": "Juan 11:25",
+        "text": "Sinabi sa kanya ni Jesus, \"Ako ang nagbibigay-buhay at muling pagkabuhay. Ang sinumang sumasampalataya sa akin, kahit mamatay ay muling mabubuhay.\""
+      },
+      "revelation_key": "Ang salitang nangangahulugang \"bumangon muli\" ay may pangalan: Jesus."
+    },
+    {
+      "order": 6,
+      "type": "cinematic_scene",
+      "mood": "falling",
+      "image_url": "lazarus_mary_weeping.png",
+      "title": "Ang pag-iyak ni Maria at ng karamihan",
+      "narrative": "Lumabas din si Maria upang salubungin si Jesus at nagpatirapa sa kanyang paanan, inuulit ang parehong salita ng kanyang kapatid na si Marta. Umiiyak nang malakas ang mga Judiong kasama niya sa pagdadalamhati, gaya ng kaugalian.\n\nNamasdan ni Jesus ang buong eksena: ang kapatid na nagpatirapa sa kanyang paanan, ang pagdadalamhati sa publiko ng mga kasama niya.",
+      "ambient_sound": "crowd_distant",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 11:32",
+        "text": "Pagdating ni Maria sa kinaroroonan ni Jesus, nagpatirapa siya sa paanan nito at nagsabi, \"Panginoon, kung narito po lamang kayo, hindi sana namatay ang aking kapatid.\""
+      },
+      "revelation_key": "Naniniwala kapwa sina Marta at Maria sa iisang bagay: maaaring pagalingin ni Jesus si Lazaro bago siya namatay — ngunit walang sinuman sa kanila ang naghintay na aabot ang pananampalataya sa kabila ng libingan."
+    },
+    {
+      "order": 7,
+      "type": "theological_depth",
+      "mood": "tense",
+      "image_url": "lazarus_he_troubled_himself.png",
+      "title": "Nabagbag ang kanyang sarili",
+      "content": "Ang tekstong Griyego ng Juan 11:33 ay gumagamit ng ταράσσω, (tarássō) (G5015), ang parehong salitang ginagamit para sa tubig na kinalog, nagulo mula sa kaloob-looban, kasama ang ἑαυτοῦ, (heautoû) (G1438), na nangangahulugang \"kanyang sarili.\" Literal na sinasabi ng buong parirala na nabagbag ni Jesus ang kanyang sariling kalooban.\n\nPinili ni Jesus na kalugin ang kanyang sariling kaluluwa sa harap ng pagdadalamhati ni Maria at ng mga umiiyak na kasama niya. Ito ay isang kusang gawa ng pagmamahal, isang desisyong dumanas muna ng dalamhating iyon bago ito lutasin.",
+      "verse_overlay": {
+        "reference": "Juan 11:33",
+        "text": "Nahabag si Jesus at nabagbag ang kanyang kalooban nang makita niyang umiiyak si Maria, pati ang mga Judiong kasama nito."
+      },
+      "revelation_key": "Kinalog ni Jesus ang kanyang sariling kaluluwa nang kusang-loob, isang kusang gawa ng pagmamahal bago siya kumilos."
+    },
+    {
+      "order": 8,
+      "type": "character_moment",
+      "mood": "falling",
+      "image_url": "lazarus_jesus_wept.png",
+      "title": "Tumangis si Jesus",
+      "subtitle": "Tahimik na luha",
+      "content": "Ang pandiwang naglalarawan sa pag-iyak ni Jesus sa Juan 11:35 ay δακρύω, (dakrýō) (G1145), luhang tahimik na dumaloy. Naiiba ito sa κλαίω, (klaíō) (G2799), ang malakas, pampublikong pagdadalamhati na ginamit ng teksto para kay Maria at sa mga kasama niya.\n\nDumating si Jesus na alam na niyang namatay na si Lazaro, at hawak niya ang kapangyarihang baguhin ang kalagayan. Gayunpaman, huminto muna siya upang tumangis, nang tahimik, kasama ng mga minamahal niya. Isa itong pagpapahayag ng pagmamahal: nakikiramdam siya sa loob ng parehong dalamhati, kahit hawak niya ang buong kapangyarihang lutasin ito.",
+      "verse_overlay": {
+        "reference": "Juan 11:35",
+        "text": "Tumangis si Jesus,"
+      },
+      "revelation_key": "Ang pakiramdam ng tunay na dalamhati at ang paglalakad kasama ang iba sa kanilang pagdadalamhati ang tinatawag sa atin, gaya ng ginawa ni Jesus kay Maria."
+    },
+    {
+      "order": 9,
+      "type": "cinematic_scene",
+      "mood": "tense",
+      "image_url": "lazarus_take_away_the_stone.png",
+      "title": "Alisin ang bato",
+      "narrative": "Dumating si Jesus sa libingan at nagbigay ng isang simpleng utos: \"Alisin ninyo ang bato.\" Sumagot si Marta sa katotohanan ng katawan: apat na araw na, nariyan na ang amoy.\n\nIpinaalala ni Jesus sa kanya ang dati niyang sinabi: kung siya'y maniniwala, makikita niya ang kaluwalhatian ng Diyos. Isinagawa ang utos habang ang pananampalataya ni Marta ay nauuna pa sa anumang tanda.",
+      "ambient_sound": "wind",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 11:39-40",
+        "text": "\"Alisin ninyo ang bato,\" utos ni Jesus. Ngunit sumagot si Marta, \"Panginoon, nangangamoy na po siya ngayon; apat na araw na siyang patay.\" Sinabi ni Jesus, \"Hindi ba't sinabi ko sa iyo na kung sasampalataya ka sa akin ay makikita mo ang kaluwalhatian ng Diyos?\""
+      },
+      "revelation_key": "Inilarawan ni Marta ang nasasabi ng kanyang mga pandama; hinihiling ni Jesus na tumayo siya sa ipinangako na niya sa kanya."
+    },
+    {
+      "order": 10,
+      "type": "cinematic_scene",
+      "mood": "awe",
+      "image_url": "lazarus_come_forth.png",
+      "title": "Lazaro, lumabas ka",
+      "narrative": "Itinaas ni Jesus ang kanyang mga mata at nanalangin, alam na niyang laging nakikinig sa kanya ang Ama. Idinalangin niya ito nang malakas para sa karamihang nakapaligid sa kanya, upang makita nila ang alam na niya: na isinugo siya ng Ama. Pagkatapos, sumigaw siya nang malakas: \"Lazaro, lumabas ka!\"\n\nLumabas ang namatay, nakagapos ang mga kamay at paa ng telang panlibing, ang kanyang mukha'y nababalot ng isang panyo — σουδάριον, (soudárion) (G4676), ang parehong telang ginagamit sa pagpunas ng pawis sa mukha at gayundin sa pagtatakip ng mukha ng mga patay. Naabot ng tinig ni Jesus ang lugar kung saan humihinto ang bawat tinig ng tao.",
+      "ambient_sound": "silence",
+      "haptic": null,
+      "verse_overlay": {
+        "reference": "Juan 11:43-44",
+        "text": "Pagkasabi nito ay sumigaw siya, \"Lazaro, lumabas ka!\" Lumabas nga si Lazaro na nababalot ng telang panlibing ang mga kamay at paa; may nakatakip ring tela sa mukha. Inutos ni Jesus sa kanila, \"Kalagan ninyo siya at nang makalaya.\""
+      },
+      "revelation_key": "Naabot ng tinig ni Jesus kung saan walang tinig ng tao ang makararating, at lumabas na buháy si Lazaro."
+    },
+    {
+      "order": 11,
+      "type": "theological_depth",
+      "mood": "grace",
+      "image_url": "lazarus_loose_him.png",
+      "title": "Kalagan siya, at hayaang makalaya",
+      "content": "Lumabas si Lazaro nang buháy, ngunit nakabalot pa rin sa telang panlibing ng kamatayan. Inatasan ni Jesus ang mga nakatayo roon: \"Kalagan ninyo siya at nang makalaya.\" Tinawag ng himala si Lazaro palabas ng libingan; ang komunidad naman ang gumawa upang palayain siya mula sa dala-dala pa niyang gapos.\n\nMaaari sanang kinalag ni Jesus si Lazaro gamit ang parehong salitang nagbangon sa kanya mula sa kamatayan. Sa halip, hinayaan niyang ang mga kamay ng mga nandoon ang mag-alis ng mga balot — para bang gusto niyang mahawakan nila mismo ang katibayan, hindi lang ito makita.\n\nItinuturo ng tandang ito sa isang mas dakilang bagay. Bumabalik si Lazaro sa parehong buhay na dati niyang taglay, at isang araw mamamatay siya muli. Ang gagawin ni Jesus mamaya, sa kanyang sariling muling pagkabuhay, ay magiging iba: isang bagong buhay, nagtagumpay laban sa kamatayan magpakailanman (1 Corinto 15:26).",
+      "verse_overlay": {
+        "reference": "Juan 11:44",
+        "text": "Lumabas nga si Lazaro na nababalot ng telang panlibing ang mga kamay at paa; may nakatakip ring tela sa mukha. Inutos ni Jesus sa kanila, \"Kalagan ninyo siya at nang makalaya.\""
+      },
+      "scripture_connections": [
+        {
+          "reference": "1 Mga Taga-Corinto 15:26",
+          "text": "Ang kahuli-hulihang kaaway na kanyang lulupigin ay ang kamatayan."
+        }
+      ],
+      "revelation_key": "Pinili ni Jesus na hayaan ang iba na magkalag kay Lazaro; kapag siya mismo ang bumangon, lalabas na siya'y malaya na."
+    },
+    {
+      "order": 12,
+      "type": "discovery_activation",
+      "mood": "peace",
+      "image_url": "lazarus_personal_discovery.png",
+      "title": "Sariling Pagtatagpo",
+      "discovery_questions": [
+        {
+          "category": "Paghihintay",
+          "question": "Naghintay si Marta ng agarang sagot ngunit apat na araw na katahimikan ang natanggap niya. Nagtitiwala ka ba sa oras ng Diyos kapag hindi ito tumutugma sa sarili mong itinatakda?"
+        },
+        {
+          "category": "Pananampalataya",
+          "question": "Naniwala si Marta sa isang muling pagkabuhay na nakalaan para sa huling araw. Nagtitiwala ka ba na kikilos si Jesus ngayon, sa bagay na tila imposible ngayon?"
+        },
+        {
+          "category": "Kalayaan",
+          "question": "Lumabas si Lazaro nang buháy, ngunit nakagapos pa rin, at kinailangan pa siyang kalagan ng iba. Anong kasalanan, ugali, sugat, o dating pagkakasala ang gumagapos pa sa iyo, kahit natanggap mo na ang bagong buhay kay Cristo?"
+        }
+      ],
+      "prayer": {
+        "title": "Isang panalangin mula sa libingan",
+        "content": "Amang nasa Langit, salamat po dahil kung paanong binuhay Ninyo si Lazaro mula sa kamatayan, inilipat Ninyo rin ako mula sa kamatayan tungo sa buhay, mula nang tanggapin Kita bilang aking Tagapagligtas at maniwala sa iyong sakripisyo sa krus. Salamat po sa himalang hindi ko karapat-dapat tanggapin, na patuloy na nagbibigay sa akin ng kalapitan sa Inyo hanggang ngayon. Panginoon, tulad ni Lazaro, nais kong manatiling buháy at malaya mula sa kasalanan. Tulungan Ninyo akong dalhin ang parehong pag-asang ito sa iba, sa isang mundong nangangailangan ng Inyong pagmamahal at nangangailangang makilala Kayo; tulungan Ninyo akong parangalan Kayo sa lahat ng aking ginagawa. Kayo, na bumuhay sa Inyong kaibigan mula sa libingan sa Betania, hawak Ninyo ang kapangyarihan sa anumang kinakaharap ko — nasa kontrol Ninyo ang lahat. Sa pangalan ni Jesus, amen."
+      }
+    },
+    {
+      "order": 13,
+      "type": "completion",
+      "mood": "peace",
+      "image_url": "lazarus_closing.png",
+      "completion_verse": {
+        "reference": "Juan 11:25-26",
+        "text": "Sinabi sa kanya ni Jesus, \"Ako ang nagbibigay-buhay at muling pagkabuhay. Ang sinumang sumasampalataya sa akin, kahit mamatay ay muling mabubuhay; at sinumang nabubuhay at sumasampalataya sa akin ay hindi mamamatay kailanman. Naniniwala ka ba sa sinabi ko?\"",
+        "bible_version": "MBB05"
+      },
+      "reflection_prompt": "Ang Jesus na nabagbag para kay Marta at tumangis para kay Lazaro ay patuloy pa ring nagpapalaya sa mga tao mula sa kamatayan ngayon. Naniniwala ka ba sa sinabi ko?",
+      "celebration_type": "gentle_light"
+    }
+  ]
+}

@@ -1098,6 +1098,79 @@
         "hi": 12,
         "fil": 10
       }
+    },
+    {
+      "id": "lazarus_001",
+      "version": "1.0",
+      "image_version": "1.0",
+      "emoji": "🪨",
+      "status": "published",
+      "intro_image": "lazarus_intro.png",
+      "mood_primary": "falling",
+      "accent_color": "#5C4A72",
+      "has_interactive": false,
+      "testament": "new",
+      "character": "Martha and Lazarus",
+      "files": {
+        "es": "lazarus_es_001.json",
+        "pt": "lazarus_pt_001.json",
+        "fr": "lazarus_fr_001.json",
+        "en": "lazarus_en_001.json",
+        "de": "lazarus_de_001.json",
+        "ja": "lazarus_ja_001.json",
+        "zh": "lazarus_zh_001.json",
+        "hi": "lazarus_hi_001.json",
+        "ar": "lazarus_ar_001.json",
+        "fil": "lazarus_fil_001.json"
+      },
+      "titles": {
+        "es": "Cuatro días de silencio",
+        "pt": "Quatro dias de silêncio",
+        "fr": "Quatre jours de silence",
+        "en": "Four days of silence",
+        "de": "Vier Tage Schweigen",
+        "ja": "四日間の沈黙",
+        "zh": "沉默的四天",
+        "hi": "मौन के चार दिन",
+        "ar": "أربعة أيام من الصمت",
+        "fil": "Apat na Araw ng Katahimikan"
+      },
+      "subtitles": {
+        "es": "Cuando Jesús llega justo después de que toda esperanza se ha agotado.",
+        "pt": "Quando Jesus chega bem depois que toda esperança já se esgotou.",
+        "fr": "Quand Jésus arrive juste après que tout espoir s'est épuisé.",
+        "en": "When Jesus arrives just after every hope has run out.",
+        "de": "Als Jesus ankommt, gerade als alle Hoffnung erloschen ist.",
+        "ja": "すべての希望が尽き果てた、まさにその後にイエスが到着するとき。",
+        "zh": "当耶稣到来时，一切盼望都已耗尽。",
+        "hi": "जब यीशु आते हैं, ठीक तभी जब हर आशा समाप्त हो चुकी होती है।",
+        "ar": "حين يصل يسوع بعد أن ينفد كل رجاء.",
+        "fil": "Nang dumating si Jesus nang lampas na sa punto kung saan naubos na ang lahat ng pag-asa."
+      },
+      "scripture_reference": {
+        "es": "Juan 11:1-44",
+        "pt": "João 11:1-44",
+        "fr": "Jean 11:1-44",
+        "en": "John 11:1-44",
+        "de": "Johannes 11:1-44",
+        "ja": "ヨハネの福音書 11:1-44",
+        "zh": "约翰福音 11:1-44",
+        "hi": "यूहन्ना 11:1-44",
+        "ar": "يوحنا 11:1-44",
+        "fil": "Juan 11:1-44"
+      },
+      "estimated_reading_minutes": {
+        "es": 10,
+        "pt": 11,
+        "fr": 11,
+        "en": 11,
+        "de": 12,
+        "ja": 14,
+        "zh": 14,
+        "hi": 13,
+        "ar": 11,
+        "fil": 12
+      }
     }
   ]
 }
