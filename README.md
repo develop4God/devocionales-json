@@ -27,7 +27,7 @@ Generated biblical content consumed by the [devocional_nuevo](https://github.com
 |---|---|---|---|
 | ar | NAV, SVDA | 4 | 1,460 |
 | de | LU17, SCH2000 | 4 | 1,460 |
-| en | KJV, NIV | 5 | 1,826 |
+| en | KJV, NIV | 6 | 2,192 |
 | es | NVI, RVR1960 | 6 | 2,192 |
 | fil | ASND, MBB05 | 4 | 1,460 |
 | fr | LSG1910, TOB | 4 | 1,460 |
@@ -36,7 +36,7 @@ Generated biblical content consumed by the [devocional_nuevo](https://github.com
 | pt | ARC, NVI | 4 | 1,460 |
 | zh | 和合本1919, 新译本 | 4 | 1,460 |
 
-**Total: 43 files · 15,698 entries · 10 languages · 20 Bible versions**
+**Total: 44 files · 16,064 entries · 10 languages · 20 Bible versions**
 <!-- /README-STATS:devocionales -->
 
 ### ✨ Discovery & Encounters
