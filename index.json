@@ -6,9 +6,11 @@
       "RVR1960": {
         "2025": "2026-08-17",
         "2026": "2026-04-27",
+        "2027": "2026-09-18",
         "files": {
           "2025": "Devocional_year_2025.json",
-          "2026": "Devocional_year_2026.json"
+          "2026": "Devocional_year_2026.json",
+          "2027": "Devocional_year_2027.json"
         }
       },
       "NVI": {
@@ -24,9 +26,11 @@
       "KJV": {
         "2025": "2026-04-24",
         "2026": "2026-04-24",
+        "2027": "2026-09-18",
         "files": {
           "2025": "Devocional_year_2025_en_KJV.json",
-          "2026": "Devocional_year_2026_en_KJV.json"
+          "2026": "Devocional_year_2026_en_KJV.json",
+          "2027": "Devocional_year_2027_en_KJV.json"
         }
       },
       "NIV": {
