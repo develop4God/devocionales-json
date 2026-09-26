@@ -33,10 +33,10 @@ Generated biblical content consumed by the [devocional_nuevo](https://github.com
 | fr | LSG1910, TOB | 4 | 1,460 |
 | hi | HERV, HIOV | 4 | 1,460 |
 | ja | リビングバイブル, 新改訳2003 | 4 | 1,460 |
-| pt | ARC, NVI | 4 | 1,460 |
+| pt | ARC, NVI | 6 | 2,192 |
 | zh | 和合本1919, 新译本 | 4 | 1,460 |
 
-**Total: 44 files · 16,064 entries · 10 languages · 20 Bible versions**
+**Total: 46 files · 16,796 entries · 10 languages · 20 Bible versions**
 <!-- /README-STATS:devocionales -->
 
 ### ✨ Discovery & Encounters
