@@ -50,17 +50,21 @@
       "ARC": {
         "2025": "2026-08-17",
         "2026": "2026-04-24",
+        "2027": "2026-09-26",
         "files": {
           "2025": "Devocional_year_2025_pt_ARC.json",
-          "2026": "Devocional_year_2026_pt_ARC.json"
+          "2026": "Devocional_year_2026_pt_ARC.json",
+          "2027": "Devocional_year_2027_pt_ARC.json"
         }
       },
       "NVI": {
         "2025": "2026-04-24",
         "2026": "2026-04-24",
+        "2027": "2026-09-26",
         "files": {
           "2025": "Devocional_year_2025_pt_NVI.json",
-          "2026": "Devocional_year_2026_pt_NVI.json"
+          "2026": "Devocional_year_2026_pt_NVI.json",
+          "2027": "Devocional_year_2027_pt_NVI.json"
         }
       }
     },
