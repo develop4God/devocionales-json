@@ -36,6 +36,7 @@ EXPECTED_MIN_ENTRIES = 365
 FILENAME_PATTERN = re.compile(
     r"Devocional_year_(?P<year>\d{4})_(?P<lang>[a-z]{2})_(?P<version>.+)\.json$"
 )
+BASE_FILENAME_PATTERN = re.compile(r"Devocional_year_(?P<year>\d{4})\.json$")
 
 NON_LATIN_LANGS = {"hi", "ja", "zh"}
 ALWAYS_ALLOWED = {
@@ -327,7 +328,10 @@ def validate(filepath, lang_override, version_override):
         return False, "\n".join(lines), summary
 
     match = FILENAME_PATTERN.search(path.name)
-    expected_year = int(match.group("year")) if match else None
+    base_match = BASE_FILENAME_PATTERN.search(path.name)
+    expected_year = int(match.group("year")) if match else (
+        int(base_match.group("year")) if base_match else None
+    )
     expected_lang = lang_override.strip() or (match.group("lang") if match else None)
     expected_version = version_override.strip() or (
         match.group("version") if match else None

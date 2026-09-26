@@ -1,0 +1,102 @@
+{
+  "encounter_id": "lazarus_es_001",
+  "character": "Martha of Bethany",
+  "master_character_prompt": "A woman in her late thirties, sturdy medium build, sun-weathered olive-brown skin, dark brown hair mostly covered by a faded rust-colored head cloth with a few strands escaping at the temple, strong practical face with deep-set dark eyes and a firm set jaw, plain deep-clay-colored linen tunic with a rope belt, worn leather sandals, hands showing the calluses of household work. Painterly warm 2D illustration style, Mediterranean palette, ochre and sandstone tones, cinematic lighting. Character reference sheet, full body and face close-up.",
+  "intro_image": {
+    "filename": "lazarus_intro.png",
+    "prompt": "A sturdy woman in her late thirties, olive-brown weathered skin, dark hair under a faded rust head cloth, deep-clay linen tunic, seen small in the distance standing at the edge of a dusty village path at dusk, looking toward the horizon where a tomb carved into a hillside is faintly visible under deepening shadow. Wide establishing shot, empty road stretching between her and the tomb. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+  },
+  "card_prompts": [
+    {
+      "order": 1,
+      "image_url": "lazarus_urgent_message.png",
+      "mood": "tense",
+      "shot_type": "medium two-figure",
+      "prompt": "A sturdy woman in her late thirties, olive-brown weathered skin, dark hair under a faded rust head cloth, deep-clay linen tunic, stands in a doorway watching a young messenger disappear down a dusty path at midday. Her hand rests on the doorframe, face calm but eyes fixed on the empty road ahead. Sparse village houses, hard afternoon light and long shadows. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 2,
+      "image_url": "lazarus_fourth_day.png",
+      "mood": "falling",
+      "shot_type": "wide establishing",
+      "prompt": "A rocky hillside tomb sealed with a large flat stone, set into a sun-bleached limestone slope outside a small village. No people visible. Long late-afternoon shadows stretch across dry ground, a few olive trees nearby. Muted dusty light suggesting days have passed. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 3,
+      "image_url": "lazarus_martha_encounter.png",
+      "mood": "intense",
+      "shot_type": "close-up portrait",
+      "prompt": "Close-up portrait of a sturdy woman in her late thirties, olive-brown weathered skin, dark hair under a faded rust head cloth, deep-clay linen tunic, eyes fixed on a nearby figure with an expression that carries both grief and firm trust at once, lips slightly parted mid-sentence. Soft out-of-focus figure of a man in a simple first-century tunic standing just before her, face never visible, a subtle warm glow of glory around his form. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 4,
+      "image_url": "lazarus_i_am.png",
+      "mood": "awe",
+      "shot_type": "medium two-figure",
+      "prompt": "A sturdy woman in her late thirties, olive-brown weathered skin, dark hair under a faded rust head cloth, deep-clay linen tunic, stands facing a man in a simple first-century tunic seen from behind, face never visible, a subtle warm glow of glory emanating from his form. They stand on a dusty road outside the village, golden late-afternoon light between them. Her posture is still, attentive. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 5,
+      "image_url": "lazarus_anastasis.png",
+      "mood": "mysterious",
+      "shot_type": "object/still life",
+      "prompt": "Extreme close-up of a single wooden staff planted upright in dry cracked earth, casting a long shadow that stretches toward a distant tomb carved into a hillside. No people. Pure metaphor of standing firm before what lies ahead. Deep amber ground light, soft dust haze. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 6,
+      "image_url": "lazarus_mary_weeping.png",
+      "mood": "falling",
+      "shot_type": "wide establishing",
+      "prompt": "A small group of mourners in muted earth-toned robes gathered on a dusty road outside a village, several with hands raised or covering their faces in visible grief, a lone man in a simple first-century tunic standing at the edge of the group, seen from behind, face never visible, subtle warm glow around his form. Overcast late-afternoon light, dust hanging in the air. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 7,
+      "image_url": "lazarus_he_troubled_himself.png",
+      "mood": "tense",
+      "shot_type": "close-up portrait",
+      "prompt": "Close-up portrait from behind of a man in a simple first-century tunic, face never visible, shoulders tensed, head bowed forward, a subtle warm glow of glory emanating faintly from his form against a backdrop of blurred grieving figures. The composition emphasizes tension in the shoulders and stillness before movement. Dim golden late light. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 8,
+      "image_url": "lazarus_jesus_wept.png",
+      "mood": "falling",
+      "shot_type": "close-up portrait",
+      "prompt": "Extreme close-up of a single tear falling past the edge of a shadowed, softly-lit jawline of a man seen from behind and in silhouette, face never visible, a faint warm glow around the edge of his form. Blurred dusty road and distant tomb in the background. Quiet, intimate framing. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 9,
+      "image_url": "lazarus_take_away_the_stone.png",
+      "mood": "tense",
+      "shot_type": "medium two-figure",
+      "prompt": "A sturdy woman in her late thirties, olive-brown weathered skin, dark hair under a faded rust head cloth, deep-clay linen tunic, stands near a large stone being rolled from the mouth of a rock-cut tomb, her hand half-raised as if to caution, face tense. A man in a simple first-century tunic stands nearby, seen from behind, face never visible, subtle warm glow around his form. Dust rising from the moving stone, harsh midday light. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 10,
+      "image_url": "lazarus_come_forth.png",
+      "mood": "awe",
+      "shot_type": "action/movement",
+      "prompt": "Wide shot of the dark open mouth of a rock-cut tomb, a man in a simple first-century tunic standing before it with one arm raised, seen from behind, face never visible, a subtle warm glow of glory around his form, small crowd of onlookers frozen mid-motion behind him. A pale bandaged figure is just visible emerging from the tomb's shadow. Dramatic midday light cutting across the scene. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 11,
+      "image_url": "lazarus_loose_him.png",
+      "mood": "grace",
+      "shot_type": "medium two-figure",
+      "prompt": "Two villagers in earth-toned tunics kneel beside a man wrapped in pale linen burial bandages, carefully unwinding cloth from his hands as he stands unsteadily in bright open daylight outside the tomb. A sturdy woman in her late thirties, olive-brown weathered skin, dark hair under a faded rust head cloth, deep-clay linen tunic, watches from just behind with visibly relieved posture. Warm golden light. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 12,
+      "image_url": "lazarus_personal_discovery.png",
+      "mood": "peace",
+      "shot_type": "object/still life",
+      "prompt": "Close-up of loosened white linen burial bandages lying gently coiled on sunlit ground beside a now-empty rock-cut tomb entrance, morning light spilling across the stone. No people. Pure metaphor of freedom left behind. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    },
+    {
+      "order": 13,
+      "image_url": "lazarus_closing.png",
+      "mood": "peace",
+      "shot_type": "wide departure",
+      "prompt": "A sturdy woman in her late thirties, olive-brown weathered skin, dark hair under a faded rust head cloth, deep-clay linen tunic, walks with a small group away from a now-empty tomb toward the warmly lit village in the distance, golden late-afternoon light, long soft shadows trailing behind them. Sense of quiet resolution and forward movement. Painterly warm 2D illustration, Mediterranean palette, ochre and sandstone tones, cinematic lighting, no text."
+    }
+  ]
+}
