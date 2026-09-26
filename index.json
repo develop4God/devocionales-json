@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-17",
+  "updated_at": "2026-09-26",
   "files": {
     "es": {
       "RVR1960": {
@@ -16,9 +16,11 @@
       "NVI": {
         "2025": "2026-04-27",
         "2026": "2026-04-27",
+        "2027": "2026-09-26",
         "files": {
           "2025": "Devocional_year_2025_es_NVI.json",
-          "2026": "Devocional_year_2026_es_NVI.json"
+          "2026": "Devocional_year_2026_es_NVI.json",
+          "2027": "Devocional_year_2027_es_NVI.json"
         }
       }
     },
