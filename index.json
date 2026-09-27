@@ -174,9 +174,11 @@
       "SVDA": {
         "2025": "2026-04-15",
         "2026": "2026-04-15",
+        "2027": "2026-09-27",
         "files": {
           "2025": "Devocional_year_2025_ar_SVDA.json",
-          "2026": "Devocional_year_2026_ar_SVDA.json"
+          "2026": "Devocional_year_2026_ar_SVDA.json",
+          "2027": "Devocional_year_2027_ar_SVDA.json"
         }
       }
     },
