@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-27",
+  "updated_at": "2026-10-05",
   "files": {
     "es": {
       "RVR1960": {
@@ -176,7 +176,7 @@
       "SVDA": {
         "2025": "2026-09-27",
         "2026": "2026-09-27",
-        "2027": "2026-09-27",
+        "2027": "2026-10-05",
         "files": {
           "2025": "Devocional_year_2025_ar_SVDA.json",
           "2026": "Devocional_year_2026_ar_SVDA.json",
