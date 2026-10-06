@@ -4,6 +4,9 @@ version = "0.1.0"
 description = "Content, validation, and generation pipelines for devocionales-json (Devotionals, Discovery, Encounters)."
 requires-python = ">=3.12"
 dependencies = [
+    # Single source of truth for verse resolution: always the latest main of bible_versions.
+    # Update with: uv lock --upgrade-package bible-resolver
+    "bible-resolver @ git+https://github.com/develop4God/bible_versions@main",
     "sentence-transformers>=6.0.1",
     "fastapi>=0.115",
     "uvicorn>=0.30",
@@ -22,3 +25,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 include = ["shared_validation*", "devocionales_scripts*", "semantic_search_service*"]
+
+[tool.pytest.ini_options]
+# Fixture DBs are synthetic (no language row), so raw-title fallbacks are expected in tests.
+filterwarnings = ["ignore::bible_resolver.UnmappedBookWarning"]

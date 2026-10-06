@@ -34,6 +34,11 @@ wheels = [
 ]
 
 [[package]]
+name = "bible-resolver"
+version = "0.2.0"
+source = { git = "https://github.com/develop4God/bible_versions?rev=main#ef837caac4d863be6154a5b265543114670c0894" }
+
+[[package]]
 name = "certifi"
 version = "2026.7.22"
 source = { registry = "https://pypi.org/simple" }
@@ -149,6 +154,7 @@ name = "devocionales-json"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "bible-resolver" },
     { name = "fastapi" },
     { name = "pydantic-settings" },
     { name = "sentence-transformers" },
@@ -163,6 +169,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "bible-resolver", git = "https://github.com/develop4God/bible_versions?rev=main" },
     { name = "fastapi", specifier = ">=0.115" },
     { name = "pydantic-settings", specifier = ">=2.5" },
     { name = "pytest", marker = "extra == 'dev'" },

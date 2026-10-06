@@ -2,8 +2,8 @@
 resolvable citation and that its stored verse text matches what that
 reference actually points to.
 
-Reuses devocionales_scripts/verse_resolver.py (VerseResolver, parse_en_ref,
-fetch_text), which is already trusted at generation time — this module
+Reuses the shared `bible_resolver` package from develop4God/bible_versions
+(VerseResolver, parse_en_ref, fetch_text), which is already trusted at generation time — this module
 never re-implements reference parsing or verse lookup, only wires those
 existing pieces into the validation pipelines.
 
@@ -35,7 +35,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Self
 
-from devocionales_scripts.verse_resolver import VerseResolver, fetch_text, parse_en_ref
+from bible_resolver import VerseResolver, fetch_text, parse_en_ref
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CI GATING
@@ -342,7 +342,7 @@ class Finding:
 
 
 # Raw source-DB footnote apparatus that fetch_text() strips when building
-# the resolved comparison text (see devocionales_scripts/verse_resolver.py):
+# the resolved comparison text (see bible_resolver.clean_verse_text):
 # circled-letter/number reference markers (U+2460-24FF, e.g. "ⓜ", "ⓓ") and
 # trailing bracketed footnote numbers (e.g. " [11]"). If either survives in
 # a file's own stored verse_text, that text was copied from the DB without

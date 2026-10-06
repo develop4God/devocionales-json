@@ -16,12 +16,13 @@ keep a local copy of it:
       only, never `versions[code]["name"]` (display string, e.g. `"Reina-Valera 1960"`).
 - [ ] Download `.gz` to `bible_database/` if missing — never decompress manually,
       `VerseResolver` takes the `.gz` path directly.
-- [ ] Resolve every verse via `devocionales_scripts/verse_resolver.py`
-      (`VerseResolver(path).resolve("John 3:16")`) — never hand-type/copy-paste verse
-      text or references.
+- [ ] Resolve every verse via the shared `bible_resolver` package (dependency on
+      `develop4God/bible_versions`; `from bible_resolver import VerseResolver`,
+      `VerseResolver(path).resolve("John 3:16")`) — never hand-type/copy-paste verse
+      text or references. Do not copy resolver code into this repo.
 - [ ] Book names: always pass **English** book names into `resolve()` (e.g. `"John"`,
       not a native name) — `VerseResolver` looks that up in `bible_books.json` (English
-      name → `book_number`) for you, then reads the native name back from the target
+      name → `book_number`, latest copy from `bible_versions` `main`) for you, then reads the native name back from the target
       language's own SQLite `books` table. Never hand-supply or hand-translate a native
       book name yourself.
 - [ ] Before delivery: `assert data["bible_version"] in (primary_code, fallback_code)` —

@@ -18,6 +18,6 @@ contexts before "fixing" a दिया/दिए-type verb near यीशु.
 ## HIOV database book-name patch
 The HIOV database's `books.long_name` stores the Gospels in liturgical long form
 (e.g. `लूका रचित सुसमाचार`, "the Gospel composed by Luke") instead of the short form real
-Hindi Bibles cite (`लूका`). `VerseResolver` already rewrites this for HIOV specifically —
-it is not a general behavior, don't assume any other language DB needs the same
-shortening, and never hand-type the long form yourself.
+Hindi Bibles cite (`लूका`). `bible_resolver` already rewrites this through its Hindi title map
+(`hi.json` in `bible_versions`, which covers both HIOV and HERV) — never hand-type the long
+form yourself, and if a Hindi citation comes back long, fix the map there, not in this repo.

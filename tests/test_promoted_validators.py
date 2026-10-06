@@ -111,7 +111,7 @@ class TestPromotedValidatorsGateOnFailure(unittest.TestCase):
         validator locates its content directory relative to its own
         __file__, not cwd) plus shared_validation/ and devocionales_scripts/
         (its import-time dependencies — shared_validation.scripture_check
-        imports devocionales_scripts.verse_resolver at module load, so its
+        imports bible_resolver at module load, so its
         absence crashes the subprocess before Phase A ever runs, not a
         real "broken index.json" failure) into an isolated temp tree, then
         corrupt the copy's index.json. Does NOT copy bible_database/ (many

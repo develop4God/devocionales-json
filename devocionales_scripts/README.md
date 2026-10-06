@@ -78,21 +78,29 @@ All devotional files have unique IDs. ✨
 
 ---
 
-### `verse_resolver.py` — verse lookup utility
+### `bible_resolver` — verse lookup (shared package, not a file in this repo)
 
-Resolves an English Bible reference to target-language citation and verse text, using the gzip-compressed SQLite3 databases in `../bible_database/`.
+Resolving English references to target-language citations and verse text is done by the
+`bible_resolver` package from [`develop4God/bible_versions`](https://github.com/develop4God/bible_versions),
+the single source of truth. It is a dependency in `pyproject.toml` that follows that repo's `main`
+branch; there is no copy of the resolver here. Update it with `uv lock --upgrade-package bible-resolver`.
 
 ```python
-from verse_resolver import VerseResolver
+from bible_resolver import VerseResolver
 
-with VerseResolver("../bible_database/LU17_de.SQLite3.gz", "book_map.json", "de") as r:
+with VerseResolver("../bible_database/LU17_de.SQLite3.gz") as r:   # language is read from the DB
     cita, texto, error = r.resolve("Luke 19:10")
     # ("Lukas 19:10", "Denn der Menschensohn ist gekommen...", None)
 ```
 
+Book titles come from the per-language maps in `bible_versions` and `bible_books.json` is fetched from
+`main` and hash-checked against its `index.json` (see that repo's README). To work on the resolver and this
+repo together, temporarily point the dependency at your checkout:
+`uv add --editable ../bible_versions`.
+
 **Used by:** maintenance scripts that need to fill missing `para_meditar.texto` fields when a verse is absent or empty in the target Bible database.
 
-**Note on absent verses:** Some translations omit textually disputed verses (e.g., Matthew 18:11 in LU17; Ephesians 1:4–5 in HERV). When `texto` returns `""`, use a canonical equivalent from the same translation (e.g., Luke 19:10 for LU17; Galatians 4:5 for HERV).
+**Note on absent verses:** Some translations omit textually disputed verses (e.g., Matthew 18:11 in LU17; Ephesians 1:4–5 in HERV). The resolver returns an `error` (`verse not found` or `verse text is empty`) and no text for them, never blank text. Use a canonical equivalent from the same translation (e.g., Luke 19:10 for LU17; Galatians 4:5 for HERV).
 
 ---
 
@@ -121,7 +129,7 @@ python3 extract_unique_tags.py
 
 ### `book_map.json`
 
-Maps English canonical book names to their counterparts in each supported language.  Used by `verse_resolver.py` and `fix_devotional_ids.py`.
+Maps English canonical book names to their counterparts in each supported language.  Used by `fix_devotional_ids.py`.
 
 Structure:
 ```json
@@ -162,7 +170,7 @@ python3 devocionales_scripts/validate_duplicates.py
 | HIOV (Hindi OV) | Labels itself `(ओ.वी.)` in `versiculo`, not `HIOV` | Expected — validator accepts this alias |
 | LU17 (Luther 2017) | Matthew 18:11 is absent (disputed verse omitted) | Use Luke 19:10 as canonical equivalent |
 | HERV (Hindi ERV) | Ephesians 1:4–5 empty in DB (restructured into vv.3 and 6) | Use Galatians 4:5 as canonical equivalent |
-| LU17 / HERV | Some book numbers differ from standard (Matthew=470, not 40) | `verse_resolver.py` handles this via `book_map.json` |
+| LU17 / HERV | Some book numbers differ from standard (Matthew=470, not 40) | `bible_resolver` handles this via `bible_books.json` (book numbers) |
 
 **Summary**:
 - **Total files fixed**: 22 files (6 languages × ~4 files each)
