@@ -14,8 +14,9 @@ keep a local copy of it:
 - [ ] `lang_entry = index["languages"][lang_code]` → use `primary_version`;
       `fallback_version` if primary lookup fails. Version field = that short code
       only, never `versions[code]["name"]` (display string, e.g. `"Reina-Valera 1960"`).
-- [ ] Download `.gz` to `bible_database/` if missing — never decompress manually,
-      `VerseResolver` takes the `.gz` path directly.
+- [ ] Get the `.gz` path with `bible_resolver.database_path(lang, version)` — it reads the
+      `bible_versions` checkout in place or downloads a hash-checked copy; never copy DBs
+      into this repo, never decompress manually (`VerseResolver` takes the `.gz` path directly).
 - [ ] Resolve every verse via the shared `bible_resolver` package (dependency on
       `develop4God/bible_versions`; `from bible_resolver import VerseResolver`,
       `VerseResolver(path).resolve("John 3:16")`) — never hand-type/copy-paste verse

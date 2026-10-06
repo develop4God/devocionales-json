@@ -92,7 +92,6 @@ from shared_validation.report import Report
 SCRIPTS_DIR = Path(__file__).parent
 ENCOUNTERS_DIR = SCRIPTS_DIR.parent
 INDEX_PATH = ENCOUNTERS_DIR / "index.json"
-BIBLE_DATABASE_DIR = ENCOUNTERS_DIR.parent / "bible_database"
 
 SCHEMA_VERSION = "encounters_v1"
 VALID_STATUSES = {"published", "coming_soon"}
@@ -964,7 +963,7 @@ def validate_scripture_references(
     resolution_failures = 0
     text_mismatches = 0
 
-    with ScriptureValidator(BIBLE_DATABASE_DIR) as validator:
+    with ScriptureValidator() as validator:
         for enc in index_data["encounters"]:
             files = enc.get("files", {})
             en_fname = files.get("en")
@@ -1112,7 +1111,7 @@ def main():
     # text-mismatch both need a human-review pass over real corpus findings
     # before either is considered for promotion to ERROR. Scans the ENTIRE
     # corpus (2000+ references across 10 languages) every run — confirmed
-    # fast (~1s locally against the SQLite bible_database) so it always
+    # fast (~1s locally against the shared SQLite databases) so it always
     # runs, local or CI, not just when CI=true.
     run_report.wrap(
         "PHASE D: SCRIPTURE REFERENCES",
