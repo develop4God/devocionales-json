@@ -57,7 +57,7 @@ pass.
    first, then check the other 2 files in this phase for the same inherited defect.
 10. **Validate this phase's files now — do not defer to the end of the batch:**
     - Confirm valid JSON for all 3 files
-      (`python3 -c "import json; json.load(open(path))"`).
+      (`uv run python3 -c "import json; json.load(open(path))"`).
     - Run the real corpus validator (`validate_encounters.py` for encounters,
       `discovery_master_validator.py` for discovery). **These validators always scan
       the whole corpus — neither takes a file-path argument to scope to just this
@@ -77,7 +77,7 @@ pass.
       Phase 1, ES/PT/FR/EN all exist by now, so this should have ≥2 files and run its
       real checks — a "fewer than 2 files" exit 1 at this point in Phase 1 is a
       genuine problem, not the expected mid-batch state.
-    - Run `python3 skills/post_translate_checks.py <file>` on each of the 3 files
+    - Run `uv run python3 skills/post_translate_checks.py <file>` on each of the 3 files
       individually — this one DOES take a single file path — zero violations.
     - If anything fails here, fix it and re-run before moving to step 11 — Round 2
       must start from files that already pass every check, not just "critic-clean."

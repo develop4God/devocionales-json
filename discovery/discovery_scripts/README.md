@@ -19,7 +19,7 @@ This folder contains all scripts needed to validate the structure, translation, 
 Run this to check everything in one go:
 
 ```bash
-python3 discovery_master_validator.py
+uv run python3 discovery_master_validator.py
 ```
 - ✅ Runs global translation/JSON/structure/index validation for all files
 - 🟢 If all pass, your codebase is fully validated!
@@ -28,7 +28,7 @@ python3 discovery_master_validator.py
 ### 2️⃣ Validate All Translations Only
 
 ```bash
-python3 validate_discovery.py
+uv run python3 validate_discovery.py
 ```
 - 🌐 Checks all translation files for JSON, structure, and language issues
 - Uses index.json as the source of truth
@@ -96,7 +96,7 @@ python3 validate_discovery.py
 
 ```bash
 # From the discovery folder
-python3 scripts/validate_discovery.py
+uv run python3 scripts/validate_discovery.py
 # Make it executable (optional)
 chmod +x scripts/validate_discovery.py
 ./scripts/validate_discovery.py

@@ -84,21 +84,21 @@ CI (`.github/workflows/ci.yml`) runs on every PR and push to `main`, gating **Di
 **Devocionales:**
 ```bash
 # Full phased pipeline (lint, index, Bible-versions SOT, per-file corpus checks)
-python3 devocionales_scripts/devocionales_master_validator.py
+uv run python3 devocionales_scripts/devocionales_master_validator.py
 
 # Cross-file duplicate ID check
-python3 devocionales_scripts/validate_duplicates.py
+uv run python3 devocionales_scripts/validate_duplicates.py
 
 # Single-file validator (GUI with no args, or --file for CLI)
-python3 devocionales_scripts/validate_devocional_gui.py --file <path>.json
+uv run python3 devocionales_scripts/validate_devocional_gui.py --file <path>.json
 ```
 
 📖 **[devocionales_scripts/README.md](./devocionales_scripts/README.md)** — full validator reference
 
 **Discovery / Encounters:**
 ```bash
-python3 discovery/discovery_scripts/discovery_master_validator.py
-python3 encounters/encounters_scripts/encounters_master_validator.py
+uv run python3 discovery/discovery_scripts/discovery_master_validator.py
+uv run python3 encounters/encounters_scripts/encounters_master_validator.py
 ```
 
 📖 **[discovery_scripts/README.md](./discovery/discovery_scripts/README.md)** · **[encounters_scripts/](./encounters/encounters_scripts/)**
@@ -167,21 +167,21 @@ CI (`.github/workflows/ci.yml`) se ejecuta en cada PR y push a `main`, validando
 **Devocionales:**
 ```bash
 # Pipeline completo por fases (lint, índice, SOT de versiones bíblicas, validación por archivo)
-python3 devocionales_scripts/devocionales_master_validator.py
+uv run python3 devocionales_scripts/devocionales_master_validator.py
 
 # Verificación de IDs duplicados entre archivos
-python3 devocionales_scripts/validate_duplicates.py
+uv run python3 devocionales_scripts/validate_duplicates.py
 
 # Validador de un solo archivo (GUI sin argumentos, o --file para CLI)
-python3 devocionales_scripts/validate_devocional_gui.py --file <ruta>.json
+uv run python3 devocionales_scripts/validate_devocional_gui.py --file <ruta>.json
 ```
 
 📖 **[devocionales_scripts/README.md](./devocionales_scripts/README.md)** — referencia completa de validadores
 
 **Discovery / Encounters:**
 ```bash
-python3 discovery/discovery_scripts/discovery_master_validator.py
-python3 encounters/encounters_scripts/encounters_master_validator.py
+uv run python3 discovery/discovery_scripts/discovery_master_validator.py
+uv run python3 encounters/encounters_scripts/encounters_master_validator.py
 ```
 
 📖 **[discovery_scripts/README.md](./discovery/discovery_scripts/README.md)** · **[encounters_scripts/](./encounters/encounters_scripts/)**

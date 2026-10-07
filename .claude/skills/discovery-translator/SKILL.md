@@ -22,7 +22,7 @@ This file only covers what's specific to Discovery.
 - Remote index — source of truth for versions, codes, and download URLs (see core skill)
 - `validate_family.py` — cross-checks **all** language files of one study against each
   other (not a pairwise EN-vs-one-language tool). Usage:
-  `python3 validate_family.py {study_id}` (the bare study id from `index.json`, not a
+  `uv run python3 validate_family.py {study_id}` (the bare study id from `index.json`, not a
   file path — it resolves every language file for that study from `index.json`'s
   `files` map itself). Catches per-file structural completeness AND cross-file issues
   no pairwise check can see: an untranslated leak (2+ languages sharing byte-identical
@@ -123,10 +123,10 @@ Run in this order. Fix all errors before proceeding to the next language.
 ```bash
 # After each language file is created (re-validates the WHOLE family, not just this
 # one file — cheap, and catches cross-file issues a pairwise check would miss):
-python3 validate_family.py {study_id}
+uv run python3 validate_family.py {study_id}
 
 # After all languages are done:
-python3 discovery_master_validator.py
+uv run python3 discovery_master_validator.py
 ```
 
 **Zero errors required.** Warnings about `estimated_reading_minutes` differing from EN are expected and acceptable. All other warnings must be investigated and resolved.
