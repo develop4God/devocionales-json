@@ -74,7 +74,7 @@ bled into the field value and no single-language critic review checks a value th
 looks "correct" in isolation. Before delivery, run this exact check against
 `index.json`'s canonical id and fail the batch if any file differs:
 ```bash
-python3 -c "
+uv run python3 -c "
 import json, glob
 canon = json.load(open('encounters/index.json'))
 canon_id = next(e['id'] for e in canon['encounters'] if e['id'] == '{encounter_id}')
@@ -160,13 +160,13 @@ required before delivery.
 ```bash
 # Cross-file family check — run after EACH new language is added (cheap, re-checks
 # the whole family every time, catches issues a single-language run can't see):
-python3 encounters/encounters_scripts/validate_family.py {encounter_id}
+uv run python3 encounters/encounters_scripts/validate_family.py {encounter_id}
 
 # Run encounters validator
-python3 encounters/encounters_scripts/validate_encounters.py
+uv run python3 encounters/encounters_scripts/validate_encounters.py
 
 # Or via master
-python3 encounters/encounters_scripts/encounters_master_validator.py
+uv run python3 encounters/encounters_scripts/encounters_master_validator.py
 ```
 
 Warnings about cognates (FR/PT/ES) and reading time differences from EN are expected and acceptable. All other warnings must be investigated and resolved.

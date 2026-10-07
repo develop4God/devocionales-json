@@ -14,10 +14,10 @@ Validates a single devotional JSON file.  Run in **GUI mode** (no args) or **CLI
 
 ```bash
 # CLI
-python3 validate_devocional_gui.py --file ../Devocional_year_2026_de_LU17.json
+uv run python3 validate_devocional_gui.py --file ../Devocional_year_2026_de_LU17.json
 
 # GUI
-python3 validate_devocional_gui.py
+uv run python3 validate_devocional_gui.py
 ```
 
 **All checks performed:**
@@ -63,9 +63,9 @@ python3 validate_devocional_gui.py
 Checks that every `id` is globally unique across **all 32 production files** (11 680 entries).
 
 ```bash
-python3 validate_duplicates.py
+uv run python3 validate_duplicates.py
 # Run from the repo root:
-python3 devocionales_scripts/validate_duplicates.py
+uv run python3 devocionales_scripts/validate_duplicates.py
 ```
 
 Scans all files listed inside the script. Reports duplicate IDs with their file and date location.
@@ -122,7 +122,7 @@ Fixed 4 205 entries across 22 files where IDs were missing the book/chapter/vers
 Scans all production files and prints a sorted, deduplicated list of all tag values used across every entry.  Useful for auditing tag vocabulary consistency.
 
 ```bash
-python3 extract_unique_tags.py
+uv run python3 extract_unique_tags.py
 ```
 
 ---
@@ -153,12 +153,12 @@ fr_LSG1910,fr_TOB,hi_HERV,hi_HIOV,pt_ARC,pt_NVI}.json \
   "Devocional_year_2026_ja_リビングバイブル.json" "Devocional_year_2026_ja_新改訳2003.json" \
   "Devocional_year_2025_zh_和合本1919.json" "Devocional_year_2025_zh_新译本.json" \
   "Devocional_year_2026_zh_和合本1919.json" "Devocional_year_2026_zh_新译本.json"; do
-    result=$(python3 devocionales_scripts/validate_devocional_gui.py --file "$f" 2>&1)
+    result=$(uv run python3 devocionales_scripts/validate_devocional_gui.py --file "$f" 2>&1)
     status=$(echo "$result" | grep "Status" | tail -1)
     echo "$f | $status"
 done
 
-python3 devocionales_scripts/validate_duplicates.py
+uv run python3 devocionales_scripts/validate_duplicates.py
 ```
 
 ---

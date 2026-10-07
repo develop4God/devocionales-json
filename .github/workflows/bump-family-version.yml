@@ -16,14 +16,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 🏷️ Set up Python
-        uses: actions/setup-python@v6
+      - name: 🏷️ Install uv
+        uses: astral-sh/setup-uv@v3
         with:
+          enable-cache: true
           python-version: "3.12"
 
       - name: 🏷️ Bump and commit
         run: |
-          python3 shared_validation/tools/bump_family_version.py "${{ github.event.before }}" "${{ github.sha }}"
+          uv run python3 shared_validation/tools/bump_family_version.py "${{ github.event.before }}" "${{ github.sha }}"
 
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action [bot]"
@@ -59,14 +60,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 🗓️ Set up Python
-        uses: actions/setup-python@v6
+      - name: 🗓️ Install uv
+        uses: astral-sh/setup-uv@v3
         with:
+          enable-cache: true
           python-version: "3.12"
 
       - name: 🗓️ Bump and commit
         run: |
-          python3 devocionales_scripts/bump_devocionales_date.py "${{ github.event.before }}" "${{ github.sha }}"
+          uv run python3 devocionales_scripts/bump_devocionales_date.py "${{ github.event.before }}" "${{ github.sha }}"
 
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action [bot]"
