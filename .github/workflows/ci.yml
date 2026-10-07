@@ -49,7 +49,18 @@ jobs:
           git add README.md
           if ! git diff --cached --quiet; then
             git commit -m "📊 Update README stats [skip ci]"
-            git push
+
+            attempt=1
+            max_attempts=3
+            until git push; do
+              if [ "$attempt" -ge "$max_attempts" ]; then
+                echo "❌ git push failed after $attempt attempts"
+                exit 1
+              fi
+              echo "⚠️ git push failed (attempt $attempt/$max_attempts) — main likely moved, rebasing and retrying"
+              git pull --rebase origin main
+              attempt=$((attempt + 1))
+            done
           else
             echo "ℹ️ Stats unchanged — skipping commit"
           fi
