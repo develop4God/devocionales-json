@@ -5,11 +5,12 @@ Covers find_scripture_pairs() (pure extraction: nested structures, multiple
 pairs per card, missing bible_version) and validate_pair() (known-good
 reference, known-bad book name, known verse-count-exceeded, a synthetic
 text-mismatch case) against a tiny in-memory-equivalent SQLite fixture DB —
-same approach as tests/test_verse_resolver.py, so these tests don't depend
+same approach as bible_versions' resolver tests, so these tests don't depend
 on decompressing the real multi-MB bible_database/*.gz files and stay fast
 and deterministic.
 """
 
+import json
 import sqlite3
 import sys
 import tempfile
@@ -18,9 +19,8 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
-sys.path.insert(0, str(REPO_ROOT / "devocionales_scripts"))
 
-from verse_resolver import VerseResolver  # noqa: E402
+from bible_resolver import VerseResolver  # noqa: E402
 
 from shared_validation.checks.scripture_check import (  # noqa: E402
     FUZZY_MATCH_THRESHOLD,
@@ -48,6 +48,17 @@ def _make_bible_db(path: str, books: list, verses: list) -> None:
     conn.commit()
     conn.close()
 
+
+
+def _write_sot(testcase, mapping):
+    """Write a tiny bible_books.json (name -> book_number) and return its path,
+    so tests pass it as books_sot_path and never touch the network."""
+    with tempfile.NamedTemporaryFile(
+        "w", suffix=".json", delete=False, encoding="utf-8"
+    ) as f:
+        json.dump({"books": {k: {"book_number": v} for k, v in mapping.items()}}, f)
+    testcase.addCleanup(Path(f.name).unlink, missing_ok=True)
+    return f.name
 
 # ── find_scripture_pairs ─────────────────────────────────────────────────────
 
@@ -377,9 +388,7 @@ class ValidatePairTestCase(unittest.TestCase):
     """Base class providing a books_sot fixture so tests don't hit the network."""
 
     def setUp(self):
-        import verse_resolver
-
-        verse_resolver._books_sot_cache = {"John": 500, "Matthew": 470}
+        self.sot_path = _write_sot(self, {"John": 500, "Matthew": 470})
 
         with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
             self.db_path = f.name
@@ -402,12 +411,9 @@ class ValidatePairTestCase(unittest.TestCase):
                 (470, 14, 31, "O thou of little faith, wherefore didst thou doubt?"),
             ],
         )
-        self.resolver = VerseResolver(self.db_path)
+        self.resolver = VerseResolver(self.db_path, books_sot_path=self.sot_path)
 
     def tearDown(self):
-        import verse_resolver
-
-        verse_resolver._books_sot_cache = None
         self.resolver.close()
         Path(self.db_path).unlink(missing_ok=True)
 
@@ -496,9 +502,7 @@ class ValidateTranslatedPairTestCase(unittest.TestCase):
     with a Spanish-labeled DB standing in for any non-EN target."""
 
     def setUp(self):
-        import verse_resolver
-
-        verse_resolver._books_sot_cache = {"John": 500, "Genesis": 10}
+        self.sot_path = _write_sot(self, {"John": 500, "Genesis": 10})
 
         with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
             self.db_path = f.name
@@ -514,12 +518,9 @@ class ValidateTranslatedPairTestCase(unittest.TestCase):
                 ),
             ],
         )
-        self.resolver = VerseResolver(self.db_path)
+        self.resolver = VerseResolver(self.db_path, books_sot_path=self.sot_path)
 
     def tearDown(self):
-        import verse_resolver
-
-        verse_resolver._books_sot_cache = None
         self.resolver.close()
         Path(self.db_path).unlink(missing_ok=True)
 
@@ -602,7 +603,7 @@ class TestValidateTranslatedPairNullText(ValidateTranslatedPairTestCase):
             conn.commit()
             conn.close()
 
-            null_resolver = VerseResolver(null_db_path)
+            null_resolver = VerseResolver(null_db_path, books_sot_path=self.sot_path)
             try:
                 en_ref = ScriptureRef(
                     reference="Genesis 24:16",
@@ -633,9 +634,7 @@ class TestValidateTranslatedPairVersificationException(unittest.TestCase):
     omitted — the exception lookup is opt-in per call, not automatic."""
 
     def setUp(self):
-        import verse_resolver
-
-        verse_resolver._books_sot_cache = {"Jonah": 390}
+        self.sot_path = _write_sot(self, {"Jonah": 390})
 
         with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
             self.db_path = f.name
@@ -653,12 +652,9 @@ class TestValidateTranslatedPairVersificationException(unittest.TestCase):
                 ),
             ],
         )
-        self.resolver = VerseResolver(self.db_path)
+        self.resolver = VerseResolver(self.db_path, books_sot_path=self.sot_path)
 
     def tearDown(self):
-        import verse_resolver
-
-        verse_resolver._books_sot_cache = None
         self.resolver.close()
         Path(self.db_path).unlink(missing_ok=True)
 
@@ -719,9 +715,7 @@ class TestValidateTranslatedPairVersificationExceptionVerseExistsAtBothAddresses
     not only as a fallback when it fails."""
 
     def setUp(self):
-        import verse_resolver
-
-        verse_resolver._books_sot_cache = {"Psalm": 490}
+        self.sot_path = _write_sot(self, {"Psalm": 490})
 
         with tempfile.NamedTemporaryFile(suffix=".SQLite3", delete=False) as f:
             self.db_path = f.name
@@ -741,12 +735,9 @@ class TestValidateTranslatedPairVersificationExceptionVerseExistsAtBothAddresses
                 ),
             ],
         )
-        self.resolver = VerseResolver(self.db_path)
+        self.resolver = VerseResolver(self.db_path, books_sot_path=self.sot_path)
 
     def tearDown(self):
-        import verse_resolver
-
-        verse_resolver._books_sot_cache = None
         self.resolver.close()
         Path(self.db_path).unlink(missing_ok=True)
 
