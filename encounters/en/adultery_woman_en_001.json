@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "en",
-  "bible_version": "KJV",
+  "bible_version": "KJ2000",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 10,
@@ -26,7 +26,7 @@
   "key_verse": {
     "reference": "John 8:7",
     "text": "So when they continued asking him, he lifted himself up, and said unto them, He that is without sin among you, let him first cast a stone at her.",
-    "bible_version": "KJV"
+    "bible_version": "KJ2000"
   },
   "cards": [
     {
@@ -261,7 +261,7 @@
       "completion_verse": {
         "reference": "John 8:11",
         "text": "She said, No man, Lord. And Jesus said unto her, Neither do I condemn you: go, and sin no more.",
-        "bible_version": "KJV"
+        "bible_version": "KJ2000"
       },
       "celebration_type": "gentle_light"
     }

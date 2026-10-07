@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "en",
-  "bible_version": "KJV",
+  "bible_version": "KJ2000",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 8,
@@ -25,7 +25,7 @@
   "key_verse": {
     "reference": "Luke 7:12",
     "text": "Now when he came near to the gate of the city, behold, there was a dead man carried out, the only son of his mother, and she was a widow: and many people of the city were with her.",
-    "bible_version": "KJV"
+    "bible_version": "KJ2000"
   },
   "cards": [
     {
@@ -244,7 +244,7 @@
       "completion_verse": {
         "reference": "Luke 7:13",
         "text": "And when the Lord saw her, he had compassion on her, and said unto her, Weep not.",
-        "bible_version": "KJV"
+        "bible_version": "KJ2000"
       },
       "celebration_type": "gentle_light"
     }

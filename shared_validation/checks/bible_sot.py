@@ -29,7 +29,9 @@ def _remote_to_local_shape(remote_entry: dict) -> dict:
         "script": remote_entry["script"],
         "primary_version": primary,
         "fallback_version": fallback,
-        "allowed_versions": [primary, fallback],
+        # The SOT may widen this per language (e.g. English also allows KJ2000);
+        # without it the default stays primary + fallback.
+        "allowed_versions": remote_entry.get("allowed_versions", [primary, fallback]),
         "reading_speed": remote_entry["reading_speed"],
     }
 

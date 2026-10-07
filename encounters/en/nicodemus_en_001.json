@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "en",
-  "bible_version": "KJV",
+  "bible_version": "KJ2000",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 11,
@@ -25,7 +25,7 @@
   "key_verse": {
     "reference": "John 3:16",
     "text": "For God so loved the world, that he gave his only begotten Son, that whosoever believes in him should not perish, but have everlasting life.",
-    "bible_version": "KJV"
+    "bible_version": "KJ2000"
   },
   "cards": [
     {
@@ -307,7 +307,7 @@
       "completion_verse": {
         "reference": "John 3:16",
         "text": "For God so loved the world, that he gave his only begotten Son, that whosoever believes in him should not perish, but have everlasting life.",
-        "bible_version": "KJV"
+        "bible_version": "KJ2000"
       },
       "celebration_type": "gentle_light"
     }

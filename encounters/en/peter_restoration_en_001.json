@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "en",
-  "bible_version": "KJV",
+  "bible_version": "KJ2000",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 10,
@@ -27,7 +27,7 @@
   "key_verse": {
     "reference": "John 21:9",
     "text": "As soon then as they were come to land, they saw a fire of coals there, and fish laid thereon, and bread.",
-    "bible_version": "KJV"
+    "bible_version": "KJ2000"
   },
   "cards": [
     {
@@ -266,7 +266,7 @@
       "completion_verse": {
         "reference": "John 21:17",
         "text": "He said unto him the third time, Simon, son of Jonas, do you love me? Peter was grieved because he said unto him the third time, Do you love me? And he said unto him, Lord, you know all things; you know that I love you. Jesus said unto him, Feed my sheep.",
-        "bible_version": "KJV"
+        "bible_version": "KJ2000"
       },
       "celebration_type": "gentle_light"
     }

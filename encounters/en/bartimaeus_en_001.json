@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "en",
-  "bible_version": "KJV",
+  "bible_version": "KJ2000",
   "version": "1.1",
   "estimated_reading_minutes": 7,
   "meta": {
@@ -27,7 +27,7 @@
   "key_verse": {
     "reference": "Mark 10:46",
     "text": "And they came to Jericho: and as he went out of Jericho with his disciples and a great number of people, blind Bartimaeus, the son of Timaeus, sat by the highway side begging.",
-    "bible_version": "KJV"
+    "bible_version": "KJ2000"
   },
   "cards": [
     {
@@ -181,7 +181,7 @@
       "completion_verse": {
         "reference": "Mark 10:52",
         "text": "And Jesus said unto him, Go thy way; thy faith hath made thee whole. And immediately he received his sight, and followed Jesus in the way.",
-        "bible_version": "KJV"
+        "bible_version": "KJ2000"
       },
       "celebration_type": "gentle_light"
     }

@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "en",
-  "bible_version": "KJV",
+  "bible_version": "KJ2000",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 10,
@@ -28,7 +28,7 @@
   "key_verse": {
     "reference": "John 9:6",
     "text": "When he had thus spoken, he spat on the ground, and made clay of the spittle, and he anointed the eyes of the blind man with the clay,",
-    "bible_version": "KJV"
+    "bible_version": "KJ2000"
   },
   "cards": [
     {
@@ -281,7 +281,7 @@
       "completion_verse": {
         "reference": "John 9:25",
         "text": "He answered and said, Whether he be a sinner or not, I know not: one thing I know, that, though I was blind, now I see.",
-        "bible_version": "KJV"
+        "bible_version": "KJ2000"
       },
       "celebration_type": "gentle_light"
     }

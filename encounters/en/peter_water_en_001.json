@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "en",
-  "bible_version": "KJV",
+  "bible_version": "KJ2000",
   "version": "1.3",
   "estimated_reading_minutes": 5,
   "meta": {
@@ -26,7 +26,7 @@
   "key_verse": {
     "reference": "Matthew 14:22",
     "text": "And immediately Jesus made his disciples get into a ship, and to go before him unto the other side, while he sent the multitudes away.",
-    "bible_version": "KJV"
+    "bible_version": "KJ2000"
   },
   "cards": [
     {
@@ -177,7 +177,7 @@
       "completion_verse": {
         "reference": "Matthew 14:33",
         "text": "Then they that were in the ship came and worshipped him, saying, Of a truth thou art the Son of God.",
-        "bible_version": "KJV"
+        "bible_version": "KJ2000"
       },
       "celebration_type": "gentle_light"
     }

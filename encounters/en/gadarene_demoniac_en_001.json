@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "en",
-  "bible_version": "KJV",
+  "bible_version": "KJ2000",
   "version": "1.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 13,
@@ -30,7 +30,7 @@
   "key_verse": {
     "reference": "Mark 5:2",
     "text": "And when he came out of the ship, immediately there met him out of the tombs a man with an unclean spirit,",
-    "bible_version": "KJV"
+    "bible_version": "KJ2000"
   },
   "cards": [
     {
@@ -282,7 +282,7 @@
       "completion_verse": {
         "reference": "Mark 5:19",
         "text": "But Jesus permitted him not, but said unto him, Go home to your friends, and tell them what great things the Lord has done for you, and has had compassion on you.",
-        "bible_version": "KJV"
+        "bible_version": "KJ2000"
       },
       "celebration_type": "gentle_light"
     }

@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "en",
-  "bible_version": "KJV",
+  "bible_version": "KJ2000",
   "version": "2.0",
   "image_version": "1.0",
   "estimated_reading_minutes": 15,
@@ -33,7 +33,7 @@
   "key_verse": {
     "reference": "Acts 9:1-2",
     "text": "And Saul, yet breathing out threatenings and slaughter against the disciples of the Lord, went unto the high priest, And desired of him letters to Damascus to the synagogues, that if he found any of this way, whether they were men or women, he might bring them bound unto Jerusalem.",
-    "bible_version": "KJV"
+    "bible_version": "KJ2000"
   },
   "cards": [
     {
@@ -257,7 +257,7 @@
       "completion_verse": {
         "reference": "Acts 9:15",
         "text": "But the Lord said unto him, Go your way: for he is a chosen vessel unto me, to bear my name before the Gentiles, and kings, and the children of Israel:",
-        "bible_version": "KJV"
+        "bible_version": "KJ2000"
       },
       "celebration_type": "burst"
     }
