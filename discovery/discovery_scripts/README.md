@@ -81,7 +81,7 @@ python3 validate_discovery.py
 - ✅ All files listed in index.json exist and follow naming convention
 
 #### 📦 Expected Languages
-- 🇬🇧 English (en) - KJV, NIV
+- 🇬🇧 English (en) - KJ2000, NIV
 - 🇪🇸 Spanish (es) - RVR1960, NVI
 - 🇵🇹 Portuguese (pt) - ARC, NVI
 - 🇫🇷 French (fr) - LSG1910, TOB
