@@ -20,6 +20,7 @@ and "footnote_artifact". Callers decide severity.
 """
 
 import re
+import unicodedata
 from dataclasses import dataclass
 
 from bible_resolver import (
@@ -35,12 +36,14 @@ from shared_validation.checks.scripture_check import (
     _compare_text,
 )
 
-# "<book> <ch>:<v>[-<v>][ <version label>]: <text>". The label is free text
+# "<book> <ch>:<v>[-<v>][ <version label>]: <text>" (CJK citations have no
+# space before the chapter, hence `\s*`; the non-greedy book still splits
+# "1 Corinthians 13:4" correctly). The label is free text
 # ("NIV", "पवित्र बाइबल (HERV)", French "TOB :") but may not start with a comma,
 # so a discontiguous citation ("Éphésiens 5:1-2, 18 LSG1910:") does not match
 # and is reported as unparsed rather than half-compared.
 _VERSICULO_RE = re.compile(
-    r"^(?P<book>.+?)\s+(?P<chapter>\d+):(?P<start>\d+)(?:-(?P<end>\d+))?"
+    r"^(?P<book>.+?)\s*(?P<chapter>\d+):(?P<start>\d+)(?:-(?P<end>\d+))?"
     r"(?:\s+[^\s,:\"“«][^:\"“«]*?)?\s*:\s*(?P<text>.*)$",
     re.DOTALL,
 )
@@ -88,6 +91,27 @@ def build_native_book_map(resolver: VerseResolver, language: str) -> dict[str, i
     return book_map
 
 
+def _invisible_character_hint(title: str) -> str:
+    """Name what makes a title that *looks* right fail to match: a non-ASCII
+    space (e.g. U+200A hair space) or a Cyrillic/Greek letter inside an
+    otherwise Latin title. Empty string when the title has neither."""
+    problems = []
+    for ch in title:
+        if ch != " " and unicodedata.category(ch) in ("Zs", "Cf"):
+            problems.append(f"U+{ord(ch):04X} ({unicodedata.name(ch, 'unnamed')})")
+    has_latin = any(unicodedata.name(c, "").startswith("LATIN") for c in title)
+    if has_latin:
+        for ch in title:
+            name = unicodedata.name(ch, "")
+            if name.startswith(("CYRILLIC", "GREEK")):
+                problems.append(f"U+{ord(ch):04X} ({name})")
+    return (
+        f" — contains lookalike/invisible character(s): {', '.join(problems)}"
+        if problems
+        else ""
+    )
+
+
 def validate_versiculo(
     entry_id: str,
     versiculo: str,
@@ -109,7 +133,8 @@ def validate_versiculo(
         )
 
     ref = ScriptureRef(
-        reference=f"{parsed.book} {parsed.chapter}:{parsed.verse_start}",
+        reference=f"{parsed.book} {parsed.chapter}:{parsed.verse_start}"
+        + (f"-{parsed.verse_end}" if parsed.verse_end != parsed.verse_start else ""),
         verse_text=parsed.text,
         path=entry_id,
     )
@@ -125,7 +150,7 @@ def validate_versiculo(
         return Finding(
             "unknown_book",
             ref,
-            f"'{entry_id}': book title '{parsed.book}' is not a title this language's book-name config produces",
+            f"'{entry_id}': book title '{parsed.book}' is not a title this language's book-name config produces{_invisible_character_hint(parsed.book)}",
         )
 
     resolved = fetch_text(

@@ -106,6 +106,16 @@ class TestParseVersiculo(unittest.TestCase):
         self.assertEqual((p.book, p.chapter, p.verse_start), ("Jean", 12, 24))
         self.assertEqual(p.text, "Amen, amen, je vous le dis")
 
+    def test_parses_cjk_citation_with_no_space_before_chapter(self):
+        p = parse_versiculo('ガラテヤ5:22-23: "しかし、御霊の実は、愛、喜び"')
+        self.assertEqual(
+            (p.book, p.chapter, p.verse_start, p.verse_end), ("ガラテヤ", 5, 22, 23)
+        )
+
+    def test_numbered_book_still_splits_correctly_without_required_space(self):
+        p = parse_versiculo('1 Corinthians 13:4-7 KJV: "Charity suffereth long"')
+        self.assertEqual((p.book, p.chapter), ("1 Corinthians", 13))
+
     def test_discontiguous_reference_is_unparsed(self):
         self.assertIsNone(parse_versiculo('Éphésiens 5:1-2, 18 LSG1910: "Devenez"'))
 
@@ -172,6 +182,10 @@ class TestValidateVersiculo(unittest.TestCase):
 
     def test_unknown_book_is_flagged(self):
         self.assertEqual(self._check('Nahum 1:1 NIV: "x y z"').kind, "unknown_book")
+
+    def test_missing_range_message_shows_the_full_range(self):
+        finding = self._check('John 3:16-99 NIV: "something"')
+        self.assertIn("John 3:16-99", finding.message)
 
     def test_missing_verse_is_resolution_failed(self):
         self.assertEqual(
@@ -245,6 +259,66 @@ class TestParaMeditarVerses(unittest.TestCase):
     def test_missing_para_meditar_key_is_fine(self):
         entry = {"id": "d1", "versiculo": f'John 3:16 NIV: "{JOHN_316}"'}
         self.assertEqual(validate_devotional_entries([entry], self.resolver, "en"), [])
+
+
+class TestParaMeditar(unittest.TestCase):
+    def setUp(self):
+        self.resolver = _make_resolver(self)
+
+    def _entry(self, items):
+        return {
+            "id": "d1",
+            "versiculo": f'John 3:16 NIV: "{JOHN_316}"',
+            "para_meditar": items,
+        }
+
+    def test_clean_para_meditar_has_no_findings(self):
+        entry = self._entry([{"cita": "John 3:16", "texto": JOHN_316}])
+        self.assertEqual(validate_devotional_entries([entry], self.resolver, "en"), [])
+
+    def test_wrong_texto_is_flagged_with_indexed_path(self):
+        entry = self._entry(
+            [
+                {"cita": "John 3:16", "texto": JOHN_316},
+                {"cita": "Psalms 23:1", "texto": "completely different words"},
+            ]
+        )
+        findings = validate_devotional_entries([entry], self.resolver, "en")
+        self.assertEqual(
+            [(f.ref.path, f.kind) for f in findings],
+            [("d1/para_meditar[1]", "text_mismatch")],
+        )
+
+    def test_empty_texto_is_flagged_even_without_a_database(self):
+        entry = self._entry([{"cita": "John 3:16", "texto": ""}])
+        findings = validate_devotional_entries([entry], None, "en")
+        self.assertEqual([f.kind for f in findings], ["empty_text"])
+
+    def test_entry_without_para_meditar_is_fine(self):
+        entry = {"id": "d1", "versiculo": f'John 3:16 NIV: "{JOHN_316}"'}
+        self.assertEqual(validate_devotional_entries([entry], self.resolver, "en"), [])
+
+
+class TestInvisibleCharacterTitles(unittest.TestCase):
+    def setUp(self):
+        self.resolver = _make_resolver(self)
+        self.book_map = build_native_book_map(self.resolver, "en")
+
+    def _msg(self, book):
+        return validate_versiculo(
+            "e1", f'{book} 3:16 NIV: "{JOHN_316}"', self.resolver, self.book_map
+        ).message
+
+    def test_hair_space_in_title_is_named(self):
+        msg = self._msg("Mga\u200aGawa")
+        self.assertIn("U+200A", msg)
+
+    def test_cyrillic_lookalike_in_title_is_named(self):
+        msg = self._msg("J\u043ehn")  # Cyrillic о inside a Latin word
+        self.assertIn("CYRILLIC", msg)
+
+    def test_plain_unknown_title_has_no_character_hint(self):
+        self.assertNotIn("U+", self._msg("Nahum"))
 
 
 class TestCorpusScripturePhase(unittest.TestCase):
