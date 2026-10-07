@@ -78,19 +78,19 @@ Run these in order after every change, before reporting done.
 
 ### Gate 1 — Format (ruff format) — the `dart format` equivalent
 ```bash
-source .venv/bin/activate && ruff format <changed files>
+uv run ruff format <changed files>
 ```
 Run this **first**, before lint. The repo has been normalized to `ruff format`'s Black-compatible style repo-wide — every file should already come out clean from a bare `ruff format --check`. If a file you're about to touch isn't yet formatted (check with `ruff format --check <file>` before editing), that's either drift since the last reformat or a file the reformat missed; format it as part of your change rather than leaving it inconsistent, and mention it in your report. Every file you touch should come out of this step already formatted; do not hand-format or second-guess its output. Zero tolerance, same as `dart format` — unformatted code is not done.
 
 ### Gate 2 — Fix (ruff check --fix) — the `dart fix --apply` equivalent
 ```bash
-source .venv/bin/activate && ruff check --fix <changed files>
+uv run ruff check --fix <changed files>
 ```
 Auto-fixes real lint violations (unused imports, etc.) in place. Run it, then re-run plain `ruff check <changed files>` (no `--fix`) to confirm what's left.
 
 ### Gate 3 — Lint (ruff check)
 ```bash
-source .venv/bin/activate && ruff check <changed files>
+uv run ruff check <changed files>
 ```
 Target: **no new issues introduced by your change.** Ruff is installed in `.venv` and is not wired into CI (`.github/workflows/ci.yml` has no lint step) and there is no `ruff.toml`/`pyproject.toml` config, so both `format` and `check` run with defaults. Treat it as a real but informational check: fix anything it flags in a line you touched (Gate 2 should have already caught the auto-fixable ones); do not chase pre-existing issues outside your diff.
 
@@ -98,8 +98,8 @@ Target: **no new issues introduced by your change.** Ruff is installed in `.venv
 
 ### Gate 4 — Run the real entrypoints (matches CI exactly)
 ```bash
-source .venv/bin/activate && python3 discovery/discovery_scripts/discovery_master_validator.py
-source .venv/bin/activate && python3 encounters/encounters_scripts/encounters_master_validator.py
+uv run python3 discovery/discovery_scripts/discovery_master_validator.py
+uv run python3 encounters/encounters_scripts/encounters_master_validator.py
 ```
 These are the actual CI gate (`.github/workflows/ci.yml`) — not the inner `validate_discovery.py` / `validate_encounters.py` scripts directly, though those are what you'll usually invoke while iterating since they're faster (no image-URL/SOT network phases). Run **both** master validators before declaring done if the module you changed lives in `shared_validation/` (it's imported by both pipelines). Confirm:
 - No new errors/warnings appear that aren't attributable to your intended change.
@@ -107,7 +107,7 @@ These are the actual CI gate (`.github/workflows/ci.yml`) — not the inner `val
 
 ### Gate 5 — Unit tests
 ```bash
-source .venv/bin/activate && python3 -m unittest discover -s tests -v
+uv run python3 -m unittest discover -s tests -v
 ```
 This is CI's other real gate. `tests/test_promoted_validators.py` smoke-tests the master validators against real repo content and a deliberately-broken fixture — run the full suite, not a subset, since it's fast and this is what CI actually runs.
 

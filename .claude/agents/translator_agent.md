@@ -58,7 +58,7 @@ a complete, correct delivery — it is not expected to be perfect prose on its o
    delivered. This is intentional, harmless duplication for the 2nd/3rd translator
    in a phase (same file set, same result) — not a bug, don't skip your own run to
    "avoid re-checking."
-3. Run `python3 skills/post_translate_checks.py <delivered_file_path>` — zero
+3. Run `uv run python3 skills/post_translate_checks.py <delivered_file_path>` — zero
    violations required.
 4. If any of the above fails for any reason other than the fewer-than-2-files case
    in step 2, fix and re-run — do not report done with a failing check you could
