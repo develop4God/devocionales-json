@@ -56,7 +56,7 @@ Generated biblical content consumed by the [devocional_nuevo](https://github.com
 devocionales-json/
 ├── archive/
 ├── badges/
-├── bible_database/          # README only: DBs come from bible_versions via bible_resolver.database_path
+├── bible_database/
 ├── devocionales_json.egg-info/
 ├── devocionales_scripts/
 ├── discovery/
