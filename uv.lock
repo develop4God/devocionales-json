@@ -36,7 +36,7 @@ wheels = [
 [[package]]
 name = "bible-resolver"
 version = "0.2.0"
-source = { git = "https://github.com/develop4God/bible_versions?rev=main#b68321366149cab5d31f02bf677ec5208ea7310b" }
+source = { git = "https://github.com/develop4God/bible_versions?rev=main#1236e4c704fd05aa01e37e8ad7ae5652cecd20b4" }
 
 [[package]]
 name = "certifi"
