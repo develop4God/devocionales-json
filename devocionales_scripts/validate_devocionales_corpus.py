@@ -31,6 +31,10 @@ validate_devocional_gui.py's job, a separate concern with a separate
              match the declaration, declared version is legitimate per the
              Bible SOT, date range matches declared year, no orphaned files
              on disk
+  PHASE C:   Validate every entry's versiculo: verse text is not empty (error)
+             and matches the file's own Bible DB (warning), same checks as
+             encounters/discovery Phase D — shared_validation.checks.
+             devotional_scripture
 
 Exit codes: 0 = all passed, 1 = errors found
 """
@@ -51,8 +55,12 @@ from shared_validation.checks.bible_sot import (
     REMOTE_INDEX_URL,
     load_bible_versions,
 )
+from shared_validation.checks.devotional_scripture import (
+    validate_devotional_entries,
+)
 from shared_validation.checks.lint import lint_json_files
 from shared_validation.checks.run_report import RunReport
+from shared_validation.checks.scripture_check import ScriptureValidator
 from shared_validation.report import ReportLike
 
 SCRIPTS_DIR = Path(__file__).parent
@@ -175,6 +183,46 @@ def validate_corpus_files(
     )
 
 
+# ── Phase C: Scripture verses ────────────────────────────────────────────────
+
+
+def validate_corpus_scripture(
+    report: ReportLike, combos: list, lint_cache: dict
+) -> None:
+    report.I("=" * 60)
+    report.I("PHASE C: SCRIPTURE VERSES (versiculo vs Bible DB)")
+    report.I("=" * 60)
+
+    entries_checked = 0
+    with ScriptureValidator() as validator:
+        for combo in combos:
+            data = lint_cache.get(CORPUS_DIR / combo.filename)
+            entries = (
+                [
+                    e
+                    for day in data.get("data", {}).get(combo.lang, {}).values()
+                    for e in day
+                ]
+                if data
+                else []
+            )
+            if not entries:
+                continue
+
+            resolver = validator.get_resolver(combo.version, combo.lang)
+            if resolver is None:
+                report.W(
+                    f"{combo.filename}: no local Bible DB for '{combo.version}' "
+                    f"(lang '{combo.lang}') — only empty-verse checks ran"
+                )
+            entries_checked += len(entries)
+            for finding in validate_devotional_entries(entries, resolver, combo.lang):
+                emit = report.E if finding.kind == "empty_text" else report.W
+                emit(f"{combo.filename}: {finding.message}")
+
+    report.I(f"✓ Checked {entries_checked} verse(s)")
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 
@@ -189,7 +237,7 @@ def main():
         "devocionales"
     )
 
-    run_report.wrap("PHASE 1: LINT", validate_lint)
+    lint_cache = run_report.wrap("PHASE 1: LINT", validate_lint)
     index_result = run_report.wrap("PHASE A: INDEX", validate_index)
 
     if index_result is None:
@@ -227,6 +275,13 @@ def main():
         validate_corpus_files,
         combos,
         bible_versions,
+    )
+
+    run_report.wrap(
+        "PHASE C: SCRIPTURE VERSES",
+        validate_corpus_scripture,
+        combos,
+        lint_cache,
         final=True,
     )
 
