@@ -35,7 +35,13 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Self
 
-from bible_resolver import VerseResolver, fetch_text, parse_en_ref
+from bible_resolver import (
+    DatabaseNotFoundError,
+    VerseResolver,
+    database_path,
+    fetch_text,
+    parse_en_ref,
+)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CI GATING
@@ -519,30 +525,47 @@ class ScriptureValidator:
     run, so a corpus scan across many files/languages opens each SQLite DB
     once instead of once per card. Cached by (lang, version) rather than
     version alone because a version code is not always unique to one
-    language — e.g. 'NVI' names both bible_database/NVI_es.SQLite3.gz
-    (Spanish) and NVI_pt.SQLite3.gz (Portuguese), two different DBs with
+    language — e.g. 'NVI' names both NVI_es.SQLite3.gz (Spanish) and
+    NVI_pt.SQLite3.gz (Portuguese), two different DBs with
     different verse text. Does not extract pairs or perform comparisons
     itself — that's find_scripture_pairs()'s and validate_pair()'s job
     respectively; this class only manages resolver lifecycle/caching.
     """
 
-    def __init__(self, bible_database_dir: Path, books_sot_path: str | None = None):
-        self._bible_database_dir = Path(bible_database_dir)
+    def __init__(
+        self,
+        bible_database_dir: Path | None = None,
+        books_sot_path: str | None = None,
+    ):
+        # Databases come from the bible_versions SOT via bible_resolver.database_path
+        # (read in place from a checkout, else downloaded and hash-checked).
+        # bible_database_dir only exists so tests can point at fixture DBs.
+        self._bible_database_dir = (
+            Path(bible_database_dir) if bible_database_dir is not None else None
+        )
         self._books_sot_path = books_sot_path
         self._resolvers: dict[tuple[str, str], VerseResolver] = {}
 
     def get_resolver(self, bible_version: str, lang: str) -> VerseResolver | None:
         """Return the open VerseResolver for (bible_version, lang), opening
-        and caching it on first use. Returns None if no matching DB file
-        exists under bible_database_dir — callers should treat that as
-        "cannot validate this version," not crash the run."""
+        and caching it on first use. Returns None if the SOT has no such
+        version (or no such file under the optional bible_database_dir) —
+        callers should treat that as "cannot validate this version," not
+        crash the run. A failed download or hash check raises, so an outage
+        is never mistaken for "nothing to validate"."""
         cache_key = (lang, bible_version)
         if cache_key in self._resolvers:
             return self._resolvers[cache_key]
 
-        db_path = self._bible_database_dir / f"{bible_version}_{lang}.SQLite3.gz"
-        if not db_path.exists():
-            return None
+        if self._bible_database_dir is not None:
+            db_path = self._bible_database_dir / f"{bible_version}_{lang}.SQLite3.gz"
+            if not db_path.exists():
+                return None
+        else:
+            try:
+                db_path = database_path(lang, bible_version)
+            except DatabaseNotFoundError:
+                return None
 
         resolver = VerseResolver(str(db_path), books_sot_path=self._books_sot_path)
         self._resolvers[cache_key] = resolver

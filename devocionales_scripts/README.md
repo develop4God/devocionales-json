@@ -86,9 +86,9 @@ the single source of truth. It is a dependency in `pyproject.toml` that follows 
 branch; there is no copy of the resolver here. Update it with `uv lock --upgrade-package bible-resolver`.
 
 ```python
-from bible_resolver import VerseResolver
+from bible_resolver import VerseResolver, database_path
 
-with VerseResolver("../bible_database/LU17_de.SQLite3.gz") as r:   # language is read from the DB
+with VerseResolver(str(database_path("de", "LU17"))) as r:   # language is read from the DB
     cita, texto, error = r.resolve("Luke 19:10")
     # ("Lukas 19:10", "Denn der Menschensohn ist gekommen...", None)
 ```

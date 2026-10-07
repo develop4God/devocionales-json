@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "en",
-  "bible_version": "KJV",
+  "bible_version": "KJ2000",
   "version": "1.1",
   "image_version": "1.0",
   "estimated_reading_minutes": 12,
@@ -32,7 +32,7 @@
   "key_verse": {
     "reference": "John 20:28",
     "text": "And Thomas answered and said unto him, My Lord and my God.",
-    "bible_version": "KJV"
+    "bible_version": "KJ2000"
   },
   "cards": [
     {
@@ -275,7 +275,7 @@
       "completion_verse": {
         "reference": "John 20:29",
         "text": "Jesus said unto him, Thomas, because thou hast seen me, thou hast believed: blessed are they that have not seen, and yet have believed.",
-        "bible_version": "KJV"
+        "bible_version": "KJ2000"
       },
       "celebration_type": "gentle_light"
     }

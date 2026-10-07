@@ -3,7 +3,7 @@
   "type": "encounter",
   "schema_version": "encounters_v1",
   "language": "en",
-  "bible_version": "KJV",
+  "bible_version": "KJ2000",
   "version": "6.1",
   "estimated_reading_minutes": 10,
   "meta": {
@@ -29,7 +29,7 @@
   "key_verse": {
     "reference": "John 4:4",
     "text": "And he must needs go through Samaria.",
-    "bible_version": "KJV"
+    "bible_version": "KJ2000"
   },
   "cards": [
     {
@@ -282,7 +282,7 @@
       "completion_verse": {
         "reference": "John 4:28-29",
         "text": "The woman then left her water pot, and went her way into the city, and said to the men, Come, see a man, who told me all things that ever I did: is not this the Christ?",
-        "bible_version": "KJV"
+        "bible_version": "KJ2000"
       },
       "celebration_type": "gentle_light"
     }

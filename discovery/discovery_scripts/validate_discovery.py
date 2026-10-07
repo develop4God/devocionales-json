@@ -667,7 +667,6 @@ def validate_greek_family_patterns(report: Report) -> None:
 def validate_scripture_references(
     report: Report,
     all_studies: dict,
-    bible_database_dir: Path,
     only_lang: str | None = None,
 ) -> None:
     """Resolve every scripture reference found in every loaded study file
@@ -694,7 +693,7 @@ def validate_scripture_references(
     warned_versions = set()
     en_studies = all_studies.get("en", {})
 
-    with ScriptureValidator(bible_database_dir) as validator:
+    with ScriptureValidator() as validator:
         for lang, lang_studies in all_studies.items():
             if only_lang and lang != only_lang:
                 continue
@@ -863,13 +862,12 @@ def main():
     # text-mismatch both need a human-review pass over real corpus findings
     # before either is considered for promotion to ERROR. Scans the ENTIRE
     # corpus (2000+ references across 10 languages) every run — confirmed
-    # fast (~1s locally against the SQLite bible_database) so it always
+    # fast (~1s locally against the shared SQLite databases) so it always
     # runs, local or CI, not just when CI=true.
     run_report.wrap(
         "PHASE D: SCRIPTURE REFERENCES",
         validate_scripture_references,
         all_studies,
-        discovery_dir.parent / "bible_database",
         args.lang,
         gate=False,
         final=True,
