@@ -355,5 +355,73 @@ class TestCorpusScripturePhase(unittest.TestCase):
         self.assertIn("no local Bible DB", report.warnings[0])
 
 
+class TestBibleVersionAliases(unittest.TestCase):
+    """The file-declared user-facing name (e.g. 新改訳2003) resolves to the
+    bible_versions index code (SK2003) for both the allowed-versions check
+    and the database lookup; unknown names pass through unchanged."""
+
+    def setUp(self):
+        sys.path.insert(0, str(REPO_ROOT / "devocionales_scripts"))
+
+    def test_native_name_maps_to_index_code(self):
+        from sot_exceptions import canonical_version
+
+        self.assertEqual(canonical_version("ja", "新改訳2003"), "SK2003")
+        self.assertEqual(canonical_version("zh", "和合本1919"), "CUV1919")
+
+    def test_unaliased_version_passes_through(self):
+        from sot_exceptions import canonical_version
+
+        self.assertEqual(canonical_version("en", "NIV"), "NIV")
+        self.assertEqual(canonical_version("fr", "TOB"), "TOB")
+
+    def test_alias_is_per_language(self):
+        from sot_exceptions import canonical_version
+
+        self.assertEqual(canonical_version("zh", "新改訳2003"), "新改訳2003")
+
+    def test_phase_b_accepts_aliased_version_without_warning(self):
+        from corpus_file_validator import CorpusFileValidator
+        from corpus_index_reader import CorpusCombo
+
+        from shared_validation.report import Report
+
+        validator = CorpusFileValidator({"ja": {"allowed_versions": ["SK2003", "JCB"]}})
+        report = Report("B")
+        validator._check_against_bible_sot(
+            CorpusCombo("ja", "新改訳2003", "2026", "f.json"), report
+        )
+        self.assertEqual(report.errors, [])
+        self.assertEqual(report.warnings, [])
+
+    def test_phase_b_still_errors_on_unknown_unaliased_version(self):
+        from corpus_file_validator import CorpusFileValidator
+        from corpus_index_reader import CorpusCombo
+
+        from shared_validation.report import Report
+
+        validator = CorpusFileValidator({"en": {"allowed_versions": ["KJV", "NIV"]}})
+        report = Report("B")
+        validator._check_against_bible_sot(
+            CorpusCombo("en", "XYZ", "2026", "f.json"), report
+        )
+        self.assertEqual(len(report.errors), 1)
+
+    def test_phase_c_resolves_database_with_canonical_version(self):
+        import validate_devocionales_corpus as phase
+        from corpus_index_reader import CorpusCombo
+
+        from shared_validation.report import Report
+
+        combo = CorpusCombo("ja", "新改訳2003", "2026", "f.json")
+        data = {"data": {"ja": {"2026-01-01": [{"id": "a", "versiculo": "x"}]}}}
+        cache = {phase.CORPUS_DIR / "f.json": data}
+        with mock.patch.object(
+            phase.ScriptureValidator, "get_resolver", return_value=None
+        ) as get_resolver:
+            phase.validate_corpus_scripture(Report("C"), [combo], cache)
+        get_resolver.assert_called_once_with("SK2003", "ja")
+
+
 if __name__ == "__main__":
     unittest.main()

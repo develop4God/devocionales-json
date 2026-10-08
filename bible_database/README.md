@@ -1,9 +1,20 @@
 # bible_database
 
-The Bible SQLite databases are **not stored in this repo**. The single source of truth is
-[`develop4God/bible_versions`](https://github.com/develop4God/bible_versions) (public); never copy them here.
+The Bible SQLite databases are **not stored in this repo**. The source of truth is the
+[`develop4God/bible_versions`](https://github.com/develop4God/bible_versions) repo and its `index.json`
+(the index lists every available language/version, with each file's `url` and `hash`). Never copy databases here.
 
-Get a path to one from Python:
+## Where to read from
+
+1. **Local checkout first.** If a `bible_versions` checkout exists on this machine, it is the source of truth:
+   use its `index.json` and files in place. Point to it with `BIBLE_VERSIONS_DIR=<path to checkout>`.
+2. **Otherwise, remote.** Use the remote index:
+   <https://raw.githubusercontent.com/develop4God/bible_versions/main/index.json>
+   (files are downloaded, hash-verified and cached by `bible_resolver`).
+
+Always read the index to find out what exists; do not assume a list of languages or versions.
+
+## Usage
 
 ```python
 from bible_resolver import database_path, VerseResolver
@@ -12,13 +23,9 @@ with VerseResolver(str(database_path("hi", "HERV"))) as r:   # language code, ve
     cita, texto, error = r.resolve("Titus 2:11")
 ```
 
-| Where you run | What `database_path` does |
-|---|---|
-| A machine with a `bible_versions` checkout (set `BIBLE_VERSIONS_DIR=~/Projects/bible_versions`, or install the package editable) | Reads the file in place, no copy, and checks its hash against that checkout's `index.json`. |
-| CI, cloud sessions, any machine without a checkout | Downloads the file listed in `index.json` from `main`, verifies the hash, caches it in `~/.cache/bible_resolver/dbs/`, and reuses the cache offline. |
+`database_path` follows the order above. Note that merely having a checkout on disk is not enough: the
+package must be told where it is (`BIBLE_VERSIONS_DIR`, or an editable install of the checkout), otherwise it
+falls back to the remote.
 
-Errors are explicit: `DatabaseNotFoundError` (version not in the index) and `DatabaseIntegrityError`
-(no network and no cache, or a corrupt/half-updated download).
-
-Without Python: `https://raw.githubusercontent.com/develop4God/bible_versions/main/index.json` lists every
-version's `url` and `hash` (first 16 hex chars of sha256).
+Errors are explicit: `DatabaseNotFoundError` (not in the index) and `DatabaseIntegrityError`
+(no network and no cache, or a corrupt download).
