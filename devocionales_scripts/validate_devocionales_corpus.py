@@ -238,10 +238,14 @@ def main():
     )
 
     lint_cache = run_report.wrap("PHASE 1: LINT", validate_lint)
-    index_result = run_report.wrap("PHASE A: INDEX", validate_index)
+    # gate=False: index.json errors (e.g. a family missing a year) are
+    # reported and still fail the run via the summary/exit code, but must
+    # not hide Phase B/C results. Only an unreadable index (None) leaves
+    # no combos to validate, so only that stops the run.
+    index_result = run_report.wrap("PHASE A: INDEX", validate_index, gate=False)
 
     if index_result is None:
-        print("\n❌ PHASE A FAILED - Stopping validation")
+        print("\n❌ PHASE A FAILED - index.json unreadable, nothing to validate")
         run_report.print_summary()
         sys.exit(1)
 
@@ -275,6 +279,7 @@ def main():
         validate_corpus_files,
         combos,
         bible_versions,
+        gate=False,
     )
 
     run_report.wrap(
