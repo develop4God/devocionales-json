@@ -50,6 +50,7 @@ from corpus_calendar_checker import CorpusCalendarChecker
 from corpus_file_validator import CorpusFileValidator
 from corpus_index_reader import CorpusIndexReader
 from corpus_schema_checker import CorpusSchemaChecker
+from sot_exceptions import canonical_version
 
 from shared_validation.checks.bible_sot import (
     REMOTE_INDEX_URL,
@@ -209,7 +210,9 @@ def validate_corpus_scripture(
             if not entries:
                 continue
 
-            resolver = validator.get_resolver(combo.version, combo.lang)
+            resolver = validator.get_resolver(
+                canonical_version(combo.lang, combo.version), combo.lang
+            )
             if resolver is None:
                 report.W(
                     f"{combo.filename}: no local Bible DB for '{combo.version}' "

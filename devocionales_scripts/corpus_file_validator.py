@@ -11,7 +11,7 @@ version SOT — say it should be.
 """
 
 from corpus_index_reader import CorpusCombo
-from sot_exceptions import ACKNOWLEDGED_SOT_MISMATCHES
+from sot_exceptions import ACKNOWLEDGED_SOT_MISMATCHES, canonical_version
 
 from shared_validation.report import ReportLike
 
@@ -92,7 +92,7 @@ class CorpusFileValidator:
             return
 
         allowed = lang_cfg.get("allowed_versions", [])
-        if combo.version not in allowed:
+        if canonical_version(combo.lang, combo.version) not in allowed:
             exception_note = ACKNOWLEDGED_SOT_MISMATCHES.get(
                 (combo.lang, combo.version)
             )

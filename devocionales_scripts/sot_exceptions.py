@@ -16,20 +16,24 @@ acknowledged, shown in the warning message for traceability.
 
 ACKNOWLEDGED_SOT_MISMATCHES = {
     (
-        "ja",
-        "新改訳2003",
-    ): "Confirmed not a user-facing risk — pending formal SOT update",
-    (
-        "ja",
-        "リビングバイブル",
-    ): "Confirmed not a user-facing risk — pending formal SOT update",
-    (
-        "zh",
-        "和合本1919",
-    ): "Confirmed not a user-facing risk — pending formal SOT update",
-    ("zh", "新译本"): "Confirmed not a user-facing risk — pending formal SOT update",
-    (
         "fr",
         "TOB",
     ): "TOB Bible text not obtainable for verification — pending SOT/Bible source",
 }
+
+# User-facing version names that differ from the bible_versions index code
+# for the SAME Bible. Devotional files carry the native name shown to users
+# (e.g. 新改訳2003); the SOT index and the databases use its own code (SK2003).
+# Validators resolve the database and check allowed_versions through
+# canonical_version(); the files themselves are never renamed.
+BIBLE_VERSION_ALIASES = {
+    ("ja", "新改訳2003"): "SK2003",
+    ("ja", "リビングバイブル"): "JCB",
+    ("zh", "和合本1919"): "CUV1919",
+    ("zh", "新译本"): "CNVS",
+}
+
+
+def canonical_version(lang: str, version: str) -> str:
+    """The bible_versions index code for a (lang, file-declared version)."""
+    return BIBLE_VERSION_ALIASES.get((lang, version), version)
