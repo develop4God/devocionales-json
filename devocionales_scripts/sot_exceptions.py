@@ -28,5 +28,8 @@ ACKNOWLEDGED_SOT_MISMATCHES = {
         "和合本1919",
     ): "Confirmed not a user-facing risk — pending formal SOT update",
     ("zh", "新译本"): "Confirmed not a user-facing risk — pending formal SOT update",
-    # ("fr", "TOB"): still open — usage/risk not yet confirmed, stays an error.
+    (
+        "fr",
+        "TOB",
+    ): "TOB Bible text not obtainable for verification — pending SOT/Bible source",
 }
